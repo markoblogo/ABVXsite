@@ -103,13 +103,13 @@ export default async function EcosystemPage({
                         {b.section}
                       </div>
                     ) : null}
-                    <div className="mt-3 flex flex-wrap gap-2 text-sm">
+                    <div className="mt-3 flex flex-wrap gap-2">
                       {b.amazon ? (
                         <a
                           href={b.amazon}
                           target="_blank"
                           rel="noreferrer"
-                          className="underline text-zinc-700 hover:text-black dark:text-zinc-300 dark:hover:text-white"
+                          className="inline-flex items-center rounded-full border border-black/15 bg-black/5 px-2.5 py-1 text-xs font-semibold text-zinc-800 hover:bg-black/10 dark:border-white/15 dark:bg-white/5 dark:text-zinc-200 dark:hover:bg-white/10"
                           onClick={(e) => e.stopPropagation()}
                         >
                           Kindle
@@ -120,7 +120,7 @@ export default async function EcosystemPage({
                           href={b.paper}
                           target="_blank"
                           rel="noreferrer"
-                          className="underline text-zinc-700 hover:text-black dark:text-zinc-300 dark:hover:text-white"
+                          className="inline-flex items-center rounded-full border border-black/15 bg-black/5 px-2.5 py-1 text-xs font-semibold text-zinc-800 hover:bg-black/10 dark:border-white/15 dark:bg-white/5 dark:text-zinc-200 dark:hover:bg-white/10"
                           onClick={(e) => e.stopPropagation()}
                         >
                           Paperback
@@ -131,7 +131,7 @@ export default async function EcosystemPage({
                           href={b.site}
                           target="_blank"
                           rel="noreferrer"
-                          className="underline text-zinc-700 hover:text-black dark:text-zinc-300 dark:hover:text-white"
+                          className="inline-flex items-center rounded-full border border-black/15 bg-black/5 px-2.5 py-1 text-xs font-semibold text-zinc-800 hover:bg-black/10 dark:border-white/15 dark:bg-white/5 dark:text-zinc-200 dark:hover:bg-white/10"
                           onClick={(e) => e.stopPropagation()}
                         >
                           Teaser
@@ -142,7 +142,7 @@ export default async function EcosystemPage({
                           href={b.pdf}
                           target="_blank"
                           rel="noreferrer"
-                          className="underline text-zinc-700 hover:text-black dark:text-zinc-300 dark:hover:text-white"
+                          className="inline-flex items-center rounded-full border border-black/15 bg-black/5 px-2.5 py-1 text-xs font-semibold text-zinc-800 hover:bg-black/10 dark:border-white/15 dark:bg-white/5 dark:text-zinc-200 dark:hover:bg-white/10"
                           onClick={(e) => e.stopPropagation()}
                         >
                           PDF

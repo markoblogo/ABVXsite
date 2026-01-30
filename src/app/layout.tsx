@@ -20,7 +20,7 @@ function Nav() {
 
   return (
     <header className="border-b border-black/10 dark:border-white/10">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
         <a
           href="/"
           className="flex items-center gap-2 text-sm font-semibold tracking-wide text-black dark:text-white"
@@ -28,9 +28,9 @@ function Nav() {
           <Image
             src="/brand/abv-mark.png"
             alt="ABV"
-            width={40}
-            height={40}
-            className="rounded-[6px]"
+            width={48}
+            height={48}
+            className="rounded-[8px]"
             priority
           />
           <span className="sr-only">Home</span>

@@ -28,9 +28,9 @@ function Nav() {
           <Image
             src="/brand/abv-mark.png"
             alt="ABV"
-            width={20}
-            height={20}
-            className="rounded-[4px]"
+            width={40}
+            height={40}
+            className="rounded-[6px]"
             priority
           />
           <span className="sr-only">Home</span>

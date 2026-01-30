@@ -66,10 +66,12 @@ export default function WorkWithMe() {
         </p>
         <div className="flex flex-wrap gap-3">
           <a
-            className="rounded-md bg-white px-4 py-2 text-sm font-semibold text-zinc-950 hover:bg-zinc-200"
-            href="#"
+            className="rounded-md bg-zinc-950 px-4 py-2 text-sm font-semibold text-white hover:bg-black dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200"
+            href="https://www.linkedin.com/in/abvcreative/"
+            target="_blank"
+            rel="noreferrer"
           >
-            LinkedIn (add link)
+            LinkedIn DM
           </a>
           <a
             className="rounded-md border border-white/15 px-4 py-2 text-sm font-semibold text-white hover:border-white/30"

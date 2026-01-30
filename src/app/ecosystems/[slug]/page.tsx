@@ -81,12 +81,76 @@ export default async function EcosystemPage({
               <a
                 key={b.id}
                 href={`/books/${b.slug}`}
-                className="rounded-xl border border-white/10 bg-white/5 p-5 hover:border-white/20"
+                className="rounded-xl border border-black/10 bg-black/5 p-5 hover:border-black/20 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20"
               >
-                <div className="text-sm font-semibold">{b.name}</div>
-                {b.section ? (
-                  <div className="mt-1 text-sm text-zinc-400">{b.section}</div>
-                ) : null}
+                <div className="flex gap-4">
+                  {b.coverImage ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={b.coverImage}
+                      alt=""
+                      className="h-16 w-12 flex-none rounded-md border border-black/10 object-cover dark:border-white/10"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="h-16 w-12 flex-none rounded-md border border-black/10 bg-black/5 dark:border-white/10 dark:bg-white/5" />
+                  )}
+
+                  <div className="min-w-0 flex-1">
+                    <div className="text-sm font-semibold">{b.name}</div>
+                    {b.section ? (
+                      <div className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+                        {b.section}
+                      </div>
+                    ) : null}
+                    <div className="mt-3 flex flex-wrap gap-2 text-sm">
+                      {b.amazon ? (
+                        <a
+                          href={b.amazon}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="underline text-zinc-700 hover:text-black dark:text-zinc-300 dark:hover:text-white"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          Kindle
+                        </a>
+                      ) : null}
+                      {b.paper ? (
+                        <a
+                          href={b.paper}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="underline text-zinc-700 hover:text-black dark:text-zinc-300 dark:hover:text-white"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          Paperback
+                        </a>
+                      ) : null}
+                      {b.site ? (
+                        <a
+                          href={b.site}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="underline text-zinc-700 hover:text-black dark:text-zinc-300 dark:hover:text-white"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          Teaser
+                        </a>
+                      ) : null}
+                      {b.pdf ? (
+                        <a
+                          href={b.pdf}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="underline text-zinc-700 hover:text-black dark:text-zinc-300 dark:hover:text-white"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          PDF
+                        </a>
+                      ) : null}
+                    </div>
+                  </div>
+                </div>
               </a>
             ))}
           </div>

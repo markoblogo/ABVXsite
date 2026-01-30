@@ -60,6 +60,15 @@ export function propNumber(prop: NotionProperty): number | null {
 }
 
 export function propUrl(prop: NotionProperty): string | null {
+  if (!prop) return null;
+  if (prop.type === 'url') return prop.url || null;
+  if (prop.type === 'files') {
+    const f = (prop.files || [])[0];
+    if (!f) return null;
+    if (f.type === 'external') return f.external?.url || null;
+    if (f.type === 'file') return f.file?.url || null;
+    return null;
+  }
   const u = propText(prop);
   return u ? u : null;
 }

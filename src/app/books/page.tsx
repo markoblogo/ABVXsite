@@ -55,10 +55,51 @@ export default async function BooksPage() {
                       {b.section}
                     </div>
                   ) : null}
-                  <div className="mt-3 flex flex-wrap gap-3 text-sm text-zinc-600 dark:text-zinc-300">
-                    {b.amazon ? <span>Amazon</span> : null}
-                    {b.site ? <span>Site</span> : null}
-                    {b.pdf ? <span>PDF</span> : null}
+                  <div className="mt-3 flex flex-wrap gap-2 text-sm">
+                    {b.amazon ? (
+                      <a
+                        href={b.amazon}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="underline text-zinc-700 hover:text-black dark:text-zinc-300 dark:hover:text-white"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        Kindle
+                      </a>
+                    ) : null}
+                    {b.paper ? (
+                      <a
+                        href={b.paper}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="underline text-zinc-700 hover:text-black dark:text-zinc-300 dark:hover:text-white"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        Paperback
+                      </a>
+                    ) : null}
+                    {b.site ? (
+                      <a
+                        href={b.site}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="underline text-zinc-700 hover:text-black dark:text-zinc-300 dark:hover:text-white"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        Teaser
+                      </a>
+                    ) : null}
+                    {b.pdf ? (
+                      <a
+                        href={b.pdf}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="underline text-zinc-700 hover:text-black dark:text-zinc-300 dark:hover:text-white"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        PDF
+                      </a>
+                    ) : null}
                   </div>
                 </div>
               </div>

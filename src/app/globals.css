@@ -1,10 +1,7 @@
 @import "tailwindcss";
 
-/*
-  We intentionally rely on Tailwind + next-themes (class="dark" on <html>)
-  for theme switching. Avoid prefers-color-scheme CSS variables here, otherwise
-  the system theme will override the manual toggle.
-*/
+/* Tailwind v4: make `dark:` respond to a `.dark` class (not media query). */
+@custom-variant dark (&:where(.dark, .dark *));
 
 body {
   font-family: Arial, Helvetica, sans-serif;

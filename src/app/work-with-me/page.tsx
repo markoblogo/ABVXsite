@@ -74,10 +74,10 @@ export default function WorkWithMe() {
             LinkedIn DM
           </a>
           <a
-            className="rounded-md border border-white/15 px-4 py-2 text-sm font-semibold text-white hover:border-white/30"
-            href="mailto:"
+            className="rounded-md border border-black/15 px-4 py-2 text-sm font-semibold text-zinc-950 hover:border-black/30 dark:border-white/15 dark:text-white dark:hover:border-white/30"
+            href="mailto:a.biletskiy@gmail.com"
           >
-            Email (add)
+            Email
           </a>
         </div>
       </section>

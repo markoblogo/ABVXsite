@@ -30,7 +30,7 @@ function Nav() {
             alt="ABV"
             width={48}
             height={48}
-            className="rounded-[8px]"
+            className="rounded-[8px] invert dark:invert-0"
             priority
           />
           <span className="sr-only">Home</span>

@@ -1,4 +1,4 @@
-import { getEcosystems } from '@/lib/abvx-data';
+import { getBooks, getEcosystems, getProjects } from '@/lib/abvx-data';
 
 export const dynamic = 'force-dynamic';
 
@@ -7,8 +7,17 @@ const card =
 const cardStatic =
   'rounded-xl border border-black/10 bg-black/5 p-5 dark:border-white/10 dark:bg-white/5';
 
+import { computeEcosystemMeta } from '@/lib/ecosystem-meta';
+
+const chip =
+  'inline-flex items-center rounded-full border border-black/15 bg-black/5 px-2.5 py-1 text-xs font-semibold text-zinc-800 dark:border-white/15 dark:bg-white/5 dark:text-zinc-200';
+
 export default async function Home() {
-  const ecosystems = await getEcosystems();
+  const [ecosystems, projects, books] = await Promise.all([
+    getEcosystems(),
+    getProjects(),
+    getBooks(),
+  ]);
 
   return (
     <div className="flex flex-col gap-10">
@@ -103,11 +112,14 @@ export default async function Home() {
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <div className="text-base font-semibold leading-snug">{e.name}</div>
-                      {e.tagline ? (
-                        <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-300">
-                          {e.tagline}
-                        </div>
-                      ) : null}
+                      {(() => {
+                        const meta = computeEcosystemMeta(e, books, projects);
+                        return meta.tagline ? (
+                          <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-300">
+                            {meta.tagline}
+                          </div>
+                        ) : null;
+                      })()}
                     </div>
                     {e.status ? (
                       <div className="rounded-full border border-black/15 px-2 py-0.5 text-xs text-zinc-600 dark:border-white/15 dark:text-zinc-300">
@@ -115,6 +127,19 @@ export default async function Home() {
                       </div>
                     ) : null}
                   </div>
+
+                  {(() => {
+                    const meta = computeEcosystemMeta(e, books, projects);
+                    return meta.labels.length ? (
+                      <div className="mt-2 flex flex-wrap gap-2">
+                        {meta.labels.map((l) => (
+                          <span key={l} className={chip}>
+                            {l}
+                          </span>
+                        ))}
+                      </div>
+                    ) : null;
+                  })()}
                 </div>
               </div>
             </a>

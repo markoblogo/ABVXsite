@@ -1,4 +1,4 @@
-import { fetchMediumFeed, mergeFeeds } from '@/lib/feeds';
+import { fetchMediumFeed, fetchSubstackFeed, mergeFeeds } from '@/lib/feeds';
 
 export const metadata = {
   title: 'Writing',
@@ -22,10 +22,12 @@ function formatDate(iso: string): string {
 }
 
 export default async function WritingPage() {
-  const medium = await fetchMediumFeed('https://abvcreative.medium.com/feed');
+  const [medium, substack] = await Promise.all([
+    fetchMediumFeed('https://abvcreative.medium.com/feed'),
+    fetchSubstackFeed('https://abvx.substack.com/feed'),
+  ]);
 
-  // TODO: add Substack once URL is provided
-  const posts = mergeFeeds(medium);
+  const posts = mergeFeeds(medium, substack);
 
   return (
     <div className="flex flex-col gap-6">

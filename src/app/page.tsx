@@ -86,18 +86,36 @@ export default async function Home() {
               href={`/ecosystems/${e.slug}`}
               className={card}
             >
-              <div className="flex items-center justify-between gap-4">
-                <div>
-                  <div className="text-sm font-semibold">{e.name}</div>
-                  {e.tagline ? (
-                    <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-300">{e.tagline}</div>
-                  ) : null}
-                </div>
-                {e.status ? (
-                  <div className="rounded-full border border-black/15 px-2 py-0.5 text-xs text-zinc-600 dark:border-white/15 dark:text-zinc-300">
-                    {e.status}
+              <div className="flex gap-4">
+                {e.coverImage ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={e.coverImage}
+                    alt=""
+                    className="h-20 w-28 flex-none rounded-xl border border-black/10 object-cover dark:border-white/10"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="h-20 w-28 flex-none rounded-xl border border-black/10 bg-black/5 dark:border-white/10 dark:bg-white/5" />
+                )}
+
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <div className="text-base font-semibold leading-snug">{e.name}</div>
+                      {e.tagline ? (
+                        <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-300">
+                          {e.tagline}
+                        </div>
+                      ) : null}
+                    </div>
+                    {e.status ? (
+                      <div className="rounded-full border border-black/15 px-2 py-0.5 text-xs text-zinc-600 dark:border-white/15 dark:text-zinc-300">
+                        {e.status}
+                      </div>
+                    ) : null}
                   </div>
-                ) : null}
+                </div>
               </div>
             </a>
           ))}

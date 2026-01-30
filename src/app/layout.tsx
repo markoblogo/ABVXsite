@@ -10,13 +10,23 @@ export const metadata: Metadata = {
     'Product & Growth Strategist. Building AI-native products, ecosystems, and publishing projects.',
 };
 
+import Image from 'next/image';
+
 function Nav() {
   const link = 'text-sm text-zinc-300 hover:text-white';
   return (
     <header className="border-b border-white/10">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <a href="/" className="text-sm font-semibold tracking-wide text-white">
-          ABV
+        <a href="/" className="flex items-center gap-2 text-sm font-semibold tracking-wide text-white">
+          <Image
+            src="/brand/abv-mark.png"
+            alt="ABV"
+            width={20}
+            height={20}
+            className="rounded-[4px]"
+            priority
+          />
+          <span className="sr-only">Home</span>
         </a>
         <nav className="flex items-center gap-4">
           <a className={link} href="/work-with-me">

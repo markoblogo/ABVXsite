@@ -19,8 +19,8 @@ export async function notionFetch<T>(path: string, init?: RequestInit): Promise<
       'Content-Type': 'application/json',
       ...(init?.headers || {}),
     },
-    // Next.js: cache by default on server components; we prefer revalidate.
-    next: { revalidate: 300 },
+    // Covers change often; for staging we want freshest data.
+    cache: 'no-store',
   });
 
   const json = (await res.json()) as any;

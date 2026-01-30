@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
 import './globals.css';
 
+import Image from 'next/image';
+import { ThemeProvider } from '@/components/theme-provider';
+import { ThemeToggle } from '@/components/theme-toggle';
+
 export const metadata: Metadata = {
   title: {
     default: 'Anton Biletskyi‑Volokh',
@@ -10,14 +14,17 @@ export const metadata: Metadata = {
     'Product & Growth Strategist. Building AI-native products, ecosystems, and publishing projects.',
 };
 
-import Image from 'next/image';
-
 function Nav() {
-  const link = 'text-sm text-zinc-300 hover:text-white';
+  const link =
+    'text-sm text-zinc-700 hover:text-black dark:text-zinc-300 dark:hover:text-white';
+
   return (
-    <header className="border-b border-white/10">
+    <header className="border-b border-black/10 dark:border-white/10">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <a href="/" className="flex items-center gap-2 text-sm font-semibold tracking-wide text-white">
+        <a
+          href="/"
+          className="flex items-center gap-2 text-sm font-semibold tracking-wide text-black dark:text-white"
+        >
           <Image
             src="/brand/abv-mark.png"
             alt="ABV"
@@ -44,6 +51,7 @@ function Nav() {
           <a className={link} href="/writing">
             Writing
           </a>
+          <ThemeToggle />
         </nav>
       </div>
     </header>
@@ -56,30 +64,32 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-zinc-950 text-zinc-50">
-        <Nav />
-        <main className="mx-auto max-w-5xl px-6 py-12">{children}</main>
-        <footer className="border-t border-white/10">
-          <div className="mx-auto max-w-5xl px-6 py-10 text-sm text-zinc-400">
-            <div className="flex flex-col gap-2">
-              <div>
-                Open to consulting, partnerships, and selected full‑time roles.
-              </div>
-              <div className="flex gap-3">
-                <a className="underline hover:text-white" href="/work-with-me">
-                  Work with me
-                </a>
-                <a
-                  className="underline hover:text-white"
-                  href="/projects"
-                >
-                  Projects
-                </a>
+    <html lang="en" suppressHydrationWarning>
+      <body className="min-h-screen bg-white text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50">
+        <ThemeProvider>
+          <Nav />
+          <main className="mx-auto max-w-5xl px-6 py-12">{children}</main>
+          <footer className="border-t border-black/10 dark:border-white/10">
+            <div className="mx-auto max-w-5xl px-6 py-10 text-sm text-zinc-500 dark:text-zinc-400">
+              <div className="flex flex-col gap-2">
+                <div>
+                  Open to consulting, partnerships, and selected full‑time roles.
+                </div>
+                <div className="flex gap-3">
+                  <a className="underline hover:text-black dark:hover:text-white" href="/work-with-me">
+                    Work with me
+                  </a>
+                  <a
+                    className="underline hover:text-black dark:hover:text-white"
+                    href="/projects"
+                  >
+                    Projects
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        </footer>
+          </footer>
+        </ThemeProvider>
       </body>
     </html>
   );

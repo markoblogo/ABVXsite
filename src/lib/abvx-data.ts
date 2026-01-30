@@ -16,6 +16,7 @@ export type Ecosystem = {
   tagline?: string;
   primaryUrl?: string;
   priority?: number;
+  coverImage?: string;
 };
 
 export type Project = {
@@ -69,6 +70,7 @@ export async function getEcosystems(): Promise<Ecosystem[]> {
       tagline: propText(p.Tagline) || undefined,
       primaryUrl: propUrl(p['Primary URL']) || undefined,
       priority: propNumber(p.Priority) ?? undefined,
+      coverImage: coverUrlFromPage(r),
     } satisfies Ecosystem;
   });
 

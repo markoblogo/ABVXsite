@@ -27,6 +27,7 @@ export type Project = {
   website?: string;
   github?: string;
   statusNote?: string;
+  coverImage?: string;
   ecosystemIds: string[];
 };
 
@@ -39,12 +40,21 @@ export type Book = {
   pdf?: string;
   amazon?: string;
   paper?: string;
+  coverImage?: string;
   ecosystemIds: string[];
 };
 
 function idsFromRelation(prop: any): string[] {
   if (!prop || prop.type !== 'relation') return [];
   return (prop.relation || []).map((x: any) => x.id);
+}
+
+function coverUrlFromPage(page: any): string | undefined {
+  const cover = page?.cover;
+  if (!cover) return undefined;
+  if (cover.type === 'external') return cover.external?.url || undefined;
+  if (cover.type === 'file') return cover.file?.url || undefined;
+  return undefined;
 }
 
 export async function getEcosystems(): Promise<Ecosystem[]> {
@@ -79,6 +89,7 @@ export async function getProjects(): Promise<Project[]> {
       website: propUrl(p.Website) || undefined,
       github: propUrl(p.GitHub) || undefined,
       statusNote: propText(p['Status note']) || undefined,
+      coverImage: coverUrlFromPage(r),
       ecosystemIds: idsFromRelation(p.Ecosystem),
     } satisfies Project;
   });
@@ -101,6 +112,7 @@ export async function getBooks(): Promise<Book[]> {
       pdf: propUrl(p.Pdf) || undefined,
       amazon: propUrl(p['e-book Amazon']) || undefined,
       paper: propUrl(p['Paper book']) || undefined,
+      coverImage: coverUrlFromPage(r),
       ecosystemIds: idsFromRelation(p.Ecosystem),
     } satisfies Book;
   });

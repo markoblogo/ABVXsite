@@ -50,6 +50,16 @@ function idsFromRelation(prop: any): string[] {
   return (prop.relation || []).map((x: any) => x.id);
 }
 
+function cleanLabel(s: string | undefined): string | undefined {
+  if (!s) return undefined;
+  // Remove most emoji / pictographic glyphs + variation selectors.
+  const out = s
+    .replace(/[\p{Extended_Pictographic}\uFE0F]/gu, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+  return out || undefined;
+}
+
 function coverUrlFromPage(page: any): string | undefined {
   const cover = page?.cover;
   if (!cover) return undefined;
@@ -64,10 +74,10 @@ export async function getEcosystems(): Promise<Ecosystem[]> {
     const p = r.properties || {};
     return {
       id: r.id,
-      name: propText(p.Name),
+      name: cleanLabel(propText(p.Name)) || '',
       slug: propText(p.Slug),
-      status: propText(p.Status) || undefined,
-      tagline: propText(p.Tagline) || undefined,
+      status: cleanLabel(propText(p.Status)) || undefined,
+      tagline: cleanLabel(propText(p.Tagline)) || undefined,
       primaryUrl: propUrl(p['Primary URL']) || undefined,
       priority: propNumber(p.Priority) ?? undefined,
       coverImage: coverUrlFromPage(r),
@@ -84,13 +94,13 @@ export async function getProjects(): Promise<Project[]> {
     const p = r.properties || {};
     return {
       id: r.id,
-      name: propText(p.Name),
-      type: propText(p.Type) || undefined,
-      stage: propText(p.Stage) || undefined,
-      tagline: propText(p.Tagline) || undefined,
+      name: cleanLabel(propText(p.Name)) || '',
+      type: cleanLabel(propText(p.Type)) || undefined,
+      stage: cleanLabel(propText(p.Stage)) || undefined,
+      tagline: cleanLabel(propText(p.Tagline)) || undefined,
       website: propUrl(p.Website) || undefined,
       github: propUrl(p.GitHub) || undefined,
-      statusNote: propText(p['Status note']) || undefined,
+      statusNote: cleanLabel(propText(p['Status note'])) || undefined,
       coverImage: coverUrlFromPage(r),
       ecosystemIds: idsFromRelation(p.Ecosystem),
     } satisfies Project;
@@ -107,9 +117,9 @@ export async function getBooks(): Promise<Book[]> {
     const p = r.properties || {};
     return {
       id: r.id,
-      name: propText(p.Name),
+      name: cleanLabel(propText(p.Name)) || '',
       slug: propText(p.Slug),
-      section: propText(p['Раздел']) || undefined,
+      section: cleanLabel(propText(p['Раздел'])) || undefined,
       site: propUrl(p.Site) || undefined,
       pdf: propUrl(p.Pdf) || undefined,
       amazon: propUrl(p['e-book Amazon']) || undefined,

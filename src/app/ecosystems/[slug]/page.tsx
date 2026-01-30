@@ -24,19 +24,36 @@ export default async function EcosystemPage({
 
   return (
     <div className="flex flex-col gap-8">
-      <header className="flex flex-col gap-2">
-        <h1 className="text-2xl font-semibold tracking-tight">{eco.name}</h1>
-        {eco.tagline ? (
-          <p className="text-zinc-700 dark:text-zinc-300">{eco.tagline}</p>
+      <header className="flex flex-col gap-4">
+        {eco.coverImage ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={eco.coverImage}
+            alt=""
+            className="h-40 w-full rounded-2xl border border-black/10 object-cover dark:border-white/10"
+            loading="lazy"
+          />
         ) : null}
-        {eco.primaryUrl ? (
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">
-            Primary:{' '}
-            <a className="underline" href={eco.primaryUrl} target="_blank" rel="noreferrer">
-              {eco.primaryUrl}
-            </a>
-          </p>
-        ) : null}
+
+        <div className="flex flex-col gap-2">
+          <h1 className="text-2xl font-semibold tracking-tight">{eco.name}</h1>
+          {eco.tagline ? (
+            <p className="text-zinc-700 dark:text-zinc-300">{eco.tagline}</p>
+          ) : null}
+          {eco.primaryUrl ? (
+            <p className="text-sm text-zinc-500 dark:text-zinc-400">
+              Primary:{' '}
+              <a
+                className="underline"
+                href={eco.primaryUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {eco.primaryUrl}
+              </a>
+            </p>
+          ) : null}
+        </div>
       </header>
 
       <section className="flex flex-col gap-3">

@@ -13,9 +13,19 @@ export default async function Home() {
   return (
     <div className="flex flex-col gap-10">
       <section className="flex flex-col gap-4">
-        <h1 className="text-3xl font-semibold tracking-tight">
-          Anton Biletskyi‑Volokh
-        </h1>
+        <div className="flex items-center gap-3">
+          {/* upside-down avatar: attention hook */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/brand/avatar-upside-96.jpg"
+            alt=""
+            className="h-12 w-12 rounded-full border border-black/10 object-cover dark:border-white/10"
+            loading="lazy"
+          />
+          <h1 className="text-3xl font-semibold tracking-tight">
+            Anton Biletskyi‑Volokh
+          </h1>
+        </div>
         <p className="text-lg text-zinc-700 dark:text-zinc-300">
           Product &amp; Growth Strategist — I help teams build, package, and scale
           products with a modern, AI‑native approach.

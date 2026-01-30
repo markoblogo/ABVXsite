@@ -51,6 +51,9 @@ function Nav() {
           <a className={link} href="/writing">
             Writing
           </a>
+          <a className={link} href="/about">
+            About
+          </a>
           <ThemeToggle />
         </nav>
       </div>

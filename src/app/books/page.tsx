@@ -26,7 +26,7 @@ export default async function BooksPage() {
         ) : null}
       </header>
 
-      <div className="grid gap-3 md:grid-cols-2">
+      <div className="grid gap-3">
         {books
           .filter((b) => b.slug)
           .map((b) => (
@@ -41,15 +41,15 @@ export default async function BooksPage() {
                   <img
                     src={b.coverImage}
                     alt=""
-                    className="h-16 w-12 flex-none rounded-md border border-black/10 object-cover dark:border-white/10"
+                    className="h-28 w-20 flex-none rounded-xl border border-black/10 object-cover dark:border-white/10"
                     loading="lazy"
                   />
                 ) : (
-                  <div className="h-16 w-12 flex-none rounded-md border border-black/10 bg-black/5 dark:border-white/10 dark:bg-white/5" />
+                  <div className="h-28 w-20 flex-none rounded-xl border border-black/10 bg-black/5 dark:border-white/10 dark:bg-white/5" />
                 )}
 
                 <div className="min-w-0 flex-1">
-                  <div className="text-sm font-semibold">{b.name}</div>
+                  <div className="text-base font-semibold leading-snug">{b.name}</div>
                   {b.section ? (
                     <div className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
                       {b.section}

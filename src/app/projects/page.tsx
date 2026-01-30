@@ -37,17 +37,17 @@ export default async function ProjectsPage() {
                   <img
                     src={p.coverImage}
                     alt=""
-                    className="h-24 w-36 flex-none rounded-lg border border-black/10 object-cover dark:border-white/10"
+                    className="h-28 w-40 flex-none rounded-xl border border-black/10 object-cover dark:border-white/10"
                     loading="lazy"
                   />
                 ) : (
-                  <div className="h-24 w-36 flex-none rounded-lg border border-black/10 bg-black/5 dark:border-white/10 dark:bg-white/5" />
+                  <div className="h-28 w-40 flex-none rounded-xl border border-black/10 bg-black/5 dark:border-white/10 dark:bg-white/5" />
                 )}
 
                 <div className="min-w-0 flex-1">
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <div className="text-sm font-semibold">{p.name}</div>
+                      <div className="text-base font-semibold leading-snug">{p.name}</div>
                       {p.tagline ? (
                         <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-300">
                           {p.tagline}
@@ -77,14 +77,24 @@ export default async function ProjectsPage() {
                     ))}
                   </div>
 
-                  <div className="mt-3 flex flex-wrap gap-3 text-sm">
+                  <div className="mt-3 flex flex-wrap gap-2">
                     {p.website ? (
-                      <a className="underline" href={p.website}>
+                      <a
+                        className="inline-flex items-center rounded-full border border-black/15 bg-black/5 px-2.5 py-1 text-xs font-semibold text-zinc-800 hover:bg-black/10 dark:border-white/15 dark:bg-white/5 dark:text-zinc-200 dark:hover:bg-white/10"
+                        href={p.website}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         Website
                       </a>
                     ) : null}
                     {p.github ? (
-                      <a className="underline" href={p.github}>
+                      <a
+                        className="inline-flex items-center rounded-full border border-black/15 bg-black/5 px-2.5 py-1 text-xs font-semibold text-zinc-800 hover:bg-black/10 dark:border-white/15 dark:bg-white/5 dark:text-zinc-200 dark:hover:bg-white/10"
+                        href={p.github}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         GitHub
                       </a>
                     ) : null}

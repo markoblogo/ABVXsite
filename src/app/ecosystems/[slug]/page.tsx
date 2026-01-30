@@ -2,6 +2,12 @@ import { getBooks, getEcosystemBySlug, getProjects } from '@/lib/abvx-data';
 
 export const dynamic = 'force-dynamic';
 
+const card =
+  'rounded-xl border border-black/10 bg-black/5 p-5 hover:border-black/20 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20';
+
+const chip =
+  'inline-flex items-center rounded-full border border-black/15 bg-black/5 px-2.5 py-1 text-xs font-semibold text-zinc-800 hover:bg-black/10 dark:border-white/15 dark:bg-white/5 dark:text-zinc-200 dark:hover:bg-white/10';
+
 export default async function EcosystemPage({
   params,
 }: {
@@ -20,10 +26,15 @@ export default async function EcosystemPage({
     <div className="flex flex-col gap-8">
       <header className="flex flex-col gap-2">
         <h1 className="text-2xl font-semibold tracking-tight">{eco.name}</h1>
-        {eco.tagline ? <p className="text-zinc-300">{eco.tagline}</p> : null}
+        {eco.tagline ? (
+          <p className="text-zinc-700 dark:text-zinc-300">{eco.tagline}</p>
+        ) : null}
         {eco.primaryUrl ? (
-          <p className="text-sm text-zinc-400">
-            Primary: <a className="underline" href={eco.primaryUrl}>{eco.primaryUrl}</a>
+          <p className="text-sm text-zinc-500 dark:text-zinc-400">
+            Primary:{' '}
+            <a className="underline" href={eco.primaryUrl} target="_blank" rel="noreferrer">
+              {eco.primaryUrl}
+            </a>
           </p>
         ) : null}
       </header>
@@ -33,10 +44,7 @@ export default async function EcosystemPage({
         {projectsIn.length ? (
           <div className="grid gap-3">
             {projectsIn.map((p) => (
-              <div
-                key={p.id}
-                className="rounded-xl border border-black/10 bg-black/5 p-5 hover:border-black/20 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20"
-              >
+              <div key={p.id} className={card}>
                 <div className="flex gap-4">
                   {p.coverImage ? (
                     // eslint-disable-next-line @next/next/no-img-element
@@ -69,22 +77,12 @@ export default async function EcosystemPage({
 
                     <div className="mt-3 flex flex-wrap gap-2">
                       {p.website ? (
-                        <a
-                          className="inline-flex items-center rounded-full border border-black/15 bg-black/5 px-2.5 py-1 text-xs font-semibold text-zinc-800 hover:bg-black/10 dark:border-white/15 dark:bg-white/5 dark:text-zinc-200 dark:hover:bg-white/10"
-                          href={p.website}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
+                        <a href={p.website} target="_blank" rel="noreferrer" className={chip}>
                           Website
                         </a>
                       ) : null}
                       {p.github ? (
-                        <a
-                          className="inline-flex items-center rounded-full border border-black/15 bg-black/5 px-2.5 py-1 text-xs font-semibold text-zinc-800 hover:bg-black/10 dark:border-white/15 dark:bg-white/5 dark:text-zinc-200 dark:hover:bg-white/10"
-                          href={p.github}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
+                        <a href={p.github} target="_blank" rel="noreferrer" className={chip}>
                           GitHub
                         </a>
                       ) : null}
@@ -108,86 +106,69 @@ export default async function EcosystemPage({
       <section className="flex flex-col gap-3">
         <h2 className="text-lg font-semibold">Books</h2>
         {booksIn.length ? (
-          <div className="grid gap-3 md:grid-cols-2">
+          <div className="grid gap-3">
             {booksIn.map((b) => (
-              <a
-                key={b.id}
-                href={`/books/${b.slug}`}
-                className="rounded-xl border border-black/10 bg-black/5 p-5 hover:border-black/20 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20"
-              >
+              <div key={b.id} className={card}>
                 <div className="flex gap-4">
                   {b.coverImage ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
                       src={b.coverImage}
                       alt=""
-                      className="h-16 w-12 flex-none rounded-md border border-black/10 object-cover dark:border-white/10"
+                      className="h-28 w-20 flex-none rounded-xl border border-black/10 object-cover dark:border-white/10"
                       loading="lazy"
                     />
                   ) : (
-                    <div className="h-16 w-12 flex-none rounded-md border border-black/10 bg-black/5 dark:border-white/10 dark:bg-white/5" />
+                    <div className="h-28 w-20 flex-none rounded-xl border border-black/10 bg-black/5 dark:border-white/10 dark:bg-white/5" />
                   )}
 
                   <div className="min-w-0 flex-1">
-                    <div className="text-sm font-semibold">{b.name}</div>
+                    {b.slug ? (
+                      <a
+                        href={`/books/${b.slug}`}
+                        className="text-base font-semibold leading-snug hover:underline"
+                      >
+                        {b.name}
+                      </a>
+                    ) : (
+                      <div className="text-base font-semibold leading-snug">{b.name}</div>
+                    )}
+
                     {b.section ? (
                       <div className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
                         {b.section}
                       </div>
                     ) : null}
+
                     <div className="mt-3 flex flex-wrap gap-2">
                       {b.amazon ? (
-                        <a
-                          href={b.amazon}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="inline-flex items-center rounded-full border border-black/15 bg-black/5 px-2.5 py-1 text-xs font-semibold text-zinc-800 hover:bg-black/10 dark:border-white/15 dark:bg-white/5 dark:text-zinc-200 dark:hover:bg-white/10"
-                          onClick={(e) => e.stopPropagation()}
-                        >
+                        <a href={b.amazon} target="_blank" rel="noreferrer" className={chip}>
                           Kindle
                         </a>
                       ) : null}
                       {b.paper ? (
-                        <a
-                          href={b.paper}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="inline-flex items-center rounded-full border border-black/15 bg-black/5 px-2.5 py-1 text-xs font-semibold text-zinc-800 hover:bg-black/10 dark:border-white/15 dark:bg-white/5 dark:text-zinc-200 dark:hover:bg-white/10"
-                          onClick={(e) => e.stopPropagation()}
-                        >
+                        <a href={b.paper} target="_blank" rel="noreferrer" className={chip}>
                           Paperback
                         </a>
                       ) : null}
                       {b.site ? (
-                        <a
-                          href={b.site}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="inline-flex items-center rounded-full border border-black/15 bg-black/5 px-2.5 py-1 text-xs font-semibold text-zinc-800 hover:bg-black/10 dark:border-white/15 dark:bg-white/5 dark:text-zinc-200 dark:hover:bg-white/10"
-                          onClick={(e) => e.stopPropagation()}
-                        >
+                        <a href={b.site} target="_blank" rel="noreferrer" className={chip}>
                           Teaser
                         </a>
                       ) : null}
                       {b.pdf ? (
-                        <a
-                          href={b.pdf}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="inline-flex items-center rounded-full border border-black/15 bg-black/5 px-2.5 py-1 text-xs font-semibold text-zinc-800 hover:bg-black/10 dark:border-white/15 dark:bg-white/5 dark:text-zinc-200 dark:hover:bg-white/10"
-                          onClick={(e) => e.stopPropagation()}
-                        >
+                        <a href={b.pdf} target="_blank" rel="noreferrer" className={chip}>
                           PDF
                         </a>
                       ) : null}
                     </div>
                   </div>
                 </div>
-              </a>
+              </div>
             ))}
           </div>
         ) : (
-          <div className="text-sm text-zinc-400">No books yet.</div>
+          <div className="text-sm text-zinc-500 dark:text-zinc-400">No books yet.</div>
         )}
       </section>
     </div>

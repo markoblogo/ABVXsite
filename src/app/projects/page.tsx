@@ -37,11 +37,11 @@ export default async function ProjectsPage() {
                   <img
                     src={p.coverImage}
                     alt=""
-                    className="h-12 w-12 flex-none rounded-lg border border-black/10 object-cover dark:border-white/10"
+                    className="h-24 w-36 flex-none rounded-lg border border-black/10 object-cover dark:border-white/10"
                     loading="lazy"
                   />
                 ) : (
-                  <div className="h-12 w-12 flex-none rounded-lg border border-black/10 bg-black/5 dark:border-white/10 dark:bg-white/5" />
+                  <div className="h-24 w-36 flex-none rounded-lg border border-black/10 bg-black/5 dark:border-white/10 dark:bg-white/5" />
                 )}
 
                 <div className="min-w-0 flex-1">

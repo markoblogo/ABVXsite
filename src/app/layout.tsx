@@ -124,7 +124,9 @@ export default function RootLayout({
                     <a className="underline hover:text-black dark:hover:text-white" href="https://www.instagram.com/abvcreative/" target="_blank" rel="noreferrer">
                       Instagram
                     </a>
-                    <span className="text-zinc-500 dark:text-zinc-400">Telegram: @ABVcreative</span>
+                    <a className="underline hover:text-black dark:hover:text-white" href="https://t.me/ABVcreative" target="_blank" rel="noreferrer">
+                      Telegram
+                    </a>
                     <a className="underline hover:text-black dark:hover:text-white" href="https://wa.me/33635189545" target="_blank" rel="noreferrer">
                       WhatsApp
                     </a>

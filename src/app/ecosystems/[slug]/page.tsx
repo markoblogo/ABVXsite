@@ -68,6 +68,8 @@ export default async function EcosystemPage({
                     <ZoomableImage
                       src={p.coverImage}
                       alt=""
+                      width={144}
+                      height={96}
                       imgClassName="h-24 w-36 flex-none rounded-xl border border-black/10 object-cover dark:border-white/10"
                     />
                   ) : (
@@ -151,6 +153,8 @@ export default async function EcosystemPage({
                       <ZoomableImage
                         src={b.coverImage}
                         alt=""
+                        width={80}
+                        height={112}
                         imgClassName="h-28 w-20 flex-none rounded-xl border border-black/10 object-cover dark:border-white/10"
                       />
                     ) : (

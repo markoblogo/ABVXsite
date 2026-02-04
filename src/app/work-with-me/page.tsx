@@ -13,7 +13,7 @@ export default function WorkWithMe() {
       </header>
 
       <section className="grid gap-4 md:grid-cols-3">
-        <div className="rounded-xl border border-white/10 bg-white/5 p-5">
+        <div className="rounded-xl border border-black/10 bg-black/5 p-5 dark:border-white/10 dark:bg-white/5">
           <div className="text-sm font-semibold">Product &amp; Growth Strategy</div>
           <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-700 dark:text-zinc-300">
             <li>Positioning &amp; messaging system</li>
@@ -23,7 +23,7 @@ export default function WorkWithMe() {
           </ul>
         </div>
 
-        <div className="rounded-xl border border-white/10 bg-white/5 p-5">
+        <div className="rounded-xl border border-black/10 bg-black/5 p-5 dark:border-white/10 dark:bg-white/5">
           <div className="text-sm font-semibold">
             AI Visibility &amp; Digital Optimization Audit
           </div>
@@ -35,7 +35,7 @@ export default function WorkWithMe() {
           </ul>
         </div>
 
-        <div className="rounded-xl border border-white/10 bg-white/5 p-5">
+        <div className="rounded-xl border border-black/10 bg-black/5 p-5 dark:border-white/10 dark:bg-white/5">
           <div className="text-sm font-semibold">Rapid 0→1 Build Sprint</div>
           <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-700 dark:text-zinc-300">
             <li>Validate &amp; refine the idea</li>
@@ -46,7 +46,7 @@ export default function WorkWithMe() {
         </div>
       </section>
 
-      <section className="rounded-xl border border-white/10 bg-white/5 p-6">
+      <section className="rounded-xl border border-black/10 bg-black/5 p-6 dark:border-white/10 dark:bg-white/5">
         <h2 className="text-lg font-semibold">Who it’s for</h2>
         <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-700 dark:text-zinc-300">
           <li>Founders &amp; small teams building products</li>

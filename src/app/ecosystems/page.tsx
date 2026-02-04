@@ -39,6 +39,8 @@ export default async function EcosystemsPage() {
                 <ZoomableImage
                   src={e.coverImage}
                   alt=""
+                  width={112}
+                  height={80}
                   imgClassName="h-20 w-28 flex-none rounded-xl border border-black/10 object-cover dark:border-white/10"
                 />
               ) : (

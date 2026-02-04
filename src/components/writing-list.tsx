@@ -27,7 +27,7 @@ function hostFromUrl(url: string): string {
 }
 
 export default function WritingList({ posts }: { posts: FeedItem[] }) {
-  const [visible, setVisible] = useState(30);
+  const [visible, setVisible] = useState(10);
   const shown = posts.slice(0, visible);
 
   return (

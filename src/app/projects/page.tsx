@@ -57,6 +57,8 @@ export default async function ProjectsPage() {
                   <ZoomableImage
                     src={p.coverImage}
                     alt=""
+                    width={160}
+                    height={112}
                     imgClassName="h-28 w-40 flex-none rounded-xl border border-black/10 object-cover dark:border-white/10"
                   />
                 ) : (

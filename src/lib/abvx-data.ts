@@ -27,6 +27,7 @@ export type Project = {
   tagline?: string;
   website?: string;
   github?: string;
+  demo?: string;
   statusNote?: string;
   coverImage?: string;
   ecosystemIds: string[];
@@ -38,6 +39,7 @@ export type Book = {
   slug: string;
   section?: string; // "Раздел"
   site?: string;
+  teaser?: string;
   pdf?: string;
   amazon?: string;
   paper?: string;
@@ -60,6 +62,20 @@ function cleanLabel(s: string | undefined): string | undefined {
   return out || undefined;
 }
 
+function cleanStatus(s: string | undefined): string | undefined {
+  const value = cleanLabel(s);
+  if (!value) return undefined;
+  return value.toLowerCase() === 'publishing' ? undefined : value;
+}
+
+function propUrlAny(props: any, keys: string[]): string | undefined {
+  for (const key of keys) {
+    const value = propUrl(props[key]);
+    if (value) return value;
+  }
+  return undefined;
+}
+
 function coverUrlFromPage(page: any): string | undefined {
   const cover = page?.cover;
   if (!cover) return undefined;
@@ -76,7 +92,7 @@ export async function getEcosystems(): Promise<Ecosystem[]> {
       id: r.id,
       name: cleanLabel(propText(p.Name)) || '',
       slug: propText(p.Slug),
-      status: cleanLabel(propText(p.Status)) || undefined,
+      status: cleanStatus(propText(p.Status)) || undefined,
       tagline: cleanLabel(propText(p.Tagline)) || undefined,
       primaryUrl: propUrl(p['Primary URL']) || undefined,
       priority: propNumber(p.Priority) ?? undefined,
@@ -100,6 +116,7 @@ export async function getProjects(): Promise<Project[]> {
       tagline: cleanLabel(propText(p.Tagline)) || undefined,
       website: propUrl(p.Website) || undefined,
       github: propUrl(p.GitHub) || undefined,
+      demo: propUrlAny(p, ['Demo', 'Video', 'Teaser', 'Teaser video']) || undefined,
       statusNote: cleanLabel(propText(p['Status note'])) || undefined,
       coverImage: coverUrlFromPage(r),
       ecosystemIds: idsFromRelation(p.Ecosystem),
@@ -121,6 +138,7 @@ export async function getBooks(): Promise<Book[]> {
       slug: propText(p.Slug),
       section: cleanLabel(propText(p['Раздел'])) || undefined,
       site: propUrl(p.Site) || undefined,
+      teaser: propUrlAny(p, ['Teaser', 'Teaser video', 'Video', 'Site']) || undefined,
       pdf: propUrl(p.Pdf) || undefined,
       amazon: propUrl(p['e-book Amazon']) || undefined,
       paper: propUrl(p['Paper book']) || undefined,

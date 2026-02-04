@@ -1,4 +1,5 @@
 import { getBooks, getEcosystems, getProjects } from '@/lib/abvx-data';
+import ZoomableImage from '@/components/zoomable-image';
 
 export const dynamic = 'force-dynamic';
 
@@ -35,12 +36,10 @@ export default async function EcosystemsPage() {
           <a key={e.id} href={`/ecosystems/${e.slug}`} className={card}>
             <div className="flex gap-4">
               {e.coverImage ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
+                <ZoomableImage
                   src={e.coverImage}
                   alt=""
-                  className="h-20 w-28 flex-none rounded-xl border border-black/10 object-cover dark:border-white/10"
-                  loading="lazy"
+                  imgClassName="h-20 w-28 flex-none rounded-xl border border-black/10 object-cover dark:border-white/10"
                 />
               ) : (
                 <div className="h-20 w-28 flex-none rounded-xl border border-black/10 bg-black/5 dark:border-white/10 dark:bg-white/5" />
@@ -60,6 +59,9 @@ export default async function EcosystemsPage() {
                               {meta.tagline}
                             </div>
                           ) : null}
+                          <div className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">
+                            {meta.booksCount} book(s) · {meta.projectsCount} project(s)
+                          </div>
                           {meta.labels.length ? (
                             <div className="mt-2 flex flex-wrap gap-2">
                               {meta.labels.map((l) => (

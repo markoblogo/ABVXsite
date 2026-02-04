@@ -1,4 +1,5 @@
 import { getEcosystems, getProjects } from '@/lib/abvx-data';
+import ZoomableImage from '@/components/zoomable-image';
 
 export const dynamic = 'force-dynamic';
 
@@ -13,6 +14,19 @@ export default async function ProjectsPage() {
   const [ecosystems, projects] = await Promise.all([getEcosystems(), getProjects()]);
 
   const ecoById = new Map(ecosystems.map((e) => [e.id, e] as const));
+  const stageRank = (stage?: string) => {
+    const s = (stage || '').toLowerCase();
+    if (s.includes('live')) return 0;
+    if (s.includes('in development') || s.includes('in-dev') || s.includes('dev')) return 1;
+    return 2;
+  };
+
+  const sorted = [...projects].sort((a, b) => {
+    const ra = stageRank(a.stage);
+    const rb = stageRank(b.stage);
+    if (ra !== rb) return ra - rb;
+    return a.name.localeCompare(b.name);
+  });
 
   return (
     <div className="flex flex-col gap-6">
@@ -24,21 +38,26 @@ export default async function ProjectsPage() {
       </header>
 
       <div className="grid gap-3">
-        {projects.map((p) => {
+        {sorted.map((p) => {
           const ecoNames = p.ecosystemIds
             .map((id) => ecoById.get(id)?.name)
             .filter(Boolean) as string[];
+          const stageLower = (p.stage || '').toLowerCase();
+          const stageClass =
+            stageLower.includes('live')
+              ? 'border-emerald-300/60 text-emerald-700 dark:border-emerald-300/30 dark:text-emerald-300'
+              : stageLower.includes('in development') || stageLower.includes('in-dev') || stageLower.includes('dev')
+                ? 'border-amber-300/60 text-amber-700 dark:border-amber-300/30 dark:text-amber-300'
+                : 'border-black/15 text-zinc-600 dark:border-white/15 dark:text-zinc-300';
 
           return (
             <div key={p.id} className={card}>
               <div className="flex gap-4">
                 {p.coverImage ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
+                  <ZoomableImage
                     src={p.coverImage}
                     alt=""
-                    className="h-28 w-40 flex-none rounded-xl border border-black/10 object-cover dark:border-white/10"
-                    loading="lazy"
+                    imgClassName="h-28 w-40 flex-none rounded-xl border border-black/10 object-cover dark:border-white/10"
                   />
                 ) : (
                   <div className="h-28 w-40 flex-none rounded-xl border border-black/10 bg-black/5 dark:border-white/10 dark:bg-white/5" />
@@ -55,7 +74,7 @@ export default async function ProjectsPage() {
                       ) : null}
                     </div>
                     {p.stage ? (
-                      <div className="rounded-full border border-black/15 px-2 py-0.5 text-xs text-zinc-600 dark:border-white/15 dark:text-zinc-300">
+                      <div className={`rounded-full border px-2 py-0.5 text-xs ${stageClass}`}>
                         {p.stage}
                       </div>
                     ) : null}
@@ -96,6 +115,16 @@ export default async function ProjectsPage() {
                         rel="noreferrer"
                       >
                         GitHub
+                      </a>
+                    ) : null}
+                    {p.demo ? (
+                      <a
+                        className="inline-flex items-center rounded-full border border-black/15 bg-black/5 px-2.5 py-1 text-xs font-semibold text-zinc-800 hover:bg-black/10 dark:border-white/15 dark:bg-white/5 dark:text-zinc-200 dark:hover:bg-white/10"
+                        href={p.demo}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Demo
                       </a>
                     ) : null}
                   </div>

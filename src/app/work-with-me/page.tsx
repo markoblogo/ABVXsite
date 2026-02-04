@@ -7,7 +7,7 @@ export default function WorkWithMe() {
     <div className="flex flex-col gap-10">
       <header className="flex flex-col gap-3">
         <h1 className="text-2xl font-semibold tracking-tight">Work with me</h1>
-        <p className="text-zinc-300">
+        <p className="text-zinc-700 dark:text-zinc-300">
           Engagements that move from clarity → execution → measurable traction.
         </p>
       </header>
@@ -15,7 +15,7 @@ export default function WorkWithMe() {
       <section className="grid gap-4 md:grid-cols-3">
         <div className="rounded-xl border border-white/10 bg-white/5 p-5">
           <div className="text-sm font-semibold">Product &amp; Growth Strategy</div>
-          <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-300">
+          <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-700 dark:text-zinc-300">
             <li>Positioning &amp; messaging system</li>
             <li>Offer architecture &amp; packaging</li>
             <li>GTM plan + channel prioritization</li>
@@ -27,7 +27,7 @@ export default function WorkWithMe() {
           <div className="text-sm font-semibold">
             AI Visibility &amp; Digital Optimization Audit
           </div>
-          <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-300">
+          <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-700 dark:text-zinc-300">
             <li>LLM‑first visibility audit</li>
             <li>llms.txt, metadata, internal linking</li>
             <li>Automation/digitalization opportunities</li>
@@ -37,7 +37,7 @@ export default function WorkWithMe() {
 
         <div className="rounded-xl border border-white/10 bg-white/5 p-5">
           <div className="text-sm font-semibold">Rapid 0→1 Build Sprint</div>
-          <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-300">
+          <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-700 dark:text-zinc-300">
             <li>Validate &amp; refine the idea</li>
             <li>Packaging: landing + funnel</li>
             <li>Analytics &amp; automation</li>
@@ -48,7 +48,7 @@ export default function WorkWithMe() {
 
       <section className="rounded-xl border border-white/10 bg-white/5 p-6">
         <h2 className="text-lg font-semibold">Who it’s for</h2>
-        <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-300">
+        <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-700 dark:text-zinc-300">
           <li>Founders &amp; small teams building products</li>
           <li>Marketing / growth leads needing sharp positioning + execution</li>
           <li>Publishers / creators who want AI‑first visibility + conversion</li>
@@ -61,7 +61,7 @@ export default function WorkWithMe() {
 
       <section className="flex flex-col gap-3">
         <h2 className="text-lg font-semibold">Contact</h2>
-        <p className="text-sm text-zinc-300">
+        <p className="text-sm text-zinc-700 dark:text-zinc-300">
           Best: LinkedIn DM. Or email for longer context.
         </p>
         <div className="flex flex-wrap gap-3">

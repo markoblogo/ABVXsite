@@ -124,6 +124,9 @@ export default function RootLayout({
                     <a className="underline hover:text-black dark:hover:text-white" href="https://www.behance.net/ABV_Creative" target="_blank" rel="noreferrer">
                       Behance
                     </a>
+                    <a className="underline hover:text-black dark:hover:text-white" href="https://www.vivino.com/users/anthony.bile" target="_blank" rel="noreferrer">
+                      Vivino
+                    </a>
                     <a className="underline hover:text-black dark:hover:text-white" href="https://www.instagram.com/abvcreative/" target="_blank" rel="noreferrer">
                       Instagram
                     </a>

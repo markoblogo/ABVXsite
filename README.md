@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Personal site for Anton Biletskyi-Volokh.
+
+Live: https://abvx.xyz
 
 ## Getting Started
 
-First, run the development server:
+Install deps and run the dev server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Data sources
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Content is pulled from Notion databases via the server-side helpers in `src/lib/notion.ts`
+and `src/lib/abvx-data.ts`.
 
-## Learn More
+Required env (see `.env.example`):
+- `NOTION_TOKEN`
+- `NOTION_VERSION`
 
-To learn more about Next.js, take a look at the following resources:
+## Key routes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `/projects` - products/tools with demos and links
+- `/books` - publishing projects grouped by ecosystem
+- `/writing` - unified Medium + Substack feed
+- `/ecosystems` - grouped workstreams
+- `/work-with-me` - consulting/engagements
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## SEO / LLMO
 
-## Deploy on Vercel
+- Canonical domain: https://abvx.xyz
+- `sitemap.ts` and `robots.ts` are configured
+- `public/llms.txt` provides a compact site map for LLMs
+- JSON-LD includes Person, WebSite, and ItemList markup
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Notes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Images from Notion are optimized via `next/image` using `remotePatterns` in `next.config.ts`.
+- `src/components/zoomable-image.tsx` provides click-to-zoom previews.

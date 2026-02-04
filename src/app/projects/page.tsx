@@ -4,8 +4,8 @@ import StructuredData from '@/components/structured-data';
 
 export const dynamic = 'force-dynamic';
 
-const card =
-  'rounded-xl border border-black/10 bg-black/5 p-5 hover:border-black/20 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20';
+  const card =
+  'rounded-xl border border-black/10 bg-black/5 p-5 hover:border-black/20 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20 overflow-hidden';
 
 export const metadata = {
   title: 'Projects',
@@ -81,9 +81,11 @@ export default async function ProjectsPage() {
                 <div className="min-w-0 flex-1">
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <div className="text-base font-semibold leading-snug">{p.name}</div>
+                      <div className="text-base font-semibold leading-snug break-words">
+                        {p.name}
+                      </div>
                       {p.tagline ? (
-                        <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-300">
+                        <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-300 break-words">
                           {p.tagline}
                         </div>
                       ) : null}

@@ -35,9 +35,9 @@ export default async function ProjectsPage() {
   const items = sorted.map((p) => ({
     id: p.id,
     name: p.name,
-    url: p.website || 'https://abvx.xyz/projects',
+    url: p.website || p.demo || 'https://abvx.xyz/projects',
     image: p.coverImage,
-    type: 'CreativeWork',
+    type: p.demo || p.website ? 'SoftwareApplication' : 'CreativeWork',
   }));
 
   return (
@@ -65,7 +65,7 @@ export default async function ProjectsPage() {
 
           return (
             <div key={p.id} className={card}>
-              <div className="flex gap-4">
+              <div className="flex flex-col gap-4 sm:flex-row">
                 {p.coverImage ? (
                   <ZoomableImage
                     src={p.coverImage}

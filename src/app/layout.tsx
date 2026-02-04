@@ -12,6 +12,21 @@ export const metadata: Metadata = {
   },
   description:
     'Product & Growth Strategist. Building AI-native products, ecosystems, and publishing projects.',
+  metadataBase: new URL('https://abvx.xyz'),
+  openGraph: {
+    title: 'Anton Biletskyi‑Volokh',
+    description:
+      'Product & Growth Strategist. Building AI-native products, ecosystems, and publishing projects.',
+    url: 'https://abvx.xyz',
+    siteName: 'Anton Biletskyi‑Volokh',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Anton Biletskyi‑Volokh',
+    description:
+      'Product & Growth Strategist. Building AI-native products, ecosystems, and publishing projects.',
+  },
 };
 
 function Nav() {

@@ -1,0 +1,18 @@
+Site: https://abvx.xyz
+Name: Anton Biletskyi‑Volokh
+Summary: Personal site featuring projects, books, ecosystems, and writing.
+
+Primary sections:
+- /projects
+- /books
+- /ecosystems
+- /writing
+- /work-with-me
+- /about
+
+Content notes:
+- Projects and books may include external links (website, GitHub, demo, Amazon, PDF).
+- Ecosystems group related projects and books.
+
+Contact:
+- Email: a.biletskyi@gmail.com

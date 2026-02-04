@@ -50,7 +50,7 @@ function Nav() {
           />
           <span className="sr-only">Home</span>
         </a>
-        <nav className="flex items-center gap-4">
+        <nav className="flex flex-wrap items-center gap-4">
           <a className={link} href="/work-with-me">
             Work with me
           </a>

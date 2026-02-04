@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import './globals.css';
 
 import Image from 'next/image';
@@ -85,6 +86,41 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className="min-h-screen bg-white text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50">
         <ThemeProvider>
+          <Script
+            id="jsonld-person"
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'Person',
+                name: 'Anton Biletskyi‑Volokh',
+                url: 'https://abvx.xyz',
+                sameAs: [
+                  'https://www.linkedin.com/in/abvcreative/',
+                  'https://github.com/markoblogo',
+                  'https://abvcreative.medium.com/',
+                  'https://abvx.substack.com/',
+                  'https://www.youtube.com/@ABV_Creative',
+                  'https://x.com/abv_creative',
+                  'https://www.behance.net/ABV_Creative',
+                  'https://www.instagram.com/abvcreative/',
+                  'https://t.me/ABVcreative',
+                ],
+              }),
+            }}
+          />
+          <Script
+            id="jsonld-website"
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'WebSite',
+                name: 'Anton Biletskyi‑Volokh',
+                url: 'https://abvx.xyz',
+              }),
+            }}
+          />
           <Nav />
           <main className="mx-auto max-w-5xl px-6 py-12">{children}</main>
           <footer className="border-t border-black/10 dark:border-white/10">

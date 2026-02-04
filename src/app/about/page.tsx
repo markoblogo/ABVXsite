@@ -2,6 +2,9 @@ import { getBooks, getEcosystems, getProjects } from '@/lib/abvx-data';
 
 export const metadata = {
   title: 'About',
+  description:
+    'Background, focus areas, and the ecosystem of projects I build across publishing, AI, and product strategy.',
+  alternates: { canonical: 'https://abvx.xyz/about' },
 };
 
 export const dynamic = 'force-dynamic';

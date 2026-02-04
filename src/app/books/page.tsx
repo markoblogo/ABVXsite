@@ -1,10 +1,14 @@
 import { getBooks, getEcosystems } from '@/lib/abvx-data';
 import ZoomableImage from '@/components/zoomable-image';
+import StructuredData from '@/components/structured-data';
 
 export const dynamic = 'force-dynamic';
 
 export const metadata = {
   title: 'Books',
+  description:
+    'Publishing projects and book releases with links to Kindle, paperback, teasers, and downloads.',
+  alternates: { canonical: 'https://abvx.xyz/books' },
 };
 
 const chip =
@@ -14,6 +18,15 @@ export default async function BooksPage() {
   const [books, ecosystems] = await Promise.all([getBooks(), getEcosystems()]);
 
   const missing = books.filter((b) => !b.slug);
+  const items = books
+    .filter((b) => b.slug)
+    .map((b) => ({
+      id: b.id,
+      name: b.name,
+      url: `https://abvx.xyz/books/${b.slug}`,
+      image: b.coverImage,
+      type: 'Book',
+    }));
   const ecoById = new Map(ecosystems.map((e) => [e.id, e] as const));
   const booksByEco = new Map<string, typeof books>();
   const other: typeof books = [];
@@ -32,6 +45,7 @@ export default async function BooksPage() {
 
   return (
     <div className="flex flex-col gap-6">
+      <StructuredData id="jsonld-books" items={items} />
       <header>
         <h1 className="text-2xl font-semibold tracking-tight">Books</h1>
         <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">

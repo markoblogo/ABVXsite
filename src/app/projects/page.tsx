@@ -1,5 +1,6 @@
 import { getEcosystems, getProjects } from '@/lib/abvx-data';
 import ZoomableImage from '@/components/zoomable-image';
+import StructuredData from '@/components/structured-data';
 
 export const dynamic = 'force-dynamic';
 
@@ -8,6 +9,9 @@ const card =
 
 export const metadata = {
   title: 'Projects',
+  description:
+    'A catalog of products, tools, and landing pages I build or maintain — with links to live sites, demos, and source.',
+  alternates: { canonical: 'https://abvx.xyz/projects' },
 };
 
 export default async function ProjectsPage() {
@@ -28,8 +32,17 @@ export default async function ProjectsPage() {
     return a.name.localeCompare(b.name);
   });
 
+  const items = sorted.map((p) => ({
+    id: p.id,
+    name: p.name,
+    url: p.website || 'https://abvx.xyz/projects',
+    image: p.coverImage,
+    type: 'CreativeWork',
+  }));
+
   return (
     <div className="flex flex-col gap-6">
+      <StructuredData id="jsonld-projects" items={items} />
       <header>
         <h1 className="text-2xl font-semibold tracking-tight">Projects</h1>
         <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">

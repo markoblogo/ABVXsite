@@ -3,6 +3,9 @@ import WritingList from '@/components/writing-list';
 
 export const metadata = {
   title: 'Writing',
+  description:
+    'A unified feed of my latest essays and notes from Medium and Substack.',
+  alternates: { canonical: 'https://abvx.xyz/writing' },
 };
 
 export const dynamic = 'force-dynamic';

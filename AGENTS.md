@@ -219,7 +219,7 @@ State:
 - **Build:** `npm run build`
 
 - **Run a single test:** (not specified)
-- **Where configs live:** (not specified)
+- **Where configs live:** `package-lock.json`, `package.json`
 <!-- AGENTSGEN:END section=commands -->
 
 <!-- AGENTSGEN:START section=node -->
@@ -239,7 +239,8 @@ State:
 ## Repo Structure
 
 <!-- AGENTSGEN:START section=structure -->
-- (not specified)
+- **Source:** `src`
+- **Config:** `package-lock.json`, `package.json`
 <!-- AGENTSGEN:END section=structure -->
 
 ## Output Protocol

@@ -27,7 +27,14 @@
     "docs": [
       "README.md"
     ],
-    "ci": ""
+    "ci": "",
+    "source_dirs": [
+      "src"
+    ],
+    "config_locations": [
+      "package.json",
+      "package-lock.json"
+    ]
   },
   "commands": {
     "dev": "npm run dev",

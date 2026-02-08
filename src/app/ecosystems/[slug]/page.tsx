@@ -9,6 +9,9 @@ const card =
 const chip =
   'inline-flex items-center rounded-full border border-black/15 bg-black/5 px-2.5 py-1 text-xs font-semibold text-zinc-800 hover:bg-black/10 dark:border-white/15 dark:bg-white/5 dark:text-zinc-200 dark:hover:bg-white/10';
 
+const publishingBadge =
+  'border-emerald-300/60 text-emerald-700 dark:border-emerald-300/30 dark:text-emerald-300';
+
 export default async function EcosystemPage({
   params,
 }: {
@@ -161,22 +164,30 @@ export default async function EcosystemPage({
                     )}
 
                     <div className="min-w-0 flex-1">
-                      {b.slug ? (
-                        <a
-                          href={`/books/${b.slug}`}
-                          className="text-base font-semibold leading-snug hover:underline"
-                        >
-                          {b.name}
-                        </a>
-                      ) : (
-                        <div className="text-base font-semibold leading-snug">{b.name}</div>
-                      )}
+                      <div className="flex items-start justify-between gap-4">
+                        <div className="min-w-0">
+                          {b.slug ? (
+                            <a
+                              href={`/books/${b.slug}`}
+                              className="block text-base font-semibold leading-snug hover:underline"
+                            >
+                              {b.name}
+                            </a>
+                          ) : (
+                            <div className="text-base font-semibold leading-snug">{b.name}</div>
+                          )}
 
-                      {b.section ? (
-                        <div className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
-                          {b.section}
+                          {b.section ? (
+                            <div className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+                              {b.section}
+                            </div>
+                          ) : null}
                         </div>
-                      ) : null}
+
+                        <div className={`rounded-full border px-2 py-0.5 text-xs ${publishingBadge}`}>
+                          Publishing
+                        </div>
+                      </div>
 
                       <div className="mt-3 flex flex-wrap gap-2">
                         {b.amazon ? (

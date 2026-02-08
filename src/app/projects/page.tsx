@@ -21,7 +21,14 @@ export default async function ProjectsPage() {
   const stageRank = (stage?: string) => {
     const s = (stage || '').toLowerCase();
     if (s.includes('live')) return 0;
-    if (s.includes('in development') || s.includes('in-dev') || s.includes('dev')) return 1;
+    if (
+      s.includes('building') ||
+      s.includes('in development') ||
+      s.includes('in-dev') ||
+      s === 'dev' ||
+      s === 'building'
+    )
+      return 1;
     return 2;
   };
 
@@ -59,8 +66,11 @@ export default async function ProjectsPage() {
           const stageClass =
             stageLower.includes('live')
               ? 'border-emerald-300/60 text-emerald-700 dark:border-emerald-300/30 dark:text-emerald-300'
-              : stageLower.includes('in development') || stageLower.includes('in-dev') || stageLower.includes('dev')
-                ? 'border-amber-300/60 text-amber-700 dark:border-amber-300/30 dark:text-amber-300'
+              : stageLower.includes('building') ||
+                  stageLower.includes('in development') ||
+                  stageLower.includes('in-dev') ||
+                  stageLower === 'dev'
+                ? 'border-orange-300/60 text-orange-700 dark:border-orange-300/30 dark:text-orange-300'
                 : 'border-black/15 text-zinc-600 dark:border-white/15 dark:text-zinc-300';
 
           return (

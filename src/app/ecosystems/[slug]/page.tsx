@@ -145,7 +145,6 @@ export default async function EcosystemPage({
         {booksIn.length ? (
           <div className="grid gap-3">
             {booksIn.map((b) => {
-              const teaser = b.teaser || b.site;
               return (
                 <div key={b.id} className={card}>
                   <div className="flex gap-4">
@@ -190,9 +189,14 @@ export default async function EcosystemPage({
                             Paperback
                           </a>
                         ) : null}
-                        {teaser ? (
-                          <a href={teaser} target="_blank" rel="noreferrer" className={chip}>
+                        {b.teaser ? (
+                          <a href={b.teaser} target="_blank" rel="noreferrer" className={chip}>
                             Teaser
+                          </a>
+                        ) : null}
+                        {b.site ? (
+                          <a href={b.site} target="_blank" rel="noreferrer" className={chip}>
+                            Site
                           </a>
                         ) : null}
                         {b.pdf ? (

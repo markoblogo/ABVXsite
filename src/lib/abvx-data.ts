@@ -63,9 +63,8 @@ function cleanLabel(s: string | undefined): string | undefined {
 }
 
 function cleanStatus(s: string | undefined): string | undefined {
-  const value = cleanLabel(s);
-  if (!value) return undefined;
-  return value.toLowerCase() === 'publishing' ? undefined : value;
+  // Keep status as-is (after emoji cleanup). UI decides how to display/highlight.
+  return cleanLabel(s);
 }
 
 function propUrlAny(props: any, keys: string[]): string | undefined {

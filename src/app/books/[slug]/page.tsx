@@ -48,9 +48,14 @@ export default async function BookPage({
       <section className="rounded-xl border border-white/10 bg-white/5 p-6">
         <h2 className="text-lg font-semibold">Links</h2>
         <div className="mt-3 flex flex-col gap-2 text-sm">
-          {book.teaser || book.site ? (
-            <a className="underline" href={book.teaser || book.site}>
+          {book.teaser ? (
+            <a className="underline" href={book.teaser}>
               Teaser
+            </a>
+          ) : null}
+          {book.site ? (
+            <a className="underline" href={book.site}>
+              Site
             </a>
           ) : null}
           {book.amazon ? (

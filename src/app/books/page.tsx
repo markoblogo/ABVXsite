@@ -74,7 +74,6 @@ export default async function BooksPage() {
 
               <div className="grid gap-3">
                 {list.map((b) => {
-                  const teaser = b.teaser || b.site;
                   return (
                     <div
                       key={b.id}
@@ -124,9 +123,14 @@ export default async function BooksPage() {
                                 Paperback
                               </a>
                             ) : null}
-                            {teaser ? (
-                              <a href={teaser} target="_blank" rel="noreferrer" className={chip}>
+                            {b.teaser ? (
+                              <a href={b.teaser} target="_blank" rel="noreferrer" className={chip}>
                                 Teaser
+                              </a>
+                            ) : null}
+                            {b.site ? (
+                              <a href={b.site} target="_blank" rel="noreferrer" className={chip}>
+                                Site
                               </a>
                             ) : null}
                             {b.pdf ? (
@@ -152,7 +156,6 @@ export default async function BooksPage() {
             </div>
             <div className="grid gap-3">
               {other.map((b) => {
-                const teaser = b.teaser || b.site;
                 return (
                   <div
                     key={b.id}
@@ -202,9 +205,14 @@ export default async function BooksPage() {
                               Paperback
                             </a>
                           ) : null}
-                          {teaser ? (
-                            <a href={teaser} target="_blank" rel="noreferrer" className={chip}>
+                          {b.teaser ? (
+                            <a href={b.teaser} target="_blank" rel="noreferrer" className={chip}>
                               Teaser
+                            </a>
+                          ) : null}
+                          {b.site ? (
+                            <a href={b.site} target="_blank" rel="noreferrer" className={chip}>
+                              Site
                             </a>
                           ) : null}
                           {b.pdf ? (

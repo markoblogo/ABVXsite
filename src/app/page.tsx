@@ -91,6 +91,22 @@ export default async function Home() {
               Writing
             </a>
           </div>
+
+          <div className="pt-1 text-sm text-zinc-600 dark:text-zinc-300">
+            Quick map:{' '}
+            <a className="underline" href="/llmo">
+              LLM-first visibility (LLMO)
+            </a>
+            ,{' '}
+            <a className="underline" href="/work-with-me">
+              Product &amp; growth strategy
+            </a>
+            ,{' '}
+            <a className="underline" href="/about">
+              About Anton (ABVX)
+            </a>
+            .
+          </div>
         </div>
       </section>
 

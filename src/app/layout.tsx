@@ -154,6 +154,9 @@ export default function RootLayout({
                     <a className="underline hover:text-black dark:hover:text-white" href="/books">
                       Books
                     </a>
+                    <a className="underline hover:text-black dark:hover:text-white" href="/links">
+                      Links
+                    </a>
                   </div>
                 </div>
 

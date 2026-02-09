@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Work with me',
+  title: 'ABVX — Work with me',
   description:
     'Strategy, advisory, and LLM-first visibility (LLMO) support for founders and small teams: positioning, go-to-market, and shippable artifacts.',
   alternates: { canonical: 'https://abvx.xyz/work-with-me' },
@@ -15,6 +15,10 @@ export default function WorkWithMe() {
         <p className="text-zinc-700 dark:text-zinc-300">
           Product, growth, brand, and LLM-first visibility delivered as clear decisions
           and shippable artifacts.
+        </p>
+        <p className="text-sm text-zinc-600 dark:text-zinc-300">
+          If you’re looking for abvx product growth support, the work is simple: clarify the offer,
+          pick a narrow next step, and ship with measurable outputs.
         </p>
       </header>
 

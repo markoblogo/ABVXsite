@@ -261,6 +261,10 @@ export default async function EcosystemPage({
           </div>
         )}
       </section>
+
+      <div className="text-sm text-zinc-600 dark:text-zinc-300">
+        Back to <a className="underline" href="/">ABVX hub</a>.
+      </div>
     </div>
   );
 }

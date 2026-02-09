@@ -24,6 +24,9 @@ export default async function EcosystemsPage() {
         <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
           Ecosystems are running threads that produce tools, writing, and reusable assets.
         </p>
+        <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+          abvx.xyz is the hub. Spokes may live on dedicated subdomains or external sites, but each ecosystem links back here as the canonical home.
+        </p>
       </header>
 
       <section className="grid gap-4 md:grid-cols-2">

@@ -1,7 +1,7 @@
 import { getBooks, getEcosystems, getProjects } from '@/lib/abvx-data';
 
 export const metadata = {
-  title: 'About',
+  title: 'Anton Biletskyi-Volokh (ABVX)',
   description:
     'Marketing, brand, and growth strategy with 20+ years of international experience across tech, hospitality, FMCG, and venture building.',
   alternates: { canonical: 'https://abvx.xyz/about' },
@@ -42,6 +42,9 @@ export default async function AboutPage() {
           the middle layer between ideas and outcomes: turning complexity into clear
           stories, systems, and execution.
         </p>
+        <p className="text-sm text-zinc-600 dark:text-zinc-300">
+          ABVX is the umbrella for my ecosystem of tools, writing, books, and experiments.
+        </p>
       </header>
 
       <section className="rounded-xl border border-black/10 bg-black/5 p-6 dark:border-white/10 dark:bg-white/5">
@@ -76,6 +79,33 @@ export default async function AboutPage() {
         <p className="mt-3 text-sm text-zinc-700 dark:text-zinc-300">
           Ukrainian, Russian (native), English (B2), French (A2–B1).
         </p>
+      </section>
+
+      <section className="rounded-xl border border-black/10 bg-black/5 p-6 dark:border-white/10 dark:bg-white/5">
+        <h2 className="text-lg font-semibold">Elsewhere</h2>
+        <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm">
+          <a className="underline" href="https://www.linkedin.com/in/abvcreative/" target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
+          <a className="underline" href="https://github.com/markoblogo" target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+          <a className="underline" href="https://abvx.substack.com/" target="_blank" rel="noreferrer">
+            Substack
+          </a>
+          <a className="underline" href="https://abvcreative.medium.com/" target="_blank" rel="noreferrer">
+            Medium
+          </a>
+          <a className="underline" href="https://www.youtube.com/@ABV_Creative" target="_blank" rel="noreferrer">
+            YouTube
+          </a>
+          <a className="underline" href="https://x.com/abv_creative" target="_blank" rel="noreferrer">
+            X
+          </a>
+        </div>
+        <div className="mt-4 text-sm text-zinc-600 dark:text-zinc-300">
+          Full list: <a className="underline" href="/links">/links</a>
+        </div>
       </section>
 
       <section className="grid gap-4 md:grid-cols-3">

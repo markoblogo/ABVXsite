@@ -15,6 +15,10 @@ export default async function sitemap() {
     { url: `${base}/writing`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${base}/work-with-me`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/ecosystems`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${base}/llmo`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/links`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${base}/toki-pona`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${base}/cropto`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
   ];
 
   for (const b of books) {

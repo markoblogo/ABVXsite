@@ -6,7 +6,9 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { ThemeToggle } from '@/components/theme-toggle';
 
 const googleVerification = process.env.GOOGLE_SITE_VERIFICATION;
-const bingVerification = process.env.BING_SITE_VERIFICATION;
+// Prefer env var, but keep a safe default so verification survives redeploys.
+const bingVerification =
+  process.env.BING_SITE_VERIFICATION || '6eb9686badc546c2ac215812a702e4e4';
 
 const personJsonLd = {
   '@context': 'https://schema.org',

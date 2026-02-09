@@ -3,7 +3,7 @@ import { getBooks, getEcosystems, getProjects } from '@/lib/abvx-data';
 export const metadata = {
   title: 'About',
   description:
-    'Background, focus areas, and the ecosystem of projects I build across publishing, AI, and product strategy.',
+    'Marketing, brand, and growth strategy with 20+ years of international experience across tech, hospitality, FMCG, and venture building.',
   alternates: { canonical: 'https://abvx.xyz/about' },
 };
 
@@ -37,11 +37,46 @@ export default async function AboutPage() {
       <header className="flex flex-col gap-3">
         <h1 className="text-2xl font-semibold tracking-tight">About</h1>
         <p className="text-zinc-700 dark:text-zinc-300">
-          I’m a product &amp; growth strategist with a background in building brands,
-          products, and go‑to‑market systems. In recent years my focus has shifted
-          heavily toward AI‑native products and LLM‑first visibility.
+          I’m a marketing, brand, and growth strategist with 20+ years of international
+          experience across tech, hospitality, FMCG, and venture building. I’m drawn to
+          the middle layer between ideas and outcomes: turning complexity into clear
+          stories, systems, and execution.
         </p>
       </header>
+
+      <section className="rounded-xl border border-black/10 bg-black/5 p-6 dark:border-white/10 dark:bg-white/5">
+        <h2 className="text-lg font-semibold">What I’m focused on now</h2>
+        <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-700 dark:text-zinc-300">
+          <li>Applied AI for product and marketing workflows (prompting, toolchains, automation)</li>
+          <li>Building clearer product narratives and distribution systems</li>
+          <li>Writing and publishing: books, essays, and research threads</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-black/10 bg-black/5 p-6 dark:border-white/10 dark:bg-white/5">
+        <h2 className="text-lg font-semibold">Highlights (selected)</h2>
+        <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-700 dark:text-zinc-300">
+          <li>Independent consultant: strategy and execution across Web3, consumer goods, and creative products</li>
+          <li>Venture and growth leadership for startup studios and accelerators; mentorship and pitch refinement at EastLabs</li>
+          <li>Hospitality operator: co-founded and scaled venues across years</li>
+          <li>Regional leadership: marketing, distribution, and crisis roles including multi-country operations</li>
+          <li>Civic and creative work connected to USAID projects; talks and events including TEDx and PechaKucha</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-black/10 bg-black/5 p-6 dark:border-white/10 dark:bg-white/5">
+        <h2 className="text-lg font-semibold">How I think</h2>
+        <p className="mt-3 text-sm text-zinc-700 dark:text-zinc-300">
+          Clarity is a growth lever. Systems beat bursts of effort. Proof compounds faster than claims.
+        </p>
+      </section>
+
+      <section className="rounded-xl border border-black/10 bg-black/5 p-6 dark:border-white/10 dark:bg-white/5">
+        <h2 className="text-lg font-semibold">Languages</h2>
+        <p className="mt-3 text-sm text-zinc-700 dark:text-zinc-300">
+          Ukrainian, Russian (native), English (B2), French (A2–B1).
+        </p>
+      </section>
 
       <section className="grid gap-4 md:grid-cols-3">
         <div className={card}>

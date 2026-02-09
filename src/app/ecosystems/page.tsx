@@ -19,9 +19,36 @@ export default async function EcosystemsPage() {
       <header>
         <h1 className="text-2xl font-semibold tracking-tight">Ecosystems</h1>
         <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
-          The main directions I’m building right now.
+          Ecosystems are running threads that produce tools, writing, and reusable assets.
         </p>
       </header>
+
+      <section className="grid gap-4 md:grid-cols-2">
+        <div className="rounded-xl border border-black/10 bg-black/5 p-5 text-sm text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300">
+          <div className="font-semibold text-zinc-900 dark:text-zinc-100">Applied AI</div>
+          <div className="mt-2">
+            Experiments, workflows, and pragmatic guidance on using AI tools to ship faster and communicate better. (Prompting, automation, creative toolchains.)
+          </div>
+        </div>
+        <div className="rounded-xl border border-black/10 bg-black/5 p-5 text-sm text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300">
+          <div className="font-semibold text-zinc-900 dark:text-zinc-100">Books</div>
+          <div className="mt-2">
+            Reading as infrastructure: notes, frameworks, and distilled ideas I use in product and growth.
+          </div>
+        </div>
+        <div className="rounded-xl border border-black/10 bg-black/5 p-5 text-sm text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300">
+          <div className="font-semibold text-zinc-900 dark:text-zinc-100">Validation</div>
+          <div className="mt-2">
+            What holds when hype fades: positioning, proof, distribution systems, and decision-making under constraints.
+          </div>
+        </div>
+        <div className="rounded-xl border border-black/10 bg-black/5 p-5 text-sm text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300">
+          <div className="font-semibold text-zinc-900 dark:text-zinc-100">Culture threads</div>
+          <div className="mt-2">
+            Long-form research and curation (for example: Ukrmodernism).
+          </div>
+        </div>
+      </section>
 
       <div className="grid gap-3 md:grid-cols-2">
         {ecosystems.map((eco) => (

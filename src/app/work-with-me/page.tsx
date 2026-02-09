@@ -1,5 +1,8 @@
 export const metadata = {
   title: 'Work with me',
+  description:
+    'Strategy, advisory, and LLM-first visibility (LLMO) support for founders and small teams: positioning, go-to-market, and shippable artifacts.',
+  alternates: { canonical: 'https://abvx.xyz/work-with-me' },
 };
 
 export default function WorkWithMe() {

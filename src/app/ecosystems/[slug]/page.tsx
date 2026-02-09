@@ -1,7 +1,40 @@
 import { getBooks, getEcosystemBySlug, getProjects } from '@/lib/abvx-data';
 import ZoomableImage from '@/components/zoomable-image';
+import type { Metadata } from 'next';
 
 export const dynamic = 'force-dynamic';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const eco = await getEcosystemBySlug(slug);
+  if (!eco) {
+    return {
+      title: 'Ecosystem',
+      alternates: { canonical: `https://abvx.xyz/ecosystems/${slug}` },
+    };
+  }
+
+  const desc =
+    eco.tagline ||
+    'An ecosystem thread with projects, books, tools, and reusable artifacts.';
+
+  return {
+    title: eco.name,
+    description: desc,
+    alternates: { canonical: `https://abvx.xyz/ecosystems/${eco.slug}` },
+    openGraph: {
+      title: eco.name,
+      description: desc,
+      url: `https://abvx.xyz/ecosystems/${eco.slug}`,
+      type: 'website',
+      images: eco.coverImage ? [{ url: eco.coverImage }] : undefined,
+    },
+  };
+}
 
 const card =
   'rounded-xl border border-black/10 bg-black/5 p-5 hover:border-black/20 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20';

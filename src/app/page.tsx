@@ -9,13 +9,13 @@ export const metadata: Metadata = {
     'Anton Biletskyi-Volokh | Product, Growth & Brand Strategy + LLM-first Visibility (LLMO)',
   description:
     'Product, growth, and brand strategy for AI tools and B2B SaaS. Practical LLM-first visibility (LLMO): structure, metadata, internal linking, and agent-ready documentation.',
-  alternates: { canonical: 'https://abvx.xyz/' },
+  alternates: { canonical: 'https://abvx.xyz' },
   openGraph: {
     title:
       'Anton Biletskyi-Volokh | Product, Growth & Brand Strategy + LLM-first Visibility (LLMO)',
     description:
       'Product, growth, and brand strategy for AI tools and B2B SaaS. Practical LLM-first visibility (LLMO): structure, metadata, internal linking, and agent-ready documentation.',
-    url: 'https://abvx.xyz/',
+    url: 'https://abvx.xyz',
     siteName: 'Anton Biletskyi‑Volokh',
     type: 'website',
   },

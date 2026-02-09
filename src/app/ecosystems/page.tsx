@@ -5,6 +5,9 @@ export const dynamic = 'force-dynamic';
 
 export const metadata = {
   title: 'Ecosystems',
+  description:
+    'Ecosystems are running threads that produce tools, writing, books, and reusable assets across AI, validation, publishing, and culture research.',
+  alternates: { canonical: 'https://abvx.xyz/ecosystems' },
 };
 
 export default async function EcosystemsPage() {

@@ -1,10 +1,39 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import './globals.css';
 
 import Image from 'next/image';
 import { ThemeProvider } from '@/components/theme-provider';
 import { ThemeToggle } from '@/components/theme-toggle';
+
+const googleVerification = process.env.GOOGLE_SITE_VERIFICATION;
+const bingVerification = process.env.BING_SITE_VERIFICATION;
+
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Anton Biletskyi-Volokh',
+  url: 'https://abvx.xyz',
+  jobTitle: 'Product & Growth Strategist',
+  sameAs: [
+    'https://www.linkedin.com/in/abvcreative/',
+    'https://github.com/markoblogo',
+    'https://abvcreative.medium.com/',
+    'https://abvx.substack.com/',
+    'https://www.youtube.com/@ABV_Creative',
+    'https://x.com/abv_creative',
+    'https://www.behance.net/ABV_Creative',
+    'https://www.instagram.com/abvcreative/',
+    'https://t.me/ABVcreative',
+    'https://www.vivino.com/users/anthony.bile',
+  ],
+};
+
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'ABVX',
+  url: 'https://abvx.xyz',
+};
 
 export const metadata: Metadata = {
   title: {
@@ -14,6 +43,12 @@ export const metadata: Metadata = {
   description:
     'Product & Growth Strategist. Building AI-native products, ecosystems, and publishing projects.',
   metadataBase: new URL('https://abvx.xyz'),
+  verification: {
+    ...(googleVerification ? { google: googleVerification } : {}),
+    other: {
+      ...(bingVerification ? { 'msvalidate.01': bingVerification } : {}),
+    },
+  },
   openGraph: {
     title: 'Anton Biletskyi‑Volokh',
     description:
@@ -84,43 +119,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          // JSON-LD must be a plain string.
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+      </head>
       <body className="min-h-screen bg-white text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50">
         <ThemeProvider>
-          <Script
-            id="jsonld-person"
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                '@context': 'https://schema.org',
-                '@type': 'Person',
-                name: 'Anton Biletskyi‑Volokh',
-                url: 'https://abvx.xyz',
-                sameAs: [
-                  'https://www.linkedin.com/in/abvcreative/',
-                  'https://github.com/markoblogo',
-                  'https://abvcreative.medium.com/',
-                  'https://abvx.substack.com/',
-                  'https://www.youtube.com/@ABV_Creative',
-                  'https://x.com/abv_creative',
-                  'https://www.behance.net/ABV_Creative',
-                  'https://www.instagram.com/abvcreative/',
-                  'https://t.me/ABVcreative',
-                ],
-              }),
-            }}
-          />
-          <Script
-            id="jsonld-website"
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                '@context': 'https://schema.org',
-                '@type': 'WebSite',
-                name: 'Anton Biletskyi‑Volokh',
-                url: 'https://abvx.xyz',
-              }),
-            }}
-          />
           <Nav />
           <main className="mx-auto max-w-5xl px-6 py-12">{children}</main>
           <footer className="border-t border-black/10 dark:border-white/10">

@@ -1,255 +1,68 @@
-import { getBooks, getEcosystems, getProjects } from '@/lib/abvx-data';
-
 export const metadata = {
   title: 'Anton Biletskyi-Volokh (ABVX)',
   description:
-    'Marketing, brand, and growth strategy with 20+ years of international experience across tech, hospitality, FMCG, and venture building.',
+    'Product and AI systems builder: validation, positioning, implementation, and practical adoption.',
   alternates: { canonical: 'https://abvx.xyz/about' },
 };
 
-export const dynamic = 'force-dynamic';
-
-import { computeEcosystemMeta } from '@/lib/ecosystem-meta';
-
-const card =
-  'rounded-xl border border-black/10 bg-black/5 p-5 hover:border-black/20 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20';
-
-const chip =
-  'inline-flex items-center rounded-full border border-black/15 bg-black/5 px-2.5 py-1 text-xs font-semibold text-zinc-800 dark:border-white/15 dark:bg-white/5 dark:text-zinc-200';
-
-export default async function AboutPage() {
-  const [ecosystems, projects, books] = await Promise.all([
-    getEcosystems(),
-    getProjects(),
-    getBooks(),
-  ]);
-
-  const featuredEcosystems = ecosystems
-    .filter((e) => ['toki', 'llmo', 'ukrmodernism', 'cropto'].includes(e.slug))
-    .slice(0, 4);
-
-  const featuredProjects = projects
-    .filter((p) => ['LLMO — The Next SEO Revolution', 'Cropto — Human-Centred Crypto Clarity'].includes(p.name))
-    .slice(0, 4);
-
+export default function AboutPage() {
   return (
     <div className="flex flex-col gap-10">
       <header className="flex flex-col gap-3">
         <h1 className="text-2xl font-semibold tracking-tight">About</h1>
         <p className="text-zinc-700 dark:text-zinc-300">
-          I’m a marketing, brand, and growth strategist with 20+ years of international
-          experience across tech, hospitality, FMCG, and venture building. I’m drawn to
-          the middle layer between ideas and outcomes: turning complexity into clear
-          stories, systems, and execution.
+          I build and ship product + AI systems: from validation and positioning to implementation.
+          I can operate as founder, partner, consultant, or full-time depending on fit.
         </p>
-        <p className="text-sm text-zinc-600 dark:text-zinc-300">
-          ABVX is the umbrella for my ecosystem of tools, writing, books, and experiments.
+        <p className="text-zinc-700 dark:text-zinc-300">
+          The core is product/GTM/brand rigor plus hands-on building of tools, automations,
+          internal systems, and OSS.
         </p>
       </header>
 
       <section className="rounded-xl border border-black/10 bg-black/5 p-6 dark:border-white/10 dark:bg-white/5">
-        <h2 className="text-lg font-semibold">What I’m focused on now</h2>
+        <h2 className="text-lg font-semibold">What I do</h2>
         <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-700 dark:text-zinc-300">
-          <li>Applied AI for product and marketing workflows (prompting, toolchains, automation)</li>
-          <li>Building clearer product narratives and distribution systems</li>
-          <li>Writing and publishing: books, essays, and research threads</li>
+          <li>Validate and position products so teams can ship with clear trade-offs.</li>
+          <li>Build AI-powered systems: tools, automations, internal workflows, and OSS.</li>
+          <li>Run product/GTM execution loops from scope to first usable release.</li>
         </ul>
-      </section>
-
-      <section className="rounded-xl border border-black/10 bg-black/5 p-6 dark:border-white/10 dark:bg-white/5">
-        <h2 className="text-lg font-semibold">Highlights (selected)</h2>
-        <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-700 dark:text-zinc-300">
-          <li>Independent consultant: strategy and execution across Web3, consumer goods, and creative products</li>
-          <li>Venture and growth leadership for startup studios and accelerators; mentorship and pitch refinement at EastLabs</li>
-          <li>Hospitality operator: co-founded and scaled venues across years</li>
-          <li>Regional leadership: marketing, distribution, and crisis roles including multi-country operations</li>
-          <li>Civic and creative work connected to USAID projects; talks and events including TEDx and PechaKucha</li>
-        </ul>
-      </section>
-
-      <section className="rounded-xl border border-black/10 bg-black/5 p-6 dark:border-white/10 dark:bg-white/5">
-        <h2 className="text-lg font-semibold">How I think</h2>
-        <p className="mt-3 text-sm text-zinc-700 dark:text-zinc-300">
-          Clarity is a growth lever. Systems beat bursts of effort. Proof compounds faster than claims.
-        </p>
-      </section>
-
-      <section className="rounded-xl border border-black/10 bg-black/5 p-6 dark:border-white/10 dark:bg-white/5">
-        <h2 className="text-lg font-semibold">Languages</h2>
-        <p className="mt-3 text-sm text-zinc-700 dark:text-zinc-300">
-          Ukrainian, Russian (native), English (B2), French (A2–B1).
-        </p>
-      </section>
-
-      <section className="rounded-xl border border-black/10 bg-black/5 p-6 dark:border-white/10 dark:bg-white/5">
-        <h2 className="text-lg font-semibold">Elsewhere</h2>
-        <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm">
-          <a className="underline" href="https://www.linkedin.com/in/abvcreative/" target="_blank" rel="noreferrer">
-            LinkedIn
-          </a>
-          <a className="underline" href="https://github.com/markoblogo" target="_blank" rel="noreferrer">
-            GitHub
-          </a>
-          <a className="underline" href="https://abvx.substack.com/" target="_blank" rel="noreferrer">
-            Substack
-          </a>
-          <a className="underline" href="https://abvcreative.medium.com/" target="_blank" rel="noreferrer">
-            Medium
-          </a>
-          <a className="underline" href="https://www.youtube.com/@ABV_Creative" target="_blank" rel="noreferrer">
-            YouTube
-          </a>
-          <a className="underline" href="https://x.com/abv_creative" target="_blank" rel="noreferrer">
-            X
-          </a>
-        </div>
-        <div className="mt-4 text-sm text-zinc-600 dark:text-zinc-300">
-          Full list: <a className="underline" href="/links">/links</a>
-        </div>
-      </section>
-
-      <section className="grid gap-4 md:grid-cols-3">
-        <div className={card}>
-          <div className="text-sm font-semibold">Product &amp; Growth Strategy</div>
-          <div className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
-            Positioning, messaging, offer design, go‑to‑market, competitive framing.
-          </div>
-        </div>
-        <div className={card}>
-          <div className="text-sm font-semibold">
-            AI Visibility &amp; Digital Optimization Audit
-          </div>
-          <div className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
-            LLM‑first visibility (structure, llms.txt, metadata, internal linking)
-            plus a roadmap for digitalization, automation, and innovation adoption.
-          </div>
-        </div>
-        <div className={card}>
-          <div className="text-sm font-semibold">Rapid 0→1 Build Sprint</div>
-          <div className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
-            From idea validation and refinement to packaging and shipping: landing,
-            funnel, analytics, automation.
-          </div>
-        </div>
       </section>
 
       <section className="rounded-xl border border-black/10 bg-black/5 p-6 dark:border-white/10 dark:bg-white/5">
         <h2 className="text-lg font-semibold">How I work</h2>
         <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-700 dark:text-zinc-300">
-          <li>Fast ramp‑up: I quickly map the system and find leverage points.</li>
-          <li>Strategic view + execution: clarity first, then shipping.</li>
-          <li>AI‑native pragmatism: tools, automation, and machine‑readable assets.</li>
-          <li>High signal: less busywork, more outcomes.</li>
+          <li>Start with constraints and user reality, not abstract strategy decks.</li>
+          <li>Ship in short loops: define scope, build, test, and iterate quickly.</li>
+          <li>Leave reusable assets behind: docs, checklists, and maintainable systems.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-black/10 bg-black/5 p-6 dark:border-white/10 dark:bg-white/5">
+        <h2 className="text-lg font-semibold">Now</h2>
+        <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-700 dark:text-zinc-300">
+          <li>Writing about AI tools, doc systems, reviews, and practical adoption; books/publishing run as a separate track.</li>
+          <li>Currently studying AI ethics at Oxford while continuing to build and ship active systems.</li>
         </ul>
       </section>
 
       <section className="flex flex-col gap-3">
-        <h2 className="text-lg font-semibold">Selected work</h2>
-        <div className="grid gap-3 md:grid-cols-2">
-          {featuredEcosystems.map((e) => (
-            <a key={e.id} href={`/ecosystems/${e.slug}`} className={card}>
-              <div className="flex gap-4">
-                {e.coverImage ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={e.coverImage}
-                    alt=""
-                    className="h-20 w-28 flex-none rounded-xl border border-black/10 object-cover dark:border-white/10"
-                    loading="lazy"
-                  />
-                ) : (
-                  <div className="h-20 w-28 flex-none rounded-xl border border-black/10 bg-black/5 dark:border-white/10 dark:bg-white/5" />
-                )}
-
-                <div className="min-w-0 flex-1">
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <div className="text-base font-semibold leading-snug">{e.name}</div>
-                      {(() => {
-                        const meta = computeEcosystemMeta(e, books, projects);
-                        return meta.tagline ? (
-                          <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-300">
-                            {meta.tagline}
-                          </div>
-                        ) : null;
-                      })()}
-                      {(() => {
-                        const meta = computeEcosystemMeta(e, books, projects);
-                        return meta.labels.length ? (
-                          <div className="mt-2 flex flex-wrap gap-2">
-                            {meta.labels.map((l) => (
-                              <span key={l} className={chip}>
-                                {l}
-                              </span>
-                            ))}
-                          </div>
-                        ) : null;
-                      })()}
-                    </div>
-                    {e.status ? (
-                      <div className="rounded-full border border-black/15 px-2 py-0.5 text-xs text-zinc-600 dark:border-white/15 dark:text-zinc-300">
-                        {e.status}
-                      </div>
-                    ) : null}
-                  </div>
-                </div>
-              </div>
-            </a>
-          ))}
-        </div>
-
-        {featuredProjects.length ? (
-          <div className="mt-2 grid gap-3 md:grid-cols-2">
-            {featuredProjects.map((p) => (
-              <div key={p.id} className={card}>
-                <div className="flex gap-4">
-                  {p.coverImage ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={p.coverImage}
-                      alt=""
-                      className="h-20 w-28 flex-none rounded-xl border border-black/10 object-cover dark:border-white/10"
-                      loading="lazy"
-                    />
-                  ) : (
-                    <div className="h-20 w-28 flex-none rounded-xl border border-black/10 bg-black/5 dark:border-white/10 dark:bg-white/5" />
-                  )}
-
-                  <div className="min-w-0 flex-1">
-                    <div className="text-base font-semibold leading-snug">{p.name}</div>
-                    {p.tagline ? (
-                      <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-300">
-                        {p.tagline}
-                      </div>
-                    ) : null}
-                    <div className="mt-3 flex flex-wrap gap-3 text-sm">
-                      {p.website ? (
-                        <a className="underline" href={p.website} target="_blank" rel="noreferrer">
-                          Website
-                        </a>
-                      ) : null}
-                      {p.github ? (
-                        <a className="underline" href={p.github} target="_blank" rel="noreferrer">
-                          GitHub
-                        </a>
-                      ) : null}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        ) : null}
+        <h2 className="text-lg font-semibold">Credibility snapshot</h2>
+        <ul className="mt-1 list-disc space-y-1 pl-4 text-sm text-zinc-700 dark:text-zinc-300">
+          <li>Strong product/GTM/brand background across consulting, operating, and founder contexts.</li>
+          <li>Hands-on builder of tools, automations, internal systems, and OSS.</li>
+          <li>Flexible engagement model: founder, partner, consultant, or full-time depending on fit.</li>
+        </ul>
       </section>
 
-      <section className="flex flex-col gap-3">
+      <section className="flex flex-col gap-3 rounded-xl border border-black/10 bg-zinc-950 p-6 text-zinc-100 dark:border-white/15 dark:bg-white dark:text-zinc-900">
         <h2 className="text-lg font-semibold">Contact</h2>
-        <p className="text-sm text-zinc-700 dark:text-zinc-300">
-          Open to consulting, partnerships, and selected full‑time roles.
+        <p className="text-sm text-zinc-200 dark:text-zinc-700">
+          Open to founder/partner/consulting/full-time conversations depending on fit.
         </p>
         <div className="flex flex-wrap gap-3">
           <a
-            className="rounded-md bg-zinc-950 px-4 py-2 text-sm font-semibold text-white hover:bg-black dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200"
+            className="rounded-md bg-white px-4 py-2 text-sm font-semibold text-zinc-950 hover:bg-zinc-200 dark:bg-zinc-950 dark:text-white dark:hover:bg-black"
             href="https://www.linkedin.com/in/abvcreative/"
             target="_blank"
             rel="noreferrer"
@@ -257,7 +70,7 @@ export default async function AboutPage() {
             LinkedIn DM
           </a>
           <a
-            className="rounded-md border border-black/15 px-4 py-2 text-sm font-semibold text-zinc-950 hover:border-black/30 dark:border-white/15 dark:text-white dark:hover:border-white/30"
+            className="rounded-md border border-white/30 px-4 py-2 text-sm font-semibold text-white hover:border-white/60 dark:border-zinc-400/40 dark:text-zinc-900 dark:hover:border-zinc-700"
             href="mailto:a.biletskiy@gmail.com"
           >
             Email

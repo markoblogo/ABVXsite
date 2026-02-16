@@ -183,15 +183,15 @@ export default function WorldTimeDock() {
       >
         <button
           type="button"
-          className="time-dock-tab"
+          className="time-dock-edge-toggle"
           aria-expanded={open}
           aria-controls="world-time-panel"
           onClick={() => setOpen((v) => !v)}
         >
-          <span className="time-tab-icon" aria-hidden="true">
+          <span className="time-edge-icon" aria-hidden="true">
             ◷
           </span>
-          <span className="time-tab-label">Time</span>
+          <span className="time-edge-label">TIME</span>
         </button>
 
         <div className="time-dock-panel" id="world-time-panel">
@@ -240,4 +240,3 @@ export default function WorldTimeDock() {
     </>
   );
 }
-

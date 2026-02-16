@@ -117,44 +117,49 @@ header nav::-webkit-scrollbar {
   transform: translate3d(0, -50%, 0);
 }
 
-.time-dock-tab {
+.time-dock-edge-toggle {
   position: absolute;
-  left: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-  display: inline-flex;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 44px;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
-  padding: 10px 9px;
-  border: 1px solid var(--dock-border);
-  border-left: 0;
-  border-radius: 0 999px 999px 0;
-  background: var(--dock-bg);
-  box-shadow: var(--dock-shadow);
+  justify-content: center;
+  gap: 4px;
+  border: 0;
+  border-right: 1px solid var(--dock-border);
+  border-radius: 16px 0 0 16px;
+  background: transparent;
   color: inherit;
   cursor: pointer;
-  backdrop-filter: blur(8px);
+  z-index: 1;
 }
 
-.time-tab-icon {
-  font-size: 14px;
-  line-height: 1;
+.time-edge-icon {
+  font-size: 12px;
+  opacity: 0.8;
 }
 
-.time-tab-label {
+.time-edge-label {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  font-size: 11px;
-  letter-spacing: 0.08em;
+  font-size: 10px;
+  letter-spacing: 0.11em;
   font-weight: 700;
   text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.time-dock.is-open .time-dock-edge-toggle {
+  opacity: 0.72;
 }
 
 .time-dock-panel {
   border: 1px solid var(--dock-border);
   border-radius: 16px;
-  padding: 12px;
+  padding: 12px 12px 12px 54px;
   background: var(--dock-bg);
   box-shadow: var(--dock-shadow);
   backdrop-filter: blur(10px);
@@ -307,7 +312,7 @@ header nav::-webkit-scrollbar {
     transform: translateY(0);
   }
 
-  .time-dock-tab {
+  .time-dock-edge-toggle {
     display: none;
   }
 

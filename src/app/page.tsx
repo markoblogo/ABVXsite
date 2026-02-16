@@ -28,8 +28,6 @@ export const metadata: Metadata = {
   },
 };
 
-const cardStatic =
-  'rounded-xl border border-black/10 bg-black/5 p-5 dark:border-white/10 dark:bg-white/5';
 const cardCompact =
   'rounded-xl border border-black/10 bg-black/5 p-5 dark:border-white/10 dark:bg-white/5';
 
@@ -132,35 +130,18 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col gap-4">
-        <h2 className="text-xl font-semibold tracking-tight">Selected outcomes</h2>
-        <ul className="list-disc space-y-2 pl-5 text-sm text-zinc-600 dark:text-zinc-300">
-          <li>Led positioning and brand architecture for GT Protocol and supported early-stage growth, including a reported x55 token ROI.</li>
-          <li>Led growth/branding/GTM for 30+ startups across Europe and work with Reface.</li>
-          <li>Launched foodtech onChef, reaching $500K+ ARR (reported).</li>
-          <li>Built and scaled venue concepts and worked on nationwide rollouts including Pizza Celentano (reported).</li>
-        </ul>
-        <div>
-          <a className="text-sm underline" href="/projects">
-            More
-          </a>
-        </div>
-      </section>
-
       <section className="flex scroll-mt-24 flex-col gap-4" id="ecosystems-projects">
         <h2 className="text-xl font-semibold tracking-tight">Ecosystems</h2>
         <p className="text-sm text-zinc-600 dark:text-zinc-300">
-          Tools, OSS, and experiments I’m building. Most start as internal solutions.
+          This is what I’m actively building and shipping right now — not a portfolio archive.
         </p>
         <div className="flex flex-col gap-2 text-sm text-zinc-600 dark:text-zinc-300">
-          <p>
-            This site is the hub. Each ecosystem is a focused thread of work with its own tools, notes, and artifacts:
-          </p>
+          <p>Each ecosystem is a living thread with tools, notes, and artifacts.</p>
           <ul className="list-disc space-y-1 pl-5">
             <li>Cropto: product and growth work on real software.</li>
             <li>Toki Pona: language tools, translation, and writing.</li>
             <li>Ukrmodernism: cultural research and curation.</li>
-            <li>Business books: condensed frameworks I actually use.</li>
+            <li>Business books: a small publishing line I run alongside product work.</li>
           </ul>
         </div>
 
@@ -177,23 +158,6 @@ export default async function Home() {
             Explore ecosystems
           </a>
         </div>
-      </section>
-
-      <section className="flex flex-col gap-4">
-        <h2 className="text-xl font-semibold tracking-tight">Quick map</h2>
-        <p className="text-sm text-zinc-600 dark:text-zinc-300">
-          <a className="underline" href="/llmo">
-            LLM-first visibility (LLMO)
-          </a>{' '}
-          ·{' '}
-          <a className="underline" href="/work-with-me">
-            Product &amp; growth strategy
-          </a>{' '}
-          ·{' '}
-          <a className="underline" href="/about">
-            About Anton (ABVX)
-          </a>
-        </p>
       </section>
 
       <section className="flex scroll-mt-24 flex-col gap-4" id="work-with-me">

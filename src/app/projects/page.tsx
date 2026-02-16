@@ -53,19 +53,9 @@ export default async function ProjectsPage() {
       <header>
         <h1 className="text-2xl font-semibold tracking-tight">Projects</h1>
         <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
-          A selection across AI, Web3, foodtech, and publishing. I typically lead positioning,
-          brand architecture, go-to-market, and growth execution.
+          What I’m working on right now — shipped tools, OSS, and active experiments (paid and hobby). Not a historical portfolio.
         </p>
       </header>
-
-      <section className="rounded-xl border border-black/10 bg-black/5 p-6 text-sm text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300">
-        <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">Featured</h2>
-        <ul className="mt-3 list-disc space-y-1 pl-4">
-          <li>GT Protocol: positioning, brand architecture, and early-stage growth support.</li>
-          <li>Foodtech: Doood, MonChef (launch and growth work; MonChef reported $500K+ ARR).</li>
-          <li>Hospitality: multi-brand creation and renovations across formats.</li>
-        </ul>
-      </section>
 
       <div className="grid gap-3">
         {sorted.map((p) => {

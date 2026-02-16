@@ -1,6 +1,7 @@
 import { getBooks, getEcosystemBySlug, getProjects } from '@/lib/abvx-data';
 import ZoomableImage from '@/components/zoomable-image';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const dynamic = 'force-dynamic';
 
@@ -45,6 +46,20 @@ const chip =
 const publishingBadge =
   'border-emerald-300/60 text-emerald-700 dark:border-emerald-300/30 dark:text-emerald-300';
 
+function stageBadgeClass(stage?: string) {
+  const s = (stage || '').toLowerCase();
+  if (s.includes('live') || s.includes('publishing')) return publishingBadge;
+  if (
+    s.includes('building') ||
+    s.includes('in development') ||
+    s.includes('in-dev') ||
+    s === 'dev'
+  ) {
+    return 'border-orange-300/60 text-orange-700 dark:border-orange-300/30 dark:text-orange-300';
+  }
+  return 'border-black/15 text-zinc-600 dark:border-white/15 dark:text-zinc-300';
+}
+
 export default async function EcosystemPage({
   params,
 }: {
@@ -62,16 +77,6 @@ export default async function EcosystemPage({
   return (
     <div className="flex flex-col gap-8">
       <header className="flex flex-col gap-4">
-        {eco.coverImage ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={eco.coverImage}
-            alt=""
-            className="h-40 w-full rounded-2xl border border-black/10 object-cover dark:border-white/10"
-            loading="lazy"
-          />
-        ) : null}
-
         <div className="flex flex-col gap-2">
           <h1 className="text-2xl font-semibold tracking-tight">{eco.name}</h1>
           {eco.tagline ? (
@@ -125,7 +130,7 @@ export default async function EcosystemPage({
                         ) : null}
                       </div>
                       {p.stage ? (
-                        <div className="rounded-full border border-black/15 px-2 py-0.5 text-xs text-zinc-600 dark:border-white/15 dark:text-zinc-300">
+                        <div className={`rounded-full border px-2 py-0.5 text-xs ${stageBadgeClass(p.stage)}`}>
                           {p.stage}
                         </div>
                       ) : null}
@@ -263,7 +268,7 @@ export default async function EcosystemPage({
       </section>
 
       <div className="text-sm text-zinc-600 dark:text-zinc-300">
-        Back to <a className="underline" href="/">ABVX hub</a>.
+        Back to <Link className="underline" href="/">ABVX hub</Link>.
       </div>
     </div>
   );

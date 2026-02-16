@@ -3,6 +3,14 @@
 /* Tailwind v4: make `dark:` respond to a `.dark` class (not media query). */
 @custom-variant dark (&:where(.dark, .dark *));
 
+:root {
+  --glow-accent: rgba(34, 197, 94, 0.35);
+  --glow-accent-strong: rgba(34, 197, 94, 0.55);
+  --glow-ring: 0 0 0 4px var(--glow-accent);
+  --glow-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(34, 197, 94, 0.18), 0 0 28px var(--glow-accent);
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -30,13 +38,88 @@ header nav::-webkit-scrollbar {
 }
 
 .hero-stickers {
-  pointer-events: none;
+  pointer-events: auto;
   position: absolute;
   right: 0;
   top: 8px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.ux-hover-card {
+  will-change: transform;
+  transition: transform 160ms var(--ease-out), box-shadow 160ms var(--ease-out), border-color 160ms var(--ease-out);
+}
+
+.ux-hover-btn {
+  will-change: transform;
+  transition: transform 140ms var(--ease-out), box-shadow 140ms var(--ease-out), border-color 140ms var(--ease-out), color 140ms var(--ease-out), background-color 140ms var(--ease-out);
+}
+
+.ux-hover-sticker {
+  transition: transform 140ms var(--ease-out), filter 140ms var(--ease-out), box-shadow 140ms var(--ease-out);
+}
+
+.ux-focus-ring:focus-visible {
+  outline: none;
+  box-shadow: var(--glow-ring);
+  border-color: rgba(34, 197, 94, 0.35) !important;
+}
+
+/* Auto-apply to existing rounded card/button patterns across pages. */
+main :is(.rounded-xl.border, .rounded-2xl.border) {
+  will-change: transform;
+  transition: transform 160ms var(--ease-out), box-shadow 160ms var(--ease-out), border-color 160ms var(--ease-out);
+}
+
+main :is(a, button, [role="button"]).rounded-md,
+main :is(a, button, [role="button"]).rounded-full {
+  will-change: transform;
+  transition: transform 140ms var(--ease-out), box-shadow 140ms var(--ease-out), border-color 140ms var(--ease-out), color 140ms var(--ease-out), background-color 140ms var(--ease-out);
+}
+
+header nav a {
+  transition: color 140ms var(--ease-out), text-shadow 140ms var(--ease-out), text-decoration-color 140ms var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .ux-hover-card:hover,
+  main :is(.rounded-xl.border, .rounded-2xl.border):hover {
+    transform: translateY(-2px);
+    box-shadow: var(--glow-shadow);
+    border-color: rgba(34, 197, 94, 0.28) !important;
+  }
+
+  .ux-hover-btn:hover,
+  main :is(a, button, [role="button"]).rounded-md:hover,
+  main :is(a, button, [role="button"]).rounded-full:hover {
+    transform: translateY(-1px) scale(1.01);
+    box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.2), 0 0 20px var(--glow-accent);
+    border-color: rgba(34, 197, 94, 0.35) !important;
+  }
+
+  .ux-hover-sticker:hover,
+  .hero-sticker:hover {
+    transform: translateY(-1px) rotate(1deg);
+    filter: drop-shadow(0 0 10px var(--glow-accent-strong));
+  }
+
+  header nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: rgba(34, 197, 94, 0.45);
+    text-shadow: 0 0 10px var(--glow-accent);
+  }
+}
+
+main :is(a, button, [role="button"]).rounded-md:focus-visible,
+main :is(a, button, [role="button"]).rounded-full:focus-visible,
+header nav a:focus-visible,
+.ux-focus-ring:focus-visible {
+  outline: none;
+  box-shadow: var(--glow-ring);
+  border-color: rgba(34, 197, 94, 0.35) !important;
 }
 
 .hero-sticker {
@@ -342,8 +425,16 @@ header nav::-webkit-scrollbar {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .ux-hover-card,
+  .ux-hover-btn,
+  .ux-hover-sticker,
+  main :is(.rounded-xl.border, .rounded-2xl.border),
+  main :is(a, button, [role="button"]).rounded-md,
+  main :is(a, button, [role="button"]).rounded-full,
+  header nav a,
   .time-dock,
   .time-mobile-toggle {
     transition: none !important;
+    transform: none !important;
   }
 }

@@ -120,24 +120,6 @@ export default function WorkWithMe() {
         </ul>
       </section>
 
-      <section className="flex flex-col gap-3">
-        <h2 className="text-lg font-semibold">FAQ</h2>
-        <div className="flex flex-col gap-4 text-sm text-zinc-700 dark:text-zinc-300">
-          <div>
-            <div className="text-[15px] font-semibold">Do you do “SEO”?</div>
-            <div>
-              I focus on clarity, intent, structure, and compounding distribution. Search usually improves as a byproduct.
-            </div>
-          </div>
-          <div>
-            <div className="text-[15px] font-semibold">Do you work with Web3?</div>
-            <div>
-              Yes, selectively. I work where fundamentals are clear: offer, trust, distribution, and measurable outcomes.
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="flex flex-col gap-3 rounded-xl border border-black/10 bg-zinc-950 p-6 text-zinc-100 dark:border-white/15 dark:bg-white dark:text-zinc-900" id="start-conversation">
         <h2 className="text-lg font-semibold">Start a conversation</h2>
         <p className="text-sm text-zinc-200 dark:text-zinc-700">

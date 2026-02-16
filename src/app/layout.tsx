@@ -103,7 +103,7 @@ function Nav() {
             Books
           </a>
           <a className={link} href="/writing">
-            Writing
+            Blogs
           </a>
           <a className={link} href="/about">
             About
@@ -153,7 +153,7 @@ export default function RootLayout({
                       Projects
                     </a>
                     <a className="underline hover:text-black dark:hover:text-white" href="/writing">
-                      Writing
+                      Blogs
                     </a>
                     <a className="underline hover:text-black dark:hover:text-white" href="/books">
                       Books

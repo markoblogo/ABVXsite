@@ -30,6 +30,8 @@ export const metadata: Metadata = {
 
 const cardStatic =
   'rounded-xl border border-black/10 bg-black/5 p-5 dark:border-white/10 dark:bg-white/5';
+const cardCompact =
+  'rounded-xl border border-black/10 bg-black/5 p-5 dark:border-white/10 dark:bg-white/5';
 
 export default async function Home() {
   const [ecosystems, projects, books] = await Promise.all([
@@ -40,8 +42,13 @@ export default async function Home() {
   const featuredEcosystems = ecosystems.slice(0, 4);
 
   return (
-    <div className="flex flex-col gap-12">
-      <section className="flex flex-col gap-5">
+    <div className="home-shell mx-auto flex w-full max-w-[1100px] flex-col gap-14">
+      <section className="relative flex scroll-mt-24 flex-col gap-6" id="home">
+        <div className="hero-stickers hidden sm:block" aria-hidden="true">
+          <div className="hero-sticker burst">OPEN SOURCE + SHIPPED</div>
+          <div className="hero-sticker ribbon">LLM-FIRST VISIBILITY (LLMO)</div>
+        </div>
+
         <div className="flex items-center gap-3">
           {/* upside-down avatar: attention hook */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -56,110 +63,71 @@ export default async function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-3">
-          <h1 className="text-3xl font-semibold tracking-tight">
-            Product, growth &amp; brand strategy for AI tools, plus LLM-first visibility (LLMO)
+        <div className="hero-stickers-mobile flex flex-wrap gap-2 sm:hidden" aria-hidden="true">
+          <div className="hero-sticker burst">OPEN SOURCE + SHIPPED</div>
+          <div className="hero-sticker ribbon">LLM-FIRST VISIBILITY (LLMO)</div>
+        </div>
+
+        <div className="flex max-w-3xl flex-col gap-4">
+          <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+            Product &amp; AI systems — from validation to shipped tools
           </h1>
-          <p className="text-lg text-zinc-700 dark:text-zinc-300">
-            I help founders and small teams turn strong ideas into clear offers, focused go-to-market, and systems that compound.
-            <br />
-            My work sits at the intersection of applied AI, books, and validation: clarity first, execution next, proof always.
+          <p className="text-base text-zinc-700 dark:text-zinc-300 sm:text-lg">
+            I help founders and small teams validate ideas, ship the first real version, and set up LLM-first visibility (docs, IA, distribution) that compounds.
           </p>
-          <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-zinc-600 dark:text-zinc-300">
-            <li>Positioning and messaging you can ship across website, product, and sales.</li>
-            <li>A prioritized growth roadmap for the next 4–8 weeks: channels, experiments, metrics.</li>
-            <li>LLM-first visibility improvements: information architecture, metadata, internal linking, and agent-ready docs.</li>
+          <ul className="list-disc space-y-1 pl-5 text-sm text-zinc-600 dark:text-zinc-300">
+            <li>Validate offer + roadmap (2–4 weeks)</li>
+            <li>Build / ship: MVPs, automations, internal tools, OSS</li>
+            <li>LLM-first visibility: agent-ready docs, structure, metadata, internal linking</li>
           </ul>
 
-          <div className="flex flex-wrap gap-3 pt-2">
+          <div className="flex flex-wrap gap-3 pt-1">
             <a
-              href="/work-with-me"
+              href="#work-with-me"
               className="rounded-md bg-zinc-950 px-4 py-2 text-sm font-semibold text-white hover:bg-black dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200"
             >
               Work with me
             </a>
             <a
-              href="/projects"
+              href="#ecosystems-projects"
               className="rounded-md border border-black/15 px-4 py-2 text-sm font-semibold text-zinc-950 hover:border-black/30 dark:border-white/15 dark:text-white dark:hover:border-white/30"
             >
-              Projects
-            </a>
-            <a
-              href="/writing"
-              className="rounded-md border border-black/15 px-4 py-2 text-sm font-semibold text-zinc-950 hover:border-black/30 dark:border-white/15 dark:text-white dark:hover:border-white/30"
-            >
-              Writing
+              See projects
             </a>
           </div>
 
-          <div className="pt-1 text-sm text-zinc-600 dark:text-zinc-300">
-            Quick map:{' '}
-            <a className="underline" href="/llmo">
-              LLM-first visibility (LLMO)
-            </a>
-            ,{' '}
-            <a className="underline" href="/work-with-me">
-              Product &amp; growth strategy
-            </a>
-            ,{' '}
-            <a className="underline" href="/about">
-              About Anton (ABVX)
-            </a>
-            .
+          <div className="text-sm text-zinc-600 dark:text-zinc-300">
+            Open to: consulting, product roles, and selective cofounder opportunities.
           </div>
         </div>
       </section>
 
-      <section className="flex flex-col gap-4">
-        <h2 className="text-xl font-semibold tracking-tight">Who I help</h2>
-        <div className="flex flex-col gap-3 text-sm text-zinc-600 dark:text-zinc-300">
-          <p>
-            I’m a fit if you’re building an AI product or a B2B SaaS and you need clarity and traction, not noise.
-          </p>
-          <p>Common situations:</p>
-          <ul className="list-disc space-y-1 pl-5">
-            <li>Your product is strong, but the offer is hard to explain in one sentence.</li>
-            <li>You ship fast, but distribution is inconsistent or accidental.</li>
-            <li>Your website reads like a portfolio, not a decision path for a buyer.</li>
-            <li>You want to adapt to LLM-driven discovery and zero-click behavior with pragmatic steps, not gimmicks.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section className="flex flex-col gap-4">
-        <h2 className="text-xl font-semibold tracking-tight">What I do</h2>
-
-        <div className="grid gap-4 md:grid-cols-2">
-          <div className={cardStatic}>
-            <h3 className="text-sm font-semibold">Track 1: Product &amp; growth strategy</h3>
-            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
-              I help you convert “cool tech” into a focused offer people understand and can buy.
-            </p>
-            <div className="mt-3 text-sm text-zinc-600 dark:text-zinc-300">
-              <div className="font-semibold text-zinc-700 dark:text-zinc-200">Typical deliverables:</div>
-              <ul className="mt-2 list-disc space-y-1 pl-5">
-                <li>Positioning and messaging map (ICP, pains, alternatives, proof).</li>
-                <li>Offer design (packages, onboarding, pricing logic).</li>
-                <li>Go-to-market plan (4–8 weeks): channels, experiments, measurement.</li>
-                <li>Content and distribution system: what to publish, where, and why it compounds.</li>
-              </ul>
-            </div>
+      <section className="flex scroll-mt-24 flex-col gap-5" id="how-help">
+        <h2 className="text-xl font-semibold tracking-tight">How I help teams ship</h2>
+        <div className="grid gap-4 md:grid-cols-3">
+          <div className={cardCompact}>
+            <h3 className="text-sm font-semibold">Strategy Sprint (1–2 weeks)</h3>
+            <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-600 dark:text-zinc-300">
+              <li>Positioning + offer clarity</li>
+              <li>Prioritized roadmap and scope</li>
+              <li>Execution plan with concrete next steps</li>
+            </ul>
           </div>
-
-          <div className={cardStatic}>
-            <h3 className="text-sm font-semibold">Track 2: LLM-first visibility (LLMO)</h3>
-            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
-              I make your site and docs more legible for humans and language models through structure and intent-driven pages.
-            </p>
-            <div className="mt-3 text-sm text-zinc-600 dark:text-zinc-300">
-              <div className="font-semibold text-zinc-700 dark:text-zinc-200">Typical deliverables:</div>
-              <ul className="mt-2 list-disc space-y-1 pl-5">
-                <li>Information architecture and internal linking plan.</li>
-                <li>Titles, descriptions, structured data basics, page templates.</li>
-                <li>Agent-ready documentation patterns: predictable, referenceable, reusable.</li>
-                <li>Optional: llms.txt and supporting conventions as an auxiliary signal, used carefully.</li>
-              </ul>
-            </div>
+          <div className={cardCompact}>
+            <h3 className="text-sm font-semibold">Build Sprint (2–4 weeks)</h3>
+            <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-600 dark:text-zinc-300">
+              <li>MVP, internal tools, or automation shipped</li>
+              <li>Agent-ready docs and implementation notes</li>
+              <li>Handoff checklist for ongoing execution</li>
+            </ul>
+          </div>
+          <div className={cardCompact}>
+            <h3 className="text-sm font-semibold">Advisory (weekly/biweekly)</h3>
+            <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-600 dark:text-zinc-300">
+              <li>Decision reviews and unblock sessions</li>
+              <li>Messaging and distribution calibration</li>
+              <li>Progress tracking against shipping goals</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -170,26 +138,21 @@ export default async function Home() {
           <li>Led positioning and brand architecture for GT Protocol and supported early-stage growth, including a reported x55 token ROI.</li>
           <li>Led growth/branding/GTM for 30+ startups across Europe and work with Reface.</li>
           <li>Launched foodtech onChef, reaching $500K+ ARR (reported).</li>
-          <li>Built and scaled 0+ venues, and work on a nationwide chain rollout including Pizza Celentano (240+ outlets, reported).</li>
+          <li>Built and scaled venue concepts and worked on nationwide rollouts including Pizza Celentano (reported).</li>
         </ul>
-      </section>
-
-      <section className="flex flex-col gap-4">
-        <h2 className="text-xl font-semibold tracking-tight">How we work</h2>
-        <div className="flex flex-col gap-3 text-sm text-zinc-600 dark:text-zinc-300">
-          <ol className="list-decimal space-y-1 pl-5">
-            <li>Intake: goals, constraints, and what success means.</li>
-            <li>Audit and synthesis: product, messaging, site, distribution signals.</li>
-            <li>Roadmap: priorities, quick wins, and what not to do.</li>
-            <li>Optional sprint: implement together or with your team.</li>
-            <li>Handoff: docs, templates, and a system you can run.</li>
-          </ol>
+        <div>
+          <a className="text-sm underline" href="/projects">
+            More
+          </a>
         </div>
       </section>
 
-      <section className="flex flex-col gap-4">
+      <section className="flex scroll-mt-24 flex-col gap-4" id="ecosystems-projects">
         <h2 className="text-xl font-semibold tracking-tight">Ecosystems</h2>
-        <div className="flex flex-col gap-3 text-sm text-zinc-600 dark:text-zinc-300">
+        <p className="text-sm text-zinc-600 dark:text-zinc-300">
+          Tools, OSS, and experiments I’m building. Most start as internal solutions.
+        </p>
+        <div className="flex flex-col gap-2 text-sm text-zinc-600 dark:text-zinc-300">
           <p>
             This site is the hub. Each ecosystem is a focused thread of work with its own tools, notes, and artifacts:
           </p>
@@ -217,6 +180,23 @@ export default async function Home() {
       </section>
 
       <section className="flex flex-col gap-4">
+        <h2 className="text-xl font-semibold tracking-tight">Quick map</h2>
+        <p className="text-sm text-zinc-600 dark:text-zinc-300">
+          <a className="underline" href="/llmo">
+            LLM-first visibility (LLMO)
+          </a>{' '}
+          ·{' '}
+          <a className="underline" href="/work-with-me">
+            Product &amp; growth strategy
+          </a>{' '}
+          ·{' '}
+          <a className="underline" href="/about">
+            About Anton (ABVX)
+          </a>
+        </p>
+      </section>
+
+      <section className="flex scroll-mt-24 flex-col gap-4" id="work-with-me">
         <h2 className="text-xl font-semibold tracking-tight">Work with me</h2>
         <div className="flex flex-col gap-3 text-sm text-zinc-600 dark:text-zinc-300">
           <p>

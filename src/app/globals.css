@@ -6,3 +6,72 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+img,
+svg,
+video,
+canvas,
+pre,
+code {
+  max-width: 100%;
+}
+
+/* Keep top nav on one line; allow horizontal scroll instead of ugly wraps. */
+header nav {
+  flex-wrap: nowrap !important;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+header nav::-webkit-scrollbar {
+  display: none;
+}
+
+.hero-stickers {
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-sticker {
+  border: 3px solid #fff;
+  border-radius: 999px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+  color: #111827;
+  display: inline-flex;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  padding: 8px 12px;
+}
+
+.hero-sticker.burst {
+  background: #facc15;
+  transform: rotate(-6deg);
+}
+
+.hero-sticker.ribbon {
+  background: #86efac;
+  transform: rotate(4deg);
+}
+
+@media (max-width: 640px) {
+  .home-shell {
+    gap: 44px;
+  }
+
+  .hero-stickers-mobile .hero-sticker {
+    border-width: 2px;
+    font-size: 10px;
+    letter-spacing: 0.03em;
+    padding: 6px 10px;
+    transform: none !important;
+  }
+}

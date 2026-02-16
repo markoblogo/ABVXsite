@@ -75,3 +75,268 @@ header nav::-webkit-scrollbar {
     transform: none !important;
   }
 }
+
+.time-dock {
+  --dock-bg: color-mix(in srgb, white 84%, transparent);
+  --dock-border: rgba(17, 24, 39, 0.14);
+  --dock-shadow: 0 12px 30px rgba(17, 24, 39, 0.18);
+  --card-bg: rgba(255, 255, 255, 0.72);
+  --card-border: rgba(17, 24, 39, 0.12);
+  --dial-ring: rgba(17, 24, 39, 0.16);
+  --day-face: #f8fafc;
+  --night-face: #111827;
+  --tick-color: rgba(17, 24, 39, 0.45);
+  --hand-color: #111827;
+  --second-color: #ef4444;
+  --text-muted: #4b5563;
+  position: fixed;
+  left: 12px;
+  top: 50%;
+  z-index: 45;
+  width: 292px;
+  transform: translate3d(calc(-100% + 44px), -50%, 0);
+  transition: transform 200ms ease;
+}
+
+.dark .time-dock {
+  --dock-bg: color-mix(in srgb, #0a0a0a 84%, transparent);
+  --dock-border: rgba(255, 255, 255, 0.16);
+  --dock-shadow: 0 16px 34px rgba(0, 0, 0, 0.45);
+  --card-bg: rgba(24, 24, 27, 0.78);
+  --card-border: rgba(255, 255, 255, 0.14);
+  --dial-ring: rgba(255, 255, 255, 0.22);
+  --day-face: #f3f4f6;
+  --night-face: #0b1220;
+  --tick-color: rgba(255, 255, 255, 0.55);
+  --hand-color: #e5e7eb;
+  --second-color: #f87171;
+  --text-muted: #cbd5e1;
+}
+
+.time-dock.is-open {
+  transform: translate3d(0, -50%, 0);
+}
+
+.time-dock-tab {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 9px;
+  border: 1px solid var(--dock-border);
+  border-left: 0;
+  border-radius: 0 999px 999px 0;
+  background: var(--dock-bg);
+  box-shadow: var(--dock-shadow);
+  color: inherit;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+}
+
+.time-tab-icon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.time-tab-label {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.time-dock-panel {
+  border: 1px solid var(--dock-border);
+  border-radius: 16px;
+  padding: 12px;
+  background: var(--dock-bg);
+  box-shadow: var(--dock-shadow);
+  backdrop-filter: blur(10px);
+}
+
+.time-dock-title {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.time-dock-list {
+  display: grid;
+  gap: 8px;
+}
+
+.time-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 8px 10px;
+  background: var(--card-bg);
+}
+
+.time-card.is-primary {
+  border-color: rgba(16, 185, 129, 0.55);
+  box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.2), 0 8px 18px rgba(16, 185, 129, 0.16);
+}
+
+.time-card-meta {
+  min-width: 0;
+}
+
+.time-city-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.time-city {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.time-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(16, 185, 129, 0.45);
+  padding: 1px 6px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #047857;
+  letter-spacing: 0.02em;
+}
+
+.dark .time-pill {
+  color: #34d399;
+}
+
+.time-digital {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.time-dial {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 auto;
+}
+
+.dial-ring {
+  fill: none;
+  stroke: var(--dial-ring);
+  stroke-width: 3;
+}
+
+.dial-face {
+  fill: var(--day-face);
+}
+
+.time-dial.is-night .dial-face {
+  fill: var(--night-face);
+}
+
+.time-dial.is-night .dial-tick {
+  stroke: rgba(255, 255, 255, 0.7);
+}
+
+.dial-tick {
+  stroke: var(--tick-color);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+
+.dial-tick.major {
+  stroke-width: 2.2;
+}
+
+.dial-hand {
+  transform-origin: 50px 50px;
+  stroke-linecap: round;
+  stroke: var(--hand-color);
+}
+
+.dial-hand.hour {
+  stroke-width: 3;
+}
+
+.dial-hand.minute {
+  stroke-width: 2.2;
+}
+
+.dial-hand.second {
+  stroke-width: 1.4;
+  stroke: var(--second-color);
+}
+
+.dial-center {
+  fill: var(--hand-color);
+}
+
+.time-mobile-toggle {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .time-dock {
+    width: 272px;
+  }
+}
+
+@media (max-width: 640px) {
+  .time-dock {
+    left: 10px;
+    right: 10px;
+    top: auto;
+    bottom: 10px;
+    width: auto;
+    transform: translateY(calc(100% + 14px));
+  }
+
+  .time-dock.is-open {
+    transform: translateY(0);
+  }
+
+  .time-dock-tab {
+    display: none;
+  }
+
+  .time-mobile-toggle {
+    position: fixed;
+    left: 12px;
+    bottom: 12px;
+    z-index: 46;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 999px;
+    border: 1px solid var(--dock-border);
+    background: var(--dock-bg);
+    padding: 9px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    box-shadow: var(--dock-shadow);
+    backdrop-filter: blur(8px);
+  }
+
+  .time-dock.is-open + .time-mobile-toggle {
+    opacity: 0.35;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .time-dock,
+  .time-mobile-toggle {
+    transition: none !important;
+  }
+}

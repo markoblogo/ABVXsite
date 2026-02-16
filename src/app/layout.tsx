@@ -4,6 +4,7 @@ import './globals.css';
 import Image from 'next/image';
 import { ThemeProvider } from '@/components/theme-provider';
 import { ThemeToggle } from '@/components/theme-toggle';
+import WorldTimeDock from '@/components/world-time-dock';
 
 const googleVerification = process.env.GOOGLE_SITE_VERIFICATION;
 // Prefer env var, but keep a safe default so verification survives redeploys.
@@ -135,6 +136,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-white text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50">
         <ThemeProvider>
           <Nav />
+          <WorldTimeDock />
           <main className="mx-auto max-w-5xl px-6 py-12">{children}</main>
           <footer className="border-t border-black/10 dark:border-white/10">
             <div className="mx-auto max-w-5xl px-6 py-10 text-sm text-zinc-500 dark:text-zinc-400">

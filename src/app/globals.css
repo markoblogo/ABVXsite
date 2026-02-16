@@ -96,6 +96,7 @@ header nav::-webkit-scrollbar {
   width: 292px;
   transform: translate3d(calc(-100% + 44px), -50%, 0);
   transition: transform 200ms ease;
+  cursor: pointer;
 }
 
 .dark .time-dock {
@@ -163,6 +164,7 @@ header nav::-webkit-scrollbar {
   background: var(--dock-bg);
   box-shadow: var(--dock-shadow);
   backdrop-filter: blur(10px);
+  pointer-events: none;
 }
 
 .time-dock-title {

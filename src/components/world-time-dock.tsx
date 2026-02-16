@@ -175,24 +175,34 @@ export default function WorldTimeDock() {
 
   if (!available) return null;
 
+  const toggleDock = () => setOpen((v) => !v);
+
   return (
     <>
       <aside
         className={`time-dock ${open ? 'is-open' : 'is-closed'}`}
         aria-label="World time panel"
+        role="button"
+        tabIndex={0}
+        aria-expanded={open}
+        aria-controls="world-time-panel"
+        onClick={toggleDock}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleDock();
+          }
+        }}
       >
-        <button
-          type="button"
+        <div
           className="time-dock-edge-toggle"
-          aria-expanded={open}
-          aria-controls="world-time-panel"
-          onClick={() => setOpen((v) => !v)}
+          aria-hidden="true"
         >
           <span className="time-edge-icon" aria-hidden="true">
             ◷
           </span>
           <span className="time-edge-label">TIME</span>
-        </button>
+        </div>
 
         <div className="time-dock-panel" id="world-time-panel">
           <div className="time-dock-title">World Time</div>
@@ -232,7 +242,10 @@ export default function WorldTimeDock() {
         className="time-mobile-toggle"
         aria-expanded={open}
         aria-controls="world-time-panel"
-        onClick={() => setOpen((v) => !v)}
+        onClick={(e) => {
+          e.stopPropagation();
+          toggleDock();
+        }}
       >
         <span aria-hidden="true">◷</span>
         <span>Time</span>

@@ -438,3 +438,145 @@ header nav a:focus-visible,
     transform: none !important;
   }
 }
+
+.work-with-me-page {
+  --wm-surface: rgba(255, 255, 255, 0.9);
+  --wm-surface-strong: rgba(255, 255, 255, 0.95);
+  --wm-border: rgba(17, 24, 39, 0.12);
+  --wm-text: rgb(17 24 39);
+}
+
+.dark .work-with-me-page {
+  --wm-surface: rgba(24, 24, 27, 0.72);
+  --wm-surface-strong: rgba(20, 20, 23, 0.86);
+  --wm-border: rgba(255, 255, 255, 0.16);
+  --wm-text: rgb(244 244 245);
+}
+
+.work-with-me-page .wm-card {
+  background: var(--wm-surface);
+  border: 1px solid var(--wm-border);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+  transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease;
+}
+
+.work-with-me-page .wm-card--accent {
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+.work-with-me-page .wm-panel {
+  background: color-mix(in srgb, var(--wm-surface-strong) 92%, #22c55e 8%);
+  border: 1px solid var(--wm-border);
+  border-left: 3px solid rgba(34, 197, 94, 0.55);
+  transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease;
+}
+
+.work-with-me-page .wm-cta {
+  background: var(--wm-surface-strong);
+  border: 1px solid var(--wm-border);
+  color: var(--wm-text);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+  transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease;
+}
+
+.work-with-me-page .wm-chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.04);
+  color: rgba(17, 24, 39, 0.82);
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  text-transform: uppercase;
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.08);
+  transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease;
+}
+
+.dark .work-with-me-page .wm-chip {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(244, 244, 245, 0.92);
+}
+
+.work-with-me-page .wm-chip--accent {
+  border-color: rgba(34, 197, 94, 0.45);
+  background: rgba(34, 197, 94, 0.12);
+  color: rgb(21 128 61);
+}
+
+.dark .work-with-me-page .wm-chip--accent {
+  color: rgb(134 239 172);
+  background: rgba(34, 197, 94, 0.2);
+}
+
+.work-with-me-page .wm-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease, background-color 150ms ease, color 150ms ease;
+}
+
+.work-with-me-page .wm-btn:focus-visible {
+  outline: none;
+  box-shadow: var(--glow-ring);
+}
+
+.work-with-me-page .wm-btn--primary {
+  background: #111827;
+  color: #f9fafb;
+  border-color: #111827;
+}
+
+.dark .work-with-me-page .wm-btn--primary {
+  background: #f4f4f5;
+  color: #111827;
+  border-color: #f4f4f5;
+}
+
+.work-with-me-page .wm-btn--secondary {
+  background: transparent;
+  color: var(--wm-text);
+  border-color: var(--wm-border);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .work-with-me-page .wm-card:hover,
+  .work-with-me-page .wm-panel:hover,
+  .work-with-me-page .wm-cta:hover {
+    transform: translateY(-2px);
+    border-color: rgba(34, 197, 94, 0.28);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1), 0 0 18px var(--glow-accent);
+  }
+
+  .work-with-me-page .wm-chip:hover {
+    transform: translateY(-2px);
+    border-color: rgba(34, 197, 94, 0.32);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 0 12px var(--glow-accent);
+  }
+
+  .work-with-me-page .wm-btn:hover {
+    transform: translateY(-2px);
+    border-color: rgba(34, 197, 94, 0.35);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1), 0 0 14px var(--glow-accent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work-with-me-page .wm-card,
+  .work-with-me-page .wm-panel,
+  .work-with-me-page .wm-cta,
+  .work-with-me-page .wm-chip,
+  .work-with-me-page .wm-btn {
+    transition: none !important;
+    transform: none !important;
+  }
+}

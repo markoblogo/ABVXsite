@@ -3,7 +3,7 @@ import { computeEcosystemMeta } from '@/lib/ecosystem-meta';
 import ZoomableImage from '@/components/zoomable-image';
 
 const card =
-  'rounded-xl border border-black/10 bg-black/5 p-5 hover:border-black/20 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20';
+  'ux-hover-card ux-focus-ring rounded-xl border border-black/10 bg-black/5 p-5 hover:border-black/20 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20';
 
 const chip =
   'inline-flex items-center rounded-full border border-black/15 bg-black/5 px-2.5 py-1 text-xs font-semibold text-zinc-800 dark:border-white/15 dark:bg-white/5 dark:text-zinc-200';
@@ -82,4 +82,3 @@ export default function EcosystemCard({
     </a>
   );
 }
-

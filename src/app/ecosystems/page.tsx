@@ -20,38 +20,43 @@ export default async function EcosystemsPage() {
   return (
     <div className="flex flex-col gap-6">
       <header>
-        <h1 className="text-2xl font-semibold tracking-tight">Ecosystems</h1>
+        <div className="flex flex-wrap items-center gap-2">
+          <h1 className="text-2xl font-semibold tracking-tight">Ecosystems</h1>
+          <span className="ux-hover-sticker inline-flex items-center rounded-full border border-emerald-300/60 bg-emerald-100/70 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-emerald-800 dark:border-emerald-300/35 dark:bg-emerald-900/35 dark:text-emerald-200">
+            Current focus
+          </span>
+        </div>
         <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
-          Ecosystems are running threads that produce tools, writing, and reusable assets.
+          Ecosystems are my <em>current</em> work streams: tools, writing, and reusable assets that ship.
         </p>
         <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
-          abvx.xyz is the hub. Spokes may live on dedicated subdomains or external sites, but each ecosystem links back here as the canonical home.
+          This is not a portfolio of “past projects”. Each ecosystem is alive right now — and links back here as the canonical home.
         </p>
       </header>
 
       <section className="grid gap-4 md:grid-cols-2">
-        <div className="rounded-xl border border-black/10 bg-black/5 p-5 text-sm text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300">
+        <div className="ux-hover-card rounded-xl border border-black/10 bg-black/5 p-5 text-sm text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300">
           <div className="font-semibold text-zinc-900 dark:text-zinc-100">Applied AI</div>
           <div className="mt-2">
-            Experiments, workflows, and pragmatic guidance on using AI tools to ship faster and communicate better. (Prompting, automation, creative toolchains.)
+            Experiments, workflows, and pragmatic tooling I use to ship faster: prompting, automation, agent docs, and evaluation.
           </div>
         </div>
-        <div className="rounded-xl border border-black/10 bg-black/5 p-5 text-sm text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300">
+        <div className="ux-hover-card rounded-xl border border-black/10 bg-black/5 p-5 text-sm text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300">
           <div className="font-semibold text-zinc-900 dark:text-zinc-100">Books</div>
           <div className="mt-2">
-            Reading as infrastructure: notes, frameworks, and distilled ideas I use in product and growth.
+            Reading as infrastructure: notes, frameworks, and distilled ideas I actually use in product and strategy work.
           </div>
         </div>
-        <div className="rounded-xl border border-black/10 bg-black/5 p-5 text-sm text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300">
+        <div className="ux-hover-card rounded-xl border border-black/10 bg-black/5 p-5 text-sm text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300">
           <div className="font-semibold text-zinc-900 dark:text-zinc-100">Validation</div>
           <div className="mt-2">
-            What holds when hype fades: positioning, proof, distribution systems, and decision-making under constraints.
+            What survives contact with reality: proof, constraints, distribution systems, and decision-making under pressure.
           </div>
         </div>
-        <div className="rounded-xl border border-black/10 bg-black/5 p-5 text-sm text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300">
+        <div className="ux-hover-card rounded-xl border border-black/10 bg-black/5 p-5 text-sm text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300">
           <div className="font-semibold text-zinc-900 dark:text-zinc-100">Culture threads</div>
           <div className="mt-2">
-            Long-form research and curation (for example: Ukrmodernism).
+            Long-form research and curation projects that run in parallel (e.g., Ukrmodernism).
           </div>
         </div>
       </section>

@@ -52,7 +52,7 @@ export default async function BooksPage() {
       <header>
         <h1 className="text-2xl font-semibold tracking-tight">Books</h1>
         <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
-          Books and long-form projects on brand, perception, and modern marketing systems.
+          Published titles and long-form projects across languages, culture, and applied AI.
         </p>
         {missing.length ? (
           <p className="mt-2 text-xs text-amber-300">
@@ -65,9 +65,9 @@ export default async function BooksPage() {
       <section className="rounded-xl border border-black/10 bg-black/5 p-6 text-sm text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300">
         <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">What you’ll find here</h2>
         <ul className="mt-3 list-disc space-y-1 pl-4">
-          <li>Book pages with summaries, key ideas, and references.</li>
-          <li>Supporting essays and frameworks.</li>
-          <li>Updates and upcoming titles.</li>
+          <li>Direct links to each title (Amazon, site, teaser).</li>
+          <li>Editions and formats (Kindle / paperback / PDF when available).</li>
+          <li>Occasional free downloads and updates when new releases ship.</li>
         </ul>
       </section>
 

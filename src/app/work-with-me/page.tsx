@@ -7,114 +7,145 @@ export const metadata = {
 
 export default function WorkWithMe() {
   return (
-    <div className="flex flex-col gap-10">
-      <header className="flex flex-col gap-3">
+    <div className="flex flex-col gap-12">
+      <header className="rounded-2xl border border-black/10 bg-black/[0.03] p-6 dark:border-white/10 dark:bg-white/[0.03] sm:p-7">
+        <div className="mb-3 flex flex-wrap gap-2">
+          <span className="inline-flex items-center rounded-full border border-emerald-300/60 bg-emerald-100/70 px-2.5 py-1 text-[11px] font-semibold text-emerald-800 dark:border-emerald-300/40 dark:bg-emerald-900/40 dark:text-emerald-200">
+            Product + AI systems
+          </span>
+          <span className="inline-flex items-center rounded-full border border-sky-300/60 bg-sky-100/70 px-2.5 py-1 text-[11px] font-semibold text-sky-800 dark:border-sky-300/40 dark:bg-sky-900/40 dark:text-sky-200">
+            LLM-first visibility (LLMO)
+          </span>
+          <span className="inline-flex items-center rounded-full border border-violet-300/60 bg-violet-100/70 px-2.5 py-1 text-[11px] font-semibold text-violet-800 dark:border-violet-300/40 dark:bg-violet-900/40 dark:text-violet-200">
+            Build with founders
+          </span>
+        </div>
         <h1 className="text-2xl font-semibold tracking-tight">
           Strategy and execution for founders and small teams
         </h1>
-        <p className="text-zinc-700 dark:text-zinc-300">
+        <p className="mt-2 text-zinc-700 dark:text-zinc-300">
           Product, growth, brand, and LLM-first visibility delivered as clear decisions
           and shippable artifacts.
         </p>
-        <p className="text-sm text-zinc-600 dark:text-zinc-300">
-          If you’re looking for abvx product growth support, the work is simple: clarify the offer,
-          pick a narrow next step, and ship with measurable outputs.
+        <p className="mt-3 text-sm font-medium text-zinc-600 dark:text-zinc-300">
+          Product + AI systems engagements for teams that need clarity, speed, and shipped outcomes.
+        </p>
+        <div className="mt-4 flex flex-wrap gap-3">
+          <a
+            href="#start-conversation"
+            className="rounded-md bg-zinc-950 px-4 py-2 text-sm font-semibold text-white hover:bg-black dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200"
+          >
+            Work with me
+          </a>
+          <a
+            href="/projects"
+            className="rounded-md border border-black/15 px-4 py-2 text-sm font-semibold text-zinc-950 hover:border-black/30 dark:border-white/15 dark:text-white dark:hover:border-white/30"
+          >
+            See projects
+          </a>
+        </div>
+        <p className="mt-3 text-xs text-zinc-500 dark:text-zinc-400">
+          Working in Paris time (CET/CEST).
         </p>
       </header>
 
-      <section className="flex flex-col gap-4">
-        <h2 className="text-lg font-semibold">Engagements</h2>
+      <section className="flex flex-col gap-4" id="engagements">
+        <h2 className="text-lg font-semibold">How I help teams ship</h2>
         <div className="grid gap-4 md:grid-cols-3">
-        <div className="rounded-xl border border-black/10 bg-black/5 p-5 dark:border-white/10 dark:bg-white/5">
-          <div className="text-sm font-semibold">1) Strategy Sprint (1–2 weeks)</div>
-          <div className="mt-2 text-sm text-zinc-700 dark:text-zinc-300">
-            For when you need clarity fast.
+        <div className="rounded-xl border border-emerald-300/40 bg-gradient-to-b from-emerald-50/70 to-transparent p-5 dark:border-emerald-400/30 dark:from-emerald-900/20 dark:to-transparent">
+          <div className="inline-flex items-center rounded-full border border-emerald-300/60 bg-emerald-100/80 px-2.5 py-1 text-[11px] font-semibold text-emerald-800 dark:border-emerald-300/40 dark:bg-emerald-900/40 dark:text-emerald-200">Fast clarity</div>
+          <div className="mt-2 text-sm font-semibold">Strategy Sprint (1–2 weeks)</div>
+          <div className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+            For founders who need a crisp plan before building.
           </div>
           <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-700 dark:text-zinc-300">
-            <li>Positioning map</li>
-            <li>Offer definition</li>
-            <li>4–8 week GTM roadmap</li>
-            <li>KPI set</li>
-            <li>Landing page outline</li>
+            <li>Offer + ICP clarity (what you sell, to whom, why you win)</li>
+            <li>Prioritized roadmap (next 2–4 weeks)</li>
+            <li>Metrics &amp; constraints (what success means, what we won’t do)</li>
+            <li>Messaging primitives you can reuse across site, product, and sales</li>
+            <li>Handoff: 1-page plan + decision log</li>
           </ul>
         </div>
 
-        <div className="rounded-xl border border-black/10 bg-black/5 p-5 dark:border-white/10 dark:bg-white/5">
-          <div className="text-sm font-semibold">2) Advisory (weekly / biweekly)</div>
-          <div className="mt-2 text-sm text-zinc-700 dark:text-zinc-300">
-            For ongoing decision support while you ship.
+        <div className="rounded-xl border border-violet-300/40 bg-gradient-to-b from-violet-50/70 to-transparent p-5 dark:border-violet-400/30 dark:from-violet-900/20 dark:to-transparent">
+          <div className="inline-flex items-center rounded-full border border-violet-300/60 bg-violet-100/80 px-2.5 py-1 text-[11px] font-semibold text-violet-800 dark:border-violet-300/40 dark:bg-violet-900/40 dark:text-violet-200">Ship the first real version</div>
+          <div className="mt-2 text-sm font-semibold">Build Sprint (2–4 weeks)</div>
+          <div className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+            For teams that want to build and launch with a tight loop.
           </div>
           <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-700 dark:text-zinc-300">
-            <li>Decision log</li>
-            <li>Weekly priorities</li>
-            <li>Review of experiments</li>
-            <li>Messaging iterations</li>
+            <li>MVP scope + build plan (what ships, what waits)</li>
+            <li>Landing + onboarding flow (first conversion path)</li>
+            <li>Analytics baseline (events, funnels, simple reporting)</li>
+            <li>AI-ready docs (AGENTS/RUNBOOK, repo context, workflows)</li>
+            <li>Weekly checkpoints + ship list</li>
           </ul>
         </div>
 
-        <div className="rounded-xl border border-black/10 bg-black/5 p-5 dark:border-white/10 dark:bg-white/5">
-          <div className="text-sm font-semibold">
-            3) LLM-first Visibility Audit + Implementation
-          </div>
-          <div className="mt-2 text-sm text-zinc-700 dark:text-zinc-300">
-            For when your site and docs need to become a usable distribution asset.
+        <div className="rounded-xl border border-sky-300/40 bg-gradient-to-b from-sky-50/70 to-transparent p-5 dark:border-sky-400/30 dark:from-sky-900/20 dark:to-transparent">
+          <div className="inline-flex items-center rounded-full border border-sky-300/60 bg-sky-100/80 px-2.5 py-1 text-[11px] font-semibold text-sky-800 dark:border-sky-300/40 dark:bg-sky-900/40 dark:text-sky-200">Make your product legible to humans + crawlers</div>
+          <div className="mt-2 text-sm font-semibold">LLM-first Visibility Audit + Implementation</div>
+          <div className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+            For products whose docs/site need to work in an AI-first discovery world.
           </div>
           <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-700 dark:text-zinc-300">
-            <li>IA + internal linking plan</li>
-            <li>Metadata pack</li>
-            <li>Page templates</li>
-            <li>Documentation patterns</li>
-            <li>Optional llms.txt convention</li>
+            <li>Information architecture + internal linking plan</li>
+            <li>Metadata pack (titles, descriptions, canonical, structured basics)</li>
+            <li>Agent-friendly documentation patterns (predictable, referenceable)</li>
+            <li>Optional llms.txt / LLMO pack conventions (where appropriate)</li>
+            <li>Implementation sprint: fix + measure + iterate</li>
           </ul>
         </div>
         </div>
       </section>
 
-      <section className="rounded-xl border border-black/10 bg-black/5 p-6 dark:border-white/10 dark:bg-white/5">
-        <h2 className="text-lg font-semibold">What you get</h2>
+      <section className="rounded-xl border border-amber-300/40 bg-gradient-to-br from-amber-50/80 to-transparent p-6 dark:border-amber-300/30 dark:from-amber-900/20 dark:to-transparent">
+        <h2 className="text-lg font-semibold">What you get (every time)</h2>
         <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-700 dark:text-zinc-300">
-          <li>Clear story: what you do, for whom, why you win.</li>
-          <li>A practical plan you can execute with your current resources.</li>
-          <li>A website and doc set that helps buyers (and agents) understand you quickly.</li>
+          <li>A clear story: offer, audience, and why you win — in plain language.</li>
+          <li>A practical plan you can execute with your current team and constraints.</li>
+          <li>Shippable artifacts (docs, pages, checklists) — not just advice.</li>
         </ul>
+        <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-300">
+          Not sure which track fits? Send 3 lines about what you’re building and where you’re stuck — I’ll point you to the best next step.
+        </p>
       </section>
 
       <section className="flex flex-col gap-3">
         <h2 className="text-lg font-semibold">Credibility snapshot</h2>
-        <p className="text-sm text-zinc-700 dark:text-zinc-300">
-          Over 20 years across tech, foodtech, Web3, hospitality, FMCG, and retail,
-          including VP/C-level roles and venture-backed work.
-        </p>
+        <ul className="list-disc space-y-1 pl-4 text-sm text-zinc-700 dark:text-zinc-300">
+          <li>Product + GTM leadership across AI tools and software (founder + C-level marketing/product).</li>
+          <li>Built and scaled ventures across Web3 and commodities infrastructure (options/indices/markets).</li>
+          <li>Hands-on builder: automation, internal tools, and OSS — from validation to shipped systems.</li>
+        </ul>
       </section>
 
       <section className="flex flex-col gap-3">
         <h2 className="text-lg font-semibold">FAQ</h2>
-        <div className="flex flex-col gap-3 text-sm text-zinc-700 dark:text-zinc-300">
+        <div className="flex flex-col gap-4 text-sm text-zinc-700 dark:text-zinc-300">
           <div>
-            <div className="font-semibold">Do you do “SEO”?</div>
+            <div className="text-[15px] font-semibold">Do you do “SEO”?</div>
             <div>
-              I focus on clarity, intent, structure, and compounding distribution. That often
-              improves search performance as a consequence.
+              I focus on clarity, intent, structure, and compounding distribution. Search usually improves as a byproduct.
             </div>
           </div>
           <div>
-            <div className="font-semibold">Do you work with Web3?</div>
+            <div className="text-[15px] font-semibold">Do you work with Web3?</div>
             <div>
-              Yes, selectively. I care about fundamentals: offer, distribution, trust, and
-              measurable outcomes.
+              Yes, selectively. I work where fundamentals are clear: offer, trust, distribution, and measurable outcomes.
             </div>
           </div>
         </div>
       </section>
 
-      <section className="flex flex-col gap-3">
-        <h2 className="text-lg font-semibold">Contact</h2>
-        <p className="text-sm text-zinc-700 dark:text-zinc-300">
-          Best: LinkedIn DM. Or email for longer context.
+      <section className="flex flex-col gap-3 rounded-xl border border-black/10 bg-zinc-950 p-6 text-zinc-100 dark:border-white/15 dark:bg-white dark:text-zinc-900" id="start-conversation">
+        <h2 className="text-lg font-semibold">Start a conversation</h2>
+        <p className="text-sm text-zinc-200 dark:text-zinc-700">
+          Best via LinkedIn DM for quick context. Email works for longer briefs or partnership ideas.
         </p>
         <div className="flex flex-wrap gap-3">
           <a
-            className="rounded-md bg-zinc-950 px-4 py-2 text-sm font-semibold text-white hover:bg-black dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200"
+            className="rounded-md bg-white px-4 py-2 text-sm font-semibold text-zinc-950 hover:bg-zinc-200 dark:bg-zinc-950 dark:text-white dark:hover:bg-black"
             href="https://www.linkedin.com/in/abvcreative/"
             target="_blank"
             rel="noreferrer"
@@ -122,7 +153,7 @@ export default function WorkWithMe() {
             LinkedIn DM
           </a>
           <a
-            className="rounded-md border border-black/15 px-4 py-2 text-sm font-semibold text-zinc-950 hover:border-black/30 dark:border-white/15 dark:text-white dark:hover:border-white/30"
+            className="rounded-md border border-white/30 px-4 py-2 text-sm font-semibold text-white hover:border-white/60 dark:border-zinc-400/40 dark:text-zinc-900 dark:hover:border-zinc-700"
             href="mailto:a.biletskiy@gmail.com"
           >
             Email

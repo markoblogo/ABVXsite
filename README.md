@@ -16,6 +16,12 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+Theme smoke-check:
+
+```bash
+npm run smoke:theme
+```
+
 ## Environment variables
 
 Minimum required:

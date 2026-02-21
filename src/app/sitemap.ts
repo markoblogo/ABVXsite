@@ -4,8 +4,17 @@ export default async function sitemap() {
   const base = 'https://abvx.xyz';
   const now = new Date();
 
-  const books = await getBooks();
-  const ecosystems = await getEcosystems();
+  let books: Awaited<ReturnType<typeof getBooks>> = [];
+  let ecosystems: Awaited<ReturnType<typeof getEcosystems>> = [];
+
+  try {
+    books = await getBooks();
+    ecosystems = await getEcosystems();
+  } catch {
+    // Build fallback: keep a valid sitemap even when Notion env is unavailable.
+    books = [];
+    ecosystems = [];
+  }
 
   const urls = [
     { url: `${base}`, lastModified: now, changeFrequency: 'weekly', priority: 1 },

@@ -27,7 +27,7 @@ Optional:
 - `GOOGLE_SITE_VERIFICATION` - injected into metadata verification tags.
 - `BING_SITE_VERIFICATION` - optional override for Bing verification.
 
-Build note: static generation for `sitemap.xml` pulls Notion data; without `NOTION_TOKEN`, production build fails.
+Build note: without `NOTION_TOKEN`, sitemap generation falls back to static core routes only (no Notion-derived URLs).
 
 ## Notion data model
 

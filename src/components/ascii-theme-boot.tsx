@@ -25,13 +25,12 @@ function initAsciiTheme(): void {
   }
 
   window.AsciiTheme?.initAsciiTheme?.({
-    integrateTheme: 'auto',
-    addThemeToggle: true,
+    integrateTheme: 'respect',
+    addThemeToggle: false,
     addStyleToggle: true,
     mountSelector: '#ascii-toggle-anchor',
     mountPlacement: 'append',
     storageKey: 'abvx_theme_v1',
-    themeAttr: 'data-theme',
     className: 'abvx-ascii-toggle',
   });
 

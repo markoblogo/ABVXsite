@@ -12,8 +12,8 @@ declare global {
 
 const ASCII_STYLE_ID = 'ascii-theme-css';
 const ASCII_SCRIPT_ID = 'ascii-theme-js';
-const ASCII_CSS_SRC = 'https://cdn.jsdelivr.net/gh/markoblogo/AsciiTheme@main/dist/style.css';
-const ASCII_JS_SRC = 'https://cdn.jsdelivr.net/gh/markoblogo/AsciiTheme@main/dist/ascii-theme.umd.js';
+const ASCII_CSS_SRC = 'https://cdn.jsdelivr.net/gh/markoblogo/AsciiTheme@c191370/dist/style.css';
+const ASCII_JS_SRC = 'https://cdn.jsdelivr.net/gh/markoblogo/AsciiTheme@c191370/dist/ascii-theme.umd.js';
 
 function initAsciiTheme(): void {
   if (typeof window === 'undefined') {
@@ -79,4 +79,3 @@ export function AsciiThemeBoot() {
 
   return null;
 }
-

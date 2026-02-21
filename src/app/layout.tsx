@@ -4,6 +4,7 @@ import './globals.css';
 import Image from 'next/image';
 import { ThemeProvider } from '@/components/theme-provider';
 import { ThemeToggle } from '@/components/theme-toggle';
+import { AsciiThemeBoot } from '@/components/ascii-theme-boot';
 import WorldTimeDock from '@/components/world-time-dock';
 
 const googleVerification = process.env.GOOGLE_SITE_VERIFICATION;
@@ -109,6 +110,7 @@ function Nav() {
             About
           </a>
           <ThemeToggle />
+          <div id="ascii-toggle-anchor" className="ascii-toggle-anchor" />
         </nav>
       </div>
     </header>
@@ -135,6 +137,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-white text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50">
         <ThemeProvider>
+          <AsciiThemeBoot />
           <Nav />
           <WorldTimeDock />
           <main className="mx-auto max-w-5xl px-6 py-12">{children}</main>
@@ -209,6 +212,13 @@ export default function RootLayout({
                       Amazon Author
                     </a>
                   </div>
+                </div>
+
+                <div className="ascii-footnote">
+                  This landing uses an experimental ASCII theme mode (toggle in the header) · Source:{' '}
+                  <a href="https://github.com/markoblogo/AsciiTheme" target="_blank" rel="noreferrer">
+                    AsciiTheme
+                  </a>
                 </div>
               </div>
             </div>

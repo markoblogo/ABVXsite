@@ -43,8 +43,12 @@ export default async function Home() {
     <div className="home-shell mx-auto flex w-full max-w-[1100px] flex-col gap-14">
       <section className="relative flex scroll-mt-24 flex-col gap-6" id="home">
         <div className="hero-stickers hidden sm:block" aria-hidden="true">
-          <div className="hero-sticker burst">OPEN SOURCE + SHIPPED</div>
-          <div className="hero-sticker ribbon">LLM-FIRST VISIBILITY (LLMO)</div>
+          <div className="hero-sticker burst" data-ascii-sticker="OPEN SOURCE + SHIPPED">
+            OPEN SOURCE + SHIPPED
+          </div>
+          <div className="hero-sticker ribbon" data-ascii-sticker="LLM-FIRST VISIBILITY (LLMO)">
+            LLM-FIRST VISIBILITY (LLMO)
+          </div>
         </div>
 
         <div className="flex items-center gap-3">
@@ -62,8 +66,12 @@ export default async function Home() {
         </div>
 
         <div className="hero-stickers-mobile flex flex-wrap gap-2 sm:hidden" aria-hidden="true">
-          <div className="hero-sticker burst">OPEN SOURCE + SHIPPED</div>
-          <div className="hero-sticker ribbon">LLM-FIRST VISIBILITY (LLMO)</div>
+          <div className="hero-sticker burst" data-ascii-sticker="OPEN SOURCE + SHIPPED">
+            OPEN SOURCE + SHIPPED
+          </div>
+          <div className="hero-sticker ribbon" data-ascii-sticker="LLM-FIRST VISIBILITY (LLMO)">
+            LLM-FIRST VISIBILITY (LLMO)
+          </div>
         </div>
 
         <div className="flex max-w-3xl flex-col gap-4">

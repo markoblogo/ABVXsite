@@ -83,6 +83,56 @@ header nav a {
   transition: color 140ms var(--ease-out), text-shadow 140ms var(--ease-out), text-decoration-color 140ms var(--ease-out);
 }
 
+.ascii-toggle-anchor {
+  display: inline-flex;
+  align-items: center;
+}
+
+.ascii-toggle-anchor .ascii-theme-toggle-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ascii-toggle-anchor .ascii-theme-toggle-btn {
+  border: 1px solid rgb(0 0 0 / 0.1);
+  background: rgb(0 0 0 / 0.05);
+  color: rgb(63 63 70);
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+  min-height: 36px;
+  min-width: 36px;
+  line-height: 1;
+}
+
+.dark .ascii-toggle-anchor .ascii-theme-toggle-btn {
+  border-color: rgb(255 255 255 / 0.15);
+  background: rgb(255 255 255 / 0.05);
+  color: rgb(228 228 231);
+}
+
+.ascii-footnote {
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  opacity: 0.9;
+  white-space: normal;
+}
+
+.ascii-footnote a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+:root[data-style="ascii"] .ascii-footnote {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  letter-spacing: 0.02em;
+}
+
+:root[data-style="ascii"] .ascii-footnote a {
+  color: currentColor;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .ux-hover-card:hover,
   main :is(.rounded-xl.border, .rounded-2xl.border):hover {

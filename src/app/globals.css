@@ -124,6 +124,55 @@ header nav a {
   text-underline-offset: 2px;
 }
 
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.15rem;
+  height: 2.15rem;
+  color: rgb(113 113 122);
+  border: 1px solid rgb(0 0 0 / 0.08);
+  border-radius: 999px;
+  background: rgb(0 0 0 / 0.025);
+  transition:
+    color 140ms var(--ease-out),
+    border-color 140ms var(--ease-out),
+    background-color 140ms var(--ease-out),
+    transform 140ms var(--ease-out),
+    box-shadow 140ms var(--ease-out);
+}
+
+.footer-social-icon {
+  width: 0.95rem;
+  height: 0.95rem;
+  flex: none;
+}
+
+.dark .footer-social-link {
+  color: rgb(161 161 170);
+  border-color: rgb(255 255 255 / 0.12);
+  background: rgb(255 255 255 / 0.04);
+}
+
+.footer-social-link:hover {
+  color: rgb(24 24 27);
+  border-color: rgb(0 0 0 / 0.16);
+  background: rgb(0 0 0 / 0.05);
+  transform: translateY(-1px);
+}
+
+.dark .footer-social-link:hover {
+  color: rgb(244 244 245);
+  border-color: rgb(255 255 255 / 0.2);
+  background: rgb(255 255 255 / 0.08);
+}
+
+.footer-social-link:focus-visible {
+  outline: none;
+  box-shadow: var(--glow-ring);
+  border-color: rgba(34, 197, 94, 0.35);
+}
+
 :root[data-style="ascii"] .ascii-footnote {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
   letter-spacing: 0.02em;

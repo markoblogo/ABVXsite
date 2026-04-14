@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const profiles = [
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/abvcreative/' },
   { label: 'GitHub', href: 'https://github.com/markoblogo' },
@@ -6,6 +8,7 @@ const profiles = [
   { label: 'YouTube', href: 'https://www.youtube.com/@ABV_Creative' },
   { label: 'X', href: 'https://x.com/abv_creative' },
   { label: 'Behance', href: 'https://www.behance.net/ABV_Creative' },
+  { label: 'Bluesky', href: 'https://bsky.app/profile/abvx.xyz' },
   { label: 'Instagram', href: 'https://www.instagram.com/abvcreative/' },
   { label: 'Telegram', href: 'https://t.me/ABVcreative' },
   { label: 'Vivino', href: 'https://www.vivino.com/users/anthony.bile' },
@@ -29,7 +32,7 @@ export default function LinksPage() {
           an ABVX page, treat this domain as the source of truth.
         </p>
         <p className="text-sm text-zinc-600 dark:text-zinc-300">
-          Identity page: <a className="underline" href="/about">About Anton (ABVX)</a>
+          Identity page: <Link className="underline" href="/about">About Anton (ABVX)</Link>
         </p>
       </header>
 
@@ -47,26 +50,25 @@ export default function LinksPage() {
       </section>
 
       <section className="flex flex-wrap gap-3">
-        <a
+        <Link
           href="/work-with-me"
           className="rounded-md bg-zinc-950 px-4 py-2 text-sm font-semibold text-white hover:bg-black dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200"
         >
           Work with me
-        </a>
-        <a
+        </Link>
+        <Link
           href="/projects"
           className="rounded-md border border-black/15 px-4 py-2 text-sm font-semibold text-zinc-950 hover:border-black/30 dark:border-white/15 dark:text-white dark:hover:border-white/30"
         >
           Projects
-        </a>
-        <a
+        </Link>
+        <Link
           href="/ecosystems"
           className="rounded-md border border-black/15 px-4 py-2 text-sm font-semibold text-zinc-950 hover:border-black/30 dark:border-white/15 dark:text-white dark:hover:border-white/30"
         >
           Ecosystems
-        </a>
+        </Link>
       </section>
     </div>
   );
 }
-

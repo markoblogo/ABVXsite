@@ -112,10 +112,24 @@ header nav a {
 }
 
 .ascii-footnote {
-  margin-top: 0.25rem;
+  margin-top: 1.25rem;
   font-size: 0.85rem;
   opacity: 0.9;
   white-space: normal;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: start;
+  gap: 1.5rem 2.5rem;
+}
+
+.footer-social-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-start;
 }
 
 .ascii-footnote a {
@@ -171,6 +185,17 @@ header nav a {
   outline: none;
   box-shadow: var(--glow-ring);
   border-color: rgba(34, 197, 94, 0.35);
+}
+
+@media (max-width: 760px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .ascii-footnote {
+    margin-top: 1rem;
+  }
 }
 
 :root[data-style="ascii"] .ascii-footnote {

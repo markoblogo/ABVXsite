@@ -337,9 +337,9 @@ export default function RootLayout({
           <WorldTimeDock />
           <main className="mx-auto max-w-5xl px-6 py-12">{children}</main>
           <footer className="border-t border-black/10 dark:border-white/10">
-            <div className="mx-auto max-w-5xl px-6 py-10 text-sm text-zinc-500 dark:text-zinc-400">
-              <div className="flex flex-col gap-6">
-                <div className="flex flex-col gap-2">
+            <div className="mx-auto max-w-5xl px-6 py-8 text-sm text-zinc-500 dark:text-zinc-400">
+              <div className="footer-grid">
+                <div className="flex flex-col gap-3">
                   <div>
                     Open to consulting, partnerships, and selected full‑time roles.
                   </div>
@@ -362,7 +362,7 @@ export default function RootLayout({
                   </div>
                 </div>
 
-                <div className="flex flex-col gap-3">
+                <div className="footer-social-column">
                   <div className="text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
                     Elsewhere
                   </div>
@@ -386,13 +386,13 @@ export default function RootLayout({
                     })}
                   </div>
                 </div>
+              </div>
 
-                <div className="ascii-footnote">
-                  This landing uses an experimental ASCII theme mode (toggle in the header) · Source:{' '}
-                  <a href="https://github.com/markoblogo/AsciiTheme" target="_blank" rel="noreferrer">
-                    AsciiTheme
-                  </a>
-                </div>
+              <div className="ascii-footnote">
+                This landing uses an experimental ASCII theme mode (toggle in the header) · Source:{' '}
+                <a href="https://github.com/markoblogo/AsciiTheme" target="_blank" rel="noreferrer">
+                  AsciiTheme
+                </a>
               </div>
             </div>
           </footer>

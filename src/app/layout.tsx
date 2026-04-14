@@ -366,7 +366,7 @@ export default function RootLayout({
                   <div className="text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
                     Elsewhere
                   </div>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="footer-social-row">
                     {footerSocialLinks.map((social) => {
                       const isExternal = social.href.startsWith('http');
 

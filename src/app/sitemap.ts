@@ -1,4 +1,5 @@
 import { getBooks, getEcosystems } from '@/lib/abvx-data';
+import { DIRECTIONS } from '@/lib/directions';
 
 export default async function sitemap() {
   const base = 'https://abvx.xyz';
@@ -27,7 +28,12 @@ export default async function sitemap() {
     { url: `${base}/llmo`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/links`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${base}/toki-pona`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${base}/cropto`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
+    ...DIRECTIONS.map((direction) => ({
+      url: `${base}${direction.href}`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    })),
   ];
 
   for (const b of books) {

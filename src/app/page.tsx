@@ -1,6 +1,7 @@
-import { getBooks, getEcosystems, getProjects } from '@/lib/abvx-data';
-import EcosystemCard from '@/components/ecosystem-card';
+import { getBooks, getProjects } from '@/lib/abvx-data';
+import { DIRECTIONS, type DirectionItem, itemBelongsToDirection } from '@/lib/directions';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const dynamic = 'force-dynamic';
 
@@ -32,12 +33,11 @@ const cardCompact =
   'rounded-xl border border-black/10 bg-black/5 p-5 dark:border-white/10 dark:bg-white/5';
 
 export default async function Home() {
-  const [ecosystems, projects, books] = await Promise.all([
-    getEcosystems(),
-    getProjects(),
-    getBooks(),
-  ]);
-  const featuredEcosystems = ecosystems.slice(0, 4);
+  const [projects, books] = await Promise.all([getProjects(), getBooks()]);
+  const directionItems: DirectionItem[] = [
+    ...projects.map((project) => ({ ...project, kind: 'project' as const })),
+    ...books.map((book) => ({ ...book, kind: 'book' as const })),
+  ];
 
   return (
     <div className="home-shell mx-auto flex w-full max-w-[1100px] flex-col gap-14">
@@ -139,32 +139,53 @@ export default async function Home() {
       </section>
 
       <section className="flex scroll-mt-24 flex-col gap-4" id="ecosystems-projects">
-        <h2 className="text-xl font-semibold tracking-tight">Ecosystems</h2>
+        <h2 className="text-xl font-semibold tracking-tight">Directions</h2>
         <p className="text-sm text-zinc-600 dark:text-zinc-300">
-          This is what I’m actively building and shipping right now — not a portfolio archive.
+          The site now groups work by four active directions instead of uneven legacy ecosystems.
         </p>
         <div className="flex flex-col gap-2 text-sm text-zinc-600 dark:text-zinc-300">
-          <p>Each ecosystem is a living thread with tools, notes, and artifacts.</p>
+          <p>Each direction can contain books, landings, services, repositories, and supporting tools.</p>
           <ul className="list-disc space-y-1 pl-5">
-            <li>Cropto: product and growth work on real software.</li>
-            <li>Toki Pona: language tools, translation, and writing.</li>
-            <li>Ukrmodernism: cultural research and curation.</li>
-            <li>Business books: a small publishing line I run alongside product work.</li>
+            <li>Cropto: commodity trading infrastructure and market tools.</li>
+            <li>ABVX Press: books, translations, free editions, and companion landings.</li>
+            <li>Tech Lab: AI-dev tooling, open-source utilities, and service prototypes.</li>
+            <li>Lang Lab: Toki Pona, pictographic protocols, and language-AI experiments.</li>
           </ul>
         </div>
 
         <div className="grid gap-3 md:grid-cols-2">
-          {featuredEcosystems.map((eco) => (
-            <EcosystemCard key={eco.id} eco={eco} books={books} projects={projects} />
-          ))}
+          {DIRECTIONS.map((direction) => {
+            const count = directionItems.filter((item) =>
+              itemBelongsToDirection(item, direction),
+            ).length;
+
+            return (
+              <a
+                key={direction.href}
+                href={direction.href}
+                className="rounded-xl border border-black/10 bg-black/5 p-5 hover:border-black/20 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20"
+              >
+                <div className="text-base font-semibold leading-snug">{direction.title}</div>
+                <div className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+                  {direction.tagline}
+                </div>
+                <div className="mt-3 text-xs uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+                  {count} structured item{count === 1 ? '' : 's'}
+                </div>
+              </a>
+            );
+          })}
         </div>
-        <div>
-          <a
-            className="rounded-md border border-black/15 px-4 py-2 text-sm font-semibold text-zinc-950 hover:border-black/30 dark:border-white/15 dark:text-white dark:hover:border-white/30"
-            href="/ecosystems"
-          >
-            Explore ecosystems
-          </a>
+        <div className="flex flex-wrap gap-3">
+          {DIRECTIONS.map((direction) => (
+            <a
+              key={direction.href}
+              className="rounded-md border border-black/15 px-4 py-2 text-sm font-semibold text-zinc-950 hover:border-black/30 dark:border-white/15 dark:text-white dark:hover:border-white/30"
+              href={direction.href}
+            >
+              Open {direction.title}
+            </a>
+          ))}
         </div>
       </section>
 
@@ -176,24 +197,24 @@ export default async function Home() {
           </p>
         </div>
         <div className="flex flex-wrap gap-3 pt-1">
-          <a
+          <Link
             href="/work-with-me"
             className="rounded-md bg-zinc-950 px-4 py-2 text-sm font-semibold text-white hover:bg-black dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200"
           >
             Work with me
-          </a>
-          <a
+          </Link>
+          <Link
             href="/about"
             className="rounded-md border border-black/15 px-4 py-2 text-sm font-semibold text-zinc-950 hover:border-black/30 dark:border-white/15 dark:text-white dark:hover:border-white/30"
           >
             About
-          </a>
-          <a
+          </Link>
+          <Link
             href="/books"
             className="rounded-md border border-black/15 px-4 py-2 text-sm font-semibold text-zinc-950 hover:border-black/30 dark:border-white/15 dark:text-white dark:hover:border-white/30"
           >
             Books
-          </a>
+          </Link>
         </div>
       </section>
     </div>

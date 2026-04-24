@@ -8,6 +8,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { AsciiThemeBoot } from '@/components/ascii-theme-boot';
 import WorldTimeDock from '@/components/world-time-dock';
+import { DIRECTIONS } from '@/lib/directions';
 
 const googleVerification = process.env.GOOGLE_SITE_VERIFICATION;
 // Prefer env var, but keep a safe default so verification survives redeploys.
@@ -289,15 +290,11 @@ function Nav() {
           <Link className={link} href="/work-with-me">
             Work with me
           </Link>
-          <Link className={link} href="/ecosystems">
-            Ecosystems
-          </Link>
-          <Link className={link} href="/projects">
-            Projects
-          </Link>
-          <Link className={link} href="/books">
-            Books
-          </Link>
+          {DIRECTIONS.map((direction) => (
+            <Link key={direction.href} className={link} href={direction.href}>
+              {direction.title}
+            </Link>
+          ))}
           <Link className={link} href="/writing">
             Blogs
           </Link>
@@ -347,14 +344,23 @@ export default function RootLayout({
                     <Link className="underline hover:text-black dark:hover:text-white" href="/work-with-me">
                       Work with me
                     </Link>
-                    <Link className="underline hover:text-black dark:hover:text-white" href="/projects">
-                      Projects
-                    </Link>
+                    {DIRECTIONS.map((direction) => (
+                      <Link
+                        key={direction.href}
+                        className="underline hover:text-black dark:hover:text-white"
+                        href={direction.href}
+                      >
+                        {direction.title}
+                      </Link>
+                    ))}
                     <Link className="underline hover:text-black dark:hover:text-white" href="/writing">
                       Blogs
                     </Link>
+                    <Link className="underline hover:text-black dark:hover:text-white" href="/projects">
+                      Projects archive
+                    </Link>
                     <Link className="underline hover:text-black dark:hover:text-white" href="/books">
-                      Books
+                      Books archive
                     </Link>
                     <Link className="underline hover:text-black dark:hover:text-white" href="/links">
                       Links

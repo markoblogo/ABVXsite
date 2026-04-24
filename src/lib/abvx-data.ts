@@ -23,6 +23,7 @@ export type Project = {
   id: string;
   name: string;
   type?: string;
+  assetType?: string;
   stage?: string;
   tagline?: string;
   website?: string;
@@ -31,6 +32,19 @@ export type Project = {
   statusNote?: string;
   coverImage?: string;
   ecosystemIds: string[];
+  primaryDirection?: string;
+  relatedDirections: string[];
+  initiative?: string;
+  parentInitiative?: string;
+  pressCluster?: string;
+  pressSubcluster?: string;
+  langCluster?: string;
+  langSubcluster?: string;
+  techCluster?: string;
+  techSubcluster?: string;
+  croptoCluster?: string;
+  croptoSubcluster?: string;
+  reviewNotes?: string;
 };
 
 export type Book = {
@@ -38,6 +52,7 @@ export type Book = {
   name: string;
   slug: string;
   section?: string; // "Раздел"
+  assetType?: string;
   site?: string;
   teaser?: string;
   pdf?: string;
@@ -45,11 +60,26 @@ export type Book = {
   paper?: string;
   coverImage?: string;
   ecosystemIds: string[];
+  primaryDirection?: string;
+  relatedDirections: string[];
+  initiative?: string;
+  parentInitiative?: string;
+  pressCluster?: string;
+  pressSubcluster?: string;
+  langCluster?: string;
+  langSubcluster?: string;
+  techCluster?: string;
+  techSubcluster?: string;
+  croptoCluster?: string;
+  croptoSubcluster?: string;
+  reviewNotes?: string;
 };
 
-function idsFromRelation(prop: any): string[] {
-  if (!prop || prop.type !== 'relation') return [];
-  return (prop.relation || []).map((x: any) => x.id);
+function idsFromRelation(prop: unknown): string[] {
+  if (!prop || typeof prop !== 'object' || (prop as { type?: string }).type !== 'relation') {
+    return [];
+  }
+  return ((prop as RelationProperty).relation || []).map((x) => x.id);
 }
 
 function cleanLabel(s: string | undefined): string | undefined {
@@ -67,7 +97,7 @@ function cleanStatus(s: string | undefined): string | undefined {
   return cleanLabel(s);
 }
 
-function propUrlAny(props: any, keys: string[]): string | undefined {
+function propUrlAny(props: NotionProps, keys: string[]): string | undefined {
   for (const key of keys) {
     const value = propUrl(props[key]);
     if (value) return value;
@@ -75,7 +105,43 @@ function propUrlAny(props: any, keys: string[]): string | undefined {
   return undefined;
 }
 
-function coverUrlFromPage(page: any): string | undefined {
+function splitLabels(value: string | undefined): string[] {
+  if (!value) return [];
+  return value
+    .split(',')
+    .map((x) => cleanLabel(x))
+    .filter(Boolean) as string[];
+}
+
+function relatedDirections(props: NotionProps): string[] {
+  const textValue = cleanLabel(propText(props['Related Directions Text']));
+  const multiValue = cleanLabel(propText(props['Related Directions']));
+  return splitLabels(textValue || multiValue);
+}
+
+function structureProps(props: NotionProps) {
+  return {
+    assetType:
+      cleanLabel(propText(props['Asset Type V2'])) ||
+      cleanLabel(propText(props['Artifact Type'])) ||
+      undefined,
+    primaryDirection: cleanLabel(propText(props['Primary Direction'])) || undefined,
+    relatedDirections: relatedDirections(props),
+    initiative: cleanLabel(propText(props.Initiative)) || undefined,
+    parentInitiative: cleanLabel(propText(props['Parent Initiative'])) || undefined,
+    pressCluster: cleanLabel(propText(props['Press Cluster'])) || undefined,
+    pressSubcluster: cleanLabel(propText(props['Press Subcluster'])) || undefined,
+    langCluster: cleanLabel(propText(props['Lang Cluster'])) || undefined,
+    langSubcluster: cleanLabel(propText(props['Lang Subcluster'])) || undefined,
+    techCluster: cleanLabel(propText(props['Tech Cluster'])) || undefined,
+    techSubcluster: cleanLabel(propText(props['Tech Subcluster'])) || undefined,
+    croptoCluster: cleanLabel(propText(props['Cropto Cluster'])) || undefined,
+    croptoSubcluster: cleanLabel(propText(props['Cropto Subcluster'])) || undefined,
+    reviewNotes: cleanLabel(propText(props['Review Notes'])) || undefined,
+  };
+}
+
+function coverUrlFromPage(page: NotionPage): string | undefined {
   const cover = page?.cover;
   if (!cover) return undefined;
   if (cover.type === 'external') return cover.external?.url || undefined;
@@ -126,6 +192,7 @@ export async function getProjects(): Promise<Project[]> {
       statusNote: cleanLabel(propText(p['Status note'])) || undefined,
       coverImage: coverUrlFromPage(r),
       ecosystemIds: idsFromRelation(p.Ecosystem),
+      ...structureProps(p),
     } satisfies Project;
   });
 
@@ -157,6 +224,7 @@ export async function getBooks(): Promise<Book[]> {
       paper: propUrl(p['Paper book']) || undefined,
       coverImage: coverUrlFromPage(r),
       ecosystemIds: idsFromRelation(p.Ecosystem),
+      ...structureProps(p),
     } satisfies Book;
   });
 
@@ -173,3 +241,17 @@ export async function getEcosystemBySlug(slug: string): Promise<Ecosystem | null
   const e = await getEcosystems();
   return e.find((x) => x.slug === slug) || null;
 }
+type NotionProps = Record<string, unknown>;
+
+type RelationProperty = {
+  type: 'relation';
+  relation?: Array<{ id: string }>;
+};
+
+type NotionPage = {
+  cover?: {
+    type?: string;
+    external?: { url?: string };
+    file?: { url?: string };
+  };
+};

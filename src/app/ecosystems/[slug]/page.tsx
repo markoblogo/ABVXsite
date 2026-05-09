@@ -14,23 +14,23 @@ export async function generateMetadata({
   const eco = await getEcosystemBySlug(slug);
   if (!eco) {
     return {
-      title: 'Ecosystem',
-      alternates: { canonical: `https://abvx.xyz/ecosystems/${slug}` },
+      title: 'Systems Catalogue',
+      alternates: { canonical: 'https://abvx.xyz/systems' },
     };
   }
 
   const desc =
     eco.tagline ||
-    'An ecosystem thread with projects, books, tools, and reusable artifacts.';
+    'A legacy grouped thread now represented inside the systems catalogue.';
 
   return {
     title: eco.name,
     description: desc,
-    alternates: { canonical: `https://abvx.xyz/ecosystems/${eco.slug}` },
+    alternates: { canonical: 'https://abvx.xyz/systems' },
     openGraph: {
       title: eco.name,
       description: desc,
-      url: `https://abvx.xyz/ecosystems/${eco.slug}`,
+      url: 'https://abvx.xyz/systems',
       type: 'website',
       images: eco.coverImage ? [{ url: eco.coverImage }] : undefined,
     },

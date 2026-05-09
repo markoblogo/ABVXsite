@@ -7,7 +7,7 @@ export const dynamic = 'force-dynamic';
 export const metadata = {
   title: 'ABVX Press',
   description: 'Books, translation series, companion landings, free editions, and publishing experiments by ABVX.',
-  alternates: { canonical: 'https://abvx.xyz/abvx-press' },
+  alternates: { canonical: 'https://abvx.xyz/books' },
 };
 
 export default async function AbvxPressPage() {

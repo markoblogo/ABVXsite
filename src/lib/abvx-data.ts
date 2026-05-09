@@ -1,4 +1,4 @@
-import { propNumber, propText, propUrl, queryDataSource } from './notion';
+import { propNumber, propText, propUrl, queryDataSource, type NotionProperty } from './notion';
 
 // Notion IDs (current workspace)
 // Ecosystem DB: 2f83d845-eb21-8045-b543-ea749b4e38a9
@@ -241,7 +241,7 @@ export async function getEcosystemBySlug(slug: string): Promise<Ecosystem | null
   const e = await getEcosystems();
   return e.find((x) => x.slug === slug) || null;
 }
-type NotionProps = Record<string, unknown>;
+type NotionProps = Record<string, NotionProperty>;
 
 type RelationProperty = {
   type: 'relation';

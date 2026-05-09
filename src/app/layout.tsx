@@ -11,9 +11,23 @@ const bingVerification =
 const personJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
+  '@id': 'https://abvx.xyz/#person',
   name: 'Anton Biletskyi-Volokh',
   url: 'https://abvx.xyz',
   jobTitle: 'Systems, Strategy, and Product Development',
+  description:
+    'Designer and builder of complex systems across strategy, markets, technology, language, and AI.',
+  knowsAbout: [
+    'Market infrastructure',
+    'Agro-commodity trading',
+    'AI-native development',
+    'Agentic workflows',
+    'Web services',
+    'Protocols',
+    'Constructed languages',
+    'Publishing',
+    'Translations',
+  ],
   sameAs: [
     'https://www.linkedin.com/in/abvcreative/',
     'https://github.com/markoblogo',
@@ -32,8 +46,40 @@ const personJsonLd = {
 const websiteJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
+  '@id': 'https://abvx.xyz/#website',
   name: 'ABVX',
   url: 'https://abvx.xyz',
+  description:
+    'A working index of systems, strategy, market infrastructure, AI-native development, language experiments, books, translations, and essays.',
+  inLanguage: 'en',
+  author: { '@id': 'https://abvx.xyz/#person' },
+  publisher: { '@id': 'https://abvx.xyz/#person' },
+  hasPart: [
+    {
+      '@type': 'CollectionPage',
+      name: 'Current Focus',
+      url: 'https://abvx.xyz/focus',
+      description: 'Agro-commodity trading infrastructure and related systems.',
+    },
+    {
+      '@type': 'CollectionPage',
+      name: 'Systems Catalogue',
+      url: 'https://abvx.xyz/systems',
+      description: 'Web services, AI workflows, protocols, tools, and language experiments.',
+    },
+    {
+      '@type': 'CollectionPage',
+      name: 'ABVX Press',
+      url: 'https://abvx.xyz/books',
+      description: 'Books, translations, series, and publishing projects.',
+    },
+    {
+      '@type': 'CollectionPage',
+      name: 'Writing',
+      url: 'https://abvx.xyz/writing',
+      description: 'Medium and Substack essays, build logs, and research notes.',
+    },
+  ],
 };
 
 export const metadata: Metadata = {

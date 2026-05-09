@@ -48,6 +48,10 @@ export function getBooks(): Book[] {
   return [...books].sort(byRankThenTitle);
 }
 
+export function getBooksBySection(section: SiteSection): Book[] {
+  return getBooks().filter((book) => appearsInSection(book, section));
+}
+
 export function getLatestBook(): Book | undefined {
   return [...books].sort(byLatest)[0];
 }

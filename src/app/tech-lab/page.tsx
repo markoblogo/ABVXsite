@@ -5,9 +5,9 @@ import { DIRECTIONS } from '@/lib/directions';
 export const dynamic = 'force-dynamic';
 
 export const metadata = {
-  title: 'Tech Lab',
+  title: 'Systems Catalogue',
   description: 'AI-development tooling, open-source utilities, landing systems, services, and shipped experiments.',
-  alternates: { canonical: 'https://abvx.xyz/tech-lab' },
+  alternates: { canonical: 'https://abvx.xyz/systems' },
 };
 
 export default async function TechLabPage() {

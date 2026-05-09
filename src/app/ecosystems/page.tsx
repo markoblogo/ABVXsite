@@ -4,10 +4,10 @@ import EcosystemCard from '@/components/ecosystem-card';
 export const dynamic = 'force-dynamic';
 
 export const metadata = {
-  title: 'Ecosystems',
+  title: 'Systems Catalogue',
   description:
-    'Ecosystems are running threads that produce tools, writing, books, and reusable assets across AI, validation, publishing, and culture research.',
-  alternates: { canonical: 'https://abvx.xyz/ecosystems' },
+    'Web services, AI-agent workflows, protocols, tools, language experiments and technical companions.',
+  alternates: { canonical: 'https://abvx.xyz/systems' },
 };
 
 export default async function EcosystemsPage() {

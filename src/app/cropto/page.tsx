@@ -5,9 +5,9 @@ import { DIRECTIONS } from '@/lib/directions';
 export const dynamic = 'force-dynamic';
 
 export const metadata = {
-  title: 'Cropto',
+  title: 'Current Focus',
   description: 'Commodity trading infrastructure: services, dashboards, monitors, and productized market tools.',
-  alternates: { canonical: 'https://abvx.xyz/cropto' },
+  alternates: { canonical: 'https://abvx.xyz/focus' },
 };
 
 export default async function CroptoPage() {

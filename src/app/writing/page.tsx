@@ -1,56 +1,84 @@
-import { fetchMediumFeed, fetchSubstackFeed, mergeFeeds } from '@/lib/feeds';
-import WritingList from '@/components/writing-list';
+import LatestCard from '@/components/LatestCard';
+import PageHeader from '@/components/PageHeader';
+import SectionPanel from '@/components/SectionPanel';
+import {
+  fetchMediumFeed,
+  fetchSubstackFeed,
+  mergeFeeds,
+  type FeedItem,
+} from '@/lib/feeds';
+import type { Metadata } from 'next';
 
-export const metadata = {
-  title: 'Blogs',
+export const metadata: Metadata = {
+  title: 'Writing',
   description:
-    'Notes on AI tools, agent workflows, and what actually ships in the real world.',
+    'Applied AI reviews, build logs and essays on systems, validation, agent workflows, decision-making and how ideas survive contact with reality.',
   alternates: { canonical: 'https://abvx.xyz/writing' },
 };
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 900;
+
+async function safeFeed(fetcher: (url: string) => Promise<FeedItem[]>, url: string) {
+  try {
+    return await fetcher(url);
+  } catch {
+    return [];
+  }
+}
+
+function formatDate(iso: string): string {
+  const date = new Date(iso);
+  if (Number.isNaN(date.valueOf())) return '';
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: '2-digit',
+  });
+}
 
 export default async function WritingPage() {
   const [medium, substack] = await Promise.all([
-    fetchMediumFeed('https://abvcreative.medium.com/feed'),
-    fetchSubstackFeed('https://abvx.substack.com/feed'),
+    safeFeed(fetchMediumFeed, 'https://abvcreative.medium.com/feed'),
+    safeFeed(fetchSubstackFeed, 'https://abvx.substack.com/feed'),
   ]);
-
   const posts = mergeFeeds(medium, substack);
 
   return (
-    <div className="flex flex-col gap-6">
-      <header>
-        <h1 className="text-2xl font-semibold tracking-tight">Blogs</h1>
-        <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
-          Notes on AI tools, agent workflows, and what actually ships in the real world.
-        </p>
-      </header>
+    <div className="route-writing grid gap-8">
+      <PageHeader
+        eyebrow="Writing"
+        title="Writing"
+        summary="Applied AI reviews, build logs and essays on systems, validation, agent workflows, decision-making and how ideas survive contact with reality."
+      />
 
-      <section className="rounded-xl border border-black/10 bg-black/5 p-6 text-sm text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300">
-        <p>Two feeds, same focus: practical AI work, reviews, and field notes.</p>
-        <div className="mt-4 flex flex-wrap gap-3">
-          <a
-            className="rounded-md bg-zinc-950 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-zinc-900 hover:shadow dark:bg-zinc-950 dark:text-white dark:hover:bg-zinc-900"
-            href="https://abvx.substack.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Substack
-          </a>
-          <a
-            className="rounded-md bg-zinc-950 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-zinc-900 hover:shadow dark:bg-zinc-950 dark:text-white dark:hover:bg-zinc-900"
-            href="https://medium.com/@abvcreative"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Medium
-          </a>
-        </div>
-      </section>
-
-      <div id="latest" />
-      <WritingList posts={posts} />
+      {posts.length ? (
+        <section className="grid gap-4 md:grid-cols-2">
+          {posts.map((post) => (
+            <LatestCard
+              key={post.url}
+              title={post.title}
+              summary={post.excerpt || 'External essay from the ABVX writing archive.'}
+              href={post.url}
+              meta={`${post.source} / ${formatDate(post.publishedAt)}`}
+            />
+          ))}
+        </section>
+      ) : (
+        <SectionPanel title="Writing feed temporarily unavailable" eyebrow="RSS">
+          <p>
+            Medium and Substack feeds could not be loaded right now. The page is
+            still available and will repopulate automatically when the feeds respond.
+          </p>
+          <div className="link-strip">
+            <a href="https://abvcreative.medium.com/" target="_blank" rel="noreferrer">
+              Medium
+            </a>
+            <a href="https://abvx.substack.com/" target="_blank" rel="noreferrer">
+              Substack
+            </a>
+          </div>
+        </SectionPanel>
+      )}
     </div>
   );
 }

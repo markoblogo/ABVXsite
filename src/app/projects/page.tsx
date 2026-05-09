@@ -8,10 +8,10 @@ export const dynamic = 'force-dynamic';
   'rounded-xl border border-black/10 bg-black/5 p-5 hover:border-black/20 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20 overflow-hidden';
 
 export const metadata = {
-  title: 'Projects',
+  title: 'Systems Catalogue',
   description:
-    'A selection across AI, Web3, foodtech, and publishing. I typically lead positioning, brand architecture, go-to-market, and growth execution.',
-  alternates: { canonical: 'https://abvx.xyz/projects' },
+    'Web services, AI-agent workflows, protocols, tools, language experiments and technical companions.',
+  alternates: { canonical: 'https://abvx.xyz/systems' },
 };
 
 export default async function ProjectsPage() {

@@ -1,259 +1,72 @@
-import { getBooks, getEcosystems } from '@/lib/abvx-data';
-import ZoomableImage from '@/components/zoomable-image';
-import StructuredData from '@/components/structured-data';
+import BookCard from '@/components/BookCard';
+import PageHeader from '@/components/PageHeader';
+import SectionPanel from '@/components/SectionPanel';
+import { getBooks, type BookType } from '@/content';
+import type { Metadata } from 'next';
 
-export const dynamic = 'force-dynamic';
-
-export const metadata = {
-  title: 'Books',
+export const metadata: Metadata = {
+  title: 'ABVX Press',
   description:
-    'Books and long-form projects on brand, perception, and modern marketing systems.',
+    'Books, translations, series and publishing projects across AI, strategy, language, culture, markets and systems thinking.',
   alternates: { canonical: 'https://abvx.xyz/books' },
 };
 
-const chip =
-  'inline-flex items-center rounded-full border border-black/15 bg-black/5 px-2.5 py-1 text-xs font-semibold text-zinc-800 hover:bg-black/10 dark:border-white/15 dark:bg-white/5 dark:text-zinc-200 dark:hover:bg-white/10';
+const typeLabels: Record<BookType, string> = {
+  book: 'Books',
+  series: 'Series',
+  translation: 'Translations',
+  'free-edition': 'Free editions',
+  companion: 'Companions',
+};
 
-const publishingBadge =
-  'border-emerald-300/60 text-emerald-700 dark:border-emerald-300/30 dark:text-emerald-300';
-
-export default async function BooksPage() {
-  const [books, ecosystems] = await Promise.all([getBooks(), getEcosystems()]);
-
-  const missing = books.filter((b) => !b.slug);
-  const items = books
-    .filter((b) => b.slug)
-    .map((b) => ({
-      id: b.id,
-      name: b.name,
-      url: `https://abvx.xyz/books/${b.slug}`,
-      image: b.coverImage,
-      type: 'Book',
-    }));
-  const ecoById = new Map(ecosystems.map((e) => [e.id, e] as const));
-  const booksByEco = new Map<string, typeof books>();
-  const other: typeof books = [];
-
-  for (const b of books) {
-    if (!b.ecosystemIds.length) {
-      other.push(b);
-      continue;
-    }
-    for (const id of b.ecosystemIds) {
-      const list = booksByEco.get(id) || [];
-      list.push(b);
-      booksByEco.set(id, list);
-    }
-  }
+export default function BooksPage() {
+  const books = getBooks();
+  const grouped = books.reduce<Partial<Record<BookType, typeof books>>>((acc, book) => {
+    acc[book.type] ||= [];
+    acc[book.type]?.push(book);
+    return acc;
+  }, {});
 
   return (
-    <div className="flex flex-col gap-6">
-      <StructuredData id="jsonld-books" items={items} />
-      <header>
-        <h1 className="text-2xl font-semibold tracking-tight">Books</h1>
-        <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
-          Published titles and long-form projects across languages, culture, and applied AI.
-        </p>
-        {missing.length ? (
-          <p className="mt-2 text-xs text-amber-300">
-            Note: {missing.length} book(s) are missing a slug and won’t have a
-            detail page yet.
-          </p>
-        ) : null}
-      </header>
+    <div className="route-books grid gap-8">
+      <PageHeader
+        eyebrow="ABVX Press"
+        title="ABVX Press"
+        summary="Books, translations, series and publishing projects across AI, strategy, language, culture, markets and systems thinking."
+      />
 
-      <section className="rounded-xl border border-black/10 bg-black/5 p-6 text-sm text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300">
-        <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">What you’ll find here</h2>
-        <ul className="mt-3 list-disc space-y-1 pl-4">
-          <li>Direct links to each title (Amazon, site, teaser).</li>
-          <li>Editions and formats (Kindle / paperback / PDF when available).</li>
-          <li>Occasional free downloads and updates when new releases ship.</li>
-        </ul>
+      <SectionPanel title="Publishing as infrastructure" eyebrow="Press">
+        <p>
+          The press layer collects books, translations, companion pages, free
+          editions and series. Some items also appear in Systems or Focus when
+          they support a technical or market-infrastructure thread.
+        </p>
+      </SectionPanel>
+
+      <section className="grid gap-4 md:grid-cols-2">
+        {books.map((book) => (
+          <BookCard key={book.id} book={book} />
+        ))}
       </section>
 
-      <div className="flex flex-col gap-8">
-        {ecosystems.map((eco) => {
-          const list = booksByEco.get(eco.id) || [];
-          if (!list.length) return null;
-          return (
-            <section key={eco.id} className="flex flex-col gap-3">
-              <div>
-                <h2 className="text-lg font-semibold">{eco.name}</h2>
-                {eco.tagline ? (
-                  <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">{eco.tagline}</p>
-                ) : null}
-              </div>
-
-              <div className="grid gap-3">
-                {list.map((b) => {
-                  return (
-                    <div
-                      key={b.id}
-                      className="rounded-xl border border-black/10 bg-black/5 p-5 hover:border-black/20 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20"
-                    >
-                      <div className="flex gap-4">
-                        {b.coverImage ? (
-                          <ZoomableImage
-                            src={b.coverImage}
-                            alt=""
-                            width={80}
-                            height={112}
-                            imgClassName="h-28 w-20 flex-none rounded-xl border border-black/10 object-cover dark:border-white/10"
-                          />
-                        ) : (
-                          <div className="h-28 w-20 flex-none rounded-xl border border-black/10 bg-black/5 dark:border-white/10 dark:bg-white/5" />
-                        )}
-
-                        <div className="min-w-0 flex-1">
-                          <div className="flex items-start justify-between gap-4">
-                            <div className="min-w-0">
-                              {b.slug ? (
-                                <a
-                                  href={`/books/${b.slug}`}
-                                  className="block text-base font-semibold leading-snug hover:underline"
-                                >
-                                  {b.name}
-                                </a>
-                              ) : (
-                                <div className="text-base font-semibold leading-snug">{b.name}</div>
-                              )}
-
-                              {b.section ? (
-                                <div className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
-                                  {b.section}
-                                </div>
-                              ) : null}
-                            </div>
-
-                            <div className={`rounded-full border px-2 py-0.5 text-xs ${publishingBadge}`}>
-                              Publishing
-                            </div>
-                          </div>
-
-                          <div className="mt-3 flex flex-wrap gap-2">
-                            {b.amazon ? (
-                              <a href={b.amazon} target="_blank" rel="noreferrer" className={chip}>
-                                Kindle
-                              </a>
-                            ) : null}
-                            {b.paper ? (
-                              <a href={b.paper} target="_blank" rel="noreferrer" className={chip}>
-                                Paperback
-                              </a>
-                            ) : null}
-                            {b.teaser ? (
-                              <a href={b.teaser} target="_blank" rel="noreferrer" className={chip}>
-                                Teaser
-                              </a>
-                            ) : null}
-                            {b.site ? (
-                              <a href={b.site} target="_blank" rel="noreferrer" className={chip}>
-                                Site
-                              </a>
-                            ) : null}
-                            {b.pdf ? (
-                              <a href={b.pdf} target="_blank" rel="noreferrer" className={chip}>
-                                PDF
-                              </a>
-                            ) : null}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
+      <section className="home-section" aria-labelledby="book-groups-title">
+        <div className="home-section__header">
+          <div className="eyebrow">Grouped by form</div>
+          <h2 id="book-groups-title">Books, series, translations, companions.</h2>
+        </div>
+        <div className="grid gap-6">
+          {Object.entries(grouped).map(([type, items]) => (
+            <section key={type} className="grid gap-3">
+              <h3 className="group-title">{typeLabels[type as BookType]}</h3>
+              <div className="grid gap-4 md:grid-cols-2">
+                {items?.map((book) => (
+                  <BookCard key={book.id} book={book} />
+                ))}
               </div>
             </section>
-          );
-        })}
-
-        {other.length ? (
-          <section className="flex flex-col gap-3">
-            <div>
-              <h2 className="text-lg font-semibold">Other</h2>
-            </div>
-            <div className="grid gap-3">
-              {other.map((b) => {
-                return (
-                  <div
-                    key={b.id}
-                    className="rounded-xl border border-black/10 bg-black/5 p-5 hover:border-black/20 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20"
-                  >
-                    <div className="flex gap-4">
-                      {b.coverImage ? (
-                        <ZoomableImage
-                          src={b.coverImage}
-                          alt=""
-                          width={80}
-                          height={112}
-                          imgClassName="h-28 w-20 flex-none rounded-xl border border-black/10 object-cover dark:border-white/10"
-                        />
-                      ) : (
-                        <div className="h-28 w-20 flex-none rounded-xl border border-black/10 bg-black/5 dark:border-white/10 dark:bg-white/5" />
-                      )}
-
-                      <div className="min-w-0 flex-1">
-                        <div className="flex items-start justify-between gap-4">
-                          <div className="min-w-0">
-                            {b.slug ? (
-                              <a
-                                href={`/books/${b.slug}`}
-                                className="block text-base font-semibold leading-snug hover:underline"
-                              >
-                                {b.name}
-                              </a>
-                            ) : (
-                              <div className="text-base font-semibold leading-snug">{b.name}</div>
-                            )}
-
-                            {b.section ? (
-                              <div className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
-                                {b.section}
-                              </div>
-                            ) : null}
-                          </div>
-
-                          <div className={`rounded-full border px-2 py-0.5 text-xs ${publishingBadge}`}>
-                            Publishing
-                          </div>
-                        </div>
-
-                        <div className="mt-3 flex flex-wrap gap-2">
-                          {b.amazon ? (
-                            <a href={b.amazon} target="_blank" rel="noreferrer" className={chip}>
-                              Kindle
-                            </a>
-                          ) : null}
-                          {b.paper ? (
-                            <a href={b.paper} target="_blank" rel="noreferrer" className={chip}>
-                              Paperback
-                            </a>
-                          ) : null}
-                          {b.teaser ? (
-                            <a href={b.teaser} target="_blank" rel="noreferrer" className={chip}>
-                              Teaser
-                            </a>
-                          ) : null}
-                          {b.site ? (
-                            <a href={b.site} target="_blank" rel="noreferrer" className={chip}>
-                              Site
-                            </a>
-                          ) : null}
-                          {b.pdf ? (
-                            <a href={b.pdf} target="_blank" rel="noreferrer" className={chip}>
-                              PDF
-                            </a>
-                          ) : null}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </section>
-        ) : null}
-      </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

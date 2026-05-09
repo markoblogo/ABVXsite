@@ -5,9 +5,28 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
 ![License](https://img.shields.io/badge/License-UNLICENSED-lightgrey)
 
-Production source for [abvx.xyz](https://abvx.xyz/), built with Next.js App Router and TypeScript.
+Production source for [abvx.xyz](https://abvx.xyz/), built with Next.js App Router, TypeScript, and a Git-based public content registry.
 
-## Local development
+## Site Concept
+
+ABVX is the working index of Anton Biletskiy-Volokh: strategy, AI-native development, market infrastructure, web services, protocols, language experiments, books, translations, and essays.
+
+The redesigned public IA is:
+
+- `/` - overview, poster hero, latest updates, and entry points.
+- `/focus` - current focus on agro-commodity trading infrastructure.
+- `/systems` - systems catalogue for web services, AI workflows, protocols, tools, language experiments, and technical companions.
+- `/books` - ABVX Press: books, translations, series, free editions, and publishing projects.
+- `/writing` - combined Medium and Substack writing archive.
+- `/about` - professional framing, contact, and profile links.
+- `/work/[slug]` - non-book artifact detail pages.
+- `/books/[slug]` - book and publishing detail pages.
+
+Legacy URLs are preserved with redirects in `next.config.ts`.
+
+## Local Development
+
+Install dependencies and run the development server:
 
 ```bash
 npm install
@@ -16,69 +35,90 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-Theme smoke-check:
+Useful checks:
 
 ```bash
+npm run lint
+npm run build
 npm run smoke:theme
 ```
 
-## Environment variables
+The core redesigned pages build without `NOTION_TOKEN`.
 
-Minimum required:
+## Content Editing Workflow
 
-- `NOTION_TOKEN` - server-side token for Notion API access.
+Core public content lives in `src/content`:
 
-Optional:
+- `src/content/types.ts` - content model and allowed values.
+- `src/content/artifacts.ts` - focus and systems artifacts.
+- `src/content/books.ts` - books, series, translations, free editions, and publishing items.
+- `src/content/index.ts` - helper functions consumed by pages.
 
-- `GOOGLE_SITE_VERIFICATION` - injected into metadata verification tags.
-- `BING_SITE_VERIFICATION` - optional override for Bing verification.
+Each item has one canonical home through `primarySection`, but can appear elsewhere through `appearsIn`.
 
-Build note: without `NOTION_TOKEN`, sitemap generation falls back to static core routes only (no Notion-derived URLs).
+Common examples:
 
-## Notion data model
+- A market infrastructure project is usually `primarySection: 'focus'` and `appearsIn: ['focus', 'systems']`.
+- A technical tool is usually `primarySection: 'systems'` and `appearsIn: ['systems']`.
+- A book is usually `primarySection: 'books'` and `appearsIn: ['books']`.
+- A book companion or language project may appear in both `books` and `systems`.
 
-Content is loaded server-side from Notion data sources in `/src/lib/abvx-data.ts` using helpers in `/src/lib/notion.ts`.
+If a URL is not verified, omit it from `links` and set `needsReview: true`.
 
-Primary datasets:
+See [docs/content-editing.md](docs/content-editing.md) for detailed examples.
 
-- Ecosystems
-- Projects
-- Books
+## RSS Integration
 
-The app maps Notion properties into typed view models (`Ecosystem`, `Project`, `Book`) and uses those models across pages.
+The writing layer uses RSS helpers in `src/lib/feeds.ts`.
 
-## Main routes
+Current feeds:
 
-- `/` - homepage and positioning
-- `/work-with-me` - services and engagement format
-- `/ecosystems` and `/ecosystems/[slug]` - ecosystem index and detail pages
-- `/projects` - projects and tools
-- `/books` and `/books/[slug]` - publishing catalog
-- `/writing` - writing feed
-- `/llmo` - LLM visibility/pack context
-- `/links`, `/about`, `/toki-pona`, `/cropto`
+- Medium: `https://abvcreative.medium.com/feed`
+- Substack: `https://abvx.substack.com/feed`
 
-## Deployment (Vercel)
+Homepage and `/writing` both handle RSS failures gracefully. If a feed request fails, the page renders fallback cards or an unavailable-feed panel instead of crashing.
 
-Typical production flow:
+RSS content is external and should not be treated as the source of truth for core site IA.
+
+## Deployment Notes
+
+The site is intended for Vercel deployment through Git integration.
+
+Before preview or production deployment:
 
 ```bash
+npm run lint
 npm run build
 ```
 
-Then deploy through Vercel (Git integration or `vercel --prod` from a configured environment).
+Environment variables:
 
-Ensure production env vars are set in Vercel, especially `NOTION_TOKEN`.
+- `GOOGLE_SITE_VERIFICATION` - optional Google verification token.
+- `BING_SITE_VERIFICATION` - optional Bing verification override.
+- `NOTION_TOKEN` - optional legacy export/compatibility token only. It is not required for core redesigned pages.
 
-## SEO / LLMO
+Do not commit secrets. If legacy Notion export is needed locally, set `NOTION_TOKEN` in the shell and run:
+
+```bash
+npm run export:legacy-content
+```
+
+## SEO / LLM Readability
 
 - Canonical domain: `https://abvx.xyz`
-- `src/app/sitemap.ts` and `src/app/robots.ts` generate sitemap/robots
-- `public/llms.txt` provides a compact LLM-readable map
-- JSON-LD is injected in `src/app/layout.tsx` (Person + WebSite)
+- Sitemap: `src/app/sitemap.ts`
+- Robots: `src/app/robots.ts`
+- LLM-readable site map: `public/llms.txt`
+- JSON-LD: `src/app/layout.tsx`
 
-## ASCII theme
+The sitemap is generated from the new Git content layer and does not require Notion.
 
-The site includes an experimental ASCII theme mode (toggle in the header).
+## Legacy Compatibility
 
-It uses [AsciiTheme](https://github.com/markoblogo/AsciiTheme).
+Old routes are kept as compatibility paths or redirect sources, but they are not the current public IA.
+
+Redirects are configured in `next.config.ts`; examples include old project, grouped-index, topic, profile-links, and work/contact URLs redirecting into `/focus`, `/systems`, `/books`, `/writing`, or `/about`.
+
+## ASCII Theme
+
+The source still contains the experimental ASCII theme support and theme smoke-check script. The redesigned layout does not rely on the old ASCII theme as its primary visual system.

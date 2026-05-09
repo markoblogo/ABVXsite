@@ -1,15 +1,17 @@
+import Link from 'next/link';
+
 export const metadata = {
-  title: 'ABVX — LLM-first visibility (LLMO)',
+  title: 'Systems Catalogue',
   description:
-    'LLM-first visibility (LLMO) for AI tools and B2B SaaS: structure, internal linking, metadata, structured data, and agent-ready documentation.',
-  alternates: { canonical: 'https://abvx.xyz/llmo' },
+    'AI-native systems, agentic development workflows, technical companions, and related research artifacts.',
+  alternates: { canonical: 'https://abvx.xyz/systems' },
 };
 
 export default function LLMOPage() {
   return (
     <div className="flex flex-col gap-10">
       <header className="flex flex-col gap-3">
-        <h1 className="text-2xl font-semibold tracking-tight">LLM-first visibility (LLMO)</h1>
+        <h1 className="text-2xl font-semibold tracking-tight">Agent-ready visibility</h1>
         <p className="text-zinc-700 dark:text-zinc-300">
           abvx llmo is a pragmatic set of improvements that makes your site and docs easier to parse
           for humans and language models: clear page intent, predictable structure, and fewer dead ends.
@@ -37,26 +39,25 @@ export default function LLMOPage() {
       </section>
 
       <section className="flex flex-wrap gap-3">
-        <a
-          href="/work-with-me"
+        <Link
+          href="/about"
           className="rounded-md bg-zinc-950 px-4 py-2 text-sm font-semibold text-white hover:bg-black dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200"
         >
           Work with me
-        </a>
-        <a
-          href="/projects"
+        </Link>
+        <Link
+          href="/systems"
           className="rounded-md border border-black/15 px-4 py-2 text-sm font-semibold text-zinc-950 hover:border-black/30 dark:border-white/15 dark:text-white dark:hover:border-white/30"
         >
-          Projects
-        </a>
-        <a
+          Systems
+        </Link>
+        <Link
           href="/about"
           className="rounded-md border border-black/15 px-4 py-2 text-sm font-semibold text-zinc-950 hover:border-black/30 dark:border-white/15 dark:text-white dark:hover:border-white/30"
         >
           About Anton (ABVX)
-        </a>
+        </Link>
       </section>
     </div>
   );
 }
-

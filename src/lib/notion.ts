@@ -23,7 +23,7 @@ export async function notionFetch<T>(path: string, init?: RequestInit): Promise<
     cache: 'no-store',
   });
 
-  const json = (await res.json()) as any;
+  const json = (await res.json()) as { message?: string };
   if (!res.ok) {
     const msg = json?.message || res.statusText;
     throw new Error(`Notion API error ${res.status}: ${msg}`);
@@ -31,22 +31,43 @@ export async function notionFetch<T>(path: string, init?: RequestInit): Promise<
   return json as T;
 }
 
-export type NotionProperty = any;
+type NotionTextFragment = {
+  plain_text?: string;
+};
+
+export type NotionProperty = {
+  type?: string;
+  title?: NotionTextFragment[];
+  rich_text?: NotionTextFragment[];
+  url?: string | null;
+  email?: string | null;
+  phone_number?: string | null;
+  select?: { name?: string } | null;
+  multi_select?: Array<{ name?: string }>;
+  number?: number | null;
+  checkbox?: boolean;
+  relation?: Array<{ id?: string }>;
+  files?: Array<{
+    type?: string;
+    external?: { url?: string };
+    file?: { url?: string };
+  }>;
+};
 
 export function propText(prop: NotionProperty): string {
   if (!prop) return '';
   const t = prop.type;
-  if (t === 'title') return (prop.title || []).map((x: any) => x.plain_text).join('');
-  if (t === 'rich_text') return (prop.rich_text || []).map((x: any) => x.plain_text).join('');
+  if (t === 'title') return (prop.title || []).map((x) => x.plain_text || '').join('');
+  if (t === 'rich_text') return (prop.rich_text || []).map((x) => x.plain_text || '').join('');
   if (t === 'url') return prop.url || '';
   if (t === 'email') return prop.email || '';
   if (t === 'phone_number') return prop.phone_number || '';
   if (t === 'select') return prop.select?.name || '';
-  if (t === 'multi_select') return (prop.multi_select || []).map((x: any) => x.name).join(', ');
+  if (t === 'multi_select') return (prop.multi_select || []).map((x) => x.name || '').join(', ');
   if (t === 'number') return prop.number === null || prop.number === undefined ? '' : String(prop.number);
   if (t === 'checkbox') return prop.checkbox ? 'true' : 'false';
   // relation -> ids
-  if (t === 'relation') return (prop.relation || []).map((x: any) => x.id).join(',');
+  if (t === 'relation') return (prop.relation || []).map((x) => x.id || '').join(',');
   return '';
 }
 
@@ -75,12 +96,23 @@ export function propUrl(prop: NotionProperty): string | null {
 
 export type DataSourceQueryResponse = {
   object: 'list';
-  results: Array<any>;
+  results: Array<{
+    id: string;
+    properties?: Record<string, NotionProperty>;
+    cover?: {
+      type?: string;
+      external?: { url?: string };
+      file?: { url?: string };
+    };
+  }>;
   has_more: boolean;
   next_cursor: string | null;
 };
 
-export async function queryDataSource(dataSourceId: string, body: any = {}): Promise<DataSourceQueryResponse> {
+export async function queryDataSource(
+  dataSourceId: string,
+  body: Record<string, unknown> = {},
+): Promise<DataSourceQueryResponse> {
   return notionFetch<DataSourceQueryResponse>(`/data_sources/${dataSourceId}/query`, {
     method: 'POST',
     body: JSON.stringify({ page_size: 100, ...body }),

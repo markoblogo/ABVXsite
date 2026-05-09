@@ -1,8 +1,10 @@
+import Link from 'next/link';
+
 export const metadata = {
-  title: 'Toki Pona (ABVX)',
+  title: 'ABVX Press',
   description:
-    'A pillar page for the Toki Pona thread inside ABVX: language tools, translation work, writing, and related books.',
-  alternates: { canonical: 'https://abvx.xyz/toki-pona' },
+    'Books, translations, series and publishing projects across AI, strategy, language, culture, markets and systems thinking.',
+  alternates: { canonical: 'https://abvx.xyz/books' },
 };
 
 export default function TokiPonaPillar() {
@@ -20,24 +22,23 @@ export default function TokiPonaPillar() {
         <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">Where to go next</h2>
         <ul className="mt-3 list-disc space-y-1 pl-4">
           <li>
-            <a className="underline" href="/ecosystems">Ecosystems</a>: find the Toki Pona ecosystem entry and related projects.
+            <Link className="underline" href="/systems">Systems</Link>: find language tools and related technical projects.
           </li>
           <li>
-            <a className="underline" href="/projects">Projects</a>: tools and utilities used in the publishing pipeline.
+            <Link className="underline" href="/focus">Focus</Link>: current infrastructure work and active systems.
           </li>
           <li>
-            <a className="underline" href="/books">Books</a>: publishing artifacts connected to this thread.
+            <Link className="underline" href="/books">Books</Link>: publishing artifacts connected to this thread.
           </li>
           <li>
-            <a className="underline" href="/writing">Writing</a>: essays and notes that explain the intent and method.
+            <Link className="underline" href="/writing">Writing</Link>: essays and notes that explain the intent and method.
           </li>
         </ul>
       </section>
 
       <div className="text-sm text-zinc-600 dark:text-zinc-300">
-        Back to <a className="underline" href="/">ABVX hub</a>.
+        Back to <Link className="underline" href="/">ABVX hub</Link>.
       </div>
     </div>
   );
 }
-

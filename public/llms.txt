@@ -1,18 +1,26 @@
 Site: https://abvx.xyz
-Name: Anton Biletskyi‑Volokh
-Summary: Personal site featuring projects, books, ecosystems, and writing.
+Name: ABVX / Anton Biletskyi-Volokh
+Summary: ABVX is the working index of Anton Biletskyi-Volokh: strategy, AI-native development, market infrastructure, web services, protocols, language experiments, books, translations, and essays.
 
-Primary sections:
-- /projects
-- /books
-- /ecosystems
-- /writing
-- /work-with-me
-- /about
+Primary public routes:
+- / — overview and latest updates
+- /focus — current focus on agro-commodity trading infrastructure
+- /systems — systems catalogue for web services, AI workflows, protocols, tools, language experiments, and technical companions
+- /books — ABVX Press: books, translations, series, and publishing projects
+- /writing — Medium and Substack writing archive
+- /about — professional framing, contact, and profile links
+
+Canonical item routes:
+- /work/[slug] — non-book systems, tools, services, protocols, and research artifacts
+- /books/[slug] — book, series, translation, free-edition, and publishing detail pages
 
 Content notes:
-- Projects and books may include external links (website, GitHub, demo, Amazon, PDF).
-- Ecosystems group related projects and books.
+- Each item has one canonical home but may appear in multiple sections.
+- Public content is served from the Git-based content registry for the redesigned core pages.
+- Legacy project, grouped-index, topic, profile-links, and work/contact URLs redirect to the new public IA.
 
 Contact:
 - Email: a.biletskyi@gmail.com
+- LinkedIn: https://www.linkedin.com/in/abvcreative/
+- GitHub: https://github.com/markoblogo
+- Bluesky: https://bsky.app/profile/abvx.xyz

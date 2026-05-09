@@ -5,9 +5,9 @@ import { DIRECTIONS } from '@/lib/directions';
 export const dynamic = 'force-dynamic';
 
 export const metadata = {
-  title: 'Lang Lab',
+  title: 'Systems Catalogue',
   description: 'Language systems, Toki Pona work, pictographic protocols, translators, and language-AI experiments.',
-  alternates: { canonical: 'https://abvx.xyz/lang-lab' },
+  alternates: { canonical: 'https://abvx.xyz/systems' },
 };
 
 export default async function LangLabPage() {

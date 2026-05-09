@@ -121,26 +121,22 @@ function AnalogClock({
 }
 
 export default function WorldTimeDock() {
-  const [open, setOpen] = useState(false);
-  const [available, setAvailable] = useState(true);
-  const [now, setNow] = useState<Date | null>(null);
-
-  useEffect(() => {
+  const [open, setOpen] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    return window.localStorage.getItem(STORAGE_KEY) === '1';
+  });
+  const [available] = useState(() => {
     try {
       const probe = new Date();
       ZONES.forEach((z) => {
         formatZoneTime(probe, z.zone);
       });
-      setAvailable(true);
+      return true;
     } catch {
-      setAvailable(false);
-      return;
+      return false;
     }
-
-    const saved = window.localStorage.getItem(STORAGE_KEY);
-    setOpen(saved === '1');
-    setNow(new Date());
-  }, []);
+  });
+  const [now, setNow] = useState(() => new Date());
 
   useEffect(() => {
     if (!available) return;

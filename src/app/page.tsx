@@ -1,71 +1,218 @@
-import ArtifactCard from '@/components/ArtifactCard';
-import BookCard from '@/components/BookCard';
 import HeroPoster from '@/components/HeroPoster';
+import LatestCard from '@/components/LatestCard';
 import MarqueeTicker from '@/components/MarqueeTicker';
 import SectionPanel from '@/components/SectionPanel';
-import { getFeaturedArtifacts, getLatestBook } from '@/content';
+import TagList from '@/components/TagList';
+import { getLatestArtifact, getLatestBook } from '@/content';
+import { fetchMediumFeed, fetchSubstackFeed, type FeedItem } from '@/lib/feeds';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'ABVX',
   description:
-    'A live working index for systems, strategy, market infrastructure, agentic development, language experiments, books, and essays.',
+    'ABVX is the working index of Anton Biletskiy-Volokh: strategy, AI-native development, market infrastructure, web services, language experiments, books and essays.',
   alternates: { canonical: 'https://abvx.xyz' },
 };
 
-export default function Home() {
-  const featured = getFeaturedArtifacts();
+export const revalidate = 900;
+
+const heroLabels = [
+  'MARKET INFRASTRUCTURE',
+  'AI SYSTEMS',
+  'WEB SERVICES',
+  'LANGUAGE EXPERIMENTS',
+  'BOOKS',
+  'ESSAYS',
+];
+
+const fallbackLatest = {
+  focus: {
+    title: 'Current Focus',
+    summary:
+      'Agro-commodity trading infrastructure, brokerage workflows, market interfaces, indexes, standards and AI-assisted tools.',
+  },
+  systems: {
+    title: 'Systems Catalogue',
+    summary:
+      'Web services, agentic development experiments, protocols, AI/dev utilities, language systems and technical companions.',
+  },
+  books: {
+    title: 'ABVX Press',
+    summary:
+      'Books, translations, series and publishing projects across AI, strategy, language, culture, markets and systems thinking.',
+  },
+  medium: {
+    title: 'Medium',
+    summary:
+      'Applied AI reviews, product notes, and research breakdowns from the Medium archive.',
+  },
+  substack: {
+    title: 'Substack',
+    summary:
+      'Longer essays and field notes on validation, decisions, automation, and AI-native work.',
+  },
+};
+
+async function safeLatestFeed(
+  source: 'medium' | 'substack',
+  fetcher: (url: string) => Promise<FeedItem[]>,
+  url: string,
+): Promise<FeedItem | null> {
+  try {
+    const items = await fetcher(url);
+    return items.find((item) => item.source === source) || items[0] || null;
+  } catch {
+    return null;
+  }
+}
+
+function formatDate(iso?: string): string | undefined {
+  if (!iso) return undefined;
+  const time = new Date(iso);
+  if (Number.isNaN(time.valueOf())) return undefined;
+  return time.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: '2-digit',
+  });
+}
+
+export default async function Home() {
+  const [mediumLatest, substackLatest] = await Promise.all([
+    safeLatestFeed('medium', fetchMediumFeed, 'https://abvcreative.medium.com/feed'),
+    safeLatestFeed('substack', fetchSubstackFeed, 'https://abvx.substack.com/feed'),
+  ]);
+
+  const latestFocus = getLatestArtifact('focus');
+  const latestSystem = getLatestArtifact('systems');
   const latestBook = getLatestBook();
 
   return (
-    <div className="grid gap-8">
+    <div className="home-redesign">
       <HeroPoster
-        eyebrow="Live index"
-        title="Systems, markets, language, books."
-        summary="ABVX tracks current work across market infrastructure, strategy, product development, AI-native tooling, protocols, constructed-language experiments, publishing, and essays."
-      />
+        eyebrow="ABVX / WORKING INDEX"
+        title="Systems that survive contact with reality."
+        summary="ABVX is the working index of Anton Biletskiy-Volokh: strategy, AI-native development, market infrastructure, web services, language experiments, books and essays."
+      >
+        <TagList tags={heroLabels} />
+        <div className="hero-actions">
+          <Link href="#explore-the-work">Explore the work</Link>
+          <Link href="/writing">Read latest writing</Link>
+        </div>
+      </HeroPoster>
 
       <MarqueeTicker
         items={[
-          'Current focus: agro-commodity trading infrastructure',
-          'Systems catalogue: tools, services, protocols, language experiments',
-          'ABVX Press: books, translations, free editions',
-          'Writing: Medium + Substack archive',
+          'Market infrastructure',
+          'AI-native development',
+          'Web services and protocols',
+          'Constructed-language experiments',
+          'Books and essays',
         ]}
       />
 
-      <section className="grid gap-4 lg:grid-cols-[1.15fr_0.85fr]">
-        <SectionPanel title="Current working surface" eyebrow="Focus">
+      <section className="about-snapshot" aria-labelledby="about-snapshot-title">
+        <div className="eyebrow">About snapshot</div>
+        <h2 id="about-snapshot-title">LinkedIn has the timeline. This site has the work.</h2>
+        <div className="about-snapshot__copy">
           <p>
-            The site is being rebuilt as a public operating index: each item has one
-            canonical home but can appear where it is contextually useful.
+            For more than 25 years, I have worked across strategic marketing,
+            creative direction, product development and go-to-market, building
+            brands, products, technologies and launch systems for companies,
+            partners and my own ventures.
           </p>
-        </SectionPanel>
-        <SectionPanel title="No portfolio theater" eyebrow="Principle" accent>
           <p>
-            Projects, books, and essays are grouped by the work they support, not by
-            legacy labels or archive categories.
+            Today I combine that background with AI-native workflows and agentic
+            development to build practical systems: market infrastructure, web
+            services, protocols, language experiments and publishing projects.
           </p>
-        </SectionPanel>
+          <p>
+            My current business focus is digital infrastructure for agro-commodity
+            trading and brokerage. My broader work spans applied AI, systems
+            design, constructed languages, books, translations and long-form
+            writing.
+          </p>
+        </div>
       </section>
 
-      <section className="grid gap-4 md:grid-cols-2">
-        {featured.slice(0, 4).map((artifact) => (
-          <ArtifactCard key={artifact.id} artifact={artifact} />
-        ))}
+      <section className="home-section" aria-labelledby="latest-title">
+        <div className="home-section__header">
+          <div className="eyebrow">Latest from ABVX</div>
+          <h2 id="latest-title">Five entry points into the current work.</h2>
+        </div>
+        <div className="home-latest-grid">
+          <LatestCard
+            title={latestFocus?.title || fallbackLatest.focus.title}
+            summary={latestFocus?.summary || fallbackLatest.focus.summary}
+            href="/focus"
+            meta="Current Focus"
+          />
+          <LatestCard
+            title={latestSystem?.title || fallbackLatest.systems.title}
+            summary={latestSystem?.summary || fallbackLatest.systems.summary}
+            href="/systems"
+            meta="Systems Catalogue"
+          />
+          <LatestCard
+            title={latestBook?.title || fallbackLatest.books.title}
+            summary={latestBook?.summary || fallbackLatest.books.summary}
+            href="/books"
+            meta="ABVX Press"
+          />
+          <LatestCard
+            title={mediumLatest?.title || fallbackLatest.medium.title}
+            summary={mediumLatest?.excerpt || fallbackLatest.medium.summary}
+            href={mediumLatest?.url}
+            meta={`Medium${formatDate(mediumLatest?.publishedAt) ? ` / ${formatDate(mediumLatest?.publishedAt)}` : ''}`}
+          />
+          <LatestCard
+            title={substackLatest?.title || fallbackLatest.substack.title}
+            summary={substackLatest?.excerpt || fallbackLatest.substack.summary}
+            href={substackLatest?.url}
+            meta={`Substack${formatDate(substackLatest?.publishedAt) ? ` / ${formatDate(substackLatest?.publishedAt)}` : ''}`}
+          />
+        </div>
       </section>
 
-      {latestBook ? (
-        <section className="grid gap-4 lg:grid-cols-[0.8fr_1.2fr]">
-          <SectionPanel title="ABVX Press" eyebrow="Books">
+      <section className="home-section" id="explore-the-work" aria-labelledby="explore-title">
+        <div className="home-section__header">
+          <div className="eyebrow">Explore the work</div>
+          <h2 id="explore-title">One index, four public doors.</h2>
+        </div>
+        <div className="explore-grid">
+          <SectionPanel title="Current Focus" eyebrow="01" accent>
             <p>
-              Books, translations, series, companion landings, and free editions live
-              under the publishing layer.
+              Agro-commodity trading infrastructure, brokerage workflows, market
+              interfaces, indexes, standards and AI-assisted tools for physical
+              commodity markets.
             </p>
+            <Link className="panel-link" href="/focus">Open Focus</Link>
           </SectionPanel>
-          <BookCard book={latestBook} />
-        </section>
-      ) : null}
+          <SectionPanel title="Systems Catalogue" eyebrow="02">
+            <p>
+              Web services, agentic development experiments, protocols, AI/dev
+              utilities, language systems and technical companions for products,
+              books and market infrastructure.
+            </p>
+            <Link className="panel-link" href="/systems">Open Systems</Link>
+          </SectionPanel>
+          <SectionPanel title="ABVX Press" eyebrow="03">
+            <p>
+              Books, translations, series and publishing projects across AI,
+              strategy, language, culture, markets and systems thinking.
+            </p>
+            <Link className="panel-link" href="/books">Open Books</Link>
+          </SectionPanel>
+          <SectionPanel title="Writing" eyebrow="04">
+            <p>
+              Applied AI reviews, research breakdowns, build logs and essays on
+              validation, decision-making, automation and AI-native work.
+            </p>
+            <Link className="panel-link" href="/writing">Open Writing</Link>
+          </SectionPanel>
+        </div>
+      </section>
     </div>
   );
 }

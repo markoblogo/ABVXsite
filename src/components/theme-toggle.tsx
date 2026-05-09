@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 
 function SunIcon(props: React.SVGProps<SVGSVGElement>) {
@@ -21,14 +20,8 @@ function MoonIcon(props: React.SVGProps<SVGSVGElement>) {
 }
 
 export function ThemeToggle() {
-  const { theme, setTheme, resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
-
-  // theme: 'system' | 'light' | 'dark'
-  // resolvedTheme: 'light' | 'dark'
-  const current = mounted ? resolvedTheme : undefined;
+  const { setTheme, resolvedTheme } = useTheme();
+  const current = resolvedTheme;
   const isDark = (current ?? 'dark') === 'dark';
 
   return (

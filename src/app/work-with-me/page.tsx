@@ -1,8 +1,10 @@
+import Link from 'next/link';
+
 export const metadata = {
-  title: 'ABVX — Work with me',
+  title: 'About',
   description:
-    'Strategy, advisory, and LLM-first visibility (LLMO) support for founders and small teams: positioning, go-to-market, and shippable artifacts.',
-  alternates: { canonical: 'https://abvx.xyz/work-with-me' },
+    'Professional framing, contact, and profile links for Anton Biletskyi-Volokh.',
+  alternates: { canonical: 'https://abvx.xyz/about' },
 };
 
 export default function WorkWithMe() {
@@ -14,7 +16,7 @@ export default function WorkWithMe() {
             Product + AI systems
           </span>
           <span className="wm-chip wm-chip--accent">
-            LLM-first visibility (LLMO)
+            AI-native systems
           </span>
           <span className="wm-chip">
             Build with founders
@@ -24,7 +26,7 @@ export default function WorkWithMe() {
           Strategy and execution for founders and small teams
         </h1>
         <p className="mt-2 text-zinc-700 dark:text-zinc-300">
-          Product, growth, brand, and LLM-first visibility delivered as clear decisions
+          Strategy, product, brand, and AI-native systems delivered as clear decisions
           and shippable artifacts.
         </p>
         <p className="mt-3 text-sm font-medium text-zinc-600 dark:text-zinc-300">
@@ -37,12 +39,12 @@ export default function WorkWithMe() {
           >
             Work with me
           </a>
-          <a
-            href="/projects"
+          <Link
+            href="/systems"
             className="wm-btn wm-btn--secondary"
           >
-            See projects
-          </a>
+            See systems
+          </Link>
         </div>
         <p className="mt-3 text-xs text-zinc-500 dark:text-zinc-400">
           Working in Paris time (CET/CEST).
@@ -84,7 +86,7 @@ export default function WorkWithMe() {
 
         <div className="wm-card wm-card--accent rounded-xl p-5">
           <div className="wm-chip wm-chip--accent">Make your product legible to humans + crawlers</div>
-          <div className="mt-2 text-sm font-semibold">LLM-first Visibility Audit + Implementation</div>
+          <div className="mt-2 text-sm font-semibold">AI-native systems audit + implementation</div>
           <div className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
             For products whose docs/site need to work in an AI-first discovery world.
           </div>

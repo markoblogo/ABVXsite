@@ -16,10 +16,10 @@ const profiles = [
 ];
 
 export const metadata = {
-  title: 'ABVX — Links',
+  title: 'About',
   description:
-    'Official links and profiles for Anton Biletskyi-Volokh (ABVX). abvx.xyz is the canonical hub for projects, ecosystems, writing, and books.',
-  alternates: { canonical: 'https://abvx.xyz/links' },
+    'Official profile links, contact, and professional framing for Anton Biletskyi-Volokh.',
+  alternates: { canonical: 'https://abvx.xyz/about' },
 };
 
 export default function LinksPage() {
@@ -51,22 +51,22 @@ export default function LinksPage() {
 
       <section className="flex flex-wrap gap-3">
         <Link
-          href="/work-with-me"
+          href="/about"
           className="rounded-md bg-zinc-950 px-4 py-2 text-sm font-semibold text-white hover:bg-black dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200"
         >
           Work with me
         </Link>
         <Link
-          href="/projects"
+          href="/systems"
           className="rounded-md border border-black/15 px-4 py-2 text-sm font-semibold text-zinc-950 hover:border-black/30 dark:border-white/15 dark:text-white dark:hover:border-white/30"
         >
-          Projects
+          Systems
         </Link>
         <Link
-          href="/ecosystems"
+          href="/books"
           className="rounded-md border border-black/15 px-4 py-2 text-sm font-semibold text-zinc-950 hover:border-black/30 dark:border-white/15 dark:text-white dark:hover:border-white/30"
         >
-          Ecosystems
+          Books
         </Link>
       </section>
     </div>

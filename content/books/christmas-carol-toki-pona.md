@@ -6,11 +6,23 @@
   "status": "released",
   "visibility": "public",
   "title": "A Christmas Carol in Toki Pona",
-  "summary": "Charles Dickens’ classic translated into Toki Pona with sitelen pona support.",
+  "shortTitle": "A Christmas Carol — in Toki Pona",
+  "subtitle": "Translated into the minimalist language Toki Pona",
+  "summary": "A bilingual Toki Pona edition of Dickens’ A Christmas Carol, pairing the classic story of Scrooge’s transformation with minimalist language, sitelen pona and a calm experiment in literary compression.",
+  "language": "Toki Pona / English",
+  "originalLanguage": "English",
+  "author": "Charles Dickens",
+  "translator": "Anton Biletskyi-Volokh",
   "tags": [
-    "toki-pona",
+    "Toki Pona",
+    "sitelen pona",
+    "Charles Dickens",
+    "A Christmas Carol",
     "translation",
-    "european-classics"
+    "bilingual edition",
+    "minimalist language",
+    "classic literature",
+    "Christmas"
   ],
   "appearsIn": [
     "books"
@@ -38,7 +50,7 @@
   "needsMediaReview": false,
   "needsLinkReview": false,
   "series": "Toki Pona Classics",
-  "group": "European Classics",
+  "group": "Toki Pona Classics",
   "formats": [
     "kindle",
     "paperback"
@@ -50,3 +62,11 @@
   }
 }
 ---
+
+A Christmas Carol — in Toki Pona brings Charles Dickens’ classic story into the minimalist constructed language Toki Pona. It is both a literary translation and a language experiment: a Victorian moral tale retold through a vocabulary built for simplicity, clarity and restraint.
+
+The book follows Scrooge’s transformation through short, meditative phrasing that preserves the moral force and gentle humor of the original while reducing the language to its essential emotional and narrative movements.
+
+The edition also includes sitelen pona, the pictographic writing system of Toki Pona. This turns the reading experience into a visual encounter between Dickens’ world and a modern minimalist script, where story, symbol and moral clarity meet on the page.
+
+Designed for readers of classic literature, language enthusiasts and Toki Pona learners, this edition shows how a familiar story changes when it is filtered through radical simplicity. It is a compact, reflective and visually distinctive way to revisit one of the most enduring Christmas stories in world literature.

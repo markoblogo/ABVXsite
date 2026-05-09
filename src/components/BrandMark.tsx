@@ -9,10 +9,10 @@ export default function BrandMark({ className, priority = false }: BrandMarkProp
   return (
     <span className={className}>
       <Image
-        src="/brand/abv-mark.png"
+        src="/brand/abv-mark-dark.png"
         alt=""
-        width={160}
-        height={160}
+        width={512}
+        height={512}
         priority={priority}
       />
     </span>

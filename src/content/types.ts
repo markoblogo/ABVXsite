@@ -90,6 +90,7 @@ type BaseContentItem<TType extends string> = {
   needsLinkReview?: boolean;
   editorialNotes?: string;
   mediaNeedsReview?: boolean;
+  relatedSlugs?: string[];
 };
 
 export type Artifact = BaseContentItem<ArtifactType> & {
@@ -107,6 +108,13 @@ export type Book = BaseContentItem<BookType> & {
   group?: string;
   category?: string;
   formats?: string[];
+  availableFormats?: string[];
+  language?: string;
+  originalLanguage?: string;
+  editionRole?: 'original' | 'translation' | 'adaptation' | 'companion' | string;
+  author?: string;
+  translator?: string | null;
+  translationOf?: string | null;
 };
 
 export type Series = {
@@ -138,4 +146,5 @@ export type Series = {
   series?: string;
   category?: string;
   formats?: string[];
+  relatedSlugs?: string[];
 };

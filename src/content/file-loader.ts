@@ -85,6 +85,11 @@ function optionalString(value: unknown): string | undefined {
   return typeof value === 'string' && value.length ? value : undefined;
 }
 
+function nullableString(value: unknown): string | null | undefined {
+  if (value === null) return null;
+  return optionalString(value);
+}
+
 function booleanValue(value: unknown, fallback = false): boolean {
   return typeof value === 'boolean' ? value : fallback;
 }
@@ -168,6 +173,7 @@ function baseFields(data: RawRecord, body: string) {
     needsLinkReview: booleanValue(data.needsLinkReview),
     editorialNotes: optionalString(data.editorialNotes),
     mediaNeedsReview: booleanValue(data.needsMediaReview),
+    relatedSlugs: stringArray(data.relatedSlugs),
   };
 }
 
@@ -189,6 +195,13 @@ export function readBookFiles(): Book[] {
         group: optionalString(data.group),
         category: optionalString(data.group) || optionalString(data.category),
         formats: stringArray(data.formats),
+        availableFormats: stringArray(data.availableFormats),
+        language: optionalString(data.language),
+        originalLanguage: optionalString(data.originalLanguage),
+        editionRole: optionalString(data.editionRole),
+        author: optionalString(data.author),
+        translator: nullableString(data.translator),
+        translationOf: nullableString(data.translationOf),
       };
     });
 }
@@ -227,6 +240,7 @@ export function readSeriesFiles(): Series[] {
         series: optionalString(data.title),
         category: optionalString(data.group) || 'Series',
         formats: stringArray(data.formats),
+        relatedSlugs: stringArray(data.relatedSlugs),
       };
     });
 }

@@ -144,6 +144,7 @@ export function getSeriesBySlug(slug: string): Series | undefined {
 function relatedScore(source: RelatedSource, candidate: RelatedSource): number {
   if (source.slug === candidate.slug) return 0;
   let score = candidate.tags.filter((tag) => source.tags.includes(tag)).length * 8;
+  if (source.relatedSlugs?.includes(candidate.slug) || candidate.relatedSlugs?.includes(source.slug)) score += 90;
   if ('series' in source && 'series' in candidate && source.series && source.series === candidate.series) score += 60;
   if ('group' in source && 'group' in candidate && source.group && source.group === candidate.group) score += 45;
   if (candidate.appearsIn.some((section) => source.appearsIn.includes(section))) score += 14;

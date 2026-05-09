@@ -1,9 +1,9 @@
 import HeroPoster from '@/components/HeroPoster';
-import LatestCard from '@/components/LatestCard';
+import HomepageLatestCard from '@/components/HomepageLatestCard';
 import MarqueeTicker from '@/components/MarqueeTicker';
 import SectionPanel from '@/components/SectionPanel';
 import TagList from '@/components/TagList';
-import { getLatestArtifact, getLatestBook } from '@/content';
+import { getArtifactsBySection, getLatestArtifact, getLatestBook, type Artifact } from '@/content';
 import { fetchMediumFeed, fetchSubstackFeed, type FeedItem } from '@/lib/feeds';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -78,6 +78,42 @@ function formatDate(iso?: string): string | undefined {
   });
 }
 
+function latestTime(item: Artifact): number {
+  const value = item.updatedAt || item.publishedAt;
+  if (!value) return 0;
+  const time = new Date(value).valueOf();
+  return Number.isFinite(time) ? time : 0;
+}
+
+function latestArtifact(items: Artifact[]): Artifact | undefined {
+  return [...items].sort((a, b) => {
+    const diff = latestTime(b) - latestTime(a);
+    if (diff) return diff;
+    if (a.sortRank !== b.sortRank) return a.sortRank - b.sortRank;
+    return a.title.localeCompare(b.title);
+  })[0];
+}
+
+function pickLatestSystem(excludedSlug?: string): Artifact | undefined {
+  const systems = getArtifactsBySection('systems').filter((item) => item.slug !== excludedSlug);
+  const primarySystems = systems.filter((item) => item.primarySection === 'systems');
+  const latestPrimary = latestArtifact(primarySystems);
+  if (latestPrimary) return latestPrimary;
+
+  const curatedFallback = [
+    'agents-md-generator',
+    'abvx-shortener',
+    'ascii-theme',
+    'llmo-site',
+    'toki-pona-ai-translator',
+  ];
+  return (
+    curatedFallback
+      .map((slug) => systems.find((item) => item.slug === slug))
+      .find(Boolean) || latestArtifact(systems)
+  );
+}
+
 export default async function Home() {
   const [mediumLatest, substackLatest] = await Promise.all([
     safeLatestFeed('medium', fetchMediumFeed, 'https://abvcreative.medium.com/feed'),
@@ -85,7 +121,7 @@ export default async function Home() {
   ]);
 
   const latestFocus = getLatestArtifact('focus');
-  const latestSystem = getLatestArtifact('systems');
+  const latestSystem = pickLatestSystem(latestFocus?.slug);
   const latestBook = getLatestBook();
 
   return (
@@ -142,49 +178,47 @@ export default async function Home() {
           <h2 id="latest-title">Five entry points into the current work.</h2>
         </div>
         <div className="home-latest-grid">
-          <LatestCard
+          <HomepageLatestCard
             title={latestFocus?.title || fallbackLatest.focus.title}
             summary={latestFocus?.summary || fallbackLatest.focus.summary}
             href="/focus"
-            meta="Current Focus"
+            label="Current Focus"
             image={latestFocus?.thumbnail}
-            variant="project"
             cta="Open focus"
           />
-          <LatestCard
+          <HomepageLatestCard
             title={latestSystem?.title || fallbackLatest.systems.title}
             summary={latestSystem?.summary || fallbackLatest.systems.summary}
             href="/systems"
-            meta="Systems Catalogue"
+            label="Systems Catalogue"
             image={latestSystem?.thumbnail}
-            variant="project"
-            cta="Open systems"
+            cta="Open system"
           />
-          <LatestCard
+          <HomepageLatestCard
             title={latestBook?.title || fallbackLatest.books.title}
             summary={latestBook?.summary || fallbackLatest.books.summary}
             href="/books"
-            meta="ABVX Press"
+            label="ABVX Press"
+            detail={formatDate(latestBook?.publishedAt)}
             image={latestBook?.coverImage}
-            variant="book"
-            cta="Open press"
+            cta="Open book"
           />
-          <LatestCard
+          <HomepageLatestCard
             title={mediumLatest?.title || fallbackLatest.medium.title}
             summary={mediumLatest?.excerpt || fallbackLatest.medium.summary}
             href={mediumLatest?.url}
-            meta={`Medium${formatDate(mediumLatest?.publishedAt) ? ` / ${formatDate(mediumLatest?.publishedAt)}` : ''}`}
+            label="Medium"
+            detail={formatDate(mediumLatest?.publishedAt)}
             image={mediumLatest?.coverImage ? { src: mediumLatest.coverImage, alt: mediumLatest.title } : undefined}
-            variant="writing"
             cta="Read on Medium"
           />
-          <LatestCard
+          <HomepageLatestCard
             title={substackLatest?.title || fallbackLatest.substack.title}
             summary={substackLatest?.excerpt || fallbackLatest.substack.summary}
             href={substackLatest?.url}
-            meta={`Substack${formatDate(substackLatest?.publishedAt) ? ` / ${formatDate(substackLatest?.publishedAt)}` : ''}`}
+            label="Substack"
+            detail={formatDate(substackLatest?.publishedAt)}
             image={substackLatest?.coverImage ? { src: substackLatest.coverImage, alt: substackLatest.title } : undefined}
-            variant="writing"
             cta="Read on Substack"
           />
         </div>

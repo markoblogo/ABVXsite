@@ -8,12 +8,18 @@
   "title": "Future-Proof Your Productivity: Navigating the AI Decade to Accelerate Your Output, Innovate Your Role, and Thrive",
   "shortTitle": "Future-Proof Your Productivity",
   "subtitle": "Navigating the AI Decade to Accelerate Your Output, Innovate Your Role, and Thrive",
-  "summary": "A productivity and AI book about adapting work, output, and roles during the AI decade.",
+  "summary": "A practical manual for using AI, automation, no-code tools and workflow design to increase output, reduce routine work and stay professionally resilient through the AI decade.",
+  "language": "English",
+  "author": "Anton Biletskyi-Volokh",
   "tags": [
-    "ai",
     "productivity",
-    "business",
-    "future-of-work"
+    "AI",
+    "automation",
+    "no-code",
+    "workflows",
+    "future of work",
+    "knowledge work",
+    "English"
   ],
   "appearsIn": [
     "books"
@@ -53,3 +59,11 @@
   }
 }
 ---
+
+Future-Proof Your Productivity is a practical guide to working better in the age of AI. It is written for professionals, entrepreneurs and teams who want to move beyond tool-chasing and build durable systems for output, learning and execution.
+
+The book shows how to use AI, no-code automation, workflow design and knowledge management to reduce routine work, organize ideas, build a “second brain” and free more time for creative and strategic work.
+
+It covers automation tools such as Zapier and n8n, practical workflow patterns, AI-assisted task design, personal operating systems and examples of how professionals can redesign their work instead of simply adding more apps.
+
+The core idea is not productivity as speed for its own sake, but productivity as orchestration: building a system that helps you think, act, adapt and stay useful while the nature of work changes.

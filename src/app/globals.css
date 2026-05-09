@@ -2724,6 +2724,7 @@ a {
 
 .featured-writing-card,
 .recent-writing-card {
+  overflow: hidden;
   border: 1px solid var(--line);
   background:
     linear-gradient(135deg, color-mix(in srgb, var(--route-soft) 86%, transparent), transparent 64%),
@@ -2741,22 +2742,30 @@ a {
 
 .featured-writing-card {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
-  min-height: 360px;
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 0;
 }
 
 .featured-writing-card__media,
 .recent-writing-card__media {
   display: block;
   min-width: 0;
-  border-right: 1px solid var(--line);
+  overflow: hidden;
   text-decoration: none;
+}
+
+.featured-writing-card__media {
+  border-bottom: 1px solid var(--line);
+}
+
+.recent-writing-card__media {
+  border-right: 1px solid var(--line);
 }
 
 .featured-writing-card .media-panel--writing,
 .featured-writing-card .writing-image-placeholder {
-  height: 100%;
-  min-height: 320px;
+  height: auto;
+  min-height: 0;
   max-height: none;
   aspect-ratio: 16 / 9;
 }
@@ -2780,15 +2789,20 @@ a {
   display: grid;
   align-content: center;
   gap: 0.9rem;
+  min-width: 0;
+  background: color-mix(in srgb, var(--paper) 91%, white 9%);
   padding: clamp(1rem, 3vw, 2rem);
+  position: relative;
+  z-index: 1;
 }
 
 .featured-writing-card h2 {
   margin: 0;
-  font-size: clamp(2rem, 4.8vw, 4.6rem);
+  max-width: 18ch;
+  font-size: clamp(1.9rem, 4vw, 3.8rem);
   font-weight: 950;
   letter-spacing: -0.075em;
-  line-height: 0.9;
+  line-height: 0.92;
   text-transform: uppercase;
   text-wrap: balance;
 }
@@ -2845,18 +2859,19 @@ a {
 
 .recent-writing-card {
   display: grid;
-  grid-template-columns: minmax(140px, 0.38fr) minmax(0, 1fr);
-  min-height: 190px;
+  grid-template-columns: minmax(160px, 200px) minmax(0, 1fr);
+  min-height: 210px;
 }
 
 .recent-writing-card__media {
-  min-height: 100%;
+  min-height: 0;
+  position: relative;
 }
 
 .recent-writing-card .media-panel--writing,
 .recent-writing-card .writing-image-placeholder {
   height: 100%;
-  min-height: 168px;
+  min-height: 210px;
   max-height: none;
   aspect-ratio: 4 / 3;
 }
@@ -2865,15 +2880,20 @@ a {
   display: grid;
   align-content: start;
   gap: 0.55rem;
+  min-width: 0;
+  background: color-mix(in srgb, var(--paper) 90%, white 10%);
   padding: 0.9rem;
+  position: relative;
+  z-index: 1;
 }
 
 .recent-writing-card h3 {
   margin: 0;
-  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  overflow-wrap: anywhere;
+  font-size: clamp(1.12rem, 1.7vw, 1.42rem);
   font-weight: 950;
   letter-spacing: -0.045em;
-  line-height: 1.02;
+  line-height: 1.04;
   text-transform: uppercase;
   text-wrap: balance;
 }
@@ -2955,13 +2975,12 @@ a {
   }
 
   .featured-writing-card__media {
-    border-right: 0;
     border-bottom: 1px solid var(--line);
   }
 
   .featured-writing-card .media-panel--writing,
   .featured-writing-card .writing-image-placeholder {
-    min-height: 260px;
+    min-height: 0;
   }
 
   .recent-writing-grid {
@@ -3015,7 +3034,7 @@ a {
 
   .recent-writing-card .media-panel--writing,
   .recent-writing-card .writing-image-placeholder {
-    min-height: 180px;
+    min-height: 0;
     aspect-ratio: 16 / 9;
   }
 

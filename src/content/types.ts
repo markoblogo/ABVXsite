@@ -20,9 +20,19 @@ export type BookType =
 
 export type Status = 'live' | 'released' | 'building' | 'research' | 'archive';
 
+export type MediaRole =
+  | 'book-cover'
+  | 'project-screenshot'
+  | 'landing-screenshot'
+  | 'mockup'
+  | 'rss-image'
+  | 'video-thumbnail'
+  | 'generic-thumbnail';
+
 export type ContentImage = {
   src: string;
   alt: string;
+  mediaRole?: MediaRole;
   width?: number;
   height?: number;
 };

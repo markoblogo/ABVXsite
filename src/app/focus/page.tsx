@@ -1,5 +1,5 @@
 import BookCatalogueCard from '@/components/BookCatalogueCard';
-import CatalogueCard from '@/components/CatalogueCard';
+import ProjectCatalogueCard from '@/components/ProjectCatalogueCard';
 import PageHeader from '@/components/PageHeader';
 import SectionPanel from '@/components/SectionPanel';
 import {
@@ -37,7 +37,7 @@ export default function FocusPage() {
         </div>
         <div className="focus-featured-grid">
           {(featured.length ? featured : artifacts).map((artifact) => (
-            <CatalogueCard key={artifact.id} artifact={artifact} />
+            <ProjectCatalogueCard key={artifact.id} artifact={artifact} tone="focus" />
           ))}
         </div>
       </section>
@@ -49,7 +49,7 @@ export default function FocusPage() {
         </div>
         <div className="focus-index-grid">
           {artifacts.map((artifact) => (
-            <CatalogueCard key={artifact.id} artifact={artifact} />
+            <ProjectCatalogueCard key={artifact.id} artifact={artifact} tone="focus" />
           ))}
         </div>
       </section>

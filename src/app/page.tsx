@@ -149,6 +149,7 @@ export default async function Home() {
             meta="Current Focus"
             image={latestFocus?.thumbnail}
             variant="project"
+            cta="Open focus"
           />
           <LatestCard
             title={latestSystem?.title || fallbackLatest.systems.title}
@@ -157,6 +158,7 @@ export default async function Home() {
             meta="Systems Catalogue"
             image={latestSystem?.thumbnail}
             variant="project"
+            cta="Open systems"
           />
           <LatestCard
             title={latestBook?.title || fallbackLatest.books.title}
@@ -165,6 +167,7 @@ export default async function Home() {
             meta="ABVX Press"
             image={latestBook?.coverImage}
             variant="book"
+            cta="Open press"
           />
           <LatestCard
             title={mediumLatest?.title || fallbackLatest.medium.title}
@@ -173,6 +176,7 @@ export default async function Home() {
             meta={`Medium${formatDate(mediumLatest?.publishedAt) ? ` / ${formatDate(mediumLatest?.publishedAt)}` : ''}`}
             image={mediumLatest?.coverImage ? { src: mediumLatest.coverImage, alt: mediumLatest.title } : undefined}
             variant="writing"
+            cta="Read on Medium"
           />
           <LatestCard
             title={substackLatest?.title || fallbackLatest.substack.title}
@@ -181,6 +185,7 @@ export default async function Home() {
             meta={`Substack${formatDate(substackLatest?.publishedAt) ? ` / ${formatDate(substackLatest?.publishedAt)}` : ''}`}
             image={substackLatest?.coverImage ? { src: substackLatest.coverImage, alt: substackLatest.title } : undefined}
             variant="writing"
+            cta="Read on Substack"
           />
         </div>
       </section>

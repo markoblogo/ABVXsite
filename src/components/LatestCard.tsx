@@ -8,6 +8,7 @@ export default function LatestCard({
   meta,
   image,
   variant = 'project',
+  cta = 'Open',
 }: {
   title: string;
   summary: string;
@@ -15,22 +16,26 @@ export default function LatestCard({
   meta?: string;
   image?: ContentImage;
   variant?: 'project' | 'book' | 'writing';
+  cta?: string;
 }) {
   const content = (
     <>
-      {image ? (
-        <div className="latest-card__media" data-media={variant}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
+      <div className="latest-card__media" data-media={variant} data-media-role={image?.mediaRole || 'generic-thumbnail'}>
+        {image ? (
+          // eslint-disable-next-line @next/next/no-img-element
           <img className="latest-card__image" src={image.src} alt={image.alt} loading="lazy" />
-        </div>
-      ) : null}
+        ) : (
+          <span className="latest-card__placeholder" aria-hidden="true" />
+        )}
+      </div>
       {meta ? <div className="latest-card__meta">{meta}</div> : null}
       <h3>{title}</h3>
       <p>{summary}</p>
+      <span className="latest-card__cta">{cta}</span>
     </>
   );
 
-  const className = `latest-card latest-card--${variant}`;
+  const className = 'latest-card';
 
   if (!href) return <article className={className}>{content}</article>;
 

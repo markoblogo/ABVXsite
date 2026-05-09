@@ -76,14 +76,13 @@ export default async function WorkDetailPage({
         summary={artifact.summary}
         tags={artifact.tags}
         links={artifact.links}
+        image={image}
         variant="project"
       />
 
       <SectionPanel title="Overview" eyebrow="Work">
         <p>{artifact.description || artifact.summary}</p>
       </SectionPanel>
-
-      {image ? <MediaPanel image={image} title={artifact.title} variant="project" /> : null}
 
       {videoUrl ? (
         <SectionPanel title="Video / demo" eyebrow="Media">
@@ -97,10 +96,11 @@ export default async function WorkDetailPage({
         </SectionPanel>
       ) : null}
 
-      <SectionPanel title="Role in the index" eyebrow="Context">
+      <SectionPanel title="Context" eyebrow="Public dossier">
         <p>
-          This public artifact sits in the ABVX working index as a concrete system,
-          service, protocol or technical companion connected to current work.
+          This artifact is presented here as part of the public ABVX work catalogue:
+          a shipped or developing system, service, protocol, tool, or companion layer
+          connected to current product and publishing work.
         </p>
       </SectionPanel>
 

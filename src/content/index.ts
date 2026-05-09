@@ -72,6 +72,7 @@ export type {
   ContentImage,
   ContentLink,
   ContentLinkType,
+  MediaRole,
   SiteSection,
   Status,
 } from './types';

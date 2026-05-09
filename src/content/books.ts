@@ -1,10 +1,11 @@
-import type { Book, ContentLinkType } from './types';
+import type { Book, ContentLinkType, MediaRole } from './types';
 
 function cover(slug: string, alt: string) {
   const extension = new Set(['future-proof', 'christmas-carol-toki-pona']).has(slug)
     ? 'jpg'
     : 'png';
-  return { src: `/media/books/${slug}.${extension}`, alt };
+  const mediaRole: MediaRole = slug === 'toki-pona-machine-mind' ? 'book-cover' : 'mockup';
+  return { src: `/media/books/${slug}.${extension}`, alt, mediaRole };
 }
 
 function link(type: ContentLinkType, label: string, url: string) {

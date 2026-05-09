@@ -569,6 +569,359 @@ header nav a:focus-visible,
   }
 }
 
+/* Composition correction: three scales instead of one universal card system. */
+.home-latest-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.home-latest-grid > :nth-child(n) {
+  grid-column: auto;
+}
+
+.home-latest-grid .latest-card {
+  gap: 0.62rem;
+  padding: 0.75rem;
+  min-height: auto;
+}
+
+.home-latest-grid .latest-card__media {
+  aspect-ratio: 16 / 10;
+  max-height: 150px;
+}
+
+.latest-card__media[data-media-role="book-cover"],
+.latest-card__media[data-media-role="mockup"] {
+  background: color-mix(in srgb, var(--paper) 82%, white 18%);
+}
+
+.latest-card__media[data-media-role="book-cover"] img,
+.latest-card__media[data-media-role="mockup"] img,
+.latest-card__media[data-media-role="landing-screenshot"] img {
+  object-fit: contain;
+}
+
+.home-latest-grid .latest-card h3 {
+  font-size: clamp(1.1rem, 1.8vw, 1.55rem);
+  letter-spacing: -0.045em;
+  line-height: 1;
+  -webkit-line-clamp: 3;
+}
+
+.home-latest-grid .latest-card p {
+  display: -webkit-box;
+  overflow: hidden;
+  font-size: 0.9rem;
+  line-height: 1.32;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.latest-card__cta {
+  width: fit-content;
+  border-top: 1px solid var(--line);
+  padding-top: 0.42rem;
+  font-size: 0.68rem;
+  font-weight: 950;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.latest-card__placeholder {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 72% 32%, var(--accent) 0 18%, transparent 19%),
+    linear-gradient(90deg, transparent calc(50% - 0.5px), var(--line) 0 calc(50% + 0.5px), transparent 0),
+    linear-gradient(0deg, transparent calc(50% - 0.5px), var(--line) 0 calc(50% + 0.5px), transparent 0),
+    color-mix(in srgb, var(--paper) 82%, white 18%);
+}
+
+.project-catalogue-card,
+.book-catalogue-card,
+.companion-catalogue-card,
+.writing-card {
+  min-width: 0;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--paper) 86%, white 14%);
+  transition: box-shadow 180ms var(--ease-out), transform 180ms var(--ease-out), background-color 180ms var(--ease-out);
+}
+
+.project-catalogue-card,
+.book-catalogue-card,
+.companion-catalogue-card {
+  display: grid;
+  align-content: start;
+}
+
+.project-catalogue-card__media,
+.companion-catalogue-card__media,
+.book-catalogue-card__cover-link {
+  display: block;
+  text-decoration: none;
+}
+
+.project-catalogue-card__body,
+.companion-catalogue-card__body,
+.book-catalogue-card .catalogue-card__body {
+  display: grid;
+  gap: 0.58rem;
+  padding: 0.78rem;
+}
+
+.project-catalogue-card h3,
+.book-catalogue-card h3,
+.companion-catalogue-card h3,
+.writing-card h3 {
+  margin: 0;
+  font-size: clamp(1.12rem, 1.75vw, 1.5rem);
+  font-weight: 950;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.project-catalogue-card h3 a,
+.book-catalogue-card h3 a,
+.companion-catalogue-card h3 a,
+.writing-card h3 a {
+  text-decoration: none;
+}
+
+.project-catalogue-card p,
+.book-catalogue-card p,
+.companion-catalogue-card p,
+.writing-card p {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--ink-muted);
+  font-size: 0.91rem;
+  line-height: 1.34;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.project-catalogue-card p,
+.companion-catalogue-card p {
+  -webkit-line-clamp: 2;
+}
+
+.focus-featured-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.focus-index-grid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.systems-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.books-featured-grid,
+.books-catalogue-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.books-series-grid,
+.books-companion-grid,
+.related-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.writing-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (min-width: 1320px) {
+  .systems-grid,
+  .books-featured-grid,
+  .books-catalogue-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .writing-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.project-catalogue-card--focus .media-panel--project {
+  max-height: 240px;
+}
+
+.project-catalogue-card--systems .media-panel--project,
+.project-catalogue-card .media-panel--project {
+  max-height: 190px;
+}
+
+.media-panel--project {
+  aspect-ratio: 16 / 9;
+}
+
+.media-panel[data-media-role="landing-screenshot"] img,
+.media-panel[data-media-role="project-screenshot"] img {
+  object-fit: contain;
+  background: color-mix(in srgb, var(--paper) 88%, white 12%);
+}
+
+.media-panel--book {
+  background: color-mix(in srgb, var(--paper) 84%, white 16%);
+}
+
+.media-panel--book[data-media-role="book-cover"] {
+  aspect-ratio: 2 / 3;
+  padding: 0.45rem;
+}
+
+.media-panel--book[data-media-role="mockup"],
+.media-panel--book[data-media-role="landing-screenshot"] {
+  aspect-ratio: 16 / 10;
+  padding: 0.35rem;
+}
+
+.media-panel--book img {
+  object-fit: contain;
+  filter: none;
+}
+
+.book-catalogue-card .media-panel--book {
+  width: auto;
+  max-height: 190px;
+  margin: 0.72rem 0.72rem 0;
+  box-shadow: none;
+}
+
+.book-catalogue-card[data-media-role="book-cover"] .media-panel--book {
+  width: min(100%, 142px);
+  margin-inline: auto;
+}
+
+.companion-catalogue-card .media-panel--project {
+  max-height: 170px;
+}
+
+.writing-card {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.writing-card .media-panel--writing {
+  aspect-ratio: 16 / 9;
+  max-height: 190px;
+}
+
+.writing-card__body {
+  padding: 0.82rem;
+}
+
+.writing-card h3 {
+  font-size: clamp(1.08rem, 1.7vw, 1.42rem);
+  letter-spacing: -0.04em;
+  line-height: 1.02;
+}
+
+.writing-card p {
+  -webkit-line-clamp: 3;
+}
+
+.detail-hero--project,
+.detail-hero--book {
+  grid-template-columns: minmax(0, 0.96fr) minmax(320px, 0.92fr);
+  align-items: start;
+}
+
+.detail-hero--book .media-panel,
+.detail-hero--project .media-panel {
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  max-height: 520px;
+  box-shadow: 10px 10px 0 var(--ink);
+}
+
+.detail-hero--book .detail-hero__copy,
+.detail-hero--project .detail-hero__copy {
+  grid-column: 1;
+}
+
+.detail-hero--project .media-panel--project {
+  aspect-ratio: 16 / 10;
+}
+
+.detail-hero--book .media-panel--book[data-media-role="mockup"] {
+  aspect-ratio: 16 / 10;
+}
+
+.detail-hero h1 {
+  max-width: 15ch;
+  font-size: clamp(2.9rem, 6.8vw, 6.2rem);
+  letter-spacing: -0.078em;
+}
+
+.detail-page .section-panel {
+  max-width: 860px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-catalogue-card:hover,
+  .book-catalogue-card:hover,
+  .companion-catalogue-card:hover,
+  .writing-card:hover {
+    box-shadow: 6px 6px 0 var(--ink);
+    transform: translate(-3px, -3px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .home-latest-grid,
+  .focus-featured-grid,
+  .focus-index-grid,
+  .systems-grid,
+  .books-featured-grid,
+  .books-catalogue-grid,
+  .books-series-grid,
+  .books-companion-grid,
+  .writing-grid,
+  .related-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .detail-hero--project,
+  .detail-hero--book {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-hero--book .media-panel,
+  .detail-hero--project .media-panel,
+  .detail-hero--book .detail-hero__copy,
+  .detail-hero--project .detail-hero__copy {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .home-latest-grid,
+  .focus-featured-grid,
+  .focus-index-grid,
+  .systems-grid,
+  .books-featured-grid,
+  .books-catalogue-grid,
+  .books-series-grid,
+  .books-companion-grid,
+  .writing-grid,
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-hero h1 {
+    font-size: clamp(2.35rem, 12vw, 4.3rem);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .ux-hover-card,
   .ux-hover-btn,

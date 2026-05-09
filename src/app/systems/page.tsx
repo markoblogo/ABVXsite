@@ -1,4 +1,4 @@
-import CatalogueCard from '@/components/CatalogueCard';
+import ProjectCatalogueCard from '@/components/ProjectCatalogueCard';
 import PageHeader from '@/components/PageHeader';
 import { getArtifactsBySection } from '@/content';
 import type { Metadata } from 'next';
@@ -38,7 +38,7 @@ export default function SystemsPage() {
               <h3 className="group-title">{group}</h3>
               <div className="systems-grid">
                 {items?.map((artifact) => (
-                  <CatalogueCard key={artifact.id} artifact={artifact} />
+                  <ProjectCatalogueCard key={artifact.id} artifact={artifact} />
                 ))}
               </div>
             </section>

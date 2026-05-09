@@ -1,5 +1,5 @@
 import BookCatalogueCard from '@/components/BookCatalogueCard';
-import CatalogueCard from '@/components/CatalogueCard';
+import CompanionCatalogueCard from '@/components/CompanionCatalogueCard';
 import PageHeader from '@/components/PageHeader';
 import SectionPanel from '@/components/SectionPanel';
 import { getArtifactsBySection, getBooks } from '@/content';
@@ -57,7 +57,7 @@ export default function BooksPage() {
         </div>
         <div className="books-series-grid">
           {series.map((book) => (
-            <BookCatalogueCard key={book.id} book={book} />
+            <CompanionCatalogueCard key={book.id} item={book} />
           ))}
         </div>
       </section>
@@ -82,10 +82,10 @@ export default function BooksPage() {
           </div>
           <div className="books-companion-grid">
             {companions.map((book) => (
-              <BookCatalogueCard key={book.id} book={book} />
+              <CompanionCatalogueCard key={book.id} item={book} />
             ))}
             {publishingArtifacts.map((artifact) => (
-              <CatalogueCard key={artifact.id} artifact={artifact} />
+              <CompanionCatalogueCard key={artifact.id} item={artifact} />
             ))}
           </div>
         </section>

@@ -6,9 +6,10 @@ import Link from 'next/link';
 
 export default function BookCatalogueCard({ book }: { book: Book }) {
   const title = book.displayTitle || book.shortTitle || book.title;
+  const mediaRole = book.coverImage?.mediaRole || 'mockup';
 
   return (
-    <article className="catalogue-card book-catalogue-card">
+    <article className="book-catalogue-card" data-media-role={mediaRole}>
       <Link className="book-catalogue-card__cover-link" href={`/books/${book.slug}`} aria-label={title}>
         <MediaPanel image={book.coverImage} title={title} variant="book" />
       </Link>

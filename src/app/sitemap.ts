@@ -19,6 +19,8 @@ export default async function sitemap() {
 
   const urls = [
     { url: `${base}`, lastModified: now, changeFrequency: 'weekly', priority: 1 },
+    { url: `${base}/focus`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${base}/systems`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/about`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${base}/projects`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${base}/books`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },

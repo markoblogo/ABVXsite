@@ -1,222 +1,71 @@
-import { getBooks, getProjects } from '@/lib/abvx-data';
-import { DIRECTIONS, type DirectionItem, itemBelongsToDirection } from '@/lib/directions';
+import ArtifactCard from '@/components/ArtifactCard';
+import BookCard from '@/components/BookCard';
+import HeroPoster from '@/components/HeroPoster';
+import MarqueeTicker from '@/components/MarqueeTicker';
+import SectionPanel from '@/components/SectionPanel';
+import { getFeaturedArtifacts, getLatestBook } from '@/content';
 import type { Metadata } from 'next';
-import Link from 'next/link';
-
-export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title:
-    'Anton Biletskyi-Volokh | Product, Growth & Brand Strategy + LLM-first Visibility (LLMO)',
+  title: 'ABVX',
   description:
-    'Product, growth, and brand strategy for AI tools and B2B SaaS. Practical LLM-first visibility (LLMO): structure, metadata, internal linking, and agent-ready documentation.',
+    'A live working index for systems, strategy, market infrastructure, agentic development, language experiments, books, and essays.',
   alternates: { canonical: 'https://abvx.xyz' },
-  openGraph: {
-    title:
-      'Anton Biletskyi-Volokh | Product, Growth & Brand Strategy + LLM-first Visibility (LLMO)',
-    description:
-      'Product, growth, and brand strategy for AI tools and B2B SaaS. Practical LLM-first visibility (LLMO): structure, metadata, internal linking, and agent-ready documentation.',
-    url: 'https://abvx.xyz',
-    siteName: 'Anton Biletskyi‑Volokh',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title:
-      'Anton Biletskyi-Volokh | Product, Growth & Brand Strategy + LLM-first Visibility (LLMO)',
-    description:
-      'Product, growth, and brand strategy for AI tools and B2B SaaS. Practical LLM-first visibility (LLMO): structure, metadata, internal linking, and agent-ready documentation.',
-  },
 };
 
-const cardCompact =
-  'rounded-xl border border-black/10 bg-black/5 p-5 dark:border-white/10 dark:bg-white/5';
-
-export default async function Home() {
-  const [projects, books] = await Promise.all([getProjects(), getBooks()]);
-  const directionItems: DirectionItem[] = [
-    ...projects.map((project) => ({ ...project, kind: 'project' as const })),
-    ...books.map((book) => ({ ...book, kind: 'book' as const })),
-  ];
+export default function Home() {
+  const featured = getFeaturedArtifacts();
+  const latestBook = getLatestBook();
 
   return (
-    <div className="home-shell mx-auto flex w-full max-w-[1100px] flex-col gap-14">
-      <section className="relative flex scroll-mt-24 flex-col gap-6" id="home">
-        <div className="hero-stickers hidden sm:block" aria-hidden="true">
-          <div className="hero-sticker burst" data-ascii-sticker="OPEN SOURCE + SHIPPED">
-            OPEN SOURCE + SHIPPED
-          </div>
-          <div className="hero-sticker ribbon" data-ascii-sticker="LLM-FIRST VISIBILITY (LLMO)">
-            LLM-FIRST VISIBILITY (LLMO)
-          </div>
-        </div>
+    <div className="grid gap-8">
+      <HeroPoster
+        eyebrow="Live index"
+        title="Systems, markets, language, books."
+        summary="ABVX tracks current work across market infrastructure, strategy, product development, AI-native tooling, protocols, constructed-language experiments, publishing, and essays."
+      />
 
-        <div className="flex items-center gap-3">
-          {/* upside-down avatar: attention hook */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/brand/avatar-upside-96.jpg"
-            alt=""
-            className="h-12 w-12 rounded-full border border-black/10 object-cover dark:border-white/10"
-            loading="lazy"
-          />
-          <div className="text-sm font-semibold tracking-wide text-zinc-700 dark:text-zinc-300">
-            Anton Biletskyi‑Volokh
-          </div>
-        </div>
+      <MarqueeTicker
+        items={[
+          'Current focus: agro-commodity trading infrastructure',
+          'Systems catalogue: tools, services, protocols, language experiments',
+          'ABVX Press: books, translations, free editions',
+          'Writing: Medium + Substack archive',
+        ]}
+      />
 
-        <div className="hero-stickers-mobile flex flex-wrap gap-2 sm:hidden" aria-hidden="true">
-          <div className="hero-sticker burst" data-ascii-sticker="OPEN SOURCE + SHIPPED">
-            OPEN SOURCE + SHIPPED
-          </div>
-          <div className="hero-sticker ribbon" data-ascii-sticker="LLM-FIRST VISIBILITY (LLMO)">
-            LLM-FIRST VISIBILITY (LLMO)
-          </div>
-        </div>
-
-        <div className="flex max-w-3xl flex-col gap-4">
-          <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-            Product &amp; AI systems — from validation to shipped tools
-          </h1>
-          <p className="text-base text-zinc-700 dark:text-zinc-300 sm:text-lg">
-            I help founders and small teams validate ideas, ship the first real version, and set up LLM-first visibility (docs, IA, distribution) that compounds.
-          </p>
-          <ul className="list-disc space-y-1 pl-5 text-sm text-zinc-600 dark:text-zinc-300">
-            <li>Validate offer + roadmap (2–4 weeks)</li>
-            <li>Build / ship: MVPs, automations, internal tools, OSS</li>
-            <li>LLM-first visibility: agent-ready docs, structure, metadata, internal linking</li>
-          </ul>
-
-          <div className="flex flex-wrap gap-3 pt-1">
-            <a
-              href="#work-with-me"
-              className="rounded-md bg-zinc-950 px-4 py-2 text-sm font-semibold text-white hover:bg-black dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200"
-            >
-              Work with me
-            </a>
-            <a
-              href="#ecosystems-projects"
-              className="rounded-md border border-black/15 px-4 py-2 text-sm font-semibold text-zinc-950 hover:border-black/30 dark:border-white/15 dark:text-white dark:hover:border-white/30"
-            >
-              See projects
-            </a>
-          </div>
-
-          <div className="text-sm text-zinc-600 dark:text-zinc-300">
-            Open to: consulting, product roles, and selective cofounder opportunities.
-          </div>
-        </div>
-      </section>
-
-      <section className="flex scroll-mt-24 flex-col gap-5" id="how-help">
-        <h2 className="text-xl font-semibold tracking-tight">How I help teams ship</h2>
-        <div className="grid gap-4 md:grid-cols-3">
-          <div className={cardCompact}>
-            <h3 className="text-sm font-semibold">Strategy Sprint (1–2 weeks)</h3>
-            <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-600 dark:text-zinc-300">
-              <li>Positioning + offer clarity</li>
-              <li>Prioritized roadmap and scope</li>
-              <li>Execution plan with concrete next steps</li>
-            </ul>
-          </div>
-          <div className={cardCompact}>
-            <h3 className="text-sm font-semibold">Build Sprint (2–4 weeks)</h3>
-            <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-600 dark:text-zinc-300">
-              <li>MVP, internal tools, or automation shipped</li>
-              <li>Agent-ready docs and implementation notes</li>
-              <li>Handoff checklist for ongoing execution</li>
-            </ul>
-          </div>
-          <div className={cardCompact}>
-            <h3 className="text-sm font-semibold">Advisory (weekly/biweekly)</h3>
-            <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-600 dark:text-zinc-300">
-              <li>Decision reviews and unblock sessions</li>
-              <li>Messaging and distribution calibration</li>
-              <li>Progress tracking against shipping goals</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="flex scroll-mt-24 flex-col gap-4" id="ecosystems-projects">
-        <h2 className="text-xl font-semibold tracking-tight">Directions</h2>
-        <p className="text-sm text-zinc-600 dark:text-zinc-300">
-          The site now groups work by four active directions instead of uneven legacy ecosystems.
-        </p>
-        <div className="flex flex-col gap-2 text-sm text-zinc-600 dark:text-zinc-300">
-          <p>Each direction can contain books, landings, services, repositories, and supporting tools.</p>
-          <ul className="list-disc space-y-1 pl-5">
-            <li>Cropto: commodity trading infrastructure and market tools.</li>
-            <li>ABVX Press: books, translations, free editions, and companion landings.</li>
-            <li>Tech Lab: AI-dev tooling, open-source utilities, and service prototypes.</li>
-            <li>Lang Lab: Toki Pona, pictographic protocols, and language-AI experiments.</li>
-          </ul>
-        </div>
-
-        <div className="grid gap-3 md:grid-cols-2">
-          {DIRECTIONS.map((direction) => {
-            const count = directionItems.filter((item) =>
-              itemBelongsToDirection(item, direction),
-            ).length;
-
-            return (
-              <a
-                key={direction.href}
-                href={direction.href}
-                className="rounded-xl border border-black/10 bg-black/5 p-5 hover:border-black/20 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20"
-              >
-                <div className="text-base font-semibold leading-snug">{direction.title}</div>
-                <div className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
-                  {direction.tagline}
-                </div>
-                <div className="mt-3 text-xs uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
-                  {count} structured item{count === 1 ? '' : 's'}
-                </div>
-              </a>
-            );
-          })}
-        </div>
-        <div className="flex flex-wrap gap-3">
-          {DIRECTIONS.map((direction) => (
-            <a
-              key={direction.href}
-              className="rounded-md border border-black/15 px-4 py-2 text-sm font-semibold text-zinc-950 hover:border-black/30 dark:border-white/15 dark:text-white dark:hover:border-white/30"
-              href={direction.href}
-            >
-              Open {direction.title}
-            </a>
-          ))}
-        </div>
-      </section>
-
-      <section className="flex scroll-mt-24 flex-col gap-4" id="work-with-me">
-        <h2 className="text-xl font-semibold tracking-tight">Work with me</h2>
-        <div className="flex flex-col gap-3 text-sm text-zinc-600 dark:text-zinc-300">
+      <section className="grid gap-4 lg:grid-cols-[1.15fr_0.85fr]">
+        <SectionPanel title="Current working surface" eyebrow="Focus">
           <p>
-            Send a short note with what you’re building, your current bottleneck, and what you want to achieve in the next 4–8 weeks.
+            The site is being rebuilt as a public operating index: each item has one
+            canonical home but can appear where it is contextually useful.
           </p>
-        </div>
-        <div className="flex flex-wrap gap-3 pt-1">
-          <Link
-            href="/work-with-me"
-            className="rounded-md bg-zinc-950 px-4 py-2 text-sm font-semibold text-white hover:bg-black dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200"
-          >
-            Work with me
-          </Link>
-          <Link
-            href="/about"
-            className="rounded-md border border-black/15 px-4 py-2 text-sm font-semibold text-zinc-950 hover:border-black/30 dark:border-white/15 dark:text-white dark:hover:border-white/30"
-          >
-            About
-          </Link>
-          <Link
-            href="/books"
-            className="rounded-md border border-black/15 px-4 py-2 text-sm font-semibold text-zinc-950 hover:border-black/30 dark:border-white/15 dark:text-white dark:hover:border-white/30"
-          >
-            Books
-          </Link>
-        </div>
+        </SectionPanel>
+        <SectionPanel title="No portfolio theater" eyebrow="Principle" accent>
+          <p>
+            Projects, books, and essays are grouped by the work they support, not by
+            legacy labels or archive categories.
+          </p>
+        </SectionPanel>
       </section>
+
+      <section className="grid gap-4 md:grid-cols-2">
+        {featured.slice(0, 4).map((artifact) => (
+          <ArtifactCard key={artifact.id} artifact={artifact} />
+        ))}
+      </section>
+
+      {latestBook ? (
+        <section className="grid gap-4 lg:grid-cols-[0.8fr_1.2fr]">
+          <SectionPanel title="ABVX Press" eyebrow="Books">
+            <p>
+              Books, translations, series, companion landings, and free editions live
+              under the publishing layer.
+            </p>
+          </SectionPanel>
+          <BookCard book={latestBook} />
+        </section>
+      ) : null}
     </div>
   );
 }

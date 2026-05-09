@@ -1,0 +1,70 @@
+import type { Book } from './types';
+
+export const books = [
+  {
+    id: 'abvx-press',
+    slug: 'abvx-press',
+    title: 'ABVX Press',
+    type: 'series',
+    primarySection: 'books',
+    appearsIn: ['books'],
+    status: 'building',
+    summary:
+      'Publishing umbrella for books, translations, free editions, series, and companion landing pages.',
+    description:
+      'ABVX Press is the canonical home for the publishing track: Ukrainian modernism translations, Toki Pona editions, business/AI books, and related companion projects.',
+    tags: ['publishing', 'books', 'translations', 'abvx-press'],
+    links: [],
+    featured: true,
+    sortRank: 10,
+    needsReview: true,
+  },
+  {
+    id: 'ukrainian-modernism-translations',
+    slug: 'ukrainian-modernism-translations',
+    title: 'Ukrainian Modernism translations',
+    type: 'series',
+    primarySection: 'books',
+    appearsIn: ['books'],
+    status: 'released',
+    summary:
+      'Translation series of early twentieth-century Ukrainian modernist authors into French.',
+    tags: ['ukrainian-modernism', 'translations', 'french', 'literature'],
+    links: [],
+    featured: true,
+    sortRank: 20,
+    needsReview: true,
+  },
+  {
+    id: 'toki-pona-publishing-projects',
+    slug: 'toki-pona-publishing-projects',
+    title: 'Toki Pona publishing projects',
+    type: 'series',
+    primarySection: 'books',
+    appearsIn: ['books', 'systems'],
+    status: 'released',
+    summary:
+      'Toki Pona book series, translations, free editions, reader kits, and technical companions.',
+    tags: ['toki-pona', 'translations', 'language-ai', 'constructed-language'],
+    links: [],
+    featured: true,
+    sortRank: 30,
+    needsReview: true,
+  },
+  {
+    id: 'llmo-the-next-seo-revolution',
+    slug: 'llmo-the-next-seo-revolution',
+    title: 'LLMO: The Next SEO Revolution',
+    type: 'book',
+    primarySection: 'books',
+    appearsIn: ['books', 'systems'],
+    status: 'released',
+    summary:
+      'Book project on LLM-first visibility and staying visible to AI systems in the age of zero-click discovery.',
+    tags: ['llmo', 'ai-search', 'visibility', 'books'],
+    links: [],
+    featured: false,
+    sortRank: 80,
+    needsReview: true,
+  },
+] satisfies Book[];

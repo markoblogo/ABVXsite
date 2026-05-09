@@ -1,19 +1,5 @@
 import Link from 'next/link';
-
-const profiles = [
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/abvcreative/' },
-  { label: 'GitHub', href: 'https://github.com/markoblogo' },
-  { label: 'Substack', href: 'https://abvx.substack.com/' },
-  { label: 'Medium', href: 'https://abvcreative.medium.com/' },
-  { label: 'YouTube', href: 'https://www.youtube.com/@ABV_Creative' },
-  { label: 'X', href: 'https://x.com/abv_creative' },
-  { label: 'Behance', href: 'https://www.behance.net/ABV_Creative' },
-  { label: 'Bluesky', href: 'https://bsky.app/profile/abvx.xyz' },
-  { label: 'Instagram', href: 'https://www.instagram.com/abvcreative/' },
-  { label: 'Telegram', href: 'https://t.me/ABVcreative' },
-  { label: 'Vivino', href: 'https://www.vivino.com/users/anthony.bile' },
-  { label: 'Email', href: 'mailto:a.biletskiy@gmail.com' },
-];
+import { socialLinks } from '@/content/navigation';
 
 export const metadata = {
   title: 'About',
@@ -39,7 +25,7 @@ export default function LinksPage() {
       <section className="rounded-xl border border-black/10 bg-black/5 p-6 text-sm text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300">
         <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">Elsewhere</h2>
         <ul className="mt-3 list-disc space-y-1 pl-4">
-          {profiles.map((p) => (
+          {socialLinks.map((p) => (
             <li key={p.label}>
               <a className="underline" href={p.href} target={p.href.startsWith('http') ? '_blank' : undefined} rel={p.href.startsWith('http') ? 'noreferrer' : undefined}>
                 {p.label}

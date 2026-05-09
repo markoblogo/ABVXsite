@@ -1,5 +1,5 @@
-import ArtifactCard from '@/components/ArtifactCard';
-import BookCard from '@/components/BookCard';
+import BookCatalogueCard from '@/components/BookCatalogueCard';
+import CatalogueCard from '@/components/CatalogueCard';
 import PageHeader from '@/components/PageHeader';
 import SectionPanel from '@/components/SectionPanel';
 import { getArtifactsBySection, getBooks } from '@/content';
@@ -42,9 +42,9 @@ export default function BooksPage() {
             <div className="eyebrow">Featured publishing</div>
             <h2 id="featured-publishing-title">Current books and active lines.</h2>
           </div>
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="books-featured-grid">
             {featured.map((book) => (
-              <BookCard key={book.id} book={book} />
+              <BookCatalogueCard key={book.id} book={book} />
             ))}
           </div>
         </section>
@@ -55,9 +55,9 @@ export default function BooksPage() {
           <div className="eyebrow">Series</div>
           <h2 id="book-series-title">Publishing lines and translation projects.</h2>
         </div>
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="books-series-grid">
           {series.map((book) => (
-            <BookCard key={book.id} book={book} />
+            <BookCatalogueCard key={book.id} book={book} />
           ))}
         </div>
       </section>
@@ -67,9 +67,9 @@ export default function BooksPage() {
           <div className="eyebrow">Books</div>
           <h2 id="books-title">Books and translations.</h2>
         </div>
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="books-catalogue-grid">
           {standardBooks.map((book) => (
-            <BookCard key={book.id} book={book} />
+            <BookCatalogueCard key={book.id} book={book} />
           ))}
         </div>
       </section>
@@ -80,12 +80,12 @@ export default function BooksPage() {
             <div className="eyebrow">Free kits / companions</div>
             <h2 id="book-companions-title">Reader kits and publishing support.</h2>
           </div>
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="books-companion-grid">
             {companions.map((book) => (
-              <BookCard key={book.id} book={book} />
+              <BookCatalogueCard key={book.id} book={book} />
             ))}
             {publishingArtifacts.map((artifact) => (
-              <ArtifactCard key={artifact.id} artifact={artifact} />
+              <CatalogueCard key={artifact.id} artifact={artifact} />
             ))}
           </div>
         </section>

@@ -1,12 +1,20 @@
-import PageHeader from '@/components/PageHeader';
+import ActionLinks from '@/components/ActionLinks';
+import BookCatalogueCard from '@/components/BookCatalogueCard';
+import CatalogueCard from '@/components/CatalogueCard';
+import DetailHero from '@/components/DetailHero';
+import MediaPanel from '@/components/MediaPanel';
 import SectionPanel from '@/components/SectionPanel';
-import TagList from '@/components/TagList';
-import { getBookBySlug, getBooks } from '@/content';
+import { getArtifactsBySection, getBookBySlug, getBooks } from '@/content';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 export function generateStaticParams() {
   return getBooks().map((book) => ({ slug: book.slug }));
+}
+
+function youtubeEmbedUrl(url: string): string | undefined {
+  const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([^?&/]+)/);
+  return match?.[1] ? `https://www.youtube.com/embed/${match[1]}` : undefined;
 }
 
 export async function generateMetadata({
@@ -46,25 +54,35 @@ export default async function BookDetailPage({
   if (!book) notFound();
 
   const links = book.links;
+  const image = book.heroImage || book.coverImage;
+  const relatedBooks = getBooks()
+    .filter((item) => item.id !== book.id)
+    .filter(
+      (item) =>
+        item.series === book.series ||
+        item.category === book.category ||
+        item.tags.some((tag) => book.tags.includes(tag)),
+    )
+    .slice(0, 3);
+  const relatedArtifacts = getArtifactsBySection('books')
+    .filter((item) => item.tags.some((tag) => book.tags.includes(tag)))
+    .slice(0, 2);
+  const youtube = book.links.find((link) => link.type === 'youtube');
+  const videoUrl = youtube ? youtubeEmbedUrl(youtube.url) : undefined;
+  const title = book.displayTitle || book.shortTitle || book.title;
 
   return (
-    <article className="grid gap-8">
-      <PageHeader
+    <article className="detail-page detail-page--book">
+      <DetailHero
         eyebrow={`${book.series || book.category || book.type} / ${book.status}`}
-        title={book.title}
+        title={title}
+        subtitle={book.subtitle}
         summary={book.summary}
-      >
-        <TagList tags={book.tags} />
-      </PageHeader>
-
-      {book.heroImage || book.coverImage ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          className="detail-hero-image detail-hero-image--book"
-          src={(book.heroImage || book.coverImage)?.src}
-          alt={(book.heroImage || book.coverImage)?.alt || book.title}
-        />
-      ) : null}
+        tags={book.tags}
+        links={links}
+        image={image}
+        variant="book"
+      />
 
       <SectionPanel title="Overview" eyebrow="ABVX Press">
         <p>{book.description || book.summary}</p>
@@ -78,16 +96,33 @@ export default async function BookDetailPage({
         </p>
       </SectionPanel>
 
+      {videoUrl ? (
+        <SectionPanel title="Video / context" eyebrow="Media">
+          <MediaPanel videoUrl={videoUrl} title={title} variant="video" />
+        </SectionPanel>
+      ) : null}
+
       {links.length ? (
-        <SectionPanel title="Links" eyebrow="Public">
-          <div className="link-strip">
-            {links.map((link) => (
-              <a key={link.url} href={link.url} target="_blank" rel="noreferrer">
-                {link.label}
-              </a>
+        <SectionPanel title="Formats and links" eyebrow="Public">
+          <ActionLinks links={links} />
+        </SectionPanel>
+      ) : null}
+
+      {relatedBooks.length || relatedArtifacts.length ? (
+        <section className="home-section" aria-labelledby="related-books-title">
+          <div className="home-section__header">
+            <div className="eyebrow">Related items</div>
+            <h2 id="related-books-title">Same shelf, nearby systems.</h2>
+          </div>
+          <div className="related-grid">
+            {relatedBooks.map((item) => (
+              <BookCatalogueCard key={item.id} book={item} />
+            ))}
+            {relatedArtifacts.map((artifact) => (
+              <CatalogueCard key={artifact.id} artifact={artifact} />
             ))}
           </div>
-        </SectionPanel>
+        </section>
       ) : null}
     </article>
   );

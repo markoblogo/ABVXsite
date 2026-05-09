@@ -75,6 +75,9 @@ export type Artifact = BaseContentItem<ArtifactType> & {
 };
 
 export type Book = BaseContentItem<BookType> & {
+  shortTitle?: string;
+  subtitle?: string;
+  displayTitle?: string;
   coverImage?: ContentImage;
   heroImage?: ContentImage;
   series?: string;

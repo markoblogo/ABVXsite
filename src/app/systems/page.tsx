@@ -1,4 +1,4 @@
-import ArtifactCard from '@/components/ArtifactCard';
+import CatalogueCard from '@/components/CatalogueCard';
 import PageHeader from '@/components/PageHeader';
 import { getArtifactsBySection } from '@/content';
 import type { Metadata } from 'next';
@@ -27,24 +27,18 @@ export default function SystemsPage() {
         summary="Web services, AI-agent workflows, protocols, tools, language experiments and technical companions built for my own, partner and client projects."
       />
 
-      <section className="grid gap-4 md:grid-cols-2">
-        {artifacts.map((artifact) => (
-          <ArtifactCard key={artifact.id} artifact={artifact} />
-        ))}
-      </section>
-
       <section className="home-section" aria-labelledby="systems-groups-title">
         <div className="home-section__header">
-          <div className="eyebrow">Grouped by type</div>
+          <div className="eyebrow">Working technical index</div>
           <h2 id="systems-groups-title">Services, workflows, protocols, tools.</h2>
         </div>
         <div className="grid gap-6">
           {Object.entries(grouped).map(([group, items]) => (
             <section key={group} className="grid gap-3">
               <h3 className="group-title">{group}</h3>
-              <div className="grid gap-4 md:grid-cols-2">
+              <div className="systems-grid">
                 {items?.map((artifact) => (
-                  <ArtifactCard key={artifact.id} artifact={artifact} />
+                  <CatalogueCard key={artifact.id} artifact={artifact} />
                 ))}
               </div>
             </section>

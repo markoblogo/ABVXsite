@@ -1,6 +1,6 @@
-import LatestCard from '@/components/LatestCard';
 import PageHeader from '@/components/PageHeader';
 import SectionPanel from '@/components/SectionPanel';
+import WritingCard from '@/components/WritingCard';
 import {
   fetchMediumFeed,
   fetchSubstackFeed,
@@ -52,14 +52,15 @@ export default async function WritingPage() {
       />
 
       {posts.length ? (
-        <section className="grid gap-4 md:grid-cols-2">
+        <section className="writing-grid">
           {posts.map((post) => (
-            <LatestCard
+            <WritingCard
               key={post.url}
               title={post.title}
-              summary={post.excerpt || 'External essay from the ABVX writing archive.'}
+              excerpt={post.excerpt || 'External essay from the ABVX writing archive.'}
               href={post.url}
-              meta={`${post.source} / ${formatDate(post.publishedAt)}`}
+              source={post.source}
+              date={formatDate(post.publishedAt)}
               image={post.coverImage ? { src: post.coverImage, alt: post.title } : undefined}
             />
           ))}

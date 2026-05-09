@@ -1,5 +1,5 @@
-import ArtifactCard from '@/components/ArtifactCard';
-import BookCard from '@/components/BookCard';
+import BookCatalogueCard from '@/components/BookCatalogueCard';
+import CatalogueCard from '@/components/CatalogueCard';
 import PageHeader from '@/components/PageHeader';
 import SectionPanel from '@/components/SectionPanel';
 import {
@@ -35,9 +35,9 @@ export default function FocusPage() {
           <div className="eyebrow">Featured focus artifacts</div>
           <h2 id="featured-focus-title">The active market systems thread.</h2>
         </div>
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="focus-featured-grid">
           {(featured.length ? featured : artifacts).map((artifact) => (
-            <ArtifactCard key={artifact.id} artifact={artifact} />
+            <CatalogueCard key={artifact.id} artifact={artifact} />
           ))}
         </div>
       </section>
@@ -47,9 +47,9 @@ export default function FocusPage() {
           <div className="eyebrow">All focus items</div>
           <h2 id="all-focus-title">Infrastructure, workflows, interfaces.</h2>
         </div>
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="focus-index-grid">
           {artifacts.map((artifact) => (
-            <ArtifactCard key={artifact.id} artifact={artifact} />
+            <CatalogueCard key={artifact.id} artifact={artifact} />
           ))}
         </div>
       </section>
@@ -60,9 +60,9 @@ export default function FocusPage() {
             <div className="eyebrow">Related books/resources</div>
             <h2 id="focus-books-title">Publishing that supports the focus.</h2>
           </div>
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="related-grid">
             {relatedBooks.map((book) => (
-              <BookCard key={book.id} book={book} />
+              <BookCatalogueCard key={book.id} book={book} />
             ))}
           </div>
         </section>

@@ -1,5 +1,6 @@
 import BookCatalogueCard from '@/components/BookCatalogueCard';
 import CompanionCatalogueCard from '@/components/CompanionCatalogueCard';
+import MediaPanel from '@/components/MediaPanel';
 import PageHeader from '@/components/PageHeader';
 import SectionPanel from '@/components/SectionPanel';
 import ActionLinks from '@/components/ActionLinks';
@@ -82,22 +83,31 @@ function SeriesLine({
   const bookCount = items.filter((entry) => entry.kind === 'book' && (entry.item.type === 'book' || entry.item.type === 'translation')).length;
   const freeCount = items.filter((entry) => entry.kind === 'book' && !(entry.item.type === 'book' || entry.item.type === 'translation')).length;
   const companionCount = items.filter((entry) => entry.kind === 'artifact').length;
+  const image = series.heroImage || series.media;
 
   return (
     <article className="books-series-line">
-      <div className="books-series-line__header">
-        <div className="eyebrow">Official publishing line</div>
-        <h3>{series.title}</h3>
-        <p>{series.summary}</p>
-        <div className="books-series-line__meta">
-          <span>{bookCount} books</span>
-          {freeCount ? <span>{freeCount} free resources</span> : null}
-          {companionCount ? <span>{companionCount} companion systems</span> : null}
+      <div className={`books-series-line__top${image ? ' books-series-line__top--with-media' : ''}`}>
+        <div className="books-series-line__header">
+          <div className="eyebrow">Official publishing line</div>
+          <h3>{series.title}</h3>
+          <p>{series.summary}</p>
+          <div className="books-series-line__meta">
+            <span>{bookCount} books</span>
+            {freeCount ? <span>{freeCount} free resources</span> : null}
+            {companionCount ? <span>{companionCount} companion systems</span> : null}
+          </div>
+          <div className="books-series-line__actions">
+            <TagList tags={series.tags.slice(0, 5)} />
+            <ActionLinks links={series.links} compact />
+          </div>
         </div>
-        <div className="books-series-line__actions">
-          <TagList tags={series.tags.slice(0, 5)} />
-          <ActionLinks links={series.links} compact />
-        </div>
+
+        {image ? (
+          <div className="books-series-line__media">
+            <MediaPanel image={image} title={series.title} variant="project" />
+          </div>
+        ) : null}
       </div>
 
       <div className="books-mixed-grid">

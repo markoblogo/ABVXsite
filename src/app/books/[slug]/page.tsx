@@ -1,6 +1,8 @@
+import BookActionLinks from '@/components/BookActionLinks';
 import BookDetailHero from '@/components/BookDetailHero';
 import BookRelatedCard from '@/components/BookRelatedCard';
 import MediaPanel from '@/components/MediaPanel';
+import TagList from '@/components/TagList';
 import { getArtifactsBySection, getBookBySlug, getBooks, type Artifact, type Book } from '@/content';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -31,15 +33,35 @@ function tagOverlap(a: string[], b: string[]): number {
   return a.filter((tag) => b.includes(tag)).length;
 }
 
+function belongsToSeries(item: Book | Artifact, slug: string): boolean {
+  return item.primarySeriesSlug === slug || item.seriesSlugs?.includes(slug) || false;
+}
+
+function sharesSeries(source: Book, candidate: Book | Artifact): boolean {
+  const sourceSeries = new Set([source.primarySeriesSlug, ...(source.seriesSlugs || [])].filter(Boolean));
+  return candidate.primarySeriesSlug
+    ? sourceSeries.has(candidate.primarySeriesSlug)
+    : Boolean(candidate.seriesSlugs?.some((slug) => sourceSeries.has(slug)));
+}
+
 function relatedScore(book: Book, candidate: Book | Artifact): number {
   let score = tagOverlap(book.tags, candidate.tags) * 8;
 
+  if (sharesSeries(book, candidate)) score += 90;
   if ('series' in candidate && candidate.series && candidate.series === book.series) score += 70;
   if ('category' in candidate && candidate.category && candidate.category === book.category) score += 35;
   if ('series' in candidate && candidate.type === 'series') score += 12;
   if (!('series' in candidate) && candidate.type === 'book-companion') score += 22;
 
   return score;
+}
+
+function seriesItemSortValue(item: Book | Artifact) {
+  if ('series' in item) {
+    if (item.type === 'book' || item.type === 'translation') return 0;
+    return 1000;
+  }
+  return 2000;
 }
 
 export async function generateMetadata({
@@ -79,6 +101,87 @@ export default async function BookDetailPage({
   if (!book) notFound();
 
   const image = book.heroImage || book.coverImage;
+  const title = book.displayTitle || book.shortTitle || book.title;
+
+  if (book.type === 'series') {
+    const relatedItems = [
+      ...getBooks()
+        .filter((item) => item.id !== book.id && item.type !== 'series')
+        .filter((item) => belongsToSeries(item, book.slug))
+        .map((item) => ({ kind: 'book' as const, item })),
+      ...getArtifactsBySection('books')
+        .filter((item) => belongsToSeries(item, book.slug))
+        .map((item) => ({ kind: 'artifact' as const, item })),
+    ]
+      .sort((a, b) => {
+        const rank = seriesItemSortValue(a.item) - seriesItemSortValue(b.item);
+        if (rank) return rank;
+        return a.item.sortRank - b.item.sortRank;
+      })
+      .slice(0, 12);
+    const contextRows = [
+      ['Type', 'Series'],
+      ['Line', book.group || 'Official publishing lines'],
+      book.status ? ['Status', book.status] : undefined,
+    ].filter(Boolean) as [string, string][];
+
+    return (
+      <article className="detail-page detail-page--book detail-page--series">
+        <header className={`series-detail-hero${image ? ' series-detail-hero--with-media' : ''}`}>
+          <div className="series-detail-hero__copy">
+            <div className="eyebrow">Official publishing line / {book.status}</div>
+            <h1>{title}</h1>
+            <p>{book.summary}</p>
+            <TagList tags={book.tags.slice(0, 8)} />
+            <BookActionLinks links={book.links} />
+          </div>
+
+          {image ? (
+            <div className="series-detail-hero__media">
+              <MediaPanel image={image} title={title} variant="project" />
+            </div>
+          ) : null}
+        </header>
+
+        <section className="book-detail-main" aria-labelledby="series-about-title">
+          <div className="book-detail-copy-panel">
+            <div className="eyebrow">Publishing line</div>
+            <h2 id="series-about-title">About this series</h2>
+            <p>{book.description || book.summary}</p>
+          </div>
+
+          {contextRows.length ? (
+            <aside className="book-detail-context" aria-label="Series context">
+              <div className="eyebrow">Series context</div>
+              <dl>
+                {contextRows.map(([label, value]) => (
+                  <div key={label}>
+                    <dt>{label}</dt>
+                    <dd>{value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </aside>
+          ) : null}
+        </section>
+
+        {relatedItems.length ? (
+          <section className="home-section" aria-labelledby="series-related-title">
+            <div className="home-section__header">
+              <div className="eyebrow">Related items</div>
+              <h2 id="series-related-title">Books, resources and companion systems.</h2>
+            </div>
+            <div className="book-related-grid">
+              {relatedItems.map((related) => (
+                <BookRelatedCard key={`${related.kind}-${related.item.id}`} related={related} />
+              ))}
+            </div>
+          </section>
+        ) : null}
+      </article>
+    );
+  }
+
   const relatedBooks = getBooks()
     .filter((item) => item.id !== book.id)
     .filter(
@@ -101,7 +204,6 @@ export default async function BookDetailPage({
     .slice(0, 6);
   const youtube = book.links.find((link) => link.type === 'youtube');
   const videoUrl = youtube ? youtubeEmbedUrl(youtube.url) : undefined;
-  const title = book.displayTitle || book.shortTitle || book.title;
   const formats = formatFormats(book.formats);
   const contextRows = [
     book.series ? ['Series', book.series] : undefined,

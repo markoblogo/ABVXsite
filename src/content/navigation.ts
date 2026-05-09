@@ -7,9 +7,25 @@ export type FooterLink = {
 export type SocialLink = {
   label: string;
   href: string;
-  icon: string;
+  icon: SocialIconName;
   external?: boolean;
 };
+
+export type SocialIconName =
+  | 'linkedin'
+  | 'email'
+  | 'github'
+  | 'substack'
+  | 'medium'
+  | 'youtube'
+  | 'x'
+  | 'bluesky'
+  | 'behance'
+  | 'vivino'
+  | 'instagram'
+  | 'telegram'
+  | 'whatsapp'
+  | 'amazon-author';
 
 export const footerPrimaryLinks: FooterLink[] = [
   { label: 'Focus', href: '/focus' },
@@ -32,17 +48,18 @@ export const footerArchiveLinks: FooterLink[] = [
 ];
 
 export const socialLinks: SocialLink[] = [
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/abvcreative/', icon: 'in', external: true },
-  { label: 'Email', href: 'mailto:a.biletskiy@gmail.com', icon: '@' },
-  { label: 'GitHub', href: 'https://github.com/markoblogo', icon: 'gh', external: true },
-  { label: 'Substack', href: 'https://abvx.substack.com/', icon: 'S', external: true },
-  { label: 'Medium', href: 'https://abvcreative.medium.com/', icon: 'M', external: true },
-  { label: 'YouTube', href: 'https://www.youtube.com/@ABV_Creative', icon: '▶', external: true },
-  { label: 'X', href: 'https://x.com/abv_creative', icon: 'X', external: true },
-  { label: 'Bluesky', href: 'https://bsky.app/profile/abvx.xyz', icon: 'BS', external: true },
-  { label: 'Behance', href: 'https://www.behance.net/ABV_Creative', icon: 'Be', external: true },
-  { label: 'Vivino', href: 'https://www.vivino.com/users/anthony.bile', icon: 'V', external: true },
-  { label: 'Instagram', href: 'https://www.instagram.com/abvcreative/', icon: '◎', external: true },
-  { label: 'Telegram', href: 'https://t.me/ABVcreative', icon: '↗', external: true },
-  { label: 'Amazon Author', href: 'https://www.amazon.com/stores/author/B0FTGN5QNK', icon: 'A', external: true },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/abvcreative/', icon: 'linkedin', external: true },
+  { label: 'Email', href: 'mailto:a.biletskiy@gmail.com', icon: 'email' },
+  { label: 'GitHub', href: 'https://github.com/markoblogo', icon: 'github', external: true },
+  { label: 'Substack', href: 'https://abvx.substack.com/', icon: 'substack', external: true },
+  { label: 'Medium', href: 'https://abvcreative.medium.com/', icon: 'medium', external: true },
+  { label: 'YouTube', href: 'https://www.youtube.com/@ABV_Creative', icon: 'youtube', external: true },
+  { label: 'X', href: 'https://x.com/abv_creative', icon: 'x', external: true },
+  { label: 'Bluesky', href: 'https://bsky.app/profile/abvx.xyz', icon: 'bluesky', external: true },
+  { label: 'Behance', href: 'https://www.behance.net/ABV_Creative', icon: 'behance', external: true },
+  { label: 'Vivino', href: 'https://www.vivino.com/users/anthony.bile', icon: 'vivino', external: true },
+  { label: 'Instagram', href: 'https://www.instagram.com/abvcreative/', icon: 'instagram', external: true },
+  { label: 'Telegram', href: 'https://t.me/ABVcreative', icon: 'telegram', external: true },
+  { label: 'WhatsApp', href: 'https://wa.me/33635189545', icon: 'whatsapp', external: true },
+  { label: 'Amazon Author', href: 'https://www.amazon.com/stores/author/B0FTGN5QNK', icon: 'amazon-author', external: true },
 ];

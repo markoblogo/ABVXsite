@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import BrandMark from './BrandMark';
 
 const navItems = [
   { label: 'Focus', href: '/focus' },
@@ -13,9 +14,7 @@ export default function SiteHeader() {
     <header className="site-header">
       <div className="site-header__inner">
         <Link className="site-brand" href="/" aria-label="ABVX home">
-          <span className="site-brand__mark" aria-hidden="true">
-            ABVX
-          </span>
+          <BrandMark className="site-brand__mark" priority />
           <span className="site-brand__text">Anton Biletskyi-Volokh</span>
         </Link>
         <nav className="site-nav" aria-label="Primary navigation">

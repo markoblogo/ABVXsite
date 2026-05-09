@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import BrandMark from './BrandMark';
+import SocialIcon from './SocialIcon';
 import {
   footerArchiveLinks,
   footerPrimaryLinks,
@@ -19,7 +21,7 @@ function FooterNavLink({ item }: { item: FooterLink }) {
   return <Link href={item.href}>{item.label}</Link>;
 }
 
-function SocialIcon({ item }: { item: SocialLink }) {
+function SocialLinkButton({ item }: { item: SocialLink }) {
   const isExternal = item.external && item.href.startsWith('http');
 
   return (
@@ -31,17 +33,7 @@ function SocialIcon({ item }: { item: SocialLink }) {
       target={isExternal ? '_blank' : undefined}
       rel={isExternal ? 'noreferrer' : undefined}
     >
-      <svg
-        aria-hidden="true"
-        className="site-footer__social-icon"
-        viewBox="0 0 40 40"
-        role="img"
-      >
-        <rect x="0.5" y="0.5" width="39" height="39" rx="20" />
-        <text x="20" y="24" textAnchor="middle">
-          {item.icon}
-        </text>
-      </svg>
+      <SocialIcon name={item.icon} />
     </a>
   );
 }
@@ -51,7 +43,10 @@ export default function SiteFooter() {
     <footer className="site-footer">
       <div className="site-footer__inner">
         <section className="site-footer__brand" aria-label="ABVX">
-          <div className="site-footer__title">ABVX</div>
+          <div className="site-footer__brand-row">
+            <BrandMark className="site-footer__brand-mark" />
+            <div className="site-footer__title">ABVX</div>
+          </div>
           <p>
             Working index for market infrastructure, agentic development, language systems,
             and publishing.
@@ -82,7 +77,7 @@ export default function SiteFooter() {
           <h2 id="footer-elsewhere-title">Elsewhere</h2>
           <div className="site-footer__social-grid">
             {socialLinks.map((item) => (
-              <SocialIcon key={`${item.label}-${item.href}`} item={item} />
+              <SocialLinkButton key={`${item.label}-${item.href}`} item={item} />
             ))}
           </div>
         </section>

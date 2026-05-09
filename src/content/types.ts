@@ -91,6 +91,8 @@ type BaseContentItem<TType extends string> = {
   editorialNotes?: string;
   mediaNeedsReview?: boolean;
   relatedSlugs?: string[];
+  primarySeriesSlug?: string;
+  seriesSlugs?: string[];
 };
 
 export type Artifact = BaseContentItem<ArtifactType> & {
@@ -147,4 +149,6 @@ export type Series = {
   category?: string;
   formats?: string[];
   relatedSlugs?: string[];
+  primarySeriesSlug?: string;
+  seriesSlugs?: string[];
 };

@@ -58,7 +58,7 @@
   "needsMediaReview": false,
   "needsLinkReview": false,
   "series": "Language & AI",
-  "group": "Language & AI",
+  "group": "Language, AI & Toki Pona",
   "formats": [
     "kindle",
     "paperback",

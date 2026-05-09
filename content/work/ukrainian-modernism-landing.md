@@ -40,7 +40,7 @@
   "needsMediaReview": false,
   "needsLinkReview": false,
   "primarySection": "systems",
-  "group": "Landing pages",
+  "group": "Publishing systems & protocols",
   "media": {
     "src": "/media/projects/ukrainian-modernism-landing.png",
     "alt": "Ukrainian Modernism landing screenshot",
@@ -50,6 +50,10 @@
     "src": "/media/projects/ukrainian-modernism-landing.png",
     "alt": "Ukrainian Modernism landing screenshot",
     "role": "landing-screenshot"
-  }
+  },
+  "primarySeriesSlug": "modernisme-ukrainien",
+  "seriesSlugs": [
+    "modernisme-ukrainien"
+  ]
 }
 ---

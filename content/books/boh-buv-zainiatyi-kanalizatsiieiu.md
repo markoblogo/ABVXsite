@@ -18,7 +18,7 @@
     "god-was-busy-with-the-plumbing"
   ],
   "series": "Бог був зайнятий каналізацією",
-  "group": "fiction",
+  "group": "Fiction",
   "tags": [
     "fiction",
     "absurdist fiction",

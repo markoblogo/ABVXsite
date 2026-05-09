@@ -35,7 +35,7 @@
   "needsMediaReview": false,
   "needsLinkReview": false,
   "primarySection": "systems",
-  "group": "Language experiments",
+  "group": "Publishing systems & protocols",
   "media": {
     "src": "/media/projects/sitelen-emoji-truth.png",
     "alt": "sitelen-emoji-truth cover",

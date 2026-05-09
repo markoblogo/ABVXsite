@@ -40,7 +40,7 @@
   "needsMediaReview": false,
   "needsLinkReview": false,
   "primarySection": "systems",
-  "group": "AI services",
+  "group": "Publishing systems & protocols",
   "media": {
     "src": "/media/projects/toki-pona-ai-translator.png",
     "alt": "Toki Pona AI translator screenshot",

@@ -50,7 +50,7 @@
   "needsMediaReview": false,
   "needsLinkReview": false,
   "series": "Toki Pona Classics",
-  "group": "Toki Pona Classics",
+  "group": "Language, AI & Toki Pona",
   "formats": [
     "kindle",
     "paperback"

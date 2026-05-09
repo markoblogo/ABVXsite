@@ -48,7 +48,7 @@
   "needsCopyReview": false,
   "needsMediaReview": false,
   "needsLinkReview": false,
-  "series": "Modernisme ukrainien",
+  "series": "Modernisme Ukrainien",
   "group": "Ukrainian Modernism",
   "formats": [
     "kindle",
@@ -59,7 +59,11 @@
     "src": "/media/books/mykola-khvylovy-la-zone-du-sanatorium.png",
     "alt": "Mykola Khvylovy French translation cover",
     "role": "mockup"
-  }
+  },
+  "primarySeriesSlug": "modernisme-ukrainien",
+  "seriesSlugs": [
+    "modernisme-ukrainien"
+  ]
 }
 ---
 

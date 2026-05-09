@@ -174,6 +174,8 @@ function baseFields(data: RawRecord, body: string) {
     editorialNotes: optionalString(data.editorialNotes),
     mediaNeedsReview: booleanValue(data.needsMediaReview),
     relatedSlugs: stringArray(data.relatedSlugs),
+    primarySeriesSlug: optionalString(data.primarySeriesSlug),
+    seriesSlugs: stringArray(data.seriesSlugs),
   };
 }
 

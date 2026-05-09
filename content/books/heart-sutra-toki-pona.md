@@ -38,8 +38,8 @@
   "needsCopyReview": false,
   "needsMediaReview": false,
   "needsLinkReview": false,
-  "series": "Chinese Wisdom in Toki Pona",
-  "group": "Free kits / companions",
+  "series": "Toki Pona Free Kits & Translations",
+  "group": "Toki Pona Free Kits & Translations",
   "formats": [
     "pdf",
     "site"
@@ -48,6 +48,10 @@
     "src": "/media/books/heart-sutra-toki-pona.png",
     "alt": "Heart Sutra in toki pona cover",
     "role": "mockup"
-  }
+  },
+  "primarySeriesSlug": "toki-pona-free-kits",
+  "seriesSlugs": [
+    "toki-pona-free-kits"
+  ]
 }
 ---

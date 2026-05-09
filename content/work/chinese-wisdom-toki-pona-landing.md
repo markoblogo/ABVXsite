@@ -35,7 +35,7 @@
   "needsMediaReview": false,
   "needsLinkReview": false,
   "primarySection": "systems",
-  "group": "Landing pages",
+  "group": "Publishing systems & protocols",
   "media": {
     "src": "/media/projects/chinese-wisdom-toki-pona-landing.png",
     "alt": "Chinese Wisdom in toki pona landing screenshot",
@@ -45,6 +45,10 @@
     "src": "/media/projects/chinese-wisdom-toki-pona-landing.png",
     "alt": "Chinese Wisdom in toki pona landing screenshot",
     "role": "landing-screenshot"
-  }
+  },
+  "primarySeriesSlug": "chinese-wisdom-toki-pona",
+  "seriesSlugs": [
+    "chinese-wisdom-toki-pona"
+  ]
 }
 ---

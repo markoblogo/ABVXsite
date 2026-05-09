@@ -38,8 +38,8 @@
   "needsCopyReview": false,
   "needsMediaReview": false,
   "needsLinkReview": false,
-  "series": "Ukrainian Modernism",
-  "group": "Ukrainian-French",
+  "series": "Modernisme Ukrainien",
+  "group": "Ukrainian Modernism",
   "formats": [
     "pdf",
     "series"
@@ -48,6 +48,10 @@
     "src": "/media/books/hryhorii-kosynka-dans-les-seigles.png",
     "alt": "Hryhorii Kosynka French translation cover",
     "role": "mockup"
-  }
+  },
+  "primarySeriesSlug": "modernisme-ukrainien",
+  "seriesSlugs": [
+    "modernisme-ukrainien"
+  ]
 }
 ---

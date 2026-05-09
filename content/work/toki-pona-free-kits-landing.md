@@ -35,7 +35,7 @@
   "needsMediaReview": false,
   "needsLinkReview": false,
   "primarySection": "systems",
-  "group": "Landing pages",
+  "group": "Publishing systems & protocols",
   "media": {
     "src": "/media/projects/toki-pona-free-kits-landing.png",
     "alt": "Toki Pona free kits landing screenshot",
@@ -45,6 +45,10 @@
     "src": "/media/projects/toki-pona-free-kits-landing.png",
     "alt": "Toki Pona free kits landing screenshot",
     "role": "landing-screenshot"
-  }
+  },
+  "primarySeriesSlug": "toki-pona-free-kits",
+  "seriesSlugs": [
+    "toki-pona-free-kits"
+  ]
 }
 ---

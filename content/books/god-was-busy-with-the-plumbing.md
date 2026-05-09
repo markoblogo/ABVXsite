@@ -18,7 +18,7 @@
     "boh-buv-zainiatyi-kanalizatsiieiu"
   ],
   "series": "Бог був зайнятий каналізацією",
-  "group": "fiction",
+  "group": "Fiction",
   "tags": [
     "fiction",
     "absurdist fiction",

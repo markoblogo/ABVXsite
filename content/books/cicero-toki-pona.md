@@ -55,7 +55,7 @@
   "needsMediaReview": false,
   "needsLinkReview": false,
   "series": "Stoic Wisdom in Toki Pona",
-  "group": "Toki Pona Classics",
+  "group": "Stoic Wisdom in Toki Pona",
   "formats": [
     "kindle",
     "paperback",
@@ -65,7 +65,11 @@
     "src": "/media/books/cicero-toki-pona.png",
     "alt": "Cicero On Duties in toki pona book cover",
     "role": "mockup"
-  }
+  },
+  "primarySeriesSlug": "stoic-wisdom-toki-pona",
+  "seriesSlugs": [
+    "stoic-wisdom-toki-pona"
+  ]
 }
 ---
 

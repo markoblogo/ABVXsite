@@ -55,7 +55,7 @@
   "needsCopyReview": false,
   "needsMediaReview": false,
   "needsLinkReview": false,
-  "series": "Modernisme ukrainien",
+  "series": "Modernisme Ukrainien",
   "group": "Ukrainian Modernism",
   "formats": [
     "kindle",
@@ -66,7 +66,11 @@
     "src": "/media/books/maik-johansen-le-voyage-du-savant-docteur-leonardo.png",
     "alt": "Maik Johansen French translation cover",
     "role": "mockup"
-  }
+  },
+  "primarySeriesSlug": "modernisme-ukrainien",
+  "seriesSlugs": [
+    "modernisme-ukrainien"
+  ]
 }
 ---
 

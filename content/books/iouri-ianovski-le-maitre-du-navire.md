@@ -55,7 +55,7 @@
   "needsCopyReview": false,
   "needsMediaReview": false,
   "needsLinkReview": false,
-  "series": "Modernisme ukrainien",
+  "series": "Modernisme Ukrainien",
   "group": "Ukrainian Modernism",
   "formats": [
     "kindle",
@@ -66,7 +66,11 @@
     "src": "/media/books/iouri-ianovski-le-maitre-du-navire.png",
     "alt": "Iouri Ianovski French translation cover",
     "role": "mockup"
-  }
+  },
+  "primarySeriesSlug": "modernisme-ukrainien",
+  "seriesSlugs": [
+    "modernisme-ukrainien"
+  ]
 }
 ---
 

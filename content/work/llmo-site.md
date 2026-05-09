@@ -35,7 +35,7 @@
   "needsMediaReview": false,
   "needsLinkReview": false,
   "primarySection": "systems",
-  "group": "AI services",
+  "group": "Business, AI & Marketing",
   "media": {
     "src": "/media/projects/llmo-site.png",
     "alt": "LLMO site screenshot",

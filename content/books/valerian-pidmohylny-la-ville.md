@@ -55,7 +55,7 @@
   "needsCopyReview": false,
   "needsMediaReview": false,
   "needsLinkReview": false,
-  "series": "Modernisme ukrainien",
+  "series": "Modernisme Ukrainien",
   "group": "Ukrainian Modernism",
   "formats": [
     "kindle",
@@ -66,7 +66,11 @@
     "src": "/media/books/valerian-pidmohylny-la-ville.png",
     "alt": "Valerian Pidmohylny French translation cover",
     "role": "mockup"
-  }
+  },
+  "primarySeriesSlug": "modernisme-ukrainien",
+  "seriesSlugs": [
+    "modernisme-ukrainien"
+  ]
 }
 ---
 

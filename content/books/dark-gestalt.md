@@ -46,8 +46,7 @@
   "needsCopyReview": false,
   "needsMediaReview": false,
   "needsLinkReview": false,
-  "series": "Business & Productivity",
-  "group": "Strategy & Marketing",
+  "group": "Business, AI & Marketing",
   "formats": [
     "kindle",
     "paperback"

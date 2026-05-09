@@ -66,7 +66,11 @@
     "src": "/media/books/sunzi-art-of-war-toki-pona.png",
     "alt": "Sunzi Art of War in toki pona book cover",
     "role": "mockup"
-  }
+  },
+  "primarySeriesSlug": "chinese-wisdom-toki-pona",
+  "seriesSlugs": [
+    "chinese-wisdom-toki-pona"
+  ]
 }
 ---
 

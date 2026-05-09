@@ -38,8 +38,8 @@
   "needsCopyReview": false,
   "needsMediaReview": false,
   "needsLinkReview": false,
-  "series": "Stoic Wisdom in Toki Pona",
-  "group": "Free kits / companions",
+  "series": "Toki Pona Free Kits & Translations",
+  "group": "Toki Pona Free Kits & Translations",
   "formats": [
     "pdf",
     "site"
@@ -48,6 +48,10 @@
     "src": "/media/books/toki-pona-readers-kit.png",
     "alt": "The Toki Pona Reader’s Kit cover",
     "role": "mockup"
-  }
+  },
+  "primarySeriesSlug": "toki-pona-free-kits",
+  "seriesSlugs": [
+    "toki-pona-free-kits"
+  ]
 }
 ---

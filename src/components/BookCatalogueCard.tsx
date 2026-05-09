@@ -4,16 +4,28 @@ import MediaPanel from './MediaPanel';
 import TagList from './TagList';
 import Link from 'next/link';
 
-export default function BookCatalogueCard({ book }: { book: Book }) {
+export default function BookCatalogueCard({
+  book,
+  variantLabel,
+  tone,
+}: {
+  book: Book;
+  variantLabel?: string;
+  tone?: 'book' | 'free-resource';
+}) {
   const title = book.displayTitle || book.shortTitle || book.title;
   const mediaRole = book.coverImage?.mediaRole || 'mockup';
 
   return (
-    <article className="book-catalogue-card" data-media-role={mediaRole}>
+    <article
+      className={`book-catalogue-card${tone ? ` book-catalogue-card--${tone}` : ''}`}
+      data-media-role={mediaRole}
+    >
       <Link className="book-catalogue-card__cover-link" href={`/books/${book.slug}`} aria-label={title}>
         <MediaPanel image={book.coverImage} title={title} variant="book" />
       </Link>
       <div className="catalogue-card__body">
+        {variantLabel ? <div className="catalogue-type-label">{variantLabel}</div> : null}
         <div className="catalogue-card__meta">{book.series || book.category || book.type}</div>
         <h3>
           <Link href={`/books/${book.slug}`}>{title}</Link>

@@ -8,18 +8,27 @@ function isBook(item: Artifact | Book): item is Book {
   return item.primarySection === 'books';
 }
 
-export default function CompanionCatalogueCard({ item }: { item: Artifact | Book }) {
+export default function CompanionCatalogueCard({
+  item,
+  variantLabel,
+  tone,
+}: {
+  item: Artifact | Book;
+  variantLabel?: string;
+  tone?: 'companion-project' | 'protocol-tool' | 'free-resource';
+}) {
   const title = isBook(item) ? item.displayTitle || item.shortTitle || item.title : item.title;
   const href = isBook(item) ? `/books/${item.slug}` : `/work/${item.slug}`;
   const image = isBook(item) ? item.coverImage : item.thumbnail;
   const meta = isBook(item) ? item.series || item.category || item.type : item.group || item.status;
 
   return (
-    <article className="companion-catalogue-card">
+    <article className={`companion-catalogue-card${tone ? ` companion-catalogue-card--${tone}` : ''}`}>
       <Link className="companion-catalogue-card__media" href={href} aria-label={title}>
         <MediaPanel image={image} title={title} variant="project" />
       </Link>
       <div className="companion-catalogue-card__body">
+        {variantLabel ? <div className="catalogue-type-label">{variantLabel}</div> : null}
         <div className="catalogue-card__meta">{meta}</div>
         <h3>
           <Link href={href}>{title}</Link>

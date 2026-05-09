@@ -6,7 +6,7 @@
   "status": "released",
   "visibility": "public",
   "title": "Toki Pona Free Kits & Translations",
-  "summary": "Free downloadable Toki Pona reader kits, short translations and companion materials for learning, reading and experimenting with minimalist language.",
+  "summary": "Free downloadable Toki Pona reader kits, short translations and companion materials for learning, reading and experimenting with minimalist language. This line supports the paid book series and gives readers a low-friction entry point.",
   "tags": [
     "Toki Pona",
     "free books",
@@ -34,4 +34,4 @@
 }
 ---
 
-Toki Pona Free Kits & Translations collects free downloadable Toki Pona reader kits, short translations and companion materials for learning, reading and experimenting with minimalist language.
+Toki Pona Free Kits & Translations collects free downloadable Toki Pona reader kits, short translations and companion materials for learning, reading and experimenting with minimalist language. This line supports the paid book series and gives readers a low-friction entry point.

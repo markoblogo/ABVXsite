@@ -23,55 +23,98 @@ const officialSeriesSlugs = [
 ];
 
 const standaloneGroups = [
-  'Business, AI & Marketing',
-  'Language, AI & Toki Pona',
-  'Fiction',
+  {
+    title: 'Business, AI & Marketing',
+    description: 'Independent strategy, marketing, productivity and AI books outside the formal publishing series.',
+  },
+  {
+    title: 'Language, AI & Toki Pona',
+    description: 'Standalone books where language systems, Toki Pona and AI-native thinking become the main subject.',
+  },
+  {
+    title: 'Fiction',
+    description: 'Original fiction and translations outside the non-fiction and classical translation lines.',
+  },
 ];
 
 function belongsToSeries(item: Book | Artifact, slug: string) {
   return item.primarySeriesSlug === slug || item.seriesSlugs?.includes(slug);
 }
 
+function itemLabel(item: Book | Artifact) {
+  if (item.primarySection === 'books') {
+    if (item.type === 'free-edition' || item.type === 'companion') return 'FREE RESOURCE';
+    return 'BOOK';
+  }
+  if (item.type === 'protocol') return 'PROTOCOL';
+  if (item.type === 'tool') return 'TOOL';
+  if (item.type === 'book-companion') return 'COMPANION SITE';
+  return 'PROJECT';
+}
+
+function bookTone(book: Book): 'book' | 'free-resource' {
+  return book.type === 'free-edition' || book.type === 'companion' ? 'free-resource' : 'book';
+}
+
+function companionTone(item: Artifact): 'companion-project' | 'protocol-tool' {
+  return item.type === 'protocol' || item.type === 'tool' ? 'protocol-tool' : 'companion-project';
+}
+
+function seriesSortValue(item: Book | Artifact) {
+  if (item.primarySection === 'books') {
+    if (item.type === 'book' || item.type === 'translation') return 0;
+    return 1000;
+  }
+  return 2000;
+}
+
 function SeriesLine({
   series,
-  books,
-  companions,
+  items,
 }: {
   series: Series;
-  books: Book[];
-  companions: Artifact[];
+  items: Array<{ kind: 'book'; item: Book } | { kind: 'artifact'; item: Artifact }>;
 }) {
+  const bookCount = items.filter((entry) => entry.kind === 'book' && (entry.item.type === 'book' || entry.item.type === 'translation')).length;
+  const freeCount = items.filter((entry) => entry.kind === 'book' && !(entry.item.type === 'book' || entry.item.type === 'translation')).length;
+  const companionCount = items.filter((entry) => entry.kind === 'artifact').length;
+
   return (
-    <article className="section-panel grid gap-5">
-      <div className="grid gap-3">
+    <article className="books-series-line">
+      <div className="books-series-line__header">
         <div className="eyebrow">Official publishing line</div>
         <h3>{series.title}</h3>
         <p>{series.summary}</p>
-        <TagList tags={series.tags.slice(0, 6)} />
-        <ActionLinks links={series.links} compact />
+        <div className="books-series-line__meta">
+          <span>{bookCount} books</span>
+          {freeCount ? <span>{freeCount} free resources</span> : null}
+          {companionCount ? <span>{companionCount} companion systems</span> : null}
+        </div>
+        <div className="books-series-line__actions">
+          <TagList tags={series.tags.slice(0, 5)} />
+          <ActionLinks links={series.links} compact />
+        </div>
       </div>
 
-      {books.length ? (
-        <div className="grid gap-3">
-          <div className="catalogue-card__meta">Books / resources</div>
-          <div className="books-catalogue-grid">
-            {books.map((book) => (
-              <BookCatalogueCard key={book.id} book={book} />
-            ))}
-          </div>
-        </div>
-      ) : null}
-
-      {companions.length ? (
-        <div className="grid gap-3">
-          <div className="catalogue-card__meta">Companion systems</div>
-          <div className="books-companion-grid">
-            {companions.map((artifact) => (
-              <CompanionCatalogueCard key={artifact.id} item={artifact} />
-            ))}
-          </div>
-        </div>
-      ) : null}
+      <div className="books-mixed-grid">
+        {items.map((entry) =>
+          entry.kind === 'book' ? (
+            <BookCatalogueCard
+              key={entry.item.id}
+              book={entry.item}
+              tone={bookTone(entry.item)}
+              variantLabel={itemLabel(entry.item)}
+            />
+          ) : (
+            <CompanionCatalogueCard
+              key={entry.item.id}
+              item={entry.item}
+              tone={companionTone(entry.item)}
+              variantLabel={itemLabel(entry.item)}
+            />
+          ),
+        )}
+      </div>
     </article>
   );
 }
@@ -93,7 +136,7 @@ export default function BooksPage() {
   );
 
   return (
-    <div className="route-books grid gap-8">
+    <div className="route-books route-books--structured grid gap-8">
       <PageHeader
         eyebrow="ABVX Press"
         title="ABVX Press"
@@ -119,8 +162,18 @@ export default function BooksPage() {
             <SeriesLine
               key={line.id}
               series={line}
-              books={bookItems.filter((book) => belongsToSeries(book, line.slug))}
-              companions={publishingArtifacts.filter((artifact) => belongsToSeries(artifact, line.slug))}
+              items={[
+                ...bookItems
+                  .filter((book) => belongsToSeries(book, line.slug))
+                  .map((item) => ({ kind: 'book' as const, item })),
+                ...publishingArtifacts
+                  .filter((artifact) => belongsToSeries(artifact, line.slug))
+                  .map((item) => ({ kind: 'artifact' as const, item })),
+              ].sort((a, b) => {
+                const rank = seriesSortValue(a.item) - seriesSortValue(b.item);
+                if (rank) return rank;
+                return a.item.sortRank - b.item.sortRank;
+              })}
             />
           ))}
         </div>
@@ -131,21 +184,26 @@ export default function BooksPage() {
           <div className="eyebrow">Standalone</div>
           <h2 id="books-title">Standalone books.</h2>
         </div>
-        {standaloneGroups.map((group) => {
-          const groupBooks = standaloneBooks.filter((book) => book.group === group);
-          if (!groupBooks.length) return null;
+        <div className="grid gap-6">
+          {standaloneGroups.map((group) => {
+            const groupBooks = standaloneBooks.filter((book) => book.group === group.title);
+            if (!groupBooks.length) return null;
 
-          return (
-            <div key={group} className="grid gap-4">
-              <div className="catalogue-card__meta">{group}</div>
-              <div className="books-catalogue-grid">
-                {groupBooks.map((book) => (
-                  <BookCatalogueCard key={book.id} book={book} />
-                ))}
-              </div>
-            </div>
-          );
-        })}
+            return (
+              <section key={group.title} className="books-standalone-group">
+                <div className="books-standalone-group__header">
+                  <h3>{group.title}</h3>
+                  <p>{group.description}</p>
+                </div>
+                <div className="books-mixed-grid">
+                  {groupBooks.map((book) => (
+                    <BookCatalogueCard key={book.id} book={book} tone="book" variantLabel="BOOK" />
+                  ))}
+                </div>
+              </section>
+            );
+          })}
+        </div>
       </section>
 
       {publishingSystems.length ? (
@@ -153,10 +211,20 @@ export default function BooksPage() {
           <div className="home-section__header">
             <div className="eyebrow">Systems</div>
             <h2 id="book-companions-title">Publishing systems & protocols.</h2>
+            <p>
+              Tools, landing pages, protocols and language systems that support
+              the publishing work: translation, reader kits, visual protocols,
+              AI visibility and companion sites.
+            </p>
           </div>
-          <div className="books-companion-grid">
+          <div className="books-mixed-grid">
             {publishingSystems.map((artifact) => (
-              <CompanionCatalogueCard key={artifact.id} item={artifact} />
+              <CompanionCatalogueCard
+                key={artifact.id}
+                item={artifact}
+                tone={companionTone(artifact)}
+                variantLabel={itemLabel(artifact)}
+              />
             ))}
           </div>
         </section>

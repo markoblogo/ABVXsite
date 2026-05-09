@@ -6,7 +6,7 @@
   "status": "released",
   "visibility": "public",
   "title": "Stoic Wisdom in Toki Pona",
-  "summary": "Stoic classics translated into toki pona and sitelen pona, designed for slow reading, visual practice and minimalist philosophical reflection.",
+  "summary": "Stoic classics translated into toki pona and sitelen pona, designed for slow reading, visual practice and minimalist philosophical reflection. The line uses a tiny language to make ethical and practical thought more inspectable.",
   "tags": [
     "Toki Pona",
     "Stoicism",
@@ -34,4 +34,4 @@
 }
 ---
 
-Stoic Wisdom in Toki Pona collects Stoic classics translated into toki pona and sitelen pona, designed for slow reading, visual practice and minimalist philosophical reflection.
+Stoic Wisdom in Toki Pona collects Stoic classics translated into toki pona and sitelen pona, designed for slow reading, visual practice and minimalist philosophical reflection. The line uses a tiny language to make ethical and practical thought more inspectable.

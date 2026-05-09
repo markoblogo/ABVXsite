@@ -6,7 +6,7 @@
   "status": "released",
   "visibility": "public",
   "title": "Chinese Wisdom in toki pona",
-  "summary": "A compact multilingual series bringing classical Chinese texts into toki pona, sitelen pona and parallel reading formats.",
+  "summary": "A compact multilingual line bringing classical Chinese texts into toki pona, sitelen pona and parallel reading formats. It treats minimalist language as a tool for slow reading, comparison and philosophical compression.",
   "tags": [
     "Toki Pona",
     "Chinese philosophy",
@@ -34,4 +34,4 @@
 }
 ---
 
-Chinese Wisdom in toki pona is a compact multilingual series bringing classical Chinese texts into toki pona, sitelen pona and parallel reading formats.
+Chinese Wisdom in toki pona is a compact multilingual line bringing classical Chinese texts into toki pona, sitelen pona and parallel reading formats. It treats minimalist language as a tool for slow reading, comparison and philosophical compression.

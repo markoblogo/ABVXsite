@@ -3072,6 +3072,146 @@ a {
   object-fit: cover;
 }
 
+.route-books--structured .home-section {
+  display: grid;
+  gap: clamp(1rem, 2.4vw, 1.6rem);
+}
+
+.books-series-line {
+  display: grid;
+  gap: clamp(0.9rem, 2vw, 1.25rem);
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--accent) 16%, transparent) 0 9px, transparent 9px),
+    color-mix(in srgb, var(--paper) 88%, white 12%);
+  padding: clamp(0.9rem, 2vw, 1.25rem);
+}
+
+.books-series-line__header {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 1040px;
+}
+
+.books-series-line__header h3,
+.books-standalone-group__header h3 {
+  margin: 0;
+  font-weight: 950;
+  letter-spacing: -0.07em;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+.books-series-line__header h3 {
+  max-width: 13ch;
+  font-size: clamp(2.4rem, 7vw, 5.8rem);
+}
+
+.books-series-line__header p,
+.books-standalone-group__header p,
+.route-books--structured .home-section__header p {
+  max-width: 820px;
+  color: var(--ink-muted);
+  font-size: clamp(1rem, 1.6vw, 1.24rem);
+  line-height: 1.28;
+}
+
+.books-series-line__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.42rem;
+}
+
+.books-series-line__meta span,
+.catalogue-type-label {
+  width: fit-content;
+  border: 1px solid var(--line);
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.34rem 0.48rem;
+  font-size: 0.6rem;
+  font-weight: 950;
+  letter-spacing: 0.11em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.books-series-line__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.books-mixed-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 0.9rem;
+}
+
+@media (min-width: 1180px) {
+  .books-mixed-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.books-standalone-group {
+  display: grid;
+  gap: 0.95rem;
+  border-top: 2px solid var(--line);
+  padding-top: 1rem;
+}
+
+.books-standalone-group__header {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.books-standalone-group__header h3 {
+  font-size: clamp(1.9rem, 4vw, 3.5rem);
+}
+
+.route-books .book-catalogue-card--book {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--route-accent) 12%, transparent) 0 5px, transparent 5px),
+    color-mix(in srgb, var(--paper) 88%, white 12%);
+}
+
+.route-books .book-catalogue-card--free-resource,
+.route-books .companion-catalogue-card--free-resource {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, #d5d36a 28%, transparent) 0 5px, transparent 5px),
+    color-mix(in srgb, #f3efba 18%, var(--paper) 82%);
+}
+
+.route-books .companion-catalogue-card--companion-project {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, #7aa6a8 24%, transparent) 0 5px, transparent 5px),
+    color-mix(in srgb, #d8eeee 14%, var(--paper) 86%);
+}
+
+.route-books .companion-catalogue-card--protocol-tool {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, #8b8fb8 28%, transparent) 0 5px, transparent 5px),
+    color-mix(in srgb, #dcdff7 15%, var(--paper) 85%);
+}
+
+.route-books .book-catalogue-card--free-resource .catalogue-type-label,
+.route-books .companion-catalogue-card--free-resource .catalogue-type-label {
+  background: #d5d36a;
+  color: var(--ink);
+}
+
+.route-books .companion-catalogue-card--companion-project .catalogue-type-label {
+  background: #7aa6a8;
+  color: var(--ink);
+}
+
+.route-books .companion-catalogue-card--protocol-tool .catalogue-type-label {
+  background: #8b8fb8;
+  color: var(--paper);
+}
+
 /* /systems catalogue media: integrated full-width project screenshots. */
 .route-systems .project-catalogue-card__media {
   display: block;

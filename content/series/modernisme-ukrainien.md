@@ -6,7 +6,7 @@
   "status": "released",
   "visibility": "public",
   "title": "Modernisme Ukrainien",
-  "summary": "French translations of early twentieth-century Ukrainian modernist literature, with critical framing, notes and companion publishing infrastructure.",
+  "summary": "French translations of early twentieth-century Ukrainian modernist literature, with critical framing, notes and companion publishing infrastructure. The line brings authors of the Ukrainian “Executed Renaissance” into a French-reading context.",
   "tags": [
     "Ukrainian Modernism",
     "Modernisme ukrainien",
@@ -35,4 +35,4 @@
 }
 ---
 
-Modernisme Ukrainien is the publishing line for French translations of early twentieth-century Ukrainian modernist literature, with critical framing, notes and companion publishing infrastructure.
+Modernisme Ukrainien is the publishing line for French translations of early twentieth-century Ukrainian modernist literature, with critical framing, notes and companion publishing infrastructure. The line brings authors of the Ukrainian “Executed Renaissance” into a French-reading context.

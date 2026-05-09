@@ -41,8 +41,12 @@ function belongsToSeries(item: Book | Artifact, slug: string) {
   return item.primarySeriesSlug === slug || item.seriesSlugs?.includes(slug);
 }
 
+function isBookItem(item: Book | Artifact): item is Book {
+  return ['book', 'translation', 'free-edition', 'companion', 'series'].includes(item.type);
+}
+
 function itemLabel(item: Book | Artifact) {
-  if (item.primarySection === 'books') {
+  if (isBookItem(item)) {
     if (item.type === 'free-edition' || item.type === 'companion') return 'FREE RESOURCE';
     return 'BOOK';
   }
@@ -61,7 +65,7 @@ function companionTone(item: Artifact): 'companion-project' | 'protocol-tool' {
 }
 
 function seriesSortValue(item: Book | Artifact) {
-  if (item.primarySection === 'books') {
+  if (isBookItem(item)) {
     if (item.type === 'book' || item.type === 'translation') return 0;
     return 1000;
   }

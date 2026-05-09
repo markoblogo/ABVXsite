@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "smoke:theme": "node scripts/theme-smoke-check.mjs"
+    "smoke:theme": "node scripts/theme-smoke-check.mjs",
+    "export:legacy-content": "node scripts/export-legacy-content.mjs"
   },
   "dependencies": {
     "next": "16.1.6",

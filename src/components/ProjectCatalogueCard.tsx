@@ -13,9 +13,11 @@ export default function ProjectCatalogueCard({
 }) {
   return (
     <article className={`project-catalogue-card project-catalogue-card--${tone}`}>
-      <Link className="project-catalogue-card__media" href={`/work/${artifact.slug}`} aria-label={artifact.title}>
-        <MediaPanel image={artifact.thumbnail} title={artifact.title} variant="project" />
-      </Link>
+      {artifact.thumbnail ? (
+        <Link className="project-catalogue-card__media" href={`/work/${artifact.slug}`} aria-label={artifact.title}>
+          <MediaPanel image={artifact.thumbnail} title={artifact.title} variant="project" />
+        </Link>
+      ) : null}
       <div className="project-catalogue-card__body">
         <div className="catalogue-card__meta">{artifact.group || artifact.status}</div>
         <h3>

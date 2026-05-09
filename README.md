@@ -47,13 +47,15 @@ The core redesigned pages build without `NOTION_TOKEN`.
 
 ## Content Editing Workflow
 
-Core public content lives in `src/content`:
+Core public content now lives in `/content`:
 
-- `src/content/types.ts` - content model and allowed values.
-- `src/content/artifacts.ts` - focus and systems artifacts.
-- `src/content/books.ts` - books, series, translations, free editions, and publishing items.
-- `src/content/index.ts` - helper functions consumed by pages.
+- `content/books/*.md` - books, translations, free editions, and publishing items.
+- `content/work/*.md` - focus, systems, projects, tools, protocols, services, and companion sites.
+- `content/series/*.md` - series and publishing lines.
 - `public/media` - local public images and PDFs used by content cards and detail pages.
+- `src/content` - types, file loaders, helper functions, and temporary fallback registries.
+
+Notion is no longer required for core page rendering or content editing. Existing TypeScript registries remain only as temporary fallback data; file-based content overrides fallback content by `slug`.
 
 Each item has one canonical home through `primarySection`, but can appear elsewhere through `appearsIn`.
 
@@ -66,7 +68,19 @@ Common examples:
 
 If a URL is not verified, omit it from `links` and set `needsReview: true`.
 
-See [docs/content-editing.md](docs/content-editing.md) for detailed examples.
+Use the content scripts:
+
+```bash
+npm run content:new-book
+npm run content:new-work
+npm run content:new-series
+npm run content:validate
+npm run content:review
+```
+
+Run `npm run content:validate` and `npm run content:review` before build/deploy.
+
+See [docs/content-workflow.md](docs/content-workflow.md) for the current workflow and [docs/content-editing.md](docs/content-editing.md) for earlier content model notes.
 
 To re-run the one-off public media migration from the legacy public pages:
 

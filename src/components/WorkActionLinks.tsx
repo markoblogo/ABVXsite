@@ -1,25 +1,33 @@
 import type { ContentLink } from '@/content';
 
 const labels: Record<string, string> = {
+  site: 'Site',
   website: 'Site',
   github: 'GitHub',
   demo: 'Demo',
   youtube: 'YouTube',
   amazon: 'Amazon',
+  kindle: 'Kindle',
+  paperback: 'Paperback',
   'amazon-kindle': 'Kindle',
   'amazon-paperback': 'Paperback',
   pdf: 'PDF',
   'book-site': 'Book site',
+  series: 'Series site',
   'series-site': 'Series site',
   medium: 'Medium',
   substack: 'Substack',
+  deck: 'Deck',
   other: 'Open',
 };
 
 const priority: Record<string, number> = {
+  site: 1,
   website: 1,
   demo: 2,
+  deck: 3,
   pdf: 3,
+  series: 5,
   'book-site': 4,
   'series-site': 5,
   github: 6,
@@ -27,7 +35,9 @@ const priority: Record<string, number> = {
   medium: 8,
   substack: 9,
   amazon: 10,
+  kindle: 11,
   'amazon-kindle': 11,
+  paperback: 12,
   'amazon-paperback': 12,
   other: 99,
 };
@@ -46,7 +56,7 @@ function labelFor(link: ContentLink): string {
 }
 
 function isPrimary(link: ContentLink): boolean {
-  return ['website', 'demo', 'pdf', 'book-site', 'series-site'].includes(link.type);
+  return ['site', 'website', 'demo', 'pdf', 'deck', 'book-site', 'series-site', 'series'].includes(link.type);
 }
 
 export default function WorkActionLinks({

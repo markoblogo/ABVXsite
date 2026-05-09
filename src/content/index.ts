@@ -1,6 +1,12 @@
-import { artifacts } from './artifacts';
-import { books } from './books';
-import type { Artifact, Book, SiteSection } from './types';
+import { artifacts as fallbackArtifacts } from './artifacts';
+import { books as fallbackBooks } from './books';
+import { readBookFiles, readSeriesFiles, readWorkFiles } from './file-loader';
+import type { Artifact, Book, Series, SiteSection } from './types';
+
+type RelatedSource = Artifact | Book | Series;
+
+const artifacts = fallbackArtifacts as Artifact[];
+const books = fallbackBooks as Book[];
 
 function byRankThenTitle<T extends { sortRank: number; title: string }>(a: T, b: T): number {
   if (a.sortRank !== b.sortRank) return a.sortRank - b.sortRank;
@@ -27,8 +33,34 @@ function appearsInSection(item: { primarySection: SiteSection; appearsIn: SiteSe
   return item.primarySection === section || item.appearsIn.includes(section);
 }
 
+function byPublicOrder<T extends { featured: boolean; sortRank: number; title: string; updatedAt?: string; publishedAt?: string }>(
+  a: T,
+  b: T,
+): number {
+  if (a.featured !== b.featured) return a.featured ? -1 : 1;
+  if (a.sortRank !== b.sortRank) return a.sortRank - b.sortRank;
+  const diff = dateValue(b) - dateValue(a);
+  if (diff) return diff;
+  return a.title.localeCompare(b.title);
+}
+
+function mergeBySlug<T extends { slug: string }>(fallback: T[], files: T[]): T[] {
+  const bySlug = new Map<string, T>();
+  fallback.forEach((item) => bySlug.set(item.slug, item));
+  files.forEach((item) => bySlug.set(item.slug, item));
+  return [...bySlug.values()];
+}
+
+function seriesAsBooks(seriesItems: Series[]): Book[] {
+  return seriesItems.map((series) => ({
+    ...series,
+    coverImage: series.media,
+    heroImage: series.heroImage,
+  }));
+}
+
 export function getArtifacts(): Artifact[] {
-  return [...artifacts].sort(byRankThenTitle);
+  return mergeBySlug(artifacts, readWorkFiles()).sort(byPublicOrder);
 }
 
 export function getArtifactsBySection(section: SiteSection): Artifact[] {
@@ -45,7 +77,7 @@ export function getLatestArtifact(section: SiteSection): Artifact | undefined {
 }
 
 export function getBooks(): Book[] {
-  return [...books].sort(byRankThenTitle);
+  return mergeBySlug(books, [...readBookFiles(), ...seriesAsBooks(readSeriesFiles())]).sort(byPublicOrder);
 }
 
 export function getBooksBySection(section: SiteSection): Book[] {
@@ -53,15 +85,100 @@ export function getBooksBySection(section: SiteSection): Book[] {
 }
 
 export function getLatestBook(): Book | undefined {
-  return [...books].filter((book) => book.type !== 'series').sort(byLatest)[0];
+  return getBooks().filter((book) => book.type !== 'series').sort(byLatest)[0];
 }
 
 export function getBookBySlug(slug: string): Book | undefined {
-  return books.find((book) => book.slug === slug);
+  return getBooks().find((book) => book.slug === slug);
 }
 
 export function getArtifactBySlug(slug: string): Artifact | undefined {
-  return artifacts.find((artifact) => artifact.slug === slug);
+  return getArtifacts().find((artifact) => artifact.slug === slug);
+}
+
+export function getFeaturedBooks(): Book[] {
+  return getBooks().filter((book) => book.featured);
+}
+
+export function getBooksBySeries(series: string): Book[] {
+  return getBooks().filter((book) => book.series === series);
+}
+
+export function getBooksByGroup(group: string): Book[] {
+  return getBooks().filter((book) => book.group === group || book.category === group);
+}
+
+export function getWorkItems(): Artifact[] {
+  return getArtifacts();
+}
+
+export function getWorkBySlug(slug: string): Artifact | undefined {
+  return getArtifactBySlug(slug);
+}
+
+export function getWorkBySection(section: SiteSection): Artifact[] {
+  return getArtifactsBySection(section);
+}
+
+export function getLatestWork(section?: SiteSection): Artifact | undefined {
+  const source = section ? getArtifactsBySection(section) : getArtifacts();
+  return [...source].sort(byLatest)[0];
+}
+
+export function getFeaturedWork(section?: SiteSection): Artifact[] {
+  return getFeaturedArtifacts(section);
+}
+
+export function getWorkByGroup(group: string): Artifact[] {
+  return getArtifacts().filter((artifact) => artifact.group === group);
+}
+
+export function getSeries(): Series[] {
+  return readSeriesFiles().sort(byPublicOrder);
+}
+
+export function getSeriesBySlug(slug: string): Series | undefined {
+  return getSeries().find((series) => series.slug === slug);
+}
+
+function relatedScore(source: RelatedSource, candidate: RelatedSource): number {
+  if (source.slug === candidate.slug) return 0;
+  let score = candidate.tags.filter((tag) => source.tags.includes(tag)).length * 8;
+  if ('series' in source && 'series' in candidate && source.series && source.series === candidate.series) score += 60;
+  if ('group' in source && 'group' in candidate && source.group && source.group === candidate.group) score += 45;
+  if (candidate.appearsIn.some((section) => source.appearsIn.includes(section))) score += 14;
+  if (candidate.primarySection === source.primarySection) score += 10;
+  return score;
+}
+
+export function getRelatedItems(item: RelatedSource, limit = 6): RelatedSource[] {
+  return [...getArtifacts(), ...getBooks()]
+    .map((candidate) => ({ candidate, score: relatedScore(item, candidate) }))
+    .filter((entry) => entry.score > 0)
+    .sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      return a.candidate.sortRank - b.candidate.sortRank;
+    })
+    .slice(0, limit)
+    .map((entry) => entry.candidate);
+}
+
+export function getContentReviewReport() {
+  const items = [...getArtifacts(), ...getBooks(), ...getSeries()];
+  return {
+    needsCopyReview: items.filter((item) => item.needsCopyReview || item.needsReview),
+    needsMediaReview: items.filter(
+      (item) => item.needsMediaReview || ('mediaNeedsReview' in item && item.mediaNeedsReview),
+    ),
+    needsLinkReview: items.filter((item) => item.needsLinkReview),
+    missingBody: items.filter((item) => !item.description),
+    missingMedia: items.filter((item) => {
+      if ('thumbnail' in item || 'coverImage' in item || 'media' in item) {
+        return !('thumbnail' in item && item.thumbnail) && !('coverImage' in item && item.coverImage) && !('media' in item && item.media);
+      }
+      return true;
+    }),
+  };
 }
 
 export type {
@@ -73,6 +190,8 @@ export type {
   ContentLink,
   ContentLinkType,
   MediaRole,
+  Series,
   SiteSection,
   Status,
+  Visibility,
 } from './types';

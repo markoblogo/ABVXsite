@@ -1,14 +1,18 @@
 import type { ContentLink } from '@/content';
 
 const labels: Record<string, string> = {
+  site: 'Book site',
   website: 'Site',
   github: 'GitHub',
   demo: 'Demo',
   youtube: 'YouTube',
   amazon: 'Amazon',
+  kindle: 'Kindle',
+  paperback: 'Paperback',
   'amazon-kindle': 'Kindle',
   'amazon-paperback': 'Paperback',
   pdf: 'PDF',
+  series: 'Series site',
   'book-site': 'Book site',
   'series-site': 'Series site',
   medium: 'Medium',
@@ -17,11 +21,15 @@ const labels: Record<string, string> = {
 };
 
 const priority: Record<string, number> = {
+  kindle: 1,
   'amazon-kindle': 1,
+  paperback: 2,
   'amazon-paperback': 2,
   amazon: 3,
   pdf: 4,
+  site: 5,
   'book-site': 5,
+  series: 6,
   'series-site': 6,
   youtube: 7,
   github: 8,
@@ -41,7 +49,7 @@ function orderedLinks(links: ContentLink[]): ContentLink[] {
 }
 
 function isPrimary(link: ContentLink): boolean {
-  return ['amazon-kindle', 'amazon-paperback', 'amazon', 'pdf'].includes(link.type);
+  return ['kindle', 'paperback', 'amazon-kindle', 'amazon-paperback', 'amazon', 'pdf'].includes(link.type);
 }
 
 export default function BookActionLinks({

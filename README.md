@@ -53,6 +53,7 @@ Core public content lives in `src/content`:
 - `src/content/artifacts.ts` - focus and systems artifacts.
 - `src/content/books.ts` - books, series, translations, free editions, and publishing items.
 - `src/content/index.ts` - helper functions consumed by pages.
+- `public/media` - local public images and PDFs used by content cards and detail pages.
 
 Each item has one canonical home through `primarySection`, but can appear elsewhere through `appearsIn`.
 
@@ -66,6 +67,14 @@ Common examples:
 If a URL is not verified, omit it from `links` and set `needsReview: true`.
 
 See [docs/content-editing.md](docs/content-editing.md) for detailed examples.
+
+To re-run the one-off public media migration from the legacy public pages:
+
+```bash
+npm run migrate:public-media
+```
+
+The migration stores stable local files under `public/media` and writes a review map to `content-migration/media-map.json`. Do not paste temporary Notion asset URLs or old Next.js image optimizer URLs into `src/content`.
 
 ## RSS Integration
 

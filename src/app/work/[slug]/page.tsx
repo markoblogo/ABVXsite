@@ -3,7 +3,6 @@ import SectionPanel from '@/components/SectionPanel';
 import TagList from '@/components/TagList';
 import { getArtifactBySlug, getArtifacts } from '@/content';
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 export function generateStaticParams() {
@@ -49,31 +48,37 @@ export default async function WorkDetailPage({
   return (
     <article className="grid gap-8">
       <PageHeader
-        eyebrow={`${artifact.type} / ${artifact.status}`}
+        eyebrow={`${artifact.group || artifact.type} / ${artifact.status}`}
         title={artifact.title}
         summary={artifact.summary}
       >
         <TagList tags={artifact.tags} />
       </PageHeader>
 
-      <SectionPanel title="Canonical work item" eyebrow={artifact.primarySection}>
+      {artifact.heroImage || artifact.thumbnail ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          className="detail-hero-image"
+          src={(artifact.heroImage || artifact.thumbnail)?.src}
+          alt={(artifact.heroImage || artifact.thumbnail)?.alt || artifact.title}
+        />
+      ) : null}
+
+      <SectionPanel title="Overview" eyebrow="Work">
         <p>{artifact.description || artifact.summary}</p>
       </SectionPanel>
 
       {artifact.appearsIn.length ? (
-        <SectionPanel title="Appears in" eyebrow="Sections">
-          <div className="link-strip">
-            {artifact.appearsIn.map((section) => (
-              <Link key={section} href={`/${section}`}>
-                {section}
-              </Link>
-            ))}
-          </div>
+        <SectionPanel title="Related work" eyebrow="Context">
+          <p>
+            This item is part of the {artifact.appearsIn.join(', ')} section
+            {artifact.appearsIn.length === 1 ? '' : 's'} of the ABVX working index.
+          </p>
         </SectionPanel>
       ) : null}
 
       {artifact.links.length ? (
-        <SectionPanel title="Links" eyebrow="External">
+        <SectionPanel title="Links" eyebrow="Public">
           <div className="link-strip">
             {artifact.links.map((link) => (
               <a key={link.url} href={link.url} target="_blank" rel="noreferrer">
@@ -81,13 +86,6 @@ export default async function WorkDetailPage({
               </a>
             ))}
           </div>
-        </SectionPanel>
-      ) : artifact.needsReview ? (
-        <SectionPanel title="Links pending review" eyebrow="Review">
-          <p>
-            Public links for this item are intentionally omitted until they are
-            verified in the Git content registry.
-          </p>
         </SectionPanel>
       ) : null}
     </article>

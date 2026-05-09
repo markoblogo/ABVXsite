@@ -20,7 +20,30 @@ export type BookType =
 
 export type Status = 'live' | 'released' | 'building' | 'research' | 'archive';
 
+export type ContentImage = {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+};
+
+export type ContentLinkType =
+  | 'website'
+  | 'github'
+  | 'demo'
+  | 'youtube'
+  | 'amazon'
+  | 'amazon-kindle'
+  | 'amazon-paperback'
+  | 'pdf'
+  | 'book-site'
+  | 'series-site'
+  | 'medium'
+  | 'substack'
+  | 'other';
+
 export type ContentLink = {
+  type: ContentLinkType;
   label: string;
   url: string;
 };
@@ -42,8 +65,19 @@ type BaseContentItem<TType extends string> = {
   featured: boolean;
   sortRank: number;
   needsReview: boolean;
+  mediaNeedsReview?: boolean;
 };
 
-export type Artifact = BaseContentItem<ArtifactType>;
+export type Artifact = BaseContentItem<ArtifactType> & {
+  thumbnail?: ContentImage;
+  heroImage?: ContentImage;
+  group?: string;
+};
 
-export type Book = BaseContentItem<BookType>;
+export type Book = BaseContentItem<BookType> & {
+  coverImage?: ContentImage;
+  heroImage?: ContentImage;
+  series?: string;
+  category?: string;
+  formats?: string[];
+};

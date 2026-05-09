@@ -54,26 +54,19 @@ export default function FocusPage() {
         </div>
       </section>
 
-      <section className="home-section" aria-labelledby="focus-books-title">
-        <div className="home-section__header">
-          <div className="eyebrow">Related books/resources</div>
-          <h2 id="focus-books-title">Publishing that supports the focus.</h2>
-        </div>
-        {relatedBooks.length ? (
+      {relatedBooks.length ? (
+        <section className="home-section" aria-labelledby="focus-books-title">
+          <div className="home-section__header">
+            <div className="eyebrow">Related books/resources</div>
+            <h2 id="focus-books-title">Publishing that supports the focus.</h2>
+          </div>
           <div className="grid gap-4 md:grid-cols-2">
             {relatedBooks.map((book) => (
               <BookCard key={book.id} book={book} />
             ))}
           </div>
-        ) : (
-          <SectionPanel title="No focus-specific publishing item yet" eyebrow="Review">
-            <p>
-              Focus-related books and resources will appear here once they are
-              represented in the Git content registry.
-            </p>
-          </SectionPanel>
-        )}
-      </section>
+        </section>
+      ) : null}
 
       <SectionPanel title="Partnerships and market systems" eyebrow="CTA" accent>
         <p>

@@ -147,30 +147,35 @@ export default async function Home() {
             summary={latestFocus?.summary || fallbackLatest.focus.summary}
             href="/focus"
             meta="Current Focus"
+            image={latestFocus?.thumbnail}
           />
           <LatestCard
             title={latestSystem?.title || fallbackLatest.systems.title}
             summary={latestSystem?.summary || fallbackLatest.systems.summary}
             href="/systems"
             meta="Systems Catalogue"
+            image={latestSystem?.thumbnail}
           />
           <LatestCard
             title={latestBook?.title || fallbackLatest.books.title}
             summary={latestBook?.summary || fallbackLatest.books.summary}
             href="/books"
             meta="ABVX Press"
+            image={latestBook?.coverImage}
           />
           <LatestCard
             title={mediumLatest?.title || fallbackLatest.medium.title}
             summary={mediumLatest?.excerpt || fallbackLatest.medium.summary}
             href={mediumLatest?.url}
             meta={`Medium${formatDate(mediumLatest?.publishedAt) ? ` / ${formatDate(mediumLatest?.publishedAt)}` : ''}`}
+            image={mediumLatest?.coverImage ? { src: mediumLatest.coverImage, alt: mediumLatest.title } : undefined}
           />
           <LatestCard
             title={substackLatest?.title || fallbackLatest.substack.title}
             summary={substackLatest?.excerpt || fallbackLatest.substack.summary}
             href={substackLatest?.url}
             meta={`Substack${formatDate(substackLatest?.publishedAt) ? ` / ${formatDate(substackLatest?.publishedAt)}` : ''}`}
+            image={substackLatest?.coverImage ? { src: substackLatest.coverImage, alt: substackLatest.title } : undefined}
           />
         </div>
       </section>

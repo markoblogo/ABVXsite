@@ -27,7 +27,7 @@ Every content item uses the same base shape:
   summary: 'Short public card summary.',
   description: 'Longer detail-page text.',
   tags: ['tag-one', 'tag-two'],
-  links: [{ label: 'Website', url: 'https://example.com' }],
+  links: [{ type: 'website', label: 'Website', url: 'https://example.com' }],
   featured: true,
   sortRank: 10,
   needsReview: false,
@@ -37,6 +37,8 @@ Every content item uses the same base shape:
 Use public-facing text only. Do not add private notes, internal IDs, unverified claims, or secret URLs.
 
 If a title is known but the URL is not verified, leave `links: []` and set `needsReview: true`.
+
+Local media should live under `public/media/books`, `public/media/projects`, or `public/media/series`. Reference it with public paths such as `/media/projects/example.png`; preserve the real file extension and do not use temporary Notion asset URLs or old Next.js image optimizer URLs in content records.
 
 ## Add a Focus Project
 
@@ -57,7 +59,11 @@ Focus projects are current work around agro-commodity trading infrastructure. Th
   description:
     'Longer public explanation of what the system does and where it fits in the market infrastructure work.',
   tags: ['agro-commodities', 'market-infrastructure', 'workflow'],
-  links: [],
+  thumbnail: {
+    src: '/media/projects/new-market-system.png',
+    alt: 'New Market System interface screenshot',
+  },
+  links: [{ type: 'website', label: 'Site', url: 'https://example.com' }],
   featured: false,
   sortRank: 50,
   needsReview: true,
@@ -99,7 +105,11 @@ Example:
   description:
     'Public detail text explaining the workflow, intended use, and current state.',
   tags: ['ai-dev', 'agents', 'workflow'],
-  links: [{ label: 'GitHub', url: 'https://github.com/markoblogo/example' }],
+  thumbnail: {
+    src: '/media/projects/new-agent-tool.png',
+    alt: 'New Agent Tool screenshot',
+  },
+  links: [{ type: 'github', label: 'GitHub', url: 'https://github.com/markoblogo/example' }],
   featured: false,
   sortRank: 140,
   needsReview: false,
@@ -136,9 +146,13 @@ Example:
   description:
     'Longer detail-page text with public context, series notes, or edition notes.',
   tags: ['books', 'strategy'],
+  coverImage: {
+    src: '/media/books/new-book.png',
+    alt: 'New Book cover',
+  },
   links: [
-    { label: 'Amazon', url: 'https://www.amazon.com/example' },
-    { label: 'PDF', url: 'https://example.com/book.pdf' },
+    { type: 'amazon', label: 'Amazon', url: 'https://www.amazon.com/example' },
+    { type: 'pdf', label: 'PDF', url: '/media/books/new-book.pdf' },
   ],
   featured: false,
   sortRank: 90,
@@ -173,7 +187,11 @@ Example book companion:
   description:
     'Public context for the companion, related publishing project, and system role.',
   tags: ['book-companion', 'landing', 'publishing'],
-  links: [{ label: 'Website', url: 'https://example.com' }],
+  coverImage: {
+    src: '/media/series/new-book-companion.png',
+    alt: 'New Book Companion cover',
+  },
+  links: [{ type: 'book-site', label: 'Site', url: 'https://example.com' }],
   featured: true,
   sortRank: 45,
   needsReview: false,

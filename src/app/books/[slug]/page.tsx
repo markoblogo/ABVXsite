@@ -50,19 +50,36 @@ export default async function BookDetailPage({
   return (
     <article className="grid gap-8">
       <PageHeader
-        eyebrow={`${book.type} / ${book.status}`}
+        eyebrow={`${book.series || book.category || book.type} / ${book.status}`}
         title={book.title}
         summary={book.summary}
       >
         <TagList tags={book.tags} />
       </PageHeader>
 
-      <SectionPanel title="About this publishing item" eyebrow="ABVX Press">
+      {book.heroImage || book.coverImage ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          className="detail-hero-image detail-hero-image--book"
+          src={(book.heroImage || book.coverImage)?.src}
+          alt={(book.heroImage || book.coverImage)?.alt || book.title}
+        />
+      ) : null}
+
+      <SectionPanel title="Overview" eyebrow="ABVX Press">
         <p>{book.description || book.summary}</p>
       </SectionPanel>
 
+      <SectionPanel title="Publishing context" eyebrow={book.type}>
+        <p>
+          {book.series ? `${book.series}. ` : ''}
+          {book.category ? `${book.category}. ` : ''}
+          {book.formats?.length ? `Available formats: ${book.formats.join(', ')}.` : ''}
+        </p>
+      </SectionPanel>
+
       {links.length ? (
-        <SectionPanel title="Links" eyebrow="External">
+        <SectionPanel title="Links" eyebrow="Public">
           <div className="link-strip">
             {links.map((link) => (
               <a key={link.url} href={link.url} target="_blank" rel="noreferrer">
@@ -70,13 +87,6 @@ export default async function BookDetailPage({
               </a>
             ))}
           </div>
-        </SectionPanel>
-      ) : book.needsReview ? (
-        <SectionPanel title="Links pending review" eyebrow="Review">
-          <p>
-            Public links for this item are intentionally omitted until they are
-            verified in the Git content registry.
-          </p>
         </SectionPanel>
       ) : null}
     </article>

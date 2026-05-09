@@ -1,0 +1,396 @@
+{
+  "generatedAt": "2026-05-09T13:34:52.462Z",
+  "mediaMap": [
+    {
+      "sourceHash": "dca7a0e409899017e6e68280e9b548a5e7a1fb4152264786e3a22c703117110d",
+      "localPath": "/media/books/dark-gestalt.png",
+      "title": "Dark Gestalt: How Brands Hijack Emotions, Distort Perception, and Manufacture Desire",
+      "slug": "dark-gestalt",
+      "sourcePage": "/abvx-press",
+      "bytes": 26201,
+      "sha256": "5c010860bb6a0a14a7652b0247cc606fda9fbd183684a67ff8d08f72426f3e1c",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "74314a40fcc46392f24b871be2d850363d6dc512b8234077ffe80bd21c0cb676",
+      "localPath": "/media/books/future-proof.jpg",
+      "title": "Future-Proof Your Productivity: Navigating the AI Decade to Accelerate Your Output, Innovate Your Role, and Thrive",
+      "slug": "future-proof",
+      "sourcePage": "/abvx-press",
+      "bytes": 7925,
+      "sha256": "a27b43249066d470fcd1fdc2b728368ef52825dbab8c38172f42c9beae398172",
+      "contentType": "image/jpeg"
+    },
+    {
+      "sourceHash": "f922482ccfb5976fd18ba6a706a94f3b07cc5c5aaadbb72f71f3037fb9a4205e",
+      "localPath": "/media/books/llmo-seo-revolution.png",
+      "title": "LLMO: The Next SEO Revolution — How to Stay Visible to AI in the Age of Zero Clicks",
+      "slug": "llmo-seo-revolution",
+      "sourcePage": "/abvx-press",
+      "bytes": 29426,
+      "sha256": "655488a952757b4bda7810f98afbf2db3d8a85456c75ecec6bed98d8ccaaecdd",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "c723a249ee5d64333bef1c289bfb10c9a8c6da9440f1db711c026f1ef97bf189",
+      "localPath": "/media/books/toki-pona-machine-mind.png",
+      "title": "Toki Pona and the Machine Mind: Designing cleaner prompts, smaller models, and better systems with the world’s simplest language",
+      "slug": "toki-pona-machine-mind",
+      "sourcePage": "/abvx-press",
+      "bytes": 54146,
+      "sha256": "40010e0dd73f23290b5ca843084c00a5f679caba068ab20e9cb64ae602de0715",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "4a7119d4291e68721308f65dd436f5c25aee05439934b00587b12e0ca23414ef",
+      "localPath": "/media/books/christmas-carol-toki-pona.jpg",
+      "title": "A Christmas Carol — in Toki Pona: Translated into the minimalist language Toki Pona",
+      "slug": "christmas-carol-toki-pona",
+      "sourcePage": "/abvx-press",
+      "bytes": 14973,
+      "sha256": "16536d3a3c86f15b48d87ed745bd79145403c01c64b5af7eae60109ce6014b1e",
+      "contentType": "image/jpeg"
+    },
+    {
+      "sourceHash": "e684a16e8b0fc72db90b4f70ee08baff3fad143f3d66714325d3109e37a933da",
+      "localPath": "/media/books/cicero-toki-pona.png",
+      "title": "Cicero: On Duties (De Officiis) in toki pona",
+      "slug": "cicero-toki-pona",
+      "sourcePage": "/abvx-press",
+      "bytes": 19082,
+      "sha256": "a34b410dc643881dbcd2cf9bfdf9a9e61bddeefa2f6fc7b8158592480dcc294b",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "c268166c705afc80cf4995342c973b304624b3e5907dc98a7863011b6ef4d86e",
+      "localPath": "/media/books/dao-de-jing-toki-pona.png",
+      "title": "Dao De Jing (Tao Te Ching): Chinese text with Toki Pona in sitelen pona",
+      "slug": "dao-de-jing-toki-pona",
+      "sourcePage": "/abvx-press",
+      "bytes": 35948,
+      "sha256": "7d4a4b51aabf21e3f9a74dd16326ed9fb5c18dbfe50bb300e61b67588e1caf3f",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "374ef69d484d59dcb2061c3c69e0736b2f8eb25b09e6de10ab50477f846a851d",
+      "localPath": "/media/books/epictetus-enchiridion-toki-pona.png",
+      "title": "Epictetus: The Enchiridion — in toki pona: A Stoic handbook in the world’s simplest language (with sitelen pona)",
+      "slug": "epictetus-enchiridion-toki-pona",
+      "sourcePage": "/abvx-press",
+      "bytes": 21313,
+      "sha256": "79d738cded7b5a78a4ac6ebc70a8b432a3cae3e79a24bf769d97c7546522e3d2",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "b5edc48d476a8f5cf8992ab84b0e7c854660ed185da63cf4d941e8e48fc4fbcb",
+      "localPath": "/media/books/chinese-wisdom-reader-guide.png",
+      "title": "Free Kit / Reader’s Guide Chinese Wisdom in toki pona",
+      "slug": "chinese-wisdom-reader-guide",
+      "sourcePage": "/abvx-press",
+      "bytes": 19206,
+      "sha256": "4d00115845fbcd833c12c67459e3590556f1376707d63a6ceda3b2a4b5efb9d8",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "c98407fb155a570af27777bf5e979712bfcbc7132a0dddbecab49f4fd97fa5dc",
+      "localPath": "/media/books/chinese-wisdom-reader-guide.pdf",
+      "title": "Free Kit / Reader’s Guide Chinese Wisdom in toki pona",
+      "slug": "chinese-wisdom-reader-guide",
+      "sourcePage": "/abvx-press",
+      "bytes": 684153,
+      "sha256": "abba9d2f0fbe99f00050cce37d1d130a15c9f47c929cfa440c6a5335c2ceab5f",
+      "contentType": "application/pdf"
+    },
+    {
+      "sourceHash": "27ff06d81f2e11f0c2edd102151f2ec0f742e1185d5d7a3690337b1053ffbb34",
+      "localPath": "/media/books/heart-sutra-toki-pona.png",
+      "title": "Heart Sūtra in toki pona / sitelen pona",
+      "slug": "heart-sutra-toki-pona",
+      "sourcePage": "/abvx-press",
+      "bytes": 35485,
+      "sha256": "6acb5a0e443465fc2115ec9d4641a34f5345ae7f9eb3f7d51cf0fdfc75ac4263",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "5e286d35fcd485156b16425fd79499a6d48781c9d6ec13ad92ec0acf18ecb90d",
+      "localPath": "/media/books/heart-sutra-toki-pona.pdf",
+      "title": "Heart Sūtra in toki pona / sitelen pona",
+      "slug": "heart-sutra-toki-pona",
+      "sourcePage": "/abvx-press",
+      "bytes": 415438,
+      "sha256": "463865da8c7f8f34a50ae2b194a7dacfce9a1eefc9e43375a9f8a797b9dc7a4d",
+      "contentType": "application/pdf"
+    },
+    {
+      "sourceHash": "65cb272e902186a37e1c6965c15e605ecce10ebdb47778dc9197a21f1d2e92d7",
+      "localPath": "/media/books/hryhorii-kosynka-dans-les-seigles.png",
+      "title": "Hryhorii Kosynka: Dans les seigles et autres nouvelles",
+      "slug": "hryhorii-kosynka-dans-les-seigles",
+      "sourcePage": "/abvx-press",
+      "bytes": 39958,
+      "sha256": "fb0bd2003382a05ec7423c6881f6e5aa58026eb3cb19c8f6ecf8529c2b8b8e62",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "50d21a53d8c981b8daef7622e982ff398413335d04954309ccda31d59fc08dfc",
+      "localPath": "/media/books/hryhorii-kosynka-dans-les-seigles.pdf",
+      "title": "Hryhorii Kosynka: Dans les seigles et autres nouvelles",
+      "slug": "hryhorii-kosynka-dans-les-seigles",
+      "sourcePage": "/abvx-press",
+      "bytes": 1066378,
+      "sha256": "7e8a5ef149b52b9d282e229375aca77e4c146b8a0b96c9521150ade1b13238d2",
+      "contentType": "application/pdf"
+    },
+    {
+      "sourceHash": "c2a676f248967a485825e61439f7e7c2f9780798feee4544cbeb314cb7251fc0",
+      "localPath": "/media/books/iouri-ianovski-le-maitre-du-navire.png",
+      "title": "Iouri Ianovski: Le Maître du navire",
+      "slug": "iouri-ianovski-le-maitre-du-navire",
+      "sourcePage": "/abvx-press",
+      "bytes": 69623,
+      "sha256": "e26eef8157dd4643e7eba2a91716e7573cbba221618ffe4cf5018f5d86354d1b",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "aa31a95a5878afa18f667223cff1a31c4049d4c7c48c6eb99cfdd6c3806fcb3d",
+      "localPath": "/media/books/maik-johansen-le-voyage-du-savant-docteur-leonardo.png",
+      "title": "Maik Johansen: Le Voyage du savant docteur Leonardo (et autres paysages textuels)",
+      "slug": "maik-johansen-le-voyage-du-savant-docteur-leonardo",
+      "sourcePage": "/abvx-press",
+      "bytes": 42130,
+      "sha256": "8404394c64bcd958300d6d3f8517ffd4399aec241930d7cadea6b95d9a62da63",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "c177e0d0c158f5d4e60ec0f1bdb8706bd7cc297150ac88943593f69211bf158b",
+      "localPath": "/media/books/marcus-aurelius-meditations-toki-pona.png",
+      "title": "Meditations of Marcus Aurelius — in Toki Pona: A minimalist Stoic classic, reimagined in the world’s simplest language",
+      "slug": "marcus-aurelius-meditations-toki-pona",
+      "sourcePage": "/abvx-press",
+      "bytes": 31255,
+      "sha256": "4ce3c8717970f7e971c283fddf2f91f878c7a3400136d7acec385bb75c8efbf7",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "8449121abe365d09791f8284895cfc0b41f3bfaf657e2a08ed546a74fbd6377c",
+      "localPath": "/media/books/mykola-khvylovy-la-zone-du-sanatorium.png",
+      "title": "Mykola Khvylovy: La zone du sanatorium: Et autres récits de la renaissance fusillée",
+      "slug": "mykola-khvylovy-la-zone-du-sanatorium",
+      "sourcePage": "/abvx-press",
+      "bytes": 62541,
+      "sha256": "2306f4142edffaa6da9620ea13c1aa653815b310802b5f67d971a8af56625486",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "10f727977d295f8dce59761cef98b51157bc779d2ce037dca1037c1e9f66c951",
+      "localPath": "/media/books/seneca-shortness-of-life-toki-pona.png",
+      "title": "Seneca: On the Shortness of Life — in toki pona",
+      "slug": "seneca-shortness-of-life-toki-pona",
+      "sourcePage": "/abvx-press",
+      "bytes": 27665,
+      "sha256": "45ef480916c8a78c03c460e0c6daf1b5626fc7f47a1b2061d2ef9c2a180f2fac",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "e4478627a7917495e2caf5fb3c7459f0820db0381150cf1e42548fc9641cd099",
+      "localPath": "/media/books/sunzi-art-of-war-toki-pona.png",
+      "title": "Sunzi: The Art of War in toki pona",
+      "slug": "sunzi-art-of-war-toki-pona",
+      "sourcePage": "/abvx-press",
+      "bytes": 18431,
+      "sha256": "648b889ddddafc918251477f77b8aaa7e35cd655c08fa670aad4e9faf023ef26",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "7a87fb818b9d3fa77415a3d778ecf362026ec4e29a64da4bb50a0907cf37d3b4",
+      "localPath": "/media/books/toki-pona-readers-kit.png",
+      "title": "The Toki Pona Reader’s Kit",
+      "slug": "toki-pona-readers-kit",
+      "sourcePage": "/abvx-press",
+      "bytes": 27917,
+      "sha256": "20534691ab9db59bc095acb644c783297c7ba00ebed06cd863be9f61eee0928b",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "e1b20d0070a06038134695166513ed571e1606f5bd6f70d90833dd35efbc627d",
+      "localPath": "/media/books/toki-pona-readers-kit.pdf",
+      "title": "The Toki Pona Reader’s Kit",
+      "slug": "toki-pona-readers-kit",
+      "sourcePage": "/abvx-press",
+      "bytes": 677856,
+      "sha256": "bb120bc51a3474bb443666dd1bf1eea29586d2b3ace10ddc4dc11e19ad4b132d",
+      "contentType": "application/pdf"
+    },
+    {
+      "sourceHash": "b76bc457f1bfd1edb720fc7ff62ec6a8577efe7be87336be2205893c801a45d3",
+      "localPath": "/media/books/valerian-pidmohylny-la-ville.png",
+      "title": "Valerian Pidmohylny: La Ville: Roman ukrainien",
+      "slug": "valerian-pidmohylny-la-ville",
+      "sourcePage": "/abvx-press",
+      "bytes": 54842,
+      "sha256": "6d023f896cbd3a31b9fa01ceebf44b11d3c0b907cf65990290fc11d2d5328ae9",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "8644f3975a3409867b62b2b895653c69bede340dfa1d56f83b2039e2aa0c60e9",
+      "localPath": "/media/projects/chinese-wisdom-toki-pona-landing.png",
+      "title": "Chinese Wisdom in toki pona",
+      "slug": "chinese-wisdom-toki-pona-landing",
+      "sourcePage": "/abvx-press",
+      "bytes": 11604,
+      "sha256": "aefaf9dd4f2d46847c53b3fe8f1f4671b1cc62d00f50a31b0bad109ad4e53772",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "6737d088cfcc71443e6ad5eec2e0e378499dab298d4efa201ce5e87666de4355",
+      "localPath": "/media/projects/sitelen-emoji-truth.png",
+      "title": "sitelen-emoji-truth",
+      "slug": "sitelen-emoji-truth",
+      "sourcePage": "/abvx-press",
+      "bytes": 14683,
+      "sha256": "a36ec68df8d191e170f1680108f6e324d3cdb5ade03ab15a1505b13cf677e58c",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "951b43039a711b0f20248556e3d94b4a8cbbf45cdbf83658f53497e385ca7198",
+      "localPath": "/media/projects/stoic-wisdom-toki-pona-landing.png",
+      "title": "Stoic Wisdom in Toki Pona - landing",
+      "slug": "stoic-wisdom-toki-pona-landing",
+      "sourcePage": "/abvx-press",
+      "bytes": 17976,
+      "sha256": "220fb41ae97bbb89fd364b44aa26903a1a05d436665e9f24b0f4d438d7146e52",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "f74f79947126c3493fdfaba9f0b69409671c85028d714e4809e9d4f912594c97",
+      "localPath": "/media/projects/toki-pona-ai-translator.png",
+      "title": "Toki Pona AI translator",
+      "slug": "toki-pona-ai-translator",
+      "sourcePage": "/abvx-press",
+      "bytes": 12460,
+      "sha256": "e7b99e0205c8c5567971a1ab6f5cf03999376d252f05670acd8f293f6cd41b91",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "a8abb0b60e82a0474040b9e66bcbf4041d3f455f8ffed60cfd4864380896d0ab",
+      "localPath": "/media/projects/toki-pona-free-kits-landing.png",
+      "title": "Toki Pona free kits landing",
+      "slug": "toki-pona-free-kits-landing",
+      "sourcePage": "/abvx-press",
+      "bytes": 24266,
+      "sha256": "6f8857b4ba0d7a2720b291a62d3a4a8c9bdc9ab0e326f07e0a20fb8a46d2692d",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "29bb8f56fa421d5c0f2ec2dd915870ba30c53137b398dc3775b6d84b412446f0",
+      "localPath": "/media/projects/ukrainian-modernism-landing.png",
+      "title": "Ukrainian Modernism — Landing",
+      "slug": "ukrainian-modernism-landing",
+      "sourcePage": "/abvx-press",
+      "bytes": 33061,
+      "sha256": "db51d1b204467e8c25090d536a426a50269089bd1d1671116ade744a808c9bad",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "47dac4fd41f61fa4d52f3e3a9e72d98563d8fd6e3bfec4cc0599c2bedbf08fff",
+      "localPath": "/media/projects/abvx-shortener.png",
+      "title": "ABVX shortener",
+      "slug": "abvx-shortener",
+      "sourcePage": "/projects",
+      "bytes": 15567,
+      "sha256": "a1cc14673c862fe8fc3b04165c37f3d829dab263b399db1dddf4050be61d19a5",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "3cef45054929cfc6b73dceda0baf5b209242e336a44dafd082a6b588b5f46cd4",
+      "localPath": "/media/projects/agents-md-generator.png",
+      "title": "AGENTS.md Generator (agentsgen)",
+      "slug": "agents-md-generator",
+      "sourcePage": "/projects",
+      "bytes": 19954,
+      "sha256": "67cdf5b86f8861376673e8932fc58b23a4dcef428b49f2384eb42d1689479d84",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "b76bc457f1bfd1edb720fc7ff62ec6a8577efe7be87336be2205893c801a45d3",
+      "localPath": "/media/projects/ascii-theme.png",
+      "title": "AsciiTheme",
+      "slug": "ascii-theme",
+      "sourcePage": "/abvx-press",
+      "bytes": 54842,
+      "sha256": "6d023f896cbd3a31b9fa01ceebf44b11d3c0b907cf65990290fc11d2d5328ae9",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "d59b209a9dc7dd2a2bb57987a668c86dc946959d5ce892f487720d1d55e0deb1",
+      "localPath": "/media/projects/cropto-market-risk-deck.png",
+      "title": "Deck: Cropto brings local market risk tools into modern digital infrastructure.",
+      "slug": "cropto-market-risk-deck",
+      "sourcePage": "/projects",
+      "bytes": 29320,
+      "sha256": "9c56c02010e7b8a8d547f1da7ca9a8a26b24c699746a345e7699ffb147f08a29",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "78dac0ba72771fdb9c36e928ca8fe7c9028cf20b1c6657fc8737944c86442e00",
+      "localPath": "/media/projects/liqua.png",
+      "title": "Liqua: builds structured market liquidity for physical commodity trading",
+      "slug": "liqua",
+      "sourcePage": "/projects",
+      "bytes": 16629,
+      "sha256": "2b3f05d79113fdb5cc238119f07a936ae681675a5f25a3696dd26ca90ce90d0f",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "49b4cddc81b31c9fbe0b3646fd67480f8b9c092651818de31030f834667c281f",
+      "localPath": "/media/projects/trade-solution-eu.png",
+      "title": "Trade Solution EU",
+      "slug": "trade-solution-eu",
+      "sourcePage": "/projects",
+      "bytes": 20995,
+      "sha256": "e8b6734524dbf77462bbd85bfed32555d40ec0c68d1a23f5bc7d0b70bced098b",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "20becd248780359f8dcdc00e4a230f1326b1ad0f8b7fbdcd86dee15cc364e935",
+      "localPath": "/media/projects/ytmamp.png",
+      "title": "YTMamp",
+      "slug": "ytmamp",
+      "sourcePage": "/projects",
+      "bytes": 14625,
+      "sha256": "0077fbd0ff1524e1a024b4ae9501a070807f3ce1ccb88da8643857afea550fe9",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "57d19d8ff14e6341a82e9d184154669f8aa00ad876417244b4f0610f522b74db",
+      "localPath": "/media/projects/cropto-monitor.png",
+      "title": "Cropto Monitor: Commodity Signals Terminal",
+      "slug": "cropto-monitor",
+      "sourcePage": "/projects",
+      "bytes": 19062,
+      "sha256": "371ab758386d205aac3b1060fa2c122d707d06d56efbe469a377037fc5f3e4a9",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "dbec91b50445e5365c61417b0301710c2213fd38bd277d67c9b88cd61b264e44",
+      "localPath": "/media/projects/cropto.png",
+      "title": "Cropto — Human-Centred Crypto Clarity",
+      "slug": "cropto",
+      "sourcePage": "/projects",
+      "bytes": 16241,
+      "sha256": "c67835b9ddc64100725004127cac72281ad2bd8b103ebf549058338f454a1cfd",
+      "contentType": "image/png"
+    },
+    {
+      "sourceHash": "4da862bb71707de3bd111222e35c8197c4b2c3bd0ff113426b871d32d4dff15f",
+      "localPath": "/media/projects/llmo-site.png",
+      "title": "LLMO — The Next SEO Revolution",
+      "slug": "llmo-site",
+      "sourcePage": "/projects",
+      "bytes": 8290,
+      "sha256": "f87f1eac11a46cad98a9043188c2f210404f96b005f33cbab82c341acb935bd0",
+      "contentType": "image/png"
+    }
+  ],
+  "missing": []
+}

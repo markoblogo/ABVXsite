@@ -1207,6 +1207,14 @@ a {
   text-transform: uppercase;
 }
 
+.latest-card__image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+
 .latest-card h3 {
   font-size: clamp(1.35rem, 4vw, 2.6rem);
   font-weight: 950;
@@ -1231,6 +1239,58 @@ a {
     background-color 180ms var(--ease-out),
     box-shadow 180ms var(--ease-out),
     transform 180ms var(--ease-out);
+}
+
+.book-card {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--paper) 76%, white 24%) 0 72%, color-mix(in srgb, var(--paper-2) 80%, white 20%) 72%),
+    var(--paper);
+}
+
+.book-card .latest-card__image {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.card-link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.card-link-row a {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+  padding: 0.38rem 0.52rem;
+  font-size: 0.66rem;
+  font-weight: 950;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.card-link-row a:hover,
+.card-link-row a:focus-visible {
+  background: var(--ink);
+  color: var(--paper);
+  outline: none;
+}
+
+.detail-hero-image {
+  width: 100%;
+  max-height: 620px;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+  object-fit: cover;
+}
+
+.detail-hero-image--book {
+  width: min(100%, 520px);
+  max-height: none;
+  aspect-ratio: 3 / 4;
+  justify-self: start;
 }
 
 .artifact-card:focus-within,

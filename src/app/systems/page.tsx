@@ -1,6 +1,5 @@
 import ArtifactCard from '@/components/ArtifactCard';
 import PageHeader from '@/components/PageHeader';
-import type { ArtifactType } from '@/content';
 import { getArtifactsBySection } from '@/content';
 import type { Metadata } from 'next';
 
@@ -11,20 +10,12 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://abvx.xyz/systems' },
 };
 
-const typeLabels: Partial<Record<ArtifactType, string>> = {
-  'web-service': 'Web services',
-  'ai-workflow': 'AI workflows',
-  protocol: 'Protocols',
-  tool: 'Tools',
-  'language-experiment': 'Language experiments',
-  'book-companion': 'Book companions',
-};
-
 export default function SystemsPage() {
   const artifacts = getArtifactsBySection('systems');
-  const grouped = artifacts.reduce<Partial<Record<ArtifactType, typeof artifacts>>>((acc, artifact) => {
-    acc[artifact.type] ||= [];
-    acc[artifact.type]?.push(artifact);
+  const grouped = artifacts.reduce<Record<string, typeof artifacts>>((acc, artifact) => {
+    const group = artifact.group || 'Other systems';
+    acc[group] ||= [];
+    acc[group]?.push(artifact);
     return acc;
   }, {});
 
@@ -48,11 +39,9 @@ export default function SystemsPage() {
           <h2 id="systems-groups-title">Services, workflows, protocols, tools.</h2>
         </div>
         <div className="grid gap-6">
-          {Object.entries(grouped).map(([type, items]) => (
-            <section key={type} className="grid gap-3">
-              <h3 className="group-title">
-                {typeLabels[type as ArtifactType] || type}
-              </h3>
+          {Object.entries(grouped).map(([group, items]) => (
+            <section key={group} className="grid gap-3">
+              <h3 className="group-title">{group}</h3>
               <div className="grid gap-4 md:grid-cols-2">
                 {items?.map((artifact) => (
                   <ArtifactCard key={artifact.id} artifact={artifact} />

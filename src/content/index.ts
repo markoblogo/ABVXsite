@@ -53,7 +53,7 @@ export function getBooksBySection(section: SiteSection): Book[] {
 }
 
 export function getLatestBook(): Book | undefined {
-  return [...books].sort(byLatest)[0];
+  return [...books].filter((book) => book.type !== 'series').sort(byLatest)[0];
 }
 
 export function getBookBySlug(slug: string): Book | undefined {
@@ -64,4 +64,14 @@ export function getArtifactBySlug(slug: string): Artifact | undefined {
   return artifacts.find((artifact) => artifact.slug === slug);
 }
 
-export type { Artifact, ArtifactType, Book, BookType, ContentLink, SiteSection, Status } from './types';
+export type {
+  Artifact,
+  ArtifactType,
+  Book,
+  BookType,
+  ContentImage,
+  ContentLink,
+  ContentLinkType,
+  SiteSection,
+  Status,
+} from './types';

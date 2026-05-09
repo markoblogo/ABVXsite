@@ -60,6 +60,7 @@ export default async function WritingPage() {
               summary={post.excerpt || 'External essay from the ABVX writing archive.'}
               href={post.url}
               meta={`${post.source} / ${formatDate(post.publishedAt)}`}
+              image={post.coverImage ? { src: post.coverImage, alt: post.title } : undefined}
             />
           ))}
         </section>

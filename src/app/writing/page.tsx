@@ -1,6 +1,9 @@
 import PageHeader from '@/components/PageHeader';
+import FeaturedWritingCard from '@/components/FeaturedWritingCard';
+import RecentWritingCard from '@/components/RecentWritingCard';
 import SectionPanel from '@/components/SectionPanel';
-import WritingCard from '@/components/WritingCard';
+import WritingArchiveRow from '@/components/WritingArchiveRow';
+import WritingSourceLinks, { type WritingSource } from '@/components/WritingSourceLinks';
 import {
   fetchMediumFeed,
   fetchSubstackFeed,
@@ -17,6 +20,9 @@ export const metadata: Metadata = {
 };
 
 export const revalidate = 900;
+
+const RECENT_POST_COUNT = 6;
+const ARCHIVE_POST_LIMIT = 30;
 
 async function safeFeed(fetcher: (url: string) => Promise<FeedItem[]>, url: string) {
   try {
@@ -36,40 +42,113 @@ function formatDate(iso: string): string {
   });
 }
 
-export default async function WritingPage() {
+function normalizeSource(source: string | string[] | undefined): WritingSource {
+  const value = Array.isArray(source) ? source[0] : source;
+  if (value === 'medium' || value === 'substack') return value;
+  return 'all';
+}
+
+function postExcerpt(post: FeedItem): string {
+  return post.excerpt || 'External essay from the ABVX writing archive.';
+}
+
+function postImage(post: FeedItem) {
+  return post.coverImage ? { src: post.coverImage, alt: post.title } : undefined;
+}
+
+export default async function WritingPage({
+  searchParams,
+}: {
+  searchParams?: Promise<{ source?: string | string[] }>;
+}) {
+  const params = searchParams ? await searchParams : {};
+  const activeSource = normalizeSource(params.source);
   const [medium, substack] = await Promise.all([
     safeFeed(fetchMediumFeed, 'https://abvcreative.medium.com/feed'),
     safeFeed(fetchSubstackFeed, 'https://abvx.substack.com/feed'),
   ]);
-  const posts = mergeFeeds(medium, substack);
+  const allPosts = mergeFeeds(medium, substack);
+  const posts =
+    activeSource === 'all' ? allPosts : allPosts.filter((post) => post.source === activeSource);
+  const featuredPost = posts[0];
+  const recentPosts = posts.slice(1, RECENT_POST_COUNT + 1);
+  const archivePosts = posts.slice(RECENT_POST_COUNT + 1, RECENT_POST_COUNT + 1 + ARCHIVE_POST_LIMIT);
 
   return (
-    <div className="route-writing grid gap-8">
+    <div className="route-writing writing-page grid gap-8">
       <PageHeader
         eyebrow="Writing"
         title="Writing"
         summary="Applied AI reviews, build logs and essays on systems, validation, agent workflows, decision-making and how ideas survive contact with reality."
       />
 
-      {posts.length ? (
-        <section className="writing-grid">
-          {posts.map((post) => (
-            <WritingCard
-              key={post.url}
-              title={post.title}
-              excerpt={post.excerpt || 'External essay from the ABVX writing archive.'}
-              href={post.url}
-              source={post.source}
-              date={formatDate(post.publishedAt)}
-              image={post.coverImage ? { src: post.coverImage, alt: post.title } : undefined}
+      <WritingSourceLinks active={activeSource} />
+
+      {featuredPost ? (
+        <>
+          <section className="writing-section writing-section--featured" aria-labelledby="featured-writing-title">
+            <div className="writing-section__header">
+              <div className="eyebrow">Latest essay</div>
+              <h2 id="featured-writing-title">Featured latest</h2>
+            </div>
+            <FeaturedWritingCard
+              title={featuredPost.title}
+              excerpt={postExcerpt(featuredPost)}
+              href={featuredPost.url}
+              source={featuredPost.source}
+              date={formatDate(featuredPost.publishedAt)}
+              image={postImage(featuredPost)}
             />
-          ))}
-        </section>
+          </section>
+
+          {recentPosts.length ? (
+            <section className="writing-section" aria-labelledby="recent-writing-title">
+              <div className="writing-section__header">
+                <div className="eyebrow">Recent writing</div>
+                <h2 id="recent-writing-title">Recent posts</h2>
+              </div>
+              <div className="recent-writing-grid">
+                {recentPosts.map((post) => (
+                  <RecentWritingCard
+                    key={post.url}
+                    title={post.title}
+                    excerpt={postExcerpt(post)}
+                    href={post.url}
+                    source={post.source}
+                    date={formatDate(post.publishedAt)}
+                    image={postImage(post)}
+                  />
+                ))}
+              </div>
+            </section>
+          ) : null}
+
+          {archivePosts.length ? (
+            <section className="writing-section writing-section--archive" aria-labelledby="writing-archive-title">
+              <div className="writing-section__header">
+                <div className="eyebrow">Archive</div>
+                <h2 id="writing-archive-title">Older notes and essays</h2>
+              </div>
+              <div className="writing-archive-list">
+                {archivePosts.map((post) => (
+                  <WritingArchiveRow
+                    key={post.url}
+                    title={post.title}
+                    excerpt={post.excerpt}
+                    href={post.url}
+                    source={post.source}
+                    date={formatDate(post.publishedAt)}
+                  />
+                ))}
+              </div>
+            </section>
+          ) : null}
+        </>
       ) : (
         <SectionPanel title="Writing feed temporarily unavailable" eyebrow="RSS">
           <p>
-            Medium and Substack feeds could not be loaded right now. The page is
-            still available and will repopulate automatically when the feeds respond.
+            Medium and Substack feeds could not be loaded right now, or this source has
+            no recent items. The page will repopulate automatically when the feeds respond.
           </p>
           <div className="link-strip">
             <a href="https://abvcreative.medium.com/" target="_blank" rel="noreferrer">

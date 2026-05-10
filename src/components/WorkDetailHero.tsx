@@ -1,4 +1,5 @@
 import type { Artifact, ContentImage } from '@/content';
+import { operationalLinks } from '@/content/link-utils';
 import MediaPanel from './MediaPanel';
 import TagList from './TagList';
 import WorkActionLinks from './WorkActionLinks';
@@ -17,7 +18,7 @@ export default function WorkDetailHero({
         <h1>{artifact.title}</h1>
         <p className="work-detail-hero__summary">{artifact.summary}</p>
         <TagList tags={artifact.tags} />
-        <WorkActionLinks links={artifact.links} />
+        <WorkActionLinks links={operationalLinks(artifact.links)} />
       </div>
       {image ? (
         <div className="work-detail-hero__media">

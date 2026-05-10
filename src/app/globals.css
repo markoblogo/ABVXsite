@@ -3051,6 +3051,43 @@ a {
   transform: translate(-2px, -2px);
 }
 
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.social-links a {
+  border: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+  background: color-mix(in srgb, var(--paper) 82%, white 18%);
+  color: var(--ink-muted);
+  padding: 0.5rem 0.65rem;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 160ms var(--ease-out), color 160ms var(--ease-out), box-shadow 160ms var(--ease-out);
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+  background: var(--accent);
+  color: var(--ink);
+  box-shadow: 3px 3px 0 var(--line);
+  outline: none;
+}
+
+.social-links--compact {
+  gap: 0.28rem;
+}
+
+.social-links--compact a {
+  padding: 0.34rem 0.45rem;
+  font-size: 0.58rem;
+}
+
 .writing-card {
   display: grid;
   grid-template-columns: minmax(84px, 0.36fr) minmax(0, 1fr);
@@ -4559,9 +4596,31 @@ a {
 
 .work-brief__main,
 .work-brief__context,
+.work-social-section,
 .work-video-section {
   border: 1px solid var(--line);
   background: color-mix(in srgb, var(--paper) 88%, white 12%);
+}
+
+.work-social-section {
+  display: grid;
+  gap: 0.85rem;
+  padding: clamp(1rem, 2vw, 1.25rem);
+}
+
+.work-social-section__header {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.work-social-section__header h2 {
+  max-width: 14ch;
+  margin: 0;
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+  font-weight: 950;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  text-transform: uppercase;
 }
 
 .work-brief__main {

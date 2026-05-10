@@ -1,8 +1,10 @@
 import MediaPanel from '@/components/MediaPanel';
+import SocialLinks from '@/components/SocialLinks';
 import WorkBrief from '@/components/WorkBrief';
 import WorkDetailHero from '@/components/WorkDetailHero';
 import WorkRelatedCard from '@/components/WorkRelatedCard';
 import { getArtifactBySlug, getArtifacts, getBooks, type Artifact, type Book } from '@/content';
+import { socialLinks } from '@/content/link-utils';
 import { toPublicArtifact, toPublicBook } from '@/content/public-props';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -154,12 +156,23 @@ export default async function WorkDetailPage({
   const youtube = artifact.links.find((link) => link.type === 'youtube');
   const videoUrl = youtube ? youtubeEmbedUrl(youtube.url) : undefined;
   const publicArtifact = toPublicArtifact(artifact);
+  const channels = socialLinks(publicArtifact.links);
 
   return (
     <article className="detail-page detail-page--work">
       <WorkDetailHero artifact={publicArtifact} image={image} />
 
       <WorkBrief artifact={publicArtifact} />
+
+      {channels.length ? (
+        <section className="work-social-section" aria-labelledby="work-social-title">
+          <div className="work-social-section__header">
+            <div className="eyebrow">Channels</div>
+            <h2 id="work-social-title">Social / Channels</h2>
+          </div>
+          <SocialLinks links={channels} />
+        </section>
+      ) : null}
 
       {videoUrl ? (
         <section className="work-video-section" aria-labelledby="work-video-title">

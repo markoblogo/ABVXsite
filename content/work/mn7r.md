@@ -30,6 +30,11 @@
       "type": "github",
       "label": "GitHub",
       "url": "https://github.com/markoblogo/mn7r"
+    },
+    {
+      "type": "bluesky",
+      "label": "Bluesky",
+      "url": "https://bsky.app/profile/spike.mn7r.com"
     }
   ],
   "featured": true,

@@ -1,6 +1,8 @@
 import type { Artifact } from '@/content';
+import { operationalLinks, socialLinks } from '@/content/link-utils';
 import ActionLinks from './ActionLinks';
 import MediaPanel from './MediaPanel';
+import SocialLinks from './SocialLinks';
 import TagList from './TagList';
 import Link from 'next/link';
 
@@ -13,6 +15,8 @@ export default function ProjectCatalogueCard({
   meta?: string;
   tone?: 'focus' | 'systems';
 }) {
+  const social = socialLinks(artifact.links);
+
   return (
     <article className={`project-catalogue-card project-catalogue-card--${tone}`}>
       {artifact.thumbnail ? (
@@ -27,7 +31,8 @@ export default function ProjectCatalogueCard({
         </h3>
         <p>{artifact.summary}</p>
         <TagList tags={artifact.tags.slice(0, 4)} />
-        <ActionLinks links={artifact.links} limit={4} compact />
+        <ActionLinks links={operationalLinks(artifact.links)} limit={4} compact />
+        <SocialLinks links={social} compact />
       </div>
     </article>
   );

@@ -52,9 +52,9 @@
     "paperback"
   ],
   "media": {
-    "src": "/media/books/future-proof.jpg",
+    "src": "/media/books/future-proof-your-productivity/cover.jpeg",
     "alt": "Future-Proof Your Productivity book cover",
-    "role": "mockup"
+    "role": "book-cover"
   }
 }
 ---

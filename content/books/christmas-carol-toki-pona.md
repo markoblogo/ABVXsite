@@ -56,9 +56,9 @@
     "paperback"
   ],
   "media": {
-    "src": "/media/books/christmas-carol-toki-pona.jpg",
+    "src": "/media/books/a-christmas-carol-toki-pona/cover.jpeg",
     "alt": "A Christmas Carol in Toki Pona book cover",
-    "role": "mockup"
+    "role": "book-cover"
   }
 }
 ---

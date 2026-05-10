@@ -65,7 +65,7 @@
     "site"
   ],
   "media": {
-    "src": "/media/books/toki-pona-machine-mind.png",
+    "src": "/media/books/toki-pona-machine-mind/cover.png",
     "alt": "Toki Pona and the Machine Mind book cover",
     "role": "book-cover"
   }

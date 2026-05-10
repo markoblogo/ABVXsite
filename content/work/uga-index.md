@@ -31,10 +31,20 @@
   "featured": true,
   "sortRank": 20,
   "needsCopyReview": false,
-  "needsMediaReview": true,
+  "needsMediaReview": false,
   "needsLinkReview": false,
   "primarySection": "focus",
-  "group": "Market Intelligence, Monitoring & Indexes"
+  "group": "Market Intelligence, Monitoring & Indexes",
+  "media": {
+    "src": "/media/work/uga-index/hero.png",
+    "alt": "UGA Index market index dashboard",
+    "role": "project-screenshot"
+  },
+  "heroImage": {
+    "src": "/media/work/uga-index/hero.png",
+    "alt": "UGA Index market index dashboard",
+    "role": "project-screenshot"
+  }
 }
 ---
 

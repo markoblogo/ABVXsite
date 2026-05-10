@@ -40,13 +40,13 @@
   "primarySection": "focus",
   "group": "Market Intelligence, Monitoring & Indexes",
   "media": {
-    "src": "/media/projects/cropto-monitor.png",
-    "alt": "Cropto Monitor screenshot",
+    "src": "/media/work/cropto-monitor/hero.png",
+    "alt": "Cropto Monitor commodity signals dashboard",
     "role": "project-screenshot"
   },
   "heroImage": {
-    "src": "/media/projects/cropto-monitor.png",
-    "alt": "Cropto Monitor screenshot",
+    "src": "/media/work/cropto-monitor/hero.png",
+    "alt": "Cropto Monitor commodity signals dashboard",
     "role": "project-screenshot"
   }
 }

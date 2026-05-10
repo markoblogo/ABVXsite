@@ -42,13 +42,13 @@
   "primarySection": "focus",
   "group": "Market Fronts & Partner Landings",
   "media": {
-    "src": "/media/projects/trade-solution-eu.png",
-    "alt": "Trade Solution EU screenshot",
+    "src": "/media/work/trade-solution-eu/hero.png",
+    "alt": "Trade Solution EU landing page",
     "role": "landing-screenshot"
   },
   "heroImage": {
-    "src": "/media/projects/trade-solution-eu.png",
-    "alt": "Trade Solution EU screenshot",
+    "src": "/media/work/trade-solution-eu/hero.png",
+    "alt": "Trade Solution EU landing page",
     "role": "landing-screenshot"
   }
 }

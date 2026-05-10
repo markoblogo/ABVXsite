@@ -32,10 +32,20 @@
   "featured": false,
   "sortRank": 21,
   "needsCopyReview": false,
-  "needsMediaReview": true,
+  "needsMediaReview": false,
   "needsLinkReview": false,
   "primarySection": "focus",
-  "group": "Market Intelligence, Monitoring & Indexes"
+  "group": "Market Intelligence, Monitoring & Indexes",
+  "media": {
+    "src": "/media/work/last30days-cropto/hero.png",
+    "alt": "Last30Days Cropto monitoring interface",
+    "role": "project-screenshot"
+  },
+  "heroImage": {
+    "src": "/media/work/last30days-cropto/hero.png",
+    "alt": "Last30Days Cropto monitoring interface",
+    "role": "project-screenshot"
+  }
 }
 ---
 

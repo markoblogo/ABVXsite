@@ -42,13 +42,13 @@
   "primarySection": "focus",
   "group": "Market Fronts & Partner Landings",
   "media": {
-    "src": "/media/projects/cropto-market-risk-deck.png",
-    "alt": "Cropto market risk deck screenshot",
+    "src": "/media/work/cropto-market-risk-tools-deck/hero.png",
+    "alt": "Cropto Market Risk Tools Deck landing preview",
     "role": "landing-screenshot"
   },
   "heroImage": {
-    "src": "/media/projects/cropto-market-risk-deck.png",
-    "alt": "Cropto market risk deck screenshot",
+    "src": "/media/work/cropto-market-risk-tools-deck/hero.png",
+    "alt": "Cropto Market Risk Tools Deck landing preview",
     "role": "landing-screenshot"
   }
 }

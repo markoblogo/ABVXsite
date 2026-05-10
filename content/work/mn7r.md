@@ -30,10 +30,20 @@
   "featured": true,
   "sortRank": 1,
   "needsCopyReview": false,
-  "needsMediaReview": true,
+  "needsMediaReview": false,
   "needsLinkReview": false,
   "primarySection": "focus",
-  "group": "Trading & Brokerage Platforms"
+  "group": "Trading & Brokerage Platforms",
+  "media": {
+    "src": "/media/work/mn7r/hero.png",
+    "alt": "MN7R brokerage platform interface",
+    "role": "project-screenshot"
+  },
+  "heroImage": {
+    "src": "/media/work/mn7r/hero.png",
+    "alt": "MN7R brokerage platform interface",
+    "role": "project-screenshot"
+  }
 }
 ---
 

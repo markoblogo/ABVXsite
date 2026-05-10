@@ -34,7 +34,7 @@
   "needsMediaReview": false,
   "needsLinkReview": false,
   "primarySection": "systems",
-  "group": "AI/dev stack",
+  "group": "Development Surfaces & Interfaces",
   "media": {
     "src": "/media/projects/ascii-theme.png",
     "alt": "AsciiTheme screenshot",

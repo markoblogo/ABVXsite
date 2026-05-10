@@ -22,6 +22,6 @@
   "needsLinkReview": true,
   "editorialNotes": "Migrated from TypeScript registry; review copy/media/links before final polish.",
   "primarySection": "systems",
-  "group": "Tools"
+  "group": "Protocols & Decision Systems"
 }
 ---

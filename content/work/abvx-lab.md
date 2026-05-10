@@ -29,6 +29,6 @@
   "needsLinkReview": false,
   "editorialNotes": "Migrated from TypeScript registry; review copy/media/links before final polish.",
   "primarySection": "systems",
-  "group": "AI/dev stack"
+  "group": "Development Surfaces & Interfaces"
 }
 ---

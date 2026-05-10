@@ -6,9 +6,11 @@ import Link from 'next/link';
 
 export default function ProjectCatalogueCard({
   artifact,
+  meta,
   tone = 'systems',
 }: {
   artifact: Artifact;
+  meta?: string;
   tone?: 'focus' | 'systems';
 }) {
   return (
@@ -19,7 +21,7 @@ export default function ProjectCatalogueCard({
         </Link>
       ) : null}
       <div className="project-catalogue-card__body">
-        <div className="catalogue-card__meta">{artifact.group || artifact.status}</div>
+        <div className="catalogue-card__meta">{meta || artifact.group || artifact.status}</div>
         <h3>
           <Link href={`/work/${artifact.slug}`}>{artifact.title}</Link>
         </h3>

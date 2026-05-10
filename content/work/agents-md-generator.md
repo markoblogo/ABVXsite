@@ -34,7 +34,7 @@
   "needsMediaReview": false,
   "needsLinkReview": false,
   "primarySection": "systems",
-  "group": "AI/dev stack",
+  "group": "Workflow & Orchestration",
   "media": {
     "src": "/media/projects/agents-md-generator.png",
     "alt": "AGENTS.md Generator landing screenshot",

@@ -35,7 +35,7 @@
   "needsMediaReview": false,
   "needsLinkReview": false,
   "primarySection": "systems",
-  "group": "Business, AI & Marketing",
+  "group": "Development Surfaces & Interfaces",
   "media": {
     "src": "/media/projects/llmo-site.png",
     "alt": "LLMO site screenshot",

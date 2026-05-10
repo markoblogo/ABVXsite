@@ -3,6 +3,7 @@ import WorkBrief from '@/components/WorkBrief';
 import WorkDetailHero from '@/components/WorkDetailHero';
 import WorkRelatedCard from '@/components/WorkRelatedCard';
 import { getArtifactBySlug, getArtifacts, getBooks, type Artifact, type Book } from '@/content';
+import { toPublicArtifact, toPublicBook } from '@/content/public-props';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
@@ -86,12 +87,13 @@ export default async function WorkDetailPage({
     .slice(0, 6);
   const youtube = artifact.links.find((link) => link.type === 'youtube');
   const videoUrl = youtube ? youtubeEmbedUrl(youtube.url) : undefined;
+  const publicArtifact = toPublicArtifact(artifact);
 
   return (
     <article className="detail-page detail-page--work">
-      <WorkDetailHero artifact={artifact} image={image} />
+      <WorkDetailHero artifact={publicArtifact} image={image} />
 
-      <WorkBrief artifact={artifact} />
+      <WorkBrief artifact={publicArtifact} />
 
       {videoUrl ? (
         <section className="work-video-section" aria-labelledby="work-video-title">
@@ -111,7 +113,14 @@ export default async function WorkDetailPage({
           </div>
           <div className="work-related-grid">
             {relatedItems.map((related) => (
-              <WorkRelatedCard key={`${related.kind}-${related.item.id}`} related={related} />
+              <WorkRelatedCard
+                key={`${related.kind}-${related.item.id}`}
+                related={
+                  related.kind === 'artifact'
+                    ? { kind: 'artifact', item: toPublicArtifact(related.item) }
+                    : { kind: 'book', item: toPublicBook(related.item) }
+                }
+              />
             ))}
           </div>
         </section>

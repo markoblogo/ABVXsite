@@ -40,7 +40,7 @@
   "needsMediaReview": false,
   "needsLinkReview": false,
   "primarySection": "focus",
-  "group": "Trading services",
+  "group": "Market Fronts & Partner Landings",
   "media": {
     "src": "/media/projects/liqua.png",
     "alt": "Liqua landing screenshot",

@@ -2,16 +2,21 @@
 {
   "id": "cropto",
   "slug": "cropto",
-  "type": "market-infrastructure",
+  "type": "trading-platform",
   "status": "building",
   "visibility": "public",
-  "title": "Cropto — Human-Centred Crypto Clarity",
-  "summary": "Core Cropto platform entry for commodity trading infrastructure, market tools, monitors, and risk workflows.",
+  "title": "Cropto",
+  "shortTitle": "Cropto",
+  "summary": "Cropto is a commodity trading platform for indexed spot trading, options, tokenized commodity assets and related market instruments. The project is in development and testing with virtual contracts, with a public waitlist open.",
   "tags": [
     "cropto",
-    "commodities",
-    "market-infrastructure",
-    "trading-platform"
+    "agro-commodities",
+    "trading-platform",
+    "indexed-trading",
+    "spot-trading",
+    "options",
+    "tokenized-assets",
+    "market-infrastructure"
   ],
   "appearsIn": [
     "focus",
@@ -21,7 +26,7 @@
     {
       "type": "site",
       "label": "Site",
-      "url": "https://cropto.abvx.xyz/"
+      "url": "https://cr0pto.com/"
     },
     {
       "type": "github",
@@ -40,7 +45,7 @@
   "needsMediaReview": false,
   "needsLinkReview": false,
   "primarySection": "focus",
-  "group": "Trading platforms",
+  "group": "Trading & Brokerage Platforms",
   "media": {
     "src": "/media/projects/cropto.png",
     "alt": "Cropto platform screenshot",
@@ -54,4 +59,8 @@
 }
 ---
 
-Cropto is the public platform layer for the agro-commodity trading infrastructure work: a home for market-risk tooling, monitors, dashboards, and service interfaces around physical commodity markets.
+Cropto is a commodity trading platform for indexed spot trading, options, tokenized commodity assets and related market instruments.
+
+The platform is currently in development and testing. Its current tests use virtual contracts, while the public project is open for waitlist registration.
+
+Within the ABVX focus layer, Cropto represents the market-trading side of the infrastructure: a platform concept for structured exposure, indexed commodity instruments and future transaction layers around physical agro-commodity markets.

@@ -40,7 +40,7 @@
   "needsMediaReview": false,
   "needsLinkReview": false,
   "primarySection": "focus",
-  "group": "Landing pages",
+  "group": "Market Fronts & Partner Landings",
   "media": {
     "src": "/media/projects/cropto-market-risk-deck.png",
     "alt": "Cropto market risk deck screenshot",

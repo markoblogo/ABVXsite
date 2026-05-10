@@ -3,7 +3,11 @@ export type SiteSection = 'focus' | 'systems' | 'books' | 'writing';
 export type Visibility = 'public' | 'draft' | 'private';
 
 export type ArtifactType =
+  | 'brokerage-platform'
+  | 'trading-platform'
+  | 'market-intelligence'
   | 'market-infrastructure'
+  | 'market-index'
   | 'web-service'
   | 'tool'
   | 'protocol'

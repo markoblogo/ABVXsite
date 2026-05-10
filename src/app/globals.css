@@ -2669,6 +2669,50 @@ a {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.focus-product-group {
+  display: grid;
+  gap: clamp(0.9rem, 2vw, 1.25rem);
+}
+
+.focus-product-group__header {
+  display: grid;
+  gap: 0.45rem;
+  max-width: 900px;
+  border-top: 2px solid var(--line);
+  padding-top: 0.95rem;
+}
+
+.focus-product-group__header h2 {
+  margin: 0;
+  font-size: clamp(2.1rem, 5.2vw, 4.9rem);
+  font-weight: 950;
+  letter-spacing: -0.08em;
+  line-height: 0.9;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.focus-product-group__header p {
+  max-width: 760px;
+  color: var(--ink-muted);
+  font-size: clamp(1rem, 1.5vw, 1.18rem);
+  line-height: 1.36;
+}
+
+.focus-platform-grid,
+.focus-product-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.focus-platform-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.focus-product-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .books-featured-grid,
 .books-series-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2812,6 +2856,20 @@ a {
 
   .writing-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .focus-platform-grid,
+  .focus-product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .focus-platform-grid,
+  .focus-product-grid {
+    grid-template-columns: 1fr;
   }
 }
 

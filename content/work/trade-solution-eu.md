@@ -40,7 +40,7 @@
   "needsMediaReview": false,
   "needsLinkReview": false,
   "primarySection": "focus",
-  "group": "Trading services",
+  "group": "Market Fronts & Partner Landings",
   "media": {
     "src": "/media/projects/trade-solution-eu.png",
     "alt": "Trade Solution EU screenshot",

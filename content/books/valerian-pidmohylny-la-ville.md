@@ -63,9 +63,9 @@
     "series"
   ],
   "media": {
-    "src": "/media/books/valerian-pidmohylny-la-ville.png",
-    "alt": "Valerian Pidmohylny French translation cover",
-    "role": "mockup"
+    "src": "/media/books/la-ville/cover.png",
+    "alt": "La Ville book cover",
+    "role": "book-cover"
   },
   "primarySeriesSlug": "modernisme-ukrainien",
   "seriesSlugs": [

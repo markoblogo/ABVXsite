@@ -45,9 +45,9 @@
     "series"
   ],
   "media": {
-    "src": "/media/books/hryhorii-kosynka-dans-les-seigles.png",
-    "alt": "Hryhorii Kosynka French translation cover",
-    "role": "mockup"
+    "src": "/media/books/dans-les-seigles/cover.png",
+    "alt": "Dans les seigles et autres nouvelles book cover",
+    "role": "book-cover"
   },
   "primarySeriesSlug": "modernisme-ukrainien",
   "seriesSlugs": [

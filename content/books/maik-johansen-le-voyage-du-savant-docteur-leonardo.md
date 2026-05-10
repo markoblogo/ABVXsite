@@ -63,9 +63,9 @@
     "series"
   ],
   "media": {
-    "src": "/media/books/maik-johansen-le-voyage-du-savant-docteur-leonardo.png",
-    "alt": "Maik Johansen French translation cover",
-    "role": "mockup"
+    "src": "/media/books/le-voyage-du-savant-docteur-leonardo/cover.png",
+    "alt": "Le Voyage du savant docteur Leonardo book cover",
+    "role": "book-cover"
   },
   "primarySeriesSlug": "modernisme-ukrainien",
   "seriesSlugs": [

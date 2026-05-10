@@ -62,9 +62,9 @@
     "series"
   ],
   "media": {
-    "src": "/media/books/marcus-aurelius-meditations-toki-pona.png",
+    "src": "/media/books/meditations-marcus-aurelius/cover.png",
     "alt": "Meditations of Marcus Aurelius in Toki Pona book cover",
-    "role": "mockup"
+    "role": "book-cover"
   },
   "primarySeriesSlug": "stoic-wisdom-toki-pona",
   "seriesSlugs": [

@@ -26,13 +26,13 @@
     }
   ],
   "media": {
-    "src": "/media/projects/toki-pona-free-kits-landing.png",
-    "alt": "Toki Pona Free Kits & Translations publishing line landing page",
+    "src": "/media/series/toki-pona-free-kits/hero.png",
+    "alt": "Toki Pona Free Kits & Translations publishing line visual",
     "role": "landing-screenshot"
   },
   "heroImage": {
-    "src": "/media/projects/toki-pona-free-kits-landing.png",
-    "alt": "Toki Pona Free Kits & Translations publishing line landing page",
+    "src": "/media/series/toki-pona-free-kits/hero.png",
+    "alt": "Toki Pona Free Kits & Translations publishing line visual",
     "role": "landing-screenshot"
   },
   "featured": true,

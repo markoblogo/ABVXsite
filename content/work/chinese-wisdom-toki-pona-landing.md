@@ -37,13 +37,13 @@
   "primarySection": "systems",
   "group": "Publishing systems & protocols",
   "media": {
-    "src": "/media/projects/chinese-wisdom-toki-pona-landing.png",
-    "alt": "Chinese Wisdom in toki pona landing screenshot",
+    "src": "/media/work/chinese-wisdom-toki-pona-landing/hero.png",
+    "alt": "Chinese Wisdom in toki pona landing page",
     "role": "landing-screenshot"
   },
   "heroImage": {
-    "src": "/media/projects/chinese-wisdom-toki-pona-landing.png",
-    "alt": "Chinese Wisdom in toki pona landing screenshot",
+    "src": "/media/work/chinese-wisdom-toki-pona-landing/hero.png",
+    "alt": "Chinese Wisdom in toki pona landing page",
     "role": "landing-screenshot"
   },
   "primarySeriesSlug": "chinese-wisdom-toki-pona",

@@ -45,12 +45,13 @@
     "site"
   ],
   "media": {
-    "src": "/media/books/chinese-wisdom-reader-guide.png",
+    "src": "/media/books/chinese-wisdom-free-kit/cover.png",
     "alt": "Chinese Wisdom reader guide cover",
-    "role": "mockup"
+    "role": "book-cover"
   },
   "primarySeriesSlug": "toki-pona-free-kits",
   "seriesSlugs": [
+    "chinese-wisdom-toki-pona",
     "toki-pona-free-kits"
   ]
 }

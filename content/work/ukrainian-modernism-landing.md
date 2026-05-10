@@ -42,13 +42,13 @@
   "primarySection": "systems",
   "group": "Publishing systems & protocols",
   "media": {
-    "src": "/media/projects/ukrainian-modernism-landing.png",
-    "alt": "Ukrainian Modernism landing screenshot",
+    "src": "/media/work/ukrainian-modernism-landing/hero.png",
+    "alt": "Ukrainian Modernism landing page",
     "role": "landing-screenshot"
   },
   "heroImage": {
-    "src": "/media/projects/ukrainian-modernism-landing.png",
-    "alt": "Ukrainian Modernism landing screenshot",
+    "src": "/media/work/ukrainian-modernism-landing/hero.png",
+    "alt": "Ukrainian Modernism landing page",
     "role": "landing-screenshot"
   },
   "primarySeriesSlug": "modernisme-ukrainien",

@@ -62,9 +62,9 @@
     "series"
   ],
   "media": {
-    "src": "/media/books/epictetus-enchiridion-toki-pona.png",
+    "src": "/media/books/epictetus-enchiridion/cover.png",
     "alt": "Epictetus Enchiridion in toki pona book cover",
-    "role": "mockup"
+    "role": "book-cover"
   },
   "primarySeriesSlug": "stoic-wisdom-toki-pona",
   "seriesSlugs": [

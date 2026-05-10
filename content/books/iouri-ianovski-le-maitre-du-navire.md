@@ -63,9 +63,9 @@
     "series"
   ],
   "media": {
-    "src": "/media/books/iouri-ianovski-le-maitre-du-navire.png",
-    "alt": "Iouri Ianovski French translation cover",
-    "role": "mockup"
+    "src": "/media/books/le-maitre-du-navire/cover.png",
+    "alt": "Le Maître du navire book cover",
+    "role": "book-cover"
   },
   "primarySeriesSlug": "modernisme-ukrainien",
   "seriesSlugs": [

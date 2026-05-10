@@ -62,9 +62,9 @@
     "series"
   ],
   "media": {
-    "src": "/media/books/seneca-shortness-of-life-toki-pona.png",
+    "src": "/media/books/seneca-shortness-of-life/cover.png",
     "alt": "Seneca On the Shortness of Life in toki pona book cover",
-    "role": "mockup"
+    "role": "book-cover"
   },
   "primarySeriesSlug": "stoic-wisdom-toki-pona",
   "seriesSlugs": [

@@ -37,13 +37,13 @@
   "primarySection": "systems",
   "group": "Publishing systems & protocols",
   "media": {
-    "src": "/media/projects/stoic-wisdom-toki-pona-landing.png",
-    "alt": "Stoic Wisdom in Toki Pona landing screenshot",
+    "src": "/media/work/stoic-wisdom-toki-pona-landing/hero.png",
+    "alt": "Stoic Wisdom in Toki Pona landing page",
     "role": "landing-screenshot"
   },
   "heroImage": {
-    "src": "/media/projects/stoic-wisdom-toki-pona-landing.png",
-    "alt": "Stoic Wisdom in Toki Pona landing screenshot",
+    "src": "/media/work/stoic-wisdom-toki-pona-landing/hero.png",
+    "alt": "Stoic Wisdom in Toki Pona landing page",
     "role": "landing-screenshot"
   },
   "primarySeriesSlug": "stoic-wisdom-toki-pona",

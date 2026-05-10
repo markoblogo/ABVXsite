@@ -45,12 +45,13 @@
     "site"
   ],
   "media": {
-    "src": "/media/books/toki-pona-readers-kit.png",
+    "src": "/media/books/toki-pona-readers-kit/cover.png",
     "alt": "The Toki Pona Reader’s Kit cover",
-    "role": "mockup"
+    "role": "book-cover"
   },
   "primarySeriesSlug": "toki-pona-free-kits",
   "seriesSlugs": [
+    "stoic-wisdom-toki-pona",
     "toki-pona-free-kits"
   ]
 }

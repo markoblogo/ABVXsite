@@ -62,9 +62,9 @@
     "series"
   ],
   "media": {
-    "src": "/media/books/cicero-toki-pona.png",
+    "src": "/media/books/cicero-on-duties/cover.png",
     "alt": "Cicero On Duties in toki pona book cover",
-    "role": "mockup"
+    "role": "book-cover"
   },
   "primarySeriesSlug": "stoic-wisdom-toki-pona",
   "seriesSlugs": [

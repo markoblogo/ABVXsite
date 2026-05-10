@@ -26,13 +26,13 @@
     }
   ],
   "media": {
-    "src": "/media/projects/stoic-wisdom-toki-pona-landing.png",
-    "alt": "Stoic Wisdom in Toki Pona publishing line landing page",
+    "src": "/media/series/stoic-wisdom-toki-pona/hero.png",
+    "alt": "Stoic Wisdom in Toki Pona publishing line visual",
     "role": "landing-screenshot"
   },
   "heroImage": {
-    "src": "/media/projects/stoic-wisdom-toki-pona-landing.png",
-    "alt": "Stoic Wisdom in Toki Pona publishing line landing page",
+    "src": "/media/series/stoic-wisdom-toki-pona/hero.png",
+    "alt": "Stoic Wisdom in Toki Pona publishing line visual",
     "role": "landing-screenshot"
   },
   "featured": true,

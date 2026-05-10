@@ -45,9 +45,9 @@
     "site"
   ],
   "media": {
-    "src": "/media/books/heart-sutra-toki-pona.png",
+    "src": "/media/books/heart-sutra-toki-pona/cover.png",
     "alt": "Heart Sutra in toki pona cover",
-    "role": "mockup"
+    "role": "book-cover"
   },
   "primarySeriesSlug": "toki-pona-free-kits",
   "seriesSlugs": [

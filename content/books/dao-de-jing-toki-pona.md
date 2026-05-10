@@ -62,9 +62,9 @@
     "series"
   ],
   "media": {
-    "src": "/media/books/dao-de-jing-toki-pona.png",
+    "src": "/media/books/dao-de-jing/cover.png",
     "alt": "Dao De Jing in Toki Pona book cover",
-    "role": "mockup"
+    "role": "book-cover"
   },
   "primarySeriesSlug": "chinese-wisdom-toki-pona",
   "seriesSlugs": [

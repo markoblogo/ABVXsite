@@ -1,5 +1,6 @@
 import type { Artifact } from '@/content';
 import { operationalLinks } from '@/content/link-utils';
+import Link from 'next/link';
 
 function uniqueTexts(texts: string[]): string[] {
   const seen = new Set<string>();
@@ -11,12 +12,38 @@ function uniqueTexts(texts: string[]): string[] {
   });
 }
 
+const focusInfrastructureGroups = new Set([
+  'Trading & Brokerage Platforms',
+  'Market Intelligence, Monitoring & Indexes',
+  'Market Fronts & Partner Landings',
+]);
+
+function sectionLabel(section: string): string {
+  const labels: Record<string, string> = {
+    focus: 'Current Focus',
+    systems: 'Systems Catalogue',
+    books: 'ABVX Press',
+    writing: 'Writing',
+  };
+  return labels[section] || section;
+}
+
+function sectionHref(section: string): string {
+  return `/${section}`;
+}
+
 export default function WorkBrief({ artifact }: { artifact: Artifact }) {
   const texts = uniqueTexts([artifact.description || '', artifact.summary]);
   const publicSections = uniqueTexts([artifact.primarySection, ...artifact.appearsIn]);
   const links = operationalLinks(artifact.links);
   const siteLink = links.find((link) => link.type === 'site' || link.type === 'demo');
   const githubLink = links.find((link) => link.type === 'github');
+  const partOfLinks = [
+    ...publicSections.map((section) => ({ label: sectionLabel(section), href: sectionHref(section) })),
+    ...(artifact.group && focusInfrastructureGroups.has(artifact.group)
+      ? [{ label: 'Agro Market Infrastructure Systems', href: '/systems' }]
+      : []),
+  ];
 
   return (
     <section className="work-brief" aria-labelledby="work-brief-title">
@@ -42,6 +69,19 @@ export default function WorkBrief({ artifact }: { artifact: Artifact }) {
             <dt>Section</dt>
             <dd>{publicSections.join(', ')}</dd>
           </div>
+          {partOfLinks.length ? (
+            <div>
+              <dt>Part of</dt>
+              <dd>
+                {partOfLinks.map((link, index) => (
+                  <span key={`${link.href}-${link.label}`}>
+                    {index > 0 ? ', ' : null}
+                    <Link href={link.href}>{link.label}</Link>
+                  </span>
+                ))}
+              </dd>
+            </div>
+          ) : null}
           {artifact.group ? (
             <div>
               <dt>Related ecosystem</dt>

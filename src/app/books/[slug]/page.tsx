@@ -1,6 +1,7 @@
 import BookActionLinks from '@/components/BookActionLinks';
 import BookDetailHero from '@/components/BookDetailHero';
 import BookRelatedCard from '@/components/BookRelatedCard';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import JsonLd from '@/components/JsonLd';
 import MediaPanel from '@/components/MediaPanel';
 import TagList from '@/components/TagList';
@@ -14,6 +15,7 @@ import {
   SITE_URL,
 } from '@/lib/seo';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { ReactNode } from 'react';
 
@@ -52,6 +54,19 @@ function renderLinks(links: Book['links']): ReactNode {
           <a href={link.url} target="_blank" rel="noreferrer">
             {link.label || link.type}
           </a>
+        </span>
+      ))}
+    </span>
+  );
+}
+
+function renderBookLinks(books: Book[]): ReactNode {
+  return (
+    <span className="book-context-links">
+      {books.map((item, index) => (
+        <span key={item.slug}>
+          {index > 0 ? ', ' : null}
+          <Link href={`/books/${item.slug}`}>{item.shortTitle || item.title}</Link>
         </span>
       ))}
     </span>
@@ -165,6 +180,13 @@ export default async function BookDetailPage({
             { name: title, url: `${SITE_URL}/books/${book.slug}` },
           ])}
         />
+        <BreadcrumbNav
+          items={[
+            { label: 'ABVX', href: '/' },
+            { label: 'Books', href: '/books' },
+            { label: title },
+          ]}
+        />
         <header className={`series-detail-hero${image ? ' series-detail-hero--with-media' : ''}`}>
           <div className="series-detail-hero__copy">
             <div className="eyebrow">Official publishing line / {book.status}</div>
@@ -244,11 +266,21 @@ export default async function BookDetailPage({
   const videoUrl = youtube ? youtubeEmbedUrl(youtube.url) : undefined;
   const formats = formatFormats(book.availableFormats?.length ? book.availableFormats : book.formats);
   const buyLinks = purchaseLinks(book);
+  const primarySeries = book.primarySeriesSlug ? getBookBySlug(book.primarySeriesSlug) : undefined;
+  const relatedEditionSlugs = [
+    book.translationOf || undefined,
+    ...(book.relatedSlugs || []),
+  ].filter((relatedSlug): relatedSlug is string => Boolean(relatedSlug) && relatedSlug !== book.slug);
+  const relatedEditions = [...new Set(relatedEditionSlugs)]
+    .map((relatedSlug) => getBookBySlug(relatedSlug))
+    .filter((item): item is Book => Boolean(item));
   const contextRows = [
     book.language ? ['Language', book.language] : undefined,
     book.author ? ['Author', book.author] : undefined,
     book.translator ? ['Translator', book.translator] : undefined,
+    primarySeries ? ['Part of', renderBookLinks([primarySeries])] : undefined,
     book.series ? ['Series', book.series] : undefined,
+    relatedEditions.length ? ['Related editions', renderBookLinks(relatedEditions)] : undefined,
     book.category ? ['Line', book.category] : undefined,
     ['Type', book.type],
     formats ? ['Formats', formats] : undefined,
@@ -265,6 +297,14 @@ export default async function BookDetailPage({
           { name: 'ABVX Press', url: `${SITE_URL}/books` },
           { name: title, url: `${SITE_URL}/books/${book.slug}` },
         ])}
+      />
+      <BreadcrumbNav
+        items={[
+          { label: 'ABVX', href: '/' },
+          { label: 'Books', href: '/books' },
+          ...(primarySeries ? [{ label: primarySeries.shortTitle || primarySeries.title, href: `/books/${primarySeries.slug}` }] : []),
+          { label: title },
+        ]}
       />
       <BookDetailHero book={book} image={image} />
 

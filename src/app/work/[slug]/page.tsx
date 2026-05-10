@@ -1,6 +1,7 @@
 import JsonLd from '@/components/JsonLd';
 import MediaPanel from '@/components/MediaPanel';
 import SocialLinks from '@/components/SocialLinks';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import WorkBrief from '@/components/WorkBrief';
 import WorkDetailHero from '@/components/WorkDetailHero';
 import WorkRelatedCard from '@/components/WorkRelatedCard';
@@ -182,6 +183,16 @@ export default async function WorkDetailPage({
           },
           { name: artifact.title, url: `${SITE_URL}/work/${artifact.slug}` },
         ])}
+      />
+      <BreadcrumbNav
+        items={[
+          { label: 'ABVX', href: '/' },
+          {
+            label: focusInfrastructure ? 'Focus' : 'Systems',
+            href: focusInfrastructure ? '/focus' : '/systems',
+          },
+          { label: artifact.title },
+        ]}
       />
       <WorkDetailHero artifact={publicArtifact} image={image} />
 

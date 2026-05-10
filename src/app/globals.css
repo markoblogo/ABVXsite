@@ -2753,6 +2753,48 @@ a {
   gap: clamp(1rem, 3vw, 2rem);
 }
 
+.breadcrumb-nav {
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--paper) 90%, white 10%);
+  padding: 0.65rem 0.8rem;
+}
+
+.breadcrumb-nav ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumb-nav li {
+  display: inline-flex;
+  gap: 0.35rem;
+  align-items: center;
+  color: var(--ink-muted);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.breadcrumb-nav li:not(:last-child)::after {
+  content: "/";
+  color: var(--ink);
+}
+
+.breadcrumb-nav a,
+.book-detail-context a,
+.work-brief__context a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+
 .detail-media-frame {
   position: relative;
   margin: 0;

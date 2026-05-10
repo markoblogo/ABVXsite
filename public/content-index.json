@@ -1,0 +1,1916 @@
+{
+  "site": "https://abvx.xyz",
+  "generatedFrom": "/content",
+  "items": [
+    {
+      "type": "translation",
+      "section": "books",
+      "title": "A Christmas Carol in Toki Pona",
+      "summary": "A bilingual Toki Pona edition of Dickens’ A Christmas Carol, pairing the classic story of Scrooge’s transformation with minimalist language, sitelen pona and a calm experiment in literary compression.",
+      "canonicalUrl": "https://abvx.xyz/books/christmas-carol-toki-pona",
+      "tags": [
+        "Toki Pona",
+        "sitelen pona",
+        "Charles Dickens",
+        "A Christmas Carol",
+        "translation",
+        "bilingual edition",
+        "minimalist language",
+        "classic literature",
+        "Christmas"
+      ],
+      "links": [
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0G1N2YHD8"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0G1XVNPSL"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/ammjR4v58CM"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
+      "type": "series",
+      "section": "books",
+      "title": "Chinese Wisdom in toki pona",
+      "summary": "A compact multilingual line bringing classical Chinese texts into toki pona, sitelen pona and parallel reading formats. It treats minimalist language as a tool for slow reading, comparison and philosophical compression.",
+      "canonicalUrl": "https://abvx.xyz/books/chinese-wisdom-toki-pona",
+      "tags": [
+        "Toki Pona",
+        "Chinese philosophy",
+        "classical texts",
+        "translation",
+        "sitelen pona",
+        "multilingual edition"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://dao-toki.abvx.xyz/en"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Chinese Wisdom in toki pona landing",
+          "canonicalUrl": "https://abvx.xyz/work/chinese-wisdom-toki-pona-landing",
+          "relation": "companion"
+        },
+        {
+          "title": "Free Kit / Reader’s Guide Chinese Wisdom in toki pona",
+          "canonicalUrl": "https://abvx.xyz/books/chinese-wisdom-reader-guide",
+          "relation": "member"
+        },
+        {
+          "title": "Dao De Jing in Toki Pona",
+          "canonicalUrl": "https://abvx.xyz/books/dao-de-jing-toki-pona",
+          "relation": "member"
+        },
+        {
+          "title": "Sunzi: The Art of War in toki pona",
+          "canonicalUrl": "https://abvx.xyz/books/sunzi-art-of-war-toki-pona",
+          "relation": "member"
+        }
+      ]
+    },
+    {
+      "type": "translation",
+      "section": "books",
+      "title": "Cicero: On Duties in toki pona",
+      "summary": "A Toki Pona and sitelen pona edition of Cicero’s On Duties, reframing a classic manual of moral decision-making through minimal language, slow reading and visual repetition.",
+      "canonicalUrl": "https://abvx.xyz/books/cicero-toki-pona",
+      "tags": [
+        "Toki Pona",
+        "sitelen pona",
+        "Cicero",
+        "De Officiis",
+        "Stoicism",
+        "ethics",
+        "moral philosophy",
+        "translation",
+        "minimalist language"
+      ],
+      "links": [
+        {
+          "type": "series",
+          "label": "Series",
+          "url": "https://stoic.abvx.xyz/en"
+        },
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0GL86LVF1"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0GLFN8KBX"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/61dVZDB-tYs"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Stoic Wisdom in Toki Pona",
+          "canonicalUrl": "https://abvx.xyz/books/stoic-wisdom-toki-pona",
+          "relation": "series"
+        }
+      ]
+    },
+    {
+      "type": "translation",
+      "section": "books",
+      "title": "Dao De Jing in Toki Pona",
+      "summary": "An experimental edition of the Dao De Jing pairing the classical Chinese text with a Toki Pona translation designed for sitelen pona, bringing two compact systems of philosophical writing into quiet visual dialogue.",
+      "canonicalUrl": "https://abvx.xyz/books/dao-de-jing-toki-pona",
+      "tags": [
+        "Toki Pona",
+        "sitelen pona",
+        "Dao De Jing",
+        "Tao Te Ching",
+        "Laozi",
+        "Classical Chinese",
+        "Chinese philosophy",
+        "multilingual edition",
+        "experimental book design"
+      ],
+      "links": [
+        {
+          "type": "series",
+          "label": "Series",
+          "url": "https://dao-toki.abvx.xyz/"
+        },
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0G4XNRS4W"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0G5MCFN2T"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/oWA-_FatU3E"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Chinese Wisdom in toki pona",
+          "canonicalUrl": "https://abvx.xyz/books/chinese-wisdom-toki-pona",
+          "relation": "series"
+        }
+      ]
+    },
+    {
+      "type": "book",
+      "section": "books",
+      "title": "Dark Gestalt: How Brands Hijack Emotions, Distort Perception, and Manufacture Desire",
+      "summary": "A sharp exploration of how brands shape emotion, perception and desire, and how modern behavioral design can manipulate decisions through symbols, shortcuts, narratives and AI-driven persuasion.",
+      "canonicalUrl": "https://abvx.xyz/books/dark-gestalt",
+      "tags": [
+        "branding",
+        "marketing psychology",
+        "behavioral design",
+        "perception",
+        "influence",
+        "dark patterns",
+        "AI",
+        "English"
+      ],
+      "links": [
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0FT5V3QCL"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0FTLQXWY1"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/QjZgzs845yI"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
+      "type": "translation",
+      "section": "books",
+      "title": "Epictetus: The Enchiridion in toki pona",
+      "summary": "A fixed-layout Toki Pona and sitelen pona edition of Epictetus’ Enchiridion, turning one of Stoicism’s most practical handbooks into a compact, visual and low-noise reading experience.",
+      "canonicalUrl": "https://abvx.xyz/books/epictetus-enchiridion-toki-pona",
+      "tags": [
+        "Toki Pona",
+        "sitelen pona",
+        "Stoicism",
+        "Epictetus",
+        "Enchiridion",
+        "philosophy",
+        "translation",
+        "minimalist language",
+        "Print Replica"
+      ],
+      "links": [
+        {
+          "type": "series",
+          "label": "Series",
+          "url": "https://stoic.abvx.xyz/en"
+        },
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0GKWR5NL1"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0GKXXJGZV"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/DNgkm9tf6Cg"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Stoic Wisdom in Toki Pona",
+          "canonicalUrl": "https://abvx.xyz/books/stoic-wisdom-toki-pona",
+          "relation": "series"
+        }
+      ]
+    },
+    {
+      "type": "free-edition",
+      "section": "books",
+      "title": "Free Kit / Reader’s Guide Chinese Wisdom in toki pona",
+      "summary": "Free reader’s guide for Chinese Wisdom in toki pona.",
+      "canonicalUrl": "https://abvx.xyz/books/chinese-wisdom-reader-guide",
+      "tags": [
+        "toki-pona",
+        "free-book",
+        "reader-guide",
+        "chinese-wisdom"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://toki-free.abvx.xyz/en"
+        },
+        {
+          "type": "pdf",
+          "label": "PDF",
+          "url": "/media/books/chinese-wisdom-reader-guide.pdf"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/BOVyG1jP580"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Toki Pona Free Kits & Translations",
+          "canonicalUrl": "https://abvx.xyz/books/toki-pona-free-kits",
+          "relation": "series"
+        },
+        {
+          "title": "Chinese Wisdom in toki pona",
+          "canonicalUrl": "https://abvx.xyz/books/chinese-wisdom-toki-pona",
+          "relation": "series"
+        }
+      ]
+    },
+    {
+      "type": "book",
+      "section": "books",
+      "title": "Future-Proof Your Productivity: Navigating the AI Decade to Accelerate Your Output, Innovate Your Role, and Thrive",
+      "summary": "A practical manual for using AI, automation, no-code tools and workflow design to increase output, reduce routine work and stay professionally resilient through the AI decade.",
+      "canonicalUrl": "https://abvx.xyz/books/future-proof-productivity",
+      "tags": [
+        "productivity",
+        "AI",
+        "automation",
+        "no-code",
+        "workflows",
+        "future of work",
+        "knowledge work",
+        "English"
+      ],
+      "links": [
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0FQ5SWMTJ"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0FR1WH15S"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/IJBn0x2UeF8"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
+      "type": "book",
+      "section": "books",
+      "title": "God Was Busy With the Plumbing",
+      "summary": "An English translation of the Ukrainian absurdist literary novella about Jonathan Swanson, a former artist turned handyman, whose quiet pre-Christmas days collapse into a strange hospital night of plumbing, doctors, prophets, Brahms, and possible secret space programs. A darkly funny story about loneliness, faith, work, the body, snow, and the small mercies that remain when the world cannot be fully repaired.",
+      "canonicalUrl": "https://abvx.xyz/books/god-was-busy-with-the-plumbing",
+      "tags": [
+        "fiction",
+        "absurdist fiction",
+        "literary novella",
+        "English",
+        "translation",
+        "Ukrainian original",
+        "faith",
+        "loneliness",
+        "Christmas"
+      ],
+      "links": [
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0GYZ37NHN"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0GYX4C2PV"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Бог був зайнятий каналізацією",
+          "canonicalUrl": "https://abvx.xyz/books/boh-buv-zainiatyi-kanalizatsiieiu",
+          "relation": "related"
+        }
+      ]
+    },
+    {
+      "type": "free-edition",
+      "section": "books",
+      "title": "Heart Sutra in toki pona / sitelen pona",
+      "summary": "Heart Sutra edition with traditional Chinese, Toki Pona, English, and sitelen pona.",
+      "canonicalUrl": "https://abvx.xyz/books/heart-sutra-toki-pona",
+      "tags": [
+        "toki-pona",
+        "free-book",
+        "heart-sutra",
+        "chinese-wisdom"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://toki-free.abvx.xyz/en"
+        },
+        {
+          "type": "pdf",
+          "label": "PDF",
+          "url": "/media/books/heart-sutra-toki-pona.pdf"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/5q0eaRllDJQ"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Toki Pona Free Kits & Translations",
+          "canonicalUrl": "https://abvx.xyz/books/toki-pona-free-kits",
+          "relation": "series"
+        }
+      ]
+    },
+    {
+      "type": "translation",
+      "section": "books",
+      "title": "Hryhorii Kosynka: Dans les seigles et autres nouvelles",
+      "summary": "French translation from the Ukrainian Modernism series.",
+      "canonicalUrl": "https://abvx.xyz/books/hryhorii-kosynka-dans-les-seigles",
+      "tags": [
+        "ukrainian-modernism",
+        "translation",
+        "french",
+        "kosynka"
+      ],
+      "links": [
+        {
+          "type": "series",
+          "label": "Series",
+          "url": "https://ukrmodernism.abvx.xyz/fr"
+        },
+        {
+          "type": "pdf",
+          "label": "PDF",
+          "url": "/media/books/hryhorii-kosynka-dans-les-seigles.pdf"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/4z3O2o2DNyc"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Modernisme Ukrainien",
+          "canonicalUrl": "https://abvx.xyz/books/modernisme-ukrainien",
+          "relation": "series"
+        }
+      ]
+    },
+    {
+      "type": "translation",
+      "section": "books",
+      "title": "Iouri Ianovski: Le Maitre du navire",
+      "summary": "La première traduction française intégrale du roman maritime et cinématographique d’Iouri Ianovski, œuvre fondatrice du modernisme ukrainien et de l’avant-garde des années 1920.",
+      "canonicalUrl": "https://abvx.xyz/books/iouri-ianovski-le-maitre-du-navire",
+      "tags": [
+        "Modernisme ukrainien",
+        "renaissance fusillée",
+        "Iouri Ianovski",
+        "Ukrainian literature",
+        "French",
+        "translation",
+        "fiction",
+        "cinema",
+        "maritime novel",
+        "modernism"
+      ],
+      "links": [
+        {
+          "type": "series",
+          "label": "Series",
+          "url": "https://ukrmodernism.abvx.xyz/fr"
+        },
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.fr/dp/B0GC9P9VKT"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.fr/dp/B0GCLLJZJ8"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/GqNzjSkvWvs"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Modernisme Ukrainien",
+          "canonicalUrl": "https://abvx.xyz/books/modernisme-ukrainien",
+          "relation": "series"
+        }
+      ]
+    },
+    {
+      "type": "book",
+      "section": "books",
+      "title": "LLMO: The Next SEO Revolution",
+      "summary": "A practical guide to LLM Optimization: the emerging discipline of making brands, ideas and content visible to AI systems in an age of zero-click search and intelligent answers.",
+      "canonicalUrl": "https://abvx.xyz/books/llmo-seo-revolution",
+      "tags": [
+        "LLMO",
+        "AI search",
+        "digital visibility",
+        "content strategy",
+        "SEO",
+        "marketing",
+        "AI",
+        "English"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://llmo.abvx.xyz/"
+        },
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0FYRSSZKL"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0G1YBYKDR"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/0l_fawMcPmw"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
+      "type": "translation",
+      "section": "books",
+      "title": "Maik Johansen: Le Voyage du savant docteur Leonardo",
+      "summary": "Une anthologie française de Maïk Johansen, écrivain majeur du modernisme ukrainien, où roman-paysage, essais littéraires, reportage poétique, satire et expérimentation formelle révèlent une voix libre, ludique et interrompue par la Grande Terreur.",
+      "canonicalUrl": "https://abvx.xyz/books/maik-johansen-le-voyage-du-savant-docteur-leonardo",
+      "tags": [
+        "Modernisme ukrainien",
+        "renaissance fusillée",
+        "Maïk Johansen",
+        "Ukrainian literature",
+        "French",
+        "translation",
+        "fiction",
+        "modernism",
+        "avant-garde",
+        "literary anthology"
+      ],
+      "links": [
+        {
+          "type": "series",
+          "label": "Series",
+          "url": "https://ukrmodernism.abvx.xyz/fr"
+        },
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.fr/dp/B0GDV7283Z"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.fr/dp/B0GDXGNT6B"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/LWRWb7CKE4I"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Modernisme Ukrainien",
+          "canonicalUrl": "https://abvx.xyz/books/modernisme-ukrainien",
+          "relation": "series"
+        }
+      ]
+    },
+    {
+      "type": "translation",
+      "section": "books",
+      "title": "Meditations of Marcus Aurelius in Toki Pona",
+      "summary": "A Toki Pona and sitelen pona edition of Marcus Aurelius’ Meditations, translating Stoic reflection into a radically minimal language of clarity, restraint and visual form.",
+      "canonicalUrl": "https://abvx.xyz/books/marcus-aurelius-meditations-toki-pona",
+      "tags": [
+        "Toki Pona",
+        "sitelen pona",
+        "Marcus Aurelius",
+        "Meditations",
+        "Stoicism",
+        "philosophy",
+        "translation",
+        "minimalist language",
+        "classic literature"
+      ],
+      "links": [
+        {
+          "type": "series",
+          "label": "Series",
+          "url": "https://stoic.abvx.xyz/en"
+        },
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0FV3F1RC5"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0FVLPD69K"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/ILN2qILESH0"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Stoic Wisdom in Toki Pona",
+          "canonicalUrl": "https://abvx.xyz/books/stoic-wisdom-toki-pona",
+          "relation": "series"
+        }
+      ]
+    },
+    {
+      "type": "series",
+      "section": "books",
+      "title": "Modernisme Ukrainien",
+      "summary": "French translations of early twentieth-century Ukrainian modernist literature, with critical framing, notes and companion publishing infrastructure. The line brings authors of the Ukrainian “Executed Renaissance” into a French-reading context.",
+      "canonicalUrl": "https://abvx.xyz/books/modernisme-ukrainien",
+      "tags": [
+        "Ukrainian Modernism",
+        "Modernisme ukrainien",
+        "French",
+        "Ukrainian",
+        "translation",
+        "modernism",
+        "literature"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://ukrmodernism.abvx.xyz/fr"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Ukrainian Modernism landing",
+          "canonicalUrl": "https://abvx.xyz/work/ukrainian-modernism-landing",
+          "relation": "companion"
+        },
+        {
+          "title": "Hryhorii Kosynka: Dans les seigles et autres nouvelles",
+          "canonicalUrl": "https://abvx.xyz/books/hryhorii-kosynka-dans-les-seigles",
+          "relation": "member"
+        },
+        {
+          "title": "Iouri Ianovski: Le Maitre du navire",
+          "canonicalUrl": "https://abvx.xyz/books/iouri-ianovski-le-maitre-du-navire",
+          "relation": "member"
+        },
+        {
+          "title": "Maik Johansen: Le Voyage du savant docteur Leonardo",
+          "canonicalUrl": "https://abvx.xyz/books/maik-johansen-le-voyage-du-savant-docteur-leonardo",
+          "relation": "member"
+        },
+        {
+          "title": "Mykola Khvylovy: La zone du sanatorium",
+          "canonicalUrl": "https://abvx.xyz/books/mykola-khvylovy-la-zone-du-sanatorium",
+          "relation": "member"
+        },
+        {
+          "title": "Valerian Pidmohylny: La Ville",
+          "canonicalUrl": "https://abvx.xyz/books/valerian-pidmohylny-la-ville",
+          "relation": "member"
+        }
+      ]
+    },
+    {
+      "type": "translation",
+      "section": "books",
+      "title": "Mykola Khvylovy: La zone du sanatorium",
+      "summary": "Une traduction française de récits majeurs de Mykola Khvylovy, figure centrale du modernisme ukrainien des années 1920 et de la « renaissance fusillée ».",
+      "canonicalUrl": "https://abvx.xyz/books/mykola-khvylovy-la-zone-du-sanatorium",
+      "tags": [
+        "Modernisme ukrainien",
+        "renaissance fusillée",
+        "Mykola Khvylovy",
+        "Ukrainian literature",
+        "French",
+        "translation",
+        "fiction",
+        "modernism"
+      ],
+      "links": [
+        {
+          "type": "series",
+          "label": "Series",
+          "url": "https://ukrmodernism.abvx.xyz/fr"
+        },
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.fr/dp/B0G8V24GS2"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.fr/dp/B0G9G6JGDN"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Modernisme Ukrainien",
+          "canonicalUrl": "https://abvx.xyz/books/modernisme-ukrainien",
+          "relation": "series"
+        }
+      ]
+    },
+    {
+      "type": "work",
+      "section": "books",
+      "title": "Pictiq",
+      "summary": "Pictiq is a minimal visual protocol for short messages across language barriers, built from icon tiles and a simple grammar for pointing, quick signs, stickers and compact phrases.",
+      "canonicalUrl": "https://abvx.xyz/work/pictiq",
+      "tags": [
+        "pictiq",
+        "colang",
+        "visual protocol",
+        "icons",
+        "language barriers",
+        "constructed language",
+        "translation",
+        "publishing systems"
+      ],
+      "links": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/pictiq"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
+      "type": "translation",
+      "section": "books",
+      "title": "Seneca: On the Shortness of Life in toki pona",
+      "summary": "A Toki Pona and sitelen pona edition of Seneca’s On the Shortness of Life, compressing a classic Stoic essay on time, attention and intention into a slower, clearer reading format.",
+      "canonicalUrl": "https://abvx.xyz/books/seneca-shortness-of-life-toki-pona",
+      "tags": [
+        "Toki Pona",
+        "sitelen pona",
+        "Stoicism",
+        "Seneca",
+        "On the Shortness of Life",
+        "philosophy",
+        "translation",
+        "minimalist language",
+        "attention"
+      ],
+      "links": [
+        {
+          "type": "series",
+          "label": "Series",
+          "url": "https://stoic.abvx.xyz/en"
+        },
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0GKCJ72PG"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0GL1ZBK18"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/_JL2xu4Sn70"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Stoic Wisdom in Toki Pona",
+          "canonicalUrl": "https://abvx.xyz/books/stoic-wisdom-toki-pona",
+          "relation": "series"
+        }
+      ]
+    },
+    {
+      "type": "series",
+      "section": "books",
+      "title": "Stoic Wisdom in Toki Pona",
+      "summary": "Stoic classics translated into toki pona and sitelen pona, designed for slow reading, visual practice and minimalist philosophical reflection. The line uses a tiny language to make ethical and practical thought more inspectable.",
+      "canonicalUrl": "https://abvx.xyz/books/stoic-wisdom-toki-pona",
+      "tags": [
+        "Toki Pona",
+        "Stoicism",
+        "philosophy",
+        "translation",
+        "sitelen pona",
+        "classical texts"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://stoic.abvx.xyz/en"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Stoic Wisdom in Toki Pona landing",
+          "canonicalUrl": "https://abvx.xyz/work/stoic-wisdom-toki-pona-landing",
+          "relation": "companion"
+        },
+        {
+          "title": "Cicero: On Duties in toki pona",
+          "canonicalUrl": "https://abvx.xyz/books/cicero-toki-pona",
+          "relation": "member"
+        },
+        {
+          "title": "Epictetus: The Enchiridion in toki pona",
+          "canonicalUrl": "https://abvx.xyz/books/epictetus-enchiridion-toki-pona",
+          "relation": "member"
+        },
+        {
+          "title": "Meditations of Marcus Aurelius in Toki Pona",
+          "canonicalUrl": "https://abvx.xyz/books/marcus-aurelius-meditations-toki-pona",
+          "relation": "member"
+        },
+        {
+          "title": "Seneca: On the Shortness of Life in toki pona",
+          "canonicalUrl": "https://abvx.xyz/books/seneca-shortness-of-life-toki-pona",
+          "relation": "member"
+        },
+        {
+          "title": "The Toki Pona Reader’s Kit",
+          "canonicalUrl": "https://abvx.xyz/books/toki-pona-readers-kit",
+          "relation": "member"
+        }
+      ]
+    },
+    {
+      "type": "translation",
+      "section": "books",
+      "title": "Sunzi: The Art of War in toki pona",
+      "summary": "A multilingual edition of The Art of War with Traditional Chinese, English, toki pona and a sitelen-pona-ready reading layer, designed for slow comparison, strategy study and minimalist interpretation.",
+      "canonicalUrl": "https://abvx.xyz/books/sunzi-art-of-war-toki-pona",
+      "tags": [
+        "Toki Pona",
+        "sitelen pona",
+        "Sunzi",
+        "The Art of War",
+        "Classical Chinese",
+        "Traditional Chinese",
+        "English",
+        "multilingual edition",
+        "philosophy",
+        "strategy"
+      ],
+      "links": [
+        {
+          "type": "series",
+          "label": "Series",
+          "url": "https://dao-toki.abvx.xyz/en"
+        },
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0GQTZFFVG"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0GQXP442Z"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/sJdkHP6Pk-k"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Chinese Wisdom in toki pona",
+          "canonicalUrl": "https://abvx.xyz/books/chinese-wisdom-toki-pona",
+          "relation": "series"
+        }
+      ]
+    },
+    {
+      "type": "free-edition",
+      "section": "books",
+      "title": "The Toki Pona Reader’s Kit",
+      "summary": "Free reader kit for beginning to read Toki Pona editions.",
+      "canonicalUrl": "https://abvx.xyz/books/toki-pona-readers-kit",
+      "tags": [
+        "toki-pona",
+        "free-book",
+        "reader-kit",
+        "stoicism"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://stoic.abvx.xyz/en"
+        },
+        {
+          "type": "pdf",
+          "label": "PDF",
+          "url": "/media/books/toki-pona-readers-kit.pdf"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/F7fSBElppzI"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Toki Pona Free Kits & Translations",
+          "canonicalUrl": "https://abvx.xyz/books/toki-pona-free-kits",
+          "relation": "series"
+        },
+        {
+          "title": "Stoic Wisdom in Toki Pona",
+          "canonicalUrl": "https://abvx.xyz/books/stoic-wisdom-toki-pona",
+          "relation": "series"
+        }
+      ]
+    },
+    {
+      "type": "book",
+      "section": "books",
+      "title": "Toki Pona and the Machine Mind",
+      "summary": "A field guide to using Toki Pona as a design lens for cleaner prompts, constrained prompt languages, small language models and more inspectable human-AI systems.",
+      "canonicalUrl": "https://abvx.xyz/books/toki-pona-machine-mind",
+      "tags": [
+        "Toki Pona",
+        "AI",
+        "prompt engineering",
+        "small language models",
+        "constrained languages",
+        "language systems",
+        "sitelen pona",
+        "English"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://toki.abvx.xyz/learn"
+        },
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0G44JSMR2"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0G5MQKZTX"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/0juEOOI1iEM"
+        },
+        {
+          "type": "github",
+          "label": "AsciiTheme",
+          "url": "https://github.com/markoblogo/AsciiTheme"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
+      "type": "series",
+      "section": "books",
+      "title": "Toki Pona Classics",
+      "summary": "Toki Pona book series, reader kits, free editions, and companion websites around classics, philosophy, and language experiments.",
+      "canonicalUrl": "https://abvx.xyz/books/toki-pona-classics-series",
+      "tags": [
+        "toki-pona",
+        "translations",
+        "constructed-language",
+        "series"
+      ],
+      "links": [
+        {
+          "type": "series",
+          "label": "Stoic Series",
+          "url": "https://stoic.abvx.xyz/en"
+        },
+        {
+          "type": "series",
+          "label": "Chinese Wisdom",
+          "url": "https://dao-toki.abvx.xyz/"
+        },
+        {
+          "type": "series",
+          "label": "Free Kits",
+          "url": "https://toki-free.abvx.xyz/en"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
+      "type": "series",
+      "section": "books",
+      "title": "Toki Pona Free Kits & Translations",
+      "summary": "Free downloadable Toki Pona reader kits, short translations and companion materials for learning, reading and experimenting with minimalist language. This line supports the paid book series and gives readers a low-friction entry point.",
+      "canonicalUrl": "https://abvx.xyz/books/toki-pona-free-kits",
+      "tags": [
+        "Toki Pona",
+        "free books",
+        "translation",
+        "learning",
+        "sitelen pona",
+        "reader kits"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://toki-free.abvx.xyz/en"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Toki Pona free kits landing",
+          "canonicalUrl": "https://abvx.xyz/work/toki-pona-free-kits-landing",
+          "relation": "companion"
+        },
+        {
+          "title": "Free Kit / Reader’s Guide Chinese Wisdom in toki pona",
+          "canonicalUrl": "https://abvx.xyz/books/chinese-wisdom-reader-guide",
+          "relation": "member"
+        },
+        {
+          "title": "Heart Sutra in toki pona / sitelen pona",
+          "canonicalUrl": "https://abvx.xyz/books/heart-sutra-toki-pona",
+          "relation": "member"
+        },
+        {
+          "title": "The Toki Pona Reader’s Kit",
+          "canonicalUrl": "https://abvx.xyz/books/toki-pona-readers-kit",
+          "relation": "member"
+        }
+      ]
+    },
+    {
+      "type": "series",
+      "section": "books",
+      "title": "Ukrainian Modernism translations",
+      "summary": "Series of early twentieth-century Ukrainian modernist literature translated into French.",
+      "canonicalUrl": "https://abvx.xyz/books/ukrainian-modernism-series",
+      "tags": [
+        "ukrainian-modernism",
+        "translations",
+        "french",
+        "literature"
+      ],
+      "links": [
+        {
+          "type": "series",
+          "label": "Series",
+          "url": "https://ukrmodernism.abvx.xyz/fr"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
+      "type": "translation",
+      "section": "books",
+      "title": "Valerian Pidmohylny: La Ville",
+      "summary": "Une traduction française du grand roman urbain de Valerian Pidmohylny, où Kyiv devient une force de transformation morale, sociale et intime pour un jeune provincial venu conquérir la ville.",
+      "canonicalUrl": "https://abvx.xyz/books/valerian-pidmohylny-la-ville",
+      "tags": [
+        "Modernisme ukrainien",
+        "renaissance fusillée",
+        "Valerian Pidmohylny",
+        "Ukrainian literature",
+        "Kyiv",
+        "French",
+        "translation",
+        "fiction",
+        "modernism",
+        "psychological novel"
+      ],
+      "links": [
+        {
+          "type": "series",
+          "label": "Series",
+          "url": "https://ukrmodernism.abvx.xyz/fr"
+        },
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.fr/dp/B0GBY8CHYM"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.fr/dp/B0GC5ZMBTX"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/sHyGKkFdChY"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Modernisme Ukrainien",
+          "canonicalUrl": "https://abvx.xyz/books/modernisme-ukrainien",
+          "relation": "series"
+        }
+      ]
+    },
+    {
+      "type": "book",
+      "section": "books",
+      "title": "Бог був зайнятий каналізацією",
+      "summary": "Абсурдистська повість про колишнього художника й майстра з ремонту Джонатана Свонсона, який напередодні Різдва вирушає до лікарні через аварію в каналізації й потрапляє в ніч дивних зустрічей. Темна, смішна й тиха історія про самотність, віру, тіло, роботу, сніг і маленькі форми милосердя.",
+      "canonicalUrl": "https://abvx.xyz/books/boh-buv-zainiatyi-kanalizatsiieiu",
+      "tags": [
+        "fiction",
+        "absurdist fiction",
+        "literary novella",
+        "Ukrainian",
+        "original",
+        "faith",
+        "loneliness",
+        "Christmas"
+      ],
+      "links": [
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0GYYLZ876"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "God Was Busy With the Plumbing",
+          "canonicalUrl": "https://abvx.xyz/books/god-was-busy-with-the-plumbing",
+          "relation": "related"
+        }
+      ]
+    },
+    {
+      "type": "work",
+      "section": "focus",
+      "title": "Cropto",
+      "summary": "Cropto is a prototype commodity trading platform for indexed spot trading, options and tokenized commodity-linked instruments across Ukraine, Argentina and Brazil.",
+      "canonicalUrl": "https://abvx.xyz/work/cropto",
+      "tags": [
+        "cropto",
+        "agro-commodities",
+        "trading-platform",
+        "indexed-trading",
+        "options",
+        "tokenized-assets",
+        "market-infrastructure"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://cr0pto.com/"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/cropto-v0"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/zumLJKZQFxc"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
+      "type": "work",
+      "section": "focus",
+      "title": "Cropto market risk tools deck",
+      "summary": "Cropto Market Risk Tools Deck presents tokenized local spot-index risk infrastructure for commodity markets and programmable settlement systems.",
+      "canonicalUrl": "https://abvx.xyz/work/cropto-market-risk-deck",
+      "tags": [
+        "cropto",
+        "market-risk",
+        "deck",
+        "tokenized-assets",
+        "indexed-trading",
+        "landing",
+        "commodities"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://cr0pto.com/deck"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/cropto-v0"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/zumLJKZQFxc"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
+      "type": "work",
+      "section": "focus",
+      "title": "Cropto Monitor: Commodity Signals Terminal",
+      "summary": "Cropto Monitor is a customizable commodity-signals terminal combining market data, logistics, weather, policy, risk and live situational awareness for agro-commodity markets.",
+      "canonicalUrl": "https://abvx.xyz/work/cropto-monitor",
+      "tags": [
+        "cropto",
+        "monitoring",
+        "commodity-signals",
+        "logistics",
+        "weather",
+        "market-intelligence",
+        "dashboard",
+        "agro-commodities"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://cr0pto.com/monitor"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/cropto-v0"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
+      "type": "work",
+      "section": "focus",
+      "title": "Last30Days Cropto",
+      "summary": "Last30Days Cropto is an agro-commodity intelligence desk that aggregates market mentions, signals and AI-generated summaries across web, news and social sources.",
+      "canonicalUrl": "https://abvx.xyz/work/last30days-cropto",
+      "tags": [
+        "market-intelligence",
+        "monitoring",
+        "AI-summary",
+        "agro-commodities",
+        "signals",
+        "news-analysis",
+        "social-monitoring",
+        "cropto"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://cr0pto.com/last30days/"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/cropto-v0"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
+      "type": "work",
+      "section": "focus",
+      "title": "Liqua",
+      "summary": "Liqua is a structured liquidity and execution layer for physical commodity markets, designed to turn fragmented brokerage activity into scalable infrastructure.",
+      "canonicalUrl": "https://abvx.xyz/work/liqua",
+      "tags": [
+        "liquidity",
+        "brokerage",
+        "execution",
+        "market-infrastructure",
+        "trading-services",
+        "agro-commodities"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://liqua.cr0pto.com/"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/liqua"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/f8te3FBX32I"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
+      "type": "work",
+      "section": "focus",
+      "title": "MN7R",
+      "summary": "MN7R is a commodity trading workflow workspace for brokerage teams running Deals, Clients and EXE inside one structured operational system.",
+      "canonicalUrl": "https://abvx.xyz/work/mn7r",
+      "tags": [
+        "brokerage",
+        "agro-commodities",
+        "deal-workflows",
+        "execution",
+        "trading-workspace",
+        "market-infrastructure"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://mn7r.com/"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/mn7r"
+        },
+        {
+          "type": "bluesky",
+          "label": "Bluesky",
+          "url": "https://bsky.app/profile/spike.mn7r.com"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
+      "type": "work",
+      "section": "focus",
+      "title": "Trade Solution EU",
+      "summary": "Trade Solution EU is a structured commercial and logistics framework for commodity-market execution, supply-chain coordination and operational clarity.",
+      "canonicalUrl": "https://abvx.xyz/work/trade-solution-eu",
+      "tags": [
+        "commodities",
+        "logistics",
+        "supply-chain",
+        "trading",
+        "execution",
+        "market-signals",
+        "landing"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://trade-solution.eu/en"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/TS"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/YOFrlLiPY6A"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
+      "type": "work",
+      "section": "focus",
+      "title": "UGA Index",
+      "summary": "UGA Index is a benchmark platform for daily Ukrainian grain and oilseed export price references built with the Ukrainian Grain Association.",
+      "canonicalUrl": "https://abvx.xyz/work/uga-index",
+      "tags": [
+        "agro-commodities",
+        "market-data",
+        "price-indexes",
+        "benchmark",
+        "Ukraine",
+        "grain-markets",
+        "oilseeds",
+        "market-infrastructure"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://index-uga.cr0pto.com/"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/index-uga"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
+      "type": "work",
+      "section": "systems",
+      "title": "ABVX Lab",
+      "summary": "ABVX Lab is the ecosystem front for AI-native development systems, protocols, workflows and operational tooling.",
+      "canonicalUrl": "https://abvx.xyz/work/abvx-lab",
+      "tags": [
+        "lab",
+        "experiments",
+        "ai-dev"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://lab.abvx.xyz/"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/lab.abvx"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
+      "type": "work",
+      "section": "systems",
+      "title": "ABVX Shortener",
+      "summary": "ABVX Shortener is a lightweight web and browser-extension system for shortened operational links and compact URL workflows.",
+      "canonicalUrl": "https://abvx.xyz/work/abvx-shortener",
+      "tags": [
+        "web-service",
+        "utility",
+        "shortener"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://go.abvx.xyz/"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/-abvx-shortener"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/oEPow5tKjXQ"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
+      "type": "work",
+      "section": "systems",
+      "title": "AGENTS.md Generator",
+      "summary": "AGENTS.md Generator is an operational workflow surface for AI-assisted development systems, agent coordination and structured coding workflows.",
+      "canonicalUrl": "https://abvx.xyz/work/agents-md-generator",
+      "tags": [
+        "ai-dev",
+        "agents",
+        "documentation",
+        "workflow"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://agentsmd.abvx.xyz/"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/AGENTS.md_generator"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
+      "type": "work",
+      "section": "systems",
+      "title": "AsciiTheme",
+      "summary": "AsciiTheme is a UI and CSS system for light, dark and ASCII-inspired development interfaces inside the broader AI-native tooling ecosystem.",
+      "canonicalUrl": "https://abvx.xyz/work/ascii-theme",
+      "tags": [
+        "ui",
+        "theme",
+        "ascii",
+        "web-tool"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://markoblogo.github.io/AsciiTheme/"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/AsciiTheme"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/VVQX7DtGHX0"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
+      "type": "work",
+      "section": "systems",
+      "title": "Chinese Wisdom in toki pona landing",
+      "summary": "Chinese Wisdom in toki pona is a multilingual publishing surface for classical Chinese texts translated into toki pona and sitelen pona.",
+      "canonicalUrl": "https://abvx.xyz/work/chinese-wisdom-toki-pona-landing",
+      "tags": [
+        "toki-pona",
+        "book-companion",
+        "landing",
+        "dao"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://dao-toki.abvx.xyz/"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/dao-toki"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Chinese Wisdom in toki pona",
+          "canonicalUrl": "https://abvx.xyz/books/chinese-wisdom-toki-pona",
+          "relation": "series"
+        }
+      ]
+    },
+    {
+      "type": "work",
+      "section": "systems",
+      "title": "Decision Map",
+      "summary": "Decision Map is a protocol for AI-assisted strategic decision-making in product launches, positioning and complex marketing scenarios.",
+      "canonicalUrl": "https://abvx.xyz/work/decision-map",
+      "tags": [
+        "decision-making",
+        "protocol",
+        "AI",
+        "strategic-marketing",
+        "product-launch",
+        "reasoning",
+        "workflow",
+        "systems"
+      ],
+      "links": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/decision-map"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
+      "type": "work",
+      "section": "systems",
+      "title": "git-tweet",
+      "summary": "git-tweet is a lightweight development communication system for turning repository activity into structured operational signals and updates.",
+      "canonicalUrl": "https://abvx.xyz/work/git-tweet",
+      "tags": [
+        "tool",
+        "developer-utility"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://git-tweet.abvx.xyz/"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/git-tweet"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
+      "type": "work",
+      "section": "systems",
+      "title": "ID",
+      "summary": "ID is a protocol layer for structured identity, operational references and system coordination inside the AI-native ecosystem.",
+      "canonicalUrl": "https://abvx.xyz/work/id",
+      "tags": [
+        "ai-dev",
+        "tool"
+      ],
+      "links": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/ID"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
+      "type": "work",
+      "section": "systems",
+      "title": "LLMO site/platform",
+      "summary": "LLMO Site/Platform is an AI-native visibility and optimization platform focused on structured machine-readable content and discovery systems.",
+      "canonicalUrl": "https://abvx.xyz/work/llmo-site",
+      "tags": [
+        "llmo",
+        "ai-search",
+        "book-companion",
+        "web-service"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://llmo.abvx.xyz/"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/llmo-abvx"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
+      "type": "work",
+      "section": "systems",
+      "title": "SET",
+      "summary": "SET is an orchestration layer for AI-native operational tools, workflows and structured development systems.",
+      "canonicalUrl": "https://abvx.xyz/work/set",
+      "tags": [
+        "ai-dev",
+        "tool"
+      ],
+      "links": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/SET"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
+      "type": "work",
+      "section": "systems",
+      "title": "sitelen-emoji-truth",
+      "summary": "sitelen-emoji-truth is an experimental visual-language protocol exploring emoji-based semantic compression and symbolic communication systems.",
+      "canonicalUrl": "https://abvx.xyz/work/sitelen-emoji-truth",
+      "tags": [
+        "toki-pona",
+        "sitelen-emoji",
+        "protocol",
+        "publishing"
+      ],
+      "links": [
+        {
+          "type": "substack",
+          "label": "Substack",
+          "url": "https://abvx.substack.com/p/freezing-a-moving-target-a-source"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/sitelen-emoji-truth"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
+      "type": "work",
+      "section": "systems",
+      "title": "Stoic Wisdom in Toki Pona landing",
+      "summary": "Stoic Wisdom in Toki Pona is a publishing and reading environment for Stoic classics translated into toki pona and sitelen pona.",
+      "canonicalUrl": "https://abvx.xyz/work/stoic-wisdom-toki-pona-landing",
+      "tags": [
+        "toki-pona",
+        "stoicism",
+        "book-companion",
+        "landing"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://stoic.abvx.xyz/"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/stoic-wisdom-series"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Stoic Wisdom in Toki Pona",
+          "canonicalUrl": "https://abvx.xyz/books/stoic-wisdom-toki-pona",
+          "relation": "series"
+        }
+      ]
+    },
+    {
+      "type": "work",
+      "section": "systems",
+      "title": "Toki Pona AI translator",
+      "summary": "Toki Pona AI translator is an experimental translation interface for converting natural language into toki pona and related visual-script forms.",
+      "canonicalUrl": "https://abvx.xyz/work/toki-pona-ai-translator",
+      "tags": [
+        "toki-pona",
+        "language-ai",
+        "translator",
+        "ai-service"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://toki.abvx.xyz"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/toki-pona-translator"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/lCAFiDnP2NQ?si=HOEWm4Cr1VVRitPt"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
+      "type": "work",
+      "section": "systems",
+      "title": "Toki Pona free kits landing",
+      "summary": "Toki Pona Free Kits is a lightweight publishing environment for downloadable reader kits, free translations and companion learning resources.",
+      "canonicalUrl": "https://abvx.xyz/work/toki-pona-free-kits-landing",
+      "tags": [
+        "toki-pona",
+        "free-books",
+        "book-companion",
+        "landing"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://toki-free.abvx.xyz/"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/toki-free-kit"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Toki Pona Free Kits & Translations",
+          "canonicalUrl": "https://abvx.xyz/books/toki-pona-free-kits",
+          "relation": "series"
+        }
+      ]
+    },
+    {
+      "type": "work",
+      "section": "systems",
+      "title": "Ukrainian Modernism landing",
+      "summary": "Ukrainian Modernism Landing is a publishing surface for French translations of early twentieth-century Ukrainian modernist literature.",
+      "canonicalUrl": "https://abvx.xyz/work/ukrainian-modernism-landing",
+      "tags": [
+        "ukrainian-modernism",
+        "translation",
+        "book-companion",
+        "landing"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://ukrmodernism.abvx.xyz/"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/ukrainian-modernism"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/krXa1OzLVIs?si=RpMnZ340bGVTBz4I"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Modernisme Ukrainien",
+          "canonicalUrl": "https://abvx.xyz/books/modernisme-ukrainien",
+          "relation": "series"
+        }
+      ]
+    },
+    {
+      "type": "work",
+      "section": "systems",
+      "title": "YTMamp",
+      "summary": "YTMamp is a macOS app and browser-extension experiment that transforms YouTube Music into a Winamp-inspired player experience.",
+      "canonicalUrl": "https://abvx.xyz/work/ytmamp",
+      "tags": [
+        "macos",
+        "music",
+        "tool",
+        "youtube-music"
+      ],
+      "links": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/YTMamp"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/fHRDm8e2n-U?si=mnMXHU2qv5MIN8G6"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    }
+  ]
+}

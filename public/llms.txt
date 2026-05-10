@@ -1,26 +1,281 @@
+# ABVX public LLM index
+
 Site: https://abvx.xyz
 Name: ABVX / Anton Biletskyi-Volokh
-Summary: ABVX is the working index of Anton Biletskyi-Volokh: strategy, AI-native development, market infrastructure, web services, protocols, language experiments, books, translations, and essays.
+Summary: ABVX is the public ecosystem site for focus infrastructure, publishing lines, books, AI-native systems, language tools and standalone utilities.
+Machine-readable index: https://abvx.xyz/content-index.json
 
-Primary public routes:
-- / — overview and latest updates
-- /focus — current focus on agro-commodity trading infrastructure
-- /systems — systems catalogue for web services, AI workflows, protocols, tools, language experiments, and technical companions
-- /books — ABVX Press: books, translations, series, and publishing projects
-- /writing — Medium and Substack writing archive
-- /about — professional framing, contact, and profile links
+## Focus systems
 
-Canonical item routes:
-- /work/[slug] — non-book systems, tools, services, protocols, and research artifacts
-- /books/[slug] — book, series, translation, free-edition, and publishing detail pages
+- MN7R
+  URL: https://abvx.xyz/work/mn7r
+  Summary: MN7R is a commodity trading workflow workspace for brokerage teams running Deals, Clients and EXE inside one structured operational system.
+  Group: Trading & Brokerage Platforms
+  Tags: brokerage, agro-commodities, deal-workflows, execution, trading-workspace, market-infrastructure
 
-Content notes:
-- Each item has one canonical home but may appear in multiple sections.
-- Public content is served from the Git-based content registry for the redesigned core pages.
-- Legacy project, grouped-index, topic, profile-links, and work/contact URLs redirect to the new public IA.
+- Cropto
+  URL: https://abvx.xyz/work/cropto
+  Summary: Cropto is a prototype commodity trading platform for indexed spot trading, options and tokenized commodity-linked instruments across Ukraine, Argentina and Brazil.
+  Group: Trading & Brokerage Platforms
+  Tags: cropto, agro-commodities, trading-platform, indexed-trading, options, tokenized-assets, market-infrastructure
 
-Contact:
-- Email: a.biletskyi@gmail.com
-- LinkedIn: https://www.linkedin.com/in/abvcreative/
-- GitHub: https://github.com/markoblogo
-- Bluesky: https://bsky.app/profile/abvx.xyz
+- Cropto Monitor: Commodity Signals Terminal
+  URL: https://abvx.xyz/work/cropto-monitor
+  Summary: Cropto Monitor is a customizable commodity-signals terminal combining market data, logistics, weather, policy, risk and live situational awareness for agro-commodity markets.
+  Group: Market Intelligence, Monitoring & Indexes
+  Tags: cropto, monitoring, commodity-signals, logistics, weather, market-intelligence, dashboard, agro-commodities
+
+- UGA Index
+  URL: https://abvx.xyz/work/uga-index
+  Summary: UGA Index is a benchmark platform for daily Ukrainian grain and oilseed export price references built with the Ukrainian Grain Association.
+  Group: Market Intelligence, Monitoring & Indexes
+  Tags: agro-commodities, market-data, price-indexes, benchmark, Ukraine, grain-markets, oilseeds, market-infrastructure
+
+- Last30Days Cropto
+  URL: https://abvx.xyz/work/last30days-cropto
+  Summary: Last30Days Cropto is an agro-commodity intelligence desk that aggregates market mentions, signals and AI-generated summaries across web, news and social sources.
+  Group: Market Intelligence, Monitoring & Indexes
+  Tags: market-intelligence, monitoring, AI-summary, agro-commodities, signals, news-analysis, social-monitoring, cropto
+
+- Cropto market risk tools deck
+  URL: https://abvx.xyz/work/cropto-market-risk-deck
+  Summary: Cropto Market Risk Tools Deck presents tokenized local spot-index risk infrastructure for commodity markets and programmable settlement systems.
+  Group: Market Fronts & Partner Landings
+  Tags: cropto, market-risk, deck, tokenized-assets, indexed-trading, landing, commodities
+
+- Liqua
+  URL: https://abvx.xyz/work/liqua
+  Summary: Liqua is a structured liquidity and execution layer for physical commodity markets, designed to turn fragmented brokerage activity into scalable infrastructure.
+  Group: Market Fronts & Partner Landings
+  Tags: liquidity, brokerage, execution, market-infrastructure, trading-services, agro-commodities
+
+- Trade Solution EU
+  URL: https://abvx.xyz/work/trade-solution-eu
+  Summary: Trade Solution EU is a structured commercial and logistics framework for commodity-market execution, supply-chain coordination and operational clarity.
+  Group: Market Fronts & Partner Landings
+  Tags: commodities, logistics, supply-chain, trading, execution, market-signals, landing
+
+## Publishing lines
+
+- Modernisme Ukrainien
+  URL: https://abvx.xyz/books/modernisme-ukrainien
+  Summary: French translations of early twentieth-century Ukrainian modernist literature, with critical framing, notes and companion publishing infrastructure. The line brings authors of the Ukrainian “Executed Renaissance” into a French-reading context.
+  Group: Official publishing lines
+  Tags: Ukrainian Modernism, Modernisme ukrainien, French, Ukrainian, translation, modernism, literature
+
+- Chinese Wisdom in toki pona
+  URL: https://abvx.xyz/books/chinese-wisdom-toki-pona
+  Summary: A compact multilingual line bringing classical Chinese texts into toki pona, sitelen pona and parallel reading formats. It treats minimalist language as a tool for slow reading, comparison and philosophical compression.
+  Group: Official publishing lines
+  Tags: Toki Pona, Chinese philosophy, classical texts, translation, sitelen pona, multilingual edition
+
+- Stoic Wisdom in Toki Pona
+  URL: https://abvx.xyz/books/stoic-wisdom-toki-pona
+  Summary: Stoic classics translated into toki pona and sitelen pona, designed for slow reading, visual practice and minimalist philosophical reflection. The line uses a tiny language to make ethical and practical thought more inspectable.
+  Group: Official publishing lines
+  Tags: Toki Pona, Stoicism, philosophy, translation, sitelen pona, classical texts
+
+- Toki Pona Free Kits & Translations
+  URL: https://abvx.xyz/books/toki-pona-free-kits
+  Summary: Free downloadable Toki Pona reader kits, short translations and companion materials for learning, reading and experimenting with minimalist language. This line supports the paid book series and gives readers a low-friction entry point.
+  Group: Official publishing lines
+  Tags: Toki Pona, free books, translation, learning, sitelen pona, reader kits
+
+## Books
+
+- Бог був зайнятий каналізацією
+  URL: https://abvx.xyz/books/boh-buv-zainiatyi-kanalizatsiieiu
+  Summary: Абсурдистська повість про колишнього художника й майстра з ремонту Джонатана Свонсона, який напередодні Різдва вирушає до лікарні через аварію в каналізації й потрапляє в ніч дивних зустрічей. Темна, смішна й тиха історія про самотність, віру, тіло, роботу, сніг і маленькі форми милосердя.
+  Group: Fiction
+  Tags: fiction, absurdist fiction, literary novella, Ukrainian, original, faith, loneliness, Christmas
+
+- God Was Busy With the Plumbing
+  URL: https://abvx.xyz/books/god-was-busy-with-the-plumbing
+  Summary: An English translation of the Ukrainian absurdist literary novella about Jonathan Swanson, a former artist turned handyman, whose quiet pre-Christmas days collapse into a strange hospital night of plumbing, doctors, prophets, Brahms, and possible secret space programs. A darkly funny story about loneliness, faith, work, the body, snow, and the small mercies that remain when the world cannot be fully repaired.
+  Group: Fiction
+  Tags: fiction, absurdist fiction, literary novella, English, translation, Ukrainian original, faith, loneliness
+
+- Dark Gestalt: How Brands Hijack Emotions, Distort Perception, and Manufacture Desire
+  URL: https://abvx.xyz/books/dark-gestalt
+  Summary: A sharp exploration of how brands shape emotion, perception and desire, and how modern behavioral design can manipulate decisions through symbols, shortcuts, narratives and AI-driven persuasion.
+  Group: Business, AI & Marketing
+  Tags: branding, marketing psychology, behavioral design, perception, influence, dark patterns, AI, English
+
+- Future-Proof Your Productivity: Navigating the AI Decade to Accelerate Your Output, Innovate Your Role, and Thrive
+  URL: https://abvx.xyz/books/future-proof-productivity
+  Summary: A practical manual for using AI, automation, no-code tools and workflow design to increase output, reduce routine work and stay professionally resilient through the AI decade.
+  Group: Business, AI & Marketing
+  Tags: productivity, AI, automation, no-code, workflows, future of work, knowledge work, English
+
+- LLMO: The Next SEO Revolution
+  URL: https://abvx.xyz/books/llmo-seo-revolution
+  Summary: A practical guide to LLM Optimization: the emerging discipline of making brands, ideas and content visible to AI systems in an age of zero-click search and intelligent answers.
+  Group: Business, AI & Marketing
+  Tags: LLMO, AI search, digital visibility, content strategy, SEO, marketing, AI, English
+
+- Toki Pona and the Machine Mind
+  URL: https://abvx.xyz/books/toki-pona-machine-mind
+  Summary: A field guide to using Toki Pona as a design lens for cleaner prompts, constrained prompt languages, small language models and more inspectable human-AI systems.
+  Group: Language, AI & Toki Pona
+  Tags: Toki Pona, AI, prompt engineering, small language models, constrained languages, language systems, sitelen pona, English
+
+- A Christmas Carol in Toki Pona
+  URL: https://abvx.xyz/books/christmas-carol-toki-pona
+  Summary: A bilingual Toki Pona edition of Dickens’ A Christmas Carol, pairing the classic story of Scrooge’s transformation with minimalist language, sitelen pona and a calm experiment in literary compression.
+  Group: Language, AI & Toki Pona
+  Tags: Toki Pona, sitelen pona, Charles Dickens, A Christmas Carol, translation, bilingual edition, minimalist language, classic literature
+
+- Cicero: On Duties in toki pona
+  URL: https://abvx.xyz/books/cicero-toki-pona
+  Summary: A Toki Pona and sitelen pona edition of Cicero’s On Duties, reframing a classic manual of moral decision-making through minimal language, slow reading and visual repetition.
+  Group: Stoic Wisdom in Toki Pona
+  Tags: Toki Pona, sitelen pona, Cicero, De Officiis, Stoicism, ethics, moral philosophy, translation
+
+- Dao De Jing in Toki Pona
+  URL: https://abvx.xyz/books/dao-de-jing-toki-pona
+  Summary: An experimental edition of the Dao De Jing pairing the classical Chinese text with a Toki Pona translation designed for sitelen pona, bringing two compact systems of philosophical writing into quiet visual dialogue.
+  Group: Chinese Wisdom in toki pona
+  Tags: Toki Pona, sitelen pona, Dao De Jing, Tao Te Ching, Laozi, Classical Chinese, Chinese philosophy, multilingual edition
+
+- Epictetus: The Enchiridion in toki pona
+  URL: https://abvx.xyz/books/epictetus-enchiridion-toki-pona
+  Summary: A fixed-layout Toki Pona and sitelen pona edition of Epictetus’ Enchiridion, turning one of Stoicism’s most practical handbooks into a compact, visual and low-noise reading experience.
+  Group: Stoic Wisdom in Toki Pona
+  Tags: Toki Pona, sitelen pona, Stoicism, Epictetus, Enchiridion, philosophy, translation, minimalist language
+
+- Meditations of Marcus Aurelius in Toki Pona
+  URL: https://abvx.xyz/books/marcus-aurelius-meditations-toki-pona
+  Summary: A Toki Pona and sitelen pona edition of Marcus Aurelius’ Meditations, translating Stoic reflection into a radically minimal language of clarity, restraint and visual form.
+  Group: Stoic Wisdom in Toki Pona
+  Tags: Toki Pona, sitelen pona, Marcus Aurelius, Meditations, Stoicism, philosophy, translation, minimalist language
+
+- Seneca: On the Shortness of Life in toki pona
+  URL: https://abvx.xyz/books/seneca-shortness-of-life-toki-pona
+  Summary: A Toki Pona and sitelen pona edition of Seneca’s On the Shortness of Life, compressing a classic Stoic essay on time, attention and intention into a slower, clearer reading format.
+  Group: Stoic Wisdom in Toki Pona
+  Tags: Toki Pona, sitelen pona, Stoicism, Seneca, On the Shortness of Life, philosophy, translation, minimalist language
+
+- Sunzi: The Art of War in toki pona
+  URL: https://abvx.xyz/books/sunzi-art-of-war-toki-pona
+  Summary: A multilingual edition of The Art of War with Traditional Chinese, English, toki pona and a sitelen-pona-ready reading layer, designed for slow comparison, strategy study and minimalist interpretation.
+  Group: Chinese Wisdom in toki pona
+  Tags: Toki Pona, sitelen pona, Sunzi, The Art of War, Classical Chinese, Traditional Chinese, English, multilingual edition
+
+- Free Kit / Reader’s Guide Chinese Wisdom in toki pona
+  URL: https://abvx.xyz/books/chinese-wisdom-reader-guide
+  Summary: Free reader’s guide for Chinese Wisdom in toki pona.
+  Group: Toki Pona Free Kits & Translations
+  Tags: toki-pona, free-book, reader-guide, chinese-wisdom
+
+- Heart Sutra in toki pona / sitelen pona
+  URL: https://abvx.xyz/books/heart-sutra-toki-pona
+  Summary: Heart Sutra edition with traditional Chinese, Toki Pona, English, and sitelen pona.
+  Group: Toki Pona Free Kits & Translations
+  Tags: toki-pona, free-book, heart-sutra, chinese-wisdom
+
+- The Toki Pona Reader’s Kit
+  URL: https://abvx.xyz/books/toki-pona-readers-kit
+  Summary: Free reader kit for beginning to read Toki Pona editions.
+  Group: Toki Pona Free Kits & Translations
+  Tags: toki-pona, free-book, reader-kit, stoicism
+
+- Hryhorii Kosynka: Dans les seigles et autres nouvelles
+  URL: https://abvx.xyz/books/hryhorii-kosynka-dans-les-seigles
+  Summary: French translation from the Ukrainian Modernism series.
+  Group: Ukrainian Modernism
+  Tags: ukrainian-modernism, translation, french, kosynka
+
+- Iouri Ianovski: Le Maitre du navire
+  URL: https://abvx.xyz/books/iouri-ianovski-le-maitre-du-navire
+  Summary: La première traduction française intégrale du roman maritime et cinématographique d’Iouri Ianovski, œuvre fondatrice du modernisme ukrainien et de l’avant-garde des années 1920.
+  Group: Ukrainian Modernism
+  Tags: Modernisme ukrainien, renaissance fusillée, Iouri Ianovski, Ukrainian literature, French, translation, fiction, cinema
+
+- Maik Johansen: Le Voyage du savant docteur Leonardo
+  URL: https://abvx.xyz/books/maik-johansen-le-voyage-du-savant-docteur-leonardo
+  Summary: Une anthologie française de Maïk Johansen, écrivain majeur du modernisme ukrainien, où roman-paysage, essais littéraires, reportage poétique, satire et expérimentation formelle révèlent une voix libre, ludique et interrompue par la Grande Terreur.
+  Group: Ukrainian Modernism
+  Tags: Modernisme ukrainien, renaissance fusillée, Maïk Johansen, Ukrainian literature, French, translation, fiction, modernism
+
+- Mykola Khvylovy: La zone du sanatorium
+  URL: https://abvx.xyz/books/mykola-khvylovy-la-zone-du-sanatorium
+  Summary: Une traduction française de récits majeurs de Mykola Khvylovy, figure centrale du modernisme ukrainien des années 1920 et de la « renaissance fusillée ».
+  Group: Ukrainian Modernism
+  Tags: Modernisme ukrainien, renaissance fusillée, Mykola Khvylovy, Ukrainian literature, French, translation, fiction, modernism
+
+- Valerian Pidmohylny: La Ville
+  URL: https://abvx.xyz/books/valerian-pidmohylny-la-ville
+  Summary: Une traduction française du grand roman urbain de Valerian Pidmohylny, où Kyiv devient une force de transformation morale, sociale et intime pour un jeune provincial venu conquérir la ville.
+  Group: Ukrainian Modernism
+  Tags: Modernisme ukrainien, renaissance fusillée, Valerian Pidmohylny, Ukrainian literature, Kyiv, French, translation, fiction
+
+## AI-native systems
+
+- AGENTS.md Generator
+  URL: https://abvx.xyz/work/agents-md-generator
+  Summary: AGENTS.md Generator is an operational workflow surface for AI-assisted development systems, agent coordination and structured coding workflows.
+  Group: Workflow & Orchestration
+  Tags: ai-dev, agents, documentation, workflow
+
+- AsciiTheme
+  URL: https://abvx.xyz/work/ascii-theme
+  Summary: AsciiTheme is a UI and CSS system for light, dark and ASCII-inspired development interfaces inside the broader AI-native tooling ecosystem.
+  Group: Development Surfaces & Interfaces
+  Tags: ui, theme, ascii, web-tool
+
+- LLMO site/platform
+  URL: https://abvx.xyz/work/llmo-site
+  Summary: LLMO Site/Platform is an AI-native visibility and optimization platform focused on structured machine-readable content and discovery systems.
+  Group: Development Surfaces & Interfaces
+  Tags: llmo, ai-search, book-companion, web-service
+
+- ABVX Lab
+  URL: https://abvx.xyz/work/abvx-lab
+  Summary: ABVX Lab is the ecosystem front for AI-native development systems, protocols, workflows and operational tooling.
+  Group: Development Surfaces & Interfaces
+  Tags: lab, experiments, ai-dev
+
+- git-tweet
+  URL: https://abvx.xyz/work/git-tweet
+  Summary: git-tweet is a lightweight development communication system for turning repository activity into structured operational signals and updates.
+  Group: Protocols & Decision Systems
+  Tags: tool, developer-utility
+
+- ID
+  URL: https://abvx.xyz/work/id
+  Summary: ID is a protocol layer for structured identity, operational references and system coordination inside the AI-native ecosystem.
+  Group: Protocols & Decision Systems
+  Tags: ai-dev, tool
+
+- SET
+  URL: https://abvx.xyz/work/set
+  Summary: SET is an orchestration layer for AI-native operational tools, workflows and structured development systems.
+  Group: Workflow & Orchestration
+  Tags: ai-dev, tool
+
+- Decision Map
+  URL: https://abvx.xyz/work/decision-map
+  Summary: Decision Map is a protocol for AI-assisted strategic decision-making in product launches, positioning and complex marketing scenarios.
+  Group: Protocols & Decision Systems
+  Tags: decision-making, protocol, AI, strategic-marketing, product-launch, reasoning, workflow, systems
+
+## Standalone utilities
+
+- ABVX Shortener
+  URL: https://abvx.xyz/work/abvx-shortener
+  Summary: ABVX Shortener is a lightweight web and browser-extension system for shortened operational links and compact URL workflows.
+  Group: Standalone Utilities & Experiments
+  Tags: web-service, utility, shortener
+
+- YTMamp
+  URL: https://abvx.xyz/work/ytmamp
+  Summary: YTMamp is a macOS app and browser-extension experiment that transforms YouTube Music into a Winamp-inspired player experience.
+  Group: Standalone Utilities & Experiments
+  Tags: macos, music, tool, youtube-music
+
+## Notes for crawlers and LLM agents
+
+- Canonical pages use https://abvx.xyz URLs.
+- Public content source files live under /content in the repository.
+- Review flags and editorial notes are intentionally excluded from this public index.
+- Use /content-index.json when a structured public inventory is needed.

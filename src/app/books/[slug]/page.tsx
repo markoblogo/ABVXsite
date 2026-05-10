@@ -15,6 +15,7 @@ import {
 } from '@/lib/seo';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import type { ReactNode } from 'react';
 
 export function generateStaticParams() {
   return getBooks().map((book) => ({ slug: book.slug }));
@@ -36,6 +37,25 @@ function formatFormats(formats?: string[]): string | undefined {
     'free-editions': 'free editions',
   };
   return formats.map((format) => labels[format] || format).join(', ');
+}
+
+function purchaseLinks(book: Book) {
+  return book.links.filter((link) => ['amazon', 'kindle', 'paperback', 'pdf'].includes(link.type));
+}
+
+function renderLinks(links: Book['links']): ReactNode {
+  return (
+    <span className="book-context-links">
+      {links.map((link, index) => (
+        <span key={`${link.type}-${link.url}`}>
+          {index > 0 ? ', ' : null}
+          <a href={link.url} target="_blank" rel="noreferrer">
+            {link.label || link.type}
+          </a>
+        </span>
+      ))}
+    </span>
+  );
 }
 
 function tagOverlap(a: string[], b: string[]): number {
@@ -126,11 +146,13 @@ export default async function BookDetailPage({
         return a.item.sortRank - b.item.sortRank;
       })
       .slice(0, 12);
+    const seriesSiteLinks = book.links.filter((link) => link.type === 'site' || link.type === 'series');
     const contextRows = [
       ['Type', 'Series'],
       ['Line', book.group || 'Official publishing lines'],
       book.status ? ['Status', book.status] : undefined,
-    ].filter(Boolean) as [string, string][];
+      seriesSiteLinks.length ? ['Site', renderLinks(seriesSiteLinks)] : undefined,
+    ].filter(Boolean) as [string, ReactNode][];
 
     return (
       <article className="detail-page detail-page--book detail-page--series">
@@ -220,13 +242,18 @@ export default async function BookDetailPage({
     .slice(0, 6);
   const youtube = book.links.find((link) => link.type === 'youtube');
   const videoUrl = youtube ? youtubeEmbedUrl(youtube.url) : undefined;
-  const formats = formatFormats(book.formats);
+  const formats = formatFormats(book.availableFormats?.length ? book.availableFormats : book.formats);
+  const buyLinks = purchaseLinks(book);
   const contextRows = [
+    book.language ? ['Language', book.language] : undefined,
+    book.author ? ['Author', book.author] : undefined,
+    book.translator ? ['Translator', book.translator] : undefined,
     book.series ? ['Series', book.series] : undefined,
     book.category ? ['Line', book.category] : undefined,
     ['Type', book.type],
     formats ? ['Formats', formats] : undefined,
-  ].filter(Boolean) as [string, string][];
+    buyLinks.length ? ['Purchase links', renderLinks(buyLinks)] : undefined,
+  ].filter(Boolean) as [string, ReactNode][];
 
   return (
     <article className="detail-page detail-page--book">

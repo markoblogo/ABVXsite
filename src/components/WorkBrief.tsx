@@ -1,4 +1,5 @@
 import type { Artifact } from '@/content';
+import { operationalLinks } from '@/content/link-utils';
 
 function uniqueTexts(texts: string[]): string[] {
   const seen = new Set<string>();
@@ -12,6 +13,10 @@ function uniqueTexts(texts: string[]): string[] {
 
 export default function WorkBrief({ artifact }: { artifact: Artifact }) {
   const texts = uniqueTexts([artifact.description || '', artifact.summary]);
+  const publicSections = uniqueTexts([artifact.primarySection, ...artifact.appearsIn]);
+  const links = operationalLinks(artifact.links);
+  const siteLink = links.find((link) => link.type === 'site' || link.type === 'demo');
+  const githubLink = links.find((link) => link.type === 'github');
 
   return (
     <section className="work-brief" aria-labelledby="work-brief-title">
@@ -23,7 +28,7 @@ export default function WorkBrief({ artifact }: { artifact: Artifact }) {
         ))}
       </div>
       <aside className="work-brief__context" aria-label="Project context">
-        <div className="eyebrow">Where it fits</div>
+        <div className="eyebrow">Key facts</div>
         <dl>
           <div>
             <dt>Type</dt>
@@ -33,10 +38,34 @@ export default function WorkBrief({ artifact }: { artifact: Artifact }) {
             <dt>Status</dt>
             <dd>{artifact.status}</dd>
           </div>
+          <div>
+            <dt>Section</dt>
+            <dd>{publicSections.join(', ')}</dd>
+          </div>
           {artifact.group ? (
             <div>
-              <dt>Group</dt>
+              <dt>Related ecosystem</dt>
               <dd>{artifact.group}</dd>
+            </div>
+          ) : null}
+          {siteLink ? (
+            <div>
+              <dt>Canonical site</dt>
+              <dd>
+                <a href={siteLink.url} target="_blank" rel="noreferrer">
+                  {siteLink.label || 'Site'}
+                </a>
+              </dd>
+            </div>
+          ) : null}
+          {githubLink ? (
+            <div>
+              <dt>GitHub</dt>
+              <dd>
+                <a href={githubLink.url} target="_blank" rel="noreferrer">
+                  {githubLink.label || 'GitHub'}
+                </a>
+              </dd>
             </div>
           ) : null}
         </dl>

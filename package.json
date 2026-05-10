@@ -13,6 +13,7 @@
     "content:new-book": "node scripts/new-book.mjs",
     "content:new-work": "node scripts/new-work.mjs",
     "content:new-series": "node scripts/new-series.mjs",
+    "llms:generate": "node scripts/generate-llm-index.mjs",
     "content:validate": "node scripts/validate-content.mjs",
     "content:review": "node scripts/content-review-report.mjs"
   },

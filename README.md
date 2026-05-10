@@ -8,7 +8,7 @@
 
 Production source for [abvx.xyz](https://abvx.xyz/): the public ABVX ecosystem site for market infrastructure, AI-native systems, publishing, language experiments, books, and writing.
 
-The site is built with Next.js App Router, TypeScript, React, local Markdown content files, and local media assets.
+The site is built with Next.js App Router, TypeScript, React, local Markdown content files, local media assets, structured metadata, and public LLM-readable indexes.
 
 ## Public Structure
 
@@ -25,6 +25,8 @@ The current production information architecture is:
 
 Legacy public paths redirect into the current structure through `next.config.ts`.
 
+Detail pages include visible breadcrumb links and entity-oriented "Key facts" blocks so users, search engines, and LLM agents can understand where each item belongs.
+
 ## Stack
 
 - Next.js 16 App Router
@@ -33,6 +35,9 @@ Legacy public paths redirect into the current structure through `next.config.ts`
 - Tailwind CSS v4 pipeline
 - File-based content in `/content`
 - Local public media in `/public/media`
+- Page-specific Open Graph / Twitter images
+- JSON-LD for global identity, collection pages, work items, books, series, item lists, and breadcrumbs
+- Public LLM indexes in `/llms.txt` and `/content-index.json`
 - RSS ingestion for `/writing`
 - Vercel production deployment
 
@@ -118,7 +123,13 @@ Generate the editorial review report:
 npm run content:review
 ```
 
-Run both before build or deployment.
+Generate the public LLM-readable indexes after content changes:
+
+```bash
+npm run llms:generate
+```
+
+Run validation, review, and LLM index generation before build or deployment when content has changed.
 
 ## Verification
 
@@ -127,6 +138,7 @@ Standard checks before pushing:
 ```bash
 npm run content:validate
 npm run content:review
+npm run llms:generate
 npm run lint
 npm run build
 ```
@@ -150,6 +162,7 @@ git checkout main
 git pull origin main
 npm run content:validate
 npm run content:review
+npm run llms:generate
 npm run lint
 npm run build
 git push origin main
@@ -183,12 +196,30 @@ https://abvx.xyz
 Important files:
 
 - `src/app/layout.tsx` - global metadata, JSON-LD, social profile data.
-- `src/app/sitemap.ts` - generated sitemap from the file-based content layer.
+- `src/lib/seo.ts` - shared metadata helpers, JSON-LD builders, OG image metadata, breadcrumbs.
+- `src/app/sitemap.ts` - generated sitemap from the file-based content layer. Uses `updatedAt` / `publishedAt` when available and avoids build-time `lastmod` for unchanged content.
 - `src/app/robots.ts` - robots configuration.
 - `public/llms.txt` - LLM-readable public site map.
+- `public/content-index.json` - machine-readable public index of content items with canonical URLs, summaries, tags, links, dates, and relationships.
+- `public/og/` - generated social preview images for core sections.
 - `next.config.ts` - production redirects and compatibility aliases.
 
+Current metadata behavior:
+
+- Core pages expose page-specific Open Graph and Twitter images.
+- `/work/[slug]` uses project media as social preview when available.
+- `/books/[slug]` uses book covers or series hero images when available.
+- Work detail pages expose structured facts: type, status, section, canonical site, GitHub, and related ecosystem.
+- Book detail pages expose structured facts: language, author, translator, official series, related editions, formats, and purchase links.
+- JSON-LD includes `Person`, `WebSite`, `CollectionPage`, `AboutPage`, `ItemList`, work item entities, `Book`, `CreativeWorkSeries`, and `BreadcrumbList`.
+
 Before production, verify that rendered pages do not expose local paths, preview URLs, debug labels, or internal editorial flags.
+
+Regenerate LLM indexes after editing `/content`:
+
+```bash
+npm run llms:generate
+```
 
 ## Writing / RSS
 
@@ -234,4 +265,5 @@ docs/                 Editorial workflow and project documentation
 - Do not edit old registries unless a compatibility fallback requires it.
 - Do not redesign pages during content-only tasks.
 - Preserve slugs, media paths, redirects, and public URLs unless the task explicitly says otherwise.
+- Regenerate `public/llms.txt` and `public/content-index.json` after public content changes.
 - Run the full verification chain before reporting production readiness.

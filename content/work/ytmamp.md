@@ -36,13 +36,13 @@
   "primarySection": "systems",
   "group": "Standalone Utilities & Experiments",
   "media": {
-    "src": "/media/projects/ytmamp.png",
-    "alt": "YTMamp screenshot",
+    "src": "/media/work/ytmamp/hero.png",
+    "alt": "YTMamp Winamp-style YouTube Music interface",
     "role": "project-screenshot"
   },
   "heroImage": {
-    "src": "/media/projects/ytmamp.png",
-    "alt": "YTMamp screenshot",
+    "src": "/media/work/ytmamp/hero.png",
+    "alt": "YTMamp Winamp-style YouTube Music interface",
     "role": "project-screenshot"
   }
 }

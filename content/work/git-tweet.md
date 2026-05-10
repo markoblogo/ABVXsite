@@ -29,10 +29,20 @@
   "featured": false,
   "sortRank": 510,
   "needsCopyReview": false,
-  "needsMediaReview": true,
+  "needsMediaReview": false,
   "needsLinkReview": false,
   "editorialNotes": "Migrated from TypeScript registry; review copy/media/links before final polish.",
   "primarySection": "systems",
-  "group": "Protocols & Decision Systems"
+  "group": "Protocols & Decision Systems",
+  "media": {
+    "src": "/media/work/git-tweet/hero.png",
+    "alt": "git-tweet workflow interface",
+    "role": "project-screenshot"
+  },
+  "heroImage": {
+    "src": "/media/work/git-tweet/hero.png",
+    "alt": "git-tweet workflow interface",
+    "role": "project-screenshot"
+  }
 }
 ---

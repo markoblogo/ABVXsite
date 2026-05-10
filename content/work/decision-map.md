@@ -32,8 +32,18 @@
   ],
   "featured": true,
   "needsCopyReview": false,
-  "needsMediaReview": true,
-  "needsLinkReview": false
+  "needsMediaReview": false,
+  "needsLinkReview": false,
+  "media": {
+    "src": "/media/work/decision-map/hero.png",
+    "alt": "Decision Map protocol interface",
+    "role": "project-screenshot"
+  },
+  "heroImage": {
+    "src": "/media/work/decision-map/hero.png",
+    "alt": "Decision Map protocol interface",
+    "role": "project-screenshot"
+  }
 }
 ---
 

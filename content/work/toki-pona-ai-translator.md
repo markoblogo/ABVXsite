@@ -42,13 +42,13 @@
   "primarySection": "systems",
   "group": "Publishing systems & protocols",
   "media": {
-    "src": "/media/projects/toki-pona-ai-translator.png",
-    "alt": "Toki Pona AI translator screenshot",
+    "src": "/media/work/toki-pona-ai-translator/hero.png",
+    "alt": "Toki Pona AI translator interface",
     "role": "project-screenshot"
   },
   "heroImage": {
-    "src": "/media/projects/toki-pona-ai-translator.png",
-    "alt": "Toki Pona AI translator screenshot",
+    "src": "/media/work/toki-pona-ai-translator/hero.png",
+    "alt": "Toki Pona AI translator interface",
     "role": "project-screenshot"
   }
 }

@@ -41,13 +41,13 @@
   "primarySection": "systems",
   "group": "Development Surfaces & Interfaces",
   "media": {
-    "src": "/media/projects/ascii-theme.png",
-    "alt": "AsciiTheme screenshot",
+    "src": "/media/work/asciitheme/hero.png",
+    "alt": "AsciiTheme interface preview",
     "role": "project-screenshot"
   },
   "heroImage": {
-    "src": "/media/projects/ascii-theme.png",
-    "alt": "AsciiTheme screenshot",
+    "src": "/media/work/asciitheme/hero.png",
+    "alt": "AsciiTheme interface preview",
     "role": "project-screenshot"
   }
 }

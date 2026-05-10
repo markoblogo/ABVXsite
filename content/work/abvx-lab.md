@@ -30,10 +30,20 @@
   "featured": false,
   "sortRank": 500,
   "needsCopyReview": false,
-  "needsMediaReview": true,
+  "needsMediaReview": false,
   "needsLinkReview": false,
   "editorialNotes": "Migrated from TypeScript registry; review copy/media/links before final polish.",
   "primarySection": "systems",
-  "group": "Development Surfaces & Interfaces"
+  "group": "Development Surfaces & Interfaces",
+  "media": {
+    "src": "/media/work/abvx-lab/hero.png",
+    "alt": "ABVX Lab ecosystem landing page",
+    "role": "landing-screenshot"
+  },
+  "heroImage": {
+    "src": "/media/work/abvx-lab/hero.png",
+    "alt": "ABVX Lab ecosystem landing page",
+    "role": "landing-screenshot"
+  }
 }
 ---

@@ -40,13 +40,13 @@
   "primarySection": "systems",
   "group": "Standalone Utilities & Experiments",
   "media": {
-    "src": "/media/projects/abvx-shortener.png",
-    "alt": "ABVX Shortener screenshot",
+    "src": "/media/work/abvx-shortener/hero.png",
+    "alt": "ABVX Shortener interface",
     "role": "project-screenshot"
   },
   "heroImage": {
-    "src": "/media/projects/abvx-shortener.png",
-    "alt": "ABVX Shortener screenshot",
+    "src": "/media/work/abvx-shortener/hero.png",
+    "alt": "ABVX Shortener interface",
     "role": "project-screenshot"
   }
 }

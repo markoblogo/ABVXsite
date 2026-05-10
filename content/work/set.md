@@ -24,10 +24,20 @@
   "featured": false,
   "sortRank": 530,
   "needsCopyReview": false,
-  "needsMediaReview": true,
+  "needsMediaReview": false,
   "needsLinkReview": false,
   "editorialNotes": "Migrated from TypeScript registry; review copy/media/links before final polish.",
   "primarySection": "systems",
-  "group": "Workflow & Orchestration"
+  "group": "Workflow & Orchestration",
+  "media": {
+    "src": "/media/work/set/hero.png",
+    "alt": "SET orchestration system interface",
+    "role": "project-screenshot"
+  },
+  "heroImage": {
+    "src": "/media/work/set/hero.png",
+    "alt": "SET orchestration system interface",
+    "role": "project-screenshot"
+  }
 }
 ---

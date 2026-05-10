@@ -36,14 +36,14 @@
   "primarySection": "systems",
   "group": "Workflow & Orchestration",
   "media": {
-    "src": "/media/projects/agents-md-generator.png",
-    "alt": "AGENTS.md Generator landing screenshot",
-    "role": "landing-screenshot"
+    "src": "/media/work/agentsmd-generator/hero.png",
+    "alt": "AGENTS.md Generator interface",
+    "role": "project-screenshot"
   },
   "heroImage": {
-    "src": "/media/projects/agents-md-generator.png",
-    "alt": "AGENTS.md Generator landing screenshot",
-    "role": "landing-screenshot"
+    "src": "/media/work/agentsmd-generator/hero.png",
+    "alt": "AGENTS.md Generator interface",
+    "role": "project-screenshot"
   }
 }
 ---

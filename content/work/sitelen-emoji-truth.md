@@ -37,14 +37,14 @@
   "primarySection": "systems",
   "group": "Publishing systems & protocols",
   "media": {
-    "src": "/media/projects/sitelen-emoji-truth.png",
-    "alt": "sitelen-emoji-truth cover",
-    "role": "mockup"
+    "src": "/media/work/sitelen-emoji-truth/hero.jpg",
+    "alt": "sitelen-emoji-truth protocol preview",
+    "role": "project-screenshot"
   },
   "heroImage": {
-    "src": "/media/projects/sitelen-emoji-truth.png",
-    "alt": "sitelen-emoji-truth cover",
-    "role": "mockup"
+    "src": "/media/work/sitelen-emoji-truth/hero.jpg",
+    "alt": "sitelen-emoji-truth protocol preview",
+    "role": "project-screenshot"
   }
 }
 ---

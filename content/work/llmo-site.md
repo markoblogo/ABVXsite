@@ -37,14 +37,14 @@
   "primarySection": "systems",
   "group": "Development Surfaces & Interfaces",
   "media": {
-    "src": "/media/projects/llmo-site.png",
-    "alt": "LLMO site screenshot",
-    "role": "project-screenshot"
+    "src": "/media/work/llmo-site-platform/hero.png",
+    "alt": "LLMO platform interface",
+    "role": "landing-screenshot"
   },
   "heroImage": {
-    "src": "/media/projects/llmo-site.png",
-    "alt": "LLMO site screenshot",
-    "role": "project-screenshot"
+    "src": "/media/work/llmo-site-platform/hero.png",
+    "alt": "LLMO platform interface",
+    "role": "landing-screenshot"
   }
 }
 ---

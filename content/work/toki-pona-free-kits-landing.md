@@ -6,7 +6,7 @@
   "status": "live",
   "visibility": "public",
   "title": "Toki Pona free kits landing",
-  "summary": "Landing page for free Toki Pona kits and translations with direct downloads.",
+  "summary": "Toki Pona Free Kits is a lightweight publishing environment for downloadable reader kits, free translations and companion learning resources.",
   "tags": [
     "toki-pona",
     "free-books",
@@ -52,3 +52,16 @@
   ]
 }
 ---
+
+Toki Pona Free Kits is a free-access publishing and learning environment connected to the broader ABVX toki pona ecosystem.
+
+The project provides:
+- downloadable reader kits,
+- short translations,
+- companion materials,
+- experimental reading resources,
+- entry-level language tools.
+
+It is designed as a low-friction entry point into toki pona, sitelen pona and the surrounding publishing lines.
+
+The project supports both casual exploration and deeper movement into the larger language, philosophy and translation ecosystem.

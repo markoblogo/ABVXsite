@@ -6,7 +6,7 @@
   "status": "live",
   "visibility": "public",
   "title": "AsciiTheme",
-  "summary": "AsciiTheme is a UI and CSS system for light, dark and ASCII-inspired development interfaces within the broader AI-native tooling ecosystem.",
+  "summary": "AsciiTheme is a UI and CSS system for light, dark and ASCII-inspired development interfaces inside the broader AI-native tooling ecosystem.",
   "tags": [
     "ui",
     "theme",
@@ -53,4 +53,12 @@
 }
 ---
 
-A framework-agnostic micro-package for adding an experimental ASCII visual theme mode to websites.
+AsciiTheme is a lightweight interface and CSS system designed around ASCII-inspired visual language and low-noise operational interfaces.
+
+The project includes:
+- light and dark themes,
+- ASCII-inspired interface variants,
+- development-oriented UI surfaces,
+- minimal visual systems.
+
+AsciiTheme belongs to the broader AI-native ecosystem as a development-interface layer rather than a standalone design experiment.

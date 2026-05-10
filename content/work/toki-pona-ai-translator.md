@@ -6,7 +6,7 @@
   "status": "live",
   "visibility": "public",
   "title": "Toki Pona AI translator",
-  "summary": "Playful translator from any language into Toki Pona, sitelen pona and sitelen emoji.",
+  "summary": "Toki Pona AI translator is an experimental translation interface for converting natural language into toki pona and related visual-script forms.",
   "tags": [
     "toki-pona",
     "language-ai",
@@ -53,3 +53,13 @@
   }
 }
 ---
+
+Toki Pona AI translator is an experimental language interface built around toki pona translation workflows.
+
+The system explores how AI-assisted translation, constrained language systems and visual-script interpretation can work together inside a minimal linguistic environment.
+
+The project functions both as:
+- a practical translation tool,
+- and a research surface for simplified semantic systems.
+
+The translator belongs to the broader publishing and language ecosystem around toki pona, sitelen pona and minimalist communication protocols.

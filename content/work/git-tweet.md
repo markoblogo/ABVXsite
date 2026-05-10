@@ -46,3 +46,11 @@
   }
 }
 ---
+
+git-tweet is a lightweight operational communication layer for development workflows.
+
+The project transforms repository activity and development-state information into structured, readable operational signals.
+
+Originally conceived as a standalone utility, git-tweet now belongs to the broader AI-native ecosystem as part of the workflow and coordination layer around structured development communication.
+
+The project focuses on visibility, operational continuity and lightweight signaling inside active development systems.

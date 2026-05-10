@@ -51,3 +51,13 @@
   }
 }
 ---
+
+ABVX Shortener is a compact operational-link system designed for lightweight sharing and simplified URL workflows.
+
+The project combines:
+- a web shortening surface,
+- browser-extension functionality,
+- compact operational routing,
+- lightweight link management.
+
+The system is intentionally minimal and utility-oriented, existing outside the larger ecosystem structures as a standalone operational tool.

@@ -6,7 +6,7 @@
   "status": "live",
   "visibility": "public",
   "title": "Ukrainian Modernism landing",
-  "summary": "Bilingual editorial landing page showcasing Ukrainian modernist literature for a French-speaking audience.",
+  "summary": "Ukrainian Modernism Landing is a publishing surface for French translations of early twentieth-century Ukrainian modernist literature.",
   "tags": [
     "ukrainian-modernism",
     "translation",
@@ -57,3 +57,16 @@
   ]
 }
 ---
+
+Ukrainian Modernism Landing is a companion publishing surface for the Modernisme Ukrainien line.
+
+The project introduces French-speaking readers to early twentieth-century Ukrainian modernist literature and the cultural context of the “Executed Renaissance.”
+
+The system combines:
+- translation context,
+- author introductions,
+- publishing navigation,
+- companion resources,
+- editorial framing around the broader literary line.
+
+The goal is not only to publish translated books, but to rebuild visibility around a modernist literary ecosystem that historically remained underrepresented in European cultural mapping.

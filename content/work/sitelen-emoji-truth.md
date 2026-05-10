@@ -6,7 +6,7 @@
   "status": "released",
   "visibility": "public",
   "title": "sitelen-emoji-truth",
-  "summary": "Pinned source-of-truth mapping for toki pona to sitelen emoji, with reproducible, book-ready visuals.",
+  "summary": "sitelen-emoji-truth is an experimental visual-language protocol exploring emoji-based semantic compression and symbolic communication systems.",
   "tags": [
     "toki-pona",
     "sitelen-emoji",
@@ -48,3 +48,13 @@
   }
 }
 ---
+
+sitelen-emoji-truth is an experimental protocol project exploring emoji as a structured semantic layer rather than decorative reaction language.
+
+The system investigates how compressed symbolic systems can function as:
+- lightweight communication protocols,
+- translation surfaces,
+- semantic markers,
+- or visual reasoning tools.
+
+The project belongs to the broader ABVX language-systems ecosystem around toki pona, sitelen pona and constrained communication models.

@@ -48,4 +48,13 @@
 }
 ---
 
-A diff-first, marker-based workflow tool for generating strict, actionable repository instructions for coding agents.
+AGENTS.md Generator began as a small utility for structured AI-agent instructions, but evolved into a broader operational workflow environment for AI-native development.
+
+The project helps organize:
+- agent coordination,
+- workflow structure,
+- operational documentation,
+- development-system consistency,
+- AI-assisted coding processes.
+
+It now functions as one of the central operational surfaces inside the ABVX AI-native ecosystem, connecting tooling, orchestration logic and protocolized development workflows.

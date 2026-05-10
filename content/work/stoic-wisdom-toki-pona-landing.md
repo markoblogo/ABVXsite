@@ -6,7 +6,7 @@
   "status": "live",
   "visibility": "public",
   "title": "Stoic Wisdom in Toki Pona landing",
-  "summary": "Landing page for classic Stoic texts reimagined in Toki Pona and sitelen pona.",
+  "summary": "Stoic Wisdom in Toki Pona is a publishing and reading environment for Stoic classics translated into toki pona and sitelen pona.",
   "tags": [
     "toki-pona",
     "stoicism",
@@ -52,3 +52,16 @@
   ]
 }
 ---
+
+Stoic Wisdom in Toki Pona is a companion publishing environment for Stoic and practical philosophical texts translated into toki pona and sitelen pona.
+
+The project supports a broader publishing line around Marcus Aurelius, Epictetus, Seneca, Cicero and related traditions.
+
+The system combines:
+- multilingual reading layers,
+- visual-script presentation,
+- slow-reading structure,
+- companion guides,
+- publishing context and reference material.
+
+The project treats minimalist language not as novelty, but as a tool for making philosophical structure more visible and inspectable.

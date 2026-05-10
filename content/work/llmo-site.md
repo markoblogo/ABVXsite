@@ -6,7 +6,7 @@
   "status": "building",
   "visibility": "public",
   "title": "LLMO site/platform",
-  "summary": "LLMO Site/Platform is an AI-native visibility and optimization platform focused on structured machine-readable content, discovery and operational publishing surfaces.",
+  "summary": "LLMO Site/Platform is an AI-native visibility and optimization platform focused on structured machine-readable content and discovery systems.",
   "tags": [
     "llmo",
     "ai-search",
@@ -48,3 +48,16 @@
   }
 }
 ---
+
+LLMO Site/Platform began as a standalone SaaS-style concept around machine-readable visibility and AI-native optimization.
+
+The project later evolved into an open operational surface connected to the broader ABVX AI-native ecosystem.
+
+The system focuses on:
+- machine-readable publishing,
+- structured visibility,
+- AI-discovery logic,
+- operational content surfaces,
+- optimization for AI-mediated information systems.
+
+The project acts both as a conceptual platform and as a practical environment for experiments around LLM Optimization and AI-native discoverability.

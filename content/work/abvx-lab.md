@@ -47,3 +47,16 @@
   }
 }
 ---
+
+ABVX Lab is the public ecosystem surface for the ABVX AI-native development layer.
+
+The project acts as a structured entry point into:
+- workflows,
+- orchestration systems,
+- protocols,
+- development interfaces,
+- AI-native operational tools.
+
+Rather than representing a single application, the lab functions as a connected environment for experimentation, operational tooling and development-system organization.
+
+It is both a navigation layer and a conceptual map of the broader AI-native ecosystem.

@@ -47,3 +47,13 @@
   }
 }
 ---
+
+YTMamp is a lightweight media-interface experiment inspired by the operational simplicity and visual identity of Winamp.
+
+The project combines:
+- a macOS app,
+- browser-extension logic,
+- YouTube Music integration,
+- retro-inspired interaction patterns.
+
+Rather than functioning as part of a larger infrastructure ecosystem, YTMamp exists as a standalone software and interface experiment around music interaction and nostalgic UI design.

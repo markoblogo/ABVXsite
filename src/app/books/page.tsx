@@ -57,6 +57,7 @@ function itemLabel(item: Book | Artifact) {
     return 'BOOK';
   }
   if (item.type === 'protocol') return 'PROTOCOL';
+  if (item.type === 'plugin') return 'PLUGIN';
   if (item.type === 'tool') return 'TOOL';
   if (item.type === 'book-companion') return 'COMPANION SITE';
   return 'PROJECT';
@@ -67,7 +68,7 @@ function bookTone(book: Book): 'book' | 'free-resource' {
 }
 
 function companionTone(item: Artifact): 'companion-project' | 'protocol-tool' {
-  return item.type === 'protocol' || item.type === 'tool' ? 'protocol-tool' : 'companion-project';
+  return item.type === 'protocol' || item.type === 'plugin' || item.type === 'tool' ? 'protocol-tool' : 'companion-project';
 }
 
 function seriesSortValue(item: Book | Artifact) {

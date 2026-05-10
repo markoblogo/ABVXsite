@@ -10,6 +10,7 @@ export type ArtifactType =
   | 'market-index'
   | 'web-service'
   | 'tool'
+  | 'plugin'
   | 'protocol'
   | 'ai-workflow'
   | 'language-experiment'

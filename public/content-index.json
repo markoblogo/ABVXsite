@@ -1752,6 +1752,68 @@
     {
       "type": "work",
       "section": "systems",
+      "title": "sitelen-layer-plugin",
+      "summary": "sitelen-layer-plugin is a rendering layer for sitelen pona and experimental visual-language systems used across ABVX publishing and language projects.",
+      "canonicalUrl": "https://abvx.xyz/work/sitelen-layer-plugin",
+      "tags": [
+        "toki-pona",
+        "sitelen-pona",
+        "plugin",
+        "rendering",
+        "publishing",
+        "visual-language",
+        "language-systems",
+        "typography"
+      ],
+      "links": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/sitelen-layer-plugin"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Toki Pona AI translator",
+          "canonicalUrl": "https://abvx.xyz/work/toki-pona-ai-translator",
+          "relation": "related"
+        },
+        {
+          "title": "sitelen-emoji-truth",
+          "canonicalUrl": "https://abvx.xyz/work/sitelen-emoji-truth",
+          "relation": "related"
+        },
+        {
+          "title": "Chinese Wisdom in toki pona landing",
+          "canonicalUrl": "https://abvx.xyz/work/chinese-wisdom-toki-pona-landing",
+          "relation": "related"
+        },
+        {
+          "title": "Stoic Wisdom in Toki Pona landing",
+          "canonicalUrl": "https://abvx.xyz/work/stoic-wisdom-toki-pona-landing",
+          "relation": "related"
+        },
+        {
+          "title": "Toki Pona free kits landing",
+          "canonicalUrl": "https://abvx.xyz/work/toki-pona-free-kits-landing",
+          "relation": "related"
+        },
+        {
+          "title": "Pictiq",
+          "canonicalUrl": "https://abvx.xyz/work/pictiq",
+          "relation": "related"
+        },
+        {
+          "title": "ABVX Lab",
+          "canonicalUrl": "https://abvx.xyz/work/abvx-lab",
+          "relation": "related"
+        }
+      ]
+    },
+    {
+      "type": "work",
+      "section": "systems",
       "title": "Stoic Wisdom in Toki Pona landing",
       "summary": "Stoic Wisdom in Toki Pona is a publishing and reading environment for Stoic classics translated into toki pona and sitelen pona.",
       "canonicalUrl": "https://abvx.xyz/work/stoic-wisdom-toki-pona-landing",

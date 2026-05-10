@@ -50,7 +50,7 @@ const ecosystems = [
       },
       {
         title: 'Language Tools, Protocols & Experiments',
-        slugs: ['toki-pona-ai-translator', 'pictiq', 'sitelen-emoji-truth'],
+        slugs: ['toki-pona-ai-translator', 'sitelen-layer-plugin', 'pictiq', 'sitelen-emoji-truth'],
       },
     ],
   },

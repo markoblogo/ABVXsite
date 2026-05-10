@@ -83,6 +83,7 @@ function focusRelatedScore(artifact: Artifact, candidate: Artifact): number {
 
 function relatedArtifactScore(artifact: Artifact, candidate: Artifact): number {
   let score = tagOverlap(artifact.tags, candidate.tags) * 8;
+  if (artifact.relatedSlugs?.includes(candidate.slug) || candidate.relatedSlugs?.includes(artifact.slug)) score += 100;
   if (candidate.group && candidate.group === artifact.group) score += 60;
   if (candidate.primarySection === artifact.primarySection) score += 18;
   if (candidate.appearsIn.some((section) => artifact.appearsIn.includes(section))) score += 14;
@@ -110,17 +111,19 @@ function relatedItemsForWork(artifact: Artifact) {
   const relatedBooks = getBooks()
     .map((item) => ({ kind: 'book' as const, item, score: relatedBookScore(artifact, item) }))
     .filter((related) => related.score > 0);
+  const limit = artifact.relatedSlugs?.length ? Math.min(Math.max(artifact.relatedSlugs.length, 6), 8) : 6;
 
   return [...relatedArtifacts, ...relatedBooks]
     .sort((a, b) => {
       if (b.score !== a.score) return b.score - a.score;
       return a.item.sortRank - b.item.sortRank;
     })
-    .slice(0, 6);
+    .slice(0, limit);
 }
 
 function relatedBookScore(artifact: Artifact, book: Book): number {
   let score = tagOverlap(artifact.tags, book.tags) * 8;
+  if (artifact.relatedSlugs?.includes(book.slug) || book.relatedSlugs?.includes(artifact.slug)) score += 100;
   if (book.appearsIn.some((section) => artifact.appearsIn.includes(section))) score += 18;
   if (artifact.tags.includes('book-companion')) score += 14;
   return score;

@@ -119,11 +119,35 @@ Machine-readable index: https://abvx.xyz/content-index.json
   Group: Language, AI & Toki Pona
   Tags: Toki Pona, AI, prompt engineering, small language models, constrained languages, language systems, sitelen pona, English
 
+- Pictiq
+  URL: https://abvx.xyz/work/pictiq
+  Summary: Pictiq is a minimal visual protocol for short messages across language barriers, built from icon tiles and a simple grammar for pointing, quick signs, stickers and compact phrases.
+  Group: Publishing systems & protocols
+  Tags: pictiq, colang, visual protocol, icons, language barriers, constructed language, translation, publishing systems
+
+- sitelen-layer-plugin
+  URL: https://abvx.xyz/work/sitelen-layer-plugin
+  Summary: sitelen-layer-plugin is a rendering layer for sitelen pona and experimental visual-language systems used across ABVX publishing and language projects.
+  Group: Language Tools, Protocols & Experiments
+  Tags: toki-pona, sitelen-pona, plugin, rendering, publishing, visual-language, language-systems, typography
+
 - A Christmas Carol in Toki Pona
   URL: https://abvx.xyz/books/christmas-carol-toki-pona
   Summary: A bilingual Toki Pona edition of Dickens’ A Christmas Carol, pairing the classic story of Scrooge’s transformation with minimalist language, sitelen pona and a calm experiment in literary compression.
   Group: Language, AI & Toki Pona
   Tags: Toki Pona, sitelen pona, Charles Dickens, A Christmas Carol, translation, bilingual edition, minimalist language, classic literature
+
+- Toki Pona AI translator
+  URL: https://abvx.xyz/work/toki-pona-ai-translator
+  Summary: Toki Pona AI translator is an experimental translation interface for converting natural language into toki pona and related visual-script forms.
+  Group: Publishing systems & protocols
+  Tags: toki-pona, language-ai, translator, ai-service
+
+- Chinese Wisdom in toki pona landing
+  URL: https://abvx.xyz/work/chinese-wisdom-toki-pona-landing
+  Summary: Chinese Wisdom in toki pona is a multilingual publishing surface for classical Chinese texts translated into toki pona and sitelen pona.
+  Group: Publishing systems & protocols
+  Tags: toki-pona, book-companion, landing, dao
 
 - Cicero: On Duties in toki pona
   URL: https://abvx.xyz/books/cicero-toki-pona
@@ -137,11 +161,23 @@ Machine-readable index: https://abvx.xyz/content-index.json
   Group: Chinese Wisdom in toki pona
   Tags: Toki Pona, sitelen pona, Dao De Jing, Tao Te Ching, Laozi, Classical Chinese, Chinese philosophy, multilingual edition
 
+- Stoic Wisdom in Toki Pona landing
+  URL: https://abvx.xyz/work/stoic-wisdom-toki-pona-landing
+  Summary: Stoic Wisdom in Toki Pona is a publishing and reading environment for Stoic classics translated into toki pona and sitelen pona.
+  Group: Publishing systems & protocols
+  Tags: toki-pona, stoicism, book-companion, landing
+
 - Epictetus: The Enchiridion in toki pona
   URL: https://abvx.xyz/books/epictetus-enchiridion-toki-pona
   Summary: A fixed-layout Toki Pona and sitelen pona edition of Epictetus’ Enchiridion, turning one of Stoicism’s most practical handbooks into a compact, visual and low-noise reading experience.
   Group: Stoic Wisdom in Toki Pona
   Tags: Toki Pona, sitelen pona, Stoicism, Epictetus, Enchiridion, philosophy, translation, minimalist language
+
+- Toki Pona free kits landing
+  URL: https://abvx.xyz/work/toki-pona-free-kits-landing
+  Summary: Toki Pona Free Kits is a lightweight publishing environment for downloadable reader kits, free translations and companion learning resources.
+  Group: Publishing systems & protocols
+  Tags: toki-pona, free-books, book-companion, landing
 
 - Meditations of Marcus Aurelius in Toki Pona
   URL: https://abvx.xyz/books/marcus-aurelius-meditations-toki-pona
@@ -149,11 +185,23 @@ Machine-readable index: https://abvx.xyz/content-index.json
   Group: Stoic Wisdom in Toki Pona
   Tags: Toki Pona, sitelen pona, Marcus Aurelius, Meditations, Stoicism, philosophy, translation, minimalist language
 
+- Ukrainian Modernism landing
+  URL: https://abvx.xyz/work/ukrainian-modernism-landing
+  Summary: Ukrainian Modernism Landing is a publishing surface for French translations of early twentieth-century Ukrainian modernist literature.
+  Group: Publishing systems & protocols
+  Tags: ukrainian-modernism, translation, book-companion, landing
+
 - Seneca: On the Shortness of Life in toki pona
   URL: https://abvx.xyz/books/seneca-shortness-of-life-toki-pona
   Summary: A Toki Pona and sitelen pona edition of Seneca’s On the Shortness of Life, compressing a classic Stoic essay on time, attention and intention into a slower, clearer reading format.
   Group: Stoic Wisdom in Toki Pona
   Tags: Toki Pona, sitelen pona, Stoicism, Seneca, On the Shortness of Life, philosophy, translation, minimalist language
+
+- sitelen-emoji-truth
+  URL: https://abvx.xyz/work/sitelen-emoji-truth
+  Summary: sitelen-emoji-truth is an experimental visual-language protocol exploring emoji-based semantic compression and symbolic communication systems.
+  Group: Publishing systems & protocols
+  Tags: toki-pona, sitelen-emoji, protocol, publishing
 
 - Sunzi: The Art of War in toki pona
   URL: https://abvx.xyz/books/sunzi-art-of-war-toki-pona
@@ -166,6 +214,12 @@ Machine-readable index: https://abvx.xyz/content-index.json
   Summary: Free reader’s guide for Chinese Wisdom in toki pona.
   Group: Toki Pona Free Kits & Translations
   Tags: toki-pona, free-book, reader-guide, chinese-wisdom
+
+- LLMO site/platform
+  URL: https://abvx.xyz/work/llmo-site
+  Summary: LLMO Site/Platform is an AI-native visibility and optimization platform focused on structured machine-readable content and discovery systems.
+  Group: Development Surfaces & Interfaces
+  Tags: llmo, ai-search, book-companion, web-service
 
 - Heart Sutra in toki pona / sitelen pona
   URL: https://abvx.xyz/books/heart-sutra-toki-pona

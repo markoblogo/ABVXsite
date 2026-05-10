@@ -153,8 +153,8 @@ function isPublishingLine(item) {
   return item.folder === 'series' && item.group === 'Official publishing lines';
 }
 
-function isBook(item) {
-  return item.folder === 'books';
+function isBooksEcosystemItem(item) {
+  return item.folder === 'books' || (item.folder === 'work' && item.appearsIn?.includes('books'));
 }
 
 function llmsLine(item) {
@@ -191,7 +191,7 @@ const llms = [
   '',
   llmsSection('Publishing lines', rawItems.filter(isPublishingLine)),
   '',
-  llmsSection('Books', rawItems.filter(isBook)),
+  llmsSection('Books', rawItems.filter(isBooksEcosystemItem)),
   '',
   llmsSection('AI-native systems', rawItems.filter(isAiNative)),
   '',

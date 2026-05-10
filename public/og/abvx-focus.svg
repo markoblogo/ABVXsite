@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#efe1c0"/>
+  <path d="M0 0h1200v630H0z" fill="url(#grid)"/>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0v40" fill="none" stroke="#111" stroke-opacity=".11" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect x="60" y="60" width="1080" height="510" fill="#fff3d7" stroke="#111" stroke-width="6"/>
+  <rect x="760" y="110" width="300" height="300" fill="#111"/>
+  <path d="M790 380 930 150l140 230z" fill="#d6a63a" stroke="#111" stroke-width="6"/>
+  <text x="104" y="150" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="5" fill="#111">CURRENT FOCUS</text>
+  <text x="104" y="282" font-family="Georgia, serif" font-size="78" font-weight="700" fill="#111">Agro Commodity</text>
+  <text x="104" y="370" font-family="Georgia, serif" font-size="78" font-weight="700" fill="#111">Trading Infrastructure</text>
+  <text x="104" y="476" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#111">Trading, monitoring, indexes, brokerage workflows.</text>
+</svg>

@@ -1,9 +1,18 @@
 import BookActionLinks from '@/components/BookActionLinks';
 import BookDetailHero from '@/components/BookDetailHero';
 import BookRelatedCard from '@/components/BookRelatedCard';
+import JsonLd from '@/components/JsonLd';
 import MediaPanel from '@/components/MediaPanel';
 import TagList from '@/components/TagList';
 import { getArtifactsBySection, getBookBySlug, getBooks, type Artifact, type Book } from '@/content';
+import {
+  bookJsonLd,
+  booksOgImage,
+  breadcrumbJsonLd,
+  imageMetadata,
+  metadataWithImage,
+  SITE_URL,
+} from '@/lib/seo';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
@@ -78,17 +87,15 @@ export async function generateMetadata({
     };
   }
 
-  return {
+  const image = imageMetadata(book.heroImage || book.coverImage, booksOgImage, book.type === 'series' ? 'project' : 'book');
+
+  return metadataWithImage({
     title: book.title,
     description: book.summary,
-    alternates: { canonical: `https://abvx.xyz/books/${book.slug}` },
-    openGraph: {
-      title: book.title,
-      description: book.summary,
-      url: `https://abvx.xyz/books/${book.slug}`,
-      type: 'book',
-    },
-  };
+    canonicalPath: `/books/${book.slug}`,
+    image,
+    type: book.type === 'series' ? 'website' : 'book',
+  });
 }
 
 export default async function BookDetailPage({
@@ -127,6 +134,15 @@ export default async function BookDetailPage({
 
     return (
       <article className="detail-page detail-page--book detail-page--series">
+        <JsonLd id="jsonld-book-series" data={bookJsonLd(book)} />
+        <JsonLd
+          id="jsonld-book-breadcrumbs"
+          data={breadcrumbJsonLd([
+            { name: 'ABVX', url: SITE_URL },
+            { name: 'ABVX Press', url: `${SITE_URL}/books` },
+            { name: title, url: `${SITE_URL}/books/${book.slug}` },
+          ])}
+        />
         <header className={`series-detail-hero${image ? ' series-detail-hero--with-media' : ''}`}>
           <div className="series-detail-hero__copy">
             <div className="eyebrow">Official publishing line / {book.status}</div>
@@ -214,6 +230,15 @@ export default async function BookDetailPage({
 
   return (
     <article className="detail-page detail-page--book">
+      <JsonLd id="jsonld-book-item" data={bookJsonLd(book)} />
+      <JsonLd
+        id="jsonld-book-breadcrumbs"
+        data={breadcrumbJsonLd([
+          { name: 'ABVX', url: SITE_URL },
+          { name: 'ABVX Press', url: `${SITE_URL}/books` },
+          { name: title, url: `${SITE_URL}/books/${book.slug}` },
+        ])}
+      />
       <BookDetailHero book={book} image={image} />
 
       <section className="book-detail-main" aria-labelledby="book-about-title">

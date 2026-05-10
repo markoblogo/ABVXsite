@@ -1,3 +1,4 @@
+import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import FeaturedWritingCard from '@/components/FeaturedWritingCard';
 import RecentWritingCard from '@/components/RecentWritingCard';
@@ -10,14 +11,18 @@ import {
   mergeFeeds,
   type FeedItem,
 } from '@/lib/feeds';
+import { collectionPageJsonLd, defaultOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = {
+const writingDescription =
+  'Applied AI reviews, build logs and essays on systems, validation, agent workflows, decision-making and how ideas survive contact with reality.';
+
+export const metadata: Metadata = metadataWithImage({
   title: 'Writing',
-  description:
-    'Applied AI reviews, build logs and essays on systems, validation, agent workflows, decision-making and how ideas survive contact with reality.',
-  alternates: { canonical: 'https://abvx.xyz/writing' },
-};
+  description: writingDescription,
+  canonicalPath: '/writing',
+  image: defaultOgImage,
+});
 
 export const revalidate = 900;
 
@@ -76,6 +81,29 @@ export default async function WritingPage({
 
   return (
     <div className="route-writing writing-page grid gap-8">
+      <JsonLd
+        id="jsonld-writing-page"
+        data={collectionPageJsonLd({
+          id: `${SITE_URL}/writing#page`,
+          name: 'Writing',
+          description: writingDescription,
+          url: `${SITE_URL}/writing`,
+          image: defaultOgImage,
+        })}
+      />
+      <JsonLd
+        id="jsonld-writing-list"
+        data={itemListJsonLd({
+          id: `${SITE_URL}/writing#items`,
+          name: 'ABVX writing archive',
+          items: allPosts.slice(0, 20).map((post) => ({
+            name: post.title,
+            url: post.url,
+            type: 'Article',
+            image: post.coverImage,
+          })),
+        })}
+      />
       <PageHeader
         eyebrow="Writing"
         title="Writing"

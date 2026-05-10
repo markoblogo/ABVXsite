@@ -1,15 +1,20 @@
 import ProjectCatalogueCard from '@/components/ProjectCatalogueCard';
+import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import { getArtifactsBySection } from '@/content';
 import type { Artifact } from '@/content';
 import { toPublicArtifact } from '@/content/public-props';
+import { artifactListItem, collectionPageJsonLd, itemListJsonLd, metadataWithImage, SITE_URL, systemsOgImage } from '@/lib/seo';
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = {
+const systemsDescription = 'Services, workflows, protocols, tools and technical companion systems.';
+
+export const metadata: Metadata = metadataWithImage({
   title: 'Systems Catalogue',
-  description: 'Services, workflows, protocols, tools and technical companion systems.',
-  alternates: { canonical: 'https://abvx.xyz/systems' },
-};
+  description: systemsDescription,
+  canonicalPath: '/systems',
+  image: systemsOgImage,
+});
 
 const ecosystems = [
   {
@@ -94,10 +99,32 @@ function itemsForSlugs(artifacts: Artifact[], slugs: readonly string[], usedSlug
 
 export default function SystemsPage() {
   const artifacts = getArtifactsBySection('systems');
+  const listedArtifacts = ecosystems.flatMap((ecosystem) =>
+    'groups' in ecosystem ? ecosystem.groups.flatMap((group) => group.slugs) : ecosystem.slugs,
+  );
+  const listedItems = itemsForSlugs(artifacts, listedArtifacts, new Set<string>());
   const usedSlugs = new Set<string>();
 
   return (
     <div className="route-systems grid gap-8">
+      <JsonLd
+        id="jsonld-systems-page"
+        data={collectionPageJsonLd({
+          id: `${SITE_URL}/systems#page`,
+          name: 'Systems Catalogue',
+          description: systemsDescription,
+          url: `${SITE_URL}/systems`,
+          image: systemsOgImage,
+        })}
+      />
+      <JsonLd
+        id="jsonld-systems-list"
+        data={itemListJsonLd({
+          id: `${SITE_URL}/systems#items`,
+          name: 'ABVX operational systems',
+          items: listedItems.map(artifactListItem),
+        })}
+      />
       <PageHeader
         eyebrow="Systems Catalogue"
         title="Systems Catalogue"

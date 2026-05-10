@@ -1,19 +1,24 @@
 import HeroPoster from '@/components/HeroPoster';
 import HomepageLatestCard from '@/components/HomepageLatestCard';
+import JsonLd from '@/components/JsonLd';
 import MarqueeTicker from '@/components/MarqueeTicker';
 import SectionPanel from '@/components/SectionPanel';
 import TagList from '@/components/TagList';
 import { getArtifactsBySection, getLatestArtifact, getLatestBook, type Artifact } from '@/content';
 import { fetchMediumFeed, fetchSubstackFeed, type FeedItem } from '@/lib/feeds';
+import { collectionPageJsonLd, defaultOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
+const homeDescription =
+  'ABVX is the working index of Anton Biletskiy-Volokh: strategy, AI-native development, market infrastructure, web services, language experiments, books and essays.';
+
+export const metadata: Metadata = metadataWithImage({
   title: 'ABVX',
-  description:
-    'ABVX is the working index of Anton Biletskiy-Volokh: strategy, AI-native development, market infrastructure, web services, language experiments, books and essays.',
-  alternates: { canonical: 'https://abvx.xyz' },
-};
+  description: homeDescription,
+  canonicalPath: '/',
+  image: defaultOgImage,
+});
 
 export const revalidate = 900;
 
@@ -126,6 +131,30 @@ export default async function Home() {
 
   return (
     <div className="home-redesign">
+      <JsonLd
+        id="jsonld-home-page"
+        data={collectionPageJsonLd({
+          id: `${SITE_URL}/#home`,
+          name: 'ABVX',
+          description: homeDescription,
+          url: SITE_URL,
+          image: defaultOgImage,
+        })}
+      />
+      <JsonLd
+        id="jsonld-home-list"
+        data={itemListJsonLd({
+          id: `${SITE_URL}/#home-items`,
+          name: 'ABVX primary public sections',
+          items: [
+            { name: 'Current Focus', url: `${SITE_URL}/focus`, type: 'CollectionPage' },
+            { name: 'Systems Catalogue', url: `${SITE_URL}/systems`, type: 'CollectionPage' },
+            { name: 'ABVX Press', url: `${SITE_URL}/books`, type: 'CollectionPage' },
+            { name: 'Writing', url: `${SITE_URL}/writing`, type: 'CollectionPage' },
+            { name: 'About / Method', url: `${SITE_URL}/about`, type: 'AboutPage' },
+          ],
+        })}
+      />
       <HeroPoster
         eyebrow="ABVX / WORKING INDEX"
         title="Systems that survive contact with reality."

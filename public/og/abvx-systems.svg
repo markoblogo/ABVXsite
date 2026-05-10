@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#e4e9df"/>
+  <path d="M0 0h1200v630H0z" fill="url(#grid)"/>
+  <defs>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0v42" fill="none" stroke="#111" stroke-opacity=".1" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect x="60" y="60" width="1080" height="510" fill="#f8f5e9" stroke="#111" stroke-width="6"/>
+  <rect x="760" y="126" width="92" height="92" fill="#111"/>
+  <rect x="890" y="126" width="92" height="92" fill="#6f8f72" stroke="#111" stroke-width="6"/>
+  <rect x="1020" y="126" width="92" height="92" fill="#111"/>
+  <rect x="825" y="280" width="92" height="92" fill="#d96d2b" stroke="#111" stroke-width="6"/>
+  <rect x="955" y="280" width="92" height="92" fill="#111"/>
+  <text x="104" y="150" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="5" fill="#111">SYSTEMS CATALOGUE</text>
+  <text x="104" y="286" font-family="Georgia, serif" font-size="86" font-weight="700" fill="#111">Operational systems</text>
+  <text x="104" y="384" font-family="Georgia, serif" font-size="86" font-weight="700" fill="#111">architecture.</text>
+  <text x="104" y="486" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#111">Tools, protocols, workflows, interfaces.</text>
+</svg>

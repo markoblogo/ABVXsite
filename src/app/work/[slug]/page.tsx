@@ -1,3 +1,4 @@
+import JsonLd from '@/components/JsonLd';
 import MediaPanel from '@/components/MediaPanel';
 import SocialLinks from '@/components/SocialLinks';
 import WorkBrief from '@/components/WorkBrief';
@@ -6,6 +7,15 @@ import WorkRelatedCard from '@/components/WorkRelatedCard';
 import { getArtifactBySlug, getArtifacts, getBooks, type Artifact, type Book } from '@/content';
 import { socialLinks } from '@/content/link-utils';
 import { toPublicArtifact, toPublicBook } from '@/content/public-props';
+import {
+  artifactJsonLd,
+  breadcrumbJsonLd,
+  defaultOgImage,
+  focusOgImage,
+  imageMetadata,
+  metadataWithImage,
+  SITE_URL,
+} from '@/lib/seo';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
@@ -129,17 +139,18 @@ export async function generateMetadata({
     };
   }
 
-  return {
+  const image = imageMetadata(
+    artifact.heroImage || artifact.thumbnail,
+    isFocusInfrastructure(artifact) ? focusOgImage : defaultOgImage,
+    'project',
+  );
+
+  return metadataWithImage({
     title: artifact.title,
     description: artifact.summary,
-    alternates: { canonical: `https://abvx.xyz/work/${artifact.slug}` },
-    openGraph: {
-      title: artifact.title,
-      description: artifact.summary,
-      url: `https://abvx.xyz/work/${artifact.slug}`,
-      type: 'website',
-    },
-  };
+    canonicalPath: `/work/${artifact.slug}`,
+    image,
+  });
 }
 
 export default async function WorkDetailPage({
@@ -160,6 +171,18 @@ export default async function WorkDetailPage({
 
   return (
     <article className="detail-page detail-page--work">
+      <JsonLd id="jsonld-work-item" data={artifactJsonLd(artifact)} />
+      <JsonLd
+        id="jsonld-work-breadcrumbs"
+        data={breadcrumbJsonLd([
+          { name: 'ABVX', url: SITE_URL },
+          {
+            name: focusInfrastructure ? 'Current Focus' : 'Systems Catalogue',
+            url: `${SITE_URL}/${focusInfrastructure ? 'focus' : 'systems'}`,
+          },
+          { name: artifact.title, url: `${SITE_URL}/work/${artifact.slug}` },
+        ])}
+      />
       <WorkDetailHero artifact={publicArtifact} image={image} />
 
       <WorkBrief artifact={publicArtifact} />

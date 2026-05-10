@@ -3,6 +3,7 @@ import './globals.css';
 
 import SiteFooter from '@/components/SiteFooter';
 import SiteHeader from '@/components/SiteHeader';
+import { defaultOgImage } from '@/lib/seo';
 
 const googleVerification = process.env.GOOGLE_SITE_VERIFICATION;
 const bingVerification =
@@ -103,12 +104,14 @@ export const metadata: Metadata = {
     url: 'https://abvx.xyz',
     siteName: 'Anton Biletskyi-Volokh',
     type: 'website',
+    images: [defaultOgImage],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Anton Biletskyi-Volokh',
     description:
       'Live working index for systems, strategy, market infrastructure, agentic development, language experiments, books, and essays.',
+    images: [defaultOgImage.url],
   },
 };
 

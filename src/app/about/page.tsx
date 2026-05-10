@@ -1,14 +1,19 @@
+import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import { socialLinks } from '@/content/navigation';
+import { aboutPageJsonLd, defaultOgImage, metadataWithImage } from '@/lib/seo';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
+const aboutDescription =
+  'About Anton Biletskiy-Volokh, ABVX, working method, operating lines and collaboration context.';
+
+export const metadata: Metadata = metadataWithImage({
   title: 'About / Method',
-  description:
-    'About Anton Biletskiy-Volokh, ABVX, working method, operating lines and collaboration context.',
-  alternates: { canonical: 'https://abvx.xyz/about' },
-};
+  description: aboutDescription,
+  canonicalPath: '/about',
+  image: defaultOgImage,
+});
 
 const buildAreas = [
   {
@@ -78,6 +83,7 @@ export default function AboutPage() {
 
   return (
     <div className="route-about about-page grid gap-8">
+      <JsonLd id="jsonld-about-page" data={aboutPageJsonLd()} />
       <PageHeader
         eyebrow="About / Method"
         title="Not a CV. A working method."

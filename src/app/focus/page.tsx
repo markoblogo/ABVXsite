@@ -1,18 +1,23 @@
 import ProjectCatalogueCard from '@/components/ProjectCatalogueCard';
+import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import SectionPanel from '@/components/SectionPanel';
 import { getArtifactsBySection } from '@/content';
 import type { Artifact } from '@/content';
 import { toPublicArtifact } from '@/content/public-props';
+import { artifactListItem, collectionPageJsonLd, focusOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
+const focusDescription =
+  'Digital infrastructure, standards, indexes, workflows and AI-assisted tools for physical agro-commodity markets.';
+
+export const metadata: Metadata = metadataWithImage({
   title: 'Current Focus',
-  description:
-    'Digital infrastructure, standards, indexes, workflows and AI-assisted tools for physical agro-commodity markets.',
-  alternates: { canonical: 'https://abvx.xyz/focus' },
-};
+  description: focusDescription,
+  canonicalPath: '/focus',
+  image: focusOgImage,
+});
 
 const focusGroups = [
   {
@@ -45,9 +50,28 @@ function itemsForGroup(artifacts: Artifact[], slugs: readonly string[]): Artifac
 
 export default function FocusPage() {
   const artifacts = getArtifactsBySection('focus');
+  const listedArtifacts = focusGroups.flatMap((group) => itemsForGroup(artifacts, group.slugs));
 
   return (
     <div className="route-focus grid gap-8">
+      <JsonLd
+        id="jsonld-focus-page"
+        data={collectionPageJsonLd({
+          id: `${SITE_URL}/focus#page`,
+          name: 'Current Focus',
+          description: focusDescription,
+          url: `${SITE_URL}/focus`,
+          image: focusOgImage,
+        })}
+      />
+      <JsonLd
+        id="jsonld-focus-list"
+        data={itemListJsonLd({
+          id: `${SITE_URL}/focus#items`,
+          name: 'Focus market infrastructure projects',
+          items: listedArtifacts.map(artifactListItem),
+        })}
+      />
       <PageHeader
         eyebrow="Current Focus"
         title="Agro Commodity Trading Infrastructure"

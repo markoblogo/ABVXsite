@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#eadfd2"/>
+  <path d="M0 0h1200v630H0z" fill="url(#grid)"/>
+  <defs>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0v44" fill="none" stroke="#111" stroke-opacity=".1" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect x="60" y="60" width="1080" height="510" fill="#fff8e8" stroke="#111" stroke-width="6"/>
+  <rect x="790" y="116" width="110" height="330" fill="#111"/>
+  <rect x="920" y="116" width="110" height="330" fill="#c84f2c" stroke="#111" stroke-width="6"/>
+  <rect x="1050" y="116" width="56" height="330" fill="#f0c95a" stroke="#111" stroke-width="6"/>
+  <text x="104" y="150" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="5" fill="#111">ABVX PRESS</text>
+  <text x="104" y="286" font-family="Georgia, serif" font-size="86" font-weight="700" fill="#111">Books, translations,</text>
+  <text x="104" y="384" font-family="Georgia, serif" font-size="86" font-weight="700" fill="#111">publishing systems.</text>
+  <text x="104" y="486" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#111">Official lines, standalone books, free resources.</text>
+</svg>

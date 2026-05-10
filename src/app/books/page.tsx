@@ -1,5 +1,6 @@
 import BookCatalogueCard from '@/components/BookCatalogueCard';
 import CompanionCatalogueCard from '@/components/CompanionCatalogueCard';
+import JsonLd from '@/components/JsonLd';
 import MediaPanel from '@/components/MediaPanel';
 import PageHeader from '@/components/PageHeader';
 import SectionPanel from '@/components/SectionPanel';
@@ -7,14 +8,18 @@ import ActionLinks from '@/components/ActionLinks';
 import TagList from '@/components/TagList';
 import { getArtifactsBySection, getBooks, getSeries } from '@/content';
 import type { Artifact, Book, Series } from '@/content';
+import { artifactListItem, bookListItem, booksOgImage, collectionPageJsonLd, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = {
+const booksDescription =
+  'Books, translations, series and publishing projects across AI, strategy, language, culture, markets and systems thinking.';
+
+export const metadata: Metadata = metadataWithImage({
   title: 'ABVX Press',
-  description:
-    'Books, translations, series and publishing projects across AI, strategy, language, culture, markets and systems thinking.',
-  alternates: { canonical: 'https://abvx.xyz/books' },
-};
+  description: booksDescription,
+  canonicalPath: '/books',
+  image: booksOgImage,
+});
 
 const officialSeriesSlugs = [
   'modernisme-ukrainien',
@@ -151,6 +156,33 @@ export default function BooksPage() {
 
   return (
     <div className="route-books route-books--structured grid gap-8">
+      <JsonLd
+        id="jsonld-books-page"
+        data={collectionPageJsonLd({
+          id: `${SITE_URL}/books#page`,
+          name: 'ABVX Press',
+          description: booksDescription,
+          url: `${SITE_URL}/books`,
+          image: booksOgImage,
+        })}
+      />
+      <JsonLd
+        id="jsonld-books-list"
+        data={itemListJsonLd({
+          id: `${SITE_URL}/books#items`,
+          name: 'ABVX Press books, series and publishing systems',
+          items: [
+            ...officialSeries.map((line) => ({
+              name: line.title,
+              url: `${SITE_URL}/books/${line.slug}`,
+              type: 'CreativeWorkSeries',
+              image: (line.heroImage || line.media)?.src ? `${SITE_URL}${(line.heroImage || line.media)!.src}` : undefined,
+            })),
+            ...bookItems.map(bookListItem),
+            ...publishingSystems.map(artifactListItem),
+          ],
+        })}
+      />
       <PageHeader
         eyebrow="ABVX Press"
         title="ABVX Press"

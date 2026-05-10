@@ -20,6 +20,54 @@ function tagOverlap(a: string[], b: string[]): number {
   return a.filter((tag) => b.includes(tag)).length;
 }
 
+const focusGroups = new Set([
+  'Trading & Brokerage Platforms',
+  'Market Intelligence, Monitoring & Indexes',
+  'Market Fronts & Partner Landings',
+]);
+
+const marketEcosystemTags = new Set([
+  'cropto',
+  'agro-commodities',
+  'brokerage',
+  'market-intelligence',
+  'market-monitoring',
+  'trading-platform',
+  'market-infrastructure',
+  'commodity-signals',
+  'commodity-indexes',
+  'market-data',
+  'market-risk',
+  'trading',
+  'liquidity',
+  'trading-service',
+]);
+
+function isFocusInfrastructure(artifact: Artifact): boolean {
+  return artifact.primarySection === 'focus' || Boolean(artifact.group && focusGroups.has(artifact.group));
+}
+
+function marketTagOverlap(a: string[], b: string[]): number {
+  return a.filter((tag) => marketEcosystemTags.has(tag) && b.includes(tag)).length;
+}
+
+function focusRelatedScore(artifact: Artifact, candidate: Artifact): number {
+  if (!isFocusInfrastructure(candidate)) return 0;
+
+  let score = marketTagOverlap(artifact.tags, candidate.tags) * 14;
+  if (candidate.group && candidate.group === artifact.group) score += 80;
+  if (candidate.primarySection === 'focus') score += 30;
+  if (candidate.appearsIn.includes('focus')) score += 18;
+  if (candidate.type === artifact.type) score += 14;
+  if (artifact.relatedSlugs?.includes(candidate.slug) || candidate.relatedSlugs?.includes(artifact.slug)) score += 100;
+  if (artifact.tags.includes('cropto') && candidate.slug === 'cropto') score += 80;
+  if (artifact.slug === 'cropto' && candidate.tags.includes('cropto')) score += 60;
+  if (artifact.group === 'Market Fronts & Partner Landings' && candidate.slug === 'cropto') score += 75;
+  if (artifact.group === 'Market Fronts & Partner Landings' && candidate.group === 'Trading & Brokerage Platforms') score += 30;
+
+  return score;
+}
+
 function relatedArtifactScore(artifact: Artifact, candidate: Artifact): number {
   let score = tagOverlap(artifact.tags, candidate.tags) * 8;
   if (candidate.group && candidate.group === artifact.group) score += 60;
@@ -27,6 +75,35 @@ function relatedArtifactScore(artifact: Artifact, candidate: Artifact): number {
   if (candidate.appearsIn.some((section) => artifact.appearsIn.includes(section))) score += 14;
   if (candidate.type === artifact.type) score += 12;
   return score;
+}
+
+function relatedItemsForWork(artifact: Artifact) {
+  if (isFocusInfrastructure(artifact)) {
+    return getArtifacts()
+      .filter((item) => item.id !== artifact.id)
+      .map((item) => ({ kind: 'artifact' as const, item, score: focusRelatedScore(artifact, item) }))
+      .filter((related) => related.score > 0)
+      .sort((a, b) => {
+        if (b.score !== a.score) return b.score - a.score;
+        return a.item.sortRank - b.item.sortRank;
+      })
+      .slice(0, 3);
+  }
+
+  const relatedArtifacts = getArtifacts()
+    .filter((item) => item.id !== artifact.id)
+    .map((item) => ({ kind: 'artifact' as const, item, score: relatedArtifactScore(artifact, item) }))
+    .filter((related) => related.score > 0);
+  const relatedBooks = getBooks()
+    .map((item) => ({ kind: 'book' as const, item, score: relatedBookScore(artifact, item) }))
+    .filter((related) => related.score > 0);
+
+  return [...relatedArtifacts, ...relatedBooks]
+    .sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      return a.item.sortRank - b.item.sortRank;
+    })
+    .slice(0, 6);
 }
 
 function relatedBookScore(artifact: Artifact, book: Book): number {
@@ -72,19 +149,8 @@ export default async function WorkDetailPage({
   const artifact = getArtifactBySlug(slug);
   if (!artifact) notFound();
   const image = artifact.heroImage || artifact.thumbnail;
-  const relatedArtifacts = getArtifacts()
-    .filter((item) => item.id !== artifact.id)
-    .map((item) => ({ kind: 'artifact' as const, item, score: relatedArtifactScore(artifact, item) }))
-    .filter((related) => related.score > 0);
-  const relatedBooks = getBooks()
-    .map((item) => ({ kind: 'book' as const, item, score: relatedBookScore(artifact, item) }))
-    .filter((related) => related.score > 0);
-  const relatedItems = [...relatedArtifacts, ...relatedBooks]
-    .sort((a, b) => {
-      if (b.score !== a.score) return b.score - a.score;
-      return a.item.sortRank - b.item.sortRank;
-    })
-    .slice(0, 6);
+  const focusInfrastructure = isFocusInfrastructure(artifact);
+  const relatedItems = relatedItemsForWork(artifact);
   const youtube = artifact.links.find((link) => link.type === 'youtube');
   const videoUrl = youtube ? youtubeEmbedUrl(youtube.url) : undefined;
   const publicArtifact = toPublicArtifact(artifact);
@@ -109,7 +175,9 @@ export default async function WorkDetailPage({
         <section className="home-section" aria-labelledby="related-work-title">
           <div className="home-section__header">
             <div className="eyebrow">Related work</div>
-            <h2 id="related-work-title">Adjacent systems and publishing.</h2>
+            <h2 id="related-work-title">
+              {focusInfrastructure ? 'Related market systems.' : 'Adjacent systems and publishing.'}
+            </h2>
           </div>
           <div className="work-related-grid">
             {relatedItems.map((related) => (

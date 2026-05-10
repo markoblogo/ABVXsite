@@ -7,14 +7,14 @@
   "visibility": "public",
   "title": "MN7R",
   "shortTitle": "MN7R",
-  "summary": "MN7R is an active brokerage platform for real agro-commodity deal workflows, used by a brokerage team while continuing to expand in functionality, users, teams and territories.",
+  "summary": "MN7R is a commodity trading workflow workspace for brokerage teams running Deals, Clients and EXE inside one structured operational system.",
   "tags": [
-    "agro-commodities",
     "brokerage",
-    "trading-platform",
+    "agro-commodities",
     "deal-workflows",
-    "market-infrastructure",
-    "active-platform"
+    "execution",
+    "trading-workspace",
+    "market-infrastructure"
   ],
   "appearsIn": [
     "focus",
@@ -25,6 +25,11 @@
       "type": "site",
       "label": "Site",
       "url": "https://mn7r.com/"
+    },
+    {
+      "type": "github",
+      "label": "GitHub",
+      "url": "https://github.com/markoblogo/mn7r"
     }
   ],
   "featured": true,
@@ -47,8 +52,17 @@
 }
 ---
 
-MN7R is an active brokerage platform for real agro-commodity deal workflows.
+MN7R is a private operational workspace for commodity trading teams.
 
-It is already used by a brokerage team for live deal activity, while the platform continues to expand with new functionality, more users, additional teams and broader territorial coverage.
+The platform is designed to replace fragmented coordination across chats, spreadsheets and scattered notes with one structured operating environment for brokerage execution.
 
-Within the ABVX focus layer, MN7R represents the brokerage execution side of agro-commodity infrastructure: a practical operating environment for teams working with physical commodity deals, counterparties and transaction workflows.
+The system organizes work into three connected operational layers:
+- Deals for live market flow,
+- Clients for counterparty follow-up,
+- EXE for post-trade execution control.
+
+MN7R is built around operational continuity: BID -> OFFER -> MATCH -> TRADE.
+
+The goal is clearer ownership, stronger execution discipline, cleaner team visibility and better post-trade control without overcomplicating daily broker workflows.
+
+The platform is already used by a brokerage team in real commodity operations while continuing to expand in functionality, users, teams and territories.

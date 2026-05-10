@@ -6,15 +6,16 @@
   "status": "research",
   "visibility": "public",
   "title": "Cropto Monitor: Commodity Signals Terminal",
-  "summary": "Cropto Monitor is a customizable commodity-market monitoring terminal for market signals, adjacent markets, logistics, fuel, weather, crop conditions and visual field or port context.",
+  "summary": "Cropto Monitor is a customizable commodity-signals terminal combining market data, logistics, weather, policy, risk and live situational awareness for agro-commodity markets.",
   "tags": [
     "cropto",
-    "monitor",
+    "monitoring",
     "commodity-signals",
-    "dashboard",
+    "logistics",
+    "weather",
     "market-intelligence",
-    "market-monitoring",
-    "paused-prototype"
+    "dashboard",
+    "agro-commodities"
   ],
   "appearsIn": [
     "focus",
@@ -52,8 +53,22 @@
 }
 ---
 
-Cropto Monitor is the most complex product in the monitoring layer.
+Cropto Monitor is a customizable market-signals terminal for agro-commodity intelligence and situational awareness.
 
-It is designed as a customizable terminal for agro-commodity market context: market signals, commodity-market data, related markets such as logistics and fuel, weather and crop conditions, and visual feeds from ports, farms and other market-relevant locations.
+The platform combines multiple layers of market context into one operational surface:
+- commodity prices,
+- market signals,
+- logistics,
+- fuel,
+- weather,
+- crop conditions,
+- policy,
+- freight,
+- risk indicators,
+- live field and port context.
 
-The product was developed as part of the Cropto infrastructure layer. It is currently not the highest-priority active build, but it remains part of the broader commodity intelligence direction.
+The system is designed around configurable monitoring panels and operational dashboards rather than static reports. Users can reorganize panels, track regional market changes and observe interconnected market conditions in real time.
+
+The platform also incorporates live video streams, signal feeds, global maps, weather layers, logistics pressure indicators and AI-assisted interpretation workflows.
+
+Cropto Monitor belongs to the intelligence layer of the broader Cropto ecosystem: not execution infrastructure itself, but a market-observation and decision-support environment.

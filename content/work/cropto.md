@@ -7,13 +7,12 @@
   "visibility": "public",
   "title": "Cropto",
   "shortTitle": "Cropto",
-  "summary": "Cropto is a commodity trading platform for indexed spot trading, options, tokenized commodity assets and related market instruments. The project is in development and testing with virtual contracts, with a public waitlist open.",
+  "summary": "Cropto is a prototype commodity trading platform for indexed spot trading, options and tokenized commodity-linked instruments across Ukraine, Argentina and Brazil.",
   "tags": [
     "cropto",
     "agro-commodities",
     "trading-platform",
     "indexed-trading",
-    "spot-trading",
     "options",
     "tokenized-assets",
     "market-infrastructure"
@@ -59,8 +58,18 @@
 }
 ---
 
-Cropto is a commodity trading platform for indexed spot trading, options, tokenized commodity assets and related market instruments.
+Cropto is a prototype infrastructure platform for trading and risk management around commodity-linked instruments.
 
-The platform is currently in development and testing. Its current tests use virtual contracts, while the public project is open for waitlist registration.
+The system combines tokenized settlement logic with off-chain commodity index feeds. Instruments are cash-settled against local spot indices rather than tied to physical delivery itself.
 
-Within the ABVX focus layer, Cropto represents the market-trading side of the infrastructure: a platform concept for structured exposure, indexed commodity instruments and future transaction layers around physical agro-commodity markets.
+The platform is designed to separate price-risk management from physical grain logistics:
+- price exposure can be traded financially,
+- hedging does not require physical delivery,
+- logistics flows stay operational rather than speculative,
+- blockchain infrastructure is used for auditability, transparency and settlement logic where it adds practical value.
+
+The platform currently focuses on indexed spot markets, options and tokenized commodity exposure around Ukraine, Argentina and Brazil.
+
+Users can choose a commodity market, connect a wallet, create or take orders, track margin and settlement, and manage indexed commodity exposure.
+
+Cropto is currently in active prototype development and testing with virtual contracts, while public waitlist onboarding remains open.

@@ -7,16 +7,16 @@
   "visibility": "public",
   "title": "Last30Days Cropto",
   "shortTitle": "Last30Days Cropto",
-  "summary": "Last30Days Cropto is a market-mentions monitoring system for agro-commodity and adjacent markets, collecting signals from the web, Reddit, X, Bluesky, news channels and other sources with daily, weekly and 30-day AI summaries.",
+  "summary": "Last30Days Cropto is an agro-commodity intelligence desk that aggregates market mentions, signals and AI-generated summaries across web, news and social sources.",
   "tags": [
-    "cropto",
-    "agro-commodities",
     "market-intelligence",
-    "market-monitoring",
-    "social-signals",
-    "news-monitoring",
+    "monitoring",
     "AI-summary",
-    "paused-prototype"
+    "agro-commodities",
+    "signals",
+    "news-analysis",
+    "social-monitoring",
+    "cropto"
   ],
   "appearsIn": [
     "focus",
@@ -27,6 +27,11 @@
       "type": "site",
       "label": "Site",
       "url": "https://cr0pto.com/last30days/"
+    },
+    {
+      "type": "github",
+      "label": "GitHub",
+      "url": "https://github.com/markoblogo/cropto-v0"
     }
   ],
   "featured": false,
@@ -49,10 +54,24 @@
 }
 ---
 
-Last30Days Cropto is a market-mentions monitoring system for agro-commodity and adjacent markets.
+Last30Days Cropto is a market-intelligence monitoring system focused on agro-commodity and adjacent markets.
 
-It collects and organizes market mentions from multiple public sources, including the web, Reddit, X, Bluesky, news channels and other market-relevant streams.
+The platform aggregates signals from multiple public sources:
+- web publications,
+- news channels,
+- Reddit,
+- X,
+- Bluesky,
+- market discussions,
+- adjacent logistics and macro-market streams.
 
-The service shows current mentions, weekly mentions and 30-day market mentions with links back to original sources. It also generates AI-assisted analytical summaries for today, the week and the last 30 days.
+The system organizes market mentions into:
+- daily view,
+- weekly context,
+- rolling 30-day market memory.
 
-The project was developed as part of the Cropto intelligence layer. It is currently paused due to shifting priorities, but it remains a relevant part of the market-monitoring direction.
+Alongside raw source aggregation, the platform generates AI-assisted analytical summaries for each period.
+
+The project is designed around a synthesized-analytics-first, raw-feed-second approach: tight period focus, visual distribution context and narrative interpretation before information overload.
+
+The platform currently exists as a paused but active infrastructure direction within the broader Cropto monitoring ecosystem.

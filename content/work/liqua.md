@@ -6,12 +6,14 @@
   "status": "building",
   "visibility": "public",
   "title": "Liqua",
-  "summary": "Liquidity layer for physical commodity markets and structured market liquidity.",
+  "summary": "Liqua is a structured liquidity and execution layer for physical commodity markets, designed to turn fragmented brokerage activity into scalable infrastructure.",
   "tags": [
-    "commodities",
     "liquidity",
+    "brokerage",
+    "execution",
     "market-infrastructure",
-    "trading-service"
+    "trading-services",
+    "agro-commodities"
   ],
   "appearsIn": [
     "focus",
@@ -21,7 +23,7 @@
     {
       "type": "site",
       "label": "Site",
-      "url": "https://liqua.abvx.xyz/"
+      "url": "https://liqua.cr0pto.com/"
     },
     {
       "type": "github",
@@ -54,4 +56,15 @@
 }
 ---
 
-Liqua is a Cropto-adjacent landing/service project for structured market liquidity in physical commodity trading.
+Liqua is a market-liquidity and execution infrastructure project for physical commodity trading.
+
+The platform is built around the idea that brokers should remain focused on relationships, negotiation and trust, while execution workflow, process control and operational consistency become structured infrastructure.
+
+Liqua is designed as:
+- a broker-enabled liquidity layer,
+- a standardized execution environment,
+- an operational coordination system for scaling commodity-market activity across corridors and commodities.
+
+The project focuses on turning fragmented brokerage workflows into repeatable market infrastructure without removing the human relationship layer that commodity trading still depends on.
+
+The platform is open to partnerships, pilot corridors and investor conversations.

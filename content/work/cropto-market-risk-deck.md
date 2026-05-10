@@ -6,12 +6,15 @@
   "status": "building",
   "visibility": "public",
   "title": "Cropto market risk tools deck",
-  "summary": "Deck and landing page for local market risk tools, spot indices, hedging, options, and cross-market strategies.",
+  "summary": "Cropto Market Risk Tools Deck presents tokenized local spot-index risk infrastructure for commodity markets and programmable settlement systems.",
   "tags": [
     "cropto",
     "market-risk",
     "deck",
-    "landing"
+    "tokenized-assets",
+    "indexed-trading",
+    "landing",
+    "commodities"
   ],
   "appearsIn": [
     "focus",
@@ -21,7 +24,7 @@
     {
       "type": "site",
       "label": "Site",
-      "url": "https://cropto.abvx.xyz/deck/"
+      "url": "https://cr0pto.com/deck"
     },
     {
       "type": "github",
@@ -54,4 +57,15 @@
 }
 ---
 
-A Cropto presentation/landing artifact explaining how local market risk tools can become modern digital infrastructure for commodity markets.
+Cropto Market Risk Tools Deck is a market-facing presentation layer for the Cropto infrastructure direction.
+
+The project explains the idea of tokenized local spot-index risk infrastructure: a system where commodity-market risk can be managed through indexed financial exposure rather than through forced physical delivery.
+
+The deck positions Cropto as a bridge between physical commodity markets and programmable digital infrastructure:
+- local spot-index references,
+- structured market exposure,
+- programmable settlement rails,
+- transparent infrastructure logic,
+- stronger correlation with physical market conditions.
+
+The project functions both as a presentation environment and as a conceptual market-infrastructure narrative around tokenized commodity risk systems.

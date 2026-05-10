@@ -6,7 +6,7 @@
   "status": "live",
   "visibility": "public",
   "title": "ABVX Shortener",
-  "summary": "Private, zero-bloat link shortener with a one-click browser workflow.",
+  "summary": "ABVX Shortener is a lightweight web and browser-extension system for shortened operational links and compact URL workflows.",
   "tags": [
     "web-service",
     "utility",
@@ -16,6 +16,11 @@
     "systems"
   ],
   "links": [
+    {
+      "type": "site",
+      "label": "Site",
+      "url": "https://go.abvx.xyz/"
+    },
     {
       "type": "github",
       "label": "GitHub",
@@ -33,7 +38,7 @@
   "needsMediaReview": false,
   "needsLinkReview": false,
   "primarySection": "systems",
-  "group": "Web services",
+  "group": "Standalone Utilities & Experiments",
   "media": {
     "src": "/media/projects/abvx-shortener.png",
     "alt": "ABVX Shortener screenshot",

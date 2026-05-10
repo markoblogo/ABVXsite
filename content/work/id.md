@@ -6,7 +6,7 @@
   "status": "building",
   "visibility": "public",
   "title": "ID",
-  "summary": "Open-source development project from the AI/dev stack; public description and links need final review.",
+  "summary": "ID is a protocol layer within the AI-native ecosystem for structured identity, operational references and system coordination.",
   "tags": [
     "ai-dev",
     "tool"
@@ -23,7 +23,7 @@
   ],
   "featured": false,
   "sortRank": 520,
-  "needsCopyReview": true,
+  "needsCopyReview": false,
   "needsMediaReview": true,
   "needsLinkReview": false,
   "editorialNotes": "Migrated from TypeScript registry; review copy/media/links before final polish.",

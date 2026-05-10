@@ -6,7 +6,7 @@
   "status": "archive",
   "visibility": "public",
   "title": "git-tweet",
-  "summary": "Small development utility from the legacy public projects list; public links need review before promotion.",
+  "summary": "git-tweet is a lightweight development communication system for turning repository activity into structured operational signals and updates.",
   "tags": [
     "tool",
     "developer-utility"
@@ -14,12 +14,23 @@
   "appearsIn": [
     "systems"
   ],
-  "links": [],
+  "links": [
+    {
+      "type": "site",
+      "label": "Site",
+      "url": "https://git-tweet.abvx.xyz/"
+    },
+    {
+      "type": "github",
+      "label": "GitHub",
+      "url": "https://github.com/markoblogo/git-tweet"
+    }
+  ],
   "featured": false,
   "sortRank": 510,
-  "needsCopyReview": true,
+  "needsCopyReview": false,
   "needsMediaReview": true,
-  "needsLinkReview": true,
+  "needsLinkReview": false,
   "editorialNotes": "Migrated from TypeScript registry; review copy/media/links before final polish.",
   "primarySection": "systems",
   "group": "Protocols & Decision Systems"

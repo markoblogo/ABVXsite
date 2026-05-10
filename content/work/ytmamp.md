@@ -6,7 +6,7 @@
   "status": "released",
   "visibility": "public",
   "title": "YTMamp",
-  "summary": "Lightweight, retro-inspired mini-player for YouTube Music on macOS.",
+  "summary": "YTMamp is a macOS app and browser-extension experiment that transforms YouTube Music into a Winamp-inspired player experience.",
   "tags": [
     "macos",
     "music",
@@ -34,7 +34,7 @@
   "needsMediaReview": false,
   "needsLinkReview": false,
   "primarySection": "systems",
-  "group": "Tools",
+  "group": "Standalone Utilities & Experiments",
   "media": {
     "src": "/media/projects/ytmamp.png",
     "alt": "YTMamp screenshot",

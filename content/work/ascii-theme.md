@@ -6,7 +6,7 @@
   "status": "live",
   "visibility": "public",
   "title": "AsciiTheme",
-  "summary": "Open-source ASCII UI theme for modern websites, with CSS/JS and light/dark awareness.",
+  "summary": "AsciiTheme is a UI and CSS system for light, dark and ASCII-inspired development interfaces within the broader AI-native tooling ecosystem.",
   "tags": [
     "ui",
     "theme",
@@ -17,6 +17,11 @@
     "systems"
   ],
   "links": [
+    {
+      "type": "site",
+      "label": "Site",
+      "url": "https://markoblogo.github.io/AsciiTheme/"
+    },
     {
       "type": "github",
       "label": "GitHub",

@@ -6,7 +6,7 @@
   "status": "building",
   "visibility": "public",
   "title": "LLMO site/platform",
-  "summary": "Website and companion platform for the LLMO: The Next SEO Revolution book/project.",
+  "summary": "LLMO Site/Platform is an AI-native visibility and optimization platform focused on structured machine-readable content, discovery and operational publishing surfaces.",
   "tags": [
     "llmo",
     "ai-search",

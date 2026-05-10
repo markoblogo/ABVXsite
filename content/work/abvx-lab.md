@@ -6,7 +6,7 @@
   "status": "building",
   "visibility": "public",
   "title": "ABVX Lab",
-  "summary": "Public lab surface for experiments, prototypes, and AI-native development utilities.",
+  "summary": "ABVX Lab is the ecosystem front for AI-native development systems, protocols, workflows and operational tooling.",
   "tags": [
     "lab",
     "experiments",
@@ -20,11 +20,16 @@
       "type": "site",
       "label": "Site",
       "url": "https://lab.abvx.xyz/"
+    },
+    {
+      "type": "github",
+      "label": "GitHub",
+      "url": "https://github.com/markoblogo/lab.abvx"
     }
   ],
   "featured": false,
   "sortRank": 500,
-  "needsCopyReview": true,
+  "needsCopyReview": false,
   "needsMediaReview": true,
   "needsLinkReview": false,
   "editorialNotes": "Migrated from TypeScript registry; review copy/media/links before final polish.",

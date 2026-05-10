@@ -6,7 +6,7 @@
   "status": "building",
   "visibility": "public",
   "title": "SET",
-  "summary": "Open-source development project from the AI/dev stack; public description and links need final review.",
+  "summary": "SET is an orchestration layer for AI-native operational tools, workflows and structured development systems.",
   "tags": [
     "ai-dev",
     "tool"
@@ -23,7 +23,7 @@
   ],
   "featured": false,
   "sortRank": 530,
-  "needsCopyReview": true,
+  "needsCopyReview": false,
   "needsMediaReview": true,
   "needsLinkReview": false,
   "editorialNotes": "Migrated from TypeScript registry; review copy/media/links before final polish.",

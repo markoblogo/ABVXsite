@@ -6,7 +6,7 @@
   "status": "live",
   "visibility": "public",
   "title": "AGENTS.md Generator",
-  "summary": "Safe-by-default CLI that generates and updates AGENTS.md / RUNBOOK.md for AI coding agents.",
+  "summary": "AGENTS.md Generator is an operational workflow surface for AI-assisted development systems, agent coordination and structured coding workflows.",
   "tags": [
     "ai-dev",
     "agents",

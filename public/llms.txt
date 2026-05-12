@@ -119,6 +119,12 @@ Machine-readable index: https://abvx.xyz/content-index.json
   Group: Language, AI & Toki Pona
   Tags: Toki Pona, AI, prompt engineering, small language models, constrained languages, language systems, sitelen pona, English
 
+- The Tiny Language Protocol: Toki Pona, Lojban, and the Future of Clear Thinking
+  URL: https://abvx.xyz/books/the-tiny-language-protocol
+  Summary: The Tiny Language Protocol explores Toki Pona and Lojban as opposite but complementary tools for clearer thinking, structured communication and AI-era language design.
+  Group: Language, AI & Toki Pona
+  Tags: toki-pona, lojban, language, AI, conlang, prompting, philosophy, communication
+
 - Pictiq
   URL: https://abvx.xyz/work/pictiq
   Summary: Pictiq is a minimal visual protocol for short messages across language barriers, built from icon tiles and a simple grammar for pointing, quick signs, stickers and compact phrases.

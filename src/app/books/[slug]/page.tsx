@@ -89,8 +89,11 @@ function sharesSeries(source: Book, candidate: Book | Artifact): boolean {
 }
 
 function relatedScore(book: Book, candidate: Book | Artifact): number {
+  const explicitIndex = book.relatedSlugs?.indexOf(candidate.slug) ?? -1;
   let score = tagOverlap(book.tags, candidate.tags) * 8;
 
+  if (explicitIndex >= 0) score += 1000 - explicitIndex;
+  if (candidate.relatedSlugs?.includes(book.slug)) score += 900;
   if (sharesSeries(book, candidate)) score += 90;
   if ('series' in candidate && candidate.series && candidate.series === book.series) score += 70;
   if ('category' in candidate && candidate.category && candidate.category === book.category) score += 35;
@@ -246,12 +249,13 @@ export default async function BookDetailPage({
     .filter((item) => item.id !== book.id)
     .filter(
       (item) =>
+        book.relatedSlugs?.includes(item.slug) ||
         item.series === book.series ||
         item.category === book.category ||
         item.tags.some((tag) => book.tags.includes(tag)),
     );
   const relatedArtifacts = getArtifactsBySection('books')
-    .filter((item) => item.tags.some((tag) => book.tags.includes(tag)))
+    .filter((item) => book.relatedSlugs?.includes(item.slug) || item.tags.some((tag) => book.tags.includes(tag)))
     .filter((item) => relatedScore(book, item) > 0);
   const relatedItems = [
     ...relatedBooks.map((item) => ({ kind: 'book' as const, item, score: relatedScore(book, item) })),
@@ -261,7 +265,7 @@ export default async function BookDetailPage({
       if (b.score !== a.score) return b.score - a.score;
       return a.item.sortRank - b.item.sortRank;
     })
-    .slice(0, 6);
+    .slice(0, book.relatedSlugs?.length ? Math.min(Math.max(book.relatedSlugs.length, 6), 9) : 6);
   const youtube = book.links.find((link) => link.type === 'youtube');
   const videoUrl = youtube ? youtubeEmbedUrl(youtube.url) : undefined;
   const formats = formatFormats(book.availableFormats?.length ? book.availableFormats : book.formats);

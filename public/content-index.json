@@ -921,6 +921,85 @@
       ]
     },
     {
+      "type": "book",
+      "section": "books",
+      "title": "The Tiny Language Protocol: Toki Pona, Lojban, and the Future of Clear Thinking",
+      "summary": "The Tiny Language Protocol explores Toki Pona and Lojban as opposite but complementary tools for clearer thinking, structured communication and AI-era language design.",
+      "canonicalUrl": "https://abvx.xyz/books/the-tiny-language-protocol",
+      "tags": [
+        "toki-pona",
+        "lojban",
+        "language",
+        "AI",
+        "conlang",
+        "prompting",
+        "philosophy",
+        "communication",
+        "semantic-compression",
+        "language-systems"
+      ],
+      "links": [
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0H1DKLKL9"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0H1HFRRFV"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Toki Pona and the Machine Mind",
+          "canonicalUrl": "https://abvx.xyz/books/toki-pona-machine-mind",
+          "relation": "related"
+        },
+        {
+          "title": "Dao De Jing in Toki Pona",
+          "canonicalUrl": "https://abvx.xyz/books/dao-de-jing-toki-pona",
+          "relation": "related"
+        },
+        {
+          "title": "Sunzi: The Art of War in toki pona",
+          "canonicalUrl": "https://abvx.xyz/books/sunzi-art-of-war-toki-pona",
+          "relation": "related"
+        },
+        {
+          "title": "Toki Pona AI translator",
+          "canonicalUrl": "https://abvx.xyz/work/toki-pona-ai-translator",
+          "relation": "related"
+        },
+        {
+          "title": "Pictiq",
+          "canonicalUrl": "https://abvx.xyz/work/pictiq",
+          "relation": "related"
+        },
+        {
+          "title": "sitelen-emoji-truth",
+          "canonicalUrl": "https://abvx.xyz/work/sitelen-emoji-truth",
+          "relation": "related"
+        },
+        {
+          "title": "sitelen-layer-plugin",
+          "canonicalUrl": "https://abvx.xyz/work/sitelen-layer-plugin",
+          "relation": "related"
+        },
+        {
+          "title": "Stoic Wisdom in Toki Pona",
+          "canonicalUrl": "https://abvx.xyz/books/stoic-wisdom-toki-pona",
+          "relation": "related"
+        },
+        {
+          "title": "Chinese Wisdom in toki pona",
+          "canonicalUrl": "https://abvx.xyz/books/chinese-wisdom-toki-pona",
+          "relation": "related"
+        }
+      ]
+    },
+    {
       "type": "free-edition",
       "section": "books",
       "title": "The Toki Pona Reader’s Kit",

@@ -46,6 +46,10 @@ const nextConfig: NextConfig = {
       { source: "/books/future-proof-your-productivity/", destination: "/books/future-proof-productivity", permanent: true },
       { source: "/books/dao-de-jing", destination: "/books/dao-de-jing-toki-pona", permanent: true },
       { source: "/books/dao-de-jing/", destination: "/books/dao-de-jing-toki-pona", permanent: true },
+      { source: "/books/ukrainian-modernism-series", destination: "/books/modernisme-ukrainien", permanent: true },
+      { source: "/books/ukrainian-modernism-series/", destination: "/books/modernisme-ukrainien", permanent: true },
+      { source: "/books/toki-pona-classics-series", destination: "/books/toki-pona-free-kits", permanent: true },
+      { source: "/books/toki-pona-classics-series/", destination: "/books/toki-pona-free-kits", permanent: true },
       // Enforce a no-trailing-slash canonical style (except root).
       { source: "/about/", destination: "/about", permanent: true },
       { source: "/books/", destination: "/books", permanent: true },

@@ -97,6 +97,14 @@ function itemsForSlugs(artifacts: Artifact[], slugs: readonly string[], usedSlug
     });
 }
 
+function slugifyFragment(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
 export default function SystemsPage() {
   const artifacts = getArtifactsBySection('systems');
   const listedArtifacts = ecosystems.flatMap((ecosystem) =>
@@ -131,8 +139,8 @@ export default function SystemsPage() {
         summary="Services, workflows, protocols, tools and technical companion systems."
       />
 
-      {ecosystems.map((ecosystem, index) => {
-        const titleId = `systems-ecosystem-${index}`;
+      {ecosystems.map((ecosystem) => {
+        const titleId = slugifyFragment(ecosystem.title);
 
         if ('groups' in ecosystem) {
           const renderedGroups = ecosystem.groups
@@ -150,23 +158,26 @@ export default function SystemsPage() {
               </div>
 
               <div className="systems-ecosystem__groups">
-                {renderedGroups.map((group) => (
-                  <section key={group.title} className="systems-subgroup">
-                    <div className="systems-subgroup__header">
-                      <h3>{group.title}</h3>
-                      {'description' in group && group.description ? <p>{group.description}</p> : null}
-                    </div>
-                    <div className="systems-grid">
-                      {group.items.map((artifact) => (
-                        <ProjectCatalogueCard
-                          key={artifact.id}
-                          artifact={toPublicArtifact(artifact)}
-                          meta={group.title}
-                        />
-                      ))}
-                    </div>
-                  </section>
-                ))}
+                {renderedGroups.map((group) => {
+                  const groupId = slugifyFragment(group.title);
+                  return (
+                    <section key={group.title} className="systems-subgroup" aria-labelledby={groupId}>
+                      <div className="systems-subgroup__header">
+                        <h3 id={groupId}>{group.title}</h3>
+                        {'description' in group && group.description ? <p>{group.description}</p> : null}
+                      </div>
+                      <div className="systems-grid">
+                        {group.items.map((artifact) => (
+                          <ProjectCatalogueCard
+                            key={artifact.id}
+                            artifact={toPublicArtifact(artifact)}
+                            meta={group.title}
+                          />
+                        ))}
+                      </div>
+                    </section>
+                  );
+                })}
               </div>
             </section>
           );

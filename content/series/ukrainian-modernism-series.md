@@ -4,7 +4,7 @@
   "slug": "ukrainian-modernism-series",
   "type": "series",
   "status": "released",
-  "visibility": "public",
+  "visibility": "private",
   "title": "Ukrainian Modernism translations",
   "summary": "Series of early twentieth-century Ukrainian modernist literature translated into French.",
   "tags": [

@@ -48,6 +48,14 @@ function itemsForGroup(artifacts: Artifact[], slugs: readonly string[]): Artifac
   return slugs.map((slug) => bySlug.get(slug)).filter((item): item is Artifact => Boolean(item));
 }
 
+function slugifyFragment(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
 export default function FocusPage() {
   const artifacts = getArtifactsBySection('focus');
   const listedArtifacts = focusGroups.flatMap((group) => itemsForGroup(artifacts, group.slugs));
@@ -78,10 +86,10 @@ export default function FocusPage() {
         summary="Digital infrastructure, standards, indexes, workflows and AI-assisted tools for physical agro-commodity markets."
       />
 
-      {focusGroups.map((group, index) => {
+      {focusGroups.map((group) => {
         const groupItems = itemsForGroup(artifacts, group.slugs);
         if (!groupItems.length) return null;
-        const titleId = `focus-group-${index}`;
+        const titleId = slugifyFragment(group.title);
 
         return (
           <section key={group.title} className="home-section focus-product-group" aria-labelledby={titleId}>

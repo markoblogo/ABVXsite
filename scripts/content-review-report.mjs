@@ -9,6 +9,8 @@ for (const folder of ['books', 'work', 'series']) {
   }
 }
 
+const publicItems = items.filter((item) => item.data.visibility !== 'private' && item.data.visibility !== 'draft');
+
 function hasLink(item, types) {
   return Array.isArray(item.data.links) && item.data.links.some((link) => types.includes(link.type));
 }
@@ -24,18 +26,19 @@ function section(title, entries) {
   }
 }
 
-section('Needs copy review', items.filter((item) => item.data.needsCopyReview));
-section('Needs media review', items.filter((item) => item.data.needsMediaReview));
-section('Needs link review', items.filter((item) => item.data.needsLinkReview));
-section('No body / long description', items.filter((item) => !item.body));
-section('Books without purchase links', items.filter((item) => item.folder === 'books' && !hasLink(item, ['kindle', 'paperback', 'amazon'])));
+section('Needs copy review', publicItems.filter((item) => item.data.needsCopyReview));
+section('Needs media review', publicItems.filter((item) => item.data.needsMediaReview));
+section('Needs link review', publicItems.filter((item) => item.data.needsLinkReview));
+section('No body / long description', publicItems.filter((item) => !item.body));
+section('Books without purchase links', publicItems.filter((item) => item.folder === 'books' && !hasLink(item, ['kindle', 'paperback', 'amazon'])));
 section(
   'Released books without Kindle/Paperback',
-  items.filter((item) => item.folder === 'books' && item.data.status === 'released' && !hasLink(item, ['kindle', 'paperback'])),
+  publicItems.filter((item) => item.folder === 'books' && item.data.status === 'released' && !hasLink(item, ['kindle', 'paperback'])),
 );
-section('Work without public action link', items.filter((item) => item.folder === 'work' && !hasLink(item, ['site', 'demo', 'github', 'youtube', 'pdf', 'deck'])));
-section('Items without media', items.filter((item) => !item.data.media));
-section('Items using generic-thumbnail', items.filter((item) => item.data.media?.role === 'generic-thumbnail'));
-section('Very short summaries', items.filter((item) => typeof item.data.summary === 'string' && item.data.summary.length < 60));
+section('Work without public action link', publicItems.filter((item) => item.folder === 'work' && !hasLink(item, ['site', 'demo', 'github', 'youtube', 'pdf', 'deck'])));
+section('Items without media', publicItems.filter((item) => !item.data.media));
+section('Items using generic-thumbnail', publicItems.filter((item) => item.data.media?.role === 'generic-thumbnail'));
+section('Very short summaries', publicItems.filter((item) => typeof item.data.summary === 'string' && item.data.summary.length < 60));
 
-console.log(`\nTotal content files reviewed: ${items.length}`);
+console.log(`\nTotal public content files reviewed: ${publicItems.length}`);
+console.log(`Total content files scanned: ${items.length}`);

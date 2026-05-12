@@ -4,7 +4,7 @@
   "slug": "toki-pona-classics-series",
   "type": "series",
   "status": "released",
-  "visibility": "public",
+  "visibility": "private",
   "title": "Toki Pona Classics",
   "summary": "Toki Pona book series, reader kits, free editions, and companion websites around classics, philosophy, and language experiments.",
   "tags": [

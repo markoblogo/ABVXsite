@@ -1,6 +1,6 @@
 import { artifacts as fallbackArtifacts } from './artifacts';
 import { books as fallbackBooks } from './books';
-import { readBookFiles, readSeriesFiles, readWorkFiles } from './file-loader';
+import { readBookFiles, readHiddenSlugs, readSeriesFiles, readWorkFiles } from './file-loader';
 import type { Artifact, Book, Series, SiteSection } from './types';
 
 type RelatedSource = Artifact | Book | Series;
@@ -51,6 +51,10 @@ function mergeBySlug<T extends { slug: string }>(fallback: T[], files: T[]): T[]
   return [...bySlug.values()];
 }
 
+function removeHiddenFallback<T extends { slug: string }>(items: T[], hiddenSlugs: Set<string>): T[] {
+  return items.filter((item) => !hiddenSlugs.has(item.slug));
+}
+
 function seriesAsBooks(seriesItems: Series[]): Book[] {
   return seriesItems.map((series) => ({
     ...series,
@@ -60,7 +64,7 @@ function seriesAsBooks(seriesItems: Series[]): Book[] {
 }
 
 export function getArtifacts(): Artifact[] {
-  return mergeBySlug(artifacts, readWorkFiles()).sort(byPublicOrder);
+  return mergeBySlug(removeHiddenFallback(artifacts, readHiddenSlugs('work')), readWorkFiles()).sort(byPublicOrder);
 }
 
 export function getArtifactsBySection(section: SiteSection): Artifact[] {
@@ -77,7 +81,8 @@ export function getLatestArtifact(section: SiteSection): Artifact | undefined {
 }
 
 export function getBooks(): Book[] {
-  return mergeBySlug(books, [...readBookFiles(), ...seriesAsBooks(readSeriesFiles())]).sort(byPublicOrder);
+  const hiddenSlugs = new Set([...readHiddenSlugs('books'), ...readHiddenSlugs('series')]);
+  return mergeBySlug(removeHiddenFallback(books, hiddenSlugs), [...readBookFiles(), ...seriesAsBooks(readSeriesFiles())]).sort(byPublicOrder);
 }
 
 export function getBooksBySection(section: SiteSection): Book[] {

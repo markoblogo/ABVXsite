@@ -56,8 +56,39 @@ const marketEcosystemTags = new Set([
   'trading-service',
 ]);
 
+const sectionMeta: Record<string, { label: string; href: string; jsonUrl: string }> = {
+  focus: { label: 'Focus', href: '/focus', jsonUrl: `${SITE_URL}/focus` },
+  systems: { label: 'Systems', href: '/systems', jsonUrl: `${SITE_URL}/systems` },
+  books: { label: 'Books', href: '/books', jsonUrl: `${SITE_URL}/books` },
+  writing: { label: 'Writing', href: '/writing', jsonUrl: `${SITE_URL}/writing` },
+};
+
 function isFocusInfrastructure(artifact: Artifact): boolean {
   return artifact.primarySection === 'focus' || Boolean(artifact.group && focusGroups.has(artifact.group));
+}
+
+function slugifyFragment(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
+function breadcrumbSectionFor(artifact: Artifact) {
+  if (isFocusInfrastructure(artifact)) return sectionMeta.focus;
+  return sectionMeta[artifact.primarySection] || sectionMeta.systems;
+}
+
+function breadcrumbGroupFor(artifact: Artifact, section: { href: string; jsonUrl: string }) {
+  if (!artifact.group) return undefined;
+  if (artifact.primarySection === 'books') return { label: artifact.group, href: '/books#book-companions-title', jsonUrl: `${SITE_URL}/books#book-companions-title` };
+  const fragment = slugifyFragment(artifact.group);
+  return {
+    label: artifact.group,
+    href: `${section.href}#${fragment}`,
+    jsonUrl: `${section.jsonUrl}#${fragment}`,
+  };
 }
 
 function marketTagOverlap(a: string[], b: string[]): number {
@@ -172,6 +203,8 @@ export default async function WorkDetailPage({
   const videoUrl = youtube ? youtubeEmbedUrl(youtube.url) : undefined;
   const publicArtifact = toPublicArtifact(artifact);
   const channels = socialLinks(publicArtifact.links);
+  const breadcrumbSection = breadcrumbSectionFor(artifact);
+  const breadcrumbGroup = breadcrumbGroupFor(artifact, breadcrumbSection);
 
   return (
     <article className="detail-page detail-page--work">
@@ -180,20 +213,16 @@ export default async function WorkDetailPage({
         id="jsonld-work-breadcrumbs"
         data={breadcrumbJsonLd([
           { name: 'ABVX', url: SITE_URL },
-          {
-            name: focusInfrastructure ? 'Current Focus' : 'Systems Catalogue',
-            url: `${SITE_URL}/${focusInfrastructure ? 'focus' : 'systems'}`,
-          },
+          { name: breadcrumbSection.label, url: breadcrumbSection.jsonUrl },
+          ...(breadcrumbGroup ? [{ name: breadcrumbGroup.label, url: breadcrumbGroup.jsonUrl }] : []),
           { name: artifact.title, url: `${SITE_URL}/work/${artifact.slug}` },
         ])}
       />
       <BreadcrumbNav
         items={[
           { label: 'ABVX', href: '/' },
-          {
-            label: focusInfrastructure ? 'Focus' : 'Systems',
-            href: focusInfrastructure ? '/focus' : '/systems',
-          },
+          { label: breadcrumbSection.label, href: breadcrumbSection.href },
+          ...(breadcrumbGroup ? [{ label: breadcrumbGroup.label, href: breadcrumbGroup.href }] : []),
           { label: artifact.title },
         ]}
       />

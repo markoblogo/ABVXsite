@@ -34,6 +34,20 @@ function itemKind(item) {
   return item.type || 'book';
 }
 
+function ecosystemLabel(item) {
+  if (item.folder === 'series') return 'Publishing lines';
+  if (item.folder === 'books') return item.group || item.series || 'Books';
+  if (item.primarySection === 'focus' || item.appearsIn?.includes('focus')) return 'Agro Market Infrastructure Systems';
+  if (['Publishing Companion Sites', 'Language Tools, Protocols & Experiments', 'Publishing systems & protocols'].includes(item.group)) {
+    return 'Publishing & Language Systems';
+  }
+  if (['Workflow & Orchestration', 'Development Surfaces & Interfaces', 'Protocols & Decision Systems'].includes(item.group)) {
+    return 'AI-native Development Systems';
+  }
+  if (item.group === 'Standalone Utilities & Experiments') return 'Standalone Utilities & Experiments';
+  return item.group || item.primarySection || item.folder;
+}
+
 function cleanLinks(links) {
   if (!Array.isArray(links)) return [];
   return links
@@ -120,6 +134,9 @@ function publicIndexItem(item) {
   return {
     type: itemKind(item),
     section: itemSection(item),
+    ecosystem: ecosystemLabel(item),
+    group: item.group || item.series || null,
+    status: item.status || null,
     title: item.title,
     summary: item.summary,
     canonicalUrl: canonicalUrl(item),
@@ -186,6 +203,7 @@ const llms = [
   'Name: ABVX / Anton Biletskyi-Volokh',
   'Summary: ABVX is the public ecosystem site for focus infrastructure, publishing lines, books, AI-native systems, language tools and standalone utilities.',
   'Machine-readable index: https://abvx.xyz/content-index.json',
+  'Primary layers: Focus = market infrastructure; Systems = operational systems architecture; Books = publishing and intellectual layer; Writing = essays and field notes.',
   '',
   llmsSection('Focus systems', rawItems.filter(isFocus)),
   '',

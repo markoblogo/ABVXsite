@@ -83,6 +83,15 @@ function readMarkdownFiles(folder: string): ParsedFile[] {
     });
 }
 
+export function readHiddenSlugs(folder: string): Set<string> {
+  return new Set(
+    readMarkdownFiles(folder)
+      .filter((file) => !isVisible(file.data.visibility))
+      .map((file) => stringValue(file.data.slug))
+      .filter(Boolean),
+  );
+}
+
 function stringValue(value: unknown, fallback = ''): string {
   return typeof value === 'string' ? value : fallback;
 }

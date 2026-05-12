@@ -86,7 +86,12 @@ export function metadataWithImage({
       card: 'summary_large_image',
       title,
       description: compactDescription,
-      images: [image.url],
+      images: [
+        {
+          url: image.url,
+          alt: image.alt,
+        },
+      ],
     },
   };
 }
@@ -152,8 +157,10 @@ export function collectionPageJsonLd({
     name,
     description,
     url,
+    mainEntityOfPage: url,
     isPartOf: { '@id': `${SITE_URL}/#website` },
-    about: { '@id': `${SITE_URL}/#person` },
+    about: { '@id': `${SITE_URL}/#organization` },
+    publisher: { '@id': `${SITE_URL}/#organization` },
     ...(image ? { image: image.url, primaryImageOfPage: { '@type': 'ImageObject', url: image.url, width: image.width, height: image.height, caption: image.alt } } : {}),
   };
 }
@@ -167,6 +174,7 @@ export function aboutPageJsonLd() {
     description:
       'About Anton Biletskiy-Volokh, ABVX, working method, operating lines and collaboration context.',
     url: `${SITE_URL}/about`,
+    mainEntityOfPage: `${SITE_URL}/about`,
     isPartOf: { '@id': `${SITE_URL}/#website` },
     about: { '@id': `${SITE_URL}/#person` },
   };
@@ -205,14 +213,45 @@ function artifactSchemaType(type: Artifact['type']) {
     return 'WebApplication';
   }
   if (['tool', 'ai-workflow'].includes(type)) return 'SoftwareApplication';
+  if (type === 'plugin') return 'SoftwareSourceCode';
+  if (type === 'book-companion') return 'WebPage';
   if (['research', 'build-log'].includes(type)) return 'TechArticle';
   return 'CreativeWork';
+}
+
+function imageObject(image: ContentImage | undefined, fallbackAlt?: string) {
+  if (!image?.src) return undefined;
+  return {
+    '@type': 'ImageObject',
+    url: absoluteUrl(image.src),
+    ...(image.width ? { width: image.width } : {}),
+    ...(image.height ? { height: image.height } : {}),
+    ...(image.alt || fallbackAlt ? { caption: image.alt || fallbackAlt } : {}),
+  };
+}
+
+function linkOfType(item: { links: Array<{ type: string; url: string }> }, type: string) {
+  return item.links.find((link) => link.type === type);
+}
+
+function amazonAsins(book: Book) {
+  return [...new Set(
+    book.links
+      .map((link) => link.url.match(/amazon\.[^/]+\/(?:dp|gp\/product)\/([A-Z0-9]{10})/i)?.[1])
+      .filter((asin): asin is string => Boolean(asin)),
+  )];
 }
 
 export function artifactJsonLd(artifact: Artifact) {
   const url = `${SITE_URL}/work/${artifact.slug}`;
   const image = artifact.heroImage || artifact.thumbnail;
   const schemaType = artifactSchemaType(artifact.type);
+  const siteLink = linkOfType(artifact, 'site') || linkOfType(artifact, 'website');
+  const githubLink = linkOfType(artifact, 'github');
+  const imageSchema = imageObject(image, artifact.title);
+  const sameAs = artifact.links
+    .map((link) => link.url)
+    .filter((link) => link !== siteLink?.url);
 
   return {
     '@context': 'https://schema.org',
@@ -222,26 +261,24 @@ export function artifactJsonLd(artifact: Artifact) {
     headline: artifact.title,
     description: seoDescription(artifact.summary, 220),
     url,
+    mainEntityOfPage: url,
     isPartOf: { '@id': `${SITE_URL}/#website` },
     author: { '@id': `${SITE_URL}/#person` },
     creator: { '@id': `${SITE_URL}/#person` },
+    publisher: { '@id': `${SITE_URL}/#organization` },
+    provider: { '@id': `${SITE_URL}/#organization` },
     keywords: artifact.tags.join(', '),
     datePublished: artifact.publishedAt,
     dateModified: artifact.updatedAt || artifact.publishedAt,
     ...(artifact.status ? { creativeWorkStatus: artifact.status } : {}),
     ...(artifact.group ? { genre: artifact.group } : {}),
-    ...(image?.src ? { image: absoluteUrl(image.src) } : {}),
+    ...(siteLink ? { sameAs: [siteLink.url, ...sameAs] } : sameAs.length ? { sameAs } : {}),
+    ...(githubLink ? { codeRepository: githubLink.url } : {}),
+    ...(imageSchema ? { image: imageSchema, primaryImageOfPage: imageSchema } : {}),
     ...(schemaType === 'SoftwareApplication' || schemaType === 'WebApplication'
       ? {
           applicationCategory: artifact.group || artifact.type,
           operatingSystem: 'Web',
-        }
-      : {}),
-    ...(artifact.links.length
-      ? {
-          sameAs: artifact.links
-            .filter((link) => link.type !== 'site' && link.type !== 'website')
-            .map((link) => link.url),
         }
       : {}),
   };
@@ -250,6 +287,7 @@ export function artifactJsonLd(artifact: Artifact) {
 export function bookJsonLd(book: Book) {
   const url = `${SITE_URL}/books/${book.slug}`;
   const image = book.heroImage || book.coverImage;
+  const imageSchema = imageObject(image, book.title);
 
   if (book.type === 'series') {
     return {
@@ -259,13 +297,24 @@ export function bookJsonLd(book: Book) {
       name: book.title,
       description: seoDescription(book.summary, 220),
       url,
+      mainEntityOfPage: url,
       isPartOf: { '@id': `${SITE_URL}/#website` },
       creator: { '@id': `${SITE_URL}/#person` },
-      publisher: { '@id': `${SITE_URL}/#person` },
+      publisher: { '@id': `${SITE_URL}/#organization` },
       keywords: book.tags.join(', '),
-      ...(image?.src ? { image: absoluteUrl(image.src) } : {}),
+      ...(book.links.length ? { sameAs: book.links.map((link) => link.url) } : {}),
+      ...(imageSchema ? { image: imageSchema, primaryImageOfPage: imageSchema } : {}),
     };
   }
+
+  const isPartOf = [
+    { '@id': `${SITE_URL}/#website` },
+    ...(book.primarySeriesSlug
+      ? [{ '@type': 'CreativeWorkSeries', '@id': `${SITE_URL}/books/${book.primarySeriesSlug}#series` }]
+      : []),
+    ...(!book.primarySeriesSlug && book.series ? [{ '@type': 'CreativeWorkSeries', name: book.series }] : []),
+  ];
+  const asins = amazonAsins(book);
 
   return {
     '@context': 'https://schema.org',
@@ -275,19 +324,28 @@ export function bookJsonLd(book: Book) {
     headline: book.title,
     description: seoDescription(book.summary, 220),
     url,
-    isPartOf: book.series
-      ? [{ '@id': `${SITE_URL}/#website` }, { '@type': 'CreativeWorkSeries', name: book.series }]
-      : { '@id': `${SITE_URL}/#website` },
+    mainEntityOfPage: url,
+    isPartOf: isPartOf.length === 1 ? isPartOf[0] : isPartOf,
     author: book.author ? { '@type': 'Person', name: book.author } : { '@id': `${SITE_URL}/#person` },
+    creator: book.author ? { '@type': 'Person', name: book.author } : { '@id': `${SITE_URL}/#person` },
     translator: book.translator ? { '@type': 'Person', name: book.translator } : undefined,
-    publisher: { '@id': `${SITE_URL}/#person` },
+    publisher: { '@id': `${SITE_URL}/#organization` },
     inLanguage: book.language,
     translationOfWork: book.translationOf ? { '@id': `${SITE_URL}/books/${book.translationOf}#book` } : undefined,
     bookFormat: book.availableFormats || book.formats,
     keywords: book.tags.join(', '),
     datePublished: book.publishedAt,
     dateModified: book.updatedAt || book.publishedAt,
-    ...(image?.src ? { image: absoluteUrl(image.src) } : {}),
+    ...(asins.length
+      ? {
+          identifier: asins.map((asin) => ({
+            '@type': 'PropertyValue',
+            propertyID: 'ASIN',
+            value: asin,
+          })),
+        }
+      : {}),
+    ...(imageSchema ? { image: imageSchema, primaryImageOfPage: imageSchema } : {}),
     ...(book.links.length ? { sameAs: book.links.map((link) => link.url) } : {}),
   };
 }

@@ -4,6 +4,7 @@ Site: https://abvx.xyz
 Name: ABVX / Anton Biletskyi-Volokh
 Summary: ABVX is the public ecosystem site for focus infrastructure, publishing lines, books, AI-native systems, language tools and standalone utilities.
 Machine-readable index: https://abvx.xyz/content-index.json
+Primary layers: Focus = market infrastructure; Systems = operational systems architecture; Books = publishing and intellectual layer; Writing = essays and field notes.
 
 ## Focus systems
 

@@ -4,6 +4,7 @@
   "slug": "the-tiny-language-protocol",
   "title": "The Tiny Language Protocol: Toki Pona, Lojban, and the Future of Clear Thinking",
   "shortTitle": "The Tiny Language Protocol",
+  "subtitle": "Using Toki Pona and Lojban as operational tools for clearer prompts, structured reasoning and semantic compression.",
   "author": "Anton Biletskyi-Volokh",
   "language": "English",
   "type": "book",

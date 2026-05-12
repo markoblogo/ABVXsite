@@ -10,7 +10,6 @@ const bingVerification =
   process.env.BING_SITE_VERIFICATION || '6eb9686badc546c2ac215812a702e4e4';
 
 const personJsonLd = {
-  '@context': 'https://schema.org',
   '@type': 'Person',
   '@id': 'https://abvx.xyz/#person',
   name: 'Anton Biletskyi-Volokh',
@@ -44,8 +43,26 @@ const personJsonLd = {
   ],
 };
 
+const organizationJsonLd = {
+  '@type': 'Organization',
+  '@id': 'https://abvx.xyz/#organization',
+  name: 'ABVX',
+  url: 'https://abvx.xyz',
+  logo: {
+    '@type': 'ImageObject',
+    url: 'https://abvx.xyz/brand/abv-mark-512.png',
+    width: 512,
+    height: 512,
+  },
+  founder: { '@id': 'https://abvx.xyz/#person' },
+  sameAs: [
+    'https://github.com/markoblogo',
+    'https://abvx.substack.com/',
+    'https://bsky.app/profile/abvx.xyz',
+  ],
+};
+
 const websiteJsonLd = {
-  '@context': 'https://schema.org',
   '@type': 'WebSite',
   '@id': 'https://abvx.xyz/#website',
   name: 'ABVX',
@@ -54,7 +71,7 @@ const websiteJsonLd = {
     'A working index of systems, strategy, market infrastructure, AI-native development, language experiments, books, translations, and essays.',
   inLanguage: 'en',
   author: { '@id': 'https://abvx.xyz/#person' },
-  publisher: { '@id': 'https://abvx.xyz/#person' },
+  publisher: { '@id': 'https://abvx.xyz/#organization' },
   hasPart: [
     {
       '@type': 'CollectionPage',
@@ -81,6 +98,11 @@ const websiteJsonLd = {
       description: 'Medium and Substack essays, build logs, and research notes.',
     },
   ],
+};
+
+const siteIdentityJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [personJsonLd, organizationJsonLd, websiteJsonLd],
 };
 
 export const metadata: Metadata = {
@@ -125,12 +147,10 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteIdentityJsonLd) }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
-        />
+        <link rel="alternate" type="application/rss+xml" title="ABVX Medium feed" href="https://abvcreative.medium.com/feed" />
+        <link rel="alternate" type="application/rss+xml" title="ABVX Substack feed" href="https://abvx.substack.com/feed" />
       </head>
       <body>
         <SiteHeader />

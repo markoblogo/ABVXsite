@@ -5,6 +5,8 @@
   "type": "market-index",
   "status": "building",
   "visibility": "public",
+  "publishedAt": "2026-05-08",
+  "homepageEligible": true,
   "title": "UGA Index",
   "shortTitle": "UGA Index",
   "summary": "UGA Index is a benchmark platform for daily Ukrainian grain and oilseed export price references built with the Ukrainian Grain Association.",

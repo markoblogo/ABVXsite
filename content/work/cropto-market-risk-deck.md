@@ -5,6 +5,8 @@
   "type": "market-infrastructure",
   "status": "building",
   "visibility": "public",
+  "publishedAt": "2026-05-01",
+  "homepageEligible": true,
   "title": "Cropto market risk tools deck",
   "summary": "Cropto Market Risk Tools Deck presents tokenized local spot-index risk infrastructure for commodity markets and programmable settlement systems.",
   "tags": [

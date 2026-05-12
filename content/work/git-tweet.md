@@ -5,6 +5,8 @@
   "type": "tool",
   "status": "archive",
   "visibility": "public",
+  "publishedAt": "2026-04-23",
+  "homepageEligible": false,
   "title": "git-tweet",
   "summary": "git-tweet is a lightweight development communication system for turning repository activity into structured operational signals and updates.",
   "tags": [

@@ -5,6 +5,8 @@
   "type": "book",
   "status": "released",
   "visibility": "public",
+  "publishedAt": "2026-04-12",
+  "homepageEligible": true,
   "title": "Dark Gestalt: How Brands Hijack Emotions, Distort Perception, and Manufacture Desire",
   "shortTitle": "Dark Gestalt",
   "subtitle": "How Brands Hijack Emotions, Distort Perception, and Manufacture Desire",

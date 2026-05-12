@@ -13,6 +13,7 @@
   "group": "Optional public group",
   "publishedAt": "",
   "updatedAt": "",
+  "homepageEligible": true,
   "tags": ["tag-one", "tag-two"],
   "media": {
     "src": "/media/work/work-slug/thumbnail.png",

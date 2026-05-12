@@ -5,6 +5,8 @@
   "type": "market-infrastructure",
   "status": "live",
   "visibility": "public",
+  "publishedAt": "2026-05-02",
+  "homepageEligible": true,
   "title": "Trade Solution EU",
   "summary": "Trade Solution EU is a structured commercial and logistics framework for commodity-market execution, supply-chain coordination and operational clarity.",
   "tags": [

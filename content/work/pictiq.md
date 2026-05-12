@@ -5,6 +5,8 @@
   "type": "protocol",
   "status": "live",
   "visibility": "public",
+  "publishedAt": "2026-05-04",
+  "homepageEligible": true,
   "title": "Pictiq",
   "shortTitle": "Pictiq",
   "summary": "Pictiq is a minimal visual protocol for short messages across language barriers, built from icon tiles and a simple grammar for pointing, quick signs, stickers and compact phrases.",

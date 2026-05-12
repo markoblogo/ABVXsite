@@ -5,6 +5,8 @@
   "type": "market-intelligence",
   "status": "research",
   "visibility": "public",
+  "publishedAt": "2026-05-05",
+  "homepageEligible": true,
   "title": "Cropto Monitor: Commodity Signals Terminal",
   "summary": "Cropto Monitor is a customizable commodity-signals terminal combining market data, logistics, weather, policy, risk and live situational awareness for agro-commodity markets.",
   "tags": [

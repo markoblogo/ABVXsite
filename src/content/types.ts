@@ -89,6 +89,7 @@ type BaseContentItem<TType extends string> = {
   visibility?: Visibility;
   publishedAt?: string;
   updatedAt?: string;
+  homepageEligible?: boolean;
   summary: string;
   description?: string;
   tags: string[];
@@ -142,6 +143,7 @@ export type Series = {
   visibility?: Visibility;
   publishedAt?: string;
   updatedAt?: string;
+  homepageEligible?: boolean;
   summary: string;
   description?: string;
   tags: string[];

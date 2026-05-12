@@ -5,6 +5,8 @@
   "type": "tool",
   "status": "released",
   "visibility": "public",
+  "publishedAt": "2026-04-25",
+  "homepageEligible": false,
   "title": "YTMamp",
   "summary": "YTMamp is a macOS app and browser-extension experiment that transforms YouTube Music into a Winamp-inspired player experience.",
   "tags": [

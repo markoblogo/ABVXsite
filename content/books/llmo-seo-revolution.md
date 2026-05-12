@@ -5,6 +5,8 @@
   "type": "book",
   "status": "released",
   "visibility": "public",
+  "publishedAt": "2026-04-18",
+  "homepageEligible": true,
   "title": "LLMO: The Next SEO Revolution",
   "shortTitle": "LLMO: The Next SEO Revolution",
   "subtitle": "How to Stay Visible to AI in the Age of Zero Clicks",

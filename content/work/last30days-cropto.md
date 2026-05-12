@@ -5,6 +5,8 @@
   "type": "market-intelligence",
   "status": "research",
   "visibility": "public",
+  "publishedAt": "2026-05-04",
+  "homepageEligible": true,
   "title": "Last30Days Cropto",
   "shortTitle": "Last30Days Cropto",
   "summary": "Last30Days Cropto is an agro-commodity intelligence desk that aggregates market mentions, signals and AI-generated summaries across web, news and social sources.",

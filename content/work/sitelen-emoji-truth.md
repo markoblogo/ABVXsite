@@ -5,6 +5,8 @@
   "type": "protocol",
   "status": "released",
   "visibility": "public",
+  "publishedAt": "2026-04-28",
+  "homepageEligible": false,
   "title": "sitelen-emoji-truth",
   "summary": "sitelen-emoji-truth is an experimental visual-language protocol exploring emoji-based semantic compression and symbolic communication systems.",
   "tags": [

@@ -5,6 +5,8 @@
   "type": "book",
   "status": "released",
   "visibility": "public",
+  "publishedAt": "2026-04-06",
+  "homepageEligible": true,
   "title": "Future-Proof Your Productivity: Navigating the AI Decade to Accelerate Your Output, Innovate Your Role, and Thrive",
   "shortTitle": "Future-Proof Your Productivity",
   "subtitle": "Navigating the AI Decade to Accelerate Your Output, Innovate Your Role, and Thrive",

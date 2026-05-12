@@ -5,6 +5,8 @@
   "type": "tool",
   "status": "building",
   "visibility": "public",
+  "publishedAt": "2026-04-22",
+  "homepageEligible": false,
   "title": "ID",
   "summary": "ID is a protocol layer for structured identity, operational references and system coordination inside the AI-native ecosystem.",
   "tags": [

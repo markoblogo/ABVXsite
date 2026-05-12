@@ -5,6 +5,8 @@
   "type": "market-infrastructure",
   "status": "building",
   "visibility": "public",
+  "publishedAt": "2026-05-03",
+  "homepageEligible": true,
   "title": "Liqua",
   "summary": "Liqua is a structured liquidity and execution layer for physical commodity markets, designed to turn fragmented brokerage activity into scalable infrastructure.",
   "tags": [

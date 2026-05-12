@@ -4,6 +4,7 @@ import { ensureMediaFolder, parseList, promptForBase, writeContentFile } from '.
 
 const base = await promptForBase('web-service');
 const rl = readline.createInterface({ input, output });
+const today = new Date().toISOString().slice(0, 10);
 try {
   const primarySection = (await rl.question('Primary section [focus/systems/books/writing] (systems): ')).trim() || 'systems';
   const appearsIn = parseList(await rl.question(`Appears in (${primarySection}): `));
@@ -14,6 +15,8 @@ try {
     type: base.type,
     status: base.status,
     visibility: 'draft',
+    publishedAt: today,
+    homepageEligible: true,
     title: base.title,
     summary: base.summary,
     primarySection,

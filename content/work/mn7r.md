@@ -5,6 +5,8 @@
   "type": "brokerage-platform",
   "status": "live",
   "visibility": "public",
+  "publishedAt": "2026-05-07",
+  "homepageEligible": true,
   "title": "MN7R",
   "shortTitle": "MN7R",
   "summary": "MN7R is a commodity trading workflow workspace for brokerage teams running Deals, Clients and EXE inside one structured operational system.",

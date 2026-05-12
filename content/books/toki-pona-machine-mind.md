@@ -5,6 +5,8 @@
   "type": "book",
   "status": "released",
   "visibility": "public",
+  "publishedAt": "2026-05-01",
+  "homepageEligible": true,
   "title": "Toki Pona and the Machine Mind",
   "shortTitle": "Toki Pona and the Machine Mind",
   "subtitle": "Designing cleaner prompts, smaller models, and better systems with the world’s simplest language",

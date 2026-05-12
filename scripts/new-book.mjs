@@ -4,6 +4,7 @@ import { ensureMediaFolder, parseList, promptForBase, writeContentFile } from '.
 
 const base = await promptForBase('book');
 const rl = readline.createInterface({ input, output });
+const today = new Date().toISOString().slice(0, 10);
 try {
   const shortTitle = (await rl.question('Short title (optional): ')).trim();
   const subtitle = (await rl.question('Subtitle (optional): ')).trim();
@@ -16,6 +17,8 @@ try {
     type: base.type,
     status: base.status,
     visibility: 'draft',
+    publishedAt: today,
+    homepageEligible: true,
     title: base.title,
     ...(shortTitle ? { shortTitle } : {}),
     ...(subtitle ? { subtitle } : {}),

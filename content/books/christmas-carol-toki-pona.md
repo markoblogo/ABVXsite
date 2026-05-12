@@ -5,6 +5,8 @@
   "type": "translation",
   "status": "released",
   "visibility": "public",
+  "publishedAt": "2026-04-24",
+  "homepageEligible": true,
   "title": "A Christmas Carol in Toki Pona",
   "shortTitle": "A Christmas Carol — in Toki Pona",
   "subtitle": "Translated into the minimalist language Toki Pona",

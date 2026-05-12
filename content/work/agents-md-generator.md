@@ -5,6 +5,8 @@
   "type": "ai-workflow",
   "status": "live",
   "visibility": "public",
+  "publishedAt": "2026-05-09",
+  "homepageEligible": true,
   "title": "AGENTS.md Generator",
   "summary": "AGENTS.md Generator is an operational workflow surface for AI-assisted development systems, agent coordination and structured coding workflows.",
   "tags": [

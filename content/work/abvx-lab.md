@@ -5,6 +5,8 @@
   "type": "web-service",
   "status": "building",
   "visibility": "public",
+  "publishedAt": "2026-05-08",
+  "homepageEligible": true,
   "title": "ABVX Lab",
   "summary": "ABVX Lab is the ecosystem front for AI-native development systems, protocols, workflows and operational tooling.",
   "tags": [

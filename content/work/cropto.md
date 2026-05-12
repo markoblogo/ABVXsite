@@ -5,6 +5,8 @@
   "type": "trading-platform",
   "status": "building",
   "visibility": "public",
+  "publishedAt": "2026-05-06",
+  "homepageEligible": true,
   "title": "Cropto",
   "shortTitle": "Cropto",
   "summary": "Cropto is a prototype commodity trading platform for indexed spot trading, options and tokenized commodity-linked instruments across Ukraine, Argentina and Brazil.",

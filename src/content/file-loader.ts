@@ -176,6 +176,7 @@ function baseFields(data: RawRecord, body: string) {
     visibility: visibilityFor(data.visibility),
     publishedAt: optionalString(data.publishedAt),
     updatedAt: optionalString(data.updatedAt),
+    homepageEligible: booleanValue(data.homepageEligible),
     summary: stringValue(data.summary),
     ...(description ? { description } : {}),
     tags: stringArray(data.tags),

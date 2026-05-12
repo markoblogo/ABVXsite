@@ -5,6 +5,8 @@
   "type": "tool",
   "status": "building",
   "visibility": "public",
+  "publishedAt": "2026-05-03",
+  "homepageEligible": true,
   "title": "SET",
   "summary": "SET is an orchestration layer for AI-native operational tools, workflows and structured development systems.",
   "tags": [

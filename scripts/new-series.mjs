@@ -4,6 +4,7 @@ import { ensureMediaFolder, parseList, promptForBase, writeContentFile } from '.
 
 const base = await promptForBase('series');
 const rl = readline.createInterface({ input, output });
+const today = new Date().toISOString().slice(0, 10);
 try {
   const group = (await rl.question('Group/publishing line (optional): ')).trim();
   const appearsIn = parseList(await rl.question('Appears in (books): '));
@@ -13,6 +14,8 @@ try {
     type: 'series',
     status: base.status,
     visibility: 'draft',
+    publishedAt: today,
+    homepageEligible: true,
     title: base.title,
     summary: base.summary,
     ...(group ? { group } : {}),

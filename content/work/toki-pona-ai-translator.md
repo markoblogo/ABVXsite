@@ -5,6 +5,8 @@
   "type": "language-experiment",
   "status": "live",
   "visibility": "public",
+  "publishedAt": "2026-05-05",
+  "homepageEligible": true,
   "title": "Toki Pona AI translator",
   "summary": "Toki Pona AI translator is an experimental translation interface for converting natural language into toki pona and related visual-script forms.",
   "tags": [

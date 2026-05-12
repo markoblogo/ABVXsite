@@ -20,6 +20,7 @@
   "group": "Optional publishing line",
   "publishedAt": "",
   "updatedAt": "",
+  "homepageEligible": true,
   "tags": ["tag-one", "tag-two"],
   "appearsIn": ["books"],
   "formats": ["kindle", "paperback"],

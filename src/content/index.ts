@@ -29,6 +29,23 @@ function byLatest<T extends { updatedAt?: string; publishedAt?: string; sortRank
   return byRankThenTitle(a, b);
 }
 
+function publishedDateValue(item: { publishedAt?: string }): number {
+  if (!item.publishedAt) return 0;
+  const time = new Date(item.publishedAt).valueOf();
+  return Number.isFinite(time) ? time : 0;
+}
+
+function byHomepagePublished<T extends { publishedAt?: string; sortRank: number; title: string }>(a: T, b: T): number {
+  const diff = publishedDateValue(b) - publishedDateValue(a);
+  if (diff) return diff;
+  if (a.sortRank !== b.sortRank) return a.sortRank - b.sortRank;
+  return a.title.localeCompare(b.title);
+}
+
+function isHomepageEligible<T extends { homepageEligible?: boolean; publishedAt?: string }>(item: T): boolean {
+  return item.homepageEligible === true && publishedDateValue(item) > 0;
+}
+
 function appearsInSection(item: { primarySection: SiteSection; appearsIn: SiteSection[] }, section: SiteSection) {
   return item.primarySection === section || item.appearsIn.includes(section);
 }
@@ -93,6 +110,13 @@ export function getLatestBook(): Book | undefined {
   return getBooks().filter((book) => book.type !== 'series').sort(byLatest)[0];
 }
 
+export function getLatestHomepageBook(): Book | undefined {
+  return getBooks()
+    .filter((book) => book.type !== 'series')
+    .filter(isHomepageEligible)
+    .sort(byHomepagePublished)[0];
+}
+
 export function getBookBySlug(slug: string): Book | undefined {
   return getBooks().find((book) => book.slug === slug);
 }
@@ -128,6 +152,14 @@ export function getWorkBySection(section: SiteSection): Artifact[] {
 export function getLatestWork(section?: SiteSection): Artifact | undefined {
   const source = section ? getArtifactsBySection(section) : getArtifacts();
   return [...source].sort(byLatest)[0];
+}
+
+export function getLatestHomepageWork(section: SiteSection, excludedSlug?: string): Artifact | undefined {
+  return getArtifactsBySection(section)
+    .filter((artifact) => artifact.slug !== excludedSlug)
+    .filter((artifact) => artifact.primarySection === section)
+    .filter(isHomepageEligible)
+    .sort(byHomepagePublished)[0];
 }
 
 export function getFeaturedWork(section?: SiteSection): Artifact[] {

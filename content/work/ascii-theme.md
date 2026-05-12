@@ -5,6 +5,8 @@
   "type": "tool",
   "status": "live",
   "visibility": "public",
+  "publishedAt": "2026-05-07",
+  "homepageEligible": true,
   "title": "AsciiTheme",
   "summary": "AsciiTheme is a UI and CSS system for light, dark and ASCII-inspired development interfaces inside the broader AI-native tooling ecosystem.",
   "tags": [

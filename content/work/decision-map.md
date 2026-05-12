@@ -7,6 +7,8 @@
   "type": "protocol",
   "status": "building",
   "visibility": "public",
+  "publishedAt": "2026-05-10",
+  "homepageEligible": true,
   "primarySection": "systems",
   "appearsIn": [
     "systems"

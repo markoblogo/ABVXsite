@@ -5,6 +5,8 @@
   "type": "ai-workflow",
   "status": "building",
   "visibility": "public",
+  "publishedAt": "2026-05-06",
+  "homepageEligible": true,
   "title": "LLMO site/platform",
   "summary": "LLMO Site/Platform is an AI-native visibility and optimization platform focused on structured machine-readable content and discovery systems.",
   "tags": [

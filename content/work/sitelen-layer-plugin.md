@@ -7,6 +7,8 @@
   "type": "plugin",
   "status": "live",
   "visibility": "public",
+  "publishedAt": "2026-05-11",
+  "homepageEligible": true,
   "primarySection": "systems",
   "appearsIn": [
     "systems",

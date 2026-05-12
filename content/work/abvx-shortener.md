@@ -5,6 +5,8 @@
   "type": "web-service",
   "status": "live",
   "visibility": "public",
+  "publishedAt": "2026-04-24",
+  "homepageEligible": false,
   "title": "ABVX Shortener",
   "summary": "ABVX Shortener is a lightweight web and browser-extension system for shortened operational links and compact URL workflows.",
   "tags": [

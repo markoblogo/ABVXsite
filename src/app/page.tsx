@@ -4,7 +4,7 @@ import JsonLd from '@/components/JsonLd';
 import MarqueeTicker from '@/components/MarqueeTicker';
 import SectionPanel from '@/components/SectionPanel';
 import TagList from '@/components/TagList';
-import { getArtifactsBySection, getLatestArtifact, getLatestBook, type Artifact } from '@/content';
+import { getLatestHomepageBook, getLatestHomepageWork } from '@/content';
 import { fetchMediumFeed, fetchSubstackFeed, type FeedItem } from '@/lib/feeds';
 import { collectionPageJsonLd, defaultOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
 import type { Metadata } from 'next';
@@ -83,51 +83,15 @@ function formatDate(iso?: string): string | undefined {
   });
 }
 
-function latestTime(item: Artifact): number {
-  const value = item.updatedAt || item.publishedAt;
-  if (!value) return 0;
-  const time = new Date(value).valueOf();
-  return Number.isFinite(time) ? time : 0;
-}
-
-function latestArtifact(items: Artifact[]): Artifact | undefined {
-  return [...items].sort((a, b) => {
-    const diff = latestTime(b) - latestTime(a);
-    if (diff) return diff;
-    if (a.sortRank !== b.sortRank) return a.sortRank - b.sortRank;
-    return a.title.localeCompare(b.title);
-  })[0];
-}
-
-function pickLatestSystem(excludedSlug?: string): Artifact | undefined {
-  const systems = getArtifactsBySection('systems').filter((item) => item.slug !== excludedSlug);
-  const primarySystems = systems.filter((item) => item.primarySection === 'systems');
-  const latestPrimary = latestArtifact(primarySystems);
-  if (latestPrimary) return latestPrimary;
-
-  const curatedFallback = [
-    'agents-md-generator',
-    'abvx-shortener',
-    'ascii-theme',
-    'llmo-site',
-    'toki-pona-ai-translator',
-  ];
-  return (
-    curatedFallback
-      .map((slug) => systems.find((item) => item.slug === slug))
-      .find(Boolean) || latestArtifact(systems)
-  );
-}
-
 export default async function Home() {
   const [mediumLatest, substackLatest] = await Promise.all([
     safeLatestFeed('medium', fetchMediumFeed, 'https://abvcreative.medium.com/feed'),
     safeLatestFeed('substack', fetchSubstackFeed, 'https://abvx.substack.com/feed'),
   ]);
 
-  const latestFocus = getLatestArtifact('focus');
-  const latestSystem = pickLatestSystem(latestFocus?.slug);
-  const latestBook = getLatestBook();
+  const latestFocus = getLatestHomepageWork('focus');
+  const latestSystem = getLatestHomepageWork('systems', latestFocus?.slug);
+  const latestBook = getLatestHomepageBook();
 
   return (
     <div className="home-redesign">
@@ -210,23 +174,25 @@ export default async function Home() {
           <HomepageLatestCard
             title={latestFocus?.title || fallbackLatest.focus.title}
             summary={latestFocus?.summary || fallbackLatest.focus.summary}
-            href="/focus"
+            href={latestFocus ? `/work/${latestFocus.slug}` : '/focus'}
             label="Current Focus"
+            detail={formatDate(latestFocus?.publishedAt)}
             image={latestFocus?.thumbnail}
-            cta="Open focus"
+            cta="Open focus item"
           />
           <HomepageLatestCard
             title={latestSystem?.title || fallbackLatest.systems.title}
             summary={latestSystem?.summary || fallbackLatest.systems.summary}
-            href="/systems"
+            href={latestSystem ? `/work/${latestSystem.slug}` : '/systems'}
             label="Systems Catalogue"
+            detail={formatDate(latestSystem?.publishedAt)}
             image={latestSystem?.thumbnail}
             cta="Open system"
           />
           <HomepageLatestCard
             title={latestBook?.title || fallbackLatest.books.title}
             summary={latestBook?.summary || fallbackLatest.books.summary}
-            href="/books"
+            href={latestBook ? `/books/${latestBook.slug}` : '/books'}
             label="ABVX Press"
             detail={formatDate(latestBook?.publishedAt)}
             image={latestBook?.coverImage}

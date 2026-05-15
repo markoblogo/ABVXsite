@@ -172,7 +172,7 @@ export function aboutPageJsonLd() {
     '@id': `${SITE_URL}/about#page`,
     name: 'About / Method',
     description:
-      'About Anton Biletskiy-Volokh, ABVX, working method, operating lines and collaboration context.',
+      'About Anton Biletskyi-Volokh, ABVX, working method, operating lines and collaboration context.',
     url: `${SITE_URL}/about`,
     mainEntityOfPage: `${SITE_URL}/about`,
     isPartOf: { '@id': `${SITE_URL}/#website` },

@@ -11,7 +11,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 const homeDescription =
-  'ABVX is the working index of Anton Biletskiy-Volokh: strategy, AI-native development, market infrastructure, web services, language experiments, books and essays.';
+  'ABVX is the working index of Anton Biletskyi-Volokh: strategy, AI-native development, market infrastructure, web services, language experiments, books and essays.';
 
 export const metadata: Metadata = metadataWithImage({
   title: 'ABVX',
@@ -122,7 +122,7 @@ export default async function Home() {
       <HeroPoster
         eyebrow="ABVX / WORKING INDEX"
         title="Systems that survive contact with reality."
-        summary="ABVX is the working index of Anton Biletskiy-Volokh: strategy, AI-native development, market infrastructure, web services, language experiments, books and essays."
+        summary="ABVX is the working index of Anton Biletskyi-Volokh: strategy, AI-native development, market infrastructure, web services, language experiments, books and essays."
       >
         <TagList tags={heroLabels} />
         <div className="hero-actions">

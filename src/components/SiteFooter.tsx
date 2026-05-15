@@ -3,6 +3,7 @@ import BrandMark from './BrandMark';
 import SocialIcon from './SocialIcon';
 import {
   footerArchiveLinks,
+  footerMachineLinks,
   footerPrimaryLinks,
   socialLinks,
   type FooterLink,
@@ -67,6 +68,14 @@ export default function SiteFooter() {
             <h2>Archive</h2>
             <div className="site-footer__links">
               {footerArchiveLinks.map((item) => (
+                <FooterNavLink key={`${item.label}-${item.href}`} item={item} />
+              ))}
+            </div>
+          </div>
+          <div className="site-footer__link-group">
+            <h2>Machine</h2>
+            <div className="site-footer__links">
+              {footerMachineLinks.map((item) => (
                 <FooterNavLink key={`${item.label}-${item.href}`} item={item} />
               ))}
             </div>

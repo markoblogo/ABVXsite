@@ -13,15 +13,43 @@ const personJsonLd = {
   '@type': 'Person',
   '@id': 'https://abvx.xyz/#person',
   name: 'Anton Biletskyi-Volokh',
+  alternateName: [
+    'Anton Biletskiy-Volokh',
+    'Anton Biletskyi Volokh',
+    'Anton Biletskiy Volokh',
+    'ABV Creative',
+    'ABVX',
+  ],
   url: 'https://abvx.xyz',
   jobTitle: 'Systems, Strategy, and Product Development',
   description:
     'Designer and builder of complex systems across strategy, markets, technology, language, and AI.',
+  identifier: [
+    {
+      '@type': 'PropertyValue',
+      propertyID: 'canonical-site',
+      value: 'https://abvx.xyz/#person',
+    },
+    {
+      '@type': 'PropertyValue',
+      propertyID: 'github',
+      value: 'markoblogo',
+    },
+    {
+      '@type': 'PropertyValue',
+      propertyID: 'linkedin',
+      value: 'abvcreative',
+    },
+  ],
   knowsAbout: [
     'Market infrastructure',
     'Agro-commodity trading',
+    'Commodity indexes',
+    'Benchmark infrastructure',
+    'Market intelligence systems',
     'AI-native development',
     'Agentic workflows',
+    'LLM optimization',
     'Web services',
     'Protocols',
     'Constructed languages',
@@ -47,6 +75,11 @@ const organizationJsonLd = {
   '@type': 'Organization',
   '@id': 'https://abvx.xyz/#organization',
   name: 'ABVX',
+  alternateName: [
+    'ABVX Press',
+    'ABV Creative',
+    'Anton Biletskyi-Volokh public work index',
+  ],
   url: 'https://abvx.xyz',
   logo: {
     '@type': 'ImageObject',
@@ -55,6 +88,18 @@ const organizationJsonLd = {
     height: 512,
   },
   founder: { '@id': 'https://abvx.xyz/#person' },
+  identifier: [
+    {
+      '@type': 'PropertyValue',
+      propertyID: 'canonical-site',
+      value: 'https://abvx.xyz/#organization',
+    },
+    {
+      '@type': 'PropertyValue',
+      propertyID: 'github',
+      value: 'markoblogo',
+    },
+  ],
   sameAs: [
     'https://github.com/markoblogo',
     'https://abvx.substack.com/',
@@ -66,6 +111,10 @@ const websiteJsonLd = {
   '@type': 'WebSite',
   '@id': 'https://abvx.xyz/#website',
   name: 'ABVX',
+  alternateName: [
+    'ABVX public work index',
+    'Anton Biletskyi-Volokh working index',
+  ],
   url: 'https://abvx.xyz',
   description:
     'A working index of systems, strategy, market infrastructure, AI-native development, language experiments, books, translations, and essays.',
@@ -96,6 +145,20 @@ const websiteJsonLd = {
       name: 'Writing',
       url: 'https://abvx.xyz/writing',
       description: 'Medium and Substack essays, build logs, and research notes.',
+    },
+    {
+      '@type': 'DigitalDocument',
+      name: 'ABVX public LLM index',
+      url: 'https://abvx.xyz/llms.txt',
+      encodingFormat: 'text/plain',
+      description: 'Plain-text public index for LLM crawlers and AI agents.',
+    },
+    {
+      '@type': 'DataCatalog',
+      name: 'ABVX structured public content index',
+      url: 'https://abvx.xyz/content-index.json',
+      encodingFormat: 'application/json',
+      description: 'Machine-readable JSON inventory of public ABVX content.',
     },
   ],
 };
@@ -149,6 +212,8 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteIdentityJsonLd) }}
         />
+        <link rel="alternate" type="text/plain" title="ABVX public LLM index" href="/llms.txt" />
+        <link rel="alternate" type="application/json" title="ABVX structured content index" href="/content-index.json" />
         <link rel="alternate" type="application/rss+xml" title="ABVX Medium feed" href="https://abvcreative.medium.com/feed" />
         <link rel="alternate" type="application/rss+xml" title="ABVX Substack feed" href="https://abvx.substack.com/feed" />
       </head>

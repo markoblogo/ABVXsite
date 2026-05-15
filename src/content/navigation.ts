@@ -47,6 +47,12 @@ export const footerArchiveLinks: FooterLink[] = [
   { label: 'Links', href: '/about' },
 ];
 
+export const footerMachineLinks: FooterLink[] = [
+  { label: 'llms.txt', href: '/llms.txt' },
+  { label: 'Content index JSON', href: '/content-index.json' },
+  { label: 'Sitemap XML', href: '/sitemap.xml' },
+];
+
 export const socialLinks: SocialLink[] = [
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/abvcreative/', icon: 'linkedin', external: true },
   { label: 'Email', href: 'mailto:a.biletskiy@gmail.com', icon: 'email' },

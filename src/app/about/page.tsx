@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 const aboutDescription =
-  'About Anton Biletskiy-Volokh, ABVX, working method, operating lines and collaboration context.';
+  'About Anton Biletskyi-Volokh, ABVX, working method, operating lines and collaboration context.';
 
 export const metadata: Metadata = metadataWithImage({
   title: 'About / Method',
@@ -62,6 +62,19 @@ const operatingLines = [
     title: 'Writing',
     href: '/writing',
     text: 'Applied AI notes, validation essays, agent workflows and field observations.',
+  },
+];
+
+const machineIndexes = [
+  {
+    title: 'llms.txt',
+    href: '/llms.txt',
+    text: 'Plain-text public index for LLM crawlers, AI agents and answer engines.',
+  },
+  {
+    title: 'content-index.json',
+    href: '/content-index.json',
+    text: 'Structured JSON inventory of public ABVX work, books, systems, links and relations.',
   },
 ];
 
@@ -163,6 +176,22 @@ export default function AboutPage() {
         </div>
         <div className="about-line-grid">
           {operatingLines.map((item) => (
+            <Link className="about-line-card" href={item.href} key={item.href}>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+              <span>Open -&gt;</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="about-section" aria-labelledby="about-machine-title">
+        <div className="about-section__header">
+          <div className="eyebrow">Machine-readable index</div>
+          <h2 id="about-machine-title">Public data for crawlers and agents.</h2>
+        </div>
+        <div className="about-line-grid about-line-grid--machine">
+          {machineIndexes.map((item) => (
             <Link className="about-line-card" href={item.href} key={item.href}>
               <h3>{item.title}</h3>
               <p>{item.text}</p>

@@ -54,7 +54,7 @@
     "paperback"
   ],
   "media": {
-    "src": "/media/books/dark-gestalt/cover.png",
+    "src": "/media/books/dark-gestalt/cover.webp",
     "alt": "Dark Gestalt book cover",
     "role": "book-cover"
   }

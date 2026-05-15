@@ -26,12 +26,12 @@
     }
   ],
   "media": {
-    "src": "/media/series/chinese-wisdom-toki-pona/hero.png",
+    "src": "/media/series/chinese-wisdom-toki-pona/hero.webp",
     "alt": "Chinese Wisdom in toki pona publishing line visual",
     "role": "landing-screenshot"
   },
   "heroImage": {
-    "src": "/media/series/chinese-wisdom-toki-pona/hero.png",
+    "src": "/media/series/chinese-wisdom-toki-pona/hero.webp",
     "alt": "Chinese Wisdom in toki pona publishing line visual",
     "role": "landing-screenshot"
   },

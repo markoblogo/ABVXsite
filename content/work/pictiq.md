@@ -39,12 +39,12 @@
   "needsMediaReview": false,
   "needsLinkReview": false,
   "media": {
-    "src": "/media/work/pictiq/thumbnail.png",
+    "src": "/media/work/pictiq/thumbnail.webp",
     "alt": "Pictiq visual protocol preview",
     "role": "project-screenshot"
   },
   "heroImage": {
-    "src": "/media/work/pictiq/thumbnail.png",
+    "src": "/media/work/pictiq/thumbnail.webp",
     "alt": "Pictiq visual protocol preview",
     "role": "project-screenshot"
   }

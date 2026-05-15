@@ -204,7 +204,7 @@ export default async function BookDetailPage({
 
           {image ? (
             <div className="series-detail-hero__media">
-              <MediaPanel image={image} title={title} variant="project" />
+              <MediaPanel image={image} title={title} variant="project" priority />
             </div>
           ) : null}
         </header>

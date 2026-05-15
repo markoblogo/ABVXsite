@@ -33,7 +33,7 @@
     "books"
   ],
   "media": {
-    "src": "/media/books/boh-buv-zainiatyi-kanalizatsiieiu/cover.png",
+    "src": "/media/books/boh-buv-zainiatyi-kanalizatsiieiu/cover.webp",
     "alt": "Обкладинка книги «Бог був зайнятий каналізацією»",
     "role": "book-cover"
   },

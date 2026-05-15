@@ -62,7 +62,7 @@
     "series"
   ],
   "media": {
-    "src": "/media/books/dao-de-jing/cover.png",
+    "src": "/media/books/dao-de-jing/cover.webp",
     "alt": "Dao De Jing in Toki Pona book cover",
     "role": "book-cover"
   },

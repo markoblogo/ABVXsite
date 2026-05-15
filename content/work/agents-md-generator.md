@@ -38,12 +38,12 @@
   "primarySection": "systems",
   "group": "Workflow & Orchestration",
   "media": {
-    "src": "/media/work/agentsmd-generator/hero.png",
+    "src": "/media/work/agentsmd-generator/hero.webp",
     "alt": "AGENTS.md Generator interface",
     "role": "project-screenshot"
   },
   "heroImage": {
-    "src": "/media/work/agentsmd-generator/hero.png",
+    "src": "/media/work/agentsmd-generator/hero.webp",
     "alt": "AGENTS.md Generator interface",
     "role": "project-screenshot"
   }

@@ -63,7 +63,7 @@
     "series"
   ],
   "media": {
-    "src": "/media/books/la-ville/cover.png",
+    "src": "/media/books/la-ville/cover.webp",
     "alt": "La Ville book cover",
     "role": "book-cover"
   },

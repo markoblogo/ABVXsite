@@ -69,12 +69,12 @@
   ],
   "sortRank": 19,
   "media": {
-    "src": "/media/work/spike-spot-commodity-index-ukraine/hero.png",
+    "src": "/media/work/spike-spot-commodity-index-ukraine/hero.webp",
     "alt": "SPIKE SPOT COMMODITY INDEX UKRAINE market index interface",
     "role": "project-screenshot"
   },
   "heroImage": {
-    "src": "/media/work/spike-spot-commodity-index-ukraine/hero.png",
+    "src": "/media/work/spike-spot-commodity-index-ukraine/hero.webp",
     "alt": "SPIKE SPOT COMMODITY INDEX UKRAINE market index interface",
     "role": "project-screenshot"
   }

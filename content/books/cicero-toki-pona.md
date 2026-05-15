@@ -62,7 +62,7 @@
     "series"
   ],
   "media": {
-    "src": "/media/books/cicero-on-duties/cover.png",
+    "src": "/media/books/cicero-on-duties/cover.webp",
     "alt": "Cicero On Duties in toki pona book cover",
     "role": "book-cover"
   },

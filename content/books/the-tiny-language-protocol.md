@@ -67,7 +67,7 @@
   "needsMediaReview": false,
   "needsLinkReview": false,
   "media": {
-    "src": "/media/books/the-tiny-language-protocol/cover.png",
+    "src": "/media/books/the-tiny-language-protocol/cover.webp",
     "alt": "The Tiny Language Protocol book cover",
     "role": "book-cover",
     "width": 2134,

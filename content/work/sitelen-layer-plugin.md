@@ -48,14 +48,14 @@
   "needsMediaReview": false,
   "needsLinkReview": false,
   "media": {
-    "src": "/media/work/sitelen-layer-plugin/hero.png",
+    "src": "/media/work/sitelen-layer-plugin/hero.webp",
     "alt": "sitelen-layer-plugin rendering system preview",
     "role": "project-screenshot",
     "width": 2310,
     "height": 1234
   },
   "heroImage": {
-    "src": "/media/work/sitelen-layer-plugin/hero.png",
+    "src": "/media/work/sitelen-layer-plugin/hero.webp",
     "alt": "sitelen-layer-plugin rendering system preview",
     "role": "project-screenshot",
     "width": 2310,

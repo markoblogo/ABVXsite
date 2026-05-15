@@ -63,7 +63,7 @@
     "series"
   ],
   "media": {
-    "src": "/media/books/le-voyage-du-savant-docteur-leonardo/cover.png",
+    "src": "/media/books/le-voyage-du-savant-docteur-leonardo/cover.webp",
     "alt": "Le Voyage du savant docteur Leonardo book cover",
     "role": "book-cover"
   },

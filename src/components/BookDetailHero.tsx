@@ -33,7 +33,7 @@ export default function BookDetailHero({
   return (
     <header className="book-detail-hero">
       <div className="book-detail-hero__media">
-        <MediaPanel image={image} title={title} variant="book" />
+        <MediaPanel image={image} title={title} variant="book" priority />
       </div>
       <div className="book-detail-hero__copy">
         <div className="eyebrow">{formatLabel(book)}</div>

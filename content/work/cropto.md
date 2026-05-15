@@ -48,12 +48,12 @@
   "primarySection": "focus",
   "group": "Trading & Brokerage Platforms",
   "media": {
-    "src": "/media/work/cropto/hero.png",
+    "src": "/media/work/cropto/hero.webp",
     "alt": "Cropto trading platform interface",
     "role": "project-screenshot"
   },
   "heroImage": {
-    "src": "/media/work/cropto/hero.png",
+    "src": "/media/work/cropto/hero.webp",
     "alt": "Cropto trading platform interface",
     "role": "project-screenshot"
   }

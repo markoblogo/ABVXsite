@@ -34,7 +34,7 @@
     "books"
   ],
   "media": {
-    "src": "/media/books/god-was-busy-with-the-plumbing/cover.png",
+    "src": "/media/books/god-was-busy-with-the-plumbing/cover.webp",
     "alt": "God Was Busy With the Plumbing book cover",
     "role": "book-cover"
   },

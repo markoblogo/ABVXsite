@@ -56,7 +56,7 @@
     "series"
   ],
   "media": {
-    "src": "/media/books/la-zone-du-sanatorium/cover.png",
+    "src": "/media/books/la-zone-du-sanatorium/cover.webp",
     "alt": "La zone du sanatorium book cover",
     "role": "book-cover"
   },

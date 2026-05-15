@@ -46,12 +46,12 @@
   "primarySection": "focus",
   "group": "Market Fronts & Partner Landings",
   "media": {
-    "src": "/media/work/liqua/hero.png",
+    "src": "/media/work/liqua/hero.webp",
     "alt": "Liqua trading-service landing page",
     "role": "landing-screenshot"
   },
   "heroImage": {
-    "src": "/media/work/liqua/hero.png",
+    "src": "/media/work/liqua/hero.webp",
     "alt": "Liqua trading-service landing page",
     "role": "landing-screenshot"
   }

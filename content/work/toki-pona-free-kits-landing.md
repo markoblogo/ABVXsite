@@ -37,12 +37,12 @@
   "primarySection": "systems",
   "group": "Publishing systems & protocols",
   "media": {
-    "src": "/media/work/toki-pona-free-kits-landing/hero.png",
+    "src": "/media/work/toki-pona-free-kits-landing/hero.webp",
     "alt": "Toki Pona free kits landing page",
     "role": "landing-screenshot"
   },
   "heroImage": {
-    "src": "/media/work/toki-pona-free-kits-landing/hero.png",
+    "src": "/media/work/toki-pona-free-kits-landing/hero.webp",
     "alt": "Toki Pona free kits landing page",
     "role": "landing-screenshot"
   },

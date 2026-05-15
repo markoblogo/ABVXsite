@@ -32,12 +32,12 @@
   "primarySection": "systems",
   "group": "Protocols & Decision Systems",
   "media": {
-    "src": "/media/work/id/hero.png",
+    "src": "/media/work/id/hero.webp",
     "alt": "ID protocol interface",
     "role": "project-screenshot"
   },
   "heroImage": {
-    "src": "/media/work/id/hero.png",
+    "src": "/media/work/id/hero.webp",
     "alt": "ID protocol interface",
     "role": "project-screenshot"
   }

@@ -37,12 +37,12 @@
   "needsMediaReview": false,
   "needsLinkReview": false,
   "media": {
-    "src": "/media/work/decision-map/hero.png",
+    "src": "/media/work/decision-map/hero.webp",
     "alt": "Decision Map protocol interface",
     "role": "project-screenshot"
   },
   "heroImage": {
-    "src": "/media/work/decision-map/hero.png",
+    "src": "/media/work/decision-map/hero.webp",
     "alt": "Decision Map protocol interface",
     "role": "project-screenshot"
   }

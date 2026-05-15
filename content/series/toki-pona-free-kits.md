@@ -26,12 +26,12 @@
     }
   ],
   "media": {
-    "src": "/media/series/toki-pona-free-kits/hero.png",
+    "src": "/media/series/toki-pona-free-kits/hero.webp",
     "alt": "Toki Pona Free Kits & Translations publishing line visual",
     "role": "landing-screenshot"
   },
   "heroImage": {
-    "src": "/media/series/toki-pona-free-kits/hero.png",
+    "src": "/media/series/toki-pona-free-kits/hero.webp",
     "alt": "Toki Pona Free Kits & Translations publishing line visual",
     "role": "landing-screenshot"
   },

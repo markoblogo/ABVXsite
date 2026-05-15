@@ -63,7 +63,7 @@
     "series"
   ],
   "media": {
-    "src": "/media/books/le-maitre-du-navire/cover.png",
+    "src": "/media/books/le-maitre-du-navire/cover.webp",
     "alt": "Le Maître du navire book cover",
     "role": "book-cover"
   },

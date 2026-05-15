@@ -27,12 +27,12 @@
     }
   ],
   "media": {
-    "src": "/media/series/modernisme-ukrainien/hero.png",
+    "src": "/media/series/modernisme-ukrainien/hero.webp",
     "alt": "Modernisme Ukrainien publishing line visual",
     "role": "landing-screenshot"
   },
   "heroImage": {
-    "src": "/media/series/modernisme-ukrainien/hero.png",
+    "src": "/media/series/modernisme-ukrainien/hero.webp",
     "alt": "Modernisme Ukrainien publishing line visual",
     "role": "landing-screenshot"
   },

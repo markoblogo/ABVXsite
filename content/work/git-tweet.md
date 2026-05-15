@@ -37,12 +37,12 @@
   "primarySection": "systems",
   "group": "Protocols & Decision Systems",
   "media": {
-    "src": "/media/work/git-tweet/hero.png",
+    "src": "/media/work/git-tweet/hero.webp",
     "alt": "git-tweet workflow interface",
     "role": "project-screenshot"
   },
   "heroImage": {
-    "src": "/media/work/git-tweet/hero.png",
+    "src": "/media/work/git-tweet/hero.webp",
     "alt": "git-tweet workflow interface",
     "role": "project-screenshot"
   }

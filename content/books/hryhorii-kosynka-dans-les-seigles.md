@@ -45,7 +45,7 @@
     "series"
   ],
   "media": {
-    "src": "/media/books/dans-les-seigles/cover.png",
+    "src": "/media/books/dans-les-seigles/cover.webp",
     "alt": "Dans les seigles et autres nouvelles book cover",
     "role": "book-cover"
   },

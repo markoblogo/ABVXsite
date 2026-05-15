@@ -62,7 +62,7 @@
     "series"
   ],
   "media": {
-    "src": "/media/books/meditations-marcus-aurelius/cover.png",
+    "src": "/media/books/meditations-marcus-aurelius/cover.webp",
     "alt": "Meditations of Marcus Aurelius in Toki Pona book cover",
     "role": "book-cover"
   },

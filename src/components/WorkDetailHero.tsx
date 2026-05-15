@@ -22,7 +22,7 @@ export default function WorkDetailHero({
       </div>
       {image ? (
         <div className="work-detail-hero__media">
-          <MediaPanel image={image} title={artifact.title} variant="project" />
+          <MediaPanel image={image} title={artifact.title} variant="project" priority />
         </div>
       ) : null}
     </header>

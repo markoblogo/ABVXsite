@@ -44,12 +44,12 @@
   "primarySection": "focus",
   "group": "Market Intelligence, Monitoring & Indexes",
   "media": {
-    "src": "/media/work/last30days-cropto/hero.png",
+    "src": "/media/work/last30days-cropto/hero.webp",
     "alt": "Last30Days Cropto monitoring interface",
     "role": "project-screenshot"
   },
   "heroImage": {
-    "src": "/media/work/last30days-cropto/hero.png",
+    "src": "/media/work/last30days-cropto/hero.webp",
     "alt": "Last30Days Cropto monitoring interface",
     "role": "project-screenshot"
   }

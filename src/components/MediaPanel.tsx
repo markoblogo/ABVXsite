@@ -1,4 +1,5 @@
 import type { ContentImage } from '@/content';
+import Image from 'next/image';
 
 function roleFor(image: ContentImage | undefined, variant: string) {
   if (image?.mediaRole) return image.mediaRole;
@@ -12,11 +13,13 @@ export default function MediaPanel({
   videoUrl,
   title,
   variant = 'project',
+  priority = false,
 }: {
   image?: ContentImage;
   videoUrl?: string;
   title: string;
   variant?: 'project' | 'book' | 'writing' | 'video';
+  priority?: boolean;
 }) {
   if (videoUrl) {
     return (
@@ -39,8 +42,15 @@ export default function MediaPanel({
 
   return (
     <figure className={`media-panel media-panel--${variant}`} data-media-role={role}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={image.src} alt={image.alt || title} width={width} height={height} loading="lazy" />
+      <Image
+        src={image.src}
+        alt={image.alt || title}
+        width={width}
+        height={height}
+        loading={priority ? 'eager' : 'lazy'}
+        fetchPriority={priority ? 'high' : 'auto'}
+        sizes={isBook ? '(max-width: 768px) 100vw, 42vw' : '(max-width: 768px) 100vw, 55vw'}
+      />
     </figure>
   );
 }

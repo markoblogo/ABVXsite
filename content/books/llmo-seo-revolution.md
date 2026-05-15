@@ -79,7 +79,7 @@
     "site"
   ],
   "media": {
-    "src": "/media/books/llmo-seo-revolution/cover.png",
+    "src": "/media/books/llmo-seo-revolution/cover.webp",
     "alt": "LLMO: The Next SEO Revolution book cover",
     "role": "book-cover"
   }

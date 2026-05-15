@@ -62,7 +62,7 @@
     "series"
   ],
   "media": {
-    "src": "/media/books/epictetus-enchiridion/cover.png",
+    "src": "/media/books/epictetus-enchiridion/cover.webp",
     "alt": "Epictetus Enchiridion in toki pona book cover",
     "role": "book-cover"
   },

@@ -62,7 +62,7 @@
     "series"
   ],
   "media": {
-    "src": "/media/books/seneca-shortness-of-life/cover.png",
+    "src": "/media/books/seneca-shortness-of-life/cover.webp",
     "alt": "Seneca On the Shortness of Life in toki pona book cover",
     "role": "book-cover"
   },

@@ -45,7 +45,7 @@
     "site"
   ],
   "media": {
-    "src": "/media/books/toki-pona-readers-kit/cover.png",
+    "src": "/media/books/toki-pona-readers-kit/cover.webp",
     "alt": "The Toki Pona Reader’s Kit cover",
     "role": "book-cover"
   },

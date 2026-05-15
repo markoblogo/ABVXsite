@@ -26,12 +26,12 @@
     }
   ],
   "media": {
-    "src": "/media/series/stoic-wisdom-toki-pona/hero.png",
+    "src": "/media/series/stoic-wisdom-toki-pona/hero.webp",
     "alt": "Stoic Wisdom in Toki Pona publishing line visual",
     "role": "landing-screenshot"
   },
   "heroImage": {
-    "src": "/media/series/stoic-wisdom-toki-pona/hero.png",
+    "src": "/media/series/stoic-wisdom-toki-pona/hero.webp",
     "alt": "Stoic Wisdom in Toki Pona publishing line visual",
     "role": "landing-screenshot"
   },

@@ -45,7 +45,7 @@
     "site"
   ],
   "media": {
-    "src": "/media/books/chinese-wisdom-free-kit/cover.png",
+    "src": "/media/books/chinese-wisdom-free-kit/cover.webp",
     "alt": "Chinese Wisdom reader guide cover",
     "role": "book-cover"
   },

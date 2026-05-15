@@ -45,7 +45,7 @@
     "site"
   ],
   "media": {
-    "src": "/media/books/heart-sutra-toki-pona/cover.png",
+    "src": "/media/books/heart-sutra-toki-pona/cover.webp",
     "alt": "Heart Sutra in toki pona cover",
     "role": "book-cover"
   },

@@ -32,12 +32,12 @@
   "primarySection": "systems",
   "group": "Workflow & Orchestration",
   "media": {
-    "src": "/media/work/set/hero.png",
+    "src": "/media/work/set/hero.webp",
     "alt": "SET orchestration system interface",
     "role": "project-screenshot"
   },
   "heroImage": {
-    "src": "/media/work/set/hero.png",
+    "src": "/media/work/set/hero.webp",
     "alt": "SET orchestration system interface",
     "role": "project-screenshot"
   }

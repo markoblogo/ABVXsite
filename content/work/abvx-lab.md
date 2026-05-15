@@ -38,12 +38,12 @@
   "primarySection": "systems",
   "group": "Development Surfaces & Interfaces",
   "media": {
-    "src": "/media/work/abvx-lab/hero.png",
+    "src": "/media/work/abvx-lab/hero.webp",
     "alt": "ABVX Lab ecosystem landing page",
     "role": "landing-screenshot"
   },
   "heroImage": {
-    "src": "/media/work/abvx-lab/hero.png",
+    "src": "/media/work/abvx-lab/hero.webp",
     "alt": "ABVX Lab ecosystem landing page",
     "role": "landing-screenshot"
   }

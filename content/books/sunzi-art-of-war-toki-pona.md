@@ -63,7 +63,7 @@
     "series"
   ],
   "media": {
-    "src": "/media/books/sunzi-art-of-war/cover.png",
+    "src": "/media/books/sunzi-art-of-war/cover.webp",
     "alt": "Sunzi Art of War in toki pona book cover",
     "role": "book-cover"
   },

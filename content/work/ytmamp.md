@@ -38,12 +38,12 @@
   "primarySection": "systems",
   "group": "Standalone Utilities & Experiments",
   "media": {
-    "src": "/media/work/ytmamp/hero.png",
+    "src": "/media/work/ytmamp/hero.webp",
     "alt": "YTMamp Winamp-style YouTube Music interface",
     "role": "project-screenshot"
   },
   "heroImage": {
-    "src": "/media/work/ytmamp/hero.png",
+    "src": "/media/work/ytmamp/hero.webp",
     "alt": "YTMamp Winamp-style YouTube Music interface",
     "role": "project-screenshot"
   }

@@ -62,12 +62,12 @@
   "primarySection": "focus",
   "group": "Market Intelligence, Monitoring & Indexes",
   "media": {
-    "src": "/media/work/uga-index/hero.png",
+    "src": "/media/work/uga-index/hero.webp",
     "alt": "UGA Index market index dashboard",
     "role": "project-screenshot"
   },
   "heroImage": {
-    "src": "/media/work/uga-index/hero.png",
+    "src": "/media/work/uga-index/hero.webp",
     "alt": "UGA Index market index dashboard",
     "role": "project-screenshot"
   }

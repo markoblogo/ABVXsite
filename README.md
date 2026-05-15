@@ -6,7 +6,7 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
 ![License](https://img.shields.io/badge/License-UNLICENSED-lightgrey)
 
-Production source for [abvx.xyz](https://abvx.xyz/): the public ABVX ecosystem site for market infrastructure, AI-native systems, publishing, language experiments, books, and writing.
+Production source for [abvx.xyz](https://abvx.xyz/): the public ABVX ecosystem site for agro-commodity market infrastructure, AI-native systems, publishing, language experiments, books, and writing.
 
 The site is built with Next.js App Router, TypeScript, React, local Markdown content files, local media assets, structured metadata, and public LLM-readable indexes.
 
@@ -15,7 +15,7 @@ The site is built with Next.js App Router, TypeScript, React, local Markdown con
 The current production information architecture is:
 
 - `/` - overview, latest entry points, and high-level ABVX positioning.
-- `/focus` - agro-commodity market infrastructure: trading platforms, brokerage workflows, monitoring, indexes, and partner fronts.
+- `/focus` - pillar page and catalogue for agro-commodity market infrastructure: trading platforms, brokerage workflows, monitoring, indexes, benchmark layers, use cases, and partner fronts.
 - `/systems` - operational systems architecture: market systems, publishing/language systems, AI-native development systems, and standalone utilities.
 - `/books` - ABVX Press: official publishing lines, standalone books, free resources, and companion publishing systems.
 - `/writing` - Medium and Substack writing archive.
@@ -23,9 +23,9 @@ The current production information architecture is:
 - `/work/[slug]` - detail pages for projects, tools, protocols, systems, landing pages, and work items.
 - `/books/[slug]` - detail pages for books, official publishing lines, free resources, and series.
 
-Legacy public paths redirect into the current structure through `next.config.ts`.
+Legacy public paths are preserved either as redirects or as noindex compatibility pages with canonical links into the current structure.
 
-Detail pages include visible breadcrumb links and entity-oriented "Key facts" blocks so users, search engines, and LLM agents can understand where each item belongs.
+Detail pages include visible breadcrumb links, entity-oriented "Key facts" blocks, related ecosystem items, and targeted FAQ / methodology blocks where they are real page content.
 
 ## Stack
 
@@ -35,8 +35,9 @@ Detail pages include visible breadcrumb links and entity-oriented "Key facts" bl
 - Tailwind CSS v4 pipeline
 - File-based content in `/content`
 - Local public media in `/public/media`
+- WebP / AVIF media derivatives for larger local images
 - Page-specific Open Graph / Twitter images
-- JSON-LD for global identity, collection pages, work items, books, series, item lists, and breadcrumbs
+- JSON-LD for global identity, collection pages, work items, books, series, item lists, breadcrumbs, related ecosystem graphs, FAQ pages, and Dataset/DataFeed-style market-index projects
 - Public LLM indexes in `/llms.txt` and `/content-index.json`
 - RSS ingestion for `/writing`
 - Vercel production deployment
@@ -95,9 +96,12 @@ Do not write local machine paths into content files. Public media references sho
 
 ```text
 /media/work/mn7r/hero.png
-/media/books/dark-gestalt/cover.png
-/media/series/modernisme-ukrainien/hero.png
+/media/work/spike-spot-commodity-index-ukraine/hero.webp
+/media/books/dark-gestalt/cover.webp
+/media/series/modernisme-ukrainien/hero.webp
 ```
+
+Large PNG/JPEG source files may remain in `public/media` for archival/source fidelity, but public content should prefer generated `.webp` paths when derivatives exist. `.avif` derivatives are also generated for many large images and can be used by future media resolvers.
 
 Internal editorial fields such as `needsCopyReview`, `needsMediaReview`, `needsLinkReview`, and `editorialNotes` are for workflow only and must not render publicly.
 
@@ -129,7 +133,7 @@ Generate the public LLM-readable indexes after content changes:
 npm run llms:generate
 ```
 
-Run validation, review, and LLM index generation before build or deployment when content has changed.
+`npm run build` runs `npm run llms:generate` automatically through `prebuild`, so generated `/public/llms.txt` and `/public/content-index.json` stay aligned with `/content`.
 
 ## Verification
 
@@ -138,7 +142,6 @@ Standard checks before pushing:
 ```bash
 npm run content:validate
 npm run content:review
-npm run llms:generate
 npm run lint
 npm run build
 ```
@@ -162,7 +165,6 @@ git checkout main
 git pull origin main
 npm run content:validate
 npm run content:review
-npm run llms:generate
 npm run lint
 npm run build
 git push origin main
@@ -207,11 +209,16 @@ Important files:
 Current metadata behavior:
 
 - Core pages expose page-specific Open Graph and Twitter images.
+- `/focus` is both a catalogue and a topic pillar for agro commodity market infrastructure, including definitions, use cases, ecosystem layers, benchmark/monitoring/trading distinctions, and internal links to core market projects.
 - `/work/[slug]` uses project media as social preview when available.
 - `/books/[slug]` uses book covers or series hero images when available.
 - Work detail pages expose structured facts: type, status, section, canonical site, GitHub, and related ecosystem.
 - Book detail pages expose structured facts: language, author, translator, official series, related editions, formats, and purchase links.
-- JSON-LD includes `Person`, `WebSite`, `CollectionPage`, `AboutPage`, `ItemList`, work item entities, `Book`, `CreativeWorkSeries`, and `BreadcrumbList`.
+- Related items are exposed both in UI and schema graph where available.
+- Market-index projects, including SPIKE and UGA Index, expose Dataset/DataFeed-oriented semantics.
+- Visible FAQ / methodology blocks emit `FAQPage` JSON-LD only on pages that actually render those questions and answers.
+- JSON-LD includes `Person`, `Organization`, `WebSite`, `CollectionPage`, `AboutPage`, `ItemList`, work item entities, `Book`, `CreativeWorkSeries`, `BreadcrumbList`, `FAQPage`, and market-index dataset/data-feed semantics.
+- Detail hero media uses Next Image, eager loading, and `fetchPriority="high"` for LCP-relevant project/book hero images.
 
 Before production, verify that rendered pages do not expose local paths, preview URLs, debug labels, or internal editorial flags.
 
@@ -234,15 +241,14 @@ RSS failures are handled gracefully. Core site content does not depend on RSS av
 
 ## Route Compatibility
 
-Old public paths are preserved as redirects where useful.
+Old public paths are preserved where useful. Some are hard redirects. Others are lightweight noindex compatibility pages with `follow` robots and canonical links to the stronger current route.
 
 Examples:
 
-- `/projects` -> `/systems`
-- `/abvx-press` -> `/books`
-- `/tech-lab` -> `/systems`
-- `/lang-lab` -> `/systems`
-- `/cropto` -> `/focus`
+- `/ecosystems` redirects to `/systems`.
+- `/blog` redirects to `/writing`.
+- `/cropto`, `/projects`, `/tech-lab`, `/lang-lab`, `/abvx-press`, and `/links` render compatibility pages with canonical targets.
+- `/llmo`, `/work-with-me`, and `/toki-pona` are indexable gateway pages with self-canonical metadata.
 
 Some slug aliases are also redirected to their canonical content routes.
 

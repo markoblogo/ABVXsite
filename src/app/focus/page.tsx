@@ -31,7 +31,7 @@ const focusGroups = [
     title: 'Market Intelligence, Monitoring & Indexes',
     description:
       'Monitoring and index products that turn fragmented market data, news, logistics, weather, crop, signal and commodity-market context into readable intelligence.',
-    slugs: ['cropto-monitor', 'last30days-cropto', 'uga-index'],
+    slugs: ['cropto-monitor', 'last30days-cropto', 'spike-spot-commodity-index-ukraine', 'uga-index'],
     variant: 'standard',
   },
   {

@@ -1607,6 +1607,37 @@ a {
   padding: clamp(1rem, 3vw, 1.6rem);
 }
 
+.legacy-route-notice {
+  display: grid;
+  min-height: 42vh;
+  align-items: center;
+}
+
+.legacy-route-notice__panel {
+  display: grid;
+  gap: 1rem;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--paper) 88%, white 12%);
+  padding: clamp(1rem, 4vw, 2rem);
+}
+
+.legacy-route-notice__panel h1 {
+  max-width: 12ch;
+  margin: 0;
+  font-size: clamp(2.4rem, 7vw, 6rem);
+  font-weight: 950;
+  letter-spacing: -0.095em;
+  line-height: 0.85;
+  text-transform: uppercase;
+}
+
+.legacy-route-notice__panel p {
+  max-width: 48rem;
+  color: var(--ink-muted);
+  font-size: clamp(1rem, 1.4vw, 1.16rem);
+  line-height: 1.45;
+}
+
 .section-panel--accent {
   background: var(--accent);
 }

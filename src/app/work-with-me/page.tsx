@@ -1,10 +1,10 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'About',
+  title: 'Work With Me',
   description:
-    'Professional framing, contact, and profile links for Anton Biletskyi-Volokh.',
-  alternates: { canonical: 'https://abvx.xyz/about' },
+    'Consulting and implementation offers for strategy, product systems, AI-native workflows, LLMO, metadata, and market infrastructure.',
+  alternates: { canonical: 'https://abvx.xyz/work-with-me' },
 };
 
 export default function WorkWithMe() {

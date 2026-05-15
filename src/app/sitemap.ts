@@ -33,6 +33,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/books`, lastModified: booksDate, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${base}/writing`, changeFrequency: 'weekly', priority: 0.75 },
     { url: `${base}/about`, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/llmo`, lastModified: allContentDate, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/work-with-me`, changeFrequency: 'monthly', priority: 0.65 },
+    { url: `${base}/toki-pona`, lastModified: booksDate, changeFrequency: 'monthly', priority: 0.65 },
   ];
 
   const workRoutes: MetadataRoute.Sitemap = artifacts.map((artifact) => ({

@@ -1,10 +1,10 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'ABVX Press',
+  title: 'Toki Pona Books, Tools, and Language Systems',
   description:
-    'Books, translations, series and publishing projects across AI, strategy, language, culture, markets and systems thinking.',
-  alternates: { canonical: 'https://abvx.xyz/books' },
+    'A gateway to ABVX Toki Pona books, translations, sitelen pona work, language tools, visual protocols, and AI-language experiments.',
+  alternates: { canonical: 'https://abvx.xyz/toki-pona' },
 };
 
 export default function TokiPonaPillar() {

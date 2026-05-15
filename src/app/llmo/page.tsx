@@ -1,10 +1,10 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Systems Catalogue',
+  title: 'LLMO / Agent-ready Visibility',
   description:
-    'AI-native systems, agentic development workflows, technical companions, and related research artifacts.',
-  alternates: { canonical: 'https://abvx.xyz/systems' },
+    'A focused gateway for LLM optimization, agent-ready documentation, structured metadata, and AI search visibility work by ABVX.',
+  alternates: { canonical: 'https://abvx.xyz/llmo' },
 };
 
 export default function LLMOPage() {

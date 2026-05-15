@@ -2,10 +2,11 @@ import Link from 'next/link';
 import { socialLinks } from '@/content/navigation';
 
 export const metadata = {
-  title: 'About',
+  title: 'Official Links',
   description:
     'Official profile links, contact, and professional framing for Anton Biletskyi-Volokh.',
   alternates: { canonical: 'https://abvx.xyz/about' },
+  robots: { index: false, follow: true },
 };
 
 export default function LinksPage() {

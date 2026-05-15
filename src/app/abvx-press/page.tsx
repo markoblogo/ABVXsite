@@ -1,18 +1,20 @@
-import DirectionPage from '@/components/direction-page';
-import { getBooks, getProjects } from '@/lib/abvx-data';
-import { DIRECTIONS } from '@/lib/directions';
-
-export const dynamic = 'force-dynamic';
+import LegacyRouteNotice from '@/components/legacy-route-notice';
 
 export const metadata = {
-  title: 'ABVX Press',
+  title: 'ABVX Press Direction Archive',
   description: 'Books, translation series, companion landings, free editions, and publishing experiments by ABVX.',
   alternates: { canonical: 'https://abvx.xyz/books' },
+  robots: { index: false, follow: true },
 };
 
-export default async function AbvxPressPage() {
-  const [projects, books] = await Promise.all([getProjects(), getBooks()]);
-  const direction = DIRECTIONS.find((item) => item.name === 'ABVX Press')!;
-
-  return <DirectionPage direction={direction} projects={projects} books={books} />;
+export default function AbvxPressPage() {
+  return (
+    <LegacyRouteNotice
+      eyebrow="Legacy route"
+      title="ABVX Press moved into Books."
+      description="This route is kept for old links. Books, translation series, companion landings and publishing systems now live under ABVX Press."
+      canonicalHref="/books"
+      canonicalLabel="ABVX Press"
+    />
+  );
 }

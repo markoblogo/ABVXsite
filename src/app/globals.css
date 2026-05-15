@@ -2734,6 +2734,131 @@ a {
   gap: clamp(0.9rem, 2vw, 1.25rem);
 }
 
+.focus-pillar-links {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  max-width: 58rem;
+}
+
+.focus-pillar-links a,
+.focus-layer-links a {
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--paper) 88%, white 12%);
+  color: var(--ink);
+  padding: 0.45rem 0.58rem;
+  font-size: 0.68rem;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.focus-pillar-links a:hover,
+.focus-pillar-links a:focus-visible,
+.focus-layer-links a:hover,
+.focus-layer-links a:focus-visible {
+  background: var(--ink);
+  color: var(--paper);
+  outline: none;
+}
+
+.focus-explainer,
+.focus-layer-map,
+.focus-use-cases {
+  display: grid;
+  gap: clamp(0.9rem, 2vw, 1.25rem);
+}
+
+.focus-explainer-grid,
+.focus-layer-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.focus-explainer-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.focus-layer-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.focus-explainer-panel,
+.focus-layer-panel {
+  display: grid;
+  align-content: start;
+  gap: 0.8rem;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--paper) 88%, white 12%);
+  padding: clamp(1rem, 2.4vw, 1.45rem);
+}
+
+.focus-explainer-panel h3,
+.focus-layer-panel h3 {
+  margin: 0;
+  font-size: clamp(1.35rem, 3vw, 2.4rem);
+  font-weight: 950;
+  letter-spacing: -0.06em;
+  line-height: 0.95;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.focus-explainer-panel p,
+.focus-layer-panel p {
+  color: var(--ink-muted);
+  line-height: 1.45;
+}
+
+.focus-explainer-panel a {
+  color: var(--ink);
+  font-weight: 850;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.16em;
+}
+
+.focus-layer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.focus-use-case-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: focus-use-case;
+}
+
+.focus-use-case-list li {
+  position: relative;
+  min-height: 100%;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--paper) 88%, white 12%);
+  padding: 3rem 1rem 1rem;
+  color: var(--ink-muted);
+  line-height: 1.42;
+  counter-increment: focus-use-case;
+}
+
+.focus-use-case-list li::before {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  color: var(--ink);
+  font-size: 0.72rem;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  content: counter(focus-use-case, decimal-leading-zero);
+}
+
 .focus-product-group__header {
   display: grid;
   gap: 0.45rem;
@@ -2962,6 +3087,12 @@ a {
 }
 
 @media (max-width: 900px) {
+  .focus-explainer-grid,
+  .focus-layer-grid,
+  .focus-use-case-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .focus-platform-grid,
   .focus-product-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2969,6 +3100,9 @@ a {
 }
 
 @media (max-width: 640px) {
+  .focus-explainer-grid,
+  .focus-layer-grid,
+  .focus-use-case-list,
   .focus-platform-grid,
   .focus-product-grid {
     grid-template-columns: 1fr;

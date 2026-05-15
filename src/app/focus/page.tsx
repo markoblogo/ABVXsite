@@ -11,10 +11,10 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 const focusDescription =
-  'Digital infrastructure, standards, indexes, workflows and AI-assisted tools for physical agro-commodity markets.';
+  'Expert map of agro commodity market infrastructure: trading systems, benchmark indexes, monitoring layers, market fronts and AI-assisted workflows for physical commodity markets.';
 
 export const metadata: Metadata = metadataWithImage({
-  title: 'Current Focus',
+  title: 'Agro Commodity Market Infrastructure',
   description: focusDescription,
   canonicalPath: '/focus',
   image: focusOgImage,
@@ -62,9 +62,58 @@ const focusFaqs: ContentFaq[] = [
   },
 ];
 
+const focusPillarLinks = [
+  { label: 'Cropto', href: '/work/cropto', description: 'market infrastructure and trading-service layer' },
+  { label: 'MN7R', href: '/work/mn7r', description: 'brokerage operating system and transaction workflow layer' },
+  { label: 'SPIKE', href: '/work/spike-spot-commodity-index-ukraine', description: 'Ukrainian spot benchmark and reference-price layer' },
+  { label: 'UGA Index', href: '/work/uga-index', description: 'Ukrainian export benchmark platform' },
+  { label: 'Cropto Monitor', href: '/work/cropto-monitor', description: 'commodity signals and monitoring terminal' },
+  { label: 'Liqua', href: '/work/liqua', description: 'market-front and commercial coordination layer' },
+];
+
+const infrastructureLayers = [
+  {
+    title: 'Trading and brokerage layer',
+    description:
+      'Systems for deal flow, brokerage coordination, transaction context, counterparties, execution workflows and operational market memory.',
+    links: ['MN7R', 'Cropto'],
+  },
+  {
+    title: 'Monitoring and intelligence layer',
+    description:
+      'Dashboards and signal surfaces for prices, logistics, weather, policy, risk, freight, ports, crop conditions and live situational awareness.',
+    links: ['Cropto Monitor'],
+  },
+  {
+    title: 'Benchmark and index layer',
+    description:
+      'Reference-price infrastructure that turns fragmented spot indications into structured benchmarks for comparison, analysis and market coordination.',
+    links: ['SPIKE', 'UGA Index'],
+  },
+  {
+    title: 'Market front and partner layer',
+    description:
+      'External-facing product surfaces, landing systems and partner fronts that translate infrastructure into concrete offers, narratives and collaboration entry points.',
+    links: ['Cropto', 'Liqua'],
+  },
+];
+
+const focusUseCases = [
+  'Compare Ukrainian grain and oilseed spot references without relying only on informal bilateral quote circulation.',
+  'Monitor logistics, weather, freight, policy and port context around physical agro-commodity markets.',
+  'Give brokerage teams a clearer operating surface for market memory, client context and transaction workflows.',
+  'Expose benchmark methodology and reference-pricing logic in a way analysts, exporters, processors and traders can inspect.',
+  'Connect product fronts, partner landings and commercial narratives back to the underlying market infrastructure.',
+  'Prepare market data and project pages for AI-assisted discovery, retrieval and structured understanding.',
+];
+
 function itemsForGroup(artifacts: Artifact[], slugs: readonly string[]): Artifact[] {
   const bySlug = new Map(artifacts.map((artifact) => [artifact.slug, artifact]));
   return slugs.map((slug) => bySlug.get(slug)).filter((item): item is Artifact => Boolean(item));
+}
+
+function linkByLabel(label: string) {
+  return focusPillarLinks.find((item) => item.label === label);
 }
 
 function slugifyFragment(value: string): string {
@@ -104,7 +153,97 @@ export default function FocusPage() {
         eyebrow="Current Focus"
         title="Agro Commodity Trading Infrastructure"
         summary="Digital infrastructure, standards, indexes, workflows and AI-assisted tools for physical agro-commodity markets."
-      />
+      >
+        <div className="focus-pillar-links" aria-label="Key infrastructure projects">
+          {focusPillarLinks.map((item) => (
+            <Link key={item.href} href={item.href}>
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      </PageHeader>
+
+      <section className="focus-explainer" aria-labelledby="agro-market-infrastructure-title">
+        <div className="focus-product-group__header">
+          <div className="eyebrow">Pillar page</div>
+          <h2 id="agro-market-infrastructure-title">What agro commodity market infrastructure means.</h2>
+          <p>
+            Agro commodity market infrastructure is the digital and methodological layer around
+            physical grain and oilseed markets: systems that help participants observe prices,
+            compare benchmarks, coordinate trading workflows and understand market context.
+          </p>
+        </div>
+
+        <div className="focus-explainer-grid">
+          <section className="focus-explainer-panel">
+            <div className="eyebrow">Definition</div>
+            <h3>Not one product category.</h3>
+            <p>
+              It includes trading and brokerage systems like <Link href="/work/mn7r">MN7R</Link>,
+              market infrastructure surfaces like <Link href="/work/cropto">Cropto</Link>,
+              reference-price products like <Link href="/work/spike-spot-commodity-index-ukraine">SPIKE</Link> and{' '}
+              <Link href="/work/uga-index">UGA Index</Link>, and intelligence terminals like{' '}
+              <Link href="/work/cropto-monitor">Cropto Monitor</Link>.
+            </p>
+          </section>
+          <section className="focus-explainer-panel">
+            <div className="eyebrow">Why it matters</div>
+            <h3>Physical markets are fragmented.</h3>
+            <p>
+              Commodity-market decisions depend on port access, logistics, freight, currency,
+              policy, quality, crop conditions, exporter demand and processor demand. Infrastructure
+              turns that fragmented context into repeatable workflows, reference points and shared
+              market language.
+            </p>
+          </section>
+        </div>
+      </section>
+
+      <section className="focus-layer-map" aria-labelledby="infrastructure-layers-title">
+        <div className="focus-product-group__header">
+          <div className="eyebrow">Ecosystem map</div>
+          <h2 id="infrastructure-layers-title">Benchmark, monitoring and trading layers.</h2>
+          <p>
+            The focus area is organized as an ecosystem rather than a flat portfolio. Each layer
+            supports a different part of market coordination.
+          </p>
+        </div>
+        <div className="focus-layer-grid">
+          {infrastructureLayers.map((layer) => (
+            <section key={layer.title} className="focus-layer-panel">
+              <h3>{layer.title}</h3>
+              <p>{layer.description}</p>
+              <div className="focus-layer-links">
+                {layer.links.map((label) => {
+                  const item = linkByLabel(label);
+                  if (!item) return null;
+                  return (
+                    <Link key={item.href} href={item.href}>
+                      {item.label}
+                    </Link>
+                  );
+                })}
+              </div>
+            </section>
+          ))}
+        </div>
+      </section>
+
+      <section className="focus-use-cases" aria-labelledby="focus-use-cases-title">
+        <div className="focus-product-group__header">
+          <div className="eyebrow">Use cases</div>
+          <h2 id="focus-use-cases-title">What this infrastructure is for.</h2>
+          <p>
+            These projects are built around concrete market operations: reference pricing,
+            monitoring, brokerage workflows, partner entry points and AI-readable public context.
+          </p>
+        </div>
+        <ol className="focus-use-case-list">
+          {focusUseCases.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ol>
+      </section>
 
       {focusGroups.map((group) => {
         const groupItems = itemsForGroup(artifacts, group.slugs);

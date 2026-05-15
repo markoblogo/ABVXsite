@@ -208,7 +208,7 @@ export default async function WorkDetailPage({
 
   return (
     <article className="detail-page detail-page--work">
-      <JsonLd id="jsonld-work-item" data={artifactJsonLd(artifact)} />
+      <JsonLd id="jsonld-work-item" data={artifactJsonLd(artifact, relatedItems.map((related) => related.item))} />
       <JsonLd
         id="jsonld-work-breadcrumbs"
         data={breadcrumbJsonLd([

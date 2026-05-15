@@ -219,6 +219,13 @@ function artifactSchemaType(type: Artifact['type']) {
   return 'CreativeWork';
 }
 
+function artifactSchemaTypes(type: Artifact['type']) {
+  const primaryType = artifactSchemaType(type);
+  if (type === 'market-index') return [primaryType, 'Dataset', 'DataFeed'];
+  if (type === 'market-intelligence') return [primaryType, 'Dataset'];
+  return primaryType;
+}
+
 function imageObject(image: ContentImage | undefined, fallbackAlt?: string) {
   if (!image?.src) return undefined;
   return {
@@ -242,20 +249,31 @@ function amazonAsins(book: Book) {
   )];
 }
 
-export function artifactJsonLd(artifact: Artifact) {
+export function artifactJsonLd(artifact: Artifact, relatedItems: Array<Artifact | Book> = []) {
   const url = `${SITE_URL}/work/${artifact.slug}`;
   const image = artifact.heroImage || artifact.thumbnail;
   const schemaType = artifactSchemaType(artifact.type);
+  const schemaTypes = artifactSchemaTypes(artifact.type);
   const siteLink = linkOfType(artifact, 'site') || linkOfType(artifact, 'website');
   const githubLink = linkOfType(artifact, 'github');
   const imageSchema = imageObject(image, artifact.title);
   const sameAs = artifact.links
     .map((link) => link.url)
     .filter((link) => link !== siteLink?.url);
+  const relatedSchemas = relatedItems.map((item) => {
+    const isBook = 'coverImage' in item;
+    const itemUrl = `${SITE_URL}/${isBook ? 'books' : 'work'}/${item.slug}`;
+    return {
+      '@type': isBook ? (item.type === 'series' ? 'CreativeWorkSeries' : 'Book') : artifactSchemaType(item.type as Artifact['type']),
+      '@id': `${itemUrl}${isBook ? (item.type === 'series' ? '#series' : '#book') : '#work'}`,
+      name: item.title,
+      url: itemUrl,
+    };
+  });
 
   return {
     '@context': 'https://schema.org',
-    '@type': schemaType,
+    '@type': schemaTypes,
     '@id': `${url}#work`,
     name: artifact.title,
     headline: artifact.title,
@@ -275,6 +293,16 @@ export function artifactJsonLd(artifact: Artifact) {
     ...(siteLink ? { sameAs: [siteLink.url, ...sameAs] } : sameAs.length ? { sameAs } : {}),
     ...(githubLink ? { codeRepository: githubLink.url } : {}),
     ...(imageSchema ? { image: imageSchema, primaryImageOfPage: imageSchema } : {}),
+    ...(relatedSchemas.length ? { isRelatedTo: relatedSchemas, mentions: relatedSchemas } : {}),
+    ...(artifact.type === 'market-index'
+      ? {
+          additionalType: ['https://schema.org/Dataset', 'https://schema.org/DataFeed'],
+          measurementTechnique: 'Reference-price benchmark methodology',
+          variableMeasured: artifact.tags
+            .filter((tag) => ['grain', 'oilseeds', 'market-data', 'benchmark', 'spot-index', 'price-indexes'].includes(tag))
+            .join(', '),
+        }
+      : {}),
     ...(schemaType === 'SoftwareApplication' || schemaType === 'WebApplication'
       ? {
           applicationCategory: artifact.group || artifact.type,

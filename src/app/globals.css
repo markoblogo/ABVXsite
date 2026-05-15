@@ -4343,12 +4343,39 @@ a {
   text-transform: uppercase;
 }
 
-.book-detail-copy-panel p {
+.content-markdown {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.content-markdown h3,
+.content-markdown h4 {
+  margin: 0.35rem 0 0;
+  color: var(--ink);
+  font-size: clamp(1.02rem, 1.45vw, 1.2rem);
+  font-weight: 900;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.content-markdown p,
+.content-markdown li {
   max-width: 68rem;
   color: var(--ink-muted);
   font-size: clamp(1rem, 1.35vw, 1.12rem);
   line-height: 1.46;
   overflow-wrap: anywhere;
+}
+
+.content-markdown ul {
+  display: grid;
+  gap: 0.42rem;
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.content-markdown li::marker {
+  color: var(--ink);
 }
 
 .book-detail-context {
@@ -4680,14 +4707,6 @@ a {
   letter-spacing: -0.075em;
   line-height: 0.92;
   text-transform: uppercase;
-}
-
-.work-brief__main p {
-  max-width: 68rem;
-  color: var(--ink-muted);
-  font-size: clamp(1rem, 1.35vw, 1.12rem);
-  line-height: 1.46;
-  overflow-wrap: anywhere;
 }
 
 .work-brief__context {

@@ -1,6 +1,7 @@
 import type { Artifact } from '@/content';
 import { operationalLinks } from '@/content/link-utils';
 import Link from 'next/link';
+import MarkdownContent from './MarkdownContent';
 
 function uniqueTexts(texts: string[]): string[] {
   const seen = new Set<string>();
@@ -33,7 +34,7 @@ function sectionHref(section: string): string {
 }
 
 export default function WorkBrief({ artifact }: { artifact: Artifact }) {
-  const texts = uniqueTexts([artifact.description || '', artifact.summary]);
+  const body = artifact.description || artifact.summary;
   const publicSections = uniqueTexts([artifact.primarySection, ...artifact.appearsIn]);
   const links = operationalLinks(artifact.links);
   const siteLink = links.find((link) => link.type === 'site' || link.type === 'demo');
@@ -50,9 +51,7 @@ export default function WorkBrief({ artifact }: { artifact: Artifact }) {
       <div className="work-brief__main">
         <div className="eyebrow">Project brief</div>
         <h2 id="work-brief-title">What it is</h2>
-        {texts.map((text) => (
-          <p key={text}>{text}</p>
-        ))}
+        <MarkdownContent>{body}</MarkdownContent>
       </div>
       <aside className="work-brief__context" aria-label="Project context">
         <div className="eyebrow">Key facts</div>

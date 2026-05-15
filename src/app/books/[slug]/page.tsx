@@ -3,6 +3,7 @@ import BookDetailHero from '@/components/BookDetailHero';
 import BookRelatedCard from '@/components/BookRelatedCard';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import JsonLd from '@/components/JsonLd';
+import MarkdownContent from '@/components/MarkdownContent';
 import MediaPanel from '@/components/MediaPanel';
 import TagList from '@/components/TagList';
 import { getArtifactsBySection, getBookBySlug, getBooks, type Artifact, type Book } from '@/content';
@@ -210,7 +211,7 @@ export default async function BookDetailPage({
           <div className="book-detail-copy-panel">
             <div className="eyebrow">Publishing line</div>
             <h2 id="series-about-title">About this series</h2>
-            <p>{book.description || book.summary}</p>
+            <MarkdownContent>{book.description || book.summary}</MarkdownContent>
           </div>
 
           {contextRows.length ? (
@@ -316,7 +317,7 @@ export default async function BookDetailPage({
         <div className="book-detail-copy-panel">
           <div className="eyebrow">ABVX Press</div>
           <h2 id="book-about-title">About this book</h2>
-          <p>{book.description || book.summary}</p>
+          <MarkdownContent>{book.description || book.summary}</MarkdownContent>
         </div>
 
         {contextRows.length ? (

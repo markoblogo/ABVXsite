@@ -20,6 +20,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Trading & Brokerage Platforms
   Tags: cropto, agro-commodities, trading-platform, indexed-trading, options, tokenized-assets, market-infrastructure
 
+- SPIKE SPOT COMMODITY INDEX UKRAINE
+  URL: https://abvx.xyz/work/spike-spot-commodity-index-ukraine
+  Summary: SPIKE SPOT COMMODITY INDEX UKRAINE is a benchmark and reference-price infrastructure project for Ukrainian agro-commodity spot markets.
+  Group: Market Intelligence, Monitoring & Indexes
+  Tags: agro-commodities, Ukraine, spot-index, market-index, grain, oilseeds, benchmark, market-data
+
 - Cropto Monitor: Commodity Signals Terminal
   URL: https://abvx.xyz/work/cropto-monitor
   Summary: Cropto Monitor is a customizable commodity-signals terminal combining market data, logistics, weather, policy, risk and live situational awareness for agro-commodity markets.

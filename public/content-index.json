@@ -1517,6 +1517,58 @@
       "type": "work",
       "section": "focus",
       "ecosystem": "Agro Market Infrastructure Systems",
+      "group": "Market Intelligence, Monitoring & Indexes",
+      "status": "live",
+      "title": "SPIKE SPOT COMMODITY INDEX UKRAINE",
+      "summary": "SPIKE SPOT COMMODITY INDEX UKRAINE is a benchmark and reference-price infrastructure project for Ukrainian agro-commodity spot markets.",
+      "canonicalUrl": "https://abvx.xyz/work/spike-spot-commodity-index-ukraine",
+      "tags": [
+        "agro-commodities",
+        "Ukraine",
+        "spot-index",
+        "market-index",
+        "grain",
+        "oilseeds",
+        "benchmark",
+        "market-data",
+        "cropto",
+        "market-infrastructure"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://spike-ua.cr0pto.com/"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/index"
+        }
+      ],
+      "updatedAt": "2026-05-12",
+      "related": [
+        {
+          "title": "UGA Index",
+          "canonicalUrl": "https://abvx.xyz/work/uga-index",
+          "relation": "related"
+        },
+        {
+          "title": "Cropto Monitor: Commodity Signals Terminal",
+          "canonicalUrl": "https://abvx.xyz/work/cropto-monitor",
+          "relation": "related"
+        },
+        {
+          "title": "Last30Days Cropto",
+          "canonicalUrl": "https://abvx.xyz/work/last30days-cropto",
+          "relation": "related"
+        }
+      ]
+    },
+    {
+      "type": "work",
+      "section": "focus",
+      "ecosystem": "Agro Market Infrastructure Systems",
       "group": "Market Fronts & Partner Landings",
       "status": "live",
       "title": "Trade Solution EU",

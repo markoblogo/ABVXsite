@@ -49,6 +49,24 @@
     "cropto-monitor",
     "last30days-cropto"
   ],
+  "faqs": [
+    {
+      "question": "Is SPIKE a trading platform?",
+      "answer": "No. SPIKE is benchmark and reference-price infrastructure. It does not execute trades, replace brokerage, or create a marketplace; it makes Ukrainian spot-market reference levels easier to compare."
+    },
+    {
+      "question": "What market problem does the index address?",
+      "answer": "Ukrainian agro-commodity spot pricing is fragmented across bilateral indications, logistics conditions, exporter demand, processor demand, freight and quality differences. SPIKE gives participants a structured public reference layer instead of another scattered quote stream."
+    },
+    {
+      "question": "How should the published values be interpreted?",
+      "answer": "The values are reference benchmarks for selected grain and oilseed spot conditions. They should be read as market visibility and comparison infrastructure, not as executable bids, offers or trading advice."
+    },
+    {
+      "question": "How does SPIKE relate to the Cropto ecosystem?",
+      "answer": "SPIKE belongs to the Cropto market-intelligence and index layer. It complements monitoring terminals, benchmark products and market-data surfaces that help physical agro-commodity participants coordinate around shared market context."
+    }
+  ],
   "sortRank": 19,
   "media": {
     "src": "/media/work/spike-spot-commodity-index-ukraine/hero.png",

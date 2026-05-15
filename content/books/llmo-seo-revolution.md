@@ -51,6 +51,24 @@
   ],
   "featured": true,
   "sortRank": 120,
+  "faqs": [
+    {
+      "question": "What is LLM Optimization?",
+      "answer": "LLM Optimization is the practice of making a brand, product, idea or content library easier for language models and AI-search systems to understand, summarize, trust and cite."
+    },
+    {
+      "question": "Who is the book for?",
+      "answer": "The book is written for marketers, founders, creators, strategists and businesses that need visibility as discovery shifts from search result pages to AI-generated answers."
+    },
+    {
+      "question": "How is LLMO different from keyword SEO?",
+      "answer": "Keyword SEO often focuses on rankings and traffic. LLMO focuses on semantic clarity, entity consistency, structured context, source confidence and whether AI systems can correctly understand what something is and why it matters."
+    },
+    {
+      "question": "Does the book promise AI-search rankings?",
+      "answer": "No. The book treats LLMO as a practical visibility discipline, not a guarantee system. It focuses on improving how well AI systems can read, connect and represent your knowledge."
+    }
+  ],
   "needsCopyReview": false,
   "needsMediaReview": false,
   "needsLinkReview": false,

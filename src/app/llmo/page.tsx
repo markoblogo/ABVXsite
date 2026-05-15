@@ -1,3 +1,7 @@
+import FAQSection from '@/components/FAQSection';
+import JsonLd from '@/components/JsonLd';
+import type { ContentFaq } from '@/content';
+import { faqPageJsonLd, SITE_URL } from '@/lib/seo';
 import Link from 'next/link';
 
 export const metadata = {
@@ -7,9 +11,28 @@ export const metadata = {
   alternates: { canonical: 'https://abvx.xyz/llmo' },
 };
 
+const llmoFaqs: ContentFaq[] = [
+  {
+    question: 'What does LLMO mean?',
+    answer:
+      'LLMO means LLM Optimization: improving how clearly a site, brand, product or knowledge base can be understood by large language models and AI-search systems.',
+  },
+  {
+    question: 'What changes first in an LLMO pass?',
+    answer:
+      'The first changes are usually entity clarity, page intent, canonical metadata, internal crosslinks, structured content indexes and JSON-LD that matches what users can actually see on the page.',
+  },
+  {
+    question: 'Is this a replacement for SEO?',
+    answer:
+      'No. It extends SEO into AI-mediated discovery. Traditional crawlability, titles and page quality still matter, but LLMO adds structured context, entity consistency and agent-readable references.',
+  },
+];
+
 export default function LLMOPage() {
   return (
     <div className="flex flex-col gap-10">
+      <JsonLd id="jsonld-llmo-faq" data={faqPageJsonLd({ id: `${SITE_URL}/llmo#faq`, faqs: llmoFaqs })} />
       <header className="flex flex-col gap-3">
         <h1 className="text-2xl font-semibold tracking-tight">Agent-ready visibility</h1>
         <p className="text-zinc-700 dark:text-zinc-300">
@@ -37,6 +60,8 @@ export default function LLMOPage() {
           <li>No heavy “SEO content” that makes the product harder to understand.</li>
         </ul>
       </section>
+
+      <FAQSection id="llmo-faq-title" title="LLMO methodology questions." faqs={llmoFaqs} />
 
       <section className="flex flex-wrap gap-3">
         <Link

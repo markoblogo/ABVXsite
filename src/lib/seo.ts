@@ -1,4 +1,4 @@
-import type { Artifact, Book, ContentImage } from '@/content';
+import type { Artifact, Book, ContentFaq, ContentImage } from '@/content';
 import type { Metadata } from 'next';
 
 export const SITE_URL = 'https://abvx.xyz';
@@ -133,6 +133,22 @@ export function breadcrumbJsonLd(items: BreadcrumbItem[]) {
       position: index + 1,
       name: item.name,
       item: item.url,
+    })),
+  };
+}
+
+export function faqPageJsonLd({ id, faqs }: { id: string; faqs: ContentFaq[] }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    '@id': id,
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
     })),
   };
 }

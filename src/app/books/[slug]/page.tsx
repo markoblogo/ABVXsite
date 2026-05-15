@@ -2,6 +2,7 @@ import BookActionLinks from '@/components/BookActionLinks';
 import BookDetailHero from '@/components/BookDetailHero';
 import BookRelatedCard from '@/components/BookRelatedCard';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import FAQSection from '@/components/FAQSection';
 import JsonLd from '@/components/JsonLd';
 import MarkdownContent from '@/components/MarkdownContent';
 import MediaPanel from '@/components/MediaPanel';
@@ -11,6 +12,7 @@ import {
   bookJsonLd,
   booksOgImage,
   breadcrumbJsonLd,
+  faqPageJsonLd,
   imageMetadata,
   metadataWithImage,
   SITE_URL,
@@ -295,6 +297,15 @@ export default async function BookDetailPage({
   return (
     <article className="detail-page detail-page--book">
       <JsonLd id="jsonld-book-item" data={bookJsonLd(book)} />
+      {book.faqs?.length ? (
+        <JsonLd
+          id="jsonld-book-faq"
+          data={faqPageJsonLd({
+            id: `${SITE_URL}/books/${book.slug}#faq`,
+            faqs: book.faqs,
+          })}
+        />
+      ) : null}
       <JsonLd
         id="jsonld-book-breadcrumbs"
         data={breadcrumbJsonLd([
@@ -334,6 +345,8 @@ export default async function BookDetailPage({
           </aside>
         ) : null}
       </section>
+
+      <FAQSection id="book-faq-title" title="Reader questions." faqs={book.faqs || []} />
 
       {videoUrl ? (
         <section className="book-video-section" aria-labelledby="book-video-title">

@@ -224,6 +224,7 @@ export type {
   ArtifactType,
   Book,
   BookType,
+  ContentFaq,
   ContentImage,
   ContentLink,
   ContentLinkType,

@@ -1785,6 +1785,35 @@ a {
   justify-self: start;
 }
 
+.faq-section {
+  display: grid;
+  gap: 1rem;
+}
+
+.faq-list {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.faq-item {
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--paper) 88%, white 12%);
+  padding: 1rem;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  font-weight: 950;
+  line-height: 1.2;
+}
+
+.faq-item p {
+  max-width: 62rem;
+  margin-top: 0.8rem;
+  color: var(--ink-muted);
+  line-height: 1.5;
+}
+
 .artifact-card:focus-within,
 .book-card:focus-within {
   box-shadow: 0 0 0 3px var(--accent);

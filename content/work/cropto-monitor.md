@@ -37,6 +37,24 @@
   ],
   "featured": true,
   "sortRank": 20,
+  "faqs": [
+    {
+      "question": "What is Cropto Monitor?",
+      "answer": "Cropto Monitor is a market-signals terminal for agro-commodity intelligence. It brings prices, logistics, weather, policy, freight, crop conditions and live context into configurable monitoring panels."
+    },
+    {
+      "question": "Is Cropto Monitor an index?",
+      "answer": "No. It is a monitoring and intelligence surface. It can sit next to index and benchmark projects, but its primary role is situational awareness rather than benchmark calculation."
+    },
+    {
+      "question": "Who is the system for?",
+      "answer": "The system is intended for commodity-market teams that need to watch changing conditions across logistics, risk, market signals and physical-market context without switching between disconnected sources."
+    },
+    {
+      "question": "How does it relate to Cropto and market infrastructure?",
+      "answer": "Cropto Monitor is the observation layer of the broader Cropto ecosystem. It supports decision-making around market infrastructure, while trading or brokerage execution belongs to separate systems."
+    }
+  ],
   "needsCopyReview": false,
   "needsMediaReview": false,
   "needsLinkReview": false,

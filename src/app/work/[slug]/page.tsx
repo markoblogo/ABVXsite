@@ -1,4 +1,5 @@
 import JsonLd from '@/components/JsonLd';
+import FAQSection from '@/components/FAQSection';
 import MediaPanel from '@/components/MediaPanel';
 import SocialLinks from '@/components/SocialLinks';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
@@ -12,6 +13,7 @@ import {
   artifactJsonLd,
   breadcrumbJsonLd,
   defaultOgImage,
+  faqPageJsonLd,
   focusOgImage,
   imageMetadata,
   metadataWithImage,
@@ -209,6 +211,15 @@ export default async function WorkDetailPage({
   return (
     <article className="detail-page detail-page--work">
       <JsonLd id="jsonld-work-item" data={artifactJsonLd(artifact, relatedItems.map((related) => related.item))} />
+      {artifact.faqs?.length ? (
+        <JsonLd
+          id="jsonld-work-faq"
+          data={faqPageJsonLd({
+            id: `${SITE_URL}/work/${artifact.slug}#faq`,
+            faqs: artifact.faqs,
+          })}
+        />
+      ) : null}
       <JsonLd
         id="jsonld-work-breadcrumbs"
         data={breadcrumbJsonLd([
@@ -229,6 +240,13 @@ export default async function WorkDetailPage({
       <WorkDetailHero artifact={publicArtifact} image={image} />
 
       <WorkBrief artifact={publicArtifact} />
+
+      <FAQSection
+        id="work-faq-title"
+        eyebrow={artifact.type === 'market-index' ? 'Methodology FAQ' : 'FAQ'}
+        title={artifact.type === 'market-index' ? 'Benchmark methodology questions.' : 'Questions this page answers.'}
+        faqs={artifact.faqs || []}
+      />
 
       {channels.length ? (
         <section className="work-social-section" aria-labelledby="work-social-title">

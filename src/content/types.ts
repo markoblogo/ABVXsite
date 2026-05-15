@@ -77,6 +77,11 @@ export type ContentLink = {
   url: string;
 };
 
+export type ContentFaq = {
+  question: string;
+  answer: string;
+};
+
 type BaseContentItem<TType extends string> = {
   id: string;
   slug: string;
@@ -103,6 +108,7 @@ type BaseContentItem<TType extends string> = {
   editorialNotes?: string;
   mediaNeedsReview?: boolean;
   relatedSlugs?: string[];
+  faqs?: ContentFaq[];
   primarySeriesSlug?: string;
   seriesSlugs?: string[];
 };

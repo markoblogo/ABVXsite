@@ -1,11 +1,12 @@
+import FAQSection from '@/components/FAQSection';
 import ProjectCatalogueCard from '@/components/ProjectCatalogueCard';
 import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import SectionPanel from '@/components/SectionPanel';
 import { getArtifactsBySection } from '@/content';
-import type { Artifact } from '@/content';
+import type { Artifact, ContentFaq } from '@/content';
 import { toPublicArtifact } from '@/content/public-props';
-import { artifactListItem, collectionPageJsonLd, focusOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
+import { artifactListItem, collectionPageJsonLd, faqPageJsonLd, focusOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -42,6 +43,24 @@ const focusGroups = [
     variant: 'standard',
   },
 ] as const;
+
+const focusFaqs: ContentFaq[] = [
+  {
+    question: 'What belongs in the ABVX Focus area?',
+    answer:
+      'Focus contains the active agro-commodity infrastructure layer: brokerage systems, market intelligence surfaces, benchmark indexes, partner fronts and practical tools for physical commodity markets.',
+  },
+  {
+    question: 'Why are benchmark and monitoring systems grouped together?',
+    answer:
+      'They solve the same infrastructure problem from different angles. Indexes provide structured reference pricing, while monitoring systems provide market context, signals and situational awareness.',
+  },
+  {
+    question: 'Is every Focus project a trading platform?',
+    answer:
+      'No. Some projects support execution, but others are reference-data, benchmark, intelligence, risk, landing or coordination layers around the physical agro-commodity market ecosystem.',
+  },
+];
 
 function itemsForGroup(artifacts: Artifact[], slugs: readonly string[]): Artifact[] {
   const bySlug = new Map(artifacts.map((artifact) => [artifact.slug, artifact]));
@@ -80,6 +99,7 @@ export default function FocusPage() {
           items: listedArtifacts.map(artifactListItem),
         })}
       />
+      <JsonLd id="jsonld-focus-faq" data={faqPageJsonLd({ id: `${SITE_URL}/focus#faq`, faqs: focusFaqs })} />
       <PageHeader
         eyebrow="Current Focus"
         title="Agro Commodity Trading Infrastructure"
@@ -106,6 +126,8 @@ export default function FocusPage() {
           </section>
         );
       })}
+
+      <FAQSection id="focus-faq-title" title="Focus methodology questions." faqs={focusFaqs} />
 
       <SectionPanel title="Partnerships and market systems" eyebrow="CTA" accent>
         <p>

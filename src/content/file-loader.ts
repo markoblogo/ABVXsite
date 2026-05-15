@@ -6,6 +6,7 @@ import type {
   Book,
   BookType,
   ContentImage,
+  ContentFaq,
   ContentLink,
   ContentLinkType,
   Series,
@@ -160,6 +161,17 @@ function normalizeLinks(value: unknown): ContentLink[] {
     .filter((link) => link.url);
 }
 
+function normalizeFaqs(value: unknown): ContentFaq[] {
+  if (!Array.isArray(value)) return [];
+  return value
+    .filter((item): item is RawRecord => Boolean(item) && typeof item === 'object')
+    .map((item) => ({
+      question: stringValue(item.question),
+      answer: stringValue(item.answer),
+    }))
+    .filter((item) => item.question && item.answer);
+}
+
 function baseFields(data: RawRecord, body: string) {
   const description = body || optionalString(data.description);
   const needsReview = booleanValue(data.needsReview) ||
@@ -190,6 +202,7 @@ function baseFields(data: RawRecord, body: string) {
     editorialNotes: optionalString(data.editorialNotes),
     mediaNeedsReview: booleanValue(data.needsMediaReview),
     relatedSlugs: stringArray(data.relatedSlugs),
+    faqs: normalizeFaqs(data.faqs),
     primarySeriesSlug: optionalString(data.primarySeriesSlug),
     seriesSlugs: stringArray(data.seriesSlugs),
   };

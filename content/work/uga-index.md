@@ -38,6 +38,24 @@
   ],
   "featured": true,
   "sortRank": 20,
+  "faqs": [
+    {
+      "question": "What is UGA Index designed to publish?",
+      "answer": "UGA Index is designed to publish methodology-based Ukrainian grain and oilseed export price references, focused on daily benchmark visibility for major commodity positions."
+    },
+    {
+      "question": "Why does an export price benchmark matter?",
+      "answer": "A shared benchmark helps producers, exporters, traders, processors and analysts compare market conditions without relying only on fragmented bilateral indications or informal quote circulation."
+    },
+    {
+      "question": "Is UGA Index the same as a trading venue?",
+      "answer": "No. It is a reference-data and benchmark infrastructure project. The role is to improve price transparency and market coordination, not to execute trades."
+    },
+    {
+      "question": "How does UGA Index fit into ABVX Focus?",
+      "answer": "It sits in Market Intelligence, Monitoring & Indexes because it provides benchmark logic and market-reference data for Ukrainian agro-commodity infrastructure."
+    }
+  ],
   "needsCopyReview": false,
   "needsMediaReview": false,
   "needsLinkReview": false,

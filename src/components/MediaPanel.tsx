@@ -37,8 +37,25 @@ export default function MediaPanel({
   if (!image) return null;
   const role = roleFor(image, variant);
   const isBook = role === 'book-cover' || variant === 'book';
+  const isRemote = image.src.startsWith('http://') || image.src.startsWith('https://');
   const width = image.width || (isBook ? 1200 : 1200);
   const height = image.height || (isBook ? 1600 : 630);
+
+  if (isRemote) {
+    return (
+      <figure className={`media-panel media-panel--${variant}`} data-media-role={role}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={image.src}
+          alt={image.alt || title}
+          width={width}
+          height={height}
+          loading={priority ? 'eager' : 'lazy'}
+          fetchPriority={priority ? 'high' : 'auto'}
+        />
+      </figure>
+    );
+  }
 
   return (
     <figure className={`media-panel media-panel--${variant}`} data-media-role={role}>

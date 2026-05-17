@@ -8,6 +8,7 @@ export type ArtifactType =
   | 'market-intelligence'
   | 'market-infrastructure'
   | 'market-index'
+  | 'hospitality-interface'
   | 'web-service'
   | 'tool'
   | 'plugin'

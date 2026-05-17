@@ -1768,6 +1768,72 @@
     {
       "type": "work",
       "section": "systems",
+      "ecosystem": "Commercial Sites & Interfaces",
+      "group": "Commercial Sites & Interfaces",
+      "status": "live",
+      "title": "AzurMenton",
+      "summary": "AzurMenton is a hospitality booking and presentation platform for seaside apartments in Menton, France.",
+      "canonicalUrl": "https://abvx.xyz/work/azurmenton",
+      "tags": [
+        "hospitality",
+        "booking",
+        "apartments",
+        "France",
+        "Menton",
+        "travel",
+        "presentation-site",
+        "web-interface",
+        "multilingual"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://azurmenton.com/"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/azurmenton"
+        }
+      ],
+      "updatedAt": "2026-05-17",
+      "related": [
+        {
+          "title": "ABVX Shortener",
+          "canonicalUrl": "https://abvx.xyz/work/abvx-shortener",
+          "relation": "related"
+        },
+        {
+          "title": "AsciiTheme",
+          "canonicalUrl": "https://abvx.xyz/work/ascii-theme",
+          "relation": "related"
+        },
+        {
+          "title": "ABVX Lab",
+          "canonicalUrl": "https://abvx.xyz/work/abvx-lab",
+          "relation": "related"
+        },
+        {
+          "title": "YTMamp",
+          "canonicalUrl": "https://abvx.xyz/work/ytmamp",
+          "relation": "related"
+        },
+        {
+          "title": "LLMO site/platform",
+          "canonicalUrl": "https://abvx.xyz/work/llmo-site",
+          "relation": "related"
+        },
+        {
+          "title": "git-tweet",
+          "canonicalUrl": "https://abvx.xyz/work/git-tweet",
+          "relation": "related"
+        }
+      ]
+    },
+    {
+      "type": "work",
+      "section": "systems",
       "ecosystem": "Publishing & Language Systems",
       "group": "Publishing systems & protocols",
       "status": "live",

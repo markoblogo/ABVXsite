@@ -225,7 +225,7 @@ export function itemListJsonLd({
 }
 
 function artifactSchemaType(type: Artifact['type']) {
-  if (['brokerage-platform', 'trading-platform', 'market-intelligence', 'market-index', 'web-service'].includes(type)) {
+  if (['brokerage-platform', 'trading-platform', 'market-intelligence', 'market-index', 'hospitality-interface', 'web-service'].includes(type)) {
     return 'WebApplication';
   }
   if (['tool', 'ai-workflow'].includes(type)) return 'SoftwareApplication';

@@ -81,9 +81,22 @@ const ecosystems = [
   {
     title: 'Standalone Utilities & Experiments',
     description: 'Independent utilities, interfaces and small software experiments outside the main ecosystems.',
-    slugs: ['ytmamp', 'abvx-shortener'],
+    groups: [
+      {
+        title: 'Commercial Sites & Interfaces',
+        description:
+          'Commercial presentation surfaces, booking-oriented interfaces and lightweight operational web systems outside the main ecosystem clusters.',
+        slugs: ['azurmenton'],
+      },
+      {
+        title: 'Standalone Utilities',
+        slugs: ['ytmamp', 'abvx-shortener'],
+      },
+    ],
   },
 ] as const;
+
+type SystemsGroup = (typeof ecosystems)[number]['groups'][number];
 
 function itemsForSlugs(artifacts: Artifact[], slugs: readonly string[], usedSlugs: Set<string>): Artifact[] {
   const bySlug = new Map(artifacts.map((artifact) => [artifact.slug, artifact]));
@@ -107,9 +120,7 @@ function slugifyFragment(value: string): string {
 
 export default function SystemsPage() {
   const artifacts = getArtifactsBySection('systems');
-  const listedArtifacts = ecosystems.flatMap((ecosystem) =>
-    'groups' in ecosystem ? ecosystem.groups.flatMap((group) => group.slugs) : ecosystem.slugs,
-  );
+  const listedArtifacts = ecosystems.flatMap((ecosystem) => ecosystem.groups.flatMap((group) => group.slugs));
   const listedItems = itemsForSlugs(artifacts, listedArtifacts, new Set<string>());
   const usedSlugs = new Set<string>();
 
@@ -141,50 +152,11 @@ export default function SystemsPage() {
 
       {ecosystems.map((ecosystem) => {
         const titleId = slugifyFragment(ecosystem.title);
+        const renderedGroups = ecosystem.groups
+          .map((group: SystemsGroup) => ({ ...group, items: itemsForSlugs(artifacts, group.slugs, usedSlugs) }))
+          .filter((group) => group.items.length);
 
-        if ('groups' in ecosystem) {
-          const renderedGroups = ecosystem.groups
-            .map((group) => ({ ...group, items: itemsForSlugs(artifacts, group.slugs, usedSlugs) }))
-            .filter((group) => group.items.length);
-
-          if (!renderedGroups.length) return null;
-
-          return (
-            <section key={ecosystem.title} className="home-section systems-ecosystem" aria-labelledby={titleId}>
-              <div className="systems-ecosystem__header">
-                <div className="eyebrow">Operational ecosystem</div>
-                <h2 id={titleId}>{ecosystem.title}</h2>
-                <p>{ecosystem.description}</p>
-              </div>
-
-              <div className="systems-ecosystem__groups">
-                {renderedGroups.map((group) => {
-                  const groupId = slugifyFragment(group.title);
-                  return (
-                    <section key={group.title} className="systems-subgroup" aria-labelledby={groupId}>
-                      <div className="systems-subgroup__header">
-                        <h3 id={groupId}>{group.title}</h3>
-                        {'description' in group && group.description ? <p>{group.description}</p> : null}
-                      </div>
-                      <div className="systems-grid">
-                        {group.items.map((artifact) => (
-                          <ProjectCatalogueCard
-                            key={artifact.id}
-                            artifact={toPublicArtifact(artifact)}
-                            meta={group.title}
-                          />
-                        ))}
-                      </div>
-                    </section>
-                  );
-                })}
-              </div>
-            </section>
-          );
-        }
-
-        const items = itemsForSlugs(artifacts, ecosystem.slugs, usedSlugs);
-        if (!items.length) return null;
+        if (!renderedGroups.length) return null;
 
         return (
           <section key={ecosystem.title} className="home-section systems-ecosystem" aria-labelledby={titleId}>
@@ -193,14 +165,27 @@ export default function SystemsPage() {
               <h2 id={titleId}>{ecosystem.title}</h2>
               <p>{ecosystem.description}</p>
             </div>
-            <div className="systems-grid systems-grid--standalone">
-              {items.map((artifact) => (
-                <ProjectCatalogueCard
-                  key={artifact.id}
-                  artifact={toPublicArtifact(artifact)}
-                  meta={ecosystem.title}
-                />
-              ))}
+            <div className="systems-ecosystem__groups">
+              {renderedGroups.map((group) => {
+                const groupId = slugifyFragment(group.title);
+                return (
+                  <section key={group.title} className="systems-subgroup" aria-labelledby={groupId}>
+                    <div className="systems-subgroup__header">
+                      <h3 id={groupId}>{group.title}</h3>
+                      {'description' in group && group.description ? <p>{group.description}</p> : null}
+                    </div>
+                    <div className="systems-grid">
+                      {group.items.map((artifact) => (
+                        <ProjectCatalogueCard
+                          key={artifact.id}
+                          artifact={toPublicArtifact(artifact)}
+                          meta={group.title}
+                        />
+                      ))}
+                    </div>
+                  </section>
+                );
+              })}
             </div>
           </section>
         );

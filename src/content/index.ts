@@ -162,6 +162,13 @@ export function getLatestHomepageWork(section: SiteSection, excludedSlug?: strin
     .sort(byHomepagePublished)[0];
 }
 
+export function getLatestSectionEntryWork(section: SiteSection, excludedSlug?: string): Artifact | undefined {
+  return getArtifactsBySection(section)
+    .filter((artifact) => artifact.slug !== excludedSlug)
+    .filter((artifact) => artifact.primarySection === section)
+    .sort(byLatest)[0];
+}
+
 export function getFeaturedWork(section?: SiteSection): Artifact[] {
   return getFeaturedArtifacts(section);
 }

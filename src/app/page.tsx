@@ -4,7 +4,7 @@ import JsonLd from '@/components/JsonLd';
 import MarqueeTicker from '@/components/MarqueeTicker';
 import SectionPanel from '@/components/SectionPanel';
 import TagList from '@/components/TagList';
-import { getLatestHomepageBook, getLatestHomepageWork } from '@/content';
+import { getLatestHomepageBook, getLatestSectionEntryWork } from '@/content';
 import { fetchMediumFeed, fetchSubstackFeed, type FeedItem } from '@/lib/feeds';
 import { collectionPageJsonLd, defaultOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
 import type { Metadata } from 'next';
@@ -89,8 +89,8 @@ export default async function Home() {
     safeLatestFeed('substack', fetchSubstackFeed, 'https://abvx.substack.com/feed'),
   ]);
 
-  const latestFocus = getLatestHomepageWork('focus');
-  const latestSystem = getLatestHomepageWork('systems', latestFocus?.slug);
+  const latestFocus = getLatestSectionEntryWork('focus');
+  const latestSystem = getLatestSectionEntryWork('systems', latestFocus?.slug);
   const latestBook = getLatestHomepageBook();
 
   return (

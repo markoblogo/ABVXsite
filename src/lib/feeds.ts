@@ -10,12 +10,25 @@ export type FeedItem = {
 };
 
 function stripHtml(html: string): string {
-  return html
+  const text = html
     .replace(/<script[\s\S]*?<\/script>/gi, '')
     .replace(/<style[\s\S]*?<\/style>/gi, '')
     .replace(/<[^>]+>/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
+
+  return decodeHtmlEntities(text);
+}
+
+function decodeHtmlEntities(text: string): string {
+  return text
+    .replace(/&#x([0-9a-f]+);/gi, (_, hex: string) => String.fromCodePoint(Number.parseInt(hex, 16)))
+    .replace(/&#(\d+);/g, (_, code: string) => String.fromCodePoint(Number.parseInt(code, 10)))
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>');
 }
 
 function decodeCdata(s: string): string {
@@ -41,6 +54,11 @@ function extractFirstImg(html: string): string | null {
   return m ? m[1] : null;
 }
 
+function extractMediumSnippet(html: string): string | null {
+  const m = html.match(/<p[^>]*class=["'][^"']*medium-feed-snippet[^"']*["'][^>]*>([\s\S]*?)<\/p>/i);
+  return m ? stripHtml(m[1]) : null;
+}
+
 export async function fetchMediumFeed(feedUrl: string): Promise<FeedItem[]> {
   const res = await fetch(feedUrl, {
     // cache on server, refresh periodically
@@ -58,9 +76,11 @@ export async function fetchMediumFeed(feedUrl: string): Promise<FeedItem[]> {
       const cats = getTags(it, 'category').map((c) => decodeCdata(c).trim()).filter(Boolean);
 
       const content = getTag(it, 'content:encoded') || '';
+      const description = getTag(it, 'description') || '';
       const contentHtml = decodeCdata(content);
-      const cover = extractFirstImg(contentHtml);
-      const excerpt = stripHtml(contentHtml).slice(0, 220);
+      const descriptionHtml = decodeCdata(description);
+      const cover = extractFirstImg(contentHtml) || extractFirstImg(descriptionHtml);
+      const excerpt = (extractMediumSnippet(descriptionHtml) || stripHtml(contentHtml || descriptionHtml)).slice(0, 220);
 
       const dt = pubDate ? new Date(pubDate) : null;
       const publishedAt = dt && !Number.isNaN(dt.valueOf()) ? dt.toISOString() : new Date().toISOString();

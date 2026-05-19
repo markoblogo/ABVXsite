@@ -6,6 +6,7 @@ import SectionPanel from '@/components/SectionPanel';
 import { getArtifactsBySection } from '@/content';
 import type { Artifact, ContentFaq } from '@/content';
 import { toPublicArtifact } from '@/content/public-props';
+import { fetchMn7rFeed, type FeedItem } from '@/lib/feeds';
 import { artifactListItem, collectionPageJsonLd, faqPageJsonLd, focusOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -20,6 +21,8 @@ export const metadata: Metadata = metadataWithImage({
   image: focusOgImage,
 });
 
+export const revalidate = 900;
+
 const focusGroups = [
   {
     title: 'Trading & Brokerage Platforms',
@@ -32,7 +35,7 @@ const focusGroups = [
     title: 'Market Intelligence, Monitoring & Indexes',
     description:
       'Monitoring and index products that turn fragmented market data, news, logistics, weather, crop, signal and commodity-market context into readable intelligence.',
-    slugs: ['cropto-monitor', 'last30days-cropto', 'spike-spot-commodity-index-ukraine', 'uga-index'],
+    slugs: ['cropto-monitor', 'mn7r-blog', 'last30days-cropto', 'spike-spot-commodity-index-ukraine', 'uga-index'],
     variant: 'standard',
   },
   {
@@ -124,9 +127,55 @@ function slugifyFragment(value: string): string {
     .replace(/^-|-$/g, '');
 }
 
-export default function FocusPage() {
+async function safeLatestMn7rFeed(feedUrl?: string): Promise<FeedItem | null> {
+  if (!feedUrl) return null;
+  try {
+    const items = await fetchMn7rFeed(feedUrl);
+    return items[0] || null;
+  } catch {
+    return null;
+  }
+}
+
+function formatDate(iso?: string): string | undefined {
+  if (!iso) return undefined;
+  const time = new Date(iso);
+  if (Number.isNaN(time.valueOf())) return undefined;
+  return time.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: '2-digit',
+  });
+}
+
+function siteLink(artifact: Artifact): string | undefined {
+  return artifact.links.find((link) => link.type === 'site')?.url;
+}
+
+function feedCardProps(artifact: Artifact, latest: FeedItem | null) {
+  if (artifact.slug !== 'mn7r-blog') return {};
+
+  return {
+    href: latest?.url || siteLink(artifact) || `/work/${artifact.slug}`,
+    title: latest?.title || artifact.title,
+    summary: latest?.excerpt || artifact.summary,
+    image: latest?.coverImage
+      ? {
+          src: latest.coverImage,
+          alt: latest.title,
+          role: 'rss-image' as const,
+          mediaRole: 'rss-image' as const,
+        }
+      : undefined,
+    meta: latest?.publishedAt ? `MN7R Blog / ${formatDate(latest.publishedAt)}` : 'MN7R Blog / live RSS',
+  };
+}
+
+export default async function FocusPage() {
   const artifacts = getArtifactsBySection('focus');
   const listedArtifacts = focusGroups.flatMap((group) => itemsForGroup(artifacts, group.slugs));
+  const mn7rBlog = artifacts.find((artifact) => artifact.slug === 'mn7r-blog');
+  const mn7rLatest = await safeLatestMn7rFeed(mn7rBlog?.rssFeed?.enabled ? mn7rBlog.rssFeed.url : undefined);
 
   return (
     <div className="route-focus grid gap-8">
@@ -259,7 +308,12 @@ export default function FocusPage() {
             </div>
             <div className={group.variant === 'primary' ? 'focus-platform-grid' : 'focus-product-grid'}>
               {groupItems.map((artifact) => (
-                <ProjectCatalogueCard key={artifact.id} artifact={toPublicArtifact(artifact)} tone="focus" />
+                <ProjectCatalogueCard
+                  key={artifact.id}
+                  artifact={toPublicArtifact(artifact)}
+                  tone="focus"
+                  {...feedCardProps(artifact, mn7rLatest)}
+                />
               ))}
             </div>
           </section>

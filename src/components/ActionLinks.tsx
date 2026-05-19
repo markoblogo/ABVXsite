@@ -23,6 +23,7 @@ const preferredLabels: Record<string, string> = {
   'youtube-channel': 'YouTube',
   medium: 'Medium',
   substack: 'Substack',
+  rss: 'RSS',
   deck: 'Deck',
 };
 
@@ -50,6 +51,7 @@ const priority: Record<string, number> = {
   'youtube-channel': 10,
   medium: 10,
   substack: 10,
+  rss: 11,
   other: 99,
 };
 

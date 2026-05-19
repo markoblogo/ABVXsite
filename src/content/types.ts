@@ -8,6 +8,7 @@ export type ArtifactType =
   | 'market-intelligence'
   | 'market-infrastructure'
   | 'market-index'
+  | 'media-resource'
   | 'hospitality-interface'
   | 'web-service'
   | 'tool'
@@ -69,6 +70,7 @@ export type ContentLinkType =
   | 'youtube-channel'
   | 'medium'
   | 'substack'
+  | 'rss'
   | 'deck'
   | 'other';
 
@@ -81,6 +83,11 @@ export type ContentLink = {
 export type ContentFaq = {
   question: string;
   answer: string;
+};
+
+export type RssFeedConfig = {
+  enabled: boolean;
+  url: string;
 };
 
 type BaseContentItem<TType extends string> = {
@@ -109,6 +116,7 @@ type BaseContentItem<TType extends string> = {
   editorialNotes?: string;
   mediaNeedsReview?: boolean;
   relatedSlugs?: string[];
+  rssFeed?: RssFeedConfig;
   faqs?: ContentFaq[];
   primarySeriesSlug?: string;
   seriesSlugs?: string[];

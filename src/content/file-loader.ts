@@ -9,6 +9,7 @@ import type {
   ContentFaq,
   ContentLink,
   ContentLinkType,
+  RssFeedConfig,
   Series,
   SiteSection,
   Status,
@@ -48,6 +49,7 @@ const linkTypeMap: Record<string, ContentLinkType> = {
   'youtube-channel': 'youtube-channel',
   medium: 'medium',
   substack: 'substack',
+  rss: 'rss',
   deck: 'deck',
   other: 'other',
 };
@@ -172,6 +174,17 @@ function normalizeFaqs(value: unknown): ContentFaq[] {
     .filter((item) => item.question && item.answer);
 }
 
+function normalizeRssFeed(value: unknown): RssFeedConfig | undefined {
+  if (!value || typeof value !== 'object') return undefined;
+  const record = value as RawRecord;
+  const url = stringValue(record.url);
+  if (!url) return undefined;
+  return {
+    enabled: booleanValue(record.enabled),
+    url,
+  };
+}
+
 function baseFields(data: RawRecord, body: string) {
   const description = body || optionalString(data.description);
   const needsReview = booleanValue(data.needsReview) ||
@@ -202,6 +215,7 @@ function baseFields(data: RawRecord, body: string) {
     editorialNotes: optionalString(data.editorialNotes),
     mediaNeedsReview: booleanValue(data.needsMediaReview),
     relatedSlugs: stringArray(data.relatedSlugs),
+    rssFeed: normalizeRssFeed(data.rssFeed),
     faqs: normalizeFaqs(data.faqs),
     primarySeriesSlug: optionalString(data.primarySeriesSlug),
     seriesSlugs: stringArray(data.seriesSlugs),

@@ -1,4 +1,4 @@
-import type { Artifact } from '@/content';
+import type { Artifact, ContentImage } from '@/content';
 import { operationalLinks, socialLinks } from '@/content/link-utils';
 import ActionLinks from './ActionLinks';
 import MediaPanel from './MediaPanel';
@@ -9,27 +9,53 @@ import Link from 'next/link';
 export default function ProjectCatalogueCard({
   artifact,
   meta,
+  href,
+  title,
+  summary,
+  image,
   tone = 'systems',
 }: {
   artifact: Artifact;
   meta?: string;
+  href?: string;
+  title?: string;
+  summary?: string;
+  image?: ContentImage;
   tone?: 'focus' | 'systems';
 }) {
   const social = socialLinks(artifact.links);
+  const cardHref = href || `/work/${artifact.slug}`;
+  const cardTitle = title || artifact.title;
+  const cardSummary = summary || artifact.summary;
+  const cardImage = image || artifact.thumbnail;
+  const isExternal = cardHref.startsWith('http');
+  const media = cardImage ? (
+    <MediaPanel image={cardImage} title={cardTitle} variant="project" />
+  ) : null;
+  const heading = isExternal ? (
+    <a href={cardHref} target="_blank" rel="noreferrer">
+      {cardTitle}
+    </a>
+  ) : (
+    <Link href={cardHref}>{cardTitle}</Link>
+  );
 
   return (
     <article className={`project-catalogue-card project-catalogue-card--${tone}`}>
-      {artifact.thumbnail ? (
-        <Link className="project-catalogue-card__media" href={`/work/${artifact.slug}`} aria-label={artifact.title}>
-          <MediaPanel image={artifact.thumbnail} title={artifact.title} variant="project" />
+      {media && isExternal ? (
+        <a className="project-catalogue-card__media" href={cardHref} target="_blank" rel="noreferrer" aria-label={cardTitle}>
+          {media}
+        </a>
+      ) : null}
+      {media && !isExternal ? (
+        <Link className="project-catalogue-card__media" href={cardHref} aria-label={cardTitle}>
+          {media}
         </Link>
       ) : null}
       <div className="project-catalogue-card__body">
         <div className="catalogue-card__meta">{meta || artifact.group || artifact.status}</div>
-        <h3>
-          <Link href={`/work/${artifact.slug}`}>{artifact.title}</Link>
-        </h3>
-        <p>{artifact.summary}</p>
+        <h3>{heading}</h3>
+        <p>{cardSummary}</p>
         <TagList tags={artifact.tags.slice(0, 4)} />
         <ActionLinks links={operationalLinks(artifact.links)} limit={4} compact />
         <SocialLinks links={social} compact />

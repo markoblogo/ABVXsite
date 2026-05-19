@@ -44,6 +44,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Market Intelligence, Monitoring & Indexes
   Tags: market-intelligence, monitoring, AI-summary, agro-commodities, signals, news-analysis, social-monitoring, cropto
 
+- MN7R Blog
+  URL: https://abvx.xyz/work/mn7r-blog
+  Summary: Operational notes, brokerage workflows, execution systems and market infrastructure research from the MN7R ecosystem.
+  Group: Market Intelligence, Monitoring & Indexes
+  Tags: brokerage, market-infrastructure, workflows, execution, commodities, market-intelligence, MN7R, trading
+
 - Cropto market risk tools deck
   URL: https://abvx.xyz/work/cropto-market-risk-deck
   Summary: Cropto Market Risk Tools Deck presents tokenized local spot-index risk infrastructure for commodity markets and programmable settlement systems.

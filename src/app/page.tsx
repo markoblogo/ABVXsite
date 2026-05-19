@@ -5,7 +5,7 @@ import MarqueeTicker from '@/components/MarqueeTicker';
 import SectionPanel from '@/components/SectionPanel';
 import TagList from '@/components/TagList';
 import { getLatestHomepageBook, getLatestSectionEntryWork } from '@/content';
-import { fetchMediumFeed, fetchSubstackFeed, type FeedItem } from '@/lib/feeds';
+import { fetchMediumFeed, fetchMn7rFeed, fetchSubstackFeed, type FeedItem } from '@/lib/feeds';
 import { collectionPageJsonLd, defaultOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -57,10 +57,15 @@ const fallbackLatest = {
     summary:
       'Longer essays and field notes on validation, decisions, automation, and AI-native work.',
   },
+  mn7rBlog: {
+    title: 'MN7R Blog',
+    summary:
+      'Operational notes, brokerage workflows, execution systems and market infrastructure research from the MN7R ecosystem.',
+  },
 };
 
 async function safeLatestFeed(
-  source: 'medium' | 'substack',
+  source: FeedItem['source'],
   fetcher: (url: string) => Promise<FeedItem[]>,
   url: string,
 ): Promise<FeedItem | null> {
@@ -84,12 +89,13 @@ function formatDate(iso?: string): string | undefined {
 }
 
 export default async function Home() {
-  const [mediumLatest, substackLatest] = await Promise.all([
+  const [mediumLatest, substackLatest, mn7rLatest] = await Promise.all([
     safeLatestFeed('medium', fetchMediumFeed, 'https://abvcreative.medium.com/feed'),
     safeLatestFeed('substack', fetchSubstackFeed, 'https://abvx.substack.com/feed'),
+    safeLatestFeed('mn7r', fetchMn7rFeed, 'https://mn7r.com/rss.xml'),
   ]);
 
-  const latestFocus = getLatestSectionEntryWork('focus');
+  const latestFocus = getLatestSectionEntryWork('focus', 'mn7r-blog');
   const latestSystem = getLatestSectionEntryWork('systems', latestFocus?.slug);
   const latestBook = getLatestHomepageBook();
 
@@ -168,7 +174,7 @@ export default async function Home() {
       <section className="home-section" aria-labelledby="latest-title">
         <div className="home-section__header">
           <div className="eyebrow">Latest from ABVX</div>
-          <h2 id="latest-title">Five entry points into the current work.</h2>
+          <h2 id="latest-title">Six entry points into the current work.</h2>
         </div>
         <div className="home-latest-grid">
           <HomepageLatestCard
@@ -215,6 +221,15 @@ export default async function Home() {
             detail={formatDate(substackLatest?.publishedAt)}
             image={substackLatest?.coverImage ? { src: substackLatest.coverImage, alt: substackLatest.title } : undefined}
             cta="Read on Substack"
+          />
+          <HomepageLatestCard
+            title={mn7rLatest?.title || fallbackLatest.mn7rBlog.title}
+            summary={mn7rLatest?.excerpt || fallbackLatest.mn7rBlog.summary}
+            href={mn7rLatest?.url || 'https://mn7r.com/blog'}
+            label="MN7R Blog"
+            detail={formatDate(mn7rLatest?.publishedAt)}
+            image={mn7rLatest?.coverImage ? { src: mn7rLatest.coverImage, alt: mn7rLatest.title, role: 'rss-image', mediaRole: 'rss-image' } : undefined}
+            cta="Read on MN7R"
           />
         </div>
       </section>

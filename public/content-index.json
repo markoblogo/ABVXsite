@@ -1519,6 +1519,71 @@
       "ecosystem": "Agro Market Infrastructure Systems",
       "group": "Market Intelligence, Monitoring & Indexes",
       "status": "live",
+      "title": "MN7R Blog",
+      "summary": "Operational notes, brokerage workflows, execution systems and market infrastructure research from the MN7R ecosystem.",
+      "canonicalUrl": "https://abvx.xyz/work/mn7r-blog",
+      "tags": [
+        "brokerage",
+        "market-infrastructure",
+        "workflows",
+        "execution",
+        "commodities",
+        "market-intelligence",
+        "MN7R",
+        "trading"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Blog",
+          "url": "https://mn7r.com/blog"
+        },
+        {
+          "type": "rss",
+          "label": "RSS",
+          "url": "https://mn7r.com/rss.xml"
+        }
+      ],
+      "updatedAt": "2026-05-17",
+      "related": [
+        {
+          "title": "MN7R",
+          "canonicalUrl": "https://abvx.xyz/work/mn7r",
+          "relation": "related"
+        },
+        {
+          "title": "Cropto Monitor: Commodity Signals Terminal",
+          "canonicalUrl": "https://abvx.xyz/work/cropto-monitor",
+          "relation": "related"
+        },
+        {
+          "title": "Last30Days Cropto",
+          "canonicalUrl": "https://abvx.xyz/work/last30days-cropto",
+          "relation": "related"
+        },
+        {
+          "title": "UGA Index",
+          "canonicalUrl": "https://abvx.xyz/work/uga-index",
+          "relation": "related"
+        },
+        {
+          "title": "Cropto",
+          "canonicalUrl": "https://abvx.xyz/work/cropto",
+          "relation": "related"
+        },
+        {
+          "title": "Liqua",
+          "canonicalUrl": "https://abvx.xyz/work/liqua",
+          "relation": "related"
+        }
+      ]
+    },
+    {
+      "type": "work",
+      "section": "focus",
+      "ecosystem": "Agro Market Infrastructure Systems",
+      "group": "Market Intelligence, Monitoring & Indexes",
+      "status": "live",
       "title": "SPIKE SPOT COMMODITY INDEX UKRAINE",
       "summary": "SPIKE SPOT COMMODITY INDEX UKRAINE is a benchmark and reference-price infrastructure project for Ukrainian agro-commodity spot markets.",
       "canonicalUrl": "https://abvx.xyz/work/spike-spot-commodity-index-ukraine",

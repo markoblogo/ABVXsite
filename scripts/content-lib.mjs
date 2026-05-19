@@ -36,6 +36,7 @@ export const validLinkTypes = new Set([
   'youtube-channel',
   'medium',
   'substack',
+  'rss',
   'deck',
   'other',
 ]);

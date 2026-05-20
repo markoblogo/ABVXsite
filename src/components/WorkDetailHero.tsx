@@ -1,6 +1,7 @@
 import type { Artifact, ContentImage } from '@/content';
-import { operationalLinks } from '@/content/link-utils';
+import { operationalLinks, socialLinks } from '@/content/link-utils';
 import MediaPanel from './MediaPanel';
+import SocialLinks from './SocialLinks';
 import TagList from './TagList';
 import WorkActionLinks from './WorkActionLinks';
 
@@ -11,6 +12,8 @@ export default function WorkDetailHero({
   artifact: Artifact;
   image?: ContentImage;
 }) {
+  const channels = socialLinks(artifact.links);
+
   return (
     <header className={`work-detail-hero${image ? ' work-detail-hero--with-media' : ''}`}>
       <div className="work-detail-hero__copy">
@@ -19,6 +22,7 @@ export default function WorkDetailHero({
         <p className="work-detail-hero__summary">{artifact.summary}</p>
         <TagList tags={artifact.tags} />
         <WorkActionLinks links={operationalLinks(artifact.links)} />
+        <SocialLinks links={channels} compact />
       </div>
       {image ? (
         <div className="work-detail-hero__media">

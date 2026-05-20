@@ -3,6 +3,7 @@ import type { ContentLink } from '@/content';
 const labels: Record<string, string> = {
   site: 'Site',
   website: 'Site',
+  blog: 'Blog',
   github: 'GitHub',
   demo: 'Demo',
   youtube: 'YouTube',
@@ -30,7 +31,8 @@ const labels: Record<string, string> = {
 const priority: Record<string, number> = {
   site: 1,
   website: 1,
-  demo: 2,
+  blog: 2,
+  demo: 3,
   deck: 3,
   pdf: 3,
   series: 5,
@@ -68,7 +70,7 @@ function labelFor(link: ContentLink): string {
 }
 
 function isPrimary(link: ContentLink): boolean {
-  return ['site', 'website', 'demo', 'pdf', 'deck', 'book-site', 'series-site', 'series'].includes(link.type);
+  return ['site', 'website', 'blog', 'demo', 'pdf', 'deck', 'book-site', 'series-site', 'series'].includes(link.type);
 }
 
 export default function WorkActionLinks({

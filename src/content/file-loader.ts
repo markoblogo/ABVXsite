@@ -29,6 +29,7 @@ type ParsedFile = {
 const linkTypeMap: Record<string, ContentLinkType> = {
   site: 'site',
   website: 'site',
+  blog: 'blog',
   github: 'github',
   demo: 'demo',
   youtube: 'youtube',

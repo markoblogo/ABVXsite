@@ -34,7 +34,7 @@
       "url": "https://github.com/markoblogo/mn7r"
     },
     {
-      "type": "site",
+      "type": "blog",
       "label": "Blog",
       "url": "https://mn7r.com/blog"
     },

@@ -50,6 +50,7 @@ export type ContentImage = {
 export type ContentLinkType =
   | 'site'
   | 'website'
+  | 'blog'
   | 'github'
   | 'demo'
   | 'youtube'

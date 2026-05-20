@@ -3,6 +3,7 @@ import type { ContentLink } from '@/content';
 const preferredLabels: Record<string, string> = {
   site: 'Site',
   website: 'Site',
+  blog: 'Blog',
   github: 'GitHub',
   demo: 'Demo',
   youtube: 'YouTube',
@@ -30,9 +31,10 @@ const preferredLabels: Record<string, string> = {
 const priority: Record<string, number> = {
   site: 1,
   website: 1,
+  blog: 2,
   'book-site': 1,
-  series: 2,
-  'series-site': 2,
+  series: 3,
+  'series-site': 3,
   demo: 3,
   github: 4,
   kindle: 5,

@@ -20,6 +20,7 @@ export const validMediaRoles = new Set([
 ]);
 export const validLinkTypes = new Set([
   'site',
+  'blog',
   'github',
   'demo',
   'youtube',

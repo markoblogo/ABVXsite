@@ -1505,9 +1505,19 @@
           "url": "https://github.com/markoblogo/mn7r"
         },
         {
+          "type": "site",
+          "label": "Blog",
+          "url": "https://mn7r.com/blog"
+        },
+        {
           "type": "bluesky",
           "label": "Bluesky",
-          "url": "https://bsky.app/profile/spike.mn7r.com"
+          "url": "https://bsky.app/profile/mn7r.bsky.social"
+        },
+        {
+          "type": "substack",
+          "label": "Substack",
+          "url": "https://mn7r.substack.com/"
         }
       ],
       "updatedAt": "2026-05-07",

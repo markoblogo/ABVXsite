@@ -78,6 +78,18 @@ function extractMetaImage(html: string, baseUrl: string): string | null {
   }
 }
 
+function deriveMn7rArticleImage(url: string): string | null {
+  try {
+    const parsed = new URL(url);
+    if (parsed.hostname !== 'mn7r.com' || !parsed.pathname.startsWith('/blog/')) return null;
+    const pathname = parsed.pathname.replace(/\/$/, '');
+    if (/\.(?:avif|webp|png|jpe?g)$/i.test(pathname)) return null;
+    return `${parsed.origin}${pathname}.jpg`;
+  } catch {
+    return null;
+  }
+}
+
 function extractMediumSnippet(html: string): string | null {
   const m = html.match(/<p[^>]*class=["'][^"']*medium-feed-snippet[^"']*["'][^>]*>([\s\S]*?)<\/p>/i);
   return m ? stripHtml(m[1]) : null;
@@ -118,7 +130,8 @@ async function parseRssFeed(
         extractFirstImg(contentHtml) ||
         extractFirstImg(descriptionHtml) ||
         getTagAttribute(it, 'media:content', 'url') ||
-        getTagAttribute(it, 'enclosure', 'url');
+        getTagAttribute(it, 'enclosure', 'url') ||
+        (source === 'mn7r' ? deriveMn7rArticleImage(link) : null);
       const excerpt = stripHtml(contentHtml || descriptionHtml).slice(0, 220);
 
       const dt = pubDate ? new Date(pubDate) : null;

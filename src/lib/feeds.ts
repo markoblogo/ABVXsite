@@ -78,15 +78,15 @@ function extractMetaImage(html: string, baseUrl: string): string | null {
   }
 }
 
-function deriveMn7rArticleImage(url: string): string | null {
+function deriveMn7rArticleImageCandidates(url: string): string[] {
   try {
     const parsed = new URL(url);
-    if (parsed.hostname !== 'mn7r.com' || !parsed.pathname.startsWith('/blog/')) return null;
+    if (parsed.hostname !== 'mn7r.com' || !parsed.pathname.startsWith('/blog/')) return [];
     const pathname = parsed.pathname.replace(/\/$/, '');
-    if (/\.(?:avif|webp|png|jpe?g)$/i.test(pathname)) return null;
-    return `${parsed.origin}${pathname}.jpg`;
+    if (/\.(?:avif|webp|png|jpe?g)$/i.test(pathname)) return [];
+    return ['png', 'jpg', 'webp', 'avif'].map((extension) => `${parsed.origin}${pathname}.${extension}`);
   } catch {
-    return null;
+    return [];
   }
 }
 
@@ -95,7 +95,7 @@ function extractMediumSnippet(html: string): string | null {
   return m ? stripHtml(m[1]) : null;
 }
 
-async function fetchArticleImage(url: string): Promise<string | null> {
+async function fetchArticleMetaImage(url: string): Promise<string | null> {
   try {
     const res = await fetch(url, { next: { revalidate: 900 } });
     if (!res.ok) return null;
@@ -104,6 +104,32 @@ async function fetchArticleImage(url: string): Promise<string | null> {
   } catch {
     return null;
   }
+}
+
+async function imageUrlIfValid(url: string | undefined): Promise<string | null> {
+  if (!url) return null;
+  try {
+    const res = await fetch(url, { method: 'HEAD', next: { revalidate: 900 } });
+    if (!res.ok) return null;
+    const contentType = res.headers.get('content-type') || '';
+    return contentType.toLowerCase().startsWith('image/') ? url : null;
+  } catch {
+    return null;
+  }
+}
+
+async function firstValidImageUrl(candidates: Array<string | null | undefined>): Promise<string | null> {
+  for (const candidate of candidates) {
+    const imageUrl = await imageUrlIfValid(candidate || undefined);
+    if (imageUrl) return imageUrl;
+  }
+  return null;
+}
+
+async function resolveArticleImage(item: FeedItem): Promise<string | null> {
+  const metaImage = await fetchArticleMetaImage(item.url);
+  const mn7rCandidates = item.source === 'mn7r' ? deriveMn7rArticleImageCandidates(item.url) : [];
+  return firstValidImageUrl([item.coverImage, metaImage, ...mn7rCandidates]);
 }
 
 async function parseRssFeed(
@@ -130,8 +156,7 @@ async function parseRssFeed(
         extractFirstImg(contentHtml) ||
         extractFirstImg(descriptionHtml) ||
         getTagAttribute(it, 'media:content', 'url') ||
-        getTagAttribute(it, 'enclosure', 'url') ||
-        (source === 'mn7r' ? deriveMn7rArticleImage(link) : null);
+        getTagAttribute(it, 'enclosure', 'url');
       const excerpt = stripHtml(contentHtml || descriptionHtml).slice(0, 220);
 
       const dt = pubDate ? new Date(pubDate) : null;
@@ -157,8 +182,8 @@ async function parseRssFeed(
   const limit = options.articleImageLimit ?? parsed.length;
   const withImages = await Promise.all(
     parsed.map(async (item, index) => {
-      if (item.coverImage || index >= limit) return item;
-      const coverImage = await fetchArticleImage(item.url);
+      if (index >= limit) return item;
+      const coverImage = await resolveArticleImage(item);
       return coverImage ? { ...item, coverImage } : item;
     }),
   );

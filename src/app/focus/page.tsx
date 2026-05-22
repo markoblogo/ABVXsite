@@ -1,11 +1,12 @@
 import FAQSection from '@/components/FAQSection';
 import BookCatalogueCard from '@/components/BookCatalogueCard';
+import MediaPanel from '@/components/MediaPanel';
 import ProjectCatalogueCard from '@/components/ProjectCatalogueCard';
 import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import SectionPanel from '@/components/SectionPanel';
-import { getArtifactsBySection, getBooksBySection } from '@/content';
-import type { Artifact, Book, ContentFaq } from '@/content';
+import { getArtifactsBySection, getBooksBySection, getSeries } from '@/content';
+import type { Artifact, Book, ContentFaq, Series } from '@/content';
 import { toPublicArtifact } from '@/content/public-props';
 import { fetchMn7rFeed, type FeedItem } from '@/lib/feeds';
 import { artifactListItem, bookListItem, collectionPageJsonLd, faqPageJsonLd, focusOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
@@ -52,6 +53,7 @@ const focusBookGroup = {
   title: 'Books & Field Manuals',
   description:
     'Publishing surfaces, practical manuals and free editions connected to agro-commodity brokerage, operational market workflows and the MN7R infrastructure ecosystem.',
+  seriesSlug: 'mn7r-commodity-brokerage-library',
   slugs: ['mn7r-agro-commodity-brokerage-ua-free-edition'],
 } as const;
 
@@ -128,6 +130,10 @@ function booksForGroup(books: Book[], slugs: readonly string[] = []): Book[] {
   return slugs.map((slug) => bySlug.get(slug)).filter((item): item is Book => Boolean(item));
 }
 
+function seriesBySlug(series: Series[], slug: string): Series | undefined {
+  return series.find((item) => item.slug === slug);
+}
+
 function linkByLabel(label: string) {
   return focusPillarLinks.find((item) => item.label === label);
 }
@@ -187,8 +193,11 @@ function feedCardProps(artifact: Artifact, latest: FeedItem | null) {
 export default async function FocusPage() {
   const artifacts = getArtifactsBySection('focus');
   const books = getBooksBySection('focus').filter((book) => book.type !== 'series');
+  const series = getSeries();
   const listedArtifacts = focusGroups.flatMap((group) => itemsForGroup(artifacts, group.slugs));
   const listedBooks = booksForGroup(books, focusBookGroup.slugs);
+  const focusBookSeries = seriesBySlug(series, focusBookGroup.seriesSlug);
+  const focusBookSeriesImage = focusBookSeries?.heroImage || focusBookSeries?.media;
   const mn7rBlog = artifacts.find((artifact) => artifact.slug === 'mn7r-blog');
   const mn7rLatest = await safeLatestMn7rFeed(mn7rBlog?.rssFeed?.enabled ? mn7rBlog.rssFeed.url : undefined);
 
@@ -342,6 +351,11 @@ export default async function FocusPage() {
             <h2 id="books-field-manuals">{focusBookGroup.title}</h2>
             <p>{focusBookGroup.description}</p>
           </div>
+          {focusBookSeries && focusBookSeriesImage ? (
+            <Link className="focus-book-line-cover" href={`/books/${focusBookSeries.slug}`} aria-label={focusBookSeries.title}>
+              <MediaPanel image={focusBookSeriesImage} title={focusBookSeries.title} variant="project" />
+            </Link>
+          ) : null}
           <div className="focus-book-grid">
             {listedBooks.map((book) => (
               <BookCatalogueCard

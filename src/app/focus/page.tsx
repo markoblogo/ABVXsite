@@ -1,6 +1,5 @@
 import FAQSection from '@/components/FAQSection';
 import BookCatalogueCard from '@/components/BookCatalogueCard';
-import MediaPanel from '@/components/MediaPanel';
 import ProjectCatalogueCard from '@/components/ProjectCatalogueCard';
 import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
@@ -199,30 +198,22 @@ function FocusBookSeriesLine({
   series: Series;
   books: Book[];
 }) {
-  const image = series.heroImage || series.media;
-
   return (
-    <article className="books-series-line focus-series-line">
-      <div className={`books-series-line__top${image ? ' books-series-line__top--with-media' : ''}`}>
-        <div className="books-series-line__header">
+    <article className="focus-library-line">
+      <div className="focus-library-line__header">
+        <div>
           <div className="eyebrow">Publishing line</div>
           <h3>{series.title}</h3>
           <p>{series.summary}</p>
+        </div>
+        <div className="focus-library-line__meta">
           <div className="books-series-line__meta">
             <span>{books.filter((book) => book.type === 'book' || book.type === 'translation').length} books</span>
             <span>{books.filter((book) => !(book.type === 'book' || book.type === 'translation')).length} free resources</span>
           </div>
-          <div className="books-series-line__actions">
-            <TagList tags={series.tags.slice(0, 5)} />
-            <ActionLinks links={series.links} compact />
-          </div>
+          <TagList tags={series.tags.slice(0, 5)} />
+          <ActionLinks links={series.links} compact />
         </div>
-
-        {image ? (
-          <Link className="books-series-line__media" href={`/books/${series.slug}`} aria-label={series.title}>
-            <MediaPanel image={image} title={series.title} variant="project" />
-          </Link>
-        ) : null}
       </div>
 
       <div className="focus-book-grid">

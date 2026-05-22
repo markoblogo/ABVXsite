@@ -7,7 +7,8 @@ import JsonLd from '@/components/JsonLd';
 import MarkdownContent from '@/components/MarkdownContent';
 import MediaPanel from '@/components/MediaPanel';
 import TagList from '@/components/TagList';
-import { getArtifacts, getArtifactsBySection, getBookBySlug, getBooks, type Artifact, type Book } from '@/content';
+import { getArtifacts, getArtifactsBySection, getBookBySlug, getBooks, type Artifact, type Book, type ContentImage } from '@/content';
+import { fetchMn7rFeed } from '@/lib/feeds';
 import {
   bookJsonLd,
   booksOgImage,
@@ -47,6 +48,22 @@ function formatFormats(formats?: string[]): string | undefined {
 
 function purchaseLinks(book: Book) {
   return book.links.filter((link) => ['amazon', 'kindle', 'paperback', 'pdf', 'epub'].includes(link.type));
+}
+
+async function latestMn7rBlogImage(feedUrl?: string): Promise<ContentImage | undefined> {
+  if (!feedUrl) return undefined;
+  try {
+    const latest = (await fetchMn7rFeed(feedUrl))[0];
+    if (!latest?.coverImage) return undefined;
+    return {
+      src: latest.coverImage,
+      alt: latest.title,
+      role: 'rss-image',
+      mediaRole: 'rss-image',
+    };
+  } catch {
+    return undefined;
+  }
 }
 
 function renderLinks(links: Book['links']): ReactNode {
@@ -271,6 +288,9 @@ export default async function BookDetailPage({
       return a.item.sortRank - b.item.sortRank;
     })
     .slice(0, book.relatedSlugs?.length ? Math.min(Math.max(book.relatedSlugs.length, 6), 9) : 6);
+  const mn7rBlogRelated = relatedItems.find((related) => related.kind === 'artifact' && related.item.slug === 'mn7r-blog');
+  const mn7rBlogRelatedImage =
+    mn7rBlogRelated?.kind === 'artifact' ? await latestMn7rBlogImage(mn7rBlogRelated.item.rssFeed?.url) : undefined;
   const youtube = book.links.find((link) => link.type === 'youtube');
   const videoUrl = youtube ? youtubeEmbedUrl(youtube.url) : undefined;
   const formats = formatFormats(book.availableFormats?.length ? book.availableFormats : book.formats);
@@ -368,7 +388,11 @@ export default async function BookDetailPage({
           </div>
           <div className="book-related-grid">
             {relatedItems.map((related) => (
-              <BookRelatedCard key={`${related.kind}-${related.item.id}`} related={related} />
+              <BookRelatedCard
+                key={`${related.kind}-${related.item.id}`}
+                related={related}
+                imageOverride={related.item.slug === 'mn7r-blog' ? mn7rBlogRelatedImage : undefined}
+              />
             ))}
           </div>
         </section>

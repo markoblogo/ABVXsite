@@ -4,10 +4,8 @@ import ProjectCatalogueCard from '@/components/ProjectCatalogueCard';
 import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import SectionPanel from '@/components/SectionPanel';
-import ActionLinks from '@/components/ActionLinks';
-import TagList from '@/components/TagList';
-import { getArtifactsBySection, getBooksBySection, getSeries } from '@/content';
-import type { Artifact, Book, ContentFaq, Series } from '@/content';
+import { getArtifactsBySection, getBooksBySection } from '@/content';
+import type { Artifact, Book, ContentFaq } from '@/content';
 import { toPublicArtifact } from '@/content/public-props';
 import { fetchMn7rFeed, type FeedItem } from '@/lib/feeds';
 import { artifactListItem, bookListItem, collectionPageJsonLd, faqPageJsonLd, focusOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
@@ -54,7 +52,6 @@ const focusBookGroup = {
   title: 'Books & Field Manuals',
   description:
     'Publishing surfaces, practical manuals and free editions connected to agro-commodity brokerage, operational market workflows and the MN7R infrastructure ecosystem.',
-  seriesSlug: 'mn7r-commodity-brokerage-library',
   slugs: ['mn7r-agro-commodity-brokerage-ua-free-edition'],
 } as const;
 
@@ -131,10 +128,6 @@ function booksForGroup(books: Book[], slugs: readonly string[] = []): Book[] {
   return slugs.map((slug) => bySlug.get(slug)).filter((item): item is Book => Boolean(item));
 }
 
-function seriesBySlug(series: Series[], slug: string): Series | undefined {
-  return series.find((item) => item.slug === slug);
-}
-
 function linkByLabel(label: string) {
   return focusPillarLinks.find((item) => item.label === label);
 }
@@ -191,53 +184,11 @@ function feedCardProps(artifact: Artifact, latest: FeedItem | null) {
   };
 }
 
-function FocusBookSeriesLine({
-  series,
-  books,
-}: {
-  series: Series;
-  books: Book[];
-}) {
-  return (
-    <article className="focus-library-line">
-      <div className="focus-library-line__header">
-        <div>
-          <div className="eyebrow">Publishing line</div>
-          <h3>{series.title}</h3>
-          <p>{series.summary}</p>
-        </div>
-        <div className="focus-library-line__meta">
-          <div className="books-series-line__meta">
-            <span>{books.filter((book) => book.type === 'book' || book.type === 'translation').length} books</span>
-            <span>{books.filter((book) => !(book.type === 'book' || book.type === 'translation')).length} free resources</span>
-          </div>
-          <TagList tags={series.tags.slice(0, 5)} />
-          <ActionLinks links={series.links} compact />
-        </div>
-      </div>
-
-      <div className="focus-book-grid">
-        {books.map((book) => (
-          <BookCatalogueCard
-            key={book.id}
-            book={book}
-            tone={book.type === 'free-book' || book.type === 'free-edition' || book.type === 'companion' ? 'free-resource' : 'book'}
-            variantLabel={book.type === 'free-book' || book.type === 'free-edition' ? 'FREE RESOURCE' : 'BOOK'}
-            mediaVariant="landscape"
-          />
-        ))}
-      </div>
-    </article>
-  );
-}
-
 export default async function FocusPage() {
   const artifacts = getArtifactsBySection('focus');
   const books = getBooksBySection('focus').filter((book) => book.type !== 'series');
-  const series = getSeries();
   const listedArtifacts = focusGroups.flatMap((group) => itemsForGroup(artifacts, group.slugs));
   const listedBooks = booksForGroup(books, focusBookGroup.slugs);
-  const focusBookSeries = seriesBySlug(series, focusBookGroup.seriesSlug);
   const mn7rBlog = artifacts.find((artifact) => artifact.slug === 'mn7r-blog');
   const mn7rLatest = await safeLatestMn7rFeed(mn7rBlog?.rssFeed?.enabled ? mn7rBlog.rssFeed.url : undefined);
 
@@ -391,7 +342,18 @@ export default async function FocusPage() {
             <h2 id="books-field-manuals">{focusBookGroup.title}</h2>
             <p>{focusBookGroup.description}</p>
           </div>
-          {focusBookSeries ? <FocusBookSeriesLine series={focusBookSeries} books={listedBooks} /> : null}
+          <div className="focus-book-grid">
+            {listedBooks.map((book) => (
+              <BookCatalogueCard
+                key={book.id}
+                book={book}
+                tone={book.type === 'free-book' || book.type === 'free-edition' || book.type === 'companion' ? 'free-resource' : 'book'}
+                variantLabel={book.type === 'free-book' || book.type === 'free-edition' ? 'FREE RESOURCE' : 'BOOK'}
+                mediaVariant="landscape"
+                metaOverride="Безкоштовне українське видання"
+              />
+            ))}
+          </div>
         </section>
       ) : null}
 

@@ -9,11 +9,13 @@ export default function BookCatalogueCard({
   variantLabel,
   tone,
   mediaVariant = 'book',
+  metaOverride,
 }: {
   book: Book;
   variantLabel?: string;
   tone?: 'book' | 'free-resource';
   mediaVariant?: 'book' | 'landscape';
+  metaOverride?: string;
 }) {
   const title = book.displayTitle || book.shortTitle || book.title;
   const mediaRole = book.coverImage?.mediaRole || 'mockup';
@@ -30,7 +32,7 @@ export default function BookCatalogueCard({
       </Link>
       <div className="catalogue-card__body">
         {variantLabel ? <div className="catalogue-type-label">{variantLabel}</div> : null}
-        <div className="catalogue-card__meta">{book.series || book.category || book.type}</div>
+        <div className="catalogue-card__meta">{metaOverride || book.series || book.category || book.type}</div>
         <h3>
           <Link href={`/books/${book.slug}`}>{title}</Link>
         </h3>

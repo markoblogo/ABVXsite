@@ -114,9 +114,9 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Fiction
   Tags: fiction, absurdist fiction, literary novella, English, translation, Ukrainian original, faith, loneliness
 
-- MN7R Agro Commodity Brokerage - Free Ukrainian Edition
+- Брокеридж на ринках зернових та олійних
   URL: https://abvx.xyz/books/mn7r-agro-commodity-brokerage-ua-free-edition
-  Summary: A practical introduction to agro-commodity brokerage workflows, execution systems and operational market infrastructure inside the MN7R ecosystem.
+  Summary: Українська безкоштовна версія практичного гіда MN7R для брокерів на ринку зернових та олійних.
   Group: Market Infrastructure & Brokerage
   Tags: brokerage, agro-commodities, execution, workflows, market-infrastructure, trading, Ukraine, MN7R
 

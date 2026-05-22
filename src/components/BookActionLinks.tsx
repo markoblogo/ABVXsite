@@ -12,6 +12,7 @@ const labels: Record<string, string> = {
   'amazon-kindle': 'Kindle',
   'amazon-paperback': 'Paperback',
   pdf: 'PDF',
+  epub: 'EPUB',
   series: 'Series site',
   'book-site': 'Book site',
   'series-site': 'Series site',
@@ -27,10 +28,11 @@ const priority: Record<string, number> = {
   'amazon-paperback': 2,
   amazon: 3,
   pdf: 4,
-  site: 5,
-  'book-site': 5,
-  series: 6,
-  'series-site': 6,
+  epub: 5,
+  site: 6,
+  'book-site': 6,
+  series: 7,
+  'series-site': 7,
   youtube: 7,
   github: 8,
   website: 9,
@@ -49,7 +51,7 @@ function orderedLinks(links: ContentLink[]): ContentLink[] {
 }
 
 function isPrimary(link: ContentLink): boolean {
-  return ['kindle', 'paperback', 'amazon-kindle', 'amazon-paperback', 'amazon', 'pdf'].includes(link.type);
+  return ['kindle', 'paperback', 'amazon-kindle', 'amazon-paperback', 'amazon', 'pdf', 'epub'].includes(link.type);
 }
 
 export default function BookActionLinks({

@@ -94,6 +94,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Official publishing lines
   Tags: Toki Pona, free books, translation, learning, sitelen pona, reader kits
 
+- MN7R Commodity Brokerage Library
+  URL: https://abvx.xyz/books/mn7r-commodity-brokerage-library
+  Summary: Publishing line focused on agro-commodity brokerage, execution workflows, market infrastructure and operational trading systems.
+  Group: Official publishing lines
+  Tags: brokerage, agro-commodities, market-infrastructure, trading, execution, workflows, MN7R, commodity-markets
+
 ## Books
 
 - Бог був зайнятий каналізацією
@@ -107,6 +113,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Summary: An English translation of the Ukrainian absurdist literary novella about Jonathan Swanson, a former artist turned handyman, whose quiet pre-Christmas days collapse into a strange hospital night of plumbing, doctors, prophets, Brahms, and possible secret space programs. A darkly funny story about loneliness, faith, work, the body, snow, and the small mercies that remain when the world cannot be fully repaired.
   Group: Fiction
   Tags: fiction, absurdist fiction, literary novella, English, translation, Ukrainian original, faith, loneliness
+
+- MN7R Agro Commodity Brokerage - Free Ukrainian Edition
+  URL: https://abvx.xyz/books/mn7r-agro-commodity-brokerage-ua-free-edition
+  Summary: A practical introduction to agro-commodity brokerage workflows, execution systems and operational market infrastructure inside the MN7R ecosystem.
+  Group: Market Infrastructure & Brokerage
+  Tags: brokerage, agro-commodities, execution, workflows, market-infrastructure, trading, Ukraine, MN7R
 
 - Dark Gestalt: How Brands Hijack Emotions, Distort Perception, and Manufacture Desire
   URL: https://abvx.xyz/books/dark-gestalt

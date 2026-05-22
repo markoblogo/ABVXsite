@@ -1,13 +1,14 @@
 import FAQSection from '@/components/FAQSection';
+import BookCatalogueCard from '@/components/BookCatalogueCard';
 import ProjectCatalogueCard from '@/components/ProjectCatalogueCard';
 import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import SectionPanel from '@/components/SectionPanel';
-import { getArtifactsBySection } from '@/content';
-import type { Artifact, ContentFaq } from '@/content';
+import { getArtifactsBySection, getBooksBySection } from '@/content';
+import type { Artifact, Book, ContentFaq } from '@/content';
 import { toPublicArtifact } from '@/content/public-props';
 import { fetchMn7rFeed, type FeedItem } from '@/lib/feeds';
-import { artifactListItem, collectionPageJsonLd, faqPageJsonLd, focusOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
+import { artifactListItem, bookListItem, collectionPageJsonLd, faqPageJsonLd, focusOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -36,6 +37,7 @@ const focusGroups = [
     description:
       'Monitoring and index products that turn fragmented market data, news, logistics, weather, crop, signal and commodity-market context into readable intelligence.',
     slugs: ['cropto-monitor', 'mn7r-blog', 'last30days-cropto', 'spike-spot-commodity-index-ukraine', 'uga-index'],
+    bookSlugs: ['mn7r-agro-commodity-brokerage-ua-free-edition'],
     variant: 'standard',
   },
   {
@@ -115,6 +117,11 @@ function itemsForGroup(artifacts: Artifact[], slugs: readonly string[]): Artifac
   return slugs.map((slug) => bySlug.get(slug)).filter((item): item is Artifact => Boolean(item));
 }
 
+function booksForGroup(books: Book[], slugs: readonly string[] = []): Book[] {
+  const bySlug = new Map(books.map((book) => [book.slug, book]));
+  return slugs.map((slug) => bySlug.get(slug)).filter((item): item is Book => Boolean(item));
+}
+
 function linkByLabel(label: string) {
   return focusPillarLinks.find((item) => item.label === label);
 }
@@ -173,7 +180,9 @@ function feedCardProps(artifact: Artifact, latest: FeedItem | null) {
 
 export default async function FocusPage() {
   const artifacts = getArtifactsBySection('focus');
+  const books = getBooksBySection('focus').filter((book) => book.type !== 'series');
   const listedArtifacts = focusGroups.flatMap((group) => itemsForGroup(artifacts, group.slugs));
+  const listedBooks = focusGroups.flatMap((group) => booksForGroup(books, 'bookSlugs' in group ? group.bookSlugs : []));
   const mn7rBlog = artifacts.find((artifact) => artifact.slug === 'mn7r-blog');
   const mn7rLatest = await safeLatestMn7rFeed(mn7rBlog?.rssFeed?.enabled ? mn7rBlog.rssFeed.url : undefined);
 
@@ -194,7 +203,7 @@ export default async function FocusPage() {
         data={itemListJsonLd({
           id: `${SITE_URL}/focus#items`,
           name: 'Focus market infrastructure projects',
-          items: listedArtifacts.map(artifactListItem),
+          items: [...listedArtifacts.map(artifactListItem), ...listedBooks.map(bookListItem)],
         })}
       />
       <JsonLd id="jsonld-focus-faq" data={faqPageJsonLd({ id: `${SITE_URL}/focus#faq`, faqs: focusFaqs })} />
@@ -296,7 +305,8 @@ export default async function FocusPage() {
 
       {focusGroups.map((group) => {
         const groupItems = itemsForGroup(artifacts, group.slugs);
-        if (!groupItems.length) return null;
+        const groupBooks = booksForGroup(books, 'bookSlugs' in group ? group.bookSlugs : []);
+        if (!groupItems.length && !groupBooks.length) return null;
         const titleId = slugifyFragment(group.title);
 
         return (
@@ -313,6 +323,14 @@ export default async function FocusPage() {
                   artifact={toPublicArtifact(artifact)}
                   tone="focus"
                   {...feedCardProps(artifact, mn7rLatest)}
+                />
+              ))}
+              {groupBooks.map((book) => (
+                <BookCatalogueCard
+                  key={book.id}
+                  book={book}
+                  tone={book.type === 'free-book' || book.type === 'free-edition' || book.type === 'companion' ? 'free-resource' : 'book'}
+                  variantLabel={book.type === 'free-book' || book.type === 'free-edition' ? 'FREE RESOURCE' : 'BOOK'}
                 />
               ))}
             </div>

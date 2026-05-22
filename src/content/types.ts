@@ -24,6 +24,7 @@ export type BookType =
   | 'book'
   | 'series'
   | 'translation'
+  | 'free-book'
   | 'free-edition'
   | 'companion';
 
@@ -60,6 +61,7 @@ export type ContentLinkType =
   | 'amazon-kindle'
   | 'amazon-paperback'
   | 'pdf'
+  | 'epub'
   | 'series'
   | 'book-site'
   | 'series-site'

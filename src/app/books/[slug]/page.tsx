@@ -7,7 +7,7 @@ import JsonLd from '@/components/JsonLd';
 import MarkdownContent from '@/components/MarkdownContent';
 import MediaPanel from '@/components/MediaPanel';
 import TagList from '@/components/TagList';
-import { getArtifactsBySection, getBookBySlug, getBooks, type Artifact, type Book } from '@/content';
+import { getArtifacts, getArtifactsBySection, getBookBySlug, getBooks, type Artifact, type Book } from '@/content';
 import {
   bookJsonLd,
   booksOgImage,
@@ -37,6 +37,7 @@ function formatFormats(formats?: string[]): string | undefined {
     kindle: 'Kindle',
     paperback: 'paperback',
     pdf: 'PDF',
+    epub: 'EPUB',
     'book-site': 'book site',
     'series-site': 'series site',
     'free-editions': 'free editions',
@@ -45,7 +46,7 @@ function formatFormats(formats?: string[]): string | undefined {
 }
 
 function purchaseLinks(book: Book) {
-  return book.links.filter((link) => ['amazon', 'kindle', 'paperback', 'pdf'].includes(link.type));
+  return book.links.filter((link) => ['amazon', 'kindle', 'paperback', 'pdf', 'epub'].includes(link.type));
 }
 
 function renderLinks(links: Book['links']): ReactNode {
@@ -257,7 +258,8 @@ export default async function BookDetailPage({
         item.category === book.category ||
         item.tags.some((tag) => book.tags.includes(tag)),
     );
-  const relatedArtifacts = getArtifactsBySection('books')
+  const artifactSource = book.appearsIn.includes('focus') ? getArtifacts() : getArtifactsBySection('books');
+  const relatedArtifacts = artifactSource
     .filter((item) => book.relatedSlugs?.includes(item.slug) || item.tags.some((tag) => book.tags.includes(tag)))
     .filter((item) => relatedScore(book, item) > 0);
   const relatedItems = [

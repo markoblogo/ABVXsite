@@ -5,7 +5,7 @@ import TagList from './TagList';
 import Link from 'next/link';
 
 function isBook(item: Artifact | Book): item is Book {
-  return ['book', 'translation', 'free-edition', 'companion', 'series'].includes(item.type);
+  return ['book', 'translation', 'free-book', 'free-edition', 'companion', 'series'].includes(item.type);
 }
 
 export default function CompanionCatalogueCard({

@@ -13,6 +13,7 @@ function formatFormats(formats?: string[]): string | undefined {
     kindle: 'Kindle',
     paperback: 'paperback',
     pdf: 'PDF',
+    epub: 'EPUB',
     'book-site': 'book site',
     'series-site': 'series site',
     'free-editions': 'free editions',

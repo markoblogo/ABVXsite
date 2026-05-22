@@ -15,6 +15,10 @@ function hasLink(item, types) {
   return Array.isArray(item.data.links) && item.data.links.some((link) => types.includes(link.type));
 }
 
+function isFreeBook(item) {
+  return item.folder === 'books' && ['free-book', 'free-edition', 'companion'].includes(item.data.type);
+}
+
 function section(title, entries) {
   console.log(`\n${title} (${entries.length})`);
   if (!entries.length) {
@@ -30,10 +34,15 @@ section('Needs copy review', publicItems.filter((item) => item.data.needsCopyRev
 section('Needs media review', publicItems.filter((item) => item.data.needsMediaReview));
 section('Needs link review', publicItems.filter((item) => item.data.needsLinkReview));
 section('No body / long description', publicItems.filter((item) => !item.body));
-section('Books without purchase links', publicItems.filter((item) => item.folder === 'books' && !hasLink(item, ['kindle', 'paperback', 'amazon'])));
+section(
+  'Books without purchase links',
+  publicItems.filter((item) => item.folder === 'books' && !isFreeBook(item) && !hasLink(item, ['kindle', 'paperback', 'amazon'])),
+);
 section(
   'Released books without Kindle/Paperback',
-  publicItems.filter((item) => item.folder === 'books' && item.data.status === 'released' && !hasLink(item, ['kindle', 'paperback'])),
+  publicItems.filter(
+    (item) => item.folder === 'books' && item.data.status === 'released' && !isFreeBook(item) && !hasLink(item, ['kindle', 'paperback']),
+  ),
 );
 section('Work without public action link', publicItems.filter((item) => item.folder === 'work' && !hasLink(item, ['site', 'demo', 'github', 'youtube', 'pdf', 'deck'])));
 section('Items without media', publicItems.filter((item) => !item.data.media));

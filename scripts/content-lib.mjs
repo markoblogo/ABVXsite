@@ -28,6 +28,7 @@ export const validLinkTypes = new Set([
   'kindle',
   'paperback',
   'pdf',
+  'epub',
   'series',
   'bluesky',
   'x',

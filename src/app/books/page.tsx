@@ -26,6 +26,7 @@ const officialSeriesSlugs = [
   'chinese-wisdom-toki-pona',
   'stoic-wisdom-toki-pona',
   'toki-pona-free-kits',
+  'mn7r-commodity-brokerage-library',
 ];
 
 const standaloneGroups = [
@@ -48,12 +49,12 @@ function belongsToSeries(item: Book | Artifact, slug: string) {
 }
 
 function isBookItem(item: Book | Artifact): item is Book {
-  return ['book', 'translation', 'free-edition', 'companion', 'series'].includes(item.type);
+  return ['book', 'translation', 'free-book', 'free-edition', 'companion', 'series'].includes(item.type);
 }
 
 function itemLabel(item: Book | Artifact) {
   if (isBookItem(item)) {
-    if (item.type === 'free-edition' || item.type === 'companion') return 'FREE RESOURCE';
+    if (item.type === 'free-book' || item.type === 'free-edition' || item.type === 'companion') return 'FREE RESOURCE';
     return 'BOOK';
   }
   if (item.type === 'protocol') return 'PROTOCOL';
@@ -64,7 +65,7 @@ function itemLabel(item: Book | Artifact) {
 }
 
 function bookTone(book: Book): 'book' | 'free-resource' {
-  return book.type === 'free-edition' || book.type === 'companion' ? 'free-resource' : 'book';
+  return book.type === 'free-book' || book.type === 'free-edition' || book.type === 'companion' ? 'free-resource' : 'book';
 }
 
 function companionTone(item: Artifact): 'companion-project' | 'protocol-tool' {

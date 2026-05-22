@@ -8,21 +8,25 @@ export default function BookCatalogueCard({
   book,
   variantLabel,
   tone,
+  mediaVariant = 'book',
 }: {
   book: Book;
   variantLabel?: string;
   tone?: 'book' | 'free-resource';
+  mediaVariant?: 'book' | 'landscape';
 }) {
   const title = book.displayTitle || book.shortTitle || book.title;
   const mediaRole = book.coverImage?.mediaRole || 'mockup';
 
   return (
     <article
-      className={`book-catalogue-card${tone ? ` book-catalogue-card--${tone}` : ''}`}
+      className={`book-catalogue-card${tone ? ` book-catalogue-card--${tone}` : ''}${
+        mediaVariant === 'landscape' ? ' book-catalogue-card--landscape' : ''
+      }`}
       data-media-role={mediaRole}
     >
       <Link className="book-catalogue-card__cover-link" href={`/books/${book.slug}`} aria-label={title}>
-        <MediaPanel image={book.coverImage} title={title} variant="book" />
+        <MediaPanel image={book.coverImage} title={title} variant={mediaVariant === 'landscape' ? 'project' : 'book'} />
       </Link>
       <div className="catalogue-card__body">
         {variantLabel ? <div className="catalogue-type-label">{variantLabel}</div> : null}

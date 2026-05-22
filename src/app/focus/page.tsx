@@ -37,7 +37,6 @@ const focusGroups = [
     description:
       'Monitoring and index products that turn fragmented market data, news, logistics, weather, crop, signal and commodity-market context into readable intelligence.',
     slugs: ['cropto-monitor', 'mn7r-blog', 'last30days-cropto', 'spike-spot-commodity-index-ukraine', 'uga-index'],
-    bookSlugs: ['mn7r-agro-commodity-brokerage-ua-free-edition'],
     variant: 'standard',
   },
   {
@@ -48,6 +47,13 @@ const focusGroups = [
     variant: 'standard',
   },
 ] as const;
+
+const focusBookGroup = {
+  title: 'Books & Field Manuals',
+  description:
+    'Publishing surfaces, practical manuals and free editions connected to agro-commodity brokerage, operational market workflows and the MN7R infrastructure ecosystem.',
+  slugs: ['mn7r-agro-commodity-brokerage-ua-free-edition'],
+} as const;
 
 const focusFaqs: ContentFaq[] = [
   {
@@ -182,7 +188,7 @@ export default async function FocusPage() {
   const artifacts = getArtifactsBySection('focus');
   const books = getBooksBySection('focus').filter((book) => book.type !== 'series');
   const listedArtifacts = focusGroups.flatMap((group) => itemsForGroup(artifacts, group.slugs));
-  const listedBooks = focusGroups.flatMap((group) => booksForGroup(books, 'bookSlugs' in group ? group.bookSlugs : []));
+  const listedBooks = booksForGroup(books, focusBookGroup.slugs);
   const mn7rBlog = artifacts.find((artifact) => artifact.slug === 'mn7r-blog');
   const mn7rLatest = await safeLatestMn7rFeed(mn7rBlog?.rssFeed?.enabled ? mn7rBlog.rssFeed.url : undefined);
 
@@ -305,8 +311,7 @@ export default async function FocusPage() {
 
       {focusGroups.map((group) => {
         const groupItems = itemsForGroup(artifacts, group.slugs);
-        const groupBooks = booksForGroup(books, 'bookSlugs' in group ? group.bookSlugs : []);
-        if (!groupItems.length && !groupBooks.length) return null;
+        if (!groupItems.length) return null;
         const titleId = slugifyFragment(group.title);
 
         return (
@@ -325,18 +330,31 @@ export default async function FocusPage() {
                   {...feedCardProps(artifact, mn7rLatest)}
                 />
               ))}
-              {groupBooks.map((book) => (
-                <BookCatalogueCard
-                  key={book.id}
-                  book={book}
-                  tone={book.type === 'free-book' || book.type === 'free-edition' || book.type === 'companion' ? 'free-resource' : 'book'}
-                  variantLabel={book.type === 'free-book' || book.type === 'free-edition' ? 'FREE RESOURCE' : 'BOOK'}
-                />
-              ))}
             </div>
           </section>
         );
       })}
+
+      {listedBooks.length ? (
+        <section className="home-section focus-product-group focus-book-group" aria-labelledby="books-field-manuals">
+          <div className="focus-product-group__header">
+            <div className="eyebrow">Focus library</div>
+            <h2 id="books-field-manuals">{focusBookGroup.title}</h2>
+            <p>{focusBookGroup.description}</p>
+          </div>
+          <div className="focus-book-grid">
+            {listedBooks.map((book) => (
+              <BookCatalogueCard
+                key={book.id}
+                book={book}
+                tone={book.type === 'free-book' || book.type === 'free-edition' || book.type === 'companion' ? 'free-resource' : 'book'}
+                variantLabel={book.type === 'free-book' || book.type === 'free-edition' ? 'FREE RESOURCE' : 'BOOK'}
+                mediaVariant="landscape"
+              />
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <FAQSection id="focus-faq-title" title="Focus methodology questions." faqs={focusFaqs} />
 

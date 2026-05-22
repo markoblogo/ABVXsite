@@ -5,6 +5,8 @@ import ProjectCatalogueCard from '@/components/ProjectCatalogueCard';
 import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import SectionPanel from '@/components/SectionPanel';
+import ActionLinks from '@/components/ActionLinks';
+import TagList from '@/components/TagList';
 import { getArtifactsBySection, getBooksBySection, getSeries } from '@/content';
 import type { Artifact, Book, ContentFaq, Series } from '@/content';
 import { toPublicArtifact } from '@/content/public-props';
@@ -190,6 +192,54 @@ function feedCardProps(artifact: Artifact, latest: FeedItem | null) {
   };
 }
 
+function FocusBookSeriesLine({
+  series,
+  books,
+}: {
+  series: Series;
+  books: Book[];
+}) {
+  const image = series.heroImage || series.media;
+
+  return (
+    <article className="books-series-line focus-series-line">
+      <div className={`books-series-line__top${image ? ' books-series-line__top--with-media' : ''}`}>
+        <div className="books-series-line__header">
+          <div className="eyebrow">Publishing line</div>
+          <h3>{series.title}</h3>
+          <p>{series.summary}</p>
+          <div className="books-series-line__meta">
+            <span>{books.filter((book) => book.type === 'book' || book.type === 'translation').length} books</span>
+            <span>{books.filter((book) => !(book.type === 'book' || book.type === 'translation')).length} free resources</span>
+          </div>
+          <div className="books-series-line__actions">
+            <TagList tags={series.tags.slice(0, 5)} />
+            <ActionLinks links={series.links} compact />
+          </div>
+        </div>
+
+        {image ? (
+          <Link className="books-series-line__media" href={`/books/${series.slug}`} aria-label={series.title}>
+            <MediaPanel image={image} title={series.title} variant="project" />
+          </Link>
+        ) : null}
+      </div>
+
+      <div className="focus-book-grid">
+        {books.map((book) => (
+          <BookCatalogueCard
+            key={book.id}
+            book={book}
+            tone={book.type === 'free-book' || book.type === 'free-edition' || book.type === 'companion' ? 'free-resource' : 'book'}
+            variantLabel={book.type === 'free-book' || book.type === 'free-edition' ? 'FREE RESOURCE' : 'BOOK'}
+            mediaVariant="landscape"
+          />
+        ))}
+      </div>
+    </article>
+  );
+}
+
 export default async function FocusPage() {
   const artifacts = getArtifactsBySection('focus');
   const books = getBooksBySection('focus').filter((book) => book.type !== 'series');
@@ -197,7 +247,6 @@ export default async function FocusPage() {
   const listedArtifacts = focusGroups.flatMap((group) => itemsForGroup(artifacts, group.slugs));
   const listedBooks = booksForGroup(books, focusBookGroup.slugs);
   const focusBookSeries = seriesBySlug(series, focusBookGroup.seriesSlug);
-  const focusBookSeriesImage = focusBookSeries?.heroImage || focusBookSeries?.media;
   const mn7rBlog = artifacts.find((artifact) => artifact.slug === 'mn7r-blog');
   const mn7rLatest = await safeLatestMn7rFeed(mn7rBlog?.rssFeed?.enabled ? mn7rBlog.rssFeed.url : undefined);
 
@@ -351,22 +400,7 @@ export default async function FocusPage() {
             <h2 id="books-field-manuals">{focusBookGroup.title}</h2>
             <p>{focusBookGroup.description}</p>
           </div>
-          {focusBookSeries && focusBookSeriesImage ? (
-            <Link className="focus-book-line-cover" href={`/books/${focusBookSeries.slug}`} aria-label={focusBookSeries.title}>
-              <MediaPanel image={focusBookSeriesImage} title={focusBookSeries.title} variant="project" />
-            </Link>
-          ) : null}
-          <div className="focus-book-grid">
-            {listedBooks.map((book) => (
-              <BookCatalogueCard
-                key={book.id}
-                book={book}
-                tone={book.type === 'free-book' || book.type === 'free-edition' || book.type === 'companion' ? 'free-resource' : 'book'}
-                variantLabel={book.type === 'free-book' || book.type === 'free-edition' ? 'FREE RESOURCE' : 'BOOK'}
-                mediaVariant="landscape"
-              />
-            ))}
-          </div>
+          {focusBookSeries ? <FocusBookSeriesLine series={focusBookSeries} books={listedBooks} /> : null}
         </section>
       ) : null}
 

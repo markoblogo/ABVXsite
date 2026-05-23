@@ -43,6 +43,99 @@
       "related": []
     },
     {
+      "type": "free-book",
+      "section": "books",
+      "ecosystem": "Market Infrastructure & Brokerage",
+      "group": "Market Infrastructure & Brokerage",
+      "status": "released",
+      "title": "Agri-Commodity Brokerage: A Practical Guide for Brokers",
+      "summary": "The adapted English edition of the MN7R practical guide for agri-commodity brokers, written for an international brokerage audience.",
+      "canonicalUrl": "https://abvx.xyz/books/mn7r-agro-commodity-brokerage-en-free-edition",
+      "tags": [
+        "brokerage",
+        "agro-commodities",
+        "commodity brokerage",
+        "grains",
+        "oilseeds",
+        "execution",
+        "workflows",
+        "market-infrastructure",
+        "trading",
+        "international",
+        "MN7R"
+      ],
+      "links": [
+        {
+          "type": "pdf",
+          "label": "PDF",
+          "url": "https://mn7r.com/book/mn7r-agro-commodity-brokerage-en.pdf"
+        },
+        {
+          "type": "epub",
+          "label": "EPUB",
+          "url": "https://mn7r.com/book/mn7r-agro-commodity-brokerage-en.epub"
+        },
+        {
+          "type": "site",
+          "label": "Book announcement",
+          "url": "https://mn7r.com/blog/mn7r-book-en-free-edition"
+        },
+        {
+          "type": "site",
+          "label": "MN7R",
+          "url": "https://mn7r.com/"
+        }
+      ],
+      "updatedAt": "2026-05-23",
+      "related": [
+        {
+          "title": "Брокеридж на ринках зернових та олійних",
+          "canonicalUrl": "https://abvx.xyz/books/mn7r-agro-commodity-brokerage-ua-free-edition",
+          "relation": "related"
+        },
+        {
+          "title": "MN7R",
+          "canonicalUrl": "https://abvx.xyz/work/mn7r",
+          "relation": "related"
+        },
+        {
+          "title": "MN7R Blog",
+          "canonicalUrl": "https://abvx.xyz/work/mn7r-blog",
+          "relation": "related"
+        },
+        {
+          "title": "Cropto",
+          "canonicalUrl": "https://abvx.xyz/work/cropto",
+          "relation": "related"
+        },
+        {
+          "title": "Cropto Monitor: Commodity Signals Terminal",
+          "canonicalUrl": "https://abvx.xyz/work/cropto-monitor",
+          "relation": "related"
+        },
+        {
+          "title": "UGA Index",
+          "canonicalUrl": "https://abvx.xyz/work/uga-index",
+          "relation": "related"
+        },
+        {
+          "title": "Last30Days Cropto",
+          "canonicalUrl": "https://abvx.xyz/work/last30days-cropto",
+          "relation": "related"
+        },
+        {
+          "title": "Liqua",
+          "canonicalUrl": "https://abvx.xyz/work/liqua",
+          "relation": "related"
+        },
+        {
+          "title": "MN7R Commodity Brokerage Library",
+          "canonicalUrl": "https://abvx.xyz/books/mn7r-commodity-brokerage-library",
+          "relation": "series"
+        }
+      ]
+    },
+    {
       "type": "series",
       "section": "books",
       "ecosystem": "Publishing lines",
@@ -717,6 +810,11 @@
       ],
       "updatedAt": "2026-05-17",
       "related": [
+        {
+          "title": "Agri-Commodity Brokerage: A Practical Guide for Brokers",
+          "canonicalUrl": "https://abvx.xyz/books/mn7r-agro-commodity-brokerage-en-free-edition",
+          "relation": "member"
+        },
         {
           "title": "Брокеридж на ринках зернових та олійних",
           "canonicalUrl": "https://abvx.xyz/books/mn7r-agro-commodity-brokerage-ua-free-edition",

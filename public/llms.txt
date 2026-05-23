@@ -120,6 +120,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Market Infrastructure & Brokerage
   Tags: brokerage, agro-commodities, execution, workflows, market-infrastructure, trading, Ukraine, MN7R
 
+- Agri-Commodity Brokerage: A Practical Guide for Brokers
+  URL: https://abvx.xyz/books/mn7r-agro-commodity-brokerage-en-free-edition
+  Summary: The adapted English edition of the MN7R practical guide for agri-commodity brokers, written for an international brokerage audience.
+  Group: Market Infrastructure & Brokerage
+  Tags: brokerage, agro-commodities, commodity brokerage, grains, oilseeds, execution, workflows, market-infrastructure
+
 - Dark Gestalt: How Brands Hijack Emotions, Distort Perception, and Manufacture Desire
   URL: https://abvx.xyz/books/dark-gestalt
   Summary: A sharp exploration of how brands shape emotion, perception and desire, and how modern behavioral design can manipulate decisions through symbols, shortcuts, narratives and AI-driven persuasion.

@@ -52,7 +52,7 @@ const focusBookGroup = {
   title: 'Books & Field Manuals',
   description:
     'Publishing surfaces, practical manuals and free editions connected to agro-commodity brokerage, operational market workflows and the MN7R infrastructure ecosystem.',
-  slugs: ['mn7r-agro-commodity-brokerage-ua-free-edition'],
+  slugs: ['mn7r-agro-commodity-brokerage-en-free-edition', 'mn7r-agro-commodity-brokerage-ua-free-edition'],
 } as const;
 
 const focusFaqs: ContentFaq[] = [

@@ -27,7 +27,7 @@ const ecosystems = [
       },
       {
         title: 'Monitoring & Intelligence',
-        slugs: ['cropto-monitor', 'last30days-cropto', 'spike-spot-commodity-index-ukraine', 'uga-index'],
+        slugs: ['cropto-monitor', 'last30days-cropto', '1d3x', 'spike-spot-commodity-index-ukraine', 'uga-index'],
       },
       {
         title: 'Market Fronts & Landings',

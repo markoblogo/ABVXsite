@@ -1515,6 +1515,73 @@
       "type": "work",
       "section": "focus",
       "ecosystem": "Agro Market Infrastructure Systems",
+      "group": "Market Intelligence, Monitoring & Indexes",
+      "status": "live",
+      "title": "1D3X",
+      "summary": "1D3X is an index infrastructure platform for local agricultural markets, building local commodity indices with market leaders.",
+      "canonicalUrl": "https://abvx.xyz/work/1d3x",
+      "tags": [
+        "agro-commodities",
+        "commodity-indexes",
+        "benchmark",
+        "market-data",
+        "index-infrastructure",
+        "agricultural-markets",
+        "local-markets",
+        "market-infrastructure",
+        "MN7R",
+        "Cropto"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://1d3x.com/"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/index"
+        }
+      ],
+      "updatedAt": "2026-05-27",
+      "related": [
+        {
+          "title": "SPIKE SPOT COMMODITY INDEX UKRAINE",
+          "canonicalUrl": "https://abvx.xyz/work/spike-spot-commodity-index-ukraine",
+          "relation": "related"
+        },
+        {
+          "title": "UGA Index",
+          "canonicalUrl": "https://abvx.xyz/work/uga-index",
+          "relation": "related"
+        },
+        {
+          "title": "Cropto Monitor: Commodity Signals Terminal",
+          "canonicalUrl": "https://abvx.xyz/work/cropto-monitor",
+          "relation": "related"
+        },
+        {
+          "title": "Last30Days Cropto",
+          "canonicalUrl": "https://abvx.xyz/work/last30days-cropto",
+          "relation": "related"
+        },
+        {
+          "title": "Cropto",
+          "canonicalUrl": "https://abvx.xyz/work/cropto",
+          "relation": "related"
+        },
+        {
+          "title": "MN7R",
+          "canonicalUrl": "https://abvx.xyz/work/mn7r",
+          "relation": "related"
+        }
+      ]
+    },
+    {
+      "type": "work",
+      "section": "focus",
+      "ecosystem": "Agro Market Infrastructure Systems",
       "group": "Trading & Brokerage Platforms",
       "status": "building",
       "title": "Cropto",
@@ -1829,7 +1896,7 @@
         {
           "type": "site",
           "label": "Site",
-          "url": "https://spike-ua.cr0pto.com/"
+          "url": "https://spike.1d3x.com/"
         },
         {
           "type": "github",
@@ -1917,7 +1984,7 @@
         {
           "type": "site",
           "label": "Site",
-          "url": "https://index-uga.cr0pto.com/"
+          "url": "https://uga.1d3x.com/"
         },
         {
           "type": "github",

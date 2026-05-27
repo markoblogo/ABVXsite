@@ -30,7 +30,7 @@
     {
       "type": "site",
       "label": "Site",
-      "url": "https://spike-ua.cr0pto.com/"
+      "url": "https://spike.1d3x.com/"
     },
     {
       "type": "github",

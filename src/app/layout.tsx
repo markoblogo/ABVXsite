@@ -4,6 +4,8 @@ import './globals.css';
 import SiteFooter from '@/components/SiteFooter';
 import SiteHeader from '@/components/SiteHeader';
 import { defaultOgImage } from '@/lib/seo';
+import { headers } from 'next/headers';
+import { connection } from 'next/server';
 
 const googleVerification = process.env.GOOGLE_SITE_VERIFICATION;
 const bingVerification =
@@ -200,15 +202,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  await connection();
+  const nonce = (await headers()).get('x-nonce') || undefined;
+
   return (
     <html lang="en">
       <head>
         <script
+          nonce={nonce}
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteIdentityJsonLd) }}
         />

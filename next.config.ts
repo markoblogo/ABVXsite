@@ -1,67 +1,5 @@
 import type { NextConfig } from "next";
 
-const imageSources = [
-  "'self'",
-  "data:",
-  "blob:",
-  "https://cdn-images-1.medium.com",
-  "https://miro.medium.com",
-  "https://substackcdn.com",
-  "https://*.substackcdn.com",
-  "https://substack-post-media.s3.amazonaws.com",
-  "https://mn7r.com",
-  "https://images.unsplash.com",
-  "https://cdn.discordapp.com",
-  "https://*.notion.site",
-  "https://*.notion.so",
-  "https://*.amazonaws.com",
-].join(" ");
-
-const contentSecurityPolicy = [
-  "default-src 'self'",
-  // Next production HTML and JSON-LD are still emitted as inline scripts.
-  // Keep inline script execution explicit here, but do not allow eval.
-  "script-src 'self' 'unsafe-inline'",
-  "script-src-elem 'self' 'unsafe-inline'",
-  "script-src-attr 'none'",
-  "style-src 'self' 'unsafe-inline'",
-  `img-src ${imageSources}`,
-  "font-src 'self' data:",
-  "connect-src 'self'",
-  "media-src 'self'",
-  "frame-src https://www.youtube.com https://www.youtube-nocookie.com",
-  "worker-src 'self' blob:",
-  "manifest-src 'self'",
-  "object-src 'none'",
-  "base-uri 'self'",
-  "form-action 'self'",
-  "frame-ancestors 'none'",
-  "upgrade-insecure-requests",
-].join("; ");
-
-const contentSecurityPolicyReportOnly = [
-  "default-src 'self'",
-  // CSP v2 exploration: this intentionally omits unsafe-inline so reports show
-  // the remaining Next/JSON-LD inline script surface before a nonce rollout.
-  "script-src 'self' 'report-sample'",
-  "script-src-elem 'self' 'report-sample'",
-  "script-src-attr 'none'",
-  "style-src 'self' 'unsafe-inline'",
-  `img-src ${imageSources}`,
-  "font-src 'self' data:",
-  "connect-src 'self'",
-  "media-src 'self'",
-  "frame-src https://www.youtube.com https://www.youtube-nocookie.com",
-  "worker-src 'self' blob:",
-  "manifest-src 'self'",
-  "object-src 'none'",
-  "base-uri 'self'",
-  "form-action 'self'",
-  "frame-ancestors 'none'",
-  "report-uri /api/csp-report",
-  "report-to csp-endpoint",
-].join("; ");
-
 const projectRoot = process.cwd();
 
 const nextConfig: NextConfig = {
@@ -85,18 +23,6 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     const securityHeaders = [
-      {
-        key: "Content-Security-Policy",
-        value: contentSecurityPolicy,
-      },
-      {
-        key: "Content-Security-Policy-Report-Only",
-        value: contentSecurityPolicyReportOnly,
-      },
-      {
-        key: "Reporting-Endpoints",
-        value: 'csp-endpoint="/api/csp-report"',
-      },
       { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
       { key: "X-Content-Type-Options", value: "nosniff" },
       { key: "X-Frame-Options", value: "DENY" },

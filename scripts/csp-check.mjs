@@ -20,7 +20,8 @@ const cspNeedles = [
 
 const requiredCspDirectives = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline'",
+  "script-src 'self' 'nonce-",
+  "'strict-dynamic'",
   "script-src-attr 'none'",
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https://cdn-images-1.medium.com",
@@ -31,7 +32,8 @@ const requiredCspDirectives = [
 ];
 
 const requiredReportOnlyDirectives = [
-  "script-src 'self' 'report-sample'",
+  "script-src 'self' 'nonce-",
+  "'strict-dynamic'",
   "script-src-attr 'none'",
   "connect-src 'self'",
   'report-uri /api/csp-report',
@@ -103,6 +105,7 @@ async function inspectPage(page) {
       inlineScriptNodes.map(async (script) => ({
         id: script.id || null,
         type: script.getAttribute('type') || null,
+        nonce: script.nonce || script.getAttribute('nonce') || null,
         bytes: (script.textContent || '').length,
         sha256: await sha256Base64(script.textContent || ''),
       })),
@@ -167,6 +170,11 @@ await withQaServer(async (baseUrl) => {
       const missingDirectives = requiredCspDirectives.filter((directive) => !csp.includes(directive));
       const missingReportOnlyDirectives = requiredReportOnlyDirectives.filter((directive) => !cspReportOnly.includes(directive));
       const hasUnsafeEval = csp.includes("'unsafe-eval'");
+      const scriptDirectives = [
+        cspDirectiveValue(csp, 'script-src'),
+        cspDirectiveValue(csp, 'script-src-elem'),
+      ].join(' ');
+      const scriptAllowsUnsafeInline = scriptDirectives.includes("'unsafe-inline'");
       const reportOnlyScriptDirectives = [
         cspDirectiveValue(cspReportOnly, 'script-src'),
         cspDirectiveValue(cspReportOnly, 'script-src-elem'),
@@ -187,11 +195,14 @@ await withQaServer(async (baseUrl) => {
       };
       const inspected = await inspectPage(page);
       const invalidJsonLd = inspected.jsonLd.filter((item) => !item.valid);
+      const inlineScriptsWithoutNonce = inspected.inlineScripts.filter((script) => script.bytes > 0 && !script.nonce);
       const routeFailures = [
         ...missingDirectives.map((directive) => `missing CSP directive: ${directive}`),
         ...missingReportOnlyDirectives.map((directive) => `missing CSP report-only directive: ${directive}`),
         ...(hasUnsafeEval ? ['CSP still allows unsafe-eval'] : []),
+        ...(scriptAllowsUnsafeInline ? ['CSP enforced script directives still allow unsafe-inline'] : []),
         ...(reportOnlyScriptAllowsUnsafe ? ['CSP report-only script directives still allow unsafe-inline/unsafe-eval'] : []),
+        ...(inlineScriptsWithoutNonce.length ? [`inline scripts without nonce: ${inlineScriptsWithoutNonce.length}`] : []),
         ...(!reportingEndpoints.includes('csp-endpoint="/api/csp-report"') ? ['missing CSP Reporting-Endpoints header'] : []),
         ...(consoleViolations.length ? [`CSP/security console violations: ${consoleViolations.length}`] : []),
         ...(pageErrors.length ? [`CSP/security page errors: ${pageErrors.length}`] : []),

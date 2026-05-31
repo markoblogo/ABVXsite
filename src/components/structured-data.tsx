@@ -1,4 +1,5 @@
 import Script from 'next/script';
+import { headers } from 'next/headers';
 
 type CreativeWorkItem = {
   id: string;
@@ -8,7 +9,7 @@ type CreativeWorkItem = {
   type?: string;
 };
 
-export default function StructuredData({
+export default async function StructuredData({
   id,
   items,
 }: {
@@ -16,6 +17,7 @@ export default function StructuredData({
   items: CreativeWorkItem[];
 }) {
   if (!items.length) return null;
+  const nonce = (await headers()).get('x-nonce') || undefined;
 
   const data = {
     '@context': 'https://schema.org',
@@ -36,6 +38,7 @@ export default function StructuredData({
   return (
     <Script
       id={id}
+      nonce={nonce}
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />

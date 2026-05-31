@@ -32,7 +32,7 @@ function SocialLinkButton({ item }: { item: SocialLink }) {
       aria-label={item.label}
       title={item.label}
       target={isExternal ? '_blank' : undefined}
-      rel={isExternal ? 'noreferrer' : undefined}
+      rel={isExternal ? 'noopener noreferrer' : undefined}
     >
       <SocialIcon name={item.icon} />
     </a>

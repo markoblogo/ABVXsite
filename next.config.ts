@@ -22,7 +22,12 @@ const contentSecurityPolicy = [
   "upgrade-insecure-requests",
 ].join("; ");
 
+const projectRoot = process.cwd();
+
 const nextConfig: NextConfig = {
+  turbopack: {
+    root: projectRoot,
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [

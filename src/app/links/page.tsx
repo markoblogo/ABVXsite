@@ -28,7 +28,12 @@ export default function LinksPage() {
         <ul className="mt-3 list-disc space-y-1 pl-4">
           {socialLinks.map((p) => (
             <li key={p.label}>
-              <a className="underline" href={p.href} target={p.href.startsWith('http') ? '_blank' : undefined} rel={p.href.startsWith('http') ? 'noreferrer' : undefined}>
+              <a
+                className="underline"
+                href={p.href}
+                target={p.href.startsWith('http') ? '_blank' : undefined}
+                rel={p.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+              >
                 {p.label}
               </a>
             </li>

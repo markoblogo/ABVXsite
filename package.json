@@ -19,7 +19,9 @@
     "content:review": "node scripts/content-review-report.mjs",
     "media:review": "node scripts/media-optimization-report.mjs",
     "media:derivatives": "node scripts/generate-image-derivatives.mjs",
-    "feeds:check": "node scripts/check-feed-covers.mjs"
+    "feeds:check": "node scripts/check-feed-covers.mjs",
+    "qa:visual": "node scripts/visual-smoke.mjs",
+    "qa:perf": "node scripts/perf-check.mjs"
   },
   "dependencies": {
     "next": "16.1.6",
@@ -34,6 +36,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "playwright": "^1.60.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

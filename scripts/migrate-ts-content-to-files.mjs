@@ -1,4 +1,4 @@
-import { mkdirSync, readFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import ts from 'typescript';
 import vm from 'node:vm';
@@ -72,6 +72,7 @@ function commonFields(item) {
 const root = process.cwd();
 const books = loadTsExport(path.join(root, 'src/content/books.ts'), 'books');
 const artifacts = loadTsExport(path.join(root, 'src/content/artifacts.ts'), 'artifacts');
+const overwrite = process.argv.includes('--overwrite');
 
 mkdirSync(path.join(root, 'content/books'), { recursive: true });
 mkdirSync(path.join(root, 'content/work'), { recursive: true });
@@ -80,6 +81,17 @@ mkdirSync(path.join(root, 'content/series'), { recursive: true });
 let bookCount = 0;
 let workCount = 0;
 let seriesCount = 0;
+let skippedCount = 0;
+
+function writeIfMissing(folder, slug, data, body = '') {
+  const filePath = path.join(root, 'content', folder, `${slug}.md`);
+  if (!overwrite && existsSync(filePath)) {
+    skippedCount += 1;
+    return false;
+  }
+  writeContentFile(folder, slug, data, body);
+  return true;
+}
 
 for (const item of books) {
   const data = {
@@ -92,11 +104,9 @@ for (const item of books) {
   };
 
   if (item.type === 'series') {
-    writeContentFile('series', item.slug, data, item.description || '');
-    seriesCount += 1;
+    if (writeIfMissing('series', item.slug, data, item.description || '')) seriesCount += 1;
   } else {
-    writeContentFile('books', item.slug, data, item.description || '');
-    bookCount += 1;
+    if (writeIfMissing('books', item.slug, data, item.description || '')) bookCount += 1;
   }
 }
 
@@ -108,8 +118,8 @@ for (const item of artifacts) {
     ...(mapImage(item.thumbnail) ? { media: mapImage(item.thumbnail) } : {}),
     ...(mapImage(item.heroImage) ? { heroImage: mapImage(item.heroImage) } : {}),
   };
-  writeContentFile('work', item.slug, data, item.description || '');
-  workCount += 1;
+  if (writeIfMissing('work', item.slug, data, item.description || '')) workCount += 1;
 }
 
 console.log(`Migrated ${bookCount} books, ${workCount} work items, ${seriesCount} series files.`);
+if (skippedCount) console.log(`Skipped ${skippedCount} existing content files. Pass --overwrite to replace them.`);

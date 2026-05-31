@@ -1,5 +1,8 @@
 import type { Book, ContentLinkType, MediaRole } from './types';
 
+// Legacy archive only. Runtime content is loaded from /content/books and /content/series.
+// Use `npm run content:parity` before deleting or changing this archive.
+
 function cover(slug: string, alt: string) {
   const extension = new Set(['future-proof', 'christmas-carol-toki-pona']).has(slug)
     ? 'jpg'

@@ -1,12 +1,7 @@
-import { artifacts as fallbackArtifacts } from './artifacts';
-import { books as fallbackBooks } from './books';
-import { readBookFiles, readHiddenSlugs, readSeriesFiles, readWorkFiles } from './file-loader';
+import { readBookFiles, readSeriesFiles, readWorkFiles } from './file-loader';
 import type { Artifact, Book, Series, SiteSection } from './types';
 
 type RelatedSource = Artifact | Book | Series;
-
-const artifacts = fallbackArtifacts as Artifact[];
-const books = fallbackBooks as Book[];
 
 function byRankThenTitle<T extends { sortRank: number; title: string }>(a: T, b: T): number {
   if (a.sortRank !== b.sortRank) return a.sortRank - b.sortRank;
@@ -61,17 +56,6 @@ function byPublicOrder<T extends { featured: boolean; sortRank: number; title: s
   return a.title.localeCompare(b.title);
 }
 
-function mergeBySlug<T extends { slug: string }>(fallback: T[], files: T[]): T[] {
-  const bySlug = new Map<string, T>();
-  fallback.forEach((item) => bySlug.set(item.slug, item));
-  files.forEach((item) => bySlug.set(item.slug, item));
-  return [...bySlug.values()];
-}
-
-function removeHiddenFallback<T extends { slug: string }>(items: T[], hiddenSlugs: Set<string>): T[] {
-  return items.filter((item) => !hiddenSlugs.has(item.slug));
-}
-
 function seriesAsBooks(seriesItems: Series[]): Book[] {
   return seriesItems.map((series) => ({
     ...series,
@@ -81,7 +65,7 @@ function seriesAsBooks(seriesItems: Series[]): Book[] {
 }
 
 export function getArtifacts(): Artifact[] {
-  return mergeBySlug(removeHiddenFallback(artifacts, readHiddenSlugs('work')), readWorkFiles()).sort(byPublicOrder);
+  return readWorkFiles().sort(byPublicOrder);
 }
 
 export function getArtifactsBySection(section: SiteSection): Artifact[] {
@@ -98,8 +82,7 @@ export function getLatestArtifact(section: SiteSection): Artifact | undefined {
 }
 
 export function getBooks(): Book[] {
-  const hiddenSlugs = new Set([...readHiddenSlugs('books'), ...readHiddenSlugs('series')]);
-  return mergeBySlug(removeHiddenFallback(books, hiddenSlugs), [...readBookFiles(), ...seriesAsBooks(readSeriesFiles())]).sort(byPublicOrder);
+  return [...readBookFiles(), ...seriesAsBooks(readSeriesFiles())].sort(byPublicOrder);
 }
 
 export function getBooksBySection(section: SiteSection): Book[] {

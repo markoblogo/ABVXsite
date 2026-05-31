@@ -1,6 +1,7 @@
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { contentFiles, mediaRoot, parseContentFile } from './content-lib.mjs';
+import { legacyContentParity } from './legacy-content-parity.mjs';
 
 const items = [];
 
@@ -38,25 +39,28 @@ function localMediaMissing(item) {
   return !existsSync(path.join(mediaRoot, src.replace(/^\/media\//, '')));
 }
 
-function legacySlugs(file) {
-  if (!existsSync(file)) return new Set();
-  const source = readFileSync(file, 'utf8');
-  return new Set([...source.matchAll(/slug:\s*['"`]([^'"`]+)['"`]/g)].map((match) => match[1]));
+const duplicateSlugEntries = [];
+const bySlug = new Map();
+for (const item of items) {
+  const slug = item.data.slug;
+  if (!slug) continue;
+  bySlug.set(slug, [...(bySlug.get(slug) || []), item]);
+}
+for (const [slug, matches] of bySlug) {
+  if (matches.length > 1) duplicateSlugEntries.push({ data: { slug, title: matches.map((item) => item.file).join(', ') }, folder: 'content' });
 }
 
-const fallbackWorkSlugs = legacySlugs(path.join(process.cwd(), 'src', 'content', 'artifacts.ts'));
-const fallbackBookSlugs = legacySlugs(path.join(process.cwd(), 'src', 'content', 'books.ts'));
+const legacyParity = legacyContentParity();
+const legacyMissing = [
+  ...legacyParity.missingBooks.map((item) => ({ folder: 'legacy/books', data: item })),
+  ...legacyParity.missingWork.map((item) => ({ folder: 'legacy/work', data: item })),
+];
 
-function overridesLegacyFallback(item) {
-  if (item.folder === 'work') return fallbackWorkSlugs.has(item.data.slug);
-  if (item.folder === 'books' || item.folder === 'series') return fallbackBookSlugs.has(item.data.slug);
-  return false;
-}
-
+section('Blocking: duplicate slugs', duplicateSlugEntries);
+section('Blocking: legacy TS items missing from /content', legacyMissing);
 section('Needs copy review', publicItems.filter((item) => item.data.needsCopyReview));
 section('Needs media review', publicItems.filter((item) => item.data.needsMediaReview));
 section('Needs link review', publicItems.filter((item) => item.data.needsLinkReview));
-section('Content files overriding legacy TS fallback', publicItems.filter(overridesLegacyFallback));
 section('No body / long description', publicItems.filter((item) => !item.body));
 section(
   'Books without purchase links',
@@ -76,3 +80,8 @@ section('Very short summaries', publicItems.filter((item) => typeof item.data.su
 
 console.log(`\nTotal public content files reviewed: ${publicItems.length}`);
 console.log(`Total content files scanned: ${items.length}`);
+console.log(`Legacy TS parity: ${legacyParity.isComplete ? 'complete' : 'incomplete'} (${legacyParity.legacyBookCount} book/series, ${legacyParity.legacyWorkCount} work items covered by /content)`);
+
+if (duplicateSlugEntries.length || legacyMissing.length) {
+  process.exitCode = 1;
+}

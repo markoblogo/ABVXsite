@@ -1,5 +1,8 @@
 import type { Artifact, ContentLinkType, MediaRole } from './types';
 
+// Legacy archive only. Runtime content is loaded from /content/work.
+// Use `npm run content:parity` before deleting or changing this archive.
+
 function image(slug: string, alt: string, folder = 'projects', mediaRole: MediaRole = 'project-screenshot') {
   return { src: `/media/${folder}/${slug}.png`, alt, mediaRole };
 }

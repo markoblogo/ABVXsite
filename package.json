@@ -17,6 +17,7 @@
     "llms:generate": "node scripts/generate-llm-index.mjs",
     "content:validate": "node scripts/validate-content.mjs",
     "content:review": "node scripts/content-review-report.mjs",
+    "content:parity": "node scripts/legacy-content-parity.mjs",
     "media:review": "node scripts/media-optimization-report.mjs",
     "media:derivatives": "node scripts/generate-image-derivatives.mjs",
     "feeds:check": "node scripts/check-feed-covers.mjs",

@@ -17,7 +17,8 @@
     "llms:generate": "node scripts/generate-llm-index.mjs",
     "content:validate": "node scripts/validate-content.mjs",
     "content:review": "node scripts/content-review-report.mjs",
-    "media:review": "node scripts/media-optimization-report.mjs"
+    "media:review": "node scripts/media-optimization-report.mjs",
+    "feeds:check": "node scripts/check-feed-covers.mjs"
   },
   "dependencies": {
     "next": "16.1.6",

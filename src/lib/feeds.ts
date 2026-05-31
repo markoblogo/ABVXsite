@@ -1,3 +1,6 @@
+import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from 'node:fs';
+import path from 'node:path';
+
 export type FeedItem = {
   source: 'medium' | 'substack' | 'mn7r';
   title: string;
@@ -19,6 +22,112 @@ const sourceFallbackCover: Record<FeedItem['source'], string> = {
 };
 
 const lastValidCoverBySource = new Map<FeedItem['source'], string>();
+
+type CachedFeedImage = {
+  source: FeedItem['source'];
+  articleUrl: string;
+  imageUrl: string;
+  title?: string;
+  updatedAt: string;
+};
+
+type FeedImageCache = {
+  version: 1;
+  updatedAt: string;
+  sources: Partial<Record<FeedItem['source'], CachedFeedImage>>;
+  articles: Record<string, CachedFeedImage>;
+};
+
+const emptyFeedImageCache = (): FeedImageCache => ({
+  version: 1,
+  updatedAt: new Date(0).toISOString(),
+  sources: {},
+  articles: {},
+});
+
+const writableFeedImageCachePath =
+  process.env.FEED_IMAGE_CACHE_PATH || path.join(process.cwd(), '.cache', 'feed-image-cache.json');
+const seedFeedImageCachePath = path.join(process.cwd(), 'public', 'feed-image-cache.json');
+
+let loadedFeedImageCache: FeedImageCache | undefined;
+
+function readCacheFile(filePath: string): FeedImageCache | undefined {
+  if (!existsSync(filePath)) return undefined;
+  try {
+    const parsed = JSON.parse(readFileSync(filePath, 'utf8')) as Partial<FeedImageCache>;
+    if (parsed.version !== 1 || typeof parsed.articles !== 'object' || typeof parsed.sources !== 'object') return undefined;
+    return {
+      version: 1,
+      updatedAt: typeof parsed.updatedAt === 'string' ? parsed.updatedAt : new Date(0).toISOString(),
+      sources: parsed.sources || {},
+      articles: parsed.articles || {},
+    };
+  } catch {
+    return undefined;
+  }
+}
+
+function feedImageCache(): FeedImageCache {
+  if (!loadedFeedImageCache) {
+    loadedFeedImageCache =
+      readCacheFile(writableFeedImageCachePath) ||
+      readCacheFile(seedFeedImageCachePath) ||
+      emptyFeedImageCache();
+
+    for (const [source, entry] of Object.entries(loadedFeedImageCache.sources)) {
+      if (entry?.imageUrl) lastValidCoverBySource.set(source as FeedItem['source'], entry.imageUrl);
+    }
+  }
+  return loadedFeedImageCache;
+}
+
+function writeFeedImageCache() {
+  const cache = feedImageCache();
+  try {
+    mkdirSync(path.dirname(writableFeedImageCachePath), { recursive: true });
+    const temporaryPath = `${writableFeedImageCachePath}.tmp`;
+    writeFileSync(temporaryPath, `${JSON.stringify(cache, null, 2)}\n`);
+    renameSync(temporaryPath, writableFeedImageCachePath);
+  } catch {
+    // Cache writes are best-effort because some production runtimes expose read-only filesystems.
+  }
+}
+
+function articleCacheKey(source: FeedItem['source'], articleUrl: string): string {
+  try {
+    const url = new URL(articleUrl);
+    url.hash = '';
+    return `${source}:${url.toString()}`;
+  } catch {
+    return `${source}:${articleUrl}`;
+  }
+}
+
+function cachedCoverFor(item: FeedItem): string | undefined {
+  const cache = feedImageCache();
+  return cache.articles[articleCacheKey(item.source, item.url)]?.imageUrl || cache.sources[item.source]?.imageUrl;
+}
+
+function rememberValidCover(item: FeedItem, imageUrl: string) {
+  if (imageUrl === sourceFallbackCover[item.source]) return;
+
+  const cache = feedImageCache();
+  const entry: CachedFeedImage = {
+    source: item.source,
+    articleUrl: item.url,
+    imageUrl,
+    title: item.title,
+    updatedAt: new Date().toISOString(),
+  };
+  const key = articleCacheKey(item.source, item.url);
+  if (cache.articles[key]?.imageUrl === imageUrl && cache.sources[item.source]?.imageUrl === imageUrl) return;
+
+  cache.articles[key] = entry;
+  cache.sources[item.source] = entry;
+  cache.updatedAt = entry.updatedAt;
+  lastValidCoverBySource.set(item.source, imageUrl);
+  writeFeedImageCache();
+}
 
 function safeHttpUrl(value: string | undefined, baseUrl?: string): string | null {
   if (!value) return null;
@@ -47,6 +156,7 @@ function uniqueStrings(values: Array<string | null | undefined>): string[] {
 function withCoverFallback(item: FeedItem): FeedItem {
   const coverImage =
     safeHttpUrl(item.coverImage, item.url) ||
+    cachedCoverFor(item) ||
     lastValidCoverBySource.get(item.source) ||
     sourceFallbackCover[item.source];
   if (coverImage) lastValidCoverBySource.set(item.source, coverImage);
@@ -208,9 +318,27 @@ async function firstValidImageUrl(candidates: Array<string | null | undefined>):
 async function resolveArticleImage(item: FeedItem): Promise<string | null> {
   const metaImage = await fetchArticleMetaImage(item.url);
   const mn7rCandidates = item.source === 'mn7r' ? deriveMn7rArticleImageCandidates(item.url) : [];
-  const image = await firstValidImageUrl([item.coverImage, metaImage, ...mn7rCandidates, lastValidCoverBySource.get(item.source), sourceFallbackCover[item.source]]);
-  if (image) lastValidCoverBySource.set(item.source, image);
+  const image = await firstValidImageUrl([
+    item.coverImage,
+    metaImage,
+    ...mn7rCandidates,
+    cachedCoverFor(item),
+    lastValidCoverBySource.get(item.source),
+    sourceFallbackCover[item.source],
+  ]);
+  if (image) rememberValidCover(item, image);
   return image;
+}
+
+async function resolveFeedImages(items: FeedItem[], limit: number): Promise<FeedItem[]> {
+  const withImages = await Promise.all(
+    items.map(async (item, index) => {
+      if (index >= limit) return item;
+      const coverImage = await resolveArticleImage(item);
+      return coverImage ? { ...item, coverImage } : item;
+    }),
+  );
+  return withImages.map(withCoverFallback);
 }
 
 async function parseRssFeed(
@@ -266,15 +394,7 @@ async function parseRssFeed(
   if (!options.resolveArticleImages) return parsed.map(withCoverFallback);
 
   const limit = options.articleImageLimit ?? parsed.length;
-  const withImages = await Promise.all(
-    parsed.map(async (item, index) => {
-      if (index >= limit) return item;
-      const coverImage = await resolveArticleImage(item);
-      return coverImage ? { ...item, coverImage } : item;
-    }),
-  );
-
-  return withImages.map(withCoverFallback);
+  return resolveFeedImages(parsed, limit);
 }
 
 export async function fetchMediumFeed(feedUrl: string): Promise<FeedItem[]> {
@@ -285,7 +405,7 @@ export async function fetchMediumFeed(feedUrl: string): Promise<FeedItem[]> {
   const xml = await res.text();
   const items = xml.split(/<item>/i).slice(1).map((chunk) => chunk.split(/<\/item>/i)[0]);
 
-  return items
+  const parsed = items
     .map((it) => {
       const title = decodeCdata(getTag(it, 'title') || '').trim();
       const link = (getTag(it, 'link') || '').trim();
@@ -318,8 +438,9 @@ export async function fetchMediumFeed(feedUrl: string): Promise<FeedItem[]> {
         coverImage: cover || undefined,
       } satisfies FeedItem;
     })
-    .filter(Boolean)
-    .map((item) => withCoverFallback(item as FeedItem)) as FeedItem[];
+    .filter(Boolean) as FeedItem[];
+
+  return resolveFeedImages(parsed, 3);
 }
 
 export async function fetchSubstackFeed(feedUrl: string): Promise<FeedItem[]> {
@@ -328,7 +449,7 @@ export async function fetchSubstackFeed(feedUrl: string): Promise<FeedItem[]> {
   const xml = await res.text();
   const items = xml.split(/<item>/i).slice(1).map((chunk) => chunk.split(/<\/item>/i)[0]);
 
-  return items
+  const parsed = items
     .map((it) => {
       const title = decodeCdata(getTag(it, 'title') || '').trim();
       const link = (getTag(it, 'link') || '').trim();
@@ -360,8 +481,9 @@ export async function fetchSubstackFeed(feedUrl: string): Promise<FeedItem[]> {
         coverImage: cover || undefined,
       } satisfies FeedItem;
     })
-    .filter(Boolean)
-    .map((item) => withCoverFallback(item as FeedItem)) as FeedItem[];
+    .filter(Boolean) as FeedItem[];
+
+  return resolveFeedImages(parsed, 3);
 }
 
 export async function fetchMn7rFeed(feedUrl: string): Promise<FeedItem[]> {

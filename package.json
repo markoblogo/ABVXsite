@@ -21,6 +21,7 @@
     "media:derivatives": "node scripts/generate-image-derivatives.mjs",
     "feeds:check": "node scripts/check-feed-covers.mjs",
     "qa:visual": "node scripts/visual-smoke.mjs",
+    "qa:csp": "node scripts/csp-check.mjs",
     "qa:perf": "node scripts/perf-check.mjs"
   },
   "dependencies": {

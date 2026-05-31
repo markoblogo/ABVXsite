@@ -23,11 +23,19 @@ const requiredCspDirectives = [
   "script-src 'self' 'unsafe-inline'",
   "script-src-attr 'none'",
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob: https:",
-  "connect-src 'self' https:",
+  "img-src 'self' data: blob: https://cdn-images-1.medium.com",
+  "connect-src 'self'",
   'object-src \'none\'',
   "base-uri 'self'",
   "frame-ancestors 'none'",
+];
+
+const requiredReportOnlyDirectives = [
+  "script-src 'self' 'report-sample'",
+  "script-src-attr 'none'",
+  "connect-src 'self'",
+  'report-uri /api/csp-report',
+  'report-to csp-endpoint',
 ];
 
 const headerRoutes = [...qaRoutes, { path: '/work/cropto-market-risk-deck', slug: 'youtube-embed', label: 'YouTube embed' }];
@@ -41,8 +49,26 @@ function isCspMessage(message) {
   return cspNeedles.some((needle) => text.includes(needle));
 }
 
+function isReportOnlyCspMessage(message) {
+  return message.toLowerCase().includes('report-only');
+}
+
+function cspDirectiveValue(csp, directiveName) {
+  const directive = csp
+    .split(';')
+    .map((part) => part.trim())
+    .find((part) => part.startsWith(`${directiveName} `));
+  return directive || '';
+}
+
 async function inspectPage(page) {
   return page.evaluate(() => {
+    const sha256Base64 = async (value) => {
+      const data = new TextEncoder().encode(value);
+      const digest = await crypto.subtle.digest('SHA-256', data);
+      return btoa(String.fromCharCode(...new Uint8Array(digest)));
+    };
+
     const jsonLd = [...document.querySelectorAll('script[type="application/ld+json"]')].map((script) => {
       try {
         JSON.parse(script.textContent || '');
@@ -52,6 +78,7 @@ async function inspectPage(page) {
       }
     });
 
+    const inlineScriptNodes = [...document.querySelectorAll('script:not([src])')];
     const nextChunks = [...document.querySelectorAll('script[src*="/_next/static/"]')].map((script) =>
       script.getAttribute('src'),
     );
@@ -72,12 +99,20 @@ async function inspectPage(page) {
       (iframe) => iframe.getAttribute('src'),
     );
 
-    return {
+    return Promise.all(
+      inlineScriptNodes.map(async (script) => ({
+        id: script.id || null,
+        type: script.getAttribute('type') || null,
+        bytes: (script.textContent || '').length,
+        sha256: await sha256Base64(script.textContent || ''),
+      })),
+    ).then((inlineScripts) => ({
       jsonLd,
+      inlineScripts,
       nextChunks,
       brokenImages,
       youtubeEmbeds,
-    };
+    }));
   });
 }
 
@@ -116,21 +151,32 @@ await withQaServer(async (baseUrl) => {
 
       page.on('console', (message) => {
         const text = message.text();
-        if (isCspMessage(text)) consoleViolations.push({ type: message.type(), text });
+        if (isCspMessage(text) && !isReportOnlyCspMessage(text)) consoleViolations.push({ type: message.type(), text });
       });
       page.on('pageerror', (error) => {
         const text = error.message;
-        if (isCspMessage(text)) pageErrors.push(text);
+        if (isCspMessage(text) && !isReportOnlyCspMessage(text)) pageErrors.push(text);
       });
 
       const url = routeUrl(baseUrl, route.path);
       const response = await page.goto(url, { waitUntil: 'networkidle', timeout: 45_000 });
       await loadLazyImages(page);
       const csp = response?.headers()['content-security-policy'] || '';
+      const cspReportOnly = response?.headers()['content-security-policy-report-only'] || '';
+      const reportingEndpoints = response?.headers()['reporting-endpoints'] || '';
       const missingDirectives = requiredCspDirectives.filter((directive) => !csp.includes(directive));
+      const missingReportOnlyDirectives = requiredReportOnlyDirectives.filter((directive) => !cspReportOnly.includes(directive));
       const hasUnsafeEval = csp.includes("'unsafe-eval'");
+      const reportOnlyScriptDirectives = [
+        cspDirectiveValue(cspReportOnly, 'script-src'),
+        cspDirectiveValue(cspReportOnly, 'script-src-elem'),
+      ].join(' ');
+      const reportOnlyScriptAllowsUnsafe =
+        reportOnlyScriptDirectives.includes("'unsafe-inline'") || reportOnlyScriptDirectives.includes("'unsafe-eval'");
       const headers = {
         csp,
+        cspReportOnly,
+        reportingEndpoints,
         referrerPolicy: response?.headers()['referrer-policy'] || '',
         contentTypeOptions: response?.headers()['x-content-type-options'] || '',
         frameOptions: response?.headers()['x-frame-options'] || '',
@@ -143,7 +189,10 @@ await withQaServer(async (baseUrl) => {
       const invalidJsonLd = inspected.jsonLd.filter((item) => !item.valid);
       const routeFailures = [
         ...missingDirectives.map((directive) => `missing CSP directive: ${directive}`),
+        ...missingReportOnlyDirectives.map((directive) => `missing CSP report-only directive: ${directive}`),
         ...(hasUnsafeEval ? ['CSP still allows unsafe-eval'] : []),
+        ...(reportOnlyScriptAllowsUnsafe ? ['CSP report-only script directives still allow unsafe-inline/unsafe-eval'] : []),
+        ...(!reportingEndpoints.includes('csp-endpoint="/api/csp-report"') ? ['missing CSP Reporting-Endpoints header'] : []),
         ...(consoleViolations.length ? [`CSP/security console violations: ${consoleViolations.length}`] : []),
         ...(pageErrors.length ? [`CSP/security page errors: ${pageErrors.length}`] : []),
         ...(invalidJsonLd.length ? [`invalid JSON-LD scripts: ${invalidJsonLd.length}`] : []),
@@ -157,6 +206,7 @@ await withQaServer(async (baseUrl) => {
         url,
         headers,
         jsonLdScripts: inspected.jsonLd.length,
+        inlineScripts: inspected.inlineScripts,
         nextChunks: inspected.nextChunks.length,
         youtubeEmbeds: inspected.youtubeEmbeds,
         brokenImages: inspected.brokenImages,
@@ -176,7 +226,9 @@ await withQaServer(async (baseUrl) => {
 
   for (const result of results) {
     console.log(`${result.failures.length ? 'FAIL' : 'OK'} ${result.route}`);
-    console.log(`  JSON-LD: ${result.jsonLdScripts}, Next chunks: ${result.nextChunks}, YouTube embeds: ${result.youtubeEmbeds.length}`);
+    console.log(
+      `  JSON-LD: ${result.jsonLdScripts}, Inline scripts: ${result.inlineScripts.length}, Next chunks: ${result.nextChunks}, YouTube embeds: ${result.youtubeEmbeds.length}`,
+    );
     for (const failure of result.failures) console.log(`  ${failure}`);
   }
 

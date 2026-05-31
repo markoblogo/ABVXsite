@@ -18,13 +18,6 @@
   --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-body {
-  background: var(--paper);
-  color: var(--ink);
-  font-family: "Arial Narrow", "Helvetica Neue Condensed", "Aptos Narrow", "Arial", sans-serif;
-  text-rendering: geometricPrecision;
-}
-
 img,
 svg,
 video,
@@ -47,16 +40,6 @@ header nav::-webkit-scrollbar {
   display: none;
 }
 
-.hero-stickers {
-  pointer-events: auto;
-  position: absolute;
-  right: 0;
-  top: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
 .ux-hover-card {
   will-change: transform;
   transition: transform 160ms var(--ease-out), box-shadow 160ms var(--ease-out), border-color 160ms var(--ease-out);
@@ -69,12 +52,6 @@ header nav::-webkit-scrollbar {
 
 .ux-hover-sticker {
   transition: transform 140ms var(--ease-out), filter 140ms var(--ease-out), box-shadow 140ms var(--ease-out);
-}
-
-.ux-focus-ring:focus-visible {
-  outline: none;
-  box-shadow: var(--glow-ring);
-  border-color: rgba(34, 197, 94, 0.35) !important;
 }
 
 /* Auto-apply to existing rounded card/button patterns across pages. */
@@ -93,141 +70,6 @@ header nav a {
   transition: color 140ms var(--ease-out), text-shadow 140ms var(--ease-out), text-decoration-color 140ms var(--ease-out);
 }
 
-.ascii-toggle-anchor {
-  display: inline-flex;
-  align-items: center;
-}
-
-.ascii-toggle-anchor .ascii-theme-toggle-group {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.ascii-toggle-anchor .ascii-theme-toggle-btn {
-  border: 1px solid rgb(0 0 0 / 0.1);
-  background: rgb(0 0 0 / 0.05);
-  color: rgb(63 63 70);
-  border-radius: 0.375rem;
-  padding: 0.5rem;
-  min-height: 36px;
-  min-width: 36px;
-  line-height: 1;
-}
-
-.dark .ascii-toggle-anchor .ascii-theme-toggle-btn {
-  border-color: rgb(255 255 255 / 0.15);
-  background: rgb(255 255 255 / 0.05);
-  color: rgb(228 228 231);
-}
-
-.ascii-footnote {
-  margin-top: 0.9rem;
-  font-size: 0.85rem;
-  opacity: 0.9;
-  white-space: normal;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: start;
-  gap: 1rem 1.75rem;
-}
-
-.footer-social-column {
-  display: flex;
-  flex-direction: column;
-  gap: 0.55rem;
-  align-items: flex-start;
-}
-
-.footer-social-row {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 0.5rem;
-}
-
-.ascii-footnote a {
-  color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-.footer-social-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.9rem;
-  height: 1.9rem;
-  color: rgb(113 113 122);
-  border: 1px solid rgb(0 0 0 / 0.08);
-  border-radius: 999px;
-  background: rgb(0 0 0 / 0.025);
-  transition:
-    color 140ms var(--ease-out),
-    border-color 140ms var(--ease-out),
-    background-color 140ms var(--ease-out),
-    transform 140ms var(--ease-out),
-    box-shadow 140ms var(--ease-out);
-}
-
-.footer-social-icon {
-  width: 0.82rem;
-  height: 0.82rem;
-  flex: none;
-}
-
-.dark .footer-social-link {
-  color: rgb(161 161 170);
-  border-color: rgb(255 255 255 / 0.12);
-  background: rgb(255 255 255 / 0.04);
-}
-
-.footer-social-link:hover {
-  color: rgb(24 24 27);
-  border-color: rgb(0 0 0 / 0.16);
-  background: rgb(0 0 0 / 0.05);
-  transform: translateY(-1px);
-}
-
-.dark .footer-social-link:hover {
-  color: rgb(244 244 245);
-  border-color: rgb(255 255 255 / 0.2);
-  background: rgb(255 255 255 / 0.08);
-}
-
-.footer-social-link:focus-visible {
-  outline: none;
-  box-shadow: var(--glow-ring);
-  border-color: rgba(34, 197, 94, 0.35);
-}
-
-@media (max-width: 760px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .footer-social-row {
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-
-  .ascii-footnote {
-    margin-top: 1rem;
-  }
-}
-
-:root[data-style="ascii"] .ascii-footnote {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-  letter-spacing: 0.02em;
-}
-
-:root[data-style="ascii"] .ascii-footnote a {
-  color: currentColor;
-}
-
 @media (hover: hover) and (pointer: fine) {
   .ux-hover-card:hover,
   main :is(.rounded-xl.border, .rounded-2xl.border):hover {
@@ -244,8 +86,7 @@ header nav a {
     border-color: rgba(34, 197, 94, 0.35) !important;
   }
 
-  .ux-hover-sticker:hover,
-  .hero-sticker:hover {
+  .ux-hover-sticker:hover {
     transform: translateY(-1px) rotate(1deg);
     filter: drop-shadow(0 0 10px var(--glow-accent-strong));
   }
@@ -265,43 +106,6 @@ header nav a:focus-visible,
   outline: none;
   box-shadow: var(--glow-ring);
   border-color: rgba(34, 197, 94, 0.35) !important;
-}
-
-.hero-sticker {
-  border: 3px solid #fff;
-  border-radius: 999px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
-  color: #111827;
-  display: inline-flex;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  line-height: 1;
-  padding: 8px 12px;
-}
-
-.hero-sticker.burst {
-  background: #facc15;
-  transform: rotate(-6deg);
-}
-
-.hero-sticker.ribbon {
-  background: #86efac;
-  transform: rotate(4deg);
-}
-
-@media (max-width: 640px) {
-  .home-shell {
-    gap: 44px;
-  }
-
-  .hero-stickers-mobile .hero-sticker {
-    border-width: 2px;
-    font-size: 10px;
-    letter-spacing: 0.03em;
-    padding: 6px 10px;
-    transform: none !important;
-  }
 }
 
 .time-dock {
@@ -1095,6 +899,8 @@ body {
     var(--paper);
   background-size: 44px 44px;
   color: var(--ink);
+  font-family: "Arial Narrow", "Helvetica Neue Condensed", "Aptos Narrow", "Arial", sans-serif;
+  text-rendering: geometricPrecision;
 }
 
 ::selection {
@@ -1594,9 +1400,7 @@ a {
 }
 
 .section-panel,
-.latest-card,
-.artifact-card,
-.book-card {
+.latest-card {
   border: 1px solid var(--line);
   background: color-mix(in srgb, var(--paper) 84%, white 16%);
 }
@@ -1721,70 +1525,6 @@ a {
   line-height: 1.38;
 }
 
-.artifact-card,
-.book-card {
-  position: relative;
-  display: grid;
-  gap: 0.75rem;
-  padding: 0.75rem;
-  transition:
-    background-color 180ms var(--ease-out),
-    box-shadow 180ms var(--ease-out),
-    transform 180ms var(--ease-out);
-}
-
-.book-card {
-  background:
-    linear-gradient(90deg, color-mix(in srgb, var(--paper) 76%, white 24%) 0 72%, color-mix(in srgb, var(--paper-2) 80%, white 20%) 72%),
-    var(--paper);
-}
-
-.book-card .latest-card__image {
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-}
-
-.card-link-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-
-.card-link-row a {
-  border: 1px solid var(--line);
-  background: var(--paper);
-  color: var(--ink);
-  padding: 0.38rem 0.52rem;
-  font-size: 0.66rem;
-  font-weight: 950;
-  letter-spacing: 0.06em;
-  line-height: 1;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.card-link-row a:hover,
-.card-link-row a:focus-visible {
-  background: var(--ink);
-  color: var(--paper);
-  outline: none;
-}
-
-.detail-hero-image {
-  width: 100%;
-  max-height: 620px;
-  border: 1px solid var(--line);
-  background: var(--paper-2);
-  object-fit: cover;
-}
-
-.detail-hero-image--book {
-  width: min(100%, 520px);
-  max-height: none;
-  aspect-ratio: 3 / 4;
-  justify-self: start;
-}
-
 .faq-section {
   display: grid;
   gap: 1rem;
@@ -1814,14 +1554,7 @@ a {
   line-height: 1.5;
 }
 
-.artifact-card:focus-within,
-.book-card:focus-within {
-  box-shadow: 0 0 0 3px var(--accent);
-}
-
 @media (hover: hover) and (pointer: fine) {
-  .artifact-card:hover,
-  .book-card:hover,
   .section-panel:hover {
     box-shadow: 6px 6px 0 var(--ink);
     transform: translate(-3px, -3px);
@@ -2413,9 +2146,7 @@ a {
   outline-color: var(--paper);
 }
 
-.latest-card img,
-.artifact-card img,
-.book-card img {
+.latest-card img {
   display: block;
   width: 100%;
   object-fit: cover;
@@ -2472,69 +2203,6 @@ a {
 .latest-card h3 {
   overflow-wrap: anywhere;
   hyphens: auto;
-}
-
-.artifact-card .latest-card {
-  padding: 0.82rem;
-}
-
-.artifact-card .latest-card h3 {
-  font-size: clamp(1.18rem, 2.2vw, 1.85rem);
-  letter-spacing: -0.055em;
-  line-height: 0.98;
-}
-
-.book-card {
-  padding: 0.85rem;
-}
-
-.book-card .latest-card {
-  align-items: start;
-  padding: 0;
-  border: 0;
-  background: transparent;
-}
-
-.book-card .latest-card::after {
-  display: none;
-}
-
-.book-card .latest-card:hover,
-.book-card .latest-card:focus-visible {
-  background: transparent;
-  box-shadow: none;
-  transform: none;
-}
-
-.book-card .latest-card--book:has(.latest-card__media) {
-  grid-template-columns: minmax(92px, 0.36fr) minmax(0, 1fr);
-  column-gap: 0.9rem;
-}
-
-.book-card .latest-card--book:has(.latest-card__media) .latest-card__media {
-  grid-row: 1 / 4;
-}
-
-.book-card .latest-card__media {
-  box-shadow: 6px 6px 0 var(--ink);
-  transform: rotate(-1deg);
-}
-
-.book-card .latest-card h3 {
-  font-size: clamp(1.08rem, 2vw, 1.72rem);
-  letter-spacing: -0.045em;
-  line-height: 1;
-  text-wrap: balance;
-}
-
-.book-card .latest-card p {
-  font-size: 0.92rem;
-  line-height: 1.34;
-}
-
-.book-card .tag-list,
-.artifact-card .tag-list {
-  padding-top: 0.1rem;
 }
 
 .latest-card--writing:has(.latest-card__media) {
@@ -2980,49 +2648,6 @@ a {
   text-underline-offset: 0.16em;
 }
 
-.detail-media-frame {
-  position: relative;
-  margin: 0;
-  border: 1px solid var(--line);
-  background: var(--paper-2);
-  padding: clamp(0.65rem, 2vw, 1rem);
-}
-
-.detail-media-frame::before {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    linear-gradient(90deg, transparent calc(50% - 0.5px), var(--line) 0 calc(50% + 0.5px), transparent 0),
-    linear-gradient(0deg, transparent calc(50% - 0.5px), var(--line) 0 calc(50% + 0.5px), transparent 0);
-  opacity: 0.13;
-  content: "";
-}
-
-.detail-media-frame--project {
-  aspect-ratio: 16 / 9;
-}
-
-.detail-media-frame--book {
-  width: min(100%, 560px);
-  justify-self: start;
-  background: var(--ink);
-  box-shadow: 12px 12px 0 var(--route-accent, var(--accent));
-}
-
-.detail-hero-image {
-  position: relative;
-  z-index: 1;
-  height: 100%;
-  max-height: none;
-  border: 1px solid var(--line);
-}
-
-.detail-hero-image--book {
-  width: 100%;
-  border-color: color-mix(in srgb, var(--paper) 70%, var(--line) 30%);
-}
-
 .detail-page .page-header h1 {
   max-width: 16ch;
   overflow-wrap: anywhere;
@@ -3035,8 +2660,7 @@ a {
   max-width: 860px;
 }
 
-.detail-page .link-strip a,
-.card-link-row a {
+.detail-page .link-strip a {
   transition: background-color 160ms var(--ease-out), color 160ms var(--ease-out), box-shadow 160ms var(--ease-out), transform 160ms var(--ease-out);
 }
 
@@ -3671,10 +3295,6 @@ a {
   font-weight: 950;
   letter-spacing: -0.03em;
   text-transform: uppercase;
-}
-
-.systems-grid--standalone {
-  max-width: 920px;
 }
 
 /* /focus catalogue media: full-width market project panels. */
@@ -5291,13 +4911,10 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .book-card .latest-card--book:has(.latest-card__media),
   .latest-card--writing:has(.latest-card__media) {
     grid-template-columns: minmax(76px, 112px) minmax(0, 1fr);
   }
 
-  .book-card .latest-card h3,
-  .artifact-card .latest-card h3,
   .latest-card--writing h3 {
     font-size: clamp(1.05rem, 6vw, 1.45rem);
     letter-spacing: -0.035em;
@@ -5437,16 +5054,12 @@ a {
 
   .latest-card,
   .site-nav a,
-  .artifact-card,
-  .book-card,
   .section-panel {
     transition: none !important;
   }
 
   .latest-card:hover,
   .latest-card:focus-visible,
-  .artifact-card:hover,
-  .book-card:hover,
   .section-panel:hover,
   .hero-actions a:hover,
   .hero-actions a:focus-visible,

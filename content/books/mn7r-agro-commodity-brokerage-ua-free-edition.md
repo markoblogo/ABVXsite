@@ -76,7 +76,7 @@
   "needsMediaReview": false,
   "needsLinkReview": false,
   "media": {
-    "src": "/media/books/mn7r-agro-commodity-brokerage-ua-free-edition/cover.png",
+    "src": "/media/books/mn7r-agro-commodity-brokerage-ua-free-edition/cover.webp",
     "alt": "Брокеридж на ринках зернових та олійних, безкоштовна українська книга MN7R",
     "role": "book-cover"
   }

@@ -82,7 +82,7 @@
   "needsMediaReview": false,
   "needsLinkReview": false,
   "media": {
-    "src": "/media/books/mn7r-agro-commodity-brokerage-en-free-edition/cover.png",
+    "src": "/media/books/mn7r-agro-commodity-brokerage-en-free-edition/cover.webp",
     "alt": "Agri-Commodity Brokerage, the English MN7R practical guide for brokers",
     "role": "book-cover"
   }

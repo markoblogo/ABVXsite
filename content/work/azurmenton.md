@@ -52,7 +52,7 @@
   ],
   "sortRank": 125,
   "media": {
-    "src": "/media/work/azurmenton/hero.png",
+    "src": "/media/work/azurmenton/hero.webp",
     "alt": "AzurMenton hospitality booking interface",
     "role": "landing-screenshot"
   }

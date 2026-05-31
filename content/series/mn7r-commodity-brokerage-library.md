@@ -38,12 +38,12 @@
   "needsLinkReview": false,
   "group": "Official publishing lines",
   "media": {
-    "src": "/media/series/mn7r-commodity-brokerage-library/hero.png",
+    "src": "/media/series/mn7r-commodity-brokerage-library/hero.webp",
     "alt": "MN7R Commodity Brokerage Library publishing line",
     "role": "landing-screenshot"
   },
   "heroImage": {
-    "src": "/media/series/mn7r-commodity-brokerage-library/hero.png",
+    "src": "/media/series/mn7r-commodity-brokerage-library/hero.webp",
     "alt": "MN7R Commodity Brokerage Library publishing line",
     "role": "landing-screenshot"
   }

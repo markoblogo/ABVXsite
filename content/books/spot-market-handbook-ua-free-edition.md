@@ -75,7 +75,7 @@
   "needsMediaReview": false,
   "needsLinkReview": false,
   "media": {
-    "src": "/media/books/spot-market-handbook-ua-free-edition/cover.png",
+    "src": "/media/books/spot-market-handbook-ua-free-edition/cover.webp",
     "alt": "Обкладинка книги Практичний гайд зі спотового ринку",
     "role": "book-cover"
   }

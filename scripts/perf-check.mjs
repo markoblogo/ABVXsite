@@ -4,6 +4,8 @@ import { chromium } from 'playwright';
 import { qaRoutes } from './qa-routes.mjs';
 import { withQaServer } from './qa-server.mjs';
 
+process.env.QA_PORT ||= '3211';
+
 const outDir = path.join(process.cwd(), '.cache', 'perf-check');
 
 const thresholds = {
@@ -115,4 +117,3 @@ await withQaServer(async (baseUrl) => {
     throw new Error(`Perf check failed: ${failures.length} routes exceeded thresholds.`);
   }
 });
-

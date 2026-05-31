@@ -260,7 +260,7 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 - Free Kit / Reader’s Guide Chinese Wisdom in toki pona
   URL: https://abvx.xyz/books/chinese-wisdom-reader-guide
-  Summary: Free reader’s guide for Chinese Wisdom in toki pona.
+  Summary: Free reader’s guide for the Chinese Wisdom in toki pona publishing line, helping readers enter the multilingual editions, parallel text structure and minimalist-language method.
   Group: Toki Pona Free Kits & Translations
   Tags: toki-pona, free-book, reader-guide, chinese-wisdom
 
@@ -278,13 +278,13 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 - The Toki Pona Reader’s Kit
   URL: https://abvx.xyz/books/toki-pona-readers-kit
-  Summary: Free reader kit for beginning to read Toki Pona editions.
+  Summary: Free reader kit for entering ABVX toki pona editions, with orientation for minimalist vocabulary, parallel reading, sitelen pona and philosophy-focused translations.
   Group: Toki Pona Free Kits & Translations
   Tags: toki-pona, free-book, reader-kit, stoicism
 
 - Hryhorii Kosynka: Dans les seigles et autres nouvelles
   URL: https://abvx.xyz/books/hryhorii-kosynka-dans-les-seigles
-  Summary: French translation from the Ukrainian Modernism series.
+  Summary: Free French edition of Hryhorii Kosynka’s short fiction from the Modernisme Ukrainien line, bringing Ukrainian modernist prose into a French-reading context.
   Group: Ukrainian Modernism
   Tags: ukrainian-modernism, translation, french, kosynka
 

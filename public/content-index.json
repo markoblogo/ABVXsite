@@ -382,7 +382,7 @@
       "group": "Toki Pona Free Kits & Translations",
       "status": "released",
       "title": "Free Kit / Reader’s Guide Chinese Wisdom in toki pona",
-      "summary": "Free reader’s guide for Chinese Wisdom in toki pona.",
+      "summary": "Free reader’s guide for the Chinese Wisdom in toki pona publishing line, helping readers enter the multilingual editions, parallel text structure and minimalist-language method.",
       "canonicalUrl": "https://abvx.xyz/books/chinese-wisdom-reader-guide",
       "tags": [
         "toki-pona",
@@ -543,13 +543,13 @@
       ]
     },
     {
-      "type": "translation",
+      "type": "free-edition",
       "section": "books",
       "ecosystem": "Ukrainian Modernism",
       "group": "Ukrainian Modernism",
       "status": "released",
       "title": "Hryhorii Kosynka: Dans les seigles et autres nouvelles",
-      "summary": "French translation from the Ukrainian Modernism series.",
+      "summary": "Free French edition of Hryhorii Kosynka’s short fiction from the Modernisme Ukrainien line, bringing Ukrainian modernist prose into a French-reading context.",
       "canonicalUrl": "https://abvx.xyz/books/hryhorii-kosynka-dans-les-seigles",
       "tags": [
         "ukrainian-modernism",
@@ -1210,7 +1210,7 @@
       "group": "Toki Pona Free Kits & Translations",
       "status": "released",
       "title": "The Toki Pona Reader’s Kit",
-      "summary": "Free reader kit for beginning to read Toki Pona editions.",
+      "summary": "Free reader kit for entering ABVX toki pona editions, with orientation for minimalist vocabulary, parallel reading, sitelen pona and philosophy-focused translations.",
       "canonicalUrl": "https://abvx.xyz/books/toki-pona-readers-kit",
       "tags": [
         "toki-pona",

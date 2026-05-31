@@ -6,7 +6,7 @@
   "status": "released",
   "visibility": "public",
   "title": "The Toki Pona Reader’s Kit",
-  "summary": "Free reader kit for beginning to read Toki Pona editions.",
+  "summary": "Free reader kit for entering ABVX toki pona editions, with orientation for minimalist vocabulary, parallel reading, sitelen pona and philosophy-focused translations.",
   "tags": [
     "toki-pona",
     "free-book",
@@ -56,3 +56,18 @@
   ]
 }
 ---
+
+The Toki Pona Reader’s Kit is a free companion for readers beginning to explore ABVX toki pona editions.
+
+The kit is designed as an orientation layer rather than a standalone textbook. It helps readers understand how to approach minimalist vocabulary, repeated structures, compact philosophical phrasing and the relationship between Latin-script toki pona and sitelen pona reading surfaces.
+
+It supports the broader Toki Pona Free Kits & Translations line by giving readers a practical entry point before they move into longer editions such as Stoic Wisdom in Toki Pona, Chinese Wisdom in toki pona and other translation experiments.
+
+The kit is useful for:
+
+- new toki pona readers,
+- readers moving from English into toki pona editions,
+- people beginning to recognize sitelen pona,
+- and anyone interested in how small-language constraints can change the way philosophy and literature are read.
+
+The purpose is simple: reduce friction. The reader should be able to download the kit, understand the reading method and then move more confidently into the full book ecosystem.

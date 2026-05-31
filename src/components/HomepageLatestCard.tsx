@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { ContentImage } from '@/content';
+import Image from 'next/image';
 
 export default function HomepageLatestCard({
   label,
@@ -19,12 +20,33 @@ export default function HomepageLatestCard({
   detail?: string;
 }) {
   const mediaRole = image?.mediaRole || 'generic-thumbnail';
+  const isRemote = image?.src?.startsWith('http://') || image?.src?.startsWith('https://');
+  const width = image?.width || (mediaRole === 'book-cover' ? 1200 : 1200);
+  const height = image?.height || (mediaRole === 'book-cover' ? 1600 : 675);
   const content = (
     <>
       <div className="homepage-latest-card__media" data-media-role={mediaRole}>
-        {image ? (
+        {image && isRemote ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={image.src} alt={image.alt || title} loading="lazy" />
+          <img
+            src={image.src}
+            alt={image.alt || title}
+            width={width}
+            height={height}
+            loading="lazy"
+            decoding="async"
+            referrerPolicy="no-referrer"
+          />
+        ) : image ? (
+          <Image
+            src={image.src}
+            alt={image.alt || title}
+            width={width}
+            height={height}
+            loading="lazy"
+            fetchPriority="auto"
+            sizes="(max-width: 768px) 100vw, 33vw"
+          />
         ) : (
           <span className="homepage-latest-card__placeholder" aria-hidden="true" />
         )}
@@ -45,7 +67,7 @@ export default function HomepageLatestCard({
 
   if (href.startsWith('http')) {
     return (
-      <a className="homepage-latest-card" href={href} target="_blank" rel="noreferrer">
+      <a className="homepage-latest-card" href={href} target="_blank" rel="noopener noreferrer">
         {content}
       </a>
     );

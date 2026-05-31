@@ -17,7 +17,7 @@ export default function WritingArchiveRow({
         {source}
         {date ? ` / ${date}` : ''}
       </div>
-      <a href={href} target="_blank" rel="noreferrer" aria-label={`Read ${title}`}>
+      <a href={href} target="_blank" rel="noopener noreferrer" aria-label={`Read ${title}`}>
         <span>{title}</span>
         <span aria-hidden="true">-&gt;</span>
       </a>

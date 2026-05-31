@@ -72,7 +72,7 @@ function renderLinks(links: Book['links']): ReactNode {
       {links.map((link, index) => (
         <span key={`${link.type}-${link.url}`}>
           {index > 0 ? ', ' : null}
-          <a href={link.url} target="_blank" rel="noreferrer">
+          <a href={link.url} target="_blank" rel="noopener noreferrer">
             {link.label || link.type}
           </a>
         </span>
@@ -318,7 +318,7 @@ export default async function BookDetailPage({
 
   return (
     <article className="detail-page detail-page--book">
-      <JsonLd id="jsonld-book-item" data={bookJsonLd(book)} />
+      <JsonLd id="jsonld-book-item" data={bookJsonLd(book, relatedItems.map((related) => related.item))} />
       {book.faqs?.length ? (
         <JsonLd
           id="jsonld-book-faq"

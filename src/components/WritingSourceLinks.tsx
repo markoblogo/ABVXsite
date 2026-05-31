@@ -23,10 +23,10 @@ export default function WritingSourceLinks({ active }: { active: WritingSource }
         ))}
       </div>
       <div className="writing-source-links__external" aria-label="External writing archives">
-        <a href="https://abvcreative.medium.com/" target="_blank" rel="noreferrer">
+        <a href="https://abvcreative.medium.com/" target="_blank" rel="noopener noreferrer">
           Medium archive -&gt;
         </a>
-        <a href="https://abvx.substack.com/" target="_blank" rel="noreferrer">
+        <a href="https://abvx.substack.com/" target="_blank" rel="noopener noreferrer">
           Substack archive -&gt;
         </a>
       </div>

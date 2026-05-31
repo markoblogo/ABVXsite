@@ -19,7 +19,7 @@ export default function WritingCard({
   return (
     <article className="writing-card">
       {image ? (
-        <a href={href} target="_blank" rel="noreferrer" aria-label={title}>
+        <a href={href} target="_blank" rel="noopener noreferrer" aria-label={title}>
           <MediaPanel image={image} title={title} variant="writing" />
         </a>
       ) : null}
@@ -29,7 +29,7 @@ export default function WritingCard({
           {date ? ` / ${date}` : ''}
         </div>
         <h3>
-          <a href={href} target="_blank" rel="noreferrer">
+          <a href={href} target="_blank" rel="noopener noreferrer">
             {title}
           </a>
         </h3>

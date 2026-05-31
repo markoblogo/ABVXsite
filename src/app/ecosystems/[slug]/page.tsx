@@ -89,7 +89,7 @@ export default async function EcosystemPage({
                 className="underline"
                 href={eco.primaryUrl}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 {eco.primaryUrl}
               </a>
@@ -141,7 +141,7 @@ export default async function EcosystemPage({
                         <a
                           href={p.website}
                           target="_blank"
-                          rel="noreferrer"
+                          rel="noopener noreferrer"
                           className={chip}
                         >
                           Website
@@ -151,14 +151,14 @@ export default async function EcosystemPage({
                         <a
                           href={p.github}
                           target="_blank"
-                          rel="noreferrer"
+                          rel="noopener noreferrer"
                           className={chip}
                         >
                           GitHub
                         </a>
                       ) : null}
                       {p.demo ? (
-                        <a href={p.demo} target="_blank" rel="noreferrer" className={chip}>
+                        <a href={p.demo} target="_blank" rel="noopener noreferrer" className={chip}>
                           Demo
                         </a>
                       ) : null}
@@ -229,27 +229,27 @@ export default async function EcosystemPage({
 
                       <div className="mt-3 flex flex-wrap gap-2">
                         {b.amazon ? (
-                          <a href={b.amazon} target="_blank" rel="noreferrer" className={chip}>
+                          <a href={b.amazon} target="_blank" rel="noopener noreferrer" className={chip}>
                             Kindle
                           </a>
                         ) : null}
                         {b.paper ? (
-                          <a href={b.paper} target="_blank" rel="noreferrer" className={chip}>
+                          <a href={b.paper} target="_blank" rel="noopener noreferrer" className={chip}>
                             Paperback
                           </a>
                         ) : null}
                         {b.teaser ? (
-                          <a href={b.teaser} target="_blank" rel="noreferrer" className={chip}>
+                          <a href={b.teaser} target="_blank" rel="noopener noreferrer" className={chip}>
                             Teaser
                           </a>
                         ) : null}
                         {b.site ? (
-                          <a href={b.site} target="_blank" rel="noreferrer" className={chip}>
+                          <a href={b.site} target="_blank" rel="noopener noreferrer" className={chip}>
                             Site
                           </a>
                         ) : null}
                         {b.pdf ? (
-                          <a href={b.pdf} target="_blank" rel="noreferrer" className={chip}>
+                          <a href={b.pdf} target="_blank" rel="noopener noreferrer" className={chip}>
                             PDF
                           </a>
                         ) : null}

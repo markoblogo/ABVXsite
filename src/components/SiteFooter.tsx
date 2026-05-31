@@ -13,7 +13,7 @@ import {
 function FooterNavLink({ item }: { item: FooterLink }) {
   if (item.external) {
     return (
-      <a href={item.href} target="_blank" rel="noreferrer">
+      <a href={item.href} target="_blank" rel="noopener noreferrer">
         {item.label}
       </a>
     );

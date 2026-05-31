@@ -214,7 +214,7 @@ export default function AboutPage() {
           <div className="link-strip">
             <a href={email || '/about'}>Contact</a>
             {linkedIn ? (
-              <a href={linkedIn} target="_blank" rel="noreferrer">
+              <a href={linkedIn} target="_blank" rel="noopener noreferrer">
                 LinkedIn
               </a>
             ) : null}
@@ -234,7 +234,7 @@ export default function AboutPage() {
       {linkedIn ? (
         <section className="about-career-note" aria-label="Career timeline">
           <p>For the full career timeline, see LinkedIn.</p>
-          <a href={linkedIn} target="_blank" rel="noreferrer">
+          <a href={linkedIn} target="_blank" rel="noopener noreferrer">
             LinkedIn profile -&gt;
           </a>
         </section>

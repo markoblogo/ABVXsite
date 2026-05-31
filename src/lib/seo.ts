@@ -257,6 +257,29 @@ function linkOfType(item: { links: Array<{ type: string; url: string }> }, type:
   return item.links.find((link) => link.type === type);
 }
 
+function relatedItemSchemas(items: Array<Artifact | Book>) {
+  return items.map((item) => {
+    const isBook = 'coverImage' in item;
+    const itemUrl = `${SITE_URL}/${isBook ? 'books' : 'work'}/${item.slug}`;
+    return {
+      '@type': isBook ? (item.type === 'series' ? 'CreativeWorkSeries' : 'Book') : artifactSchemaType(item.type as Artifact['type']),
+      '@id': `${itemUrl}${isBook ? (item.type === 'series' ? '#series' : '#book') : '#work'}`,
+      name: item.title,
+      url: itemUrl,
+    };
+  });
+}
+
+function audienceFromTags(tags: string[]) {
+  if (tags.some((tag) => ['agro-commodities', 'brokerage', 'market-infrastructure', 'trading'].includes(tag))) {
+    return { '@type': 'Audience', audienceType: 'Commodity market participants, brokers, analysts and operators' };
+  }
+  if (tags.some((tag) => ['AI', 'ai-workflow', 'llmo', 'automation'].includes(tag))) {
+    return { '@type': 'Audience', audienceType: 'AI-native builders, operators and product teams' };
+  }
+  return { '@type': 'Audience', audienceType: 'Readers, builders and collaborators following the ABVX ecosystem' };
+}
+
 function amazonAsins(book: Book) {
   return [...new Set(
     book.links
@@ -276,16 +299,7 @@ export function artifactJsonLd(artifact: Artifact, relatedItems: Array<Artifact 
   const sameAs = artifact.links
     .map((link) => link.url)
     .filter((link) => link !== siteLink?.url);
-  const relatedSchemas = relatedItems.map((item) => {
-    const isBook = 'coverImage' in item;
-    const itemUrl = `${SITE_URL}/${isBook ? 'books' : 'work'}/${item.slug}`;
-    return {
-      '@type': isBook ? (item.type === 'series' ? 'CreativeWorkSeries' : 'Book') : artifactSchemaType(item.type as Artifact['type']),
-      '@id': `${itemUrl}${isBook ? (item.type === 'series' ? '#series' : '#book') : '#work'}`,
-      name: item.title,
-      url: itemUrl,
-    };
-  });
+  const relatedSchemas = relatedItemSchemas(relatedItems);
 
   return {
     '@context': 'https://schema.org',
@@ -301,6 +315,8 @@ export function artifactJsonLd(artifact: Artifact, relatedItems: Array<Artifact 
     creator: { '@id': `${SITE_URL}/#person` },
     publisher: { '@id': `${SITE_URL}/#organization` },
     provider: { '@id': `${SITE_URL}/#organization` },
+    audience: audienceFromTags(artifact.tags),
+    about: artifact.tags.map((tag) => ({ '@type': 'Thing', name: tag })),
     keywords: artifact.tags.join(', '),
     datePublished: artifact.publishedAt,
     dateModified: artifact.updatedAt || artifact.publishedAt,
@@ -328,10 +344,11 @@ export function artifactJsonLd(artifact: Artifact, relatedItems: Array<Artifact 
   };
 }
 
-export function bookJsonLd(book: Book) {
+export function bookJsonLd(book: Book, relatedItems: Array<Artifact | Book> = []) {
   const url = `${SITE_URL}/books/${book.slug}`;
   const image = book.heroImage || book.coverImage;
   const imageSchema = imageObject(image, book.title);
+  const relatedSchemas = relatedItemSchemas(relatedItems);
 
   if (book.type === 'series') {
     return {
@@ -345,9 +362,12 @@ export function bookJsonLd(book: Book) {
       isPartOf: { '@id': `${SITE_URL}/#website` },
       creator: { '@id': `${SITE_URL}/#person` },
       publisher: { '@id': `${SITE_URL}/#organization` },
+      audience: audienceFromTags(book.tags),
+      about: book.tags.map((tag) => ({ '@type': 'Thing', name: tag })),
       keywords: book.tags.join(', '),
       ...(book.links.length ? { sameAs: book.links.map((link) => link.url) } : {}),
       ...(imageSchema ? { image: imageSchema, primaryImageOfPage: imageSchema } : {}),
+      ...(relatedSchemas.length ? { isRelatedTo: relatedSchemas, mentions: relatedSchemas } : {}),
     };
   }
 
@@ -374,6 +394,8 @@ export function bookJsonLd(book: Book) {
     creator: book.author ? { '@type': 'Person', name: book.author } : { '@id': `${SITE_URL}/#person` },
     translator: book.translator ? { '@type': 'Person', name: book.translator } : undefined,
     publisher: { '@id': `${SITE_URL}/#organization` },
+    audience: audienceFromTags(book.tags),
+    about: book.tags.map((tag) => ({ '@type': 'Thing', name: tag })),
     inLanguage: book.language,
     translationOfWork: book.translationOf ? { '@id': `${SITE_URL}/books/${book.translationOf}#book` } : undefined,
     bookFormat: book.availableFormats || book.formats,
@@ -391,6 +413,7 @@ export function bookJsonLd(book: Book) {
       : {}),
     ...(imageSchema ? { image: imageSchema, primaryImageOfPage: imageSchema } : {}),
     ...(book.links.length ? { sameAs: book.links.map((link) => link.url) } : {}),
+    ...(relatedSchemas.length ? { isRelatedTo: relatedSchemas, mentions: relatedSchemas } : {}),
   };
 }
 

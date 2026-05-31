@@ -37,7 +37,7 @@ export default function WritingList({ posts }: { posts: FeedItem[] }) {
           key={p.url}
           href={p.url}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className={card}
         >
           <div className="flex gap-4">

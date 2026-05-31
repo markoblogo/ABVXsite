@@ -9,6 +9,50 @@ export type FeedItem = {
   coverImage?: string;
 };
 
+const FEED_REVALIDATE_SECONDS = 900;
+const IMAGE_FETCH_TIMEOUT_MS = 4500;
+
+const sourceFallbackCover: Record<FeedItem['source'], string> = {
+  medium: '/og/abvx-home.png',
+  substack: '/og/abvx-home.png',
+  mn7r: '/media/work/mn7r/hero.png',
+};
+
+const lastValidCoverBySource = new Map<FeedItem['source'], string>();
+
+function safeHttpUrl(value: string | undefined, baseUrl?: string): string | null {
+  if (!value) return null;
+  const decoded = decodeHtmlEntities(decodeCdata(value.trim()));
+  if (!decoded) return null;
+  if (decoded.startsWith('/')) return decoded;
+
+  try {
+    const url = new URL(decoded, baseUrl);
+    if (!['http:', 'https:'].includes(url.protocol)) return null;
+    return url.toString();
+  } catch {
+    return null;
+  }
+}
+
+function uniqueStrings(values: Array<string | null | undefined>): string[] {
+  const seen = new Set<string>();
+  return values.filter((value): value is string => {
+    if (!value || seen.has(value)) return false;
+    seen.add(value);
+    return true;
+  });
+}
+
+function withCoverFallback(item: FeedItem): FeedItem {
+  const coverImage =
+    safeHttpUrl(item.coverImage, item.url) ||
+    lastValidCoverBySource.get(item.source) ||
+    sourceFallbackCover[item.source];
+  if (coverImage) lastValidCoverBySource.set(item.source, coverImage);
+  return { ...item, coverImage };
+}
+
 function stripHtml(html: string): string {
   const text = html
     .replace(/<script[\s\S]*?<\/script>/gi, '')
@@ -55,9 +99,20 @@ function getTagAttribute(xml: string, tag: string, attribute: string): string | 
   return m ? m[1] : null;
 }
 
-function extractFirstImg(html: string): string | null {
-  const m = html.match(/<img[^>]+src=["']([^"']+)["'][^>]*>/i);
-  return m ? m[1] : null;
+function getTagAttributes(xml: string, tag: string, attribute: string): string[] {
+  const re = new RegExp(`<${tag}[^>]*\\s${attribute}=["']([^"']+)["'][^>]*>`, 'gi');
+  const out: string[] = [];
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(xml))) out.push(m[1]);
+  return out;
+}
+
+function extractImgSources(html: string): string[] {
+  const re = /<img[^>]+src=["']([^"']+)["'][^>]*>/gi;
+  const out: string[] = [];
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(html))) out.push(m[1]);
+  return out;
 }
 
 function extractMetaImage(html: string, baseUrl: string): string | null {
@@ -96,23 +151,47 @@ function extractMediumSnippet(html: string): string | null {
 }
 
 async function fetchArticleMetaImage(url: string): Promise<string | null> {
+  let timeout: ReturnType<typeof setTimeout> | undefined;
   try {
-    const res = await fetch(url, { next: { revalidate: 900 } });
+    const controller = new AbortController();
+    timeout = setTimeout(() => controller.abort(), IMAGE_FETCH_TIMEOUT_MS);
+    const res = await fetch(url, { next: { revalidate: FEED_REVALIDATE_SECONDS }, signal: controller.signal });
     if (!res.ok) return null;
     const html = await res.text();
     return extractMetaImage(html, url);
   } catch {
     return null;
+  } finally {
+    if (timeout) clearTimeout(timeout);
   }
 }
 
 async function imageUrlIfValid(url: string | undefined): Promise<string | null> {
-  if (!url) return null;
+  const candidate = safeHttpUrl(url);
+  if (!candidate) return null;
+  if (candidate.startsWith('/')) return candidate;
+
+  const fetchWithTimeout = async (method: 'HEAD' | 'GET') => {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), IMAGE_FETCH_TIMEOUT_MS);
+    try {
+      return await fetch(candidate, {
+        method,
+        headers: method === 'GET' ? { Range: 'bytes=0-2048' } : undefined,
+        next: { revalidate: FEED_REVALIDATE_SECONDS },
+        signal: controller.signal,
+      });
+    } finally {
+      clearTimeout(timeout);
+    }
+  };
+
   try {
-    const res = await fetch(url, { method: 'HEAD', next: { revalidate: 900 } });
+    let res = await fetchWithTimeout('HEAD');
+    if (!res.ok || res.status === 405) res = await fetchWithTimeout('GET');
     if (!res.ok) return null;
     const contentType = res.headers.get('content-type') || '';
-    return contentType.toLowerCase().startsWith('image/') ? url : null;
+    return contentType.toLowerCase().startsWith('image/') ? candidate : null;
   } catch {
     return null;
   }
@@ -129,7 +208,9 @@ async function firstValidImageUrl(candidates: Array<string | null | undefined>):
 async function resolveArticleImage(item: FeedItem): Promise<string | null> {
   const metaImage = await fetchArticleMetaImage(item.url);
   const mn7rCandidates = item.source === 'mn7r' ? deriveMn7rArticleImageCandidates(item.url) : [];
-  return firstValidImageUrl([item.coverImage, metaImage, ...mn7rCandidates]);
+  const image = await firstValidImageUrl([item.coverImage, metaImage, ...mn7rCandidates, lastValidCoverBySource.get(item.source), sourceFallbackCover[item.source]]);
+  if (image) lastValidCoverBySource.set(item.source, image);
+  return image;
 }
 
 async function parseRssFeed(
@@ -152,11 +233,16 @@ async function parseRssFeed(
       const description = getTag(it, 'description') || '';
       const contentHtml = decodeCdata(content);
       const descriptionHtml = decodeCdata(description);
-      const cover =
-        extractFirstImg(contentHtml) ||
-        extractFirstImg(descriptionHtml) ||
-        getTagAttribute(it, 'media:content', 'url') ||
-        getTagAttribute(it, 'enclosure', 'url');
+      const cover = uniqueStrings([
+        ...extractImgSources(contentHtml),
+        ...extractImgSources(descriptionHtml),
+        getTagAttribute(it, 'media:content', 'url'),
+        getTagAttribute(it, 'media:thumbnail', 'url'),
+        getTagAttribute(it, 'itunes:image', 'href'),
+        ...getTagAttributes(it, 'enclosure', 'url'),
+      ])
+        .map((candidate) => safeHttpUrl(candidate, link))
+        .find(Boolean);
       const excerpt = stripHtml(contentHtml || descriptionHtml).slice(0, 220);
 
       const dt = pubDate ? new Date(pubDate) : null;
@@ -177,7 +263,7 @@ async function parseRssFeed(
     })
     .filter(Boolean) as FeedItem[];
 
-  if (!options.resolveArticleImages) return parsed;
+  if (!options.resolveArticleImages) return parsed.map(withCoverFallback);
 
   const limit = options.articleImageLimit ?? parsed.length;
   const withImages = await Promise.all(
@@ -188,13 +274,13 @@ async function parseRssFeed(
     }),
   );
 
-  return withImages;
+  return withImages.map(withCoverFallback);
 }
 
 export async function fetchMediumFeed(feedUrl: string): Promise<FeedItem[]> {
   const res = await fetch(feedUrl, {
     // cache on server, refresh periodically
-    next: { revalidate: 900 },
+    next: { revalidate: FEED_REVALIDATE_SECONDS },
   });
   const xml = await res.text();
   const items = xml.split(/<item>/i).slice(1).map((chunk) => chunk.split(/<\/item>/i)[0]);
@@ -211,7 +297,9 @@ export async function fetchMediumFeed(feedUrl: string): Promise<FeedItem[]> {
       const description = getTag(it, 'description') || '';
       const contentHtml = decodeCdata(content);
       const descriptionHtml = decodeCdata(description);
-      const cover = extractFirstImg(contentHtml) || extractFirstImg(descriptionHtml);
+      const cover = uniqueStrings([...extractImgSources(contentHtml), ...extractImgSources(descriptionHtml)])
+        .map((candidate) => safeHttpUrl(candidate, link))
+        .find(Boolean);
       const excerpt = (extractMediumSnippet(descriptionHtml) || stripHtml(contentHtml || descriptionHtml)).slice(0, 220);
 
       const dt = pubDate ? new Date(pubDate) : null;
@@ -230,12 +318,13 @@ export async function fetchMediumFeed(feedUrl: string): Promise<FeedItem[]> {
         coverImage: cover || undefined,
       } satisfies FeedItem;
     })
-    .filter(Boolean) as FeedItem[];
+    .filter(Boolean)
+    .map((item) => withCoverFallback(item as FeedItem)) as FeedItem[];
 }
 
 export async function fetchSubstackFeed(feedUrl: string): Promise<FeedItem[]> {
   // same RSS parsing approach; Substack feed is standard RSS.
-  const res = await fetch(feedUrl, { next: { revalidate: 900 } });
+  const res = await fetch(feedUrl, { next: { revalidate: FEED_REVALIDATE_SECONDS } });
   const xml = await res.text();
   const items = xml.split(/<item>/i).slice(1).map((chunk) => chunk.split(/<\/item>/i)[0]);
 
@@ -246,7 +335,15 @@ export async function fetchSubstackFeed(feedUrl: string): Promise<FeedItem[]> {
       const pubDate = (getTag(it, 'pubDate') || '').trim();
       const content = getTag(it, 'content:encoded') || getTag(it, 'description') || '';
       const contentHtml = decodeCdata(content);
-      const cover = extractFirstImg(contentHtml);
+      const cover = uniqueStrings([
+        ...extractImgSources(contentHtml),
+        getTagAttribute(it, 'media:content', 'url'),
+        getTagAttribute(it, 'media:thumbnail', 'url'),
+        getTagAttribute(it, 'itunes:image', 'href'),
+        ...getTagAttributes(it, 'enclosure', 'url'),
+      ])
+        .map((candidate) => safeHttpUrl(candidate, link))
+        .find(Boolean);
       const excerpt = stripHtml(contentHtml).slice(0, 220);
 
       const dt = pubDate ? new Date(pubDate) : null;
@@ -263,11 +360,12 @@ export async function fetchSubstackFeed(feedUrl: string): Promise<FeedItem[]> {
         coverImage: cover || undefined,
       } satisfies FeedItem;
     })
-    .filter(Boolean) as FeedItem[];
+    .filter(Boolean)
+    .map((item) => withCoverFallback(item as FeedItem)) as FeedItem[];
 }
 
 export async function fetchMn7rFeed(feedUrl: string): Promise<FeedItem[]> {
-  return parseRssFeed(feedUrl, 'mn7r', { resolveArticleImages: true, articleImageLimit: 1 });
+  return parseRssFeed(feedUrl, 'mn7r', { resolveArticleImages: true, articleImageLimit: 5 });
 }
 
 export function mergeFeeds(...lists: FeedItem[][]): FeedItem[] {

@@ -91,7 +91,7 @@ export default function WorkBrief({ artifact }: { artifact: Artifact }) {
             <div>
               <dt>Canonical site</dt>
               <dd>
-                <a href={siteLink.url} target="_blank" rel="noreferrer">
+                <a href={siteLink.url} target="_blank" rel="noopener noreferrer">
                   {siteLink.label || 'Site'}
                 </a>
               </dd>
@@ -101,7 +101,7 @@ export default function WorkBrief({ artifact }: { artifact: Artifact }) {
             <div>
               <dt>GitHub</dt>
               <dd>
-                <a href={githubLink.url} target="_blank" rel="noreferrer">
+                <a href={githubLink.url} target="_blank" rel="noopener noreferrer">
                   {githubLink.label || 'GitHub'}
                 </a>
               </dd>

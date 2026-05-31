@@ -16,7 +16,8 @@
     "content:new-series": "node scripts/new-series.mjs",
     "llms:generate": "node scripts/generate-llm-index.mjs",
     "content:validate": "node scripts/validate-content.mjs",
-    "content:review": "node scripts/content-review-report.mjs"
+    "content:review": "node scripts/content-review-report.mjs",
+    "media:review": "node scripts/media-optimization-report.mjs"
   },
   "dependencies": {
     "next": "16.1.6",

@@ -16,6 +16,7 @@ const labels: Record<string, string> = {
   'book-site': 'Book site',
   series: 'Series site',
   'series-site': 'Series site',
+  bsky: 'Bluesky',
   bluesky: 'Bluesky',
   x: 'X',
   linkedin: 'LinkedIn',
@@ -40,6 +41,7 @@ const priority: Record<string, number> = {
   'series-site': 5,
   github: 6,
   youtube: 7,
+  bsky: 8,
   bluesky: 8,
   x: 8,
   linkedin: 8,
@@ -91,7 +93,7 @@ export default function WorkActionLinks({
           className={isPrimary(link) ? 'work-action-links__link work-action-links__link--primary' : 'work-action-links__link'}
           href={link.url}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           {labelFor(link)}
         </a>

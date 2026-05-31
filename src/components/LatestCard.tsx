@@ -41,7 +41,7 @@ export default function LatestCard({
 
   if (href.startsWith('http')) {
     return (
-      <a className={className} href={href} target="_blank" rel="noreferrer">
+      <a className={className} href={href} target="_blank" rel="noopener noreferrer">
         {content}
       </a>
     );

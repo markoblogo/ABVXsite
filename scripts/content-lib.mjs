@@ -20,6 +20,7 @@ export const validMediaRoles = new Set([
 ]);
 export const validLinkTypes = new Set([
   'site',
+  'website',
   'blog',
   'github',
   'demo',
@@ -27,9 +28,14 @@ export const validLinkTypes = new Set([
   'amazon',
   'kindle',
   'paperback',
+  'amazon-kindle',
+  'amazon-paperback',
   'pdf',
   'epub',
   'series',
+  'book-site',
+  'series-site',
+  'bsky',
   'bluesky',
   'x',
   'linkedin',

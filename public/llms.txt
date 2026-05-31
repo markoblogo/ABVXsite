@@ -132,6 +132,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Market Infrastructure & Brokerage
   Tags: brokerage, agro-commodities, commodity brokerage, grains, oilseeds, execution, workflows, market-infrastructure
 
+- Практичний гайд зі спотового ринку: фізичний аграрний ринок
+  URL: https://abvx.xyz/books/spot-market-handbook-ua-free-edition
+  Summary: Практичний посібник з роботи на фізичному аграрному спотовому ринку: як будувати угоди, рахувати ризики і тримати операційну дисципліну у зерновому бізнесі.
+  Group: Market Infrastructure & Brokerage
+  Tags: brokerage, agro-commodities, spot-market, physical-commodity-markets, execution, workflows, market-infrastructure, trading
+
 - Dark Gestalt: How Brands Hijack Emotions, Distort Perception, and Manufacture Desire
   URL: https://abvx.xyz/books/dark-gestalt
   Summary: A sharp exploration of how brands shape emotion, perception and desire, and how modern behavioral design can manipulate decisions through symbols, shortcuts, narratives and AI-driven persuasion.

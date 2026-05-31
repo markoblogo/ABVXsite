@@ -84,7 +84,7 @@ function DirectionCard({
                 className="inline-flex items-center rounded-full border border-black/15 bg-black/5 px-2.5 py-1 text-xs font-semibold text-zinc-800 hover:bg-black/10 dark:border-white/15 dark:bg-white/5 dark:text-zinc-200 dark:hover:bg-white/10"
                 href={href}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 {label}
               </a>
@@ -98,7 +98,7 @@ function DirectionCard({
   if (!url) return <div className={card}>{body}</div>;
 
   return (
-    <a className={card} href={url} target="_blank" rel="noreferrer">
+    <a className={card} href={url} target="_blank" rel="noopener noreferrer">
       {body}
     </a>
   );

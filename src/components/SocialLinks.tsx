@@ -13,7 +13,7 @@ export default function SocialLinks({
   return (
     <div className={`social-links${compact ? ' social-links--compact' : ''}`}>
       {links.map((link) => (
-        <a key={`${link.type}-${link.url}`} href={link.url} target="_blank" rel="noreferrer">
+        <a key={`${link.type}-${link.url}`} href={link.url} target="_blank" rel="noopener noreferrer">
           {socialLabel(link)}
         </a>
       ))}

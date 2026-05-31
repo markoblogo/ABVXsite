@@ -6,9 +6,10 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import WorkBrief from '@/components/WorkBrief';
 import WorkDetailHero from '@/components/WorkDetailHero';
 import WorkRelatedCard from '@/components/WorkRelatedCard';
-import { getArtifactBySlug, getArtifacts, getBooks, type Artifact, type Book } from '@/content';
+import { getArtifactBySlug, getArtifacts, getBooks, type Artifact, type Book, type ContentImage } from '@/content';
 import { socialLinks } from '@/content/link-utils';
 import { toPublicArtifact, toPublicBook } from '@/content/public-props';
+import { fetchMn7rFeed } from '@/lib/feeds';
 import {
   artifactJsonLd,
   breadcrumbJsonLd,
@@ -162,6 +163,22 @@ function relatedBookScore(artifact: Artifact, book: Book): number {
   return score;
 }
 
+async function latestMn7rBlogImage(feedUrl?: string): Promise<ContentImage | undefined> {
+  if (!feedUrl) return undefined;
+  try {
+    const latest = (await fetchMn7rFeed(feedUrl))[0];
+    if (!latest?.coverImage) return undefined;
+    return {
+      src: latest.coverImage,
+      alt: latest.title,
+      role: 'rss-image',
+      mediaRole: 'rss-image',
+    };
+  } catch {
+    return undefined;
+  }
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -201,6 +218,9 @@ export default async function WorkDetailPage({
   const image = artifact.heroImage || artifact.thumbnail;
   const focusInfrastructure = isFocusInfrastructure(artifact);
   const relatedItems = relatedItemsForWork(artifact);
+  const mn7rBlogRelated = relatedItems.find((related) => related.kind === 'artifact' && related.item.slug === 'mn7r-blog');
+  const mn7rBlogRelatedImage =
+    mn7rBlogRelated?.kind === 'artifact' ? await latestMn7rBlogImage(mn7rBlogRelated.item.rssFeed?.url) : undefined;
   const youtube = artifact.links.find((link) => link.type === 'youtube');
   const videoUrl = youtube ? youtubeEmbedUrl(youtube.url) : undefined;
   const publicArtifact = toPublicArtifact(artifact);
@@ -280,6 +300,7 @@ export default async function WorkDetailPage({
             {relatedItems.map((related) => (
               <WorkRelatedCard
                 key={`${related.kind}-${related.item.id}`}
+                imageOverride={related.item.slug === 'mn7r-blog' ? mn7rBlogRelatedImage : undefined}
                 related={
                   related.kind === 'artifact'
                     ? { kind: 'artifact', item: toPublicArtifact(related.item) }

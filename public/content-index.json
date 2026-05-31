@@ -819,6 +819,11 @@
           "title": "Брокеридж на ринках зернових та олійних",
           "canonicalUrl": "https://abvx.xyz/books/mn7r-agro-commodity-brokerage-ua-free-edition",
           "relation": "member"
+        },
+        {
+          "title": "Практичний гайд зі спотового ринку: фізичний аграрний ринок",
+          "canonicalUrl": "https://abvx.xyz/books/spot-market-handbook-ua-free-edition",
+          "relation": "member"
         }
       ]
     },
@@ -1502,6 +1507,84 @@
         {
           "title": "Liqua",
           "canonicalUrl": "https://abvx.xyz/work/liqua",
+          "relation": "related"
+        },
+        {
+          "title": "MN7R Commodity Brokerage Library",
+          "canonicalUrl": "https://abvx.xyz/books/mn7r-commodity-brokerage-library",
+          "relation": "series"
+        }
+      ]
+    },
+    {
+      "type": "free-book",
+      "section": "books",
+      "ecosystem": "Market Infrastructure & Brokerage",
+      "group": "Market Infrastructure & Brokerage",
+      "status": "released",
+      "title": "Практичний гайд зі спотового ринку: фізичний аграрний ринок",
+      "summary": "Практичний посібник з роботи на фізичному аграрному спотовому ринку: як будувати угоди, рахувати ризики і тримати операційну дисципліну у зерновому бізнесі.",
+      "canonicalUrl": "https://abvx.xyz/books/spot-market-handbook-ua-free-edition",
+      "tags": [
+        "brokerage",
+        "agro-commodities",
+        "spot-market",
+        "physical-commodity-markets",
+        "execution",
+        "workflows",
+        "market-infrastructure",
+        "trading",
+        "Ukraine",
+        "MN7R",
+        "1D3X"
+      ],
+      "links": [
+        {
+          "type": "pdf",
+          "label": "PDF",
+          "url": "https://spike.1d3x.com/files/spot-market-handbook-ua.pdf"
+        },
+        {
+          "type": "epub",
+          "label": "EPUB",
+          "url": "https://spike.1d3x.com/files/spot-market-handbook-ua.epub"
+        },
+        {
+          "type": "site",
+          "label": "Про проект",
+          "url": "https://spike.1d3x.com/uk/about"
+        }
+      ],
+      "updatedAt": "2026-05-31",
+      "related": [
+        {
+          "title": "1D3X",
+          "canonicalUrl": "https://abvx.xyz/work/1d3x",
+          "relation": "related"
+        },
+        {
+          "title": "SPIKE SPOT COMMODITY INDEX UKRAINE",
+          "canonicalUrl": "https://abvx.xyz/work/spike-spot-commodity-index-ukraine",
+          "relation": "related"
+        },
+        {
+          "title": "MN7R",
+          "canonicalUrl": "https://abvx.xyz/work/mn7r",
+          "relation": "related"
+        },
+        {
+          "title": "MN7R Blog",
+          "canonicalUrl": "https://abvx.xyz/work/mn7r-blog",
+          "relation": "related"
+        },
+        {
+          "title": "Cropto",
+          "canonicalUrl": "https://abvx.xyz/work/cropto",
+          "relation": "related"
+        },
+        {
+          "title": "Cropto Monitor: Commodity Signals Terminal",
+          "canonicalUrl": "https://abvx.xyz/work/cropto-monitor",
           "relation": "related"
         },
         {

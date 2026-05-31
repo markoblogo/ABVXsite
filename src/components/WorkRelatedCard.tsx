@@ -12,15 +12,21 @@ function isBookItem(related: RelatedItem): related is { kind: 'book'; item: Book
   return related.kind === 'book';
 }
 
-export default function WorkRelatedCard({ related }: { related: RelatedItem }) {
+export default function WorkRelatedCard({
+  related,
+  imageOverride,
+}: {
+  related: RelatedItem;
+  imageOverride?: ContentImage;
+}) {
   const isBook = isBookItem(related);
   const title = isBook
     ? related.item.displayTitle || related.item.shortTitle || related.item.title
     : related.item.title;
   const href = isBook ? `/books/${related.item.slug}` : `/work/${related.item.slug}`;
-  const image: ContentImage | undefined = isBook
+  const image: ContentImage | undefined = imageOverride || (isBook
     ? related.item.coverImage || related.item.heroImage
-    : related.item.thumbnail || related.item.heroImage;
+    : related.item.thumbnail || related.item.heroImage);
   const links: ContentLink[] = related.item.links;
   const meta = isBook
     ? related.item.series || related.item.category || related.item.type

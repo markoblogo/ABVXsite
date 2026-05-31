@@ -72,7 +72,7 @@ export default function BookActionLinks({
           className={isPrimary(link) ? 'book-action-links__link book-action-links__link--primary' : 'book-action-links__link'}
           href={link.url}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           {labels[link.type] || link.label}
         </a>

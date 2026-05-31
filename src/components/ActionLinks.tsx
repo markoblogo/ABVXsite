@@ -17,6 +17,7 @@ const preferredLabels: Record<string, string> = {
   series: 'Series',
   'book-site': 'Site',
   'series-site': 'Series',
+  bsky: 'Bluesky',
   bluesky: 'Bluesky',
   x: 'X',
   linkedin: 'LinkedIn',
@@ -47,6 +48,7 @@ const priority: Record<string, number> = {
   epub: 8,
   youtube: 9,
   deck: 9,
+  bsky: 10,
   bluesky: 10,
   x: 10,
   linkedin: 10,
@@ -82,7 +84,7 @@ export default function ActionLinks({
   return (
     <div className={`action-links${compact ? ' action-links--compact' : ''}`}>
       {visibleLinks.map((link) => (
-        <a key={`${link.type}-${link.url}`} href={link.url} target="_blank" rel="noreferrer">
+        <a key={`${link.type}-${link.url}`} href={link.url} target="_blank" rel="noopener noreferrer">
           {preferredLabels[link.type] || link.label}
         </a>
       ))}

@@ -33,7 +33,7 @@ export default function ProjectCatalogueCard({
     <MediaPanel image={cardImage} title={cardTitle} variant="project" />
   ) : null;
   const heading = isExternal ? (
-    <a href={cardHref} target="_blank" rel="noreferrer">
+    <a href={cardHref} target="_blank" rel="noopener noreferrer">
       {cardTitle}
     </a>
   ) : (
@@ -43,7 +43,7 @@ export default function ProjectCatalogueCard({
   return (
     <article className={`project-catalogue-card project-catalogue-card--${tone}`}>
       {media && isExternal ? (
-        <a className="project-catalogue-card__media" href={cardHref} target="_blank" rel="noreferrer" aria-label={cardTitle}>
+        <a className="project-catalogue-card__media" href={cardHref} target="_blank" rel="noopener noreferrer" aria-label={cardTitle}>
           {media}
         </a>
       ) : null}

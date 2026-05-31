@@ -44,6 +44,7 @@ const linkTypeMap: Record<string, ContentLinkType> = {
   'series-site': 'series',
   'book-site': 'site',
   bluesky: 'bluesky',
+  bsky: 'bluesky',
   x: 'x',
   linkedin: 'linkedin',
   telegram: 'telegram',
@@ -55,6 +56,17 @@ const linkTypeMap: Record<string, ContentLinkType> = {
   deck: 'deck',
   other: 'other',
 };
+
+function safeContentUrl(value: string): string {
+  if (value.startsWith('/')) return value;
+  try {
+    const url = new URL(value);
+    if (['http:', 'https:', 'mailto:'].includes(url.protocol)) return url.toString();
+  } catch {
+    return '';
+  }
+  return '';
+}
 
 function parseMarkdownFile(source: string, filePath: string): ParsedFile {
   if (!source.startsWith('---')) {
@@ -159,7 +171,7 @@ function normalizeLinks(value: unknown): ContentLink[] {
       return {
         type,
         label: stringValue(item.label, type),
-        url: stringValue(item.url),
+        url: safeContentUrl(stringValue(item.url)),
       };
     })
     .filter((link) => link.url);

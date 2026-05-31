@@ -132,7 +132,7 @@ export default function WorkWithMe() {
             className="wm-btn wm-btn--primary"
             href="https://www.linkedin.com/in/abvcreative/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             LinkedIn DM
           </a>

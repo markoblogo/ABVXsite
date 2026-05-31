@@ -179,10 +179,10 @@ export default async function WritingPage({
             no recent items. The page will repopulate automatically when the feeds respond.
           </p>
           <div className="link-strip">
-            <a href="https://abvcreative.medium.com/" target="_blank" rel="noreferrer">
+            <a href="https://abvcreative.medium.com/" target="_blank" rel="noopener noreferrer">
               Medium
             </a>
-            <a href="https://abvx.substack.com/" target="_blank" rel="noreferrer">
+            <a href="https://abvx.substack.com/" target="_blank" rel="noopener noreferrer">
               Substack
             </a>
           </div>

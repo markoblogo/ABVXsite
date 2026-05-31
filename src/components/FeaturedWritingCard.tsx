@@ -26,7 +26,7 @@ export default function FeaturedWritingCard({
         className="featured-writing-card__media"
         href={href}
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         aria-label={`Read featured essay: ${title}`}
       >
         {image ? (
@@ -41,12 +41,12 @@ export default function FeaturedWritingCard({
           {date ? ` / ${date}` : ''}
         </div>
         <h2>
-          <a href={href} target="_blank" rel="noreferrer">
+          <a href={href} target="_blank" rel="noopener noreferrer">
             {title}
           </a>
         </h2>
         <p>{excerpt}</p>
-        <a className="writing-read-link" href={href} target="_blank" rel="noreferrer">
+        <a className="writing-read-link" href={href} target="_blank" rel="noopener noreferrer">
           Read essay -&gt;
         </a>
       </div>

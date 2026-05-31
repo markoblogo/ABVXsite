@@ -52,6 +52,8 @@ export default function MediaPanel({
           height={height}
           loading={priority ? 'eager' : 'lazy'}
           fetchPriority={priority ? 'high' : 'auto'}
+          decoding="async"
+          referrerPolicy="no-referrer"
         />
       </figure>
     );
@@ -66,6 +68,7 @@ export default function MediaPanel({
         height={height}
         loading={priority ? 'eager' : 'lazy'}
         fetchPriority={priority ? 'high' : 'auto'}
+        decoding="async"
         sizes={isBook ? '(max-width: 768px) 100vw, 42vw' : '(max-width: 768px) 100vw, 55vw'}
       />
     </figure>

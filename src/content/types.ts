@@ -65,6 +65,7 @@ export type ContentLinkType =
   | 'series'
   | 'book-site'
   | 'series-site'
+  | 'bsky'
   | 'bluesky'
   | 'x'
   | 'linkedin'

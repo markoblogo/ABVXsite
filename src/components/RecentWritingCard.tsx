@@ -26,7 +26,7 @@ export default function RecentWritingCard({
         className="recent-writing-card__media"
         href={href}
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         aria-label={`Read ${title}`}
       >
         {image ? (
@@ -41,12 +41,12 @@ export default function RecentWritingCard({
           {date ? ` / ${date}` : ''}
         </div>
         <h3>
-          <a href={href} target="_blank" rel="noreferrer">
+          <a href={href} target="_blank" rel="noopener noreferrer">
             {title}
           </a>
         </h3>
         <p>{excerpt}</p>
-        <a className="writing-read-link" href={href} target="_blank" rel="noreferrer">
+        <a className="writing-read-link" href={href} target="_blank" rel="noopener noreferrer">
           Read -&gt;
         </a>
       </div>

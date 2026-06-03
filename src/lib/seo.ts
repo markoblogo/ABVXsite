@@ -186,13 +186,28 @@ export function aboutPageJsonLd() {
     '@context': 'https://schema.org',
     '@type': 'AboutPage',
     '@id': `${SITE_URL}/about#page`,
-    name: 'About / Method',
+    name: 'About / Method - AI-native systems for complex markets',
     description:
-      'About Anton Biletskyi-Volokh, ABVX, working method, operating lines and collaboration context.',
+      'About Anton Biletskyi-Volokh: AI-native systems for complex markets, agro-commodity brokerage infrastructure, agentic development workflows, strategic product systems and collaboration context.',
     url: `${SITE_URL}/about`,
     mainEntityOfPage: `${SITE_URL}/about`,
     isPartOf: { '@id': `${SITE_URL}/#website` },
     about: { '@id': `${SITE_URL}/#person` },
+    audience: [
+      { '@type': 'Audience', audienceType: 'grant evaluators' },
+      { '@type': 'Audience', audienceType: 'startup founders' },
+      { '@type': 'Audience', audienceType: 'agro-commodity market teams' },
+      { '@type': 'Audience', audienceType: 'AI-native product and engineering teams' },
+    ],
+    mentions: [
+      'AI-native operating systems',
+      'agro-commodity brokerage',
+      'market intelligence',
+      'commodity indexes',
+      'agentic development workflows',
+      'strategic go-to-market systems',
+      'grant-backed projects',
+    ],
   };
 }
 

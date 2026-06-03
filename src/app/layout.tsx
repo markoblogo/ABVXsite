@@ -23,9 +23,9 @@ const personJsonLd = {
     'ABVX',
   ],
   url: 'https://abvx.xyz',
-  jobTitle: 'Systems, Strategy, and Product Development',
+  jobTitle: 'AI-native Systems, Market Infrastructure, and Strategic Product Development',
   description:
-    'Designer and builder of complex systems across strategy, markets, technology, language, and AI.',
+    'Builder of AI-native operating systems for complex markets, with current focus on international agro-commodity brokerage, market intelligence, trading workflows and agentic development infrastructure.',
   identifier: [
     {
       '@type': 'PropertyValue',
@@ -51,6 +51,14 @@ const personJsonLd = {
     'Market intelligence systems',
     'AI-native development',
     'Agentic workflows',
+    'AI-assisted brokerage workflows',
+    'Workflow automation',
+    'Signal extraction',
+    'Document processing',
+    'CRM and execution coordination',
+    'Strategic marketing',
+    'Go-to-market strategy',
+    'Grant-backed product development',
     'LLM optimization',
     'Web services',
     'Protocols',
@@ -119,7 +127,7 @@ const websiteJsonLd = {
   ],
   url: 'https://abvx.xyz',
   description:
-    'A working index of systems, strategy, market infrastructure, AI-native development, language experiments, books, translations, and essays.',
+    'A working index for AI-native operating systems, agro-commodity market infrastructure, agentic development tools, strategic product systems, books and essays.',
   inLanguage: 'en',
   author: { '@id': 'https://abvx.xyz/#person' },
   publisher: { '@id': 'https://abvx.xyz/#organization' },
@@ -128,13 +136,13 @@ const websiteJsonLd = {
       '@type': 'CollectionPage',
       name: 'Current Focus',
       url: 'https://abvx.xyz/focus',
-      description: 'Agro-commodity trading infrastructure and related systems.',
+      description: 'Agro-commodity brokerage, market intelligence, trading workflows, commodity indexes and AI-assisted infrastructure.',
     },
     {
       '@type': 'CollectionPage',
       name: 'Systems Catalogue',
       url: 'https://abvx.xyz/systems',
-      description: 'Web services, AI workflows, protocols, tools, and language experiments.',
+      description: 'AI-native workflows, agent skillpacks, orchestration systems, web services, protocols and operational tools.',
     },
     {
       '@type': 'CollectionPage',
@@ -176,7 +184,7 @@ export const metadata: Metadata = {
     template: '%s · Anton Biletskyi-Volokh',
   },
   description:
-    'Live working index for systems, strategy, market infrastructure, agentic development, language experiments, books, and essays.',
+    'Anton Biletskyi-Volokh builds AI-native operating systems for complex markets: agro-commodity brokerage, trading workflows, market intelligence and agentic development infrastructure.',
   metadataBase: new URL('https://abvx.xyz'),
   verification: {
     ...(googleVerification ? { google: googleVerification } : {}),
@@ -187,7 +195,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Anton Biletskyi-Volokh',
     description:
-      'Live working index for systems, strategy, market infrastructure, agentic development, language experiments, books, and essays.',
+      'AI-native operating systems for complex markets: agro-commodity brokerage, trading workflows, market intelligence and agentic development infrastructure.',
     url: 'https://abvx.xyz',
     siteName: 'Anton Biletskyi-Volokh',
     type: 'website',
@@ -197,7 +205,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Anton Biletskyi-Volokh',
     description:
-      'Live working index for systems, strategy, market infrastructure, agentic development, language experiments, books, and essays.',
+      'AI-native operating systems for complex markets: agro-commodity brokerage, trading workflows, market intelligence and agentic development infrastructure.',
     images: [defaultOgImage.url],
   },
 };

@@ -1876,6 +1876,48 @@ a {
   line-height: 1.48;
 }
 
+.about-signal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.about-signal-grid article {
+  display: grid;
+  min-height: 150px;
+  align-content: space-between;
+  gap: 1rem;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--route-soft) 86%, transparent), transparent 62%),
+    var(--about-panel);
+  padding: 1rem;
+}
+
+.about-signal-grid span {
+  width: fit-content;
+  border: 1px solid var(--line);
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.28rem 0.42rem;
+  font-size: 0.66rem;
+  font-weight: 950;
+  letter-spacing: 0.11em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.about-signal-grid strong {
+  display: block;
+  max-width: 22rem;
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
+  font-weight: 950;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
 .about-section {
   display: grid;
   gap: 1rem;
@@ -1959,6 +2001,32 @@ a {
   outline: none;
   box-shadow: 7px 7px 0 var(--ink);
   transform: translate(-3px, -3px);
+}
+
+.about-project-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  border-block: 1px solid var(--line);
+  padding-block: 0.85rem;
+}
+
+.about-project-strip a {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  padding: 0.45rem 0.6rem;
+  font-size: 0.68rem;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.about-project-strip a:hover,
+.about-project-strip a:focus-visible {
+  background: var(--route-accent);
+  outline: none;
 }
 
 .about-method {
@@ -3724,7 +3792,8 @@ a {
   }
 
   .about-card-grid,
-  .about-line-grid {
+  .about-line-grid,
+  .about-signal-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -3786,7 +3855,8 @@ a {
   }
 
   .about-card-grid,
-  .about-line-grid {
+  .about-line-grid,
+  .about-signal-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 
@@ -4823,9 +4893,10 @@ a {
 
   .page-header h1,
   .hero-poster h1 {
-    max-width: 11ch;
-    font-size: clamp(3.1rem, 18vw, 5.6rem);
-    letter-spacing: -0.105em;
+    max-width: 10.5ch;
+    font-size: clamp(2.85rem, 14.8vw, 4.8rem);
+    letter-spacing: -0.085em;
+    line-height: 0.82;
   }
 
   .page-header p,
@@ -4835,6 +4906,21 @@ a {
 
   .hero-poster {
     min-height: 440px;
+  }
+
+  .hero-poster__copy {
+    padding: 1.15rem;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-actions a {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
   }
 
   .hero-poster::before {
@@ -4852,21 +4938,34 @@ a {
   }
 
   .hero-poster__motif span:nth-child(1) {
-    right: -3rem;
-    top: 6rem;
-    width: 9rem;
+    right: -4rem;
+    top: 1.5rem;
+    width: 8rem;
+    opacity: 0.42;
   }
 
   .hero-poster__motif span:nth-child(2) {
     right: 1rem;
-    bottom: 3rem;
-    width: 4.8rem;
-    box-shadow: 7px 7px 0 var(--ink);
+    bottom: 1.25rem;
+    width: 4rem;
+    box-shadow: 6px 6px 0 var(--ink);
   }
 
   .hero-poster__motif span:nth-child(3) {
-    left: auto;
-    right: 6.5rem;
+    opacity: 0;
+  }
+
+  .route-about .page-header h1 {
+    max-width: 9ch;
+    font-size: clamp(2.75rem, 13.6vw, 4.2rem);
+    letter-spacing: -0.045em;
+    line-height: 0.86;
+  }
+
+  .about-intro h2,
+  .about-section__header h2,
+  .about-work h2 {
+    letter-spacing: -0.055em;
   }
 
   .site-footer__inner {

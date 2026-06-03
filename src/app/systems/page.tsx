@@ -7,10 +7,10 @@ import { toPublicArtifact } from '@/content/public-props';
 import { artifactListItem, collectionPageJsonLd, itemListJsonLd, metadataWithImage, SITE_URL, systemsOgImage } from '@/lib/seo';
 import type { Metadata } from 'next';
 
-const systemsDescription = 'Services, workflows, protocols, tools and technical companion systems.';
+const systemsDescription = 'AI-native development systems, agentic workflows, reusable skillpacks, orchestration layers, protocols, tools and technical companion systems.';
 
 export const metadata: Metadata = metadataWithImage({
-  title: 'Systems Catalogue',
+  title: 'Systems Catalogue - AI-native development systems',
   description: systemsDescription,
   canonicalPath: '/systems',
   image: systemsOgImage,
@@ -56,7 +56,7 @@ const ecosystems = [
   },
   {
     title: 'AI-native Development Systems',
-    description: 'AI-native workflows, orchestration systems, development protocols and operational tooling.',
+    description: 'AI-native workflows, orchestration systems, reusable agent skillpacks, project instruction layers, development protocols and operational tooling.',
     groups: [
       {
         title: 'Workflow & Orchestration',
@@ -147,7 +147,7 @@ export default function SystemsPage() {
       <PageHeader
         eyebrow="Systems Catalogue"
         title="Systems Catalogue"
-        summary="Services, workflows, protocols, tools and technical companion systems."
+        summary="AI-native development systems, agentic workflows, reusable skillpacks, orchestration layers, protocols, tools and technical companion systems."
       />
 
       {ecosystems.map((ecosystem) => {

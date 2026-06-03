@@ -13,7 +13,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 const focusDescription =
-  'Expert map of agro commodity market infrastructure: trading systems, benchmark indexes, monitoring layers, market fronts and AI-assisted workflows for physical commodity markets.';
+  'Expert map of agro-commodity market infrastructure: brokerage operating systems, trading workflows, benchmark indexes, monitoring layers, market fronts and AI-assisted tools for physical commodity markets.';
 
 export const metadata: Metadata = metadataWithImage({
   title: 'Agro Commodity Market Infrastructure',
@@ -63,12 +63,17 @@ const focusFaqs: ContentFaq[] = [
   {
     question: 'What belongs in the ABVX Focus area?',
     answer:
-      'Focus contains the active agro-commodity infrastructure layer: brokerage systems, market intelligence surfaces, benchmark indexes, partner fronts and practical tools for physical commodity markets.',
+      'Focus contains the active agro-commodity infrastructure layer: brokerage systems, trading workflows, market intelligence surfaces, benchmark indexes, partner fronts and practical AI-assisted tools for physical commodity markets.',
   },
   {
     question: 'Why are benchmark and monitoring systems grouped together?',
     answer:
       'They solve the same infrastructure problem from different angles. Indexes provide structured reference pricing, while monitoring systems provide market context, signals and situational awareness.',
+  },
+  {
+    question: 'How does AI fit into this market-infrastructure work?',
+    answer:
+      'AI is treated as an operating layer rather than a decorative feature: market intelligence, workflow automation, agent-assisted brokerage, signal extraction, document processing and CRM/execution coordination around physical commodity markets.',
   },
   {
     question: 'Is every Focus project a trading platform?',
@@ -220,7 +225,7 @@ export default async function FocusPage() {
       <PageHeader
         eyebrow="Current Focus"
         title="Agro Commodity Trading Infrastructure"
-        summary="Digital infrastructure, standards, indexes, workflows and AI-assisted tools for physical agro-commodity markets."
+        summary="Brokerage operating systems, trading workflows, benchmark indexes, market-intelligence layers and AI-assisted tools for physical agro-commodity markets."
       >
         <div className="focus-pillar-links" aria-label="Key infrastructure projects">
           {focusPillarLinks.map((item) => (
@@ -239,6 +244,11 @@ export default async function FocusPage() {
             Agro commodity market infrastructure is the digital and methodological layer around
             physical grain and oilseed markets: systems that help participants observe prices,
             compare benchmarks, coordinate trading workflows and understand market context.
+          </p>
+          <p>
+            In this ecosystem, AI is an operating layer: market intelligence, workflow automation,
+            agent-assisted brokerage, signal extraction, document processing and CRM/execution
+            coordination around physical commodity markets.
           </p>
         </div>
 

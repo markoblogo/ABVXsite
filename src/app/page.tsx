@@ -11,7 +11,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 const homeDescription =
-  'ABVX is the working index of Anton Biletskyi-Volokh: strategy, AI-native development, market infrastructure, web services, language experiments, books and essays.';
+  'Anton Biletskyi-Volokh builds AI-native operating systems for complex markets: agro-commodity brokerage, trading workflows, market intelligence and agentic development infrastructure.';
 
 export const metadata: Metadata = metadataWithImage({
   title: 'ABVX',
@@ -24,11 +24,11 @@ export const revalidate = 900;
 
 const heroLabels = [
   'MARKET INFRASTRUCTURE',
-  'AI SYSTEMS',
-  'WEB SERVICES',
-  'LANGUAGE EXPERIMENTS',
-  'BOOKS',
-  'ESSAYS',
+  'AGRO BROKERAGE',
+  'AI-NATIVE SYSTEMS',
+  'WORKFLOW ORCHESTRATION',
+  'MARKET INTELLIGENCE',
+  'STRATEGIC GTM',
 ];
 
 const fallbackLatest = {
@@ -126,47 +126,46 @@ export default async function Home() {
         })}
       />
       <HeroPoster
-        eyebrow="ABVX / WORKING INDEX"
-        title="Systems that survive contact with reality."
-        summary="ABVX is the working index of Anton Biletskyi-Volokh: strategy, AI-native development, market infrastructure, web services, language experiments, books and essays."
+        eyebrow="ABVX / AI-NATIVE SYSTEMS"
+        title="AI-native systems for complex markets."
+        summary="I build agentic development tools and agro-commodity market infrastructure: brokerage workspaces, market-intelligence layers, commodity-index systems and validation-gated AI workflows."
       >
         <TagList tags={heroLabels} />
         <div className="hero-actions">
           <Link href="#explore-the-work">Explore the work</Link>
-          <Link href="/writing">Read latest writing</Link>
+          <Link href="/work-with-me">Work with me</Link>
         </div>
       </HeroPoster>
 
       <MarqueeTicker
         items={[
-          'Market infrastructure',
+          'International agro-commodity brokerage',
+          'Agent-assisted market workflows',
+          'Commodity indexes and monitoring',
           'AI-native development',
-          'Web services and protocols',
-          'Constructed-language experiments',
-          'Books and essays',
+          'Strategic product and go-to-market',
         ]}
       />
 
       <section className="about-snapshot" aria-labelledby="about-snapshot-title">
         <div className="eyebrow">About snapshot</div>
-        <h2 id="about-snapshot-title">LinkedIn has the timeline. This site has the work.</h2>
+        <h2 id="about-snapshot-title">Markets, data, operations and AI agents in one operating layer.</h2>
         <div className="about-snapshot__copy">
           <p>
-            For more than 25 years, I have worked across strategic marketing,
-            creative direction, product development and go-to-market, building
-            brands, products, technologies and launch systems for companies,
-            partners and my own ventures.
+            I build infrastructure where markets, data, operational processes,
+            AI agents and strategic marketing intersect. The current center is
+            international agro-commodity brokerage and trading infrastructure.
           </p>
           <p>
-            Today I combine that background with AI-native workflows and agentic
-            development to build practical systems: market infrastructure, web
-            services, protocols, language experiments and publishing projects.
+            The work spans brokerage workspaces, market-intelligence surfaces,
+            local commodity indexes, execution workflows and AI-assisted tools
+            for grain and oilseed markets.
           </p>
           <p>
-            My current business focus is digital infrastructure for agro-commodity
-            trading and brokerage. My broader work spans applied AI, systems
-            design, constructed languages, books, translations and long-form
-            writing.
+            Before moving deeper into AI-native development, I spent more than
+            25 years across strategic marketing, creative direction, product
+            development, brand systems, go-to-market strategy and international
+            business communication. That background shapes how I build now.
           </p>
         </div>
       </section>
@@ -242,31 +241,31 @@ export default async function Home() {
         <div className="explore-grid">
           <SectionPanel title="Current Focus" eyebrow="01" accent>
             <p>
-              Agro-commodity trading infrastructure, brokerage workflows, market
-              interfaces, indexes, standards and AI-assisted tools for physical
-              commodity markets.
+              Agro-commodity brokerage and trading infrastructure: MN7R, Cropto,
+              market intelligence, commodity indexes, benchmark layers and
+              AI-assisted workflow tools for physical markets.
             </p>
             <Link className="panel-link" href="/focus">Open Focus</Link>
           </SectionPanel>
           <SectionPanel title="Systems Catalogue" eyebrow="02">
             <p>
-              Web services, agentic development experiments, protocols, AI/dev
-              utilities, language systems and technical companions for products,
-              books and market infrastructure.
+              Agentic development systems, reusable skillpacks, orchestration
+              layers, project instruction surfaces, validation workflows and
+              operational web tools.
             </p>
             <Link className="panel-link" href="/systems">Open Systems</Link>
           </SectionPanel>
           <SectionPanel title="ABVX Press" eyebrow="03">
             <p>
-              Books, translations, series and publishing projects across AI,
-              strategy, language, culture, markets and systems thinking.
+              Books, field manuals, translations and publishing systems that
+              turn operational knowledge into durable public assets.
             </p>
             <Link className="panel-link" href="/books">Open Books</Link>
           </SectionPanel>
           <SectionPanel title="Writing" eyebrow="04">
             <p>
-              Applied AI reviews, research breakdowns, build logs and essays on
-              validation, decision-making, automation and AI-native work.
+              Field notes on AI-native work, market infrastructure, validation,
+              decision-making, automation and strategic product systems.
             </p>
             <Link className="panel-link" href="/writing">Open Writing</Link>
           </SectionPanel>

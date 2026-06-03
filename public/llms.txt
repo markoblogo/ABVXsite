@@ -326,6 +326,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Development Surfaces & Interfaces
   Tags: ui, theme, ascii, web-tool
 
+- ABVX Agent Skills
+  URL: https://abvx.xyz/work/abvx-agent-skills
+  Summary: ABVX Agent Skills is a portable execution layer for AI-native development: small, reviewable, validation-gated skillpacks for Codex-style project work.
+  Group: Workflow & Orchestration
+  Tags: ai-dev, agent-skills, codex, workflows, validation
+
 - LLMO site/platform
   URL: https://abvx.xyz/work/llmo-site
   Summary: LLMO Site/Platform is an AI-native visibility and optimization platform focused on structured machine-readable content and discovery systems.

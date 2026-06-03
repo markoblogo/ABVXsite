@@ -61,8 +61,8 @@ const ecosystems = [
       {
         title: 'Workflow & Orchestration',
         description:
-          'Operational orchestration systems for AI-assisted development workflows, structured execution and agent coordination.',
-        slugs: ['set', 'agents-md-generator'],
+          'Operational systems for AI-assisted development: orchestration layers, project instruction surfaces and reusable agent skillpacks that turn messy project work into structured, reviewable execution. This layer is where ABVX experiments with AI-native operating discipline: not just prompting models, but defining how agents receive context, choose workflows, verify results, hand off work and avoid unsafe or wasteful actions.',
+        slugs: ['set', 'agents-md-generator', 'abvx-agent-skills'],
       },
       {
         title: 'Development Surfaces & Interfaces',

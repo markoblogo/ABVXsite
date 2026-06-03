@@ -2082,6 +2082,63 @@
       "type": "work",
       "section": "systems",
       "ecosystem": "AI-native Development Systems",
+      "group": "Workflow & Orchestration",
+      "status": "live",
+      "title": "ABVX Agent Skills",
+      "summary": "ABVX Agent Skills is a portable execution layer for AI-native development: small, reviewable, validation-gated skillpacks for Codex-style project work.",
+      "canonicalUrl": "https://abvx.xyz/work/abvx-agent-skills",
+      "tags": [
+        "ai-dev",
+        "agent-skills",
+        "codex",
+        "workflows",
+        "validation"
+      ],
+      "links": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/abvx-agent-skills"
+        },
+        {
+          "type": "site",
+          "label": "Lab",
+          "url": "https://lab.abvx.xyz/tools/abvx-agent-skills/index.html"
+        }
+      ],
+      "updatedAt": "2026-06-03",
+      "related": [
+        {
+          "title": "AGENTS.md Generator",
+          "canonicalUrl": "https://abvx.xyz/work/agents-md-generator",
+          "relation": "related"
+        },
+        {
+          "title": "SET",
+          "canonicalUrl": "https://abvx.xyz/work/set",
+          "relation": "related"
+        },
+        {
+          "title": "ABVX Lab",
+          "canonicalUrl": "https://abvx.xyz/work/abvx-lab",
+          "relation": "related"
+        },
+        {
+          "title": "LLMO site/platform",
+          "canonicalUrl": "https://abvx.xyz/work/llmo-site",
+          "relation": "related"
+        },
+        {
+          "title": "Decision Map",
+          "canonicalUrl": "https://abvx.xyz/work/decision-map",
+          "relation": "related"
+        }
+      ]
+    },
+    {
+      "type": "work",
+      "section": "systems",
+      "ecosystem": "AI-native Development Systems",
       "group": "Development Surfaces & Interfaces",
       "status": "building",
       "title": "ABVX Lab",

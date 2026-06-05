@@ -32,6 +32,8 @@ export const validLinkTypes = new Set([
   'amazon-paperback',
   'pdf',
   'epub',
+  'audio',
+  'audiobook',
   'series',
   'book-site',
   'series-site',

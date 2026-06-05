@@ -62,6 +62,8 @@ export type ContentLinkType =
   | 'amazon-paperback'
   | 'pdf'
   | 'epub'
+  | 'audio'
+  | 'audiobook'
   | 'series'
   | 'book-site'
   | 'series-site'

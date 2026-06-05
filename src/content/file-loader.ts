@@ -40,6 +40,8 @@ const linkTypeMap: Record<string, ContentLinkType> = {
   'amazon-paperback': 'paperback',
   pdf: 'pdf',
   epub: 'epub',
+  audio: 'audio',
+  audiobook: 'audiobook',
   series: 'series',
   'series-site': 'series',
   'book-site': 'site',

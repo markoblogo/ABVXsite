@@ -49,6 +49,16 @@
       "url": "https://mn7r.com/book/mn7r-agro-commodity-brokerage-en.epub"
     },
     {
+      "type": "audio",
+      "label": "Audio",
+      "url": "/media/books/mn7r-agro-commodity-brokerage-en-free-edition/audiobook.mp3"
+    },
+    {
+      "type": "audiobook",
+      "label": "Audiobook",
+      "url": "/media/books/mn7r-agro-commodity-brokerage-en-free-edition/audiobook.m4b"
+    },
+    {
       "type": "site",
       "label": "Book announcement",
       "url": "https://mn7r.com/blog/mn7r-book-en-free-edition"
@@ -71,11 +81,13 @@
   ],
   "formats": [
     "pdf",
-    "epub"
+    "epub",
+    "audio"
   ],
   "availableFormats": [
     "pdf",
-    "epub"
+    "epub",
+    "audio"
   ],
   "language": "en",
   "needsCopyReview": false,

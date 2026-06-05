@@ -39,6 +39,8 @@ function formatFormats(formats?: string[]): string | undefined {
     paperback: 'paperback',
     pdf: 'PDF',
     epub: 'EPUB',
+    audio: 'audio',
+    audiobook: 'audiobook',
     'book-site': 'book site',
     'series-site': 'series site',
     'free-editions': 'free editions',
@@ -47,7 +49,7 @@ function formatFormats(formats?: string[]): string | undefined {
 }
 
 function purchaseLinks(book: Book) {
-  return book.links.filter((link) => ['amazon', 'kindle', 'paperback', 'pdf', 'epub'].includes(link.type));
+  return book.links.filter((link) => ['amazon', 'kindle', 'paperback', 'pdf', 'epub', 'audio', 'audiobook'].includes(link.type));
 }
 
 async function latestMn7rBlogImage(feedUrl?: string): Promise<ContentImage | undefined> {
@@ -168,6 +170,7 @@ export default async function BookDetailPage({
 
   const image = book.heroImage || book.coverImage;
   const title = book.displayTitle || book.shortTitle || book.title;
+  const audioLink = book.links.find((link) => link.type === 'audio');
 
   if (book.type === 'series') {
     const relatedItems = [
@@ -345,6 +348,20 @@ export default async function BookDetailPage({
         ]}
       />
       <BookDetailHero book={book} image={image} />
+
+      {audioLink ? (
+        <section className="book-video-section" aria-labelledby="book-audio-title">
+          <div className="book-video-section__header">
+            <div className="eyebrow">Audio edition</div>
+            <h2 id="book-audio-title">Listen / Preview</h2>
+          </div>
+          <div className="book-detail-copy-panel">
+            <audio controls preload="none" style={{ width: '100%' }}>
+              <source src={audioLink.url} type="audio/mpeg" />
+            </audio>
+          </div>
+        </section>
+      ) : null}
 
       <section className="book-detail-main" aria-labelledby="book-about-title">
         <div className="book-detail-copy-panel">

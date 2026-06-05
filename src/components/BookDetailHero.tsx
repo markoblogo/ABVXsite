@@ -14,6 +14,8 @@ function formatFormats(formats?: string[]): string | undefined {
     paperback: 'paperback',
     pdf: 'PDF',
     epub: 'EPUB',
+    audio: 'audio',
+    audiobook: 'audiobook',
     'book-site': 'book site',
     'series-site': 'series site',
     'free-editions': 'free editions',

@@ -30,6 +30,11 @@
       "type": "site",
       "label": "Lab",
       "url": "https://lab.abvx.xyz/tools/abvx-agent-skills/index.html"
+    },
+    {
+      "type": "youtube",
+      "label": "YouTube",
+      "url": "https://youtu.be/F73_ofen8rI"
     }
   ],
   "featured": true,

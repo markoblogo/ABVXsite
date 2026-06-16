@@ -4,7 +4,7 @@ import JsonLd from '@/components/JsonLd';
 import MarqueeTicker from '@/components/MarqueeTicker';
 import SectionPanel from '@/components/SectionPanel';
 import TagList from '@/components/TagList';
-import { getLatestHomepageBook, getLatestSectionEntryWork } from '@/content';
+import { getLatestSectionEntryBook, getLatestSectionEntryWork } from '@/content';
 import { fetchMediumFeed, fetchMn7rFeed, fetchSubstackFeed, type FeedItem } from '@/lib/feeds';
 import { collectionPageJsonLd, defaultOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
 import type { Metadata } from 'next';
@@ -97,7 +97,7 @@ export default async function Home() {
 
   const latestFocus = getLatestSectionEntryWork('focus', 'mn7r-blog');
   const latestSystem = getLatestSectionEntryWork('systems', latestFocus?.slug);
-  const latestBook = getLatestHomepageBook();
+  const latestBook = getLatestSectionEntryBook('books');
 
   return (
     <div className="home-redesign">

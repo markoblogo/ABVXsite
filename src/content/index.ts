@@ -100,6 +100,13 @@ export function getLatestHomepageBook(): Book | undefined {
     .sort(byHomepagePublished)[0];
 }
 
+export function getLatestSectionEntryBook(section: SiteSection): Book | undefined {
+  return getBooksBySection(section)
+    .filter((book) => book.type !== 'series')
+    .filter((book) => book.primarySection === section)
+    .sort(byLatest)[0];
+}
+
 export function getBookBySlug(slug: string): Book | undefined {
   return getBooks().find((book) => book.slug === slug);
 }

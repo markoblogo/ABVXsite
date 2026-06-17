@@ -79,7 +79,7 @@
   "media": {
     "src": "/media/books/spot-market-handbook-en-free-edition/cover.jpg",
     "alt": "Spot-Market Handbook English cover",
-    "role": "book-cover",
+    "role": "generic-thumbnail",
     "width": 640,
     "height": 960
   }

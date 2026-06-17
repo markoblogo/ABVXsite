@@ -120,6 +120,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Fiction
   Tags: fiction, absurdist fiction, literary novella, English, translation, Ukrainian original, faith, loneliness
 
+- MN7R Product Guide
+  URL: https://abvx.xyz/books/mn7r-product-guide
+  Summary: A public guide to the current MN7R product: brokerage workflow, execution discipline, role model, AI operating support and public-safe demo surfaces.
+  Group: Market Infrastructure & Brokerage
+  Tags: brokerage, agro-commodities, commodity brokerage, market-infrastructure, execution, workflows, product-guide, AI
+
 - Брокеридж на ринках зернових та олійних
   URL: https://abvx.xyz/books/mn7r-agro-commodity-brokerage-ua-free-edition
   Summary: Українська безкоштовна версія практичного гіда MN7R для брокерів на ринку зернових та олійних.
@@ -137,6 +143,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Summary: Практичний посібник з роботи на фізичному аграрному спотовому ринку: як будувати угоди, рахувати ризики і тримати операційну дисципліну у зерновому бізнесі.
   Group: Market Infrastructure & Brokerage
   Tags: brokerage, agro-commodities, spot-market, physical-commodity-markets, execution, workflows, market-infrastructure, trading
+
+- Spot-Market Handbook
+  URL: https://abvx.xyz/books/spot-market-handbook-en-free-edition
+  Summary: A practical English handbook on how physical agricultural commodity markets actually work: basis, logistics, liquidity, respondent models, benchmark construction and market infrastructure.
+  Group: Market Infrastructure & Brokerage
+  Tags: spot-market, physical-commodity-markets, market-infrastructure, brokerage, agro-commodities, execution, logistics, benchmarks
 
 - Dark Gestalt: How Brands Hijack Emotions, Distort Perception, and Manufacture Desire
   URL: https://abvx.xyz/books/dark-gestalt

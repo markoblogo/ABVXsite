@@ -831,9 +831,106 @@
           "relation": "member"
         },
         {
+          "title": "MN7R Product Guide",
+          "canonicalUrl": "https://abvx.xyz/books/mn7r-product-guide",
+          "relation": "member"
+        },
+        {
+          "title": "Spot-Market Handbook",
+          "canonicalUrl": "https://abvx.xyz/books/spot-market-handbook-en-free-edition",
+          "relation": "member"
+        },
+        {
           "title": "Практичний гайд зі спотового ринку: фізичний аграрний ринок",
           "canonicalUrl": "https://abvx.xyz/books/spot-market-handbook-ua-free-edition",
           "relation": "member"
+        }
+      ]
+    },
+    {
+      "type": "free-book",
+      "section": "books",
+      "ecosystem": "Market Infrastructure & Brokerage",
+      "group": "Market Infrastructure & Brokerage",
+      "status": "released",
+      "title": "MN7R Product Guide",
+      "summary": "A public guide to the current MN7R product: brokerage workflow, execution discipline, role model, AI operating support and public-safe demo surfaces.",
+      "canonicalUrl": "https://abvx.xyz/books/mn7r-product-guide",
+      "tags": [
+        "brokerage",
+        "agro-commodities",
+        "commodity brokerage",
+        "market-infrastructure",
+        "execution",
+        "workflows",
+        "product-guide",
+        "AI",
+        "demo",
+        "MN7R"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "How to use",
+          "url": "https://mn7r.com/how-to-use"
+        },
+        {
+          "type": "pdf",
+          "label": "PDF",
+          "url": "https://mn7r.com/mn7r-guide/mn7r-product-guide.pdf"
+        },
+        {
+          "type": "epub",
+          "label": "EPUB",
+          "url": "https://mn7r.com/mn7r-guide/mn7r-product-guide.epub"
+        },
+        {
+          "type": "site",
+          "label": "MN7R",
+          "url": "https://mn7r.com/"
+        }
+      ],
+      "updatedAt": "2026-06-16",
+      "related": [
+        {
+          "title": "MN7R",
+          "canonicalUrl": "https://abvx.xyz/work/mn7r",
+          "relation": "related"
+        },
+        {
+          "title": "MN7R Blog",
+          "canonicalUrl": "https://abvx.xyz/work/mn7r-blog",
+          "relation": "related"
+        },
+        {
+          "title": "Agri-Commodity Brokerage: A Practical Guide for Brokers",
+          "canonicalUrl": "https://abvx.xyz/books/mn7r-agro-commodity-brokerage-en-free-edition",
+          "relation": "related"
+        },
+        {
+          "title": "Брокеридж на ринках зернових та олійних",
+          "canonicalUrl": "https://abvx.xyz/books/mn7r-agro-commodity-brokerage-ua-free-edition",
+          "relation": "related"
+        },
+        {
+          "title": "Практичний гайд зі спотового ринку: фізичний аграрний ринок",
+          "canonicalUrl": "https://abvx.xyz/books/spot-market-handbook-ua-free-edition",
+          "relation": "related"
+        },
+        {
+          "title": "Cropto Monitor: Commodity Signals Terminal",
+          "canonicalUrl": "https://abvx.xyz/work/cropto-monitor",
+          "relation": "related"
+        },
+        {
+          "title": "Last30Days Cropto",
+          "canonicalUrl": "https://abvx.xyz/work/last30days-cropto",
+          "relation": "related"
+        },
+        {
+          "title": "MN7R Commodity Brokerage Library",
+          "canonicalUrl": "https://abvx.xyz/books/mn7r-commodity-brokerage-library",
+          "relation": "series"
         }
       ]
     },
@@ -1017,6 +1114,89 @@
         {
           "title": "Stoic Wisdom in Toki Pona",
           "canonicalUrl": "https://abvx.xyz/books/stoic-wisdom-toki-pona",
+          "relation": "series"
+        }
+      ]
+    },
+    {
+      "type": "free-book",
+      "section": "books",
+      "ecosystem": "Market Infrastructure & Brokerage",
+      "group": "Market Infrastructure & Brokerage",
+      "status": "released",
+      "title": "Spot-Market Handbook",
+      "summary": "A practical English handbook on how physical agricultural commodity markets actually work: basis, logistics, liquidity, respondent models, benchmark construction and market infrastructure.",
+      "canonicalUrl": "https://abvx.xyz/books/spot-market-handbook-en-free-edition",
+      "tags": [
+        "spot-market",
+        "physical-commodity-markets",
+        "market-infrastructure",
+        "brokerage",
+        "agro-commodities",
+        "execution",
+        "logistics",
+        "benchmarks",
+        "Spike",
+        "MN7R",
+        "1D3X"
+      ],
+      "links": [
+        {
+          "type": "pdf",
+          "label": "PDF",
+          "url": "https://spike.1d3x.com/files/spot-market-handbook-en.pdf"
+        },
+        {
+          "type": "epub",
+          "label": "EPUB",
+          "url": "https://spike.1d3x.com/files/spot-market-handbook-en.epub"
+        },
+        {
+          "type": "site",
+          "label": "Spike Spot Index",
+          "url": "https://spike.1d3x.com/en/about"
+        }
+      ],
+      "updatedAt": "2026-06-17",
+      "related": [
+        {
+          "title": "Практичний гайд зі спотового ринку: фізичний аграрний ринок",
+          "canonicalUrl": "https://abvx.xyz/books/spot-market-handbook-ua-free-edition",
+          "relation": "related"
+        },
+        {
+          "title": "1D3X",
+          "canonicalUrl": "https://abvx.xyz/work/1d3x",
+          "relation": "related"
+        },
+        {
+          "title": "SPIKE SPOT COMMODITY INDEX UKRAINE",
+          "canonicalUrl": "https://abvx.xyz/work/spike-spot-commodity-index-ukraine",
+          "relation": "related"
+        },
+        {
+          "title": "MN7R",
+          "canonicalUrl": "https://abvx.xyz/work/mn7r",
+          "relation": "related"
+        },
+        {
+          "title": "MN7R Blog",
+          "canonicalUrl": "https://abvx.xyz/work/mn7r-blog",
+          "relation": "related"
+        },
+        {
+          "title": "Cropto",
+          "canonicalUrl": "https://abvx.xyz/work/cropto",
+          "relation": "related"
+        },
+        {
+          "title": "Cropto Monitor: Commodity Signals Terminal",
+          "canonicalUrl": "https://abvx.xyz/work/cropto-monitor",
+          "relation": "related"
+        },
+        {
+          "title": "MN7R Commodity Brokerage Library",
+          "canonicalUrl": "https://abvx.xyz/books/mn7r-commodity-brokerage-library",
           "relation": "series"
         }
       ]
@@ -2114,6 +2294,11 @@
           "type": "site",
           "label": "Lab",
           "url": "https://lab.abvx.xyz/tools/abvx-agent-skills/index.html"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/F73_ofen8rI"
         }
       ],
       "updatedAt": "2026-06-03",

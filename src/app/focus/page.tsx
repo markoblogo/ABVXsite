@@ -57,7 +57,6 @@ const focusBookGroup = {
     'mn7r-agro-commodity-brokerage-en-free-edition',
     'mn7r-agro-commodity-brokerage-ua-free-edition',
     'spot-market-handbook-ua-free-edition',
-    'spot-market-handbook-en-free-edition',
   ],
 } as const;
 
@@ -366,13 +365,7 @@ export default async function FocusPage() {
                 tone={book.type === 'free-book' || book.type === 'free-edition' || book.type === 'companion' ? 'free-resource' : 'book'}
                 variantLabel={book.type === 'free-book' || book.type === 'free-edition' ? 'FREE RESOURCE' : 'BOOK'}
                 mediaVariant="landscape"
-                metaOverride={
-                  book.language === 'uk'
-                    ? 'Безкоштовне українське видання'
-                    : book.language === 'en'
-                      ? 'Free English edition'
-                      : undefined
-                }
+                metaOverride="Безкоштовне українське видання"
               />
             ))}
           </div>

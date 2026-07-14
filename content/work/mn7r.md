@@ -49,6 +49,14 @@
       "url": "https://mn7r.substack.com/"
     }
   ],
+  "sync": {
+    "enabled": true,
+    "repository": "markoblogo/mn7r",
+    "ref": "main",
+    "paths": [
+      "README.md"
+    ]
+  },
   "featured": true,
   "sortRank": 1,
   "needsCopyReview": false,

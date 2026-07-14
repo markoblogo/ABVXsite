@@ -10,6 +10,7 @@ import {
   validStatus,
   validVisibility,
 } from './content-lib.mjs';
+import { validateSyncConfig } from './project-description-sync-lib.mjs';
 
 const errors = [];
 const warnings = [];
@@ -73,6 +74,11 @@ function validateFile(file, folder) {
   }
 
   if (!Array.isArray(data.tags)) addError(file, 'tags must be an array');
+  try {
+    validateSyncConfig(data.sync, file);
+  } catch (error) {
+    addError(file, error.message.replace(`${file}: `, ''));
+  }
   checkImage(file, data.media, 'media');
   checkImage(file, data.heroImage, 'heroImage');
 

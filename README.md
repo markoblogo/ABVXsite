@@ -135,6 +135,8 @@ npm run llms:generate
 
 `npm run build` runs `npm run llms:generate` automatically through `prebuild`, so generated `/public/llms.txt` and `/public/content-index.json` stay aligned with `/content`.
 
+Selected project descriptions can be reviewed from their source repositories through the scheduled PR workflow. See [project description sync](docs/project-description-sync.md).
+
 ## Verification
 
 Standard checks before pushing:

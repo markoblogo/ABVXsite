@@ -40,6 +40,14 @@
       "url": "https://youtu.be/zumLJKZQFxc"
     }
   ],
+  "sync": {
+    "enabled": true,
+    "repository": "markoblogo/cropto-v0",
+    "ref": "main",
+    "paths": [
+      "README.md"
+    ]
+  },
   "featured": true,
   "sortRank": 10,
   "needsCopyReview": false,

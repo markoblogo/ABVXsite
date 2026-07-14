@@ -86,7 +86,7 @@ const ecosystems = [
         title: 'Commercial Sites & Interfaces',
         description:
           'Commercial presentation surfaces, booking-oriented interfaces and lightweight operational web systems outside the main ecosystem clusters.',
-        slugs: ['azurmenton'],
+        slugs: ['blue-jay-vodka', 'azurmenton'],
       },
       {
         title: 'Standalone Utilities',

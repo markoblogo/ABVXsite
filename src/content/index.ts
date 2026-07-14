@@ -1,4 +1,5 @@
 import { readBookFiles, readSeriesFiles, readWorkFiles } from './file-loader';
+import { selectLatestSectionEntry } from './latest-selection.mjs';
 import type { Artifact, Book, Series, SiteSection } from './types';
 
 type RelatedSource = Artifact | Book | Series;
@@ -153,10 +154,7 @@ export function getLatestHomepageWork(section: SiteSection, excludedSlug?: strin
 }
 
 export function getLatestSectionEntryWork(section: SiteSection, excludedSlug?: string): Artifact | undefined {
-  return getArtifactsBySection(section)
-    .filter((artifact) => artifact.slug !== excludedSlug)
-    .filter((artifact) => artifact.primarySection === section)
-    .sort(byLatest)[0];
+  return selectLatestSectionEntry(getArtifactsBySection(section), section, excludedSlug) as Artifact | undefined;
 }
 
 export function getFeaturedWork(section?: SiteSection): Artifact[] {

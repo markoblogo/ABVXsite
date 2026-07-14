@@ -92,6 +92,8 @@ Use Markdown files with structured frontmatter:
 - `content/series/*.md` - official publishing lines and series records.
 - `public/media/**` - local images and PDFs referenced by content files.
 
+For public work items, set `publishedAt` when creating the item and update `updatedAt` whenever its public copy changes. The homepage uses `updatedAt` first, then `publishedAt`, for the latest card in every section where the item appears.
+
 Do not write local machine paths into content files. Public media references should use paths such as:
 
 ```text

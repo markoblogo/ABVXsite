@@ -5,6 +5,7 @@
   "type": "web-service",
   "status": "live",
   "visibility": "public",
+  "publishedAt": "2026-07-14",
   "title": "Blue Jay Vodka",
   "summary": "Blue Jay Vodka is a brand landing page built around the product’s alpine identity and the idea “Intelligent by Nature.”",
   "tags": [

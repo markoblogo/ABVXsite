@@ -19,7 +19,7 @@
     "content:review": "node scripts/content-review-report.mjs",
     "content:parity": "node scripts/legacy-content-parity.mjs",
     "sync:project-descriptions": "node scripts/sync-project-descriptions.mjs",
-    "test:sync": "node --test test/project-description-sync.test.mjs",
+    "test:sync": "node --test test/project-description-sync.test.mjs test/latest-section-entry.test.mjs",
     "media:review": "node scripts/media-optimization-report.mjs",
     "media:derivatives": "node scripts/generate-image-derivatives.mjs",
     "feeds:check": "node scripts/check-feed-covers.mjs",

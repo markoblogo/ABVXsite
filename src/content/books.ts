@@ -131,7 +131,6 @@ export const books = [
       'Book project on staying visible to AI systems in the age of zero-click discovery.',
     tags: ['llmo', 'ai-search', 'visibility', 'books'],
     links: [
-      link('book-site', 'Site', 'https://llmo.abvx.xyz/'),
       link('amazon-kindle', 'Kindle', 'https://www.amazon.com/dp/B0FYRSSZKL'),
       link('amazon-paperback', 'Paperback', 'https://www.amazon.com/dp/B0G1YBYKDR'),
       link('youtube', 'YouTube', 'https://youtu.be/0l_fawMcPmw'),
@@ -139,7 +138,7 @@ export const books = [
     coverImage: cover('llmo-seo-revolution', 'LLMO: The Next SEO Revolution book cover'),
     series: 'Business & Productivity',
     category: 'Language & AI',
-    formats: ['kindle', 'paperback', 'book-site'],
+    formats: ['kindle', 'paperback'],
     featured: true,
     sortRank: 120,
     needsReview: false,

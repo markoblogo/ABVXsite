@@ -29,11 +29,6 @@
   ],
   "links": [
     {
-      "type": "site",
-      "label": "Site",
-      "url": "https://llmo.abvx.xyz/"
-    },
-    {
       "type": "kindle",
       "label": "Kindle",
       "url": "https://www.amazon.com/dp/B0FYRSSZKL"
@@ -75,8 +70,7 @@
   "group": "Business, AI & Marketing",
   "formats": [
     "kindle",
-    "paperback",
-    "site"
+    "paperback"
   ],
   "media": {
     "src": "/media/books/llmo-seo-revolution/cover.webp",

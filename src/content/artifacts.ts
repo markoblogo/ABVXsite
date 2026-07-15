@@ -341,28 +341,6 @@ export const artifacts = [
     needsReview: false,
   },
   {
-    id: 'llmo-site',
-    slug: 'llmo-site',
-    title: 'LLMO site/platform',
-    type: 'ai-workflow',
-    primarySection: 'systems',
-    appearsIn: ['systems', 'books'],
-    status: 'building',
-    summary:
-      'Website and companion platform for the LLMO: The Next SEO Revolution book/project.',
-    tags: ['llmo', 'ai-search', 'book-companion', 'web-service'],
-    links: [
-      link('website', 'Site', 'https://llmo.abvx.xyz/'),
-      link('github', 'GitHub', 'https://github.com/markoblogo/llmo-abvx'),
-    ],
-    thumbnail: image('llmo-site', 'LLMO site screenshot'),
-    heroImage: image('llmo-site', 'LLMO site screenshot'),
-    group: 'AI services',
-    featured: false,
-    sortRank: 300,
-    needsReview: false,
-  },
-  {
     id: 'ytmamp',
     slug: 'ytmamp',
     title: 'YTMamp',

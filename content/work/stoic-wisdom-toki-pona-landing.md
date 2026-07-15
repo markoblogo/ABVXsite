@@ -25,8 +25,8 @@
     },
     {
       "type": "github",
-      "label": "GitHub",
-      "url": "https://github.com/markoblogo/stoic-wisdom-series"
+      "label": "Source",
+      "url": "https://github.com/markoblogo/book-landings/tree/main/apps/stoic-wisdom-series"
     }
   ],
   "featured": false,

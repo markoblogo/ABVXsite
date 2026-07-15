@@ -25,8 +25,8 @@
     },
     {
       "type": "github",
-      "label": "GitHub",
-      "url": "https://github.com/markoblogo/dao-toki"
+      "label": "Source",
+      "url": "https://github.com/markoblogo/book-landings/tree/main/apps/dao-toki"
     }
   ],
   "featured": false,

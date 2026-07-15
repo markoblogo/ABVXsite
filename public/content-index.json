@@ -2562,8 +2562,8 @@
         },
         {
           "type": "github",
-          "label": "GitHub",
-          "url": "https://github.com/markoblogo/dao-toki"
+          "label": "Source",
+          "url": "https://github.com/markoblogo/book-landings/tree/main/apps/dao-toki"
         }
       ],
       "updatedAt": null,
@@ -2796,8 +2796,8 @@
         },
         {
           "type": "github",
-          "label": "GitHub",
-          "url": "https://github.com/markoblogo/stoic-wisdom-series"
+          "label": "Source",
+          "url": "https://github.com/markoblogo/book-landings/tree/main/apps/stoic-wisdom-series"
         }
       ],
       "updatedAt": null,
@@ -2867,8 +2867,8 @@
         },
         {
           "type": "github",
-          "label": "GitHub",
-          "url": "https://github.com/markoblogo/toki-free-kit"
+          "label": "Source",
+          "url": "https://github.com/markoblogo/book-landings/tree/main/apps/toki-free-kit"
         }
       ],
       "updatedAt": null,
@@ -2903,8 +2903,8 @@
         },
         {
           "type": "github",
-          "label": "GitHub",
-          "url": "https://github.com/markoblogo/ukrainian-modernism"
+          "label": "Source",
+          "url": "https://github.com/markoblogo/book-landings/tree/main/apps/ukrainian-modernism"
         },
         {
           "type": "youtube",

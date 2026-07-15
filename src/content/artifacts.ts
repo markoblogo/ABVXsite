@@ -242,7 +242,7 @@ export const artifacts = [
     tags: ['toki-pona', 'book-companion', 'landing', 'dao'],
     links: [
       link('website', 'Site', 'https://dao-toki.abvx.xyz/'),
-      link('github', 'GitHub', 'https://github.com/markoblogo/dao-toki'),
+      link('github', 'Source', 'https://github.com/markoblogo/book-landings/tree/main/apps/dao-toki'),
     ],
     thumbnail: image('chinese-wisdom-toki-pona-landing', 'Chinese Wisdom in toki pona landing screenshot', 'projects', 'landing-screenshot'),
     heroImage: image('chinese-wisdom-toki-pona-landing', 'Chinese Wisdom in toki pona landing screenshot', 'projects', 'landing-screenshot'),
@@ -264,7 +264,7 @@ export const artifacts = [
     tags: ['toki-pona', 'stoicism', 'book-companion', 'landing'],
     links: [
       link('website', 'Site', 'https://stoic.abvx.xyz/'),
-      link('github', 'GitHub', 'https://github.com/markoblogo/stoic-wisdom-series'),
+      link('github', 'Source', 'https://github.com/markoblogo/book-landings/tree/main/apps/stoic-wisdom-series'),
     ],
     thumbnail: image('stoic-wisdom-toki-pona-landing', 'Stoic Wisdom in Toki Pona landing screenshot', 'projects', 'landing-screenshot'),
     heroImage: image('stoic-wisdom-toki-pona-landing', 'Stoic Wisdom in Toki Pona landing screenshot', 'projects', 'landing-screenshot'),
@@ -286,7 +286,7 @@ export const artifacts = [
     tags: ['toki-pona', 'free-books', 'book-companion', 'landing'],
     links: [
       link('website', 'Site', 'https://toki-free.abvx.xyz/'),
-      link('github', 'GitHub', 'https://github.com/markoblogo/toki-free-kit'),
+      link('github', 'Source', 'https://github.com/markoblogo/book-landings/tree/main/apps/toki-free-kit'),
     ],
     thumbnail: image('toki-pona-free-kits-landing', 'Toki Pona free kits landing screenshot', 'projects', 'landing-screenshot'),
     heroImage: image('toki-pona-free-kits-landing', 'Toki Pona free kits landing screenshot', 'projects', 'landing-screenshot'),
@@ -308,7 +308,7 @@ export const artifacts = [
     tags: ['ukrainian-modernism', 'translation', 'book-companion', 'landing'],
     links: [
       link('website', 'Site', 'https://ukrmodernism.abvx.xyz/'),
-      link('github', 'GitHub', 'https://github.com/markoblogo/ukrainian-modernism'),
+      link('github', 'Source', 'https://github.com/markoblogo/book-landings/tree/main/apps/ukrainian-modernism'),
       link('youtube', 'YouTube', 'https://youtu.be/krXa1OzLVIs?si=RpMnZ340bGVTBz4I'),
     ],
     thumbnail: image('ukrainian-modernism-landing', 'Ukrainian Modernism landing screenshot', 'projects', 'landing-screenshot'),

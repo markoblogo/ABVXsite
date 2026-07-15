@@ -25,8 +25,8 @@
     },
     {
       "type": "github",
-      "label": "GitHub",
-      "url": "https://github.com/markoblogo/toki-free-kit"
+      "label": "Source",
+      "url": "https://github.com/markoblogo/book-landings/tree/main/apps/toki-free-kit"
     }
   ],
   "featured": false,

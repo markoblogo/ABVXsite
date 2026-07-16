@@ -37,6 +37,12 @@ CortexABV may use imported evidence to prepare proposals for the owner's persona
 
 There is no response path from that proposal back into the base Cortex, Monitor, Index, Cropto, or their corporate Cortex. A public update is never evidence that a source system has been changed or endorsed it.
 
+## Wholly owned project tenants
+
+Private CortexABV may later host isolated tenants for wholly owned projects such as AzurMenton. Such a tenant can use only its own reviewed source pack and policy; it cannot retrieve from the personal tenant, any partner-project tenant, or this public-site adapter.
+
+AzurMenton's current contracts are static and private: a versioned guide/FAQ/place manifest with provenance, a read-only guest-chat policy skeleton, and a shadow-only scenario pack. They do not provide an endpoint, model, guest-data store, booking/availability access, payment handling, or public publishing authority. They must not be copied into ABVXsite's public indexes or interpreted as a deployed assistant.
+
 ## Non-goals
 
 This contract does not implement retrieval, replication, synchronization, mutations, feedback loops, cross-system tasks, shared memory, or autonomous social publishing. Any future import adapter needs a separate typed schema, source credential scope, data classification, provenance record, retention policy, and tests before it can run.

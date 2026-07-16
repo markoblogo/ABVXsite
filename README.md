@@ -145,6 +145,8 @@ The repository contains the proposal-only public boundary for CortexABV in [`cor
 
 The [CortexABV Read-Only Import Contract](docs/cortex-abv-read-only-import-contract.md) defines the broader architecture: base Cortex plus the owner's Monitor, Index, and Cropto ecosystems may supply authorized updates into private CortexABV, but CortexABV has no data, command, feedback, policy, or influence path back to them. It can only prepare separately validated, human-reviewable proposals for owner-controlled personal surfaces.
 
+The private runtime may also define isolated tenants for wholly owned projects, such as AzurMenton. Those tenant source packs, guest-policy and shadow-evaluation artifacts remain outside this public adapter: they cannot retrieve personal or sibling-project context, cannot appear in the public corpus, and do not create a public chat, booking, publishing, or site-editing authority.
+
 Check the adapter contract and currently enabled project-sync targets:
 
 ```bash

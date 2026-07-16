@@ -101,3 +101,29 @@ test('renders a pending-review PR receipt from observed evidence only', () => {
   assert.match(receipt, /- \[ \] Reject it and record the reason in the PR/);
   assert.doesNotMatch(receipt, /publish_external_post|send_message/);
 });
+
+test('renders claim-level source anchors without copying source text into the public receipt', () => {
+  const batch = createObservedEventBatch({
+    observedAt: '2026-07-16T12:00:00.000Z',
+    targets: [{
+      slug: 'mn7r',
+      sync: { repository: 'markoblogo/mn7r', ref: 'main', paths: ['README.md'] },
+      sourceCommit: 'abc123def456',
+    }],
+  });
+  const receipt = renderEvidenceReceipt(batch, [{
+    schemaVersion: 1,
+    kind: 'CortexABVCopyProposal',
+    slug: 'mn7r',
+    sourceCommit: 'abc123def456',
+    claims: [
+      { field: 'summary', text: 'Public summary.', evidencePath: 'README.md', lineStart: 3, lineEnd: 5 },
+      { field: 'body', text: 'Public body.', evidencePath: 'README.md', lineStart: 8, lineEnd: 10 },
+    ],
+  }]);
+
+  assert.match(receipt, /Claim-to-source anchors/);
+  assert.match(receipt, /`summary` → `README\.md:L3-L5`/);
+  assert.match(receipt, /`body` → `README\.md:L8-L10`/);
+  assert.doesNotMatch(receipt, /Public summary\.|Public body\./);
+});

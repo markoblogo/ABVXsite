@@ -15,13 +15,15 @@ It may contain source code, public project-content contracts, and reviewable pro
 
 It is reviewable and side-effect free until a human merges the generated pull request. It cannot change project identity, title, status, tags, links, media, positioning, or publish to a social network.
 
+Public-copy proposals are deliberately narrow: a summary of at most 320 characters and one body paragraph of at most 900 characters. They reject protected/internal surfaces, endpoints, environment details, demo or seeded/mock data, persistence gaps, and other prototype-gap framing. Each changed field requires one claim-to-source line-range anchor from an explicitly allowlisted file. The receipt shows those paths and line ranges, never a copied private-source excerpt.
+
 ## Observed-event workflow
 
 `Sync project descriptions` first runs a read-only observer. It fetches the current SHA for each explicit project-source allowlist, compares it with `sync.lastAppliedCommit`, and saves a `CortexABVObservedEventBatch` artifact. Only a changed SHA enables the separate PR job; the observer has read-only repository permission and does not call a model or modify content.
 
 The manual workflow `slug` input narrows both observation and the later copy-sync job to that one explicitly enabled target.
 
-When a copy PR is created, its body is a CortexABV evidence receipt rendered from that same observed artifact. It lists only repository SHA/path evidence, marks the proposal `pending_review`, and gives the reviewer explicit approve/reject checkboxes. The receipt is PR metadata, not a private-memory file committed into the public site repository.
+When a copy PR is created, its body is a CortexABV evidence receipt rendered from that same observed artifact and the generated claim anchors. It lists repository SHA/path evidence plus a source line range for each changed public field, marks the proposal `pending_review`, and gives the reviewer explicit approve/reject checkboxes. The receipt is PR metadata, not a private-memory file committed into the public site repository.
 
 Run the observer locally when `SOURCE_REPOS_TOKEN` can read every enabled source repository:
 

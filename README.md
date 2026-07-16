@@ -149,7 +149,7 @@ Check the adapter contract and currently enabled project-sync targets:
 npm run cortex-abv:status
 ```
 
-The scheduled project-copy workflow observes allowlisted source SHAs first, saves an evidence artifact, and opens or updates a reviewable PR only when an observed source differs from applied provenance. That PR receives a `pending_review` evidence receipt; it does not grant publishing or messaging authority.
+The scheduled project-copy workflow observes allowlisted source SHAs first, saves an evidence artifact, and opens or updates a reviewable PR only when an observed source differs from applied provenance. Its public-copy contract permits only a short summary and one short body paragraph, blocks internal/prototype-gap details, and requires a line-range evidence anchor per changed field. That `pending_review` receipt does not grant publishing or messaging authority.
 
 See [CortexABV public-site adapter](cortex-abv/README.md) for the authority boundary and the next integration seam.
 

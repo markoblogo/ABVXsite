@@ -67,9 +67,6 @@ jobs:
           name: cortex-abv-observed-events
           path: ${{ runner.temp }}/cortex-abv
 
-      - name: Render CortexABV evidence receipt
-        run: node scripts/cortex-abv-render-pr-receipt.mjs --input "$RUNNER_TEMP/cortex-abv/cortex-abv-observed-events.json" --output "$RUNNER_TEMP/cortex-abv-pr-receipt.md"
-
       - name: Show observed evidence targets
         env:
           TARGET_SLUGS: ${{ needs.observe-project-events.outputs.target_slugs }}
@@ -82,12 +79,16 @@ jobs:
           SOURCE_REPOS_TOKEN: ${{ secrets.SOURCE_REPOS_TOKEN }}
           TARGET_SLUGS: ${{ needs.observe-project-events.outputs.target_slugs }}
         run: |
+          mkdir -p "$RUNNER_TEMP/cortex-abv-copy-proposals"
           for slug in $TARGET_SLUGS; do
-            node scripts/sync-project-descriptions.mjs --slug "$slug"
+            node scripts/sync-project-descriptions.mjs --slug "$slug" --evidence-dir "$RUNNER_TEMP/cortex-abv-copy-proposals"
           done
 
       - name: Validate proposed content
         run: npm run content:validate
+
+      - name: Render CortexABV evidence receipt
+        run: node scripts/cortex-abv-render-pr-receipt.mjs --input "$RUNNER_TEMP/cortex-abv/cortex-abv-observed-events.json" --claims-dir "$RUNNER_TEMP/cortex-abv-copy-proposals" --output "$RUNNER_TEMP/cortex-abv-pr-receipt.md"
 
       - uses: peter-evans/create-pull-request@v7
         with:

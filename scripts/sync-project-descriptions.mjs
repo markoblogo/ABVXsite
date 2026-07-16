@@ -1,10 +1,13 @@
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { applyProposal, getSyncTargets, sourceTextFromFiles, writeProposal } from './project-description-sync-lib.mjs';
+import { applyProposal, getSyncTargets, validatePublicCopyEvidence, writeProposal } from './project-description-sync-lib.mjs';
 
 const args = new Set(process.argv.slice(2));
 const slugIndex = process.argv.indexOf('--slug');
 const requestedSlug = slugIndex >= 0 ? process.argv[slugIndex + 1] : undefined;
 const dryRun = args.has('--dry-run');
+const evidenceDirectoryIndex = process.argv.indexOf('--evidence-dir');
+const evidenceDirectory = evidenceDirectoryIndex >= 0 ? process.argv[evidenceDirectoryIndex + 1] : undefined;
 const maxSourceChars = 24000;
 
 function githubHeaders() {
@@ -31,7 +34,11 @@ async function readRepositorySources(sync) {
     if (entry.type !== 'file' || typeof entry.content !== 'string') throw new Error(`${sync.repository}:${sourcePath} is not a text file`);
     files.push({ path: sourcePath, text: Buffer.from(entry.content.replace(/\n/g, ''), 'base64').toString('utf8') });
   }
-  return { commit: commit.sha, source: sourceTextFromFiles(files).slice(0, maxSourceChars) };
+  const source = files.map(({ path: sourcePath, text }) => {
+    const numbered = text.split('\n').map((line, index) => `${index + 1}: ${line}`).join('\n');
+    return `## ${sourcePath}\n${numbered}`;
+  }).join('\n\n').slice(0, maxSourceChars);
+  return { commit: commit.sha, files, source };
 }
 
 function outputText(response) {
@@ -47,12 +54,27 @@ async function createProposal(target, source) {
   const schema = {
     type: 'object',
     additionalProperties: false,
-    required: ['changed', 'summary', 'body', 'notes'],
+    required: ['changed', 'summary', 'body', 'notes', 'claims'],
     properties: {
       changed: { type: 'boolean' },
       summary: { type: 'string' },
       body: { type: 'string' },
       notes: { type: 'array', items: { type: 'string' } },
+      claims: {
+        type: 'array',
+        items: {
+          type: 'object',
+          additionalProperties: false,
+          required: ['field', 'text', 'evidencePath', 'lineStart', 'lineEnd'],
+          properties: {
+            field: { type: 'string', enum: ['summary', 'body'] },
+            text: { type: 'string' },
+            evidencePath: { type: 'string' },
+            lineStart: { type: 'integer' },
+            lineEnd: { type: 'integer' },
+          },
+        },
+      },
     },
   };
   const prompt = [
@@ -60,7 +82,10 @@ async function createProposal(target, source) {
     'Never invent features, users, metrics, dates, commercial claims, roadmap, or security claims.',
     'Preserve the project identity and positioning unless the source explicitly changes it.',
     'Return changed=false and the current text exactly when no material change is supported.',
-    'When changed=true, write a factual one- or two-sentence summary (max 500 chars) and a concise Markdown body (max 5000 chars).',
+    'When changed=true, write a factual one- or two-sentence summary (max 320 chars) and a single concise public-facing paragraph (max 900 chars).',
+    'Never mention protected or internal surfaces, endpoints, environment variables, .env, demo data, seeded or mock data, persistence gaps, prototype-grade status, missing capabilities, or implementation caveats.',
+    'When changed=true, return exactly two claims: one for summary and one for body. Each claim.text must equal that full output field exactly and must cite an allowlisted source path plus a directly supporting, valid line range from the numbered source below. Do not quote source text in a claim.',
+    'When changed=false, return an empty claims array.',
     `Current summary:\n${target.data.summary}`,
     `Current body:\n${target.body}`,
     `Repository source (${target.sync.repository}@${target.sync.ref}):\n${source}`,
@@ -78,6 +103,17 @@ async function createProposal(target, source) {
   return JSON.parse(outputText(await response.json()));
 }
 
+function writeProposalEvidence(directory, target, sourceCommit, claims) {
+  mkdirSync(directory, { recursive: true });
+  writeFileSync(`${directory}/${target.data.slug}.json`, `${JSON.stringify({
+    schemaVersion: 1,
+    kind: 'CortexABVCopyProposal',
+    slug: target.data.slug,
+    sourceCommit,
+    claims,
+  }, null, 2)}\n`);
+}
+
 export async function run() {
   const targets = getSyncTargets().filter((target) => !requestedSlug || target.data.slug === requestedSlug);
   if (requestedSlug && !targets.length) throw new Error(`No enabled sync target for slug: ${requestedSlug}`);
@@ -90,6 +126,7 @@ export async function run() {
     try {
       const source = await readRepositorySources(target.sync);
       const proposal = await createProposal(target, source.source);
+      const evidence = validatePublicCopyEvidence({ proposal, sync: target.sync, sourceFiles: source.files });
       const result = applyProposal({
         data: target.data,
         body: target.body,
@@ -103,6 +140,7 @@ export async function run() {
       }
       changes += 1;
       console.log(`${target.data.slug}: proposed (${proposal.notes.join('; ') || 'repository docs changed'})`);
+      if (evidenceDirectory) writeProposalEvidence(evidenceDirectory, target, source.commit, evidence.claims);
       if (!dryRun) writeProposal(target.filePath, result.data, result.body);
     } catch (error) {
       console.error(`${target.data.slug}: ${error.message}`);

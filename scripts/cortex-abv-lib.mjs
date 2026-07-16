@@ -105,11 +105,32 @@ export function createObservedEventBatch({ targets, observedAt }) {
   };
 }
 
-export function renderEvidenceReceipt(batch) {
+export function renderEvidenceReceipt(batch, copyProposals = []) {
   if (!batch || batch.kind !== 'CortexABVObservedEventBatch') throw new Error('batch must be a CortexABVObservedEventBatch');
   if (!Array.isArray(batch.proposals) || !batch.proposals.length) throw new Error('batch must contain at least one proposal');
 
-  const sources = batch.proposals.map((proposal) => {
+  if (!Array.isArray(copyProposals)) throw new Error('copyProposals must be an array');
+  const observedBySlug = new Map(batch.proposals.map((proposal) => [proposal.target.slug, proposal]));
+  const receiptProposals = copyProposals.length ? copyProposals.map((copyProposal) => {
+    if (copyProposal?.schemaVersion !== 1 || copyProposal?.kind !== 'CortexABVCopyProposal') {
+      throw new Error('copy proposal must use the CortexABVCopyProposal contract');
+    }
+    const observed = observedBySlug.get(projectSlug(copyProposal?.slug, 'copyProposal.slug'));
+    if (!observed || copyProposal.sourceCommit !== observed.evidence[0].commit) throw new Error('copy proposal must match an observed source commit');
+    if (!Array.isArray(copyProposal.claims) || copyProposal.claims.length !== 2) throw new Error('copy proposal must include two claim anchors');
+    const expectedFields = new Set(['summary', 'body']);
+    for (const claim of copyProposal.claims) {
+      if (!expectedFields.delete(claim?.field) || !observed.evidence.some((item) => item.path === claim.evidencePath)) {
+        throw new Error('claim anchor must use each public field once and an observed source path');
+      }
+      if (!Number.isInteger(claim.lineStart) || !Number.isInteger(claim.lineEnd) || claim.lineStart < 1 || claim.lineEnd < claim.lineStart) {
+        throw new Error('claim anchor must contain a valid line range');
+      }
+    }
+    return { ...observed, claims: copyProposal.claims };
+  }) : batch.proposals;
+
+  const sources = receiptProposals.map((proposal) => {
     if (proposal.status !== 'pending_review' || proposal.authority !== 'proposal' || proposal.externalSideEffects !== false) {
       throw new Error('receipt proposals must remain pending-review, proposal-only, and side-effect free');
     }
@@ -117,6 +138,14 @@ export function renderEvidenceReceipt(batch) {
     const firstEvidence = proposal.evidence[0];
     return `- ${markdownCode(`${firstEvidence.repository}@${firstEvidence.commit}`)} for ${markdownCode(proposal.target.slug)}\n${evidence}`;
   }).join('\n');
+
+  const claimAnchors = copyProposals.length ? [
+    '',
+    '### Claim-to-source anchors',
+    ...receiptProposals.flatMap((proposal) => proposal.claims.map((claim) =>
+      `- ${markdownCode(proposal.target.slug)} ${markdownCode(claim.field)} → ${markdownCode(`${claim.evidencePath}:L${claim.lineStart}-L${claim.lineEnd}`)}`,
+    )),
+  ] : [];
 
   return [
     '## CortexABV evidence receipt',
@@ -129,7 +158,8 @@ export function renderEvidenceReceipt(batch) {
     sources,
     '',
     '### Basis',
-    'The observed source SHA differs from the last applied provenance. Only the listed allowlisted files may support the bounded copy proposal.',
+    'The observed source SHA differs from the last applied provenance. Only the listed allowlisted files and claim anchors may support the bounded public-copy proposal.',
+    ...claimAnchors,
     '',
     '### Review decision',
     '- [ ] Approve this bounded copy proposal',

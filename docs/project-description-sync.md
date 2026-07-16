@@ -14,6 +14,7 @@ The observer does not call a model, change content, open a PR, publish social co
 When a PR is created, its body is a CortexABV evidence receipt rendered from the same observed batch. It contains:
 
 - source repository SHA and allowlisted paths;
+- one source file and line-range anchor for each changed `summary` and body claim, without copying source text into the public PR;
 - `pending_review`, `proposal`, and `externalSideEffects: false` state;
 - a bounded basis for the proposal; and
 - explicit approve/reject review checkboxes.
@@ -30,6 +31,12 @@ Only these fields may change:
 - `sync.lastAppliedCommit` and `sync.lastAppliedAt` provenance fields
 
 It never changes project identity, title, status, section placement, tags, links, media, FAQs or positioning without an editor.
+
+## Public-copy boundary
+
+The generated patch is intentionally constrained to a summary of at most 320 characters and a single body paragraph of at most 900 characters. It is rejected if it mentions protected/internal surfaces, endpoints, environment details, demo/seeded/mock data, persistence gaps, or other missing-capability/prototype-gap framing.
+
+For each changed public field, the model must provide one exact copy claim plus an allowlisted source path and numbered line range. The workflow validates the path and range against the fetched source before it writes content. The public PR receipt exposes only the path and line range, not a quote from a private source repository.
 
 ## Enable a project
 

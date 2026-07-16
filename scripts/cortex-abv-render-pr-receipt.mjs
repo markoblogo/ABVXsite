@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { renderEvidenceReceipt } from './cortex-abv-lib.mjs';
 
 function option(name) {
@@ -11,7 +11,11 @@ export function run() {
   const outputPath = option('--output');
   if (!inputPath || !outputPath) throw new Error('--input <path> and --output <path> are required');
   const batch = JSON.parse(readFileSync(inputPath, 'utf8'));
-  writeFileSync(outputPath, `${renderEvidenceReceipt(batch)}\n`);
+  const claimsDirectory = option('--claims-dir');
+  const copyProposals = claimsDirectory && existsSync(claimsDirectory)
+    ? readdirSync(claimsDirectory).filter((name) => name.endsWith('.json')).map((name) => JSON.parse(readFileSync(`${claimsDirectory}/${name}`, 'utf8')))
+    : [];
+  writeFileSync(outputPath, `${renderEvidenceReceipt(batch, copyProposals)}\n`);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

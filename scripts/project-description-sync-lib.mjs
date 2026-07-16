@@ -4,6 +4,7 @@ import { contentFiles, parseContentFile, serializeFrontmatter } from './content-
 
 const MAX_SUMMARY_LENGTH = 320;
 const MAX_BODY_APPENDIX_LENGTH = 450;
+const AUTONOMOUS_PATCH_FIELDS = ['summary', 'bodyAppendix', 'updatedAt', 'sync.lastAppliedCommit', 'sync.lastAppliedAt'];
 const PUBLIC_COPY_DENIALS = [
   /\bprotected\b/i,
   /\binternal\b/i,
@@ -59,6 +60,17 @@ export function validateSyncConfig(sync, filePath = 'content item', publicCopy) 
     paths: sync.paths,
     publicCopy: validatePublicCopyProfile(publicCopy, filePath),
   };
+}
+
+export function validateAutonomousPublicSyncProfile(profile, filePath = 'content item') {
+  if (!profile) return null;
+  if (profile.enabled !== true) throw new Error(`${filePath}: autonomousPublicSync.enabled must be true when configured`);
+  if (profile.mode !== 'direct_main') throw new Error(`${filePath}: autonomousPublicSync.mode must be direct_main`);
+  if (profile.target !== 'abvxsite') throw new Error(`${filePath}: autonomousPublicSync.target must be abvxsite`);
+  if (!Array.isArray(profile.allowedPatchFields) || profile.allowedPatchFields.length !== AUTONOMOUS_PATCH_FIELDS.length || profile.allowedPatchFields.some((field, index) => field !== AUTONOMOUS_PATCH_FIELDS[index])) {
+    throw new Error(`${filePath}: autonomousPublicSync.allowedPatchFields must preserve the bounded public-copy fields`);
+  }
+  return { enabled: true, mode: 'direct_main', target: 'abvxsite', allowedPatchFields: [...AUTONOMOUS_PATCH_FIELDS] };
 }
 
 export function assertPublicSafeCopy(summary, bodyAppendix, publicCopy) {
@@ -134,7 +146,13 @@ export function getSyncTargets(workDirectory = process.cwd()) {
   return contentFiles('work')
     .map((filePath) => ({ filePath, ...parseContentFile(filePath) }))
     .filter(({ data }) => data.sync?.enabled === true)
-    .map(({ filePath, data, body }) => ({ filePath, data, body, sync: validateSyncConfig(data.sync, filePath, data.publicCopy) }));
+    .map(({ filePath, data, body }) => ({
+      filePath,
+      data,
+      body,
+      sync: validateSyncConfig(data.sync, filePath, data.publicCopy),
+      autonomousPublicSync: validateAutonomousPublicSyncProfile(data.autonomousPublicSync, filePath),
+    }));
 }
 
 export function writeProposal(filePath, data, body) {

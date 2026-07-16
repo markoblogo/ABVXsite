@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVAutonomousPublicSyncProfile",
+  "version": "v1",
+  "authority": "write",
+  "scope": "bounded_public_project_copy",
+  "targets": [
+    { "slug": "mn7r", "enabled": true, "target": "abvxsite/main" },
+    { "slug": "cropto", "enabled": true, "target": "abvxsite/main" },
+    { "slug": "abvx-lab", "enabled": false, "target": "markoblogo/lab.abvx/main", "reason": "pending_LAB_REPO_TOKEN_with_contents_write" }
+  ],
+  "requiredGates": ["observed_source_sha", "claim_evidence", "public_copy_validation", "test_sync", "content_validation"],
+  "rollback": { "strategy": "git_revert", "automatic": false }
+}

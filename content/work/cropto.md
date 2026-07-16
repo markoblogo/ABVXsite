@@ -48,6 +48,12 @@
       "README.md"
     ]
   },
+  "autonomousPublicSync": {
+    "enabled": true,
+    "mode": "direct_main",
+    "target": "abvxsite",
+    "allowedPatchFields": ["summary", "bodyAppendix", "updatedAt", "sync.lastAppliedCommit", "sync.lastAppliedAt"]
+  },
   "publicCopy": {
     "bodyMode": "append_only",
     "allowedThemes": [

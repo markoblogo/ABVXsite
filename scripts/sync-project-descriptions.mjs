@@ -6,6 +6,7 @@ const args = new Set(process.argv.slice(2));
 const slugIndex = process.argv.indexOf('--slug');
 const requestedSlug = slugIndex >= 0 ? process.argv[slugIndex + 1] : undefined;
 const dryRun = args.has('--dry-run');
+const autonomousOnly = args.has('--autonomous-only');
 const evidenceDirectoryIndex = process.argv.indexOf('--evidence-dir');
 const evidenceDirectory = evidenceDirectoryIndex >= 0 ? process.argv[evidenceDirectoryIndex + 1] : undefined;
 const maxSourceChars = 24000;
@@ -118,7 +119,8 @@ function writeProposalEvidence(directory, target, sourceCommit, claims) {
 }
 
 export async function run() {
-  const targets = getSyncTargets().filter((target) => !requestedSlug || target.data.slug === requestedSlug);
+  const targets = getSyncTargets().filter((target) => (!requestedSlug || target.data.slug === requestedSlug)
+    && (!autonomousOnly || target.autonomousPublicSync?.enabled === true));
   if (requestedSlug && !targets.length) throw new Error(`No enabled sync target for slug: ${requestedSlug}`);
   if (!targets.length) {
     console.log('No enabled project-description sync targets.');

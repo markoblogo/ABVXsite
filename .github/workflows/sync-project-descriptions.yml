@@ -42,13 +42,12 @@ jobs:
           path: ${{ runner.temp }}/cortex-abv-observed-events.json
           if-no-files-found: error
 
-  propose-copy-updates:
+  apply-autonomous-public-updates:
     needs: observe-project-events
     if: needs.observe-project-events.outputs.has_changes == 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      pull-requests: write
     steps:
       - uses: actions/checkout@v4
 
@@ -72,7 +71,7 @@ jobs:
           TARGET_SLUGS: ${{ needs.observe-project-events.outputs.target_slugs }}
         run: echo "CortexABV observed changed sources for $TARGET_SLUGS"
 
-      - name: Propose content updates from project repositories
+      - name: Prepare bounded content updates from project repositories
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: gpt-5-mini
@@ -81,19 +80,82 @@ jobs:
         run: |
           mkdir -p "$RUNNER_TEMP/cortex-abv-copy-proposals"
           for slug in $TARGET_SLUGS; do
-            node scripts/sync-project-descriptions.mjs --slug "$slug" --evidence-dir "$RUNNER_TEMP/cortex-abv-copy-proposals"
+            node scripts/sync-project-descriptions.mjs --slug "$slug" --autonomous-only --evidence-dir "$RUNNER_TEMP/cortex-abv-copy-proposals"
           done
 
       - name: Validate proposed content
         run: npm run content:validate
 
-      - name: Render CortexABV evidence receipt
-        run: node scripts/cortex-abv-render-pr-receipt.mjs --input "$RUNNER_TEMP/cortex-abv/cortex-abv-observed-events.json" --claims-dir "$RUNNER_TEMP/cortex-abv-copy-proposals" --output "$RUNNER_TEMP/cortex-abv-pr-receipt.md"
+      - name: Apply validated bounded update to main
+        id: apply
+        run: |
+          previous_commit="$(git rev-parse HEAD)"
+          echo "previous_commit=$previous_commit" >> "$GITHUB_OUTPUT"
+          if git diff --quiet -- content/work; then
+            echo "applied=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "cortex-abv[bot]"
+          git config user.email "cortex-abv[bot]@users.noreply.github.com"
+          git add content/work
+          git commit -m "chore: refresh bounded public project copy"
+          applied_commit="$(git rev-parse HEAD)"
+          git push origin HEAD:main
+          echo "applied=true" >> "$GITHUB_OUTPUT"
+          echo "applied_commit=$applied_commit" >> "$GITHUB_OUTPUT"
 
-      - uses: peter-evans/create-pull-request@v7
+      - name: Write CortexABV autonomous evidence receipt
+        if: steps.apply.outputs.applied == 'true'
+        run: node scripts/cortex-abv-write-autonomous-apply-receipt.mjs --input "$RUNNER_TEMP/cortex-abv/cortex-abv-observed-events.json" --claims-dir "$RUNNER_TEMP/cortex-abv-copy-proposals" --output "$RUNNER_TEMP/cortex-abv-autonomous-public-sync-receipt.json" --target-repository "${{ github.repository }}" --target-branch main --previous-commit "${{ steps.apply.outputs.previous_commit }}" --applied-commit "${{ steps.apply.outputs.applied_commit }}"
+
+      - name: Save autonomous evidence receipt
+        if: steps.apply.outputs.applied == 'true'
+        uses: actions/upload-artifact@v4
         with:
-          branch: automation/project-description-sync
-          delete-branch: true
-          title: 'chore: sync project descriptions from source repos'
-          commit-message: 'chore: sync project descriptions from source repos'
-          body-path: ${{ runner.temp }}/cortex-abv-pr-receipt.md
+          name: cortex-abv-autonomous-public-sync-receipt
+          path: ${{ runner.temp }}/cortex-abv-autonomous-public-sync-receipt.json
+          if-no-files-found: error
+
+  refresh-lab-home-ledger:
+    if: ${{ secrets.LAB_REPO_TOKEN != '' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout Lab with its separately scoped write token
+        uses: actions/checkout@v4
+        with:
+          repository: markoblogo/lab.abvx
+          token: ${{ secrets.LAB_REPO_TOKEN }}
+          path: lab-abvx
+
+      - name: Rebuild Lab home freshness ledger from allowlisted source SHAs
+        working-directory: lab-abvx
+        env:
+          SOURCE_REPOS_TOKEN: ${{ secrets.SOURCE_REPOS_TOKEN }}
+        run: |
+          python3 scripts/sync_home_ledger.py
+          git diff --check
+
+      - name: Commit bounded Lab freshness update
+        id: apply-lab
+        working-directory: lab-abvx
+        run: |
+          if git diff --quiet -- docs/index.html docs/assets/home-ledger-snapshot.v1.json; then
+            echo "applied=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "cortex-abv[bot]"
+          git config user.email "cortex-abv[bot]@users.noreply.github.com"
+          git add docs/index.html docs/assets/home-ledger-snapshot.v1.json
+          git commit -m "chore: refresh home ledger provenance"
+          git push origin HEAD:main
+          echo "applied=true" >> "$GITHUB_OUTPUT"
+
+      - name: Save Lab ledger evidence snapshot
+        if: steps.apply-lab.outputs.applied == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: cortex-abv-lab-home-ledger-snapshot
+          path: lab-abvx/docs/assets/home-ledger-snapshot.v1.json
+          if-no-files-found: error

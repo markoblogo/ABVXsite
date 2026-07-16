@@ -6,8 +6,13 @@ import { validatePublicPolicy } from './cortex-abv-lib.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const policyPath = path.join(root, 'cortex-abv', 'public-policy.example.json');
+const autonomousProfilePath = path.join(root, 'cortex-abv', 'autonomous-public-sync.v1.json');
 const policy = JSON.parse(readFileSync(policyPath, 'utf8'));
+const autonomousProfile = JSON.parse(readFileSync(autonomousProfilePath, 'utf8'));
 const validatedPolicy = validatePublicPolicy(policy);
+if (autonomousProfile.schemaVersion !== 1 || autonomousProfile.kind !== 'CortexABVAutonomousPublicSyncProfile' || autonomousProfile.authority !== 'write' || !Array.isArray(autonomousProfile.targets)) {
+  throw new Error('invalid CortexABV autonomous public sync profile');
+}
 
 const targets = getSyncTargets().map((target) => ({
   slug: target.data.slug,
@@ -26,5 +31,11 @@ console.log(JSON.stringify({
   approvedSources: validatedPolicy.sources,
   allowedProposalActions: validatedPolicy.allowedActions,
   automaticActions: policy.automaticActions,
+  autonomousException: {
+    scope: autonomousProfile.scope,
+    targets: autonomousProfile.targets,
+    requiredGates: autonomousProfile.requiredGates,
+    rollback: autonomousProfile.rollback,
+  },
   registeredProjectSyncTargets: targets,
 }, null, 2));

@@ -137,13 +137,13 @@ npm run llms:generate
 
 `npm run build` runs `npm run llms:generate` automatically through `prebuild`, so generated `/public/llms.txt` and `/public/content-index.json` stay aligned with `/content`.
 
-Selected project descriptions can be reviewed from their source repositories through the scheduled PR workflow. See [project description sync](docs/project-description-sync.md).
+Selected project descriptions may be refreshed from their source repositories through the bounded CortexABV workflow. See [project description sync](docs/project-description-sync.md).
 
 ## CortexABV public-site adapter
 
 The repository contains the proposal-only public boundary for CortexABV in [`cortex-abv/`](cortex-abv/). It validates approved public sources and bounded site-copy proposals, but it does not contain the private personal profile, inbox, credentials, contact history, or autonomous publishing controls.
 
-The [CortexABV Read-Only Import Contract](docs/cortex-abv-read-only-import-contract.md) defines the broader architecture: base Cortex plus the owner's Monitor, Index, and Cropto ecosystems may supply authorized updates into private CortexABV, but CortexABV has no data, command, feedback, policy, or influence path back to them. It can only prepare separately validated, human-reviewable proposals for owner-controlled personal surfaces.
+The [CortexABV Read-Only Import Contract](docs/cortex-abv-read-only-import-contract.md) defines the broader architecture: base Cortex plus the owner's Monitor, Index, and Cropto ecosystems may supply authorized updates into private CortexABV, but CortexABV has no data, command, feedback, policy, or influence path back to them. A target surface controls whether an evidence-backed proposal stays review-only or receives a separately configured bounded write authority.
 
 The private runtime may also define isolated tenants for wholly owned projects, such as AzurMenton. Those tenant source packs, guest-policy and shadow-evaluation artifacts remain outside this public adapter: they cannot retrieve personal or sibling-project context, cannot appear in the public corpus, and do not create a public chat, booking, publishing, or site-editing authority.
 
@@ -155,7 +155,7 @@ Check the adapter contract and currently enabled project-sync targets:
 npm run cortex-abv:status
 ```
 
-The scheduled project-copy workflow observes allowlisted source SHAs first, saves an evidence artifact, and opens or updates a reviewable PR only when an observed source differs from applied provenance. Every target has a per-project public-copy profile; automation may update a short summary or append one short paragraph, never rewrite the approved body baseline. It blocks internal/prototype-gap details and requires a line-range evidence anchor per changed field. That `pending_review` receipt does not grant publishing or messaging authority.
+The scheduled project-copy workflow observes allowlisted source SHAs first and saves an evidence artifact. MN7R and Cropto alone have an explicit `direct_main` exception: after source-SHA, per-claim, public-copy, test and content-validation gates, it may commit only their bounded summary/body appendix and provenance fields to `ABVXsite/main`. Each applied commit has an artifact receipt with source anchors and a human-initiated `git revert` rollback reference. No other target receives automatic write authority; titles, links, tags, media, positioning, social posts, messages and email remain excluded.
 
 See [CortexABV public-site adapter](cortex-abv/README.md) for the authority boundary and the next integration seam.
 

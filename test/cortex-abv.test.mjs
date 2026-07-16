@@ -1,6 +1,9 @@
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import path from 'node:path';
 import test from 'node:test';
-import { createObservedEventBatch, createProjectCopySyncProposal, renderEvidenceReceipt, validatePublicPolicy } from '../scripts/cortex-abv-lib.mjs';
+import { createAutonomousApplyReceipt, createObservedEventBatch, createProjectCopySyncProposal, renderEvidenceReceipt, validatePublicPolicy } from '../scripts/cortex-abv-lib.mjs';
+import { validateAutonomousPublicSyncProfile } from '../scripts/project-description-sync-lib.mjs';
 
 const policy = {
   schemaVersion: 1,
@@ -15,6 +18,16 @@ const policy = {
 test('keeps the public-site adapter proposal-only', () => {
   assert.deepEqual(validatePublicPolicy(policy).allowedActions, ['project_copy_sync']);
   assert.throws(() => validatePublicPolicy({ ...policy, automaticActions: ['publish_external_post'] }), /automaticActions must be empty/);
+});
+
+test('limits the autonomous exception to the two approved ABVXsite targets', () => {
+  const profile = JSON.parse(readFileSync(path.join(process.cwd(), 'cortex-abv/autonomous-public-sync.v1.json'), 'utf8'));
+  assert.equal(profile.authority, 'write');
+  assert.deepEqual(profile.targets.filter((target) => target.enabled).map((target) => target.slug), ['mn7r', 'cropto']);
+  assert.deepEqual(profile.targets.find((target) => target.slug === 'abvx-lab'), {
+    slug: 'abvx-lab', enabled: false, target: 'markoblogo/lab.abvx/main', reason: 'pending_LAB_REPO_TOKEN_with_contents_write',
+  });
+  assert.deepEqual(profile.rollback, { strategy: 'git_revert', automatic: false });
 });
 
 test('creates an evidence-bound project copy proposal without external side effects', () => {
@@ -126,4 +139,46 @@ test('renders claim-level source anchors without copying source text into the pu
   assert.match(receipt, /`summary` → `README\.md:L3-L5`/);
   assert.match(receipt, /`bodyAppendix` → `README\.md:L8-L10`/);
   assert.doesNotMatch(receipt, /Public summary\.|Public body\./);
+});
+
+test('allows direct application only through an explicit per-target autonomous profile', () => {
+  assert.deepEqual(validateAutonomousPublicSyncProfile({
+    enabled: true,
+    mode: 'direct_main',
+    target: 'abvxsite',
+    allowedPatchFields: ['summary', 'bodyAppendix', 'updatedAt', 'sync.lastAppliedCommit', 'sync.lastAppliedAt'],
+  }), {
+    enabled: true,
+    mode: 'direct_main',
+    target: 'abvxsite',
+    allowedPatchFields: ['summary', 'bodyAppendix', 'updatedAt', 'sync.lastAppliedCommit', 'sync.lastAppliedAt'],
+  });
+  assert.throws(() => validateAutonomousPublicSyncProfile({ enabled: true, mode: 'direct_main', target: 'lab' }), /target must be abvxsite/);
+});
+
+test('records autonomous application evidence with a reversible target commit', () => {
+  const batch = createObservedEventBatch({
+    observedAt: '2026-07-16T12:00:00.000Z',
+    targets: [{ slug: 'mn7r', sync: { repository: 'markoblogo/mn7r', ref: 'main', paths: ['README.md'] }, sourceCommit: 'source-commit' }],
+  });
+  const receipt = createAutonomousApplyReceipt({
+    batch,
+    copyProposals: [{
+      schemaVersion: 1,
+      kind: 'CortexABVCopyProposal',
+      slug: 'mn7r',
+      sourceCommit: 'source-commit',
+      claims: [{ field: 'summary', text: 'Safe public summary.', evidencePath: 'README.md', lineStart: 2, lineEnd: 4 }],
+    }],
+    targetRepository: 'markoblogo/ABVXsite',
+    targetBranch: 'main',
+    previousCommit: 'previous-target-commit',
+    appliedCommit: 'applied-target-commit',
+    appliedAt: '2026-07-16T12:05:00.000Z',
+  });
+  assert.equal(receipt.authority, 'write');
+  assert.equal(receipt.externalSideEffects, true);
+  assert.equal(receipt.rollback.revertCommit, 'applied-target-commit');
+  assert.deepEqual(receipt.claimAnchors, [{ slug: 'mn7r', field: 'summary', evidencePath: 'README.md', lineStart: 2, lineEnd: 4 }]);
+  assert.doesNotMatch(JSON.stringify(receipt), /Safe public summary\./);
 });

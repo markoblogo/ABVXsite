@@ -105,6 +105,41 @@ export function createObservedEventBatch({ targets, observedAt }) {
   };
 }
 
+export function createAutonomousApplyReceipt({ batch, copyProposals, targetRepository, targetBranch, previousCommit, appliedCommit, appliedAt }) {
+  if (!batch || batch.kind !== 'CortexABVObservedEventBatch' || !Array.isArray(batch.proposals) || !batch.proposals.length) {
+    throw new Error('autonomous receipt requires an observed event batch with proposals');
+  }
+  const target = { repository: nonEmptyString(targetRepository, 'targetRepository'), branch: nonEmptyString(targetBranch, 'targetBranch') };
+  const sourceBySlug = new Map(batch.proposals.map((proposal) => [proposal.target.slug, proposal]));
+  const claimAnchors = [];
+  for (const copyProposal of copyProposals || []) {
+    const observed = sourceBySlug.get(projectSlug(copyProposal?.slug, 'copyProposal.slug'));
+    if (!observed || copyProposal.sourceCommit !== observed.evidence[0].commit || !Array.isArray(copyProposal.claims)) {
+      throw new Error('autonomous receipt copy proposal must match observed source evidence');
+    }
+    for (const claim of copyProposal.claims) {
+      if (!['summary', 'bodyAppendix'].includes(claim?.field) || !observed.evidence.some((item) => item.path === claim.evidencePath)) {
+        throw new Error('autonomous receipt claim must use an allowed field and observed evidence path');
+      }
+      claimAnchors.push({ slug: copyProposal.slug, field: claim.field, evidencePath: claim.evidencePath, lineStart: claim.lineStart, lineEnd: claim.lineEnd });
+    }
+  }
+  return {
+    schemaVersion: 1,
+    kind: 'CortexABVAutonomousPublicSyncReceipt',
+    status: 'applied',
+    authority: 'write',
+    externalSideEffects: true,
+    target,
+    previousCommit: nonEmptyString(previousCommit, 'previousCommit'),
+    appliedCommit: nonEmptyString(appliedCommit, 'appliedCommit'),
+    appliedAt: nonEmptyString(appliedAt, 'appliedAt'),
+    sources: batch.proposals.map((proposal) => ({ slug: proposal.target.slug, repository: proposal.target.repository, commit: proposal.evidence[0].commit, paths: proposal.evidence.map((item) => item.path) })),
+    claimAnchors,
+    rollback: { strategy: 'git_revert', revertCommit: appliedCommit },
+  };
+}
+
 export function renderEvidenceReceipt(batch, copyProposals = []) {
   if (!batch || batch.kind !== 'CortexABVObservedEventBatch') throw new Error('batch must be a CortexABVObservedEventBatch');
   if (!Array.isArray(batch.proposals) || !batch.proposals.length) throw new Error('batch must contain at least one proposal');

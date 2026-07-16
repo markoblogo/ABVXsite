@@ -1,6 +1,6 @@
 # CortexABV public-site adapter
 
-This directory is the public, proposal-only boundary between CortexABV and `abvx.xyz`.
+This directory is the public CortexABV boundary between CortexABV and `abvx.xyz`. Its safe default is proposal-only; narrowly declared target profiles may receive bounded, evidence-gated write authority.
 
 It may contain source code, public project-content contracts, and reviewable proposal shapes. It must not contain private personal profiles, CV source files, contact history, inbox data, credentials, raw agent traces, or action receipts that identify correspondents. Those belong to a separately deployed private CortexABV runtime and store.
 
@@ -31,17 +31,17 @@ The guard rejects `data/`, ledger files, environment/key files, and token-like v
 - `updatedAt`
 - sync provenance (`lastAppliedCommit`, `lastAppliedAt`)
 
-It is reviewable and side-effect free until a human merges the generated pull request. It cannot change project identity, title, status, tags, links, media, positioning, or publish to a social network.
+Its default remains reviewable and side-effect free. MN7R and Cropto have a separate `direct_main` profile which can commit only the same bounded fields after all validation gates pass. It cannot change project identity, title, status, tags, links, media, positioning, or publish to a social network.
 
 Every enabled project has a `publicCopy` profile: explicit allowed themes, project-specific forbidden terms, and `append_only` body mode. A proposal may update a summary of at most 320 characters and may append one body paragraph of at most 450 characters; it cannot rewrite, delete, reorder, or restate the approved public body baseline. It also rejects protected/internal surfaces, endpoints, environment details, demo or seeded/mock data, persistence gaps, and other prototype-gap framing. Each changed field requires one claim-to-source line-range anchor from an explicitly allowlisted file. The receipt shows those paths and line ranges, never a copied private-source excerpt.
 
 ## Observed-event workflow
 
-`Sync project descriptions` first runs a read-only observer. It fetches the current SHA for each explicit project-source allowlist, compares it with `sync.lastAppliedCommit`, and saves a `CortexABVObservedEventBatch` artifact. Only a changed SHA enables the separate PR job; the observer has read-only repository permission and does not call a model or modify content.
+`Sync project descriptions` first runs a read-only observer. It fetches the current SHA for each explicit project-source allowlist, compares it with `sync.lastAppliedCommit`, and saves a `CortexABVObservedEventBatch` artifact. Only a changed SHA enables the bounded apply job; the observer has read-only repository permission and does not call a model or modify content.
 
 The manual workflow `slug` input narrows both observation and the later copy-sync job to that one explicitly enabled target.
 
-When a copy PR is created, its body is a CortexABV evidence receipt rendered from that same observed artifact and the generated claim anchors. It lists repository SHA/path evidence plus a source line range for each changed public field, marks the proposal `pending_review`, and gives the reviewer explicit approve/reject checkboxes. The receipt is PR metadata, not a private-memory file committed into the public site repository.
+When a direct update is applied, a `CortexABVAutonomousPublicSyncReceipt` artifact is generated from that same observed batch and the generated claim anchors. It records source SHA/path ranges, previous and applied `ABVXsite/main` commits, and a human-initiated `git revert` rollback reference. It is Actions artifact metadata, not a private-memory file committed into the public site repository.
 
 Run the observer locally when `SOURCE_REPOS_TOKEN` can read every enabled source repository:
 
@@ -51,7 +51,7 @@ SOURCE_REPOS_TOKEN=... npm run cortex-abv:observe-events -- --output /tmp/cortex
 
 ## Policy
 
-`public-policy.example.json` defines the safe public default: `proposal_only`, no automatic actions, and an explicit deny list for external communication and private-data storage. Runtime policy is validated by `npm run cortex-abv:status`.
+`public-policy.example.json` defines the safe public default: `proposal_only`, no automatic actions, and an explicit deny list for external communication and private-data storage. [`autonomous-public-sync.v1.json`](autonomous-public-sync.v1.json) is a separate narrow exception: MN7R and Cropto may write only their listed content fields to `ABVXsite/main`; Lab remains disabled until its separate write credential is installed. Runtime policy is validated by `npm run cortex-abv:status`.
 
 ## Public Presence Index v1
 

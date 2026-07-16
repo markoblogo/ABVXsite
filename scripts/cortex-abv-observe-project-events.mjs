@@ -33,7 +33,8 @@ function writeGithubOutputs(batch) {
 
 export async function run() {
   if (!outputPath) throw new Error('--output <path> is required');
-  const configuredTargets = getSyncTargets().filter((target) => !requestedSlug || target.data.slug === requestedSlug);
+  const configuredTargets = getSyncTargets().filter((target) => target.autonomousPublicSync?.enabled === true
+    && (!requestedSlug || target.data.slug === requestedSlug));
   if (requestedSlug && !configuredTargets.length) throw new Error(`No enabled project-sync target for slug: ${requestedSlug}`);
   const targets = await Promise.all(configuredTargets.map(async (target) => ({
     slug: target.data.slug,

@@ -47,6 +47,21 @@ npm run cortex-abv:public-index
 
 The index records an unavailable feed as source status rather than failing the complete snapshot. Use `-- --without-feed-items` for a fully local, deterministic rebuild. Its source configuration lives in `public-presence-sources.v1.json` and is intentionally the only place to add new public corpus roots.
 
+## Public Project Registry v1
+
+`public-project-registry.v1.json` is a typed, read-only projection of the Presence Index. For each project that explicitly publishes a `github.com` link, it records the repository, ABVX project landing, Lab catalogue membership, public channels, and source provenance.
+
+It does not discover repositories, call the GitHub API, read repository contents, infer missing links, or receive authority to update a site, repository, or social channel. A repository appears only when its public project record already declares its GitHub URL.
+
+Rebuild it after the Presence Index:
+
+```bash
+npm run cortex-abv:public-index
+npm run cortex-abv:project-registry
+```
+
+The schema and extension boundary are documented in [Public Project Registry v1](../docs/cortex-abv-public-project-registry.md).
+
 ## Next interfaces
 
 The private runtime can later submit a validated `CortexABVProposal` to the site adapter. The adapter accepts public evidence references and a bounded patch preview; it never accepts a free-form instruction as authority. Publishing, messages, email, credentials, and private-memory retrieval stay outside this repository.

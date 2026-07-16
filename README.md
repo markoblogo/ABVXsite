@@ -155,6 +155,8 @@ See [CortexABV public-site adapter](cortex-abv/README.md) for the authority boun
 
 The first public CortexABV corpus is [`cortex-abv/public-presence-index.v1.json`](cortex-abv/public-presence-index.v1.json): a versioned, read-only entity map of the public site, Lab, catalogue, writing feeds and source provenance. Rebuild it with `npm run cortex-abv:public-index`; it has no model call and no action authority.
 
+[`cortex-abv/public-project-registry.v1.json`](cortex-abv/public-project-registry.v1.json) is the next read-only layer: an explicit `repo ↔ project ↔ ABVX landing ↔ Lab ↔ public channels` map derived from that index. It includes only GitHub URLs already declared in public project content; it performs no repository discovery, GitHub access, model call, or external action. Rebuild it after the index with `npm run cortex-abv:project-registry`.
+
 ## Verification
 
 Standard checks before pushing:

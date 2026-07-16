@@ -6,9 +6,20 @@ It is the first repository-facing bridge for CortexABV, but it is not a reposito
 
 ## Input allowlist
 
-The observer accepts only the generated Public Project Registry. Every input record must already map an explicitly published GitHub URL to a public ABVX project. The observer rejects unknown, duplicate, or missing repository observations.
+The observer accepts only the generated Public Project Registry. Every input record must already map an explicitly published GitHub URL to a public ABVX project. The observer rejects unknown, duplicate, or missing public-read repository observations.
 
 It does not enumerate an account, search GitHub, infer a repository from a project name, or follow a link that is not in the registry.
+
+A project may retain a canonical GitHub link while declaring the repository private:
+
+```json
+"repositoryObserver": {
+  "enabled": false,
+  "reason": "private_repository"
+}
+```
+
+This is the only supported opt-out. The entry remains in the public registry, but the observer records it in `excluded` and never makes an anonymous GitHub request for it.
 
 ## Evidence output
 
@@ -16,6 +27,8 @@ For each allowlisted entry, the snapshot records either:
 
 - `observed`: default branch, current head SHA, `pushedAt`, `updatedAt`, and visibility; or
 - `unavailable`: an actionable GitHub status/reason.
+
+The snapshot coverage separately reports registered, public-read eligible, excluded, observed, and unavailable repository counts.
 
 It carries the registry's source digest and inherited project provenance. It intentionally excludes repository files, source text, commit messages, issues, pull requests, releases, contributors, credentials, model output, and any proposed patch.
 
@@ -42,6 +55,6 @@ npm run cortex-abv:observe-public-repositories -- --output /tmp/cortex-abv-publi
 
 ## Review and next boundary
 
-`unavailable` is a review signal, not a retry loop or a failure to be erased. A human can correct or remove an inaccessible public GitHub URL in the project source, then regenerate the registry and snapshot.
+`unavailable` is a review signal, not a retry loop or a failure to be erased. A human can correct or remove an inaccessible public GitHub URL in the project source, then regenerate the registry and snapshot. A private repository is different: retain the canonical link and use the explicit `private_repository` observer opt-out.
 
 A future change-detection capability must consume this evidence as a separate proposal-only contract. It needs its own diff policy, evaluation, evidence receipt, and explicit approval path; it must not be added implicitly to this observer.

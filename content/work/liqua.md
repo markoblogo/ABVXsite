@@ -38,6 +38,10 @@
       "url": "https://youtu.be/f8te3FBX32I"
     }
   ],
+  "repositoryObserver": {
+    "enabled": false,
+    "reason": "private_repository"
+  },
   "featured": true,
   "sortRank": 40,
   "needsCopyReview": false,

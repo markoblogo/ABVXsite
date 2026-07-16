@@ -41,11 +41,11 @@ async function readRepositoryMetadata(entry) {
 export async function run() {
   if (!outputPath) throw new Error('--output <path> is required');
   const registry = JSON.parse(readFileSync(inputPath, 'utf8'));
-  const observations = await Promise.all(registry.entries.map(readRepositoryMetadata));
+  const observations = await Promise.all(registry.entries.filter((entry) => entry.observer?.enabled !== false).map(readRepositoryMetadata));
   const snapshot = buildRepositoryObservationSnapshot({ registry, observedAt: new Date().toISOString(), observations });
   mkdirSync(path.dirname(outputPath), { recursive: true });
   writeFileSync(outputPath, `${JSON.stringify(snapshot, null, 2)}\n`);
-  console.log(`Observed ${snapshot.coverage.observedRepositories}/${snapshot.coverage.allowlistedRepositories} allowlisted public repositories; ${snapshot.coverage.unavailableRepositories} unavailable.`);
+  console.log(`Observed ${snapshot.coverage.observedRepositories}/${snapshot.coverage.observerEligibleRepositories} public-read repositories; ${snapshot.coverage.excludedRepositories} explicitly excluded and ${snapshot.coverage.unavailableRepositories} unavailable.`);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

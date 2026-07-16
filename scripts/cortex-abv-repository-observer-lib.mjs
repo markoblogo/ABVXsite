@@ -43,12 +43,18 @@ export function buildRepositoryObservationSnapshot({ registry, observedAt, obser
     throw new Error('repository observer requires CortexABVPublicProjectRegistry v1');
   }
   const entries = registry.entries || [];
+  const eligibleEntries = entries.filter((entry) => entry.observer?.enabled !== false);
+  const excluded = entries.filter((entry) => entry.observer?.enabled === false).map((entry) => ({
+    id: entry.id,
+    repository: entry.repository,
+    reason: entry.observer.reason,
+  }));
   const byId = new Map((observations || []).map((observation) => [observation.id, observation]));
   if (byId.size !== observations?.length) throw new Error('repository observations must not duplicate an allowlisted repository');
   for (const observation of observations || []) {
-    if (!entries.some((entry) => entry.id === observation.id)) throw new Error(`repository observation is not allowlisted: ${observation.id}`);
+    if (!eligibleEntries.some((entry) => entry.id === observation.id)) throw new Error(`repository observation is not allowlisted for public read: ${observation.id}`);
   }
-  const snapshotObservations = entries.map((entry) => observationForEntry(entry, byId.get(entry.id)));
+  const snapshotObservations = eligibleEntries.map((entry) => observationForEntry(entry, byId.get(entry.id)));
   const observedRepositories = snapshotObservations.filter((observation) => observation.status === 'observed').length;
   const stable = { sourceDigest: registry.sourceDigest, observations: snapshotObservations };
   return {
@@ -61,10 +67,13 @@ export function buildRepositoryObservationSnapshot({ registry, observedAt, obser
     sourceRegistry: { path: 'cortex-abv/public-project-registry.v1.json', sourceDigest: registry.sourceDigest },
     sourceDigest: digest(stable),
     coverage: {
-      allowlistedRepositories: entries.length,
+      registeredRepositories: entries.length,
+      observerEligibleRepositories: eligibleEntries.length,
       observedRepositories,
       unavailableRepositories: snapshotObservations.length - observedRepositories,
+      excludedRepositories: excluded.length,
     },
     observations: snapshotObservations,
+    excluded,
   };
 }

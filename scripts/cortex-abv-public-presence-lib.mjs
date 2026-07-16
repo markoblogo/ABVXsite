@@ -31,6 +31,7 @@ function contentEntity({ folder, filePath, data }) {
       section: folder === 'work' ? data.primarySection || null : 'books',
       tags: Array.isArray(data.tags) ? data.tags : [],
       links: Array.isArray(data.links) ? data.links.filter((link) => link?.url).map(({ type, label, url }) => ({ type, label, url })) : [],
+      ...(data.repositoryObserver?.enabled === false ? { repositoryObserver: { enabled: false, reason: data.repositoryObserver.reason } } : {}),
       updatedAt: data.updatedAt || data.publishedAt || null,
     },
     provenance: [{ kind: 'content_frontmatter', path: filePath, digest: digest(data) }],

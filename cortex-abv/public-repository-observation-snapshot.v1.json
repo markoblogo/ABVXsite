@@ -4,16 +4,18 @@
   "version": "v1",
   "authority": "read",
   "externalSideEffects": false,
-  "observedAt": "2026-07-16T16:42:46.971Z",
+  "observedAt": "2026-07-16T17:11:12.747Z",
   "sourceRegistry": {
     "path": "cortex-abv/public-project-registry.v1.json",
-    "sourceDigest": "e10cfd88eef1caef1016901e48b34d48a129cc9b0d969ac8b1d8a006a7dd1d04"
+    "sourceDigest": "3cac1bfc10fa6b1c61badc0366e882e1998941ca27b8594963b07faeb1718398"
   },
-  "sourceDigest": "2e13b9a070bf335c013d0808efcabdf8c6e3b86098a75e389f073ae9c92492e9",
+  "sourceDigest": "2791c8737962edb48e2352d31983496024f0cb4dc1d3149a95438a733742942f",
   "coverage": {
-    "allowlistedRepositories": 22,
-    "observedRepositories": 19,
-    "unavailableRepositories": 3
+    "registeredRepositories": 22,
+    "observerEligibleRepositories": 20,
+    "observedRepositories": 20,
+    "unavailableRepositories": 0,
+    "excludedRepositories": 2
   },
   "observations": [
     {
@@ -446,60 +448,6 @@
       ]
     },
     {
-      "id": "repository:github:markoblogo/liqua",
-      "repository": {
-        "provider": "github",
-        "fullName": "markoblogo/liqua",
-        "url": "https://github.com/markoblogo/liqua"
-      },
-      "project": {
-        "id": "project:liqua",
-        "name": "Liqua",
-        "canonicalUrl": "https://abvx.xyz/work/liqua",
-        "summary": "Liqua is a structured liquidity and execution layer for physical commodity markets, designed to turn fragmented brokerage activity into scalable infrastructure."
-      },
-      "landing": {
-        "canonicalUrl": "https://abvx.xyz/work/liqua",
-        "host": "abvx.xyz"
-      },
-      "status": "unavailable",
-      "reason": "GitHub 404: markoblogo/liqua",
-      "provenance": [
-        {
-          "kind": "content_frontmatter",
-          "path": "content/work/liqua.md",
-          "digest": "4e901d21f6fcd44a3f690f9d86ae55d22ea114795132710469c158dfd518e6f3"
-        }
-      ]
-    },
-    {
-      "id": "repository:github:markoblogo/mn7r",
-      "repository": {
-        "provider": "github",
-        "fullName": "markoblogo/mn7r",
-        "url": "https://github.com/markoblogo/mn7r"
-      },
-      "project": {
-        "id": "project:mn7r",
-        "name": "MN7R",
-        "canonicalUrl": "https://abvx.xyz/work/mn7r",
-        "summary": "MN7R is a commodity trading workflow workspace for brokerage teams running Deals, Clients and EXE inside one structured operational system."
-      },
-      "landing": {
-        "canonicalUrl": "https://abvx.xyz/work/mn7r",
-        "host": "abvx.xyz"
-      },
-      "status": "unavailable",
-      "reason": "GitHub 404: markoblogo/mn7r",
-      "provenance": [
-        {
-          "kind": "content_frontmatter",
-          "path": "content/work/mn7r.md",
-          "digest": "e931e527d3ff21bcd012f4e45d6f66251c4bd4d0e2c6067c1aff71cc48d7fe50"
-        }
-      ]
-    },
-    {
       "id": "repository:github:markoblogo/pictiq",
       "repository": {
         "provider": "github",
@@ -681,8 +629,14 @@
         "canonicalUrl": "https://abvx.xyz/work/trade-solution-eu",
         "host": "abvx.xyz"
       },
-      "status": "unavailable",
-      "reason": "GitHub 404: markoblogo/TS",
+      "status": "observed",
+      "metadata": {
+        "defaultBranch": "main",
+        "headSha": "5855acfa12e616db75eb8183375b9e2a01da196e",
+        "pushedAt": "2026-07-16T08:10:25Z",
+        "updatedAt": "2026-07-16T08:11:04Z",
+        "visibility": "private"
+      },
       "provenance": [
         {
           "kind": "content_frontmatter",
@@ -723,6 +677,26 @@
           "digest": "0e880480463d1858188b66db91d729444f78cfd6e334c40348767d9ce83c5879"
         }
       ]
+    }
+  ],
+  "excluded": [
+    {
+      "id": "repository:github:markoblogo/liqua",
+      "repository": {
+        "provider": "github",
+        "fullName": "markoblogo/liqua",
+        "url": "https://github.com/markoblogo/liqua"
+      },
+      "reason": "private_repository"
+    },
+    {
+      "id": "repository:github:markoblogo/mn7r",
+      "repository": {
+        "provider": "github",
+        "fullName": "markoblogo/mn7r",
+        "url": "https://github.com/markoblogo/mn7r"
+      },
+      "reason": "private_repository"
     }
   ]
 }

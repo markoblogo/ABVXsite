@@ -4,8 +4,8 @@
   "version": "v1",
   "authority": "read",
   "externalSideEffects": false,
-  "generatedAt": "2026-07-16T16:38:04.343Z",
-  "sourceDigest": "cc61c080c5db1e26f9742bdce58b28d37afb2ac1026a0f9cec19573ac7e07d94",
+  "generatedAt": "2026-07-16T17:10:59.163Z",
+  "sourceDigest": "fd76b1d3167bb0ce5a3b0ea1c02cd9669f60a941483d08b6197507d889898448",
   "sources": {
     "site": [
       "README.md",
@@ -735,13 +735,17 @@
             "url": "https://youtu.be/f8te3FBX32I"
           }
         ],
+        "repositoryObserver": {
+          "enabled": false,
+          "reason": "private_repository"
+        },
         "updatedAt": "2026-05-03"
       },
       "provenance": [
         {
           "kind": "content_frontmatter",
           "path": "content/work/liqua.md",
-          "digest": "4e901d21f6fcd44a3f690f9d86ae55d22ea114795132710469c158dfd518e6f3"
+          "digest": "d3a1eda4ab0b06395ffecf0c2144642d81a6186262d6d974f41d58248fd9a1f8"
         }
       ]
     },
@@ -789,13 +793,17 @@
             "url": "https://mn7r.substack.com/"
           }
         ],
+        "repositoryObserver": {
+          "enabled": false,
+          "reason": "private_repository"
+        },
         "updatedAt": "2026-05-07"
       },
       "provenance": [
         {
           "kind": "content_frontmatter",
           "path": "content/work/mn7r.md",
-          "digest": "e931e527d3ff21bcd012f4e45d6f66251c4bd4d0e2c6067c1aff71cc48d7fe50"
+          "digest": "30f237805327015a6e9a9895629b084a355eae993773230623893dad02f2dfc9"
         }
       ]
     },

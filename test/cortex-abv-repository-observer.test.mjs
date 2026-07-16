@@ -39,7 +39,8 @@ test('records public repository metadata and head SHA only for registry allowlis
   assert.equal(snapshot.kind, 'CortexABVRepositoryObservationSnapshot');
   assert.equal(snapshot.authority, 'read');
   assert.equal(snapshot.externalSideEffects, false);
-  assert.equal(snapshot.coverage.allowlistedRepositories, 1);
+  assert.equal(snapshot.coverage.registeredRepositories, 1);
+  assert.equal(snapshot.coverage.observerEligibleRepositories, 1);
   assert.equal(snapshot.coverage.observedRepositories, 1);
   assert.deepEqual(snapshot.observations, [{
     id: 'repository:github:markoblogo/alpha',
@@ -84,4 +85,25 @@ test('rejects an observation outside the registry allowlist', () => {
     observedAt: '2026-07-16T00:00:00.000Z',
     observations: [{ id: 'repository:github:markoblogo/not-registered', status: 'unavailable', reason: 'GitHub 404' }],
   }), /not allowlisted/);
+});
+
+test('does not require a public-read observation for a registry entry explicitly marked private', () => {
+  const privateRegistry = {
+    ...registry,
+    entries: [{ ...registry.entries[0], observer: { enabled: false, reason: 'private_repository' } }],
+  };
+  const snapshot = buildRepositoryObservationSnapshot({ registry: privateRegistry, observedAt: '2026-07-16T00:00:00.000Z', observations: [] });
+
+  assert.deepEqual(snapshot.coverage, {
+    registeredRepositories: 1,
+    observerEligibleRepositories: 0,
+    observedRepositories: 0,
+    unavailableRepositories: 0,
+    excludedRepositories: 1,
+  });
+  assert.deepEqual(snapshot.excluded, [{
+    id: 'repository:github:markoblogo/alpha',
+    repository: registry.entries[0].repository,
+    reason: 'private_repository',
+  }]);
 });

@@ -46,3 +46,17 @@ test('maps only explicit public GitHub repositories to projects, landings, Lab a
   });
   assert.match(registry.sourceDigest, /^[a-f0-9]{64}$/);
 });
+
+test('keeps a private repository link in the registry but opts it out of public observation', () => {
+  const privateRegistry = buildPublicProjectRegistry({
+    presenceIndex: {
+      ...presenceIndex,
+      entities: presenceIndex.entities.map((entity) => entity.id === 'project:alpha'
+        ? { ...entity, attributes: { ...entity.attributes, repositoryObserver: { enabled: false, reason: 'private_repository' } } }
+        : entity),
+    },
+    generatedAt: '2026-07-16T00:00:00.000Z',
+  });
+
+  assert.deepEqual(privateRegistry.entries[0].observer, { enabled: false, reason: 'private_repository' });
+});

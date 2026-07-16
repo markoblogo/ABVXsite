@@ -74,6 +74,9 @@ function validateFile(file, folder) {
   }
 
   if (!Array.isArray(data.tags)) addError(file, 'tags must be an array');
+  if (data.repositoryObserver && (data.repositoryObserver.enabled !== false || data.repositoryObserver.reason !== 'private_repository')) {
+    addError(file, 'repositoryObserver must be { enabled: false, reason: "private_repository" }');
+  }
   try {
     validateSyncConfig(data.sync, file, data.publicCopy);
   } catch (error) {

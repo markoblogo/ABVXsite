@@ -72,7 +72,7 @@ Run it with an explicit output path:
 npm run cortex-abv:observe-public-repositories -- --output /tmp/cortex-abv-public-repository-observation.json
 ```
 
-Each scheduled/manual Actions run stores its snapshot as `cortex-abv-public-repository-observation`; the workflow uses only `contents: read` and no repository secret. An unavailable URL is preserved as `status: "unavailable"` with the GitHub status, so missing or inaccessible links remain reviewable evidence rather than a guessed result.
+Each scheduled/manual Actions run stores its snapshot as `cortex-abv-public-repository-observation`; the workflow uses only `contents: read` and no repository secret. An unavailable URL is preserved as `status: "unavailable"` with the GitHub status, so missing or inaccessible links remain reviewable evidence rather than a guessed result. A canonical GitHub link for an intentionally private repository can remain in the public registry while its project declares `repositoryObserver: { "enabled": false, "reason": "private_repository" }`; that entry is explicitly excluded from anonymous observation.
 
 See [GitHub Repository Observer v1](../docs/cortex-abv-github-repository-observer.md) for the complete contract.
 

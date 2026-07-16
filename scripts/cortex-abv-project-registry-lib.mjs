@@ -16,6 +16,15 @@ function githubRepository(url) {
   }
 }
 
+function observerOptOut(project) {
+  const policy = project.attributes?.repositoryObserver;
+  if (!policy) return null;
+  if (policy.enabled !== false || policy.reason !== 'private_repository') {
+    throw new Error(`${project.id}.repositoryObserver must be { enabled: false, reason: "private_repository" }`);
+  }
+  return { enabled: false, reason: 'private_repository' };
+}
+
 export function buildPublicProjectRegistry({ presenceIndex, generatedAt }) {
   if (presenceIndex?.schemaVersion !== 1 || presenceIndex?.kind !== 'CortexABVPublicPresenceIndex') {
     throw new Error('project registry requires CortexABVPublicPresenceIndex v1');
@@ -35,6 +44,7 @@ export function buildPublicProjectRegistry({ presenceIndex, generatedAt }) {
         landing: { canonicalUrl: project.canonicalUrl, host: new URL(project.canonicalUrl).hostname },
         lab: { catalogued: cataloguedProjects.has(project.id), canonicalUrl: lab.canonicalUrl },
         publicChannels: (project.attributes.links || []).filter((link) => !githubRepository(link.url)),
+        ...(observerOptOut(project) ? { observer: observerOptOut(project) } : {}),
         provenance: project.provenance,
       })));
 

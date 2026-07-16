@@ -49,6 +49,10 @@
       "url": "https://mn7r.substack.com/"
     }
   ],
+  "repositoryObserver": {
+    "enabled": false,
+    "reason": "private_repository"
+  },
   "sync": {
     "enabled": true,
     "repository": "markoblogo/mn7r",

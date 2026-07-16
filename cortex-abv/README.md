@@ -76,6 +76,21 @@ Each scheduled/manual Actions run stores its snapshot as `cortex-abv-public-repo
 
 See [GitHub Repository Observer v1](../docs/cortex-abv-github-repository-observer.md) for the complete contract.
 
+## Repository Change Proposal v1
+
+The manual `Compare public repository snapshots` workflow creates a fresh candidate snapshot, compares it with the committed baseline, and saves both files plus a `CortexABVRepositoryChangeProposal` evidence receipt. Its only possible outcomes are `no_changes` and `pending_review`; neither outcome calls sync, creates a PR, edits a repository, or advances the baseline.
+
+For a local comparison, supply all three paths explicitly:
+
+```bash
+npm run cortex-abv:compare-repository-snapshots -- \
+  --baseline cortex-abv/public-repository-observation-snapshot.v1.json \
+  --candidate /tmp/cortex-abv-repository-candidate.json \
+  --output /tmp/cortex-abv-repository-change-proposal.json
+```
+
+The receipt is documented in [Repository Change Proposal v1](../docs/cortex-abv-repository-change-proposal.md).
+
 ## Next interfaces
 
 The private runtime can later submit a validated `CortexABVProposal` to the site adapter. The adapter accepts public evidence references and a bounded patch preview; it never accepts a free-form instruction as authority. Publishing, messages, email, credentials, and private-memory retrieval stay outside this repository.

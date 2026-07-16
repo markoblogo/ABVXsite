@@ -159,6 +159,8 @@ The first public CortexABV corpus is [`cortex-abv/public-presence-index.v1.json`
 
 The separate GitHub Repository Observer v1 consumes only that registry allowlist and emits a versioned [evidence snapshot](cortex-abv/public-repository-observation-snapshot.v1.json) with default branch, head SHA, public timestamps, and explicit unavailable statuses. It never reads repository files, synchronizes content, or writes to GitHub; its Actions workflow has `contents: read` only. Run it with `npm run cortex-abv:observe-public-repositories -- --output /tmp/cortex-abv-public-repository-observation.json`.
 
+The manual `Compare public repository snapshots` workflow compares a committed snapshot baseline with one fresh observer snapshot and saves a proposal-only evidence receipt. Its outcomes are only `no_changes` or `pending_review`; it cannot advance the baseline, start copy sync, create a PR, or change any external surface.
+
 ## Verification
 
 Standard checks before pushing:

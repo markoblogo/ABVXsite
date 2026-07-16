@@ -1,0 +1,35 @@
+name: Compare public repository snapshots
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - name: Create fresh read-only candidate snapshot
+        run: node scripts/cortex-abv-observe-public-project-repositories.mjs --output "$RUNNER_TEMP/cortex-abv-repository-candidate.json"
+
+      - name: Create proposal-only evidence receipt
+        run: node scripts/cortex-abv-compare-repository-observation-snapshots.mjs --baseline cortex-abv/public-repository-observation-snapshot.v1.json --candidate "$RUNNER_TEMP/cortex-abv-repository-candidate.json" --output "$RUNNER_TEMP/cortex-abv-repository-change-proposal.json"
+
+      - name: Save comparison evidence artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: cortex-abv-repository-change-proposal
+          path: |
+            ${{ runner.temp }}/cortex-abv-repository-candidate.json
+            ${{ runner.temp }}/cortex-abv-repository-change-proposal.json
+          if-no-files-found: error

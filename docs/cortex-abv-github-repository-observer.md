@@ -57,4 +57,4 @@ npm run cortex-abv:observe-public-repositories -- --output /tmp/cortex-abv-publi
 
 `unavailable` is a review signal, not a retry loop or a failure to be erased. A human can correct or remove an inaccessible public GitHub URL in the project source, then regenerate the registry and snapshot. A private repository is different: retain the canonical link and use the explicit `private_repository` observer opt-out.
 
-A future change-detection capability must consume this evidence as a separate proposal-only contract. It needs its own diff policy, evaluation, evidence receipt, and explicit approval path; it must not be added implicitly to this observer.
+The separate [Repository Change Proposal v1](cortex-abv-repository-change-proposal.md) compares two observer snapshots into a proposal-only evidence receipt. It deliberately stops at `pending_review`; any later consumer needs its own evaluation, approval, and rollback contract.

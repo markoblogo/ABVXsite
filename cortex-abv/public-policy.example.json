@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "name": "CortexABV public-site adapter",
+  "mode": "proposal_only",
+  "approvedSources": [
+    "site_content",
+    "approved_repository_docs",
+    "writing_feeds"
+  ],
+  "allowedProposalActions": [
+    "project_copy_sync",
+    "site_link_refresh",
+    "social_post_draft"
+  ],
+  "automaticActions": [],
+  "forbiddenActions": [
+    "publish_external_post",
+    "send_message",
+    "send_email",
+    "change_identity_fields",
+    "store_private_profile"
+  ]
+}

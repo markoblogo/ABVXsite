@@ -11,12 +11,44 @@ on:
     - cron: '17 8 * * 1'
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
 
 jobs:
-  propose-copy-updates:
+  observe-project-events:
     runs-on: ubuntu-latest
+    outputs:
+      has_changes: ${{ steps.observe.outputs.has_changes }}
+      target_slugs: ${{ steps.observe.outputs.target_slugs }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - name: Observe allowlisted project repository commits
+        id: observe
+        env:
+          SOURCE_REPOS_TOKEN: ${{ secrets.SOURCE_REPOS_TOKEN }}
+        run: node scripts/cortex-abv-observe-project-events.mjs --output "$RUNNER_TEMP/cortex-abv-observed-events.json" ${{ inputs.slug && format('--slug {0}', inputs.slug) || '' }}
+
+      - name: Save read-only evidence artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cortex-abv-observed-events
+          path: ${{ runner.temp }}/cortex-abv-observed-events.json
+          if-no-files-found: error
+
+  propose-copy-updates:
+    needs: observe-project-events
+    if: needs.observe-project-events.outputs.has_changes == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v4
 
@@ -29,12 +61,30 @@ jobs:
 
       - run: npm run test:sync
 
+      - name: Download observed evidence artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: cortex-abv-observed-events
+          path: ${{ runner.temp }}/cortex-abv
+
+      - name: Render CortexABV evidence receipt
+        run: node scripts/cortex-abv-render-pr-receipt.mjs --input "$RUNNER_TEMP/cortex-abv/cortex-abv-observed-events.json" --output "$RUNNER_TEMP/cortex-abv-pr-receipt.md"
+
+      - name: Show observed evidence targets
+        env:
+          TARGET_SLUGS: ${{ needs.observe-project-events.outputs.target_slugs }}
+        run: echo "CortexABV observed changed sources for $TARGET_SLUGS"
+
       - name: Propose content updates from project repositories
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: gpt-5-mini
           SOURCE_REPOS_TOKEN: ${{ secrets.SOURCE_REPOS_TOKEN }}
-        run: node scripts/sync-project-descriptions.mjs ${{ inputs.slug && format('--slug {0}', inputs.slug) || '' }}
+          TARGET_SLUGS: ${{ needs.observe-project-events.outputs.target_slugs }}
+        run: |
+          for slug in $TARGET_SLUGS; do
+            node scripts/sync-project-descriptions.mjs --slug "$slug"
+          done
 
       - name: Validate proposed content
         run: npm run content:validate
@@ -45,7 +95,4 @@ jobs:
           delete-branch: true
           title: 'chore: sync project descriptions from source repos'
           commit-message: 'chore: sync project descriptions from source repos'
-          body: |
-            Proposed copy updates generated only from configured repository documents.
-
-            Review factual claims and tone before merging.
+          body-path: ${{ runner.temp }}/cortex-abv-pr-receipt.md

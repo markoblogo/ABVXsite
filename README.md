@@ -139,6 +139,20 @@ npm run llms:generate
 
 Selected project descriptions can be reviewed from their source repositories through the scheduled PR workflow. See [project description sync](docs/project-description-sync.md).
 
+## CortexABV public-site adapter
+
+The repository contains the proposal-only public boundary for CortexABV in [`cortex-abv/`](cortex-abv/). It validates approved public sources and bounded site-copy proposals, but it does not contain the private personal profile, inbox, credentials, contact history, or autonomous publishing controls.
+
+Check the adapter contract and currently enabled project-sync targets:
+
+```bash
+npm run cortex-abv:status
+```
+
+The scheduled project-copy workflow observes allowlisted source SHAs first, saves an evidence artifact, and opens or updates a reviewable PR only when an observed source differs from applied provenance. That PR receives a `pending_review` evidence receipt; it does not grant publishing or messaging authority.
+
+See [CortexABV public-site adapter](cortex-abv/README.md) for the authority boundary and the next integration seam.
+
 ## Verification
 
 Standard checks before pushing:

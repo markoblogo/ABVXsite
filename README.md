@@ -157,6 +157,8 @@ The first public CortexABV corpus is [`cortex-abv/public-presence-index.v1.json`
 
 [`cortex-abv/public-project-registry.v1.json`](cortex-abv/public-project-registry.v1.json) is the next read-only layer: an explicit `repo ↔ project ↔ ABVX landing ↔ Lab ↔ public channels` map derived from that index. It includes only GitHub URLs already declared in public project content; it performs no repository discovery, GitHub access, model call, or external action. Rebuild it after the index with `npm run cortex-abv:project-registry`.
 
+The separate GitHub Repository Observer v1 consumes only that registry allowlist and emits a versioned [evidence snapshot](cortex-abv/public-repository-observation-snapshot.v1.json) with default branch, head SHA, public timestamps, and explicit unavailable statuses. It never reads repository files, synchronizes content, or writes to GitHub; its Actions workflow has `contents: read` only. Run it with `npm run cortex-abv:observe-public-repositories -- --output /tmp/cortex-abv-public-repository-observation.json`.
+
 ## Verification
 
 Standard checks before pushing:

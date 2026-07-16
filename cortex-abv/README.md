@@ -62,6 +62,20 @@ npm run cortex-abv:project-registry
 
 The schema and extension boundary are documented in [Public Project Registry v1](../docs/cortex-abv-public-project-registry.md).
 
+## GitHub Repository Observer v1
+
+`CortexABVRepositoryObservationSnapshot` is a separate, read-only evidence layer over the explicit registry allowlist. It records only public repository metadata needed for later comparison: default branch, current head SHA, pushed/updated timestamps, and visibility. It never reads files, issues, pull requests, releases, or commit messages.
+
+Run it with an explicit output path:
+
+```bash
+npm run cortex-abv:observe-public-repositories -- --output /tmp/cortex-abv-public-repository-observation.json
+```
+
+Each scheduled/manual Actions run stores its snapshot as `cortex-abv-public-repository-observation`; the workflow uses only `contents: read` and no repository secret. An unavailable URL is preserved as `status: "unavailable"` with the GitHub status, so missing or inaccessible links remain reviewable evidence rather than a guessed result.
+
+See [GitHub Repository Observer v1](../docs/cortex-abv-github-repository-observer.md) for the complete contract.
+
 ## Next interfaces
 
 The private runtime can later submit a validated `CortexABVProposal` to the site adapter. The adapter accepts public evidence references and a bounded patch preview; it never accepts a free-form instruction as authority. Publishing, messages, email, credentials, and private-memory retrieval stay outside this repository.

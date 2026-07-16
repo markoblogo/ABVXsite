@@ -1,0 +1,32 @@
+name: Observe public project repositories
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '31 8 * * 4'
+
+permissions:
+  contents: read
+
+jobs:
+  observe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - name: Observe explicitly registered public repositories
+        run: node scripts/cortex-abv-observe-public-project-repositories.mjs --output "$RUNNER_TEMP/cortex-abv-public-repository-observation.json"
+
+      - name: Save read-only evidence snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: cortex-abv-public-repository-observation
+          path: ${{ runner.temp }}/cortex-abv-public-repository-observation.json
+          if-no-files-found: error

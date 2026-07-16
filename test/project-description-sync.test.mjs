@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { applyProposal, validatePublicCopyEvidence, validatePublicCopyProfile } from '../scripts/project-description-sync-lib.mjs';
+import { PublicCopyAbstention, applyProposal, validatePublicCopyEvidence, validatePublicCopyProfile } from '../scripts/project-description-sync-lib.mjs';
 
 const source = {
   title: 'MN7R',
@@ -79,7 +79,7 @@ test('rejects public copy that exposes protected or prototype-gap details', () =
       sourceCommit: 'abc123',
       updatedAt: '2026-07-14',
     }),
-    /not public-safe: protected/i,
+    (error) => error instanceof PublicCopyAbstention && /not public-safe: protected/i.test(error.message),
   );
 });
 
@@ -127,6 +127,6 @@ test('requires a per-project public-copy profile and preserves the public body b
       sourceCommit: 'abc123',
       updatedAt: '2026-07-14',
     }),
-    /not public-safe: AI assistant/i,
+    (error) => error instanceof PublicCopyAbstention && /not public-safe: AI assistant/i.test(error.message),
   );
 });

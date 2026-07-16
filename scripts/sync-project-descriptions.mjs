@@ -1,6 +1,6 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { applyProposal, getSyncTargets, validatePublicCopyEvidence, writeProposal } from './project-description-sync-lib.mjs';
+import { PublicCopyAbstention, applyProposal, getSyncTargets, validatePublicCopyEvidence, writeProposal } from './project-description-sync-lib.mjs';
 
 const args = new Set(process.argv.slice(2));
 const slugIndex = process.argv.indexOf('--slug');
@@ -129,14 +129,24 @@ export async function run() {
     try {
       const source = await readRepositorySources(target.sync);
       const proposal = await createProposal(target, source.source);
-      const evidence = validatePublicCopyEvidence({ proposal, sync: target.sync, sourceFiles: source.files, data: target.data });
-      const result = applyProposal({
-        data: target.data,
-        body: target.body,
-        proposal,
-        sourceCommit: source.commit,
-        updatedAt: new Date().toISOString().slice(0, 10),
-      });
+      let evidence;
+      let result;
+      try {
+        evidence = validatePublicCopyEvidence({ proposal, sync: target.sync, sourceFiles: source.files, data: target.data });
+        result = applyProposal({
+          data: target.data,
+          body: target.body,
+          proposal,
+          sourceCommit: source.commit,
+          updatedAt: new Date().toISOString().slice(0, 10),
+        });
+      } catch (error) {
+        if (error instanceof PublicCopyAbstention) {
+          console.log(`${target.data.slug}: abstained (${error.message})`);
+          continue;
+        }
+        throw error;
+      }
       if (!result.changed) {
         console.log(`${target.data.slug}: no supported copy change`);
         continue;

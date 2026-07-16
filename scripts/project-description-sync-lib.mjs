@@ -19,6 +19,13 @@ const PUBLIC_COPY_DENIALS = [
   /\bnot yet\b/i,
 ];
 
+export class PublicCopyAbstention extends Error {
+  constructor(message) {
+    super(message);
+    this.name = 'PublicCopyAbstention';
+  }
+}
+
 function nonEmptyString(value, field) {
   if (typeof value !== 'string' || !value.trim()) throw new Error(`${field} must be a non-empty string`);
   return value.trim();
@@ -57,15 +64,15 @@ export function validateSyncConfig(sync, filePath = 'content item', publicCopy) 
 export function assertPublicSafeCopy(summary, bodyAppendix, publicCopy) {
   const copy = `${summary}\n${bodyAppendix}`;
   const denial = PUBLIC_COPY_DENIALS.find((pattern) => pattern.test(copy));
-  if (denial) throw new Error(`generated copy is not public-safe: ${denial.source.replace(/\\b|\\\?|\\(|\\)/g, '')}`);
+  if (denial) throw new PublicCopyAbstention(`generated copy is not public-safe: ${denial.source.replace(/\\b|\\\?|\\(|\\)/g, '')}`);
   const forbiddenTerm = publicCopy.forbiddenTerms.find((term) => copy.toLocaleLowerCase().includes(term.toLocaleLowerCase()));
-  if (forbiddenTerm) throw new Error(`generated copy is not public-safe: ${forbiddenTerm}`);
+  if (forbiddenTerm) throw new PublicCopyAbstention(`generated copy is not public-safe: ${forbiddenTerm}`);
 }
 
 export function validatePublicCopyEvidence({ proposal, sync, sourceFiles, data }) {
   if (!proposal?.changed) return { claims: [] };
-  if (!Array.isArray(proposal.claims)) throw new Error('changed proposal must include claim evidence');
-  if (!Array.isArray(sourceFiles) || !sourceFiles.length) throw new Error('source files are required for claim evidence');
+  if (!Array.isArray(proposal.claims)) throw new PublicCopyAbstention('changed proposal must include claim evidence');
+  if (!Array.isArray(sourceFiles) || !sourceFiles.length) throw new PublicCopyAbstention('source files are required for claim evidence');
 
   const expected = new Map();
   if (proposal.summary !== data?.summary) expected.set('summary', proposal.summary);
@@ -78,16 +85,16 @@ export function validatePublicCopyEvidence({ proposal, sync, sourceFiles, data }
     lineEnd: claim?.lineEnd,
   }));
   if (claims.length !== expected.size || new Set(claims.map(({ field }) => field)).size !== expected.size || !claims.every(({ field }) => expected.has(field))) {
-    throw new Error('changed proposal requires exactly one claim for each changed public field');
+    throw new PublicCopyAbstention('changed proposal requires exactly one claim for each changed public field');
   }
 
   for (const claim of claims) {
-    if (claim.text !== expected.get(claim.field)) throw new Error(`${claim.field} claim must match the proposed public copy exactly`);
-    if (!sync.paths.includes(claim.evidencePath)) throw new Error(`${claim.field} claim must reference an allowlisted source path`);
+    if (claim.text !== expected.get(claim.field)) throw new PublicCopyAbstention(`${claim.field} claim must match the proposed public copy exactly`);
+    if (!sync.paths.includes(claim.evidencePath)) throw new PublicCopyAbstention(`${claim.field} claim must reference an allowlisted source path`);
     const source = sourceFiles.find((file) => file.path === claim.evidencePath);
     const lineCount = source?.text.split('\n').length || 0;
     if (!Number.isInteger(claim.lineStart) || !Number.isInteger(claim.lineEnd) || claim.lineStart < 1 || claim.lineEnd < claim.lineStart || claim.lineEnd > lineCount) {
-      throw new Error(`${claim.field} claim must reference a valid source line range`);
+      throw new PublicCopyAbstention(`${claim.field} claim must reference a valid source line range`);
     }
   }
   return { claims };
@@ -95,13 +102,18 @@ export function validatePublicCopyEvidence({ proposal, sync, sourceFiles, data }
 
 export function applyProposal({ data, body, proposal, sourceCommit, updatedAt }) {
   if (!proposal || proposal.changed !== true) return { changed: false, data, body };
-  const summary = nonEmptyString(proposal.summary, 'summary');
-  if (typeof proposal.bodyAppendix !== 'string') throw new Error('bodyAppendix must be a string');
+  let summary;
+  try {
+    summary = nonEmptyString(proposal.summary, 'summary');
+  } catch (error) {
+    throw new PublicCopyAbstention(error.message);
+  }
+  if (typeof proposal.bodyAppendix !== 'string') throw new PublicCopyAbstention('bodyAppendix must be a string');
   const bodyAppendix = proposal.bodyAppendix.trim();
   const publicCopy = validatePublicCopyProfile(data.publicCopy);
-  if (summary.length > MAX_SUMMARY_LENGTH) throw new Error(`summary exceeds ${MAX_SUMMARY_LENGTH} characters`);
-  if (bodyAppendix.length > MAX_BODY_APPENDIX_LENGTH) throw new Error(`bodyAppendix exceeds ${MAX_BODY_APPENDIX_LENGTH} characters`);
-  if (bodyAppendix.includes('\n\n')) throw new Error('bodyAppendix must be a single paragraph');
+  if (summary.length > MAX_SUMMARY_LENGTH) throw new PublicCopyAbstention(`summary exceeds ${MAX_SUMMARY_LENGTH} characters`);
+  if (bodyAppendix.length > MAX_BODY_APPENDIX_LENGTH) throw new PublicCopyAbstention(`bodyAppendix exceeds ${MAX_BODY_APPENDIX_LENGTH} characters`);
+  if (bodyAppendix.includes('\n\n')) throw new PublicCopyAbstention('bodyAppendix must be a single paragraph');
   assertPublicSafeCopy(summary, bodyAppendix, publicCopy);
   const nextBody = bodyAppendix ? `${body.trim()}\n\n${bodyAppendix}` : body.trim();
   if (summary === data.summary && nextBody === body.trim()) return { changed: false, data, body };

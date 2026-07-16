@@ -40,6 +40,8 @@ Each enabled target must provide a `publicCopy` profile with explicit `allowedTh
 
 For each changed public field, the model must provide one exact copy claim plus an allowlisted source path and numbered line range. The workflow validates the path and range against the fetched source before it writes content. The public PR receipt exposes only the path and line range, not a quote from a private source repository.
 
+If model output violates this public-copy profile, the workflow records a clean abstention and creates no patch or PR update. Repository access, configuration, or provider failures still fail closed as workflow errors.
+
 ## Enable a project
 
 Add an explicit `sync` block to `content/work/<slug>.md`:

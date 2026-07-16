@@ -1,0 +1,3768 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVPublicPresenceIndex",
+  "version": "v1",
+  "authority": "read",
+  "externalSideEffects": false,
+  "generatedAt": "2026-07-16T16:33:25.275Z",
+  "sourceDigest": "cc61c080c5db1e26f9742bdce58b28d37afb2ac1026a0f9cec19573ac7e07d94",
+  "sources": {
+    "site": [
+      "README.md",
+      "content/**",
+      "src/app/writing/page.tsx"
+    ],
+    "lab": [
+      "src/app/tech-lab/page.tsx",
+      "src/app/lang-lab/page.tsx",
+      "content/work/**"
+    ],
+    "writingFeeds": [
+      {
+        "id": "writing:medium",
+        "feedUrl": "https://abvcreative.medium.com/feed"
+      },
+      {
+        "id": "writing:substack",
+        "feedUrl": "https://abvx.substack.com/feed"
+      }
+    ]
+  },
+  "entities": [
+    {
+      "id": "lab:abvx",
+      "kind": "lab",
+      "name": "ABVX Lab",
+      "canonicalUrl": "https://abvx.xyz/systems",
+      "summary": "Public systems catalogue for AI-native development, language and operational experiments.",
+      "attributes": {
+        "currentRoute": "/systems",
+        "legacyRoutes": [
+          "/tech-lab",
+          "/lang-lab"
+        ]
+      },
+      "provenance": [
+        {
+          "kind": "source_config",
+          "path": "cortex-abv/public-presence-sources.v1.json",
+          "digest": "dd58b309c91d35ba814c36fd08d3fe9edc338d39e255f5b5e2a4a9859e814ff0"
+        }
+      ]
+    },
+    {
+      "id": "person:anton-biletskyi-volokh",
+      "kind": "person",
+      "name": "Anton Biletskyi-Volokh",
+      "canonicalUrl": "https://abvx.xyz/about",
+      "summary": "Public founder and ecosystem profile represented by ABVX.",
+      "attributes": {},
+      "provenance": [
+        {
+          "kind": "source_config",
+          "path": "cortex-abv/public-presence-sources.v1.json",
+          "digest": "7faa6951d2a685bb626b5ff6cfa08f555eaef085c3300bfd20fa0b4971fa466c"
+        }
+      ]
+    },
+    {
+      "id": "project:1d3x",
+      "kind": "project",
+      "name": "1D3X",
+      "canonicalUrl": "https://abvx.xyz/work/1d3x",
+      "summary": "1D3X is an index infrastructure platform for local agricultural markets, building local commodity indices with market leaders.",
+      "attributes": {
+        "status": "live",
+        "section": "focus",
+        "tags": [
+          "agro-commodities",
+          "commodity-indexes",
+          "benchmark",
+          "market-data",
+          "index-infrastructure",
+          "agricultural-markets",
+          "local-markets",
+          "market-infrastructure",
+          "MN7R",
+          "Cropto"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://1d3x.com/"
+          },
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/index"
+          }
+        ],
+        "updatedAt": "2026-05-27"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/1d3x.md",
+          "digest": "459083b28c950a27532fad58094e8777cde001a4532da19d9e5f951dc5d60e61"
+        }
+      ]
+    },
+    {
+      "id": "project:abvx-agent-skills",
+      "kind": "project",
+      "name": "ABVX Agent Skills",
+      "canonicalUrl": "https://abvx.xyz/work/abvx-agent-skills",
+      "summary": "ABVX Agent Skills is a portable execution layer for AI-native development: small, reviewable, validation-gated skillpacks for Codex-style project work.",
+      "attributes": {
+        "status": "live",
+        "section": "systems",
+        "tags": [
+          "ai-dev",
+          "agent-skills",
+          "codex",
+          "workflows",
+          "validation"
+        ],
+        "links": [
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/abvx-agent-skills"
+          },
+          {
+            "type": "site",
+            "label": "Lab",
+            "url": "https://lab.abvx.xyz/tools/abvx-agent-skills/index.html"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/F73_ofen8rI"
+          }
+        ],
+        "updatedAt": "2026-06-03"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/abvx-agent-skills.md",
+          "digest": "8584860e452dae9691b971b56ae36319c95d6e2e2990fe5a56bb9eec7b00c125"
+        }
+      ]
+    },
+    {
+      "id": "project:abvx-lab",
+      "kind": "project",
+      "name": "ABVX Lab",
+      "canonicalUrl": "https://abvx.xyz/work/abvx-lab",
+      "summary": "ABVX Lab is the ecosystem front for AI-native development systems, protocols, workflows and operational tooling.",
+      "attributes": {
+        "status": "building",
+        "section": "systems",
+        "tags": [
+          "lab",
+          "experiments",
+          "ai-dev"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://lab.abvx.xyz/"
+          },
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/lab.abvx"
+          }
+        ],
+        "updatedAt": "2026-05-08"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/abvx-lab.md",
+          "digest": "2553dea93d37ce92a834120306eade6f7f367639d936b8e3cb9223dfe0ac976f"
+        }
+      ]
+    },
+    {
+      "id": "project:abvx-shortener",
+      "kind": "project",
+      "name": "ABVX Shortener",
+      "canonicalUrl": "https://abvx.xyz/work/abvx-shortener",
+      "summary": "ABVX Shortener is a lightweight web and browser-extension system for shortened operational links and compact URL workflows.",
+      "attributes": {
+        "status": "live",
+        "section": "systems",
+        "tags": [
+          "web-service",
+          "utility",
+          "shortener"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://go.abvx.xyz/"
+          },
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/-abvx-shortener"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/oEPow5tKjXQ"
+          }
+        ],
+        "updatedAt": "2026-04-24"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/abvx-shortener.md",
+          "digest": "d5c8c67867b3d7a976a2d39a9fe8d657738cba92e0cb56e8b9b68689c52de226"
+        }
+      ]
+    },
+    {
+      "id": "project:agents-md-generator",
+      "kind": "project",
+      "name": "AGENTS.md Generator",
+      "canonicalUrl": "https://abvx.xyz/work/agents-md-generator",
+      "summary": "AGENTS.md Generator is an operational workflow surface for AI-assisted development systems, agent coordination and structured coding workflows.",
+      "attributes": {
+        "status": "live",
+        "section": "systems",
+        "tags": [
+          "ai-dev",
+          "agents",
+          "documentation",
+          "workflow"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://agentsmd.abvx.xyz/"
+          },
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/AGENTS.md_generator"
+          }
+        ],
+        "updatedAt": "2026-05-09"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/agents-md-generator.md",
+          "digest": "f4590c26b54be2a8b639b12de1da0f20132ed0c694c361ef7980133c96e63750"
+        }
+      ]
+    },
+    {
+      "id": "project:ascii-theme",
+      "kind": "project",
+      "name": "AsciiTheme",
+      "canonicalUrl": "https://abvx.xyz/work/ascii-theme",
+      "summary": "AsciiTheme is a UI and CSS system for light, dark and ASCII-inspired development interfaces inside the broader AI-native tooling ecosystem.",
+      "attributes": {
+        "status": "live",
+        "section": "systems",
+        "tags": [
+          "ui",
+          "theme",
+          "ascii",
+          "web-tool"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://markoblogo.github.io/AsciiTheme/"
+          },
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/AsciiTheme"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/VVQX7DtGHX0"
+          }
+        ],
+        "updatedAt": "2026-05-07"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/ascii-theme.md",
+          "digest": "ac83eab8330060560f9ba76c6e63f8331eddc3346972a6d940be795c81a9201b"
+        }
+      ]
+    },
+    {
+      "id": "project:azurmenton",
+      "kind": "project",
+      "name": "AzurMenton",
+      "canonicalUrl": "https://abvx.xyz/work/azurmenton",
+      "summary": "AzurMenton is a hospitality booking and presentation platform for seaside apartments in Menton, France.",
+      "attributes": {
+        "status": "live",
+        "section": "systems",
+        "tags": [
+          "hospitality",
+          "booking",
+          "apartments",
+          "France",
+          "Menton",
+          "travel",
+          "presentation-site",
+          "web-interface",
+          "multilingual"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://azurmenton.com/"
+          },
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/azurmenton"
+          }
+        ],
+        "updatedAt": "2026-05-17"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/azurmenton.md",
+          "digest": "615076f19b112632fee1bd1d4947b9611d643323923832c71a125eb64bc513c1"
+        }
+      ]
+    },
+    {
+      "id": "project:blue-jay-vodka",
+      "kind": "project",
+      "name": "Blue Jay Vodka",
+      "canonicalUrl": "https://abvx.xyz/work/blue-jay-vodka",
+      "summary": "Blue Jay Vodka is a brand landing page built around the product’s alpine identity and the idea “Intelligent by Nature.”",
+      "attributes": {
+        "status": "live",
+        "section": "systems",
+        "tags": [
+          "blue-jay-vodka",
+          "brand-landing",
+          "web-design",
+          "commercial-site"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://bluejayvodka.com"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/Kn70LpAJuzI?si=7NluI2_RS-LEfRO6"
+          },
+          {
+            "type": "other",
+            "label": "Behance",
+            "url": "https://www.behance.net/gallery/226027703/Blue-Jay-Vodka-Intelligent-by-Nature-"
+          }
+        ],
+        "updatedAt": "2026-07-14"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/blue-jay-vodka.md",
+          "digest": "000e28d59b774f2a60257c6d968f774e5930595eee82c2312fb12562953dac5f"
+        }
+      ]
+    },
+    {
+      "id": "project:chinese-wisdom-toki-pona-landing",
+      "kind": "project",
+      "name": "Chinese Wisdom in toki pona landing",
+      "canonicalUrl": "https://abvx.xyz/work/chinese-wisdom-toki-pona-landing",
+      "summary": "Chinese Wisdom in toki pona is a multilingual publishing surface for classical Chinese texts translated into toki pona and sitelen pona.",
+      "attributes": {
+        "status": "live",
+        "section": "systems",
+        "tags": [
+          "toki-pona",
+          "book-companion",
+          "landing",
+          "dao"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://dao-toki.abvx.xyz/"
+          },
+          {
+            "type": "github",
+            "label": "Source",
+            "url": "https://github.com/markoblogo/book-landings/tree/main/apps/dao-toki"
+          }
+        ],
+        "updatedAt": null
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/chinese-wisdom-toki-pona-landing.md",
+          "digest": "5bb23936c225dce7bb8691e93f2a0b3d485669c566dbdab4eb97ffb32002e16d"
+        }
+      ]
+    },
+    {
+      "id": "project:cropto",
+      "kind": "project",
+      "name": "Cropto",
+      "canonicalUrl": "https://abvx.xyz/work/cropto",
+      "summary": "Cropto is a prototype commodity trading platform for indexed spot trading, options and tokenized commodity-linked instruments across Ukraine, Argentina and Brazil.",
+      "attributes": {
+        "status": "building",
+        "section": "focus",
+        "tags": [
+          "cropto",
+          "agro-commodities",
+          "trading-platform",
+          "indexed-trading",
+          "options",
+          "tokenized-assets",
+          "market-infrastructure"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://cr0pto.com/"
+          },
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/cropto-v0"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/zumLJKZQFxc"
+          }
+        ],
+        "updatedAt": "2026-05-06"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/cropto.md",
+          "digest": "bd841ba48e4c5c06fc2c677c08dc4f3d077b619cb8ff735d463cd3d55fc9272b"
+        }
+      ]
+    },
+    {
+      "id": "project:cropto-market-risk-deck",
+      "kind": "project",
+      "name": "Cropto market risk tools deck",
+      "canonicalUrl": "https://abvx.xyz/work/cropto-market-risk-deck",
+      "summary": "Cropto Market Risk Tools Deck presents tokenized local spot-index risk infrastructure for commodity markets and programmable settlement systems.",
+      "attributes": {
+        "status": "building",
+        "section": "focus",
+        "tags": [
+          "cropto",
+          "market-risk",
+          "deck",
+          "tokenized-assets",
+          "indexed-trading",
+          "landing",
+          "commodities"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://cr0pto.com/deck"
+          },
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/cropto-v0"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/zumLJKZQFxc"
+          }
+        ],
+        "updatedAt": "2026-05-01"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/cropto-market-risk-deck.md",
+          "digest": "205c8eb04707b11ad42ad9469d173889dc0297c033b8394dd3ac264b4afc2612"
+        }
+      ]
+    },
+    {
+      "id": "project:cropto-monitor",
+      "kind": "project",
+      "name": "Cropto Monitor: Commodity Signals Terminal",
+      "canonicalUrl": "https://abvx.xyz/work/cropto-monitor",
+      "summary": "Cropto Monitor is a customizable commodity-signals terminal combining market data, logistics, weather, policy, risk and live situational awareness for agro-commodity markets.",
+      "attributes": {
+        "status": "research",
+        "section": "focus",
+        "tags": [
+          "cropto",
+          "monitoring",
+          "commodity-signals",
+          "logistics",
+          "weather",
+          "market-intelligence",
+          "dashboard",
+          "agro-commodities"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://cr0pto.com/monitor"
+          },
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/cropto-v0"
+          }
+        ],
+        "updatedAt": "2026-05-05"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/cropto-monitor.md",
+          "digest": "ee640988d515697b95745d4487d24e40b10a6682717eff2c5c902a8315cf7259"
+        }
+      ]
+    },
+    {
+      "id": "project:decision-map",
+      "kind": "project",
+      "name": "Decision Map",
+      "canonicalUrl": "https://abvx.xyz/work/decision-map",
+      "summary": "Decision Map is a protocol for AI-assisted strategic decision-making in product launches, positioning and complex marketing scenarios.",
+      "attributes": {
+        "status": "building",
+        "section": "systems",
+        "tags": [
+          "decision-making",
+          "protocol",
+          "AI",
+          "strategic-marketing",
+          "product-launch",
+          "reasoning",
+          "workflow",
+          "systems"
+        ],
+        "links": [
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/decision-map"
+          }
+        ],
+        "updatedAt": "2026-05-10"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/decision-map.md",
+          "digest": "fc6f132d2e48375fdf25e33d006a0ddfd221e458bf657455d0c1fd8bf5707268"
+        }
+      ]
+    },
+    {
+      "id": "project:git-tweet",
+      "kind": "project",
+      "name": "git-tweet",
+      "canonicalUrl": "https://abvx.xyz/work/git-tweet",
+      "summary": "git-tweet is a lightweight development communication system for turning repository activity into structured operational signals and updates.",
+      "attributes": {
+        "status": "archive",
+        "section": "systems",
+        "tags": [
+          "tool",
+          "developer-utility"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://git-tweet.abvx.xyz/"
+          },
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/git-tweet"
+          }
+        ],
+        "updatedAt": "2026-04-23"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/git-tweet.md",
+          "digest": "99bd10780c5f7673d51e6562773a359ba6b7cd03a10f54b0081672184774e5e8"
+        }
+      ]
+    },
+    {
+      "id": "project:id",
+      "kind": "project",
+      "name": "ID",
+      "canonicalUrl": "https://abvx.xyz/work/id",
+      "summary": "ID is a protocol layer for structured identity, operational references and system coordination inside the AI-native ecosystem.",
+      "attributes": {
+        "status": "building",
+        "section": "systems",
+        "tags": [
+          "ai-dev",
+          "tool"
+        ],
+        "links": [
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/ID"
+          }
+        ],
+        "updatedAt": "2026-04-22"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/id.md",
+          "digest": "c3b1f4e2292fc21e94de2b1def4e8b4aa1ae92989fe79932cc6d0a854abfc533"
+        }
+      ]
+    },
+    {
+      "id": "project:last30days-cropto",
+      "kind": "project",
+      "name": "Last30Days Cropto",
+      "canonicalUrl": "https://abvx.xyz/work/last30days-cropto",
+      "summary": "Last30Days Cropto is an agro-commodity intelligence desk that aggregates market mentions, signals and AI-generated summaries across web, news and social sources.",
+      "attributes": {
+        "status": "research",
+        "section": "focus",
+        "tags": [
+          "market-intelligence",
+          "monitoring",
+          "AI-summary",
+          "agro-commodities",
+          "signals",
+          "news-analysis",
+          "social-monitoring",
+          "cropto"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://cr0pto.com/last30days/"
+          },
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/cropto-v0"
+          }
+        ],
+        "updatedAt": "2026-05-04"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/last30days-cropto.md",
+          "digest": "e31e2d397257a8c58aa359757b0bc35aa58edfcecd0e40c42e1b9eac630938fd"
+        }
+      ]
+    },
+    {
+      "id": "project:liqua",
+      "kind": "project",
+      "name": "Liqua",
+      "canonicalUrl": "https://abvx.xyz/work/liqua",
+      "summary": "Liqua is a structured liquidity and execution layer for physical commodity markets, designed to turn fragmented brokerage activity into scalable infrastructure.",
+      "attributes": {
+        "status": "building",
+        "section": "focus",
+        "tags": [
+          "liquidity",
+          "brokerage",
+          "execution",
+          "market-infrastructure",
+          "trading-services",
+          "agro-commodities"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://liqua.cr0pto.com/"
+          },
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/liqua"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/f8te3FBX32I"
+          }
+        ],
+        "updatedAt": "2026-05-03"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/liqua.md",
+          "digest": "4e901d21f6fcd44a3f690f9d86ae55d22ea114795132710469c158dfd518e6f3"
+        }
+      ]
+    },
+    {
+      "id": "project:mn7r",
+      "kind": "project",
+      "name": "MN7R",
+      "canonicalUrl": "https://abvx.xyz/work/mn7r",
+      "summary": "MN7R is a commodity trading workflow workspace for brokerage teams running Deals, Clients and EXE inside one structured operational system.",
+      "attributes": {
+        "status": "live",
+        "section": "focus",
+        "tags": [
+          "brokerage",
+          "agro-commodities",
+          "deal-workflows",
+          "execution",
+          "trading-workspace",
+          "market-infrastructure"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://mn7r.com/"
+          },
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/mn7r"
+          },
+          {
+            "type": "blog",
+            "label": "Blog",
+            "url": "https://mn7r.com/blog"
+          },
+          {
+            "type": "bluesky",
+            "label": "Bluesky",
+            "url": "https://bsky.app/profile/mn7r.bsky.social"
+          },
+          {
+            "type": "substack",
+            "label": "Substack",
+            "url": "https://mn7r.substack.com/"
+          }
+        ],
+        "updatedAt": "2026-05-07"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/mn7r.md",
+          "digest": "e931e527d3ff21bcd012f4e45d6f66251c4bd4d0e2c6067c1aff71cc48d7fe50"
+        }
+      ]
+    },
+    {
+      "id": "project:mn7r-blog",
+      "kind": "project",
+      "name": "MN7R Blog",
+      "canonicalUrl": "https://abvx.xyz/work/mn7r-blog",
+      "summary": "Operational notes, brokerage workflows, execution systems and market infrastructure research from the MN7R ecosystem.",
+      "attributes": {
+        "status": "live",
+        "section": "focus",
+        "tags": [
+          "brokerage",
+          "market-infrastructure",
+          "workflows",
+          "execution",
+          "commodities",
+          "market-intelligence",
+          "MN7R",
+          "trading"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Blog",
+            "url": "https://mn7r.com/blog"
+          },
+          {
+            "type": "rss",
+            "label": "RSS",
+            "url": "https://mn7r.com/rss.xml"
+          }
+        ],
+        "updatedAt": "2026-05-17"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/mn7r-blog.md",
+          "digest": "9c4b796b213fdfb2d83770ee425edb0825047137e1a7230697778e444cf00386"
+        }
+      ]
+    },
+    {
+      "id": "project:pictiq",
+      "kind": "project",
+      "name": "Pictiq",
+      "canonicalUrl": "https://abvx.xyz/work/pictiq",
+      "summary": "Pictiq is a minimal visual protocol for short messages across language barriers, built from icon tiles and a simple grammar for pointing, quick signs, stickers and compact phrases.",
+      "attributes": {
+        "status": "live",
+        "section": "books",
+        "tags": [
+          "pictiq",
+          "colang",
+          "visual protocol",
+          "icons",
+          "language barriers",
+          "constructed language",
+          "translation",
+          "publishing systems"
+        ],
+        "links": [
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/pictiq"
+          }
+        ],
+        "updatedAt": "2026-05-04"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/pictiq.md",
+          "digest": "b9b06b18b7819f72946f824d626a634b7c8cda9eb5037632db5d138cc9f73099"
+        }
+      ]
+    },
+    {
+      "id": "project:set",
+      "kind": "project",
+      "name": "SET",
+      "canonicalUrl": "https://abvx.xyz/work/set",
+      "summary": "SET is an orchestration layer for AI-native operational tools, workflows and structured development systems.",
+      "attributes": {
+        "status": "building",
+        "section": "systems",
+        "tags": [
+          "ai-dev",
+          "tool"
+        ],
+        "links": [
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/SET"
+          }
+        ],
+        "updatedAt": "2026-05-03"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/set.md",
+          "digest": "7397d3a86ffbbc16b7291273273d43cf78720b7cd73068ac02f01af9009e55a1"
+        }
+      ]
+    },
+    {
+      "id": "project:sitelen-emoji-truth",
+      "kind": "project",
+      "name": "sitelen-emoji-truth",
+      "canonicalUrl": "https://abvx.xyz/work/sitelen-emoji-truth",
+      "summary": "sitelen-emoji-truth is an experimental visual-language protocol exploring emoji-based semantic compression and symbolic communication systems.",
+      "attributes": {
+        "status": "released",
+        "section": "systems",
+        "tags": [
+          "toki-pona",
+          "sitelen-emoji",
+          "protocol",
+          "publishing"
+        ],
+        "links": [
+          {
+            "type": "substack",
+            "label": "Substack",
+            "url": "https://abvx.substack.com/p/freezing-a-moving-target-a-source"
+          },
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/sitelen-emoji-truth"
+          }
+        ],
+        "updatedAt": "2026-04-28"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/sitelen-emoji-truth.md",
+          "digest": "1465308233e5d2c42baf2540cca82ba8344861f2e1ae91a0d5c87c27ff792c53"
+        }
+      ]
+    },
+    {
+      "id": "project:sitelen-layer-plugin",
+      "kind": "project",
+      "name": "sitelen-layer-plugin",
+      "canonicalUrl": "https://abvx.xyz/work/sitelen-layer-plugin",
+      "summary": "sitelen-layer-plugin is a rendering layer for sitelen pona and experimental visual-language systems used across ABVX publishing and language projects.",
+      "attributes": {
+        "status": "live",
+        "section": "systems",
+        "tags": [
+          "toki-pona",
+          "sitelen-pona",
+          "plugin",
+          "rendering",
+          "publishing",
+          "visual-language",
+          "language-systems",
+          "typography"
+        ],
+        "links": [
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/sitelen-layer-plugin"
+          }
+        ],
+        "updatedAt": "2026-05-11"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/sitelen-layer-plugin.md",
+          "digest": "ecef7e3afa66a4a63bd70623453ff2bf6cf56a593d53c9ab006511c06d49e350"
+        }
+      ]
+    },
+    {
+      "id": "project:spike-spot-commodity-index-ukraine",
+      "kind": "project",
+      "name": "SPIKE SPOT COMMODITY INDEX UKRAINE",
+      "canonicalUrl": "https://abvx.xyz/work/spike-spot-commodity-index-ukraine",
+      "summary": "SPIKE SPOT COMMODITY INDEX UKRAINE is a benchmark and reference-price infrastructure project for Ukrainian agro-commodity spot markets.",
+      "attributes": {
+        "status": "live",
+        "section": "focus",
+        "tags": [
+          "agro-commodities",
+          "Ukraine",
+          "spot-index",
+          "market-index",
+          "grain",
+          "oilseeds",
+          "benchmark",
+          "market-data",
+          "cropto",
+          "market-infrastructure"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://spike.1d3x.com/"
+          },
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/index"
+          }
+        ],
+        "updatedAt": "2026-05-12"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/spike-spot-commodity-index-ukraine.md",
+          "digest": "82cb71911f5569f2e2fcdca0b3309b4803175a939c1407af79dd5c2480688268"
+        }
+      ]
+    },
+    {
+      "id": "project:stoic-wisdom-toki-pona-landing",
+      "kind": "project",
+      "name": "Stoic Wisdom in Toki Pona landing",
+      "canonicalUrl": "https://abvx.xyz/work/stoic-wisdom-toki-pona-landing",
+      "summary": "Stoic Wisdom in Toki Pona is a publishing and reading environment for Stoic classics translated into toki pona and sitelen pona.",
+      "attributes": {
+        "status": "live",
+        "section": "systems",
+        "tags": [
+          "toki-pona",
+          "stoicism",
+          "book-companion",
+          "landing"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://stoic.abvx.xyz/"
+          },
+          {
+            "type": "github",
+            "label": "Source",
+            "url": "https://github.com/markoblogo/book-landings/tree/main/apps/stoic-wisdom-series"
+          }
+        ],
+        "updatedAt": null
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/stoic-wisdom-toki-pona-landing.md",
+          "digest": "337799850df36a2b9be77422a3a8a6d4a4745fbb539455e6a43bbe368aa461e4"
+        }
+      ]
+    },
+    {
+      "id": "project:toki-pona-ai-translator",
+      "kind": "project",
+      "name": "Toki Pona AI translator",
+      "canonicalUrl": "https://abvx.xyz/work/toki-pona-ai-translator",
+      "summary": "Toki Pona AI translator is an experimental translation interface for converting natural language into toki pona and related visual-script forms.",
+      "attributes": {
+        "status": "live",
+        "section": "systems",
+        "tags": [
+          "toki-pona",
+          "language-ai",
+          "translator",
+          "ai-service"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://toki.abvx.xyz"
+          },
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/toki-pona-translator"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/lCAFiDnP2NQ?si=HOEWm4Cr1VVRitPt"
+          }
+        ],
+        "updatedAt": "2026-05-05"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/toki-pona-ai-translator.md",
+          "digest": "ce46ed0ef71d044f072dce32ad2cadfc4fba68c57c834ef40383ee0ae53627b6"
+        }
+      ]
+    },
+    {
+      "id": "project:toki-pona-free-kits-landing",
+      "kind": "project",
+      "name": "Toki Pona free kits landing",
+      "canonicalUrl": "https://abvx.xyz/work/toki-pona-free-kits-landing",
+      "summary": "Toki Pona Free Kits is a lightweight publishing environment for downloadable reader kits, free translations and companion learning resources.",
+      "attributes": {
+        "status": "live",
+        "section": "systems",
+        "tags": [
+          "toki-pona",
+          "free-books",
+          "book-companion",
+          "landing"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://toki-free.abvx.xyz/"
+          },
+          {
+            "type": "github",
+            "label": "Source",
+            "url": "https://github.com/markoblogo/book-landings/tree/main/apps/toki-free-kit"
+          }
+        ],
+        "updatedAt": null
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/toki-pona-free-kits-landing.md",
+          "digest": "362c9e61ecd77253a0da13ba584d4dcad0e3a178ae8068fc02d0233a0e29599c"
+        }
+      ]
+    },
+    {
+      "id": "project:trade-solution-eu",
+      "kind": "project",
+      "name": "Trade Solution EU",
+      "canonicalUrl": "https://abvx.xyz/work/trade-solution-eu",
+      "summary": "Trade Solution EU is a structured commercial and logistics framework for commodity-market execution, supply-chain coordination and operational clarity.",
+      "attributes": {
+        "status": "live",
+        "section": "focus",
+        "tags": [
+          "commodities",
+          "logistics",
+          "supply-chain",
+          "trading",
+          "execution",
+          "market-signals",
+          "landing"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://trade-solution.eu/en"
+          },
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/TS"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/YOFrlLiPY6A"
+          }
+        ],
+        "updatedAt": "2026-05-02"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/trade-solution-eu.md",
+          "digest": "ffc1db45a9261f98b10f6b4623f54fad5a3616d8f4143720b361d914166eb1b5"
+        }
+      ]
+    },
+    {
+      "id": "project:uga-index",
+      "kind": "project",
+      "name": "UGA Index",
+      "canonicalUrl": "https://abvx.xyz/work/uga-index",
+      "summary": "UGA Index is a benchmark platform for daily Ukrainian grain and oilseed export price references built with the Ukrainian Grain Association.",
+      "attributes": {
+        "status": "building",
+        "section": "focus",
+        "tags": [
+          "agro-commodities",
+          "market-data",
+          "price-indexes",
+          "benchmark",
+          "Ukraine",
+          "grain-markets",
+          "oilseeds",
+          "market-infrastructure"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://uga.1d3x.com/"
+          },
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/index-uga"
+          }
+        ],
+        "updatedAt": "2026-05-08"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/uga-index.md",
+          "digest": "8f5127fcc03d1877211d934b456715d72226be9e556331fe9e8b945bce36385b"
+        }
+      ]
+    },
+    {
+      "id": "project:ukrainian-modernism-landing",
+      "kind": "project",
+      "name": "Ukrainian Modernism landing",
+      "canonicalUrl": "https://abvx.xyz/work/ukrainian-modernism-landing",
+      "summary": "Ukrainian Modernism Landing is a publishing surface for French translations of early twentieth-century Ukrainian modernist literature.",
+      "attributes": {
+        "status": "live",
+        "section": "systems",
+        "tags": [
+          "ukrainian-modernism",
+          "translation",
+          "book-companion",
+          "landing"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://ukrmodernism.abvx.xyz/"
+          },
+          {
+            "type": "github",
+            "label": "Source",
+            "url": "https://github.com/markoblogo/book-landings/tree/main/apps/ukrainian-modernism"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/krXa1OzLVIs?si=RpMnZ340bGVTBz4I"
+          }
+        ],
+        "updatedAt": null
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/ukrainian-modernism-landing.md",
+          "digest": "9891f98c93a549b265034ab98e756b193945cf5f307bda584fc932d285555e98"
+        }
+      ]
+    },
+    {
+      "id": "project:ytmamp",
+      "kind": "project",
+      "name": "YTMamp",
+      "canonicalUrl": "https://abvx.xyz/work/ytmamp",
+      "summary": "YTMamp is a macOS app and browser-extension experiment that transforms YouTube Music into a Winamp-inspired player experience.",
+      "attributes": {
+        "status": "released",
+        "section": "systems",
+        "tags": [
+          "macos",
+          "music",
+          "tool",
+          "youtube-music"
+        ],
+        "links": [
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/YTMamp"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/fHRDm8e2n-U?si=mnMXHU2qv5MIN8G6"
+          }
+        ],
+        "updatedAt": "2026-04-25"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/ytmamp.md",
+          "digest": "0e880480463d1858188b66db91d729444f78cfd6e334c40348767d9ce83c5879"
+        }
+      ]
+    },
+    {
+      "id": "publication:boh-buv-zainiatyi-kanalizatsiieiu",
+      "kind": "publication",
+      "name": "Бог був зайнятий каналізацією",
+      "canonicalUrl": "https://abvx.xyz/books/boh-buv-zainiatyi-kanalizatsiieiu",
+      "summary": "Абсурдистська повість про колишнього художника й майстра з ремонту Джонатана Свонсона, який напередодні Різдва вирушає до лікарні через аварію в каналізації й потрапляє в ніч дивних зустрічей. Темна, смішна й тиха історія про самотність, віру, тіло, роботу, сніг і маленькі форми милосердя.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "fiction",
+          "absurdist fiction",
+          "literary novella",
+          "Ukrainian",
+          "original",
+          "faith",
+          "loneliness",
+          "Christmas"
+        ],
+        "links": [
+          {
+            "type": "paperback",
+            "label": "Paperback",
+            "url": "https://www.amazon.com/dp/B0GYYLZ876"
+          }
+        ],
+        "updatedAt": null
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/boh-buv-zainiatyi-kanalizatsiieiu.md",
+          "digest": "d1c992a4d734b8de30738c1ff783a4614959a5e53148e00d5a07cf5fce16f032"
+        }
+      ]
+    },
+    {
+      "id": "publication:chinese-wisdom-reader-guide",
+      "kind": "publication",
+      "name": "Free Kit / Reader’s Guide Chinese Wisdom in toki pona",
+      "canonicalUrl": "https://abvx.xyz/books/chinese-wisdom-reader-guide",
+      "summary": "Free reader’s guide for the Chinese Wisdom in toki pona publishing line, helping readers enter the multilingual editions, parallel text structure and minimalist-language method.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "toki-pona",
+          "free-book",
+          "reader-guide",
+          "chinese-wisdom"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://toki-free.abvx.xyz/en"
+          },
+          {
+            "type": "pdf",
+            "label": "PDF",
+            "url": "/media/books/chinese-wisdom-reader-guide.pdf"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/BOVyG1jP580"
+          }
+        ],
+        "updatedAt": null
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/chinese-wisdom-reader-guide.md",
+          "digest": "9b9f1c5f352a6ff5629278efae481c3925e4419732551dd801359014f98a3cc0"
+        }
+      ]
+    },
+    {
+      "id": "publication:christmas-carol-toki-pona",
+      "kind": "publication",
+      "name": "A Christmas Carol in Toki Pona",
+      "canonicalUrl": "https://abvx.xyz/books/christmas-carol-toki-pona",
+      "summary": "A bilingual Toki Pona edition of Dickens’ A Christmas Carol, pairing the classic story of Scrooge’s transformation with minimalist language, sitelen pona and a calm experiment in literary compression.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "Toki Pona",
+          "sitelen pona",
+          "Charles Dickens",
+          "A Christmas Carol",
+          "translation",
+          "bilingual edition",
+          "minimalist language",
+          "classic literature",
+          "Christmas"
+        ],
+        "links": [
+          {
+            "type": "kindle",
+            "label": "Kindle",
+            "url": "https://www.amazon.com/dp/B0G1N2YHD8"
+          },
+          {
+            "type": "paperback",
+            "label": "Paperback",
+            "url": "https://www.amazon.com/dp/B0G1XVNPSL"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/ammjR4v58CM"
+          }
+        ],
+        "updatedAt": "2026-04-24"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/christmas-carol-toki-pona.md",
+          "digest": "53ec1ab5e894c83c2c0436a96af1382d601df8688078218face1794092de1931"
+        }
+      ]
+    },
+    {
+      "id": "publication:cicero-toki-pona",
+      "kind": "publication",
+      "name": "Cicero: On Duties in toki pona",
+      "canonicalUrl": "https://abvx.xyz/books/cicero-toki-pona",
+      "summary": "A Toki Pona and sitelen pona edition of Cicero’s On Duties, reframing a classic manual of moral decision-making through minimal language, slow reading and visual repetition.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "Toki Pona",
+          "sitelen pona",
+          "Cicero",
+          "De Officiis",
+          "Stoicism",
+          "ethics",
+          "moral philosophy",
+          "translation",
+          "minimalist language"
+        ],
+        "links": [
+          {
+            "type": "series",
+            "label": "Series",
+            "url": "https://stoic.abvx.xyz/en"
+          },
+          {
+            "type": "kindle",
+            "label": "Kindle",
+            "url": "https://www.amazon.com/dp/B0GL86LVF1"
+          },
+          {
+            "type": "paperback",
+            "label": "Paperback",
+            "url": "https://www.amazon.com/dp/B0GLFN8KBX"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/61dVZDB-tYs"
+          }
+        ],
+        "updatedAt": null
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/cicero-toki-pona.md",
+          "digest": "9ba19fd393efd12a6dfbb737075c85466d63117f78248d31841917e1ddd0fd64"
+        }
+      ]
+    },
+    {
+      "id": "publication:dao-de-jing-toki-pona",
+      "kind": "publication",
+      "name": "Dao De Jing in Toki Pona",
+      "canonicalUrl": "https://abvx.xyz/books/dao-de-jing-toki-pona",
+      "summary": "An experimental edition of the Dao De Jing pairing the classical Chinese text with a Toki Pona translation designed for sitelen pona, bringing two compact systems of philosophical writing into quiet visual dialogue.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "Toki Pona",
+          "sitelen pona",
+          "Dao De Jing",
+          "Tao Te Ching",
+          "Laozi",
+          "Classical Chinese",
+          "Chinese philosophy",
+          "multilingual edition",
+          "experimental book design"
+        ],
+        "links": [
+          {
+            "type": "series",
+            "label": "Series",
+            "url": "https://dao-toki.abvx.xyz/"
+          },
+          {
+            "type": "kindle",
+            "label": "Kindle",
+            "url": "https://www.amazon.com/dp/B0G4XNRS4W"
+          },
+          {
+            "type": "paperback",
+            "label": "Paperback",
+            "url": "https://www.amazon.com/dp/B0G5MCFN2T"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/oWA-_FatU3E"
+          }
+        ],
+        "updatedAt": null
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/dao-de-jing-toki-pona.md",
+          "digest": "dec6f2e214709b0dbf164add6be917b96c8aec59792402444f3d5e1e0a4e6f07"
+        }
+      ]
+    },
+    {
+      "id": "publication:dark-gestalt",
+      "kind": "publication",
+      "name": "Dark Gestalt: How Brands Hijack Emotions, Distort Perception, and Manufacture Desire",
+      "canonicalUrl": "https://abvx.xyz/books/dark-gestalt",
+      "summary": "A sharp exploration of how brands shape emotion, perception and desire, and how modern behavioral design can manipulate decisions through symbols, shortcuts, narratives and AI-driven persuasion.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "branding",
+          "marketing psychology",
+          "behavioral design",
+          "perception",
+          "influence",
+          "dark patterns",
+          "AI",
+          "English"
+        ],
+        "links": [
+          {
+            "type": "kindle",
+            "label": "Kindle",
+            "url": "https://www.amazon.com/dp/B0FT5V3QCL"
+          },
+          {
+            "type": "paperback",
+            "label": "Paperback",
+            "url": "https://www.amazon.com/dp/B0FTLQXWY1"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/QjZgzs845yI"
+          }
+        ],
+        "updatedAt": "2026-04-12"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/dark-gestalt.md",
+          "digest": "247473b1148463b6d64e16b7fda17d7bd617c1e2fd5d956d079af6cec5f941ad"
+        }
+      ]
+    },
+    {
+      "id": "publication:epictetus-enchiridion-toki-pona",
+      "kind": "publication",
+      "name": "Epictetus: The Enchiridion in toki pona",
+      "canonicalUrl": "https://abvx.xyz/books/epictetus-enchiridion-toki-pona",
+      "summary": "A fixed-layout Toki Pona and sitelen pona edition of Epictetus’ Enchiridion, turning one of Stoicism’s most practical handbooks into a compact, visual and low-noise reading experience.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "Toki Pona",
+          "sitelen pona",
+          "Stoicism",
+          "Epictetus",
+          "Enchiridion",
+          "philosophy",
+          "translation",
+          "minimalist language",
+          "Print Replica"
+        ],
+        "links": [
+          {
+            "type": "series",
+            "label": "Series",
+            "url": "https://stoic.abvx.xyz/en"
+          },
+          {
+            "type": "kindle",
+            "label": "Kindle",
+            "url": "https://www.amazon.com/dp/B0GKWR5NL1"
+          },
+          {
+            "type": "paperback",
+            "label": "Paperback",
+            "url": "https://www.amazon.com/dp/B0GKXXJGZV"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/DNgkm9tf6Cg"
+          }
+        ],
+        "updatedAt": null
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/epictetus-enchiridion-toki-pona.md",
+          "digest": "478b02d4e8b7a4bd3b96821ff860d285f6b4df5ffab03ccd6b94eec97f725ea8"
+        }
+      ]
+    },
+    {
+      "id": "publication:future-proof-productivity",
+      "kind": "publication",
+      "name": "Future-Proof Your Productivity: Navigating the AI Decade to Accelerate Your Output, Innovate Your Role, and Thrive",
+      "canonicalUrl": "https://abvx.xyz/books/future-proof-productivity",
+      "summary": "A practical manual for using AI, automation, no-code tools and workflow design to increase output, reduce routine work and stay professionally resilient through the AI decade.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "productivity",
+          "AI",
+          "automation",
+          "no-code",
+          "workflows",
+          "future of work",
+          "knowledge work",
+          "English"
+        ],
+        "links": [
+          {
+            "type": "kindle",
+            "label": "Kindle",
+            "url": "https://www.amazon.com/dp/B0FQ5SWMTJ"
+          },
+          {
+            "type": "paperback",
+            "label": "Paperback",
+            "url": "https://www.amazon.com/dp/B0FR1WH15S"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/IJBn0x2UeF8"
+          }
+        ],
+        "updatedAt": "2026-04-06"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/future-proof-productivity.md",
+          "digest": "cd0c746881e44d816bb6065901ac905dfe5237dc7831f6023f1e04ac5cbe244a"
+        }
+      ]
+    },
+    {
+      "id": "publication:god-was-busy-with-the-plumbing",
+      "kind": "publication",
+      "name": "God Was Busy With the Plumbing",
+      "canonicalUrl": "https://abvx.xyz/books/god-was-busy-with-the-plumbing",
+      "summary": "An English translation of the Ukrainian absurdist literary novella about Jonathan Swanson, a former artist turned handyman, whose quiet pre-Christmas days collapse into a strange hospital night of plumbing, doctors, prophets, Brahms, and possible secret space programs. A darkly funny story about loneliness, faith, work, the body, snow, and the small mercies that remain when the world cannot be fully repaired.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "fiction",
+          "absurdist fiction",
+          "literary novella",
+          "English",
+          "translation",
+          "Ukrainian original",
+          "faith",
+          "loneliness",
+          "Christmas"
+        ],
+        "links": [
+          {
+            "type": "kindle",
+            "label": "Kindle",
+            "url": "https://www.amazon.com/dp/B0GYZ37NHN"
+          },
+          {
+            "type": "paperback",
+            "label": "Paperback",
+            "url": "https://www.amazon.com/dp/B0GYX4C2PV"
+          }
+        ],
+        "updatedAt": null
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/god-was-busy-with-the-plumbing.md",
+          "digest": "e01425a82e44039dcb7db22ca03c2667fd1f55083a8393f6918aba1403f34dc2"
+        }
+      ]
+    },
+    {
+      "id": "publication:heart-sutra-toki-pona",
+      "kind": "publication",
+      "name": "Heart Sutra in toki pona / sitelen pona",
+      "canonicalUrl": "https://abvx.xyz/books/heart-sutra-toki-pona",
+      "summary": "Heart Sutra edition with traditional Chinese, Toki Pona, English, and sitelen pona.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "toki-pona",
+          "free-book",
+          "heart-sutra",
+          "chinese-wisdom"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://toki-free.abvx.xyz/en"
+          },
+          {
+            "type": "pdf",
+            "label": "PDF",
+            "url": "/media/books/heart-sutra-toki-pona.pdf"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/5q0eaRllDJQ"
+          }
+        ],
+        "updatedAt": null
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/heart-sutra-toki-pona.md",
+          "digest": "a899b1bee25a5c806ba6a25a630c158f042a0484055d46f5b17f790a1fea04c2"
+        }
+      ]
+    },
+    {
+      "id": "publication:hryhorii-kosynka-dans-les-seigles",
+      "kind": "publication",
+      "name": "Hryhorii Kosynka: Dans les seigles et autres nouvelles",
+      "canonicalUrl": "https://abvx.xyz/books/hryhorii-kosynka-dans-les-seigles",
+      "summary": "Free French edition of Hryhorii Kosynka’s short fiction from the Modernisme Ukrainien line, bringing Ukrainian modernist prose into a French-reading context.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "ukrainian-modernism",
+          "translation",
+          "french",
+          "kosynka"
+        ],
+        "links": [
+          {
+            "type": "series",
+            "label": "Series",
+            "url": "https://ukrmodernism.abvx.xyz/fr"
+          },
+          {
+            "type": "pdf",
+            "label": "PDF",
+            "url": "/media/books/hryhorii-kosynka-dans-les-seigles.pdf"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/4z3O2o2DNyc"
+          }
+        ],
+        "updatedAt": null
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/hryhorii-kosynka-dans-les-seigles.md",
+          "digest": "f025daac0870831e080ca7835bb0d45dc92a07c3954f3d3052fa1ef8a7b795e8"
+        }
+      ]
+    },
+    {
+      "id": "publication:iouri-ianovski-le-maitre-du-navire",
+      "kind": "publication",
+      "name": "Iouri Ianovski: Le Maitre du navire",
+      "canonicalUrl": "https://abvx.xyz/books/iouri-ianovski-le-maitre-du-navire",
+      "summary": "La première traduction française intégrale du roman maritime et cinématographique d’Iouri Ianovski, œuvre fondatrice du modernisme ukrainien et de l’avant-garde des années 1920.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "Modernisme ukrainien",
+          "renaissance fusillée",
+          "Iouri Ianovski",
+          "Ukrainian literature",
+          "French",
+          "translation",
+          "fiction",
+          "cinema",
+          "maritime novel",
+          "modernism"
+        ],
+        "links": [
+          {
+            "type": "series",
+            "label": "Series",
+            "url": "https://ukrmodernism.abvx.xyz/fr"
+          },
+          {
+            "type": "kindle",
+            "label": "Kindle",
+            "url": "https://www.amazon.fr/dp/B0GC9P9VKT"
+          },
+          {
+            "type": "paperback",
+            "label": "Paperback",
+            "url": "https://www.amazon.fr/dp/B0GCLLJZJ8"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/GqNzjSkvWvs"
+          }
+        ],
+        "updatedAt": null
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/iouri-ianovski-le-maitre-du-navire.md",
+          "digest": "d6adbcb667b2bc2844280cb0c7a8fb484b4891e68635266e149ddf6184583c9a"
+        }
+      ]
+    },
+    {
+      "id": "publication:llmo-seo-revolution",
+      "kind": "publication",
+      "name": "LLMO: The Next SEO Revolution",
+      "canonicalUrl": "https://abvx.xyz/books/llmo-seo-revolution",
+      "summary": "A practical guide to LLM Optimization: the emerging discipline of making brands, ideas and content visible to AI systems in an age of zero-click search and intelligent answers.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "LLMO",
+          "AI search",
+          "digital visibility",
+          "content strategy",
+          "SEO",
+          "marketing",
+          "AI",
+          "English"
+        ],
+        "links": [
+          {
+            "type": "kindle",
+            "label": "Kindle",
+            "url": "https://www.amazon.com/dp/B0FYRSSZKL"
+          },
+          {
+            "type": "paperback",
+            "label": "Paperback",
+            "url": "https://www.amazon.com/dp/B0G1YBYKDR"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/0l_fawMcPmw"
+          }
+        ],
+        "updatedAt": "2026-04-18"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/llmo-seo-revolution.md",
+          "digest": "7310af662c84efabcaf18ded64cefeb1d1ba3696bf6ea6dfbc3f2a10678e8113"
+        }
+      ]
+    },
+    {
+      "id": "publication:maik-johansen-le-voyage-du-savant-docteur-leonardo",
+      "kind": "publication",
+      "name": "Maik Johansen: Le Voyage du savant docteur Leonardo",
+      "canonicalUrl": "https://abvx.xyz/books/maik-johansen-le-voyage-du-savant-docteur-leonardo",
+      "summary": "Une anthologie française de Maïk Johansen, écrivain majeur du modernisme ukrainien, où roman-paysage, essais littéraires, reportage poétique, satire et expérimentation formelle révèlent une voix libre, ludique et interrompue par la Grande Terreur.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "Modernisme ukrainien",
+          "renaissance fusillée",
+          "Maïk Johansen",
+          "Ukrainian literature",
+          "French",
+          "translation",
+          "fiction",
+          "modernism",
+          "avant-garde",
+          "literary anthology"
+        ],
+        "links": [
+          {
+            "type": "series",
+            "label": "Series",
+            "url": "https://ukrmodernism.abvx.xyz/fr"
+          },
+          {
+            "type": "kindle",
+            "label": "Kindle",
+            "url": "https://www.amazon.fr/dp/B0GDV7283Z"
+          },
+          {
+            "type": "paperback",
+            "label": "Paperback",
+            "url": "https://www.amazon.fr/dp/B0GDXGNT6B"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/LWRWb7CKE4I"
+          }
+        ],
+        "updatedAt": null
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/maik-johansen-le-voyage-du-savant-docteur-leonardo.md",
+          "digest": "44c02d1c3a0b2a28837d8afce1102f8f5275f1cb80ed79d9327271551b614f10"
+        }
+      ]
+    },
+    {
+      "id": "publication:marcus-aurelius-meditations-toki-pona",
+      "kind": "publication",
+      "name": "Meditations of Marcus Aurelius in Toki Pona",
+      "canonicalUrl": "https://abvx.xyz/books/marcus-aurelius-meditations-toki-pona",
+      "summary": "A Toki Pona and sitelen pona edition of Marcus Aurelius’ Meditations, translating Stoic reflection into a radically minimal language of clarity, restraint and visual form.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "Toki Pona",
+          "sitelen pona",
+          "Marcus Aurelius",
+          "Meditations",
+          "Stoicism",
+          "philosophy",
+          "translation",
+          "minimalist language",
+          "classic literature"
+        ],
+        "links": [
+          {
+            "type": "series",
+            "label": "Series",
+            "url": "https://stoic.abvx.xyz/en"
+          },
+          {
+            "type": "kindle",
+            "label": "Kindle",
+            "url": "https://www.amazon.com/dp/B0FV3F1RC5"
+          },
+          {
+            "type": "paperback",
+            "label": "Paperback",
+            "url": "https://www.amazon.com/dp/B0FVLPD69K"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/ILN2qILESH0"
+          }
+        ],
+        "updatedAt": null
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/marcus-aurelius-meditations-toki-pona.md",
+          "digest": "9320e92a64a66f1a59025801781be4b4fc487526fc6824133fb1a48f230b8be5"
+        }
+      ]
+    },
+    {
+      "id": "publication:mn7r-agro-commodity-brokerage-en-free-edition",
+      "kind": "publication",
+      "name": "Agri-Commodity Brokerage: A Practical Guide for Brokers",
+      "canonicalUrl": "https://abvx.xyz/books/mn7r-agro-commodity-brokerage-en-free-edition",
+      "summary": "The adapted English edition of the MN7R practical guide for agri-commodity brokers, written for an international brokerage audience.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "brokerage",
+          "agro-commodities",
+          "commodity brokerage",
+          "grains",
+          "oilseeds",
+          "execution",
+          "workflows",
+          "market-infrastructure",
+          "trading",
+          "international",
+          "MN7R"
+        ],
+        "links": [
+          {
+            "type": "pdf",
+            "label": "PDF",
+            "url": "https://mn7r.com/book/mn7r-agro-commodity-brokerage-en.pdf"
+          },
+          {
+            "type": "epub",
+            "label": "EPUB",
+            "url": "https://mn7r.com/book/mn7r-agro-commodity-brokerage-en.epub"
+          },
+          {
+            "type": "audio",
+            "label": "Audio",
+            "url": "/media/books/mn7r-agro-commodity-brokerage-en-free-edition/audiobook.mp3"
+          },
+          {
+            "type": "audiobook",
+            "label": "Audiobook",
+            "url": "/media/books/mn7r-agro-commodity-brokerage-en-free-edition/audiobook.m4b"
+          },
+          {
+            "type": "site",
+            "label": "Book announcement",
+            "url": "https://mn7r.com/blog/mn7r-book-en-free-edition"
+          },
+          {
+            "type": "site",
+            "label": "MN7R",
+            "url": "https://mn7r.com/"
+          }
+        ],
+        "updatedAt": "2026-05-23"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/mn7r-agro-commodity-brokerage-en-free-edition.md",
+          "digest": "19bc5d44e1b02269dadef4f01afe7d862f0d43feaac2e54010d626cd4499624c"
+        }
+      ]
+    },
+    {
+      "id": "publication:mn7r-agro-commodity-brokerage-ua-free-edition",
+      "kind": "publication",
+      "name": "Брокеридж на ринках зернових та олійних",
+      "canonicalUrl": "https://abvx.xyz/books/mn7r-agro-commodity-brokerage-ua-free-edition",
+      "summary": "Українська безкоштовна версія практичного гіда MN7R для брокерів на ринку зернових та олійних.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "brokerage",
+          "agro-commodities",
+          "execution",
+          "workflows",
+          "market-infrastructure",
+          "trading",
+          "Ukraine",
+          "MN7R",
+          "зернові",
+          "олійні",
+          "українська"
+        ],
+        "links": [
+          {
+            "type": "pdf",
+            "label": "PDF",
+            "url": "https://mn7r.com/book/mn7r-agro-commodity-brokerage-ua.pdf"
+          },
+          {
+            "type": "epub",
+            "label": "EPUB",
+            "url": "https://mn7r.com/book/mn7r-agro-commodity-brokerage-ua.epub"
+          },
+          {
+            "type": "site",
+            "label": "Book announcement",
+            "url": "https://mn7r.com/blog/mn7r-book-ua-free-edition"
+          }
+        ],
+        "updatedAt": "2026-05-17"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/mn7r-agro-commodity-brokerage-ua-free-edition.md",
+          "digest": "64d1e1b7b11d7083b24deb81bf9d059f9705091996f6dec4156c0e06a017d08d"
+        }
+      ]
+    },
+    {
+      "id": "publication:mn7r-product-guide",
+      "kind": "publication",
+      "name": "MN7R Product Guide",
+      "canonicalUrl": "https://abvx.xyz/books/mn7r-product-guide",
+      "summary": "A public guide to the current MN7R product: brokerage workflow, execution discipline, role model, AI operating support and public-safe demo surfaces.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "brokerage",
+          "agro-commodities",
+          "commodity brokerage",
+          "market-infrastructure",
+          "execution",
+          "workflows",
+          "product-guide",
+          "AI",
+          "demo",
+          "MN7R"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "How to use",
+            "url": "https://mn7r.com/how-to-use"
+          },
+          {
+            "type": "pdf",
+            "label": "PDF",
+            "url": "https://mn7r.com/mn7r-guide/mn7r-product-guide.pdf"
+          },
+          {
+            "type": "epub",
+            "label": "EPUB",
+            "url": "https://mn7r.com/mn7r-guide/mn7r-product-guide.epub"
+          },
+          {
+            "type": "site",
+            "label": "MN7R",
+            "url": "https://mn7r.com/"
+          }
+        ],
+        "updatedAt": "2026-06-16"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/mn7r-product-guide.md",
+          "digest": "0ed4a7f909dc43b71446df944968f8d4e06e8294d259a0e135c138e90bd58756"
+        }
+      ]
+    },
+    {
+      "id": "publication:mykola-khvylovy-la-zone-du-sanatorium",
+      "kind": "publication",
+      "name": "Mykola Khvylovy: La zone du sanatorium",
+      "canonicalUrl": "https://abvx.xyz/books/mykola-khvylovy-la-zone-du-sanatorium",
+      "summary": "Une traduction française de récits majeurs de Mykola Khvylovy, figure centrale du modernisme ukrainien des années 1920 et de la « renaissance fusillée ».",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "Modernisme ukrainien",
+          "renaissance fusillée",
+          "Mykola Khvylovy",
+          "Ukrainian literature",
+          "French",
+          "translation",
+          "fiction",
+          "modernism"
+        ],
+        "links": [
+          {
+            "type": "series",
+            "label": "Series",
+            "url": "https://ukrmodernism.abvx.xyz/fr"
+          },
+          {
+            "type": "kindle",
+            "label": "Kindle",
+            "url": "https://www.amazon.fr/dp/B0G8V24GS2"
+          },
+          {
+            "type": "paperback",
+            "label": "Paperback",
+            "url": "https://www.amazon.fr/dp/B0G9G6JGDN"
+          }
+        ],
+        "updatedAt": null
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/mykola-khvylovy-la-zone-du-sanatorium.md",
+          "digest": "be0c83bceb091224883f111f076d0097adddb8f664969a573724ea18aeaee7db"
+        }
+      ]
+    },
+    {
+      "id": "publication:seneca-shortness-of-life-toki-pona",
+      "kind": "publication",
+      "name": "Seneca: On the Shortness of Life in toki pona",
+      "canonicalUrl": "https://abvx.xyz/books/seneca-shortness-of-life-toki-pona",
+      "summary": "A Toki Pona and sitelen pona edition of Seneca’s On the Shortness of Life, compressing a classic Stoic essay on time, attention and intention into a slower, clearer reading format.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "Toki Pona",
+          "sitelen pona",
+          "Stoicism",
+          "Seneca",
+          "On the Shortness of Life",
+          "philosophy",
+          "translation",
+          "minimalist language",
+          "attention"
+        ],
+        "links": [
+          {
+            "type": "series",
+            "label": "Series",
+            "url": "https://stoic.abvx.xyz/en"
+          },
+          {
+            "type": "kindle",
+            "label": "Kindle",
+            "url": "https://www.amazon.com/dp/B0GKCJ72PG"
+          },
+          {
+            "type": "paperback",
+            "label": "Paperback",
+            "url": "https://www.amazon.com/dp/B0GL1ZBK18"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/_JL2xu4Sn70"
+          }
+        ],
+        "updatedAt": null
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/seneca-shortness-of-life-toki-pona.md",
+          "digest": "308c1c40fd6d9b9fbe39683d566a3b306788bfab315dcfa3989f2d187a08c8a5"
+        }
+      ]
+    },
+    {
+      "id": "publication:spot-market-handbook-en-free-edition",
+      "kind": "publication",
+      "name": "Spot-Market Handbook",
+      "canonicalUrl": "https://abvx.xyz/books/spot-market-handbook-en-free-edition",
+      "summary": "A practical English handbook on how physical agricultural commodity markets actually work: basis, logistics, liquidity, benchmarks, indices and market intelligence beyond futures screens.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "brokerage",
+          "agro-commodities",
+          "spot-market",
+          "physical-commodity-markets",
+          "market-infrastructure",
+          "benchmarks",
+          "indices",
+          "market-intelligence",
+          "global-markets",
+          "1D3X",
+          "MN7R"
+        ],
+        "links": [
+          {
+            "type": "pdf",
+            "label": "PDF",
+            "url": "https://spike.1d3x.com/files/spot-market-handbook-en.pdf"
+          },
+          {
+            "type": "epub",
+            "label": "EPUB",
+            "url": "https://spike.1d3x.com/files/spot-market-handbook-en.epub"
+          }
+        ],
+        "updatedAt": "2026-06-17"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/spot-market-handbook-en-free-edition.md",
+          "digest": "9bd0b4765b9231c0c68251ed8c3118e163647af0889153062803e1bfd2995880"
+        }
+      ]
+    },
+    {
+      "id": "publication:spot-market-handbook-ua-free-edition",
+      "kind": "publication",
+      "name": "Практичний гайд зі спотового ринку: фізичний аграрний ринок",
+      "canonicalUrl": "https://abvx.xyz/books/spot-market-handbook-ua-free-edition",
+      "summary": "Практичний посібник з роботи на фізичному аграрному спотовому ринку: як будувати угоди, рахувати ризики і тримати операційну дисципліну у зерновому бізнесі.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "brokerage",
+          "agro-commodities",
+          "spot-market",
+          "physical-commodity-markets",
+          "execution",
+          "workflows",
+          "market-infrastructure",
+          "trading",
+          "Ukraine",
+          "MN7R",
+          "1D3X"
+        ],
+        "links": [
+          {
+            "type": "pdf",
+            "label": "PDF",
+            "url": "https://spike.1d3x.com/files/spot-market-handbook-ua.pdf"
+          },
+          {
+            "type": "epub",
+            "label": "EPUB",
+            "url": "https://spike.1d3x.com/files/spot-market-handbook-ua.epub"
+          },
+          {
+            "type": "site",
+            "label": "Про проект",
+            "url": "https://spike.1d3x.com/uk/about"
+          }
+        ],
+        "updatedAt": "2026-05-31"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/spot-market-handbook-ua-free-edition.md",
+          "digest": "a32867efea88f34f7ed76b02b9167ba01ec0f2c3cc3d29734711f0fb104ebac4"
+        }
+      ]
+    },
+    {
+      "id": "publication:sunzi-art-of-war-toki-pona",
+      "kind": "publication",
+      "name": "Sunzi: The Art of War in toki pona",
+      "canonicalUrl": "https://abvx.xyz/books/sunzi-art-of-war-toki-pona",
+      "summary": "A multilingual edition of The Art of War with Traditional Chinese, English, toki pona and a sitelen-pona-ready reading layer, designed for slow comparison, strategy study and minimalist interpretation.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "Toki Pona",
+          "sitelen pona",
+          "Sunzi",
+          "The Art of War",
+          "Classical Chinese",
+          "Traditional Chinese",
+          "English",
+          "multilingual edition",
+          "philosophy",
+          "strategy"
+        ],
+        "links": [
+          {
+            "type": "series",
+            "label": "Series",
+            "url": "https://dao-toki.abvx.xyz/en"
+          },
+          {
+            "type": "kindle",
+            "label": "Kindle",
+            "url": "https://www.amazon.com/dp/B0GQTZFFVG"
+          },
+          {
+            "type": "paperback",
+            "label": "Paperback",
+            "url": "https://www.amazon.com/dp/B0GQXP442Z"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/sJdkHP6Pk-k"
+          }
+        ],
+        "updatedAt": null
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/sunzi-art-of-war-toki-pona.md",
+          "digest": "ca5ffe2db28d5368cec98994934145480d0c001a0d4a0014759a245440f5a0cc"
+        }
+      ]
+    },
+    {
+      "id": "publication:the-tiny-language-protocol",
+      "kind": "publication",
+      "name": "The Tiny Language Protocol: Toki Pona, Lojban, and the Future of Clear Thinking",
+      "canonicalUrl": "https://abvx.xyz/books/the-tiny-language-protocol",
+      "summary": "The Tiny Language Protocol explores Toki Pona and Lojban as opposite but complementary tools for clearer thinking, structured communication and AI-era language design.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "toki-pona",
+          "lojban",
+          "language",
+          "AI",
+          "conlang",
+          "prompting",
+          "philosophy",
+          "communication",
+          "semantic-compression",
+          "language-systems"
+        ],
+        "links": [
+          {
+            "type": "kindle",
+            "label": "Kindle",
+            "url": "https://www.amazon.com/dp/B0H1DKLKL9"
+          },
+          {
+            "type": "paperback",
+            "label": "Paperback",
+            "url": "https://www.amazon.com/dp/B0H1HFRRFV"
+          }
+        ],
+        "updatedAt": "2026-05-12"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/the-tiny-language-protocol.md",
+          "digest": "ae4959dfbd41f8e3fe8346b3b9c898555098c892113e3af496b66e0df34b1514"
+        }
+      ]
+    },
+    {
+      "id": "publication:toki-pona-machine-mind",
+      "kind": "publication",
+      "name": "Toki Pona and the Machine Mind",
+      "canonicalUrl": "https://abvx.xyz/books/toki-pona-machine-mind",
+      "summary": "A field guide to using Toki Pona as a design lens for cleaner prompts, constrained prompt languages, small language models and more inspectable human-AI systems.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "Toki Pona",
+          "AI",
+          "prompt engineering",
+          "small language models",
+          "constrained languages",
+          "language systems",
+          "sitelen pona",
+          "English"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://toki.abvx.xyz/learn"
+          },
+          {
+            "type": "kindle",
+            "label": "Kindle",
+            "url": "https://www.amazon.com/dp/B0G44JSMR2"
+          },
+          {
+            "type": "paperback",
+            "label": "Paperback",
+            "url": "https://www.amazon.com/dp/B0G5MQKZTX"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/0juEOOI1iEM"
+          },
+          {
+            "type": "github",
+            "label": "AsciiTheme",
+            "url": "https://github.com/markoblogo/AsciiTheme"
+          }
+        ],
+        "updatedAt": "2026-05-01"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/toki-pona-machine-mind.md",
+          "digest": "703e4581a7a6fe5acf7d586be5d7498512bd33b3603e92cae972e6db5d3af0f3"
+        }
+      ]
+    },
+    {
+      "id": "publication:toki-pona-readers-kit",
+      "kind": "publication",
+      "name": "The Toki Pona Reader’s Kit",
+      "canonicalUrl": "https://abvx.xyz/books/toki-pona-readers-kit",
+      "summary": "Free reader kit for entering ABVX toki pona editions, with orientation for minimalist vocabulary, parallel reading, sitelen pona and philosophy-focused translations.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "toki-pona",
+          "free-book",
+          "reader-kit",
+          "stoicism"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://stoic.abvx.xyz/en"
+          },
+          {
+            "type": "pdf",
+            "label": "PDF",
+            "url": "/media/books/toki-pona-readers-kit.pdf"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/F7fSBElppzI"
+          }
+        ],
+        "updatedAt": null
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/toki-pona-readers-kit.md",
+          "digest": "448db0f822de77522e4151a28e5f32ea583348e2bb25dcfd28a9d52cb1898f27"
+        }
+      ]
+    },
+    {
+      "id": "publication:valerian-pidmohylny-la-ville",
+      "kind": "publication",
+      "name": "Valerian Pidmohylny: La Ville",
+      "canonicalUrl": "https://abvx.xyz/books/valerian-pidmohylny-la-ville",
+      "summary": "Une traduction française du grand roman urbain de Valerian Pidmohylny, où Kyiv devient une force de transformation morale, sociale et intime pour un jeune provincial venu conquérir la ville.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "Modernisme ukrainien",
+          "renaissance fusillée",
+          "Valerian Pidmohylny",
+          "Ukrainian literature",
+          "Kyiv",
+          "French",
+          "translation",
+          "fiction",
+          "modernism",
+          "psychological novel"
+        ],
+        "links": [
+          {
+            "type": "series",
+            "label": "Series",
+            "url": "https://ukrmodernism.abvx.xyz/fr"
+          },
+          {
+            "type": "kindle",
+            "label": "Kindle",
+            "url": "https://www.amazon.fr/dp/B0GBY8CHYM"
+          },
+          {
+            "type": "paperback",
+            "label": "Paperback",
+            "url": "https://www.amazon.fr/dp/B0GC5ZMBTX"
+          },
+          {
+            "type": "youtube",
+            "label": "YouTube",
+            "url": "https://youtu.be/sHyGKkFdChY"
+          }
+        ],
+        "updatedAt": null
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/valerian-pidmohylny-la-ville.md",
+          "digest": "7c7b69d59eb944175669474122d81eebd13da6f26c0fca66e58f66afedf81659"
+        }
+      ]
+    },
+    {
+      "id": "series:chinese-wisdom-toki-pona",
+      "kind": "series",
+      "name": "Chinese Wisdom in toki pona",
+      "canonicalUrl": "https://abvx.xyz/books/chinese-wisdom-toki-pona",
+      "summary": "A compact multilingual line bringing classical Chinese texts into toki pona, sitelen pona and parallel reading formats. It treats minimalist language as a tool for slow reading, comparison and philosophical compression.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "Toki Pona",
+          "Chinese philosophy",
+          "classical texts",
+          "translation",
+          "sitelen pona",
+          "multilingual edition"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://dao-toki.abvx.xyz/en"
+          }
+        ],
+        "updatedAt": null
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/series/chinese-wisdom-toki-pona.md",
+          "digest": "d2c73628a61882a23387fcfc407be5a8af3671caea0a16233b1ac638a3df125c"
+        }
+      ]
+    },
+    {
+      "id": "series:mn7r-commodity-brokerage-library",
+      "kind": "series",
+      "name": "MN7R Commodity Brokerage Library",
+      "canonicalUrl": "https://abvx.xyz/books/mn7r-commodity-brokerage-library",
+      "summary": "Publishing line focused on agro-commodity brokerage, execution workflows, market infrastructure and operational trading systems.",
+      "attributes": {
+        "status": "building",
+        "section": "books",
+        "tags": [
+          "brokerage",
+          "agro-commodities",
+          "market-infrastructure",
+          "trading",
+          "execution",
+          "workflows",
+          "MN7R",
+          "commodity-markets"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://mn7r.com/"
+          }
+        ],
+        "updatedAt": "2026-05-17"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/series/mn7r-commodity-brokerage-library.md",
+          "digest": "3eae3488a79bab5348c3d4f34a6843705c6d274bb35af44c8e8b2843fc91e653"
+        }
+      ]
+    },
+    {
+      "id": "series:modernisme-ukrainien",
+      "kind": "series",
+      "name": "Modernisme Ukrainien",
+      "canonicalUrl": "https://abvx.xyz/books/modernisme-ukrainien",
+      "summary": "French translations of early twentieth-century Ukrainian modernist literature, with critical framing, notes and companion publishing infrastructure. The line brings authors of the Ukrainian “Executed Renaissance” into a French-reading context.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "Ukrainian Modernism",
+          "Modernisme ukrainien",
+          "French",
+          "Ukrainian",
+          "translation",
+          "modernism",
+          "literature"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://ukrmodernism.abvx.xyz/fr"
+          }
+        ],
+        "updatedAt": null
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/series/modernisme-ukrainien.md",
+          "digest": "f8f29e069d5c9aaf90f35d850378ea694775f7e6cfa92319b2daea9647e41ae2"
+        }
+      ]
+    },
+    {
+      "id": "series:stoic-wisdom-toki-pona",
+      "kind": "series",
+      "name": "Stoic Wisdom in Toki Pona",
+      "canonicalUrl": "https://abvx.xyz/books/stoic-wisdom-toki-pona",
+      "summary": "Stoic classics translated into toki pona and sitelen pona, designed for slow reading, visual practice and minimalist philosophical reflection. The line uses a tiny language to make ethical and practical thought more inspectable.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "Toki Pona",
+          "Stoicism",
+          "philosophy",
+          "translation",
+          "sitelen pona",
+          "classical texts"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://stoic.abvx.xyz/en"
+          }
+        ],
+        "updatedAt": null
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/series/stoic-wisdom-toki-pona.md",
+          "digest": "a5ca805deaf2cb70d55ecc0eb8457fe865facf7175410b33db0aea7daecb9982"
+        }
+      ]
+    },
+    {
+      "id": "series:toki-pona-free-kits",
+      "kind": "series",
+      "name": "Toki Pona Free Kits & Translations",
+      "canonicalUrl": "https://abvx.xyz/books/toki-pona-free-kits",
+      "summary": "Free downloadable Toki Pona reader kits, short translations and companion materials for learning, reading and experimenting with minimalist language. This line supports the paid book series and gives readers a low-friction entry point.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "Toki Pona",
+          "free books",
+          "translation",
+          "learning",
+          "sitelen pona",
+          "reader kits"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Site",
+            "url": "https://toki-free.abvx.xyz/en"
+          }
+        ],
+        "updatedAt": null
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/series/toki-pona-free-kits.md",
+          "digest": "6fc484debcc2e2a78343c20ab23191183e93e205f5a0c35f553a915dbd2161bc"
+        }
+      ]
+    },
+    {
+      "id": "site:abvx",
+      "kind": "site",
+      "name": "ABVX",
+      "canonicalUrl": "https://abvx.xyz/",
+      "summary": "Public ecosystem site for market infrastructure, AI-native systems, publishing, language experiments, books and writing.",
+      "attributes": {
+        "publicRoutes": [
+          "/",
+          "/about",
+          "/focus",
+          "/systems",
+          "/books",
+          "/writing"
+        ]
+      },
+      "provenance": [
+        {
+          "kind": "source_config",
+          "path": "cortex-abv/public-presence-sources.v1.json",
+          "digest": "d9405bfe86fb8b2f6bd89f73bfe33741813167b8b463158f9247b6a99967d64d"
+        }
+      ]
+    },
+    {
+      "id": "writing-item:medium:adajepa-the-world-model-that-changes-its-mind-when-reality-disagrees",
+      "kind": "writing_item",
+      "name": "AdaJEPA: The World Model That Changes Its Mind When Reality Disagrees",
+      "canonicalUrl": "https://abvcreative.medium.com/adajepa-the-world-model-that-changes-its-mind-when-reality-disagrees-3ec546f79080?source=rss-7ec8b9d56ffd------2",
+      "summary": null,
+      "attributes": {
+        "publishedAt": "Wed, 15 Jul 2026 17:33:47 GMT"
+      },
+      "provenance": [
+        {
+          "kind": "rss_item",
+          "path": "https://abvcreative.medium.com/feed",
+          "digest": "61d3b706d921c2de56e8bb6d5247ff66d7573e6073bd55cf4a9a47e1af7fe60d"
+        }
+      ]
+    },
+    {
+      "id": "writing-item:medium:ai-coding-tools-made-developers-faster-then-the-system-hit-a-wall",
+      "kind": "writing_item",
+      "name": "AI Coding Tools Made Developers Faster. Then the System Hit a Wall.",
+      "canonicalUrl": "https://abvcreative.medium.com/ai-coding-tools-made-developers-faster-then-the-system-hit-a-wall-29f509f96daa?source=rss-7ec8b9d56ffd------2",
+      "summary": null,
+      "attributes": {
+        "publishedAt": "Thu, 09 Jul 2026 13:30:20 GMT"
+      },
+      "provenance": [
+        {
+          "kind": "rss_item",
+          "path": "https://abvcreative.medium.com/feed",
+          "digest": "4e3e784d44a83c4553b768ed8f8601a2481ee9e3d827146681b278b4d3636d2d"
+        }
+      ]
+    },
+    {
+      "id": "writing-item:medium:ai-trusts-nerdwallet-that-may-still-be-terrible-news-for-nerdwallet",
+      "kind": "writing_item",
+      "name": "AI Trusts NerdWallet. That May Still Be Terrible News for NerdWallet.",
+      "canonicalUrl": "https://abvcreative.medium.com/ai-trusts-nerdwallet-that-may-still-be-terrible-news-for-nerdwallet-ee1f76e81baf?source=rss-7ec8b9d56ffd------2",
+      "summary": null,
+      "attributes": {
+        "publishedAt": "Wed, 08 Jul 2026 12:11:45 GMT"
+      },
+      "provenance": [
+        {
+          "kind": "rss_item",
+          "path": "https://abvcreative.medium.com/feed",
+          "digest": "0c2062bd068737febb0dc12fb1186c0be0b0a71350217f3afcf8931765153dab"
+        }
+      ]
+    },
+    {
+      "id": "writing-item:medium:babeltele-when-ai-stops-speaking-human",
+      "kind": "writing_item",
+      "name": "BabelTele: When AI Stops Speaking Human",
+      "canonicalUrl": "https://abvcreative.medium.com/babeltele-when-ai-stops-speaking-human-943006e83a7d?source=rss-7ec8b9d56ffd------2",
+      "summary": null,
+      "attributes": {
+        "publishedAt": "Fri, 10 Jul 2026 14:48:28 GMT"
+      },
+      "provenance": [
+        {
+          "kind": "rss_item",
+          "path": "https://abvcreative.medium.com/feed",
+          "digest": "150819f377c1be26f7bc87248bca6cd37a38c2416ad91f97451b9d36bb62e8a2"
+        }
+      ]
+    },
+    {
+      "id": "writing-item:medium:chatgpt-does-not-pick-sources-the-way-seos-think-it-does",
+      "kind": "writing_item",
+      "name": "ChatGPT Does Not Pick Sources the Way SEOs Think It Does",
+      "canonicalUrl": "https://abvcreative.medium.com/chatgpt-does-not-pick-sources-the-way-seos-think-it-does-73009e7c30df?source=rss-7ec8b9d56ffd------2",
+      "summary": null,
+      "attributes": {
+        "publishedAt": "Mon, 06 Jul 2026 14:52:28 GMT"
+      },
+      "provenance": [
+        {
+          "kind": "rss_item",
+          "path": "https://abvcreative.medium.com/feed",
+          "digest": "392cd03b883f1020f90593aa6230cba5afcb617ab008028ea4d2e572689f7ab2"
+        }
+      ]
+    },
+    {
+      "id": "writing-item:medium:claude-science-anthropic-has-built-the-research-workbench-universities-never-did",
+      "kind": "writing_item",
+      "name": "Claude Science: Anthropic Has Built the Research Workbench Universities Never Did",
+      "canonicalUrl": "https://abvcreative.medium.com/claude-science-anthropic-has-built-the-research-workbench-universities-never-did-7298d5ffa4ca?source=rss-7ec8b9d56ffd------2",
+      "summary": null,
+      "attributes": {
+        "publishedAt": "Sat, 11 Jul 2026 10:24:39 GMT"
+      },
+      "provenance": [
+        {
+          "kind": "rss_item",
+          "path": "https://abvcreative.medium.com/feed",
+          "digest": "452ec559fa37d925c54dfae190855d4de037f8279f9b824eb7a265b0de36bc30"
+        }
+      ]
+    },
+    {
+      "id": "writing-item:medium:inkling-is-not-the-best-ai-model-that-may-be-the-point",
+      "kind": "writing_item",
+      "name": "Inkling Is Not the Best AI Model. That May Be the Point.",
+      "canonicalUrl": "https://abvcreative.medium.com/inkling-is-not-the-best-ai-model-that-may-be-the-point-d05de57d7360?source=rss-7ec8b9d56ffd------2",
+      "summary": null,
+      "attributes": {
+        "publishedAt": "Thu, 16 Jul 2026 14:16:46 GMT"
+      },
+      "provenance": [
+        {
+          "kind": "rss_item",
+          "path": "https://abvcreative.medium.com/feed",
+          "digest": "3a9f95e4cc4974da2930ed8f3e247e23d669d4c7fce283f2d01458e6d819eb72"
+        }
+      ]
+    },
+    {
+      "id": "writing-item:medium:the-ai-will-take-your-job-says-the-chat-log-from-people-who-already-use-ai",
+      "kind": "writing_item",
+      "name": "The AI Will Take Your Job, Says the Chat Log From People Who Already Use AI",
+      "canonicalUrl": "https://abvcreative.medium.com/the-ai-will-take-your-job-says-the-chat-log-from-people-who-already-use-ai-665523415248?source=rss-7ec8b9d56ffd------2",
+      "summary": null,
+      "attributes": {
+        "publishedAt": "Fri, 03 Jul 2026 14:49:23 GMT"
+      },
+      "provenance": [
+        {
+          "kind": "rss_item",
+          "path": "https://abvcreative.medium.com/feed",
+          "digest": "b68dd16e9210bae8aee9c71c737e73c5d713ebc27c78fbf43ccc010d0a6dd2a1"
+        }
+      ]
+    },
+    {
+      "id": "writing-item:medium:the-aristotelian-correction-why-neural-networks-may-only-converge-locally",
+      "kind": "writing_item",
+      "name": "The Aristotelian Correction: Why Neural Networks May Only Converge Locally",
+      "canonicalUrl": "https://abvcreative.medium.com/the-aristotelian-correction-why-neural-networks-may-only-converge-locally-c872e736b12d?source=rss-7ec8b9d56ffd------2",
+      "summary": null,
+      "attributes": {
+        "publishedAt": "Wed, 01 Jul 2026 13:41:40 GMT"
+      },
+      "provenance": [
+        {
+          "kind": "rss_item",
+          "path": "https://abvcreative.medium.com/feed",
+          "digest": "dd772806a6eb22e55aa7cde1b16768a16ec065ea4bb84b1c63fe5bce9aa2e4bb"
+        }
+      ]
+    },
+    {
+      "id": "writing-item:medium:the-death-of-the-chat-window-openai-just-showed-what-the-next-interface-looks-like",
+      "kind": "writing_item",
+      "name": "The Death of the Chat Window: OpenAI Just Showed What the Next Interface Looks Like",
+      "canonicalUrl": "https://abvcreative.medium.com/the-death-of-the-chat-window-openai-just-showed-what-the-next-interface-looks-like-25e342fc1dd7?source=rss-7ec8b9d56ffd------2",
+      "summary": null,
+      "attributes": {
+        "publishedAt": "Sat, 04 Jul 2026 18:05:31 GMT"
+      },
+      "provenance": [
+        {
+          "kind": "rss_item",
+          "path": "https://abvcreative.medium.com/feed",
+          "digest": "6473cee34d68ec7af4e64b5c7aaa51e14e2303a99b66381cb20bc3c5a7f5bb84"
+        }
+      ]
+    },
+    {
+      "id": "writing-item:substack:before-you-launch-your-vibe-coded-app-please-check-the-doors",
+      "kind": "writing_item",
+      "name": "Before You Launch Your Vibe-Coded App, Please Check the Doors",
+      "canonicalUrl": "https://abvx.substack.com/p/before-you-launch-your-vibe-coded",
+      "summary": null,
+      "attributes": {
+        "publishedAt": "Thu, 09 Jul 2026 17:30:30 GMT"
+      },
+      "provenance": [
+        {
+          "kind": "rss_item",
+          "path": "https://abvx.substack.com/feed",
+          "digest": "e5ed231b6f70e484f822a8895dde89d588a14f21dc1b79cf9e2d11d397fa0194"
+        }
+      ]
+    },
+    {
+      "id": "writing-item:substack:first-we-removed-the-keyboard-now-meta-wants-to-remove-the-microphone",
+      "kind": "writing_item",
+      "name": "First We Removed the Keyboard. Now Meta Wants to Remove the Microphone.",
+      "canonicalUrl": "https://abvx.substack.com/p/first-we-removed-the-keyboard-now",
+      "summary": null,
+      "attributes": {
+        "publishedAt": "Fri, 10 Jul 2026 15:38:08 GMT"
+      },
+      "provenance": [
+        {
+          "kind": "rss_item",
+          "path": "https://abvx.substack.com/feed",
+          "digest": "699269b5a6290245844dfc7ced97f5c83d280c83bb35f88acfce5ba833e20f8f"
+        }
+      ]
+    },
+    {
+      "id": "writing-item:substack:how-to-build-an-agent-that-actually-gets-better-over-time",
+      "kind": "writing_item",
+      "name": "How to Build an Agent That Actually Gets Better Over Time",
+      "canonicalUrl": "https://abvx.substack.com/p/how-to-build-an-agent-that-actually",
+      "summary": null,
+      "attributes": {
+        "publishedAt": "Wed, 08 Jul 2026 15:08:00 GMT"
+      },
+      "provenance": [
+        {
+          "kind": "rss_item",
+          "path": "https://abvx.substack.com/feed",
+          "digest": "40a2f05b49a0e9439333a76ccd5e87016a8efaee58a5229c927f848d5b17b819"
+        }
+      ]
+    },
+    {
+      "id": "writing-item:substack:mythos-and-the-end-of-comfortable-cybersecurity",
+      "kind": "writing_item",
+      "name": "Mythos and the End of Comfortable Cybersecurity",
+      "canonicalUrl": "https://abvx.substack.com/p/mythos-and-the-end-of-comfortable",
+      "summary": null,
+      "attributes": {
+        "publishedAt": "Tue, 30 Jun 2026 19:09:38 GMT"
+      },
+      "provenance": [
+        {
+          "kind": "rss_item",
+          "path": "https://abvx.substack.com/feed",
+          "digest": "cb773843d0e795b30205fa9ba2e98a3080aa3d2e604a2243648488917d3d3a86"
+        }
+      ]
+    },
+    {
+      "id": "writing-item:substack:paid-newsletters-in-2026-the-paywall-is-not-the-product",
+      "kind": "writing_item",
+      "name": "Paid Newsletters in 2026: The Paywall Is Not the Product",
+      "canonicalUrl": "https://abvx.substack.com/p/paid-newsletters-in-2026-the-paywall",
+      "summary": null,
+      "attributes": {
+        "publishedAt": "Sun, 28 Jun 2026 17:03:56 GMT"
+      },
+      "provenance": [
+        {
+          "kind": "rss_item",
+          "path": "https://abvx.substack.com/feed",
+          "digest": "c62d0315aa91ba841a4ac86ea4e9bd66ae6d6ab84c1dd028d2c44facc233ade8"
+        }
+      ]
+    },
+    {
+      "id": "writing-item:substack:posting-on-linkedin-is-cringe-burning-300k-on-leads-is-worse",
+      "kind": "writing_item",
+      "name": "Posting on LinkedIn Is Cringe. Burning $300K on Leads Is Worse.",
+      "canonicalUrl": "https://abvx.substack.com/p/posting-on-linkedin-is-cringe-burning",
+      "summary": null,
+      "attributes": {
+        "publishedAt": "Sat, 04 Jul 2026 17:34:29 GMT"
+      },
+      "provenance": [
+        {
+          "kind": "rss_item",
+          "path": "https://abvx.substack.com/feed",
+          "digest": "33d9a975dfe6f120a5280b5066d7f64d37a0db072088852ffd52bb99da6313b4"
+        }
+      ]
+    },
+    {
+      "id": "writing-item:substack:stop-prompting-ai-start-engineering-loops",
+      "kind": "writing_item",
+      "name": "Stop Prompting AI. Start Engineering Loops.",
+      "canonicalUrl": "https://abvx.substack.com/p/stop-prompting-ai-start-engineering",
+      "summary": null,
+      "attributes": {
+        "publishedAt": "Mon, 29 Jun 2026 16:08:35 GMT"
+      },
+      "provenance": [
+        {
+          "kind": "rss_item",
+          "path": "https://abvx.substack.com/feed",
+          "digest": "ceaabf6b1a7a249986fe2b275ad75da7c601ee98b1cfb1f45056ed97b398b6cf"
+        }
+      ]
+    },
+    {
+      "id": "writing-item:substack:the-first-herculaneum-scroll-has-finally-been-read",
+      "kind": "writing_item",
+      "name": "The First Herculaneum Scroll Has Finally Been Read",
+      "canonicalUrl": "https://abvx.substack.com/p/the-first-herculaneum-scroll-has",
+      "summary": null,
+      "attributes": {
+        "publishedAt": "Mon, 06 Jul 2026 15:48:46 GMT"
+      },
+      "provenance": [
+        {
+          "kind": "rss_item",
+          "path": "https://abvx.substack.com/feed",
+          "digest": "87d360ddeae43034eff15492f6fbcf4901d2f1810236876f047f80bfab3f38ee"
+        }
+      ]
+    },
+    {
+      "id": "writing-item:substack:the-great-wrapper-panic",
+      "kind": "writing_item",
+      "name": "The Great Wrapper Panic",
+      "canonicalUrl": "https://abvx.substack.com/p/the-great-wrapper-panic",
+      "summary": null,
+      "attributes": {
+        "publishedAt": "Wed, 24 Jun 2026 10:58:05 GMT"
+      },
+      "provenance": [
+        {
+          "kind": "rss_item",
+          "path": "https://abvx.substack.com/feed",
+          "digest": "b494691266d0ec528a962a608f1e14d7ea7cad3ba25cfcc0a998990b0edd5c8a"
+        }
+      ]
+    },
+    {
+      "id": "writing-item:substack:the-hitchhiker-s-guide-to-agentic-ai-finally-a-map-for-the-whole-machine",
+      "kind": "writing_item",
+      "name": "The Hitchhiker’s Guide to Agentic AI: Finally, a Map for the Whole Machine",
+      "canonicalUrl": "https://abvx.substack.com/p/the-hitchhikers-guide-to-agentic",
+      "summary": null,
+      "attributes": {
+        "publishedAt": "Fri, 03 Jul 2026 17:21:12 GMT"
+      },
+      "provenance": [
+        {
+          "kind": "rss_item",
+          "path": "https://abvx.substack.com/feed",
+          "digest": "fa3cdc4f9dcafd8426a23d0a98d64b1b8a889e609deb08b4a52f81533889e439"
+        }
+      ]
+    },
+    {
+      "id": "writing-item:substack:what-should-you-build-in-the-age-of-ai",
+      "kind": "writing_item",
+      "name": "What Should You Build in the Age of AI?",
+      "canonicalUrl": "https://abvx.substack.com/p/what-should-you-build-in-the-age",
+      "summary": null,
+      "attributes": {
+        "publishedAt": "Wed, 15 Jul 2026 16:11:54 GMT"
+      },
+      "provenance": [
+        {
+          "kind": "rss_item",
+          "path": "https://abvx.substack.com/feed",
+          "digest": "a99fa4fdb562203658a91dd0677a7e008b932681db29317f2b0dc5a279916a3a"
+        }
+      ]
+    },
+    {
+      "id": "writing-item:substack:what-will-agi-actually-look-like",
+      "kind": "writing_item",
+      "name": "What Will AGI Actually Look Like?",
+      "canonicalUrl": "https://abvx.substack.com/p/what-will-agi-actually-look-like",
+      "summary": null,
+      "attributes": {
+        "publishedAt": "Thu, 16 Jul 2026 13:17:25 GMT"
+      },
+      "provenance": [
+        {
+          "kind": "rss_item",
+          "path": "https://abvx.substack.com/feed",
+          "digest": "778ec34aa3cf6dc6d74e735aae12e5c977629ed8ecb316091ad78a82bf42f503"
+        }
+      ]
+    },
+    {
+      "id": "writing:medium",
+      "kind": "writing_feed",
+      "name": "ABVX Medium",
+      "canonicalUrl": "https://abvx.xyz/writing",
+      "summary": "Configured public writing feed: ABVX Medium.",
+      "attributes": {
+        "feedUrl": "https://abvcreative.medium.com/feed",
+        "sourceStatus": "available"
+      },
+      "provenance": [
+        {
+          "kind": "rss_feed",
+          "path": "https://abvcreative.medium.com/feed",
+          "digest": "4ad82e1248d7c637b019cb0f786a1501a6d3b5e78198d9ab3c31a6a3759244c0"
+        }
+      ]
+    },
+    {
+      "id": "writing:substack",
+      "kind": "writing_feed",
+      "name": "ABVX Substack",
+      "canonicalUrl": "https://abvx.xyz/writing",
+      "summary": "Configured public writing feed: ABVX Substack.",
+      "attributes": {
+        "feedUrl": "https://abvx.substack.com/feed",
+        "sourceStatus": "available"
+      },
+      "provenance": [
+        {
+          "kind": "rss_feed",
+          "path": "https://abvx.substack.com/feed",
+          "digest": "e6c3ce5e811cad12dd7691a9aea9ddde6818960d0102ce5de011dcd30bbab273"
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "from": "lab:abvx",
+      "type": "catalogues",
+      "to": "project:abvx-agent-skills"
+    },
+    {
+      "from": "lab:abvx",
+      "type": "catalogues",
+      "to": "project:abvx-lab"
+    },
+    {
+      "from": "lab:abvx",
+      "type": "catalogues",
+      "to": "project:abvx-shortener"
+    },
+    {
+      "from": "lab:abvx",
+      "type": "catalogues",
+      "to": "project:agents-md-generator"
+    },
+    {
+      "from": "lab:abvx",
+      "type": "catalogues",
+      "to": "project:ascii-theme"
+    },
+    {
+      "from": "lab:abvx",
+      "type": "catalogues",
+      "to": "project:azurmenton"
+    },
+    {
+      "from": "lab:abvx",
+      "type": "catalogues",
+      "to": "project:blue-jay-vodka"
+    },
+    {
+      "from": "lab:abvx",
+      "type": "catalogues",
+      "to": "project:chinese-wisdom-toki-pona-landing"
+    },
+    {
+      "from": "lab:abvx",
+      "type": "catalogues",
+      "to": "project:decision-map"
+    },
+    {
+      "from": "lab:abvx",
+      "type": "catalogues",
+      "to": "project:git-tweet"
+    },
+    {
+      "from": "lab:abvx",
+      "type": "catalogues",
+      "to": "project:id"
+    },
+    {
+      "from": "lab:abvx",
+      "type": "catalogues",
+      "to": "project:set"
+    },
+    {
+      "from": "lab:abvx",
+      "type": "catalogues",
+      "to": "project:sitelen-emoji-truth"
+    },
+    {
+      "from": "lab:abvx",
+      "type": "catalogues",
+      "to": "project:sitelen-layer-plugin"
+    },
+    {
+      "from": "lab:abvx",
+      "type": "catalogues",
+      "to": "project:stoic-wisdom-toki-pona-landing"
+    },
+    {
+      "from": "lab:abvx",
+      "type": "catalogues",
+      "to": "project:toki-pona-ai-translator"
+    },
+    {
+      "from": "lab:abvx",
+      "type": "catalogues",
+      "to": "project:toki-pona-free-kits-landing"
+    },
+    {
+      "from": "lab:abvx",
+      "type": "catalogues",
+      "to": "project:ukrainian-modernism-landing"
+    },
+    {
+      "from": "lab:abvx",
+      "type": "catalogues",
+      "to": "project:ytmamp"
+    },
+    {
+      "from": "person:anton-biletskyi-volokh",
+      "type": "maintains",
+      "to": "lab:abvx"
+    },
+    {
+      "from": "person:anton-biletskyi-volokh",
+      "type": "publicly_represented_by",
+      "to": "site:abvx"
+    },
+    {
+      "from": "site:abvx",
+      "type": "aggregates",
+      "to": "writing:medium"
+    },
+    {
+      "from": "site:abvx",
+      "type": "aggregates",
+      "to": "writing:substack"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "lab:abvx"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:1d3x"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:abvx-agent-skills"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:abvx-lab"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:abvx-shortener"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:agents-md-generator"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:ascii-theme"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:azurmenton"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:blue-jay-vodka"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:chinese-wisdom-toki-pona-landing"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:cropto"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:cropto-market-risk-deck"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:cropto-monitor"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:decision-map"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:git-tweet"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:id"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:last30days-cropto"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:liqua"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:mn7r"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:mn7r-blog"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:pictiq"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:set"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:sitelen-emoji-truth"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:sitelen-layer-plugin"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:spike-spot-commodity-index-ukraine"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:stoic-wisdom-toki-pona-landing"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:toki-pona-ai-translator"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:toki-pona-free-kits-landing"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:trade-solution-eu"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:uga-index"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:ukrainian-modernism-landing"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:ytmamp"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:boh-buv-zainiatyi-kanalizatsiieiu"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:chinese-wisdom-reader-guide"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:christmas-carol-toki-pona"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:cicero-toki-pona"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:dao-de-jing-toki-pona"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:dark-gestalt"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:epictetus-enchiridion-toki-pona"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:future-proof-productivity"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:god-was-busy-with-the-plumbing"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:heart-sutra-toki-pona"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:hryhorii-kosynka-dans-les-seigles"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:iouri-ianovski-le-maitre-du-navire"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:llmo-seo-revolution"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:maik-johansen-le-voyage-du-savant-docteur-leonardo"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:marcus-aurelius-meditations-toki-pona"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:mn7r-agro-commodity-brokerage-en-free-edition"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:mn7r-agro-commodity-brokerage-ua-free-edition"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:mn7r-product-guide"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:mykola-khvylovy-la-zone-du-sanatorium"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:seneca-shortness-of-life-toki-pona"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:spot-market-handbook-en-free-edition"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:spot-market-handbook-ua-free-edition"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:sunzi-art-of-war-toki-pona"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:the-tiny-language-protocol"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:toki-pona-machine-mind"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:toki-pona-readers-kit"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:valerian-pidmohylny-la-ville"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "series:chinese-wisdom-toki-pona"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "series:mn7r-commodity-brokerage-library"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "series:modernisme-ukrainien"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "series:stoic-wisdom-toki-pona"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "series:toki-pona-free-kits"
+    },
+    {
+      "from": "writing:medium",
+      "type": "publishes",
+      "to": "writing-item:medium:adajepa-the-world-model-that-changes-its-mind-when-reality-disagrees"
+    },
+    {
+      "from": "writing:medium",
+      "type": "publishes",
+      "to": "writing-item:medium:ai-coding-tools-made-developers-faster-then-the-system-hit-a-wall"
+    },
+    {
+      "from": "writing:medium",
+      "type": "publishes",
+      "to": "writing-item:medium:ai-trusts-nerdwallet-that-may-still-be-terrible-news-for-nerdwallet"
+    },
+    {
+      "from": "writing:medium",
+      "type": "publishes",
+      "to": "writing-item:medium:babeltele-when-ai-stops-speaking-human"
+    },
+    {
+      "from": "writing:medium",
+      "type": "publishes",
+      "to": "writing-item:medium:chatgpt-does-not-pick-sources-the-way-seos-think-it-does"
+    },
+    {
+      "from": "writing:medium",
+      "type": "publishes",
+      "to": "writing-item:medium:claude-science-anthropic-has-built-the-research-workbench-universities-never-did"
+    },
+    {
+      "from": "writing:medium",
+      "type": "publishes",
+      "to": "writing-item:medium:inkling-is-not-the-best-ai-model-that-may-be-the-point"
+    },
+    {
+      "from": "writing:medium",
+      "type": "publishes",
+      "to": "writing-item:medium:the-ai-will-take-your-job-says-the-chat-log-from-people-who-already-use-ai"
+    },
+    {
+      "from": "writing:medium",
+      "type": "publishes",
+      "to": "writing-item:medium:the-aristotelian-correction-why-neural-networks-may-only-converge-locally"
+    },
+    {
+      "from": "writing:medium",
+      "type": "publishes",
+      "to": "writing-item:medium:the-death-of-the-chat-window-openai-just-showed-what-the-next-interface-looks-like"
+    },
+    {
+      "from": "writing:substack",
+      "type": "publishes",
+      "to": "writing-item:substack:before-you-launch-your-vibe-coded-app-please-check-the-doors"
+    },
+    {
+      "from": "writing:substack",
+      "type": "publishes",
+      "to": "writing-item:substack:first-we-removed-the-keyboard-now-meta-wants-to-remove-the-microphone"
+    },
+    {
+      "from": "writing:substack",
+      "type": "publishes",
+      "to": "writing-item:substack:how-to-build-an-agent-that-actually-gets-better-over-time"
+    },
+    {
+      "from": "writing:substack",
+      "type": "publishes",
+      "to": "writing-item:substack:mythos-and-the-end-of-comfortable-cybersecurity"
+    },
+    {
+      "from": "writing:substack",
+      "type": "publishes",
+      "to": "writing-item:substack:paid-newsletters-in-2026-the-paywall-is-not-the-product"
+    },
+    {
+      "from": "writing:substack",
+      "type": "publishes",
+      "to": "writing-item:substack:posting-on-linkedin-is-cringe-burning-300k-on-leads-is-worse"
+    },
+    {
+      "from": "writing:substack",
+      "type": "publishes",
+      "to": "writing-item:substack:stop-prompting-ai-start-engineering-loops"
+    },
+    {
+      "from": "writing:substack",
+      "type": "publishes",
+      "to": "writing-item:substack:the-first-herculaneum-scroll-has-finally-been-read"
+    },
+    {
+      "from": "writing:substack",
+      "type": "publishes",
+      "to": "writing-item:substack:the-great-wrapper-panic"
+    },
+    {
+      "from": "writing:substack",
+      "type": "publishes",
+      "to": "writing-item:substack:the-hitchhiker-s-guide-to-agentic-ai-finally-a-map-for-the-whole-machine"
+    },
+    {
+      "from": "writing:substack",
+      "type": "publishes",
+      "to": "writing-item:substack:what-should-you-build-in-the-age-of-ai"
+    },
+    {
+      "from": "writing:substack",
+      "type": "publishes",
+      "to": "writing-item:substack:what-will-agi-actually-look-like"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVPublicPresenceSources",
+  "person": {
+    "id": "person:anton-biletskyi-volokh",
+    "name": "Anton Biletskyi-Volokh",
+    "canonicalUrl": "https://abvx.xyz/about",
+    "summary": "Public founder and ecosystem profile represented by ABVX."
+  },
+  "site": {
+    "id": "site:abvx",
+    "name": "ABVX",
+    "canonicalUrl": "https://abvx.xyz/",
+    "summary": "Public ecosystem site for market infrastructure, AI-native systems, publishing, language experiments, books and writing."
+  },
+  "lab": {
+    "id": "lab:abvx",
+    "name": "ABVX Lab",
+    "canonicalUrl": "https://abvx.xyz/systems",
+    "summary": "Public systems catalogue for AI-native development, language and operational experiments."
+  },
+  "writingFeeds": [
+    {
+      "id": "writing:medium",
+      "name": "ABVX Medium",
+      "feedUrl": "https://abvcreative.medium.com/feed",
+      "archiveUrl": "https://abvx.xyz/writing"
+    },
+    {
+      "id": "writing:substack",
+      "name": "ABVX Substack",
+      "feedUrl": "https://abvx.substack.com/feed",
+      "archiveUrl": "https://abvx.xyz/writing"
+    }
+  ]
+}

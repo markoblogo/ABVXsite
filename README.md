@@ -153,6 +153,8 @@ The scheduled project-copy workflow observes allowlisted source SHAs first, save
 
 See [CortexABV public-site adapter](cortex-abv/README.md) for the authority boundary and the next integration seam.
 
+The first public CortexABV corpus is [`cortex-abv/public-presence-index.v1.json`](cortex-abv/public-presence-index.v1.json): a versioned, read-only entity map of the public site, Lab, catalogue, writing feeds and source provenance. Rebuild it with `npm run cortex-abv:public-index`; it has no model call and no action authority.
+
 ## Verification
 
 Standard checks before pushing:

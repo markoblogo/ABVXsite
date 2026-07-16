@@ -35,6 +35,18 @@ SOURCE_REPOS_TOKEN=... npm run cortex-abv:observe-events -- --output /tmp/cortex
 
 `public-policy.example.json` defines the safe public default: `proposal_only`, no automatic actions, and an explicit deny list for external communication and private-data storage. Runtime policy is validated by `npm run cortex-abv:status`.
 
+## Public Presence Index v1
+
+`public-presence-index.v1.json` is the first read-only corpus for CortexABV. It contains only public site metadata: the public person/site/lab records, catalogue entities, configured writing feeds, available RSS item metadata, graph relations, and per-entity provenance. It does not contain private profiles, contact records, credentials, raw repository documents, model output, or authority to make changes.
+
+Generate it with:
+
+```bash
+npm run cortex-abv:public-index
+```
+
+The index records an unavailable feed as source status rather than failing the complete snapshot. Use `-- --without-feed-items` for a fully local, deterministic rebuild. Its source configuration lives in `public-presence-sources.v1.json` and is intentionally the only place to add new public corpus roots.
+
 ## Next interfaces
 
 The private runtime can later submit a validated `CortexABVProposal` to the site adapter. The adapter accepts public evidence references and a bounded patch preview; it never accepts a free-form instruction as authority. Publishing, messages, email, credentials, and private-memory retrieval stay outside this repository.

@@ -48,6 +48,23 @@
       "README.md"
     ]
   },
+  "publicCopy": {
+    "bodyMode": "append_only",
+    "allowedThemes": [
+      "indexed commodity market exposure across Ukraine, Argentina and Brazil",
+      "spot markets, options and tokenized commodity-linked instruments",
+      "cash-settled risk management using local commodity indices"
+    ],
+    "forbiddenTerms": [
+      "Sea Brokerage",
+      "monitor",
+      "demo",
+      "staging",
+      "backend",
+      "wallet",
+      "waitlist"
+    ]
+  },
   "featured": true,
   "sortRank": 10,
   "needsCopyReview": false,

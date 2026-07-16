@@ -57,6 +57,24 @@
       "README.md"
     ]
   },
+  "publicCopy": {
+    "bodyMode": "append_only",
+    "allowedThemes": [
+      "commodity brokerage workflows organized around Deals, Clients and EXE",
+      "structured operational coordination and post-trade execution",
+      "clearer ownership, execution discipline and team visibility"
+    ],
+    "forbiddenTerms": [
+      "Telegram",
+      "AI assistant",
+      "AI chat",
+      "pilot",
+      "proprietary",
+      "backend",
+      "reference data",
+      "reporting"
+    ]
+  },
   "featured": true,
   "sortRank": 1,
   "needsCopyReview": false,

@@ -14,6 +14,7 @@ const targets = getSyncTargets().map((target) => ({
   repository: target.sync.repository,
   ref: target.sync.ref,
   evidencePaths: target.sync.paths,
+  publicCopy: target.sync.publicCopy,
   lastAppliedCommit: target.data.sync.lastAppliedCommit || null,
   proposalStatus: 'awaiting_observed_repository_event',
 }));

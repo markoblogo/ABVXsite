@@ -54,11 +54,11 @@ async function createProposal(target, source) {
   const schema = {
     type: 'object',
     additionalProperties: false,
-    required: ['changed', 'summary', 'body', 'notes', 'claims'],
+    required: ['changed', 'summary', 'bodyAppendix', 'notes', 'claims'],
     properties: {
       changed: { type: 'boolean' },
       summary: { type: 'string' },
-      body: { type: 'string' },
+      bodyAppendix: { type: 'string' },
       notes: { type: 'array', items: { type: 'string' } },
       claims: {
         type: 'array',
@@ -67,7 +67,7 @@ async function createProposal(target, source) {
           additionalProperties: false,
           required: ['field', 'text', 'evidencePath', 'lineStart', 'lineEnd'],
           properties: {
-            field: { type: 'string', enum: ['summary', 'body'] },
+            field: { type: 'string', enum: ['summary', 'bodyAppendix'] },
             text: { type: 'string' },
             evidencePath: { type: 'string' },
             lineStart: { type: 'integer' },
@@ -82,9 +82,12 @@ async function createProposal(target, source) {
     'Never invent features, users, metrics, dates, commercial claims, roadmap, or security claims.',
     'Preserve the project identity and positioning unless the source explicitly changes it.',
     'Return changed=false and the current text exactly when no material change is supported.',
-    'When changed=true, write a factual one- or two-sentence summary (max 320 chars) and a single concise public-facing paragraph (max 900 chars).',
+    'When changed=true, write a factual one- or two-sentence summary (max 320 chars) and an optional single public-facing body appendix (max 450 chars).',
+    'The existing body is an approved public baseline: never rewrite, delete, reorder, or restate it. Return only the new bodyAppendix; use an empty string when no addition is needed.',
+    `Allowed public themes for this project: ${target.sync.publicCopy.allowedThemes.join('; ')}. Do not introduce any other theme.`,
+    `Project-specific forbidden terms: ${target.sync.publicCopy.forbiddenTerms.join('; ')}.`,
     'Never mention protected or internal surfaces, endpoints, environment variables, .env, demo data, seeded or mock data, persistence gaps, prototype-grade status, missing capabilities, or implementation caveats.',
-    'When changed=true, return exactly two claims: one for summary and one for body. Each claim.text must equal that full output field exactly and must cite an allowlisted source path plus a directly supporting, valid line range from the numbered source below. Do not quote source text in a claim.',
+    'When changed=true, return exactly one claim for each field that changed: summary and/or bodyAppendix. Each claim.text must equal that full output field exactly and must cite an allowlisted source path plus a directly supporting, valid line range from the numbered source below. Do not quote source text in a claim.',
     'When changed=false, return an empty claims array.',
     `Current summary:\n${target.data.summary}`,
     `Current body:\n${target.body}`,
@@ -126,7 +129,7 @@ export async function run() {
     try {
       const source = await readRepositorySources(target.sync);
       const proposal = await createProposal(target, source.source);
-      const evidence = validatePublicCopyEvidence({ proposal, sync: target.sync, sourceFiles: source.files });
+      const evidence = validatePublicCopyEvidence({ proposal, sync: target.sync, sourceFiles: source.files, data: target.data });
       const result = applyProposal({
         data: target.data,
         body: target.body,

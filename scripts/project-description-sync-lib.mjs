@@ -3,7 +3,7 @@ import path from 'node:path';
 import { contentFiles, parseContentFile, serializeFrontmatter } from './content-lib.mjs';
 
 const MAX_SUMMARY_LENGTH = 320;
-const MAX_BODY_LENGTH = 900;
+const MAX_BODY_APPENDIX_LENGTH = 450;
 const PUBLIC_COPY_DENIALS = [
   /\bprotected\b/i,
   /\binternal\b/i,
@@ -24,7 +24,21 @@ function nonEmptyString(value, field) {
   return value.trim();
 }
 
-export function validateSyncConfig(sync, filePath = 'content item') {
+export function validatePublicCopyProfile(profile, filePath = 'content item') {
+  if (!profile || typeof profile !== 'object') throw new Error(`${filePath}: publicCopy profile is required for enabled sync`);
+  if (profile.bodyMode !== 'append_only') throw new Error(`${filePath}: publicCopy.bodyMode must be append_only`);
+  if (!Array.isArray(profile.allowedThemes) || !profile.allowedThemes.length) throw new Error(`${filePath}: publicCopy.allowedThemes must be a non-empty array`);
+  if (!profile.allowedThemes.every((theme) => typeof theme === 'string' && theme.trim())) throw new Error(`${filePath}: publicCopy.allowedThemes must contain non-empty strings`);
+  if (!Array.isArray(profile.forbiddenTerms) || !profile.forbiddenTerms.length) throw new Error(`${filePath}: publicCopy.forbiddenTerms must be a non-empty array`);
+  if (!profile.forbiddenTerms.every((term) => typeof term === 'string' && term.trim())) throw new Error(`${filePath}: publicCopy.forbiddenTerms must contain non-empty strings`);
+  return {
+    bodyMode: 'append_only',
+    allowedThemes: profile.allowedThemes.map((theme) => theme.trim()),
+    forbiddenTerms: profile.forbiddenTerms.map((term) => term.trim()),
+  };
+}
+
+export function validateSyncConfig(sync, filePath = 'content item', publicCopy) {
   if (!sync || sync.enabled !== true) return null;
   if (typeof sync.repository !== 'string' || !/^[\w.-]+\/[\w.-]+$/.test(sync.repository)) {
     throw new Error(`${filePath}: sync.repository must be owner/repository`);
@@ -32,21 +46,30 @@ export function validateSyncConfig(sync, filePath = 'content item') {
   if (!Array.isArray(sync.paths) || !sync.paths.length || !sync.paths.every((item) => typeof item === 'string' && item.trim())) {
     throw new Error(`${filePath}: sync.paths must contain at least one file path`);
   }
-  return { repository: sync.repository, ref: typeof sync.ref === 'string' ? sync.ref : 'main', paths: sync.paths };
+  return {
+    repository: sync.repository,
+    ref: typeof sync.ref === 'string' ? sync.ref : 'main',
+    paths: sync.paths,
+    publicCopy: validatePublicCopyProfile(publicCopy, filePath),
+  };
 }
 
-export function assertPublicSafeCopy(summary, body) {
-  const copy = `${summary}\n${body}`;
+export function assertPublicSafeCopy(summary, bodyAppendix, publicCopy) {
+  const copy = `${summary}\n${bodyAppendix}`;
   const denial = PUBLIC_COPY_DENIALS.find((pattern) => pattern.test(copy));
   if (denial) throw new Error(`generated copy is not public-safe: ${denial.source.replace(/\\b|\\\?|\\(|\\)/g, '')}`);
+  const forbiddenTerm = publicCopy.forbiddenTerms.find((term) => copy.toLocaleLowerCase().includes(term.toLocaleLowerCase()));
+  if (forbiddenTerm) throw new Error(`generated copy is not public-safe: ${forbiddenTerm}`);
 }
 
-export function validatePublicCopyEvidence({ proposal, sync, sourceFiles }) {
+export function validatePublicCopyEvidence({ proposal, sync, sourceFiles, data }) {
   if (!proposal?.changed) return { claims: [] };
   if (!Array.isArray(proposal.claims)) throw new Error('changed proposal must include claim evidence');
   if (!Array.isArray(sourceFiles) || !sourceFiles.length) throw new Error('source files are required for claim evidence');
 
-  const expected = new Map([['summary', proposal.summary], ['body', proposal.body]]);
+  const expected = new Map();
+  if (proposal.summary !== data?.summary) expected.set('summary', proposal.summary);
+  if (typeof proposal.bodyAppendix === 'string' && proposal.bodyAppendix.trim()) expected.set('bodyAppendix', proposal.bodyAppendix.trim());
   const claims = proposal.claims.map((claim) => ({
     field: claim?.field,
     text: claim?.text,
@@ -54,8 +77,8 @@ export function validatePublicCopyEvidence({ proposal, sync, sourceFiles }) {
     lineStart: claim?.lineStart,
     lineEnd: claim?.lineEnd,
   }));
-  if (claims.length !== 2 || new Set(claims.map(({ field }) => field)).size !== 2 || !claims.every(({ field }) => expected.has(field))) {
-    throw new Error('changed proposal requires exactly one summary and body claim');
+  if (claims.length !== expected.size || new Set(claims.map(({ field }) => field)).size !== expected.size || !claims.every(({ field }) => expected.has(field))) {
+    throw new Error('changed proposal requires exactly one claim for each changed public field');
   }
 
   for (const claim of claims) {
@@ -73,10 +96,14 @@ export function validatePublicCopyEvidence({ proposal, sync, sourceFiles }) {
 export function applyProposal({ data, body, proposal, sourceCommit, updatedAt }) {
   if (!proposal || proposal.changed !== true) return { changed: false, data, body };
   const summary = nonEmptyString(proposal.summary, 'summary');
-  const nextBody = nonEmptyString(proposal.body, 'body');
+  if (typeof proposal.bodyAppendix !== 'string') throw new Error('bodyAppendix must be a string');
+  const bodyAppendix = proposal.bodyAppendix.trim();
+  const publicCopy = validatePublicCopyProfile(data.publicCopy);
   if (summary.length > MAX_SUMMARY_LENGTH) throw new Error(`summary exceeds ${MAX_SUMMARY_LENGTH} characters`);
-  if (nextBody.length > MAX_BODY_LENGTH) throw new Error(`body exceeds ${MAX_BODY_LENGTH} characters`);
-  assertPublicSafeCopy(summary, nextBody);
+  if (bodyAppendix.length > MAX_BODY_APPENDIX_LENGTH) throw new Error(`bodyAppendix exceeds ${MAX_BODY_APPENDIX_LENGTH} characters`);
+  if (bodyAppendix.includes('\n\n')) throw new Error('bodyAppendix must be a single paragraph');
+  assertPublicSafeCopy(summary, bodyAppendix, publicCopy);
+  const nextBody = bodyAppendix ? `${body.trim()}\n\n${bodyAppendix}` : body.trim();
   if (summary === data.summary && nextBody === body.trim()) return { changed: false, data, body };
 
   return {
@@ -95,7 +122,7 @@ export function getSyncTargets(workDirectory = process.cwd()) {
   return contentFiles('work')
     .map((filePath) => ({ filePath, ...parseContentFile(filePath) }))
     .filter(({ data }) => data.sync?.enabled === true)
-    .map(({ filePath, data, body }) => ({ filePath, data, body, sync: validateSyncConfig(data.sync, filePath) }));
+    .map(({ filePath, data, body }) => ({ filePath, data, body, sync: validateSyncConfig(data.sync, filePath, data.publicCopy) }));
 }
 
 export function writeProposal(filePath, data, body) {

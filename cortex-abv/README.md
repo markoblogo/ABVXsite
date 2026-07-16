@@ -15,7 +15,7 @@ It may contain source code, public project-content contracts, and reviewable pro
 
 It is reviewable and side-effect free until a human merges the generated pull request. It cannot change project identity, title, status, tags, links, media, positioning, or publish to a social network.
 
-Public-copy proposals are deliberately narrow: a summary of at most 320 characters and one body paragraph of at most 900 characters. They reject protected/internal surfaces, endpoints, environment details, demo or seeded/mock data, persistence gaps, and other prototype-gap framing. Each changed field requires one claim-to-source line-range anchor from an explicitly allowlisted file. The receipt shows those paths and line ranges, never a copied private-source excerpt.
+Every enabled project has a `publicCopy` profile: explicit allowed themes, project-specific forbidden terms, and `append_only` body mode. A proposal may update a summary of at most 320 characters and may append one body paragraph of at most 450 characters; it cannot rewrite, delete, reorder, or restate the approved public body baseline. It also rejects protected/internal surfaces, endpoints, environment details, demo or seeded/mock data, persistence gaps, and other prototype-gap framing. Each changed field requires one claim-to-source line-range anchor from an explicitly allowlisted file. The receipt shows those paths and line ranges, never a copied private-source excerpt.
 
 ## Observed-event workflow
 

@@ -75,7 +75,7 @@ function validateFile(file, folder) {
 
   if (!Array.isArray(data.tags)) addError(file, 'tags must be an array');
   try {
-    validateSyncConfig(data.sync, file);
+    validateSyncConfig(data.sync, file, data.publicCopy);
   } catch (error) {
     addError(file, error.message.replace(`${file}: `, ''));
   }

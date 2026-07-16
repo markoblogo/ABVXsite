@@ -117,8 +117,8 @@ export function renderEvidenceReceipt(batch, copyProposals = []) {
     }
     const observed = observedBySlug.get(projectSlug(copyProposal?.slug, 'copyProposal.slug'));
     if (!observed || copyProposal.sourceCommit !== observed.evidence[0].commit) throw new Error('copy proposal must match an observed source commit');
-    if (!Array.isArray(copyProposal.claims) || copyProposal.claims.length !== 2) throw new Error('copy proposal must include two claim anchors');
-    const expectedFields = new Set(['summary', 'body']);
+    if (!Array.isArray(copyProposal.claims) || !copyProposal.claims.length || copyProposal.claims.length > 2) throw new Error('copy proposal must include one or two claim anchors');
+    const expectedFields = new Set(['summary', 'bodyAppendix']);
     for (const claim of copyProposal.claims) {
       if (!expectedFields.delete(claim?.field) || !observed.evidence.some((item) => item.path === claim.evidencePath)) {
         throw new Error('claim anchor must use each public field once and an observed source path');

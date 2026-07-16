@@ -14,7 +14,7 @@ The observer does not call a model, change content, open a PR, publish social co
 When a PR is created, its body is a CortexABV evidence receipt rendered from the same observed batch. It contains:
 
 - source repository SHA and allowlisted paths;
-- one source file and line-range anchor for each changed `summary` and body claim, without copying source text into the public PR;
+- one source file and line-range anchor for each changed `summary` or body-appendix claim, without copying source text into the public PR;
 - `pending_review`, `proposal`, and `externalSideEffects: false` state;
 - a bounded basis for the proposal; and
 - explicit approve/reject review checkboxes.
@@ -34,7 +34,9 @@ It never changes project identity, title, status, section placement, tags, links
 
 ## Public-copy boundary
 
-The generated patch is intentionally constrained to a summary of at most 320 characters and a single body paragraph of at most 900 characters. It is rejected if it mentions protected/internal surfaces, endpoints, environment details, demo/seeded/mock data, persistence gaps, or other missing-capability/prototype-gap framing.
+The generated patch is intentionally constrained to a summary of at most 320 characters and, at most, one appended body paragraph of 450 characters. The existing body is an approved public baseline: automation cannot rewrite, delete, reorder, or restate it. Corrections or larger editorial rewrites remain manual changes.
+
+Each enabled target must provide a `publicCopy` profile with explicit `allowedThemes`, project-specific `forbiddenTerms`, and `bodyMode: "append_only"`. The model is instructed to use only those themes; the workflow rejects the global safety denials and the profile's forbidden terms.
 
 For each changed public field, the model must provide one exact copy claim plus an allowlisted source path and numbered line range. The workflow validates the path and range against the fetched source before it writes content. The public PR receipt exposes only the path and line range, not a quote from a private source repository.
 
@@ -48,6 +50,11 @@ Add an explicit `sync` block to `content/work/<slug>.md`:
   "repository": "owner/repository",
   "ref": "main",
   "paths": ["README.md", "docs/product.md"]
+},
+"publicCopy": {
+  "bodyMode": "append_only",
+  "allowedThemes": ["one approved public theme"],
+  "forbiddenTerms": ["a project-specific prohibited phrase"]
 }
 ```
 
@@ -62,7 +69,7 @@ Set these repository secrets in `markoblogo/ABVXsite`:
 - `OPENAI_API_KEY` — API key used only by the sync workflow.
 - `SOURCE_REPOS_TOKEN` — fine-grained GitHub token with read-only **Contents** access to private source repositories. It is optional when every enabled source repository is public.
 
-The workflow creates a PR only if the generated `summary` or body differs from the existing copy. The observed-event artifact may exist even when source changes do not justify a content diff, in which case no PR is created. Missing source files, invalid configuration or API errors fail the run without touching content.
+The workflow creates a PR only if the generated `summary` or appended body paragraph differs from the existing copy. The observed-event artifact may exist even when source changes do not justify a content diff, in which case no PR is created. Missing source files, invalid configuration or API errors fail the run without touching content.
 
 ## Local dry run
 

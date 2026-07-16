@@ -118,12 +118,12 @@ test('renders claim-level source anchors without copying source text into the pu
     sourceCommit: 'abc123def456',
     claims: [
       { field: 'summary', text: 'Public summary.', evidencePath: 'README.md', lineStart: 3, lineEnd: 5 },
-      { field: 'body', text: 'Public body.', evidencePath: 'README.md', lineStart: 8, lineEnd: 10 },
+      { field: 'bodyAppendix', text: 'Public body.', evidencePath: 'README.md', lineStart: 8, lineEnd: 10 },
     ],
   }]);
 
   assert.match(receipt, /Claim-to-source anchors/);
   assert.match(receipt, /`summary` → `README\.md:L3-L5`/);
-  assert.match(receipt, /`body` → `README\.md:L8-L10`/);
+  assert.match(receipt, /`bodyAppendix` → `README\.md:L8-L10`/);
   assert.doesNotMatch(receipt, /Public summary\.|Public body\./);
 });

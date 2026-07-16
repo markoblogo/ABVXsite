@@ -42,7 +42,7 @@
   ],
   "sync": {
     "enabled": true,
-    "repository": "markoblogo/cropto-v0",
+    "repository": "markoblogo/cropto",
     "ref": "main",
     "paths": [
       "README.md"

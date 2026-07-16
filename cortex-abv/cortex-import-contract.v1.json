@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVReadOnlyImportContract",
+  "version": "v1",
+  "authority": "read",
+  "externalSideEffects": false,
+  "runtimeIntegration": false,
+  "destination": {
+    "name": "CortexABV private runtime",
+    "publicSiteAdapter": "proposal_only"
+  },
+  "inboundSources": [
+    {
+      "id": "base-cortex",
+      "direction": "base_cortex_to_cortex_abv",
+      "mayImport": ["public_data", "protected_data", "authorized_updates"],
+      "returnAuthority": "none"
+    },
+    {
+      "id": "owned-project-ecosystems",
+      "includes": ["Monitor", "Index and its systems", "Cropto"],
+      "direction": "project_ecosystem_to_cortex_abv",
+      "mayImport": ["public_data", "protected_data", "authorized_updates"],
+      "returnAuthority": "none"
+    }
+  ],
+  "prohibitedOutboundToSources": [
+    "data",
+    "commands",
+    "workflow_state",
+    "feedback",
+    "policy",
+    "runtime_influence"
+  ],
+  "publicSurfaceRule": "Imported data never becomes public-site content without a separately validated, evidence-backed, human-reviewable proposal."
+}

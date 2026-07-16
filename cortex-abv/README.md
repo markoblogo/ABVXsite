@@ -4,6 +4,12 @@ This directory is the public, proposal-only boundary between CortexABV and `abvx
 
 It may contain source code, public project-content contracts, and reviewable proposal shapes. It must not contain private personal profiles, CV source files, contact history, inbox data, credentials, raw agent traces, or action receipts that identify correspondents. Those belong to a separately deployed private CortexABV runtime and store.
 
+## Base Cortex and project ecosystem boundary
+
+[`cortex-import-contract.v1.json`](cortex-import-contract.v1.json) declares the architectural direction: the base Cortex and the owner's Monitor, Index, and Cropto ecosystems may supply authorized data and updates to the private CortexABV runtime. CortexABV has no return path to them: it cannot provide data, commands, feedback, policy, workflow state, or runtime influence. Imported material stays private unless a separately validated, human-reviewable proposal targets an owner-controlled public surface.
+
+This is documentation only. It introduces no endpoint, credential, webhook, scheduler, or runtime integration. See [Read-Only Import Contract v1](../docs/cortex-abv-read-only-import-contract.md).
+
 ## First capability
 
 `project_copy_sync` reads only the explicit `sync` allowlist already present on a work item. A proposal may update only existing copy-safe fields:

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "kind": "MonitorProjectUpdatePacket",
+  "updateId": "synthetic-monitor-update-001",
+  "projectId": "monitor",
+  "productId": "mn7r",
+  "sourceStatus": "observed",
+  "changeSet": [
+    {
+      "surface": "repository",
+      "kind": "synthetic_metadata_update",
+      "ref": "synthetic:monitor:mn7r:001"
+    }
+  ],
+  "evidence": [
+    {
+      "ref": "synthetic:evidence:monitor:001",
+      "status": "observed"
+    }
+  ],
+  "review": {
+    "status": "not_requested"
+  },
+  "blockers": [],
+  "observedAt": "2026-07-16T16:00:00.000Z",
+  "sourceDigest": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+}

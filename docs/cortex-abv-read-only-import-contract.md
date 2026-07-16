@@ -25,6 +25,8 @@ The same boundary applies to the owner's project ecosystems: Monitor, Index and 
 
 Protected imports, personal records, credentials, contact data, raw traces, and source documents belong only in the separately deployed private CortexABV runtime and store. They must never be committed to ABVXsite, its public artifacts, Actions logs, receipts, or generated indexes.
 
+ABVXsite may contain an auditable *code-and-contract snapshot* of the private runtime under `cortex-abv/private-runtime/`, but it is not that runtime or store. The snapshot contains no `data/`, ledger records, `.env`, credentials, real packets, protected payloads, personal context, or guest data; a local export guard blocks those classes of material. It does not grant ABVXsite access to the private runtime.
+
 No endpoint, token, webhook, scheduler, or runtime integration is introduced by this contract.
 
 ## Personal-surface proposals

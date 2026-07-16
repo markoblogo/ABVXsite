@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVAzurMentonSourcePack",
+  "version": "v1",
+  "authority": "read",
+  "externalSideEffects": false,
+  "runtimeIntegration": false,
+  "packId": "azur-menton-public-guide-corpus-2026-07-16",
+  "tenantId": "azur-menton",
+  "status": "snapshot_only",
+  "corpusMode": "source_manifest_only",
+  "classification": "public",
+  "guestDataIncluded": false,
+  "revision": {
+    "repository": "markoblogo/azurmenton",
+    "commitSha": "e541fa0b1e6c1fe86cdfac90888310506f44e193"
+  },
+  "sources": [
+    {
+      "relativePath": "src/content/content-map.ts",
+      "sha256": "b887845f9ed065aa904305d8d82e60156cb3505cf21a70bc0f164c8eb2b316eb",
+      "contentKinds": ["guide"],
+      "provenanceType": "repository_file_sha256"
+    },
+    {
+      "relativePath": "src/content/guide-intents.ts",
+      "sha256": "244685a859a976c7c98ef14cc05be915edc9839ffc4391bc6000fbc2e4f82fe6",
+      "contentKinds": ["guide", "faq"],
+      "provenanceType": "repository_file_sha256"
+    },
+    {
+      "relativePath": "src/content/guide.ts",
+      "sha256": "d15e72917d411c12230abe0ab4f99c5242d3e817ff4f64c4e70f47dbf996914e",
+      "contentKinds": ["guide", "faq"],
+      "provenanceType": "repository_file_sha256"
+    },
+    {
+      "relativePath": "src/content/places.ts",
+      "sha256": "d5cb41d48a366b10980aa8e447b9c224453020e08df1e203f3dfc4c067609bf2",
+      "contentKinds": ["place"],
+      "provenanceType": "repository_file_sha256"
+    }
+  ]
+}

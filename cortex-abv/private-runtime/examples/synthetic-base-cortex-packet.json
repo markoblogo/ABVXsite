@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVImportPacket",
+  "packetId": "packet:base-cortex:synthetic-001",
+  "direction": "inbound_to_cortex_abv",
+  "source": {
+    "kind": "base_cortex",
+    "id": "base-cortex"
+  },
+  "classification": "protected",
+  "dataKind": "synthetic_state_update",
+  "observedAt": "2026-07-16T12:00:00.000Z",
+  "provenance": [
+    {
+      "kind": "synthetic_fixture",
+      "ref": "example:base-cortex:001",
+      "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }
+  ],
+  "permittedUse": [
+    "private_context",
+    "personal_surface_proposal_preparation"
+  ],
+  "returnAuthority": "none",
+  "payload": {
+    "summary": "Synthetic fixture. Not a real Cortex export or instruction."
+  }
+}

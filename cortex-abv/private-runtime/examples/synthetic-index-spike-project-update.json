@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "kind": "IndexSpikeProjectUpdatePacket",
+  "updateId": "synthetic-spike-update-001",
+  "projectId": "index/spike",
+  "sourceStatus": "observed",
+  "changeSet": [
+    {
+      "surface": "repository",
+      "kind": "synthetic_metadata_update",
+      "ref": "synthetic:index:spike:001"
+    }
+  ],
+  "evidence": [
+    {
+      "ref": "synthetic:evidence:spike:001",
+      "status": "observed"
+    }
+  ],
+  "review": {
+    "status": "not_requested"
+  },
+  "blockers": [],
+  "observedAt": "2026-07-16T14:00:00.000Z",
+  "sourceDigest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+}

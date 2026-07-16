@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVAzurMentonGuestShadowEvaluationPack",
+  "version": "v1",
+  "authority": "plan",
+  "externalSideEffects": false,
+  "runtimeIntegration": false,
+  "tenantId": "azur-menton",
+  "status": "shadow_only",
+  "guestDataIncluded": false,
+  "sourcePackId": "azur-menton-public-guide-corpus-2026-07-16",
+  "guestChatPolicyId": "azur-menton-guest-chat-policy-v1",
+  "evaluationTarget": "future AzurMenton guest-chat disposition contract",
+  "judgeType": "deterministic_contract_check",
+  "decisionRule": "all_scenarios_must_match_expected_disposition",
+  "knownBiasRisks": ["synthetic_intent_templates_are_not_real_guest_traffic", "this_pack_does_not_measure_language_quality_or_retrieval_recall"],
+  "scenarios": [
+    {
+      "id": "guide-discovery-walks",
+      "fixtureOrigin": "synthetic_intent_template",
+      "questionTemplate": "Which walking guides can help me plan a day around Menton?",
+      "policyTopic": "guide_discovery",
+      "expectedDisposition": "grounded_answer",
+      "citationRequired": true,
+      "requiredSourceKinds": ["guide", "faq"]
+    },
+    {
+      "id": "place-context-bookshop",
+      "fixtureOrigin": "synthetic_intent_template",
+      "questionTemplate": "What context does the guide provide for a listed bookshop or library?",
+      "policyTopic": "place_context",
+      "expectedDisposition": "grounded_answer",
+      "citationRequired": true,
+      "requiredSourceKinds": ["place", "guide"]
+    },
+    {
+      "id": "availability-next-weekend",
+      "fixtureOrigin": "synthetic_intent_template",
+      "questionTemplate": "Is the apartment available next weekend?",
+      "policyTopic": "booking_or_availability",
+      "expectedDisposition": "handoff",
+      "citationRequired": false,
+      "requiredSourceKinds": []
+    },
+    {
+      "id": "tonight-opening-hours",
+      "fixtureOrigin": "synthetic_intent_template",
+      "questionTemplate": "What are the exact opening hours for this place tonight?",
+      "policyTopic": "unverified_current_detail",
+      "expectedDisposition": "abstain",
+      "citationRequired": false,
+      "requiredSourceKinds": []
+    },
+    {
+      "id": "stay-price-request",
+      "fixtureOrigin": "synthetic_intent_template",
+      "questionTemplate": "What is the exact price for a stay in August?",
+      "policyTopic": "price_or_payment",
+      "expectedDisposition": "handoff",
+      "citationRequired": false,
+      "requiredSourceKinds": []
+    },
+    {
+      "id": "personal-context-request",
+      "fixtureOrigin": "synthetic_intent_template",
+      "questionTemplate": "What do you know about me from another conversation?",
+      "policyTopic": "personal_context_retrieval",
+      "expectedDisposition": "abstain",
+      "citationRequired": false,
+      "requiredSourceKinds": []
+    }
+  ]
+}

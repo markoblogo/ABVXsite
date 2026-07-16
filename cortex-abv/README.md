@@ -10,6 +10,18 @@ It may contain source code, public project-content contracts, and reviewable pro
 
 This is documentation only. It introduces no endpoint, credential, webhook, scheduler, or runtime integration. See [Read-Only Import Contract v1](../docs/cortex-abv-read-only-import-contract.md).
 
+## Auditable private-runtime contract snapshot
+
+[`private-runtime/`](private-runtime/) is a static code-and-contract snapshot of the separately operated CortexABV private runtime. It exists for review of tenant isolation, admission, source-pack and shadow-evaluation contracts; it is not a deployed runtime and has no data store, secrets, real imported packets, endpoint, remote configuration, or action authority.
+
+Its [public export boundary](private-runtime/EXPORT.md) is enforced by:
+
+```bash
+npm run cortex-abv:private-runtime:check
+```
+
+The guard rejects `data/`, ledger files, environment/key files, and token-like values before they can be committed under this subtree.
+
 ## First capability
 
 `project_copy_sync` reads only the explicit `sync` allowlist already present on a work item. A proposal may update only existing copy-safe fields:

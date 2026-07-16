@@ -1,0 +1,16 @@
+{
+  "name": "cortex-abv-private",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "tenant:check": "node src/check-tenant-project-ai-engine-contract.mjs",
+    "azur-menton:check": "node src/check-azur-menton-source-pack.mjs",
+    "azur-menton:shadow-eval:check": "node src/check-azur-menton-shadow-evaluation.mjs",
+    "import:admit": "node src/admit-import-packet.mjs",
+    "shadow:base-cortex": "node src/shadow-import-base-cortex-workforce-packet.mjs",
+    "shadow:index-spike": "node src/shadow-import-index-spike-project-update.mjs",
+    "shadow:monitor-mn7r": "node src/shadow-import-monitor-mn7r-project-update.mjs"
+  }
+}

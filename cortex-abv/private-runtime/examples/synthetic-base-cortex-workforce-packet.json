@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "kind": "OneD3xCortexMarketWorkforcePacket",
+  "taskId": "synthetic-market-task-001",
+  "correlationId": "synthetic-correlation-001",
+  "diversityMode": "balanced",
+  "sourceStatus": "observed",
+  "hypotheses": [
+    {
+      "id": "synthetic-hypothesis-001",
+      "statement": "Synthetic scenario only; no market claim."
+    }
+  ],
+  "evidence": [
+    {
+      "ref": "synthetic:evidence:001",
+      "status": "observed"
+    }
+  ],
+  "counterevidence": [],
+  "officerReview": {
+    "status": "not_requested"
+  },
+  "humanApproval": {
+    "status": "not_requested"
+  },
+  "outcome": {
+    "status": "open"
+  },
+  "blockers": [],
+  "observedAt": "2026-07-16T13:00:00.000Z",
+  "sourceDigest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+}

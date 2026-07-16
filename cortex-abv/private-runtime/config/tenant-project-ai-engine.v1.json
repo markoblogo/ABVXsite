@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVTenantProjectAIEngineContract",
+  "version": "v1",
+  "authority": "plan",
+  "externalSideEffects": false,
+  "runtimeIntegration": false,
+  "core": {
+    "name": "CortexABV private AI engine",
+    "defaultIsolation": {
+      "retrievalScope": "tenant_only",
+      "crossTenantAccess": "deny",
+      "actionAuthority": "none"
+    }
+  },
+  "tenants": [
+    {
+      "id": "personal",
+      "ownership": "owner_controlled",
+      "purpose": "personal presence, private context and owner-controlled proposals",
+      "isolation": { "retrievalScope": "tenant_only", "crossTenantAccess": "deny", "actionAuthority": "none" }
+    },
+    {
+      "id": "azur-menton",
+      "ownership": "wholly_owned",
+      "purpose": "guide-grounded guest assistance for AzurMenton",
+      "isolation": { "retrievalScope": "tenant_only", "crossTenantAccess": "deny", "actionAuthority": "none" },
+      "guestExperience": {
+        "status": "planned",
+        "mode": "read_only_guest_chat",
+        "prerequisites": ["versioned_source_pack", "guest_chat_policy", "shadow_eval_pack", "human_approval"]
+      }
+    },
+    {
+      "id": "monitor-mn7r",
+      "ownership": "owner_controlled_with_partners",
+      "purpose": "scoped Monitor and MN7R context",
+      "isolation": { "retrievalScope": "tenant_only", "crossTenantAccess": "deny", "actionAuthority": "none" }
+    },
+    {
+      "id": "index-spike",
+      "ownership": "owner_controlled_with_partners",
+      "purpose": "scoped Index and SPIKE context",
+      "isolation": { "retrievalScope": "tenant_only", "crossTenantAccess": "deny", "actionAuthority": "none" }
+    },
+    {
+      "id": "cropto",
+      "ownership": "owner_controlled_with_partners",
+      "purpose": "scoped Cropto context",
+      "isolation": { "retrievalScope": "tenant_only", "crossTenantAccess": "deny", "actionAuthority": "none" }
+    }
+  ]
+}

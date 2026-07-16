@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVImportAdmissionPolicy",
+  "version": "v1",
+  "authority": "plan",
+  "externalSideEffects": false,
+  "classificationPolicies": {
+    "public": {
+      "maxAgeDays": 30,
+      "personalSurfaceEligibility": {
+        "mode": "proposal_only",
+        "targets": ["abvxsite", "owner_repository", "linkedin"]
+      }
+    },
+    "protected": {
+      "maxAgeDays": 14,
+      "personalSurfaceEligibility": {
+        "mode": "private_context_only",
+        "targets": []
+      }
+    }
+  },
+  "sourceRules": [
+    {
+      "source": { "kind": "base_cortex", "id": "base-cortex" },
+      "allowedDataKinds": ["cortex_market_workforce_packet"]
+    },
+    {
+      "source": { "kind": "owned_project_ecosystem", "id": "index/spike" },
+      "allowedDataKinds": ["index_spike_project_update"]
+    },
+    {
+      "source": { "kind": "owned_project_ecosystem", "id": "monitor" },
+      "allowedDataKinds": ["monitor_project_update"]
+    },
+    {
+      "source": { "kind": "owned_project_ecosystem", "id": "cropto" },
+      "allowedDataKinds": ["cropto_project_update"]
+    }
+  ]
+}

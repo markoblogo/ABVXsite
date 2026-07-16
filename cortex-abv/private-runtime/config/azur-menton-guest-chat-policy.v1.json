@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVAzurMentonGuestChatPolicy",
+  "version": "v1",
+  "authority": "plan",
+  "externalSideEffects": false,
+  "runtimeIntegration": false,
+  "tenantId": "azur-menton",
+  "status": "skeleton",
+  "policyId": "azur-menton-guest-chat-policy-v1",
+  "sourcePackId": "azur-menton-public-guide-corpus-2026-07-16",
+  "responseAuthority": "read_only",
+  "guestDataCollection": false,
+  "allowedIntents": ["guide_discovery", "place_context", "planning_context"],
+  "prohibitedCapabilities": [
+    "booking_mutation",
+    "availability_assertion_without_verified_source",
+    "price_assertion_without_verified_source",
+    "payment_handling",
+    "cross_tenant_retrieval",
+    "personal_context_retrieval",
+    "guest_data_retention",
+    "external_message_sending"
+  ],
+  "sourceCitation": "required_for_factual_claims",
+  "unverifiedClaimAction": "abstain",
+  "handoffIntents": ["booking_or_availability", "price_or_payment", "emergency_or_safety", "cannot_verify_from_source_pack"]
+}

@@ -9,7 +9,7 @@
   "homepageEligible": true,
   "title": "MN7R",
   "shortTitle": "MN7R",
-  "summary": "MN7R is a commodity trading workflow workspace for brokerage teams running Deals, Clients and EXE inside one structured operational system.",
+  "summary": "MN7R is a private operating workspace for commodity brokerage teams that runs Deals, Clients and EXE in a single structured operational system and includes backend services, governed reference data, reporting, and controlled Telegram relays.",
   "tags": [
     "brokerage",
     "agro-commodities",
@@ -55,7 +55,9 @@
     "ref": "main",
     "paths": [
       "README.md"
-    ]
+    ],
+    "lastAppliedCommit": "fdc854b1f2f211163d2fc3342fefc1b45d172a63",
+    "lastAppliedAt": "2026-07-16"
   },
   "featured": true,
   "sortRank": 1,
@@ -73,21 +75,9 @@
     "src": "/media/work/mn7r/hero.png",
     "alt": "MN7R brokerage platform interface",
     "role": "project-screenshot"
-  }
+  },
+  "updatedAt": "2026-07-16"
 }
 ---
 
-MN7R is a private operational workspace for commodity trading teams.
-
-The platform is designed to replace fragmented coordination across chats, spreadsheets and scattered notes with one structured operating environment for brokerage execution.
-
-The system organizes work into three connected operational layers:
-- Deals for live market flow,
-- Clients for counterparty follow-up,
-- EXE for post-trade execution control.
-
-MN7R is built around operational continuity: BID -> OFFER -> MATCH -> TRADE.
-
-The goal is clearer ownership, stronger execution discipline, cleaner team visibility and better post-trade control without overcomplicating daily broker workflows.
-
-The platform is already used by a brokerage team in real commodity operations while continuing to expand in functionality, users, teams and territories.
+MN7R is a proprietary operating workspace for commodity brokerage teams that unifies Deals, Clients and EXE alongside governed reference data, reporting and controlled Telegram relays. The platform includes an AI assistant initially focused on EXE workflows and a separate public-safe AI chat that answers only from documented public scope; MN7R does not autonomously send client communications or change payment, contract, banking, or execution state. The product is under active pilot commercial development.

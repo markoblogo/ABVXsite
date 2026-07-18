@@ -96,7 +96,7 @@ export default async function Home() {
   ]);
 
   const latestFocus = getLatestSectionEntryWork('focus', 'mn7r-blog');
-  const latestSystem = getLatestSectionEntryWork('systems');
+  const latestSystem = getLatestSectionEntryWork('systems', latestFocus?.slug);
   const latestBook = getLatestSectionEntryBook('books');
 
   return (

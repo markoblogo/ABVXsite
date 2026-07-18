@@ -31,7 +31,7 @@ const ecosystems = [
       },
       {
         title: 'Market Fronts & Landings',
-        slugs: ['liqua', 'trade-solution-eu', 'cropto-market-risk-deck'],
+        slugs: ['ami-books-physical-commodity-markets', 'liqua', 'trade-solution-eu', 'cropto-market-risk-deck'],
       },
     ],
   },

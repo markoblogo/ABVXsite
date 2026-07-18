@@ -816,6 +816,11 @@
       "updatedAt": "2026-05-17",
       "related": [
         {
+          "title": "AMI Books: Physical Commodity Markets",
+          "canonicalUrl": "https://abvx.xyz/work/ami-books-physical-commodity-markets",
+          "relation": "companion"
+        },
+        {
           "title": "Agri-Commodity Brokerage: A Practical Guide for Brokers",
           "canonicalUrl": "https://abvx.xyz/books/mn7r-agro-commodity-brokerage-en-free-edition",
           "relation": "member"
@@ -1838,6 +1843,44 @@
           "title": "MN7R",
           "canonicalUrl": "https://abvx.xyz/work/mn7r",
           "relation": "related"
+        }
+      ]
+    },
+    {
+      "type": "work",
+      "section": "focus",
+      "ecosystem": "Agro Market Infrastructure Systems",
+      "group": "Market Fronts & Partner Landings",
+      "status": "live",
+      "title": "AMI Books: Physical Commodity Markets",
+      "summary": "A free professional library of books, field manuals and living product guides for physical commodity brokers, traders, farmers and market operators.",
+      "canonicalUrl": "https://abvx.xyz/work/ami-books-physical-commodity-markets",
+      "tags": [
+        "agro-commodities",
+        "brokerage",
+        "field-manuals",
+        "free-books",
+        "market-infrastructure",
+        "publishing"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Open library",
+          "url": "https://books.1d3x.com/"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/book-landings"
+        }
+      ],
+      "updatedAt": "2026-07-18",
+      "related": [
+        {
+          "title": "MN7R Commodity Brokerage Library",
+          "canonicalUrl": "https://abvx.xyz/books/mn7r-commodity-brokerage-library",
+          "relation": "series"
         }
       ]
     },

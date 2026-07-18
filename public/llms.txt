@@ -20,6 +20,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Trading & Brokerage Platforms
   Tags: cropto, agro-commodities, trading-platform, indexed-trading, options, tokenized-assets, market-infrastructure
 
+- AMI Books: Physical Commodity Markets
+  URL: https://abvx.xyz/work/ami-books-physical-commodity-markets
+  Summary: A free professional library of books, field manuals and living product guides for physical commodity brokers, traders, farmers and market operators.
+  Group: Market Fronts & Partner Landings
+  Tags: agro-commodities, brokerage, field-manuals, free-books, market-infrastructure, publishing
+
 - 1D3X
   URL: https://abvx.xyz/work/1d3x
   Summary: 1D3X is an index infrastructure platform for local agricultural markets, building local commodity indices with market leaders.
@@ -119,6 +125,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Summary: An English translation of the Ukrainian absurdist literary novella about Jonathan Swanson, a former artist turned handyman, whose quiet pre-Christmas days collapse into a strange hospital night of plumbing, doctors, prophets, Brahms, and possible secret space programs. A darkly funny story about loneliness, faith, work, the body, snow, and the small mercies that remain when the world cannot be fully repaired.
   Group: Fiction
   Tags: fiction, absurdist fiction, literary novella, English, translation, Ukrainian original, faith, loneliness
+
+- AMI Books: Physical Commodity Markets
+  URL: https://abvx.xyz/work/ami-books-physical-commodity-markets
+  Summary: A free professional library of books, field manuals and living product guides for physical commodity brokers, traders, farmers and market operators.
+  Group: Market Fronts & Partner Landings
+  Tags: agro-commodities, brokerage, field-manuals, free-books, market-infrastructure, publishing
 
 - MN7R Product Guide
   URL: https://abvx.xyz/books/mn7r-product-guide

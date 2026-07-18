@@ -43,7 +43,7 @@ const focusGroups = [
     title: 'Market Fronts & Partner Landings',
     description:
       'Market-facing landing pages, decks and commercial fronts for commodity infrastructure projects, partner ventures and trading-service concepts.',
-    slugs: ['trade-solution-eu', 'cropto-market-risk-deck', 'liqua'],
+    slugs: ['ami-books-physical-commodity-markets', 'trade-solution-eu', 'cropto-market-risk-deck', 'liqua'],
     variant: 'standard',
   },
 ] as const;

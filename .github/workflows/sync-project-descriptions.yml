@@ -116,8 +116,24 @@ jobs:
           path: ${{ runner.temp }}/cortex-abv-autonomous-public-sync-receipt.json
           if-no-files-found: error
 
+  check-lab-repo-token:
+    runs-on: ubuntu-latest
+    outputs:
+      available: ${{ steps.token.outputs.available }}
+    steps:
+      - id: token
+        env:
+          LAB_REPO_TOKEN: ${{ secrets.LAB_REPO_TOKEN }}
+        run: |
+          if [ -n "$LAB_REPO_TOKEN" ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+          fi
+
   refresh-lab-home-ledger:
-    if: ${{ secrets.LAB_REPO_TOKEN != '' }}
+    needs: check-lab-repo-token
+    if: needs.check-lab-repo-token.outputs.available == 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: read

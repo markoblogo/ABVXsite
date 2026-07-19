@@ -9,7 +9,7 @@
   "homepageEligible": true,
   "title": "Cropto",
   "shortTitle": "Cropto",
-  "summary": "Cropto is a prototype commodity trading platform for indexed spot trading, options and tokenized commodity-linked instruments across Ukraine, Argentina and Brazil.",
+  "summary": "Cropto is an early-stage MVP commodity trading platform offering indexed spot trading, options, and tokenized commodity-linked instruments across Ukraine, Argentina and Brazil.",
   "tags": [
     "cropto",
     "agro-commodities",
@@ -46,13 +46,21 @@
     "ref": "main",
     "paths": [
       "README.md"
-    ]
+    ],
+    "lastAppliedCommit": "2f4f075cf1046691338f3df4e3fa5191ec9e1fd9",
+    "lastAppliedAt": "2026-07-19"
   },
   "autonomousPublicSync": {
     "enabled": true,
     "mode": "direct_main",
     "target": "abvxsite",
-    "allowedPatchFields": ["summary", "bodyAppendix", "updatedAt", "sync.lastAppliedCommit", "sync.lastAppliedAt"]
+    "allowedPatchFields": [
+      "summary",
+      "bodyAppendix",
+      "updatedAt",
+      "sync.lastAppliedCommit",
+      "sync.lastAppliedAt"
+    ]
   },
   "publicCopy": {
     "bodyMode": "append_only",
@@ -87,7 +95,8 @@
     "src": "/media/work/cropto/hero.webp",
     "alt": "Cropto trading platform interface",
     "role": "project-screenshot"
-  }
+  },
+  "updatedAt": "2026-07-19"
 }
 ---
 
@@ -106,3 +115,5 @@ The platform currently focuses on indexed spot markets, options and tokenized co
 Users can choose a commodity market, connect a wallet, create or take orders, track margin and settlement, and manage indexed commodity exposure.
 
 Cropto is currently in active prototype development and testing with virtual contracts, while public waitlist onboarding remains open.
+
+The repository includes a concrete Railway deployment path and a public verification target at https://cropto.abvx.xyz.

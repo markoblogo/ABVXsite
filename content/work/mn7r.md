@@ -9,7 +9,7 @@
   "homepageEligible": true,
   "title": "MN7R",
   "shortTitle": "MN7R",
-  "summary": "MN7R is a commodity trading workflow workspace for brokerage teams running Deals, Clients and EXE inside one structured operational system.",
+  "summary": "MN7R is a commodity trading workflow workspace for brokerage teams running Deals, Clients and EXE inside one structured operational system, and it includes a public-facing site plus a separate public synthetic /demo.",
   "tags": [
     "brokerage",
     "agro-commodities",
@@ -59,13 +59,21 @@
     "ref": "main",
     "paths": [
       "README.md"
-    ]
+    ],
+    "lastAppliedCommit": "9a54769a1ae43218affdb3ebb98eb8bea2438507",
+    "lastAppliedAt": "2026-07-19"
   },
   "autonomousPublicSync": {
     "enabled": true,
     "mode": "direct_main",
     "target": "abvxsite",
-    "allowedPatchFields": ["summary", "bodyAppendix", "updatedAt", "sync.lastAppliedCommit", "sync.lastAppliedAt"]
+    "allowedPatchFields": [
+      "summary",
+      "bodyAppendix",
+      "updatedAt",
+      "sync.lastAppliedCommit",
+      "sync.lastAppliedAt"
+    ]
   },
   "publicCopy": {
     "bodyMode": "append_only",
@@ -101,7 +109,8 @@
     "src": "/media/work/mn7r/hero.png",
     "alt": "MN7R brokerage platform interface",
     "role": "project-screenshot"
-  }
+  },
+  "updatedAt": "2026-07-19"
 }
 ---
 
@@ -119,3 +128,5 @@ MN7R is built around operational continuity: BID -> OFFER -> MATCH -> TRADE.
 The goal is clearer ownership, stronger execution discipline, cleaner team visibility and better post-trade control without overcomplicating daily broker workflows.
 
 The platform is already used by a brokerage team in real commodity operations while continuing to expand in functionality, users, teams and territories.
+
+MN7R also provides a public-facing site and a separate public synthetic /demo workspace; the demo uses synthetic fixtures only.

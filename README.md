@@ -149,6 +149,8 @@ The private runtime may also define isolated tenants for wholly owned projects, 
 
 For auditability, [`cortex-abv/private-runtime/`](cortex-abv/private-runtime/) contains a static code-and-contract snapshot of that separately operated runtime. It contains no private ledger/store, `.env`, credentials, real source packets, protected payloads, personal profile, or guest data; [`npm run cortex-abv:private-runtime:check`](#verification) fails closed if such material is added. The snapshot does not make the runtime public or deploy it through ABVXsite.
 
+The private runtime now defines a [Personal Knowledge Core boundary](docs/cortex-abv-personal-knowledge-core.md) for CortexABV and CoqPi. CoqPi can be the owner-facing ingress UI, while CortexABV maintains approved facts; public ABVXsite contains only contract code and synthetic fixtures, never personal knowledge, interview records, raw sources, credentials, or retrieval state.
+
 Check the adapter contract and currently enabled project-sync targets:
 
 ```bash

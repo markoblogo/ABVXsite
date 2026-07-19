@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVSharedRagIngress",
+  "version": "v1",
+  "ingressId": "coqpi:ingress:12345678-1234-1234-1234-123456789abc",
+  "ownerId": "owner",
+  "source": { "kind": "file", "label": "Synthetic fixture" },
+  "provenance": {
+    "sourceId": "coqpi:ingress:12345678-1234-1234-1234-123456789abc",
+    "locatorSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "contentHash": null,
+  "classification": "pending",
+  "retention": {
+    "mode": "manual_deletion_required",
+    "maxAgeDays": 30,
+    "expiresAt": "2026-08-18T21:30:00.000Z"
+  },
+  "retrievalScopes": ["coqpi_pending_classification"],
+  "promotion": "explicit_audit_required",
+  "createdAt": "2026-07-19T21:30:00.000Z"
+}

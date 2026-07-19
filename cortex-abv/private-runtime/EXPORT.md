@@ -1,6 +1,6 @@
 # Public export boundary
 
-Source snapshot: local `CortexABV-private` commit `5b3496e`.
+Source snapshot: local `CortexABV-private` commit `611d76f`.
 
 This subtree may contain only static code, typed contracts, documentation, tests, and synthetic fixtures. It is an audit/reference copy, not a runtime deployment.
 

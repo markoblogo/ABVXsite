@@ -29,6 +29,12 @@ ABVXsite may contain an auditable *code-and-contract snapshot* of the private ru
 
 No endpoint, token, webhook, scheduler, or runtime integration is introduced by this contract.
 
+## Personal Knowledge Core and CoqPi
+
+The owner-controlled Personal Knowledge Core is distinct from the base/corporate Cortex and from every project tenant. CoqPi may offer the personal upload/conversation interface and CortexABV may maintain approved owner/project facts, but both retrieve from one canonical private store rather than duplicating it.
+
+New CoqPi selections are pending and CoqPi-only until an explicit classification and promotion decision. Personal interview artifacts, owner facts, source text, raw transcripts, and retrieval state remain private; they cannot flow to base Cortex, a project tenant, ABVXsite, social networks, or external actions without a separately defined per-surface promotion policy and append-only audit receipt. The public repository exposes only synthetic contract artifacts; see [Personal Knowledge Core boundary](cortex-abv-personal-knowledge-core.md).
+
 ## Personal-surface proposals
 
 CortexABV may use imported evidence to prepare proposals for the owner's personal surfaces, such as ABVXsite, an owner-controlled repository, or LinkedIn. That path is separate from every source ecosystem:

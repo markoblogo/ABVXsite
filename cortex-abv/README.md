@@ -22,6 +22,8 @@ npm run cortex-abv:private-runtime:check
 
 The guard rejects `data/`, ledger files, environment/key files, and token-like values before they can be committed under this subtree.
 
+The snapshot now also documents the private, owner-controlled [Personal Knowledge Core boundary](../docs/cortex-abv-personal-knowledge-core.md): CoqPi is the personal conversational/ingress interface, while CortexABV maintains approved personal and project facts. This is one private canonical core, not base Cortex, a public corpus, or a duplicate store per assistant.
+
 ## First capability
 
 `project_copy_sync` reads only the explicit `sync` allowlist already present on a work item. A proposal may update only existing copy-safe fields:

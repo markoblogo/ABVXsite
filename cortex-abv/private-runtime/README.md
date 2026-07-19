@@ -2,11 +2,15 @@
 
 ## Public-export boundary
 
-This subtree is an auditable code-and-contract snapshot of the local CortexABV private runtime at source commit `5b3496e`. It is included here so the tenant, source-pack, admission, and shadow-evaluation contracts can be reviewed alongside the public adapter.
+This subtree is an auditable code-and-contract snapshot of the local CortexABV private runtime at source commit `611d76f`. It contains the canonical contract body below plus snapshot-only export documentation in [`EXPORT.md`](EXPORT.md).
 
-It is **not** a deployed private runtime. It contains no ledger entries, `data/` directory, credentials, `.env` files, real packets, protected payloads, personal profile, guest data, or remote configuration. The actual local runtime and any protected store remain separate. [`EXPORT.md`](EXPORT.md) defines the public-export boundary, and the ABVXsite export guard fails if prohibited files or token-like values are added.
+It is **not** a deployed private runtime. It contains no ledger entries, `data/` directory, credentials, `.env` files, real packets, protected payloads, personal profile, guest data, or remote configuration. The ABVXsite export guard fails if prohibited files or token-like values are added.
 
-The canonical runtime is local-only and has no HTTP server, scheduler, credentials, production integration, or real imported data. This published snapshot does not change that authority boundary.
+The Personal Knowledge Core is one private, owner-controlled store shared conceptually by CortexABV and CoqPi. This export documents only pending metadata ingress and later read-only compact-pack shapes; it contains no store, document contents, interview artifacts, retrieval index, or CoqPi endpoint.
+
+## Canonical runtime contract
+
+This is a local-only private runtime and append-only store for CortexABV imports. It is deliberately separate from ABVXsite and has no Git remote, HTTP server, scheduler, credentials, production integration, or real imported data.
 
 ## Import boundary
 
@@ -116,4 +120,12 @@ The supported command passes through the same admission gate before append. It r
 
 ## Scope
 
-This bootstrap validates and records a packet. It does not retrieve from Cortex, call a project system, build RAG, invoke an LLM, prepare public copy, publish, or connect to CoqPi. Those need separate contracts and explicit approval.
+This bootstrap validates and records a packet. Its Personal Knowledge Core ingress contract accepts only pending metadata records; it does not retrieve, capture source content, call a project system, build a vector index, invoke an LLM, prepare public copy, publish, or enable an external action.
+
+## Shared Personal Knowledge Core
+
+[`docs/SHARED_RAG_INGRESS_V1.md`](docs/SHARED_RAG_INGRESS_V1.md) defines owner-controlled CoqPi ingress records for a future shared Cortex/CoqPi RAG. The ingress is pending and CoqPi-only; promotion requires an explicit auditable decision.
+
+## CoqPi compact context pack
+
+[`docs/COQPI_CONTEXT_PACK_V1.md`](docs/COQPI_CONTEXT_PACK_V1.md) defines a possible later reviewed, private, read-only compact context export. The pack includes no source contents or paths, and its fixture is synthetic only.

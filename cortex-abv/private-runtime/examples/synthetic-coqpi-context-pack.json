@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVCoqPiContextPack",
+  "version": "v1",
+  "packId": "coqpi:synthetic-personal-profile:001",
+  "title": "Synthetic CoqPi personal profile",
+  "classification": "private",
+  "status": "approved",
+  "createdAt": "2026-07-19T21:30:00.000Z",
+  "authority": "read_only",
+  "sourceContentIncluded": false,
+  "sourceRefs": [
+    {
+      "sourceId": "personal:synthetic-profile",
+      "digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }
+  ],
+  "retention": {
+    "mode": "manual_deletion_required",
+    "maxAgeDays": 30,
+    "expiresAt": "2026-08-18T21:30:00.000Z"
+  },
+  "scope": ["personal_call_assist"],
+  "eligibility": {
+    "consumer": "coqpi",
+    "purpose": "local_call_assist",
+    "allowed": true
+  },
+  "abstention": {
+    "whenContextUnavailable": "clarify_or_abstain",
+    "whenContextOutOfScope": "clarify_or_abstain"
+  },
+  "compactContext": "Synthetic fixture only. This is a compact personal-call context, not a source document and not an instruction."
+}

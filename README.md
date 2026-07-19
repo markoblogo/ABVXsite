@@ -303,6 +303,7 @@ docs/                 Editorial workflow and project documentation
 - For owner-requested Google Drive, Sheets, or Calendar source inspection, use the opt-in [`abvx-google-workspace-read`](skills/abvx-google-workspace-read/SKILL.md) contract. Workspace stays read-only by default and never replaces reviewed Git content.
 - Do not edit old registries unless a compatibility fallback requires it.
 - Do not redesign pages during content-only tasks.
+- For marketing, editorial, and Books visual work, follow the bounded [Design Taste Review](docs/design-taste-review.md). Product UI routes to Lazyweb and UX evidence first.
 - Preserve slugs, media paths, redirects, and public URLs unless the task explicitly says otherwise.
 - Regenerate `public/llms.txt` and `public/content-index.json` after public content changes.
 - Run the full verification chain before reporting production readiness.

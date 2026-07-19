@@ -300,6 +300,7 @@ docs/                 Editorial workflow and project documentation
 ## Notes For Agents
 
 - Keep `/content` as the editable source of truth.
+- For owner-requested Google Drive, Sheets, or Calendar source inspection, use the opt-in [`abvx-google-workspace-read`](skills/abvx-google-workspace-read/SKILL.md) contract. Workspace stays read-only by default and never replaces reviewed Git content.
 - Do not edit old registries unless a compatibility fallback requires it.
 - Do not redesign pages during content-only tasks.
 - Preserve slugs, media paths, redirects, and public URLs unless the task explicitly says otherwise.

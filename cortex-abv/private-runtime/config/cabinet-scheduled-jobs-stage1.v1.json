@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVCabinetScheduledJobsPlan",
+  "version": "v1",
+  "module": "cabinet_scheduled_jobs",
+  "authority": "plan",
+  "externalSideEffects": false,
+  "runtimeIntegration": false,
+  "stage": "stage_1",
+  "jobs": [
+    {
+      "jobId": "public-corpus-freshness-audit",
+      "title": "Public source freshness audit",
+      "mode": "read_only",
+      "frequency": {
+        "type": "manual_or_local_only",
+        "notes": "No cron scheduler or external trigger is attached at Stage 1."
+      },
+      "sources": [
+        {
+          "kind": "artifact",
+          "path": "cortex-abv/public-presence-index.v1.json",
+          "kindDescription": "Baseline public corpus snapshot"
+        },
+        {
+          "kind": "artifact",
+          "path": "cortex-abv/public-project-registry.v1.json",
+          "kindDescription": "Project registry boundary"
+        }
+      ],
+      "checks": [
+        "artifact_shape_stable",
+        "receipt_schema_anchored",
+        "no_proposed_mutations"
+      ],
+      "output": {
+        "receiptPath": "cortex-abv/private-runtime/receipts/cabinet-stage1-scheduled-jobs-receipt.v1.json",
+        "statusField": "reviewStatus",
+        "requiredReviewActions": ["approve", "reject"]
+      },
+      "retryPolicy": {
+        "maxAttempts": 3,
+        "backoffMinutes": 5,
+        "onFailure": "record_retry_reason_and_require_human_decision"
+      },
+      "gates": [
+        {
+          "name": "governance_gate",
+          "type": "receipt_only",
+          "allowWrite": false,
+          "requirePendingReview": true
+        }
+      ]
+    }
+  ],
+  "decisionTrace": {
+    "policySource": "base",
+    "reason": "Stage 1 is a synthetic, read-only cabinet connector contract and cannot call source systems."
+  },
+  "notes": [
+    "This contract is plan-only and does not schedule or execute runtime jobs.",
+    "A real runner may be attached only after Stage 2."
+  ]
+}

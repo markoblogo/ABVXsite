@@ -10,7 +10,7 @@ The public repository contains only the static validator contracts and synthetic
 
 ## Cabinet pilot integration map (deferred)
 
-Cabinet was reviewed as a reference implementation for future personal-knowledge/runtime expansion. For now we keep it as a **deferred pilot** and do not wire it into production ABVXsite/CortexABV loops.
+Cabinet was reviewed as a reference implementation for future personal-knowledge/runtime expansion. The current pilot starts with a minimal, read-only Stage 1 and still does not wire Cabinet modules into production ABVXsite/CortexABV loops.
 
 Practical 5-module map to keep for the next phase:
 
@@ -48,6 +48,9 @@ Pilot activation rules:
 
 - Stage 0: only contracts and synthetic docs for planning.
 - Stage 1: one read-only connector job.
+- Stage 1 executed: `Scheduled jobs and task runner` now has a synthetic read-only connector contract and receipt artifact in private-runtime.  
+  - Contract: `cortex-abv/private-runtime/config/cabinet-scheduled-jobs-stage1.v1.json`  
+  - Receipt: `cortex-abv/private-runtime/receipts/cabinet-stage1-scheduled-jobs-receipt.v1.json`
 - Stage 2: explicit receipt + review-only outputs.
 - Stage 3: action tool surface only after explicit policy gates and dual-run proof.
 

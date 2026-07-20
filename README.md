@@ -153,7 +153,10 @@ For auditability, [`cortex-abv/private-runtime/`](cortex-abv/private-runtime/) c
 
 The private runtime now defines a [Personal Knowledge Core boundary](docs/cortex-abv-personal-knowledge-core.md) for CortexABV and CoqPi. CoqPi can be the owner-facing ingress UI, while CortexABV maintains approved facts; public ABVXsite contains only contract code and synthetic fixtures, never personal knowledge, interview records, raw sources, credentials, or retrieval state.
 
-See also: [Cabinet pilot integration map](docs/cortex-abv-cabinet-integration-map.md) (deferred). It records 5 low-risk modules worth piloting later after the current proposal-only governance loop is fully stabilized.
+See also: [Cabinet pilot integration map](docs/cortex-abv-cabinet-integration-map.md). Stage 1 is now active for a non-runtime contract-only pilot (`Scheduled jobs and task runner`) with read-only receipt gates:
+
+- `cortex-abv/private-runtime/config/cabinet-scheduled-jobs-stage1.v1.json`
+- `cortex-abv/private-runtime/receipts/cabinet-stage1-scheduled-jobs-receipt.v1.json`
 
 Check the adapter contract and currently enabled project-sync targets:
 

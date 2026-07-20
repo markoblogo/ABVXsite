@@ -130,6 +130,15 @@ The supported command passes through the same admission gate before append. It r
 
 This bootstrap validates and records a packet. Its Personal Knowledge Core ingress contract accepts only pending metadata records; it does not retrieve, capture source content, call a project system, build a vector index, invoke an LLM, prepare public copy, publish, or enable an external action.
 
+## Stage 1 Cabinet pilot: scheduled jobs contract
+
+For the current Cabinet pilot Stage 1, the runtime snapshot now includes:
+
+- `config/cabinet-scheduled-jobs-stage1.v1.json` — manifest for a read-only synthetic connector job.
+- `receipts/cabinet-stage1-scheduled-jobs-receipt.v1.json` — proposal-style receipt with `reviewStatus`, `decisionTrace`, and retry policy.
+
+This pilot is intentionally non-executing: no scheduler, no endpoint, and no action authority are introduced at this stage. It is designed to preserve the existing governance path before any source-adapter binding.
+
 ## Shared Personal Knowledge Core
 
 [`docs/SHARED_RAG_INGRESS_V1.md`](docs/SHARED_RAG_INGRESS_V1.md) defines owner-controlled CoqPi ingress records for a future shared Cortex/CoqPi RAG. The ingress is pending and CoqPi-only; promotion requires an explicit auditable decision.

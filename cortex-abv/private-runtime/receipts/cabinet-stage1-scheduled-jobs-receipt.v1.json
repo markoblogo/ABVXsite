@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVCabinetStage1Receipt",
+  "module": "cabinet_scheduled_jobs",
+  "stage": 1,
+  "status": "implemented",
+  "authority": "proposal",
+  "reviewStatus": "pending_review",
+  "createdAt": "2026-07-20T00:00:00Z",
+  "runMode": "synthetic_offline",
+  "contractPath": "cortex-abv/private-runtime/config/cabinet-scheduled-jobs-stage1.v1.json",
+  "decisionTrace": {
+    "policySource": "base",
+    "reason": "Stage 1 keeps this module read-only, proposal-only, and detached from any source system endpoint."
+  },
+  "results": [
+    {
+      "jobId": "public-corpus-freshness-audit",
+      "status": "no_changes",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "path": "cortex-abv/public-presence-index.v1.json",
+          "sha256": "snapshot-noted-offline",
+          "notes": "No external fetch performed in Stage 1."
+        },
+        {
+          "kind": "artifact",
+          "path": "cortex-abv/public-project-registry.v1.json",
+          "sha256": "snapshot-noted-offline",
+          "notes": "No external fetch performed in Stage 1."
+        }
+      ],
+      "decisionTrace": {
+        "policySource": "base",
+        "sourceOverride": null,
+        "failure": null
+      }
+    }
+  ],
+  "requiredReviewActions": {
+    "approve": {
+      "status": "required",
+      "notes": "Approve only after confirming no write intent and no external endpoint dependence."
+    },
+    "reject": {
+      "status": "required",
+      "notes": "Reject if runtime execution, write path, or direct source-system effect is introduced."
+    }
+  },
+  "retry": {
+    "maxAttempts": 3,
+    "nextAttemptPolicy": "retry_on_manual_review_with_retry_note",
+    "nextAttempt": null
+  }
+}

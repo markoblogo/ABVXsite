@@ -13,7 +13,7 @@
     "systems"
   ],
   "group": "Market Intelligence, Monitoring & Indexes",
-  "summary": "SPIKE SPOT COMMODITY INDEX UKRAINE is a benchmark and reference-price infrastructure project for Ukrainian agro-commodity spot markets.",
+  "summary": "SPIKE SPOT COMMODITY INDEX UKRAINE publishes structured daily reference prices across 13 public grain and oilseed positions and documents a repeatable methodology for deriving spot values for export and processing bases.",
   "tags": [
     "agro-commodities",
     "Ukraine",
@@ -45,7 +45,7 @@
     "paths": [
       "README.md"
     ],
-    "lastAppliedCommit": "513d71eb669cc38639f60e3e24596b19515e993b",
+    "lastAppliedCommit": "d4581b6e1ca2ea6f775be8958b7ee3179ec6ecd5",
     "lastAppliedAt": "2026-07-20"
   },
   "autonomousPublicSync": {
@@ -117,7 +117,8 @@
     "src": "/media/work/spike-spot-commodity-index-ukraine/hero.webp",
     "alt": "SPIKE SPOT COMMODITY INDEX UKRAINE market index interface",
     "role": "project-screenshot"
-  }
+  },
+  "updatedAt": "2026-07-20"
 }
 ---
 
@@ -139,3 +140,5 @@ The system is not a trading platform. It does not replace brokerage, negotiation
 Within the broader Cropto and agro-market infrastructure ecosystem, SPIKE belongs to the intelligence and index layer. It sits next to monitoring terminals, benchmark projects and market-data surfaces that support coordination around physical commodity markets.
 
 That makes it part of Monitoring & Intelligence: not execution infrastructure itself, but a benchmark layer for reference pricing, market visibility and structured Ukrainian spot-market memory.
+
+Public methodology: collects respondent prices by commodity and basis; ignores invalid, missing, zero and negative submissions; computes the sample median, excludes outliers where abs(price - median)/median > 0.02, averages the cleaned sample, requires a configured minimum number of included respondents before publishing, and stores official values in USD/t.

@@ -16,6 +16,28 @@ The private ledger accepts supported operator imports only after structural vali
 
 No packet can grant publication, source-system mutation, retrieval access, social access, or a callback to base Cortex or an owner project ecosystem. A later public proposal must re-establish its own evidence, target policy, and human approval.
 
+## Direct synthetic import packet example
+
+`examples/synthetic-import-packet-base-cortex.json` contains a synthetic `CortexABVImportPacket` that already follows the v1 contract:
+
+- `schemaVersion: 1`, `kind: CortexABVImportPacket`
+- `direction: inbound_to_cortex_abv`
+- `returnAuthority: none`
+- approved packet source and `dataKind` pair
+- `permittedUse` restricted to private/surface-preparation
+- structured provenance with SHA-256 digest
+
+Use it with the local admission command before any future adapter writes:
+
+```bash
+npm run import:admit -- \
+  --ledger data/import-ledger.jsonl \
+  --packet examples/synthetic-import-packet-base-cortex.json \
+  --policy config/import-admission-policy.v1.json
+```
+
+Each admitted packet is immutable in the private ledger (`protected` packets stay private_context_only), retains a hash-chained entry id, and is idempotent on replay.
+
 ## Base Cortex workforce shadow adapter
 
 `shadow:base-cortex` accepts a future-shaped `OneD3xCortexMarketWorkforcePacket` from disk only. Required source fields are task/correlation identity, diversity mode, source status, hypotheses, evidence, counterevidence, officer review, human approval, outcome, blockers, timestamp, and source digest.

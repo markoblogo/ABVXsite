@@ -74,10 +74,18 @@ Entries created before this policy remain unchanged by design; the append-only l
 ## Import a synthetic packet
 
 ```bash
-npm test
 npm run shadow:base-cortex -- \
   --ledger data/import-ledger.jsonl \
   --source-packet examples/synthetic-base-cortex-workforce-packet.json
+```
+
+Or append a synthetic packet directly:
+
+```bash
+npm run import:admit -- \
+  --ledger data/import-ledger.jsonl \
+  --packet examples/synthetic-import-packet-base-cortex.json \
+  --policy config/import-admission-policy.v1.json
 ```
 
 The command emits only an idempotent metadata summary plus retention and eligibility. The ledger is JSONL, hash-chained, and ignored by Git. Replaying an identical packet returns its existing entry without writing a duplicate.

@@ -9,7 +9,7 @@
   "homepageEligible": true,
   "title": "MN7R",
   "shortTitle": "MN7R",
-  "summary": "MN7R is a commodity trading workflow workspace for brokerage teams running Deals, Clients and EXE inside one structured operational system, and it includes a public-facing site plus a separate public synthetic /demo.",
+  "summary": "MN7R is a commodity trading workflow workspace for brokerage teams running Deals, Clients and EXE inside one structured operational system; it includes a public-facing site, a separate public synthetic /demo, and public updates are published through ABVX.",
   "tags": [
     "brokerage",
     "agro-commodities",
@@ -60,8 +60,8 @@
     "paths": [
       "README.md"
     ],
-    "lastAppliedCommit": "9a54769a1ae43218affdb3ebb98eb8bea2438507",
-    "lastAppliedAt": "2026-07-19"
+    "lastAppliedCommit": "f061d4482ef8989f05f0d0db99eafbe75c39551f",
+    "lastAppliedAt": "2026-07-20"
   },
   "autonomousPublicSync": {
     "enabled": true,
@@ -110,7 +110,7 @@
     "alt": "MN7R brokerage platform interface",
     "role": "project-screenshot"
   },
-  "updatedAt": "2026-07-19"
+  "updatedAt": "2026-07-20"
 }
 ---
 

@@ -6,3 +6,6 @@
 - Keep every tenant isolated: no personal or sibling-project retrieval inside a project tenant, and no tenant may gain action authority without a new explicit contract.
 - Do not add network listeners, webhooks, schedulers, source clients, model calls, or public-surface actions without a new explicit contract and owner approval.
 - Use synthetic fixtures for tests and examples only.
+
+Research pilot for discovery workflows (mock-only):
+- `docs/pilots/find-partners/mock-run-protocol.md`

@@ -45,7 +45,7 @@
     "paths": [
       "README.md"
     ],
-    "lastAppliedCommit": "513d71eb669cc38639f60e3e24596b19515e993b",
+    "lastAppliedCommit": "d4581b6e1ca2ea6f775be8958b7ee3179ec6ecd5",
     "lastAppliedAt": "2026-07-20"
   },
   "autonomousPublicSync": {
@@ -117,7 +117,8 @@
     "src": "/media/work/spike-spot-commodity-index-ukraine/hero.webp",
     "alt": "SPIKE SPOT COMMODITY INDEX UKRAINE market index interface",
     "role": "project-screenshot"
-  }
+  },
+  "updatedAt": "2026-07-20"
 }
 ---
 
@@ -139,3 +140,5 @@ The system is not a trading platform. It does not replace brokerage, negotiation
 Within the broader Cropto and agro-market infrastructure ecosystem, SPIKE belongs to the intelligence and index layer. It sits next to monitoring terminals, benchmark projects and market-data surfaces that support coordination around physical commodity markets.
 
 That makes it part of Monitoring & Intelligence: not execution infrastructure itself, but a benchmark layer for reference pricing, market visibility and structured Ukrainian spot-market memory.
+
+Public values are sourced from respondent submissions and automated MN7R monitor imports; respondents are collected via a Telegram-first workflow (@spike_spot_bot), and values may auto-publish if no manual publish occurs before the evening cut-off.

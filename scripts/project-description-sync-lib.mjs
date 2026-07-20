@@ -5,6 +5,7 @@ import { contentFiles, parseContentFile, serializeFrontmatter } from './content-
 const MAX_SUMMARY_LENGTH = 320;
 const MAX_BODY_APPENDIX_LENGTH = 450;
 const AUTONOMOUS_PATCH_FIELDS = ['summary', 'bodyAppendix', 'updatedAt', 'sync.lastAppliedCommit', 'sync.lastAppliedAt'];
+const DECISION_TRACE_SOURCE_FIELDS = ['sourceKind', 'sourceId'];
 const PUBLIC_COPY_DENIALS = [
   /\bprotected\b/i,
   /\binternal\b/i,
@@ -30,6 +31,46 @@ export class PublicCopyAbstention extends Error {
 function nonEmptyString(value, field) {
   if (typeof value !== 'string' || !value.trim()) throw new Error(`${field} must be a non-empty string`);
   return value.trim();
+}
+
+function validateDecisionTrace(decisionTrace, filePath) {
+  if (!decisionTrace) {
+    return {
+      policySource: 'base',
+      reason: 'base public-sync profile policy is applied',
+      basePolicy: { allowedPatchFields: [...AUTONOMOUS_PATCH_FIELDS] },
+      sourceOverride: null,
+      sourceKind: null,
+      sourceId: null,
+    };
+  }
+  if (typeof decisionTrace !== 'object' || Array.isArray(decisionTrace)) {
+    throw new Error(`${filePath}: autonomousPublicSync.decisionTrace must be an object`);
+  }
+
+  const policySource = decisionTrace.policySource === 'source_specific_override' ? 'source_specific_override' : 'base';
+  const reason = nonEmptyString(decisionTrace.reason, `${filePath}: autonomousPublicSync.decisionTrace.reason`);
+  const sourceKind = typeof decisionTrace.sourceKind === 'string' ? decisionTrace.sourceKind.trim() : '';
+  const sourceId = typeof decisionTrace.sourceId === 'string' ? decisionTrace.sourceId.trim() : '';
+  if (policySource === 'source_specific_override' && (DECISION_TRACE_SOURCE_FIELDS.some((field) => !decisionTrace[field]) || !sourceKind || !sourceId)) {
+    throw new Error(`${filePath}: source_specific_override requires sourceKind and sourceId`);
+  }
+
+  const sourceOverrideAllowedPatchFields = Array.isArray(decisionTrace.sourceOverride?.allowedPatchFields)
+    && decisionTrace.sourceOverride.allowedPatchFields.length
+    ? decisionTrace.sourceOverride.allowedPatchFields
+    : AUTONOMOUS_PATCH_FIELDS;
+
+  return {
+    policySource,
+    reason,
+    sourceKind: sourceKind || null,
+    sourceId: sourceId || null,
+    basePolicy: { allowedPatchFields: [...AUTONOMOUS_PATCH_FIELDS] },
+    sourceOverride: policySource === 'source_specific_override'
+      ? { allowedPatchFields: [...sourceOverrideAllowedPatchFields] }
+      : null,
+  };
 }
 
 export function validatePublicCopyProfile(profile, filePath = 'content item') {
@@ -70,7 +111,13 @@ export function validateAutonomousPublicSyncProfile(profile, filePath = 'content
   if (!Array.isArray(profile.allowedPatchFields) || profile.allowedPatchFields.length !== AUTONOMOUS_PATCH_FIELDS.length || profile.allowedPatchFields.some((field, index) => field !== AUTONOMOUS_PATCH_FIELDS[index])) {
     throw new Error(`${filePath}: autonomousPublicSync.allowedPatchFields must preserve the bounded public-copy fields`);
   }
-  return { enabled: true, mode: 'direct_main', target: 'abvxsite', allowedPatchFields: [...AUTONOMOUS_PATCH_FIELDS] };
+  return {
+    enabled: true,
+    mode: 'direct_main',
+    target: 'abvxsite',
+    allowedPatchFields: [...AUTONOMOUS_PATCH_FIELDS],
+    decisionTrace: validateDecisionTrace(profile.decisionTrace, filePath),
+  };
 }
 
 export function assertPublicSafeCopy(summary, bodyAppendix, publicCopy) {

@@ -51,7 +51,23 @@
     },
     {
       "source": { "kind": "owned_project_ecosystem", "id": "cropto" },
-      "allowedDataKinds": ["cropto_project_update"]
+      "allowedDataKinds": ["cropto_project_update"],
+      "classificationPolicy": {
+        "public": {
+          "maxAgeDays": 10,
+          "personalSurfaceEligibility": {
+            "mode": "proposal_only",
+            "targets": ["abvxsite", "owner_repository"]
+          }
+        },
+        "protected": {
+          "maxAgeDays": 14,
+          "personalSurfaceEligibility": {
+            "mode": "private_context_only",
+            "targets": []
+          }
+        }
+      }
     }
   ]
 }

@@ -8,7 +8,7 @@ This is CortexABV's first bounded autonomous public-surface loop. Its safe defau
 2. A changed SHA enables copy generation for that one target. The model sees only its allowlisted, public-safe paths.
 3. The workflow verifies per-claim source path and line range, project themes/stop terms, length limits, append-only body mode, `npm run test:sync`, and `npm run content:validate`.
 4. Only when a content diff remains does the workflow commit the allowed fields to `ABVXsite/main`.
-5. It saves `CortexABVAutonomousPublicSyncReceipt` with source SHA/paths, claim anchors, previous/applied commits, and a human-initiated `git revert` rollback reference.
+5. It saves `CortexABVAutonomousPublicSyncReceipt` with source SHA/paths, claim anchors, per-source `decisionTrace` (base vs source override), previous/applied commits, and a human-initiated `git revert` rollback reference.
 
 The job fails closed for missing source files, credentials, invalid profile, invalid claim, provider error, test failure, validation failure, or branch-push rejection. A source SHA change with no supported public copy change makes no commit.
 
@@ -21,6 +21,47 @@ The direct profile permits only:
 - `updatedAt` and sync provenance.
 
 It preserves the existing public body baseline. It cannot touch identity, title, status, section placement, tags, links, media, FAQ, positioning, social networks, messages, email, or source projects. It rejects protected/internal/endpoint/environment/demo/mock/prototype-gap language and project-specific stop terms.
+
+Current trace shape defaults:
+
+- `policySource: base`
+- `reason: "base public-sync profile policy is applied"`
+- `basePolicy.allowedPatchFields`
+- `sourceOverride: null`
+
+For source-specific governance on a new adapter, add in project frontmatter:
+
+```json
+"autonomousPublicSync": {
+  "enabled": true,
+  "mode": "direct_main",
+  "target": "abvxsite",
+  "allowedPatchFields": [
+    "summary",
+    "bodyAppendix",
+    "updatedAt",
+    "sync.lastAppliedCommit",
+    "sync.lastAppliedAt"
+  ],
+  "decisionTrace": {
+    "policySource": "source_specific_override",
+    "reason": "...",
+    "sourceKind": "owned_project_ecosystem",
+    "sourceId": "monitor",
+    "sourceOverride": {
+      "allowedPatchFields": [
+        "summary",
+        "bodyAppendix",
+        "updatedAt",
+        "sync.lastAppliedCommit",
+        "sync.lastAppliedAt"
+      ]
+    }
+  }
+}
+```
+
+Receipts will include this reason and override chain as evidence of why a specific source profile was used.
 
 `cortex-abv/autonomous-public-sync.v1.json` is the authoritative enrolment record. Its Lab target is intentionally disabled until `LAB_REPO_TOKEN` has a separately scoped **Contents: Write** permission for `markoblogo/lab.abvx`. Once present, a separate workflow job checks out only that repository, runs its read-only `sync_home_ledger.py` against the Lab allowlist, and may commit only `docs/index.html`'s marked ledger and its SHA/date provenance snapshot.
 

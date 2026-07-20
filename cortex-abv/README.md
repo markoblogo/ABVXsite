@@ -45,7 +45,7 @@ Every enabled project has a `publicCopy` profile: explicit allowed themes, proje
 
 The manual workflow `slug` input narrows both observation and the later copy-sync job to that one explicitly enabled target.
 
-When a direct update is applied, a `CortexABVAutonomousPublicSyncReceipt` artifact is generated from that same observed batch and the generated claim anchors. It records source SHA/path ranges, previous and applied `ABVXsite/main` commits, and a human-initiated `git revert` rollback reference. It is Actions artifact metadata, not a private-memory file committed into the public site repository.
+When a direct update is applied, a `CortexABVAutonomousPublicSyncReceipt` artifact is generated from that same observed batch and the generated claim anchors. It records source SHA/path ranges, decision-trace metadata (base vs source override), previous and applied `ABVXsite/main` commits, and a human-initiated `git revert` rollback reference. It is Actions artifact metadata, not a private-memory file committed into the public site repository.
 
 Run the observer locally when `SOURCE_REPOS_TOKEN` can read every enabled source repository:
 

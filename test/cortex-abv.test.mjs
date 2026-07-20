@@ -45,6 +45,33 @@ test('creates an evidence-bound project copy proposal without external side effe
   assert.equal(proposal.externalSideEffects, false);
   assert.deepEqual(proposal.allowedPatchFields, ['summary', 'body', 'updatedAt', 'sync.lastAppliedCommit', 'sync.lastAppliedAt']);
   assert.deepEqual(proposal.evidence, [{ repository: 'markoblogo/mn7r', ref: 'main', path: 'README.md', commit: 'abc123def456' }]);
+  assert.equal(proposal.decisionTrace.policySource, 'base');
+  assert.equal(proposal.decisionTrace.basePolicy.allowedPatchFields[0], 'summary');
+  assert.equal(proposal.decisionTrace.sourceOverride, null);
+});
+
+test('creates proposal with explicit source-specific decision trace', () => {
+  const proposal = createProjectCopySyncProposal({
+    slug: 'mn7r',
+    repository: 'markoblogo/mn7r',
+    ref: 'main',
+    paths: ['README.md'],
+    sourceCommit: 'abc123def456',
+    createdAt: '2026-07-16T12:00:00.000Z',
+    decisionTrace: {
+      policySource: 'source_specific_override',
+      reason: 'monitor adapter applies stricter public patching',
+      sourceKind: 'owned_project_ecosystem',
+      sourceId: 'monitor',
+      sourceOverride: {
+        allowedPatchFields: ['summary', 'bodyAppendix', 'updatedAt', 'sync.lastAppliedCommit', 'sync.lastAppliedAt'],
+      },
+    },
+  });
+
+  assert.equal(proposal.decisionTrace.policySource, 'source_specific_override');
+  assert.equal(proposal.decisionTrace.sourceKind, 'owned_project_ecosystem');
+  assert.equal(proposal.decisionTrace.sourceId, 'monitor');
 });
 
 test('observes only source commits that differ from last applied provenance', () => {
@@ -69,6 +96,29 @@ test('observes only source commits that differ from last applied provenance', ()
   assert.equal(batch.proposals.length, 1);
   assert.equal(batch.proposals[0].target.slug, 'mn7r');
   assert.equal(batch.proposals[0].externalSideEffects, false);
+  assert.equal(batch.proposals[0].decisionTrace.policySource, 'base');
+});
+
+test('propagates source-specific decision trace from observed target metadata', () => {
+  const batch = createObservedEventBatch({
+    observedAt: '2026-07-16T12:00:00.000Z',
+    targets: [{
+      slug: 'mn7r',
+      sync: { repository: 'markoblogo/mn7r', ref: 'main', paths: ['README.md'], lastAppliedCommit: 'already-applied' },
+      sourceCommit: 'new-commit',
+      decisionTrace: {
+        policySource: 'source_specific_override',
+        reason: 'monitor adapter applies stricter public patching',
+        sourceKind: 'owned_project_ecosystem',
+        sourceId: 'monitor',
+      },
+    }],
+  });
+
+  assert.equal(batch.proposals.length, 1);
+  assert.equal(batch.proposals[0].decisionTrace.policySource, 'source_specific_override');
+  assert.equal(batch.proposals[0].decisionTrace.sourceKind, 'owned_project_ecosystem');
+  assert.equal(batch.proposals[0].decisionTrace.sourceId, 'monitor');
 });
 
 test('does not invoke copy sync when every observed commit is already applied', () => {
@@ -152,6 +202,33 @@ test('allows direct application only through an explicit per-target autonomous p
     mode: 'direct_main',
     target: 'abvxsite',
     allowedPatchFields: ['summary', 'bodyAppendix', 'updatedAt', 'sync.lastAppliedCommit', 'sync.lastAppliedAt'],
+    decisionTrace: {
+      policySource: 'base',
+      reason: 'base public-sync profile policy is applied',
+      basePolicy: { allowedPatchFields: ['summary', 'bodyAppendix', 'updatedAt', 'sync.lastAppliedCommit', 'sync.lastAppliedAt'] },
+      sourceOverride: null,
+      sourceKind: null,
+      sourceId: null,
+    },
+  });
+  assert.deepEqual(validateAutonomousPublicSyncProfile({
+    enabled: true,
+    mode: 'direct_main',
+    target: 'abvxsite',
+    allowedPatchFields: ['summary', 'bodyAppendix', 'updatedAt', 'sync.lastAppliedCommit', 'sync.lastAppliedAt'],
+    decisionTrace: {
+      policySource: 'source_specific_override',
+      reason: 'monitor adapter route uses source policy',
+      sourceKind: 'owned_project_ecosystem',
+      sourceId: 'monitor',
+    },
+  }).decisionTrace, {
+    policySource: 'source_specific_override',
+    reason: 'monitor adapter route uses source policy',
+    basePolicy: { allowedPatchFields: ['summary', 'bodyAppendix', 'updatedAt', 'sync.lastAppliedCommit', 'sync.lastAppliedAt'] },
+    sourceOverride: { allowedPatchFields: ['summary', 'bodyAppendix', 'updatedAt', 'sync.lastAppliedCommit', 'sync.lastAppliedAt'] },
+    sourceKind: 'owned_project_ecosystem',
+    sourceId: 'monitor',
   });
   assert.throws(() => validateAutonomousPublicSyncProfile({ enabled: true, mode: 'direct_main', target: 'lab' }), /target must be abvxsite/);
 });
@@ -181,4 +258,48 @@ test('records autonomous application evidence with a reversible target commit', 
   assert.equal(receipt.rollback.revertCommit, 'applied-target-commit');
   assert.deepEqual(receipt.claimAnchors, [{ slug: 'mn7r', field: 'summary', evidencePath: 'README.md', lineStart: 2, lineEnd: 4 }]);
   assert.doesNotMatch(JSON.stringify(receipt), /Safe public summary\./);
+});
+
+test('records source-specific admission trace in autonomous write receipt', () => {
+  const batch = createObservedEventBatch({
+    observedAt: '2026-07-16T12:00:00.000Z',
+    targets: [{
+      slug: 'mn7r',
+      sync: { repository: 'markoblogo/mn7r', ref: 'main', paths: ['README.md'], lastAppliedCommit: 'applied-before' },
+      sourceCommit: 'source-commit',
+      decisionTrace: {
+        policySource: 'source_specific_override',
+        reason: 'monitor adapter applies stricter public patching',
+        sourceKind: 'owned_project_ecosystem',
+        sourceId: 'monitor',
+      },
+    }],
+  });
+
+  const receipt = createAutonomousApplyReceipt({
+    batch,
+    copyProposals: [{
+      schemaVersion: 1,
+      kind: 'CortexABVCopyProposal',
+      slug: 'mn7r',
+      sourceCommit: 'source-commit',
+      claims: [{ field: 'summary', text: 'Safe public summary.', evidencePath: 'README.md', lineStart: 2, lineEnd: 4 }],
+    }],
+    targetRepository: 'markoblogo/ABVXsite',
+    targetBranch: 'main',
+    previousCommit: 'previous-target-commit',
+    appliedCommit: 'applied-target-commit',
+    appliedAt: '2026-07-16T12:05:00.000Z',
+  });
+
+  assert.equal(receipt.sources[0].decisionTrace.policySource, 'source_specific_override');
+  assert.equal(receipt.sources[0].decisionTrace.sourceKind, 'owned_project_ecosystem');
+  assert.equal(receipt.sources[0].decisionTrace.sourceId, 'monitor');
+  assert.deepEqual(receipt.sources[0].decisionTrace.sourceOverride, { allowedPatchFields: [
+    'summary',
+    'bodyAppendix',
+    'updatedAt',
+    'sync.lastAppliedCommit',
+    'sync.lastAppliedAt',
+  ] });
 });

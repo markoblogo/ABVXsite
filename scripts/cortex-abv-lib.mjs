@@ -6,6 +6,7 @@ const forbiddenActions = new Set([
   'change_identity_fields',
   'store_private_profile',
 ]);
+const AUTONOMOUS_PATCH_FIELDS = ['summary', 'bodyAppendix', 'updatedAt', 'sync.lastAppliedCommit', 'sync.lastAppliedAt'];
 
 function nonEmptyString(value, field) {
   if (typeof value !== 'string' || !value.trim()) throw new Error(`${field} must be a non-empty string`);
@@ -23,6 +24,43 @@ function projectSlug(value, field) {
   const normalized = nonEmptyString(value, field);
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(normalized)) throw new Error(`${field} must be a normalized project slug`);
   return normalized;
+}
+
+function safeDecisionTrace(decisionTrace) {
+  if (!decisionTrace) {
+    return {
+      policySource: 'base',
+      reason: 'base public-sync profile policy is applied',
+      basePolicy: { allowedPatchFields: [...AUTONOMOUS_PATCH_FIELDS] },
+      sourceOverride: null,
+      sourceKind: null,
+      sourceId: null,
+    };
+  }
+  if (typeof decisionTrace !== 'object' || Array.isArray(decisionTrace)) throw new Error('proposal.decisionTrace must be an object');
+  const policySource = decisionTrace.policySource === 'source_specific_override' ? 'source_specific_override' : 'base';
+  const sourceKind = typeof decisionTrace.sourceKind === 'string' && decisionTrace.sourceKind.trim() ? decisionTrace.sourceKind.trim() : null;
+  const sourceId = typeof decisionTrace.sourceId === 'string' && decisionTrace.sourceId.trim() ? decisionTrace.sourceId.trim() : null;
+  if (policySource === 'source_specific_override' && (!sourceKind || !sourceId)) {
+    throw new Error('proposal.decisionTrace with source_specific_override requires sourceKind and sourceId');
+  }
+  const reason = decisionTrace.reason || (policySource === 'source_specific_override'
+    ? `source-specific override from ${sourceKind}#${sourceId} is applied`
+    : 'base public-sync profile policy is applied');
+
+  const sourceOverridePatchFields = Array.isArray(decisionTrace.sourceOverride?.allowedPatchFields)
+    ? decisionTrace.sourceOverride.allowedPatchFields
+    : AUTONOMOUS_PATCH_FIELDS;
+  return {
+    policySource,
+    reason,
+    sourceKind,
+    sourceId,
+    basePolicy: {
+      allowedPatchFields: [...AUTONOMOUS_PATCH_FIELDS],
+    },
+    sourceOverride: policySource === 'source_specific_override' ? { allowedPatchFields: [...sourceOverridePatchFields] } : null,
+  };
 }
 
 function markdownCode(value) {
@@ -48,12 +86,14 @@ export function validatePublicPolicy(policy) {
   return { sources, allowedActions, deniedActions };
 }
 
-export function createProjectCopySyncProposal({ slug, repository, ref = 'main', paths, sourceCommit, createdAt }) {
+export function createProjectCopySyncProposal({ slug, repository, ref = 'main', paths, sourceCommit, createdAt, decisionTrace }) {
   const normalizedSlug = projectSlug(slug, 'proposal.slug');
   const normalizedRepository = nonEmptyString(repository, 'proposal.repository');
   const normalizedCommit = nonEmptyString(sourceCommit, 'proposal.sourceCommit');
   const normalizedPaths = stringArray(paths, 'proposal.paths');
   const timestamp = nonEmptyString(createdAt, 'proposal.createdAt');
+
+  const safeTrace = safeDecisionTrace(decisionTrace);
 
   return {
     schemaVersion: 1,
@@ -66,6 +106,7 @@ export function createProjectCopySyncProposal({ slug, repository, ref = 'main', 
     evidence: normalizedPaths.map((sourcePath) => ({ repository: normalizedRepository, ref, path: sourcePath, commit: normalizedCommit })),
     allowedPatchFields: ['summary', 'body', 'updatedAt', 'sync.lastAppliedCommit', 'sync.lastAppliedAt'],
     externalSideEffects: false,
+    decisionTrace: safeTrace,
     createdAt: timestamp,
   };
 }
@@ -73,8 +114,9 @@ export function createProjectCopySyncProposal({ slug, repository, ref = 'main', 
 export function createObservedEventBatch({ targets, observedAt }) {
   if (!Array.isArray(targets)) throw new Error('targets must be an array');
   const timestamp = nonEmptyString(observedAt, 'observedAt');
-  const observedTargets = targets.map(({ slug, sync, sourceCommit }) => ({
+  const observedTargets = targets.map(({ slug, sync, sourceCommit, decisionTrace }) => ({
     slug: projectSlug(slug, 'target.slug'),
+    decisionTrace,
     sync: {
       repository: nonEmptyString(sync?.repository, 'target.sync.repository'),
       ref: typeof sync?.ref === 'string' && sync.ref ? sync.ref : 'main',
@@ -85,13 +127,14 @@ export function createObservedEventBatch({ targets, observedAt }) {
   }));
   const proposals = observedTargets
     .filter(({ sourceCommit, sync }) => sourceCommit !== sync.lastAppliedCommit)
-    .map(({ slug, sync, sourceCommit }) => createProjectCopySyncProposal({
+    .map(({ slug, sync, sourceCommit, decisionTrace }) => createProjectCopySyncProposal({
       slug,
       repository: sync.repository,
       ref: sync.ref,
       paths: sync.paths,
       sourceCommit,
       createdAt: timestamp,
+      decisionTrace,
     }));
 
   return {
@@ -134,7 +177,13 @@ export function createAutonomousApplyReceipt({ batch, copyProposals, targetRepos
     previousCommit: nonEmptyString(previousCommit, 'previousCommit'),
     appliedCommit: nonEmptyString(appliedCommit, 'appliedCommit'),
     appliedAt: nonEmptyString(appliedAt, 'appliedAt'),
-    sources: batch.proposals.map((proposal) => ({ slug: proposal.target.slug, repository: proposal.target.repository, commit: proposal.evidence[0].commit, paths: proposal.evidence.map((item) => item.path) })),
+    sources: batch.proposals.map((proposal) => ({
+      slug: proposal.target.slug,
+      repository: proposal.target.repository,
+      commit: proposal.evidence[0].commit,
+      paths: proposal.evidence.map((item) => item.path),
+      decisionTrace: proposal.decisionTrace,
+    })),
     claimAnchors,
     rollback: { strategy: 'git_revert', revertCommit: appliedCommit },
   };
@@ -182,6 +231,15 @@ export function renderEvidenceReceipt(batch, copyProposals = []) {
     )),
   ] : [];
 
+  const decisionTraces = ['### Decision trace', '', ...receiptProposals.map((proposal) => {
+    const trace = proposal.decisionTrace || {};
+    const source = trace.sourceKind && trace.sourceId ? ` (${markdownCode(`${trace.sourceKind}/${trace.sourceId}`)})` : '';
+    const override = trace.policySource === 'source_specific_override'
+      ? ` override = ${JSON.stringify(trace.sourceOverride || null)}`
+      : ' no source override';
+    return `- ${markdownCode(proposal.target.slug)} ${trace.policySource || 'base'}${source}: ${markdownCode(String(trace.reason || ''))}${override}`;
+  })];
+
   return [
     '## CortexABV evidence receipt',
     '',
@@ -195,6 +253,7 @@ export function renderEvidenceReceipt(batch, copyProposals = []) {
     '### Basis',
     'The observed source SHA differs from the last applied provenance. Only the listed allowlisted files and claim anchors may support the bounded public-copy proposal.',
     ...claimAnchors,
+    ...decisionTraces,
     '',
     '### Review decision',
     '- [ ] Approve this bounded copy proposal',

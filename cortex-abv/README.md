@@ -35,7 +35,8 @@ The snapshot now also documents the private, owner-controlled [Personal Knowledg
 - `updatedAt`
 - sync provenance (`lastAppliedCommit`, `lastAppliedAt`)
 
-Its default remains reviewable and side-effect free. MN7R, Cropto, and SPIKE INDEX have a separate `direct_main` profile which can commit only the same bounded fields after all validation gates pass. It cannot change project identity, title, status, tags, links, media, positioning, or publish to a social network.
+Its default remains reviewable and side-effect free. MN7R, Cropto, and SPIKE INDEX still use the same bounded fields, but now through a PR-first executor: any proposed write goes through owner-review PRs and only merges manually.
+It cannot change project identity, title, status, tags, links, media, positioning, or publish to a social network.
 
 Every enabled project has a `publicCopy` profile: explicit allowed themes, project-specific forbidden terms, and `append_only` body mode. A proposal may update a summary of at most 320 characters and may append one body paragraph of at most 450 characters; it cannot rewrite, delete, reorder, or restate the approved public body baseline. It also rejects protected/internal surfaces, endpoints, environment details, demo or seeded/mock data, persistence gaps, and other prototype-gap framing. Each changed field requires one claim-to-source line-range anchor from an explicitly allowlisted file. The receipt shows those paths and line ranges, never a copied private-source excerpt.
 
@@ -45,7 +46,7 @@ Every enabled project has a `publicCopy` profile: explicit allowed themes, proje
 
 The manual workflow `slug` input narrows both observation and the later copy-sync job to that one explicitly enabled target.
 
-When a direct update is applied, a `CortexABVAutonomousPublicSyncReceipt` artifact is generated from that same observed batch and the generated claim anchors. It records source SHA/path ranges, decision-trace metadata (base vs source override), previous and applied `ABVXsite/main` commits, and a human-initiated `git revert` rollback reference. It is Actions artifact metadata, not a private-memory file committed into the public site repository.
+When a candidate update is generated, a `CortexABVAutonomousPublicSyncReceipt` artifact is rendered for the PR and the generated claim anchors. It records source SHA/path ranges and decision-trace metadata (base vs source override), while `ownerReview.status = pending_review` indicates the initial gating state. Merging the PR is the only publication action.
 
 Run the observer locally when `SOURCE_REPOS_TOKEN` can read every enabled source repository:
 
@@ -55,7 +56,7 @@ SOURCE_REPOS_TOKEN=... npm run cortex-abv:observe-events -- --output /tmp/cortex
 
 ## Policy
 
-`public-policy.example.json` defines the safe public default: `proposal_only`, no automatic actions, and an explicit deny list for external communication and private-data storage. [`autonomous-public-sync.v1.json`](autonomous-public-sync.v1.json) is a separate narrow exception: MN7R, Cropto, and SPIKE INDEX may write only their listed content fields to `ABVXsite/main`; Lab remains disabled until its separate write credential is installed. Runtime policy is validated by `npm run cortex-abv:status`.
+`public-policy.example.json` defines the safe public default: `proposal_only`, no automatic actions, and an explicit deny list for external communication and private-data storage. [`autonomous-public-sync.v1.json`](autonomous-public-sync.v1.json) is a narrow policy list of write candidates for this same review flow; Lab remains disabled until its separate write credential is installed. Runtime policy is validated by `npm run cortex-abv:status`.
 
 ## Public Presence Index v1
 

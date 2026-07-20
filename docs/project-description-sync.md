@@ -1,16 +1,21 @@
 # Project description sync
 
-This is CortexABV's first bounded autonomous public-surface loop. Its safe default is proposal-only. MN7R, Cropto, and SPIKE SPOT COMMODITY INDEX UKRAINE have a separately declared `direct_main` profile; no other site content inherits this authority.
+This is CortexABV's first bounded public-surface loop. Its safe default is proposal-only.
+
+MN7R, Cropto, and SPIKE SPOT COMMODITY INDEX UKRAINE can still generate bounded updates, but the write path is now executed through a review-only PR executor. No update reaches `main` directly from the workflow.
 
 ## Gate and apply sequence
 
 1. `observe-project-events` reads the SHA of each explicitly enabled source, compares it with `sync.lastAppliedCommit`, and writes a `CortexABVObservedEventBatch` artifact.
 2. A changed SHA enables copy generation for that one target. The model sees only its allowlisted, public-safe paths.
 3. The workflow verifies per-claim source path and line range, project themes/stop terms, length limits, append-only body mode, `npm run test:sync`, and `npm run content:validate`.
-4. Only when a content diff remains does the workflow commit the allowed fields to `ABVXsite/main`.
-5. It saves `CortexABVAutonomousPublicSyncReceipt` with source SHA/paths, claim anchors, per-source `decisionTrace` (base vs source override), previous/applied commits, and a human-initiated `git revert` rollback reference.
+4. Only when a content diff remains does the workflow build a PR branch with the allowed fields and open a review PR for owner approval.
+5. The PR payload includes a bounded `receipt.md` plus a write-side review artifact with:
+   - `ownerReview.status = pending_review`,
+   - explicit required `approve` / `reject` actions,
+   - `merge` is the only publication step.
 
-The job fails closed for missing source files, credentials, invalid profile, invalid claim, provider error, test failure, validation failure, or branch-push rejection. A source SHA change with no supported public copy change makes no commit.
+The job fails closed for missing source files, credentials, invalid profile, invalid claim, provider error, test failure, validation failure, or branch-push rejection. A source SHA change with no supported public copy change makes no PR.
 
 ## Bounded authority
 
@@ -75,7 +80,7 @@ Required `markoblogo/ABVXsite` secrets:
 - `SOURCE_REPOS_TOKEN` — fine-grained GitHub token with read-only **Contents** access to private source repositories;
 - `LAB_REPO_TOKEN` — fine-grained token scoped only to `markoblogo/lab.abvx`, with **Contents: Write**. Its presence activates the isolated Lab freshness job; `SOURCE_REPOS_TOKEN` must also be able to read each repository listed in Lab's source allowlist.
 
-Automatic rollback is deliberately absent. If an applied update is incorrect, inspect its evidence receipt and revert the recorded applied commit.
+Automatic rollback is deliberately absent in this PR-first mode. If a proposal is incorrect, close/reject the PR and no merge occurs.
 
 ## Local checks
 

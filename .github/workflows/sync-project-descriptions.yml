@@ -48,6 +48,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v4
 
@@ -86,34 +87,66 @@ jobs:
       - name: Validate proposed content
         run: npm run content:validate
 
-      - name: Apply validated bounded update to main
+      - name: Build owner-review PR for bounded content updates
         id: apply
+        env:
+          TARGET_SLUGS: ${{ needs.observe-project-events.outputs.target_slugs }}
         run: |
-          previous_commit="$(git rev-parse HEAD)"
-          echo "previous_commit=$previous_commit" >> "$GITHUB_OUTPUT"
           if git diff --quiet -- content/work; then
             echo "applied=false" >> "$GITHUB_OUTPUT"
+            echo "No change proposed for this observed source set."
             exit 0
           fi
+
+          BRANCH="cortexabv/write-side-${GITHUB_RUN_ID}"
+          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
           git config user.name "cortex-abv[bot]"
           git config user.email "cortex-abv[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
           git add content/work
-          git commit -m "chore: refresh bounded public project copy"
-          applied_commit="$(git rev-parse HEAD)"
-          git push origin HEAD:main
+          git commit -m "chore: propose bounded public project copy updates"
+          git push -u origin "$BRANCH"
+
+          node scripts/cortex-abv-render-pr-receipt.mjs \
+            --input "$RUNNER_TEMP/cortex-abv/cortex-abv-observed-events.json" \
+            --claims-dir "$RUNNER_TEMP/cortex-abv-copy-proposals" \
+            --output "$RUNNER_TEMP/cortex-abv-autonomous-public-sync-receipt.md"
+
+          node scripts/cortex-abv-write-side-review-artifact.mjs \
+            --input "$RUNNER_TEMP/cortex-abv/cortex-abv-observed-events.json" \
+            --claims-dir "$RUNNER_TEMP/cortex-abv-copy-proposals" \
+            --output "$RUNNER_TEMP/cortex-abv-write-side-review-artifact.json"
+
+          cat > "$RUNNER_TEMP/cortex-abv-pr-review-body.md" <<'EOF_BODY'
+## CortexABV write-side executor (owner review)
+
+Status: `pending_review`
+
+Owner decision:
+- [ ] set `ownerReview.status = approved` and merge this PR
+- [ ] set `ownerReview.status = rejected` and close with a reason
+
+Merging is the only publication action. This workflow does not auto-publish.
+
+EOF_BODY
+          cat "$RUNNER_TEMP/cortex-abv-autonomous-public-sync-receipt.md" >> "$RUNNER_TEMP/cortex-abv-pr-review-body.md"
+          gh pr create \
+            --repo "${{ github.repository }}" \
+            --title "chore: CortexABV bounded project-copy proposal (${TARGET_SLUGS})" \
+            --body-file "$RUNNER_TEMP/cortex-abv-pr-review-body.md" \
+            --head "$BRANCH" \
+            --base main
           echo "applied=true" >> "$GITHUB_OUTPUT"
-          echo "applied_commit=$applied_commit" >> "$GITHUB_OUTPUT"
 
-      - name: Write CortexABV autonomous evidence receipt
-        if: steps.apply.outputs.applied == 'true'
-        run: node scripts/cortex-abv-write-autonomous-apply-receipt.mjs --input "$RUNNER_TEMP/cortex-abv/cortex-abv-observed-events.json" --claims-dir "$RUNNER_TEMP/cortex-abv-copy-proposals" --output "$RUNNER_TEMP/cortex-abv-autonomous-public-sync-receipt.json" --target-repository "${{ github.repository }}" --target-branch main --previous-commit "${{ steps.apply.outputs.previous_commit }}" --applied-commit "${{ steps.apply.outputs.applied_commit }}"
-
-      - name: Save autonomous evidence receipt
+      - name: Save write-side executor evidence artifacts
         if: steps.apply.outputs.applied == 'true'
         uses: actions/upload-artifact@v4
         with:
-          name: cortex-abv-autonomous-public-sync-receipt
-          path: ${{ runner.temp }}/cortex-abv-autonomous-public-sync-receipt.json
+          name: cortex-abv-write-side-executor
+          path: |
+            ${{ runner.temp }}/cortex-abv-autonomous-public-sync-receipt.md
+            ${{ runner.temp }}/cortex-abv-pr-review-body.md
+            ${{ runner.temp }}/cortex-abv-write-side-review-artifact.json
           if-no-files-found: error
 
   check-lab-repo-token:

@@ -167,7 +167,7 @@ Check the adapter contract and currently enabled project-sync targets:
 npm run cortex-abv:status
 ```
 
-The scheduled project-copy workflow observes allowlisted source SHAs first and saves an evidence artifact. MN7R, Cropto, and SPIKE SPOT INDEX have an explicit `direct_main` exception: after source-SHA, per-claim, public-copy, test and content-validation gates, it may commit only their bounded summary/body appendix and provenance fields to `ABVXsite/main`. Each applied commit has an artifact receipt with source anchors and a human-initiated `git revert` rollback reference. No other target receives automatic write authority; titles, links, tags, media, positioning, social posts, messages and email remain excluded.
+The scheduled project-copy workflow observes allowlisted source SHAs first and saves an evidence artifact. MN7R, Cropto, and SPIKE SPOT INDEX still run through the same bounded public-copy and validation gates, but the write path is now PR-first: workflow candidates open an owner-review pull request and are only published after manual merge. No title, links, tags, media, positioning, social posts, messages, or email updates are permitted by this path.
 
 See [CortexABV public-site adapter](cortex-abv/README.md) for the authority boundary and the next integration seam.
 

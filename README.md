@@ -153,6 +153,8 @@ For auditability, [`cortex-abv/private-runtime/`](cortex-abv/private-runtime/) c
 
 The private runtime now defines a [Personal Knowledge Core boundary](docs/cortex-abv-personal-knowledge-core.md) for CortexABV and CoqPi. CoqPi can be the owner-facing ingress UI, while CortexABV maintains approved facts; public ABVXsite contains only contract code and synthetic fixtures, never personal knowledge, interview records, raw sources, credentials, or retrieval state.
 
+See also: [Cabinet pilot integration map](docs/cortex-abv-cabinet-integration-map.md) (deferred). It records 5 low-risk modules worth piloting later after the current proposal-only governance loop is fully stabilized.
+
 Check the adapter contract and currently enabled project-sync targets:
 
 ```bash

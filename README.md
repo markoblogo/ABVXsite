@@ -141,6 +141,8 @@ Selected project descriptions may be refreshed from their source repositories th
 
 ## CortexABV public-site adapter
 
+![CortexABV logo](./cortex-abv/assets/cortex-abv-logo.png)
+
 The repository contains the proposal-only public boundary for CortexABV in [`cortex-abv/`](cortex-abv/). It validates approved public sources and bounded site-copy proposals, but it does not contain the private personal profile, inbox, credentials, contact history, or autonomous publishing controls.
 
 The [CortexABV Read-Only Import Contract](docs/cortex-abv-read-only-import-contract.md) defines the broader architecture: base Cortex plus the owner's Monitor, Index, and Cropto ecosystems may supply authorized updates into private CortexABV, but CortexABV has no data, command, feedback, policy, or influence path back to them. A target surface controls whether an evidence-backed proposal stays review-only or receives a separately configured bounded write authority.

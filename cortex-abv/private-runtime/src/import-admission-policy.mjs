@@ -32,6 +32,27 @@ function sourceRuleFor(packet, policy) {
   return rule;
 }
 
+function resolveClassificationPolicy(classification, rule, policy) {
+  const basePolicy = policy.classificationPolicies?.[classification];
+  if (!basePolicy || !Number.isInteger(basePolicy.maxAgeDays) || basePolicy.maxAgeDays < 1) {
+    throw new Error(`policy has no valid retention policy for ${classification}`);
+  }
+
+  const sourceOverride = rule?.classificationPolicy?.[classification];
+  if (!sourceOverride) {
+    return basePolicy;
+  }
+
+  return {
+    ...basePolicy,
+    ...sourceOverride,
+    personalSurfaceEligibility: {
+      ...basePolicy.personalSurfaceEligibility,
+      ...sourceOverride.personalSurfaceEligibility,
+    },
+  };
+}
+
 function expiration(admittedAt, maxAgeDays) {
   return new Date(Date.parse(admittedAt) + maxAgeDays * 24 * 60 * 60 * 1000).toISOString();
 }
@@ -40,11 +61,8 @@ export function admitImportPacket({ packet, policy, admittedAt }) {
   validateImportPacket(packet);
   validatePolicy(policy);
   const timestamp = validTimestamp(admittedAt, 'admittedAt');
-  sourceRuleFor(packet, policy);
-  const classificationPolicy = policy.classificationPolicies[packet.classification];
-  if (!classificationPolicy || !Number.isInteger(classificationPolicy.maxAgeDays) || classificationPolicy.maxAgeDays < 1) {
-    throw new Error(`policy has no valid retention policy for ${packet.classification}`);
-  }
+  const sourceRule = sourceRuleFor(packet, policy);
+  const classificationPolicy = resolveClassificationPolicy(packet.classification, sourceRule, policy);
   const packetDigest = digest(packet);
   const policyDigest = digest(policy);
   return {

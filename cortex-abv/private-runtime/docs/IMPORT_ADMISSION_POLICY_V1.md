@@ -6,11 +6,16 @@ It checks the exact `(source.kind, source.id, dataKind)` tuple, classification, 
 
 The policy grants neither source access nor publication authority. `proposal_only` means an item may later be considered as evidence for a bounded proposal; it does not create, approve, or apply that proposal.
 
-The current rules are intentionally narrow:
+The current rules are intentionally narrow and now include source-aware classification overrides:
 
 - `base-cortex` + `cortex_market_workforce_packet`;
 - `index/spike` + `index_spike_project_update`;
 - `monitor` + `monitor_project_update`.
+
+Monitor source has a separate public path than base classification defaults:
+
+- `monitor` + public: 7 days, `proposal_only`, targets `abvxsite` only;
+- `monitor` + protected: 14 days, `private_context_only`, no public targets.
 
 `cropto` remains reserved for a future synthetic adapter pass and is intentionally not allowed yet.
 

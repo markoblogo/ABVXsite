@@ -31,7 +31,23 @@
     },
     {
       "source": { "kind": "owned_project_ecosystem", "id": "monitor" },
-      "allowedDataKinds": ["monitor_project_update"]
+      "allowedDataKinds": ["monitor_project_update"],
+      "classificationPolicy": {
+        "public": {
+          "maxAgeDays": 7,
+          "personalSurfaceEligibility": {
+            "mode": "proposal_only",
+            "targets": ["abvxsite"]
+          }
+        },
+        "protected": {
+          "maxAgeDays": 14,
+          "personalSurfaceEligibility": {
+            "mode": "private_context_only",
+            "targets": []
+          }
+        }
+      }
     },
     {
       "source": { "kind": "owned_project_ecosystem", "id": "cropto" },

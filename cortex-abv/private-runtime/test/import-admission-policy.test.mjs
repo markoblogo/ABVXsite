@@ -53,6 +53,27 @@ test('admits a protected Monitor/MN7R packet for private-context-only eligibilit
   assert.deepEqual(monitorReceipt.personalSurfaceEligibility, { mode: 'private_context_only', targets: [] });
 });
 
+test('applies monitor-specific public admission policy tighter than base public policy', () => {
+  const monitorPublicReceipt = admitImportPacket({
+    packet: packet({
+      packetId: 'packet:monitor-mn7r:public-synthetic-002',
+      source: { kind: 'owned_project_ecosystem', id: 'monitor' },
+      classification: 'public',
+      dataKind: 'monitor_project_update',
+    }),
+    policy,
+    admittedAt: '2026-07-20T16:00:00.000Z',
+  });
+
+  assert.equal(monitorPublicReceipt.retention.maxAgeDays, 7);
+  assert.deepEqual(monitorPublicReceipt.personalSurfaceEligibility, { mode: 'proposal_only', targets: ['abvxsite'] });
+  assert.deepEqual(monitorPublicReceipt.retention, {
+    mode: 'manual_deletion_required',
+    maxAgeDays: 7,
+    expiresAt: '2026-07-27T16:00:00.000Z',
+  });
+});
+
 test('keeps protected base Cortex imports private-context-only and rejects a non-allowlisted kind', () => {
   const protectedReceipt = admitImportPacket({
     packet: packet({

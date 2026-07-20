@@ -5,52 +5,77 @@
   "stage": 1,
   "status": "implemented",
   "authority": "proposal",
-  "reviewStatus": "pending_review",
-  "createdAt": "2026-07-20T00:00:00Z",
-  "runMode": "synthetic_offline",
+  "reviewStatus": "no_changes",
+  "createdAt": "2026-07-20T19:18:11.162Z",
+  "runMode": "local_synthetic_read_only",
   "contractPath": "cortex-abv/private-runtime/config/cabinet-scheduled-jobs-stage1.v1.json",
   "decisionTrace": {
     "policySource": "base",
-    "reason": "Stage 1 keeps this module read-only, proposal-only, and detached from any source system endpoint."
+    "reason": "Real local synthetic run against versioned public artifacts; no network/endpoint actions",
+    "sourceKind": null,
+    "sourceId": null,
+    "basePolicy": {
+      "allowedPatchFields": [
+        "summary",
+        "bodyAppendix",
+        "updatedAt",
+        "sync.lastAppliedCommit",
+        "sync.lastAppliedAt"
+      ]
+    },
+    "sourceOverride": null
   },
   "results": [
     {
       "jobId": "public-corpus-freshness-audit",
+      "title": "Public source freshness audit",
       "status": "no_changes",
       "evidence": [
         {
-          "kind": "artifact",
           "path": "cortex-abv/public-presence-index.v1.json",
-          "sha256": "snapshot-noted-offline",
-          "notes": "No external fetch performed in Stage 1."
+          "sha256": "2e3e2e0837e753ce8dafe346b4cc393c501b5474f622758417ad2553c6ea3cc8"
         },
         {
-          "kind": "artifact",
           "path": "cortex-abv/public-project-registry.v1.json",
-          "sha256": "snapshot-noted-offline",
-          "notes": "No external fetch performed in Stage 1."
+          "sha256": "a6ef8c5ff58a1b73620db371c651c9b942bdf898a2e272fa3929952e6d04518c"
         }
       ],
       "decisionTrace": {
         "policySource": "base",
-        "sourceOverride": null,
-        "failure": null
+        "sourceKind": null,
+        "sourceId": null,
+        "reason": "Stage 1 is a synthetic, read-only cabinet connector contract and cannot call source systems.",
+        "failure": null,
+        "basePolicy": {
+          "allowedPatchFields": [
+            "summary",
+            "bodyAppendix",
+            "updatedAt",
+            "sync.lastAppliedCommit",
+            "sync.lastAppliedAt"
+          ]
+        },
+        "notes": "artifact digests match previous baseline; no public surface actions proposed"
       }
     }
   ],
   "requiredReviewActions": {
     "approve": {
       "status": "required",
-      "notes": "Approve only after confirming no write intent and no external endpoint dependence."
+      "notes": "Approve only after confirming checks match governance and no write intent was introduced."
     },
     "reject": {
       "status": "required",
-      "notes": "Reject if runtime execution, write path, or direct source-system effect is introduced."
+      "notes": "Reject on any job failure, missing artifact, or unexpected write-path attempt."
     }
   },
   "retry": {
     "maxAttempts": 3,
     "nextAttemptPolicy": "retry_on_manual_review_with_retry_note",
     "nextAttempt": null
+  },
+  "sourceDigest": {
+    "presenceIndexSha256": "2e3e2e0837e753ce8dafe346b4cc393c501b5474f622758417ad2553c6ea3cc8",
+    "projectRegistrySha256": "a6ef8c5ff58a1b73620db371c651c9b942bdf898a2e272fa3929952e6d04518c"
   }
 }

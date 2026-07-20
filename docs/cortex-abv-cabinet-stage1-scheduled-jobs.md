@@ -13,6 +13,19 @@ This is the implemented Stage 1 for Cabinet pilot module #4 (`Scheduled jobs and
 - Contract: `cortex-abv/private-runtime/config/cabinet-scheduled-jobs-stage1.v1.json`
 - Synthetic receipt: `cortex-abv/private-runtime/receipts/cabinet-stage1-scheduled-jobs-receipt.v1.json`
 
+## Stage 2 runner
+
+```bash
+npm run cortex-abv:cabinet-stage1-run
+```
+
+The runner reads the above contract and current:
+
+- `cortex-abv/public-presence-index.v1.json`
+- `cortex-abv/public-project-registry.v1.json`
+
+It overwrites the receipt artifact with a real execution result (`createdAt`, `reviewStatus`, per-job `status`, and `sha256` evidence).
+
 ## Receipt gate
 
 The receipt keeps governance parity with existing proposal gates:
@@ -37,5 +50,4 @@ No source-system read/write calls are made in this stage.
 Before Stage 2 is opened:
 
 1. Keep the contract read-only and proposal-only.
-2. Add a real runner that can only write a proposal artifact.
-3. Add the first real adapter for one owned source in the same receipt gate.
+2. Add a first real adapter for one owned source in the same receipt gate.

@@ -136,8 +136,15 @@ For the current Cabinet pilot Stage 1, the runtime snapshot now includes:
 
 - `config/cabinet-scheduled-jobs-stage1.v1.json` — manifest for a read-only synthetic connector job.
 - `receipts/cabinet-stage1-scheduled-jobs-receipt.v1.json` — proposal-style receipt with `reviewStatus`, `decisionTrace`, and retry policy.
+- `scripts/cortex-abv-run-cabinet-stage1.mjs` — local Stage 2 real runner that recomputes and refreshes the synthetic receipt from local artifacts only.
 
-This pilot is intentionally non-executing: no scheduler, no endpoint, and no action authority are introduced at this stage. It is designed to preserve the existing governance path before any source-adapter binding.
+Run Stage 2 locally:
+
+```bash
+npm run cortex-abv:cabinet-stage1-run
+```
+
+The pilot remains intentionally non-executing: no scheduler, no endpoint, and no action authority are introduced at this stage. It is designed to preserve the existing governance path before any source-adapter binding.
 
 ## Shared Personal Knowledge Core
 

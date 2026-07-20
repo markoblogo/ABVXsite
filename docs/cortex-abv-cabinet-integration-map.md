@@ -1,6 +1,6 @@
 # Cabinet Pilot Integration Map for CortexABV
 
-Status: Stage 1 in-progress (read-only, governance-safe)
+Status: Stage 1 complete, Stage 2 in-progress (read-only, governance-safe)
 
 Purpose: keep a stable plan for a future private/runtime extension of Cabinet-style capabilities without changing current CortexABV governance.
 
@@ -45,7 +45,7 @@ Leverage Cabinet’s proven building blocks (agent/runtime/adapters/model/provid
   - jobs are read-only and receipt-only at Stage 1;
   - failures produce structured reasons and retry policy.
 
-#### Stage 1 execution status
+#### Stage 1 execution status (completed)
 
 Completed (read-only pilot): one synthetic scheduled-job plan + receipt, no runtime execution, no endpoint, no writes.
 
@@ -54,9 +54,12 @@ Completed (read-only pilot): one synthetic scheduled-job plan + receipt, no runt
 - Receipt gate: read-only, proposal-like output with explicit `reviewStatus` and `approvalOutcome`.
 - Evidence basis: local `public-presence-index` and `public-project-registry` snapshots only.
 
-#### Stage 2 candidates
+#### Stage 2 execution status (in-progress)
 
 - Add scheduler runner that emits a real receipt artifact per planned run.
+  - Implemented command: `npm run cortex-abv:cabinet-stage1-run`
+  - Latest real run output: `cortex-abv/private-runtime/receipts/cabinet-stage1-scheduled-jobs-receipt.v1.json`
+
 - Add synthetic + one real source-specific adapter in this same job envelope before any write authority.
 
 ### 5) Git-based provenance + storage model

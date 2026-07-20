@@ -36,6 +36,23 @@ test('admits a public Index/spike packet for proposal-only personal-surface elig
   assert.deepEqual(receipt.personalSurfaceEligibility, { mode: 'proposal_only', targets: ['abvxsite', 'owner_repository', 'linkedin'] });
 });
 
+test('admits a protected Monitor/MN7R packet for private-context-only eligibility', () => {
+  const monitorReceipt = admitImportPacket({
+    packet: packet({
+      packetId: 'packet:monitor-mn7r:synthetic-001',
+      source: { kind: 'owned_project_ecosystem', id: 'monitor' },
+      classification: 'protected',
+      dataKind: 'monitor_project_update',
+    }),
+    policy,
+    admittedAt: '2026-07-20T16:00:00.000Z',
+  });
+
+  assert.equal(monitorReceipt.status, 'admitted');
+  assert.equal(monitorReceipt.retention.maxAgeDays, 14);
+  assert.deepEqual(monitorReceipt.personalSurfaceEligibility, { mode: 'private_context_only', targets: [] });
+});
+
 test('keeps protected base Cortex imports private-context-only and rejects a non-allowlisted kind', () => {
   const protectedReceipt = admitImportPacket({
     packet: packet({

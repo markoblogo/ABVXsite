@@ -10,7 +10,9 @@ The current rules are intentionally narrow:
 
 - `base-cortex` + `cortex_market_workforce_packet`;
 - `index/spike` + `index_spike_project_update`;
-- reserved future source kinds for `monitor` and `cropto`.
+- `monitor` + `monitor_project_update`.
+
+`cropto` remains reserved for a future synthetic adapter pass and is intentionally not allowed yet.
 
 All deletion remains manual. No scheduler or retention worker is introduced by this policy.
 

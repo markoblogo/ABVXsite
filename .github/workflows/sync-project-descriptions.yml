@@ -117,18 +117,19 @@ jobs:
             --claims-dir "$RUNNER_TEMP/cortex-abv-copy-proposals" \
             --output "$RUNNER_TEMP/cortex-abv-write-side-review-artifact.json"
 
-          cat > "$RUNNER_TEMP/cortex-abv-pr-review-body.md" <<'EOF_BODY'
-## CortexABV write-side executor (owner review)
-
-Status: `pending_review`
-
-Owner decision:
-- [ ] set `ownerReview.status = approved` and merge this PR
-- [ ] set `ownerReview.status = rejected` and close with a reason
-
-Merging is the only publication action. This workflow does not auto-publish.
-
-EOF_BODY
+          {
+            printf '%s\n' \
+              '## CortexABV write-side executor (owner review)' \
+              '' \
+              'Status: `pending_review`' \
+              '' \
+              'Owner decision:' \
+              '- [ ] set `ownerReview.status = approved` and merge this PR' \
+              '- [ ] set `ownerReview.status = rejected` and close with a reason' \
+              '' \
+              'Merging is the only publication action. This workflow does not auto-publish.' \
+              > "$RUNNER_TEMP/cortex-abv-pr-review-body.md"
+          }
           cat "$RUNNER_TEMP/cortex-abv-autonomous-public-sync-receipt.md" >> "$RUNNER_TEMP/cortex-abv-pr-review-body.md"
           gh pr create \
             --repo "${{ github.repository }}" \

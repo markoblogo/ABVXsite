@@ -1,6 +1,6 @@
 # Project description sync
 
-This is CortexABV's first bounded autonomous public-surface loop. Its safe default is proposal-only. Only MN7R and Cropto have a separately declared `direct_main` profile; no other site content inherits this authority.
+This is CortexABV's first bounded autonomous public-surface loop. Its safe default is proposal-only. MN7R, Cropto, and SPIKE SPOT COMMODITY INDEX UKRAINE have a separately declared `direct_main` profile; no other site content inherits this authority.
 
 ## Gate and apply sequence
 

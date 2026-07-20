@@ -35,7 +35,7 @@ The snapshot now also documents the private, owner-controlled [Personal Knowledg
 - `updatedAt`
 - sync provenance (`lastAppliedCommit`, `lastAppliedAt`)
 
-Its default remains reviewable and side-effect free. MN7R and Cropto have a separate `direct_main` profile which can commit only the same bounded fields after all validation gates pass. It cannot change project identity, title, status, tags, links, media, positioning, or publish to a social network.
+Its default remains reviewable and side-effect free. MN7R, Cropto, and SPIKE INDEX have a separate `direct_main` profile which can commit only the same bounded fields after all validation gates pass. It cannot change project identity, title, status, tags, links, media, positioning, or publish to a social network.
 
 Every enabled project has a `publicCopy` profile: explicit allowed themes, project-specific forbidden terms, and `append_only` body mode. A proposal may update a summary of at most 320 characters and may append one body paragraph of at most 450 characters; it cannot rewrite, delete, reorder, or restate the approved public body baseline. It also rejects protected/internal surfaces, endpoints, environment details, demo or seeded/mock data, persistence gaps, and other prototype-gap framing. Each changed field requires one claim-to-source line-range anchor from an explicitly allowlisted file. The receipt shows those paths and line ranges, never a copied private-source excerpt.
 
@@ -55,7 +55,7 @@ SOURCE_REPOS_TOKEN=... npm run cortex-abv:observe-events -- --output /tmp/cortex
 
 ## Policy
 
-`public-policy.example.json` defines the safe public default: `proposal_only`, no automatic actions, and an explicit deny list for external communication and private-data storage. [`autonomous-public-sync.v1.json`](autonomous-public-sync.v1.json) is a separate narrow exception: MN7R and Cropto may write only their listed content fields to `ABVXsite/main`; Lab remains disabled until its separate write credential is installed. Runtime policy is validated by `npm run cortex-abv:status`.
+`public-policy.example.json` defines the safe public default: `proposal_only`, no automatic actions, and an explicit deny list for external communication and private-data storage. [`autonomous-public-sync.v1.json`](autonomous-public-sync.v1.json) is a separate narrow exception: MN7R, Cropto, and SPIKE INDEX may write only their listed content fields to `ABVXsite/main`; Lab remains disabled until its separate write credential is installed. Runtime policy is validated by `npm run cortex-abv:status`.
 
 ## Public Presence Index v1
 

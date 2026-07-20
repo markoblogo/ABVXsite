@@ -20,10 +20,10 @@ test('keeps the public-site adapter proposal-only', () => {
   assert.throws(() => validatePublicPolicy({ ...policy, automaticActions: ['publish_external_post'] }), /automaticActions must be empty/);
 });
 
-test('limits the autonomous exception to the two approved ABVXsite targets', () => {
+test('tracks the approved ABVXsite direct-write targets', () => {
   const profile = JSON.parse(readFileSync(path.join(process.cwd(), 'cortex-abv/autonomous-public-sync.v1.json'), 'utf8'));
   assert.equal(profile.authority, 'write');
-  assert.deepEqual(profile.targets.filter((target) => target.enabled).map((target) => target.slug), ['mn7r', 'cropto']);
+  assert.deepEqual(profile.targets.filter((target) => target.enabled).map((target) => target.slug), ['mn7r', 'cropto', 'spike-spot-commodity-index-ukraine']);
   assert.deepEqual(profile.targets.find((target) => target.slug === 'abvx-lab'), {
     slug: 'abvx-lab', enabled: false, target: 'markoblogo/lab.abvx/main', reason: 'pending_LAB_REPO_TOKEN_with_contents_write',
   });

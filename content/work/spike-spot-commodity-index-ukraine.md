@@ -38,6 +38,46 @@
       "url": "https://github.com/markoblogo/index"
     }
   ],
+  "sync": {
+    "enabled": true,
+    "repository": "markoblogo/index",
+    "ref": "main",
+    "paths": [
+      "README.md"
+    ],
+    "lastAppliedCommit": "513d71eb669cc38639f60e3e24596b19515e993b",
+    "lastAppliedAt": "2026-07-20"
+  },
+  "autonomousPublicSync": {
+    "enabled": true,
+    "mode": "direct_main",
+    "target": "abvxsite",
+    "allowedPatchFields": [
+      "summary",
+      "bodyAppendix",
+      "updatedAt",
+      "sync.lastAppliedCommit",
+      "sync.lastAppliedAt"
+    ]
+  },
+  "publicCopy": {
+    "bodyMode": "append_only",
+    "allowedThemes": [
+      "public reference pricing for Ukrainian grain and oilseed spot markets",
+      "market benchmarks and transparent price context across sources",
+      "structured updates suitable for commodity landing content"
+    ],
+    "forbiddenTerms": [
+      "backend",
+      "demo",
+      "prototype",
+      "seeded",
+      "mock",
+      "persistence",
+      "wallet",
+      "endpoint"
+    ]
+  },
   "featured": true,
   "homepageEligible": true,
   "publishedAt": "2026-05-12",

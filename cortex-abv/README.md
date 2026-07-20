@@ -1,5 +1,7 @@
 # CortexABV public-site adapter
 
+<img src="./assets/cortex-abv-logo.png" alt="CortexABV logo" width="140" />
+
 This directory is the public CortexABV boundary between CortexABV and `abvx.xyz`. Its safe default is proposal-only; narrowly declared target profiles may receive bounded, evidence-gated write authority.
 
 It may contain source code, public project-content contracts, and reviewable proposal shapes. It must not contain private personal profiles, CV source files, contact history, inbox data, credentials, raw agent traces, or action receipts that identify correspondents. Those belong to a separately deployed private CortexABV runtime and store.

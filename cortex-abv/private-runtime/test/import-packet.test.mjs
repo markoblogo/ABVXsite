@@ -4,7 +4,7 @@ import path from 'node:path';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { validateImportPacket } from '../src/import-ledger.mjs';
-import { admitImportPacket } from '../src/import-admission-policy.mjs';
+import { admitAndAppendImportPacket } from '../src/import-admission-policy.mjs';
 
 const fixture = path.join(import.meta.dirname, '../examples/synthetic-import-packet-base-cortex.json');
 const policyPath = path.join(import.meta.dirname, '../config/import-admission-policy.v1.json');
@@ -22,7 +22,7 @@ test('admitting synthetic import packet creates an append-only entry with retent
   const ledgerPath = path.join(mkdtempSync(path.join(tmpdir(), 'cortex-abv-import-ledger-')), 'import-ledger.jsonl');
   const packet = readJson(fixture);
   const policy = readJson(policyPath);
-  const { admission, result } = admitImportPacket({
+  const { admission, result } = admitAndAppendImportPacket({
     ledgerPath,
     packet,
     policy,
@@ -31,7 +31,8 @@ test('admitting synthetic import packet creates an append-only entry with retent
 
   assert.equal(result.appended, true);
   assert.equal(admission.status, 'admitted');
-  assert.equal(admission.classification, 'protected');
+  assert.equal(admission.decisionTrace.policySource, 'base');
+  assert.equal(admission.decisionTrace.reason, 'no source override');
   assert.equal(admission.packetDigest.length, 64);
   assert.equal(admission.retention.maxAgeDays, 14);
   assert.equal(admission.personalSurfaceEligibility.mode, 'private_context_only');

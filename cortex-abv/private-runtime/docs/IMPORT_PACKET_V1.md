@@ -38,6 +38,8 @@ npm run import:admit -- \
 
 Each admitted packet is immutable in the private ledger (`protected` packets stay private_context_only), retains a hash-chained entry id, and is idempotent on replay.
 
+Admission output includes a `decisionTrace` block (whether in script output or ledger receipt) showing if the source-specific policy branch was used and why it was selected.
+
 ## Base Cortex workforce shadow adapter
 
 `shadow:base-cortex` accepts a future-shaped `OneD3xCortexMarketWorkforcePacket` from disk only. Required source fields are task/correlation identity, diversity mode, source status, hypotheses, evidence, counterevidence, officer review, human approval, outcome, blockers, timestamp, and source digest.

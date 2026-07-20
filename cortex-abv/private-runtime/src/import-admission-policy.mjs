@@ -40,15 +40,41 @@ function resolveClassificationPolicy(classification, rule, policy) {
 
   const sourceOverride = rule?.classificationPolicy?.[classification];
   if (!sourceOverride) {
-    return basePolicy;
+    return {
+      policy: basePolicy,
+      decisionTrace: {
+        sourceKind: rule?.source?.kind,
+        sourceId: rule?.source?.id,
+        dataKind: rule?.allowedDataKinds?.[0],
+        policySource: 'base',
+        reason: 'no source override',
+      },
+    };
   }
 
   return {
-    ...basePolicy,
-    ...sourceOverride,
-    personalSurfaceEligibility: {
-      ...basePolicy.personalSurfaceEligibility,
-      ...sourceOverride.personalSurfaceEligibility,
+    policy: {
+      ...basePolicy,
+      ...sourceOverride,
+      personalSurfaceEligibility: {
+        ...basePolicy.personalSurfaceEligibility,
+        ...sourceOverride.personalSurfaceEligibility,
+      },
+    },
+    decisionTrace: {
+      sourceKind: rule.source.kind,
+      sourceId: rule.source.id,
+      dataKind: rule?.allowedDataKinds?.[0],
+      policySource: 'source_specific_override',
+      reason: `source rule '${rule.source.kind}/${rule.source.id}' overrides ${classification} policy`,
+      basePolicy: {
+        maxAgeDays: basePolicy.maxAgeDays,
+        personalSurfaceEligibility: basePolicy.personalSurfaceEligibility,
+      },
+      sourceOverride: {
+        maxAgeDays: sourceOverride.maxAgeDays,
+        personalSurfaceEligibility: sourceOverride.personalSurfaceEligibility,
+      },
     },
   };
 }
@@ -62,7 +88,7 @@ export function admitImportPacket({ packet, policy, admittedAt }) {
   validatePolicy(policy);
   const timestamp = validTimestamp(admittedAt, 'admittedAt');
   const sourceRule = sourceRuleFor(packet, policy);
-  const classificationPolicy = resolveClassificationPolicy(packet.classification, sourceRule, policy);
+  const { policy: classificationPolicy, decisionTrace } = resolveClassificationPolicy(packet.classification, sourceRule, policy);
   const packetDigest = digest(packet);
   const policyDigest = digest(policy);
   return {
@@ -72,6 +98,7 @@ export function admitImportPacket({ packet, policy, admittedAt }) {
     authority: 'plan',
     externalSideEffects: false,
     status: 'admitted',
+    decisionTrace,
     admittedAt: timestamp,
     packetDigest,
     policy: { version: policy.version, digest: policyDigest },

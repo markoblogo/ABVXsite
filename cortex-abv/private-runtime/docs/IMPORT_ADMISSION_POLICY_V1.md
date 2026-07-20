@@ -6,6 +6,14 @@ It checks the exact `(source.kind, source.id, dataKind)` tuple, classification, 
 
 The policy grants neither source access nor publication authority. `proposal_only` means an item may later be considered as evidence for a bounded proposal; it does not create, approve, or apply that proposal.
 
+Admission receipts include a `decisionTrace` block to make policy decisions auditable in logs and ledger records:
+
+- `policySource`: `base` or `source_specific_override`;
+- `sourceKind`/`sourceId`;
+- `dataKind`;
+- `reason`;
+- `basePolicy` + `sourceOverride` snapshots when override is present.
+
 The current rules are intentionally narrow and now include source-aware classification overrides:
 
 - `base-cortex` + `cortex_market_workforce_packet`;

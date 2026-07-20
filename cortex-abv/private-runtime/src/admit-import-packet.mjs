@@ -19,6 +19,7 @@ export function run() {
     appended: result.appended,
     sequence: result.entry.sequence,
     packetId: result.entry.packet.packetId,
+    decisionTrace: admission.decisionTrace,
     retention: admission.retention,
     personalSurfaceEligibility: admission.personalSurfaceEligibility,
   }));

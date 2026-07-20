@@ -32,6 +32,8 @@ test('admits a public Index/spike packet for proposal-only personal-surface elig
   assert.equal(receipt.authority, 'plan');
   assert.equal(receipt.externalSideEffects, false);
   assert.equal(receipt.status, 'admitted');
+  assert.equal(receipt.decisionTrace.policySource, 'base');
+  assert.equal(receipt.decisionTrace.reason, 'no source override');
   assert.deepEqual(receipt.retention, { mode: 'manual_deletion_required', maxAgeDays: 30, expiresAt: '2026-08-15T15:00:00.000Z' });
   assert.deepEqual(receipt.personalSurfaceEligibility, { mode: 'proposal_only', targets: ['abvxsite', 'owner_repository', 'linkedin'] });
 });
@@ -49,6 +51,10 @@ test('admits a protected Monitor/MN7R packet for private-context-only eligibilit
   });
 
   assert.equal(monitorReceipt.status, 'admitted');
+  assert.equal(monitorReceipt.decisionTrace.policySource, 'source_specific_override');
+  assert.equal(monitorReceipt.decisionTrace.reason, "source rule 'owned_project_ecosystem/monitor' overrides protected policy");
+  assert.equal(monitorReceipt.decisionTrace.sourceKind, 'owned_project_ecosystem');
+  assert.equal(monitorReceipt.decisionTrace.sourceId, 'monitor');
   assert.equal(monitorReceipt.retention.maxAgeDays, 14);
   assert.deepEqual(monitorReceipt.personalSurfaceEligibility, { mode: 'private_context_only', targets: [] });
 });
@@ -66,6 +72,16 @@ test('applies monitor-specific public admission policy tighter than base public 
   });
 
   assert.equal(monitorPublicReceipt.retention.maxAgeDays, 7);
+  assert.equal(monitorPublicReceipt.decisionTrace.policySource, 'source_specific_override');
+  assert.equal(monitorPublicReceipt.decisionTrace.reason, "source rule 'owned_project_ecosystem/monitor' overrides public policy");
+  assert.deepEqual(monitorPublicReceipt.decisionTrace.basePolicy, {
+    maxAgeDays: 30,
+    personalSurfaceEligibility: { mode: 'proposal_only', targets: ['abvxsite', 'owner_repository', 'linkedin'] },
+  });
+  assert.deepEqual(monitorPublicReceipt.decisionTrace.sourceOverride, {
+    maxAgeDays: 7,
+    personalSurfaceEligibility: { mode: 'proposal_only', targets: ['abvxsite'] },
+  });
   assert.deepEqual(monitorPublicReceipt.personalSurfaceEligibility, { mode: 'proposal_only', targets: ['abvxsite'] });
   assert.deepEqual(monitorPublicReceipt.retention, {
     mode: 'manual_deletion_required',

@@ -91,6 +91,7 @@ jobs:
         id: apply
         env:
           TARGET_SLUGS: ${{ needs.observe-project-events.outputs.target_slugs }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           if git diff --quiet -- content/work; then
             echo "applied=false" >> "$GITHUB_OUTPUT"

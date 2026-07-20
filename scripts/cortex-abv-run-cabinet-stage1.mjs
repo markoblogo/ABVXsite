@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { admitImportPacket } from '../cortex-abv/private-runtime/src/import-admission-policy.mjs';
 import { createMonitorMn7rShadowImport } from '../cortex-abv/private-runtime/src/monitor-mn7r-shadow-import.mjs';
+import { createIndexSpikeShadowImport } from '../cortex-abv/private-runtime/src/index-spike-shadow-import.mjs';
 import path from 'node:path';
 
 const root = process.cwd();
@@ -27,9 +28,24 @@ function nonEmptyString(value, field) {
   return value.trim();
 }
 
+function ensureAdapterDecisionTrace(decisionTrace, adapterId) {
+  if (!decisionTrace || typeof decisionTrace !== 'object' || Array.isArray(decisionTrace)) {
+    throw new Error(`adapter ${adapterId} missing admission decisionTrace`);
+  }
+  const policySource = decisionTrace.policySource === 'source_specific_override' ? 'source_specific_override' : 'base';
+  const sourceKind = nonEmptyString(decisionTrace.sourceKind, `adapter ${adapterId} decisionTrace.sourceKind`);
+  const sourceId = nonEmptyString(decisionTrace.sourceId, `adapter ${adapterId} decisionTrace.sourceId`);
+  const reason = nonEmptyString(decisionTrace.reason, `adapter ${adapterId} decisionTrace.reason`);
+  return { ...decisionTrace, policySource, sourceKind, sourceId, reason };
+}
+
 const ADAPTER_FACTORIES = {
   'monitor-mn7r-shadow': {
     factory: createMonitorMn7rShadowImport,
+    inputField: 'projectUpdate',
+  },
+  'index-spike-shadow': {
+    factory: createIndexSpikeShadowImport,
     inputField: 'projectUpdate',
   },
 };
@@ -153,15 +169,16 @@ export function run() {
         const packet = factory({ [inputField]: sourcePacket });
 
         const admission = admitImportPacket({ packet, policy, admittedAt: createdAt });
+        const decisionTrace = ensureAdapterDecisionTrace(admission.decisionTrace, adapterId);
         const adapterDecision = {
           adapterId,
           status: 'admitted',
-          sourceKind: nonEmptyString(admission.decisionTrace.sourceKind, 'admission.decisionTrace.sourceKind'),
-          sourceId: nonEmptyString(admission.decisionTrace.sourceId, 'admission.decisionTrace.sourceId'),
+          sourceKind: nonEmptyString(decisionTrace.sourceKind, 'adapterDecision.sourceKind'),
+          sourceId: nonEmptyString(decisionTrace.sourceId, 'adapterDecision.sourceId'),
           packetKind: nonEmptyString(packet.kind, 'packet.kind'),
           packetId: nonEmptyString(packet.packetId, 'packet.packetId'),
           dataKind: nonEmptyString(packet.dataKind, 'packet.dataKind'),
-          decisionTrace: admission.decisionTrace,
+          decisionTrace,
           packetDigest: nonEmptyString(admission.packetDigest, 'admission.packetDigest'),
         };
         sourceAdapterDecisions.push(adapterDecision);

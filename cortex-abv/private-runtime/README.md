@@ -139,6 +139,11 @@ For the current Cabinet pilot Stage 1, the runtime snapshot now includes:
 - `scripts/cortex-abv-run-cabinet-stage1.mjs` — local Stage 2 real runner that recomputes and refreshes the synthetic receipt from local artifacts only.
 - `config/import-admission-policy.v1.json` — shared admission policy used by the stage1 source adapter.
 - `src/monitor-mn7r-shadow-import.mjs` + `examples/synthetic-monitor-mn7r-project-update.json` — first real monitor-owned synthetic source adapter input and converter.
+- `src/index-spike-shadow-import.mjs` + `examples/synthetic-index-spike-project-update.json` — second real index-owned synthetic source adapter input and converter.
+
+Current stage invariants:
+
+- `result.sourceAdapters[].decisionTrace` is required for all enabled adapters before any future write-authority expansion.
 
 Run Stage 2 locally:
 

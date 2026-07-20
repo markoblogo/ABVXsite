@@ -6,7 +6,7 @@
   "status": "implemented",
   "authority": "proposal",
   "reviewStatus": "no_changes",
-  "createdAt": "2026-07-20T19:27:33.929Z",
+  "createdAt": "2026-07-20T20:03:25.801Z",
   "runMode": "local_synthetic_read_only",
   "contractPath": "cortex-abv/private-runtime/config/cabinet-scheduled-jobs-stage1.v1.json",
   "decisionTrace": {
@@ -77,6 +77,23 @@
               }
             },
             "packetDigest": "041542f50be6b8c190dc89d47482605e2f811cd6a46d9c870327908e28f1021b"
+          },
+          {
+            "adapterId": "index-spike-shadow",
+            "status": "admitted",
+            "sourceKind": "owned_project_ecosystem",
+            "sourceId": "index/spike",
+            "packetKind": "CortexABVImportPacket",
+            "packetId": "packet:index-spike:synthetic-spike-update-001",
+            "dataKind": "index_spike_project_update",
+            "decisionTrace": {
+              "sourceKind": "owned_project_ecosystem",
+              "sourceId": "index/spike",
+              "dataKind": "index_spike_project_update",
+              "policySource": "base",
+              "reason": "no source override"
+            },
+            "packetDigest": "88e7793249f2203c27e7c5864b6d14b9633d9e7794edb809a6c7fdf8230bd65f"
           }
         ],
         "basePolicy": {
@@ -122,6 +139,23 @@
             }
           },
           "packetDigest": "041542f50be6b8c190dc89d47482605e2f811cd6a46d9c870327908e28f1021b"
+        },
+        {
+          "adapterId": "index-spike-shadow",
+          "status": "admitted",
+          "sourceKind": "owned_project_ecosystem",
+          "sourceId": "index/spike",
+          "packetKind": "CortexABVImportPacket",
+          "packetId": "packet:index-spike:synthetic-spike-update-001",
+          "dataKind": "index_spike_project_update",
+          "decisionTrace": {
+            "sourceKind": "owned_project_ecosystem",
+            "sourceId": "index/spike",
+            "dataKind": "index_spike_project_update",
+            "policySource": "base",
+            "reason": "no source override"
+          },
+          "packetDigest": "88e7793249f2203c27e7c5864b6d14b9633d9e7794edb809a6c7fdf8230bd65f"
         }
       ]
     }

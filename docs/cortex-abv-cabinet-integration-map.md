@@ -62,6 +62,9 @@ Completed (read-only pilot): one synthetic scheduled-job plan + receipt, no runt
 
 - Add synthetic + one real source-specific adapter in this same job envelope before any write authority.
   - Completed in repo: `monitor-mn7r-shadow` synthetic adapter is now bound in `cabinet-scheduled-jobs-stage1.v1.json` and executed in the runner. The adapter uses `import-admission-policy.v1` and keeps `source_specific_override` in `decisionTrace` for audit, but does not write any files or API calls.
+- Add second real owned-source adapter and codify adapter trace invariant:
+  - Completed: `index-spike-shadow` is now bound in the same contract envelope.
+  - Contract invariant for this job: every enabled source adapter must contribute a `decisionTrace` into `result.sourceAdapters[].decisionTrace`.
 
 ### 5) Git-based provenance + storage model
 - In Cabinet: markdown + file history + schema state.

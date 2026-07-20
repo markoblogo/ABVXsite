@@ -39,8 +39,18 @@
           "enabled": true,
           "sourcePacket": "cortex-abv/private-runtime/examples/synthetic-monitor-mn7r-project-update.json",
           "note": "First real owned-source synthetic adapter in Stage 2 path; no side effects."
+        },
+        {
+          "adapterId": "index-spike-shadow",
+          "enabled": true,
+          "sourcePacket": "cortex-abv/private-runtime/examples/synthetic-index-spike-project-update.json",
+          "note": "Second owned-source synthetic adapter; no side effects and policy admission trace required."
         }
       ],
+      "sourceAdapterTracePolicy": {
+        "requireDecisionTrace": true,
+        "resultPath": "result.sourceAdapters[].decisionTrace"
+      },
       "output": {
         "receiptPath": "cortex-abv/private-runtime/receipts/cabinet-stage1-scheduled-jobs-receipt.v1.json",
         "statusField": "reviewStatus",

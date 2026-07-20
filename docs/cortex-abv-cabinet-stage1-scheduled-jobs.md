@@ -55,8 +55,19 @@ Before Stage 2 is opened:
 
 ## Current Stage 2 status
 
-First real adapter is now wired:
+Real adapters now wired:
 
 - adapterId: `monitor-mn7r-shadow`
 - source packet: `cortex-abv/private-runtime/examples/synthetic-monitor-mn7r-project-update.json`
 - evidence trace: stored in `sourceAdapters` entries inside `cabinet-stage1-scheduled-jobs-receipt.v1.json`
+- adapterId: `index-spike-shadow`
+- source packet: `cortex-abv/private-runtime/examples/synthetic-index-spike-project-update.json`
+- evidence trace: also stored in `sourceAdapters` entries as `decisionTrace`
+
+### New adapter trace rule
+
+For this Stage 2 job envelope, adapter trace rule is explicit:
+
+- for every enabled `sourceAdapters[]` entry, `result.sourceAdapters[].decisionTrace` must be present.
+- policy reason and source identity are mandatory in that trace.
+- this rule is an internal invariant before any future write-authority expansion.

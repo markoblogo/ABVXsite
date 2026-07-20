@@ -137,6 +137,8 @@ For the current Cabinet pilot Stage 1, the runtime snapshot now includes:
 - `config/cabinet-scheduled-jobs-stage1.v1.json` — manifest for a read-only synthetic connector job.
 - `receipts/cabinet-stage1-scheduled-jobs-receipt.v1.json` — proposal-style receipt with `reviewStatus`, `decisionTrace`, and retry policy.
 - `scripts/cortex-abv-run-cabinet-stage1.mjs` — local Stage 2 real runner that recomputes and refreshes the synthetic receipt from local artifacts only.
+- `config/import-admission-policy.v1.json` — shared admission policy used by the stage1 source adapter.
+- `src/monitor-mn7r-shadow-import.mjs` + `examples/synthetic-monitor-mn7r-project-update.json` — first real monitor-owned synthetic source adapter input and converter.
 
 Run Stage 2 locally:
 

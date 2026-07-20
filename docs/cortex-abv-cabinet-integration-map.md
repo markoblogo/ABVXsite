@@ -61,6 +61,7 @@ Completed (read-only pilot): one synthetic scheduled-job plan + receipt, no runt
   - Latest real run output: `cortex-abv/private-runtime/receipts/cabinet-stage1-scheduled-jobs-receipt.v1.json`
 
 - Add synthetic + one real source-specific adapter in this same job envelope before any write authority.
+  - Completed in repo: `monitor-mn7r-shadow` synthetic adapter is now bound in `cabinet-scheduled-jobs-stage1.v1.json` and executed in the runner. The adapter uses `import-admission-policy.v1` and keeps `source_specific_override` in `decisionTrace` for audit, but does not write any files or API calls.
 
 ### 5) Git-based provenance + storage model
 - In Cabinet: markdown + file history + schema state.

@@ -33,6 +33,14 @@
         "receipt_schema_anchored",
         "no_proposed_mutations"
       ],
+      "sourceAdapters": [
+        {
+          "adapterId": "monitor-mn7r-shadow",
+          "enabled": true,
+          "sourcePacket": "cortex-abv/private-runtime/examples/synthetic-monitor-mn7r-project-update.json",
+          "note": "First real owned-source synthetic adapter in Stage 2 path; no side effects."
+        }
+      ],
       "output": {
         "receiptPath": "cortex-abv/private-runtime/receipts/cabinet-stage1-scheduled-jobs-receipt.v1.json",
         "statusField": "reviewStatus",

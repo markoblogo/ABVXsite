@@ -6,7 +6,7 @@
   "status": "implemented",
   "authority": "proposal",
   "reviewStatus": "no_changes",
-  "createdAt": "2026-07-20T19:18:11.162Z",
+  "createdAt": "2026-07-20T19:27:33.929Z",
   "runMode": "local_synthetic_read_only",
   "contractPath": "cortex-abv/private-runtime/config/cabinet-scheduled-jobs-stage1.v1.json",
   "decisionTrace": {
@@ -46,6 +46,39 @@
         "sourceId": null,
         "reason": "Stage 1 is a synthetic, read-only cabinet connector contract and cannot call source systems.",
         "failure": null,
+        "sourceAdapterDecisions": [
+          {
+            "adapterId": "monitor-mn7r-shadow",
+            "status": "admitted",
+            "sourceKind": "owned_project_ecosystem",
+            "sourceId": "monitor",
+            "packetKind": "CortexABVImportPacket",
+            "packetId": "packet:monitor-mn7r:synthetic-monitor-update-001",
+            "dataKind": "monitor_project_update",
+            "decisionTrace": {
+              "sourceKind": "owned_project_ecosystem",
+              "sourceId": "monitor",
+              "dataKind": "monitor_project_update",
+              "policySource": "source_specific_override",
+              "reason": "source rule 'owned_project_ecosystem/monitor' overrides protected policy",
+              "basePolicy": {
+                "maxAgeDays": 14,
+                "personalSurfaceEligibility": {
+                  "mode": "private_context_only",
+                  "targets": []
+                }
+              },
+              "sourceOverride": {
+                "maxAgeDays": 14,
+                "personalSurfaceEligibility": {
+                  "mode": "private_context_only",
+                  "targets": []
+                }
+              }
+            },
+            "packetDigest": "041542f50be6b8c190dc89d47482605e2f811cd6a46d9c870327908e28f1021b"
+          }
+        ],
         "basePolicy": {
           "allowedPatchFields": [
             "summary",
@@ -55,8 +88,42 @@
             "sync.lastAppliedAt"
           ]
         },
+        "sourceSpecificOverrideObserved": true,
         "notes": "artifact digests match previous baseline; no public surface actions proposed"
-      }
+      },
+      "sourceAdapters": [
+        {
+          "adapterId": "monitor-mn7r-shadow",
+          "status": "admitted",
+          "sourceKind": "owned_project_ecosystem",
+          "sourceId": "monitor",
+          "packetKind": "CortexABVImportPacket",
+          "packetId": "packet:monitor-mn7r:synthetic-monitor-update-001",
+          "dataKind": "monitor_project_update",
+          "decisionTrace": {
+            "sourceKind": "owned_project_ecosystem",
+            "sourceId": "monitor",
+            "dataKind": "monitor_project_update",
+            "policySource": "source_specific_override",
+            "reason": "source rule 'owned_project_ecosystem/monitor' overrides protected policy",
+            "basePolicy": {
+              "maxAgeDays": 14,
+              "personalSurfaceEligibility": {
+                "mode": "private_context_only",
+                "targets": []
+              }
+            },
+            "sourceOverride": {
+              "maxAgeDays": 14,
+              "personalSurfaceEligibility": {
+                "mode": "private_context_only",
+                "targets": []
+              }
+            }
+          },
+          "packetDigest": "041542f50be6b8c190dc89d47482605e2f811cd6a46d9c870327908e28f1021b"
+        }
+      ]
     }
   ],
   "requiredReviewActions": {

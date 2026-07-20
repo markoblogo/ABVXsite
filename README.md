@@ -158,6 +158,7 @@ See also: [Cabinet pilot integration map](docs/cortex-abv-cabinet-integration-ma
 - `cortex-abv/private-runtime/config/cabinet-scheduled-jobs-stage1.v1.json`
 - `cortex-abv/private-runtime/receipts/cabinet-stage1-scheduled-jobs-receipt.v1.json`
 - `npm run cortex-abv:cabinet-stage1-run` for a real local synthetic Stage 2 execution (no write authority).
+- `cortex-abv/private-runtime/config/cabinet-scheduled-jobs-stage1.v1.json` now also binds one owned-source synthetic adapter (`monitor-mn7r-shadow`) with `source_specific_override` visibility in the receipt decision trace.
 
 Check the adapter contract and currently enabled project-sync targets:
 

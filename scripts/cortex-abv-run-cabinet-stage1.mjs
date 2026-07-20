@@ -1,5 +1,7 @@
 import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { admitImportPacket } from '../cortex-abv/private-runtime/src/import-admission-policy.mjs';
+import { createMonitorMn7rShadowImport } from '../cortex-abv/private-runtime/src/monitor-mn7r-shadow-import.mjs';
 import path from 'node:path';
 
 const root = process.cwd();
@@ -25,6 +27,18 @@ function nonEmptyString(value, field) {
   return value.trim();
 }
 
+const ADAPTER_FACTORIES = {
+  'monitor-mn7r-shadow': {
+    factory: createMonitorMn7rShadowImport,
+    inputField: 'projectUpdate',
+  },
+};
+
+function adapterSourceFor(adapterId) {
+  const adapterFactory = ADAPTER_FACTORIES[adapterId];
+  return adapterFactory ?? null;
+}
+
 function compareEvidence(previous = [], next = []) {
   if (!Array.isArray(previous) || !Array.isArray(next) || previous.length !== next.length) return false;
   const previousMap = new Map(previous.map((item) => [item.path, item.sha256]));
@@ -47,11 +61,15 @@ export function run() {
   if (!existsSync(contractPath)) throw new Error(`contract not found: ${contractPath}`);
   if (!existsSync(presenceIndexPath)) throw new Error(`presence index not found: ${presenceIndexPath}`);
   if (!existsSync(registryPath)) throw new Error(`project registry not found: ${registryPath}`);
+  const admissionPolicyPath = option('--admission-policy')
+    || path.join(root, 'cortex-abv', 'private-runtime', 'config', 'import-admission-policy.v1.json');
+  if (!existsSync(admissionPolicyPath)) throw new Error(`admission policy not found: ${admissionPolicyPath}`);
 
   const contract = readJson(contractPath);
   if (contract.schemaVersion !== 1 || contract.kind !== 'CortexABVCabinetScheduledJobsPlan') {
     throw new Error('invalid Cabinet scheduled jobs plan contract');
   }
+  const policy = readJson(admissionPolicyPath);
 
   const createdAt = option('--created-at') || new Date().toISOString();
   const previousReceipt = existsSync(outputPath) ? readJson(outputPath) : null;
@@ -78,8 +96,10 @@ export function run() {
           'contract.decisionTrace.reason',
         ),
         failure: null,
+        sourceAdapterDecisions: [],
       },
     };
+    const sourceAdapterDecisions = [];
 
     try {
       for (const source of job.sources || []) {
@@ -113,6 +133,46 @@ export function run() {
           'sync.lastAppliedAt',
         ],
       };
+
+      for (const sourceAdapter of job.sourceAdapters || []) {
+        if (!sourceAdapter?.enabled) continue;
+        const adapterId = nonEmptyString(sourceAdapter.adapterId, 'job.sourceAdapters.adapterId');
+        const adapterFactory = adapterSourceFor(adapterId);
+        if (!adapterFactory) {
+          throw new Error(`unsupported adapterId: ${adapterId}`);
+        }
+        const { factory, inputField } = adapterFactory;
+
+        const packetPath = sourceAdapter.sourcePacket && nonEmptyString(sourceAdapter.sourcePacket, `job.sourceAdapters[${adapterId}].sourcePacket`);
+        const sourcePacketPath = path.join(root, packetPath);
+        if (!existsSync(sourcePacketPath)) {
+          throw new Error(`source packet not found for adapter ${adapterId}: ${packetPath}`);
+        }
+        const sourcePacket = readJson(sourcePacketPath);
+
+        const packet = factory({ [inputField]: sourcePacket });
+
+        const admission = admitImportPacket({ packet, policy, admittedAt: createdAt });
+        const adapterDecision = {
+          adapterId,
+          status: 'admitted',
+          sourceKind: nonEmptyString(admission.decisionTrace.sourceKind, 'admission.decisionTrace.sourceKind'),
+          sourceId: nonEmptyString(admission.decisionTrace.sourceId, 'admission.decisionTrace.sourceId'),
+          packetKind: nonEmptyString(packet.kind, 'packet.kind'),
+          packetId: nonEmptyString(packet.packetId, 'packet.packetId'),
+          dataKind: nonEmptyString(packet.dataKind, 'packet.dataKind'),
+          decisionTrace: admission.decisionTrace,
+          packetDigest: nonEmptyString(admission.packetDigest, 'admission.packetDigest'),
+        };
+        sourceAdapterDecisions.push(adapterDecision);
+      }
+
+      result.decisionTrace.sourceAdapterDecisions = sourceAdapterDecisions;
+      if (sourceAdapterDecisions.some((entry) => entry.decisionTrace?.policySource === 'source_specific_override')) {
+        result.decisionTrace.sourceSpecificOverrideObserved = true;
+      }
+
+      result.sourceAdapters = sourceAdapterDecisions;
       if (evidenceMatchesPrevious) {
         result.decisionTrace.notes = 'artifact digests match previous baseline; no public surface actions proposed';
       } else {
@@ -123,6 +183,7 @@ export function run() {
       result.status = 'blocked';
       pending = true;
       result.evidence = [];
+      result.sourceAdapters = [];
     }
 
     results.push(result);

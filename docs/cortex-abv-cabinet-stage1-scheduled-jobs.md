@@ -43,7 +43,7 @@ Stage 1 uses only static public artifacts:
 - `cortex-abv/public-presence-index.v1.json`
 - `cortex-abv/public-project-registry.v1.json`
 
-No source-system read/write calls are made in this stage.
+No source-system read/write calls are made in this stage, except a local synthetic path through allowlisted source packets.
 
 ## Next transition rule
 
@@ -51,3 +51,12 @@ Before Stage 2 is opened:
 
 1. Keep the contract read-only and proposal-only.
 2. Add a first real adapter for one owned source in the same receipt gate.
+3. Keep the adapter synthetic and record `source_specific_override` in `decisionTrace` (if present).
+
+## Current Stage 2 status
+
+First real adapter is now wired:
+
+- adapterId: `monitor-mn7r-shadow`
+- source packet: `cortex-abv/private-runtime/examples/synthetic-monitor-mn7r-project-update.json`
+- evidence trace: stored in `sourceAdapters` entries inside `cabinet-stage1-scheduled-jobs-receipt.v1.json`

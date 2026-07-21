@@ -1,0 +1,45 @@
+# TurboQuant vector-retrieval pilot v1
+
+This pilot defines a **bound, proposal-only, local retrieval experiment** for CortexABV private runtime contracts. It is intentionally read-only and does not run retrieval, call an LLM, send network requests, or modify any external/public surface.
+
+## Why this pilot
+
+The earlier idea was to keep a low-latency, memory-efficient local vector layer for private candidate retrieval before adding any runtime endpoint. `turbovec` matches this goal: local ANN, strong quantization, and first-class allowlist filtering.
+
+## Current pilot contract
+
+Configured in:
+
+- `cortex-abv/private-runtime/config/vector-retrieval-turbovec-pilot.v1.json`
+
+Key controls:
+
+- `authority: plan_only`
+- `runtimeIntegration: false`
+- `externalSideEffects: false`
+- `safetyControls`: no network calls, no LLM calls, no writes, no public actions
+- scope only on existing public artifacts:
+  - `cortex-abv/public-presence-index.v1.json`
+  - `cortex-abv/public-project-registry.v1.json`
+
+## Validation
+
+Use:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-retrieval-pilot:check
+```
+
+Validation proves structural integrity of the pilot contract. It does not index vectors or retrieve semantic matches.
+
+## Next gate
+
+Before any true index build:
+
+1. define a deterministic fixture corpus for synthetic retrieval probes;
+2. add a bounded shadow contract that requires claim anchors for every retrieval proposal;
+3. keep approval path explicit (`proposal_only`) and evidence-only in PR/review flow;
+4. only then allow any retrieval-assisted proposal path in a later stage.
+
+This keeps the governance rule: **no outbound action until auditability and evidence policy are proven.**

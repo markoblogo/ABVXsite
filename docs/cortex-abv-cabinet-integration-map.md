@@ -73,6 +73,18 @@ Completed (read-only pilot): one synthetic scheduled-job plan + receipt, no runt
   - every mutation has versioned evidence artifact;
   - rollback target is explicit and human-approvable.
 
+### 6) Vector retrieval readiness (local pilot)
+- Current local pilot contract uses `turbovec` as a bounded vector engine for read-only retrieval experiments.
+- Objective: keep a strict local retrieval plan without introducing runtime endpoint, action authority, or data-plane side effects.
+- Active artifact:
+  - `cortex-abv/private-runtime/config/vector-retrieval-turbovec-pilot.v1.json`
+  - `cortex-abv/private-runtime/src/check-vector-retrieval-pilot.mjs`
+- Required invariants (current stage):
+  - no network/LLM calls;
+  - no writes and no public action authority;
+  - synthetic corpus and evidence-anchored outputs only;
+  - pilot must be explicitly reviewed before any production retrieval path.
+
 ## Staged adoption (hard requirement)
 1. Read-only planning (contracts + synthetic map only)
 2. One read-only adapter job in private runtime

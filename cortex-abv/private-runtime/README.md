@@ -130,6 +130,22 @@ The supported command passes through the same admission gate before append. It r
 
 This bootstrap validates and records a packet. Its Personal Knowledge Core ingress contract accepts only pending metadata records; it does not retrieve, capture source content, call a project system, build a vector index, invoke an LLM, prepare public copy, publish, or enable an external action.
 
+## Vector retrieval pilot: local TurboQuant contract
+
+To prepare a local retrieval layer without changing governance, the runtime now has a planned pilot contract for a local-only vector index candidate:
+
+- `config/vector-retrieval-turbovec-pilot.v1.json` defines bounded controls and source scope for a read-only, no-side-effect retrieval experiment.
+- `src/check-vector-retrieval-pilot.mjs` validates the contract.
+
+Check it locally:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-retrieval-pilot:check
+```
+
+The pilot is **synthetic** by default and must stay proposal-only until separate governance gates add explicit retrieval evidence rules.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

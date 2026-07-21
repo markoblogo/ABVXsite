@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRetrievalPilotPlan",
+  "version": "v1",
+  "authority": "plan_only",
+  "runtimeIntegration": false,
+  "externalSideEffects": false,
+  "engine": "turbovec",
+  "engineNotes": {
+    "goal": "pilot_local_retrieval_only",
+    "notes": [
+      "TurboQuant allows local ANN retrieval with compressed index and candidate allowlisting.",
+      "This plan is read-only, proposal-grade, and synthetic-only until governance gates are passed."
+    ],
+    "reference": "https://github.com/RyanCodrai/turbovec"
+  },
+  "pilotScope": [
+    {
+      "id": "public-presence-index",
+      "source": "cortex-abv/public-presence-index.v1.json",
+      "readOnly": true,
+      "allowedSurface": "private_runtime",
+      "purpose": "surface mapping and tenant lookup fixtures"
+    },
+    {
+      "id": "public-project-registry",
+      "source": "cortex-abv/public-project-registry.v1.json",
+      "readOnly": true,
+      "allowedSurface": "private_runtime",
+      "purpose": "project/repo mapping and tenant tagging"
+    }
+  ],
+  "candidatePolicy": {
+    "mode": "allowlist",
+    "maxReturn": 20,
+    "minScoreFloor": 0.01,
+    "requiresClaimEvidence": true
+  },
+  "safetyControls": {
+    "networkCalls": false,
+    "llmCalls": false,
+    "writes": false,
+    "publicActionAuthority": false,
+    "allowExternalData": false
+  },
+  "evaluation": {
+    "status": "proposal_only",
+    "runMode": "synthetic_local_only",
+    "required": [
+      "schema_valid",
+      "decision_reason_trace_present",
+      "no_unscoped_return"
+    ]
+  }
+}

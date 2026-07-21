@@ -79,10 +79,17 @@ Completed (read-only pilot): one synthetic scheduled-job plan + receipt, no runt
 - Active artifact:
   - `cortex-abv/private-runtime/config/vector-retrieval-turbovec-pilot.v1.json`
   - `cortex-abv/private-runtime/src/check-vector-retrieval-pilot.mjs`
+- Stage 2 local shadow artifact:
+  - `cortex-abv/private-runtime/examples/synthetic-vector-retrieval-benchmark.v1.json`
+  - `cortex-abv/private-runtime/src/vector-retrieval-synthetic-runner.mjs`
+  - `cortex-abv/private-runtime/test/vector-retrieval-synthetic-runner.test.mjs`
+- Receipt from synthetic stage-2 shadow run:
+  - `cortex-abv/private-runtime/receipts/vector-retrieval-turbovec-shadow-receipt.v1.json`
 - Required invariants (current stage):
   - no network/LLM calls;
   - no writes and no public action authority;
   - synthetic corpus and evidence-anchored outputs only;
+  - recall/top-k and claim-evidence are written into a receipt-style artifact;
   - pilot must be explicitly reviewed before any production retrieval path.
 
 ## Staged adoption (hard requirement)

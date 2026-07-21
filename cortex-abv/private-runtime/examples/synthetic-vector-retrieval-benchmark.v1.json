@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRetrievalSyntheticBenchmark",
+  "version": "v1",
+  "createdAt": "2026-07-21T09:00:00.000Z",
+  "pilot": "vector-retrieval-turbovec-pilot",
+  "description": "Synthetic corpus and queries for Stage 2 TurboQuant shadow evaluation.",
+  "corpus": [
+    {
+      "id": "pp-index-spike-updates",
+      "title": "Index/spike public updates",
+      "tenant": "index-spike",
+      "text": "Index Spike is a commodities analytics product and its public page includes updated project summary dates and snapshot exports.",
+      "evidenceRefs": [
+        {
+          "path": "cortex-abv/public-presence-index.v1.json",
+          "ref": "projects.index-spike.summary",
+          "digest": "3d8f9cb2d9f9f9c3d7f6d4f8d2ac9a1fc8f6a2e2f1f7f4a2b0c2d3e4f5a6b7c8"
+        }
+      ]
+    },
+    {
+      "id": "pp-monitor-mn7r-dashboard",
+      "title": "Monitor/MN7R dashboard status",
+      "tenant": "monitor-mn7r",
+      "text": "Monitor MN7R updates cover repository readiness, lab readiness checks, and status flags for project-owned releases.",
+      "evidenceRefs": [
+        {
+          "path": "cortex-abv/public-project-registry.v1.json",
+          "ref": "projects.monitor-mn7r.status",
+          "digest": "7f1e8f2cb4a1c3d6f2b5d8e9f0c3a4b5d6e7f8a9c0b1d2e3f4a5b6c7d8e9f012"
+        }
+      ]
+    },
+    {
+      "id": "pp-azurmenton-guides",
+      "title": "AzurMenton guide bundle",
+      "tenant": "azur-menton",
+      "text": "AzurMenton public guides include local onboarding instructions, city-level FAQ, and place cards for practical use cases.",
+      "evidenceRefs": [
+        {
+          "path": "cortex-abv/public-presence-index.v1.json",
+          "ref": "projects.azur-menton.links",
+          "digest": "d1a9f8c7b6a5e4d3c2b1a09876543210fedcba9876543210abcdef1234567890ab"
+        }
+      ]
+    },
+    {
+      "id": "pp-digital-presence-sync",
+      "title": "Public presence baseline",
+      "tenant": "cortex-abv-personal",
+      "text": "CortexABV maintains a public presence index and project registry snapshots to keep source-of-truth links synchronized across sites.",
+      "evidenceRefs": [
+        {
+          "path": "cortex-abv/public-presence-index.v1.json",
+          "ref": "metadata.syncPolicy",
+          "digest": "f0e1d2c3b4a59687788990aabbccddeeff00112233445566778899aabbccddeeff"
+        }
+      ]
+    }
+  ],
+  "probes": [
+    {
+      "probeId": "probe-index-summary",
+      "query": "What is the latest Index spike summary about public updates?",
+      "expectedCorpusIds": [
+        "pp-index-spike-updates"
+      ],
+      "minRecallAtK": 1
+    },
+    {
+      "probeId": "probe-monitor-readiness",
+      "query": "Show Monitor MN7R dashboard repository readiness status",
+      "expectedCorpusIds": [
+        "pp-monitor-mn7r-dashboard"
+      ],
+      "minRecallAtK": 1
+    },
+    {
+      "probeId": "probe-azurmenton-guides",
+      "query": "AzurMenton public guides and onboarding place cards",
+      "expectedCorpusIds": [
+        "pp-azurmenton-guides",
+        "pp-digital-presence-sync"
+      ],
+      "minRecallAtK": 0.5
+    }
+  ],
+  "evaluation": {
+    "topK": 3,
+    "minRecallAtK": 0.75,
+    "minScoreFloor": 0.06,
+    "maxRunMs": 2000
+  }
+}

@@ -33,6 +33,31 @@ npm run vector-retrieval-pilot:check
 
 Validation proves structural integrity of the pilot contract. It does not index vectors or retrieve semantic matches.
 
+## Stage 2: synthetic shadow retrieval runner
+
+Added artifacts (still synthetic, local-only):
+
+- `cortex-abv/private-runtime/examples/synthetic-vector-retrieval-benchmark.v1.json`
+- `cortex-abv/private-runtime/src/vector-retrieval-synthetic-runner.mjs`
+- `cortex-abv/private-runtime/test/vector-retrieval-synthetic-runner.test.mjs`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-retrieval-shadow:run
+```
+
+The runner computes deterministic retrieval-like recall metrics and writes:
+- per-probe top-k candidates,
+- per-probe recall@k,
+- aggregate recall@k,
+- `decisionTrace.claimEvidence` (evidence anchors for every returned candidate).
+
+Default stage-2 receipt artifact:
+
+- `cortex-abv/private-runtime/receipts/vector-retrieval-turbovec-shadow-receipt.v1.json`
+
 ## Next gate
 
 Before any true index build:

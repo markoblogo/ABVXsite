@@ -146,6 +146,30 @@ npm run vector-retrieval-pilot:check
 
 The pilot is **synthetic** by default and must stay proposal-only until separate governance gates add explicit retrieval evidence rules.
 
+## Vector retrieval shadow runner (Stage 2)
+
+After fixtures are in place, you can run a local deterministic synthetic benchmark that:
+
+- builds a fixed top-k candidate list from an allowlisted corpus;
+- computes recall@k against probe expectations;
+- emits a signed-ish receipt with claim evidence per candidate;
+- keeps all safety controls explicit (`no_network`, `no_llm`, `no_writes`, `no_public_actions`).
+
+Fixture: `examples/synthetic-vector-retrieval-benchmark.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-retrieval-shadow:run
+```
+
+Result artifact:
+
+`receipts/vector-retrieval-turbovec-shadow-receipt.v1.json`
+
+This remains Stage 2 synthetic validation only. It does not build ANN indexes and does not call vector dependencies yet.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

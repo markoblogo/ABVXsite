@@ -46,7 +46,7 @@
       "README.md"
     ],
     "lastAppliedCommit": "d4581b6e1ca2ea6f775be8958b7ee3179ec6ecd5",
-    "lastAppliedAt": "2026-07-20"
+    "lastAppliedAt": "2026-07-21"
   },
   "autonomousPublicSync": {
     "enabled": true,
@@ -118,7 +118,7 @@
     "alt": "SPIKE SPOT COMMODITY INDEX UKRAINE market index interface",
     "role": "project-screenshot"
   },
-  "updatedAt": "2026-07-20"
+  "updatedAt": "2026-07-21"
 }
 ---
 
@@ -142,3 +142,5 @@ Within the broader Cropto and agro-market infrastructure ecosystem, SPIKE belong
 That makes it part of Monitoring & Intelligence: not execution infrastructure itself, but a benchmark layer for reference pricing, market visibility and structured Ukrainian spot-market memory.
 
 Public values are sourced from respondent submissions and automated MN7R monitor imports; respondents are collected via a Telegram-first workflow (@spike_spot_bot), and values may auto-publish if no manual publish occurs before the evening cut-off.
+
+SPIKE publishes 13 public positions grouped into Grains Export, Oilseeds Export and Oilseeds Crush, covering export and processing bases including CPT Port, CPT parity Odesa and FCA Chop.

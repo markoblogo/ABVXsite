@@ -9,7 +9,7 @@
   "homepageEligible": true,
   "title": "Cropto",
   "shortTitle": "Cropto",
-  "summary": "Cropto is an early-stage MVP commodity trading platform offering indexed spot trading, options, and tokenized commodity-linked instruments across Ukraine, Argentina and Brazil.",
+  "summary": "Cropto is an early-stage MVP commodity trading platform offering indexed spot trading, options, and tokenized commodity-linked instruments across Ukraine, Argentina and Brazil; the repository publishes a public monthly indexed-spot update cadence for those markets.",
   "tags": [
     "cropto",
     "agro-commodities",
@@ -47,8 +47,8 @@
     "paths": [
       "README.md"
     ],
-    "lastAppliedCommit": "2f4f075cf1046691338f3df4e3fa5191ec9e1fd9",
-    "lastAppliedAt": "2026-07-19"
+    "lastAppliedCommit": "294f8aaf4e4f0ba7d9131c075213aabbfffc369f",
+    "lastAppliedAt": "2026-07-21"
   },
   "autonomousPublicSync": {
     "enabled": true,
@@ -96,7 +96,7 @@
     "alt": "Cropto trading platform interface",
     "role": "project-screenshot"
   },
-  "updatedAt": "2026-07-19"
+  "updatedAt": "2026-07-21"
 }
 ---
 
@@ -117,3 +117,5 @@ Users can choose a commodity market, connect a wallet, create or take orders, tr
 Cropto is currently in active prototype development and testing with virtual contracts, while public waitlist onboarding remains open.
 
 The repository includes a concrete Railway deployment path and a public verification target at https://cropto.abvx.xyz.
+
+The repository publishes a public monthly indexed-spot update cadence for Ukraine, Argentina and Brazil.

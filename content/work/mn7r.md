@@ -9,7 +9,7 @@
   "homepageEligible": true,
   "title": "MN7R",
   "shortTitle": "MN7R",
-  "summary": "MN7R is a commodity trading workflow workspace for brokerage teams running Deals, Clients and EXE inside one structured operational system; it includes a public-facing site, a separate public synthetic /demo, and public updates are published through ABVX.",
+  "summary": "MN7R is a commodity trading workflow workspace for brokerage teams running Deals, Clients and EXE inside one structured operational system; it includes a public-facing site, a separate public synthetic /demo, public updates published through ABVX, and a governance-first summary update path for site-level facts.",
   "tags": [
     "brokerage",
     "agro-commodities",
@@ -60,8 +60,8 @@
     "paths": [
       "README.md"
     ],
-    "lastAppliedCommit": "f061d4482ef8989f05f0d0db99eafbe75c39551f",
-    "lastAppliedAt": "2026-07-20"
+    "lastAppliedCommit": "713e85a2220020968d1289c3591fbb3cdef94a00",
+    "lastAppliedAt": "2026-07-21"
   },
   "autonomousPublicSync": {
     "enabled": true,
@@ -110,7 +110,7 @@
     "alt": "MN7R brokerage platform interface",
     "role": "project-screenshot"
   },
-  "updatedAt": "2026-07-20"
+  "updatedAt": "2026-07-21"
 }
 ---
 
@@ -130,3 +130,5 @@ The goal is clearer ownership, stronger execution discipline, cleaner team visib
 The platform is already used by a brokerage team in real commodity operations while continuing to expand in functionality, users, teams and territories.
 
 MN7R also provides a public-facing site and a separate public synthetic /demo workspace; the demo uses synthetic fixtures only.
+
+Public-facing updates now include checkpoint snapshots focused on team ownership and execution visibility across Deals, Clients, and EXE, and the public copy provides a governance-first summary update path for site-level facts.

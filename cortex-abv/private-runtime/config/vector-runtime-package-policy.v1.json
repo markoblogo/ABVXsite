@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimePackagePolicy",
+  "version": "v1",
+  "authority": "plan_only",
+  "engine": "turbovec",
+  "package": {
+    "ecosystem": "pypi",
+    "name": "turbovec",
+    "versionPin": "0.8.0",
+    "installSpec": "turbovec==0.8.0",
+    "reference": "https://github.com/RyanCodrai/turbovec"
+  },
+  "venvPolicy": {
+    "mode": "temporary_or_local_only",
+    "temporaryPrefix": "cortexabv-turbovec-probe-",
+    "allowProjectCommittedVenv": false,
+    "allowGlobalSitePackages": false,
+    "allowInstallWithoutExplicitFlag": false,
+    "allowNetworkDuringInstallOnly": true,
+    "deletePolicy": "outside_git_worktree_or_operator_cleanup"
+  },
+  "platformConstraints": {
+    "python": {
+      "minMajor": 3,
+      "minMinor": 10,
+      "maxMajor": 3,
+      "maxMinor": 14
+    },
+    "os": [
+      "darwin",
+      "linux"
+    ],
+    "arch": [
+      "arm64",
+      "x64"
+    ],
+    "nativeBuildsAllowed": true,
+    "requiresLocalOnlyDataPlane": true
+  },
+  "reproducibility": {
+    "receiptRequired": true,
+    "requiredReceiptFields": [
+      "policyDigest",
+      "package.installSpec",
+      "platform",
+      "venvPolicy",
+      "governance",
+      "acceptance"
+    ],
+    "dependencyProbeMustUsePolicy": true
+  },
+  "governance": {
+    "readOnly": true,
+    "proposalOnly": true,
+    "runtimeIntegration": false,
+    "endpoint": false,
+    "llmCalls": false,
+    "writesOutsideReceipt": false,
+    "publicActionAuthority": false
+  }
+}

@@ -4,11 +4,17 @@
   "version": "v1",
   "authority": "plan_only",
   "status": "passed",
-  "runAt": "2026-07-22T16:35:02.313Z",
+  "runAt": "2026-07-22T16:56:43.748Z",
   "mode": "bounded_local_dependency_probe",
   "engine": "turbovec",
-  "package": "turbovec",
+  "package": "turbovec==0.8.0",
   "sourcePilotPlan": "vector-retrieval-turbovec-pilot.v1.json",
+  "packagePolicy": {
+    "policy": "vector-runtime-package-policy.v1.json",
+    "policyDigest": "84043aa05915ba568f397c55ed395408d3e4776e2dcd9470a1d08ae6f878bc91",
+    "installSpec": "turbovec==0.8.0",
+    "policyReceiptRequired": true
+  },
   "governance": {
     "readOnly": true,
     "proposalOnly": true,
@@ -59,7 +65,7 @@
           "pip",
           "install",
           "--quiet",
-          "turbovec"
+          "turbovec==0.8.0"
         ],
         "ok": true,
         "stderr": "WARNING: Cache entry deserialization failed, entry ignored\n"

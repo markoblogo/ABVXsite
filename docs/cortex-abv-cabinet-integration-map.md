@@ -132,6 +132,22 @@ Completed (read-only pilot): one synthetic scheduled-job plan + receipt, no runt
   - governance remains `readOnly`, `proposalOnly`, no endpoint, no LLM, no external write and no public action authority.
 - This does not yet approve package pinning or runtime integration.
 
+#### Stage 4d execution status (completed)
+
+- Added package supply policy gate:
+  - `cortex-abv/private-runtime/config/vector-runtime-package-policy.v1.json`
+  - `cortex-abv/private-runtime/src/vector-runtime-package-policy.mjs`
+  - `cortex-abv/private-runtime/receipts/vector-runtime-package-policy-receipt.v1.json`
+- Current policy fixes:
+  - PyPI package `turbovec==0.8.0`;
+  - temporary/local venv only;
+  - no committed venv and no global site-packages;
+  - install only with an explicit flag;
+  - platform constraints and reproducibility receipt fields;
+  - read-only/proposal-only governance with no endpoint, LLM, external write or public action authority.
+- Dependency probe receipts now carry the package policy digest and install spec.
+- This approves only the supply policy for bounded probes, not runtime integration.
+
 ## Staged adoption (hard requirement)
 1. Read-only planning (contracts + synthetic map only)
 2. One read-only adapter job in private runtime

@@ -162,6 +162,7 @@ See also: [Cabinet pilot integration map](docs/cortex-abv-cabinet-integration-ma
 - `cortex-abv/private-runtime/config/cabinet-scheduled-jobs-stage1.v1.json` now binds second owned-source synthetic adapter (`index-spike-shadow`) and requires `result.sourceAdapters[].decisionTrace` for every enabled adapter before any future write-authority expansion.
 - `cortex-abv/private-runtime/src/vector-runtime-shim.mjs` defines the future local vector runtime `buildIndex/query` interface for the turbovec pilot, currently fallback-only (`tfidf-lite`) and receipt-only via `npm run vector-runtime-readiness:run`.
 - `cortex-abv/private-runtime/src/vector-runtime-dependency-probe-runner.mjs` adds an opt-in real PyPI `turbovec` probe with index-build/query acceptance and a receipt-only governance gate.
+- `cortex-abv/private-runtime/config/vector-runtime-package-policy.v1.json` pins the allowed package supply path to PyPI `turbovec==0.8.0`, temporary/local venv only, platform constraints, and reproducibility receipts.
 
 Check the adapter contract and currently enabled project-sync targets:
 

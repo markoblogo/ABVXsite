@@ -3,6 +3,7 @@ import { existsSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
+import { validateVectorRuntimePackagePolicy } from './vector-runtime-package-policy.mjs';
 
 function option(name) {
   const index = process.argv.indexOf(name);
@@ -257,11 +258,12 @@ function claimEvidenceFromResults(results) {
 export function runVectorRuntimeDependencyProbe({
   planPath,
   benchmarkPath,
+  policyPath,
   receiptPath,
   runAt,
   allowInstall = false,
   pythonBin,
-  packageName = 'turbovec',
+  packageName,
   executor = defaultExecutor,
 } = {}) {
   if (!existsSync(planPath)) throw new Error(`plan file not found: ${planPath}`);
@@ -270,9 +272,12 @@ export function runVectorRuntimeDependencyProbe({
   const benchmark = readJson(benchmarkPath);
   const evaluation = validateBenchmark(benchmark);
   validatePlan(plan);
+  const policy = policyPath ? readJson(policyPath) : undefined;
+  const policyValidation = policy ? validateVectorRuntimePackagePolicy(policy) : undefined;
+  const packageSpec = packageName || policy?.package?.installSpec || 'turbovec==0.8.0';
 
   const runAtValue = runAt ? new Date(runAt).toISOString() : new Date().toISOString();
-  const probe = executor({ benchmark, allowInstall, pythonBin, packageName });
+  const probe = executor({ benchmark, allowInstall, pythonBin, packageName: packageSpec });
   const output = probe.output || {};
   const { evidence, missing } = claimEvidenceFromResults(output.results || []);
   const indexBuildAccepted = probe.ok && output.documentCount === benchmark.corpus.length && output.indexType === 'IdMapIndex';
@@ -292,8 +297,17 @@ export function runVectorRuntimeDependencyProbe({
     runAt: runAtValue,
     mode: 'bounded_local_dependency_probe',
     engine: plan.engine,
-    package: packageName,
+    package: packageSpec,
     sourcePilotPlan: path.basename(planPath),
+    packagePolicy: policy ? {
+      policy: path.basename(policyPath),
+      policyDigest: policyValidation.policyDigest,
+      installSpec: policy.package.installSpec,
+      policyReceiptRequired: true,
+    } : {
+      policyReceiptRequired: false,
+      reason: 'legacy probe path without package policy',
+    },
     governance: {
       readOnly: true,
       proposalOnly: true,
@@ -356,11 +370,12 @@ export function run() {
   const receipt = runVectorRuntimeDependencyProbe({
     planPath: option('--plan') || path.resolve(process.cwd(), 'config/vector-retrieval-turbovec-pilot.v1.json'),
     benchmarkPath: option('--benchmark') || path.resolve(process.cwd(), 'examples/synthetic-vector-retrieval-benchmark.v1.json'),
+    policyPath: option('--policy') || path.resolve(process.cwd(), 'config/vector-runtime-package-policy.v1.json'),
     receiptPath: option('--receipt') || path.resolve(process.cwd(), 'receipts/vector-runtime-dependency-probe-receipt.v1.json'),
     runAt: option('--run-at'),
     allowInstall: flag('--allow-install'),
     pythonBin: option('--python'),
-    packageName: option('--package') || 'turbovec',
+    packageName: option('--package'),
   });
   console.log(`Vector runtime dependency probe complete: status=${receipt.status}, indexBuild=${receipt.acceptance.indexBuild.status}, query=${receipt.acceptance.query.status}`);
 }

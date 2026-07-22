@@ -7,11 +7,13 @@ import { runVectorRuntimeDependencyProbe } from '../src/vector-runtime-dependenc
 
 const planPath = path.join(import.meta.dirname, '../config/vector-retrieval-turbovec-pilot.v1.json');
 const benchmarkPath = path.join(import.meta.dirname, '../examples/synthetic-vector-retrieval-benchmark.v1.json');
+const policyPath = path.join(import.meta.dirname, '../config/vector-runtime-package-policy.v1.json');
 
 test('blocks dependency probe when real turbovec executor is unavailable', () => {
   const receipt = runVectorRuntimeDependencyProbe({
     planPath,
     benchmarkPath,
+    policyPath,
     runAt: '2026-07-22T18:30:00.000Z',
     executor: () => ({
       ok: false,
@@ -28,6 +30,8 @@ test('blocks dependency probe when real turbovec executor is unavailable', () =>
   assert.equal(receipt.governance.readOnly, true);
   assert.equal(receipt.governance.proposalOnly, true);
   assert.equal(receipt.governance.publicActionAuthority, false);
+  assert.equal(receipt.package, 'turbovec==0.8.0');
+  assert.equal(receipt.packagePolicy.policyReceiptRequired, true);
 });
 
 test('accepts dependency probe only when index-build and query gates pass', () => {
@@ -36,13 +40,14 @@ test('accepts dependency probe only when index-build and query gates pass', () =
   const receipt = runVectorRuntimeDependencyProbe({
     planPath,
     benchmarkPath,
+    policyPath,
     receiptPath,
     runAt: '2026-07-22T18:31:00.000Z',
     executor: () => ({
       ok: true,
       dependencyAvailable: true,
       dependencyInstallAttempted: true,
-      installLog: [{ args: ['-m', 'pip', 'install', 'turbovec'], ok: true }],
+      installLog: [{ args: ['-m', 'pip', 'install', 'turbovec==0.8.0'], ok: true }],
       output: {
         status: 'passed',
         package: 'turbovec',
@@ -75,5 +80,7 @@ test('accepts dependency probe only when index-build and query gates pass', () =
   assert.equal(receipt.acceptance.query.status, 'accepted');
   assert.equal(receipt.decisionTrace.claimEvidence.length, 1);
   assert.equal(receipt.review.pendingReview, true);
+  assert.equal(receipt.packagePolicy.installSpec, 'turbovec==0.8.0');
+  assert.equal(typeof receipt.packagePolicy.policyDigest, 'string');
   assert.deepEqual(persisted.acceptance, receipt.acceptance);
 });

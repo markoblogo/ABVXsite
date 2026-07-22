@@ -139,6 +139,7 @@ cd cortex-abv/private-runtime
 node src/vector-runtime-dependency-probe-runner.mjs \
   --plan config/vector-retrieval-turbovec-pilot.v1.json \
   --benchmark examples/synthetic-vector-retrieval-benchmark.v1.json \
+  --policy config/vector-runtime-package-policy.v1.json \
   --receipt receipts/vector-runtime-dependency-probe-receipt.v1.json \
   --allow-install
 ```
@@ -154,6 +155,36 @@ Acceptance criteria:
 - `governance.publicActionAuthority == false`
 
 The real probe may use network only for temporary dependency installation when `--allow-install` is present. The data plane remains local and no runtime integration is authorized.
+
+### Stage 4d: package policy gate
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/config/vector-runtime-package-policy.v1.json`
+- `cortex-abv/private-runtime/src/vector-runtime-package-policy.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-package-policy.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-package-policy-receipt.v1.json`
+
+The policy fixes the only currently approved supply shape:
+
+- ecosystem: PyPI
+- package: `turbovec`
+- exact pin: `0.8.0`
+- install spec: `turbovec==0.8.0`
+- venv: temporary/local only
+- no committed venv and no global site-packages
+- install requires an explicit flag
+- network is allowed only for dependency installation
+- data plane stays local/read-only/proposal-only
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-package-policy:check
+```
+
+The package policy receipt records `policyDigest`, package spec, observed platform, venv policy, governance and acceptance state. Dependency-probe receipts now include the policy digest and install spec.
 
 Default stage-3 receipt artifact:
 

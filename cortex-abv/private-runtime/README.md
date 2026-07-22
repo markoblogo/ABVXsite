@@ -192,6 +192,23 @@ npm run vector-runtime-readiness:run
 
 This is still a stubbed runtime boundary. It does not import `turbovec`, build a real ANN index, expose a retrieval endpoint, call models, write outside the receipt, or grant public action authority. Its purpose is to fix the future runtime interface and prove fallback/evidence tracing before any dependency is wired.
 
+## Vector runtime package policy
+
+The dependency probe now has an explicit package supply policy:
+
+- `config/vector-runtime-package-policy.v1.json` pins PyPI `turbovec==0.8.0`.
+- `src/vector-runtime-package-policy.mjs` validates the package, temporary/local venv policy, platform constraints and reproducibility receipt fields.
+- `receipts/vector-runtime-package-policy-receipt.v1.json` records the current policy digest and observed platform.
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-package-policy:check
+```
+
+The policy allows network only during an explicit temporary dependency install. It forbids committed venvs, global site-packages, runtime integration, endpoints, LLM calls, writes outside receipts and public action authority.
+
 ## Vector runtime dependency probe
 
 The first real `turbovec` dependency check is a separate gate:
@@ -214,11 +231,12 @@ cd cortex-abv/private-runtime
 node src/vector-runtime-dependency-probe-runner.mjs \
   --plan config/vector-retrieval-turbovec-pilot.v1.json \
   --benchmark examples/synthetic-vector-retrieval-benchmark.v1.json \
+  --policy config/vector-runtime-package-policy.v1.json \
   --receipt receipts/vector-runtime-dependency-probe-receipt.v1.json \
   --allow-install
 ```
 
-Passing this gate means only that the real local dependency can build an `IdMapIndex` and answer synthetic queries with evidence-backed candidates. It does not approve package pinning, runtime integration, endpoints, public retrieval, model calls, external writes, or autonomous publication.
+Passing this gate means only that the pinned real local dependency can build an `IdMapIndex` and answer synthetic queries with evidence-backed candidates under the package policy. It does not approve runtime integration, endpoints, public retrieval, model calls, external writes, or autonomous publication.
 
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 

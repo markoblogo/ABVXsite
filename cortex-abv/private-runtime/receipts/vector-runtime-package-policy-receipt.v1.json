@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimePackagePolicyReceipt",
+  "version": "v1",
+  "authority": "plan_only",
+  "status": "passed",
+  "runAt": "2026-07-22T16:56:43.064Z",
+  "mode": "package_policy_gate",
+  "engine": "turbovec",
+  "policyDigest": "84043aa05915ba568f397c55ed395408d3e4776e2dcd9470a1d08ae6f878bc91",
+  "package": {
+    "ecosystem": "pypi",
+    "name": "turbovec",
+    "versionPin": "0.8.0",
+    "installSpec": "turbovec==0.8.0",
+    "reference": "https://github.com/RyanCodrai/turbovec"
+  },
+  "platform": {
+    "os": "darwin",
+    "arch": "arm64",
+    "node": "v22.14.0",
+    "pythonObserved": {
+      "raw": "Python 3.14.5",
+      "major": 3,
+      "minor": 14,
+      "patch": 5
+    },
+    "host": "Darwin",
+    "release": "25.5.0"
+  },
+  "venvPolicy": {
+    "mode": "temporary_or_local_only",
+    "temporaryPrefix": "cortexabv-turbovec-probe-",
+    "allowProjectCommittedVenv": false,
+    "allowGlobalSitePackages": false,
+    "allowInstallWithoutExplicitFlag": false,
+    "allowNetworkDuringInstallOnly": true,
+    "deletePolicy": "outside_git_worktree_or_operator_cleanup"
+  },
+  "governance": {
+    "readOnly": true,
+    "proposalOnly": true,
+    "runtimeIntegration": false,
+    "endpoint": false,
+    "llmCalls": false,
+    "writesOutsideReceipt": false,
+    "publicActionAuthority": false
+  },
+  "acceptance": {
+    "packagePin": {
+      "status": "accepted",
+      "required": [
+        "PyPI ecosystem",
+        "exact version pin",
+        "installSpec equals name==versionPin"
+      ]
+    },
+    "venvPolicy": {
+      "status": "accepted",
+      "required": [
+        "temporary/local only",
+        "no committed venv",
+        "no global site-packages",
+        "install requires explicit flag"
+      ]
+    },
+    "platform": {
+      "status": "accepted",
+      "required": [
+        "current os allowed",
+        "current arch allowed",
+        "python bounds declared"
+      ]
+    },
+    "reproducibility": {
+      "status": "accepted",
+      "required": [
+        "policyDigest",
+        "package.installSpec",
+        "platform",
+        "venvPolicy",
+        "governance",
+        "acceptance"
+      ]
+    }
+  },
+  "review": {
+    "pendingReview": true,
+    "approvalMeaning": "Approve only the package supply policy for future private-runtime probes; not runtime integration or public retrieval.",
+    "requiredFields": [
+      "policyDigest",
+      "package.installSpec",
+      "platform",
+      "venvPolicy",
+      "governance",
+      "acceptance"
+    ]
+  }
+}

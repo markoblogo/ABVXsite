@@ -258,6 +258,23 @@ The output is `receipts/vector-runtime-integration-preflight-receipt.v1.json`. I
 
 Eligibility means only that the existing evidence is coherent enough to discuss a future real runtime wiring design. It does not approve implementation, package installation in runtime, endpoints, retrieval activation, model calls, external writes, public actions, or publication.
 
+## Vector runtime wiring design
+
+The wiring design gate records the first design-review contract for a future implementation POC:
+
+- `config/vector-runtime-wiring-design.v1.json` defines runtime boundary, index lifecycle, query contract, promotion gate and rejection cases.
+- `src/vector-runtime-wiring-design.mjs` validates the design against the integration preflight receipt.
+- `receipts/vector-runtime-wiring-design-receipt.v1.json` records design eligibility.
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-wiring-design:check
+```
+
+The receipt returns `eligible_for_implementation_poc_review` or `not_eligible`. Eligibility means only that a future implementation POC can be reviewed. It does not approve POC implementation, runtime activation, endpoints, schedulers, model calls, external writes, public actions or publication.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

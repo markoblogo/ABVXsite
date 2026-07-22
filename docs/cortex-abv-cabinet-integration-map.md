@@ -164,6 +164,23 @@ Completed (read-only pilot): one synthetic scheduled-job plan + receipt, no runt
   - `blockers: []`.
 - Scope remains design-review only. It does not approve implementation, runtime integration, endpoints, model calls, external writes or public actions.
 
+#### Stage 4f execution status (completed)
+
+- Added runtime wiring design review gate:
+  - `cortex-abv/private-runtime/config/vector-runtime-wiring-design.v1.json`
+  - `cortex-abv/private-runtime/src/vector-runtime-wiring-design.mjs`
+  - `cortex-abv/private-runtime/receipts/vector-runtime-wiring-design-receipt.v1.json`
+- Current receipt result:
+  - `eligibility: "eligible_for_implementation_poc_review"`;
+  - `status: "passed"`;
+  - `blockers: []`.
+- Design scope:
+  - private-runtime-only boundary;
+  - candidate retrieval only;
+  - no endpoint, scheduler, LLM calls, external writes or public actions;
+  - no implementation POC approval yet.
+- Next possible stage is an implementation POC review, not implementation by default.
+
 ## Staged adoption (hard requirement)
 1. Read-only planning (contracts + synthetic map only)
 2. One read-only adapter job in private runtime

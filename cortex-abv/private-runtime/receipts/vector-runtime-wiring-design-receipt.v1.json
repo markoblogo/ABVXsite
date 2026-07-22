@@ -1,0 +1,729 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimeWiringDesignReceipt",
+  "version": "v1",
+  "authority": "plan_only",
+  "status": "passed",
+  "eligibility": "eligible_for_implementation_poc_review",
+  "runAt": "2026-07-22T17:13:47.001Z",
+  "mode": "runtime_wiring_design_review",
+  "engine": "turbovec",
+  "designDigest": "ab5f8db43a8d061b920e6fb107a9fc9decddc368d28acf77c83c15a26b91d6fd",
+  "preflightDigest": "b182de2ac063dc4b29900f8043ea2d5434313abfecf58a42e182f48a65152d41",
+  "governance": {
+    "runtimeIntegration": false,
+    "implementationPocApproved": false,
+    "designReviewOnly": true,
+    "readOnly": true,
+    "proposalOnly": true,
+    "endpoint": false,
+    "llmCalls": false,
+    "writesOutsideReceipt": false,
+    "publicActionAuthority": false
+  },
+  "sources": {
+    "design": {
+      "path": "config/vector-runtime-wiring-design.v1.json",
+      "kind": "CortexABVVectorRuntimeWiringDesign",
+      "digest": "ab5f8db43a8d061b920e6fb107a9fc9decddc368d28acf77c83c15a26b91d6fd"
+    },
+    "preflight": {
+      "path": "receipts/vector-runtime-integration-preflight-receipt.v1.json",
+      "kind": "CortexABVVectorRuntimeIntegrationPreflightReceipt",
+      "status": "passed",
+      "eligibility": "eligible_for_design_review",
+      "digest": "b182de2ac063dc4b29900f8043ea2d5434313abfecf58a42e182f48a65152d41"
+    }
+  },
+  "gates": {
+    "design": [
+      {
+        "id": "kind",
+        "status": "accepted",
+        "reason": "design kind must match",
+        "evidence": {
+          "kind": "CortexABVVectorRuntimeWiringDesign"
+        }
+      },
+      {
+        "id": "version",
+        "status": "accepted",
+        "reason": "design version must be v1",
+        "evidence": {
+          "version": "v1"
+        }
+      },
+      {
+        "id": "authority",
+        "status": "accepted",
+        "reason": "design authority must be plan_only",
+        "evidence": {
+          "authority": "plan_only"
+        }
+      },
+      {
+        "id": "engine",
+        "status": "accepted",
+        "reason": "design engine must be turbovec",
+        "evidence": {
+          "engine": "turbovec"
+        }
+      },
+      {
+        "id": "preflight_required",
+        "status": "accepted",
+        "reason": "design must require eligible preflight",
+        "evidence": {
+          "requiredPreflightEligibility": "eligible_for_design_review",
+          "requiredPreflightKind": "CortexABVVectorRuntimeIntegrationPreflightReceipt"
+        }
+      },
+      {
+        "id": "private_runtime_only",
+        "status": "accepted",
+        "reason": "runtime boundary must be private-runtime only",
+        "evidence": {
+          "allowedLocation": "cortex-abv-private-runtime-only",
+          "publicRepoRuntime": false,
+          "endpoint": false,
+          "scheduler": false,
+          "llmCalls": false,
+          "publicActionAuthority": false,
+          "writesOutsideReceipts": false,
+          "allowedCommands": [
+            "build_index_poc",
+            "query_index_poc"
+          ]
+        }
+      },
+      {
+        "id": "no_public_repo_runtime",
+        "status": "accepted",
+        "reason": "public repo runtime must remain false",
+        "evidence": {
+          "allowedLocation": "cortex-abv-private-runtime-only",
+          "publicRepoRuntime": false,
+          "endpoint": false,
+          "scheduler": false,
+          "llmCalls": false,
+          "publicActionAuthority": false,
+          "writesOutsideReceipts": false,
+          "allowedCommands": [
+            "build_index_poc",
+            "query_index_poc"
+          ]
+        }
+      },
+      {
+        "id": "no_endpoint",
+        "status": "accepted",
+        "reason": "endpoint must remain false",
+        "evidence": {
+          "allowedLocation": "cortex-abv-private-runtime-only",
+          "publicRepoRuntime": false,
+          "endpoint": false,
+          "scheduler": false,
+          "llmCalls": false,
+          "publicActionAuthority": false,
+          "writesOutsideReceipts": false,
+          "allowedCommands": [
+            "build_index_poc",
+            "query_index_poc"
+          ]
+        }
+      },
+      {
+        "id": "no_scheduler",
+        "status": "accepted",
+        "reason": "scheduler must remain false",
+        "evidence": {
+          "allowedLocation": "cortex-abv-private-runtime-only",
+          "publicRepoRuntime": false,
+          "endpoint": false,
+          "scheduler": false,
+          "llmCalls": false,
+          "publicActionAuthority": false,
+          "writesOutsideReceipts": false,
+          "allowedCommands": [
+            "build_index_poc",
+            "query_index_poc"
+          ]
+        }
+      },
+      {
+        "id": "no_llm_calls",
+        "status": "accepted",
+        "reason": "llm calls must remain false",
+        "evidence": {
+          "allowedLocation": "cortex-abv-private-runtime-only",
+          "publicRepoRuntime": false,
+          "endpoint": false,
+          "scheduler": false,
+          "llmCalls": false,
+          "publicActionAuthority": false,
+          "writesOutsideReceipts": false,
+          "allowedCommands": [
+            "build_index_poc",
+            "query_index_poc"
+          ]
+        }
+      },
+      {
+        "id": "no_public_action",
+        "status": "accepted",
+        "reason": "public action authority must remain false",
+        "evidence": {
+          "allowedLocation": "cortex-abv-private-runtime-only",
+          "publicRepoRuntime": false,
+          "endpoint": false,
+          "scheduler": false,
+          "llmCalls": false,
+          "publicActionAuthority": false,
+          "writesOutsideReceipts": false,
+          "allowedCommands": [
+            "build_index_poc",
+            "query_index_poc"
+          ]
+        }
+      },
+      {
+        "id": "no_external_writes",
+        "status": "accepted",
+        "reason": "writes outside receipts must remain false",
+        "evidence": {
+          "allowedLocation": "cortex-abv-private-runtime-only",
+          "publicRepoRuntime": false,
+          "endpoint": false,
+          "scheduler": false,
+          "llmCalls": false,
+          "publicActionAuthority": false,
+          "writesOutsideReceipts": false,
+          "allowedCommands": [
+            "build_index_poc",
+            "query_index_poc"
+          ]
+        }
+      },
+      {
+        "id": "bounded_commands",
+        "status": "accepted",
+        "reason": "allowed commands must be bounded POC commands",
+        "evidence": {
+          "allowedCommands": [
+            "build_index_poc",
+            "query_index_poc"
+          ]
+        }
+      },
+      {
+        "id": "allowlisted_sources",
+        "status": "accepted",
+        "reason": "index sources must be allowlisted or reviewed private packs only",
+        "evidence": {
+          "sourceMode": "allowlisted_synthetic_or_reviewed_private_source_pack_only",
+          "automaticRebuild": false,
+          "requiresSourceDigest": true,
+          "requiresIndexDigest": true,
+          "indexArtifactPolicy": "local_gitignored_artifact_only",
+          "retention": "manual_delete_required",
+          "rollbackNotesRequired": true
+        }
+      },
+      {
+        "id": "no_auto_rebuild",
+        "status": "accepted",
+        "reason": "automatic rebuild must remain false",
+        "evidence": {
+          "sourceMode": "allowlisted_synthetic_or_reviewed_private_source_pack_only",
+          "automaticRebuild": false,
+          "requiresSourceDigest": true,
+          "requiresIndexDigest": true,
+          "indexArtifactPolicy": "local_gitignored_artifact_only",
+          "retention": "manual_delete_required",
+          "rollbackNotesRequired": true
+        }
+      },
+      {
+        "id": "source_digest_required",
+        "status": "accepted",
+        "reason": "source digest is required",
+        "evidence": {
+          "sourceMode": "allowlisted_synthetic_or_reviewed_private_source_pack_only",
+          "automaticRebuild": false,
+          "requiresSourceDigest": true,
+          "requiresIndexDigest": true,
+          "indexArtifactPolicy": "local_gitignored_artifact_only",
+          "retention": "manual_delete_required",
+          "rollbackNotesRequired": true
+        }
+      },
+      {
+        "id": "index_digest_required",
+        "status": "accepted",
+        "reason": "index digest is required",
+        "evidence": {
+          "sourceMode": "allowlisted_synthetic_or_reviewed_private_source_pack_only",
+          "automaticRebuild": false,
+          "requiresSourceDigest": true,
+          "requiresIndexDigest": true,
+          "indexArtifactPolicy": "local_gitignored_artifact_only",
+          "retention": "manual_delete_required",
+          "rollbackNotesRequired": true
+        }
+      },
+      {
+        "id": "local_gitignored_artifact",
+        "status": "accepted",
+        "reason": "index artifacts must be local gitignored only",
+        "evidence": {
+          "sourceMode": "allowlisted_synthetic_or_reviewed_private_source_pack_only",
+          "automaticRebuild": false,
+          "requiresSourceDigest": true,
+          "requiresIndexDigest": true,
+          "indexArtifactPolicy": "local_gitignored_artifact_only",
+          "retention": "manual_delete_required",
+          "rollbackNotesRequired": true
+        }
+      },
+      {
+        "id": "rollback_required",
+        "status": "accepted",
+        "reason": "rollback notes are required",
+        "evidence": {
+          "sourceMode": "allowlisted_synthetic_or_reviewed_private_source_pack_only",
+          "automaticRebuild": false,
+          "requiresSourceDigest": true,
+          "requiresIndexDigest": true,
+          "indexArtifactPolicy": "local_gitignored_artifact_only",
+          "retention": "manual_delete_required",
+          "rollbackNotesRequired": true
+        }
+      },
+      {
+        "id": "candidates_only",
+        "status": "accepted",
+        "reason": "query returns candidates only",
+        "evidence": {
+          "allowedQuerySources": [
+            "synthetic_benchmark",
+            "reviewed_private_source_pack"
+          ],
+          "returnsCandidatesOnly": true,
+          "answerGeneration": false,
+          "requiresClaimEvidence": true,
+          "requiresHardThreshold": true,
+          "requiresTenantScope": true,
+          "forbidCrossTenantLeakage": true
+        }
+      },
+      {
+        "id": "no_answer_generation",
+        "status": "accepted",
+        "reason": "answer generation must remain false",
+        "evidence": {
+          "allowedQuerySources": [
+            "synthetic_benchmark",
+            "reviewed_private_source_pack"
+          ],
+          "returnsCandidatesOnly": true,
+          "answerGeneration": false,
+          "requiresClaimEvidence": true,
+          "requiresHardThreshold": true,
+          "requiresTenantScope": true,
+          "forbidCrossTenantLeakage": true
+        }
+      },
+      {
+        "id": "claim_evidence_required",
+        "status": "accepted",
+        "reason": "claim evidence is required",
+        "evidence": {
+          "allowedQuerySources": [
+            "synthetic_benchmark",
+            "reviewed_private_source_pack"
+          ],
+          "returnsCandidatesOnly": true,
+          "answerGeneration": false,
+          "requiresClaimEvidence": true,
+          "requiresHardThreshold": true,
+          "requiresTenantScope": true,
+          "forbidCrossTenantLeakage": true
+        }
+      },
+      {
+        "id": "hard_threshold_required",
+        "status": "accepted",
+        "reason": "hard threshold is required",
+        "evidence": {
+          "allowedQuerySources": [
+            "synthetic_benchmark",
+            "reviewed_private_source_pack"
+          ],
+          "returnsCandidatesOnly": true,
+          "answerGeneration": false,
+          "requiresClaimEvidence": true,
+          "requiresHardThreshold": true,
+          "requiresTenantScope": true,
+          "forbidCrossTenantLeakage": true
+        }
+      },
+      {
+        "id": "tenant_scope_required",
+        "status": "accepted",
+        "reason": "tenant scope is required",
+        "evidence": {
+          "allowedQuerySources": [
+            "synthetic_benchmark",
+            "reviewed_private_source_pack"
+          ],
+          "returnsCandidatesOnly": true,
+          "answerGeneration": false,
+          "requiresClaimEvidence": true,
+          "requiresHardThreshold": true,
+          "requiresTenantScope": true,
+          "forbidCrossTenantLeakage": true
+        }
+      },
+      {
+        "id": "no_cross_tenant",
+        "status": "accepted",
+        "reason": "cross-tenant leakage must be forbidden",
+        "evidence": {
+          "allowedQuerySources": [
+            "synthetic_benchmark",
+            "reviewed_private_source_pack"
+          ],
+          "returnsCandidatesOnly": true,
+          "answerGeneration": false,
+          "requiresClaimEvidence": true,
+          "requiresHardThreshold": true,
+          "requiresTenantScope": true,
+          "forbidCrossTenantLeakage": true
+        }
+      },
+      {
+        "id": "target_eligibility",
+        "status": "accepted",
+        "reason": "promotion target must be implementation POC review eligibility",
+        "evidence": {
+          "targetEligibility": "eligible_for_implementation_poc_review",
+          "requiredReceipts": [
+            "vector-runtime-package-policy-receipt.v1.json",
+            "vector-runtime-dependency-probe-receipt.v1.json",
+            "vector-runtime-readiness-receipt.v1.json",
+            "vector-retrieval-turbovec-shadow-receipt.v1.json",
+            "vector-runtime-integration-preflight-receipt.v1.json"
+          ],
+          "ownerReviewRequired": true,
+          "implementationPocRequiresSeparateApproval": true
+        }
+      },
+      {
+        "id": "owner_review_required",
+        "status": "accepted",
+        "reason": "owner review is required",
+        "evidence": {
+          "targetEligibility": "eligible_for_implementation_poc_review",
+          "requiredReceipts": [
+            "vector-runtime-package-policy-receipt.v1.json",
+            "vector-runtime-dependency-probe-receipt.v1.json",
+            "vector-runtime-readiness-receipt.v1.json",
+            "vector-retrieval-turbovec-shadow-receipt.v1.json",
+            "vector-runtime-integration-preflight-receipt.v1.json"
+          ],
+          "ownerReviewRequired": true,
+          "implementationPocRequiresSeparateApproval": true
+        }
+      },
+      {
+        "id": "separate_poc_approval",
+        "status": "accepted",
+        "reason": "implementation POC requires separate approval",
+        "evidence": {
+          "targetEligibility": "eligible_for_implementation_poc_review",
+          "requiredReceipts": [
+            "vector-runtime-package-policy-receipt.v1.json",
+            "vector-runtime-dependency-probe-receipt.v1.json",
+            "vector-runtime-readiness-receipt.v1.json",
+            "vector-retrieval-turbovec-shadow-receipt.v1.json",
+            "vector-runtime-integration-preflight-receipt.v1.json"
+          ],
+          "ownerReviewRequired": true,
+          "implementationPocRequiresSeparateApproval": true
+        }
+      },
+      {
+        "id": "rejection_cases_complete",
+        "status": "accepted",
+        "reason": "required rejection cases must be listed",
+        "evidence": {
+          "requiredRejections": [
+            "missing_claim_evidence",
+            "package_policy_drift",
+            "dependency_probe_drift",
+            "platform_mismatch",
+            "runtime_action_authority_true",
+            "endpoint_true",
+            "llm_calls_true",
+            "writes_outside_receipts_true",
+            "cross_tenant_access",
+            "automatic_rebuild_true"
+          ],
+          "rejectionCases": [
+            "missing_claim_evidence",
+            "package_policy_drift",
+            "dependency_probe_drift",
+            "platform_mismatch",
+            "runtime_action_authority_true",
+            "endpoint_true",
+            "llm_calls_true",
+            "writes_outside_receipts_true",
+            "cross_tenant_access",
+            "automatic_rebuild_true"
+          ]
+        }
+      },
+      {
+        "id": "governance_readOnly",
+        "status": "accepted",
+        "reason": "governance.readOnly must be true",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "designReviewOnly": true,
+          "runtimeIntegration": false,
+          "implementationPocApproved": false,
+          "endpoint": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_proposalOnly",
+        "status": "accepted",
+        "reason": "governance.proposalOnly must be true",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "designReviewOnly": true,
+          "runtimeIntegration": false,
+          "implementationPocApproved": false,
+          "endpoint": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_designReviewOnly",
+        "status": "accepted",
+        "reason": "governance.designReviewOnly must be true",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "designReviewOnly": true,
+          "runtimeIntegration": false,
+          "implementationPocApproved": false,
+          "endpoint": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_runtimeIntegration",
+        "status": "accepted",
+        "reason": "governance.runtimeIntegration must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "designReviewOnly": true,
+          "runtimeIntegration": false,
+          "implementationPocApproved": false,
+          "endpoint": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_implementationPocApproved",
+        "status": "accepted",
+        "reason": "governance.implementationPocApproved must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "designReviewOnly": true,
+          "runtimeIntegration": false,
+          "implementationPocApproved": false,
+          "endpoint": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_endpoint",
+        "status": "accepted",
+        "reason": "governance.endpoint must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "designReviewOnly": true,
+          "runtimeIntegration": false,
+          "implementationPocApproved": false,
+          "endpoint": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_llmCalls",
+        "status": "accepted",
+        "reason": "governance.llmCalls must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "designReviewOnly": true,
+          "runtimeIntegration": false,
+          "implementationPocApproved": false,
+          "endpoint": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_writesOutsideReceipt",
+        "status": "accepted",
+        "reason": "governance.writesOutsideReceipt must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "designReviewOnly": true,
+          "runtimeIntegration": false,
+          "implementationPocApproved": false,
+          "endpoint": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_publicActionAuthority",
+        "status": "accepted",
+        "reason": "governance.publicActionAuthority must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "designReviewOnly": true,
+          "runtimeIntegration": false,
+          "implementationPocApproved": false,
+          "endpoint": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      }
+    ],
+    "preflight": [
+      {
+        "id": "kind",
+        "status": "accepted",
+        "reason": "preflight kind must match design prerequisite",
+        "evidence": {
+          "kind": "CortexABVVectorRuntimeIntegrationPreflightReceipt"
+        }
+      },
+      {
+        "id": "status",
+        "status": "accepted",
+        "reason": "preflight status must be passed",
+        "evidence": {
+          "status": "passed"
+        }
+      },
+      {
+        "id": "eligibility",
+        "status": "accepted",
+        "reason": "preflight eligibility must match design prerequisite",
+        "evidence": {
+          "eligibility": "eligible_for_design_review"
+        }
+      },
+      {
+        "id": "no_blockers",
+        "status": "accepted",
+        "reason": "preflight must have no blockers",
+        "evidence": {
+          "blockers": []
+        }
+      },
+      {
+        "id": "preflight_no_runtime",
+        "status": "accepted",
+        "reason": "preflight must not approve runtime integration",
+        "evidence": {
+          "runtimeIntegration": false,
+          "designReviewOnly": true,
+          "readOnly": true,
+          "proposalOnly": true,
+          "endpoint": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "preflight_design_review_only",
+        "status": "accepted",
+        "reason": "preflight must remain design-review only",
+        "evidence": {
+          "runtimeIntegration": false,
+          "designReviewOnly": true,
+          "readOnly": true,
+          "proposalOnly": true,
+          "endpoint": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "preflight_no_public_action",
+        "status": "accepted",
+        "reason": "preflight must not approve public actions",
+        "evidence": {
+          "runtimeIntegration": false,
+          "designReviewOnly": true,
+          "readOnly": true,
+          "proposalOnly": true,
+          "endpoint": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      }
+    ]
+  },
+  "blockers": [],
+  "decisionTrace": {
+    "policySource": "wiring_design_contract_plus_preflight",
+    "reason": "Design contract and preflight gates are coherent; eligible only for implementation POC review.",
+    "nextAllowedStep": "implementation_poc_review"
+  },
+  "review": {
+    "pendingReview": true,
+    "approvalMeaning": "Approve only review of a future implementation POC. This does not approve runtime implementation, activation, endpoints, external writes, model calls, publication or public actions.",
+    "requiredFields": [
+      "eligibility",
+      "governance",
+      "sources",
+      "gates",
+      "blockers",
+      "decisionTrace"
+    ]
+  }
+}

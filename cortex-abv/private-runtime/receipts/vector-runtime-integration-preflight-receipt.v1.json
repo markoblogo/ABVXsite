@@ -5,7 +5,7 @@
   "authority": "plan_only",
   "status": "passed",
   "eligibility": "eligible_for_design_review",
-  "runAt": "2026-07-22T17:07:58.079Z",
+  "runAt": "2026-07-22T17:13:46.615Z",
   "mode": "runtime_integration_preflight",
   "engine": "turbovec",
   "governance": {

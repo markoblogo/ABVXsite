@@ -223,6 +223,42 @@ Output eligibility:
 
 This still does not approve implementation, runtime activation, endpoint exposure, retrieval activation, writes, model calls or public actions.
 
+### Stage 4f: runtime wiring design review
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/config/vector-runtime-wiring-design.v1.json`
+- `cortex-abv/private-runtime/src/vector-runtime-wiring-design.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-wiring-design.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-wiring-design-receipt.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-wiring-design:check
+```
+
+The design contract fixes:
+
+- private-runtime-only boundary;
+- no public repo runtime;
+- no endpoint, scheduler, LLM calls, external writes or public action authority;
+- allowed future POC command names only: `build_index_poc` and `query_index_poc`;
+- allowlisted synthetic or reviewed private source packs only;
+- source and index digest requirements;
+- local gitignored index artifact policy;
+- candidate retrieval only, no answer generation;
+- claim evidence, hard threshold and tenant scope requirements;
+- explicit rejection cases for drift, evidence gaps, platform mismatch, action authority and cross-tenant access.
+
+The receipt returns:
+
+- `eligible_for_implementation_poc_review` when the design and preflight are coherent;
+- `not_eligible` when the design or preflight blocks.
+
+This does not approve implementation POC execution. A later implementation POC still needs a separate approval gate.
+
 Default stage-3 receipt artifact:
 
 - `cortex-abv/private-runtime/receipts/vector-retrieval-turbovec-shadow-receipt.v1.json`

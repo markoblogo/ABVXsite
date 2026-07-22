@@ -164,6 +164,7 @@ See also: [Cabinet pilot integration map](docs/cortex-abv-cabinet-integration-ma
 - `cortex-abv/private-runtime/src/vector-runtime-dependency-probe-runner.mjs` adds an opt-in real PyPI `turbovec` probe with index-build/query acceptance and a receipt-only governance gate.
 - `cortex-abv/private-runtime/config/vector-runtime-package-policy.v1.json` pins the allowed package supply path to PyPI `turbovec==0.8.0`, temporary/local venv only, platform constraints, and reproducibility receipts.
 - `cortex-abv/private-runtime/src/vector-runtime-integration-preflight.mjs` aggregates policy, dependency, readiness and synthetic retrieval receipts into `eligible_for_design_review` / `not_eligible_for_design_review` without approving runtime integration.
+- `cortex-abv/private-runtime/config/vector-runtime-wiring-design.v1.json` defines the private-runtime-only wiring design contract and returns `eligible_for_implementation_poc_review` without approving implementation.
 
 Check the adapter contract and currently enabled project-sync targets:
 

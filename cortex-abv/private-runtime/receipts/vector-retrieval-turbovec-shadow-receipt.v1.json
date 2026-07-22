@@ -4,7 +4,7 @@
   "version": "v1",
   "authority": "plan_only",
   "status": "passed",
-  "runAt": "2026-07-21T14:20:40.156Z",
+  "runAt": "2026-07-22T16:21:36.248Z",
   "mode": "synthetic_shadow",
   "runMode": "synthetic_local_only",
   "engine": "turbovec",
@@ -15,13 +15,18 @@
     "sourceId": "vector-retrieval-turbovec-stage-3",
     "reason": "Stage 3 synthetic TF-IDF-like rerank with hard score threshold and claim-evidence gate",
     "topK": 3,
+    "reranker": "tfidf-lite",
+    "minCandidateScore": 0.05,
     "minScoreFloor": 0.06,
+    "k1": 1.5,
+    "b": 0.75,
     "safety": {
       "networkCalls": false,
       "llmCalls": false,
       "writes": false,
       "publicActionAuthority": false
     },
+    "hardThresholdPassed": true,
     "claimEvidence": [
       {
         "probeId": "probe-index-summary",
@@ -32,7 +37,7 @@
           "spike",
           "summary"
         ],
-        "score": 0.5714,
+        "score": 3.4316,
         "evidenceRefs": [
           {
             "path": "cortex-abv/public-presence-index.v1.json",
@@ -44,33 +49,33 @@
       },
       {
         "probeId": "probe-index-summary",
-        "corpusId": "pp-digital-presence-sync",
+        "corpusId": "pp-monitor-mn7r-dashboard",
         "matchedTerms": [
-          "index",
-          "public"
+          "updates"
         ],
-        "score": 0.2857,
+        "score": 1.2322,
         "evidenceRefs": [
           {
-            "path": "cortex-abv/public-presence-index.v1.json",
-            "ref": "metadata.syncPolicy",
-            "digest": "f0e1d2c3b4a59687788990aabbccddeeff00112233445566778899aabbccddeeff"
+            "path": "cortex-abv/public-project-registry.v1.json",
+            "ref": "projects.monitor-mn7r.status",
+            "digest": "7f1e8f2cb4a1c3d6f2b5d8e9f0c3a4b5d6e7f8a9c0b1d2e3f4a5b6c7d8e9f012"
           }
         ],
         "retrievalRole": "distractor"
       },
       {
         "probeId": "probe-index-summary",
-        "corpusId": "pp-azurmenton-guides",
+        "corpusId": "pp-digital-presence-sync",
         "matchedTerms": [
+          "index",
           "public"
         ],
-        "score": 0.1429,
+        "score": 1.0419,
         "evidenceRefs": [
           {
             "path": "cortex-abv/public-presence-index.v1.json",
-            "ref": "projects.azur-menton.links",
-            "digest": "d1a9f8c7b6a5e4d3c2b1a09876543210fedcba9876543210abcdef1234567890ab"
+            "ref": "metadata.syncPolicy",
+            "digest": "f0e1d2c3b4a59687788990aabbccddeeff00112233445566778899aabbccddeeff"
           }
         ],
         "retrievalRole": "distractor"
@@ -85,7 +90,7 @@
           "repository",
           "status"
         ],
-        "score": 0.7143,
+        "score": 6.6772,
         "evidenceRefs": [
           {
             "path": "cortex-abv/public-project-registry.v1.json",
@@ -106,7 +111,7 @@
           "place",
           "public"
         ],
-        "score": 1,
+        "score": 6.3283,
         "evidenceRefs": [
           {
             "path": "cortex-abv/public-presence-index.v1.json",
@@ -122,7 +127,7 @@
         "matchedTerms": [
           "public"
         ],
-        "score": 0.1667,
+        "score": 0.354,
         "evidenceRefs": [
           {
             "path": "cortex-abv/public-presence-index.v1.json",
@@ -138,7 +143,7 @@
         "matchedTerms": [
           "public"
         ],
-        "score": 0.1667,
+        "score": 0.354,
         "evidenceRefs": [
           {
             "path": "cortex-abv/public-presence-index.v1.json",
@@ -149,11 +154,6 @@
         "retrievalRole": "distractor"
       }
     ],
-    "reranker": "tfidf-lite",
-    "minCandidateScore": 0.05,
-    "k1": 1.5,
-    "b": 0.75,
-    "hardThresholdPassed": true,
     "missingEvidence": [],
     "evidenceCoverage": 1,
     "evidenceAnchorsSatisfied": true,
@@ -165,19 +165,20 @@
     "expectedAnchorCount": 4,
     "matchedAtK": 4,
     "recallAtK": 1,
-    "avgTopScore": 0.4354,
+    "avgTopScore": 2.7742,
+    "minRecallAtK": 0.75,
     "maxRunMs": 2000,
-    "elapsedMs": 350,
-    "passedAllProbes": true,
+    "elapsedMs": 37,
     "topKCoverage": 1,
+    "passedAllProbes": true,
     "evidenceCoverage": 1,
-    "threshold": 0.05,
-    "minRecallAtK": 0.75
+    "threshold": 0.05
   },
   "results": [
     {
       "probeId": "probe-index-summary",
       "query": "What is the latest Index spike summary about public updates?",
+      "rerankMode": "tfidf-lite",
       "topK": 3,
       "expectedCorpusIds": [
         "pp-index-spike-updates"
@@ -185,7 +186,8 @@
       "topCandidates": [
         {
           "id": "pp-index-spike-updates",
-          "score": 0.5714,
+          "title": "Index/spike public updates",
+          "score": 3.4316,
           "matchedTerms": [
             "index",
             "public",
@@ -194,17 +196,19 @@
           ]
         },
         {
-          "id": "pp-digital-presence-sync",
-          "score": 0.2857,
+          "id": "pp-monitor-mn7r-dashboard",
+          "title": "Monitor/MN7R dashboard status",
+          "score": 1.2322,
           "matchedTerms": [
-            "index",
-            "public"
+            "updates"
           ]
         },
         {
-          "id": "pp-azurmenton-guides",
-          "score": 0.1429,
+          "id": "pp-digital-presence-sync",
+          "title": "Public presence baseline",
+          "score": 1.0419,
           "matchedTerms": [
+            "index",
             "public"
           ]
         }
@@ -215,7 +219,6 @@
       "recallAtK": 1,
       "minRecallAtK": 1,
       "status": "passed",
-      "rerankMode": "tfidf-lite",
       "evidenceAnchorSatisfied": true,
       "hardThresholdSatisfied": true,
       "topKPresent": true
@@ -223,6 +226,7 @@
     {
       "probeId": "probe-monitor-readiness",
       "query": "Show Monitor MN7R dashboard repository readiness status",
+      "rerankMode": "tfidf-lite",
       "topK": 3,
       "expectedCorpusIds": [
         "pp-monitor-mn7r-dashboard"
@@ -230,7 +234,8 @@
       "topCandidates": [
         {
           "id": "pp-monitor-mn7r-dashboard",
-          "score": 0.7143,
+          "title": "Monitor/MN7R dashboard status",
+          "score": 6.6772,
           "matchedTerms": [
             "mn7r",
             "monitor",
@@ -246,7 +251,6 @@
       "recallAtK": 1,
       "minRecallAtK": 1,
       "status": "passed",
-      "rerankMode": "tfidf-lite",
       "evidenceAnchorSatisfied": true,
       "hardThresholdSatisfied": true,
       "topKPresent": true
@@ -254,6 +258,7 @@
     {
       "probeId": "probe-azurmenton-guides",
       "query": "AzurMenton public guides and onboarding place cards",
+      "rerankMode": "tfidf-lite",
       "topK": 3,
       "expectedCorpusIds": [
         "pp-azurmenton-guides",
@@ -262,7 +267,8 @@
       "topCandidates": [
         {
           "id": "pp-azurmenton-guides",
-          "score": 1,
+          "title": "AzurMenton guide bundle",
+          "score": 6.3283,
           "matchedTerms": [
             "azurmenton",
             "cards",
@@ -274,14 +280,16 @@
         },
         {
           "id": "pp-digital-presence-sync",
-          "score": 0.1667,
+          "title": "Public presence baseline",
+          "score": 0.354,
           "matchedTerms": [
             "public"
           ]
         },
         {
           "id": "pp-index-spike-updates",
-          "score": 0.1667,
+          "title": "Index/spike public updates",
+          "score": 0.354,
           "matchedTerms": [
             "public"
           ]
@@ -294,7 +302,6 @@
       "recallAtK": 1,
       "minRecallAtK": 0.5,
       "status": "passed",
-      "rerankMode": "tfidf-lite",
       "evidenceAnchorSatisfied": true,
       "hardThresholdSatisfied": true,
       "topKPresent": true
@@ -321,6 +328,6 @@
   "outputIntegrity": {
     "corpusDigest": "89766f53fd974708842192e4180406c68f4f370c98a045b04d9d02ee2f3631d7",
     "benchmark": "synthetic-vector-retrieval-benchmark.v1.json",
-    "runSchemaDigest": "23f2fc614acead67c437a7e48832021ab0b112104e961923e7d15244bcac50cf"
+    "runSchemaDigest": "2ccee6ba2aa30b23d707750aac5c4e74eca30651a08c8e7f6d6388b69b808f57"
   }
 }

@@ -176,8 +176,8 @@ function validateBenchmark(benchmark) {
   if (typeof evalCfg.minRecallAtK !== 'number' || evalCfg.minRecallAtK < 0 || evalCfg.minRecallAtK > 1) {
     throw new Error('benchmark.evaluation.minRecallAtK must be in [0,1]');
   }
-  if (typeof evalCfg.minCandidateScore !== 'number' || evalCfg.minCandidateScore < 0 || evalCfg.minCandidateScore > 1) {
-    throw new Error('benchmark.evaluation.minCandidateScore must be in [0,1]');
+  if (typeof evalCfg.minCandidateScore !== 'number' || !Number.isFinite(evalCfg.minCandidateScore) || evalCfg.minCandidateScore < 0) {
+    throw new Error('benchmark.evaluation.minCandidateScore must be a finite non-negative number');
   }
   if (typeof evalCfg.minEvidenceRefsPerCandidate !== 'number' || evalCfg.minEvidenceRefsPerCandidate < 1) {
     throw new Error('benchmark.evaluation.minEvidenceRefsPerCandidate must be >= 1');
@@ -264,9 +264,11 @@ export function runVectorRetrievalShadow({ planPath, benchmarkPath, receiptPath,
       })
       .sort((a, b) => (b.score - a.score) || a.id.localeCompare(b.id));
 
-    const topK = scored.slice(0, evalConfig.topK);
+    const topK = scored
+      .filter((item) => item.score >= evalConfig.minCandidateScore)
+      .slice(0, evalConfig.topK);
     const topKHasCandidate = topK.length > 0;
-    const hardThresholdPassed = topK.every((item) => item.score >= evalConfig.minCandidateScore);
+    const hardThresholdPassed = topKHasCandidate;
 
     const retrievedIds = topK.map((entry) => entry.id);
     const matchedExpected = expectedIds.filter((id) => retrievedIds.includes(id));

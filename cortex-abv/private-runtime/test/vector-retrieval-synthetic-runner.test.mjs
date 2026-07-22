@@ -57,7 +57,7 @@ test('hard score threshold can block top-k candidate path', () => {
     ...fixture,
     evaluation: {
       ...fixture.evaluation,
-      minCandidateScore: 2,
+      minCandidateScore: 10,
     },
   }));
 

@@ -26,3 +26,16 @@ test('blocks an attempted ledger-store export', () => {
     rmSync(root, { recursive: true, force: true });
   }
 });
+
+test('allows local gitignored vector index artifacts while keeping data stores blocked', () => {
+  const root = mkdtempSync(join(tmpdir(), 'cortex-abv-export-'));
+  try {
+    mkdirSync(join(root, 'data', 'vector-indexes', 'turbovec-poc'), { recursive: true });
+    writeFileSync(join(root, 'data', 'vector-indexes', 'turbovec-poc', 'index-artifact.v1.json'), '{}');
+    const report = scanCortexAbvPrivateRuntimeExport({ runtimeRoot: root });
+    assert.equal(report.safe, true);
+    assert.deepEqual(report.violations, []);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});

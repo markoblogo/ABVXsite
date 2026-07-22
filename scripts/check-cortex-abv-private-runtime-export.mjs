@@ -19,6 +19,7 @@ function listEntries(root, directory = root) {
 
 function violationForPath(relativePath) {
   const filename = basename(relativePath);
+  if (relativePath.startsWith('data/vector-indexes/')) return null;
   if (relativePath.startsWith('data/')) return 'data_store_path';
   if (filename === '.env' || filename.startsWith('.env.')) return 'environment_file';
   if (/(^|\/)([^/]+\.(?:pem|key|jsonl))$/i.test(relativePath)) return 'sensitive_file_extension';

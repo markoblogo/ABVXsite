@@ -294,6 +294,25 @@ The receipt returns `eligible_for_implementation_poc_dry_run_review` or `not_eli
 
 This still does not approve POC implementation, package installation, runtime activation, endpoints, schedulers, model calls, source-pack mutation, external writes, public actions or publication.
 
+## Vector runtime implementation POC dry-run
+
+The dry-run executes the approved minimum POC scope locally:
+
+- `config/vector-runtime-implementation-poc-dry-run.v1.json` defines the synthetic source pack, local artifact path, commands, digest checks and rollback notes.
+- `src/vector-runtime-implementation-poc-dry-run.mjs` builds a local gitignored index artifact, runs synthetic queries, checks recall/evidence and writes a receipt.
+- `receipts/vector-runtime-implementation-poc-dry-run-receipt.v1.json` records source digest, index digest, command trace, probe results and rollback notes.
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-implementation-poc-dry-run:run
+```
+
+The local index artifact is written to `data/vector-indexes/turbovec-poc/index-artifact.v1.json`; that directory is intentionally gitignored. The committed receipt returns `eligible_for_controlled_runtime_module_review` or `not_eligible`.
+
+This still does not approve runtime activation, endpoints, schedulers, model calls, network calls, source-pack mutation, external writes, public actions or publication.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

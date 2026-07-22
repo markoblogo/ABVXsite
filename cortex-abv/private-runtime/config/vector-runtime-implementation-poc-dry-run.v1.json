@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimeImplementationPocDryRun",
+  "version": "v1",
+  "authority": "local_dry_run_only",
+  "engine": "turbovec",
+  "purpose": "Run the first local implementation POC dry-run by building a gitignored index artifact from an allowlisted source pack and recording digest, query and rollback evidence.",
+  "prerequisites": {
+    "requiredPocReviewReceiptKind": "CortexABVVectorRuntimeImplementationPocReviewReceipt",
+    "requiredPocReviewEligibility": "eligible_for_implementation_poc_dry_run_review",
+    "requiredPocReviewStatus": "passed"
+  },
+  "sourcePack": {
+    "id": "synthetic-vector-retrieval-benchmark",
+    "type": "synthetic_benchmark",
+    "path": "examples/synthetic-vector-retrieval-benchmark.v1.json"
+  },
+  "indexArtifact": {
+    "root": "data/vector-indexes/turbovec-poc",
+    "fileName": "index-artifact.v1.json",
+    "committed": false,
+    "gitignored": true,
+    "format": "cortexabv-vector-runtime-index-artifact-v1"
+  },
+  "commands": {
+    "build": "build_index_poc_dry_run",
+    "query": "query_index_poc_dry_run",
+    "verify": "verify_index_poc_dry_run"
+  },
+  "checks": {
+    "requiresSourceDigestBeforeBuild": true,
+    "requiresIndexDigestAfterBuild": true,
+    "requiresReceiptDigestLinkage": true,
+    "requiresRollbackNotes": true,
+    "requiresClaimEvidence": true,
+    "requiresProbeRecall": true
+  },
+  "rollback": {
+    "action": "delete_or_abandon_local_index_artifact",
+    "baselineAdvancementAllowed": false,
+    "notes": "Dry-run artifacts are local and disposable. Rollback means delete the local artifact path or leave it abandoned without advancing any baseline."
+  },
+  "governance": {
+    "readOnly": true,
+    "proposalOnly": true,
+    "dryRunOnly": true,
+    "runtimeIntegration": false,
+    "endpoint": false,
+    "scheduler": false,
+    "networkCalls": false,
+    "llmCalls": false,
+    "sourcePackMutation": false,
+    "writesOutsideReceiptOrLocalArtifact": false,
+    "publicActionAuthority": false
+  }
+}

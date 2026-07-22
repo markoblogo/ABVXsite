@@ -5,7 +5,7 @@
   "authority": "plan_only",
   "status": "passed",
   "eligibility": "eligible_for_implementation_poc_dry_run_review",
-  "runAt": "2026-07-22T17:19:48.437Z",
+  "runAt": "2026-07-22T17:27:54.531Z",
   "mode": "implementation_poc_scope_review",
   "engine": "turbovec",
   "reviewDigest": "e7f76f1b6f54775877634f57af298856383935a8739ad9f9df1f6ecc2ea340e9",

@@ -1,0 +1,791 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimeImplementationPocDryRunReceipt",
+  "version": "v1",
+  "authority": "local_dry_run_only",
+  "status": "passed",
+  "eligibility": "eligible_for_controlled_runtime_module_review",
+  "runAt": "2026-07-22T17:27:55.065Z",
+  "mode": "implementation_poc_dry_run",
+  "engine": "turbovec",
+  "digests": {
+    "designDigest": "c231f984cd859b66f0b58e1c8090e86f5a16814c31be6495a163603c5c306ad7",
+    "pocReviewReceiptDigest": "87091ac92fd85592bb537524db859d394477b1df42ea2e0b0e96cb096c3b68c0",
+    "sourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+    "indexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+    "receiptLinkageDigest": "6a0b5548245149401f5e27910e0afe3f2a07b5c40ac2442d364be6fb1bdba1ef"
+  },
+  "artifact": {
+    "path": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+    "root": "data/vector-indexes/turbovec-poc",
+    "gitignored": true,
+    "committed": false,
+    "digest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+    "documentCount": 4
+  },
+  "source": {
+    "id": "synthetic-vector-retrieval-benchmark",
+    "type": "synthetic_benchmark",
+    "path": "examples/synthetic-vector-retrieval-benchmark.v1.json",
+    "digest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc"
+  },
+  "commandsExecuted": [
+    "build_index_poc_dry_run",
+    "query_index_poc_dry_run",
+    "verify_index_poc_dry_run"
+  ],
+  "probeResults": [
+    {
+      "probeId": "probe-index-summary",
+      "status": "passed",
+      "query": "What is the latest Index spike summary about public updates?",
+      "expectedCorpusIds": [
+        "pp-index-spike-updates"
+      ],
+      "candidateIds": [
+        "pp-index-spike-updates",
+        "pp-monitor-mn7r-dashboard",
+        "pp-digital-presence-sync"
+      ],
+      "hits": [
+        "pp-index-spike-updates"
+      ],
+      "recallAtK": 1,
+      "minRecallAtK": 1,
+      "evidenceOk": true,
+      "candidates": [
+        {
+          "id": "pp-index-spike-updates",
+          "title": "Index/spike public updates",
+          "tenant": "index-spike",
+          "score": 3.4315945543462143,
+          "matchedTerms": [
+            "index",
+            "public",
+            "spike",
+            "summary"
+          ],
+          "evidenceRefs": [
+            {
+              "path": "cortex-abv/public-presence-index.v1.json",
+              "ref": "projects.index-spike.summary",
+              "digest": "3d8f9cb2d9f9f9c3d7f6d4f8d2ac9a1fc8f6a2e2f1f7f4a2b0c2d3e4f5a6b7c8"
+            }
+          ]
+        },
+        {
+          "id": "pp-monitor-mn7r-dashboard",
+          "title": "Monitor/MN7R dashboard status",
+          "tenant": "monitor-mn7r",
+          "score": 1.2321664432823978,
+          "matchedTerms": [
+            "updates"
+          ],
+          "evidenceRefs": [
+            {
+              "path": "cortex-abv/public-project-registry.v1.json",
+              "ref": "projects.monitor-mn7r.status",
+              "digest": "7f1e8f2cb4a1c3d6f2b5d8e9f0c3a4b5d6e7f8a9c0b1d2e3f4a5b6c7d8e9f012"
+            }
+          ]
+        },
+        {
+          "id": "pp-digital-presence-sync",
+          "title": "Public presence baseline",
+          "tenant": "cortex-abv-personal",
+          "score": 1.0418756155663917,
+          "matchedTerms": [
+            "index",
+            "public"
+          ],
+          "evidenceRefs": [
+            {
+              "path": "cortex-abv/public-presence-index.v1.json",
+              "ref": "metadata.syncPolicy",
+              "digest": "f0e1d2c3b4a59687788990aabbccddeeff00112233445566778899aabbccddeeff"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "probeId": "probe-monitor-readiness",
+      "status": "passed",
+      "query": "Show Monitor MN7R dashboard repository readiness status",
+      "expectedCorpusIds": [
+        "pp-monitor-mn7r-dashboard"
+      ],
+      "candidateIds": [
+        "pp-monitor-mn7r-dashboard"
+      ],
+      "hits": [
+        "pp-monitor-mn7r-dashboard"
+      ],
+      "recallAtK": 1,
+      "minRecallAtK": 1,
+      "evidenceOk": true,
+      "candidates": [
+        {
+          "id": "pp-monitor-mn7r-dashboard",
+          "title": "Monitor/MN7R dashboard status",
+          "tenant": "monitor-mn7r",
+          "score": 6.677204738181412,
+          "matchedTerms": [
+            "mn7r",
+            "monitor",
+            "readiness",
+            "repository",
+            "status"
+          ],
+          "evidenceRefs": [
+            {
+              "path": "cortex-abv/public-project-registry.v1.json",
+              "ref": "projects.monitor-mn7r.status",
+              "digest": "7f1e8f2cb4a1c3d6f2b5d8e9f0c3a4b5d6e7f8a9c0b1d2e3f4a5b6c7d8e9f012"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "probeId": "probe-azurmenton-guides",
+      "status": "passed",
+      "query": "AzurMenton public guides and onboarding place cards",
+      "expectedCorpusIds": [
+        "pp-azurmenton-guides",
+        "pp-digital-presence-sync"
+      ],
+      "candidateIds": [
+        "pp-azurmenton-guides",
+        "pp-digital-presence-sync",
+        "pp-index-spike-updates"
+      ],
+      "hits": [
+        "pp-azurmenton-guides",
+        "pp-digital-presence-sync"
+      ],
+      "recallAtK": 1,
+      "minRecallAtK": 0.5,
+      "evidenceOk": true,
+      "candidates": [
+        {
+          "id": "pp-azurmenton-guides",
+          "title": "AzurMenton guide bundle",
+          "tenant": "azur-menton",
+          "score": 6.328272480547291,
+          "matchedTerms": [
+            "azurmenton",
+            "cards",
+            "guides",
+            "onboarding",
+            "place",
+            "public"
+          ],
+          "evidenceRefs": [
+            {
+              "path": "cortex-abv/public-presence-index.v1.json",
+              "ref": "projects.azur-menton.links",
+              "digest": "d1a9f8c7b6a5e4d3c2b1a09876543210fedcba9876543210abcdef1234567890ab"
+            }
+          ]
+        },
+        {
+          "id": "pp-digital-presence-sync",
+          "title": "Public presence baseline",
+          "tenant": "cortex-abv-personal",
+          "score": 0.35397513359773275,
+          "matchedTerms": [
+            "public"
+          ],
+          "evidenceRefs": [
+            {
+              "path": "cortex-abv/public-presence-index.v1.json",
+              "ref": "metadata.syncPolicy",
+              "digest": "f0e1d2c3b4a59687788990aabbccddeeff00112233445566778899aabbccddeeff"
+            }
+          ]
+        },
+        {
+          "id": "pp-index-spike-updates",
+          "title": "Index/spike public updates",
+          "tenant": "index-spike",
+          "score": 0.35397513359773275,
+          "matchedTerms": [
+            "public"
+          ],
+          "evidenceRefs": [
+            {
+              "path": "cortex-abv/public-presence-index.v1.json",
+              "ref": "projects.index-spike.summary",
+              "digest": "3d8f9cb2d9f9f9c3d7f6d4f8d2ac9a1fc8f6a2e2f1f7f4a2b0c2d3e4f5a6b7c8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "rollback": {
+    "action": "delete_or_abandon_local_index_artifact",
+    "artifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+    "baselineAdvanced": false,
+    "notes": "Dry-run artifacts are local and disposable. Rollback means delete the local artifact path or leave it abandoned without advancing any baseline."
+  },
+  "governance": {
+    "readOnly": true,
+    "proposalOnly": true,
+    "dryRunOnly": true,
+    "runtimeIntegration": false,
+    "endpoint": false,
+    "scheduler": false,
+    "networkCalls": false,
+    "llmCalls": false,
+    "sourcePackMutation": false,
+    "writesOutsideReceiptOrLocalArtifact": false,
+    "publicActionAuthority": false
+  },
+  "gates": {
+    "design": [
+      {
+        "id": "kind",
+        "status": "accepted",
+        "reason": "dry-run kind must match",
+        "evidence": {
+          "kind": "CortexABVVectorRuntimeImplementationPocDryRun"
+        }
+      },
+      {
+        "id": "version",
+        "status": "accepted",
+        "reason": "dry-run version must be v1",
+        "evidence": {
+          "version": "v1"
+        }
+      },
+      {
+        "id": "authority",
+        "status": "accepted",
+        "reason": "dry-run authority must be local_dry_run_only",
+        "evidence": {
+          "authority": "local_dry_run_only"
+        }
+      },
+      {
+        "id": "engine",
+        "status": "accepted",
+        "reason": "dry-run engine must be turbovec",
+        "evidence": {
+          "engine": "turbovec"
+        }
+      },
+      {
+        "id": "review_prerequisite_kind",
+        "status": "accepted",
+        "reason": "POC review receipt kind must match",
+        "evidence": {
+          "kind": "CortexABVVectorRuntimeImplementationPocReviewReceipt"
+        }
+      },
+      {
+        "id": "review_prerequisite_status",
+        "status": "accepted",
+        "reason": "POC review receipt status must match",
+        "evidence": {
+          "status": "passed"
+        }
+      },
+      {
+        "id": "review_prerequisite_eligibility",
+        "status": "accepted",
+        "reason": "POC review receipt eligibility must match",
+        "evidence": {
+          "eligibility": "eligible_for_implementation_poc_dry_run_review"
+        }
+      },
+      {
+        "id": "review_no_blockers",
+        "status": "accepted",
+        "reason": "POC review receipt must have no blockers",
+        "evidence": {
+          "blockers": []
+        }
+      },
+      {
+        "id": "source_pack_allowlisted",
+        "status": "accepted",
+        "reason": "source pack must be allowlisted by POC review receipt",
+        "evidence": {
+          "sourcePack": {
+            "id": "synthetic-vector-retrieval-benchmark",
+            "type": "synthetic_benchmark",
+            "path": "examples/synthetic-vector-retrieval-benchmark.v1.json"
+          },
+          "allowedSourcePacks": [
+            {
+              "id": "synthetic-vector-retrieval-benchmark",
+              "type": "synthetic_benchmark",
+              "path": "examples/synthetic-vector-retrieval-benchmark.v1.json",
+              "requiresOwnerReviewReceipt": false
+            },
+            {
+              "id": "reviewed-private-source-pack",
+              "type": "reviewed_private_source_pack",
+              "pathPattern": "source-packs/reviewed/*.json",
+              "requiresOwnerReviewReceipt": true
+            }
+          ]
+        }
+      },
+      {
+        "id": "source_pack_synthetic_only_for_first_run",
+        "status": "accepted",
+        "reason": "first dry-run uses synthetic benchmark only",
+        "evidence": {
+          "id": "synthetic-vector-retrieval-benchmark",
+          "type": "synthetic_benchmark",
+          "path": "examples/synthetic-vector-retrieval-benchmark.v1.json"
+        }
+      },
+      {
+        "id": "artifact_root_matches_review",
+        "status": "accepted",
+        "reason": "artifact root must match POC review receipt",
+        "evidence": {
+          "root": "data/vector-indexes/turbovec-poc",
+          "reviewedRoot": "data/vector-indexes/turbovec-poc"
+        }
+      },
+      {
+        "id": "artifact_local_root",
+        "status": "accepted",
+        "reason": "artifact root must stay under data/vector-indexes",
+        "evidence": {
+          "root": "data/vector-indexes/turbovec-poc",
+          "fileName": "index-artifact.v1.json",
+          "committed": false,
+          "gitignored": true,
+          "format": "cortexabv-vector-runtime-index-artifact-v1"
+        }
+      },
+      {
+        "id": "artifact_gitignored",
+        "status": "accepted",
+        "reason": "artifact root must be gitignored",
+        "evidence": {
+          "root": "data/vector-indexes/turbovec-poc",
+          "fileName": "index-artifact.v1.json",
+          "committed": false,
+          "gitignored": true,
+          "format": "cortexabv-vector-runtime-index-artifact-v1"
+        }
+      },
+      {
+        "id": "artifact_not_committed",
+        "status": "accepted",
+        "reason": "artifact must not be committed",
+        "evidence": {
+          "root": "data/vector-indexes/turbovec-poc",
+          "fileName": "index-artifact.v1.json",
+          "committed": false,
+          "gitignored": true,
+          "format": "cortexabv-vector-runtime-index-artifact-v1"
+        }
+      },
+      {
+        "id": "command_build",
+        "status": "accepted",
+        "reason": "build command must be review-allowlisted dry-run command",
+        "evidence": {
+          "command": "build_index_poc_dry_run",
+          "allowedCommands": [
+            "build_index_poc_dry_run",
+            "query_index_poc_dry_run",
+            "verify_index_poc_dry_run"
+          ]
+        }
+      },
+      {
+        "id": "command_query",
+        "status": "accepted",
+        "reason": "query command must be review-allowlisted dry-run command",
+        "evidence": {
+          "command": "query_index_poc_dry_run",
+          "allowedCommands": [
+            "build_index_poc_dry_run",
+            "query_index_poc_dry_run",
+            "verify_index_poc_dry_run"
+          ]
+        }
+      },
+      {
+        "id": "command_verify",
+        "status": "accepted",
+        "reason": "verify command must be review-allowlisted dry-run command",
+        "evidence": {
+          "command": "verify_index_poc_dry_run",
+          "allowedCommands": [
+            "build_index_poc_dry_run",
+            "query_index_poc_dry_run",
+            "verify_index_poc_dry_run"
+          ]
+        }
+      },
+      {
+        "id": "check_requiresSourceDigestBeforeBuild",
+        "status": "accepted",
+        "reason": "checks.requiresSourceDigestBeforeBuild must be true",
+        "evidence": {
+          "requiresSourceDigestBeforeBuild": true,
+          "requiresIndexDigestAfterBuild": true,
+          "requiresReceiptDigestLinkage": true,
+          "requiresRollbackNotes": true,
+          "requiresClaimEvidence": true,
+          "requiresProbeRecall": true
+        }
+      },
+      {
+        "id": "check_requiresIndexDigestAfterBuild",
+        "status": "accepted",
+        "reason": "checks.requiresIndexDigestAfterBuild must be true",
+        "evidence": {
+          "requiresSourceDigestBeforeBuild": true,
+          "requiresIndexDigestAfterBuild": true,
+          "requiresReceiptDigestLinkage": true,
+          "requiresRollbackNotes": true,
+          "requiresClaimEvidence": true,
+          "requiresProbeRecall": true
+        }
+      },
+      {
+        "id": "check_requiresReceiptDigestLinkage",
+        "status": "accepted",
+        "reason": "checks.requiresReceiptDigestLinkage must be true",
+        "evidence": {
+          "requiresSourceDigestBeforeBuild": true,
+          "requiresIndexDigestAfterBuild": true,
+          "requiresReceiptDigestLinkage": true,
+          "requiresRollbackNotes": true,
+          "requiresClaimEvidence": true,
+          "requiresProbeRecall": true
+        }
+      },
+      {
+        "id": "check_requiresRollbackNotes",
+        "status": "accepted",
+        "reason": "checks.requiresRollbackNotes must be true",
+        "evidence": {
+          "requiresSourceDigestBeforeBuild": true,
+          "requiresIndexDigestAfterBuild": true,
+          "requiresReceiptDigestLinkage": true,
+          "requiresRollbackNotes": true,
+          "requiresClaimEvidence": true,
+          "requiresProbeRecall": true
+        }
+      },
+      {
+        "id": "check_requiresClaimEvidence",
+        "status": "accepted",
+        "reason": "checks.requiresClaimEvidence must be true",
+        "evidence": {
+          "requiresSourceDigestBeforeBuild": true,
+          "requiresIndexDigestAfterBuild": true,
+          "requiresReceiptDigestLinkage": true,
+          "requiresRollbackNotes": true,
+          "requiresClaimEvidence": true,
+          "requiresProbeRecall": true
+        }
+      },
+      {
+        "id": "check_requiresProbeRecall",
+        "status": "accepted",
+        "reason": "checks.requiresProbeRecall must be true",
+        "evidence": {
+          "requiresSourceDigestBeforeBuild": true,
+          "requiresIndexDigestAfterBuild": true,
+          "requiresReceiptDigestLinkage": true,
+          "requiresRollbackNotes": true,
+          "requiresClaimEvidence": true,
+          "requiresProbeRecall": true
+        }
+      },
+      {
+        "id": "rollback_action",
+        "status": "accepted",
+        "reason": "rollback action must delete or abandon local artifact",
+        "evidence": {
+          "action": "delete_or_abandon_local_index_artifact",
+          "baselineAdvancementAllowed": false,
+          "notes": "Dry-run artifacts are local and disposable. Rollback means delete the local artifact path or leave it abandoned without advancing any baseline."
+        }
+      },
+      {
+        "id": "rollback_no_baseline",
+        "status": "accepted",
+        "reason": "baseline advancement must be forbidden",
+        "evidence": {
+          "action": "delete_or_abandon_local_index_artifact",
+          "baselineAdvancementAllowed": false,
+          "notes": "Dry-run artifacts are local and disposable. Rollback means delete the local artifact path or leave it abandoned without advancing any baseline."
+        }
+      },
+      {
+        "id": "rollback_notes",
+        "status": "accepted",
+        "reason": "rollback notes must be present",
+        "evidence": {
+          "action": "delete_or_abandon_local_index_artifact",
+          "baselineAdvancementAllowed": false,
+          "notes": "Dry-run artifacts are local and disposable. Rollback means delete the local artifact path or leave it abandoned without advancing any baseline."
+        }
+      },
+      {
+        "id": "governance_readOnly",
+        "status": "accepted",
+        "reason": "governance.readOnly must be true",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "dryRunOnly": true,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "sourcePackMutation": false,
+          "writesOutsideReceiptOrLocalArtifact": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_proposalOnly",
+        "status": "accepted",
+        "reason": "governance.proposalOnly must be true",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "dryRunOnly": true,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "sourcePackMutation": false,
+          "writesOutsideReceiptOrLocalArtifact": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_dryRunOnly",
+        "status": "accepted",
+        "reason": "governance.dryRunOnly must be true",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "dryRunOnly": true,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "sourcePackMutation": false,
+          "writesOutsideReceiptOrLocalArtifact": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_runtimeIntegration",
+        "status": "accepted",
+        "reason": "governance.runtimeIntegration must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "dryRunOnly": true,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "sourcePackMutation": false,
+          "writesOutsideReceiptOrLocalArtifact": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_endpoint",
+        "status": "accepted",
+        "reason": "governance.endpoint must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "dryRunOnly": true,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "sourcePackMutation": false,
+          "writesOutsideReceiptOrLocalArtifact": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_scheduler",
+        "status": "accepted",
+        "reason": "governance.scheduler must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "dryRunOnly": true,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "sourcePackMutation": false,
+          "writesOutsideReceiptOrLocalArtifact": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_networkCalls",
+        "status": "accepted",
+        "reason": "governance.networkCalls must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "dryRunOnly": true,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "sourcePackMutation": false,
+          "writesOutsideReceiptOrLocalArtifact": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_llmCalls",
+        "status": "accepted",
+        "reason": "governance.llmCalls must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "dryRunOnly": true,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "sourcePackMutation": false,
+          "writesOutsideReceiptOrLocalArtifact": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_sourcePackMutation",
+        "status": "accepted",
+        "reason": "governance.sourcePackMutation must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "dryRunOnly": true,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "sourcePackMutation": false,
+          "writesOutsideReceiptOrLocalArtifact": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_writesOutsideReceiptOrLocalArtifact",
+        "status": "accepted",
+        "reason": "governance.writesOutsideReceiptOrLocalArtifact must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "dryRunOnly": true,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "sourcePackMutation": false,
+          "writesOutsideReceiptOrLocalArtifact": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_publicActionAuthority",
+        "status": "accepted",
+        "reason": "governance.publicActionAuthority must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "dryRunOnly": true,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "sourcePackMutation": false,
+          "writesOutsideReceiptOrLocalArtifact": false,
+          "publicActionAuthority": false
+        }
+      }
+    ],
+    "source": [
+      {
+        "id": "source_digest_before_build",
+        "status": "accepted",
+        "reason": "source digest computed before build",
+        "evidence": {
+          "sourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc"
+        }
+      },
+      {
+        "id": "source_path_matches_design",
+        "status": "accepted",
+        "reason": "source path must match dry-run design",
+        "evidence": {
+          "sourcePath": "examples/synthetic-vector-retrieval-benchmark.v1.json",
+          "expectedPath": "examples/synthetic-vector-retrieval-benchmark.v1.json"
+        }
+      }
+    ],
+    "query": [
+      {
+        "id": "index_digest_after_build",
+        "status": "accepted",
+        "reason": "index digest computed after build",
+        "evidence": {
+          "indexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6"
+        }
+      },
+      {
+        "id": "artifact_written_local_only",
+        "status": "accepted",
+        "reason": "artifact written under approved local root",
+        "evidence": {
+          "artifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json"
+        }
+      },
+      {
+        "id": "all_probes_passed",
+        "status": "accepted",
+        "reason": "all synthetic probes must pass recall/evidence checks",
+        "evidence": {
+          "probeCount": 3
+        }
+      }
+    ]
+  },
+  "blockers": [],
+  "decisionTrace": {
+    "policySource": "implementation_poc_dry_run_design_plus_review_receipt",
+    "reason": "Local dry-run built a gitignored index artifact, verified source/index digests, probe recall and rollback notes without runtime authority.",
+    "nextAllowedStep": "controlled_runtime_module_design_review"
+  }
+}

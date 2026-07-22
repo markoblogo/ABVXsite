@@ -292,17 +292,51 @@ The receipt returns:
 
 This does not approve implementation POC execution. It only records that a future dry-run POC design can be reviewed under the fixed boundary.
 
+### Stage 4h: implementation POC dry-run
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/config/vector-runtime-implementation-poc-dry-run.v1.json`
+- `cortex-abv/private-runtime/src/vector-runtime-implementation-poc-dry-run.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-implementation-poc-dry-run.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-implementation-poc-dry-run-receipt.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-implementation-poc-dry-run:run
+```
+
+The dry-run does the first real local artifact pass:
+
+- reads `examples/synthetic-vector-retrieval-benchmark.v1.json`;
+- computes source digest before build;
+- builds a local index artifact at `data/vector-indexes/turbovec-poc/index-artifact.v1.json`;
+- keeps that artifact gitignored and uncommitted;
+- computes index digest after build;
+- runs synthetic query probes through the fallback vector runtime shim;
+- requires evidence refs on every candidate;
+- records rollback notes: delete or abandon the local artifact, with no baseline advancement.
+
+The receipt returns:
+
+- `eligible_for_controlled_runtime_module_review` when artifact, digest, query and rollback gates pass;
+- `not_eligible` when any gate blocks.
+
+This does not approve runtime activation. The next stage is only a controlled runtime module design review.
+
 Default stage-3 receipt artifact:
 
 - `cortex-abv/private-runtime/receipts/vector-retrieval-turbovec-shadow-receipt.v1.json`
 
 ## Next gate
 
-Before any true index build:
+Before any controlled runtime module wiring:
 
-1. add a separate dry-run implementation POC design that consumes the approved local artifact root and command allowlist;
-2. keep the first run local and receipt-only;
-3. verify source/index digest linkage and rollback notes;
-4. only then consider controlled runtime module wiring.
+1. define a controlled runtime module contract that can consume the dry-run artifact interface;
+2. keep it private-runtime-only and local;
+3. require the Stage 4h receipt digest before any module wiring;
+4. preserve the same no-endpoint/no-LLM/no-network/no-public-action governance.
 
 This keeps the governance rule: **no outbound action until auditability and evidence policy are proven.**

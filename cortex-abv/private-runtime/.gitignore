@@ -1,5 +1,6 @@
 node_modules/
 data/*.jsonl
+data/vector-indexes/
 !data/.gitkeep
 .env
 .DS_Store

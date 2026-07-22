@@ -181,6 +181,23 @@ Completed (read-only pilot): one synthetic scheduled-job plan + receipt, no runt
   - no implementation POC approval yet.
 - Next possible stage is an implementation POC review, not implementation by default.
 
+#### Stage 4g execution status (completed)
+
+- Added implementation POC review gate:
+  - `cortex-abv/private-runtime/config/vector-runtime-implementation-poc-review.v1.json`
+  - `cortex-abv/private-runtime/src/vector-runtime-implementation-poc-review.mjs`
+  - `cortex-abv/private-runtime/receipts/vector-runtime-implementation-poc-review-receipt.v1.json`
+- Current receipt result:
+  - `eligibility: "eligible_for_implementation_poc_dry_run_review"`;
+  - `status: "passed"`;
+  - `blockers: []`.
+- Minimum future POC scope:
+  - local gitignored index artifact root: `data/vector-indexes/turbovec-poc`;
+  - allowed source packs: synthetic benchmark or reviewed private source pack;
+  - required source/index/wiring digest linkage and rollback notes;
+  - dry-run commands only: `build_index_poc_dry_run`, `query_index_poc_dry_run`, `verify_index_poc_dry_run`.
+- Still forbidden: POC implementation approval, runtime activation, endpoint, scheduler, LLM calls, source mutation, external writes, public actions and publication.
+
 ## Staged adoption (hard requirement)
 1. Read-only planning (contracts + synthetic map only)
 2. One read-only adapter job in private runtime

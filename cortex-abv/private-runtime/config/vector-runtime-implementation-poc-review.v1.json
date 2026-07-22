@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimeImplementationPocReview",
+  "version": "v1",
+  "authority": "plan_only",
+  "engine": "turbovec",
+  "purpose": "Review gate for the minimum implementation POC dry-run scope. This does not approve the POC implementation itself.",
+  "prerequisites": {
+    "requiredWiringDesignReceiptKind": "CortexABVVectorRuntimeWiringDesignReceipt",
+    "requiredWiringDesignEligibility": "eligible_for_implementation_poc_review",
+    "requiredWiringDesignStatus": "passed"
+  },
+  "pocScope": {
+    "mode": "dry_run_review_only",
+    "localIndexArtifactRoot": "data/vector-indexes/turbovec-poc",
+    "committedIndexArtifactsAllowed": false,
+    "gitignoreRequired": true,
+    "networkAccessAllowed": false,
+    "endpointAllowed": false,
+    "schedulerAllowed": false,
+    "llmCallsAllowed": false,
+    "publicActionAuthorityAllowed": false,
+    "writesOutsideReceiptOrLocalArtifactAllowed": false
+  },
+  "sourcePackPolicy": {
+    "allowedSourcePacks": [
+      {
+        "id": "synthetic-vector-retrieval-benchmark",
+        "type": "synthetic_benchmark",
+        "path": "examples/synthetic-vector-retrieval-benchmark.v1.json",
+        "requiresOwnerReviewReceipt": false
+      },
+      {
+        "id": "reviewed-private-source-pack",
+        "type": "reviewed_private_source_pack",
+        "pathPattern": "source-packs/reviewed/*.json",
+        "requiresOwnerReviewReceipt": true
+      }
+    ],
+    "publicSiteAdaptersAllowed": false,
+    "rawPersonalDataAllowed": false,
+    "crossTenantSourcesAllowed": false
+  },
+  "digestAndRollback": {
+    "requiresSourceDigestBeforeBuild": true,
+    "requiresSourcePackDigest": true,
+    "requiresIndexDigestAfterBuild": true,
+    "requiresWiringReceiptDigest": true,
+    "requiresReceiptDigestLinkage": true,
+    "rollbackNotesRequired": true,
+    "rollbackAction": "delete_or_abandon_local_index_artifact",
+    "baselineAdvancementAllowed": false
+  },
+  "dryRunCommandPolicy": {
+    "allowedCommands": [
+      "build_index_poc_dry_run",
+      "query_index_poc_dry_run",
+      "verify_index_poc_dry_run"
+    ],
+    "commandsMustEndWith": "_dry_run",
+    "shellAccessAllowed": false,
+    "installDependenciesAllowed": false,
+    "mutateSourcePacksAllowed": false
+  },
+  "rejectionCases": [
+    "wiring_design_not_eligible",
+    "local_index_artifact_not_gitignored",
+    "index_artifact_committed",
+    "source_pack_not_allowlisted",
+    "missing_source_digest",
+    "missing_index_digest",
+    "missing_rollback_notes",
+    "baseline_advancement_requested",
+    "non_dry_run_command",
+    "network_access_requested",
+    "endpoint_requested",
+    "scheduler_requested",
+    "llm_calls_requested",
+    "public_action_authority_requested",
+    "cross_tenant_source_requested"
+  ],
+  "governance": {
+    "readOnly": true,
+    "proposalOnly": true,
+    "implementationPocReviewOnly": true,
+    "implementationPocApproved": false,
+    "dryRunOnly": true,
+    "runtimeIntegration": false,
+    "endpoint": false,
+    "scheduler": false,
+    "llmCalls": false,
+    "writesOutsideReceipt": false,
+    "publicActionAuthority": false
+  }
+}

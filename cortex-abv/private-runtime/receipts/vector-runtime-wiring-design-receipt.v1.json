@@ -5,7 +5,7 @@
   "authority": "plan_only",
   "status": "passed",
   "eligibility": "eligible_for_implementation_poc_review",
-  "runAt": "2026-07-22T17:13:47.001Z",
+  "runAt": "2026-07-22T17:19:48.013Z",
   "mode": "runtime_wiring_design_review",
   "engine": "turbovec",
   "designDigest": "ab5f8db43a8d061b920e6fb107a9fc9decddc368d28acf77c83c15a26b91d6fd",

@@ -275,6 +275,25 @@ npm run vector-runtime-wiring-design:check
 
 The receipt returns `eligible_for_implementation_poc_review` or `not_eligible`. Eligibility means only that a future implementation POC can be reviewed. It does not approve POC implementation, runtime activation, endpoints, schedulers, model calls, external writes, public actions or publication.
 
+## Vector runtime implementation POC review
+
+The implementation POC review gate fixes the minimum dry-run scope before any real POC code is approved:
+
+- `config/vector-runtime-implementation-poc-review.v1.json` defines the local index artifact root, allowed source packs, digest/rollback rules and dry-run command allowlist.
+- `src/vector-runtime-implementation-poc-review.mjs` validates that scope against the wiring design receipt.
+- `receipts/vector-runtime-implementation-poc-review-receipt.v1.json` records review eligibility.
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-implementation-poc-review:check
+```
+
+The receipt returns `eligible_for_implementation_poc_dry_run_review` or `not_eligible`. Eligibility means only that a future dry-run POC scope can be reviewed. The allowed future index artifact root is `data/vector-indexes/turbovec-poc`, covered by `.gitignore`; source packs are limited to the synthetic benchmark or reviewed private source packs; dry-run commands are limited to `build_index_poc_dry_run`, `query_index_poc_dry_run` and `verify_index_poc_dry_run`.
+
+This still does not approve POC implementation, package installation, runtime activation, endpoints, schedulers, model calls, source-pack mutation, external writes, public actions or publication.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

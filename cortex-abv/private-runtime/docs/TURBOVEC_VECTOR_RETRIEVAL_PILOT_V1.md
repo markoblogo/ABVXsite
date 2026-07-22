@@ -259,6 +259,39 @@ The receipt returns:
 
 This does not approve implementation POC execution. A later implementation POC still needs a separate approval gate.
 
+### Stage 4g: implementation POC review gate
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/config/vector-runtime-implementation-poc-review.v1.json`
+- `cortex-abv/private-runtime/src/vector-runtime-implementation-poc-review.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-implementation-poc-review.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-implementation-poc-review-receipt.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-implementation-poc-review:check
+```
+
+The review gate defines the minimum future dry-run POC scope:
+
+- local index artifact root: `data/vector-indexes/turbovec-poc`;
+- index artifacts must remain gitignored and uncommitted;
+- allowed source packs: synthetic vector benchmark or reviewed private source packs only;
+- required checks: source digest before build, source-pack digest, index digest after build, wiring receipt digest and rollback notes;
+- rollback: delete or abandon the local index artifact; no baseline advancement;
+- allowed dry-run command names only: `build_index_poc_dry_run`, `query_index_poc_dry_run`, `verify_index_poc_dry_run`;
+- no network, endpoint, scheduler, LLM calls, source mutation, external writes, public actions or publication.
+
+The receipt returns:
+
+- `eligible_for_implementation_poc_dry_run_review` when the review scope and wiring design receipt are coherent;
+- `not_eligible` when the review scope or wiring design receipt blocks.
+
+This does not approve implementation POC execution. It only records that a future dry-run POC design can be reviewed under the fixed boundary.
+
 Default stage-3 receipt artifact:
 
 - `cortex-abv/private-runtime/receipts/vector-retrieval-turbovec-shadow-receipt.v1.json`
@@ -267,9 +300,9 @@ Default stage-3 receipt artifact:
 
 Before any true index build:
 
-1. define a deterministic fixture corpus for synthetic retrieval probes;
-2. add a bounded shadow contract that requires claim anchors for every retrieval proposal;
-3. keep approval path explicit (`proposal_only`) and evidence-only in PR/review flow;
-4. only then allow any retrieval-assisted proposal path in a later stage.
+1. add a separate dry-run implementation POC design that consumes the approved local artifact root and command allowlist;
+2. keep the first run local and receipt-only;
+3. verify source/index digest linkage and rollback notes;
+4. only then consider controlled runtime module wiring.
 
 This keeps the governance rule: **no outbound action until auditability and evidence policy are proven.**

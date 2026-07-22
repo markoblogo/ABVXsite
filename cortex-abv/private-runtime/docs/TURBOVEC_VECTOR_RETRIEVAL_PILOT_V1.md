@@ -33,7 +33,7 @@ npm run vector-retrieval-pilot:check
 
 Validation proves structural integrity of the pilot contract. It does not index vectors or retrieve semantic matches.
 
-## Stage 2: synthetic shadow retrieval runner
+## Stage 3: synthetic ANN-like retrieval gate (local-only)
 
 Added artifacts (still synthetic, local-only):
 
@@ -52,9 +52,11 @@ The runner computes deterministic retrieval-like recall metrics and writes:
 - per-probe top-k candidates,
 - per-probe recall@k,
 - aggregate recall@k,
-- `decisionTrace.claimEvidence` (evidence anchors for every returned candidate).
+- deterministic TF-IDF/BM25-like rerank scoring (`tfidf-lite`),
+- hard score threshold check against `evaluation.minCandidateScore`,
+- evidence gates: `decisionTrace.claimEvidence` and `decisionTrace.missingEvidence`.
 
-Default stage-2 receipt artifact:
+Default stage-3 receipt artifact:
 
 - `cortex-abv/private-runtime/receipts/vector-retrieval-turbovec-shadow-receipt.v1.json`
 

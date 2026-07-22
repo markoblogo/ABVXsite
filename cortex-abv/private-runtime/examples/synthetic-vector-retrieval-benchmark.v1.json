@@ -90,6 +90,10 @@
     "topK": 3,
     "minRecallAtK": 0.75,
     "minScoreFloor": 0.06,
+    "minCandidateScore": 0.05,
+    "minEvidenceRefsPerCandidate": 1,
+    "k1": 1.5,
+    "b": 0.75,
     "maxRunMs": 2000
   }
 }

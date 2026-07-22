@@ -12,8 +12,8 @@
   "decisionTrace": {
     "policySource": "base",
     "sourceKind": "synthetic_benchmark",
-    "sourceId": "vector-retrieval-turbovec-stage-2",
-    "reason": "Synthetic shadow retrieval run over read-only fixture corpus with fixed evidence anchors",
+    "sourceId": "vector-retrieval-turbovec-stage-3",
+    "reason": "Stage 3 synthetic TF-IDF-like rerank with hard score threshold and claim-evidence gate",
     "topK": 3,
     "minScoreFloor": 0.06,
     "safety": {
@@ -148,7 +148,16 @@
         ],
         "retrievalRole": "distractor"
       }
-    ]
+    ],
+    "reranker": "tfidf-lite",
+    "minCandidateScore": 0.05,
+    "k1": 1.5,
+    "b": 0.75,
+    "hardThresholdPassed": true,
+    "missingEvidence": [],
+    "evidenceCoverage": 1,
+    "evidenceAnchorsSatisfied": true,
+    "minEvidenceRefsPerCandidate": 1
   },
   "metrics": {
     "corpusSize": 4,
@@ -159,7 +168,11 @@
     "avgTopScore": 0.4354,
     "maxRunMs": 2000,
     "elapsedMs": 350,
-    "passedAllProbes": true
+    "passedAllProbes": true,
+    "topKCoverage": 1,
+    "evidenceCoverage": 1,
+    "threshold": 0.05,
+    "minRecallAtK": 0.75
   },
   "results": [
     {
@@ -201,7 +214,11 @@
       ],
       "recallAtK": 1,
       "minRecallAtK": 1,
-      "status": "passed"
+      "status": "passed",
+      "rerankMode": "tfidf-lite",
+      "evidenceAnchorSatisfied": true,
+      "hardThresholdSatisfied": true,
+      "topKPresent": true
     },
     {
       "probeId": "probe-monitor-readiness",
@@ -228,7 +245,11 @@
       ],
       "recallAtK": 1,
       "minRecallAtK": 1,
-      "status": "passed"
+      "status": "passed",
+      "rerankMode": "tfidf-lite",
+      "evidenceAnchorSatisfied": true,
+      "hardThresholdSatisfied": true,
+      "topKPresent": true
     },
     {
       "probeId": "probe-azurmenton-guides",
@@ -272,7 +293,11 @@
       ],
       "recallAtK": 1,
       "minRecallAtK": 0.5,
-      "status": "passed"
+      "status": "passed",
+      "rerankMode": "tfidf-lite",
+      "evidenceAnchorSatisfied": true,
+      "hardThresholdSatisfied": true,
+      "topKPresent": true
     }
   ],
   "review": {
@@ -280,16 +305,17 @@
     "requiredActions": {
       "approve": {
         "status": "optional",
-        "reason": "shadow-only run is within synthetic recall target"
+        "reason": "shadow-only run is within synthetic ANN-like rerank and governance gates"
       },
       "reject": {
-        "status": "required",
+        "status": "allowed",
         "reason": "only if governance review blocks deployment"
       }
     },
     "requiredFields": [
       "metrics.recallAtK",
-      "decisionTrace.claimEvidence"
+      "decisionTrace.claimEvidence",
+      "decisionTrace.missingEvidence"
     ]
   },
   "outputIntegrity": {

@@ -332,6 +332,25 @@ The receipt returns `eligible_for_controlled_runtime_module_poc_review` or `not_
 
 This still does not approve module implementation, runtime wiring, endpoints, schedulers, model calls, network calls, source or artifact mutation, external writes, public actions or publication.
 
+## Vector runtime controlled module POC review
+
+The controlled module POC review gate fixes the minimum local harness scope before any harness implementation:
+
+- `config/vector-runtime-controlled-module-poc-review.v1.json` defines the future harness path, required module interface, digest checks and dry-run command allowlist.
+- `src/vector-runtime-controlled-module-poc-review.mjs` validates that scope against the Stage 4i controlled module design receipt.
+- `receipts/vector-runtime-controlled-module-poc-review-receipt.v1.json` records review eligibility and the required Stage 4i receipt digest.
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-controlled-module-poc-review:check
+```
+
+The receipt returns `eligible_for_controlled_runtime_module_harness_dry_run_review` or `not_eligible`. Eligibility means only that a future local harness dry-run can be reviewed. The future harness is limited to `src/vector-runtime-controlled-module-harness.mjs`, with tests in `test/vector-runtime-controlled-module-harness.test.mjs`, and commands limited to `load_index_artifact_poc_dry_run`, `query_candidates_poc_dry_run` and `verify_claim_evidence_poc_dry_run`.
+
+This still does not approve harness implementation, runtime wiring, endpoints, schedulers, model calls, network calls, source or artifact mutation, external writes, public actions or publication.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

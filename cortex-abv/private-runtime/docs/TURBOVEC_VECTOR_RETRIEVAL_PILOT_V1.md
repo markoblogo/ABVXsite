@@ -359,17 +359,49 @@ The receipt returns:
 
 This does not approve implementation or wiring. It only makes the next POC review discussable under a fixed local module interface.
 
+### Stage 4j: controlled runtime module POC review
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/config/vector-runtime-controlled-module-poc-review.v1.json`
+- `cortex-abv/private-runtime/src/vector-runtime-controlled-module-poc-review.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-controlled-module-poc-review.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-controlled-module-poc-review-receipt.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-controlled-module-poc-review:check
+```
+
+The POC review gate defines the minimum future local harness scope:
+
+- consumes the Stage 4i controlled module design receipt and records its digest;
+- future harness path: `src/vector-runtime-controlled-module-harness.mjs`;
+- future test path: `test/vector-runtime-controlled-module-harness.test.mjs`;
+- harness remains local library only;
+- allowed future dry-run command names only: `load_index_artifact_poc_dry_run`, `query_candidates_poc_dry_run`, `verify_claim_evidence_poc_dry_run`;
+- required behavior: read Stage 4h artifact only, verify artifact/source/Stage 4i digests, enforce tenant scope and hard threshold, return candidates only, carry evidence refs.
+
+The receipt returns:
+
+- `eligible_for_controlled_runtime_module_harness_dry_run_review` when the POC scope and Stage 4i receipt are coherent;
+- `not_eligible` when the review scope or Stage 4i receipt blocks.
+
+This does not approve harness implementation or runtime wiring. It only makes the next local harness dry-run review discussable.
+
 Default stage-3 receipt artifact:
 
 - `cortex-abv/private-runtime/receipts/vector-retrieval-turbovec-shadow-receipt.v1.json`
 
 ## Next gate
 
-Before any controlled runtime module implementation POC:
+Before any controlled runtime module harness implementation:
 
-1. define a separate implementation POC review for the local module functions;
-2. require the Stage 4i design receipt digest;
-3. implement only a dry-run local library harness, not a service;
+1. add a separate local harness dry-run design that consumes the Stage 4j review receipt;
+2. implement only the local library harness surface, not a service;
+3. verify Stage 4h artifact digest and Stage 4i/4j receipt digests;
 4. preserve the same no-endpoint/no-LLM/no-network/no-public-action governance.
 
 This keeps the governance rule: **no outbound action until auditability and evidence policy are proven.**

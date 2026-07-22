@@ -232,6 +232,23 @@ Completed (read-only pilot): one synthetic scheduled-job plan + receipt, no runt
   - tenant scope, hard threshold and claim-evidence verification are mandatory.
 - Still forbidden: module implementation approval, runtime wiring, endpoint, scheduler, network calls, LLM calls, artifact/source mutation, external writes, public actions and publication.
 
+#### Stage 4j execution status (completed)
+
+- Added controlled runtime module POC review gate:
+  - `cortex-abv/private-runtime/config/vector-runtime-controlled-module-poc-review.v1.json`
+  - `cortex-abv/private-runtime/src/vector-runtime-controlled-module-poc-review.mjs`
+  - `cortex-abv/private-runtime/receipts/vector-runtime-controlled-module-poc-review-receipt.v1.json`
+- Current receipt result:
+  - `eligibility: "eligible_for_controlled_runtime_module_harness_dry_run_review"`;
+  - `status: "passed"`;
+  - `blockers: []`.
+- Minimum future harness scope:
+  - future harness path: `src/vector-runtime-controlled-module-harness.mjs`;
+  - future test path: `test/vector-runtime-controlled-module-harness.test.mjs`;
+  - allowed dry-run commands: `load_index_artifact_poc_dry_run`, `query_candidates_poc_dry_run`, `verify_claim_evidence_poc_dry_run`;
+  - Stage 4h artifact digest plus Stage 4i/4j receipt digest checks required.
+- Still forbidden: harness implementation approval, runtime wiring, endpoint, scheduler, network calls, LLM calls, source/artifact mutation, external writes, public actions and publication.
+
 ## Staged adoption (hard requirement)
 1. Read-only planning (contracts + synthetic map only)
 2. One read-only adapter job in private runtime

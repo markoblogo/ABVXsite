@@ -4,6 +4,10 @@ import path from 'node:path';
 
 const STOP_WORDS = new Set(['the', 'and', 'of', 'a', 'an', 'to', 'in', 'for', 'on', 'with', 'is', 'are', 'was', 'were', 'this', 'that', 'about']);
 
+const ANN_INDEX_MODE = 'ann';
+const ANN_FALLBACK_MODE = 'ann_with_tfidf_fallback';
+const TFIDF_MODE = 'tfidf-lite';
+
 function option(name) {
   const index = process.argv.indexOf(name);
   return index >= 0 ? process.argv[index + 1] : undefined;
@@ -16,6 +20,26 @@ function readJson(filePath) {
 function nonEmptyString(value, label) {
   if (typeof value !== 'string' || !value.trim()) throw new Error(`${label} must be a non-empty string`);
   return value.trim();
+}
+
+function buildIndexDecisionTrace(plan) {
+  const requestedMode = (plan && plan.indexInterface && plan.indexInterface.mode) || TFIDF_MODE;
+  const runtimeReady = Boolean(plan && plan.runtimeIntegration);
+  const fallback = plan?.indexInterface?.fallback;
+  const fallbackEnabled = requestedMode === ANN_FALLBACK_MODE || (requestedMode === ANN_INDEX_MODE && !runtimeReady);
+  const fallbackEngine = fallback?.engine || TFIDF_MODE;
+  const fallbackReason = fallback?.reason
+    || (fallbackEnabled ? 'runtime integration disabled, using deterministic tf-idf fallback' : undefined);
+  const selectedMode = fallbackEnabled ? fallbackEngine : requestedMode;
+
+  return {
+    requestedMode,
+    runtimeReady,
+    fallbackApplied: fallbackEnabled,
+    fallbackEngine: fallbackEngine,
+    selectedMode,
+    fallbackReason,
+  };
 }
 
 function stableJson(value) {
@@ -223,6 +247,9 @@ export function runVectorRetrievalShadow({ planPath, benchmarkPath, receiptPath,
     text: nonEmptyString(document.text, `corpus ${document.id}.text`),
   }));
 
+  const indexDecision = buildIndexDecisionTrace(plan);
+  const rerankMode = indexDecision.selectedMode;
+
   const corpusIndex = new Set(baseCorpus.map((document) => document.id));
 
   const runAtValue = runAt ? nonEmptyString(runAt, 'runAt') : new Date().toISOString();
@@ -251,6 +278,12 @@ export function runVectorRetrievalShadow({ planPath, benchmarkPath, receiptPath,
     if (!queryTokens.length) throw new Error(`probe ${probe.probeId} query has no indexable tokens`);
 
     const { queryCount, docStats, idf, averageDocLength } = buildRerankContext(baseCorpus, queryTokens);
+    if (indexDecision.fallbackApplied) {
+      const fallbackSignal = indexDecision.fallbackReason;
+      if (!fallbackSignal) {
+        throw new Error(`index fallback requested for probe ${probe.probeId} but no reason provided`);
+      }
+    }
     const scored = docStats
       .map((doc) => {
         const { score, matchedTerms } = scoreCandidateTfIdf(queryCount, doc, idf, evalConfig, averageDocLength);
@@ -308,7 +341,7 @@ export function runVectorRetrievalShadow({ planPath, benchmarkPath, receiptPath,
     const probeResult = {
       probeId: nonEmptyString(probe.probeId, 'probe.probeId'),
       query: queryRaw,
-      rerankMode: 'tfidf-lite',
+      rerankMode,
       topK: evalConfig.topK,
       expectedCorpusIds: expectedIds,
       topCandidates: topK.map((entry) => ({
@@ -374,7 +407,12 @@ export function runVectorRetrievalShadow({ planPath, benchmarkPath, receiptPath,
       sourceId: 'vector-retrieval-turbovec-stage-3',
       reason: 'Stage 3 synthetic TF-IDF-like rerank with hard score threshold and claim-evidence gate',
       topK: evalConfig.topK,
-      reranker: 'tfidf-lite',
+      reranker: rerankMode,
+      requestedReranker: indexDecision.requestedMode,
+      runtimeReady: indexDecision.runtimeReady,
+      fallbackApplied: indexDecision.fallbackApplied,
+      fallbackEngine: indexDecision.fallbackEngine,
+      fallbackReason: indexDecision.fallbackReason,
       minCandidateScore: evalConfig.minCandidateScore,
       minScoreFloor: evalConfig.minScoreFloor,
       k1: evalConfig.k1,

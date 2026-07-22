@@ -56,6 +56,29 @@ The runner computes deterministic retrieval-like recall metrics and writes:
 - hard score threshold check against `evaluation.minCandidateScore`,
 - evidence gates: `decisionTrace.claimEvidence` and `decisionTrace.missingEvidence`.
 
+### Stage 4: index interface + ANN fallback shape
+
+The Stage 3 runner now has a typed index selector contract so ANN can be represented explicitly while keeping existing gates intact.
+
+Current runtime snapshot behavior:
+
+- `vector-retrieval-turbovec-pilot.v1.json` now includes:
+  - `indexInterface.mode: "ann_with_tfidf_fallback"` by default
+  - `indexInterface.runtimeReady: false` (pilot still blocks runtime integration)
+  - `indexInterface.fallback.engine: "tfidf-lite"`
+  - `indexInterface.fallback.reason`.
+
+Decision trace now records runtime readiness and fallback details per run:
+
+- `decisionTrace.requestedReranker`
+- `decisionTrace.reranker`
+- `decisionTrace.runtimeReady`
+- `decisionTrace.fallbackApplied`
+- `decisionTrace.fallbackEngine`
+- `decisionTrace.fallbackReason`
+
+This preserves the same governance gates and keeps ANN wiring backward-safe: if runtime is off, retrieval remains deterministic tf-idf, transparent in receipts, and proposal-only.
+
 Default stage-3 receipt artifact:
 
 - `cortex-abv/private-runtime/receipts/vector-retrieval-turbovec-shadow-receipt.v1.json`

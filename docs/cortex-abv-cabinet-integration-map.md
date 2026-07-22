@@ -92,6 +92,19 @@ Completed (read-only pilot): one synthetic scheduled-job plan + receipt, no runt
   - recall/top-k and claim-evidence are written into a receipt-style artifact;
   - pilot must be explicitly reviewed before any production retrieval path.
 
+#### Stage 4 execution target (implemented in private-runtime)
+
+- Add explicit index-mode contract with transparent fallback in `config/vector-retrieval-turbovec-pilot.v1.json`.
+- Keep Stage 3 gates unchanged (decisionTrace evidence + hard thresholds).
+- Emit ANN-readiness decision in each receipt:
+  - `decisionTrace.requestedReranker`
+  - `decisionTrace.fallbackApplied`
+  - `decisionTrace.fallbackEngine`
+  - `decisionTrace.fallbackReason`
+- Next required gate before real ANN dependency:
+  - explicit `index-build` and `query` acceptance criteria in a bounded private-only benchmark;
+  - separate governance check confirming allowed surfaces remain read-only.
+
 ## Staged adoption (hard requirement)
 1. Read-only planning (contracts + synthetic map only)
 2. One read-only adapter job in private runtime

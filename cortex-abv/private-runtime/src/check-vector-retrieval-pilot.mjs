@@ -30,6 +30,25 @@ function requireArray(value, message) {
   }
 }
 
+function validateIndexInterface(indexInterface) {
+  if (!indexInterface) return;
+  if (typeof indexInterface !== 'object' || Array.isArray(indexInterface)) {
+    throw new Error('indexInterface must be an object');
+  }
+  const { mode } = indexInterface;
+  if (typeof mode === 'undefined') {
+    throw new Error('indexInterface.mode is required when indexInterface is defined');
+  }
+  if (!['tfidf-lite', 'ann', 'ann_with_tfidf_fallback'].includes(mode)) {
+    throw new Error('indexInterface.mode must be tfidf-lite, ann, or ann_with_tfidf_fallback');
+  }
+
+  const fallback = indexInterface.fallback;
+  if (fallback && (typeof fallback !== 'object' || Array.isArray(fallback))) {
+    throw new Error('indexInterface.fallback must be an object');
+  }
+}
+
 export function validateVectorRetrievalPilotPlan(plan) {
   requireObject(plan, 'vector retrieval pilot plan must be an object');
   if (plan.schemaVersion !== 1) throw new Error('vector retrieval pilot plan must have schemaVersion 1');
@@ -83,6 +102,8 @@ export function validateVectorRetrievalPilotPlan(plan) {
   if (candidatePolicy.requiresClaimEvidence !== true) {
     throw new Error('candidatePolicy requires explicit claim evidence');
   }
+
+  validateIndexInterface(plan.indexInterface);
 
   requireArray(plan.evaluation?.required || [], 'evaluation.required must be a non-empty array');
   return {

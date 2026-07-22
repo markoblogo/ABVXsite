@@ -21,6 +21,15 @@ function withTempBenchmark(mutator) {
   return tmpFile;
 }
 
+function withTempPlan(mutator) {
+  const plan = JSON.parse(readFileSync(planPath, 'utf8'));
+  const updated = mutator(plan);
+  const tmpDir = mkdtempSync(path.join(tmpdir(), 'cortexabv-vector-plan-'));
+  const tmpFile = path.join(tmpDir, 'vector-retrieval-turbovec-pilot.v1.json');
+  writeFileSync(tmpFile, `${JSON.stringify(updated, null, 2)}\n`);
+  return tmpFile;
+}
+
 test('synthetic vector shadow benchmark run computes recall and top-k', () => {
   const receipt = runVectorRetrievalShadow({
     planPath,
@@ -88,4 +97,24 @@ test('missing candidate evidence anchors blocks proposal status', () => {
   assert.equal(receipt.status, 'blocked');
   assert.equal(receipt.decisionTrace.missingEvidence.length > 0, true);
   assert.equal(Array.isArray(receipt.decisionTrace.missingEvidence), true);
+});
+
+test('ann mode with runtime off emits tf-idf fallback decision trace', () => {
+  const annPlan = withTempPlan((plan) => ({
+    ...plan,
+    indexInterface: {
+      ...plan.indexInterface,
+      mode: 'ann',
+    },
+  }));
+
+  const receipt = runVectorRetrievalShadow({
+    planPath: annPlan,
+    benchmarkPath: fixturePath,
+  });
+
+  assert.equal(receipt.decisionTrace.fallbackApplied, true);
+  assert.equal(receipt.decisionTrace.requestedReranker, 'ann');
+  assert.equal(receipt.decisionTrace.reranker, 'tfidf-lite');
+  assert.equal(receipt.results.every((probe) => probe.rerankMode === 'tfidf-lite'), true);
 });

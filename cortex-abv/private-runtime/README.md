@@ -173,6 +173,8 @@ Result artifact:
 
 This is Stage 3 synthetic validation only. It does not build ANN indexes and does not call vector dependencies yet.
 
+Planned index-layer readiness is now represented in plan shape: it includes an `indexInterface` section with ANN intent and deterministic tf-idf fallback. The runner keeps current governance gates untouched and records all fallback decisions in `decisionTrace` (`requestedReranker`, `fallbackApplied`, `fallbackEngine`, `fallbackReason`).
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

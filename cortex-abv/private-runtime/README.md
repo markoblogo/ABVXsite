@@ -192,6 +192,34 @@ npm run vector-runtime-readiness:run
 
 This is still a stubbed runtime boundary. It does not import `turbovec`, build a real ANN index, expose a retrieval endpoint, call models, write outside the receipt, or grant public action authority. Its purpose is to fix the future runtime interface and prove fallback/evidence tracing before any dependency is wired.
 
+## Vector runtime dependency probe
+
+The first real `turbovec` dependency check is a separate gate:
+
+- `src/vector-runtime-dependency-probe-runner.mjs` runs a bounded Python `turbovec.IdMapIndex` probe.
+- `receipts/vector-runtime-dependency-probe-receipt.v1.json` records index-build and query acceptance.
+- Tests use a mock executor; the real dependency path is opt-in.
+
+Default command, no install:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-dependency-probe:run
+```
+
+Real local probe, allowed to create a temporary venv and install PyPI `turbovec`:
+
+```bash
+cd cortex-abv/private-runtime
+node src/vector-runtime-dependency-probe-runner.mjs \
+  --plan config/vector-retrieval-turbovec-pilot.v1.json \
+  --benchmark examples/synthetic-vector-retrieval-benchmark.v1.json \
+  --receipt receipts/vector-runtime-dependency-probe-receipt.v1.json \
+  --allow-install
+```
+
+Passing this gate means only that the real local dependency can build an `IdMapIndex` and answer synthetic queries with evidence-backed candidates. It does not approve package pinning, runtime integration, endpoints, public retrieval, model calls, external writes, or autonomous publication.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

@@ -120,6 +120,18 @@ Completed (read-only pilot): one synthetic scheduled-job plan + receipt, no runt
 - Next gate:
   - run a bounded local dependency probe only after adding explicit `index-build`/`query` acceptance criteria and owner review.
 
+#### Stage 4c execution status (completed)
+
+- Added bounded real dependency probe:
+  - `cortex-abv/private-runtime/src/vector-runtime-dependency-probe-runner.mjs`
+  - `cortex-abv/private-runtime/receipts/vector-runtime-dependency-probe-receipt.v1.json`
+- Current receipt proves:
+  - PyPI `turbovec` can be installed into a temporary local Python venv when explicitly allowed;
+  - `IdMapIndex` can build from synthetic vectors;
+  - synthetic queries pass recall and claim-evidence gates;
+  - governance remains `readOnly`, `proposalOnly`, no endpoint, no LLM, no external write and no public action authority.
+- This does not yet approve package pinning or runtime integration.
+
 ## Staged adoption (hard requirement)
 1. Read-only planning (contracts + synthetic map only)
 2. One read-only adapter job in private runtime

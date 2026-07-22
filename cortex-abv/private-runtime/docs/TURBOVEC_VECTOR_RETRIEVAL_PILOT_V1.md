@@ -111,6 +111,50 @@ Current behavior remains fallback-only:
 
 The next acceptable step is a bounded local dependency probe with explicit `index-build` and `query` acceptance criteria. It must still be private-only and receipt-only.
 
+### Stage 4c: bounded real dependency probe
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/src/vector-runtime-dependency-probe-runner.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-dependency-probe-runner.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-dependency-probe-receipt.v1.json`
+
+The probe uses the upstream-supported Python API:
+
+- package: `turbovec`
+- index type: `IdMapIndex`
+- operation gate: `add_with_ids` + `prepare` + `search`
+
+Default run does not install anything and blocks if `turbovec` is unavailable:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-dependency-probe:run
+```
+
+Real local probe, with explicit install authority:
+
+```bash
+cd cortex-abv/private-runtime
+node src/vector-runtime-dependency-probe-runner.mjs \
+  --plan config/vector-retrieval-turbovec-pilot.v1.json \
+  --benchmark examples/synthetic-vector-retrieval-benchmark.v1.json \
+  --receipt receipts/vector-runtime-dependency-probe-receipt.v1.json \
+  --allow-install
+```
+
+Acceptance criteria:
+
+- `acceptance.indexBuild.status == "accepted"`
+- `acceptance.query.status == "accepted"`
+- `metrics.recallAtK >= evaluation.minRecallAtK`
+- `decisionTrace.missingEvidence` is empty
+- `governance.readOnly == true`
+- `governance.proposalOnly == true`
+- `governance.publicActionAuthority == false`
+
+The real probe may use network only for temporary dependency installation when `--allow-install` is present. The data plane remains local and no runtime integration is authorized.
+
 Default stage-3 receipt artifact:
 
 - `cortex-abv/private-runtime/receipts/vector-retrieval-turbovec-shadow-receipt.v1.json`

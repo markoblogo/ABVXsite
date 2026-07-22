@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimeDependencyProbeReceipt",
+  "version": "v1",
+  "authority": "plan_only",
+  "status": "passed",
+  "runAt": "2026-07-22T16:35:02.313Z",
+  "mode": "bounded_local_dependency_probe",
+  "engine": "turbovec",
+  "package": "turbovec",
+  "sourcePilotPlan": "vector-retrieval-turbovec-pilot.v1.json",
+  "governance": {
+    "readOnly": true,
+    "proposalOnly": true,
+    "dataPlaneNetworkCalls": false,
+    "llmCalls": false,
+    "endpoint": false,
+    "writesOutsideReceipt": false,
+    "publicActionAuthority": false
+  },
+  "acceptance": {
+    "indexBuild": {
+      "status": "accepted",
+      "required": [
+        "python import turbovec",
+        "IdMapIndex build",
+        "document count matches fixture corpus"
+      ]
+    },
+    "query": {
+      "status": "accepted",
+      "required": [
+        "search returns expected synthetic anchors",
+        "recallAtK threshold passed",
+        "candidate claim evidence present"
+      ]
+    }
+  },
+  "dependency": {
+    "available": true,
+    "installAttempted": true,
+    "installAllowed": true,
+    "installLog": [
+      {
+        "args": [
+          "-m",
+          "pip",
+          "install",
+          "--quiet",
+          "--upgrade",
+          "pip"
+        ],
+        "ok": true,
+        "stderr": "WARNING: Cache entry deserialization failed, entry ignored\n"
+      },
+      {
+        "args": [
+          "-m",
+          "pip",
+          "install",
+          "--quiet",
+          "turbovec"
+        ],
+        "ok": true,
+        "stderr": "WARNING: Cache entry deserialization failed, entry ignored\n"
+      }
+    ]
+  },
+  "decisionTrace": {
+    "policySource": "base",
+    "sourceKind": "synthetic_benchmark",
+    "sourceId": "vector-runtime-dependency-probe-turbovec",
+    "reason": "Bounded local real turbovec dependency probe with index-build/query acceptance and no public action authority",
+    "claimEvidence": [
+      {
+        "probeId": "probe-index-summary",
+        "corpusId": "pp-index-spike-updates",
+        "score": 0.4006,
+        "evidenceRefs": [
+          {
+            "path": "cortex-abv/public-presence-index.v1.json",
+            "ref": "projects.index-spike.summary",
+            "digest": "3d8f9cb2d9f9f9c3d7f6d4f8d2ac9a1fc8f6a2e2f1f7f4a2b0c2d3e4f5a6b7c8"
+          }
+        ],
+        "retrievalRole": "expected"
+      },
+      {
+        "probeId": "probe-index-summary",
+        "corpusId": "pp-digital-presence-sync",
+        "score": 0.2178,
+        "evidenceRefs": [
+          {
+            "path": "cortex-abv/public-presence-index.v1.json",
+            "ref": "metadata.syncPolicy",
+            "digest": "f0e1d2c3b4a59687788990aabbccddeeff00112233445566778899aabbccddeeff"
+          }
+        ],
+        "retrievalRole": "distractor"
+      },
+      {
+        "probeId": "probe-monitor-readiness",
+        "corpusId": "pp-monitor-mn7r-dashboard",
+        "score": 0.2661,
+        "evidenceRefs": [
+          {
+            "path": "cortex-abv/public-project-registry.v1.json",
+            "ref": "projects.monitor-mn7r.status",
+            "digest": "7f1e8f2cb4a1c3d6f2b5d8e9f0c3a4b5d6e7f8a9c0b1d2e3f4a5b6c7d8e9f012"
+          }
+        ],
+        "retrievalRole": "expected"
+      },
+      {
+        "probeId": "probe-azurmenton-guides",
+        "corpusId": "pp-azurmenton-guides",
+        "score": 0.6084,
+        "evidenceRefs": [
+          {
+            "path": "cortex-abv/public-presence-index.v1.json",
+            "ref": "projects.azur-menton.links",
+            "digest": "d1a9f8c7b6a5e4d3c2b1a09876543210fedcba9876543210abcdef1234567890ab"
+          }
+        ],
+        "retrievalRole": "expected"
+      },
+      {
+        "probeId": "probe-azurmenton-guides",
+        "corpusId": "pp-digital-presence-sync",
+        "score": 0.2981,
+        "evidenceRefs": [
+          {
+            "path": "cortex-abv/public-presence-index.v1.json",
+            "ref": "metadata.syncPolicy",
+            "digest": "f0e1d2c3b4a59687788990aabbccddeeff00112233445566778899aabbccddeeff"
+          }
+        ],
+        "retrievalRole": "expected"
+      },
+      {
+        "probeId": "probe-azurmenton-guides",
+        "corpusId": "pp-index-spike-updates",
+        "score": 0.2314,
+        "evidenceRefs": [
+          {
+            "path": "cortex-abv/public-presence-index.v1.json",
+            "ref": "projects.index-spike.summary",
+            "digest": "3d8f9cb2d9f9f9c3d7f6d4f8d2ac9a1fc8f6a2e2f1f7f4a2b0c2d3e4f5a6b7c8"
+          }
+        ],
+        "retrievalRole": "distractor"
+      }
+    ],
+    "missingEvidence": []
+  },
+  "metrics": {
+    "corpusSize": 4,
+    "documentCount": 4,
+    "recallAtK": 1,
+    "minRecallAtK": 0.75,
+    "passedAllProbes": true
+  },
+  "results": [
+    {
+      "probeId": "probe-index-summary",
+      "candidateIds": [
+        "pp-index-spike-updates",
+        "pp-digital-presence-sync"
+      ],
+      "matchedExpected": [
+        "pp-index-spike-updates"
+      ],
+      "recallAtK": 1,
+      "status": "passed",
+      "candidates": [
+        {
+          "id": "pp-index-spike-updates",
+          "score": 0.40057387948036194,
+          "evidenceRefs": [
+            {
+              "path": "cortex-abv/public-presence-index.v1.json",
+              "ref": "projects.index-spike.summary",
+              "digest": "3d8f9cb2d9f9f9c3d7f6d4f8d2ac9a1fc8f6a2e2f1f7f4a2b0c2d3e4f5a6b7c8"
+            }
+          ]
+        },
+        {
+          "id": "pp-digital-presence-sync",
+          "score": 0.21784144639968872,
+          "evidenceRefs": [
+            {
+              "path": "cortex-abv/public-presence-index.v1.json",
+              "ref": "metadata.syncPolicy",
+              "digest": "f0e1d2c3b4a59687788990aabbccddeeff00112233445566778899aabbccddeeff"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "probeId": "probe-monitor-readiness",
+      "candidateIds": [
+        "pp-monitor-mn7r-dashboard"
+      ],
+      "matchedExpected": [
+        "pp-monitor-mn7r-dashboard"
+      ],
+      "recallAtK": 1,
+      "status": "passed",
+      "candidates": [
+        {
+          "id": "pp-monitor-mn7r-dashboard",
+          "score": 0.2661195695400238,
+          "evidenceRefs": [
+            {
+              "path": "cortex-abv/public-project-registry.v1.json",
+              "ref": "projects.monitor-mn7r.status",
+              "digest": "7f1e8f2cb4a1c3d6f2b5d8e9f0c3a4b5d6e7f8a9c0b1d2e3f4a5b6c7d8e9f012"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "probeId": "probe-azurmenton-guides",
+      "candidateIds": [
+        "pp-azurmenton-guides",
+        "pp-digital-presence-sync",
+        "pp-index-spike-updates"
+      ],
+      "matchedExpected": [
+        "pp-azurmenton-guides",
+        "pp-digital-presence-sync"
+      ],
+      "recallAtK": 1,
+      "status": "passed",
+      "candidates": [
+        {
+          "id": "pp-azurmenton-guides",
+          "score": 0.6083844900131226,
+          "evidenceRefs": [
+            {
+              "path": "cortex-abv/public-presence-index.v1.json",
+              "ref": "projects.azur-menton.links",
+              "digest": "d1a9f8c7b6a5e4d3c2b1a09876543210fedcba9876543210abcdef1234567890ab"
+            }
+          ]
+        },
+        {
+          "id": "pp-digital-presence-sync",
+          "score": 0.29814115166664124,
+          "evidenceRefs": [
+            {
+              "path": "cortex-abv/public-presence-index.v1.json",
+              "ref": "metadata.syncPolicy",
+              "digest": "f0e1d2c3b4a59687788990aabbccddeeff00112233445566778899aabbccddeeff"
+            }
+          ]
+        },
+        {
+          "id": "pp-index-spike-updates",
+          "score": 0.23137904703617096,
+          "evidenceRefs": [
+            {
+              "path": "cortex-abv/public-presence-index.v1.json",
+              "ref": "projects.index-spike.summary",
+              "digest": "3d8f9cb2d9f9f9c3d7f6d4f8d2ac9a1fc8f6a2e2f1f7f4a2b0c2d3e4f5a6b7c8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "pendingReview": true,
+    "approvalMeaning": "Approve only the dependency as a bounded local candidate. This does not approve endpoints, public retrieval, autonomous writes, model calls, or publication.",
+    "requiredFields": [
+      "acceptance.indexBuild",
+      "acceptance.query",
+      "governance",
+      "decisionTrace.claimEvidence"
+    ]
+  },
+  "outputIntegrity": {
+    "corpusDigest": "89766f53fd974708842192e4180406c68f4f370c98a045b04d9d02ee2f3631d7",
+    "benchmark": "synthetic-vector-retrieval-benchmark.v1.json",
+    "runSchemaDigest": "2ccee6ba2aa30b23d707750aac5c4e74eca30651a08c8e7f6d6388b69b808f57"
+  }
+}

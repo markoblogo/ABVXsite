@@ -160,6 +160,7 @@ See also: [Cabinet pilot integration map](docs/cortex-abv-cabinet-integration-ma
 - `npm run cortex-abv:cabinet-stage1-run` for a real local synthetic Stage 2 execution (no write authority).
 - `cortex-abv/private-runtime/config/cabinet-scheduled-jobs-stage1.v1.json` now also binds one owned-source synthetic adapter (`monitor-mn7r-shadow`) with `source_specific_override` visibility in the receipt decision trace.
 - `cortex-abv/private-runtime/config/cabinet-scheduled-jobs-stage1.v1.json` now binds second owned-source synthetic adapter (`index-spike-shadow`) and requires `result.sourceAdapters[].decisionTrace` for every enabled adapter before any future write-authority expansion.
+- `cortex-abv/private-runtime/src/vector-runtime-shim.mjs` defines the future local vector runtime `buildIndex/query` interface for the turbovec pilot, currently fallback-only (`tfidf-lite`) and receipt-only via `npm run vector-runtime-readiness:run`.
 
 Check the adapter contract and currently enabled project-sync targets:
 

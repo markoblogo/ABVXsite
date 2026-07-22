@@ -79,6 +79,38 @@ Decision trace now records runtime readiness and fallback details per run:
 
 This preserves the same governance gates and keeps ANN wiring backward-safe: if runtime is off, retrieval remains deterministic tf-idf, transparent in receipts, and proposal-only.
 
+### Stage 4b: vector runtime readiness shim
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/src/vector-runtime-shim.mjs`
+- `cortex-abv/private-runtime/src/vector-runtime-readiness-runner.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-shim.test.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-readiness-runner.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-readiness-receipt.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-readiness:run
+```
+
+The shim provides the future runtime interface:
+
+- `buildVectorRuntimeIndex({ plan, corpus })`
+- `queryVectorRuntimeIndex({ index, query, topK, minCandidateScore })`
+
+Current behavior remains fallback-only:
+
+- no `turbovec` package import;
+- no ANN index build;
+- no network, LLM, endpoint, public action, or external write;
+- deterministic `tfidf-lite` fallback under `ann_with_tfidf_fallback`;
+- readiness receipt includes `decisionTrace.index`, claim evidence, missing evidence and recall metrics.
+
+The next acceptable step is a bounded local dependency probe with explicit `index-build` and `query` acceptance criteria. It must still be private-only and receipt-only.
+
 Default stage-3 receipt artifact:
 
 - `cortex-abv/private-runtime/receipts/vector-retrieval-turbovec-shadow-receipt.v1.json`

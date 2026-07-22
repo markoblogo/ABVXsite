@@ -105,6 +105,21 @@ Completed (read-only pilot): one synthetic scheduled-job plan + receipt, no runt
   - explicit `index-build` and `query` acceptance criteria in a bounded private-only benchmark;
   - separate governance check confirming allowed surfaces remain read-only.
 
+#### Stage 4b execution status (completed)
+
+- Added a local vector runtime shim with future `buildIndex/query` shape:
+  - `cortex-abv/private-runtime/src/vector-runtime-shim.mjs`
+  - `cortex-abv/private-runtime/src/vector-runtime-readiness-runner.mjs`
+- Added readiness receipt:
+  - `cortex-abv/private-runtime/receipts/vector-runtime-readiness-receipt.v1.json`
+- Current status:
+  - synthetic only;
+  - fallback-only (`tfidf-lite`);
+  - no `turbovec` package import;
+  - no endpoint, scheduler, network, LLM call, write authority, or public action authority.
+- Next gate:
+  - run a bounded local dependency probe only after adding explicit `index-build`/`query` acceptance criteria and owner review.
+
 ## Staged adoption (hard requirement)
 1. Read-only planning (contracts + synthetic map only)
 2. One read-only adapter job in private runtime

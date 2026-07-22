@@ -8,6 +8,7 @@
     "tenant:check": "node src/check-tenant-project-ai-engine-contract.mjs",
     "vector-retrieval-pilot:check": "node src/check-vector-retrieval-pilot.mjs",
     "vector-retrieval-shadow:run": "node src/vector-retrieval-synthetic-runner.mjs --plan config/vector-retrieval-turbovec-pilot.v1.json --benchmark examples/synthetic-vector-retrieval-benchmark.v1.json --receipt receipts/vector-retrieval-turbovec-shadow-receipt.v1.json",
+    "vector-runtime-readiness:run": "node src/vector-runtime-readiness-runner.mjs --plan config/vector-retrieval-turbovec-pilot.v1.json --benchmark examples/synthetic-vector-retrieval-benchmark.v1.json --receipt receipts/vector-runtime-readiness-receipt.v1.json",
     "azur-menton:check": "node src/check-azur-menton-source-pack.mjs",
     "azur-menton:shadow-eval:check": "node src/check-azur-menton-shadow-evaluation.mjs",
     "coqpi:context-pack:check": "node --input-type=module -e \"import { readFileSync } from 'node:fs'; import { validateCoqPiContextPack } from './src/coqpi-context-pack.mjs'; validateCoqPiContextPack(JSON.parse(readFileSync(process.argv[1], 'utf8'))); console.log('CoqPi context pack valid.');\"",

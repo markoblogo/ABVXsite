@@ -175,6 +175,23 @@ This is Stage 3 synthetic validation only. It does not build ANN indexes and doe
 
 Planned index-layer readiness is now represented in plan shape: it includes an `indexInterface` section with ANN intent and deterministic tf-idf fallback. The runner keeps current governance gates untouched and records all fallback decisions in `decisionTrace` (`requestedReranker`, `fallbackApplied`, `fallbackEngine`, `fallbackReason`).
 
+## Vector runtime readiness shim
+
+The next retrieval layer is represented by a local `buildIndex/query` shim:
+
+- `src/vector-runtime-shim.mjs` exposes `buildVectorRuntimeIndex` and `queryVectorRuntimeIndex`.
+- `src/vector-runtime-readiness-runner.mjs` runs the shim against the synthetic benchmark.
+- `receipts/vector-runtime-readiness-receipt.v1.json` records the latest readiness receipt.
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-readiness:run
+```
+
+This is still a stubbed runtime boundary. It does not import `turbovec`, build a real ANN index, expose a retrieval endpoint, call models, write outside the receipt, or grant public action authority. Its purpose is to fix the future runtime interface and prove fallback/evidence tracing before any dependency is wired.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

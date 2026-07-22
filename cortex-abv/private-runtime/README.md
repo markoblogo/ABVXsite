@@ -313,6 +313,25 @@ The local index artifact is written to `data/vector-indexes/turbovec-poc/index-a
 
 This still does not approve runtime activation, endpoints, schedulers, model calls, network calls, source-pack mutation, external writes, public actions or publication.
 
+## Vector runtime controlled module design
+
+The controlled module design gate defines the future local module contract that may consume the Stage 4h artifact interface:
+
+- `config/vector-runtime-controlled-module-design.v1.json` defines the module boundary, artifact interface, candidate-query return shape and review gate.
+- `src/vector-runtime-controlled-module-design.mjs` validates that contract against the Stage 4h dry-run receipt.
+- `receipts/vector-runtime-controlled-module-design-receipt.v1.json` records design eligibility and the required Stage 4h receipt digest.
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-controlled-module-design:check
+```
+
+The receipt returns `eligible_for_controlled_runtime_module_poc_review` or `not_eligible`. Eligibility means only that a future controlled local module POC can be reviewed. The module interface is limited to `loadIndexArtifact`, `queryCandidates` and `verifyClaimEvidence`; it must consume the gitignored Stage 4h artifact read-only, return candidates only, preserve tenant scope, apply hard thresholds and carry evidence refs.
+
+This still does not approve module implementation, runtime wiring, endpoints, schedulers, model calls, network calls, source or artifact mutation, external writes, public actions or publication.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

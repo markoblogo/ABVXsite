@@ -326,17 +326,50 @@ The receipt returns:
 
 This does not approve runtime activation. The next stage is only a controlled runtime module design review.
 
+### Stage 4i: controlled runtime module design review
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/config/vector-runtime-controlled-module-design.v1.json`
+- `cortex-abv/private-runtime/src/vector-runtime-controlled-module-design.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-controlled-module-design.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-controlled-module-design-receipt.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-controlled-module-design:check
+```
+
+The design review gate defines the future controlled local module contract:
+
+- consumes the Stage 4h dry-run receipt and records its digest;
+- reads only the Stage 4h artifact interface under `data/vector-indexes/turbovec-poc`;
+- module type: local library only;
+- allowed future functions: `loadIndexArtifact`, `queryCandidates`, `verifyClaimEvidence`;
+- candidate output must carry `candidateId`, `score`, `matchedTerms`, `evidenceRefs` and `tenant`;
+- claim-evidence verification must return `passed`, `missingEvidenceRefs` and `decisionTrace`;
+- tenant scope, hard threshold and evidence refs are mandatory.
+
+The receipt returns:
+
+- `eligible_for_controlled_runtime_module_poc_review` when the module contract and Stage 4h receipt are coherent;
+- `not_eligible` when the design or Stage 4h receipt blocks.
+
+This does not approve implementation or wiring. It only makes the next POC review discussable under a fixed local module interface.
+
 Default stage-3 receipt artifact:
 
 - `cortex-abv/private-runtime/receipts/vector-retrieval-turbovec-shadow-receipt.v1.json`
 
 ## Next gate
 
-Before any controlled runtime module wiring:
+Before any controlled runtime module implementation POC:
 
-1. define a controlled runtime module contract that can consume the dry-run artifact interface;
-2. keep it private-runtime-only and local;
-3. require the Stage 4h receipt digest before any module wiring;
+1. define a separate implementation POC review for the local module functions;
+2. require the Stage 4i design receipt digest;
+3. implement only a dry-run local library harness, not a service;
 4. preserve the same no-endpoint/no-LLM/no-network/no-public-action governance.
 
 This keeps the governance rule: **no outbound action until auditability and evidence policy are proven.**

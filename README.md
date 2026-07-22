@@ -167,6 +167,7 @@ See also: [Cabinet pilot integration map](docs/cortex-abv-cabinet-integration-ma
 - `cortex-abv/private-runtime/config/vector-runtime-wiring-design.v1.json` defines the private-runtime-only wiring design contract and returns `eligible_for_implementation_poc_review` without approving implementation.
 - `cortex-abv/private-runtime/config/vector-runtime-implementation-poc-review.v1.json` defines the minimum dry-run POC review scope: local gitignored index artifact root, allowed source packs, digest/rollback checks and dry-run command allowlist. It returns `eligible_for_implementation_poc_dry_run_review` without approving the POC itself.
 - `cortex-abv/private-runtime/config/vector-runtime-implementation-poc-dry-run.v1.json` runs the first local dry-run artifact pass: synthetic source pack, gitignored local index artifact, source/index digests, probe results and rollback notes. It returns `eligible_for_controlled_runtime_module_review` without approving runtime activation.
+- `cortex-abv/private-runtime/config/vector-runtime-controlled-module-design.v1.json` defines the next controlled local module contract over that artifact interface: `loadIndexArtifact`, `queryCandidates`, `verifyClaimEvidence`, Stage 4h receipt digest required, no implementation or wiring approval.
 
 Check the adapter contract and currently enabled project-sync targets:
 

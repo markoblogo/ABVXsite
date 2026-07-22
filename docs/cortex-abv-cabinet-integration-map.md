@@ -214,6 +214,24 @@ Completed (read-only pilot): one synthetic scheduled-job plan + receipt, no runt
   - source/index digests captured in the receipt.
 - Still forbidden: runtime activation, endpoint, scheduler, network calls, LLM calls, source mutation, external writes, public actions and publication.
 
+#### Stage 4i execution status (completed)
+
+- Added controlled runtime module design review:
+  - `cortex-abv/private-runtime/config/vector-runtime-controlled-module-design.v1.json`
+  - `cortex-abv/private-runtime/src/vector-runtime-controlled-module-design.mjs`
+  - `cortex-abv/private-runtime/receipts/vector-runtime-controlled-module-design-receipt.v1.json`
+- Current receipt result:
+  - `eligibility: "eligible_for_controlled_runtime_module_poc_review"`;
+  - `status: "passed"`;
+  - `blockers: []`.
+- Controlled module contract:
+  - consumes Stage 4h receipt digest and artifact interface;
+  - local library only;
+  - future functions limited to `loadIndexArtifact`, `queryCandidates`, `verifyClaimEvidence`;
+  - candidate outputs must include tenant and evidence refs;
+  - tenant scope, hard threshold and claim-evidence verification are mandatory.
+- Still forbidden: module implementation approval, runtime wiring, endpoint, scheduler, network calls, LLM calls, artifact/source mutation, external writes, public actions and publication.
+
 ## Staged adoption (hard requirement)
 1. Read-only planning (contracts + synthetic map only)
 2. One read-only adapter job in private runtime

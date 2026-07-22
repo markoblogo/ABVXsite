@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimeControlledModuleDesign",
+  "version": "v1",
+  "authority": "design_review_only",
+  "engine": "turbovec",
+  "purpose": "Design-review contract for a future controlled local runtime module that can consume the Stage 4h index artifact interface. This does not approve module implementation or wiring.",
+  "prerequisites": {
+    "requiredDryRunReceiptKind": "CortexABVVectorRuntimeImplementationPocDryRunReceipt",
+    "requiredDryRunEligibility": "eligible_for_controlled_runtime_module_review",
+    "requiredDryRunStatus": "passed",
+    "requiresDryRunReceiptDigest": true
+  },
+  "moduleBoundary": {
+    "allowedLocation": "cortex-abv-private-runtime-only",
+    "moduleType": "local_library_only",
+    "endpointAllowed": false,
+    "schedulerAllowed": false,
+    "networkCallsAllowed": false,
+    "llmCallsAllowed": false,
+    "publicActionAuthorityAllowed": false,
+    "writesOutsideReceiptsAllowed": false,
+    "artifactMutationAllowed": false,
+    "sourcePackMutationAllowed": false
+  },
+  "artifactInterface": {
+    "requiredArtifactKind": "CortexABVVectorRuntimeIndexArtifact",
+    "requiredArtifactVersion": "v1",
+    "requiredArtifactRoot": "data/vector-indexes/turbovec-poc",
+    "requiresArtifactDigest": true,
+    "requiresSourceDigest": true,
+    "requiresReceiptLinkageDigest": true,
+    "loadMode": "read_only",
+    "candidateMode": "candidates_only",
+    "answerGeneration": false
+  },
+  "moduleInterface": {
+    "allowedFunctions": [
+      "loadIndexArtifact",
+      "queryCandidates",
+      "verifyClaimEvidence"
+    ],
+    "returnShape": {
+      "queryCandidates": [
+        "candidateId",
+        "score",
+        "matchedTerms",
+        "evidenceRefs",
+        "tenant"
+      ],
+      "verifyClaimEvidence": [
+        "passed",
+        "missingEvidenceRefs",
+        "decisionTrace"
+      ]
+    },
+    "requiresTenantScope": true,
+    "forbidCrossTenantLeakage": true,
+    "requiresHardThreshold": true,
+    "requiresEvidenceRefs": true
+  },
+  "reviewGate": {
+    "targetEligibility": "eligible_for_controlled_runtime_module_poc_review",
+    "implementationRequiresSeparateApproval": true,
+    "wiringRequiresSeparateApproval": true,
+    "ownerReviewRequired": true
+  },
+  "rejectionCases": [
+    "dry_run_receipt_not_eligible",
+    "missing_dry_run_receipt_digest",
+    "artifact_digest_missing",
+    "artifact_root_mismatch",
+    "source_digest_missing",
+    "receipt_linkage_digest_missing",
+    "endpoint_requested",
+    "scheduler_requested",
+    "network_calls_requested",
+    "llm_calls_requested",
+    "public_action_authority_requested",
+    "external_writes_requested",
+    "artifact_mutation_requested",
+    "source_pack_mutation_requested",
+    "answer_generation_requested",
+    "cross_tenant_access_requested"
+  ],
+  "governance": {
+    "readOnly": true,
+    "proposalOnly": true,
+    "designReviewOnly": true,
+    "implementationApproved": false,
+    "wiringApproved": false,
+    "runtimeIntegration": false,
+    "endpoint": false,
+    "scheduler": false,
+    "networkCalls": false,
+    "llmCalls": false,
+    "writesOutsideReceipt": false,
+    "publicActionAuthority": false
+  }
+}

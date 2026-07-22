@@ -148,6 +148,22 @@ Completed (read-only pilot): one synthetic scheduled-job plan + receipt, no runt
 - Dependency probe receipts now carry the package policy digest and install spec.
 - This approves only the supply policy for bounded probes, not runtime integration.
 
+#### Stage 4e execution status (completed)
+
+- Added runtime integration preflight aggregator:
+  - `cortex-abv/private-runtime/src/vector-runtime-integration-preflight.mjs`
+  - `cortex-abv/private-runtime/receipts/vector-runtime-integration-preflight-receipt.v1.json`
+- Aggregates:
+  - package policy receipt;
+  - dependency probe receipt;
+  - runtime readiness receipt;
+  - synthetic retrieval shadow receipt.
+- Current receipt result:
+  - `eligibility: "eligible_for_design_review"`;
+  - `status: "passed"`;
+  - `blockers: []`.
+- Scope remains design-review only. It does not approve implementation, runtime integration, endpoints, model calls, external writes or public actions.
+
 ## Staged adoption (hard requirement)
 1. Read-only planning (contracts + synthetic map only)
 2. One read-only adapter job in private runtime

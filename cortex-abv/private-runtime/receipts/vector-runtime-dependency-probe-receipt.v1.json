@@ -4,7 +4,7 @@
   "version": "v1",
   "authority": "plan_only",
   "status": "passed",
-  "runAt": "2026-07-22T16:56:43.748Z",
+  "runAt": "2026-07-22T17:07:32.468Z",
   "mode": "bounded_local_dependency_probe",
   "engine": "turbovec",
   "package": "turbovec==0.8.0",

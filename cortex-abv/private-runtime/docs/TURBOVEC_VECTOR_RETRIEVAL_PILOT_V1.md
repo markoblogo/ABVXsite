@@ -186,6 +186,43 @@ npm run vector-runtime-package-policy:check
 
 The package policy receipt records `policyDigest`, package spec, observed platform, venv policy, governance and acceptance state. Dependency-probe receipts now include the policy digest and install spec.
 
+### Stage 4e: runtime integration preflight
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/src/vector-runtime-integration-preflight.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-integration-preflight.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-integration-preflight-receipt.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-integration-preflight:run
+```
+
+The preflight aggregates four receipts:
+
+- package policy receipt;
+- dependency probe receipt;
+- vector runtime readiness receipt;
+- synthetic retrieval shadow receipt.
+
+It validates:
+
+- package policy passed and still forbids runtime integration;
+- dependency probe references the current package policy digest;
+- index-build and query acceptance are both accepted;
+- synthetic retrieval and readiness receipts pass recall/evidence gates;
+- governance remains read-only, proposal-only, no endpoint, no LLM calls, no writes outside receipts and no public action authority.
+
+Output eligibility:
+
+- `eligible_for_design_review` means the receipts are coherent enough to design future real runtime wiring.
+- `not_eligible_for_design_review` means at least one receipt gate blocks.
+
+This still does not approve implementation, runtime activation, endpoint exposure, retrieval activation, writes, model calls or public actions.
+
 Default stage-3 receipt artifact:
 
 - `cortex-abv/private-runtime/receipts/vector-retrieval-turbovec-shadow-receipt.v1.json`

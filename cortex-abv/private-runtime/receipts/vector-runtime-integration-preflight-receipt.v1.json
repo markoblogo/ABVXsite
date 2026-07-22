@@ -1,0 +1,535 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimeIntegrationPreflightReceipt",
+  "version": "v1",
+  "authority": "plan_only",
+  "status": "passed",
+  "eligibility": "eligible_for_design_review",
+  "runAt": "2026-07-22T17:07:58.079Z",
+  "mode": "runtime_integration_preflight",
+  "engine": "turbovec",
+  "governance": {
+    "runtimeIntegration": false,
+    "designReviewOnly": true,
+    "readOnly": true,
+    "proposalOnly": true,
+    "endpoint": false,
+    "llmCalls": false,
+    "writesOutsideReceipt": false,
+    "publicActionAuthority": false
+  },
+  "sources": {
+    "packagePolicy": {
+      "path": "receipts/vector-runtime-package-policy-receipt.v1.json",
+      "digest": "fb3cd5f6fcaec1135b209dd5fbc85afe20946004fe0977169946733972183c7b",
+      "kind": "CortexABVVectorRuntimePackagePolicyReceipt",
+      "status": "passed"
+    },
+    "dependencyProbe": {
+      "path": "receipts/vector-runtime-dependency-probe-receipt.v1.json",
+      "digest": "947cb173ca089fe4c4ee4c5453b94fe78ff880f98ed618d7bfc58b2aeb4d6961",
+      "kind": "CortexABVVectorRuntimeDependencyProbeReceipt",
+      "status": "passed"
+    },
+    "readiness": {
+      "path": "receipts/vector-runtime-readiness-receipt.v1.json",
+      "digest": "a094148ac2cb34c6431f023468ea06c7784f6a952b35929a24d4f0e78ad7f676",
+      "kind": "CortexABVVectorRuntimeReadinessReceipt",
+      "status": "passed"
+    },
+    "syntheticRetrieval": {
+      "path": "receipts/vector-retrieval-turbovec-shadow-receipt.v1.json",
+      "digest": "0d83657a0f8498f16d4948666f8e31ed3dbdf2c72bfe9c1f5bafebeea4556d82",
+      "kind": "CortexABVVectorRetrievalShadowReceipt",
+      "status": "passed"
+    }
+  },
+  "gates": {
+    "packagePolicy": [
+      {
+        "id": "kind",
+        "status": "accepted",
+        "reason": "package policy receipt kind must match",
+        "evidence": {
+          "kind": "CortexABVVectorRuntimePackagePolicyReceipt"
+        }
+      },
+      {
+        "id": "status",
+        "status": "accepted",
+        "reason": "package policy receipt must be passed",
+        "evidence": {
+          "status": "passed"
+        }
+      },
+      {
+        "id": "package_pin",
+        "status": "accepted",
+        "reason": "package install spec must be pinned",
+        "evidence": {
+          "installSpec": "turbovec==0.8.0"
+        }
+      },
+      {
+        "id": "package_pin_acceptance",
+        "status": "accepted",
+        "reason": "package pin acceptance must be accepted",
+        "evidence": {
+          "status": "accepted",
+          "required": [
+            "PyPI ecosystem",
+            "exact version pin",
+            "installSpec equals name==versionPin"
+          ]
+        }
+      },
+      {
+        "id": "venv_policy_acceptance",
+        "status": "accepted",
+        "reason": "venv policy acceptance must be accepted",
+        "evidence": {
+          "status": "accepted",
+          "required": [
+            "temporary/local only",
+            "no committed venv",
+            "no global site-packages",
+            "install requires explicit flag"
+          ]
+        }
+      },
+      {
+        "id": "platform_acceptance",
+        "status": "accepted",
+        "reason": "platform acceptance must be accepted",
+        "evidence": {
+          "status": "accepted",
+          "required": [
+            "current os allowed",
+            "current arch allowed",
+            "python bounds declared"
+          ]
+        }
+      },
+      {
+        "id": "reproducibility_acceptance",
+        "status": "accepted",
+        "reason": "reproducibility acceptance must be accepted",
+        "evidence": {
+          "status": "accepted",
+          "required": [
+            "policyDigest",
+            "package.installSpec",
+            "platform",
+            "venvPolicy",
+            "governance",
+            "acceptance"
+          ]
+        }
+      },
+      {
+        "id": "governance_read_only",
+        "status": "accepted",
+        "reason": "package policy must remain read-only",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_proposal_only",
+        "status": "accepted",
+        "reason": "package policy must remain proposal-only",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_no_runtime",
+        "status": "accepted",
+        "reason": "package policy must not approve runtime integration",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_no_public_action",
+        "status": "accepted",
+        "reason": "package policy must not approve public actions",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      }
+    ],
+    "dependencyProbe": [
+      {
+        "id": "kind",
+        "status": "accepted",
+        "reason": "dependency probe receipt kind must match",
+        "evidence": {
+          "kind": "CortexABVVectorRuntimeDependencyProbeReceipt"
+        }
+      },
+      {
+        "id": "status",
+        "status": "accepted",
+        "reason": "dependency probe receipt must be passed",
+        "evidence": {
+          "status": "passed"
+        }
+      },
+      {
+        "id": "package_policy_digest",
+        "status": "accepted",
+        "reason": "dependency probe must reference current package policy digest",
+        "evidence": {
+          "expectedDigest": "84043aa05915ba568f397c55ed395408d3e4776e2dcd9470a1d08ae6f878bc91",
+          "actualDigest": "84043aa05915ba568f397c55ed395408d3e4776e2dcd9470a1d08ae6f878bc91"
+        }
+      },
+      {
+        "id": "package_install_spec",
+        "status": "accepted",
+        "reason": "dependency package must match package policy installSpec",
+        "evidence": {
+          "package": "turbovec==0.8.0",
+          "installSpec": "turbovec==0.8.0"
+        }
+      },
+      {
+        "id": "index_build",
+        "status": "accepted",
+        "reason": "dependency probe index build must be accepted",
+        "evidence": {
+          "status": "accepted",
+          "required": [
+            "python import turbovec",
+            "IdMapIndex build",
+            "document count matches fixture corpus"
+          ]
+        }
+      },
+      {
+        "id": "query",
+        "status": "accepted",
+        "reason": "dependency probe query must be accepted",
+        "evidence": {
+          "status": "accepted",
+          "required": [
+            "search returns expected synthetic anchors",
+            "recallAtK threshold passed",
+            "candidate claim evidence present"
+          ]
+        }
+      },
+      {
+        "id": "recall",
+        "status": "accepted",
+        "reason": "dependency probe recall must meet threshold",
+        "evidence": {
+          "corpusSize": 4,
+          "documentCount": 4,
+          "recallAtK": 1,
+          "minRecallAtK": 0.75,
+          "passedAllProbes": true
+        }
+      },
+      {
+        "id": "passed_all_probes",
+        "status": "accepted",
+        "reason": "dependency probe must pass all probes",
+        "evidence": {
+          "corpusSize": 4,
+          "documentCount": 4,
+          "recallAtK": 1,
+          "minRecallAtK": 0.75,
+          "passedAllProbes": true
+        }
+      },
+      {
+        "id": "governance_read_only",
+        "status": "accepted",
+        "reason": "dependency probe must remain read-only",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "dataPlaneNetworkCalls": false,
+          "llmCalls": false,
+          "endpoint": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_proposal_only",
+        "status": "accepted",
+        "reason": "dependency probe must remain proposal-only",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "dataPlaneNetworkCalls": false,
+          "llmCalls": false,
+          "endpoint": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_no_endpoint",
+        "status": "accepted",
+        "reason": "dependency probe must not approve endpoints",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "dataPlaneNetworkCalls": false,
+          "llmCalls": false,
+          "endpoint": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_no_public_action",
+        "status": "accepted",
+        "reason": "dependency probe must not approve public actions",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "dataPlaneNetworkCalls": false,
+          "llmCalls": false,
+          "endpoint": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      }
+    ],
+    "readiness": [
+      {
+        "id": "kind",
+        "status": "accepted",
+        "reason": "readiness receipt kind must match",
+        "evidence": {
+          "kind": "CortexABVVectorRuntimeReadinessReceipt"
+        }
+      },
+      {
+        "id": "status",
+        "status": "accepted",
+        "reason": "readiness receipt must be passed",
+        "evidence": {
+          "status": "passed"
+        }
+      },
+      {
+        "id": "recall",
+        "status": "accepted",
+        "reason": "readiness recall must meet threshold",
+        "evidence": {
+          "corpusSize": 4,
+          "documentCount": 4,
+          "probeCount": 3,
+          "recallAtK": 1,
+          "minRecallAtK": 0.75,
+          "passedAllProbes": true,
+          "evidenceCoverage": 1
+        }
+      },
+      {
+        "id": "evidence_coverage",
+        "status": "accepted",
+        "reason": "readiness evidence coverage must be complete",
+        "evidence": {
+          "corpusSize": 4,
+          "documentCount": 4,
+          "probeCount": 3,
+          "recallAtK": 1,
+          "minRecallAtK": 0.75,
+          "passedAllProbes": true,
+          "evidenceCoverage": 1
+        }
+      },
+      {
+        "id": "fallback_applied",
+        "status": "accepted",
+        "reason": "readiness receipt must still be fallback-only before runtime integration",
+        "evidence": {
+          "engine": "turbovec",
+          "requestedMode": "ann_with_tfidf_fallback",
+          "runtimeReady": false,
+          "adapterAvailable": false,
+          "fallbackApplied": true,
+          "fallbackEngine": "tfidf-lite",
+          "fallbackReason": "runtimeIntegration=false in pilot: tf-idf/lite fallback is required for Stage 3 governance-safe runs",
+          "selectedMode": "tfidf-lite"
+        }
+      },
+      {
+        "id": "runtime_not_ready",
+        "status": "accepted",
+        "reason": "readiness receipt must not claim runtime is active",
+        "evidence": {
+          "engine": "turbovec",
+          "requestedMode": "ann_with_tfidf_fallback",
+          "runtimeReady": false,
+          "adapterAvailable": false,
+          "fallbackApplied": true,
+          "fallbackEngine": "tfidf-lite",
+          "fallbackReason": "runtimeIntegration=false in pilot: tf-idf/lite fallback is required for Stage 3 governance-safe runs",
+          "selectedMode": "tfidf-lite"
+        }
+      },
+      {
+        "id": "no_missing_evidence",
+        "status": "accepted",
+        "reason": "readiness receipt must have no missing evidence",
+        "evidence": {
+          "missingEvidence": []
+        }
+      }
+    ],
+    "syntheticRetrieval": [
+      {
+        "id": "kind",
+        "status": "accepted",
+        "reason": "synthetic retrieval receipt kind must match",
+        "evidence": {
+          "kind": "CortexABVVectorRetrievalShadowReceipt"
+        }
+      },
+      {
+        "id": "status",
+        "status": "accepted",
+        "reason": "synthetic retrieval receipt must be passed",
+        "evidence": {
+          "status": "passed"
+        }
+      },
+      {
+        "id": "recall",
+        "status": "accepted",
+        "reason": "synthetic retrieval recall must meet threshold",
+        "evidence": {
+          "corpusSize": 4,
+          "probeCount": 3,
+          "expectedAnchorCount": 4,
+          "matchedAtK": 4,
+          "recallAtK": 1,
+          "avgTopScore": 2.7742,
+          "minRecallAtK": 0.75,
+          "maxRunMs": 2000,
+          "elapsedMs": 15,
+          "topKCoverage": 1,
+          "passedAllProbes": true,
+          "evidenceCoverage": 1,
+          "threshold": 0.05
+        }
+      },
+      {
+        "id": "evidence_coverage",
+        "status": "accepted",
+        "reason": "synthetic retrieval evidence coverage must be complete",
+        "evidence": {
+          "corpusSize": 4,
+          "probeCount": 3,
+          "expectedAnchorCount": 4,
+          "matchedAtK": 4,
+          "recallAtK": 1,
+          "avgTopScore": 2.7742,
+          "minRecallAtK": 0.75,
+          "maxRunMs": 2000,
+          "elapsedMs": 15,
+          "topKCoverage": 1,
+          "passedAllProbes": true,
+          "evidenceCoverage": 1,
+          "threshold": 0.05
+        }
+      },
+      {
+        "id": "passed_all_probes",
+        "status": "accepted",
+        "reason": "synthetic retrieval must pass all probes",
+        "evidence": {
+          "corpusSize": 4,
+          "probeCount": 3,
+          "expectedAnchorCount": 4,
+          "matchedAtK": 4,
+          "recallAtK": 1,
+          "avgTopScore": 2.7742,
+          "minRecallAtK": 0.75,
+          "maxRunMs": 2000,
+          "elapsedMs": 15,
+          "topKCoverage": 1,
+          "passedAllProbes": true,
+          "evidenceCoverage": 1,
+          "threshold": 0.05
+        }
+      },
+      {
+        "id": "no_missing_evidence",
+        "status": "accepted",
+        "reason": "synthetic retrieval must have no missing evidence",
+        "evidence": {
+          "missingEvidence": []
+        }
+      },
+      {
+        "id": "no_public_action",
+        "status": "accepted",
+        "reason": "synthetic retrieval must not grant public action authority",
+        "evidence": {
+          "networkCalls": false,
+          "llmCalls": false,
+          "writes": false,
+          "publicActionAuthority": false
+        }
+      }
+    ]
+  },
+  "blockers": [],
+  "decisionTrace": {
+    "policySource": "aggregated_receipts",
+    "reason": "All package, dependency, readiness and synthetic retrieval gates passed; eligible only for design review of future runtime wiring.",
+    "requiredReceipts": [
+      "packagePolicy",
+      "dependencyProbe",
+      "readiness",
+      "syntheticRetrieval"
+    ],
+    "packagePolicyDigest": "84043aa05915ba568f397c55ed395408d3e4776e2dcd9470a1d08ae6f878bc91",
+    "dependencyPolicyDigest": "84043aa05915ba568f397c55ed395408d3e4776e2dcd9470a1d08ae6f878bc91"
+  },
+  "review": {
+    "pendingReview": true,
+    "approvalMeaning": "Approve only entry into design review for real runtime wiring. This does not approve implementation, deployment, endpoints, retrieval activation, writes, model calls or public actions.",
+    "requiredFields": [
+      "eligibility",
+      "governance",
+      "sources",
+      "gates",
+      "blockers",
+      "decisionTrace"
+    ]
+  }
+}

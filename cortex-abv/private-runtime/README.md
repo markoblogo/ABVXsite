@@ -238,6 +238,26 @@ node src/vector-runtime-dependency-probe-runner.mjs \
 
 Passing this gate means only that the pinned real local dependency can build an `IdMapIndex` and answer synthetic queries with evidence-backed candidates under the package policy. It does not approve runtime integration, endpoints, public retrieval, model calls, external writes, or autonomous publication.
 
+## Vector runtime integration preflight
+
+The runtime integration preflight aggregates the current vector receipts:
+
+- `receipts/vector-runtime-package-policy-receipt.v1.json`
+- `receipts/vector-runtime-dependency-probe-receipt.v1.json`
+- `receipts/vector-runtime-readiness-receipt.v1.json`
+- `receipts/vector-retrieval-turbovec-shadow-receipt.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-integration-preflight:run
+```
+
+The output is `receipts/vector-runtime-integration-preflight-receipt.v1.json`. It returns either `eligible_for_design_review` or `not_eligible_for_design_review`.
+
+Eligibility means only that the existing evidence is coherent enough to discuss a future real runtime wiring design. It does not approve implementation, package installation in runtime, endpoints, retrieval activation, model calls, external writes, public actions, or publication.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

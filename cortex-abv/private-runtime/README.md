@@ -395,6 +395,28 @@ The design allows only the existing local harness functions: `loadIndexArtifact`
 
 This still does not approve endpoints, schedulers, model calls, network calls, source or artifact mutation, external writes, public actions or publication.
 
+## Vector runtime controlled wiring POC review
+
+The controlled wiring POC review gate defines the minimum scope for a future local dry-run without implementing it:
+
+- `config/vector-runtime-controlled-wiring-poc-review.v1.json` defines the future runner/test paths, allowed local binding, allowed artifact path, command allowlist and rollback policy.
+- `src/vector-runtime-controlled-wiring-poc-review.mjs` validates that scope against the Stage 4l controlled wiring design receipt.
+- `test/vector-runtime-controlled-wiring-poc-review.test.mjs` blocks endpoint, activation and non-allowlisted binding attempts.
+- `receipts/vector-runtime-controlled-wiring-poc-review-receipt.v1.json` records the Stage 4l receipt digest and minimum future POC scope.
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-controlled-wiring-poc-review:check
+```
+
+The receipt returns `eligible_for_controlled_runtime_wiring_poc_dry_run_review` or `not_eligible`. Eligibility means only that a future local wiring POC dry-run can be reviewed. It does not approve POC implementation, wiring implementation or runtime activation.
+
+The future POC scope is limited to `src/vector-runtime-controlled-wiring-poc-dry-run.mjs`, tests in `test/vector-runtime-controlled-wiring-poc-dry-run.test.mjs`, the existing controlled harness module, and dry-run commands ending in `_poc_dry_run`.
+
+This still does not approve endpoints, schedulers, model calls, network calls, source or artifact mutation, external writes, public actions or publication.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

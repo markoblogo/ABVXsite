@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimeControlledWiringPocReview",
+  "version": "v1",
+  "authority": "plan_only",
+  "engine": "turbovec",
+  "purpose": "Review the minimum scope for a future controlled local wiring POC. This does not approve wiring implementation or runtime activation.",
+  "prerequisites": {
+    "requiredControlledWiringDesignReceiptKind": "CortexABVVectorRuntimeControlledWiringDesignReceipt",
+    "requiredControlledWiringDesignEligibility": "eligible_for_controlled_runtime_wiring_poc_review",
+    "requiredControlledWiringDesignStatus": "passed",
+    "requiresControlledWiringDesignReceiptDigest": true
+  },
+  "pocScope": {
+    "mode": "controlled_wiring_poc_review_only",
+    "futureRunnerPath": "src/vector-runtime-controlled-wiring-poc-dry-run.mjs",
+    "futureTestPath": "test/vector-runtime-controlled-wiring-poc-dry-run.test.mjs",
+    "allowedLocation": "cortex-abv-private-runtime-only",
+    "bindingMode": "in_process_local_library_binding_only",
+    "allowedModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+    "allowedBindings": [
+      "loadIndexArtifact",
+      "queryCandidates",
+      "verifyClaimEvidence"
+    ],
+    "allowedArtifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+    "committedIndexArtifactsAllowed": false,
+    "endpointAllowed": false,
+    "schedulerAllowed": false,
+    "networkAccessAllowed": false,
+    "llmCallsAllowed": false,
+    "publicActionAuthorityAllowed": false,
+    "sourceMutationAllowed": false,
+    "artifactMutationAllowed": false,
+    "writesOutsideReceiptAllowed": false,
+    "crossTenantQueriesAllowed": false,
+    "answerGenerationAllowed": false
+  },
+  "digestAndRollback": {
+    "requiresStage4lReceiptDigest": true,
+    "requiresStage4kReceiptDigest": true,
+    "requiresStage4hArtifactDigest": true,
+    "requiresStage4hSourceDigest": true,
+    "requiresReceiptDigestLinkage": true,
+    "requiresRollbackNotes": true,
+    "rollbackAction": "abandon_wiring_poc_receipt_and_do_not_activate_binding",
+    "baselineAdvancementAllowed": false
+  },
+  "dryRunCommandPolicy": {
+    "allowedCommands": [
+      "verify_stage4l_digest_poc_dry_run",
+      "bind_local_harness_poc_dry_run",
+      "query_local_harness_poc_dry_run",
+      "verify_no_activation_poc_dry_run"
+    ],
+    "commandsMustEndWith": "_poc_dry_run",
+    "shellAccessAllowed": false,
+    "installDependenciesAllowed": false,
+    "mutateSourcePacksAllowed": false,
+    "mutateIndexArtifactAllowed": false,
+    "activateRuntimeAllowed": false
+  },
+  "reviewGate": {
+    "targetEligibility": "eligible_for_controlled_runtime_wiring_poc_dry_run_review",
+    "wiringPocImplementationRequiresSeparateApproval": true,
+    "runtimeActivationRequiresSeparateApproval": true,
+    "ownerReviewRequired": true
+  },
+  "rejectionCases": [
+    "controlled_wiring_design_receipt_not_eligible",
+    "missing_stage4l_receipt_digest",
+    "missing_stage4k_receipt_digest",
+    "missing_stage4h_artifact_digest",
+    "missing_stage4h_source_digest",
+    "endpoint_requested",
+    "scheduler_requested",
+    "network_access_requested",
+    "llm_calls_requested",
+    "public_action_authority_requested",
+    "source_mutation_requested",
+    "artifact_mutation_requested",
+    "external_writes_requested",
+    "cross_tenant_queries_requested",
+    "answer_generation_requested",
+    "runtime_activation_requested",
+    "non_allowlisted_binding_requested",
+    "non_dry_run_command",
+    "missing_rollback_notes",
+    "baseline_advancement_requested"
+  ],
+  "governance": {
+    "readOnly": true,
+    "proposalOnly": true,
+    "controlledWiringPocReviewOnly": true,
+    "controlledWiringPocApproved": false,
+    "wiringImplementationApproved": false,
+    "runtimeActivationApproved": false,
+    "runtimeIntegration": false,
+    "endpoint": false,
+    "scheduler": false,
+    "networkCalls": false,
+    "llmCalls": false,
+    "writesOutsideReceipt": false,
+    "publicActionAuthority": false
+  }
+}

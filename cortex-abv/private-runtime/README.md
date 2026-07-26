@@ -373,6 +373,28 @@ The harness reads only `data/vector-indexes/turbovec-poc/index-artifact.v1.json`
 
 This still does not approve endpoints, schedulers, model calls, network calls, source or artifact mutation, external writes, public actions or publication.
 
+## Vector runtime controlled wiring design
+
+The controlled wiring design gate reviews the shape of a future local binding without activating it:
+
+- `config/vector-runtime-controlled-wiring-design.v1.json` defines a private-runtime-only, in-process local library binding design.
+- `src/vector-runtime-controlled-wiring-design.mjs` validates the design against the Stage 4k harness dry-run receipt.
+- `test/vector-runtime-controlled-wiring-design.test.mjs` blocks endpoint, activation or runtime-integration authority.
+- `receipts/vector-runtime-controlled-wiring-design-receipt.v1.json` records the Stage 4k digest linkage and governance decision.
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-controlled-wiring-design:check
+```
+
+The receipt returns `eligible_for_controlled_runtime_wiring_poc_review` or `not_eligible`. Eligibility means only that a future wiring POC review can be discussed. It does not approve wiring implementation or activation.
+
+The design allows only the existing local harness functions: `loadIndexArtifact`, `queryCandidates`, and `verifyClaimEvidence`. It requires Stage 4k receipt digest, Stage 4h artifact/source digests, tenant scope, hard threshold and evidence refs. It returns candidates only and does not generate answers.
+
+This still does not approve endpoints, schedulers, model calls, network calls, source or artifact mutation, external writes, public actions or publication.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

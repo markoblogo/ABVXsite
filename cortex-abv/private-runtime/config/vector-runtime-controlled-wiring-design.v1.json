@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimeControlledWiringDesign",
+  "version": "v1",
+  "authority": "design_review_only",
+  "engine": "turbovec",
+  "purpose": "Design-review contract for future controlled runtime wiring over the local harness. This does not approve wiring activation.",
+  "prerequisites": {
+    "requiredHarnessDryRunReceiptKind": "CortexABVVectorRuntimeControlledModuleHarnessDryRunReceipt",
+    "requiredHarnessDryRunEligibility": "eligible_for_controlled_runtime_wiring_design_review",
+    "requiredHarnessDryRunStatus": "passed",
+    "requiresHarnessDryRunReceiptDigest": true
+  },
+  "wiringBoundary": {
+    "allowedLocation": "cortex-abv-private-runtime-only",
+    "wiringMode": "in_process_local_library_binding_only",
+    "activationApproved": false,
+    "endpointAllowed": false,
+    "schedulerAllowed": false,
+    "networkCallsAllowed": false,
+    "llmCallsAllowed": false,
+    "publicActionAuthorityAllowed": false,
+    "writesOutsideReceiptsAllowed": false,
+    "artifactMutationAllowed": false,
+    "sourceMutationAllowed": false,
+    "crossTenantQueriesAllowed": false
+  },
+  "bindingContract": {
+    "modulePath": "src/vector-runtime-controlled-module-harness.mjs",
+    "allowedBindings": [
+      "loadIndexArtifact",
+      "queryCandidates",
+      "verifyClaimEvidence"
+    ],
+    "requiresStage4kReceiptDigest": true,
+    "requiresStage4hArtifactDigest": true,
+    "requiresTenantScope": true,
+    "requiresHardThreshold": true,
+    "requiresEvidenceRefs": true,
+    "returnsCandidatesOnly": true,
+    "answerGeneration": false
+  },
+  "reviewGate": {
+    "targetEligibility": "eligible_for_controlled_runtime_wiring_poc_review",
+    "wiringImplementationRequiresSeparateApproval": true,
+    "runtimeActivationRequiresSeparateApproval": true,
+    "ownerReviewRequired": true
+  },
+  "rejectionCases": [
+    "harness_dry_run_receipt_not_eligible",
+    "missing_harness_dry_run_receipt_digest",
+    "wiring_activation_requested",
+    "endpoint_requested",
+    "scheduler_requested",
+    "network_calls_requested",
+    "llm_calls_requested",
+    "public_action_authority_requested",
+    "external_writes_requested",
+    "artifact_mutation_requested",
+    "source_mutation_requested",
+    "cross_tenant_queries_requested",
+    "missing_tenant_scope",
+    "missing_hard_threshold",
+    "missing_claim_evidence",
+    "answer_generation_requested"
+  ],
+  "governance": {
+    "readOnly": true,
+    "proposalOnly": true,
+    "designReviewOnly": true,
+    "wiringImplementationApproved": false,
+    "runtimeActivationApproved": false,
+    "runtimeIntegration": false,
+    "endpoint": false,
+    "scheduler": false,
+    "networkCalls": false,
+    "llmCalls": false,
+    "writesOutsideReceipt": false,
+    "publicActionAuthority": false
+  }
+}

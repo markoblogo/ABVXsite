@@ -427,17 +427,51 @@ The receipt returns:
 
 This does not approve runtime wiring. It only makes a later wiring design review discussable under the same local-only boundary.
 
+### Stage 4l: controlled runtime wiring design review
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/config/vector-runtime-controlled-wiring-design.v1.json`
+- `cortex-abv/private-runtime/src/vector-runtime-controlled-wiring-design.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-controlled-wiring-design.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-controlled-wiring-design-receipt.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-controlled-wiring-design:check
+```
+
+The design review fixes a future wiring boundary without activating it:
+
+- private-runtime-only;
+- in-process local library binding only;
+- Stage 4k harness dry-run receipt digest required;
+- Stage 4h artifact/source digest continuity required;
+- allowed bindings limited to `loadIndexArtifact`, `queryCandidates`, `verifyClaimEvidence`;
+- tenant scope, hard threshold and evidence refs required;
+- candidates only, no answer generation.
+
+The receipt returns:
+
+- `eligible_for_controlled_runtime_wiring_poc_review` when design, digest and governance gates pass;
+- `not_eligible` when any gate blocks.
+
+This does not approve wiring implementation or runtime activation. It only makes a later controlled wiring POC review discussable.
+
 Default stage-3 receipt artifact:
 
 - `cortex-abv/private-runtime/receipts/vector-retrieval-turbovec-shadow-receipt.v1.json`
 
 ## Next gate
 
-Before any controlled runtime wiring:
+Before any controlled runtime wiring POC:
 
-1. add a separate runtime wiring design review gate;
-2. require the Stage 4k harness dry-run receipt digest;
+1. add a separate controlled wiring POC review gate;
+2. require the Stage 4l controlled wiring design receipt digest;
 3. keep wiring private-runtime-only and local-library-only;
-4. preserve the same no-endpoint/no-LLM/no-network/no-public-action governance.
+4. preserve the same no-endpoint/no-LLM/no-network/no-public-action governance;
+5. keep activation as a separate later decision, not an implied result of the POC review.
 
 This keeps the governance rule: **no outbound action until auditability and evidence policy are proven.**

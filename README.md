@@ -195,6 +195,7 @@ See also: [Cabinet pilot integration map](docs/cortex-abv-cabinet-integration-ma
 - `cortex-abv/private-runtime/config/vector-runtime-controlled-module-design.v1.json` defines the next controlled local module contract over that artifact interface: `loadIndexArtifact`, `queryCandidates`, `verifyClaimEvidence`, Stage 4h receipt digest required, no implementation or wiring approval.
 - `cortex-abv/private-runtime/config/vector-runtime-controlled-module-poc-review.v1.json` defines the future local harness POC review scope and requires the Stage 4i design receipt digest. It returns `eligible_for_controlled_runtime_module_harness_dry_run_review` without approving harness implementation.
 - `cortex-abv/private-runtime/src/vector-runtime-controlled-module-harness.mjs` implements the first local-only controlled module harness over the Stage 4h artifact. Its dry-run receipt returns `eligible_for_controlled_runtime_wiring_design_review` without approving runtime wiring.
+- `cortex-abv/private-runtime/config/vector-runtime-controlled-wiring-design.v1.json` defines the controlled runtime wiring design gate: private-runtime-only, in-process local library binding only, Stage 4k receipt digest required, no endpoint/scheduler/network/LLM/public action. Its receipt returns `eligible_for_controlled_runtime_wiring_poc_review` without activating wiring.
 
 Check the adapter contract and currently enabled project-sync targets:
 

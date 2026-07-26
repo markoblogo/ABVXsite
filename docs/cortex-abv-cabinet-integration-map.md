@@ -268,6 +268,25 @@ Completed (read-only pilot): one synthetic scheduled-job plan + receipt, no runt
   - records command trace and query results in the receipt.
 - Still forbidden: runtime wiring approval, endpoint, scheduler, network calls, LLM calls, source/artifact mutation, external writes, public actions and publication.
 
+#### Stage 4l execution status (completed)
+
+- Added controlled runtime wiring design review:
+  - `cortex-abv/private-runtime/config/vector-runtime-controlled-wiring-design.v1.json`
+  - `cortex-abv/private-runtime/src/vector-runtime-controlled-wiring-design.mjs`
+  - `cortex-abv/private-runtime/receipts/vector-runtime-controlled-wiring-design-receipt.v1.json`
+- Current receipt result:
+  - `eligibility: "eligible_for_controlled_runtime_wiring_poc_review"`;
+  - `status: "passed"`;
+  - `blockers: []`.
+- Wiring design boundary:
+  - private-runtime-only;
+  - in-process local library binding only;
+  - Stage 4k receipt digest required;
+  - allowed bindings limited to `loadIndexArtifact`, `queryCandidates`, `verifyClaimEvidence`;
+  - candidates only, no answer generation;
+  - tenant scope, hard threshold and evidence refs required.
+- Still forbidden: wiring implementation approval, runtime activation, endpoint, scheduler, network calls, LLM calls, source/artifact mutation, external writes, public actions and publication.
+
 ## Staged adoption (hard requirement)
 1. Read-only planning (contracts + synthetic map only)
 2. One read-only adapter job in private runtime

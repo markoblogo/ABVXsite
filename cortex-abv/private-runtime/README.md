@@ -497,6 +497,26 @@ The receipt returns `eligible_for_runtime_activation_dry_run` or `not_eligible`.
 
 The future dry-run is limited to local callable interface checks: module importability, binding presence, read-only artifact load, tenant-scoped candidate-only query, evidence verification and proof that activation is not exposed. Writes remain receipt-only.
 
+## Vector runtime activation dry-run
+
+The first local activation dry-run now executes the approved callable checks without activating runtime:
+
+- `config/vector-runtime-activation-dry-run.v1.json` defines the Stage 4q prerequisite, module path, artifact path, queries, commands, checks and rollback notes.
+- `src/vector-runtime-activation-dry-run.mjs` imports the local harness module, verifies required bindings, checks the Stage 4q and Stage 4p digest chain, loads the artifact read-only, runs tenant-scoped candidate-only queries and writes a receipt.
+- `test/vector-runtime-activation-dry-run.test.mjs` blocks a non-eligible Stage 4q receipt and activation/endpoint authority.
+- `receipts/vector-runtime-activation-dry-run-receipt.v1.json` records module importability, binding checks, digest linkage, query results and governance.
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-activation-dry-run:run
+```
+
+The receipt returns `eligible_for_runtime_readiness_review` or `not_eligible`. Eligibility means only that a later readiness review gate can be discussed. It still does not activate runtime wiring.
+
+The dry-run writes only a receipt. It does not expose an endpoint, start a scheduler, call a model, use the network, mutate source/index artifacts, create public actions or publish anything.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

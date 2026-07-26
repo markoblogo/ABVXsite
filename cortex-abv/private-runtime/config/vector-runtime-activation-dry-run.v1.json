@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimeActivationDryRun",
+  "version": "v1",
+  "authority": "local_dry_run_only",
+  "engine": "turbovec",
+  "purpose": "Execute the first local runtime activation dry-run without activating runtime. It verifies the callable module boundary, read-only artifact loading, tenant-scoped candidate-only queries, evidence refs and no exposed activation.",
+  "prerequisites": {
+    "requiredActivationDryRunReviewReceiptKind": "CortexABVVectorRuntimeActivationDryRunReviewReceipt",
+    "requiredActivationDryRunReviewEligibility": "eligible_for_runtime_activation_dry_run",
+    "requiredActivationDryRunReviewStatus": "passed",
+    "requiresActivationDryRunReviewReceiptDigest": true
+  },
+  "module": {
+    "path": "src/vector-runtime-controlled-module-harness.mjs",
+    "type": "local_process_bound_callable_only",
+    "requiredBindings": [
+      "loadIndexArtifact",
+      "queryCandidates",
+      "verifyClaimEvidence"
+    ]
+  },
+  "artifact": {
+    "path": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+    "kind": "CortexABVVectorRuntimeIndexArtifact",
+    "version": "v1",
+    "readOnly": true
+  },
+  "queries": [
+    {
+      "id": "activation-query-index-summary",
+      "tenant": "index-spike",
+      "query": "latest index spike public summary updates",
+      "expectedCandidateIds": [
+        "pp-index-spike-updates"
+      ],
+      "topK": 3,
+      "minScore": 0.05
+    },
+    {
+      "id": "activation-query-monitor-readiness",
+      "tenant": "monitor-mn7r",
+      "query": "monitor mn7r repository readiness status",
+      "expectedCandidateIds": [
+        "pp-monitor-mn7r-dashboard"
+      ],
+      "topK": 3,
+      "minScore": 0.05
+    }
+  ],
+  "commands": {
+    "verifyStage4pDigest": "verify_stage4p_digest_activation_dry_run",
+    "loadLocalRuntimeBinding": "load_local_runtime_binding_activation_dry_run",
+    "queryLocalRuntimeBinding": "query_local_runtime_binding_activation_dry_run",
+    "verifyActivationNotExposed": "verify_activation_not_exposed_activation_dry_run"
+  },
+  "checks": {
+    "requiresModuleImportable": true,
+    "requiresBindingsPresent": true,
+    "requiresArtifactReadOnly": true,
+    "requiresStage4pReceiptDigest": true,
+    "requiresStage4oReceiptDigest": true,
+    "requiresStage4nReceiptDigest": true,
+    "requiresStage4hArtifactDigest": true,
+    "requiresStage4hSourceDigest": true,
+    "requiresTenantScope": true,
+    "requiresCandidatesOnly": true,
+    "requiresEvidenceRefs": true,
+    "requiresActivationNotExposed": true,
+    "requiresRollbackNotes": true
+  },
+  "rollbackNotes": [
+    "If module import, digest chain, tenant scope, evidence or governance gates fail, abandon this receipt and do not activate runtime.",
+    "No endpoint, scheduler, model call, network action, source mutation, artifact mutation or public action is permitted by this dry-run."
+  ],
+  "governance": {
+    "readOnly": true,
+    "proposalOnly": true,
+    "dryRunOnly": true,
+    "runtimeActivation": false,
+    "runtimeIntegration": false,
+    "endpoint": false,
+    "scheduler": false,
+    "networkCalls": false,
+    "llmCalls": false,
+    "writesOutsideReceipt": false,
+    "artifactMutation": false,
+    "sourceMutation": false,
+    "publicActionAuthority": false
+  }
+}

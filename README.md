@@ -201,6 +201,7 @@ See also: [Cabinet pilot integration map](docs/cortex-abv-cabinet-integration-ma
 - `cortex-abv/private-runtime/config/vector-runtime-controlled-wiring-review.v1.json` defines the controlled runtime wiring review gate and requires the Stage 4n receipt digest. It returns `eligible_for_runtime_activation_review` without activating runtime wiring.
 - `cortex-abv/private-runtime/config/vector-runtime-activation-review.v1.json` defines the runtime activation review gate and requires the Stage 4o receipt digest. It returns `eligible_for_runtime_activation_dry_run_review` without activating runtime wiring.
 - `cortex-abv/private-runtime/config/vector-runtime-activation-dry-run-review.v1.json` defines the runtime activation dry-run review gate and requires the Stage 4p receipt digest. It returns `eligible_for_runtime_activation_dry_run` without activating runtime wiring.
+- `cortex-abv/private-runtime/src/vector-runtime-activation-dry-run.mjs` runs the first local activation dry-run: it verifies module import/bindings, read-only artifact load, tenant-scoped candidate-only queries, evidence refs and no exposed activation. It returns `eligible_for_runtime_readiness_review` without activating runtime wiring.
 
 Check the adapter contract and currently enabled project-sync targets:
 

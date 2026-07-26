@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimeLocalTransitionStateEffect",
+  "version": "v1",
+  "authority": "local_transition_state_effect_artifact_only",
+  "engine": "turbovec",
+  "purpose": "Record an explicit bounded artifact describing the allowlisted local transition-state effects that may be referenced later, without applying any effect, transition or activation.",
+  "prerequisites": {
+    "requiredEffectReviewReceiptKind": "CortexABVVectorRuntimeLocalTransitionStateEffectReviewReceipt",
+    "requiredEffectReviewEligibility": "eligible_for_local_transition_state_effect_artifact",
+    "requiredEffectReviewStatus": "passed",
+    "requiresEffectReviewReceiptDigest": true
+  },
+  "ownerApproval": {
+    "required": true,
+    "approvalMode": "explicit_owner_manual_decision",
+    "approvedByRole": "owner",
+    "status": "approved",
+    "scope": "bounded_local_transition_state_effect_artifact_only",
+    "notes": "Approve only the bounded local transition-state effect artifact. This does not apply any effect, transition or runtime activation and does not authorize endpoint, scheduler, network, LLM or public actions."
+  },
+  "effectIntent": {
+    "effectScope": "discussion_only_local_transition_state_effects",
+    "sourceState": "bounded_owner_invoked_local_active_runtime_candidate",
+    "effectArtifactKind": "CortexABVVectorRuntimeLocalTransitionStateEffect",
+    "allowedEffects": [
+      "callable_binding_ready",
+      "read_only_artifact_access_confirmed",
+      "tenant_scoped_candidate_queries_confirmed",
+      "verified_evidence_chain_confirmed",
+      "rollback_chain_preserved"
+    ],
+    "requiredModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+    "requiredBindings": [
+      "loadIndexArtifact",
+      "queryCandidates",
+      "verifyClaimEvidence"
+    ],
+    "effectAppliedHere": false,
+    "stateTransitionAppliedHere": false,
+    "runtimeActivationAppliedHere": false
+  },
+  "effectSummary": {
+    "callableBindingReady": true,
+    "readOnlyArtifactAccessConfirmed": true,
+    "tenantScopedCandidateQueriesConfirmed": true,
+    "verifiedEvidenceChainConfirmed": true,
+    "rollbackChainPreserved": true
+  },
+  "rollbackPlan": {
+    "required": true,
+    "strategy": "discard_local_effect_artifact_and_keep_transition_unapplied",
+    "receiptOnlyEvidence": true,
+    "ownerReversalAllowed": true,
+    "steps": [
+      "Discard this effect artifact if any later review detects a mismatch with Stage 4aa or Stage 4z lineage.",
+      "Keep runtime activation, state transition and effect application unapplied.",
+      "Require a new owner-approved artifact if the allowlisted effect vocabulary or evidence lineage changes."
+    ]
+  },
+  "nextGate": {
+    "targetEligibility": "eligible_for_local_effect_application_review",
+    "futureReviewKind": "CortexABVVectorRuntimeLocalEffectApplicationReview",
+    "futureReviewMode": "local_effect_application_review_only",
+    "effectAppliedHere": false
+  },
+  "forbiddenAuthority": {
+    "activationAppliedHere": false,
+    "stateTransitionAppliedHere": false,
+    "effectAppliedHere": false,
+    "persistentServiceAllowed": false,
+    "daemonProcessAllowed": false,
+    "schedulerAllowed": false,
+    "endpointAllowed": false,
+    "networkCallsAllowed": false,
+    "llmCallsAllowed": false,
+    "publicActionAuthorityAllowed": false,
+    "answerGenerationAllowed": false,
+    "sourceMutationAllowed": false,
+    "artifactMutationAllowed": false,
+    "writesOutsideReceiptAllowed": false,
+    "crossTenantQueriesAllowed": false,
+    "autonomousExecutionAllowed": false
+  },
+  "governance": {
+    "readOnly": true,
+    "proposalOnly": true,
+    "transitionStateEffectArtifactOnly": true,
+    "runtimeActivationApplied": false,
+    "stateTransitionApplied": false,
+    "runtimeIntegration": false,
+    "endpoint": false,
+    "scheduler": false,
+    "networkCalls": false,
+    "llmCalls": false,
+    "writesOutsideReceipt": false,
+    "publicActionAuthority": false
+  }
+}

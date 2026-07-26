@@ -981,12 +981,43 @@ The receipt returns:
 
 This still does not activate runtime wiring. It only makes a later transition-state effect artifact discussable.
 
+### Stage 4ab: local transition-state effect artifact
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/config/vector-runtime-local-transition-state-effect.v1.json`
+- `cortex-abv/private-runtime/src/vector-runtime-local-transition-state-effect.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-local-transition-state-effect.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-local-transition-state-effect-receipt.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-local-transition-state-effect:run
+```
+
+The local transition-state effect artifact now:
+
+- requires the Stage 4aa local transition-state effect review receipt digest;
+- verifies Stage 4aa -> 4z -> 4y -> 4x -> 4w -> 4v -> 4u -> 4t -> 4s -> 4r -> 4q -> 4p -> 4o -> 4n -> 4h digest continuity remains present;
+- records explicit owner approval for only the allowlisted local effect vocabulary;
+- records effect summary flags for callable binding readiness, read-only artifact access, tenant-scoped candidate queries, verified evidence chain and rollback preservation;
+- writes only a receipt and still does not apply any effect, activation or transition.
+
+The receipt returns:
+
+- `eligible_for_local_effect_application_review` when Stage 4aa proof and artifact-boundary checks both pass;
+- `not_eligible` when any digest, approval or governance gate blocks.
+
+This still does not activate runtime wiring. It only makes a later local effect-application review discussable.
+
 ## Next gate
 
-Before any local transition-state effect artifact:
+Before any local effect-application review:
 
-1. require the Stage 4aa local transition-state effect review receipt digest;
-2. keep the effect artifact limited to the allowlisted local effect vocabulary and inherited dry-run evidence;
+1. require the Stage 4ab local transition-state effect artifact receipt digest;
+2. define whether any later effect-application review is even meaningful without widening governance;
 3. preserve no-endpoint/no-scheduler/no-LLM/no-network/no-public-action governance unless separately reviewed;
 4. keep any real external/personal-surface action behind separate proposal and owner-review gates.
 

@@ -787,12 +787,47 @@ The receipt returns:
 
 This still does not activate runtime wiring. It only makes a later bounded local activation dry-run discussable.
 
+### Stage 4v: local runtime activation dry-run
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/config/vector-runtime-local-activation-dry-run.v1.json`
+- `cortex-abv/private-runtime/src/vector-runtime-local-activation-dry-run.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-local-activation-dry-run.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-local-activation-dry-run-receipt.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-local-activation-dry-run:run
+```
+
+The local activation dry-run now:
+
+- requires the Stage 4u activation decision receipt digest;
+- verifies Stage 4u -> 4t -> 4s -> 4r -> 4q -> 4p -> 4o -> 4n -> 4h digest continuity;
+- verifies owner approval and rollback-plan presence from Stage 4u;
+- imports the fixed harness module;
+- loads the Stage 4h artifact read-only;
+- runs tenant-scoped candidate-only queries;
+- verifies evidence refs;
+- verifies activation is still not applied;
+- writes only a receipt.
+
+The receipt returns:
+
+- `eligible_for_local_runtime_activation_state_review` when decision lineage, module, artifact, query, evidence and governance checks all pass;
+- `not_eligible` when any gate blocks.
+
+This still does not activate runtime wiring. It only makes a later activation-state review gate discussable.
+
 ## Next gate
 
-Before any bounded local activation dry-run:
+Before any local activation-state review:
 
-1. require the Stage 4u local runtime activation decision receipt digest;
-2. define the exact local activation dry-run scope and commands;
+1. require the Stage 4v local runtime activation dry-run receipt digest;
+2. define whether any explicit local runtime “active state” exists and how it is represented or rolled back;
 3. preserve no-endpoint/no-scheduler/no-LLM/no-network/no-public-action governance unless separately reviewed;
 4. keep any real external/personal-surface action behind separate proposal and owner-review gates.
 

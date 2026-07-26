@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimeControlledWiringPocDryRun",
+  "version": "v1",
+  "authority": "local_dry_run_only",
+  "engine": "turbovec",
+  "purpose": "Minimal local-only controlled wiring POC dry-run. It binds the existing local harness module, verifies Stage 4m receipt digest and prerequisite digest continuity, runs tenant-scoped candidate queries, and writes only a receipt.",
+  "prerequisites": {
+    "requiredPocReviewReceiptKind": "CortexABVVectorRuntimeControlledWiringPocReviewReceipt",
+    "requiredPocReviewEligibility": "eligible_for_controlled_runtime_wiring_poc_dry_run_review",
+    "requiredPocReviewStatus": "passed",
+    "requiresPocReviewReceiptDigest": true
+  },
+  "artifact": {
+    "path": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+    "kind": "CortexABVVectorRuntimeIndexArtifact",
+    "version": "v1",
+    "readOnly": true
+  },
+  "binding": {
+    "mode": "in_process_local_library_binding_only",
+    "modulePath": "src/vector-runtime-controlled-module-harness.mjs",
+    "functions": [
+      "loadIndexArtifact",
+      "queryCandidates",
+      "verifyClaimEvidence"
+    ],
+    "returnsCandidatesOnly": true,
+    "answerGeneration": false
+  },
+  "queries": [
+    {
+      "id": "wiring-query-index-summary",
+      "tenant": "index-spike",
+      "query": "latest index spike public summary updates",
+      "expectedCandidateIds": [
+        "pp-index-spike-updates"
+      ],
+      "topK": 3,
+      "minScore": 0.05
+    },
+    {
+      "id": "wiring-query-monitor-readiness",
+      "tenant": "monitor-mn7r",
+      "query": "monitor mn7r repository readiness status",
+      "expectedCandidateIds": [
+        "pp-monitor-mn7r-dashboard"
+      ],
+      "topK": 3,
+      "minScore": 0.05
+    }
+  ],
+  "commands": {
+    "verifyStage4mDigest": "verify_stage4l_digest_poc_dry_run",
+    "bindLocalHarness": "bind_local_harness_poc_dry_run",
+    "queryLocalHarness": "query_local_harness_poc_dry_run",
+    "verifyNoActivation": "verify_no_activation_poc_dry_run"
+  },
+  "rollbackNotes": [
+    "If any digest, tenant, evidence, command or governance gate fails, abandon this receipt and do not activate binding.",
+    "No source pack, index artifact, public surface, endpoint or runtime baseline is advanced by this dry-run."
+  ],
+  "checks": {
+    "requiresStage4mReceiptDigest": true,
+    "requiresStage4lReceiptDigest": true,
+    "requiresStage4kReceiptDigest": true,
+    "requiresStage4hArtifactDigest": true,
+    "requiresStage4hSourceDigest": true,
+    "requiresTenantScope": true,
+    "requiresHardThreshold": true,
+    "requiresCandidatesOnly": true,
+    "requiresEvidenceRefs": true,
+    "requiresRollbackNotes": true
+  },
+  "governance": {
+    "readOnly": true,
+    "proposalOnly": true,
+    "dryRunOnly": true,
+    "runtimeIntegration": false,
+    "runtimeActivation": false,
+    "endpoint": false,
+    "scheduler": false,
+    "networkCalls": false,
+    "llmCalls": false,
+    "writesOutsideReceipt": false,
+    "artifactMutation": false,
+    "sourceMutation": false,
+    "publicActionAuthority": false
+  }
+}

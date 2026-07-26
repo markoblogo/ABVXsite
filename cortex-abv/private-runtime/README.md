@@ -417,6 +417,26 @@ The future POC scope is limited to `src/vector-runtime-controlled-wiring-poc-dry
 
 This still does not approve endpoints, schedulers, model calls, network calls, source or artifact mutation, external writes, public actions or publication.
 
+## Vector runtime controlled wiring POC dry-run
+
+The controlled wiring POC dry-run is the first local-only binding run over the existing harness:
+
+- `config/vector-runtime-controlled-wiring-poc-dry-run.v1.json` defines the Stage 4m prerequisite, artifact path, local binding, queries, command trace and rollback notes.
+- `src/vector-runtime-controlled-wiring-poc-dry-run.mjs` verifies Stage 4m/4l/4k/4h digest continuity, binds the local harness in-process, runs tenant-scoped candidate queries and writes a receipt.
+- `test/vector-runtime-controlled-wiring-poc-dry-run.test.mjs` blocks a non-eligible Stage 4m receipt and activation/endpoint/answer-generation attempts.
+- `receipts/vector-runtime-controlled-wiring-poc-dry-run-receipt.v1.json` records digest linkage, local binding trace, query results, rollback notes and governance.
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-controlled-wiring-poc-dry-run:run
+```
+
+The receipt returns `eligible_for_controlled_runtime_wiring_review` or `not_eligible`. Eligibility means only that a later controlled runtime wiring review gate can be discussed. It does not activate the runtime, expose an endpoint, start a scheduler, call a model, use the network, mutate source/index artifacts or grant public action authority.
+
+The dry-run uses only `loadIndexArtifact`, `queryCandidates` and `verifyClaimEvidence` from the existing local harness. It returns candidates only; no answer generation is allowed.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

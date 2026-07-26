@@ -495,19 +495,53 @@ The receipt returns:
 
 This does not approve POC implementation, wiring implementation or runtime activation. It only makes a later controlled wiring POC dry-run design/runner discussable.
 
+### Stage 4n: controlled runtime wiring POC dry-run
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/config/vector-runtime-controlled-wiring-poc-dry-run.v1.json`
+- `cortex-abv/private-runtime/src/vector-runtime-controlled-wiring-poc-dry-run.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-controlled-wiring-poc-dry-run.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-controlled-wiring-poc-dry-run-receipt.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-controlled-wiring-poc-dry-run:run
+```
+
+The dry-run now executes the minimum local binding path:
+
+- requires the Stage 4m controlled wiring POC review receipt digest;
+- verifies Stage 4m -> Stage 4l -> Stage 4k -> Stage 4h digest continuity;
+- loads the Stage 4h local index artifact read-only;
+- binds only `src/vector-runtime-controlled-module-harness.mjs`;
+- executes only the allowed dry-run command trace;
+- runs tenant-scoped candidate queries through `queryCandidates`;
+- verifies evidence refs through `verifyClaimEvidence`;
+- writes only `receipts/vector-runtime-controlled-wiring-poc-dry-run-receipt.v1.json`;
+- records rollback notes and does not advance any baseline.
+
+The receipt returns:
+
+- `eligible_for_controlled_runtime_wiring_review` when design, digest, binding, query, evidence and governance gates pass;
+- `not_eligible` when any gate blocks.
+
+This still does not approve runtime wiring activation. It only makes a later controlled runtime wiring review gate discussable.
+
 Default stage-3 receipt artifact:
 
 - `cortex-abv/private-runtime/receipts/vector-retrieval-turbovec-shadow-receipt.v1.json`
 
 ## Next gate
 
-Before any controlled runtime wiring POC dry-run:
+Before any controlled runtime wiring review:
 
-1. add a local dry-run design/runner for the controlled wiring POC;
-2. require the Stage 4m controlled wiring POC review receipt digest;
-3. bind only the existing local harness module and allowed functions;
-4. write only a receipt, never mutate source or index artifact;
-5. preserve the same no-endpoint/no-LLM/no-network/no-public-action governance;
-6. keep activation as a separate later decision, not an implied result of the dry-run.
+1. add a separate controlled wiring review gate;
+2. require the Stage 4n controlled wiring POC dry-run receipt digest;
+3. define exactly what wiring means operationally before any activation;
+4. preserve the same no-endpoint/no-LLM/no-network/no-public-action governance;
+5. keep runtime activation as a separate later owner-approved decision, not an implied result of review.
 
 This keeps the governance rule: **no outbound action until auditability and evidence policy are proven.**

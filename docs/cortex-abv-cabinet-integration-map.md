@@ -307,6 +307,26 @@ Completed (read-only pilot): one synthetic scheduled-job plan + receipt, no runt
   - rollback notes required; baseline advancement forbidden.
 - Still forbidden: POC implementation approval, wiring implementation approval, runtime activation, endpoint, scheduler, network calls, LLM calls, source/artifact mutation, external writes, public actions and publication.
 
+#### Stage 4n execution status (completed)
+
+- Added controlled runtime wiring POC dry-run:
+  - `cortex-abv/private-runtime/config/vector-runtime-controlled-wiring-poc-dry-run.v1.json`
+  - `cortex-abv/private-runtime/src/vector-runtime-controlled-wiring-poc-dry-run.mjs`
+  - `cortex-abv/private-runtime/receipts/vector-runtime-controlled-wiring-poc-dry-run-receipt.v1.json`
+- Current receipt result:
+  - `eligibility: "eligible_for_controlled_runtime_wiring_review"`;
+  - `status: "passed"`;
+  - `blockers: []`.
+- Dry-run behavior:
+  - requires Stage 4m receipt digest;
+  - verifies Stage 4m -> Stage 4l -> Stage 4k -> Stage 4h digest continuity;
+  - binds only the existing local controlled harness in-process;
+  - loads the local index artifact read-only;
+  - returns tenant-scoped candidates only;
+  - verifies evidence refs;
+  - writes only a receipt and rollback notes.
+- Still forbidden: runtime activation, endpoint, scheduler, network calls, LLM calls, answer generation, source/artifact mutation, external writes, public actions and publication.
+
 ## Staged adoption (hard requirement)
 1. Read-only planning (contracts + synthetic map only)
 2. One read-only adapter job in private runtime

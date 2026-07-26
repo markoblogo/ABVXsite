@@ -1,0 +1,1986 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimeLocalEffectApplicationDecisionReceipt",
+  "version": "v1",
+  "authority": "local_effect_application_decision_only",
+  "status": "passed",
+  "eligibility": "eligible_for_local_effect_transition_artifact",
+  "runAt": "2026-07-26T22:37:09.402Z",
+  "mode": "local_effect_application_decision",
+  "engine": "turbovec",
+  "decisionDigest": "4892231c76b9f0de76cb8c4ed7270e3eeb058642e32a4a61280760d3138f7fa5",
+  "stage4acReceiptDigest": "1471e5c38f99c6dfa725ed86509ef4ec9b33d420f7640fda960e6f3b3e92c400",
+  "prerequisiteDigests": {
+    "stage4abReceiptDigest": "203e4175f0894edd72bcf8263febc339368a7002aa333cf4e1083a93e9db47fd",
+    "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+    "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
+    "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
+    "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
+    "stage4wReceiptDigest": "877125e08fb083c33e2c6268b3860f9f7db104775ad13238abc343071307d441",
+    "stage4vReceiptDigest": "780061f27233ba6677001d3fd56d331ae84b8f4bba5d05e9e56228d33ad76203",
+    "stage4uReceiptDigest": "c9d532bf7d10458fe34ff76c32bf67a0565e22253d215ede0af3adeed99ffeba",
+    "stage4tReceiptDigest": "a39a0afc69b9f8e7e5580ecdf8e3c0cf57656fc8ff4d25d8e4369526e7b00bd0",
+    "stage4sReceiptDigest": "6bfdd4ba842cd17fa9498870389a71ec12a9b099328ce4abffff2acb378b4e23",
+    "stage4rReceiptDigest": "92f4319711c81d644d788b52783706e875441ef05306b1507d43316d1366c886",
+    "stage4qReceiptDigest": "0d41759bb903dc2dd262e9fd7bc87988c3e13fad5269e3286da364f959b75f34",
+    "stage4pReceiptDigest": "bf6da764c6f37b75d918dd6ae0662cac7528b7467858c0c91927664cc57d4ffc",
+    "stage4oReceiptDigest": "5b59cf3290ed44eb4798ecc3e8085b6d748099fa318f5a98504ad72b07e1802e",
+    "stage4nReceiptDigest": "ec81682f82cb503a52187bd5f0d383bfeda566e09a29924871ddb2bb55c5a26b",
+    "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+    "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+    "receiptLinkageDigest": "535662c9d711fa66c91b1f9f6a9a97c84676cd567fb340358e101e2232b4dbcc"
+  },
+  "ownerApproval": {
+    "required": true,
+    "approvalMode": "explicit_owner_manual_decision",
+    "approvedByRole": "owner",
+    "status": "approved",
+    "scope": "bounded_local_effect_application_decision_only",
+    "notes": "Approve only the bounded local effect-application decision steps. This does not apply effects, state transitions, activation, or public actions."
+  },
+  "decisionDefinition": {
+    "decisionScope": "strictly_local_receipt_only",
+    "sourceState": "bounded_owner_initiated_local_active_runtime_candidate",
+    "decisionArtifactKind": "CortexABVVectorRuntimeLocalEffectApplicationDecision",
+    "allowedLocalDecisionSteps": [
+      "candidate_query_preview",
+      "claim_evidence_verification",
+      "rollback_readiness_review",
+      "proposal_alignment_review"
+    ],
+    "requiredModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+    "requiredBindings": [
+      "loadIndexArtifact",
+      "queryCandidates",
+      "verifyClaimEvidence"
+    ],
+    "effectApplicationAppliedHere": false,
+    "stateTransitionAppliedHere": false,
+    "runtimeActivationAppliedHere": false
+  },
+  "decisionPolicy": {
+    "proposalOnly": true,
+    "readOnlyEvidence": true,
+    "decisionTraceRequired": true,
+    "tenantScopedCandidateOnly": true,
+    "noAnswerGeneration": true,
+    "noCandidateMutation": true
+  },
+  "rollbackDecisionPolicy": {
+    "required": true,
+    "strategy": "retain_decision_receipt_and_keep_effects_unapplied",
+    "receiptOnlyEvidence": true,
+    "ownerReversalAllowed": true,
+    "externalMutationAllowed": false
+  },
+  "nextGate": {
+    "targetEligibility": "eligible_for_local_effect_transition_artifact",
+    "futureArtifactKind": "CortexABVVectorRuntimeLocalEffectTransitionArtifact",
+    "futureArtifactMode": "local_effect_transition_artifact_only",
+    "effectAppliedHere": false
+  },
+  "governance": {
+    "readOnly": true,
+    "proposalOnly": true,
+    "localEffectApplicationDecisionOnly": true,
+    "runtimeActivationApplied": false,
+    "stateTransitionApplied": false,
+    "runtimeIntegration": false,
+    "endpoint": false,
+    "scheduler": false,
+    "networkCalls": false,
+    "llmCalls": false,
+    "writesOutsideReceipt": false,
+    "publicActionAuthority": false
+  },
+  "sources": {
+    "decision": {
+      "path": "config/vector-runtime-local-effect-application-decision.v1.json",
+      "kind": "CortexABVVectorRuntimeLocalEffectApplicationDecision",
+      "digest": "4892231c76b9f0de76cb8c4ed7270e3eeb058642e32a4a61280760d3138f7fa5"
+    },
+    "localEffectApplicationReviewReceipt": {
+      "path": "receipts/vector-runtime-local-effect-application-review-receipt.v1.json",
+      "kind": "CortexABVVectorRuntimeLocalEffectApplicationReviewReceipt",
+      "status": "passed",
+      "eligibility": "eligible_for_local_effect_application",
+      "digest": "1471e5c38f99c6dfa725ed86509ef4ec9b33d420f7640fda960e6f3b3e92c400"
+    }
+  },
+  "gates": {
+    "decision": [
+      {
+        "id": "kind",
+        "status": "accepted",
+        "reason": "decision kind must match",
+        "evidence": {
+          "kind": "CortexABVVectorRuntimeLocalEffectApplicationDecision"
+        }
+      },
+      {
+        "id": "version",
+        "status": "accepted",
+        "reason": "decision version must be v1",
+        "evidence": {
+          "version": "v1"
+        }
+      },
+      {
+        "id": "authority",
+        "status": "accepted",
+        "reason": "decision authority must be local_effect_application_decision_only",
+        "evidence": {
+          "authority": "local_effect_application_decision_only"
+        }
+      },
+      {
+        "id": "engine",
+        "status": "accepted",
+        "reason": "decision engine must be turbovec",
+        "evidence": {
+          "engine": "turbovec"
+        }
+      },
+      {
+        "id": "stage4ac_prerequisite",
+        "status": "accepted",
+        "reason": "decision must require eligible Stage 4ac review receipt",
+        "evidence": {
+          "requiredLocalEffectApplicationReviewReceiptKind": "CortexABVVectorRuntimeLocalEffectApplicationReviewReceipt",
+          "requiredLocalEffectApplicationReviewReceiptEligibility": "eligible_for_local_effect_application",
+          "requiredLocalEffectApplicationReviewReceiptStatus": "passed",
+          "requiresLocalEffectApplicationReviewReceiptDigest": true
+        }
+      },
+      {
+        "id": "stage4ac_status",
+        "status": "accepted",
+        "reason": "decision must require Stage 4ac passed receipt",
+        "evidence": {
+          "requiredLocalEffectApplicationReviewReceiptKind": "CortexABVVectorRuntimeLocalEffectApplicationReviewReceipt",
+          "requiredLocalEffectApplicationReviewReceiptEligibility": "eligible_for_local_effect_application",
+          "requiredLocalEffectApplicationReviewReceiptStatus": "passed",
+          "requiresLocalEffectApplicationReviewReceiptDigest": true
+        }
+      },
+      {
+        "id": "stage4ac_kind",
+        "status": "accepted",
+        "reason": "decision must require the local effect application review receipt kind",
+        "evidence": {
+          "requiredLocalEffectApplicationReviewReceiptKind": "CortexABVVectorRuntimeLocalEffectApplicationReviewReceipt",
+          "requiredLocalEffectApplicationReviewReceiptEligibility": "eligible_for_local_effect_application",
+          "requiredLocalEffectApplicationReviewReceiptStatus": "passed",
+          "requiresLocalEffectApplicationReviewReceiptDigest": true
+        }
+      },
+      {
+        "id": "stage4ac_digest_required",
+        "status": "accepted",
+        "reason": "local effect application review receipt digest is required",
+        "evidence": {
+          "requiredLocalEffectApplicationReviewReceiptKind": "CortexABVVectorRuntimeLocalEffectApplicationReviewReceipt",
+          "requiredLocalEffectApplicationReviewReceiptEligibility": "eligible_for_local_effect_application",
+          "requiredLocalEffectApplicationReviewReceiptStatus": "passed",
+          "requiresLocalEffectApplicationReviewReceiptDigest": true
+        }
+      },
+      {
+        "id": "owner_required",
+        "status": "accepted",
+        "reason": "owner approval must be required",
+        "evidence": {
+          "required": true,
+          "approvalMode": "explicit_owner_manual_decision",
+          "approvedByRole": "owner",
+          "status": "approved",
+          "scope": "bounded_local_effect_application_decision_only",
+          "notes": "Approve only the bounded local effect-application decision steps. This does not apply effects, state transitions, activation, or public actions."
+        }
+      },
+      {
+        "id": "owner_mode",
+        "status": "accepted",
+        "reason": "owner approval mode must be explicit manual decision",
+        "evidence": {
+          "required": true,
+          "approvalMode": "explicit_owner_manual_decision",
+          "approvedByRole": "owner",
+          "status": "approved",
+          "scope": "bounded_local_effect_application_decision_only",
+          "notes": "Approve only the bounded local effect-application decision steps. This does not apply effects, state transitions, activation, or public actions."
+        }
+      },
+      {
+        "id": "owner_role",
+        "status": "accepted",
+        "reason": "owner approval role must be owner",
+        "evidence": {
+          "required": true,
+          "approvalMode": "explicit_owner_manual_decision",
+          "approvedByRole": "owner",
+          "status": "approved",
+          "scope": "bounded_local_effect_application_decision_only",
+          "notes": "Approve only the bounded local effect-application decision steps. This does not apply effects, state transitions, activation, or public actions."
+        }
+      },
+      {
+        "id": "owner_status",
+        "status": "accepted",
+        "reason": "owner approval status must be approved",
+        "evidence": {
+          "required": true,
+          "approvalMode": "explicit_owner_manual_decision",
+          "approvedByRole": "owner",
+          "status": "approved",
+          "scope": "bounded_local_effect_application_decision_only",
+          "notes": "Approve only the bounded local effect-application decision steps. This does not apply effects, state transitions, activation, or public actions."
+        }
+      },
+      {
+        "id": "owner_scope",
+        "status": "accepted",
+        "reason": "owner approval scope must stay bounded to effect application decision only",
+        "evidence": {
+          "required": true,
+          "approvalMode": "explicit_owner_manual_decision",
+          "approvedByRole": "owner",
+          "status": "approved",
+          "scope": "bounded_local_effect_application_decision_only",
+          "notes": "Approve only the bounded local effect-application decision steps. This does not apply effects, state transitions, activation, or public actions."
+        }
+      },
+      {
+        "id": "decision_scope",
+        "status": "accepted",
+        "reason": "decision scope must remain strictly local and receipt-only",
+        "evidence": {
+          "decisionScope": "strictly_local_receipt_only",
+          "sourceState": "bounded_owner_initiated_local_active_runtime_candidate",
+          "decisionArtifactKind": "CortexABVVectorRuntimeLocalEffectApplicationDecision",
+          "allowedLocalDecisionSteps": [
+            "candidate_query_preview",
+            "claim_evidence_verification",
+            "rollback_readiness_review",
+            "proposal_alignment_review"
+          ],
+          "requiredModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+          "requiredBindings": [
+            "loadIndexArtifact",
+            "queryCandidates",
+            "verifyClaimEvidence"
+          ],
+          "effectApplicationAppliedHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false
+        }
+      },
+      {
+        "id": "decision_state",
+        "status": "accepted",
+        "reason": "decision source state must remain bounded local candidate state",
+        "evidence": {
+          "decisionScope": "strictly_local_receipt_only",
+          "sourceState": "bounded_owner_initiated_local_active_runtime_candidate",
+          "decisionArtifactKind": "CortexABVVectorRuntimeLocalEffectApplicationDecision",
+          "allowedLocalDecisionSteps": [
+            "candidate_query_preview",
+            "claim_evidence_verification",
+            "rollback_readiness_review",
+            "proposal_alignment_review"
+          ],
+          "requiredModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+          "requiredBindings": [
+            "loadIndexArtifact",
+            "queryCandidates",
+            "verifyClaimEvidence"
+          ],
+          "effectApplicationAppliedHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false
+        }
+      },
+      {
+        "id": "decision_artifact_kind",
+        "status": "accepted",
+        "reason": "decision artifact kind must match",
+        "evidence": {
+          "decisionScope": "strictly_local_receipt_only",
+          "sourceState": "bounded_owner_initiated_local_active_runtime_candidate",
+          "decisionArtifactKind": "CortexABVVectorRuntimeLocalEffectApplicationDecision",
+          "allowedLocalDecisionSteps": [
+            "candidate_query_preview",
+            "claim_evidence_verification",
+            "rollback_readiness_review",
+            "proposal_alignment_review"
+          ],
+          "requiredModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+          "requiredBindings": [
+            "loadIndexArtifact",
+            "queryCandidates",
+            "verifyClaimEvidence"
+          ],
+          "effectApplicationAppliedHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false
+        }
+      },
+      {
+        "id": "decision_steps",
+        "status": "accepted",
+        "reason": "decision steps must stay allowlisted",
+        "evidence": {
+          "decisionScope": "strictly_local_receipt_only",
+          "sourceState": "bounded_owner_initiated_local_active_runtime_candidate",
+          "decisionArtifactKind": "CortexABVVectorRuntimeLocalEffectApplicationDecision",
+          "allowedLocalDecisionSteps": [
+            "candidate_query_preview",
+            "claim_evidence_verification",
+            "rollback_readiness_review",
+            "proposal_alignment_review"
+          ],
+          "requiredModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+          "requiredBindings": [
+            "loadIndexArtifact",
+            "queryCandidates",
+            "verifyClaimEvidence"
+          ],
+          "effectApplicationAppliedHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false
+        }
+      },
+      {
+        "id": "decision_module_path",
+        "status": "accepted",
+        "reason": "required module path must match fixed harness",
+        "evidence": {
+          "decisionScope": "strictly_local_receipt_only",
+          "sourceState": "bounded_owner_initiated_local_active_runtime_candidate",
+          "decisionArtifactKind": "CortexABVVectorRuntimeLocalEffectApplicationDecision",
+          "allowedLocalDecisionSteps": [
+            "candidate_query_preview",
+            "claim_evidence_verification",
+            "rollback_readiness_review",
+            "proposal_alignment_review"
+          ],
+          "requiredModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+          "requiredBindings": [
+            "loadIndexArtifact",
+            "queryCandidates",
+            "verifyClaimEvidence"
+          ],
+          "effectApplicationAppliedHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false
+        }
+      },
+      {
+        "id": "decision_bindings",
+        "status": "accepted",
+        "reason": "required bindings must stay allowlisted",
+        "evidence": {
+          "decisionScope": "strictly_local_receipt_only",
+          "sourceState": "bounded_owner_initiated_local_active_runtime_candidate",
+          "decisionArtifactKind": "CortexABVVectorRuntimeLocalEffectApplicationDecision",
+          "allowedLocalDecisionSteps": [
+            "candidate_query_preview",
+            "claim_evidence_verification",
+            "rollback_readiness_review",
+            "proposal_alignment_review"
+          ],
+          "requiredModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+          "requiredBindings": [
+            "loadIndexArtifact",
+            "queryCandidates",
+            "verifyClaimEvidence"
+          ],
+          "effectApplicationAppliedHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false
+        }
+      },
+      {
+        "id": "decision_not_applied_here",
+        "status": "accepted",
+        "reason": "effect application must not be applied in this decision stage",
+        "evidence": {
+          "decisionScope": "strictly_local_receipt_only",
+          "sourceState": "bounded_owner_initiated_local_active_runtime_candidate",
+          "decisionArtifactKind": "CortexABVVectorRuntimeLocalEffectApplicationDecision",
+          "allowedLocalDecisionSteps": [
+            "candidate_query_preview",
+            "claim_evidence_verification",
+            "rollback_readiness_review",
+            "proposal_alignment_review"
+          ],
+          "requiredModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+          "requiredBindings": [
+            "loadIndexArtifact",
+            "queryCandidates",
+            "verifyClaimEvidence"
+          ],
+          "effectApplicationAppliedHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false
+        }
+      },
+      {
+        "id": "transition_not_applied_here",
+        "status": "accepted",
+        "reason": "state transition must not be applied in this decision stage",
+        "evidence": {
+          "decisionScope": "strictly_local_receipt_only",
+          "sourceState": "bounded_owner_initiated_local_active_runtime_candidate",
+          "decisionArtifactKind": "CortexABVVectorRuntimeLocalEffectApplicationDecision",
+          "allowedLocalDecisionSteps": [
+            "candidate_query_preview",
+            "claim_evidence_verification",
+            "rollback_readiness_review",
+            "proposal_alignment_review"
+          ],
+          "requiredModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+          "requiredBindings": [
+            "loadIndexArtifact",
+            "queryCandidates",
+            "verifyClaimEvidence"
+          ],
+          "effectApplicationAppliedHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false
+        }
+      },
+      {
+        "id": "activation_not_applied_here",
+        "status": "accepted",
+        "reason": "runtime activation must not be applied in this decision stage",
+        "evidence": {
+          "decisionScope": "strictly_local_receipt_only",
+          "sourceState": "bounded_owner_initiated_local_active_runtime_candidate",
+          "decisionArtifactKind": "CortexABVVectorRuntimeLocalEffectApplicationDecision",
+          "allowedLocalDecisionSteps": [
+            "candidate_query_preview",
+            "claim_evidence_verification",
+            "rollback_readiness_review",
+            "proposal_alignment_review"
+          ],
+          "requiredModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+          "requiredBindings": [
+            "loadIndexArtifact",
+            "queryCandidates",
+            "verifyClaimEvidence"
+          ],
+          "effectApplicationAppliedHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false
+        }
+      },
+      {
+        "id": "decision_policy_proposalOnly",
+        "status": "accepted",
+        "reason": "decisionPolicy.proposalOnly must be true",
+        "evidence": {
+          "proposalOnly": true,
+          "readOnlyEvidence": true,
+          "decisionTraceRequired": true,
+          "tenantScopedCandidateOnly": true,
+          "noAnswerGeneration": true,
+          "noCandidateMutation": true
+        }
+      },
+      {
+        "id": "decision_policy_readOnlyEvidence",
+        "status": "accepted",
+        "reason": "decisionPolicy.readOnlyEvidence must be true",
+        "evidence": {
+          "proposalOnly": true,
+          "readOnlyEvidence": true,
+          "decisionTraceRequired": true,
+          "tenantScopedCandidateOnly": true,
+          "noAnswerGeneration": true,
+          "noCandidateMutation": true
+        }
+      },
+      {
+        "id": "decision_policy_decisionTraceRequired",
+        "status": "accepted",
+        "reason": "decisionPolicy.decisionTraceRequired must be true",
+        "evidence": {
+          "proposalOnly": true,
+          "readOnlyEvidence": true,
+          "decisionTraceRequired": true,
+          "tenantScopedCandidateOnly": true,
+          "noAnswerGeneration": true,
+          "noCandidateMutation": true
+        }
+      },
+      {
+        "id": "decision_policy_tenantScopedCandidateOnly",
+        "status": "accepted",
+        "reason": "decisionPolicy.tenantScopedCandidateOnly must be true",
+        "evidence": {
+          "proposalOnly": true,
+          "readOnlyEvidence": true,
+          "decisionTraceRequired": true,
+          "tenantScopedCandidateOnly": true,
+          "noAnswerGeneration": true,
+          "noCandidateMutation": true
+        }
+      },
+      {
+        "id": "decision_policy_noAnswerGeneration",
+        "status": "accepted",
+        "reason": "decisionPolicy.noAnswerGeneration must be true",
+        "evidence": {
+          "proposalOnly": true,
+          "readOnlyEvidence": true,
+          "decisionTraceRequired": true,
+          "tenantScopedCandidateOnly": true,
+          "noAnswerGeneration": true,
+          "noCandidateMutation": true
+        }
+      },
+      {
+        "id": "decision_policy_noCandidateMutation",
+        "status": "accepted",
+        "reason": "decisionPolicy.noCandidateMutation must be true",
+        "evidence": {
+          "proposalOnly": true,
+          "readOnlyEvidence": true,
+          "decisionTraceRequired": true,
+          "tenantScopedCandidateOnly": true,
+          "noAnswerGeneration": true,
+          "noCandidateMutation": true
+        }
+      },
+      {
+        "id": "rollback_required",
+        "status": "accepted",
+        "reason": "rollbackDecisionPolicy.required must be true",
+        "evidence": {
+          "required": true,
+          "strategy": "retain_decision_receipt_and_keep_effects_unapplied",
+          "receiptOnlyEvidence": true,
+          "ownerReversalAllowed": true,
+          "externalMutationAllowed": false
+        }
+      },
+      {
+        "id": "rollback_strategy",
+        "status": "accepted",
+        "reason": "rollbackDecisionPolicy.strategy must be retain_decision_receipt_and_keep_effects_unapplied",
+        "evidence": {
+          "required": true,
+          "strategy": "retain_decision_receipt_and_keep_effects_unapplied",
+          "receiptOnlyEvidence": true,
+          "ownerReversalAllowed": true,
+          "externalMutationAllowed": false
+        }
+      },
+      {
+        "id": "rollback_ownerReversalAllowed",
+        "status": "accepted",
+        "reason": "rollbackDecisionPolicy.ownerReversalAllowed must be true",
+        "evidence": {
+          "required": true,
+          "strategy": "retain_decision_receipt_and_keep_effects_unapplied",
+          "receiptOnlyEvidence": true,
+          "ownerReversalAllowed": true,
+          "externalMutationAllowed": false
+        }
+      },
+      {
+        "id": "rollback_receiptOnlyEvidence",
+        "status": "accepted",
+        "reason": "rollbackDecisionPolicy.receiptOnlyEvidence must be true",
+        "evidence": {
+          "required": true,
+          "strategy": "retain_decision_receipt_and_keep_effects_unapplied",
+          "receiptOnlyEvidence": true,
+          "ownerReversalAllowed": true,
+          "externalMutationAllowed": false
+        }
+      },
+      {
+        "id": "rollback_externalMutationAllowed",
+        "status": "accepted",
+        "reason": "rollbackDecisionPolicy.externalMutationAllowed must be false",
+        "evidence": {
+          "required": true,
+          "strategy": "retain_decision_receipt_and_keep_effects_unapplied",
+          "receiptOnlyEvidence": true,
+          "ownerReversalAllowed": true,
+          "externalMutationAllowed": false
+        }
+      },
+      {
+        "id": "next_gate_targetEligibility",
+        "status": "accepted",
+        "reason": "nextGate.targetEligibility must be eligible_for_local_effect_transition_artifact",
+        "evidence": {
+          "targetEligibility": "eligible_for_local_effect_transition_artifact",
+          "futureArtifactKind": "CortexABVVectorRuntimeLocalEffectTransitionArtifact",
+          "futureArtifactMode": "local_effect_transition_artifact_only",
+          "effectAppliedHere": false
+        }
+      },
+      {
+        "id": "next_gate_futureArtifactKind",
+        "status": "accepted",
+        "reason": "nextGate.futureArtifactKind must be CortexABVVectorRuntimeLocalEffectTransitionArtifact",
+        "evidence": {
+          "targetEligibility": "eligible_for_local_effect_transition_artifact",
+          "futureArtifactKind": "CortexABVVectorRuntimeLocalEffectTransitionArtifact",
+          "futureArtifactMode": "local_effect_transition_artifact_only",
+          "effectAppliedHere": false
+        }
+      },
+      {
+        "id": "next_gate_futureArtifactMode",
+        "status": "accepted",
+        "reason": "nextGate.futureArtifactMode must be local_effect_transition_artifact_only",
+        "evidence": {
+          "targetEligibility": "eligible_for_local_effect_transition_artifact",
+          "futureArtifactKind": "CortexABVVectorRuntimeLocalEffectTransitionArtifact",
+          "futureArtifactMode": "local_effect_transition_artifact_only",
+          "effectAppliedHere": false
+        }
+      },
+      {
+        "id": "next_gate_effectAppliedHere",
+        "status": "accepted",
+        "reason": "nextGate.effectAppliedHere must be false",
+        "evidence": {
+          "targetEligibility": "eligible_for_local_effect_transition_artifact",
+          "futureArtifactKind": "CortexABVVectorRuntimeLocalEffectTransitionArtifact",
+          "futureArtifactMode": "local_effect_transition_artifact_only",
+          "effectAppliedHere": false
+        }
+      },
+      {
+        "id": "forbidden_effectAppliedHere",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.effectAppliedHere must be false",
+        "evidence": {
+          "effectAppliedHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_stateTransitionAppliedHere",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.stateTransitionAppliedHere must be false",
+        "evidence": {
+          "effectAppliedHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_runtimeActivationAppliedHere",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.runtimeActivationAppliedHere must be false",
+        "evidence": {
+          "effectAppliedHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_persistentServiceAllowed",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.persistentServiceAllowed must be false",
+        "evidence": {
+          "effectAppliedHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_daemonProcessAllowed",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.daemonProcessAllowed must be false",
+        "evidence": {
+          "effectAppliedHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_schedulerAllowed",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.schedulerAllowed must be false",
+        "evidence": {
+          "effectAppliedHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_endpointAllowed",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.endpointAllowed must be false",
+        "evidence": {
+          "effectAppliedHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_networkCallsAllowed",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.networkCallsAllowed must be false",
+        "evidence": {
+          "effectAppliedHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_llmCallsAllowed",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.llmCallsAllowed must be false",
+        "evidence": {
+          "effectAppliedHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_publicActionAuthorityAllowed",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.publicActionAuthorityAllowed must be false",
+        "evidence": {
+          "effectAppliedHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_answerGenerationAllowed",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.answerGenerationAllowed must be false",
+        "evidence": {
+          "effectAppliedHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_sourceMutationAllowed",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.sourceMutationAllowed must be false",
+        "evidence": {
+          "effectAppliedHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_artifactMutationAllowed",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.artifactMutationAllowed must be false",
+        "evidence": {
+          "effectAppliedHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_writesOutsideReceiptAllowed",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.writesOutsideReceiptAllowed must be false",
+        "evidence": {
+          "effectAppliedHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_crossTenantQueriesAllowed",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.crossTenantQueriesAllowed must be false",
+        "evidence": {
+          "effectAppliedHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_autonomousExecutionAllowed",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.autonomousExecutionAllowed must be false",
+        "evidence": {
+          "effectAppliedHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "governance_readOnly",
+        "status": "accepted",
+        "reason": "governance.readOnly must be true",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "localEffectApplicationDecisionOnly": true,
+          "runtimeActivationApplied": false,
+          "stateTransitionApplied": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_proposalOnly",
+        "status": "accepted",
+        "reason": "governance.proposalOnly must be true",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "localEffectApplicationDecisionOnly": true,
+          "runtimeActivationApplied": false,
+          "stateTransitionApplied": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_localEffectApplicationDecisionOnly",
+        "status": "accepted",
+        "reason": "governance.localEffectApplicationDecisionOnly must be true",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "localEffectApplicationDecisionOnly": true,
+          "runtimeActivationApplied": false,
+          "stateTransitionApplied": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_runtimeActivationApplied",
+        "status": "accepted",
+        "reason": "governance.runtimeActivationApplied must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "localEffectApplicationDecisionOnly": true,
+          "runtimeActivationApplied": false,
+          "stateTransitionApplied": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_stateTransitionApplied",
+        "status": "accepted",
+        "reason": "governance.stateTransitionApplied must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "localEffectApplicationDecisionOnly": true,
+          "runtimeActivationApplied": false,
+          "stateTransitionApplied": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_runtimeIntegration",
+        "status": "accepted",
+        "reason": "governance.runtimeIntegration must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "localEffectApplicationDecisionOnly": true,
+          "runtimeActivationApplied": false,
+          "stateTransitionApplied": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_endpoint",
+        "status": "accepted",
+        "reason": "governance.endpoint must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "localEffectApplicationDecisionOnly": true,
+          "runtimeActivationApplied": false,
+          "stateTransitionApplied": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_scheduler",
+        "status": "accepted",
+        "reason": "governance.scheduler must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "localEffectApplicationDecisionOnly": true,
+          "runtimeActivationApplied": false,
+          "stateTransitionApplied": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_networkCalls",
+        "status": "accepted",
+        "reason": "governance.networkCalls must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "localEffectApplicationDecisionOnly": true,
+          "runtimeActivationApplied": false,
+          "stateTransitionApplied": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_llmCalls",
+        "status": "accepted",
+        "reason": "governance.llmCalls must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "localEffectApplicationDecisionOnly": true,
+          "runtimeActivationApplied": false,
+          "stateTransitionApplied": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_writesOutsideReceipt",
+        "status": "accepted",
+        "reason": "governance.writesOutsideReceipt must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "localEffectApplicationDecisionOnly": true,
+          "runtimeActivationApplied": false,
+          "stateTransitionApplied": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_publicActionAuthority",
+        "status": "accepted",
+        "reason": "governance.publicActionAuthority must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "localEffectApplicationDecisionOnly": true,
+          "runtimeActivationApplied": false,
+          "stateTransitionApplied": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      }
+    ],
+    "stage4acReceipt": [
+      {
+        "id": "kind",
+        "status": "accepted",
+        "reason": "Stage 4ac receipt kind must match prerequisite",
+        "evidence": {
+          "kind": "CortexABVVectorRuntimeLocalEffectApplicationReviewReceipt"
+        }
+      },
+      {
+        "id": "status",
+        "status": "accepted",
+        "reason": "Stage 4ac receipt status must be passed",
+        "evidence": {
+          "status": "passed"
+        }
+      },
+      {
+        "id": "eligibility",
+        "status": "accepted",
+        "reason": "Stage 4ac receipt eligibility must match prerequisite",
+        "evidence": {
+          "eligibility": "eligible_for_local_effect_application"
+        }
+      },
+      {
+        "id": "no_blockers",
+        "status": "accepted",
+        "reason": "Stage 4ac receipt must have no blockers",
+        "evidence": {
+          "blockers": []
+        }
+      },
+      {
+        "id": "stage4ab_receipt_digest_present",
+        "status": "accepted",
+        "reason": "Stage 4ab receipt digest must be present",
+        "evidence": {
+          "stage4abReceiptDigest": "203e4175f0894edd72bcf8263febc339368a7002aa333cf4e1083a93e9db47fd"
+        }
+      },
+      {
+        "id": "stage4aa_receipt_digest_present",
+        "status": "accepted",
+        "reason": "Stage 4aa digest must be present",
+        "evidence": {
+          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
+          "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
+          "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
+          "stage4wReceiptDigest": "877125e08fb083c33e2c6268b3860f9f7db104775ad13238abc343071307d441",
+          "stage4vReceiptDigest": "780061f27233ba6677001d3fd56d331ae84b8f4bba5d05e9e56228d33ad76203",
+          "stage4uReceiptDigest": "c9d532bf7d10458fe34ff76c32bf67a0565e22253d215ede0af3adeed99ffeba",
+          "stage4tReceiptDigest": "a39a0afc69b9f8e7e5580ecdf8e3c0cf57656fc8ff4d25d8e4369526e7b00bd0",
+          "stage4sReceiptDigest": "6bfdd4ba842cd17fa9498870389a71ec12a9b099328ce4abffff2acb378b4e23",
+          "stage4rReceiptDigest": "92f4319711c81d644d788b52783706e875441ef05306b1507d43316d1366c886",
+          "stage4qReceiptDigest": "0d41759bb903dc2dd262e9fd7bc87988c3e13fad5269e3286da364f959b75f34",
+          "stage4pReceiptDigest": "bf6da764c6f37b75d918dd6ae0662cac7528b7467858c0c91927664cc57d4ffc",
+          "stage4oReceiptDigest": "5b59cf3290ed44eb4798ecc3e8085b6d748099fa318f5a98504ad72b07e1802e",
+          "stage4nReceiptDigest": "ec81682f82cb503a52187bd5f0d383bfeda566e09a29924871ddb2bb55c5a26b",
+          "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "receiptLinkageDigest": "535662c9d711fa66c91b1f9f6a9a97c84676cd567fb340358e101e2232b4dbcc"
+        }
+      },
+      {
+        "id": "stage4z_receipt_digest_present",
+        "status": "accepted",
+        "reason": "Stage 4z digest must be present",
+        "evidence": {
+          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
+          "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
+          "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
+          "stage4wReceiptDigest": "877125e08fb083c33e2c6268b3860f9f7db104775ad13238abc343071307d441",
+          "stage4vReceiptDigest": "780061f27233ba6677001d3fd56d331ae84b8f4bba5d05e9e56228d33ad76203",
+          "stage4uReceiptDigest": "c9d532bf7d10458fe34ff76c32bf67a0565e22253d215ede0af3adeed99ffeba",
+          "stage4tReceiptDigest": "a39a0afc69b9f8e7e5580ecdf8e3c0cf57656fc8ff4d25d8e4369526e7b00bd0",
+          "stage4sReceiptDigest": "6bfdd4ba842cd17fa9498870389a71ec12a9b099328ce4abffff2acb378b4e23",
+          "stage4rReceiptDigest": "92f4319711c81d644d788b52783706e875441ef05306b1507d43316d1366c886",
+          "stage4qReceiptDigest": "0d41759bb903dc2dd262e9fd7bc87988c3e13fad5269e3286da364f959b75f34",
+          "stage4pReceiptDigest": "bf6da764c6f37b75d918dd6ae0662cac7528b7467858c0c91927664cc57d4ffc",
+          "stage4oReceiptDigest": "5b59cf3290ed44eb4798ecc3e8085b6d748099fa318f5a98504ad72b07e1802e",
+          "stage4nReceiptDigest": "ec81682f82cb503a52187bd5f0d383bfeda566e09a29924871ddb2bb55c5a26b",
+          "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "receiptLinkageDigest": "535662c9d711fa66c91b1f9f6a9a97c84676cd567fb340358e101e2232b4dbcc"
+        }
+      },
+      {
+        "id": "stage4y_receipt_digest_present",
+        "status": "accepted",
+        "reason": "Stage 4y digest must be present",
+        "evidence": {
+          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
+          "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
+          "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
+          "stage4wReceiptDigest": "877125e08fb083c33e2c6268b3860f9f7db104775ad13238abc343071307d441",
+          "stage4vReceiptDigest": "780061f27233ba6677001d3fd56d331ae84b8f4bba5d05e9e56228d33ad76203",
+          "stage4uReceiptDigest": "c9d532bf7d10458fe34ff76c32bf67a0565e22253d215ede0af3adeed99ffeba",
+          "stage4tReceiptDigest": "a39a0afc69b9f8e7e5580ecdf8e3c0cf57656fc8ff4d25d8e4369526e7b00bd0",
+          "stage4sReceiptDigest": "6bfdd4ba842cd17fa9498870389a71ec12a9b099328ce4abffff2acb378b4e23",
+          "stage4rReceiptDigest": "92f4319711c81d644d788b52783706e875441ef05306b1507d43316d1366c886",
+          "stage4qReceiptDigest": "0d41759bb903dc2dd262e9fd7bc87988c3e13fad5269e3286da364f959b75f34",
+          "stage4pReceiptDigest": "bf6da764c6f37b75d918dd6ae0662cac7528b7467858c0c91927664cc57d4ffc",
+          "stage4oReceiptDigest": "5b59cf3290ed44eb4798ecc3e8085b6d748099fa318f5a98504ad72b07e1802e",
+          "stage4nReceiptDigest": "ec81682f82cb503a52187bd5f0d383bfeda566e09a29924871ddb2bb55c5a26b",
+          "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "receiptLinkageDigest": "535662c9d711fa66c91b1f9f6a9a97c84676cd567fb340358e101e2232b4dbcc"
+        }
+      },
+      {
+        "id": "stage4x_receipt_digest_present",
+        "status": "accepted",
+        "reason": "Stage 4x digest must be present",
+        "evidence": {
+          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
+          "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
+          "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
+          "stage4wReceiptDigest": "877125e08fb083c33e2c6268b3860f9f7db104775ad13238abc343071307d441",
+          "stage4vReceiptDigest": "780061f27233ba6677001d3fd56d331ae84b8f4bba5d05e9e56228d33ad76203",
+          "stage4uReceiptDigest": "c9d532bf7d10458fe34ff76c32bf67a0565e22253d215ede0af3adeed99ffeba",
+          "stage4tReceiptDigest": "a39a0afc69b9f8e7e5580ecdf8e3c0cf57656fc8ff4d25d8e4369526e7b00bd0",
+          "stage4sReceiptDigest": "6bfdd4ba842cd17fa9498870389a71ec12a9b099328ce4abffff2acb378b4e23",
+          "stage4rReceiptDigest": "92f4319711c81d644d788b52783706e875441ef05306b1507d43316d1366c886",
+          "stage4qReceiptDigest": "0d41759bb903dc2dd262e9fd7bc87988c3e13fad5269e3286da364f959b75f34",
+          "stage4pReceiptDigest": "bf6da764c6f37b75d918dd6ae0662cac7528b7467858c0c91927664cc57d4ffc",
+          "stage4oReceiptDigest": "5b59cf3290ed44eb4798ecc3e8085b6d748099fa318f5a98504ad72b07e1802e",
+          "stage4nReceiptDigest": "ec81682f82cb503a52187bd5f0d383bfeda566e09a29924871ddb2bb55c5a26b",
+          "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "receiptLinkageDigest": "535662c9d711fa66c91b1f9f6a9a97c84676cd567fb340358e101e2232b4dbcc"
+        }
+      },
+      {
+        "id": "stage4w_receipt_digest_present",
+        "status": "accepted",
+        "reason": "Stage 4w digest must be present",
+        "evidence": {
+          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
+          "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
+          "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
+          "stage4wReceiptDigest": "877125e08fb083c33e2c6268b3860f9f7db104775ad13238abc343071307d441",
+          "stage4vReceiptDigest": "780061f27233ba6677001d3fd56d331ae84b8f4bba5d05e9e56228d33ad76203",
+          "stage4uReceiptDigest": "c9d532bf7d10458fe34ff76c32bf67a0565e22253d215ede0af3adeed99ffeba",
+          "stage4tReceiptDigest": "a39a0afc69b9f8e7e5580ecdf8e3c0cf57656fc8ff4d25d8e4369526e7b00bd0",
+          "stage4sReceiptDigest": "6bfdd4ba842cd17fa9498870389a71ec12a9b099328ce4abffff2acb378b4e23",
+          "stage4rReceiptDigest": "92f4319711c81d644d788b52783706e875441ef05306b1507d43316d1366c886",
+          "stage4qReceiptDigest": "0d41759bb903dc2dd262e9fd7bc87988c3e13fad5269e3286da364f959b75f34",
+          "stage4pReceiptDigest": "bf6da764c6f37b75d918dd6ae0662cac7528b7467858c0c91927664cc57d4ffc",
+          "stage4oReceiptDigest": "5b59cf3290ed44eb4798ecc3e8085b6d748099fa318f5a98504ad72b07e1802e",
+          "stage4nReceiptDigest": "ec81682f82cb503a52187bd5f0d383bfeda566e09a29924871ddb2bb55c5a26b",
+          "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "receiptLinkageDigest": "535662c9d711fa66c91b1f9f6a9a97c84676cd567fb340358e101e2232b4dbcc"
+        }
+      },
+      {
+        "id": "stage4v_receipt_digest_present",
+        "status": "accepted",
+        "reason": "Stage 4v digest must be present",
+        "evidence": {
+          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
+          "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
+          "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
+          "stage4wReceiptDigest": "877125e08fb083c33e2c6268b3860f9f7db104775ad13238abc343071307d441",
+          "stage4vReceiptDigest": "780061f27233ba6677001d3fd56d331ae84b8f4bba5d05e9e56228d33ad76203",
+          "stage4uReceiptDigest": "c9d532bf7d10458fe34ff76c32bf67a0565e22253d215ede0af3adeed99ffeba",
+          "stage4tReceiptDigest": "a39a0afc69b9f8e7e5580ecdf8e3c0cf57656fc8ff4d25d8e4369526e7b00bd0",
+          "stage4sReceiptDigest": "6bfdd4ba842cd17fa9498870389a71ec12a9b099328ce4abffff2acb378b4e23",
+          "stage4rReceiptDigest": "92f4319711c81d644d788b52783706e875441ef05306b1507d43316d1366c886",
+          "stage4qReceiptDigest": "0d41759bb903dc2dd262e9fd7bc87988c3e13fad5269e3286da364f959b75f34",
+          "stage4pReceiptDigest": "bf6da764c6f37b75d918dd6ae0662cac7528b7467858c0c91927664cc57d4ffc",
+          "stage4oReceiptDigest": "5b59cf3290ed44eb4798ecc3e8085b6d748099fa318f5a98504ad72b07e1802e",
+          "stage4nReceiptDigest": "ec81682f82cb503a52187bd5f0d383bfeda566e09a29924871ddb2bb55c5a26b",
+          "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "receiptLinkageDigest": "535662c9d711fa66c91b1f9f6a9a97c84676cd567fb340358e101e2232b4dbcc"
+        }
+      },
+      {
+        "id": "stage4u_receipt_digest_present",
+        "status": "accepted",
+        "reason": "Stage 4u digest must be present",
+        "evidence": {
+          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
+          "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
+          "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
+          "stage4wReceiptDigest": "877125e08fb083c33e2c6268b3860f9f7db104775ad13238abc343071307d441",
+          "stage4vReceiptDigest": "780061f27233ba6677001d3fd56d331ae84b8f4bba5d05e9e56228d33ad76203",
+          "stage4uReceiptDigest": "c9d532bf7d10458fe34ff76c32bf67a0565e22253d215ede0af3adeed99ffeba",
+          "stage4tReceiptDigest": "a39a0afc69b9f8e7e5580ecdf8e3c0cf57656fc8ff4d25d8e4369526e7b00bd0",
+          "stage4sReceiptDigest": "6bfdd4ba842cd17fa9498870389a71ec12a9b099328ce4abffff2acb378b4e23",
+          "stage4rReceiptDigest": "92f4319711c81d644d788b52783706e875441ef05306b1507d43316d1366c886",
+          "stage4qReceiptDigest": "0d41759bb903dc2dd262e9fd7bc87988c3e13fad5269e3286da364f959b75f34",
+          "stage4pReceiptDigest": "bf6da764c6f37b75d918dd6ae0662cac7528b7467858c0c91927664cc57d4ffc",
+          "stage4oReceiptDigest": "5b59cf3290ed44eb4798ecc3e8085b6d748099fa318f5a98504ad72b07e1802e",
+          "stage4nReceiptDigest": "ec81682f82cb503a52187bd5f0d383bfeda566e09a29924871ddb2bb55c5a26b",
+          "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "receiptLinkageDigest": "535662c9d711fa66c91b1f9f6a9a97c84676cd567fb340358e101e2232b4dbcc"
+        }
+      },
+      {
+        "id": "stage4t_receipt_digest_present",
+        "status": "accepted",
+        "reason": "Stage 4t digest must be present",
+        "evidence": {
+          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
+          "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
+          "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
+          "stage4wReceiptDigest": "877125e08fb083c33e2c6268b3860f9f7db104775ad13238abc343071307d441",
+          "stage4vReceiptDigest": "780061f27233ba6677001d3fd56d331ae84b8f4bba5d05e9e56228d33ad76203",
+          "stage4uReceiptDigest": "c9d532bf7d10458fe34ff76c32bf67a0565e22253d215ede0af3adeed99ffeba",
+          "stage4tReceiptDigest": "a39a0afc69b9f8e7e5580ecdf8e3c0cf57656fc8ff4d25d8e4369526e7b00bd0",
+          "stage4sReceiptDigest": "6bfdd4ba842cd17fa9498870389a71ec12a9b099328ce4abffff2acb378b4e23",
+          "stage4rReceiptDigest": "92f4319711c81d644d788b52783706e875441ef05306b1507d43316d1366c886",
+          "stage4qReceiptDigest": "0d41759bb903dc2dd262e9fd7bc87988c3e13fad5269e3286da364f959b75f34",
+          "stage4pReceiptDigest": "bf6da764c6f37b75d918dd6ae0662cac7528b7467858c0c91927664cc57d4ffc",
+          "stage4oReceiptDigest": "5b59cf3290ed44eb4798ecc3e8085b6d748099fa318f5a98504ad72b07e1802e",
+          "stage4nReceiptDigest": "ec81682f82cb503a52187bd5f0d383bfeda566e09a29924871ddb2bb55c5a26b",
+          "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "receiptLinkageDigest": "535662c9d711fa66c91b1f9f6a9a97c84676cd567fb340358e101e2232b4dbcc"
+        }
+      },
+      {
+        "id": "stage4s_receipt_digest_present",
+        "status": "accepted",
+        "reason": "Stage 4s digest must be present",
+        "evidence": {
+          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
+          "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
+          "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
+          "stage4wReceiptDigest": "877125e08fb083c33e2c6268b3860f9f7db104775ad13238abc343071307d441",
+          "stage4vReceiptDigest": "780061f27233ba6677001d3fd56d331ae84b8f4bba5d05e9e56228d33ad76203",
+          "stage4uReceiptDigest": "c9d532bf7d10458fe34ff76c32bf67a0565e22253d215ede0af3adeed99ffeba",
+          "stage4tReceiptDigest": "a39a0afc69b9f8e7e5580ecdf8e3c0cf57656fc8ff4d25d8e4369526e7b00bd0",
+          "stage4sReceiptDigest": "6bfdd4ba842cd17fa9498870389a71ec12a9b099328ce4abffff2acb378b4e23",
+          "stage4rReceiptDigest": "92f4319711c81d644d788b52783706e875441ef05306b1507d43316d1366c886",
+          "stage4qReceiptDigest": "0d41759bb903dc2dd262e9fd7bc87988c3e13fad5269e3286da364f959b75f34",
+          "stage4pReceiptDigest": "bf6da764c6f37b75d918dd6ae0662cac7528b7467858c0c91927664cc57d4ffc",
+          "stage4oReceiptDigest": "5b59cf3290ed44eb4798ecc3e8085b6d748099fa318f5a98504ad72b07e1802e",
+          "stage4nReceiptDigest": "ec81682f82cb503a52187bd5f0d383bfeda566e09a29924871ddb2bb55c5a26b",
+          "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "receiptLinkageDigest": "535662c9d711fa66c91b1f9f6a9a97c84676cd567fb340358e101e2232b4dbcc"
+        }
+      },
+      {
+        "id": "stage4r_receipt_digest_present",
+        "status": "accepted",
+        "reason": "Stage 4r digest must be present",
+        "evidence": {
+          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
+          "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
+          "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
+          "stage4wReceiptDigest": "877125e08fb083c33e2c6268b3860f9f7db104775ad13238abc343071307d441",
+          "stage4vReceiptDigest": "780061f27233ba6677001d3fd56d331ae84b8f4bba5d05e9e56228d33ad76203",
+          "stage4uReceiptDigest": "c9d532bf7d10458fe34ff76c32bf67a0565e22253d215ede0af3adeed99ffeba",
+          "stage4tReceiptDigest": "a39a0afc69b9f8e7e5580ecdf8e3c0cf57656fc8ff4d25d8e4369526e7b00bd0",
+          "stage4sReceiptDigest": "6bfdd4ba842cd17fa9498870389a71ec12a9b099328ce4abffff2acb378b4e23",
+          "stage4rReceiptDigest": "92f4319711c81d644d788b52783706e875441ef05306b1507d43316d1366c886",
+          "stage4qReceiptDigest": "0d41759bb903dc2dd262e9fd7bc87988c3e13fad5269e3286da364f959b75f34",
+          "stage4pReceiptDigest": "bf6da764c6f37b75d918dd6ae0662cac7528b7467858c0c91927664cc57d4ffc",
+          "stage4oReceiptDigest": "5b59cf3290ed44eb4798ecc3e8085b6d748099fa318f5a98504ad72b07e1802e",
+          "stage4nReceiptDigest": "ec81682f82cb503a52187bd5f0d383bfeda566e09a29924871ddb2bb55c5a26b",
+          "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "receiptLinkageDigest": "535662c9d711fa66c91b1f9f6a9a97c84676cd567fb340358e101e2232b4dbcc"
+        }
+      },
+      {
+        "id": "stage4q_receipt_digest_present",
+        "status": "accepted",
+        "reason": "Stage 4q digest must be present",
+        "evidence": {
+          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
+          "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
+          "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
+          "stage4wReceiptDigest": "877125e08fb083c33e2c6268b3860f9f7db104775ad13238abc343071307d441",
+          "stage4vReceiptDigest": "780061f27233ba6677001d3fd56d331ae84b8f4bba5d05e9e56228d33ad76203",
+          "stage4uReceiptDigest": "c9d532bf7d10458fe34ff76c32bf67a0565e22253d215ede0af3adeed99ffeba",
+          "stage4tReceiptDigest": "a39a0afc69b9f8e7e5580ecdf8e3c0cf57656fc8ff4d25d8e4369526e7b00bd0",
+          "stage4sReceiptDigest": "6bfdd4ba842cd17fa9498870389a71ec12a9b099328ce4abffff2acb378b4e23",
+          "stage4rReceiptDigest": "92f4319711c81d644d788b52783706e875441ef05306b1507d43316d1366c886",
+          "stage4qReceiptDigest": "0d41759bb903dc2dd262e9fd7bc87988c3e13fad5269e3286da364f959b75f34",
+          "stage4pReceiptDigest": "bf6da764c6f37b75d918dd6ae0662cac7528b7467858c0c91927664cc57d4ffc",
+          "stage4oReceiptDigest": "5b59cf3290ed44eb4798ecc3e8085b6d748099fa318f5a98504ad72b07e1802e",
+          "stage4nReceiptDigest": "ec81682f82cb503a52187bd5f0d383bfeda566e09a29924871ddb2bb55c5a26b",
+          "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "receiptLinkageDigest": "535662c9d711fa66c91b1f9f6a9a97c84676cd567fb340358e101e2232b4dbcc"
+        }
+      },
+      {
+        "id": "stage4p_receipt_digest_present",
+        "status": "accepted",
+        "reason": "Stage 4p digest must be present",
+        "evidence": {
+          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
+          "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
+          "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
+          "stage4wReceiptDigest": "877125e08fb083c33e2c6268b3860f9f7db104775ad13238abc343071307d441",
+          "stage4vReceiptDigest": "780061f27233ba6677001d3fd56d331ae84b8f4bba5d05e9e56228d33ad76203",
+          "stage4uReceiptDigest": "c9d532bf7d10458fe34ff76c32bf67a0565e22253d215ede0af3adeed99ffeba",
+          "stage4tReceiptDigest": "a39a0afc69b9f8e7e5580ecdf8e3c0cf57656fc8ff4d25d8e4369526e7b00bd0",
+          "stage4sReceiptDigest": "6bfdd4ba842cd17fa9498870389a71ec12a9b099328ce4abffff2acb378b4e23",
+          "stage4rReceiptDigest": "92f4319711c81d644d788b52783706e875441ef05306b1507d43316d1366c886",
+          "stage4qReceiptDigest": "0d41759bb903dc2dd262e9fd7bc87988c3e13fad5269e3286da364f959b75f34",
+          "stage4pReceiptDigest": "bf6da764c6f37b75d918dd6ae0662cac7528b7467858c0c91927664cc57d4ffc",
+          "stage4oReceiptDigest": "5b59cf3290ed44eb4798ecc3e8085b6d748099fa318f5a98504ad72b07e1802e",
+          "stage4nReceiptDigest": "ec81682f82cb503a52187bd5f0d383bfeda566e09a29924871ddb2bb55c5a26b",
+          "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "receiptLinkageDigest": "535662c9d711fa66c91b1f9f6a9a97c84676cd567fb340358e101e2232b4dbcc"
+        }
+      },
+      {
+        "id": "stage4o_receipt_digest_present",
+        "status": "accepted",
+        "reason": "Stage 4o digest must be present",
+        "evidence": {
+          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
+          "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
+          "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
+          "stage4wReceiptDigest": "877125e08fb083c33e2c6268b3860f9f7db104775ad13238abc343071307d441",
+          "stage4vReceiptDigest": "780061f27233ba6677001d3fd56d331ae84b8f4bba5d05e9e56228d33ad76203",
+          "stage4uReceiptDigest": "c9d532bf7d10458fe34ff76c32bf67a0565e22253d215ede0af3adeed99ffeba",
+          "stage4tReceiptDigest": "a39a0afc69b9f8e7e5580ecdf8e3c0cf57656fc8ff4d25d8e4369526e7b00bd0",
+          "stage4sReceiptDigest": "6bfdd4ba842cd17fa9498870389a71ec12a9b099328ce4abffff2acb378b4e23",
+          "stage4rReceiptDigest": "92f4319711c81d644d788b52783706e875441ef05306b1507d43316d1366c886",
+          "stage4qReceiptDigest": "0d41759bb903dc2dd262e9fd7bc87988c3e13fad5269e3286da364f959b75f34",
+          "stage4pReceiptDigest": "bf6da764c6f37b75d918dd6ae0662cac7528b7467858c0c91927664cc57d4ffc",
+          "stage4oReceiptDigest": "5b59cf3290ed44eb4798ecc3e8085b6d748099fa318f5a98504ad72b07e1802e",
+          "stage4nReceiptDigest": "ec81682f82cb503a52187bd5f0d383bfeda566e09a29924871ddb2bb55c5a26b",
+          "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "receiptLinkageDigest": "535662c9d711fa66c91b1f9f6a9a97c84676cd567fb340358e101e2232b4dbcc"
+        }
+      },
+      {
+        "id": "stage4n_receipt_digest_present",
+        "status": "accepted",
+        "reason": "Stage 4n digest must be present",
+        "evidence": {
+          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
+          "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
+          "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
+          "stage4wReceiptDigest": "877125e08fb083c33e2c6268b3860f9f7db104775ad13238abc343071307d441",
+          "stage4vReceiptDigest": "780061f27233ba6677001d3fd56d331ae84b8f4bba5d05e9e56228d33ad76203",
+          "stage4uReceiptDigest": "c9d532bf7d10458fe34ff76c32bf67a0565e22253d215ede0af3adeed99ffeba",
+          "stage4tReceiptDigest": "a39a0afc69b9f8e7e5580ecdf8e3c0cf57656fc8ff4d25d8e4369526e7b00bd0",
+          "stage4sReceiptDigest": "6bfdd4ba842cd17fa9498870389a71ec12a9b099328ce4abffff2acb378b4e23",
+          "stage4rReceiptDigest": "92f4319711c81d644d788b52783706e875441ef05306b1507d43316d1366c886",
+          "stage4qReceiptDigest": "0d41759bb903dc2dd262e9fd7bc87988c3e13fad5269e3286da364f959b75f34",
+          "stage4pReceiptDigest": "bf6da764c6f37b75d918dd6ae0662cac7528b7467858c0c91927664cc57d4ffc",
+          "stage4oReceiptDigest": "5b59cf3290ed44eb4798ecc3e8085b6d748099fa318f5a98504ad72b07e1802e",
+          "stage4nReceiptDigest": "ec81682f82cb503a52187bd5f0d383bfeda566e09a29924871ddb2bb55c5a26b",
+          "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "receiptLinkageDigest": "535662c9d711fa66c91b1f9f6a9a97c84676cd567fb340358e101e2232b4dbcc"
+        }
+      },
+      {
+        "id": "stage4h_index_digest_present",
+        "status": "accepted",
+        "reason": "Stage 4h index digest must be present",
+        "evidence": {
+          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
+          "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
+          "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
+          "stage4wReceiptDigest": "877125e08fb083c33e2c6268b3860f9f7db104775ad13238abc343071307d441",
+          "stage4vReceiptDigest": "780061f27233ba6677001d3fd56d331ae84b8f4bba5d05e9e56228d33ad76203",
+          "stage4uReceiptDigest": "c9d532bf7d10458fe34ff76c32bf67a0565e22253d215ede0af3adeed99ffeba",
+          "stage4tReceiptDigest": "a39a0afc69b9f8e7e5580ecdf8e3c0cf57656fc8ff4d25d8e4369526e7b00bd0",
+          "stage4sReceiptDigest": "6bfdd4ba842cd17fa9498870389a71ec12a9b099328ce4abffff2acb378b4e23",
+          "stage4rReceiptDigest": "92f4319711c81d644d788b52783706e875441ef05306b1507d43316d1366c886",
+          "stage4qReceiptDigest": "0d41759bb903dc2dd262e9fd7bc87988c3e13fad5269e3286da364f959b75f34",
+          "stage4pReceiptDigest": "bf6da764c6f37b75d918dd6ae0662cac7528b7467858c0c91927664cc57d4ffc",
+          "stage4oReceiptDigest": "5b59cf3290ed44eb4798ecc3e8085b6d748099fa318f5a98504ad72b07e1802e",
+          "stage4nReceiptDigest": "ec81682f82cb503a52187bd5f0d383bfeda566e09a29924871ddb2bb55c5a26b",
+          "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "receiptLinkageDigest": "535662c9d711fa66c91b1f9f6a9a97c84676cd567fb340358e101e2232b4dbcc"
+        }
+      },
+      {
+        "id": "stage4h_source_digest_present",
+        "status": "accepted",
+        "reason": "Stage 4h source digest must be present",
+        "evidence": {
+          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
+          "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
+          "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
+          "stage4wReceiptDigest": "877125e08fb083c33e2c6268b3860f9f7db104775ad13238abc343071307d441",
+          "stage4vReceiptDigest": "780061f27233ba6677001d3fd56d331ae84b8f4bba5d05e9e56228d33ad76203",
+          "stage4uReceiptDigest": "c9d532bf7d10458fe34ff76c32bf67a0565e22253d215ede0af3adeed99ffeba",
+          "stage4tReceiptDigest": "a39a0afc69b9f8e7e5580ecdf8e3c0cf57656fc8ff4d25d8e4369526e7b00bd0",
+          "stage4sReceiptDigest": "6bfdd4ba842cd17fa9498870389a71ec12a9b099328ce4abffff2acb378b4e23",
+          "stage4rReceiptDigest": "92f4319711c81d644d788b52783706e875441ef05306b1507d43316d1366c886",
+          "stage4qReceiptDigest": "0d41759bb903dc2dd262e9fd7bc87988c3e13fad5269e3286da364f959b75f34",
+          "stage4pReceiptDigest": "bf6da764c6f37b75d918dd6ae0662cac7528b7467858c0c91927664cc57d4ffc",
+          "stage4oReceiptDigest": "5b59cf3290ed44eb4798ecc3e8085b6d748099fa318f5a98504ad72b07e1802e",
+          "stage4nReceiptDigest": "ec81682f82cb503a52187bd5f0d383bfeda566e09a29924871ddb2bb55c5a26b",
+          "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "receiptLinkageDigest": "535662c9d711fa66c91b1f9f6a9a97c84676cd567fb340358e101e2232b4dbcc"
+        }
+      },
+      {
+        "id": "receipt_linkage_digest_present",
+        "status": "accepted",
+        "reason": "receipt linkage digest must be present",
+        "evidence": {
+          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
+          "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
+          "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
+          "stage4wReceiptDigest": "877125e08fb083c33e2c6268b3860f9f7db104775ad13238abc343071307d441",
+          "stage4vReceiptDigest": "780061f27233ba6677001d3fd56d331ae84b8f4bba5d05e9e56228d33ad76203",
+          "stage4uReceiptDigest": "c9d532bf7d10458fe34ff76c32bf67a0565e22253d215ede0af3adeed99ffeba",
+          "stage4tReceiptDigest": "a39a0afc69b9f8e7e5580ecdf8e3c0cf57656fc8ff4d25d8e4369526e7b00bd0",
+          "stage4sReceiptDigest": "6bfdd4ba842cd17fa9498870389a71ec12a9b099328ce4abffff2acb378b4e23",
+          "stage4rReceiptDigest": "92f4319711c81d644d788b52783706e875441ef05306b1507d43316d1366c886",
+          "stage4qReceiptDigest": "0d41759bb903dc2dd262e9fd7bc87988c3e13fad5269e3286da364f959b75f34",
+          "stage4pReceiptDigest": "bf6da764c6f37b75d918dd6ae0662cac7528b7467858c0c91927664cc57d4ffc",
+          "stage4oReceiptDigest": "5b59cf3290ed44eb4798ecc3e8085b6d748099fa318f5a98504ad72b07e1802e",
+          "stage4nReceiptDigest": "ec81682f82cb503a52187bd5f0d383bfeda566e09a29924871ddb2bb55c5a26b",
+          "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "receiptLinkageDigest": "535662c9d711fa66c91b1f9f6a9a97c84676cd567fb340358e101e2232b4dbcc"
+        }
+      },
+      {
+        "id": "decision_scope_match",
+        "status": "accepted",
+        "reason": "application scope in Stage 4ac receipt must match decision scope",
+        "evidence": {
+          "receipt": {
+            "applicationScope": "strictly_local_receipt_only",
+            "sourceState": "bounded_owner_initiated_local_active_runtime_candidate",
+            "allowedLocalApplications": [
+              "candidate_query_preview",
+              "claim_evidence_verification",
+              "rollback_readiness_review",
+              "proposal_alignment_review"
+            ],
+            "requiredModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+            "requiredBindings": [
+              "loadIndexArtifact",
+              "queryCandidates",
+              "verifyClaimEvidence"
+            ],
+            "appliesEffectHere": false,
+            "stateTransitionAppliedHere": false,
+            "runtimeActivationAppliedHere": false
+          },
+          "decision": {
+            "decisionScope": "strictly_local_receipt_only",
+            "sourceState": "bounded_owner_initiated_local_active_runtime_candidate",
+            "decisionArtifactKind": "CortexABVVectorRuntimeLocalEffectApplicationDecision",
+            "allowedLocalDecisionSteps": [
+              "candidate_query_preview",
+              "claim_evidence_verification",
+              "rollback_readiness_review",
+              "proposal_alignment_review"
+            ],
+            "requiredModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+            "requiredBindings": [
+              "loadIndexArtifact",
+              "queryCandidates",
+              "verifyClaimEvidence"
+            ],
+            "effectApplicationAppliedHere": false,
+            "stateTransitionAppliedHere": false,
+            "runtimeActivationAppliedHere": false
+          }
+        }
+      },
+      {
+        "id": "decision_state_match",
+        "status": "accepted",
+        "reason": "application source state in Stage 4ac receipt must match decision source state",
+        "evidence": {
+          "receipt": {
+            "applicationScope": "strictly_local_receipt_only",
+            "sourceState": "bounded_owner_initiated_local_active_runtime_candidate",
+            "allowedLocalApplications": [
+              "candidate_query_preview",
+              "claim_evidence_verification",
+              "rollback_readiness_review",
+              "proposal_alignment_review"
+            ],
+            "requiredModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+            "requiredBindings": [
+              "loadIndexArtifact",
+              "queryCandidates",
+              "verifyClaimEvidence"
+            ],
+            "appliesEffectHere": false,
+            "stateTransitionAppliedHere": false,
+            "runtimeActivationAppliedHere": false
+          },
+          "decision": {
+            "decisionScope": "strictly_local_receipt_only",
+            "sourceState": "bounded_owner_initiated_local_active_runtime_candidate",
+            "decisionArtifactKind": "CortexABVVectorRuntimeLocalEffectApplicationDecision",
+            "allowedLocalDecisionSteps": [
+              "candidate_query_preview",
+              "claim_evidence_verification",
+              "rollback_readiness_review",
+              "proposal_alignment_review"
+            ],
+            "requiredModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+            "requiredBindings": [
+              "loadIndexArtifact",
+              "queryCandidates",
+              "verifyClaimEvidence"
+            ],
+            "effectApplicationAppliedHere": false,
+            "stateTransitionAppliedHere": false,
+            "runtimeActivationAppliedHere": false
+          }
+        }
+      },
+      {
+        "id": "decision_steps_match",
+        "status": "accepted",
+        "reason": "allowed local applications in Stage 4ac receipt must align with decision steps",
+        "evidence": {
+          "receipt": {
+            "applicationScope": "strictly_local_receipt_only",
+            "sourceState": "bounded_owner_initiated_local_active_runtime_candidate",
+            "allowedLocalApplications": [
+              "candidate_query_preview",
+              "claim_evidence_verification",
+              "rollback_readiness_review",
+              "proposal_alignment_review"
+            ],
+            "requiredModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+            "requiredBindings": [
+              "loadIndexArtifact",
+              "queryCandidates",
+              "verifyClaimEvidence"
+            ],
+            "appliesEffectHere": false,
+            "stateTransitionAppliedHere": false,
+            "runtimeActivationAppliedHere": false
+          },
+          "decision": {
+            "decisionScope": "strictly_local_receipt_only",
+            "sourceState": "bounded_owner_initiated_local_active_runtime_candidate",
+            "decisionArtifactKind": "CortexABVVectorRuntimeLocalEffectApplicationDecision",
+            "allowedLocalDecisionSteps": [
+              "candidate_query_preview",
+              "claim_evidence_verification",
+              "rollback_readiness_review",
+              "proposal_alignment_review"
+            ],
+            "requiredModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+            "requiredBindings": [
+              "loadIndexArtifact",
+              "queryCandidates",
+              "verifyClaimEvidence"
+            ],
+            "effectApplicationAppliedHere": false,
+            "stateTransitionAppliedHere": false,
+            "runtimeActivationAppliedHere": false
+          }
+        }
+      },
+      {
+        "id": "decision_module_match",
+        "status": "accepted",
+        "reason": "required module path in receipt must match decision contract",
+        "evidence": {
+          "receipt": {
+            "applicationScope": "strictly_local_receipt_only",
+            "sourceState": "bounded_owner_initiated_local_active_runtime_candidate",
+            "allowedLocalApplications": [
+              "candidate_query_preview",
+              "claim_evidence_verification",
+              "rollback_readiness_review",
+              "proposal_alignment_review"
+            ],
+            "requiredModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+            "requiredBindings": [
+              "loadIndexArtifact",
+              "queryCandidates",
+              "verifyClaimEvidence"
+            ],
+            "appliesEffectHere": false,
+            "stateTransitionAppliedHere": false,
+            "runtimeActivationAppliedHere": false
+          },
+          "requiredModulePath": "src/vector-runtime-controlled-module-harness.mjs"
+        }
+      },
+      {
+        "id": "decision_bindings_match",
+        "status": "accepted",
+        "reason": "required bindings in receipt must match decision contract",
+        "evidence": {
+          "receipt": {
+            "applicationScope": "strictly_local_receipt_only",
+            "sourceState": "bounded_owner_initiated_local_active_runtime_candidate",
+            "allowedLocalApplications": [
+              "candidate_query_preview",
+              "claim_evidence_verification",
+              "rollback_readiness_review",
+              "proposal_alignment_review"
+            ],
+            "requiredModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+            "requiredBindings": [
+              "loadIndexArtifact",
+              "queryCandidates",
+              "verifyClaimEvidence"
+            ],
+            "appliesEffectHere": false,
+            "stateTransitionAppliedHere": false,
+            "runtimeActivationAppliedHere": false
+          },
+          "requiredBindings": [
+            "loadIndexArtifact",
+            "queryCandidates",
+            "verifyClaimEvidence"
+          ]
+        }
+      },
+      {
+        "id": "decision_not_applied",
+        "status": "accepted",
+        "reason": "effect application must not be applied in Stage 4ac receipt",
+        "evidence": {
+          "applicationScope": "strictly_local_receipt_only",
+          "sourceState": "bounded_owner_initiated_local_active_runtime_candidate",
+          "allowedLocalApplications": [
+            "candidate_query_preview",
+            "claim_evidence_verification",
+            "rollback_readiness_review",
+            "proposal_alignment_review"
+          ],
+          "requiredModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+          "requiredBindings": [
+            "loadIndexArtifact",
+            "queryCandidates",
+            "verifyClaimEvidence"
+          ],
+          "appliesEffectHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false
+        }
+      },
+      {
+        "id": "decision_transition_not_applied",
+        "status": "accepted",
+        "reason": "state transition must not be applied in Stage 4ac receipt",
+        "evidence": {
+          "applicationScope": "strictly_local_receipt_only",
+          "sourceState": "bounded_owner_initiated_local_active_runtime_candidate",
+          "allowedLocalApplications": [
+            "candidate_query_preview",
+            "claim_evidence_verification",
+            "rollback_readiness_review",
+            "proposal_alignment_review"
+          ],
+          "requiredModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+          "requiredBindings": [
+            "loadIndexArtifact",
+            "queryCandidates",
+            "verifyClaimEvidence"
+          ],
+          "appliesEffectHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false
+        }
+      },
+      {
+        "id": "decision_activation_not_applied",
+        "status": "accepted",
+        "reason": "runtime activation must not be applied in Stage 4ac receipt",
+        "evidence": {
+          "applicationScope": "strictly_local_receipt_only",
+          "sourceState": "bounded_owner_initiated_local_active_runtime_candidate",
+          "allowedLocalApplications": [
+            "candidate_query_preview",
+            "claim_evidence_verification",
+            "rollback_readiness_review",
+            "proposal_alignment_review"
+          ],
+          "requiredModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+          "requiredBindings": [
+            "loadIndexArtifact",
+            "queryCandidates",
+            "verifyClaimEvidence"
+          ],
+          "appliesEffectHere": false,
+          "stateTransitionAppliedHere": false,
+          "runtimeActivationAppliedHere": false
+        }
+      }
+    ]
+  },
+  "blockers": [],
+  "decisionTrace": {
+    "policySource": "local_effect_application_decision_contract_plus_local_effect_application_review_receipt",
+    "reason": "Effect-application decision scope is now explicit and bounded. No effect application, transition or activation is applied in this gate.",
+    "nextAllowedStep": "local_effect_transition_artifact",
+    "effectApplicationAllowed": false,
+    "stateTransitionAllowed": false,
+    "runtimeActivationAllowed": false
+  },
+  "summary": "Local effect-application decision is now explicitly scoped and owner-approved for bounded local execution planning. No effects are applied."
+}

@@ -1039,3 +1039,33 @@ The receipt now returns:
 - `not_eligible` when any digest/gateway/governance boundary blocks.
 
 The review does not apply anything and does not create an activation path yet. It only prepares the system for a later strict local application decision gate.
+
+### Stage 4ad: local effect-application decision
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/config/vector-runtime-local-effect-application-decision.v1.json`
+- `cortex-abv/private-runtime/src/vector-runtime-local-effect-application-decision.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-local-effect-application-decision.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-local-effect-application-decision-receipt.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-local-effect-application-decision:check
+```
+
+This stage formalizes the bounded, owner-approved local effect-application decision scope:
+
+- requires the Stage 4ac local effect-application review receipt digest;
+- requires bounded owner-only decision scope with explicit manual approval mode;
+- fixes module and binding boundaries to `src/vector-runtime-controlled-module-harness.mjs` + `loadIndexArtifact`, `queryCandidates`, `verifyClaimEvidence`;
+- keeps decision steps allowlisted and receipt-only (`candidate_query_preview`, `claim_evidence_verification`, `rollback_readiness_review`, `proposal_alignment_review`).
+
+The decision returns:
+
+- `eligible_for_local_effect_transition_artifact` when local effect-application review proof, owner approval and decision boundaries all pass;
+- `not_eligible` when any prerequisite, approval or governance boundary is incomplete.
+
+This still does not apply effects, transitions or runtime activation, and still forbids endpoints, schedulers, network/LLM calls, source or artifact mutation, and public actions.

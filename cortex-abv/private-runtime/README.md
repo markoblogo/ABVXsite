@@ -730,6 +730,29 @@ The receipt returns:
 
 This still does not activate runtime wiring. It only makes a later local effect-application decision discussable.
 
+## Vector runtime local effect-application decision
+
+The local effect-application decision defines explicit owner-approved decision steps that can be considered for bounded local execution planning, still without applying any effect, transition or runtime activation:
+
+- `config/vector-runtime-local-effect-application-decision.v1.json` defines the Stage 4ac review prerequisite, owner approval, explicit decision scope and allowed local decision steps.
+- `src/vector-runtime-local-effect-application-decision.mjs` validates the Stage 4ac review receipt lineage, owner approval scope, decision scope, decision steps, rollback policy and governance boundaries, then writes a decision receipt.
+- `test/vector-runtime-local-effect-application-decision.test.mjs` blocks a non-eligible Stage 4ac review receipt and any introduced effect-application/transition/activation authority (endpoints/LLM/network/public-action/etc.).
+- `receipts/vector-runtime-local-effect-application-decision-receipt.v1.json` records the explicit local effect decision contract and inherited digest lineage.
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-local-effect-application-decision:check
+```
+
+The decision returns:
+
+- `eligible_for_local_effect_transition_artifact` when owner approval, Stage 4ac review proof and bounded local decision contract all pass;
+- `not_eligible` when any gating check, approval gate, or governance boundary is incomplete.
+
+This still does not apply effects, activation, state transitions, network/LLM calls, endpoint authority, source mutation, artifact mutation or public actions.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

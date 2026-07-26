@@ -203,6 +203,7 @@ See also: [Cabinet pilot integration map](docs/cortex-abv-cabinet-integration-ma
 - `cortex-abv/private-runtime/config/vector-runtime-activation-dry-run-review.v1.json` defines the runtime activation dry-run review gate and requires the Stage 4p receipt digest. It returns `eligible_for_runtime_activation_dry_run` without activating runtime wiring.
 - `cortex-abv/private-runtime/src/vector-runtime-activation-dry-run.mjs` runs the first local activation dry-run: it verifies module import/bindings, read-only artifact load, tenant-scoped candidate-only queries, evidence refs and no exposed activation. It returns `eligible_for_runtime_readiness_review` without activating runtime wiring.
 - `cortex-abv/private-runtime/config/vector-runtime-readiness-review.v1.json` defines the runtime readiness review gate and requires the Stage 4r receipt digest. It returns `eligible_for_runtime_activation_decision_review` only when local module, artifact, digest-chain, query and evidence signals are all sufficient, still without activation.
+- `cortex-abv/private-runtime/config/vector-runtime-activation-decision-review.v1.json` defines the runtime activation decision review gate and requires the Stage 4s receipt digest. It bounds what a later separate local activation decision may ever allow: owner-invoked same-process callable availability only, still with no endpoint, scheduler, network, LLM, public action or external writes.
 
 Check the adapter contract and currently enabled project-sync targets:
 

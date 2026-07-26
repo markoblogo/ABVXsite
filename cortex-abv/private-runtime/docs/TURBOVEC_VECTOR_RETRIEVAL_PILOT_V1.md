@@ -707,12 +707,60 @@ The receipt returns:
 
 This still does not activate runtime wiring. It only makes a later activation decision review gate discussable.
 
+### Stage 4t: runtime activation decision review
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/config/vector-runtime-activation-decision-review.v1.json`
+- `cortex-abv/private-runtime/src/vector-runtime-activation-decision-review.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-activation-decision-review.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-activation-decision-review-receipt.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-activation-decision-review:check
+```
+
+The activation decision review now formally limits any future local activation decision to:
+
+- owner-invoked same-process callable availability only;
+- private-runtime-only location;
+- fixed harness module path;
+- fixed allowlisted bindings only;
+- read-only Stage 4h local artifact only;
+- tenant-scoped candidate-only query operations;
+- evidence verification only.
+
+It also explicitly keeps forbidden even after such a future decision:
+
+- endpoint exposure;
+- persistent service or daemon lifecycle;
+- background scheduler;
+- network calls;
+- LLM calls;
+- public-action authority;
+- answer generation;
+- source mutation;
+- artifact mutation;
+- writes outside receipt;
+- cross-tenant queries;
+- autonomous execution.
+
+The receipt returns:
+
+- `eligible_for_local_runtime_activation_decision` when Stage 4s readiness proof and the bounded activation scope both hold;
+- `not_eligible` when readiness proof or governance boundaries block.
+
+This still does not activate runtime wiring. It only makes a later explicit local activation decision artifact discussable.
+
 ## Next gate
 
-Before any activation decision review:
+Before any actual local activation decision:
 
-1. require the Stage 4s runtime readiness review receipt digest;
-2. define what a local private-runtime activation decision may approve, and what remains forbidden;
+1. require the Stage 4t runtime activation decision review receipt digest;
+2. add a separate local activation decision artifact with explicit owner approval and rollback plan;
 3. preserve no-endpoint/no-scheduler/no-LLM/no-network/no-public-action governance unless separately reviewed;
 4. keep any real external/personal-surface action behind separate proposal and owner-review gates.
 

@@ -5,7 +5,7 @@
   "authority": "runtime_readiness_review_only",
   "status": "passed",
   "eligibility": "eligible_for_runtime_activation_decision_review",
-  "runAt": "2026-07-26T18:03:04.840Z",
+  "runAt": "2026-07-26T18:14:05.428Z",
   "mode": "runtime_readiness_review",
   "engine": "turbovec",
   "reviewDigest": "2861c95a88c3019d0a3f18a97e47bf6a0cb1f39d7b5a7b9758db54a4987f812c",
@@ -23,7 +23,7 @@
     "module": {
       "importable": true,
       "bindingsPresent": true,
-      "activationExposed": true
+      "activationNotExposed": true
     },
     "artifact": {
       "readOnly": true,
@@ -44,7 +44,8 @@
         "query_local_runtime_binding_activation_dry_run",
         "verify_activation_not_exposed_activation_dry_run"
       ],
-      "writesOutsideReceipt": true
+      "commandsAllowlisted": true,
+      "receiptOnlyWrites": true
     }
   },
   "activationDecisionBoundary": {

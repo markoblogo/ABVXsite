@@ -39,8 +39,10 @@ test('validates runtime readiness signals without activation', () => {
   assert.equal(receipt.eligibility, 'eligible_for_runtime_activation_decision_review');
   assert.equal(receipt.governance.runtimeActivationApproved, false);
   assert.equal(receipt.readinessSignals.module.importable, true);
+  assert.equal(receipt.readinessSignals.module.activationNotExposed, true);
   assert.equal(receipt.readinessSignals.artifact.readOnly, true);
   assert.equal(receipt.readinessSignals.queries.allPassed, true);
+  assert.equal(receipt.readinessSignals.execution.receiptOnlyWrites, true);
   assert.equal(receipt.blockers.length, 0);
   assert.equal(persisted.stage4rReceiptDigest, receipt.stage4rReceiptDigest);
 });

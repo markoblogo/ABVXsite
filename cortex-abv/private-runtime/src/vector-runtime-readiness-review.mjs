@@ -221,7 +221,7 @@ export function runVectorRuntimeReadinessReviewGate({ reviewPath, stage4rReceipt
     module: {
       importable: stage4rReceipt.module?.importable === true,
       bindingsPresent: stage4rReceipt.module?.bindingsPresent === true,
-      activationExposed: stage4rReceipt.module?.activationExposed === false,
+      activationNotExposed: stage4rReceipt.module?.activationExposed === false,
     },
     artifact: {
       readOnly: stage4rReceipt.artifact?.readOnly === true,
@@ -237,7 +237,8 @@ export function runVectorRuntimeReadinessReviewGate({ reviewPath, stage4rReceipt
     },
     execution: {
       commandsExecuted: stage4rReceipt.commandsExecuted,
-      writesOutsideReceipt: stage4rReceipt.governance?.writesOutsideReceipt === false,
+      commandsAllowlisted: Array.isArray(stage4rReceipt.commandsExecuted) && stage4rReceipt.commandsExecuted.every((command) => command.endsWith('_activation_dry_run')),
+      receiptOnlyWrites: stage4rReceipt.governance?.writesOutsideReceipt === false,
     },
   };
   const receipt = {

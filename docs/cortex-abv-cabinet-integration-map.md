@@ -422,6 +422,23 @@ Completed (read-only pilot): one synthetic scheduled-job plan + receipt, no runt
   - confirms allowlisted `_activation_dry_run` commands and receipt-only writes.
 - Still forbidden: runtime activation, endpoint, scheduler, network calls, LLM calls, answer generation, source/artifact mutation, external writes, public actions and publication.
 
+#### Stage 4t execution status (completed)
+
+- Added runtime activation decision review:
+  - `cortex-abv/private-runtime/config/vector-runtime-activation-decision-review.v1.json`
+  - `cortex-abv/private-runtime/src/vector-runtime-activation-decision-review.mjs`
+  - `cortex-abv/private-runtime/receipts/vector-runtime-activation-decision-review-receipt.v1.json`
+- Current receipt result:
+  - `eligibility: "eligible_for_local_runtime_activation_decision"`;
+  - `status: "passed"`;
+  - `blockers: []`.
+- Decision-review behavior:
+  - requires the Stage 4s runtime readiness review receipt digest;
+  - defines exactly what a later local activation decision may allow: owner-invoked same-process callable availability only;
+  - fixes module path, allowlisted bindings and Stage 4h artifact path;
+  - preserves tenant-scoped candidate-only retrieval and evidence verification only.
+- Still forbidden even after any later local activation decision: endpoint, daemon/service lifecycle, scheduler, network calls, LLM calls, answer generation, source/artifact mutation, writes outside receipt, cross-tenant queries, public actions and autonomous execution.
+
 ## Staged adoption (hard requirement)
 1. Read-only planning (contracts + synthetic map only)
 2. One read-only adapter job in private runtime

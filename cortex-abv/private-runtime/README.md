@@ -351,6 +351,28 @@ The receipt returns `eligible_for_controlled_runtime_module_harness_dry_run_revi
 
 This still does not approve harness implementation, runtime wiring, endpoints, schedulers, model calls, network calls, source or artifact mutation, external writes, public actions or publication.
 
+## Vector runtime controlled module harness dry-run
+
+The local harness dry-run is the first minimal implementation POC for the controlled module surface:
+
+- `config/vector-runtime-controlled-module-harness-dry-run.v1.json` defines the Stage 4j prerequisite, Stage 4h artifact path, dry-run queries and command trace.
+- `src/vector-runtime-controlled-module-harness.mjs` implements the local library functions: `loadIndexArtifact`, `queryCandidates`, `verifyClaimEvidence`.
+- `src/vector-runtime-controlled-module-harness-dry-run.mjs` runs the harness against the local artifact and writes a receipt.
+- `receipts/vector-runtime-controlled-module-harness-dry-run-receipt.v1.json` records Stage 4j receipt digest, Stage 4h artifact/source digests, tenant-scoped query results and evidence verification.
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-controlled-module-harness-dry-run:run
+```
+
+The receipt returns `eligible_for_controlled_runtime_wiring_design_review` or `not_eligible`. Eligibility means only that a later runtime wiring design review can be discussed. It does not approve wiring.
+
+The harness reads only `data/vector-indexes/turbovec-poc/index-artifact.v1.json`, verifies the Stage 4j receipt digest and Stage 4h artifact/source digests, returns tenant-scoped candidates only, and verifies evidence refs.
+
+This still does not approve endpoints, schedulers, model calls, network calls, source or artifact mutation, external writes, public actions or publication.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

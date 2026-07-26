@@ -194,6 +194,7 @@ See also: [Cabinet pilot integration map](docs/cortex-abv-cabinet-integration-ma
 - `cortex-abv/private-runtime/config/vector-runtime-implementation-poc-dry-run.v1.json` runs the first local dry-run artifact pass: synthetic source pack, gitignored local index artifact, source/index digests, probe results and rollback notes. It returns `eligible_for_controlled_runtime_module_review` without approving runtime activation.
 - `cortex-abv/private-runtime/config/vector-runtime-controlled-module-design.v1.json` defines the next controlled local module contract over that artifact interface: `loadIndexArtifact`, `queryCandidates`, `verifyClaimEvidence`, Stage 4h receipt digest required, no implementation or wiring approval.
 - `cortex-abv/private-runtime/config/vector-runtime-controlled-module-poc-review.v1.json` defines the future local harness POC review scope and requires the Stage 4i design receipt digest. It returns `eligible_for_controlled_runtime_module_harness_dry_run_review` without approving harness implementation.
+- `cortex-abv/private-runtime/src/vector-runtime-controlled-module-harness.mjs` implements the first local-only controlled module harness over the Stage 4h artifact. Its dry-run receipt returns `eligible_for_controlled_runtime_wiring_design_review` without approving runtime wiring.
 
 Check the adapter contract and currently enabled project-sync targets:
 

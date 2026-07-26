@@ -249,6 +249,25 @@ Completed (read-only pilot): one synthetic scheduled-job plan + receipt, no runt
   - Stage 4h artifact digest plus Stage 4i/4j receipt digest checks required.
 - Still forbidden: harness implementation approval, runtime wiring, endpoint, scheduler, network calls, LLM calls, source/artifact mutation, external writes, public actions and publication.
 
+#### Stage 4k execution status (completed)
+
+- Added controlled runtime module harness dry-run:
+  - `cortex-abv/private-runtime/config/vector-runtime-controlled-module-harness-dry-run.v1.json`
+  - `cortex-abv/private-runtime/src/vector-runtime-controlled-module-harness.mjs`
+  - `cortex-abv/private-runtime/src/vector-runtime-controlled-module-harness-dry-run.mjs`
+  - `cortex-abv/private-runtime/receipts/vector-runtime-controlled-module-harness-dry-run-receipt.v1.json`
+- Current receipt result:
+  - `eligibility: "eligible_for_controlled_runtime_wiring_design_review"`;
+  - `status: "passed"`;
+  - `blockers: []`.
+- Harness behavior:
+  - loads Stage 4h artifact read-only;
+  - verifies Stage 4j receipt digest plus Stage 4h artifact/source digests;
+  - returns tenant-scoped candidates only;
+  - verifies evidence refs;
+  - records command trace and query results in the receipt.
+- Still forbidden: runtime wiring approval, endpoint, scheduler, network calls, LLM calls, source/artifact mutation, external writes, public actions and publication.
+
 ## Staged adoption (hard requirement)
 1. Read-only planning (contracts + synthetic map only)
 2. One read-only adapter job in private runtime

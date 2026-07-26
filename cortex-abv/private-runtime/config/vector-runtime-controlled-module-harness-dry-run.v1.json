@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimeControlledModuleHarnessDryRun",
+  "version": "v1",
+  "authority": "local_dry_run_only",
+  "engine": "turbovec",
+  "purpose": "Minimal local implementation POC for the controlled vector module harness. It reads the Stage 4h artifact read-only, verifies Stage 4j receipt digest, queries candidates and verifies claim evidence.",
+  "prerequisites": {
+    "requiredPocReviewReceiptKind": "CortexABVVectorRuntimeControlledModulePocReviewReceipt",
+    "requiredPocReviewEligibility": "eligible_for_controlled_runtime_module_harness_dry_run_review",
+    "requiredPocReviewStatus": "passed",
+    "requiresPocReviewReceiptDigest": true
+  },
+  "artifact": {
+    "path": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+    "root": "data/vector-indexes/turbovec-poc",
+    "kind": "CortexABVVectorRuntimeIndexArtifact",
+    "version": "v1",
+    "readOnly": true
+  },
+  "harness": {
+    "path": "src/vector-runtime-controlled-module-harness.mjs",
+    "type": "local_library_only",
+    "functions": [
+      "loadIndexArtifact",
+      "queryCandidates",
+      "verifyClaimEvidence"
+    ]
+  },
+  "queries": [
+    {
+      "id": "query-index-summary",
+      "tenant": "index-spike",
+      "query": "latest index spike public summary updates",
+      "expectedCandidateIds": [
+        "pp-index-spike-updates"
+      ],
+      "topK": 3,
+      "minScore": 0.05
+    },
+    {
+      "id": "query-monitor-readiness",
+      "tenant": "monitor-mn7r",
+      "query": "monitor mn7r repository readiness status",
+      "expectedCandidateIds": [
+        "pp-monitor-mn7r-dashboard"
+      ],
+      "topK": 3,
+      "minScore": 0.05
+    }
+  ],
+  "commands": {
+    "load": "load_index_artifact_poc_dry_run",
+    "query": "query_candidates_poc_dry_run",
+    "verify": "verify_claim_evidence_poc_dry_run"
+  },
+  "checks": {
+    "requiresStage4jReceiptDigest": true,
+    "requiresArtifactDigest": true,
+    "requiresSourceDigest": true,
+    "requiresTenantScope": true,
+    "requiresHardThreshold": true,
+    "requiresCandidatesOnly": true,
+    "requiresEvidenceRefs": true
+  },
+  "governance": {
+    "readOnly": true,
+    "proposalOnly": true,
+    "dryRunOnly": true,
+    "runtimeIntegration": false,
+    "endpoint": false,
+    "scheduler": false,
+    "networkCalls": false,
+    "llmCalls": false,
+    "writesOutsideReceipt": false,
+    "artifactMutation": false,
+    "sourceMutation": false,
+    "publicActionAuthority": false
+  }
+}

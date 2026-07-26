@@ -391,17 +391,53 @@ The receipt returns:
 
 This does not approve harness implementation or runtime wiring. It only makes the next local harness dry-run review discussable.
 
+### Stage 4k: controlled runtime module harness dry-run
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/config/vector-runtime-controlled-module-harness-dry-run.v1.json`
+- `cortex-abv/private-runtime/src/vector-runtime-controlled-module-harness.mjs`
+- `cortex-abv/private-runtime/src/vector-runtime-controlled-module-harness-dry-run.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-controlled-module-harness.test.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-controlled-module-harness-dry-run.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-controlled-module-harness-dry-run-receipt.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-controlled-module-harness-dry-run:run
+```
+
+The harness dry-run is the first local implementation POC:
+
+- implements `loadIndexArtifact`, `queryCandidates`, `verifyClaimEvidence`;
+- reads the Stage 4h artifact read-only;
+- verifies Stage 4j receipt digest;
+- verifies Stage 4h artifact and source digests;
+- enforces tenant scope and hard threshold;
+- returns candidates only, no answer generation;
+- verifies evidence refs for returned candidates;
+- records command trace, query results and digest linkage in the receipt.
+
+The receipt returns:
+
+- `eligible_for_controlled_runtime_wiring_design_review` when load/query/evidence/digest gates pass;
+- `not_eligible` when any gate blocks.
+
+This does not approve runtime wiring. It only makes a later wiring design review discussable under the same local-only boundary.
+
 Default stage-3 receipt artifact:
 
 - `cortex-abv/private-runtime/receipts/vector-retrieval-turbovec-shadow-receipt.v1.json`
 
 ## Next gate
 
-Before any controlled runtime module harness implementation:
+Before any controlled runtime wiring:
 
-1. add a separate local harness dry-run design that consumes the Stage 4j review receipt;
-2. implement only the local library harness surface, not a service;
-3. verify Stage 4h artifact digest and Stage 4i/4j receipt digests;
+1. add a separate runtime wiring design review gate;
+2. require the Stage 4k harness dry-run receipt digest;
+3. keep wiring private-runtime-only and local-library-only;
 4. preserve the same no-endpoint/no-LLM/no-network/no-public-action governance.
 
 This keeps the governance rule: **no outbound action until auditability and evidence policy are proven.**

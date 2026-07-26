@@ -1,0 +1,825 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimeControlledModuleHarnessDryRunReceipt",
+  "version": "v1",
+  "authority": "local_dry_run_only",
+  "status": "passed",
+  "eligibility": "eligible_for_controlled_runtime_wiring_design_review",
+  "runAt": "2026-07-26T16:28:07.282Z",
+  "mode": "controlled_runtime_module_harness_dry_run",
+  "engine": "turbovec",
+  "digests": {
+    "designDigest": "e75883c121a8e77f300f24c1ee9e0a58c20cf51f8627f9602633e1dbda3b9726",
+    "stage4jReceiptDigest": "d5859fde2b03dee095b186a9f9824b8130a0d578b2e0c28945614ce4b96ae442",
+    "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+    "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+    "receiptLinkageDigest": "cc32057f642682419a364b8e277065cbad0789e0e73f5e3e56c794e050c0b8d6"
+  },
+  "artifact": {
+    "path": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+    "indexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+    "sourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+    "documentCount": 4,
+    "readOnly": true
+  },
+  "commandsExecuted": [
+    "load_index_artifact_poc_dry_run",
+    "query_candidates_poc_dry_run",
+    "verify_claim_evidence_poc_dry_run"
+  ],
+  "queryResults": [
+    {
+      "id": "query-index-summary",
+      "status": "passed",
+      "tenant": "index-spike",
+      "candidateIds": [
+        "pp-index-spike-updates"
+      ],
+      "expectedCandidateIds": [
+        "pp-index-spike-updates"
+      ],
+      "hits": [
+        "pp-index-spike-updates"
+      ],
+      "evidenceVerification": {
+        "passed": true,
+        "missingEvidenceRefs": [],
+        "decisionTrace": {
+          "requiresEvidenceRefs": true,
+          "checkedCandidateCount": 1
+        }
+      },
+      "decisionTrace": {
+        "tenantScope": "index-spike",
+        "hardThreshold": 0.05,
+        "candidatesOnly": true,
+        "answerGeneration": false
+      },
+      "candidates": [
+        {
+          "candidateId": "pp-index-spike-updates",
+          "score": 3.4315945543462147,
+          "matchedTerms": [
+            "index",
+            "public",
+            "spike",
+            "summary"
+          ],
+          "evidenceRefs": [
+            {
+              "path": "cortex-abv/public-presence-index.v1.json",
+              "ref": "projects.index-spike.summary",
+              "digest": "3d8f9cb2d9f9f9c3d7f6d4f8d2ac9a1fc8f6a2e2f1f7f4a2b0c2d3e4f5a6b7c8"
+            }
+          ],
+          "tenant": "index-spike"
+        }
+      ]
+    },
+    {
+      "id": "query-monitor-readiness",
+      "status": "passed",
+      "tenant": "monitor-mn7r",
+      "candidateIds": [
+        "pp-monitor-mn7r-dashboard"
+      ],
+      "expectedCandidateIds": [
+        "pp-monitor-mn7r-dashboard"
+      ],
+      "hits": [
+        "pp-monitor-mn7r-dashboard"
+      ],
+      "evidenceVerification": {
+        "passed": true,
+        "missingEvidenceRefs": [],
+        "decisionTrace": {
+          "requiresEvidenceRefs": true,
+          "checkedCandidateCount": 1
+        }
+      },
+      "decisionTrace": {
+        "tenantScope": "monitor-mn7r",
+        "hardThreshold": 0.05,
+        "candidatesOnly": true,
+        "answerGeneration": false
+      },
+      "candidates": [
+        {
+          "candidateId": "pp-monitor-mn7r-dashboard",
+          "score": 6.677204738181412,
+          "matchedTerms": [
+            "mn7r",
+            "monitor",
+            "readiness",
+            "repository",
+            "status"
+          ],
+          "evidenceRefs": [
+            {
+              "path": "cortex-abv/public-project-registry.v1.json",
+              "ref": "projects.monitor-mn7r.status",
+              "digest": "7f1e8f2cb4a1c3d6f2b5d8e9f0c3a4b5d6e7f8a9c0b1d2e3f4a5b6c7d8e9f012"
+            }
+          ],
+          "tenant": "monitor-mn7r"
+        }
+      ]
+    }
+  ],
+  "governance": {
+    "readOnly": true,
+    "proposalOnly": true,
+    "dryRunOnly": true,
+    "runtimeIntegration": false,
+    "endpoint": false,
+    "scheduler": false,
+    "networkCalls": false,
+    "llmCalls": false,
+    "writesOutsideReceipt": false,
+    "artifactMutation": false,
+    "sourceMutation": false,
+    "publicActionAuthority": false
+  },
+  "gates": {
+    "design": [
+      {
+        "id": "kind",
+        "status": "accepted",
+        "reason": "design kind must match",
+        "evidence": {
+          "kind": "CortexABVVectorRuntimeControlledModuleHarnessDryRun"
+        }
+      },
+      {
+        "id": "version",
+        "status": "accepted",
+        "reason": "design version must be v1",
+        "evidence": {
+          "version": "v1"
+        }
+      },
+      {
+        "id": "authority",
+        "status": "accepted",
+        "reason": "design authority must be local_dry_run_only",
+        "evidence": {
+          "authority": "local_dry_run_only"
+        }
+      },
+      {
+        "id": "engine",
+        "status": "accepted",
+        "reason": "design engine must be turbovec",
+        "evidence": {
+          "engine": "turbovec"
+        }
+      },
+      {
+        "id": "stage4j_kind",
+        "status": "accepted",
+        "reason": "Stage 4j receipt kind must match",
+        "evidence": {
+          "kind": "CortexABVVectorRuntimeControlledModulePocReviewReceipt"
+        }
+      },
+      {
+        "id": "stage4j_status",
+        "status": "accepted",
+        "reason": "Stage 4j receipt status must be passed",
+        "evidence": {
+          "status": "passed"
+        }
+      },
+      {
+        "id": "stage4j_eligibility",
+        "status": "accepted",
+        "reason": "Stage 4j receipt eligibility must match",
+        "evidence": {
+          "eligibility": "eligible_for_controlled_runtime_module_harness_dry_run_review"
+        }
+      },
+      {
+        "id": "stage4j_no_blockers",
+        "status": "accepted",
+        "reason": "Stage 4j receipt must have no blockers",
+        "evidence": {
+          "blockers": []
+        }
+      },
+      {
+        "id": "stage4j_digest_required",
+        "status": "accepted",
+        "reason": "Stage 4j receipt digest must be required",
+        "evidence": {
+          "requiredPocReviewReceiptKind": "CortexABVVectorRuntimeControlledModulePocReviewReceipt",
+          "requiredPocReviewEligibility": "eligible_for_controlled_runtime_module_harness_dry_run_review",
+          "requiredPocReviewStatus": "passed",
+          "requiresPocReviewReceiptDigest": true
+        }
+      },
+      {
+        "id": "artifact_kind",
+        "status": "accepted",
+        "reason": "artifact kind must match",
+        "evidence": {
+          "path": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+          "root": "data/vector-indexes/turbovec-poc",
+          "kind": "CortexABVVectorRuntimeIndexArtifact",
+          "version": "v1",
+          "readOnly": true
+        }
+      },
+      {
+        "id": "artifact_version",
+        "status": "accepted",
+        "reason": "artifact version must be v1",
+        "evidence": {
+          "path": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+          "root": "data/vector-indexes/turbovec-poc",
+          "kind": "CortexABVVectorRuntimeIndexArtifact",
+          "version": "v1",
+          "readOnly": true
+        }
+      },
+      {
+        "id": "artifact_read_only",
+        "status": "accepted",
+        "reason": "artifact must be read-only",
+        "evidence": {
+          "path": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+          "root": "data/vector-indexes/turbovec-poc",
+          "kind": "CortexABVVectorRuntimeIndexArtifact",
+          "version": "v1",
+          "readOnly": true
+        }
+      },
+      {
+        "id": "artifact_root",
+        "status": "accepted",
+        "reason": "artifact root must match Stage 4h root",
+        "evidence": {
+          "path": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+          "root": "data/vector-indexes/turbovec-poc",
+          "kind": "CortexABVVectorRuntimeIndexArtifact",
+          "version": "v1",
+          "readOnly": true
+        }
+      },
+      {
+        "id": "harness_path",
+        "status": "accepted",
+        "reason": "harness path must match Stage 4j review scope",
+        "evidence": {
+          "path": "src/vector-runtime-controlled-module-harness.mjs",
+          "type": "local_library_only",
+          "functions": [
+            "loadIndexArtifact",
+            "queryCandidates",
+            "verifyClaimEvidence"
+          ]
+        }
+      },
+      {
+        "id": "local_library_only",
+        "status": "accepted",
+        "reason": "harness must be local library only",
+        "evidence": {
+          "path": "src/vector-runtime-controlled-module-harness.mjs",
+          "type": "local_library_only",
+          "functions": [
+            "loadIndexArtifact",
+            "queryCandidates",
+            "verifyClaimEvidence"
+          ]
+        }
+      },
+      {
+        "id": "harness_functions",
+        "status": "accepted",
+        "reason": "harness functions must match Stage 4j review scope",
+        "evidence": {
+          "path": "src/vector-runtime-controlled-module-harness.mjs",
+          "type": "local_library_only",
+          "functions": [
+            "loadIndexArtifact",
+            "queryCandidates",
+            "verifyClaimEvidence"
+          ]
+        }
+      },
+      {
+        "id": "query_query-index-summary_tenant",
+        "status": "accepted",
+        "reason": "query must include tenant scope",
+        "evidence": {
+          "id": "query-index-summary",
+          "tenant": "index-spike",
+          "query": "latest index spike public summary updates",
+          "expectedCandidateIds": [
+            "pp-index-spike-updates"
+          ],
+          "topK": 3,
+          "minScore": 0.05
+        }
+      },
+      {
+        "id": "query_query-index-summary_threshold",
+        "status": "accepted",
+        "reason": "query must include hard threshold",
+        "evidence": {
+          "id": "query-index-summary",
+          "tenant": "index-spike",
+          "query": "latest index spike public summary updates",
+          "expectedCandidateIds": [
+            "pp-index-spike-updates"
+          ],
+          "topK": 3,
+          "minScore": 0.05
+        }
+      },
+      {
+        "id": "query_query-monitor-readiness_tenant",
+        "status": "accepted",
+        "reason": "query must include tenant scope",
+        "evidence": {
+          "id": "query-monitor-readiness",
+          "tenant": "monitor-mn7r",
+          "query": "monitor mn7r repository readiness status",
+          "expectedCandidateIds": [
+            "pp-monitor-mn7r-dashboard"
+          ],
+          "topK": 3,
+          "minScore": 0.05
+        }
+      },
+      {
+        "id": "query_query-monitor-readiness_threshold",
+        "status": "accepted",
+        "reason": "query must include hard threshold",
+        "evidence": {
+          "id": "query-monitor-readiness",
+          "tenant": "monitor-mn7r",
+          "query": "monitor mn7r repository readiness status",
+          "expectedCandidateIds": [
+            "pp-monitor-mn7r-dashboard"
+          ],
+          "topK": 3,
+          "minScore": 0.05
+        }
+      },
+      {
+        "id": "command_load",
+        "status": "accepted",
+        "reason": "load command must be Stage 4j allowlisted dry-run command",
+        "evidence": {
+          "command": "load_index_artifact_poc_dry_run",
+          "allowedCommands": [
+            "load_index_artifact_poc_dry_run",
+            "query_candidates_poc_dry_run",
+            "verify_claim_evidence_poc_dry_run"
+          ]
+        }
+      },
+      {
+        "id": "command_query",
+        "status": "accepted",
+        "reason": "query command must be Stage 4j allowlisted dry-run command",
+        "evidence": {
+          "command": "query_candidates_poc_dry_run",
+          "allowedCommands": [
+            "load_index_artifact_poc_dry_run",
+            "query_candidates_poc_dry_run",
+            "verify_claim_evidence_poc_dry_run"
+          ]
+        }
+      },
+      {
+        "id": "command_verify",
+        "status": "accepted",
+        "reason": "verify command must be Stage 4j allowlisted dry-run command",
+        "evidence": {
+          "command": "verify_claim_evidence_poc_dry_run",
+          "allowedCommands": [
+            "load_index_artifact_poc_dry_run",
+            "query_candidates_poc_dry_run",
+            "verify_claim_evidence_poc_dry_run"
+          ]
+        }
+      },
+      {
+        "id": "check_requiresStage4jReceiptDigest",
+        "status": "accepted",
+        "reason": "checks.requiresStage4jReceiptDigest must be true",
+        "evidence": {
+          "requiresStage4jReceiptDigest": true,
+          "requiresArtifactDigest": true,
+          "requiresSourceDigest": true,
+          "requiresTenantScope": true,
+          "requiresHardThreshold": true,
+          "requiresCandidatesOnly": true,
+          "requiresEvidenceRefs": true
+        }
+      },
+      {
+        "id": "check_requiresArtifactDigest",
+        "status": "accepted",
+        "reason": "checks.requiresArtifactDigest must be true",
+        "evidence": {
+          "requiresStage4jReceiptDigest": true,
+          "requiresArtifactDigest": true,
+          "requiresSourceDigest": true,
+          "requiresTenantScope": true,
+          "requiresHardThreshold": true,
+          "requiresCandidatesOnly": true,
+          "requiresEvidenceRefs": true
+        }
+      },
+      {
+        "id": "check_requiresSourceDigest",
+        "status": "accepted",
+        "reason": "checks.requiresSourceDigest must be true",
+        "evidence": {
+          "requiresStage4jReceiptDigest": true,
+          "requiresArtifactDigest": true,
+          "requiresSourceDigest": true,
+          "requiresTenantScope": true,
+          "requiresHardThreshold": true,
+          "requiresCandidatesOnly": true,
+          "requiresEvidenceRefs": true
+        }
+      },
+      {
+        "id": "check_requiresTenantScope",
+        "status": "accepted",
+        "reason": "checks.requiresTenantScope must be true",
+        "evidence": {
+          "requiresStage4jReceiptDigest": true,
+          "requiresArtifactDigest": true,
+          "requiresSourceDigest": true,
+          "requiresTenantScope": true,
+          "requiresHardThreshold": true,
+          "requiresCandidatesOnly": true,
+          "requiresEvidenceRefs": true
+        }
+      },
+      {
+        "id": "check_requiresHardThreshold",
+        "status": "accepted",
+        "reason": "checks.requiresHardThreshold must be true",
+        "evidence": {
+          "requiresStage4jReceiptDigest": true,
+          "requiresArtifactDigest": true,
+          "requiresSourceDigest": true,
+          "requiresTenantScope": true,
+          "requiresHardThreshold": true,
+          "requiresCandidatesOnly": true,
+          "requiresEvidenceRefs": true
+        }
+      },
+      {
+        "id": "check_requiresCandidatesOnly",
+        "status": "accepted",
+        "reason": "checks.requiresCandidatesOnly must be true",
+        "evidence": {
+          "requiresStage4jReceiptDigest": true,
+          "requiresArtifactDigest": true,
+          "requiresSourceDigest": true,
+          "requiresTenantScope": true,
+          "requiresHardThreshold": true,
+          "requiresCandidatesOnly": true,
+          "requiresEvidenceRefs": true
+        }
+      },
+      {
+        "id": "check_requiresEvidenceRefs",
+        "status": "accepted",
+        "reason": "checks.requiresEvidenceRefs must be true",
+        "evidence": {
+          "requiresStage4jReceiptDigest": true,
+          "requiresArtifactDigest": true,
+          "requiresSourceDigest": true,
+          "requiresTenantScope": true,
+          "requiresHardThreshold": true,
+          "requiresCandidatesOnly": true,
+          "requiresEvidenceRefs": true
+        }
+      },
+      {
+        "id": "governance_readOnly",
+        "status": "accepted",
+        "reason": "governance.readOnly must be true",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "dryRunOnly": true,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "artifactMutation": false,
+          "sourceMutation": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_proposalOnly",
+        "status": "accepted",
+        "reason": "governance.proposalOnly must be true",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "dryRunOnly": true,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "artifactMutation": false,
+          "sourceMutation": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_dryRunOnly",
+        "status": "accepted",
+        "reason": "governance.dryRunOnly must be true",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "dryRunOnly": true,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "artifactMutation": false,
+          "sourceMutation": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_runtimeIntegration",
+        "status": "accepted",
+        "reason": "governance.runtimeIntegration must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "dryRunOnly": true,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "artifactMutation": false,
+          "sourceMutation": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_endpoint",
+        "status": "accepted",
+        "reason": "governance.endpoint must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "dryRunOnly": true,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "artifactMutation": false,
+          "sourceMutation": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_scheduler",
+        "status": "accepted",
+        "reason": "governance.scheduler must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "dryRunOnly": true,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "artifactMutation": false,
+          "sourceMutation": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_networkCalls",
+        "status": "accepted",
+        "reason": "governance.networkCalls must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "dryRunOnly": true,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "artifactMutation": false,
+          "sourceMutation": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_llmCalls",
+        "status": "accepted",
+        "reason": "governance.llmCalls must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "dryRunOnly": true,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "artifactMutation": false,
+          "sourceMutation": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_writesOutsideReceipt",
+        "status": "accepted",
+        "reason": "governance.writesOutsideReceipt must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "dryRunOnly": true,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "artifactMutation": false,
+          "sourceMutation": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_artifactMutation",
+        "status": "accepted",
+        "reason": "governance.artifactMutation must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "dryRunOnly": true,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "artifactMutation": false,
+          "sourceMutation": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_sourceMutation",
+        "status": "accepted",
+        "reason": "governance.sourceMutation must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "dryRunOnly": true,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "artifactMutation": false,
+          "sourceMutation": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_publicActionAuthority",
+        "status": "accepted",
+        "reason": "governance.publicActionAuthority must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "dryRunOnly": true,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "artifactMutation": false,
+          "sourceMutation": false,
+          "publicActionAuthority": false
+        }
+      }
+    ],
+    "load": [
+      {
+        "id": "stage4j_digest_verified",
+        "status": "accepted",
+        "reason": "Stage 4j receipt digest must be verified",
+        "evidence": {
+          "indexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "sourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "stage4jReceiptDigest": "d5859fde2b03dee095b186a9f9824b8130a0d578b2e0c28945614ce4b96ae442"
+        }
+      },
+      {
+        "id": "stage4h_receipt_linked",
+        "status": "accepted",
+        "reason": "Stage 4j receipt must link to the Stage 4h receipt digest",
+        "evidence": {
+          "expected": "a379c53324643270eeaf0e0c95c5983dea10c52814893fa5567118c055271ab2",
+          "observed": "a379c53324643270eeaf0e0c95c5983dea10c52814893fa5567118c055271ab2"
+        }
+      },
+      {
+        "id": "artifact_digest_verified",
+        "status": "accepted",
+        "reason": "artifact digest must match Stage 4h receipt",
+        "evidence": {
+          "indexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "sourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "stage4jReceiptDigest": "d5859fde2b03dee095b186a9f9824b8130a0d578b2e0c28945614ce4b96ae442"
+        }
+      },
+      {
+        "id": "source_digest_verified",
+        "status": "accepted",
+        "reason": "source digest must match Stage 4h receipt",
+        "evidence": {
+          "indexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "sourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "stage4jReceiptDigest": "d5859fde2b03dee095b186a9f9824b8130a0d578b2e0c28945614ce4b96ae442"
+        }
+      }
+    ],
+    "query": [
+      {
+        "id": "tenant_scoped_queries",
+        "status": "accepted",
+        "reason": "all candidates must stay tenant-scoped",
+        "evidence": {
+          "queryCount": 2
+        }
+      },
+      {
+        "id": "expected_candidates_found",
+        "status": "accepted",
+        "reason": "expected candidates and evidence verification must pass",
+        "evidence": {
+          "queryResults": [
+            {
+              "id": "query-index-summary",
+              "status": "passed",
+              "hits": [
+                "pp-index-spike-updates"
+              ]
+            },
+            {
+              "id": "query-monitor-readiness",
+              "status": "passed",
+              "hits": [
+                "pp-monitor-mn7r-dashboard"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "candidates_only",
+        "status": "accepted",
+        "reason": "harness must return candidates only",
+        "evidence": {
+          "queryCount": 2
+        }
+      }
+    ]
+  },
+  "blockers": [],
+  "decisionTrace": {
+    "policySource": "controlled_module_harness_dry_run_plus_stage4j_receipt_digest",
+    "reason": "Local harness dry-run loaded the Stage 4h artifact read-only, verified Stage 4j digest, queried tenant-scoped candidates and verified evidence refs.",
+    "nextAllowedStep": "controlled_runtime_wiring_design_review"
+  }
+}

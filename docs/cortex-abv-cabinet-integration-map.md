@@ -577,6 +577,24 @@ Completed (read-only pilot): one synthetic scheduled-job plan + receipt, no runt
   - still does not apply activation, a transition or any effect.
 - Still forbidden: activation applied here, state transition applied here, effect applied here, endpoint, daemon/service lifecycle, scheduler, network calls, LLM calls, answer generation, source/artifact mutation, writes outside receipt, cross-tenant queries, public actions and autonomous execution.
 
+#### Stage 4ac execution status (completed)
+
+- Added local effect-application review:
+  - `cortex-abv/private-runtime/config/vector-runtime-local-effect-application-review.v1.json`
+  - `cortex-abv/private-runtime/src/vector-runtime-local-effect-application-review.mjs`
+  - `cortex-abv/private-runtime/test/vector-runtime-local-effect-application-review.test.mjs`
+  - `cortex-abv/private-runtime/receipts/vector-runtime-local-effect-application-review-receipt.v1.json`
+- Current receipt result (last synthetic run):
+  - `eligibility: "eligible_for_local_effect_application"`;
+  - `status: "passed"`;
+  - `blockers: []`.
+- Review behavior:
+  - requires the Stage 4ab local transition-state effect artifact receipt digest;
+  - verifies strict governance against runtime/activation/transition/source mutation and outbound authority;
+  - verifies local-only allowed application paths (`candidate_query_preview`, `claim_evidence_verification`, `rollback_readiness_review`, `proposal_alignment_review`);
+  - keeps discussion strictly local, evidence-backed, tenant-scoped and receipt-only.
+- Still forbidden: runtime activation applied here, state transition applied here, effect applied here, endpoint, daemon/service lifecycle, scheduler, network calls, LLM calls, answer generation, source/artifact mutation, writes outside receipt, public actions, and autonomous execution.
+
 ## Staged adoption (hard requirement)
 1. Read-only planning (contracts + synthetic map only)
 2. One read-only adapter job in private runtime

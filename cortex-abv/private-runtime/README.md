@@ -697,6 +697,39 @@ npm run vector-runtime-local-transition-state-effect:run
 
 The receipt returns `eligible_for_local_effect_application_review` or `not_eligible`. Eligibility means only that a later local effect-application review may be discussed. It still does not apply any effect, activation or transition, expose an endpoint, start a scheduler, call a model, use network authority, mutate source/index artifacts or create public actions.
 
+## Vector runtime local transition-state effect application review
+
+The local effect-application review defines which strictly local effects may be discussed and what can be considered as application, still without applying any transition, activation or real external action:
+
+- `config/vector-runtime-local-effect-application-review.v1.json` defines the Stage 4ab local transition-state effect artifact prerequisite and allowed local-application scope.
+- `src/vector-runtime-local-effect-application-review.mjs` validates the Stage 4ab artifact receipt lineage, allowed local-application scope, decision tracing and governance boundaries, then writes a review receipt.
+- `test/vector-runtime-local-effect-application-review.test.mjs` blocks a non-eligible Stage 4ab artifact receipt and any introduced effect-application authority (application/transition/activation/endpoints/LLM/network/public-action).
+- `receipts/vector-runtime-local-effect-application-review-receipt.v1.json` records application-boundary review and inherited digest lineage.
+- `cortex-abv/private-runtime/receipts/vector-runtime-local-effect-application-review-receipt.v1.json` is the Stage 4ac review artifact.
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-local-effect-application-review:check
+```
+
+The review now:
+
+- requires the Stage 4ab local transition-state effect artifact receipt digest;
+- verifies Stage 4ab -> 4aa -> 4z -> 4y -> 4x -> 4w -> 4v -> 4u -> 4t -> 4s -> 4r -> 4q -> 4p -> 4o -> 4n -> 4h digest continuity remains present;
+- keeps discussion only to bounded local application paths: `candidate_query_preview`, `claim_evidence_verification`, `rollback_readiness_review`, `proposal_alignment_review`;
+- requires fixed allowlisted bindings and fixed controlled module path;
+- requires tenant-scoped, evidence-backed, candidate-only local operations;
+- writes only a receipt and still does not apply any effect, activation or transition.
+
+The receipt returns:
+
+- `eligible_for_local_effect_application` when local effect-application review gates and Stage 4ab proof both pass;
+- `not_eligible` when any digest, receipt or governance boundary blocks.
+
+This still does not activate runtime wiring. It only makes a later local effect-application decision discussable.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

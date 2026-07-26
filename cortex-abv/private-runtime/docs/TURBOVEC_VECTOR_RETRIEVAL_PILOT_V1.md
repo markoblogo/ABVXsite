@@ -1012,13 +1012,30 @@ The receipt returns:
 
 This still does not activate runtime wiring. It only makes a later local effect-application review discussable.
 
-## Next gate
+### Stage 4ac: local effect-application review
 
-Before any local effect-application review:
+Implemented artifacts:
 
-1. require the Stage 4ab local transition-state effect artifact receipt digest;
-2. define whether any later effect-application review is even meaningful without widening governance;
-3. preserve no-endpoint/no-scheduler/no-LLM/no-network/no-public-action governance unless separately reviewed;
-4. keep any real external/personal-surface action behind separate proposal and owner-review gates.
+- `cortex-abv/private-runtime/config/vector-runtime-local-effect-application-review.v1.json`
+- `cortex-abv/private-runtime/src/vector-runtime-local-effect-application-review.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-local-effect-application-review.test.mjs`
 
-This keeps the governance rule: **no outbound action until auditability and evidence policy are proven.**
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-local-effect-application-review:check
+```
+
+This stage formally decides whether strict local transition-state effects can be discussed before any separate application/decisions gate:
+
+- requires the Stage 4ab local transition-state effect artifact receipt digest;
+- requires fixed allowlisted application vocabulary and fixed controller module/bindings (`loadIndexArtifact`, `queryCandidates`, `verifyClaimEvidence`);
+- preserves the same hard governance boundary as previous local/runtime stages (no endpoint, no activation, no transition, no network/LLM, no source or artifact mutation, no public action).
+
+The receipt now returns:
+
+- `eligible_for_local_effect_application` when local effect-application review gates and Stage 4ab proof both pass;
+- `not_eligible` when any digest/gateway/governance boundary blocks.
+
+The review does not apply anything and does not create an activation path yet. It only prepares the system for a later strict local application decision gate.

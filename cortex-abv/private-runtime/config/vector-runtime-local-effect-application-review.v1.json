@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimeLocalEffectApplicationReview",
+  "version": "v1",
+  "authority": "local_effect_application_review_only",
+  "engine": "turbovec",
+  "purpose": "Formally define whether local transition-state effects are discussable in a strictly local mode and what counts as application in that bounded context, without applying activation, state transition, source mutation, artifact mutation or public action.",
+  "prerequisites": {
+    "requiredLocalEffectArtifactKind": "CortexABVVectorRuntimeLocalTransitionStateEffectReceipt",
+    "requiredLocalEffectArtifactEligibility": "eligible_for_local_effect_application_review",
+    "requiredLocalEffectArtifactStatus": "passed",
+    "requiresLocalEffectArtifactDigest": true
+  },
+  "applicationDefinition": {
+    "applicationScope": "strictly_local_receipt_only",
+    "sourceState": "bounded_owner_initiated_local_active_runtime_candidate",
+    "allowedLocalApplications": [
+      "candidate_query_preview",
+      "claim_evidence_verification",
+      "rollback_readiness_review",
+      "proposal_alignment_review"
+    ],
+    "requiredModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+    "requiredBindings": [
+      "loadIndexArtifact",
+      "queryCandidates",
+      "verifyClaimEvidence"
+    ],
+    "appliesEffectHere": false,
+    "stateTransitionAppliedHere": false,
+    "runtimeActivationAppliedHere": false
+  },
+  "applicationRules": {
+    "proposalOnly": true,
+    "readOnlyEvidence": true,
+    "decisionTraceRequired": true,
+    "tenantScopedCandidateOnly": true,
+    "noAnswerGeneration": true,
+    "noCandidateMutation": true
+  },
+  "rollbackEffectPolicy": {
+    "required": true,
+    "strategy": "discard_effect_application_review_and_keep_all_effects_unapplied",
+    "ownerReversalAllowed": true,
+    "receiptOnlyEvidence": true,
+    "externalMutationAllowed": false
+  },
+  "nextGate": {
+    "targetEligibility": "eligible_for_local_effect_application",
+    "futureReviewKind": "CortexABVVectorRuntimeLocalEffectApplicationReviewDecision",
+    "futureReviewMode": "local_effect_application_decision_only",
+    "effectAppliedHere": false
+  },
+  "forbiddenAuthority": {
+    "activationAppliedHere": false,
+    "stateTransitionAppliedHere": false,
+    "effectAppliedHere": false,
+    "persistentServiceAllowed": false,
+    "daemonProcessAllowed": false,
+    "schedulerAllowed": false,
+    "endpointAllowed": false,
+    "networkCallsAllowed": false,
+    "llmCallsAllowed": false,
+    "publicActionAuthorityAllowed": false,
+    "answerGenerationAllowed": false,
+    "sourceMutationAllowed": false,
+    "artifactMutationAllowed": false,
+    "writesOutsideReceiptAllowed": false,
+    "crossTenantQueriesAllowed": false,
+    "autonomousExecutionAllowed": false
+  },
+  "governance": {
+    "readOnly": true,
+    "proposalOnly": true,
+    "transitionStateEffectApplicationReviewOnly": true,
+    "runtimeActivationApplied": false,
+    "stateTransitionApplied": false,
+    "runtimeIntegration": false,
+    "endpoint": false,
+    "scheduler": false,
+    "networkCalls": false,
+    "llmCalls": false,
+    "writesOutsideReceipt": false,
+    "publicActionAuthority": false
+  }
+}

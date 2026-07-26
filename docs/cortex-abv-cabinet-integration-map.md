@@ -403,6 +403,25 @@ Completed (read-only pilot): one synthetic scheduled-job plan + receipt, no runt
   - writes only a receipt.
 - Still forbidden: runtime activation, endpoint, scheduler, network calls, LLM calls, answer generation, source/artifact mutation, external writes, public actions and publication.
 
+#### Stage 4s execution status (completed)
+
+- Added runtime readiness review:
+  - `cortex-abv/private-runtime/config/vector-runtime-readiness-review.v1.json`
+  - `cortex-abv/private-runtime/src/vector-runtime-readiness-review.mjs`
+  - `cortex-abv/private-runtime/receipts/vector-runtime-readiness-review-receipt.v1.json`
+- Current receipt result:
+  - `eligibility: "eligible_for_runtime_activation_decision_review"`;
+  - `status: "passed"`;
+  - `blockers: []`.
+- Review behavior:
+  - requires the Stage 4r activation dry-run receipt digest;
+  - confirms module importability, required bindings and no exposed activation;
+  - confirms Stage 4h artifact read-only load and digest match;
+  - confirms Stage 4q -> 4p -> 4o -> 4n -> 4h digest continuity;
+  - confirms tenant-scoped candidate-only query success and verified evidence refs;
+  - confirms allowlisted `_activation_dry_run` commands and receipt-only writes.
+- Still forbidden: runtime activation, endpoint, scheduler, network calls, LLM calls, answer generation, source/artifact mutation, external writes, public actions and publication.
+
 ## Staged adoption (hard requirement)
 1. Read-only planning (contracts + synthetic map only)
 2. One read-only adapter job in private runtime

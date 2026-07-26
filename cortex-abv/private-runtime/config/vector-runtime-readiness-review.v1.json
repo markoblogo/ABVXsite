@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimeReadinessReview",
+  "version": "v1",
+  "authority": "runtime_readiness_review_only",
+  "engine": "turbovec",
+  "purpose": "Formally determine which Stage 4r local signals are sufficient to consider the runtime locally ready for a separate activation decision review. This does not activate runtime wiring.",
+  "prerequisites": {
+    "requiredActivationDryRunReceiptKind": "CortexABVVectorRuntimeActivationDryRunReceipt",
+    "requiredActivationDryRunReceiptEligibility": "eligible_for_runtime_readiness_review",
+    "requiredActivationDryRunReceiptStatus": "passed",
+    "requiresActivationDryRunReceiptDigest": true
+  },
+  "requiredSignals": {
+    "module": [
+      "module_importable",
+      "bindings_present",
+      "activation_not_exposed"
+    ],
+    "artifact": [
+      "artifact_read_only",
+      "artifact_stage4h_index_digest_match",
+      "artifact_stage4h_source_digest_match"
+    ],
+    "digestChain": [
+      "stage4q_receipt_digest_present",
+      "stage4p_receipt_digest_present",
+      "stage4o_receipt_digest_present",
+      "stage4n_receipt_digest_present",
+      "stage4h_index_digest_present",
+      "stage4h_source_digest_present",
+      "receipt_linkage_digest_present"
+    ],
+    "queries": [
+      "query_results_passed",
+      "tenant_scope_enforced",
+      "candidates_only",
+      "answer_generation_disabled",
+      "evidence_refs_verified"
+    ],
+    "execution": [
+      "commands_allowlisted",
+      "commands_use_activation_dry_run_suffix",
+      "receipt_only_writes"
+    ]
+  },
+  "activationDecisionBoundary": {
+    "targetEligibility": "eligible_for_runtime_activation_decision_review",
+    "futureReviewKind": "CortexABVVectorRuntimeActivationDecisionReview",
+    "futureReviewMode": "activation_decision_review_only",
+    "runtimeActivationApprovedHere": false,
+    "endpointAllowed": false,
+    "schedulerAllowed": false,
+    "networkCallsAllowed": false,
+    "llmCallsAllowed": false,
+    "publicActionAuthorityAllowed": false,
+    "writesOutsideReceiptAllowed": false
+  },
+  "forbiddenAuthority": {
+    "runtimeActivationAllowed": false,
+    "runtimeIntegrationAllowed": false,
+    "endpointAllowed": false,
+    "schedulerAllowed": false,
+    "networkCallsAllowed": false,
+    "llmCallsAllowed": false,
+    "publicActionAuthorityAllowed": false,
+    "answerGenerationAllowed": false,
+    "sourceMutationAllowed": false,
+    "artifactMutationAllowed": false,
+    "writesOutsideReceiptAllowed": false
+  },
+  "rejectionCases": [
+    "activation_dry_run_not_eligible",
+    "missing_stage4q_receipt_digest",
+    "missing_stage4p_receipt_digest",
+    "missing_stage4o_receipt_digest",
+    "missing_stage4n_receipt_digest",
+    "missing_stage4h_index_digest",
+    "missing_stage4h_source_digest",
+    "missing_receipt_linkage_digest",
+    "module_not_importable",
+    "bindings_missing",
+    "activation_exposed",
+    "artifact_not_read_only",
+    "artifact_digest_mismatch",
+    "query_failed",
+    "tenant_scope_not_enforced",
+    "non_candidate_result_returned",
+    "answer_generation_enabled",
+    "evidence_refs_missing",
+    "non_allowlisted_command",
+    "command_suffix_invalid",
+    "write_beyond_receipt_requested",
+    "runtime_activation_requested",
+    "runtime_integration_requested",
+    "endpoint_requested",
+    "scheduler_requested",
+    "network_calls_requested",
+    "llm_calls_requested",
+    "public_action_authority_requested",
+    "source_mutation_requested",
+    "artifact_mutation_requested",
+    "external_writes_requested"
+  ],
+  "governance": {
+    "readOnly": true,
+    "proposalOnly": true,
+    "readinessReviewOnly": true,
+    "runtimeActivationApproved": false,
+    "runtimeIntegration": false,
+    "endpoint": false,
+    "scheduler": false,
+    "networkCalls": false,
+    "llmCalls": false,
+    "writesOutsideReceipt": false,
+    "publicActionAuthority": false
+  }
+}

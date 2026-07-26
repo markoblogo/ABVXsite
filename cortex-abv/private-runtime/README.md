@@ -517,6 +517,24 @@ The receipt returns `eligible_for_runtime_readiness_review` or `not_eligible`. E
 
 The dry-run writes only a receipt. It does not expose an endpoint, start a scheduler, call a model, use the network, mutate source/index artifacts, create public actions or publish anything.
 
+## Vector runtime readiness review
+
+The runtime readiness review gate now formalizes which Stage 4r signals are enough to move toward a separate activation decision review, still without activation:
+
+- `config/vector-runtime-readiness-review.v1.json` defines the required Stage 4r signals: module importability, bindings, no activation exposure, read-only artifact, Stage 4h digest match, digest continuity, passed tenant-scoped candidate-only queries, verified evidence refs and receipt-only writes.
+- `src/vector-runtime-readiness-review.mjs` validates the readiness contract against the Stage 4r activation dry-run receipt.
+- `test/vector-runtime-readiness-review.test.mjs` blocks a non-eligible Stage 4r receipt and any introduced activation exposure or endpoint authority.
+- `receipts/vector-runtime-readiness-review-receipt.v1.json` records readiness signals, digest lineage, activation-decision boundary and governance.
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-readiness-review:check
+```
+
+The receipt returns `eligible_for_runtime_activation_decision_review` or `not_eligible`. Eligibility means only that a later activation decision review can be discussed. It still does not activate runtime wiring, expose an endpoint, start a scheduler, call a model, use network authority or create public actions.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

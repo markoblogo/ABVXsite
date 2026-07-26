@@ -670,14 +670,50 @@ Default stage-3 receipt artifact:
 
 - `cortex-abv/private-runtime/receipts/vector-retrieval-turbovec-shadow-receipt.v1.json`
 
+### Stage 4s: runtime readiness review
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/config/vector-runtime-readiness-review.v1.json`
+- `cortex-abv/private-runtime/src/vector-runtime-readiness-review.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-readiness-review.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-readiness-review-receipt.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-readiness-review:check
+```
+
+The readiness review now requires the Stage 4r activation dry-run receipt digest and verifies that local readiness signals are complete:
+
+- module importable;
+- required bindings present;
+- activation not exposed;
+- Stage 4h artifact loads read-only;
+- artifact digests match Stage 4h source/index digests;
+- Stage 4q -> 4p -> 4o -> 4n -> 4h digest continuity remains present;
+- all tenant-scoped candidate-only queries passed;
+- evidence refs verified for every query;
+- commands stayed allowlisted and suffixed `_activation_dry_run`;
+- writes remained receipt-only;
+- governance stayed read-only / proposal-only / no endpoint / no network / no public action.
+
+The receipt returns:
+
+- `eligible_for_runtime_activation_decision_review` when Stage 4r signals are sufficient for a separate activation decision review;
+- `not_eligible` when any readiness signal or governance boundary blocks.
+
+This still does not activate runtime wiring. It only makes a later activation decision review gate discussable.
+
 ## Next gate
 
-Before any runtime readiness review:
+Before any activation decision review:
 
-1. add a separate runtime readiness review gate;
-2. require the Stage 4r activation dry-run receipt digest;
-3. confirm which local readiness signals are sufficient before any real activation decision;
-4. preserve no-endpoint/no-scheduler/no-LLM/no-network/no-public-action governance;
-5. keep any real external/personal-surface action behind separate proposal and owner-review gates.
+1. require the Stage 4s runtime readiness review receipt digest;
+2. define what a local private-runtime activation decision may approve, and what remains forbidden;
+3. preserve no-endpoint/no-scheduler/no-LLM/no-network/no-public-action governance unless separately reviewed;
+4. keep any real external/personal-surface action behind separate proposal and owner-review gates.
 
 This keeps the governance rule: **no outbound action until auditability and evidence policy are proven.**

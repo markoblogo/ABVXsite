@@ -474,6 +474,23 @@ Completed (read-only pilot): one synthetic scheduled-job plan + receipt, no runt
   - still does not apply activation.
 - Still forbidden: activation applied here, endpoint, daemon/service lifecycle, scheduler, network calls, LLM calls, answer generation, source/artifact mutation, writes outside receipt, cross-tenant queries, public actions and autonomous execution.
 
+#### Stage 4w execution status (completed)
+
+- Added local runtime activation-state review:
+  - `cortex-abv/private-runtime/config/vector-runtime-local-activation-state-review.v1.json`
+  - `cortex-abv/private-runtime/src/vector-runtime-local-activation-state-review.mjs`
+  - `cortex-abv/private-runtime/receipts/vector-runtime-local-activation-state-review-receipt.v1.json`
+- Current receipt result:
+  - `eligibility: "eligible_for_local_activation_state_transition_review"`;
+  - `status: "passed"`;
+  - `blockers: []`.
+- Review behavior:
+  - requires the Stage 4v local activation dry-run receipt digest;
+  - defines the local state as receipt-defined inactive-ready only;
+  - confirms owner approval, module, artifact, query, evidence and rollback signals are sufficient to discuss that state;
+  - still does not apply activation or any state transition.
+- Still forbidden: activation applied here, state transition applied here, endpoint, daemon/service lifecycle, scheduler, network calls, LLM calls, answer generation, source/artifact mutation, writes outside receipt, cross-tenant queries, public actions and autonomous execution.
+
 ## Staged adoption (hard requirement)
 1. Read-only planning (contracts + synthetic map only)
 2. One read-only adapter job in private runtime

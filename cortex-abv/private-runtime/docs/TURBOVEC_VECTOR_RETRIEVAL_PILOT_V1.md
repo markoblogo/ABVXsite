@@ -822,12 +822,43 @@ The receipt returns:
 
 This still does not activate runtime wiring. It only makes a later activation-state review gate discussable.
 
+### Stage 4w: local runtime activation-state review
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/config/vector-runtime-local-activation-state-review.v1.json`
+- `cortex-abv/private-runtime/src/vector-runtime-local-activation-state-review.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-local-activation-state-review.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-local-activation-state-review-receipt.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-local-activation-state-review:check
+```
+
+The activation-state review now:
+
+- requires the Stage 4v local activation dry-run receipt digest;
+- defines the local state as a receipt-defined inactive-ready state only;
+- confirms that no separate persistent process, daemon, scheduler, endpoint, network or LLM dependency is required for that state definition;
+- confirms the dry-run signals sufficient to discuss the state: owner approval, module import/bindings, unapplied activation, read-only artifact, digest matches, tenant-scoped candidate-only retrieval, evidence refs and rollback notes;
+- writes only a review receipt.
+
+The receipt returns:
+
+- `eligible_for_local_activation_state_transition_review` when the Stage 4v proof and state boundary both hold;
+- `not_eligible` when any state, digest or governance gate blocks.
+
+This still does not activate runtime wiring. It only makes a later local state-transition review gate discussable.
+
 ## Next gate
 
-Before any local activation-state review:
+Before any local activation-state transition review:
 
-1. require the Stage 4v local runtime activation dry-run receipt digest;
-2. define whether any explicit local runtime “active state” exists and how it is represented or rolled back;
+1. require the Stage 4w local activation-state review receipt digest;
+2. define the minimal transition artifact that would move from inactive-ready to any later bounded local active state;
 3. preserve no-endpoint/no-scheduler/no-LLM/no-network/no-public-action governance unless separately reviewed;
 4. keep any real external/personal-surface action behind separate proposal and owner-review gates.
 

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimeLocalActivationStateReview",
+  "version": "v1",
+  "authority": "local_activation_state_review_only",
+  "engine": "turbovec",
+  "purpose": "Formally determine whether a distinct local private-runtime activation state exists, how it is represented, and which Stage 4v signals are sufficient to discuss that state. This does not apply activation.",
+  "prerequisites": {
+    "requiredLocalActivationDryRunReceiptKind": "CortexABVVectorRuntimeLocalActivationDryRunReceipt",
+    "requiredLocalActivationDryRunEligibility": "eligible_for_local_runtime_activation_state_review",
+    "requiredLocalActivationDryRunStatus": "passed",
+    "requiresLocalActivationDryRunReceiptDigest": true
+  },
+  "stateDefinition": {
+    "stateExists": true,
+    "stateMeaning": "owner-approved local callable availability remains inactive until a later explicit state transition artifact",
+    "stateRepresentation": "receipt-defined inactive-ready state only",
+    "stateStorage": "receipt_and_digest_chain_only",
+    "stateLocation": "cortex-abv-private-runtime-only",
+    "stateTransitionAllowedHere": false,
+    "persistentProcessRequired": false,
+    "backgroundSchedulerRequired": false,
+    "endpointRequired": false,
+    "networkRequired": false,
+    "llmRequired": false
+  },
+  "requiredDryRunSignals": {
+    "ownerApproval": [
+      "approved"
+    ],
+    "module": [
+      "importable",
+      "bindingsPresent",
+      "activationAppliedFalse"
+    ],
+    "artifact": [
+      "readOnly",
+      "stage4hIndexDigestMatch",
+      "stage4hSourceDigestMatch"
+    ],
+    "queries": [
+      "allPassed",
+      "tenantScopeEnforced",
+      "candidatesOnly",
+      "answerGenerationDisabled",
+      "evidenceRefsVerified"
+    ],
+    "execution": [
+      "commandsExecuted",
+      "receiptOnlyWrites"
+    ],
+    "rollback": [
+      "rollbackNotesPresent"
+    ]
+  },
+  "rollbackStatePolicy": {
+    "required": true,
+    "strategy": "discard_future_transition_and_return_to_inactive_ready_state",
+    "ownerReversalAllowed": true,
+    "receiptOnlyEvidence": true,
+    "externalMutationAllowed": false
+  },
+  "nextGate": {
+    "targetEligibility": "eligible_for_local_activation_state_transition_review",
+    "futureReviewKind": "CortexABVVectorRuntimeLocalActivationStateTransitionReview",
+    "futureReviewMode": "local_activation_state_transition_review_only",
+    "stateTransitionAllowedHere": false
+  },
+  "forbiddenAuthority": {
+    "activationAppliedHere": false,
+    "stateTransitionAppliedHere": false,
+    "persistentServiceAllowed": false,
+    "daemonProcessAllowed": false,
+    "schedulerAllowed": false,
+    "endpointAllowed": false,
+    "networkCallsAllowed": false,
+    "llmCallsAllowed": false,
+    "publicActionAuthorityAllowed": false,
+    "answerGenerationAllowed": false,
+    "sourceMutationAllowed": false,
+    "artifactMutationAllowed": false,
+    "writesOutsideReceiptAllowed": false,
+    "crossTenantQueriesAllowed": false,
+    "autonomousExecutionAllowed": false
+  },
+  "rejectionCases": [
+    "local_activation_dry_run_not_eligible",
+    "missing_stage4u_receipt_digest",
+    "missing_stage4t_receipt_digest",
+    "missing_stage4s_receipt_digest",
+    "missing_stage4r_receipt_digest",
+    "missing_stage4q_receipt_digest",
+    "missing_stage4p_receipt_digest",
+    "missing_stage4o_receipt_digest",
+    "missing_stage4n_receipt_digest",
+    "missing_stage4h_index_digest",
+    "missing_stage4h_source_digest",
+    "missing_receipt_linkage_digest",
+    "owner_approval_not_approved",
+    "module_not_importable",
+    "bindings_missing",
+    "activation_applied",
+    "artifact_not_read_only",
+    "artifact_digest_mismatch",
+    "query_failed",
+    "tenant_scope_not_enforced",
+    "non_candidate_result_returned",
+    "answer_generation_enabled",
+    "evidence_refs_missing",
+    "rollback_notes_missing",
+    "state_transition_requested_here",
+    "endpoint_requested",
+    "scheduler_requested",
+    "network_calls_requested",
+    "llm_calls_requested",
+    "public_action_authority_requested",
+    "source_mutation_requested",
+    "artifact_mutation_requested",
+    "external_writes_requested",
+    "cross_tenant_query_requested",
+    "autonomous_execution_requested"
+  ],
+  "governance": {
+    "readOnly": true,
+    "proposalOnly": true,
+    "activationStateReviewOnly": true,
+    "runtimeActivationApplied": false,
+    "runtimeIntegration": false,
+    "endpoint": false,
+    "scheduler": false,
+    "networkCalls": false,
+    "llmCalls": false,
+    "writesOutsideReceipt": false,
+    "publicActionAuthority": false
+  }
+}

@@ -589,6 +589,24 @@ npm run vector-runtime-local-activation-dry-run:run
 
 The receipt returns `eligible_for_local_runtime_activation_state_review` or `not_eligible`. Eligibility means only that a later local activation-state review can be discussed. It still does not apply activation, expose an endpoint, start a scheduler, call a model, use network authority, mutate source/index artifacts or create public actions.
 
+## Vector runtime local activation state review
+
+The local activation-state review gate now formalizes whether a distinct inactive-ready local state exists and how it is represented, still without applying activation:
+
+- `config/vector-runtime-local-activation-state-review.v1.json` defines the Stage 4v prerequisite, receipt-defined inactive-ready state model, required dry-run signals, rollback-state policy and next gate.
+- `src/vector-runtime-local-activation-state-review.mjs` validates the state review contract against the Stage 4v local activation dry-run receipt.
+- `test/vector-runtime-local-activation-state-review.test.mjs` blocks a non-eligible Stage 4v receipt and any introduced activation-applied or endpoint authority.
+- `receipts/vector-runtime-local-activation-state-review-receipt.v1.json` records the formal state definition, rollback-state policy, next transition-review gate and governance.
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-local-activation-state-review:check
+```
+
+The receipt returns `eligible_for_local_activation_state_transition_review` or `not_eligible`. Eligibility means only that a later local state-transition review can be discussed. It still does not apply activation, perform a state transition, expose an endpoint, start a scheduler, call a model, use network authority, mutate source/index artifacts or create public actions.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

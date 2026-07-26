@@ -1099,3 +1099,33 @@ The receipt returns:
 - `not_eligible` when any prerequisite, digest or governance boundary is incomplete.
 
 This stage does not apply any transition/effect/activation and does not change proposal/public surfaces.
+
+### Stage 4af: local effect transition dry-run
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/config/vector-runtime-local-effect-transition-dry-run.v1.json`
+- `cortex-abv/private-runtime/src/vector-runtime-local-effect-transition-dry-run.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-local-effect-transition-dry-run.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-local-effect-transition-dry-run-receipt.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-local-effect-transition-dry-run:run
+```
+
+This stage performs the bounded local effect transition dry-run after Stage 4ae:
+
+- requires the Stage 4ae transition artifact receipt with `eligible_for_local_effect_transition_dry_run`;
+- validates digest continuity from Stage 4ac through Stage 4h, module importability and read-only artifact loading;
+- verifies tenant-scoped, candidates-only local query behavior with evidence-backed candidate hits;
+- confirms no effect transition, state transition, endpoint activation, or runtime activation is applied in this stage.
+
+The receipt returns:
+
+- `eligible_for_local_transition_state_effect_review` when gates pass and candidate queries/evidence checks succeed;
+- `not_eligible` when any prerequisite, continuity, module, artifact, query, evidence, or governance gate blocks.
+
+This stage remains review/dry-run-only: no endpoint, scheduler, network/LLM call, public action authority, source/artifact mutation, or activation is introduced.

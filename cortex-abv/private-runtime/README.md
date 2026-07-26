@@ -782,6 +782,35 @@ The transition artifact receipt returns:
 
 This still does not apply transition/effects/activation; it only prepares the next dry-run gate.
 
+## Vector runtime local effect transition dry-run
+
+The local effect transition dry-run runs the bounded local transition pass after Stage 4ae and still applies nothing:
+
+- `config/vector-runtime-local-effect-transition-dry-run.v1.json` defines the Stage 4ae prerequisite contract, fixed module/binding allowlist, query contract and governance.
+- `src/vector-runtime-local-effect-transition-dry-run.mjs` validates the Stage 4ae receipt lineage, digest continuity, module importability, read-only artifact loading, tenant-scoped candidate-only querying and claim-evidence requirements.
+- `test/vector-runtime-local-effect-transition-dry-run.test.mjs` blocks a non-eligible Stage 4ae artifact receipt and any forbidden authority in governance.
+- `receipts/vector-runtime-local-effect-transition-dry-run-receipt.v1.json` records the local dry-run receipt and inherited chain.
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-local-effect-transition-dry-run:run
+```
+
+This stage:
+
+- requires the Stage 4ae transition artifact receipt with `eligible_for_local_effect_transition_dry_run`;
+- verifies read-only local artifact loading (`loadIndexArtifact`), fixed callable binding set (`loadIndexArtifact`, `queryCandidates`, `verifyClaimEvidence`), tenant-scoped candidate-only queries, and evidence refs;
+- confirms no effect transition, state transition, or runtime activation is applied during the run.
+
+The dry-run receipt returns:
+
+- `eligible_for_local_transition_state_effect_review` when all gates pass;
+- `not_eligible` when any prerequisite/continuity/module/query/governance gate blocks.
+
+This remains read-only, review-only, and does not introduce any endpoint, network, LLM, public action, source/artifact mutation, or activation authority.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

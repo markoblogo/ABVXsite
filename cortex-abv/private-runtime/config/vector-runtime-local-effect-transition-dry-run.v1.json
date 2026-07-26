@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimeLocalEffectTransitionDryRun",
+  "version": "v1",
+  "authority": "local_effect_transition_dry_run_only",
+  "engine": "turbovec",
+  "purpose": "Execute the first bounded local effect-transition dry-run after the explicit transition artifact, still without applying any transition or runtime activation. It verifies transition lineage, fixed callable module, read-only artifact loading, tenant-scoped candidate queries and no applied transition.",
+  "prerequisites": {
+    "requiredEffectTransitionArtifactKind": "CortexABVVectorRuntimeLocalEffectTransitionReceipt",
+    "requiredEffectTransitionArtifactEligibility": "eligible_for_local_effect_transition_dry_run",
+    "requiredEffectTransitionArtifactStatus": "passed",
+    "requiresEffectTransitionArtifactDigest": true
+  },
+  "module": {
+    "path": "src/vector-runtime-controlled-module-harness.mjs",
+    "type": "owner_invoked_local_effect_plan_only",
+    "requiredBindings": [
+      "loadIndexArtifact",
+      "queryCandidates",
+      "verifyClaimEvidence"
+    ]
+  },
+  "artifact": {
+    "path": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+    "kind": "CortexABVVectorRuntimeIndexArtifact",
+    "version": "v1",
+    "readOnly": true
+  },
+  "queries": [
+    {
+      "id": "effect-transition-dry-run-query-index-summary",
+      "tenant": "index-spike",
+      "query": "latest index spike public summary updates",
+      "expectedCandidateIds": [
+        "pp-index-spike-updates"
+      ],
+      "topK": 3,
+      "minScore": 0.05
+    },
+    {
+      "id": "effect-transition-dry-run-query-monitor-readiness",
+      "tenant": "monitor-mn7r",
+      "query": "monitor mn7r repository readiness status",
+      "expectedCandidateIds": [
+        "pp-monitor-mn7r-dashboard"
+      ],
+      "topK": 3,
+      "minScore": 0.05
+    }
+  ],
+  "commands": {
+    "verifyStage4aeReceipt": "verify_stage4ae_receipt_local_effect_transition_dry_run",
+    "loadLocalRuntimeBinding": "load_local_runtime_binding_local_effect_transition_dry_run",
+    "queryLocalRuntimeBinding": "query_local_runtime_binding_local_effect_transition_dry_run",
+    "verifyTransitionNotApplied": "verify_transition_not_applied_local_effect_transition_dry_run"
+  },
+  "checks": {
+    "requiresModuleImportable": true,
+    "requiresBindingsPresent": true,
+    "requiresArtifactReadOnly": true,
+    "requiresStage4acReceiptDigest": true,
+    "requiresStage4aaReceiptDigest": true,
+    "requiresStage4zReceiptDigest": true,
+    "requiresStage4yReceiptDigest": true,
+    "requiresStage4xReceiptDigest": true,
+    "requiresStage4wReceiptDigest": true,
+    "requiresStage4vReceiptDigest": true,
+    "requiresStage4uReceiptDigest": true,
+    "requiresStage4tReceiptDigest": true,
+    "requiresStage4sReceiptDigest": true,
+    "requiresStage4rReceiptDigest": true,
+    "requiresStage4qReceiptDigest": true,
+    "requiresStage4pReceiptDigest": true,
+    "requiresStage4oReceiptDigest": true,
+    "requiresStage4nReceiptDigest": true,
+    "requiresStage4hArtifactDigest": true,
+    "requiresStage4hSourceDigest": true,
+    "requiresReceiptLinkageDigest": true,
+    "requiresTenantScope": true,
+    "requiresCandidatesOnly": true,
+    "requiresEvidenceRefs": true,
+    "requiresTransitionNotApplied": true,
+    "requiresStateTransitionNotApplied": true,
+    "requiresActivationNotApplied": true,
+    "requiresRollbackReadiness": true
+  },
+  "rollbackNotes": [
+    "If transition artifact digest chain, approval lineage, module boundary, tenant scope, evidence or governance gates fail, abandon this dry-run and keep runtime inactive.",
+    "No endpoint, scheduler, daemon, model call, network action, source mutation, artifact mutation or public action is permitted by this dry-run."
+  ],
+  "governance": {
+    "readOnly": true,
+    "proposalOnly": true,
+    "dryRunOnly": true,
+    "localEffectTransitionDryRunOnly": true,
+    "runtimeActivationApplied": false,
+    "stateTransitionApplied": false,
+    "effectTransitionApplied": false,
+    "runtimeIntegration": false,
+    "endpoint": false,
+    "scheduler": false,
+    "networkCalls": false,
+    "llmCalls": false,
+    "artifactMutation": false,
+    "sourceMutation": false,
+    "writesOutsideReceipt": false,
+    "publicActionAuthority": false
+  }
+}

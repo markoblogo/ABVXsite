@@ -457,6 +457,26 @@ The receipt returns `eligible_for_runtime_activation_review` or `not_eligible`. 
 
 The reviewed wiring boundary remains private-runtime-only, in-process local library binding only, candidates-only, tenant-scoped and evidence-backed. Endpoints, schedulers, network calls, model calls, public action authority, external writes, source/index mutation and answer generation remain forbidden.
 
+## Vector runtime activation review
+
+The runtime activation review gate defines what can count as local private-runtime activation before any activation dry-run:
+
+- `config/vector-runtime-activation-review.v1.json` defines activation as local private-runtime availability for an internal callable interface only.
+- `src/vector-runtime-activation-review.mjs` validates the contract against the Stage 4o controlled wiring review receipt.
+- `test/vector-runtime-activation-review.test.mjs` blocks a non-eligible Stage 4o receipt and activation/endpoint/network authority.
+- `receipts/vector-runtime-activation-review-receipt.v1.json` records the Stage 4o digest, prerequisite digest chain, activation definition and future dry-run scope.
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-activation-review:check
+```
+
+The receipt returns `eligible_for_runtime_activation_dry_run_review` or `not_eligible`. Eligibility means only that a later activation dry-run review can be discussed. It still does not activate runtime wiring.
+
+Activation is defined narrowly as a local process-bound callable interface inside `cortex-abv/private-runtime`. Endpoints, schedulers, network calls, model calls, public action authority, external writes, source/index mutation, cross-tenant queries, answer generation and baseline advancement remain forbidden.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

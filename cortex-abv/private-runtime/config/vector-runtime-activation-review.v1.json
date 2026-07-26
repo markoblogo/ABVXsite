@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimeActivationReview",
+  "version": "v1",
+  "authority": "activation_review_only",
+  "engine": "turbovec",
+  "purpose": "Define what can count as local private-runtime activation before any controlled activation dry-run. This does not activate runtime wiring.",
+  "prerequisites": {
+    "requiredControlledWiringReviewReceiptKind": "CortexABVVectorRuntimeControlledWiringReviewReceipt",
+    "requiredControlledWiringReviewEligibility": "eligible_for_runtime_activation_review",
+    "requiredControlledWiringReviewStatus": "passed",
+    "requiresControlledWiringReviewReceiptDigest": true
+  },
+  "activationDefinition": {
+    "meaning": "local_private_runtime_availability_for_internal_callable_interface_only",
+    "allowedLocation": "cortex-abv-private-runtime-only",
+    "activationMode": "local_process_bound_callable_only",
+    "allowedModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+    "allowedBindings": [
+      "loadIndexArtifact",
+      "queryCandidates",
+      "verifyClaimEvidence"
+    ],
+    "activationDryRunRequired": true,
+    "runtimeActivationApprovedHere": false,
+    "endpointAllowed": false,
+    "schedulerAllowed": false,
+    "networkCallsAllowed": false,
+    "llmCallsAllowed": false,
+    "publicActionAuthorityAllowed": false,
+    "answerGenerationAllowed": false,
+    "sourceMutationAllowed": false,
+    "artifactMutationAllowed": false,
+    "writesOutsideReceiptAllowed": false,
+    "crossTenantQueriesAllowed": false,
+    "baselineAdvancementAllowed": false
+  },
+  "activationDryRunScope": {
+    "futureRunnerPath": "src/vector-runtime-activation-dry-run.mjs",
+    "futureTestPath": "test/vector-runtime-activation-dry-run.test.mjs",
+    "targetEligibility": "eligible_for_runtime_activation_dry_run_review",
+    "requiresStage4oReceiptDigest": true,
+    "requiresRollbackNotes": true,
+    "requiresOwnerReview": true,
+    "allowedCommands": [
+      "verify_stage4o_digest_activation_dry_run",
+      "load_local_runtime_binding_activation_dry_run",
+      "query_local_runtime_binding_activation_dry_run",
+      "verify_activation_not_exposed_activation_dry_run"
+    ],
+    "commandsMustEndWith": "_activation_dry_run"
+  },
+  "requiredEvidence": {
+    "requiresStage4oReceiptDigest": true,
+    "requiresStage4nReceiptDigest": true,
+    "requiresStage4hArtifactDigest": true,
+    "requiresStage4hSourceDigest": true,
+    "requiresPassedWiringReview": true,
+    "requiresEvidenceVerification": true,
+    "requiresNoActivationInPrerequisite": true
+  },
+  "rejectionCases": [
+    "controlled_wiring_review_not_eligible",
+    "missing_stage4o_receipt_digest",
+    "missing_stage4n_receipt_digest",
+    "missing_stage4h_artifact_digest",
+    "missing_stage4h_source_digest",
+    "runtime_activation_requested_here",
+    "endpoint_requested",
+    "scheduler_requested",
+    "network_calls_requested",
+    "llm_calls_requested",
+    "public_action_authority_requested",
+    "answer_generation_requested",
+    "source_mutation_requested",
+    "artifact_mutation_requested",
+    "external_writes_requested",
+    "cross_tenant_queries_requested",
+    "baseline_advancement_requested",
+    "missing_rollback_notes",
+    "missing_owner_review"
+  ],
+  "governance": {
+    "readOnly": true,
+    "proposalOnly": true,
+    "activationReviewOnly": true,
+    "runtimeActivationApproved": false,
+    "runtimeIntegration": false,
+    "endpoint": false,
+    "scheduler": false,
+    "networkCalls": false,
+    "llmCalls": false,
+    "writesOutsideReceipt": false,
+    "publicActionAuthority": false
+  }
+}

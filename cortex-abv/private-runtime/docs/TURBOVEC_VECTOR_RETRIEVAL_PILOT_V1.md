@@ -564,18 +564,51 @@ The receipt returns:
 
 This still does not approve runtime activation. It only makes a separate runtime activation review gate discussable.
 
+### Stage 4p: runtime activation review
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/config/vector-runtime-activation-review.v1.json`
+- `cortex-abv/private-runtime/src/vector-runtime-activation-review.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-activation-review.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-activation-review-receipt.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-activation-review:check
+```
+
+The activation review defines what may count as future local activation:
+
+- Stage 4o controlled wiring review receipt digest required;
+- activation means local private-runtime availability for an internal callable interface only;
+- allowed mode: `local_process_bound_callable_only`;
+- allowed module path: `src/vector-runtime-controlled-module-harness.mjs`;
+- allowed bindings limited to `loadIndexArtifact`, `queryCandidates`, `verifyClaimEvidence`;
+- future activation dry-run required before any activation;
+- owner review and rollback notes required.
+
+The receipt returns:
+
+- `eligible_for_runtime_activation_dry_run_review` when review and Stage 4o gates pass;
+- `not_eligible` when any gate blocks.
+
+This still does not approve runtime activation. It only makes a later activation dry-run review discussable.
+
 Default stage-3 receipt artifact:
 
 - `cortex-abv/private-runtime/receipts/vector-retrieval-turbovec-shadow-receipt.v1.json`
 
 ## Next gate
 
-Before any runtime activation review:
+Before any runtime activation dry-run:
 
-1. add a separate runtime activation review gate;
-2. require the Stage 4o controlled wiring review receipt digest;
-3. define activation strictly as local private-runtime availability, not an endpoint or scheduler;
-4. preserve no-LLM/no-network/no-public-action governance unless a later owner policy explicitly changes it;
+1. add a separate runtime activation dry-run review/scope gate;
+2. require the Stage 4p activation review receipt digest;
+3. keep activation local-process-only and receipt-only;
+4. preserve no-endpoint/no-scheduler/no-LLM/no-network/no-public-action governance;
 5. keep any real external/personal-surface action behind separate proposal and owner-review gates.
 
 This keeps the governance rule: **no outbound action until auditability and evidence policy are proven.**

@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimeLocalTransitionStateEffectReview",
+  "version": "v1",
+  "authority": "local_transition_state_effect_review_only",
+  "engine": "turbovec",
+  "purpose": "Formally define which strictly local transition-state effects may be discussed after the bounded Stage 4z dry-run, without applying any transition, activation or broader runtime authority.",
+  "prerequisites": {
+    "requiredLocalTransitionDryRunReceiptKind": "CortexABVVectorRuntimeLocalActivationStateTransitionDryRunReceipt",
+    "requiredLocalTransitionDryRunEligibility": "eligible_for_local_transition_state_effect_review",
+    "requiredLocalTransitionDryRunStatus": "passed",
+    "requiresLocalTransitionDryRunReceiptDigest": true
+  },
+  "effectDefinition": {
+    "effectScope": "discussion_only_local_transition_state_effects",
+    "sourceState": "bounded_owner_invoked_local_active_runtime_candidate",
+    "effectArtifactKind": "CortexABVVectorRuntimeLocalTransitionStateEffect",
+    "allowedEffects": [
+      "callable_binding_ready",
+      "read_only_artifact_access_confirmed",
+      "tenant_scoped_candidate_queries_confirmed",
+      "verified_evidence_chain_confirmed",
+      "rollback_chain_preserved"
+    ],
+    "requiredModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+    "requiredBindings": [
+      "loadIndexArtifact",
+      "queryCandidates",
+      "verifyClaimEvidence"
+    ],
+    "effectAppliedHere": false,
+    "stateTransitionAppliedHere": false,
+    "runtimeActivationAppliedHere": false,
+    "persistentProcessAllowed": false,
+    "daemonProcessAllowed": false,
+    "schedulerAllowed": false,
+    "endpointAllowed": false,
+    "networkCallsAllowed": false,
+    "llmCallsAllowed": false,
+    "publicActionAuthorityAllowed": false
+  },
+  "requiredDryRunSignals": {
+    "ownerApproval": [
+      "approved",
+      "scopeBounded"
+    ],
+    "module": [
+      "importable",
+      "bindingsPresent",
+      "transitionAppliedFalse"
+    ],
+    "artifact": [
+      "readOnly",
+      "stage4hIndexDigestMatch",
+      "stage4hSourceDigestMatch"
+    ],
+    "queries": [
+      "allPassed",
+      "tenantScopeEnforced",
+      "candidatesOnly",
+      "answerGenerationDisabled",
+      "evidenceRefsVerified"
+    ],
+    "execution": [
+      "commandsExecuted",
+      "receiptOnlyWrites"
+    ],
+    "rollback": [
+      "rollbackNotesPresent",
+      "ownerRollbackMaintained"
+    ]
+  },
+  "rollbackEffectPolicy": {
+    "required": true,
+    "strategy": "discard_effect_discussion_and_keep_transition_unapplied",
+    "ownerReversalAllowed": true,
+    "receiptOnlyEvidence": true,
+    "externalMutationAllowed": false
+  },
+  "nextGate": {
+    "targetEligibility": "eligible_for_local_transition_state_effect_artifact",
+    "futureArtifactKind": "CortexABVVectorRuntimeLocalTransitionStateEffect",
+    "futureArtifactMode": "local_transition_state_effect_artifact_only",
+    "effectAppliedHere": false
+  },
+  "forbiddenAuthority": {
+    "activationAppliedHere": false,
+    "stateTransitionAppliedHere": false,
+    "effectAppliedHere": false,
+    "persistentServiceAllowed": false,
+    "daemonProcessAllowed": false,
+    "schedulerAllowed": false,
+    "endpointAllowed": false,
+    "networkCallsAllowed": false,
+    "llmCallsAllowed": false,
+    "publicActionAuthorityAllowed": false,
+    "answerGenerationAllowed": false,
+    "sourceMutationAllowed": false,
+    "artifactMutationAllowed": false,
+    "writesOutsideReceiptAllowed": false,
+    "crossTenantQueriesAllowed": false,
+    "autonomousExecutionAllowed": false
+  },
+  "rejectionCases": [
+    "local_transition_dry_run_not_eligible",
+    "missing_stage4y_receipt_digest",
+    "missing_stage4x_receipt_digest",
+    "missing_stage4w_receipt_digest",
+    "missing_stage4v_receipt_digest",
+    "missing_stage4u_receipt_digest",
+    "missing_stage4t_receipt_digest",
+    "missing_stage4s_receipt_digest",
+    "missing_stage4r_receipt_digest",
+    "missing_stage4q_receipt_digest",
+    "missing_stage4p_receipt_digest",
+    "missing_stage4o_receipt_digest",
+    "missing_stage4n_receipt_digest",
+    "missing_stage4h_index_digest",
+    "missing_stage4h_source_digest",
+    "missing_receipt_linkage_digest",
+    "owner_approval_missing",
+    "module_not_importable",
+    "bindings_missing",
+    "transition_applied",
+    "artifact_not_read_only",
+    "artifact_digest_mismatch",
+    "query_failed",
+    "tenant_scope_not_enforced",
+    "non_candidate_result_returned",
+    "answer_generation_enabled",
+    "evidence_refs_missing",
+    "rollback_notes_missing",
+    "effect_requested_here",
+    "state_transition_requested_here",
+    "endpoint_requested",
+    "scheduler_requested",
+    "network_calls_requested",
+    "llm_calls_requested",
+    "public_action_authority_requested",
+    "source_mutation_requested",
+    "artifact_mutation_requested",
+    "external_writes_requested",
+    "cross_tenant_query_requested",
+    "autonomous_execution_requested"
+  ],
+  "governance": {
+    "readOnly": true,
+    "proposalOnly": true,
+    "transitionStateEffectReviewOnly": true,
+    "runtimeActivationApplied": false,
+    "stateTransitionApplied": false,
+    "runtimeIntegration": false,
+    "endpoint": false,
+    "scheduler": false,
+    "networkCalls": false,
+    "llmCalls": false,
+    "writesOutsideReceipt": false,
+    "publicActionAuthority": false
+  }
+}

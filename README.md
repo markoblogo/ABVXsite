@@ -210,6 +210,7 @@ See also: [Cabinet pilot integration map](docs/cortex-abv-cabinet-integration-ma
 - `cortex-abv/private-runtime/config/vector-runtime-local-activation-state-transition-review.v1.json` defines the local activation-state transition review gate and requires the Stage 4w receipt digest. It bounds the minimal transition artifact, still without applying activation or any state transition.
 - `cortex-abv/private-runtime/config/vector-runtime-local-activation-state-transition.v1.json` records the explicit local activation-state transition artifact and requires the Stage 4x receipt digest. It still does not apply activation or the transition; it only prepares a later bounded transition dry-run.
 - `cortex-abv/private-runtime/config/vector-runtime-local-activation-state-transition-dry-run.v1.json` defines the first post-artifact local transition dry-run and requires the Stage 4y receipt digest. It verifies the full transition lineage, fixed callable boundary and read-only retrieval path, still without applying any transition.
+- `cortex-abv/private-runtime/config/vector-runtime-local-transition-state-effect-review.v1.json` defines the local transition-state effect review gate and requires the Stage 4z receipt digest. It bounds which narrow local effects may even be discussed next, still without applying any effect or transition.
 
 Check the adapter contract and currently enabled project-sync targets:
 

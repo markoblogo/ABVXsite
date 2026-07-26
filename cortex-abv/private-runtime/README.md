@@ -661,6 +661,24 @@ npm run vector-runtime-local-activation-state-transition-dry-run:run
 
 The receipt returns `eligible_for_local_transition_state_effect_review` or `not_eligible`. Eligibility means only that a later local transition-state effect review can be discussed. It still does not apply activation, perform the transition, expose an endpoint, start a scheduler, call a model, use network authority, mutate source/index artifacts or create public actions.
 
+## Vector runtime local transition-state effect review
+
+The local transition-state effect review now defines the narrow set of strictly local effects that may be discussed after the Stage 4z dry-run, still without applying any effect or transition:
+
+- `config/vector-runtime-local-transition-state-effect-review.v1.json` defines the Stage 4z prerequisite, allowed effect vocabulary, required dry-run signals, rollback effect policy and next-gate boundary.
+- `src/vector-runtime-local-transition-state-effect-review.mjs` validates the Stage 4z receipt lineage, owner approval scope, module/artifact/query evidence and effect-governance boundaries, then writes a review receipt.
+- `test/vector-runtime-local-transition-state-effect-review.test.mjs` blocks a non-eligible Stage 4z receipt and any introduced effect-applied or endpoint authority.
+- `receipts/vector-runtime-local-transition-state-effect-review-receipt.v1.json` records effect-definition review, inherited digest chain and governance.
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-local-transition-state-effect-review:check
+```
+
+The receipt returns `eligible_for_local_transition_state_effect_artifact` or `not_eligible`. Eligibility means only that a later local transition-state effect artifact may be discussed. It still does not apply any effect, activation or transition, expose an endpoint, start a scheduler, call a model, use network authority, mutate source/index artifacts or create public actions.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

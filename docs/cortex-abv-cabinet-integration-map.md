@@ -439,6 +439,23 @@ Completed (read-only pilot): one synthetic scheduled-job plan + receipt, no runt
   - preserves tenant-scoped candidate-only retrieval and evidence verification only.
 - Still forbidden even after any later local activation decision: endpoint, daemon/service lifecycle, scheduler, network calls, LLM calls, answer generation, source/artifact mutation, writes outside receipt, cross-tenant queries, public actions and autonomous execution.
 
+#### Stage 4u execution status (completed)
+
+- Added local runtime activation decision artifact:
+  - `cortex-abv/private-runtime/config/vector-runtime-activation-decision.v1.json`
+  - `cortex-abv/private-runtime/src/vector-runtime-activation-decision.mjs`
+  - `cortex-abv/private-runtime/receipts/vector-runtime-activation-decision-receipt.v1.json`
+- Current receipt result:
+  - `eligibility: "eligible_for_local_runtime_activation_dry_run"`;
+  - `status: "passed"`;
+  - `blockers: []`.
+- Decision-artifact behavior:
+  - requires the Stage 4t runtime activation decision review receipt digest;
+  - records explicit owner approval and rollback plan;
+  - pins the local activation intent to the fixed harness module, fixed Stage 4h artifact and allowlisted bindings only;
+  - still does not apply activation.
+- Still forbidden: runtime activation applied here, endpoint, daemon/service lifecycle, scheduler, network calls, LLM calls, answer generation, source/artifact mutation, writes outside receipt, cross-tenant queries, public actions and autonomous execution.
+
 ## Staged adoption (hard requirement)
 1. Read-only planning (contracts + synthetic map only)
 2. One read-only adapter job in private runtime

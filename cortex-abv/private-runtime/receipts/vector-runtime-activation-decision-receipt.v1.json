@@ -1,0 +1,1724 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimeActivationDecisionReceipt",
+  "version": "v1",
+  "authority": "local_runtime_activation_decision_only",
+  "status": "passed",
+  "eligibility": "eligible_for_local_runtime_activation_dry_run",
+  "runAt": "2026-07-26T18:20:25.709Z",
+  "mode": "runtime_activation_decision",
+  "engine": "turbovec",
+  "decisionDigest": "51a92e0ed5a175166cb598d6aa5871aba94cbcf8109b2fc511b501c6f75b124b",
+  "stage4tReceiptDigest": "a39a0afc69b9f8e7e5580ecdf8e3c0cf57656fc8ff4d25d8e4369526e7b00bd0",
+  "prerequisiteDigests": {
+    "stage4sReceiptDigest": "6bfdd4ba842cd17fa9498870389a71ec12a9b099328ce4abffff2acb378b4e23",
+    "stage4rReceiptDigest": "92f4319711c81d644d788b52783706e875441ef05306b1507d43316d1366c886",
+    "stage4qReceiptDigest": "0d41759bb903dc2dd262e9fd7bc87988c3e13fad5269e3286da364f959b75f34",
+    "stage4pReceiptDigest": "bf6da764c6f37b75d918dd6ae0662cac7528b7467858c0c91927664cc57d4ffc",
+    "stage4oReceiptDigest": "5b59cf3290ed44eb4798ecc3e8085b6d748099fa318f5a98504ad72b07e1802e",
+    "stage4nReceiptDigest": "ec81682f82cb503a52187bd5f0d383bfeda566e09a29924871ddb2bb55c5a26b",
+    "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+    "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+    "receiptLinkageDigest": "535662c9d711fa66c91b1f9f6a9a97c84676cd567fb340358e101e2232b4dbcc"
+  },
+  "ownerApproval": {
+    "required": true,
+    "approvalMode": "explicit_owner_manual_decision",
+    "approvedByRole": "owner",
+    "status": "approved",
+    "scope": "local_private_runtime_callable_availability_only",
+    "notes": "Approve only the bounded local activation decision artifact. This does not expose an endpoint, start a scheduler, enable network or LLM calls, or authorize public actions."
+  },
+  "activationIntent": {
+    "allowedLocation": "cortex-abv-private-runtime-only",
+    "activationMode": "same_process_owner_invoked_callable_only",
+    "allowedModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+    "allowedBindings": [
+      "loadIndexArtifact",
+      "queryCandidates",
+      "verifyClaimEvidence"
+    ],
+    "allowedArtifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+    "allowedOperations": [
+      "load_read_only_index_artifact",
+      "query_tenant_scoped_candidates_only",
+      "verify_claim_evidence_refs"
+    ],
+    "allowedConsumers": [
+      "owner_invoked_private_runtime_process_only"
+    ],
+    "runtimeActivationAppliedHere": false
+  },
+  "rollbackPlan": {
+    "required": true,
+    "strategy": "return_to_inactive_local_private_runtime_state",
+    "steps": [
+      "Discard any future activation attempt receipt if digest or governance checks fail.",
+      "Keep the runtime without endpoint, scheduler, daemon, network or model calls.",
+      "Retain only receipt evidence for this decision artifact."
+    ],
+    "receiptOnlyEvidence": true,
+    "ownerReversalAllowed": true
+  },
+  "nextGate": {
+    "targetEligibility": "eligible_for_local_runtime_activation_dry_run",
+    "futureRunKind": "CortexABVVectorRuntimeLocalActivationDryRun",
+    "futureRunMode": "local_runtime_activation_dry_run_only",
+    "runtimeActivationAppliedHere": false
+  },
+  "governance": {
+    "readOnly": true,
+    "proposalOnly": true,
+    "activationDecisionOnly": true,
+    "runtimeActivationApplied": false,
+    "runtimeIntegration": false,
+    "endpoint": false,
+    "scheduler": false,
+    "networkCalls": false,
+    "llmCalls": false,
+    "writesOutsideReceipt": false,
+    "publicActionAuthority": false
+  },
+  "sources": {
+    "decision": {
+      "path": "config/vector-runtime-activation-decision.v1.json",
+      "kind": "CortexABVVectorRuntimeActivationDecision",
+      "digest": "51a92e0ed5a175166cb598d6aa5871aba94cbcf8109b2fc511b501c6f75b124b"
+    },
+    "activationDecisionReviewReceipt": {
+      "path": "receipts/vector-runtime-activation-decision-review-receipt.v1.json",
+      "kind": "CortexABVVectorRuntimeActivationDecisionReviewReceipt",
+      "status": "passed",
+      "eligibility": "eligible_for_local_runtime_activation_decision",
+      "digest": "a39a0afc69b9f8e7e5580ecdf8e3c0cf57656fc8ff4d25d8e4369526e7b00bd0"
+    }
+  },
+  "gates": {
+    "decision": [
+      {
+        "id": "kind",
+        "status": "accepted",
+        "reason": "decision kind must match",
+        "evidence": {
+          "kind": "CortexABVVectorRuntimeActivationDecision"
+        }
+      },
+      {
+        "id": "version",
+        "status": "accepted",
+        "reason": "decision version must be v1",
+        "evidence": {
+          "version": "v1"
+        }
+      },
+      {
+        "id": "authority",
+        "status": "accepted",
+        "reason": "decision authority must be local_runtime_activation_decision_only",
+        "evidence": {
+          "authority": "local_runtime_activation_decision_only"
+        }
+      },
+      {
+        "id": "engine",
+        "status": "accepted",
+        "reason": "decision engine must be turbovec",
+        "evidence": {
+          "engine": "turbovec"
+        }
+      },
+      {
+        "id": "stage4t_prerequisite",
+        "status": "accepted",
+        "reason": "decision must require eligible Stage 4t receipt",
+        "evidence": {
+          "requiredActivationDecisionReviewReceiptKind": "CortexABVVectorRuntimeActivationDecisionReviewReceipt",
+          "requiredActivationDecisionReviewEligibility": "eligible_for_local_runtime_activation_decision",
+          "requiredActivationDecisionReviewStatus": "passed",
+          "requiresActivationDecisionReviewReceiptDigest": true
+        }
+      },
+      {
+        "id": "stage4t_digest_required",
+        "status": "accepted",
+        "reason": "Stage 4t receipt digest is required",
+        "evidence": {
+          "requiredActivationDecisionReviewReceiptKind": "CortexABVVectorRuntimeActivationDecisionReviewReceipt",
+          "requiredActivationDecisionReviewEligibility": "eligible_for_local_runtime_activation_decision",
+          "requiredActivationDecisionReviewStatus": "passed",
+          "requiresActivationDecisionReviewReceiptDigest": true
+        }
+      },
+      {
+        "id": "owner_approval_required",
+        "status": "accepted",
+        "reason": "owner approval must be required",
+        "evidence": {
+          "required": true,
+          "approvalMode": "explicit_owner_manual_decision",
+          "approvedByRole": "owner",
+          "status": "approved",
+          "scope": "local_private_runtime_callable_availability_only",
+          "notes": "Approve only the bounded local activation decision artifact. This does not expose an endpoint, start a scheduler, enable network or LLM calls, or authorize public actions."
+        }
+      },
+      {
+        "id": "owner_approval_mode",
+        "status": "accepted",
+        "reason": "owner approval mode must be explicit manual decision",
+        "evidence": {
+          "required": true,
+          "approvalMode": "explicit_owner_manual_decision",
+          "approvedByRole": "owner",
+          "status": "approved",
+          "scope": "local_private_runtime_callable_availability_only",
+          "notes": "Approve only the bounded local activation decision artifact. This does not expose an endpoint, start a scheduler, enable network or LLM calls, or authorize public actions."
+        }
+      },
+      {
+        "id": "owner_role",
+        "status": "accepted",
+        "reason": "owner approval role must be owner",
+        "evidence": {
+          "required": true,
+          "approvalMode": "explicit_owner_manual_decision",
+          "approvedByRole": "owner",
+          "status": "approved",
+          "scope": "local_private_runtime_callable_availability_only",
+          "notes": "Approve only the bounded local activation decision artifact. This does not expose an endpoint, start a scheduler, enable network or LLM calls, or authorize public actions."
+        }
+      },
+      {
+        "id": "owner_status",
+        "status": "accepted",
+        "reason": "owner approval status must be approved",
+        "evidence": {
+          "required": true,
+          "approvalMode": "explicit_owner_manual_decision",
+          "approvedByRole": "owner",
+          "status": "approved",
+          "scope": "local_private_runtime_callable_availability_only",
+          "notes": "Approve only the bounded local activation decision artifact. This does not expose an endpoint, start a scheduler, enable network or LLM calls, or authorize public actions."
+        }
+      },
+      {
+        "id": "owner_scope",
+        "status": "accepted",
+        "reason": "owner approval scope must stay local runtime callable availability only",
+        "evidence": {
+          "required": true,
+          "approvalMode": "explicit_owner_manual_decision",
+          "approvedByRole": "owner",
+          "status": "approved",
+          "scope": "local_private_runtime_callable_availability_only",
+          "notes": "Approve only the bounded local activation decision artifact. This does not expose an endpoint, start a scheduler, enable network or LLM calls, or authorize public actions."
+        }
+      },
+      {
+        "id": "intent_location",
+        "status": "accepted",
+        "reason": "activation intent must stay private-runtime only",
+        "evidence": {
+          "allowedLocation": "cortex-abv-private-runtime-only",
+          "activationMode": "same_process_owner_invoked_callable_only",
+          "allowedModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+          "allowedBindings": [
+            "loadIndexArtifact",
+            "queryCandidates",
+            "verifyClaimEvidence"
+          ],
+          "allowedArtifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+          "allowedOperations": [
+            "load_read_only_index_artifact",
+            "query_tenant_scoped_candidates_only",
+            "verify_claim_evidence_refs"
+          ],
+          "allowedConsumers": [
+            "owner_invoked_private_runtime_process_only"
+          ],
+          "runtimeActivationAppliedHere": false
+        }
+      },
+      {
+        "id": "intent_mode",
+        "status": "accepted",
+        "reason": "activation intent mode must be owner-invoked same-process callable only",
+        "evidence": {
+          "allowedLocation": "cortex-abv-private-runtime-only",
+          "activationMode": "same_process_owner_invoked_callable_only",
+          "allowedModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+          "allowedBindings": [
+            "loadIndexArtifact",
+            "queryCandidates",
+            "verifyClaimEvidence"
+          ],
+          "allowedArtifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+          "allowedOperations": [
+            "load_read_only_index_artifact",
+            "query_tenant_scoped_candidates_only",
+            "verify_claim_evidence_refs"
+          ],
+          "allowedConsumers": [
+            "owner_invoked_private_runtime_process_only"
+          ],
+          "runtimeActivationAppliedHere": false
+        }
+      },
+      {
+        "id": "intent_module_path",
+        "status": "accepted",
+        "reason": "activation intent module path must match controlled harness",
+        "evidence": {
+          "allowedLocation": "cortex-abv-private-runtime-only",
+          "activationMode": "same_process_owner_invoked_callable_only",
+          "allowedModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+          "allowedBindings": [
+            "loadIndexArtifact",
+            "queryCandidates",
+            "verifyClaimEvidence"
+          ],
+          "allowedArtifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+          "allowedOperations": [
+            "load_read_only_index_artifact",
+            "query_tenant_scoped_candidates_only",
+            "verify_claim_evidence_refs"
+          ],
+          "allowedConsumers": [
+            "owner_invoked_private_runtime_process_only"
+          ],
+          "runtimeActivationAppliedHere": false
+        }
+      },
+      {
+        "id": "intent_bindings",
+        "status": "accepted",
+        "reason": "activation intent bindings must be allowlisted",
+        "evidence": {
+          "allowedLocation": "cortex-abv-private-runtime-only",
+          "activationMode": "same_process_owner_invoked_callable_only",
+          "allowedModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+          "allowedBindings": [
+            "loadIndexArtifact",
+            "queryCandidates",
+            "verifyClaimEvidence"
+          ],
+          "allowedArtifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+          "allowedOperations": [
+            "load_read_only_index_artifact",
+            "query_tenant_scoped_candidates_only",
+            "verify_claim_evidence_refs"
+          ],
+          "allowedConsumers": [
+            "owner_invoked_private_runtime_process_only"
+          ],
+          "runtimeActivationAppliedHere": false
+        }
+      },
+      {
+        "id": "intent_artifact_path",
+        "status": "accepted",
+        "reason": "activation intent artifact path must match Stage 4h local artifact",
+        "evidence": {
+          "allowedLocation": "cortex-abv-private-runtime-only",
+          "activationMode": "same_process_owner_invoked_callable_only",
+          "allowedModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+          "allowedBindings": [
+            "loadIndexArtifact",
+            "queryCandidates",
+            "verifyClaimEvidence"
+          ],
+          "allowedArtifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+          "allowedOperations": [
+            "load_read_only_index_artifact",
+            "query_tenant_scoped_candidates_only",
+            "verify_claim_evidence_refs"
+          ],
+          "allowedConsumers": [
+            "owner_invoked_private_runtime_process_only"
+          ],
+          "runtimeActivationAppliedHere": false
+        }
+      },
+      {
+        "id": "intent_operations",
+        "status": "accepted",
+        "reason": "activation intent operations must stay bounded",
+        "evidence": {
+          "allowedLocation": "cortex-abv-private-runtime-only",
+          "activationMode": "same_process_owner_invoked_callable_only",
+          "allowedModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+          "allowedBindings": [
+            "loadIndexArtifact",
+            "queryCandidates",
+            "verifyClaimEvidence"
+          ],
+          "allowedArtifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+          "allowedOperations": [
+            "load_read_only_index_artifact",
+            "query_tenant_scoped_candidates_only",
+            "verify_claim_evidence_refs"
+          ],
+          "allowedConsumers": [
+            "owner_invoked_private_runtime_process_only"
+          ],
+          "runtimeActivationAppliedHere": false
+        }
+      },
+      {
+        "id": "intent_consumers",
+        "status": "accepted",
+        "reason": "activation intent consumers must stay owner-invoked local process only",
+        "evidence": {
+          "allowedLocation": "cortex-abv-private-runtime-only",
+          "activationMode": "same_process_owner_invoked_callable_only",
+          "allowedModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+          "allowedBindings": [
+            "loadIndexArtifact",
+            "queryCandidates",
+            "verifyClaimEvidence"
+          ],
+          "allowedArtifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+          "allowedOperations": [
+            "load_read_only_index_artifact",
+            "query_tenant_scoped_candidates_only",
+            "verify_claim_evidence_refs"
+          ],
+          "allowedConsumers": [
+            "owner_invoked_private_runtime_process_only"
+          ],
+          "runtimeActivationAppliedHere": false
+        }
+      },
+      {
+        "id": "intent_not_applied_here",
+        "status": "accepted",
+        "reason": "runtime activation must not be applied here",
+        "evidence": {
+          "allowedLocation": "cortex-abv-private-runtime-only",
+          "activationMode": "same_process_owner_invoked_callable_only",
+          "allowedModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+          "allowedBindings": [
+            "loadIndexArtifact",
+            "queryCandidates",
+            "verifyClaimEvidence"
+          ],
+          "allowedArtifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+          "allowedOperations": [
+            "load_read_only_index_artifact",
+            "query_tenant_scoped_candidates_only",
+            "verify_claim_evidence_refs"
+          ],
+          "allowedConsumers": [
+            "owner_invoked_private_runtime_process_only"
+          ],
+          "runtimeActivationAppliedHere": false
+        }
+      },
+      {
+        "id": "rollback_required",
+        "status": "accepted",
+        "reason": "rollback plan must be required",
+        "evidence": {
+          "required": true,
+          "strategy": "return_to_inactive_local_private_runtime_state",
+          "steps": [
+            "Discard any future activation attempt receipt if digest or governance checks fail.",
+            "Keep the runtime without endpoint, scheduler, daemon, network or model calls.",
+            "Retain only receipt evidence for this decision artifact."
+          ],
+          "receiptOnlyEvidence": true,
+          "ownerReversalAllowed": true
+        }
+      },
+      {
+        "id": "rollback_strategy",
+        "status": "accepted",
+        "reason": "rollback strategy must return to inactive local private runtime state",
+        "evidence": {
+          "required": true,
+          "strategy": "return_to_inactive_local_private_runtime_state",
+          "steps": [
+            "Discard any future activation attempt receipt if digest or governance checks fail.",
+            "Keep the runtime without endpoint, scheduler, daemon, network or model calls.",
+            "Retain only receipt evidence for this decision artifact."
+          ],
+          "receiptOnlyEvidence": true,
+          "ownerReversalAllowed": true
+        }
+      },
+      {
+        "id": "rollback_receipt_only",
+        "status": "accepted",
+        "reason": "rollback evidence must remain receipt-only",
+        "evidence": {
+          "required": true,
+          "strategy": "return_to_inactive_local_private_runtime_state",
+          "steps": [
+            "Discard any future activation attempt receipt if digest or governance checks fail.",
+            "Keep the runtime without endpoint, scheduler, daemon, network or model calls.",
+            "Retain only receipt evidence for this decision artifact."
+          ],
+          "receiptOnlyEvidence": true,
+          "ownerReversalAllowed": true
+        }
+      },
+      {
+        "id": "rollback_owner_reversal",
+        "status": "accepted",
+        "reason": "owner reversal must remain allowed",
+        "evidence": {
+          "required": true,
+          "strategy": "return_to_inactive_local_private_runtime_state",
+          "steps": [
+            "Discard any future activation attempt receipt if digest or governance checks fail.",
+            "Keep the runtime without endpoint, scheduler, daemon, network or model calls.",
+            "Retain only receipt evidence for this decision artifact."
+          ],
+          "receiptOnlyEvidence": true,
+          "ownerReversalAllowed": true
+        }
+      },
+      {
+        "id": "next_gate_target",
+        "status": "accepted",
+        "reason": "next gate target must be local runtime activation dry-run",
+        "evidence": {
+          "targetEligibility": "eligible_for_local_runtime_activation_dry_run",
+          "futureRunKind": "CortexABVVectorRuntimeLocalActivationDryRun",
+          "futureRunMode": "local_runtime_activation_dry_run_only",
+          "runtimeActivationAppliedHere": false
+        }
+      },
+      {
+        "id": "next_gate_kind",
+        "status": "accepted",
+        "reason": "future run kind must match local activation dry-run",
+        "evidence": {
+          "targetEligibility": "eligible_for_local_runtime_activation_dry_run",
+          "futureRunKind": "CortexABVVectorRuntimeLocalActivationDryRun",
+          "futureRunMode": "local_runtime_activation_dry_run_only",
+          "runtimeActivationAppliedHere": false
+        }
+      },
+      {
+        "id": "next_gate_mode",
+        "status": "accepted",
+        "reason": "future run mode must match local activation dry-run only",
+        "evidence": {
+          "targetEligibility": "eligible_for_local_runtime_activation_dry_run",
+          "futureRunKind": "CortexABVVectorRuntimeLocalActivationDryRun",
+          "futureRunMode": "local_runtime_activation_dry_run_only",
+          "runtimeActivationAppliedHere": false
+        }
+      },
+      {
+        "id": "next_gate_not_applied_here",
+        "status": "accepted",
+        "reason": "runtime activation must not be applied at decision gate",
+        "evidence": {
+          "targetEligibility": "eligible_for_local_runtime_activation_dry_run",
+          "futureRunKind": "CortexABVVectorRuntimeLocalActivationDryRun",
+          "futureRunMode": "local_runtime_activation_dry_run_only",
+          "runtimeActivationAppliedHere": false
+        }
+      },
+      {
+        "id": "forbidden_runtimeActivationAppliedHere",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.runtimeActivationAppliedHere must be false",
+        "evidence": {
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_persistentServiceAllowed",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.persistentServiceAllowed must be false",
+        "evidence": {
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_daemonProcessAllowed",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.daemonProcessAllowed must be false",
+        "evidence": {
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_schedulerAllowed",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.schedulerAllowed must be false",
+        "evidence": {
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_endpointAllowed",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.endpointAllowed must be false",
+        "evidence": {
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_networkCallsAllowed",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.networkCallsAllowed must be false",
+        "evidence": {
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_llmCallsAllowed",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.llmCallsAllowed must be false",
+        "evidence": {
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_publicActionAuthorityAllowed",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.publicActionAuthorityAllowed must be false",
+        "evidence": {
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_answerGenerationAllowed",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.answerGenerationAllowed must be false",
+        "evidence": {
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_sourceMutationAllowed",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.sourceMutationAllowed must be false",
+        "evidence": {
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_artifactMutationAllowed",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.artifactMutationAllowed must be false",
+        "evidence": {
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_writesOutsideReceiptAllowed",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.writesOutsideReceiptAllowed must be false",
+        "evidence": {
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_crossTenantQueriesAllowed",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.crossTenantQueriesAllowed must be false",
+        "evidence": {
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "forbidden_autonomousExecutionAllowed",
+        "status": "accepted",
+        "reason": "forbiddenAuthority.autonomousExecutionAllowed must be false",
+        "evidence": {
+          "runtimeActivationAppliedHere": false,
+          "persistentServiceAllowed": false,
+          "daemonProcessAllowed": false,
+          "schedulerAllowed": false,
+          "endpointAllowed": false,
+          "networkCallsAllowed": false,
+          "llmCallsAllowed": false,
+          "publicActionAuthorityAllowed": false,
+          "answerGenerationAllowed": false,
+          "sourceMutationAllowed": false,
+          "artifactMutationAllowed": false,
+          "writesOutsideReceiptAllowed": false,
+          "crossTenantQueriesAllowed": false,
+          "autonomousExecutionAllowed": false
+        }
+      },
+      {
+        "id": "governance_readOnly",
+        "status": "accepted",
+        "reason": "governance.readOnly must be true",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "activationDecisionOnly": true,
+          "runtimeActivationApplied": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_proposalOnly",
+        "status": "accepted",
+        "reason": "governance.proposalOnly must be true",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "activationDecisionOnly": true,
+          "runtimeActivationApplied": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_activationDecisionOnly",
+        "status": "accepted",
+        "reason": "governance.activationDecisionOnly must be true",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "activationDecisionOnly": true,
+          "runtimeActivationApplied": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_runtimeActivationApplied",
+        "status": "accepted",
+        "reason": "governance.runtimeActivationApplied must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "activationDecisionOnly": true,
+          "runtimeActivationApplied": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_runtimeIntegration",
+        "status": "accepted",
+        "reason": "governance.runtimeIntegration must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "activationDecisionOnly": true,
+          "runtimeActivationApplied": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_endpoint",
+        "status": "accepted",
+        "reason": "governance.endpoint must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "activationDecisionOnly": true,
+          "runtimeActivationApplied": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_scheduler",
+        "status": "accepted",
+        "reason": "governance.scheduler must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "activationDecisionOnly": true,
+          "runtimeActivationApplied": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_networkCalls",
+        "status": "accepted",
+        "reason": "governance.networkCalls must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "activationDecisionOnly": true,
+          "runtimeActivationApplied": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_llmCalls",
+        "status": "accepted",
+        "reason": "governance.llmCalls must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "activationDecisionOnly": true,
+          "runtimeActivationApplied": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_writesOutsideReceipt",
+        "status": "accepted",
+        "reason": "governance.writesOutsideReceipt must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "activationDecisionOnly": true,
+          "runtimeActivationApplied": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "governance_publicActionAuthority",
+        "status": "accepted",
+        "reason": "governance.publicActionAuthority must be false",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "activationDecisionOnly": true,
+          "runtimeActivationApplied": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      }
+    ],
+    "stage4tReceipt": [
+      {
+        "id": "kind",
+        "status": "accepted",
+        "reason": "Stage 4t receipt kind must match prerequisite",
+        "evidence": {
+          "kind": "CortexABVVectorRuntimeActivationDecisionReviewReceipt"
+        }
+      },
+      {
+        "id": "status",
+        "status": "accepted",
+        "reason": "Stage 4t receipt status must be passed",
+        "evidence": {
+          "status": "passed"
+        }
+      },
+      {
+        "id": "eligibility",
+        "status": "accepted",
+        "reason": "Stage 4t receipt eligibility must match prerequisite",
+        "evidence": {
+          "eligibility": "eligible_for_local_runtime_activation_decision"
+        }
+      },
+      {
+        "id": "no_blockers",
+        "status": "accepted",
+        "reason": "Stage 4t receipt must have no blockers",
+        "evidence": {
+          "blockers": []
+        }
+      },
+      {
+        "id": "stage4s_receipt_digest_present",
+        "status": "accepted",
+        "reason": "Stage 4s receipt digest must be present",
+        "evidence": {
+          "stage4sReceiptDigest": "6bfdd4ba842cd17fa9498870389a71ec12a9b099328ce4abffff2acb378b4e23"
+        }
+      },
+      {
+        "id": "stage4r_receipt_digest_present",
+        "status": "accepted",
+        "reason": "Stage 4r receipt digest must be present",
+        "evidence": {
+          "stage4rReceiptDigest": "92f4319711c81d644d788b52783706e875441ef05306b1507d43316d1366c886",
+          "stage4qReceiptDigest": "0d41759bb903dc2dd262e9fd7bc87988c3e13fad5269e3286da364f959b75f34",
+          "stage4pReceiptDigest": "bf6da764c6f37b75d918dd6ae0662cac7528b7467858c0c91927664cc57d4ffc",
+          "stage4oReceiptDigest": "5b59cf3290ed44eb4798ecc3e8085b6d748099fa318f5a98504ad72b07e1802e",
+          "stage4nReceiptDigest": "ec81682f82cb503a52187bd5f0d383bfeda566e09a29924871ddb2bb55c5a26b",
+          "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "receiptLinkageDigest": "535662c9d711fa66c91b1f9f6a9a97c84676cd567fb340358e101e2232b4dbcc"
+        }
+      },
+      {
+        "id": "stage4q_receipt_digest_present",
+        "status": "accepted",
+        "reason": "Stage 4q receipt digest must be present",
+        "evidence": {
+          "stage4rReceiptDigest": "92f4319711c81d644d788b52783706e875441ef05306b1507d43316d1366c886",
+          "stage4qReceiptDigest": "0d41759bb903dc2dd262e9fd7bc87988c3e13fad5269e3286da364f959b75f34",
+          "stage4pReceiptDigest": "bf6da764c6f37b75d918dd6ae0662cac7528b7467858c0c91927664cc57d4ffc",
+          "stage4oReceiptDigest": "5b59cf3290ed44eb4798ecc3e8085b6d748099fa318f5a98504ad72b07e1802e",
+          "stage4nReceiptDigest": "ec81682f82cb503a52187bd5f0d383bfeda566e09a29924871ddb2bb55c5a26b",
+          "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "receiptLinkageDigest": "535662c9d711fa66c91b1f9f6a9a97c84676cd567fb340358e101e2232b4dbcc"
+        }
+      },
+      {
+        "id": "stage4p_receipt_digest_present",
+        "status": "accepted",
+        "reason": "Stage 4p receipt digest must be present",
+        "evidence": {
+          "stage4rReceiptDigest": "92f4319711c81d644d788b52783706e875441ef05306b1507d43316d1366c886",
+          "stage4qReceiptDigest": "0d41759bb903dc2dd262e9fd7bc87988c3e13fad5269e3286da364f959b75f34",
+          "stage4pReceiptDigest": "bf6da764c6f37b75d918dd6ae0662cac7528b7467858c0c91927664cc57d4ffc",
+          "stage4oReceiptDigest": "5b59cf3290ed44eb4798ecc3e8085b6d748099fa318f5a98504ad72b07e1802e",
+          "stage4nReceiptDigest": "ec81682f82cb503a52187bd5f0d383bfeda566e09a29924871ddb2bb55c5a26b",
+          "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "receiptLinkageDigest": "535662c9d711fa66c91b1f9f6a9a97c84676cd567fb340358e101e2232b4dbcc"
+        }
+      },
+      {
+        "id": "stage4o_receipt_digest_present",
+        "status": "accepted",
+        "reason": "Stage 4o receipt digest must be present",
+        "evidence": {
+          "stage4rReceiptDigest": "92f4319711c81d644d788b52783706e875441ef05306b1507d43316d1366c886",
+          "stage4qReceiptDigest": "0d41759bb903dc2dd262e9fd7bc87988c3e13fad5269e3286da364f959b75f34",
+          "stage4pReceiptDigest": "bf6da764c6f37b75d918dd6ae0662cac7528b7467858c0c91927664cc57d4ffc",
+          "stage4oReceiptDigest": "5b59cf3290ed44eb4798ecc3e8085b6d748099fa318f5a98504ad72b07e1802e",
+          "stage4nReceiptDigest": "ec81682f82cb503a52187bd5f0d383bfeda566e09a29924871ddb2bb55c5a26b",
+          "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "receiptLinkageDigest": "535662c9d711fa66c91b1f9f6a9a97c84676cd567fb340358e101e2232b4dbcc"
+        }
+      },
+      {
+        "id": "stage4n_receipt_digest_present",
+        "status": "accepted",
+        "reason": "Stage 4n receipt digest must be present",
+        "evidence": {
+          "stage4rReceiptDigest": "92f4319711c81d644d788b52783706e875441ef05306b1507d43316d1366c886",
+          "stage4qReceiptDigest": "0d41759bb903dc2dd262e9fd7bc87988c3e13fad5269e3286da364f959b75f34",
+          "stage4pReceiptDigest": "bf6da764c6f37b75d918dd6ae0662cac7528b7467858c0c91927664cc57d4ffc",
+          "stage4oReceiptDigest": "5b59cf3290ed44eb4798ecc3e8085b6d748099fa318f5a98504ad72b07e1802e",
+          "stage4nReceiptDigest": "ec81682f82cb503a52187bd5f0d383bfeda566e09a29924871ddb2bb55c5a26b",
+          "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "receiptLinkageDigest": "535662c9d711fa66c91b1f9f6a9a97c84676cd567fb340358e101e2232b4dbcc"
+        }
+      },
+      {
+        "id": "stage4h_index_digest_present",
+        "status": "accepted",
+        "reason": "Stage 4h index digest must be present",
+        "evidence": {
+          "stage4rReceiptDigest": "92f4319711c81d644d788b52783706e875441ef05306b1507d43316d1366c886",
+          "stage4qReceiptDigest": "0d41759bb903dc2dd262e9fd7bc87988c3e13fad5269e3286da364f959b75f34",
+          "stage4pReceiptDigest": "bf6da764c6f37b75d918dd6ae0662cac7528b7467858c0c91927664cc57d4ffc",
+          "stage4oReceiptDigest": "5b59cf3290ed44eb4798ecc3e8085b6d748099fa318f5a98504ad72b07e1802e",
+          "stage4nReceiptDigest": "ec81682f82cb503a52187bd5f0d383bfeda566e09a29924871ddb2bb55c5a26b",
+          "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "receiptLinkageDigest": "535662c9d711fa66c91b1f9f6a9a97c84676cd567fb340358e101e2232b4dbcc"
+        }
+      },
+      {
+        "id": "stage4h_source_digest_present",
+        "status": "accepted",
+        "reason": "Stage 4h source digest must be present",
+        "evidence": {
+          "stage4rReceiptDigest": "92f4319711c81d644d788b52783706e875441ef05306b1507d43316d1366c886",
+          "stage4qReceiptDigest": "0d41759bb903dc2dd262e9fd7bc87988c3e13fad5269e3286da364f959b75f34",
+          "stage4pReceiptDigest": "bf6da764c6f37b75d918dd6ae0662cac7528b7467858c0c91927664cc57d4ffc",
+          "stage4oReceiptDigest": "5b59cf3290ed44eb4798ecc3e8085b6d748099fa318f5a98504ad72b07e1802e",
+          "stage4nReceiptDigest": "ec81682f82cb503a52187bd5f0d383bfeda566e09a29924871ddb2bb55c5a26b",
+          "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "receiptLinkageDigest": "535662c9d711fa66c91b1f9f6a9a97c84676cd567fb340358e101e2232b4dbcc"
+        }
+      },
+      {
+        "id": "receipt_linkage_digest_present",
+        "status": "accepted",
+        "reason": "receipt linkage digest must be present",
+        "evidence": {
+          "stage4rReceiptDigest": "92f4319711c81d644d788b52783706e875441ef05306b1507d43316d1366c886",
+          "stage4qReceiptDigest": "0d41759bb903dc2dd262e9fd7bc87988c3e13fad5269e3286da364f959b75f34",
+          "stage4pReceiptDigest": "bf6da764c6f37b75d918dd6ae0662cac7528b7467858c0c91927664cc57d4ffc",
+          "stage4oReceiptDigest": "5b59cf3290ed44eb4798ecc3e8085b6d748099fa318f5a98504ad72b07e1802e",
+          "stage4nReceiptDigest": "ec81682f82cb503a52187bd5f0d383bfeda566e09a29924871ddb2bb55c5a26b",
+          "stage4hIndexDigest": "b8bfa959ef11ac5dd2acc5816412099b8c264f69b467c08901096fb7de122ea6",
+          "stage4hSourceDigest": "ee796e9a3223ab56e3a7ddc5701750a7317d295277f7c713852898a1cc22c0cc",
+          "receiptLinkageDigest": "535662c9d711fa66c91b1f9f6a9a97c84676cd567fb340358e101e2232b4dbcc"
+        }
+      },
+      {
+        "id": "scope_location_match",
+        "status": "accepted",
+        "reason": "activation intent location must match Stage 4t local scope",
+        "evidence": {
+          "scope": {
+            "meaning": "owner_invoked_local_private_runtime_callable_availability_only",
+            "allowedLocation": "cortex-abv-private-runtime-only",
+            "activationMode": "same_process_owner_invoked_callable_only",
+            "allowedModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+            "allowedBindings": [
+              "loadIndexArtifact",
+              "queryCandidates",
+              "verifyClaimEvidence"
+            ],
+            "allowedArtifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+            "allowedOperations": [
+              "load_read_only_index_artifact",
+              "query_tenant_scoped_candidates_only",
+              "verify_claim_evidence_refs"
+            ],
+            "allowedConsumers": [
+              "owner_invoked_private_runtime_process_only"
+            ],
+            "persistentServiceAllowed": false,
+            "backgroundSchedulerAllowed": false,
+            "networkCallsAllowed": false,
+            "llmCallsAllowed": false,
+            "endpointAllowed": false,
+            "publicActionAuthorityAllowed": false,
+            "sourceMutationAllowed": false,
+            "artifactMutationAllowed": false,
+            "writesOutsideReceiptAllowed": false,
+            "answerGenerationAllowed": false,
+            "crossTenantQueriesAllowed": false
+          },
+          "activationIntent": {
+            "allowedLocation": "cortex-abv-private-runtime-only",
+            "activationMode": "same_process_owner_invoked_callable_only",
+            "allowedModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+            "allowedBindings": [
+              "loadIndexArtifact",
+              "queryCandidates",
+              "verifyClaimEvidence"
+            ],
+            "allowedArtifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+            "allowedOperations": [
+              "load_read_only_index_artifact",
+              "query_tenant_scoped_candidates_only",
+              "verify_claim_evidence_refs"
+            ],
+            "allowedConsumers": [
+              "owner_invoked_private_runtime_process_only"
+            ],
+            "runtimeActivationAppliedHere": false
+          }
+        }
+      },
+      {
+        "id": "scope_mode_match",
+        "status": "accepted",
+        "reason": "activation intent mode must match Stage 4t local scope",
+        "evidence": {
+          "scope": {
+            "meaning": "owner_invoked_local_private_runtime_callable_availability_only",
+            "allowedLocation": "cortex-abv-private-runtime-only",
+            "activationMode": "same_process_owner_invoked_callable_only",
+            "allowedModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+            "allowedBindings": [
+              "loadIndexArtifact",
+              "queryCandidates",
+              "verifyClaimEvidence"
+            ],
+            "allowedArtifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+            "allowedOperations": [
+              "load_read_only_index_artifact",
+              "query_tenant_scoped_candidates_only",
+              "verify_claim_evidence_refs"
+            ],
+            "allowedConsumers": [
+              "owner_invoked_private_runtime_process_only"
+            ],
+            "persistentServiceAllowed": false,
+            "backgroundSchedulerAllowed": false,
+            "networkCallsAllowed": false,
+            "llmCallsAllowed": false,
+            "endpointAllowed": false,
+            "publicActionAuthorityAllowed": false,
+            "sourceMutationAllowed": false,
+            "artifactMutationAllowed": false,
+            "writesOutsideReceiptAllowed": false,
+            "answerGenerationAllowed": false,
+            "crossTenantQueriesAllowed": false
+          },
+          "activationIntent": {
+            "allowedLocation": "cortex-abv-private-runtime-only",
+            "activationMode": "same_process_owner_invoked_callable_only",
+            "allowedModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+            "allowedBindings": [
+              "loadIndexArtifact",
+              "queryCandidates",
+              "verifyClaimEvidence"
+            ],
+            "allowedArtifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+            "allowedOperations": [
+              "load_read_only_index_artifact",
+              "query_tenant_scoped_candidates_only",
+              "verify_claim_evidence_refs"
+            ],
+            "allowedConsumers": [
+              "owner_invoked_private_runtime_process_only"
+            ],
+            "runtimeActivationAppliedHere": false
+          }
+        }
+      },
+      {
+        "id": "scope_module_path_match",
+        "status": "accepted",
+        "reason": "activation intent module path must match Stage 4t local scope",
+        "evidence": {
+          "scope": {
+            "meaning": "owner_invoked_local_private_runtime_callable_availability_only",
+            "allowedLocation": "cortex-abv-private-runtime-only",
+            "activationMode": "same_process_owner_invoked_callable_only",
+            "allowedModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+            "allowedBindings": [
+              "loadIndexArtifact",
+              "queryCandidates",
+              "verifyClaimEvidence"
+            ],
+            "allowedArtifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+            "allowedOperations": [
+              "load_read_only_index_artifact",
+              "query_tenant_scoped_candidates_only",
+              "verify_claim_evidence_refs"
+            ],
+            "allowedConsumers": [
+              "owner_invoked_private_runtime_process_only"
+            ],
+            "persistentServiceAllowed": false,
+            "backgroundSchedulerAllowed": false,
+            "networkCallsAllowed": false,
+            "llmCallsAllowed": false,
+            "endpointAllowed": false,
+            "publicActionAuthorityAllowed": false,
+            "sourceMutationAllowed": false,
+            "artifactMutationAllowed": false,
+            "writesOutsideReceiptAllowed": false,
+            "answerGenerationAllowed": false,
+            "crossTenantQueriesAllowed": false
+          },
+          "activationIntent": {
+            "allowedLocation": "cortex-abv-private-runtime-only",
+            "activationMode": "same_process_owner_invoked_callable_only",
+            "allowedModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+            "allowedBindings": [
+              "loadIndexArtifact",
+              "queryCandidates",
+              "verifyClaimEvidence"
+            ],
+            "allowedArtifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+            "allowedOperations": [
+              "load_read_only_index_artifact",
+              "query_tenant_scoped_candidates_only",
+              "verify_claim_evidence_refs"
+            ],
+            "allowedConsumers": [
+              "owner_invoked_private_runtime_process_only"
+            ],
+            "runtimeActivationAppliedHere": false
+          }
+        }
+      },
+      {
+        "id": "scope_artifact_path_match",
+        "status": "accepted",
+        "reason": "activation intent artifact path must match Stage 4t local scope",
+        "evidence": {
+          "scope": {
+            "meaning": "owner_invoked_local_private_runtime_callable_availability_only",
+            "allowedLocation": "cortex-abv-private-runtime-only",
+            "activationMode": "same_process_owner_invoked_callable_only",
+            "allowedModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+            "allowedBindings": [
+              "loadIndexArtifact",
+              "queryCandidates",
+              "verifyClaimEvidence"
+            ],
+            "allowedArtifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+            "allowedOperations": [
+              "load_read_only_index_artifact",
+              "query_tenant_scoped_candidates_only",
+              "verify_claim_evidence_refs"
+            ],
+            "allowedConsumers": [
+              "owner_invoked_private_runtime_process_only"
+            ],
+            "persistentServiceAllowed": false,
+            "backgroundSchedulerAllowed": false,
+            "networkCallsAllowed": false,
+            "llmCallsAllowed": false,
+            "endpointAllowed": false,
+            "publicActionAuthorityAllowed": false,
+            "sourceMutationAllowed": false,
+            "artifactMutationAllowed": false,
+            "writesOutsideReceiptAllowed": false,
+            "answerGenerationAllowed": false,
+            "crossTenantQueriesAllowed": false
+          },
+          "activationIntent": {
+            "allowedLocation": "cortex-abv-private-runtime-only",
+            "activationMode": "same_process_owner_invoked_callable_only",
+            "allowedModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+            "allowedBindings": [
+              "loadIndexArtifact",
+              "queryCandidates",
+              "verifyClaimEvidence"
+            ],
+            "allowedArtifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+            "allowedOperations": [
+              "load_read_only_index_artifact",
+              "query_tenant_scoped_candidates_only",
+              "verify_claim_evidence_refs"
+            ],
+            "allowedConsumers": [
+              "owner_invoked_private_runtime_process_only"
+            ],
+            "runtimeActivationAppliedHere": false
+          }
+        }
+      },
+      {
+        "id": "scope_bindings_match",
+        "status": "accepted",
+        "reason": "activation intent bindings must match Stage 4t local scope",
+        "evidence": {
+          "scope": {
+            "meaning": "owner_invoked_local_private_runtime_callable_availability_only",
+            "allowedLocation": "cortex-abv-private-runtime-only",
+            "activationMode": "same_process_owner_invoked_callable_only",
+            "allowedModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+            "allowedBindings": [
+              "loadIndexArtifact",
+              "queryCandidates",
+              "verifyClaimEvidence"
+            ],
+            "allowedArtifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+            "allowedOperations": [
+              "load_read_only_index_artifact",
+              "query_tenant_scoped_candidates_only",
+              "verify_claim_evidence_refs"
+            ],
+            "allowedConsumers": [
+              "owner_invoked_private_runtime_process_only"
+            ],
+            "persistentServiceAllowed": false,
+            "backgroundSchedulerAllowed": false,
+            "networkCallsAllowed": false,
+            "llmCallsAllowed": false,
+            "endpointAllowed": false,
+            "publicActionAuthorityAllowed": false,
+            "sourceMutationAllowed": false,
+            "artifactMutationAllowed": false,
+            "writesOutsideReceiptAllowed": false,
+            "answerGenerationAllowed": false,
+            "crossTenantQueriesAllowed": false
+          },
+          "activationIntent": {
+            "allowedLocation": "cortex-abv-private-runtime-only",
+            "activationMode": "same_process_owner_invoked_callable_only",
+            "allowedModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+            "allowedBindings": [
+              "loadIndexArtifact",
+              "queryCandidates",
+              "verifyClaimEvidence"
+            ],
+            "allowedArtifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+            "allowedOperations": [
+              "load_read_only_index_artifact",
+              "query_tenant_scoped_candidates_only",
+              "verify_claim_evidence_refs"
+            ],
+            "allowedConsumers": [
+              "owner_invoked_private_runtime_process_only"
+            ],
+            "runtimeActivationAppliedHere": false
+          }
+        }
+      },
+      {
+        "id": "scope_operations_match",
+        "status": "accepted",
+        "reason": "activation intent operations must match Stage 4t local scope",
+        "evidence": {
+          "scope": {
+            "meaning": "owner_invoked_local_private_runtime_callable_availability_only",
+            "allowedLocation": "cortex-abv-private-runtime-only",
+            "activationMode": "same_process_owner_invoked_callable_only",
+            "allowedModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+            "allowedBindings": [
+              "loadIndexArtifact",
+              "queryCandidates",
+              "verifyClaimEvidence"
+            ],
+            "allowedArtifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+            "allowedOperations": [
+              "load_read_only_index_artifact",
+              "query_tenant_scoped_candidates_only",
+              "verify_claim_evidence_refs"
+            ],
+            "allowedConsumers": [
+              "owner_invoked_private_runtime_process_only"
+            ],
+            "persistentServiceAllowed": false,
+            "backgroundSchedulerAllowed": false,
+            "networkCallsAllowed": false,
+            "llmCallsAllowed": false,
+            "endpointAllowed": false,
+            "publicActionAuthorityAllowed": false,
+            "sourceMutationAllowed": false,
+            "artifactMutationAllowed": false,
+            "writesOutsideReceiptAllowed": false,
+            "answerGenerationAllowed": false,
+            "crossTenantQueriesAllowed": false
+          },
+          "activationIntent": {
+            "allowedLocation": "cortex-abv-private-runtime-only",
+            "activationMode": "same_process_owner_invoked_callable_only",
+            "allowedModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+            "allowedBindings": [
+              "loadIndexArtifact",
+              "queryCandidates",
+              "verifyClaimEvidence"
+            ],
+            "allowedArtifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+            "allowedOperations": [
+              "load_read_only_index_artifact",
+              "query_tenant_scoped_candidates_only",
+              "verify_claim_evidence_refs"
+            ],
+            "allowedConsumers": [
+              "owner_invoked_private_runtime_process_only"
+            ],
+            "runtimeActivationAppliedHere": false
+          }
+        }
+      },
+      {
+        "id": "scope_consumers_match",
+        "status": "accepted",
+        "reason": "activation intent consumers must match Stage 4t local scope",
+        "evidence": {
+          "scope": {
+            "meaning": "owner_invoked_local_private_runtime_callable_availability_only",
+            "allowedLocation": "cortex-abv-private-runtime-only",
+            "activationMode": "same_process_owner_invoked_callable_only",
+            "allowedModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+            "allowedBindings": [
+              "loadIndexArtifact",
+              "queryCandidates",
+              "verifyClaimEvidence"
+            ],
+            "allowedArtifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+            "allowedOperations": [
+              "load_read_only_index_artifact",
+              "query_tenant_scoped_candidates_only",
+              "verify_claim_evidence_refs"
+            ],
+            "allowedConsumers": [
+              "owner_invoked_private_runtime_process_only"
+            ],
+            "persistentServiceAllowed": false,
+            "backgroundSchedulerAllowed": false,
+            "networkCallsAllowed": false,
+            "llmCallsAllowed": false,
+            "endpointAllowed": false,
+            "publicActionAuthorityAllowed": false,
+            "sourceMutationAllowed": false,
+            "artifactMutationAllowed": false,
+            "writesOutsideReceiptAllowed": false,
+            "answerGenerationAllowed": false,
+            "crossTenantQueriesAllowed": false
+          },
+          "activationIntent": {
+            "allowedLocation": "cortex-abv-private-runtime-only",
+            "activationMode": "same_process_owner_invoked_callable_only",
+            "allowedModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+            "allowedBindings": [
+              "loadIndexArtifact",
+              "queryCandidates",
+              "verifyClaimEvidence"
+            ],
+            "allowedArtifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+            "allowedOperations": [
+              "load_read_only_index_artifact",
+              "query_tenant_scoped_candidates_only",
+              "verify_claim_evidence_refs"
+            ],
+            "allowedConsumers": [
+              "owner_invoked_private_runtime_process_only"
+            ],
+            "runtimeActivationAppliedHere": false
+          }
+        }
+      },
+      {
+        "id": "no_runtime_activation",
+        "status": "accepted",
+        "reason": "Stage 4t must not apply runtime activation",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "activationDecisionReviewOnly": true,
+          "runtimeActivationApproved": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "no_runtime_integration",
+        "status": "accepted",
+        "reason": "Stage 4t must not approve runtime integration",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "activationDecisionReviewOnly": true,
+          "runtimeActivationApproved": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "no_endpoint",
+        "status": "accepted",
+        "reason": "Stage 4t must not approve endpoint",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "activationDecisionReviewOnly": true,
+          "runtimeActivationApproved": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "no_scheduler",
+        "status": "accepted",
+        "reason": "Stage 4t must not approve scheduler",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "activationDecisionReviewOnly": true,
+          "runtimeActivationApproved": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "no_network",
+        "status": "accepted",
+        "reason": "Stage 4t must not approve network calls",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "activationDecisionReviewOnly": true,
+          "runtimeActivationApproved": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "no_llm",
+        "status": "accepted",
+        "reason": "Stage 4t must not approve LLM calls",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "activationDecisionReviewOnly": true,
+          "runtimeActivationApproved": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      },
+      {
+        "id": "no_public_action",
+        "status": "accepted",
+        "reason": "Stage 4t must not approve public action authority",
+        "evidence": {
+          "readOnly": true,
+          "proposalOnly": true,
+          "activationDecisionReviewOnly": true,
+          "runtimeActivationApproved": false,
+          "runtimeIntegration": false,
+          "endpoint": false,
+          "scheduler": false,
+          "networkCalls": false,
+          "llmCalls": false,
+          "writesOutsideReceipt": false,
+          "publicActionAuthority": false
+        }
+      }
+    ]
+  },
+  "blockers": [],
+  "decisionTrace": {
+    "policySource": "runtime_activation_decision_artifact_plus_stage4t_review_receipt",
+    "reason": "Explicit owner-approved local activation decision recorded under the Stage 4t boundary, still without applying activation.",
+    "nextAllowedStep": "local_runtime_activation_dry_run",
+    "activationApplied": false,
+    "endpointApproved": false,
+    "networkApproved": false,
+    "publicActionApproved": false
+  },
+  "summary": "Owner-approved local activation decision artifact recorded. It only allows preparation for a later local activation dry-run and does not apply activation."
+}

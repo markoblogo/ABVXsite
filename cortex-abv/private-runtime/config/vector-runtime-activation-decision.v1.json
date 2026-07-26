@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimeActivationDecision",
+  "version": "v1",
+  "authority": "local_runtime_activation_decision_only",
+  "engine": "turbovec",
+  "purpose": "Record an explicit owner-approved local runtime activation decision artifact under the Stage 4t boundary. This does not activate runtime wiring.",
+  "prerequisites": {
+    "requiredActivationDecisionReviewReceiptKind": "CortexABVVectorRuntimeActivationDecisionReviewReceipt",
+    "requiredActivationDecisionReviewEligibility": "eligible_for_local_runtime_activation_decision",
+    "requiredActivationDecisionReviewStatus": "passed",
+    "requiresActivationDecisionReviewReceiptDigest": true
+  },
+  "ownerApproval": {
+    "required": true,
+    "approvalMode": "explicit_owner_manual_decision",
+    "approvedByRole": "owner",
+    "status": "approved",
+    "scope": "local_private_runtime_callable_availability_only",
+    "notes": "Approve only the bounded local activation decision artifact. This does not expose an endpoint, start a scheduler, enable network or LLM calls, or authorize public actions."
+  },
+  "activationIntent": {
+    "allowedLocation": "cortex-abv-private-runtime-only",
+    "activationMode": "same_process_owner_invoked_callable_only",
+    "allowedModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+    "allowedBindings": [
+      "loadIndexArtifact",
+      "queryCandidates",
+      "verifyClaimEvidence"
+    ],
+    "allowedArtifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+    "allowedOperations": [
+      "load_read_only_index_artifact",
+      "query_tenant_scoped_candidates_only",
+      "verify_claim_evidence_refs"
+    ],
+    "allowedConsumers": [
+      "owner_invoked_private_runtime_process_only"
+    ],
+    "runtimeActivationAppliedHere": false
+  },
+  "rollbackPlan": {
+    "required": true,
+    "strategy": "return_to_inactive_local_private_runtime_state",
+    "steps": [
+      "Discard any future activation attempt receipt if digest or governance checks fail.",
+      "Keep the runtime without endpoint, scheduler, daemon, network or model calls.",
+      "Retain only receipt evidence for this decision artifact."
+    ],
+    "receiptOnlyEvidence": true,
+    "ownerReversalAllowed": true
+  },
+  "nextGate": {
+    "targetEligibility": "eligible_for_local_runtime_activation_dry_run",
+    "futureRunKind": "CortexABVVectorRuntimeLocalActivationDryRun",
+    "futureRunMode": "local_runtime_activation_dry_run_only",
+    "runtimeActivationAppliedHere": false
+  },
+  "forbiddenAuthority": {
+    "runtimeActivationAppliedHere": false,
+    "persistentServiceAllowed": false,
+    "daemonProcessAllowed": false,
+    "schedulerAllowed": false,
+    "endpointAllowed": false,
+    "networkCallsAllowed": false,
+    "llmCallsAllowed": false,
+    "publicActionAuthorityAllowed": false,
+    "answerGenerationAllowed": false,
+    "sourceMutationAllowed": false,
+    "artifactMutationAllowed": false,
+    "writesOutsideReceiptAllowed": false,
+    "crossTenantQueriesAllowed": false,
+    "autonomousExecutionAllowed": false
+  },
+  "rejectionCases": [
+    "activation_decision_review_not_eligible",
+    "missing_stage4s_receipt_digest",
+    "missing_stage4r_receipt_digest",
+    "missing_stage4q_receipt_digest",
+    "missing_stage4p_receipt_digest",
+    "missing_stage4o_receipt_digest",
+    "missing_stage4n_receipt_digest",
+    "missing_stage4h_index_digest",
+    "missing_stage4h_source_digest",
+    "missing_receipt_linkage_digest",
+    "owner_approval_missing",
+    "owner_approval_not_approved",
+    "activation_scope_mismatch",
+    "rollback_plan_missing",
+    "runtime_activation_applied_here",
+    "persistent_service_requested",
+    "daemon_process_requested",
+    "scheduler_requested",
+    "endpoint_requested",
+    "network_calls_requested",
+    "llm_calls_requested",
+    "public_action_authority_requested",
+    "answer_generation_requested",
+    "source_mutation_requested",
+    "artifact_mutation_requested",
+    "external_writes_requested",
+    "cross_tenant_query_requested",
+    "autonomous_execution_requested"
+  ],
+  "governance": {
+    "readOnly": true,
+    "proposalOnly": true,
+    "activationDecisionOnly": true,
+    "runtimeActivationApplied": false,
+    "runtimeIntegration": false,
+    "endpoint": false,
+    "scheduler": false,
+    "networkCalls": false,
+    "llmCalls": false,
+    "writesOutsideReceipt": false,
+    "publicActionAuthority": false
+  }
+}

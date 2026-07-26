@@ -755,12 +755,44 @@ The receipt returns:
 
 This still does not activate runtime wiring. It only makes a later explicit local activation decision artifact discussable.
 
+### Stage 4u: local runtime activation decision artifact
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/config/vector-runtime-activation-decision.v1.json`
+- `cortex-abv/private-runtime/src/vector-runtime-activation-decision.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-activation-decision.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-activation-decision-receipt.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-activation-decision:run
+```
+
+The decision artifact now records:
+
+- explicit owner approval;
+- fixed local activation intent;
+- fixed harness module path and allowlisted bindings;
+- fixed Stage 4h read-only artifact path;
+- rollback plan and owner reversal path;
+- digest lineage back through Stage 4t, 4s, 4r, 4q, 4p, 4o, 4n and 4h.
+
+The receipt returns:
+
+- `eligible_for_local_runtime_activation_dry_run` when Stage 4t proof, explicit owner approval and rollback plan all hold;
+- `not_eligible` when any decision, digest or governance boundary blocks.
+
+This still does not activate runtime wiring. It only makes a later bounded local activation dry-run discussable.
+
 ## Next gate
 
-Before any actual local activation decision:
+Before any bounded local activation dry-run:
 
-1. require the Stage 4t runtime activation decision review receipt digest;
-2. add a separate local activation decision artifact with explicit owner approval and rollback plan;
+1. require the Stage 4u local runtime activation decision receipt digest;
+2. define the exact local activation dry-run scope and commands;
 3. preserve no-endpoint/no-scheduler/no-LLM/no-network/no-public-action governance unless separately reviewed;
 4. keep any real external/personal-surface action behind separate proposal and owner-review gates.
 

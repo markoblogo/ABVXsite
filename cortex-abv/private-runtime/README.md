@@ -553,6 +553,24 @@ npm run vector-runtime-activation-decision-review:check
 
 The receipt returns `eligible_for_local_runtime_activation_decision` or `not_eligible`. Eligibility means only that a later explicit local activation decision artifact may be prepared under owner approval. It still does not activate runtime wiring, expose an endpoint, start a scheduler, call a model, use network authority, mutate source/index artifacts or create public actions.
 
+## Vector runtime activation decision artifact
+
+The local runtime activation decision artifact now records the explicit owner-approved decision under the Stage 4t boundary, still without applying activation:
+
+- `config/vector-runtime-activation-decision.v1.json` defines the owner approval, activation intent, rollback plan, next gate, forbidden authority and governance.
+- `src/vector-runtime-activation-decision.mjs` validates the decision artifact against the Stage 4t runtime activation decision review receipt.
+- `test/vector-runtime-activation-decision.test.mjs` blocks a non-eligible Stage 4t receipt and missing owner approval or introduced endpoint authority.
+- `receipts/vector-runtime-activation-decision-receipt.v1.json` records the owner-approved local activation decision artifact, digest lineage and the next dry-run gate.
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-activation-decision:run
+```
+
+The receipt returns `eligible_for_local_runtime_activation_dry_run` or `not_eligible`. Eligibility means only that a later bounded local activation dry-run may be prepared. It still does not apply activation, expose an endpoint, start a scheduler, call a model, use network authority, mutate source/index artifacts or create public actions.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

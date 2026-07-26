@@ -10,6 +10,31 @@ Production source for [abvx.xyz](https://abvx.xyz/): the public ABVX ecosystem s
 
 The site is built with Next.js App Router, TypeScript, React, local Markdown content files, local media assets, structured metadata, and public LLM-readable indexes.
 
+## System Map
+
+```mermaid
+flowchart LR
+    Public["Public visitors and LLM consumers"]
+    Site["ABVXsite Next.js app"]
+    Content["Local content graph<br/>books · work · series"]
+    Media["Public media and OG assets"]
+    Writing["RSS-fed writing archive"]
+    Indexes["llms.txt and content-index.json"]
+    Metadata["JSON-LD, SEO and route metadata"]
+    Sync["Bounded project-description sync"]
+
+    Public --> Site
+    Content --> Site
+    Media --> Site
+    Writing --> Site
+    Content --> Indexes
+    Content --> Metadata
+    Metadata --> Site
+    Sync -.-> Content
+```
+
+Keep this map updated when public information architecture, content pipelines, sync boundaries, or machine-readable indexes change.
+
 ## Public Structure
 
 The current production information architecture is:

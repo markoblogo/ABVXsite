@@ -4,7 +4,7 @@ import JsonLd from '@/components/JsonLd';
 import MarqueeTicker from '@/components/MarqueeTicker';
 import SectionPanel from '@/components/SectionPanel';
 import TagList from '@/components/TagList';
-import { getLatestSectionEntryBook, getLatestSectionEntryWork } from '@/content';
+import { getLatestHomepageWork, getLatestSectionEntryBook } from '@/content';
 import { fetchMediumFeed, fetchMn7rFeed, fetchSubstackFeed, type FeedItem } from '@/lib/feeds';
 import { collectionPageJsonLd, defaultOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
 import type { Metadata } from 'next';
@@ -95,8 +95,8 @@ export default async function Home() {
     safeLatestFeed('mn7r', fetchMn7rFeed, 'https://mn7r.com/rss.xml'),
   ]);
 
-  const latestFocus = getLatestSectionEntryWork('focus', 'mn7r-blog');
-  const latestSystem = getLatestSectionEntryWork('systems', latestFocus?.slug);
+  const latestFocus = getLatestHomepageWork('focus', 'mn7r-blog');
+  const latestSystem = getLatestHomepageWork('systems');
   const latestBook = getLatestSectionEntryBook('books');
 
   return (

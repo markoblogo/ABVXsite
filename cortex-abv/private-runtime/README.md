@@ -643,6 +643,24 @@ npm run vector-runtime-local-activation-state-transition:run
 
 The receipt returns `eligible_for_local_activation_state_transition_dry_run` or `not_eligible`. Eligibility means only that a later bounded local transition dry-run may be prepared. It still does not apply activation, perform a state transition, expose an endpoint, start a scheduler, call a model, use network authority, mutate source/index artifacts or create public actions.
 
+## Vector runtime local activation-state transition dry-run
+
+The local activation-state transition dry-run now executes the first bounded post-artifact dry-run, still without applying any transition:
+
+- `config/vector-runtime-local-activation-state-transition-dry-run.v1.json` defines the Stage 4y prerequisite, fixed callable module boundary, read-only artifact path, tenant-scoped queries, commands, checks and rollback notes.
+- `src/vector-runtime-local-activation-state-transition-dry-run.mjs` validates the Stage 4y transition digest chain, imports the fixed harness module, loads the artifact read-only, runs tenant-scoped candidate-only queries, verifies evidence refs and writes a receipt.
+- `test/vector-runtime-local-activation-state-transition-dry-run.test.mjs` blocks a non-eligible Stage 4y receipt and any introduced transition-applied or endpoint authority.
+- `receipts/vector-runtime-local-activation-state-transition-dry-run-receipt.v1.json` records owner approval lineage, module checks, artifact checks, query results and governance.
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-local-activation-state-transition-dry-run:run
+```
+
+The receipt returns `eligible_for_local_transition_state_effect_review` or `not_eligible`. Eligibility means only that a later local transition-state effect review can be discussed. It still does not apply activation, perform the transition, expose an endpoint, start a scheduler, call a model, use network authority, mutate source/index artifacts or create public actions.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

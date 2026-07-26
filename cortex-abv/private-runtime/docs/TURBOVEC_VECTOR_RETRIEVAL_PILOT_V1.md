@@ -915,12 +915,47 @@ The receipt returns:
 
 This still does not activate runtime wiring. It only makes a later bounded local transition dry-run discussable.
 
+### Stage 4z: local activation-state transition dry-run
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/config/vector-runtime-local-activation-state-transition-dry-run.v1.json`
+- `cortex-abv/private-runtime/src/vector-runtime-local-activation-state-transition-dry-run.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-local-activation-state-transition-dry-run.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-local-activation-state-transition-dry-run-receipt.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-local-activation-state-transition-dry-run:run
+```
+
+The local transition dry-run now:
+
+- requires the Stage 4y transition artifact receipt digest;
+- verifies Stage 4y -> 4x -> 4w -> 4v -> 4u -> 4t -> 4s -> 4r -> 4q -> 4p -> 4o -> 4n -> 4h digest continuity;
+- verifies owner approval and rollback-plan presence from Stage 4y;
+- imports the fixed harness module;
+- loads the Stage 4h artifact read-only;
+- runs tenant-scoped candidate-only queries;
+- verifies evidence refs;
+- verifies no transition is applied;
+- writes only a receipt.
+
+The receipt returns:
+
+- `eligible_for_local_transition_state_effect_review` when artifact lineage, module, artifact, query, evidence and governance checks all pass;
+- `not_eligible` when any gate blocks.
+
+This still does not activate runtime wiring. It only makes a later transition-state effect review gate discussable.
+
 ## Next gate
 
-Before any local activation-state transition dry-run:
+Before any local transition-state effect review:
 
-1. require the Stage 4y local activation-state transition receipt digest;
-2. define the exact local transition dry-run scope and commands;
+1. require the Stage 4z local activation-state transition dry-run receipt digest;
+2. define what effect, if any, can be considered a local active-state effect without broadening authority;
 3. preserve no-endpoint/no-scheduler/no-LLM/no-network/no-public-action governance unless separately reviewed;
 4. keep any real external/personal-surface action behind separate proposal and owner-review gates.
 

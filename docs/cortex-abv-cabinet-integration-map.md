@@ -525,6 +525,24 @@ Completed (read-only pilot): one synthetic scheduled-job plan + receipt, no runt
   - still does not apply activation or the transition.
 - Still forbidden: activation applied here, state transition applied here, endpoint, daemon/service lifecycle, scheduler, network calls, LLM calls, answer generation, source/artifact mutation, writes outside receipt, cross-tenant queries, public actions and autonomous execution.
 
+#### Stage 4z execution status (completed)
+
+- Added local activation-state transition dry-run:
+  - `cortex-abv/private-runtime/config/vector-runtime-local-activation-state-transition-dry-run.v1.json`
+  - `cortex-abv/private-runtime/src/vector-runtime-local-activation-state-transition-dry-run.mjs`
+  - `cortex-abv/private-runtime/receipts/vector-runtime-local-activation-state-transition-dry-run-receipt.v1.json`
+- Current receipt result:
+  - `eligibility: "eligible_for_local_transition_state_effect_review"`;
+  - `status: "passed"`;
+  - `blockers: []`.
+- Dry-run behavior:
+  - requires the Stage 4y local activation-state transition receipt digest;
+  - verifies owner approval lineage and rollback-plan presence;
+  - verifies Stage 4y -> 4x -> 4w -> 4v -> 4u -> 4t -> 4s -> 4r -> 4q -> 4p -> 4o -> 4n -> 4h digest continuity;
+  - imports the fixed harness module, loads the artifact read-only, runs tenant-scoped candidate-only queries and verifies evidence refs;
+  - still does not apply activation or the transition.
+- Still forbidden: activation applied here, state transition applied here, endpoint, daemon/service lifecycle, scheduler, network calls, LLM calls, answer generation, source/artifact mutation, writes outside receipt, cross-tenant queries, public actions and autonomous execution.
+
 ## Staged adoption (hard requirement)
 1. Read-only planning (contracts + synthetic map only)
 2. One read-only adapter job in private runtime

@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimeLocalActivationStateTransitionDryRun",
+  "version": "v1",
+  "authority": "local_activation_state_transition_dry_run_only",
+  "engine": "turbovec",
+  "purpose": "Execute the first bounded local activation-state transition dry-run after the explicit transition artifact, still without applying any transition. It verifies transition lineage, fixed callable module, read-only artifact loading, tenant-scoped candidate queries and no applied transition.",
+  "prerequisites": {
+    "requiredTransitionArtifactReceiptKind": "CortexABVVectorRuntimeLocalActivationStateTransitionReceipt",
+    "requiredTransitionArtifactEligibility": "eligible_for_local_activation_state_transition_dry_run",
+    "requiredTransitionArtifactStatus": "passed",
+    "requiresTransitionArtifactReceiptDigest": true
+  },
+  "module": {
+    "path": "src/vector-runtime-controlled-module-harness.mjs",
+    "type": "owner_invoked_same_process_transition_only",
+    "requiredBindings": [
+      "loadIndexArtifact",
+      "queryCandidates",
+      "verifyClaimEvidence"
+    ]
+  },
+  "artifact": {
+    "path": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+    "kind": "CortexABVVectorRuntimeIndexArtifact",
+    "version": "v1",
+    "readOnly": true
+  },
+  "queries": [
+    {
+      "id": "transition-dry-run-query-index-summary",
+      "tenant": "index-spike",
+      "query": "latest index spike public summary updates",
+      "expectedCandidateIds": [
+        "pp-index-spike-updates"
+      ],
+      "topK": 3,
+      "minScore": 0.05
+    },
+    {
+      "id": "transition-dry-run-query-monitor-readiness",
+      "tenant": "monitor-mn7r",
+      "query": "monitor mn7r repository readiness status",
+      "expectedCandidateIds": [
+        "pp-monitor-mn7r-dashboard"
+      ],
+      "topK": 3,
+      "minScore": 0.05
+    }
+  ],
+  "commands": {
+    "verifyStage4yDigest": "verify_stage4y_digest_local_activation_state_transition_dry_run",
+    "loadLocalRuntimeBinding": "load_local_runtime_binding_local_activation_state_transition_dry_run",
+    "queryLocalRuntimeBinding": "query_local_runtime_binding_local_activation_state_transition_dry_run",
+    "verifyTransitionNotApplied": "verify_transition_not_applied_local_activation_state_transition_dry_run"
+  },
+  "checks": {
+    "requiresModuleImportable": true,
+    "requiresBindingsPresent": true,
+    "requiresArtifactReadOnly": true,
+    "requiresStage4xReceiptDigest": true,
+    "requiresStage4wReceiptDigest": true,
+    "requiresStage4vReceiptDigest": true,
+    "requiresStage4uReceiptDigest": true,
+    "requiresStage4tReceiptDigest": true,
+    "requiresStage4sReceiptDigest": true,
+    "requiresStage4rReceiptDigest": true,
+    "requiresStage4qReceiptDigest": true,
+    "requiresStage4pReceiptDigest": true,
+    "requiresStage4oReceiptDigest": true,
+    "requiresStage4nReceiptDigest": true,
+    "requiresStage4hArtifactDigest": true,
+    "requiresStage4hSourceDigest": true,
+    "requiresTenantScope": true,
+    "requiresCandidatesOnly": true,
+    "requiresEvidenceRefs": true,
+    "requiresTransitionNotApplied": true,
+    "requiresRollbackPlan": true
+  },
+  "rollbackNotes": [
+    "If transition digest chain, approval lineage, module boundary, tenant scope, evidence or governance gates fail, abandon this receipt and keep runtime in inactive-ready state.",
+    "No endpoint, scheduler, daemon, model call, network action, source mutation, artifact mutation or public action is permitted by this dry-run."
+  ],
+  "governance": {
+    "readOnly": true,
+    "proposalOnly": true,
+    "dryRunOnly": true,
+    "runtimeActivationApplied": false,
+    "stateTransitionApplied": false,
+    "runtimeIntegration": false,
+    "endpoint": false,
+    "scheduler": false,
+    "networkCalls": false,
+    "llmCalls": false,
+    "writesOutsideReceipt": false,
+    "artifactMutation": false,
+    "sourceMutation": false,
+    "publicActionAuthority": false
+  }
+}

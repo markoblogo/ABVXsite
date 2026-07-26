@@ -530,18 +530,52 @@ The receipt returns:
 
 This still does not approve runtime wiring activation. It only makes a later controlled runtime wiring review gate discussable.
 
+### Stage 4o: controlled runtime wiring review
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/config/vector-runtime-controlled-wiring-review.v1.json`
+- `cortex-abv/private-runtime/src/vector-runtime-controlled-wiring-review.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-controlled-wiring-review.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-controlled-wiring-review-receipt.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-controlled-wiring-review:check
+```
+
+The wiring review defines what counts as a reviewed local wiring boundary:
+
+- Stage 4n controlled wiring POC dry-run receipt digest required;
+- private-runtime-only;
+- in-process local library binding only;
+- allowed module path: `src/vector-runtime-controlled-module-harness.mjs`;
+- allowed bindings limited to `loadIndexArtifact`, `queryCandidates`, `verifyClaimEvidence`;
+- candidates only, no answer generation;
+- tenant scope, hard threshold and evidence refs required;
+- receipt-only audit required.
+
+The receipt returns:
+
+- `eligible_for_runtime_activation_review` when review and Stage 4n gates pass;
+- `not_eligible` when any gate blocks.
+
+This still does not approve runtime activation. It only makes a separate runtime activation review gate discussable.
+
 Default stage-3 receipt artifact:
 
 - `cortex-abv/private-runtime/receipts/vector-retrieval-turbovec-shadow-receipt.v1.json`
 
 ## Next gate
 
-Before any controlled runtime wiring review:
+Before any runtime activation review:
 
-1. add a separate controlled wiring review gate;
-2. require the Stage 4n controlled wiring POC dry-run receipt digest;
-3. define exactly what wiring means operationally before any activation;
-4. preserve the same no-endpoint/no-LLM/no-network/no-public-action governance;
-5. keep runtime activation as a separate later owner-approved decision, not an implied result of review.
+1. add a separate runtime activation review gate;
+2. require the Stage 4o controlled wiring review receipt digest;
+3. define activation strictly as local private-runtime availability, not an endpoint or scheduler;
+4. preserve no-LLM/no-network/no-public-action governance unless a later owner policy explicitly changes it;
+5. keep any real external/personal-surface action behind separate proposal and owner-review gates.
 
 This keeps the governance rule: **no outbound action until auditability and evidence policy are proven.**

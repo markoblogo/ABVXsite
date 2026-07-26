@@ -437,6 +437,26 @@ The receipt returns `eligible_for_controlled_runtime_wiring_review` or `not_elig
 
 The dry-run uses only `loadIndexArtifact`, `queryCandidates` and `verifyClaimEvidence` from the existing local harness. It returns candidates only; no answer generation is allowed.
 
+## Vector runtime controlled wiring review
+
+The controlled wiring review gate defines what “wired” means before any runtime activation:
+
+- `config/vector-runtime-controlled-wiring-review.v1.json` defines the reviewed internal local binding boundary and separate activation boundary.
+- `src/vector-runtime-controlled-wiring-review.mjs` validates the contract against the Stage 4n controlled wiring POC dry-run receipt.
+- `test/vector-runtime-controlled-wiring-review.test.mjs` blocks a non-eligible Stage 4n receipt and activation/endpoint/LLM authority.
+- `receipts/vector-runtime-controlled-wiring-review-receipt.v1.json` records the Stage 4n digest, prerequisite digest chain, wiring definition and activation boundary.
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-controlled-wiring-review:check
+```
+
+The receipt returns `eligible_for_runtime_activation_review` or `not_eligible`. Eligibility means only that a later activation review gate can be discussed. It does not activate runtime wiring.
+
+The reviewed wiring boundary remains private-runtime-only, in-process local library binding only, candidates-only, tenant-scoped and evidence-backed. Endpoints, schedulers, network calls, model calls, public action authority, external writes, source/index mutation and answer generation remain forbidden.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

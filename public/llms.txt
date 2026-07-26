@@ -10,13 +10,13 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 - MN7R
   URL: https://abvx.xyz/work/mn7r
-  Summary: MN7R is a commodity trading workflow workspace for brokerage teams running Deals, Clients and EXE inside one structured operational system.
+  Summary: MN7R is a commodity trading workflow workspace for brokerage teams running Deals, Clients and EXE inside one structured operational system; it includes a public-facing site, a separate public synthetic /demo, public updates published through ABVX, and a governance-first summary update path for site-level facts.
   Group: Trading & Brokerage Platforms
   Tags: brokerage, agro-commodities, deal-workflows, execution, trading-workspace, market-infrastructure
 
 - Cropto
   URL: https://abvx.xyz/work/cropto
-  Summary: Cropto is a prototype commodity trading platform for indexed spot trading, options and tokenized commodity-linked instruments across Ukraine, Argentina and Brazil.
+  Summary: Cropto is an early-stage MVP commodity trading platform offering indexed spot trading, options, and tokenized commodity-linked instruments across Ukraine, Argentina and Brazil; the repository publishes a public monthly indexed-spot update cadence for those markets.
   Group: Trading & Brokerage Platforms
   Tags: cropto, agro-commodities, trading-platform, indexed-trading, options, tokenized-assets, market-infrastructure
 
@@ -34,7 +34,7 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 - SPIKE SPOT COMMODITY INDEX UKRAINE
   URL: https://abvx.xyz/work/spike-spot-commodity-index-ukraine
-  Summary: SPIKE SPOT COMMODITY INDEX UKRAINE is a benchmark and reference-price infrastructure project for Ukrainian agro-commodity spot markets.
+  Summary: SPIKE publishes 13 public positions grouped into Grains Export, Oilseeds Export and Oilseeds Crush, and issues weekly public market-commentary snapshots tracking local grain and oilseed spot context alongside benchmark values.
   Group: Market Intelligence, Monitoring & Indexes
   Tags: agro-commodities, Ukraine, spot-index, market-index, grain, oilseeds, benchmark, market-data
 

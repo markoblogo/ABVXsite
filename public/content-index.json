@@ -1891,7 +1891,7 @@
       "group": "Trading & Brokerage Platforms",
       "status": "building",
       "title": "Cropto",
-      "summary": "Cropto is a prototype commodity trading platform for indexed spot trading, options and tokenized commodity-linked instruments across Ukraine, Argentina and Brazil.",
+      "summary": "Cropto is an early-stage MVP commodity trading platform offering indexed spot trading, options, and tokenized commodity-linked instruments across Ukraine, Argentina and Brazil; the repository publishes a public monthly indexed-spot update cadence for those markets.",
       "canonicalUrl": "https://abvx.xyz/work/cropto",
       "tags": [
         "cropto",
@@ -1919,7 +1919,7 @@
           "url": "https://youtu.be/zumLJKZQFxc"
         }
       ],
-      "updatedAt": "2026-05-06",
+      "updatedAt": "2026-07-21",
       "related": []
     },
     {
@@ -2072,7 +2072,7 @@
       "group": "Trading & Brokerage Platforms",
       "status": "live",
       "title": "MN7R",
-      "summary": "MN7R is a commodity trading workflow workspace for brokerage teams running Deals, Clients and EXE inside one structured operational system.",
+      "summary": "MN7R is a commodity trading workflow workspace for brokerage teams running Deals, Clients and EXE inside one structured operational system; it includes a public-facing site, a separate public synthetic /demo, public updates published through ABVX, and a governance-first summary update path for site-level facts.",
       "canonicalUrl": "https://abvx.xyz/work/mn7r",
       "tags": [
         "brokerage",
@@ -2109,7 +2109,7 @@
           "url": "https://mn7r.substack.com/"
         }
       ],
-      "updatedAt": "2026-05-07",
+      "updatedAt": "2026-07-21",
       "related": []
     },
     {
@@ -2184,7 +2184,7 @@
       "group": "Market Intelligence, Monitoring & Indexes",
       "status": "live",
       "title": "SPIKE SPOT COMMODITY INDEX UKRAINE",
-      "summary": "SPIKE SPOT COMMODITY INDEX UKRAINE is a benchmark and reference-price infrastructure project for Ukrainian agro-commodity spot markets.",
+      "summary": "SPIKE publishes 13 public positions grouped into Grains Export, Oilseeds Export and Oilseeds Crush, and issues weekly public market-commentary snapshots tracking local grain and oilseed spot context alongside benchmark values.",
       "canonicalUrl": "https://abvx.xyz/work/spike-spot-commodity-index-ukraine",
       "tags": [
         "agro-commodities",
@@ -2210,7 +2210,7 @@
           "url": "https://github.com/markoblogo/index"
         }
       ],
-      "updatedAt": "2026-05-12",
+      "updatedAt": "2026-07-21",
       "related": [
         {
           "title": "UGA Index",

@@ -853,12 +853,43 @@ The receipt returns:
 
 This still does not activate runtime wiring. It only makes a later local state-transition review gate discussable.
 
+### Stage 4x: local activation-state transition review
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/config/vector-runtime-local-activation-state-transition-review.v1.json`
+- `cortex-abv/private-runtime/src/vector-runtime-local-activation-state-transition-review.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-local-activation-state-transition-review.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-local-activation-state-transition-review-receipt.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-local-activation-state-transition-review:check
+```
+
+The activation-state transition review now:
+
+- requires the Stage 4w local activation-state review receipt digest;
+- defines the minimal future transition artifact from inactive-ready to bounded owner-invoked local active runtime;
+- keeps the transition bounded to the fixed harness module, fixed bindings and private-runtime-only location;
+- confirms rollback-transition policy and receipt-only evidence;
+- writes only a review receipt.
+
+The receipt returns:
+
+- `eligible_for_local_activation_state_transition_artifact` when the Stage 4w proof and minimal transition boundary both hold;
+- `not_eligible` when any transition, digest or governance gate blocks.
+
+This still does not activate runtime wiring. It only makes a later local activation-state transition artifact discussable.
+
 ## Next gate
 
-Before any local activation-state transition review:
+Before any local activation-state transition artifact:
 
-1. require the Stage 4w local activation-state review receipt digest;
-2. define the minimal transition artifact that would move from inactive-ready to any later bounded local active state;
+1. require the Stage 4x local activation-state transition review receipt digest;
+2. define the explicit transition artifact fields and digest pinning;
 3. preserve no-endpoint/no-scheduler/no-LLM/no-network/no-public-action governance unless separately reviewed;
 4. keep any real external/personal-surface action behind separate proposal and owner-review gates.
 

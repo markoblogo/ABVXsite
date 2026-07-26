@@ -207,6 +207,7 @@ See also: [Cabinet pilot integration map](docs/cortex-abv-cabinet-integration-ma
 - `cortex-abv/private-runtime/config/vector-runtime-activation-decision.v1.json` records the explicit owner-approved local activation decision artifact and requires the Stage 4t receipt digest. It still does not activate runtime wiring; it only prepares a later bounded local activation dry-run.
 - `cortex-abv/private-runtime/config/vector-runtime-local-activation-dry-run.v1.json` defines the first post-decision local activation dry-run and requires the Stage 4u receipt digest. It verifies the full decision lineage, fixed callable boundary and read-only retrieval path, still without applying activation.
 - `cortex-abv/private-runtime/config/vector-runtime-local-activation-state-review.v1.json` defines the local activation-state review gate and requires the Stage 4v receipt digest. It formalizes the inactive-ready local state as receipt-defined only, still without applying activation or any state transition.
+- `cortex-abv/private-runtime/config/vector-runtime-local-activation-state-transition-review.v1.json` defines the local activation-state transition review gate and requires the Stage 4w receipt digest. It bounds the minimal transition artifact, still without applying activation or any state transition.
 
 Check the adapter contract and currently enabled project-sync targets:
 

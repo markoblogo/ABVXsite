@@ -607,6 +607,24 @@ npm run vector-runtime-local-activation-state-review:check
 
 The receipt returns `eligible_for_local_activation_state_transition_review` or `not_eligible`. Eligibility means only that a later local state-transition review can be discussed. It still does not apply activation, perform a state transition, expose an endpoint, start a scheduler, call a model, use network authority, mutate source/index artifacts or create public actions.
 
+## Vector runtime local activation-state transition review
+
+The local activation-state transition review gate now defines the minimal transition artifact that could later move the runtime out of the inactive-ready state, still without applying any transition:
+
+- `config/vector-runtime-local-activation-state-transition-review.v1.json` defines the Stage 4w prerequisite, minimal transition artifact boundary, required state signals, rollback-transition policy and next gate.
+- `src/vector-runtime-local-activation-state-transition-review.mjs` validates that transition-review contract against the Stage 4w local activation-state review receipt.
+- `test/vector-runtime-local-activation-state-transition-review.test.mjs` blocks a non-eligible Stage 4w receipt and any introduced transition-applied or endpoint authority.
+- `receipts/vector-runtime-local-activation-state-transition-review-receipt.v1.json` records the transition boundary, rollback-transition policy, next transition-artifact gate and governance.
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-local-activation-state-transition-review:check
+```
+
+The receipt returns `eligible_for_local_activation_state_transition_artifact` or `not_eligible`. Eligibility means only that a later local transition artifact can be discussed. It still does not apply activation, perform a state transition, expose an endpoint, start a scheduler, call a model, use network authority, mutate source/index artifacts or create public actions.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

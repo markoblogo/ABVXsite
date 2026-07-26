@@ -884,12 +884,43 @@ The receipt returns:
 
 This still does not activate runtime wiring. It only makes a later local activation-state transition artifact discussable.
 
+### Stage 4y: local activation-state transition artifact
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/config/vector-runtime-local-activation-state-transition.v1.json`
+- `cortex-abv/private-runtime/src/vector-runtime-local-activation-state-transition.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-local-activation-state-transition.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-local-activation-state-transition-receipt.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-local-activation-state-transition:run
+```
+
+The transition artifact now records:
+
+- explicit owner approval;
+- fixed transition intent;
+- fixed harness module path and allowlisted bindings;
+- rollback plan and owner reversal path;
+- digest lineage back through Stage 4x, 4w, 4v, 4u, 4t, 4s, 4r, 4q, 4p, 4o, 4n and 4h.
+
+The receipt returns:
+
+- `eligible_for_local_activation_state_transition_dry_run` when Stage 4x proof, explicit owner approval and rollback plan all hold;
+- `not_eligible` when any artifact, digest or governance boundary blocks.
+
+This still does not activate runtime wiring. It only makes a later bounded local transition dry-run discussable.
+
 ## Next gate
 
-Before any local activation-state transition artifact:
+Before any local activation-state transition dry-run:
 
-1. require the Stage 4x local activation-state transition review receipt digest;
-2. define the explicit transition artifact fields and digest pinning;
+1. require the Stage 4y local activation-state transition receipt digest;
+2. define the exact local transition dry-run scope and commands;
 3. preserve no-endpoint/no-scheduler/no-LLM/no-network/no-public-action governance unless separately reviewed;
 4. keep any real external/personal-surface action behind separate proposal and owner-review gates.
 

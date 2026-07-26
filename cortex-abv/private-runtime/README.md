@@ -625,6 +625,24 @@ npm run vector-runtime-local-activation-state-transition-review:check
 
 The receipt returns `eligible_for_local_activation_state_transition_artifact` or `not_eligible`. Eligibility means only that a later local transition artifact can be discussed. It still does not apply activation, perform a state transition, expose an endpoint, start a scheduler, call a model, use network authority, mutate source/index artifacts or create public actions.
 
+## Vector runtime local activation-state transition artifact
+
+The local activation-state transition artifact now records the explicit owner-approved transition artifact under the Stage 4x boundary, still without applying any transition:
+
+- `config/vector-runtime-local-activation-state-transition.v1.json` defines owner approval, transition intent, rollback plan, next gate, forbidden authority and governance.
+- `src/vector-runtime-local-activation-state-transition.mjs` validates the transition artifact against the Stage 4x transition-review receipt.
+- `test/vector-runtime-local-activation-state-transition.test.mjs` blocks a non-eligible Stage 4x receipt and missing owner approval or any transition-applied flag.
+- `receipts/vector-runtime-local-activation-state-transition-receipt.v1.json` records the owner-approved local transition artifact, digest lineage and the next dry-run gate.
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-local-activation-state-transition:run
+```
+
+The receipt returns `eligible_for_local_activation_state_transition_dry_run` or `not_eligible`. Eligibility means only that a later bounded local transition dry-run may be prepared. It still does not apply activation, perform a state transition, expose an endpoint, start a scheduler, call a model, use network authority, mutate source/index artifacts or create public actions.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

@@ -1069,3 +1069,33 @@ The decision returns:
 - `not_eligible` when any prerequisite, approval or governance boundary is incomplete.
 
 This still does not apply effects, transitions or runtime activation, and still forbids endpoints, schedulers, network/LLM calls, source or artifact mutation, and public actions.
+
+### Stage 4ae: local effect transition artifact
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/config/vector-runtime-local-effect-transition.v1.json`
+- `cortex-abv/private-runtime/src/vector-runtime-local-effect-transition.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-local-effect-transition.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-local-effect-transition-receipt.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-local-effect-transition:check
+```
+
+This stage formalizes the explicit owner-approved local effect transition artifact before any dry-run execution:
+
+- requires the Stage 4ad local effect-application decision receipt digest;
+- preserves the bounded transition intent: no local effect transition, no state transition, and no runtime activation in this stage;
+- keeps fixed module/path/binding constraints and strict governance (`readOnly`, `proposalOnly`, no endpoint/network/LLM/public-action/source or artifact mutation, no external writes);
+- records the inherited digest chain and next-gate target for local effect transition dry-run.
+
+The receipt returns:
+
+- `eligible_for_local_effect_transition_dry_run` when Stage 4ad proof, owner approval, transition intent and governance are all valid;
+- `not_eligible` when any prerequisite, digest or governance boundary is incomplete.
+
+This stage does not apply any transition/effect/activation and does not change proposal/public surfaces.

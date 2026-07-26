@@ -753,6 +753,35 @@ The decision returns:
 
 This still does not apply effects, activation, state transitions, network/LLM calls, endpoint authority, source mutation, artifact mutation or public actions.
 
+## Vector runtime local effect transition artifact
+
+The local effect transition artifact records an explicit owner-approved transition plan under the Stage 4ad boundary, still without applying transition, effects, state change, or runtime activation:
+
+- `config/vector-runtime-local-effect-transition.v1.json` defines the Stage 4ad prerequisite, owner approval, effect-transition intent, rollback plan, next-gate target and forbidden authority.
+- `src/vector-runtime-local-effect-transition.mjs` validates the transition artifact and Stage 4ad receipt, checks transition/evidence-boundary alignment, and writes a transition receipt.
+- `test/vector-runtime-local-effect-transition.test.mjs` blocks a non-eligible Stage 4ad receipt, missing owner approval, applied transition, and target-state drift cases.
+- `receipts/vector-runtime-local-effect-transition-receipt.v1.json` records the inherited digest chain and the next bounded dry-run gate.
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-local-effect-transition:check
+```
+
+This stage:
+
+- requires the Stage 4ad local effect-application decision receipt digest;
+- preserves the `eligible_for_local_effect_transition_dry_run` boundary when every upstream proof and boundary check passes;
+- keeps governance strictly bounded (no effect transition here, no transition/state-change side effects, no activation, no endpoint/network/LLM/public actions, no source/artifact mutation, no external writes).
+
+The transition artifact receipt returns:
+
+- `eligible_for_local_effect_transition_dry_run` when owner approval, Stage 4ad proof, transition boundaries and governance all pass;
+- `not_eligible` when any prerequisite, digest, or governance boundary is incomplete.
+
+This still does not apply transition/effects/activation; it only prepares the next dry-run gate.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

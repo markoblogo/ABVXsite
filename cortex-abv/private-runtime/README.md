@@ -477,6 +477,26 @@ The receipt returns `eligible_for_runtime_activation_dry_run_review` or `not_eli
 
 Activation is defined narrowly as a local process-bound callable interface inside `cortex-abv/private-runtime`. Endpoints, schedulers, network calls, model calls, public action authority, external writes, source/index mutation, cross-tenant queries, answer generation and baseline advancement remain forbidden.
 
+## Vector runtime activation dry-run review
+
+The activation dry-run review gate defines the minimum scope for a future local activation dry-run:
+
+- `config/vector-runtime-activation-dry-run-review.v1.json` defines dry-run commands, rollback, digest chain and local callable interface checks.
+- `src/vector-runtime-activation-dry-run-review.mjs` validates the contract against the Stage 4p runtime activation review receipt.
+- `test/vector-runtime-activation-dry-run-review.test.mjs` blocks a non-eligible Stage 4p receipt and activation/network/shell authority.
+- `receipts/vector-runtime-activation-dry-run-review-receipt.v1.json` records the Stage 4p digest, prerequisite digest chain, dry-run scope and forbidden authority.
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-activation-dry-run-review:check
+```
+
+The receipt returns `eligible_for_runtime_activation_dry_run` or `not_eligible`. Eligibility means only that a later local activation dry-run can be run. It still does not activate runtime wiring.
+
+The future dry-run is limited to local callable interface checks: module importability, binding presence, read-only artifact load, tenant-scoped candidate-only query, evidence verification and proof that activation is not exposed. Writes remain receipt-only.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

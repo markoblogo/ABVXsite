@@ -597,18 +597,53 @@ The receipt returns:
 
 This still does not approve runtime activation. It only makes a later activation dry-run review discussable.
 
+### Stage 4q: runtime activation dry-run review
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/config/vector-runtime-activation-dry-run-review.v1.json`
+- `cortex-abv/private-runtime/src/vector-runtime-activation-dry-run-review.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-activation-dry-run-review.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-activation-dry-run-review-receipt.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-activation-dry-run-review:check
+```
+
+The activation dry-run review defines the minimum future dry-run scope:
+
+- Stage 4p runtime activation review receipt digest required;
+- future runner path: `src/vector-runtime-activation-dry-run.mjs`;
+- future test path: `test/vector-runtime-activation-dry-run.test.mjs`;
+- allowed module path: `src/vector-runtime-controlled-module-harness.mjs`;
+- local callable interface checks required: module import, binding presence, read-only artifact load, tenant-scoped candidate-only query, evidence refs and no exposed activation;
+- commands limited to `verify_stage4p_digest_activation_dry_run`, `load_local_runtime_binding_activation_dry_run`, `query_local_runtime_binding_activation_dry_run`, `verify_activation_not_exposed_activation_dry_run`;
+- writes limited to `receipt_only`;
+- rollback notes and owner review required.
+
+The receipt returns:
+
+- `eligible_for_runtime_activation_dry_run` when review and Stage 4p gates pass;
+- `not_eligible` when any gate blocks.
+
+This still does not activate runtime wiring. It only makes a later local activation dry-run executable under the same local-only boundary.
+
 Default stage-3 receipt artifact:
 
 - `cortex-abv/private-runtime/receipts/vector-retrieval-turbovec-shadow-receipt.v1.json`
 
 ## Next gate
 
-Before any runtime activation dry-run:
+Before running the first runtime activation dry-run:
 
-1. add a separate runtime activation dry-run review/scope gate;
-2. require the Stage 4p activation review receipt digest;
-3. keep activation local-process-only and receipt-only;
-4. preserve no-endpoint/no-scheduler/no-LLM/no-network/no-public-action governance;
-5. keep any real external/personal-surface action behind separate proposal and owner-review gates.
+1. implement `src/vector-runtime-activation-dry-run.mjs`;
+2. require the Stage 4q activation dry-run review receipt digest;
+3. execute only the allowlisted local callable checks;
+4. write only `receipts/vector-runtime-activation-dry-run-receipt.v1.json`;
+5. preserve no-endpoint/no-scheduler/no-LLM/no-network/no-public-action governance;
+6. keep any real external/personal-surface action behind separate proposal and owner-review gates.
 
 This keeps the governance rule: **no outbound action until auditability and evidence policy are proven.**

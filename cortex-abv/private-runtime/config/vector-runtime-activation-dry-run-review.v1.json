@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimeActivationDryRunReview",
+  "version": "v1",
+  "authority": "activation_dry_run_review_only",
+  "engine": "turbovec",
+  "purpose": "Define the minimum scope for a future local runtime activation dry-run. This does not activate runtime wiring.",
+  "prerequisites": {
+    "requiredActivationReviewReceiptKind": "CortexABVVectorRuntimeActivationReviewReceipt",
+    "requiredActivationReviewEligibility": "eligible_for_runtime_activation_dry_run_review",
+    "requiredActivationReviewStatus": "passed",
+    "requiresActivationReviewReceiptDigest": true
+  },
+  "dryRunScope": {
+    "futureRunnerPath": "src/vector-runtime-activation-dry-run.mjs",
+    "futureTestPath": "test/vector-runtime-activation-dry-run.test.mjs",
+    "mode": "local_activation_dry_run_scope_review_only",
+    "targetEligibility": "eligible_for_runtime_activation_dry_run",
+    "allowedLocation": "cortex-abv-private-runtime-only",
+    "activationMode": "local_process_bound_callable_only",
+    "allowedModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+    "allowedBindings": [
+      "loadIndexArtifact",
+      "queryCandidates",
+      "verifyClaimEvidence"
+    ],
+    "allowedArtifactPath": "data/vector-indexes/turbovec-poc/index-artifact.v1.json",
+    "localCallableInterfaceChecks": [
+      "module_importable",
+      "bindings_present",
+      "artifact_loads_read_only",
+      "tenant_scoped_query_returns_candidates_only",
+      "evidence_refs_verified",
+      "activation_not_exposed"
+    ],
+    "commands": [
+      "verify_stage4p_digest_activation_dry_run",
+      "load_local_runtime_binding_activation_dry_run",
+      "query_local_runtime_binding_activation_dry_run",
+      "verify_activation_not_exposed_activation_dry_run"
+    ],
+    "commandsMustEndWith": "_activation_dry_run",
+    "writesAllowed": [
+      "receipt_only"
+    ],
+    "rollbackAction": "abandon_activation_dry_run_receipt_and_do_not_activate_runtime",
+    "rollbackNotesRequired": true,
+    "ownerReviewRequired": true
+  },
+  "digestChain": {
+    "requiresStage4pReceiptDigest": true,
+    "requiresStage4oReceiptDigest": true,
+    "requiresStage4nReceiptDigest": true,
+    "requiresStage4hArtifactDigest": true,
+    "requiresStage4hSourceDigest": true,
+    "requiresReceiptLinkageDigest": true
+  },
+  "forbiddenAuthority": {
+    "runtimeActivationAllowed": false,
+    "endpointAllowed": false,
+    "schedulerAllowed": false,
+    "networkCallsAllowed": false,
+    "llmCallsAllowed": false,
+    "publicActionAuthorityAllowed": false,
+    "answerGenerationAllowed": false,
+    "sourceMutationAllowed": false,
+    "artifactMutationAllowed": false,
+    "writesOutsideReceiptAllowed": false,
+    "crossTenantQueriesAllowed": false,
+    "baselineAdvancementAllowed": false,
+    "dependencyInstallAllowed": false,
+    "shellAccessAllowed": false
+  },
+  "rejectionCases": [
+    "activation_review_not_eligible",
+    "missing_stage4p_receipt_digest",
+    "missing_stage4o_receipt_digest",
+    "missing_stage4n_receipt_digest",
+    "missing_stage4h_artifact_digest",
+    "missing_stage4h_source_digest",
+    "missing_receipt_linkage_digest",
+    "missing_local_callable_interface_check",
+    "non_allowlisted_command",
+    "non_receipt_write_requested",
+    "runtime_activation_requested",
+    "endpoint_requested",
+    "scheduler_requested",
+    "network_calls_requested",
+    "llm_calls_requested",
+    "public_action_authority_requested",
+    "answer_generation_requested",
+    "source_mutation_requested",
+    "artifact_mutation_requested",
+    "cross_tenant_queries_requested",
+    "baseline_advancement_requested",
+    "dependency_install_requested",
+    "shell_access_requested",
+    "missing_rollback_notes",
+    "missing_owner_review"
+  ],
+  "governance": {
+    "readOnly": true,
+    "proposalOnly": true,
+    "activationDryRunReviewOnly": true,
+    "runtimeActivationApproved": false,
+    "runtimeIntegration": false,
+    "endpoint": false,
+    "scheduler": false,
+    "networkCalls": false,
+    "llmCalls": false,
+    "writesOutsideReceipt": false,
+    "publicActionAuthority": false
+  }
+}

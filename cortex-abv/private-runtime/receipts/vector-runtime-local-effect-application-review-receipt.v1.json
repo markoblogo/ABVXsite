@@ -5,13 +5,13 @@
   "authority": "local_effect_application_review_only",
   "status": "passed",
   "eligibility": "eligible_for_local_effect_application",
-  "runAt": "2026-07-26T22:33:52.001Z",
+  "runAt": "2026-07-28T16:36:16.903Z",
   "mode": "local_effect_application_review",
   "engine": "turbovec",
   "reviewDigest": "078b49f890db969c8660432d92e14043d679bbcdc7f09ca2429c5e4a32749274",
-  "stage4abReceiptDigest": "203e4175f0894edd72bcf8263febc339368a7002aa333cf4e1083a93e9db47fd",
+  "stage4abReceiptDigest": "a2ca58c678cf046c9964a089393480eb8ed7b173d4f07d14f63ab5e574ddb089",
   "prerequisiteDigests": {
-    "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+    "stage4aaReceiptDigest": "b17a081b8f7fe166563cfc5e498eb675a94de4fadc043e9d119abab70c615fbb",
     "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
     "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
     "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
@@ -93,7 +93,7 @@
       "kind": "CortexABVVectorRuntimeLocalTransitionStateEffectReceipt",
       "status": "passed",
       "eligibility": "eligible_for_local_effect_application_review",
-      "digest": "203e4175f0894edd72bcf8263febc339368a7002aa333cf4e1083a93e9db47fd"
+      "digest": "a2ca58c678cf046c9964a089393480eb8ed7b173d4f07d14f63ab5e574ddb089"
     }
   },
   "gates": {
@@ -1159,7 +1159,7 @@
         "status": "accepted",
         "reason": "Stage 4aa digest must be present",
         "evidence": {
-          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5"
+          "stage4aaReceiptDigest": "b17a081b8f7fe166563cfc5e498eb675a94de4fadc043e9d119abab70c615fbb"
         }
       },
       {

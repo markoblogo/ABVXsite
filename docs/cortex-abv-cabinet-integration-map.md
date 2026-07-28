@@ -54,11 +54,19 @@ Completed (read-only pilot): one synthetic scheduled-job plan + receipt, no runt
 - Receipt gate: read-only, proposal-like output with explicit `reviewStatus` and `approvalOutcome`.
 - Evidence basis: local `public-presence-index` and `public-project-registry` snapshots only.
 
-#### Stage 2 execution status (in-progress)
+#### Stage 2 execution status (completed)
 
 - Add scheduler runner that emits a real receipt artifact per planned run.
   - Implemented command: `npm run cortex-abv:cabinet-stage1-run`
   - Latest real run output: `cortex-abv/private-runtime/receipts/cabinet-stage1-scheduled-jobs-receipt.v1.json`
+
+- Pass B (real source packets) executed:
+  - Contract: `cortex-abv/private-runtime/config/cabinet-scheduled-jobs-stage2-passb-real-sources.v1.json`
+  - Receipt: `cortex-abv/private-runtime/receipts/cabinet-stage1-scheduled-jobs-passb-receipt.v1.json`
+  - Source packets:
+    - `cortex-abv/private-runtime/examples/real-index-spike-project-update.json`
+    - `cortex-abv/private-runtime/examples/real-monitor-mn7r-project-update.json`
+  - both adapters admitted in one ledger chain (`import-ledger.jsonl`) with explicit `sourceAdapterDecisions` and `decisionTrace`.
 
 - Add synthetic + one real source-specific adapter in this same job envelope before any write authority.
   - Completed in repo: `monitor-mn7r-shadow` synthetic adapter is now bound in `cabinet-scheduled-jobs-stage1.v1.json` and executed in the runner. The adapter uses `import-admission-policy.v1` and keeps `source_specific_override` in `decisionTrace` for audit, but does not write any files or API calls.
@@ -594,6 +602,18 @@ Completed (read-only pilot): one synthetic scheduled-job plan + receipt, no runt
   - verifies local-only allowed application paths (`candidate_query_preview`, `claim_evidence_verification`, `rollback_readiness_review`, `proposal_alignment_review`);
   - keeps discussion strictly local, evidence-backed, tenant-scoped and receipt-only.
 - Still forbidden: runtime activation applied here, state transition applied here, effect applied here, endpoint, daemon/service lifecycle, scheduler, network calls, LLM calls, answer generation, source/artifact mutation, writes outside receipt, public actions, and autonomous execution.
+
+#### Stage 4ag execution status (pending, next)
+
+- Planned next gate after Pass B: effect-application execution precheck for local-only transitions.
+- Prerequisites:
+  - completion of the latest local-effect review chain (4ac) and integrity of `import-ledger.jsonl` with Pass B source adapter entries;
+  - explicit snapshot+receipt bundle proving no public write intent.
+- 4ag acceptance criteria:
+  - only allowlisted local effect names are discussable;
+  - no activation/state transition remains applied or schedulable here;
+  - rollback and owner-review chain must be explicit in the decision trace.
+- Resulting gate outputs remain proposal-only and read/write-op-free.
 
 ## Staged adoption (hard requirement)
 1. Read-only planning (contracts + synthetic map only)

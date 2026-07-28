@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVCabinetScheduledJobsPlan",
+  "version": "v1",
+  "module": "cabinet_scheduled_jobs",
+  "authority": "plan",
+  "externalSideEffects": false,
+  "runtimeIntegration": false,
+  "stage": "stage_1",
+  "jobs": [
+    {
+      "jobId": "public-corpus-freshness-audit",
+      "title": "Public source freshness audit",
+      "mode": "read_only",
+      "frequency": {
+        "type": "manual_or_local_only",
+        "notes": "No cron scheduler or external trigger is attached at Stage 1."
+      },
+      "sources": [
+        {
+          "kind": "artifact",
+          "path": "cortex-abv/public-presence-index.v1.json",
+          "kindDescription": "Baseline public corpus snapshot"
+        },
+        {
+          "kind": "artifact",
+          "path": "cortex-abv/public-project-registry.v1.json",
+          "kindDescription": "Project registry boundary"
+        }
+      ],
+      "checks": [
+        "artifact_shape_stable",
+        "receipt_schema_anchored",
+        "no_proposed_mutations"
+      ],
+      "sourceAdapters": [
+        {
+          "adapterId": "monitor-mn7r-shadow",
+          "enabled": true,
+          "sourcePacket": "cortex-abv/private-runtime/examples/real-monitor-mn7r-project-update.json",
+          "note": "First real owned-source packet (Pass B) with repository SHA evidence; no side effects."
+        },
+        {
+          "adapterId": "index-spike-shadow",
+          "enabled": true,
+          "sourcePacket": "cortex-abv/private-runtime/examples/real-index-spike-project-update.json",
+          "note": "Second real owned-source packet (Pass B) with repository evidence and policy admission trace."
+        }
+      ],
+      "sourceAdapterTracePolicy": {
+        "requireDecisionTrace": true,
+        "resultPath": "result.sourceAdapters[].decisionTrace"
+      },
+        "output": {
+          "receiptPath": "cortex-abv/private-runtime/receipts/cabinet-stage1-scheduled-jobs-passb-receipt.v1.json",
+          "statusField": "reviewStatus",
+          "requiredReviewActions": ["approve", "reject"]
+        },
+      "retryPolicy": {
+        "maxAttempts": 3,
+        "backoffMinutes": 5,
+        "onFailure": "record_retry_reason_and_require_human_decision"
+      },
+      "gates": [
+        {
+          "name": "governance_gate",
+          "type": "receipt_only",
+          "allowWrite": false,
+          "requirePendingReview": true
+        }
+      ]
+    }
+  ],
+  "decisionTrace": {
+    "policySource": "base",
+    "reason": "Pass B keeps read-only synthetic mode for execution, but reads real source packets for evidence-bound adapter validation."
+  },
+  "notes": [
+    "Pass B validates real source packets in a local synthetic path with identical governance constraints.",
+    "No side effects, no writes, no endpoints, proposal-only receipts only."
+  ]
+}

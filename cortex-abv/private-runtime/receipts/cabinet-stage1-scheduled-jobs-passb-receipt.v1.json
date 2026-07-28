@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVCabinetStage1Receipt",
+  "module": "cabinet_scheduled_jobs",
+  "stage": 1,
+  "status": "implemented",
+  "authority": "proposal",
+  "reviewStatus": "pending_review",
+  "createdAt": "2026-07-28T16:47:42.116Z",
+  "runMode": "local_synthetic_read_only",
+  "contractPath": "cortex-abv/private-runtime/config/cabinet-scheduled-jobs-stage2-passb-real-sources.v1.json",
+  "decisionTrace": {
+    "policySource": "base",
+    "reason": "Real local synthetic run against versioned public artifacts; no network/endpoint actions",
+    "sourceKind": null,
+    "sourceId": null,
+    "basePolicy": {
+      "allowedPatchFields": [
+        "summary",
+        "bodyAppendix",
+        "updatedAt",
+        "sync.lastAppliedCommit",
+        "sync.lastAppliedAt"
+      ]
+    },
+    "sourceOverride": null
+  },
+  "results": [
+    {
+      "jobId": "public-corpus-freshness-audit",
+      "title": "Public source freshness audit",
+      "status": "pending_review",
+      "evidence": [
+        {
+          "path": "cortex-abv/public-presence-index.v1.json",
+          "sha256": "2e3e2e0837e753ce8dafe346b4cc393c501b5474f622758417ad2553c6ea3cc8"
+        },
+        {
+          "path": "cortex-abv/public-project-registry.v1.json",
+          "sha256": "a6ef8c5ff58a1b73620db371c651c9b942bdf898a2e272fa3929952e6d04518c"
+        }
+      ],
+      "decisionTrace": {
+        "policySource": "base",
+        "sourceKind": null,
+        "sourceId": null,
+        "reason": "Pass B keeps read-only synthetic mode for execution, but reads real source packets for evidence-bound adapter validation.",
+        "failure": null,
+        "sourceAdapterDecisions": [
+          {
+            "adapterId": "monitor-mn7r-shadow",
+            "status": "admitted",
+            "sourceKind": "owned_project_ecosystem",
+            "sourceId": "monitor",
+            "packetKind": "CortexABVImportPacket",
+            "packetId": "packet:monitor-mn7r:monitor-mn7r-update-real-2026-07-28",
+            "dataKind": "monitor_project_update",
+            "decisionTrace": {
+              "sourceKind": "owned_project_ecosystem",
+              "sourceId": "monitor",
+              "dataKind": "monitor_project_update",
+              "policySource": "source_specific_override",
+              "reason": "source rule 'owned_project_ecosystem/monitor' overrides protected policy",
+              "basePolicy": {
+                "maxAgeDays": 14,
+                "personalSurfaceEligibility": {
+                  "mode": "private_context_only",
+                  "targets": []
+                }
+              },
+              "sourceOverride": {
+                "maxAgeDays": 14,
+                "personalSurfaceEligibility": {
+                  "mode": "private_context_only",
+                  "targets": []
+                }
+              }
+            },
+            "packetDigest": "1553da09cd621cb860f42c50972f2e201ca93ef55ae5ba12d9d5bd64ef0692fb"
+          },
+          {
+            "adapterId": "index-spike-shadow",
+            "status": "admitted",
+            "sourceKind": "owned_project_ecosystem",
+            "sourceId": "index/spike",
+            "packetKind": "CortexABVImportPacket",
+            "packetId": "packet:index-spike:index-spike-update-real-2026-07-28",
+            "dataKind": "index_spike_project_update",
+            "decisionTrace": {
+              "sourceKind": "owned_project_ecosystem",
+              "sourceId": "index/spike",
+              "dataKind": "index_spike_project_update",
+              "policySource": "base",
+              "reason": "no source override"
+            },
+            "packetDigest": "2104e9c2df3beeb5e394e0830a54a3178b5dff7be4f5bc230fa9643ff5b4ce0c"
+          }
+        ],
+        "basePolicy": {
+          "allowedPatchFields": [
+            "summary",
+            "bodyAppendix",
+            "updatedAt",
+            "sync.lastAppliedCommit",
+            "sync.lastAppliedAt"
+          ]
+        },
+        "sourceSpecificOverrideObserved": true,
+        "notes": "artifact digests changed; proposal review required"
+      },
+      "sourceAdapters": [
+        {
+          "adapterId": "monitor-mn7r-shadow",
+          "status": "admitted",
+          "sourceKind": "owned_project_ecosystem",
+          "sourceId": "monitor",
+          "packetKind": "CortexABVImportPacket",
+          "packetId": "packet:monitor-mn7r:monitor-mn7r-update-real-2026-07-28",
+          "dataKind": "monitor_project_update",
+          "decisionTrace": {
+            "sourceKind": "owned_project_ecosystem",
+            "sourceId": "monitor",
+            "dataKind": "monitor_project_update",
+            "policySource": "source_specific_override",
+            "reason": "source rule 'owned_project_ecosystem/monitor' overrides protected policy",
+            "basePolicy": {
+              "maxAgeDays": 14,
+              "personalSurfaceEligibility": {
+                "mode": "private_context_only",
+                "targets": []
+              }
+            },
+            "sourceOverride": {
+              "maxAgeDays": 14,
+              "personalSurfaceEligibility": {
+                "mode": "private_context_only",
+                "targets": []
+              }
+            }
+          },
+          "packetDigest": "1553da09cd621cb860f42c50972f2e201ca93ef55ae5ba12d9d5bd64ef0692fb"
+        },
+        {
+          "adapterId": "index-spike-shadow",
+          "status": "admitted",
+          "sourceKind": "owned_project_ecosystem",
+          "sourceId": "index/spike",
+          "packetKind": "CortexABVImportPacket",
+          "packetId": "packet:index-spike:index-spike-update-real-2026-07-28",
+          "dataKind": "index_spike_project_update",
+          "decisionTrace": {
+            "sourceKind": "owned_project_ecosystem",
+            "sourceId": "index/spike",
+            "dataKind": "index_spike_project_update",
+            "policySource": "base",
+            "reason": "no source override"
+          },
+          "packetDigest": "2104e9c2df3beeb5e394e0830a54a3178b5dff7be4f5bc230fa9643ff5b4ce0c"
+        }
+      ]
+    }
+  ],
+  "requiredReviewActions": {
+    "approve": {
+      "status": "required",
+      "notes": "Approve only after confirming checks match governance and no write intent was introduced."
+    },
+    "reject": {
+      "status": "required",
+      "notes": "Reject on any job failure, missing artifact, or unexpected write-path attempt."
+    }
+  },
+  "retry": {
+    "maxAttempts": 3,
+    "nextAttemptPolicy": "retry_on_manual_review_with_retry_note",
+    "nextAttempt": null
+  },
+  "sourceDigest": {
+    "presenceIndexSha256": "2e3e2e0837e753ce8dafe346b4cc393c501b5474f622758417ad2553c6ea3cc8",
+    "projectRegistrySha256": "a6ef8c5ff58a1b73620db371c651c9b942bdf898a2e272fa3929952e6d04518c"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "kind": "MonitorProjectUpdatePacket",
+  "updateId": "monitor-mn7r-update-real-2026-07-28",
+  "projectId": "monitor",
+  "productId": "mn7r",
+  "sourceStatus": "observed",
+  "changeSet": [
+    {
+      "surface": "repository",
+      "kind": "metadata_update",
+      "ref": "repository:markoblogo/mn7r:README.md"
+    }
+  ],
+  "evidence": [
+    {
+      "ref": "repository:markoblogo/mn7r/README.md@bafb84508b4739e651bd0428100601fae56f7126",
+      "status": "observed"
+    }
+  ],
+  
+  "review": {
+    "status": "not_requested"
+  },
+  "blockers": [],
+  "observedAt": "2026-07-28T16:47:12Z",
+  "sourceDigest": "fa783740300297809a56c605ef58bd552b88110b8e1b84850c54cf9403c43e30"
+}

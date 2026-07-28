@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "kind": "IndexSpikeProjectUpdatePacket",
+  "updateId": "index-spike-update-real-2026-07-28",
+  "projectId": "index/spike",
+  "sourceStatus": "observed",
+  "changeSet": [
+    {
+      "surface": "repository",
+      "kind": "metadata_update",
+      "ref": "repository:markoblogo/index:README.md"
+    }
+  ],
+  "evidence": [
+    {
+      "ref": "repository:markoblogo/index/README.md@c25a7b0a1e80f0bfee46253ffca512748a305430",
+      "status": "observed"
+    }
+  ],
+  "review": {
+    "status": "not_requested"
+  },
+  "blockers": [],
+  "observedAt": "2026-07-28T16:47:12Z",
+  "sourceDigest": "39a68cfd45cccf92d13c39a538407a34b8047534c3d1a4ca0aee9b6fbde10572"
+}

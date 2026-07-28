@@ -55,14 +55,24 @@ Before Stage 2 is opened:
 
 ## Current Stage 2 status
 
-Real adapters now wired:
+Pass B current status:
 
 - adapterId: `monitor-mn7r-shadow`
-- source packet: `cortex-abv/private-runtime/examples/synthetic-monitor-mn7r-project-update.json`
+- source packet: `cortex-abv/private-runtime/examples/real-monitor-mn7r-project-update.json`
 - evidence trace: stored in `sourceAdapters` entries inside `cabinet-stage1-scheduled-jobs-receipt.v1.json`
 - adapterId: `index-spike-shadow`
-- source packet: `cortex-abv/private-runtime/examples/synthetic-index-spike-project-update.json`
+- source packet: `cortex-abv/private-runtime/examples/real-index-spike-project-update.json`
 - evidence trace: also stored in `sourceAdapters` entries as `decisionTrace`
+- Pass B real-shadow receipt: `cortex-abv/private-runtime/receipts/cabinet-stage1-scheduled-jobs-passb-receipt.v1.json`
+- Pass B source contract: `cortex-abv/private-runtime/config/cabinet-scheduled-jobs-stage2-passb-real-sources.v1.json`
+
+The 2-adapter shadow execution includes:
+
+- append-only ledger `cortex-abv/private-runtime/data/import-ledger.jsonl` with two appended entries;
+- `monitor-mn7r-shadow` admitted with `source_specific_override` in `decisionTrace`;
+- `index-spike-shadow` admitted with base policy decision.
+
+The latest ledger receipt is `pending_review` because tracked public-snapshot digests changed, and all operations remained in local synthetic/read-only mode.
 
 ### New adapter trace rule
 

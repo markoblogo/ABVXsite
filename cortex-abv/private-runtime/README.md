@@ -811,6 +811,36 @@ The dry-run receipt returns:
 
 This remains read-only, review-only, and does not introduce any endpoint, network, LLM, public action, source/artifact mutation, or activation authority.
 
+## Vector runtime local effect transition review
+
+The local effect transition review converts the Stage 4af dry-run outcome into a bounded receipt-first decision gate:
+
+- `config/vector-runtime-local-effect-transition-review.v1.json` defines the 4ag prerequisite, strict transition scope, allowlisted bindings/module, and review governance.
+- `src/vector-runtime-local-effect-transition-review.mjs` validates the Stage 4af dry-run receipt lineage and digest continuity, checks transition/authority boundaries, and writes a review receipt.
+- `test/vector-runtime-local-effect-transition-review.test.mjs` blocks a non-eligible Stage 4af receipt and any introduced transition/activation/endpoint authority.
+- `receipts/vector-runtime-local-effect-transition-review-receipt.v1.json` records the explicit local transition-review context and governance evidence.
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-local-effect-transition-review:check
+```
+
+This stage:
+
+- requires the Stage 4af local effect transition dry-run receipt with `eligible_for_local_transition_state_effect_review`;
+- keeps transition decisions bound to `strictly_local_receipt_only`, fixed harness bindings, tenant-scoped evidence-backed query behavior;
+- prevents transition/state/activation application in this gate;
+- preserves proposal-only review behavior with no endpoint, network, LLM, public action, source mutation, artifact mutation, or external writes.
+
+The review receipt returns:
+
+- `eligible_for_local_effect_transition_review` when all review gates and Stage 4af proof pass;
+- `not_eligible` when any prerequisite, continuity, or governance gate blocks.
+
+This remains proposal-only and does not apply transitions, effects, or runtime activation.
+
 ## Stage 1 Cabinet pilot: scheduled jobs contract
 
 For the current Cabinet pilot Stage 1, the runtime snapshot now includes:

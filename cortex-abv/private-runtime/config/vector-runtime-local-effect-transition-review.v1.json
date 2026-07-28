@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVVectorRuntimeLocalEffectTransitionReview",
+  "version": "v1",
+  "authority": "local_effect_transition_review_only",
+  "engine": "turbovec",
+  "purpose": "Formally review the local effect transition dry-run contract, keep transitions local and proposal-only, and ensure future effect discussions remain bounded to evidence-backed, receipt-only local decisions.",
+  "prerequisites": {
+    "requiredLocalEffectTransitionDryRunReceiptKind": "CortexABVVectorRuntimeLocalEffectTransitionDryRunReceipt",
+    "requiredLocalEffectTransitionDryRunEligibility": "eligible_for_local_transition_state_effect_review",
+    "requiredLocalEffectTransitionDryRunStatus": "passed",
+    "requiresLocalEffectTransitionDryRunReceiptDigest": true
+  },
+  "transitionDefinition": {
+    "transitionScope": "strictly_local_receipt_only",
+    "sourceState": "bounded_owner_initiated_local_active_runtime_candidate",
+    "targetState": "bounded_owner_approved_local_effect_transition_candidate",
+    "transitionMode": "owner_invoked_local_effect_plan_only",
+    "requiredModulePath": "src/vector-runtime-controlled-module-harness.mjs",
+    "requiredBindings": [
+      "loadIndexArtifact",
+      "queryCandidates",
+      "verifyClaimEvidence"
+    ],
+    "allowedLocalDecisionSteps": [
+      "candidate_query_preview",
+      "claim_evidence_verification",
+      "rollback_readiness_review",
+      "proposal_alignment_review"
+    ],
+    "effectTransitionAppliedHere": false,
+    "stateTransitionAppliedHere": false,
+    "runtimeActivationAppliedHere": false,
+    "persistentProcessAllowed": false,
+    "daemonProcessAllowed": false,
+    "schedulerAllowed": false,
+    "endpointAllowed": false,
+    "networkCallsAllowed": false,
+    "llmCallsAllowed": false,
+    "publicActionAuthorityAllowed": false,
+    "answerGenerationAllowed": false,
+    "sourceMutationAllowed": false,
+    "artifactMutationAllowed": false,
+    "writesOutsideReceiptAllowed": false
+  },
+  "requiredDryRunSignals": {
+    "ownerApproval": [
+      "approved",
+      "scopeBounded"
+    ],
+    "module": [
+      "importable",
+      "bindingsPresent",
+      "transitionNotApplied"
+    ],
+    "artifact": [
+      "readOnly",
+      "stage4hIndexDigestMatch",
+      "stage4hSourceDigestMatch"
+    ],
+    "queries": [
+      "allPassed",
+      "tenantScopeEnforced",
+      "candidatesOnly",
+      "answerGenerationDisabled",
+      "evidenceRefsVerified"
+    ],
+    "execution": [
+      "commandsExecuted",
+      "receiptOnlyWrites"
+    ],
+    "rollback": [
+      "rollbackNotesPresent",
+      "ownerRollbackMaintained"
+    ]
+  },
+  "rollbackTransitionPolicy": {
+    "required": true,
+    "strategy": "keep_local_effect_transition_artifact_local_and_review_only",
+    "ownerReversalAllowed": true,
+    "receiptOnlyEvidence": true,
+    "externalMutationAllowed": false
+  },
+  "nextGate": {
+    "targetEligibility": "eligible_for_local_effect_transition_reviewed",
+    "futureReviewKind": "CortexABVVectorRuntimeLocalEffectTransitionReview",
+    "futureReviewMode": "local_effect_transition_review_only",
+    "effectTransitionAppliedHere": false
+  },
+  "forbiddenAuthority": {
+    "activationAppliedHere": false,
+    "stateTransitionAppliedHere": false,
+    "persistentProcessAllowed": false,
+    "daemonProcessAllowed": false,
+    "schedulerAllowed": false,
+    "endpointAllowed": false,
+    "networkCallsAllowed": false,
+    "llmCallsAllowed": false,
+    "publicActionAuthorityAllowed": false,
+    "answerGenerationAllowed": false,
+    "sourceMutationAllowed": false,
+    "artifactMutationAllowed": false,
+    "writesOutsideReceiptAllowed": false,
+    "crossTenantQueriesAllowed": false,
+    "autonomousExecutionAllowed": false
+  },
+  "governance": {
+    "readOnly": true,
+    "proposalOnly": true,
+    "localEffectTransitionReviewOnly": true,
+    "runtimeActivationApplied": false,
+    "stateTransitionApplied": false,
+    "runtimeIntegration": false,
+    "endpoint": false,
+    "scheduler": false,
+    "networkCalls": false,
+    "llmCalls": false,
+    "writesOutsideReceipt": false,
+    "publicActionAuthority": false
+  }
+}

@@ -1129,3 +1129,31 @@ The receipt returns:
 - `not_eligible` when any prerequisite, continuity, module, artifact, query, evidence, or governance gate blocks.
 
 This stage remains review/dry-run-only: no endpoint, scheduler, network/LLM call, public action authority, source/artifact mutation, or activation is introduced.
+
+### Stage 4ag: local effect transition review
+
+Implemented artifacts:
+
+- `cortex-abv/private-runtime/config/vector-runtime-local-effect-transition-review.v1.json`
+- `cortex-abv/private-runtime/src/vector-runtime-local-effect-transition-review.mjs`
+- `cortex-abv/private-runtime/test/vector-runtime-local-effect-transition-review.test.mjs`
+- `cortex-abv/private-runtime/receipts/vector-runtime-local-effect-transition-review-receipt.v1.json`
+
+Run:
+
+```bash
+cd cortex-abv/private-runtime
+npm run vector-runtime-local-effect-transition-review:check
+```
+
+This stage converts the Stage 4af dry-run result into an explicit local effect transition review gate:
+
+- requires the Stage 4af local effect transition dry-run receipt with `eligible_for_local_transition_state_effect_review`;
+- enforces the strict local review boundary (`strictly_local_receipt_only`) with fixed module path and allowlisted bindings;
+- verifies tenant-scoped candidate-only behavior, evidence-verification continuity, and owner-rollover linkage from Stage 4af;
+- explicitly blocks any applied transition, transition-state change, activation, endpoint, scheduler, network, LLM, source/artifact mutation, external write, or public-action authority.
+
+The review receipt returns:
+
+- `eligible_for_local_effect_transition_review` when all review gates pass;
+- `not_eligible` when any prerequisite, continuity, or governance gate blocks.

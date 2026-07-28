@@ -603,17 +603,26 @@ Completed (read-only pilot): one synthetic scheduled-job plan + receipt, no runt
   - keeps discussion strictly local, evidence-backed, tenant-scoped and receipt-only.
 - Still forbidden: runtime activation applied here, state transition applied here, effect applied here, endpoint, daemon/service lifecycle, scheduler, network calls, LLM calls, answer generation, source/artifact mutation, writes outside receipt, public actions, and autonomous execution.
 
-#### Stage 4ag execution status (pending, next)
+#### Stage 4ag execution status (completed)
 
-- Planned next gate after Pass B: effect-application execution precheck for local-only transitions.
-- Prerequisites:
-  - completion of the latest local-effect review chain (4ac) and integrity of `import-ledger.jsonl` with Pass B source adapter entries;
-  - explicit snapshot+receipt bundle proving no public write intent.
-- 4ag acceptance criteria:
-  - only allowlisted local effect names are discussable;
-  - no activation/state transition remains applied or schedulable here;
-  - rollback and owner-review chain must be explicit in the decision trace.
-- Resulting gate outputs remain proposal-only and read/write-op-free.
+- Added local effect transition review gate:
+  - `cortex-abv/private-runtime/config/vector-runtime-local-effect-transition-review.v1.json`
+  - `cortex-abv/private-runtime/src/vector-runtime-local-effect-transition-review.mjs`
+  - `cortex-abv/private-runtime/test/vector-runtime-local-effect-transition-review.test.mjs`
+  - `cortex-abv/private-runtime/receipts/vector-runtime-local-effect-transition-review-receipt.v1.json`
+- Current receipt result:
+  - `eligibility: "eligible_for_local_effect_transition_review"`;
+  - `status: "passed"`;
+  - `blockers: []`.
+- Review behavior:
+  - requires the Stage 4af local effect transition dry-run receipt with `eligible_for_local_transition_state_effect_review`;
+  - verifies transition boundaries (`strictly_local_receipt_only`) and fixed harness/binding allowlist;
+  - verifies tenant-scoped, candidate-only, evidence-backed local query behavior from Stage 4af;
+  - enforces local-only governance (`readOnly`, `proposalOnly`, no activation/state-transition/effect-application/scheduler/network/LLM/public-action authority).
+- Outcome:
+  - decision trace remains receipt-only and proposal-only;
+  - no transition/effect/state changes are applied in this stage;
+  - rollback and owner-review lineage remains explicit for the next stage boundary.
 
 ## Staged adoption (hard requirement)
 1. Read-only planning (contracts + synthetic map only)

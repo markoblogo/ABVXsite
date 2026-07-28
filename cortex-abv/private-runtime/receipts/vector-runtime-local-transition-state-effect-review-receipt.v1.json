@@ -5,7 +5,7 @@
   "authority": "local_transition_state_effect_review_only",
   "status": "passed",
   "eligibility": "eligible_for_local_transition_state_effect_artifact",
-  "runAt": "2026-07-26T20:53:54.128Z",
+  "runAt": "2026-07-28T16:33:01.651Z",
   "mode": "local_transition_state_effect_review",
   "engine": "turbovec",
   "reviewDigest": "8e3d825c0f284f4cb1ca964db7f416aa24f1c2af4cf1c3210761fadefd42f5bd",

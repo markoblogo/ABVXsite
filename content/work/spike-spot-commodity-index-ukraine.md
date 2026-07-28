@@ -13,7 +13,7 @@
     "systems"
   ],
   "group": "Market Intelligence, Monitoring & Indexes",
-  "summary": "SPIKE publishes 13 public positions grouped into Grains Export, Oilseeds Export and Oilseeds Crush, and issues weekly public market-commentary snapshots tracking local grain and oilseed spot context alongside benchmark values.",
+  "summary": "SPIKE publishes 13 public positions grouped into Grains Export, Oilseeds Export and Oilseeds Crush, and now publishes daily public reference snapshots for selected CPT and FCA spot benchmarks in addition to its weekly market-commentary snapshots.",
   "tags": [
     "agro-commodities",
     "Ukraine",
@@ -45,8 +45,8 @@
     "paths": [
       "README.md"
     ],
-    "lastAppliedCommit": "d684ba2b0e42d3cdeff29b4b7e5d33fee9446e54",
-    "lastAppliedAt": "2026-07-21"
+    "lastAppliedCommit": "08123b4067fdd5171f1a4ae4977dfed79c487d9b",
+    "lastAppliedAt": "2026-07-28"
   },
   "autonomousPublicSync": {
     "enabled": true,
@@ -118,7 +118,7 @@
     "alt": "SPIKE SPOT COMMODITY INDEX UKRAINE market index interface",
     "role": "project-screenshot"
   },
-  "updatedAt": "2026-07-21"
+  "updatedAt": "2026-07-28"
 }
 ---
 
@@ -146,3 +146,5 @@ Public values are sourced from respondent submissions and automated MN7R monitor
 Public positions include corn (CPT Port, FCA Chop), wheat 11.5% (CPT Port), feed wheat (CPT Port), sunflower, GMO soybean, and non-GMO rapeseed; public benchmarks use CPT Port / CPT parity Odesa / FCA Chop bases.
 
 SPIKE now issues weekly public market-commentary snapshots that track changes in local grain and oilseed spot context alongside the published benchmark values.
+
+Public pages now publish daily reference snapshots for selected CPT and FCA spot benchmarks sourced from supported respondents.

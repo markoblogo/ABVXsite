@@ -5,14 +5,14 @@
   "authority": "local_effect_transition_dry_run_only",
   "status": "passed",
   "eligibility": "eligible_for_local_transition_state_effect_review",
-  "runAt": "2026-07-26T22:49:14.914Z",
+  "runAt": "2026-07-28T16:38:12.682Z",
   "mode": "local_effect_transition_dry_run",
   "engine": "turbovec",
   "digests": {
     "designDigest": "9f3bf67a0b175dd04db6ff69ca1ef08e1d7038fe2f62cda4455fa1a206b02287",
-    "stage4aeReceiptDigest": "3a747584779678408ae361461df997daa0f69e2b4fafd647182b327e6b362b18",
-    "stage4acReceiptDigest": "1471e5c38f99c6dfa725ed86509ef4ec9b33d420f7640fda960e6f3b3e92c400",
-    "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+    "stage4aeReceiptDigest": "60bba816e240a8b2f58041a87e17387e6df609a84f58fba050c1e2022fe0bf0a",
+    "stage4acReceiptDigest": "92faf5b2f002c19552051251f07b8687da369f93a3161b47eb3ed28f3d8bb61f",
+    "stage4aaReceiptDigest": "b17a081b8f7fe166563cfc5e498eb675a94de4fadc043e9d119abab70c615fbb",
     "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
     "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
     "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
@@ -239,7 +239,7 @@
       "kind": "CortexABVVectorRuntimeLocalEffectTransitionReceipt",
       "status": "passed",
       "eligibility": "eligible_for_local_effect_transition_dry_run",
-      "digest": "3a747584779678408ae361461df997daa0f69e2b4fafd647182b327e6b362b18"
+      "digest": "60bba816e240a8b2f58041a87e17387e6df609a84f58fba050c1e2022fe0bf0a"
     }
   },
   "gates": {
@@ -1907,7 +1907,7 @@
         "status": "accepted",
         "reason": "Stage 4ad receipt digest must be present",
         "evidence": {
-          "stage4adReceiptDigest": "92f64d085681dc218d18880f3ebeed604ae591b1c2cb39189f7b8fe0cad12446"
+          "stage4adReceiptDigest": "977bf481820da307cf385f73b8267a75d00017b06e306926cf22973fa764a208"
         }
       },
       {
@@ -2205,7 +2205,7 @@
         "status": "accepted",
         "reason": "Stage 4ad receipt digest must be present",
         "evidence": {
-          "stage4adReceiptDigest": "92f64d085681dc218d18880f3ebeed604ae591b1c2cb39189f7b8fe0cad12446"
+          "stage4adReceiptDigest": "977bf481820da307cf385f73b8267a75d00017b06e306926cf22973fa764a208"
         }
       },
       {
@@ -2213,8 +2213,8 @@
         "status": "accepted",
         "reason": "Stage 4ac receipt digest must be present",
         "evidence": {
-          "stage4acReceiptDigest": "1471e5c38f99c6dfa725ed86509ef4ec9b33d420f7640fda960e6f3b3e92c400",
-          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4acReceiptDigest": "92faf5b2f002c19552051251f07b8687da369f93a3161b47eb3ed28f3d8bb61f",
+          "stage4aaReceiptDigest": "b17a081b8f7fe166563cfc5e498eb675a94de4fadc043e9d119abab70c615fbb",
           "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
           "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
           "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
@@ -2238,8 +2238,8 @@
         "status": "accepted",
         "reason": "Stage 4aa receipt digest must be present",
         "evidence": {
-          "stage4acReceiptDigest": "1471e5c38f99c6dfa725ed86509ef4ec9b33d420f7640fda960e6f3b3e92c400",
-          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4acReceiptDigest": "92faf5b2f002c19552051251f07b8687da369f93a3161b47eb3ed28f3d8bb61f",
+          "stage4aaReceiptDigest": "b17a081b8f7fe166563cfc5e498eb675a94de4fadc043e9d119abab70c615fbb",
           "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
           "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
           "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
@@ -2263,8 +2263,8 @@
         "status": "accepted",
         "reason": "Stage 4z receipt digest must be present",
         "evidence": {
-          "stage4acReceiptDigest": "1471e5c38f99c6dfa725ed86509ef4ec9b33d420f7640fda960e6f3b3e92c400",
-          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4acReceiptDigest": "92faf5b2f002c19552051251f07b8687da369f93a3161b47eb3ed28f3d8bb61f",
+          "stage4aaReceiptDigest": "b17a081b8f7fe166563cfc5e498eb675a94de4fadc043e9d119abab70c615fbb",
           "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
           "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
           "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
@@ -2288,8 +2288,8 @@
         "status": "accepted",
         "reason": "Stage 4y receipt digest must be present",
         "evidence": {
-          "stage4acReceiptDigest": "1471e5c38f99c6dfa725ed86509ef4ec9b33d420f7640fda960e6f3b3e92c400",
-          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4acReceiptDigest": "92faf5b2f002c19552051251f07b8687da369f93a3161b47eb3ed28f3d8bb61f",
+          "stage4aaReceiptDigest": "b17a081b8f7fe166563cfc5e498eb675a94de4fadc043e9d119abab70c615fbb",
           "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
           "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
           "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
@@ -2313,8 +2313,8 @@
         "status": "accepted",
         "reason": "Stage 4x receipt digest must be present",
         "evidence": {
-          "stage4acReceiptDigest": "1471e5c38f99c6dfa725ed86509ef4ec9b33d420f7640fda960e6f3b3e92c400",
-          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4acReceiptDigest": "92faf5b2f002c19552051251f07b8687da369f93a3161b47eb3ed28f3d8bb61f",
+          "stage4aaReceiptDigest": "b17a081b8f7fe166563cfc5e498eb675a94de4fadc043e9d119abab70c615fbb",
           "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
           "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
           "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
@@ -2338,8 +2338,8 @@
         "status": "accepted",
         "reason": "Stage 4w receipt digest must be present",
         "evidence": {
-          "stage4acReceiptDigest": "1471e5c38f99c6dfa725ed86509ef4ec9b33d420f7640fda960e6f3b3e92c400",
-          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4acReceiptDigest": "92faf5b2f002c19552051251f07b8687da369f93a3161b47eb3ed28f3d8bb61f",
+          "stage4aaReceiptDigest": "b17a081b8f7fe166563cfc5e498eb675a94de4fadc043e9d119abab70c615fbb",
           "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
           "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
           "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
@@ -2363,8 +2363,8 @@
         "status": "accepted",
         "reason": "Stage 4v receipt digest must be present",
         "evidence": {
-          "stage4acReceiptDigest": "1471e5c38f99c6dfa725ed86509ef4ec9b33d420f7640fda960e6f3b3e92c400",
-          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4acReceiptDigest": "92faf5b2f002c19552051251f07b8687da369f93a3161b47eb3ed28f3d8bb61f",
+          "stage4aaReceiptDigest": "b17a081b8f7fe166563cfc5e498eb675a94de4fadc043e9d119abab70c615fbb",
           "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
           "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
           "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
@@ -2388,8 +2388,8 @@
         "status": "accepted",
         "reason": "Stage 4u receipt digest must be present",
         "evidence": {
-          "stage4acReceiptDigest": "1471e5c38f99c6dfa725ed86509ef4ec9b33d420f7640fda960e6f3b3e92c400",
-          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4acReceiptDigest": "92faf5b2f002c19552051251f07b8687da369f93a3161b47eb3ed28f3d8bb61f",
+          "stage4aaReceiptDigest": "b17a081b8f7fe166563cfc5e498eb675a94de4fadc043e9d119abab70c615fbb",
           "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
           "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
           "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
@@ -2413,8 +2413,8 @@
         "status": "accepted",
         "reason": "Stage 4t receipt digest must be present",
         "evidence": {
-          "stage4acReceiptDigest": "1471e5c38f99c6dfa725ed86509ef4ec9b33d420f7640fda960e6f3b3e92c400",
-          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4acReceiptDigest": "92faf5b2f002c19552051251f07b8687da369f93a3161b47eb3ed28f3d8bb61f",
+          "stage4aaReceiptDigest": "b17a081b8f7fe166563cfc5e498eb675a94de4fadc043e9d119abab70c615fbb",
           "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
           "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
           "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
@@ -2438,8 +2438,8 @@
         "status": "accepted",
         "reason": "Stage 4s receipt digest must be present",
         "evidence": {
-          "stage4acReceiptDigest": "1471e5c38f99c6dfa725ed86509ef4ec9b33d420f7640fda960e6f3b3e92c400",
-          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4acReceiptDigest": "92faf5b2f002c19552051251f07b8687da369f93a3161b47eb3ed28f3d8bb61f",
+          "stage4aaReceiptDigest": "b17a081b8f7fe166563cfc5e498eb675a94de4fadc043e9d119abab70c615fbb",
           "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
           "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
           "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
@@ -2463,8 +2463,8 @@
         "status": "accepted",
         "reason": "Stage 4r receipt digest must be present",
         "evidence": {
-          "stage4acReceiptDigest": "1471e5c38f99c6dfa725ed86509ef4ec9b33d420f7640fda960e6f3b3e92c400",
-          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4acReceiptDigest": "92faf5b2f002c19552051251f07b8687da369f93a3161b47eb3ed28f3d8bb61f",
+          "stage4aaReceiptDigest": "b17a081b8f7fe166563cfc5e498eb675a94de4fadc043e9d119abab70c615fbb",
           "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
           "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
           "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
@@ -2488,8 +2488,8 @@
         "status": "accepted",
         "reason": "Stage 4q receipt digest must be present",
         "evidence": {
-          "stage4acReceiptDigest": "1471e5c38f99c6dfa725ed86509ef4ec9b33d420f7640fda960e6f3b3e92c400",
-          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4acReceiptDigest": "92faf5b2f002c19552051251f07b8687da369f93a3161b47eb3ed28f3d8bb61f",
+          "stage4aaReceiptDigest": "b17a081b8f7fe166563cfc5e498eb675a94de4fadc043e9d119abab70c615fbb",
           "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
           "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
           "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
@@ -2513,8 +2513,8 @@
         "status": "accepted",
         "reason": "Stage 4p receipt digest must be present",
         "evidence": {
-          "stage4acReceiptDigest": "1471e5c38f99c6dfa725ed86509ef4ec9b33d420f7640fda960e6f3b3e92c400",
-          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4acReceiptDigest": "92faf5b2f002c19552051251f07b8687da369f93a3161b47eb3ed28f3d8bb61f",
+          "stage4aaReceiptDigest": "b17a081b8f7fe166563cfc5e498eb675a94de4fadc043e9d119abab70c615fbb",
           "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
           "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
           "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
@@ -2538,8 +2538,8 @@
         "status": "accepted",
         "reason": "Stage 4o receipt digest must be present",
         "evidence": {
-          "stage4acReceiptDigest": "1471e5c38f99c6dfa725ed86509ef4ec9b33d420f7640fda960e6f3b3e92c400",
-          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4acReceiptDigest": "92faf5b2f002c19552051251f07b8687da369f93a3161b47eb3ed28f3d8bb61f",
+          "stage4aaReceiptDigest": "b17a081b8f7fe166563cfc5e498eb675a94de4fadc043e9d119abab70c615fbb",
           "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
           "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
           "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
@@ -2563,8 +2563,8 @@
         "status": "accepted",
         "reason": "Stage 4n receipt digest must be present",
         "evidence": {
-          "stage4acReceiptDigest": "1471e5c38f99c6dfa725ed86509ef4ec9b33d420f7640fda960e6f3b3e92c400",
-          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4acReceiptDigest": "92faf5b2f002c19552051251f07b8687da369f93a3161b47eb3ed28f3d8bb61f",
+          "stage4aaReceiptDigest": "b17a081b8f7fe166563cfc5e498eb675a94de4fadc043e9d119abab70c615fbb",
           "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
           "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
           "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
@@ -2588,8 +2588,8 @@
         "status": "accepted",
         "reason": "Stage 4h index digest must be present",
         "evidence": {
-          "stage4acReceiptDigest": "1471e5c38f99c6dfa725ed86509ef4ec9b33d420f7640fda960e6f3b3e92c400",
-          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4acReceiptDigest": "92faf5b2f002c19552051251f07b8687da369f93a3161b47eb3ed28f3d8bb61f",
+          "stage4aaReceiptDigest": "b17a081b8f7fe166563cfc5e498eb675a94de4fadc043e9d119abab70c615fbb",
           "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
           "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
           "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
@@ -2613,8 +2613,8 @@
         "status": "accepted",
         "reason": "Stage 4h source digest must be present",
         "evidence": {
-          "stage4acReceiptDigest": "1471e5c38f99c6dfa725ed86509ef4ec9b33d420f7640fda960e6f3b3e92c400",
-          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4acReceiptDigest": "92faf5b2f002c19552051251f07b8687da369f93a3161b47eb3ed28f3d8bb61f",
+          "stage4aaReceiptDigest": "b17a081b8f7fe166563cfc5e498eb675a94de4fadc043e9d119abab70c615fbb",
           "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
           "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
           "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",
@@ -2638,8 +2638,8 @@
         "status": "accepted",
         "reason": "receipt linkage digest must be present",
         "evidence": {
-          "stage4acReceiptDigest": "1471e5c38f99c6dfa725ed86509ef4ec9b33d420f7640fda960e6f3b3e92c400",
-          "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+          "stage4acReceiptDigest": "92faf5b2f002c19552051251f07b8687da369f93a3161b47eb3ed28f3d8bb61f",
+          "stage4aaReceiptDigest": "b17a081b8f7fe166563cfc5e498eb675a94de4fadc043e9d119abab70c615fbb",
           "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
           "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
           "stage4xReceiptDigest": "f66aea31b8649d0f74be0733aae290f897fd607512079b0b995aa38034f73398",

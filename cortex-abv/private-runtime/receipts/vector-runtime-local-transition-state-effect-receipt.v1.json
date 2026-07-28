@@ -5,11 +5,11 @@
   "authority": "local_transition_state_effect_artifact_only",
   "status": "passed",
   "eligibility": "eligible_for_local_effect_application_review",
-  "runAt": "2026-07-26T20:59:02.746Z",
+  "runAt": "2026-07-28T16:33:59.323Z",
   "mode": "local_transition_state_effect_artifact",
   "engine": "turbovec",
   "artifactDigest": "71fca838c7121bc63922b315d4709d678dfbb56a622a189512ffd4f0ffbeaed1",
-  "stage4aaReceiptDigest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5",
+  "stage4aaReceiptDigest": "b17a081b8f7fe166563cfc5e498eb675a94de4fadc043e9d119abab70c615fbb",
   "prerequisiteDigests": {
     "stage4zReceiptDigest": "e3ee9839678de80141274daca9f92816e450662cbd33116eeb82caaa4b0ebf33",
     "stage4yReceiptDigest": "2e8162f6cc8e0d45850344e43b297153903529ef4627824533278875fecabfb0",
@@ -106,7 +106,7 @@
       "kind": "CortexABVVectorRuntimeLocalTransitionStateEffectReviewReceipt",
       "status": "passed",
       "eligibility": "eligible_for_local_transition_state_effect_artifact",
-      "digest": "6ddde655a3892a2ef578dafe9aba21b28b548c541bfad40806803408d57b62e5"
+      "digest": "b17a081b8f7fe166563cfc5e498eb675a94de4fadc043e9d119abab70c615fbb"
     }
   },
   "gates": {

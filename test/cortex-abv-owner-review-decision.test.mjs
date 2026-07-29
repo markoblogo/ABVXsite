@@ -58,6 +58,7 @@ test('approved owner review builds an executor plan for index/spike candidate ch
   const pendingPath = `${tempDir}/pending.json`;
   const approvedPath = `${tempDir}/approved.json`;
   const planPath = `${tempDir}/plan.json`;
+  const boundaryPath = join(process.cwd(), 'cortex-abv/executor-wiring-boundary.v1.json');
   mkdirSync(claimsDir, { recursive: true });
   writeFileSync(batchPath, `${JSON.stringify(observedBatch, null, 2)}\n`);
   writeFileSync(`${claimsDir}/spike.json`, `${JSON.stringify(validCopyProposal, null, 2)}\n`);
@@ -69,7 +70,7 @@ test('approved owner review builds an executor plan for index/spike candidate ch
     ownerDecision: 'Approved after owner review for SPIKE public-safe copy update.',
     outputPath: approvedPath,
     planOutputPath: planPath,
-    boundaryPath: '/Volumes/Work/Work/ABVXsite/cortex-abv/executor-wiring-boundary.v1.json',
+    boundaryPath,
   });
 
   assert.equal(reviewArtifact.ownerReview.status, 'approved');
@@ -85,6 +86,7 @@ test('rejected owner review does not build an executor plan', () => {
   const claimsDir = `${tempDir}/claims`;
   const pendingPath = `${tempDir}/pending.json`;
   const rejectedPath = `${tempDir}/rejected.json`;
+  const boundaryPath = join(process.cwd(), 'cortex-abv/executor-wiring-boundary.v1.json');
   mkdirSync(claimsDir, { recursive: true });
   writeFileSync(batchPath, `${JSON.stringify(observedBatch, null, 2)}\n`);
   writeFileSync(`${claimsDir}/spike.json`, `${JSON.stringify(validCopyProposal, null, 2)}\n`);
@@ -95,7 +97,7 @@ test('rejected owner review does not build an executor plan', () => {
     status: 'rejected',
     ownerDecision: 'Rejected because this public diff should be narrowed further.',
     outputPath: rejectedPath,
-    boundaryPath: '/Volumes/Work/Work/ABVXsite/cortex-abv/executor-wiring-boundary.v1.json',
+    boundaryPath,
   });
 
   assert.equal(reviewArtifact.ownerReview.status, 'rejected');

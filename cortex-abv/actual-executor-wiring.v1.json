@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVActualExecutorWiring",
+  "version": "v1",
+  "status": "design_only",
+  "mode": "approved_plan_manual_apply_only",
+  "inputContract": {
+    "requiredPlanKind": "CortexABVExecutorWiringPlan",
+    "requiredPlanStatus": "ready_for_owner_merge",
+    "requiredMappedAction": "owner_merge_pull_request",
+    "requiredPublishPath": "pull_request_merge_only",
+    "requiredTargetSurfaceId": "abvxsite-project-copy"
+  },
+  "outputContract": {
+    "receiptKind": "CortexABVActualExecutorWiringReceipt",
+    "eligibleStatus": "eligible_for_manual_apply_only",
+    "blockedStatus": "blocked"
+  },
+  "manualApplyIntent": {
+    "kind": "pull_request_merge_intent",
+    "repository": "markoblogo/ABVXsite",
+    "baseBranch": "main",
+    "branchPrefix": "cortexabv/write-side-",
+    "requiresOwnerReviewArtifact": true,
+    "requiresOwnerDecisionNote": true,
+    "requiresPlanArtifact": true
+  },
+  "proofRequirements": {
+    "requiresRealSourceDiff": true,
+    "requiresProposalPullRequest": true,
+    "requiresApprovedReviewArtifact": true,
+    "requiresApprovedExecutorPlan": true,
+    "requiresTargetBranchVisibility": true
+  },
+  "forbiddenBehaviors": [
+    "automerge",
+    "autopublish",
+    "direct_main_push",
+    "source_repository_write",
+    "social_post",
+    "message_send",
+    "email_send",
+    "external_direct_execution"
+  ],
+  "notes": [
+    "This contract evaluates whether an approved executor plan is eligible for manual PR-first application only.",
+    "It does not merge, update workflow state, or push any repository content.",
+    "A later implementation pass may consume this contract, but this file itself is design-only."
+  ]
+}

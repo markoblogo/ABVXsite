@@ -206,6 +206,8 @@ See [CortexABV public-site adapter](cortex-abv/README.md) for the authority boun
 
 The next ABVXsite executor seam is now documented as an ABVXsite-only approved-review wiring boundary: it consumes only an approved review artifact and maps only to `owner_merge_pull_request`. It does not auto-merge, auto-publish, or create any social/message/email side effect.
 
+Above that, the actual executor wiring is now also fixed as a design-only contract: it consumes only an approved executor plan and returns only a manual-apply eligibility receipt. It does not activate auto-merge, autopublish, or direct execution.
+
 The first public CortexABV corpus is [`cortex-abv/public-presence-index.v1.json`](cortex-abv/public-presence-index.v1.json): a versioned, read-only entity map of the public site, Lab, catalogue, writing feeds and source provenance. Rebuild it with `npm run cortex-abv:public-index`; it has no model call and no action authority.
 
 [`cortex-abv/public-project-registry.v1.json`](cortex-abv/public-project-registry.v1.json) is the next read-only layer: an explicit `repo ↔ project ↔ ABVX landing ↔ Lab ↔ public channels` map derived from that index. It includes only GitHub URLs already declared in public project content; it performs no repository discovery, GitHub access, model call, or external action. Rebuild it after the index with `npm run cortex-abv:project-registry`.

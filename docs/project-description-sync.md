@@ -59,6 +59,8 @@ For `index/spike`, this means the real candidate chain is now:
 5. executor wiring plan only if `approved`
 6. manual PR merge only
 
+The next design-only layer above that chain is now documented in [cortex-abv-actual-executor-wiring.md](cortex-abv-actual-executor-wiring.md): it consumes only an approved plan and returns only a manual-apply eligibility receipt. It does not merge or write anything itself.
+
 Current trace shape defaults:
 
 - `policySource: base`

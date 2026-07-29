@@ -32,6 +32,8 @@ The snapshot now also documents the private, owner-controlled [Personal Knowledg
 
 The next executor seam above that action is now documented in [`executor-wiring-boundary.v1.json`](./executor-wiring-boundary.v1.json): only an approved review artifact may cross into the wiring layer, and it maps only to PR-first merge authority. This remains non-executing design scope; no direct merge, autopublish, social, or outbound action is activated here.
 
+The next layer above that boundary is now also documented in [`actual-executor-wiring.v1.json`](./actual-executor-wiring.v1.json): only an approved executor plan may be consumed there, and even then it yields only a manual-apply eligibility receipt. No auto-merge or direct execution is activated at that layer either.
+
 It is bounded to:
 
 - `summary`

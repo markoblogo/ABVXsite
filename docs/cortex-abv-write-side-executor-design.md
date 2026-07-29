@@ -75,8 +75,10 @@ With this design:
 
 - design config: [`cortex-abv/write-side-executor-design.v1.json`](../cortex-abv/write-side-executor-design.v1.json)
 - wiring boundary: [`cortex-abv/executor-wiring-boundary.v1.json`](../cortex-abv/executor-wiring-boundary.v1.json)
+- actual wiring contract: [`cortex-abv/actual-executor-wiring.v1.json`](../cortex-abv/actual-executor-wiring.v1.json)
 - validator: [`scripts/check-cortex-abv-write-side-executor-design.mjs`](../scripts/check-cortex-abv-write-side-executor-design.mjs)
 - wiring boundary validator + planner: [`scripts/cortex-abv-executor-wiring-boundary-lib.mjs`](../scripts/cortex-abv-executor-wiring-boundary-lib.mjs)
+- actual wiring validator + receipt builder: [`scripts/cortex-abv-actual-executor-wiring-lib.mjs`](../scripts/cortex-abv-actual-executor-wiring-lib.mjs)
 - content policy: [cortex-abv-write-side-policy.md](./cortex-abv-write-side-policy.md)
 
 ## Narrow wiring boundary
@@ -107,6 +109,17 @@ The next practical layer is now explicit:
 5. merge still happens separately and manually.
 
 This keeps the artifact lineage inside the proposal branch and avoids any hidden state in GitHub Actions artifacts alone.
+
+## Actual wiring boundary
+
+The next layer is now also fixed as a design-only contract:
+
+1. it consumes only an approved executor plan;
+2. it returns only a manual-apply eligibility receipt;
+3. it requires a full proof chain before that receipt may become eligible;
+4. it still does not merge, write, publish, or execute.
+
+See [cortex-abv-actual-executor-wiring.md](./cortex-abv-actual-executor-wiring.md).
 
 ## Local check
 

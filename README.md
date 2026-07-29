@@ -168,51 +168,31 @@ Selected project descriptions may be refreshed from their source repositories th
 
 ![CortexABV logo](./cortex-abv/assets/cortex-abv-logo.png)
 
-The repository contains the proposal-only public boundary for CortexABV in [`cortex-abv/`](cortex-abv/). It validates approved public sources and bounded site-copy proposals, but it does not contain the private personal profile, inbox, credentials, contact history, or autonomous publishing controls.
+This repository contains the public CortexABV boundary in [`cortex-abv/`](cortex-abv/). It is the site-facing layer only: public contracts, evidence receipts, bounded proposal shapes, and reviewable write candidates. It does not contain the private runtime, personal knowledge, credentials, inbox data, or autonomous outbound actions.
 
-The [CortexABV Read-Only Import Contract](docs/cortex-abv-read-only-import-contract.md) defines the broader architecture: base Cortex plus the owner's Monitor, Index, and Cropto ecosystems may supply authorized updates into private CortexABV, but CortexABV has no data, command, feedback, policy, or influence path back to them. A target surface controls whether an evidence-backed proposal stays review-only or receives a separately configured bounded write authority.
+Current implemented public capabilities:
 
-The private runtime may also define isolated tenants for wholly owned projects, such as AzurMenton. Those tenant source packs, guest-policy and shadow-evaluation artifacts remain outside this public adapter: they cannot retrieve personal or sibling-project context, cannot appear in the public corpus, and do not create a public chat, booking, publishing, or site-editing authority.
+- read-only public presence index and project registry;
+- read-only GitHub repository observer and snapshot comparison;
+- bounded project copy sync for allowlisted sources;
+- PR-first owner review for `ABVXsite` project-copy changes;
+- explicit write-side policy and write-side executor design contracts.
 
-For auditability, [`cortex-abv/private-runtime/`](cortex-abv/private-runtime/) contains a static code-and-contract snapshot of that separately operated runtime. It contains no private ledger/store, `.env`, credentials, real source packets, protected payloads, personal profile, or guest data; [`npm run cortex-abv:private-runtime:check`](#verification) fails closed if such material is added. The snapshot does not make the runtime public or deploy it through ABVXsite.
+The write path is deliberately narrow:
 
-The private runtime now defines a [Personal Knowledge Core boundary](docs/cortex-abv-personal-knowledge-core.md) for CortexABV and CoqPi. CoqPi can be the owner-facing ingress UI, while CortexABV maintains approved facts; public ABVXsite contains only contract code and synthetic fixtures, never personal knowledge, interview records, raw sources, credentials, or retrieval state.
+- `ABVXsite` project copy is active only as `pending_review -> approved/rejected -> PR merge`;
+- `Lab` is now documented as a design-scoped future executor target, not an already activated PR surface;
+- merge remains the only publication action.
 
-See also: [Cabinet pilot integration map](docs/cortex-abv-cabinet-integration-map.md). Stage 1 is now active for a non-runtime contract-only pilot (`Scheduled jobs and task runner`) with read-only receipt gates:
+Key docs:
 
-- `cortex-abv/private-runtime/config/cabinet-scheduled-jobs-stage1.v1.json`
-- `cortex-abv/private-runtime/receipts/cabinet-stage1-scheduled-jobs-receipt.v1.json`
-- `npm run cortex-abv:cabinet-stage1-run` for a real local synthetic Stage 2 execution (no write authority).
-- `cortex-abv/private-runtime/config/cabinet-scheduled-jobs-stage1.v1.json` now also binds one owned-source synthetic adapter (`monitor-mn7r-shadow`) with `source_specific_override` visibility in the receipt decision trace.
-- `cortex-abv/private-runtime/config/cabinet-scheduled-jobs-stage1.v1.json` now binds second owned-source synthetic adapter (`index-spike-shadow`) and requires `result.sourceAdapters[].decisionTrace` for every enabled adapter before any future write-authority expansion.
-- `cortex-abv/private-runtime/src/vector-runtime-shim.mjs` defines the future local vector runtime `buildIndex/query` interface for the turbovec pilot, currently fallback-only (`tfidf-lite`) and receipt-only via `npm run vector-runtime-readiness:run`.
-- `cortex-abv/private-runtime/src/vector-runtime-dependency-probe-runner.mjs` adds an opt-in real PyPI `turbovec` probe with index-build/query acceptance and a receipt-only governance gate.
-- `cortex-abv/private-runtime/config/vector-runtime-package-policy.v1.json` pins the allowed package supply path to PyPI `turbovec==0.8.0`, temporary/local venv only, platform constraints, and reproducibility receipts.
-- `cortex-abv/private-runtime/src/vector-runtime-integration-preflight.mjs` aggregates policy, dependency, readiness and synthetic retrieval receipts into `eligible_for_design_review` / `not_eligible_for_design_review` without approving runtime integration.
-- `cortex-abv/private-runtime/config/vector-runtime-wiring-design.v1.json` defines the private-runtime-only wiring design contract and returns `eligible_for_implementation_poc_review` without approving implementation.
-- `cortex-abv/private-runtime/config/vector-runtime-implementation-poc-review.v1.json` defines the minimum dry-run POC review scope: local gitignored index artifact root, allowed source packs, digest/rollback checks and dry-run command allowlist. It returns `eligible_for_implementation_poc_dry_run_review` without approving the POC itself.
-- `cortex-abv/private-runtime/config/vector-runtime-implementation-poc-dry-run.v1.json` runs the first local dry-run artifact pass: synthetic source pack, gitignored local index artifact, source/index digests, probe results and rollback notes. It returns `eligible_for_controlled_runtime_module_review` without approving runtime activation.
-- `cortex-abv/private-runtime/config/vector-runtime-controlled-module-design.v1.json` defines the next controlled local module contract over that artifact interface: `loadIndexArtifact`, `queryCandidates`, `verifyClaimEvidence`, Stage 4h receipt digest required, no implementation or wiring approval.
-- `cortex-abv/private-runtime/config/vector-runtime-controlled-module-poc-review.v1.json` defines the future local harness POC review scope and requires the Stage 4i design receipt digest. It returns `eligible_for_controlled_runtime_module_harness_dry_run_review` without approving harness implementation.
-- `cortex-abv/private-runtime/src/vector-runtime-controlled-module-harness.mjs` implements the first local-only controlled module harness over the Stage 4h artifact. Its dry-run receipt returns `eligible_for_controlled_runtime_wiring_design_review` without approving runtime wiring.
-- `cortex-abv/private-runtime/config/vector-runtime-controlled-wiring-design.v1.json` defines the controlled runtime wiring design gate: private-runtime-only, in-process local library binding only, Stage 4k receipt digest required, no endpoint/scheduler/network/LLM/public action. Its receipt returns `eligible_for_controlled_runtime_wiring_poc_review` without activating wiring.
-- `cortex-abv/private-runtime/config/vector-runtime-controlled-wiring-poc-review.v1.json` defines the minimum controlled wiring POC review scope and requires the Stage 4l receipt digest. It returns `eligible_for_controlled_runtime_wiring_poc_dry_run_review` without approving implementation or activation.
-- `cortex-abv/private-runtime/src/vector-runtime-controlled-wiring-poc-dry-run.mjs` runs the first controlled local wiring POC dry-run: it requires the Stage 4m receipt digest chain, binds only the existing local harness module, queries tenant-scoped candidates, and writes only a receipt. It returns `eligible_for_controlled_runtime_wiring_review` without runtime activation.
-- `cortex-abv/private-runtime/config/vector-runtime-controlled-wiring-review.v1.json` defines the controlled runtime wiring review gate and requires the Stage 4n receipt digest. It returns `eligible_for_runtime_activation_review` without activating runtime wiring.
-- `cortex-abv/private-runtime/config/vector-runtime-activation-review.v1.json` defines the runtime activation review gate and requires the Stage 4o receipt digest. It returns `eligible_for_runtime_activation_dry_run_review` without activating runtime wiring.
-- `cortex-abv/private-runtime/config/vector-runtime-activation-dry-run-review.v1.json` defines the runtime activation dry-run review gate and requires the Stage 4p receipt digest. It returns `eligible_for_runtime_activation_dry_run` without activating runtime wiring.
-- `cortex-abv/private-runtime/src/vector-runtime-activation-dry-run.mjs` runs the first local activation dry-run: it verifies module import/bindings, read-only artifact load, tenant-scoped candidate-only queries, evidence refs and no exposed activation. It returns `eligible_for_runtime_readiness_review` without activating runtime wiring.
-- `cortex-abv/private-runtime/config/vector-runtime-readiness-review.v1.json` defines the runtime readiness review gate and requires the Stage 4r receipt digest. It returns `eligible_for_runtime_activation_decision_review` only when local module, artifact, digest-chain, query and evidence signals are all sufficient, still without activation.
-- `cortex-abv/private-runtime/config/vector-runtime-activation-decision-review.v1.json` defines the runtime activation decision review gate and requires the Stage 4s receipt digest. It bounds what a later separate local activation decision may ever allow: owner-invoked same-process callable availability only, still with no endpoint, scheduler, network, LLM, public action or external writes.
-- `cortex-abv/private-runtime/config/vector-runtime-activation-decision.v1.json` records the explicit owner-approved local activation decision artifact and requires the Stage 4t receipt digest. It still does not activate runtime wiring; it only prepares a later bounded local activation dry-run.
-- `cortex-abv/private-runtime/config/vector-runtime-local-activation-dry-run.v1.json` defines the first post-decision local activation dry-run and requires the Stage 4u receipt digest. It verifies the full decision lineage, fixed callable boundary and read-only retrieval path, still without applying activation.
-- `cortex-abv/private-runtime/config/vector-runtime-local-activation-state-review.v1.json` defines the local activation-state review gate and requires the Stage 4v receipt digest. It formalizes the inactive-ready local state as receipt-defined only, still without applying activation or any state transition.
-- `cortex-abv/private-runtime/config/vector-runtime-local-activation-state-transition-review.v1.json` defines the local activation-state transition review gate and requires the Stage 4w receipt digest. It bounds the minimal transition artifact, still without applying activation or any state transition.
-- `cortex-abv/private-runtime/config/vector-runtime-local-activation-state-transition.v1.json` records the explicit local activation-state transition artifact and requires the Stage 4x receipt digest. It still does not apply activation or the transition; it only prepares a later bounded transition dry-run.
-- `cortex-abv/private-runtime/config/vector-runtime-local-activation-state-transition-dry-run.v1.json` defines the first post-artifact local transition dry-run and requires the Stage 4y receipt digest. It verifies the full transition lineage, fixed callable boundary and read-only retrieval path, still without applying any transition.
-- `cortex-abv/private-runtime/config/vector-runtime-local-transition-state-effect-review.v1.json` defines the local transition-state effect review gate and requires the Stage 4z receipt digest. It bounds which narrow local effects may even be discussed next, still without applying any effect or transition.
-- `cortex-abv/private-runtime/config/vector-runtime-local-transition-state-effect.v1.json` records the explicit local transition-state effect artifact and requires the Stage 4aa receipt digest. It still does not apply any effect, transition or activation; it only prepares a later bounded effect-application review.
-- `cortex-abv/private-runtime/config/vector-runtime-local-effect-application-review.v1.json` defines the local effect-application review gate (Stage 4ac) over the Stage 4ab artifact receipt. It keeps any application discussion strictly local, receipt-only, tenant-scoped and no-activation, no-endpoint, no-LLM, no-network until a separate decision gate is created.
+- [Read-Only Import Contract](docs/cortex-abv-read-only-import-contract.md)
+- [Project description sync](docs/project-description-sync.md)
+- [Write-side policy](docs/cortex-abv-write-side-policy.md)
+- [Write-side executor design](docs/cortex-abv-write-side-executor-design.md)
+- [Cabinet pilot integration map](docs/cortex-abv-cabinet-integration-map.md)
+
+For auditability, [`cortex-abv/private-runtime/`](cortex-abv/private-runtime/) is still only a static public snapshot of the separately operated private runtime. The export guard [`npm run cortex-abv:private-runtime:check`](#verification) fails closed if private ledger/store material, `.env` files, credentials, or token-like values appear there.
 
 Check the adapter contract and currently enabled project-sync targets:
 
@@ -223,6 +203,8 @@ npm run cortex-abv:status
 The scheduled project-copy workflow observes allowlisted source SHAs first and saves an evidence artifact. MN7R, Cropto, and SPIKE SPOT INDEX still run through the same bounded public-copy and validation gates, but the write path is now PR-first: workflow candidates open an owner-review pull request and are only published after manual merge. No title, links, tags, media, positioning, social posts, messages, or email updates are permitted by this path.
 
 See [CortexABV public-site adapter](cortex-abv/README.md) for the authority boundary and the next integration seam.
+
+The next ABVXsite executor seam is now documented as an ABVXsite-only approved-review wiring boundary: it consumes only an approved review artifact and maps only to `owner_merge_pull_request`. It does not auto-merge, auto-publish, or create any social/message/email side effect.
 
 The first public CortexABV corpus is [`cortex-abv/public-presence-index.v1.json`](cortex-abv/public-presence-index.v1.json): a versioned, read-only entity map of the public site, Lab, catalogue, writing feeds and source provenance. Rebuild it with `npm run cortex-abv:public-index`; it has no model call and no action authority.
 

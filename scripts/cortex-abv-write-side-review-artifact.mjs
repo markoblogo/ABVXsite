@@ -1,4 +1,9 @@
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import {
+  createWriteSidePolicyContract,
+  validateWriteSideCopyProposal,
+  validateWriteSideReviewArtifact,
+} from './cortex-abv-write-side-policy-lib.mjs';
 
 function requiredArg(name) {
   const value = process.argv.indexOf(name);
@@ -18,7 +23,7 @@ function loadCopyClaims(directory) {
     .map((entry) => JSON.parse(readFileSync(`${directory}/${entry.name}`, 'utf8')));
 }
 
-function buildArtifact({ batchPath, claimsDirectory }) {
+export function buildArtifact({ batchPath, claimsDirectory }) {
   const batch = JSON.parse(readFileSync(batchPath, 'utf8'));
   if (!batch || batch.kind !== 'CortexABVObservedEventBatch' || !Array.isArray(batch.proposals) || !batch.proposals.length) {
     throw new Error('input batch must be a non-empty CortexABVObservedEventBatch');
@@ -36,6 +41,7 @@ function buildArtifact({ batchPath, claimsDirectory }) {
     if (!observed) {
       throw new Error(`copy proposal references unknown slug: ${sourceSlug}`);
     }
+    validateWriteSideCopyProposal(copyProposal, observed);
     if (!Array.isArray(copyProposal.claims)) {
       throw new Error(`copy proposal ${sourceSlug} must include claim anchors`);
     }
@@ -69,7 +75,7 @@ function buildArtifact({ batchPath, claimsDirectory }) {
     });
   }
 
-  return {
+  const artifact = {
     schemaVersion: 1,
     kind: 'CortexABVWriteExecutorReviewArtifact',
     version: 'v1',
@@ -92,10 +98,12 @@ function buildArtifact({ batchPath, claimsDirectory }) {
         notes: 'Set ownerReview.status to rejected and write the reason in the PR body/comments.',
       },
     },
+    policy: createWriteSidePolicyContract(),
     observedSources: sourceSummaries,
     claimAnchors,
     createdAt: new Date().toISOString(),
   };
+  return validateWriteSideReviewArtifact(artifact);
 }
 
 export function run() {

@@ -1,6 +1,7 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { basename, join, relative, resolve } from 'node:path';
+import { execFileSync } from 'node:child_process';
 
 const TOKEN_PATTERNS = [
   /sk-[A-Za-z0-9_-]{20,}/,
@@ -27,12 +28,25 @@ function violationForPath(relativePath) {
   return null;
 }
 
+function isGitIgnored(root, relativePath) {
+  try {
+    execFileSync('git', ['check-ignore', '-q', relativePath], {
+      cwd: root,
+      stdio: 'ignore',
+    });
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 export function scanCortexAbvPrivateRuntimeExport({ runtimeRoot = new URL('../cortex-abv/private-runtime/', import.meta.url) } = {}) {
   const root = resolve(typeof runtimeRoot === 'string' ? runtimeRoot : fileURLToPath(runtimeRoot));
   const violations = [];
   const entries = listEntries(root);
   for (const entry of entries) {
     const relativePath = relative(root, entry.path);
+    if (isGitIgnored(root, relativePath)) continue;
     if (entry.kind !== 'file') {
       violations.push({ path: relativePath, rule: 'unsupported_filesystem_entry' });
       continue;

@@ -100,23 +100,24 @@ jobs:
           fi
 
           BRANCH="cortexabv/write-side-${GITHUB_RUN_ID}"
+          REVIEW_SLUG="$(printf '%s' "$TARGET_SLUGS" | tr ' ' '-')"
+          REVIEW_ARTIFACT_PATH="cortex-abv/reviews/pending/${REVIEW_SLUG}.write-review.v1.json"
           echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
+          echo "review_artifact_path=$REVIEW_ARTIFACT_PATH" >> "$GITHUB_OUTPUT"
           git config user.name "cortex-abv[bot]"
           git config user.email "cortex-abv[bot]@users.noreply.github.com"
           git checkout -b "$BRANCH"
-          git add content/work
-          git commit -m "chore: propose bounded public project copy updates"
-          git push -u origin "$BRANCH"
 
           node scripts/cortex-abv-render-pr-receipt.mjs \
             --input "$RUNNER_TEMP/cortex-abv/cortex-abv-observed-events.json" \
             --claims-dir "$RUNNER_TEMP/cortex-abv-copy-proposals" \
             --output "$RUNNER_TEMP/cortex-abv-autonomous-public-sync-receipt.md"
 
+          mkdir -p "$(dirname "$REVIEW_ARTIFACT_PATH")"
           node scripts/cortex-abv-write-side-review-artifact.mjs \
             --input "$RUNNER_TEMP/cortex-abv/cortex-abv-observed-events.json" \
             --claims-dir "$RUNNER_TEMP/cortex-abv-copy-proposals" \
-            --output "$RUNNER_TEMP/cortex-abv-write-side-review-artifact.json"
+            --output "$REVIEW_ARTIFACT_PATH"
 
           {
             printf '%s\n' \
@@ -128,10 +129,19 @@ jobs:
               '- [ ] set `ownerReview.status = approved` and merge this PR' \
               '- [ ] set `ownerReview.status = rejected` and close with a reason' \
               '' \
+              'Pending review artifact path:' \
+              "- \`$REVIEW_ARTIFACT_PATH\`" \
+              '' \
+              'Manual owner-review workflow:' \
+              '- Run `Owner review project-copy proposal` against this PR branch, choose `approved` or `rejected`, and provide a short owner decision note.' \
+              '' \
               'Merging is the only publication action. This workflow does not auto-publish.' \
               > "$RUNNER_TEMP/cortex-abv-pr-review-body.md"
           }
           cat "$RUNNER_TEMP/cortex-abv-autonomous-public-sync-receipt.md" >> "$RUNNER_TEMP/cortex-abv-pr-review-body.md"
+          git add content/work "$REVIEW_ARTIFACT_PATH"
+          git commit -m "chore: propose bounded public project copy updates"
+          git push -u origin "$BRANCH"
           gh pr create \
             --repo "${{ github.repository }}" \
             --title "chore: CortexABV bounded project-copy proposal (${TARGET_SLUGS})" \
@@ -148,7 +158,7 @@ jobs:
           path: |
             ${{ runner.temp }}/cortex-abv-autonomous-public-sync-receipt.md
             ${{ runner.temp }}/cortex-abv-pr-review-body.md
-            ${{ runner.temp }}/cortex-abv-write-side-review-artifact.json
+            ${{ steps.apply.outputs.review_artifact_path }}
           if-no-files-found: error
 
   check-lab-repo-token:

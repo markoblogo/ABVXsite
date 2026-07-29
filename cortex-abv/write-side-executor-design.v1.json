@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVWriteSideExecutorDesign",
+  "version": "v1",
+  "status": "design_only",
+  "mode": "owner_review_pr_only",
+  "surfaces": [
+    {
+      "id": "abvxsite-project-copy",
+      "repository": "markoblogo/ABVXsite",
+      "branch": "main",
+      "implementationState": "active_pr_only",
+      "allowedPaths": [
+        "content/work/*.md"
+      ],
+      "allowedPatchFields": [
+        "summary",
+        "bodyAppendix",
+        "updatedAt",
+        "sync.lastAppliedCommit",
+        "sync.lastAppliedAt"
+      ],
+      "proposalKinds": [
+        "CortexABVCopyProposal"
+      ],
+      "requiredArtifacts": [
+        "CortexABVObservedEventBatch",
+        "CortexABVAutonomousPublicSyncReceipt",
+        "CortexABVWriteExecutorReviewArtifact"
+      ],
+      "publishPath": "pull_request_merge_only",
+      "rollbackPath": "close_pr_or_revert_merge"
+    },
+    {
+      "id": "lab-home-ledger",
+      "repository": "markoblogo/lab.abvx",
+      "branch": "main",
+      "implementationState": "design_only_pr_required",
+      "allowedPaths": [
+        "docs/index.html",
+        "docs/assets/home-ledger-snapshot.v1.json"
+      ],
+      "allowedPatchFields": [
+        "freshnessLedger",
+        "freshnessSnapshotProvenance"
+      ],
+      "proposalKinds": [
+        "CortexABVLabLedgerProposal"
+      ],
+      "requiredArtifacts": [
+        "CortexABVObservedEventBatch",
+        "CortexABVLabHomeLedgerSnapshot",
+        "CortexABVWriteExecutorReviewArtifact"
+      ],
+      "publishPath": "pull_request_merge_only",
+      "rollbackPath": "close_pr_or_revert_merge"
+    }
+  ],
+  "reviewGate": {
+    "ownerReviewRequired": true,
+    "initialStatus": "pending_review",
+    "terminalStatuses": [
+      "approved",
+      "rejected"
+    ],
+    "mergeIsOnlyPublicationAction": true
+  },
+  "forbiddenExecutorBehaviors": [
+    "direct_main_push",
+    "automatic_merge",
+    "autonomous_social_post",
+    "message_send",
+    "email_send",
+    "source_repository_mutation",
+    "identity_field_change",
+    "unbounded_content_rewrite"
+  ],
+  "notes": [
+    "ABVXsite project-copy path is already active under PR-first owner review.",
+    "Lab is intentionally design-only here until it matches the same PR-first review boundary."
+  ]
+}

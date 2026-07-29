@@ -26,19 +26,30 @@ The guard rejects `data/`, ledger files, environment/key files, and token-like v
 
 The snapshot now also documents the private, owner-controlled [Personal Knowledge Core boundary](../docs/cortex-abv-personal-knowledge-core.md): CoqPi is the personal conversational/ingress interface, while CortexABV maintains approved personal and project facts. This is one private canonical core, not base Cortex, a public corpus, or a duplicate store per assistant.
 
-## First capability
+## Current public write scope
 
-`project_copy_sync` reads only the explicit `sync` allowlist already present on a work item. A proposal may update only existing copy-safe fields:
+`project_copy_sync` is the only active public write-capable proposal action.
+
+The next executor seam above that action is now documented in [`executor-wiring-boundary.v1.json`](./executor-wiring-boundary.v1.json): only an approved review artifact may cross into the wiring layer, and it maps only to PR-first merge authority. This remains non-executing design scope; no direct merge, autopublish, social, or outbound action is activated here.
+
+It is bounded to:
 
 - `summary`
-- Markdown body
+- one appended body paragraph
 - `updatedAt`
 - sync provenance (`lastAppliedCommit`, `lastAppliedAt`)
 
-Its default remains reviewable and side-effect free. MN7R, Cropto, and SPIKE INDEX still use the same bounded fields, but now through a PR-first executor: any proposed write goes through owner-review PRs and only merges manually.
-It cannot change project identity, title, status, tags, links, media, positioning, or publish to a social network.
+It cannot change identity, title, status, tags, links, media, section placement, FAQ, social surfaces, or messages.
 
-Every enabled project has a `publicCopy` profile: explicit allowed themes, project-specific forbidden terms, and `append_only` body mode. A proposal may update a summary of at most 320 characters and may append one body paragraph of at most 450 characters; it cannot rewrite, delete, reorder, or restate the approved public body baseline. It also rejects protected/internal surfaces, endpoints, environment details, demo or seeded/mock data, persistence gaps, and other prototype-gap framing. Each changed field requires one claim-to-source line-range anchor from an explicitly allowlisted file. The receipt shows those paths and line ranges, never a copied private-source excerpt.
+The content rules are now fixed in:
+
+- [Write-side policy](../docs/cortex-abv-write-side-policy.md)
+- [Write-side executor design](../docs/cortex-abv-write-side-executor-design.md)
+
+Those two documents separate concerns cleanly:
+
+- policy defines what copy is allowed;
+- executor design defines which surfaces may receive it and under which PR boundary.
 
 ## Observed-event workflow
 
@@ -54,9 +65,17 @@ Run the observer locally when `SOURCE_REPOS_TOKEN` can read every enabled source
 SOURCE_REPOS_TOKEN=... npm run cortex-abv:observe-events -- --output /tmp/cortex-abv-observed-events.json
 ```
 
-## Policy
+## Policy and executor boundary
 
-`public-policy.example.json` defines the safe public default: `proposal_only`, no automatic actions, and an explicit deny list for external communication and private-data storage. [`autonomous-public-sync.v1.json`](autonomous-public-sync.v1.json) is a narrow policy list of write candidates for this same review flow; Lab remains disabled until its separate write credential is installed. Runtime policy is validated by `npm run cortex-abv:status`.
+`public-policy.example.json` defines the safe public default: `proposal_only`, no automatic actions, and an explicit deny list for external communication and private-data storage.
+
+[`autonomous-public-sync.v1.json`](autonomous-public-sync.v1.json) is the narrow allowlist for site-copy candidates.
+
+[`write-side-executor-design.v1.json`](write-side-executor-design.v1.json) defines the next executor boundary:
+
+- `ABVXsite` project copy is active as PR-only;
+- `Lab` is design-scoped only until it uses the same owner-review path;
+- direct pushes and any non-PR publication remain forbidden inside this executor design.
 
 ## Public Presence Index v1
 

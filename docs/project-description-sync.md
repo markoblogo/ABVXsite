@@ -13,7 +13,15 @@ MN7R, Cropto, and SPIKE SPOT COMMODITY INDEX UKRAINE can still generate bounded 
 5. The PR payload includes a bounded `receipt.md` plus a write-side review artifact with:
    - `ownerReview.status = pending_review`,
    - explicit required `approve` / `reject` actions,
+   - embedded `CortexABVWriteSidePolicy v1`,
    - `merge` is the only publication step.
+6. The pending review artifact is committed into the PR branch under `cortex-abv/reviews/pending/*.write-review.v1.json`, so the owner-review path works on the exact candidate chain that produced the PR.
+7. A separate manual workflow, `Owner review project-copy proposal`, may consume that artifact with explicit workflow inputs:
+   - `proposal_ref`
+   - `review_artifact_path`
+   - `owner_review_status = approved | rejected`
+   - `owner_decision`
+8. Only `approved` produces an executor wiring plan; `rejected` records the decision artifact only. Neither path auto-merges or publishes directly.
 
 The job fails closed for missing source files, credentials, invalid profile, invalid claim, provider error, test failure, validation failure, or branch-push rejection. A source SHA change with no supported public copy change makes no PR.
 
@@ -26,6 +34,30 @@ The direct profile permits only:
 - `updatedAt` and sync provenance.
 
 It preserves the existing public body baseline. It cannot touch identity, title, status, section placement, tags, links, media, FAQ, positioning, social networks, messages, email, or source projects. It rejects protected/internal/endpoint/environment/demo/mock/prototype-gap language and project-specific stop terms.
+
+The explicit write-side contract now lives in [cortex-abv-write-side-policy.md](cortex-abv-write-side-policy.md). That contract is mandatory for the review artifact path and defines:
+
+- which fields may ever be approved;
+- which proposal shape is valid;
+- which action forms are blocked even if a future adapter suggests them.
+
+The next boundary above that policy is the narrow executor design in [cortex-abv-write-side-executor-design.md](cortex-abv-write-side-executor-design.md). It fixes which target surfaces belong to the future PR-first executor and keeps `Lab` design-scoped until it matches the same owner-review path.
+
+Above that executor design, the new ABVXsite-only wiring boundary fixes the approved-review handoff:
+
+- input: only an approved `CortexABVWriteExecutorReviewArtifact`;
+- mapping: `owner_merge_pull_request` only;
+- publication: still PR merge only;
+- forbidden: autopublish, direct main push, social/message/email, or any external direct execution.
+
+For `index/spike`, this means the real candidate chain is now:
+
+1. observed SHA / metadata change
+2. bounded copy proposal
+3. pending review artifact committed into the PR branch
+4. explicit owner decision artifact (`approved` or `rejected`)
+5. executor wiring plan only if `approved`
+6. manual PR merge only
 
 Current trace shape defaults:
 

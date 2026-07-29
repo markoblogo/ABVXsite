@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "kind": "CortexABVExecutorWiringBoundary",
+  "version": "v1",
+  "status": "design_only",
+  "mode": "approved_review_pr_first_only",
+  "activeSurface": {
+    "id": "abvxsite-project-copy",
+    "repository": "markoblogo/ABVXsite",
+    "baseBranch": "main",
+    "allowedBranchPrefix": "cortexabv/write-side-",
+    "allowedReviewArtifactKind": "CortexABVWriteExecutorReviewArtifact",
+    "requiredOwnerReviewStatus": "approved",
+    "mappedAction": "owner_merge_pull_request",
+    "publishPath": "pull_request_merge_only"
+  },
+  "forbiddenBehaviors": [
+    "autopublish",
+    "direct_main_push",
+    "automatic_merge",
+    "social_post",
+    "message_send",
+    "email_send",
+    "external_direct_execution",
+    "source_repository_mutation"
+  ],
+  "notes": [
+    "This boundary consumes only approved ABVXsite write-side review artifacts.",
+    "It maps approval to PR-first action only and does not execute merge itself.",
+    "Lab remains outside active wiring scope at this stage."
+  ]
+}

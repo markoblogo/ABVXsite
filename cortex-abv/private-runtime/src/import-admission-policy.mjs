@@ -20,6 +20,9 @@ function validatePolicy(policy) {
   if (policy?.schemaVersion !== 1 || policy?.kind !== 'CortexABVImportAdmissionPolicy' || policy?.version !== 'v1') {
     throw new Error('policy must be CortexABVImportAdmissionPolicy v1');
   }
+  if (!policy.ingestionTrustPolicy || !Array.isArray(policy.ingestionTrustPolicy.forbiddenPayloadKeys) || !Array.isArray(policy.ingestionTrustPolicy.provenanceKindAllowlist)) {
+    throw new Error('policy ingestionTrustPolicy is incomplete');
+  }
   if (!policy.classificationPolicies?.public || !policy.classificationPolicies?.protected || !Array.isArray(policy.sourceRules)) {
     throw new Error('policy is incomplete');
   }
@@ -79,6 +82,51 @@ function resolveClassificationPolicy(classification, rule, policy) {
   };
 }
 
+function collectForbiddenPayloadPaths(value, forbiddenKeys, currentPath = 'payload') {
+  if (!value || typeof value !== 'object') return [];
+  if (Array.isArray(value)) {
+    return value.flatMap((item, index) => collectForbiddenPayloadPaths(item, forbiddenKeys, `${currentPath}[${index}]`));
+  }
+
+  return Object.entries(value).flatMap(([key, nested]) => {
+    const nextPath = `${currentPath}.${key}`;
+    const violations = forbiddenKeys.has(key) ? [nextPath] : [];
+    return violations.concat(collectForbiddenPayloadPaths(nested, forbiddenKeys, nextPath));
+  });
+}
+
+function enforceIngestionTrustPolicy(packet, rule, policy) {
+  const allowedPermittedUse = new Set(rule.allowedPermittedUse || policy.ingestionTrustPolicy.defaultAllowedPermittedUse || []);
+  const allowedProvenanceKinds = new Set(rule.allowedProvenanceKinds || policy.ingestionTrustPolicy.provenanceKindAllowlist || []);
+  const forbiddenPayloadKeys = new Set(policy.ingestionTrustPolicy.forbiddenPayloadKeys || []);
+
+  const disallowedPermittedUse = packet.permittedUse.filter((use) => !allowedPermittedUse.has(use));
+  if (disallowedPermittedUse.length) {
+    throw new Error(`packet permittedUse is not allowed by ingestion trust policy: ${disallowedPermittedUse.join(', ')}`);
+  }
+
+  const provenanceKinds = [...new Set(packet.provenance.map((item) => item.kind))].sort();
+  const disallowedProvenanceKinds = provenanceKinds.filter((kind) => !allowedProvenanceKinds.has(kind));
+  if (disallowedProvenanceKinds.length) {
+    throw new Error(`packet provenance kind is not allowed by ingestion trust policy: ${disallowedProvenanceKinds.join(', ')}`);
+  }
+
+  const forbiddenPayloadPaths = collectForbiddenPayloadPaths(packet.payload, forbiddenPayloadKeys);
+  if (forbiddenPayloadPaths.length) {
+    throw new Error(`packet payload contains forbidden ingestion keys: ${forbiddenPayloadPaths.join(', ')}`);
+  }
+
+  return {
+    policyVersion: policy.ingestionTrustPolicy.policyVersion,
+    trustLevel: rule.trustLevel || 'unspecified',
+    allowedPermittedUse: [...allowedPermittedUse],
+    actualPermittedUse: [...packet.permittedUse],
+    provenanceKinds,
+    payloadScopeStatus: 'accepted',
+    forbiddenPayloadPaths,
+  };
+}
+
 function expiration(admittedAt, maxAgeDays) {
   return new Date(Date.parse(admittedAt) + maxAgeDays * 24 * 60 * 60 * 1000).toISOString();
 }
@@ -89,6 +137,7 @@ export function admitImportPacket({ packet, policy, admittedAt }) {
   const timestamp = validTimestamp(admittedAt, 'admittedAt');
   const sourceRule = sourceRuleFor(packet, policy);
   const { policy: classificationPolicy, decisionTrace } = resolveClassificationPolicy(packet.classification, sourceRule, policy);
+  const memoryGuard = enforceIngestionTrustPolicy(packet, sourceRule, policy);
   const packetDigest = digest(packet);
   const policyDigest = digest(policy);
   return {
@@ -98,7 +147,10 @@ export function admitImportPacket({ packet, policy, admittedAt }) {
     authority: 'plan',
     externalSideEffects: false,
     status: 'admitted',
-    decisionTrace,
+    decisionTrace: {
+      ...decisionTrace,
+      memoryGuard,
+    },
     admittedAt: timestamp,
     packetDigest,
     policy: { version: policy.version, digest: policyDigest },

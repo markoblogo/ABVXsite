@@ -23,6 +23,47 @@
       "reason": "runtimeIntegration=false in pilot: tf-idf/lite fallback is required for Stage 3 governance-safe runs"
     }
   },
+  "retrievalRouting": {
+    "defaultRoute": "public_reference_lookup",
+    "routes": [
+      {
+        "id": "public_reference_lookup",
+        "description": "Public facts and summary-grade value statements from allowlisted corpus artifacts.",
+        "requiredSignals": ["public", "summary", "status", "updates"]
+      },
+      {
+        "id": "tenant_surface_lookup",
+        "description": "Tenant-scoped guide, onboarding and surface mapping queries.",
+        "requiredSignals": ["guide", "onboarding", "place", "faq"]
+      }
+    ],
+    "selectorPolicy": "deterministic_signal_match_then_default"
+  },
+  "multiStrategyGating": {
+    "policy": "all_required_strategies_must_pass",
+    "strategies": [
+      {
+        "id": "route_scope_gate",
+        "required": true,
+        "reason": "selected retrieval route must be allowlisted by the pilot plan"
+      },
+      {
+        "id": "tenant_scope_filter",
+        "required": true,
+        "reason": "results must stay within the route-appropriate tenant/public scope"
+      },
+      {
+        "id": "lexical_anchor_gate",
+        "required": true,
+        "reason": "matched tokens threshold must be satisfied before candidate promotion"
+      },
+      {
+        "id": "claim_evidence_gate",
+        "required": true,
+        "reason": "returned candidates require evidence anchors"
+      }
+    ]
+  },
   "pilotScope": [
     {
       "id": "public-presence-index",

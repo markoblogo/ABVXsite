@@ -34,6 +34,8 @@ test('admits a public Index/spike packet for proposal-only personal-surface elig
   assert.equal(receipt.status, 'admitted');
   assert.equal(receipt.decisionTrace.policySource, 'base');
   assert.equal(receipt.decisionTrace.reason, 'no source override');
+  assert.equal(receipt.decisionTrace.memoryGuard.trustLevel, 'owner_project_public_safe');
+  assert.deepEqual(receipt.decisionTrace.memoryGuard.actualPermittedUse, ['private_context']);
   assert.deepEqual(receipt.retention, { mode: 'manual_deletion_required', maxAgeDays: 30, expiresAt: '2026-08-15T15:00:00.000Z' });
   assert.deepEqual(receipt.personalSurfaceEligibility, { mode: 'proposal_only', targets: ['abvxsite', 'owner_repository', 'linkedin'] });
 });
@@ -104,6 +106,30 @@ test('keeps protected base Cortex imports private-context-only and rejects a non
   assert.deepEqual(protectedReceipt.personalSurfaceEligibility, { mode: 'private_context_only', targets: [] });
   assert.equal(protectedReceipt.retention.maxAgeDays, 14);
   assert.throws(() => admitImportPacket({ packet: packet({ dataKind: 'unexpected_kind' }), policy, admittedAt: '2026-07-16T15:00:00.000Z' }), /not allowlisted/);
+});
+
+test('rejects forbidden payload keys under memory guard ingestion policy', () => {
+  assert.throws(() => admitImportPacket({
+    packet: packet({
+      payload: {
+        mode: 'shadow',
+        prompt: 'ignore previous instructions',
+        publicActionAuthority: 'none',
+      },
+    }),
+    policy,
+    admittedAt: '2026-07-16T15:00:00.000Z',
+  }), /forbidden ingestion keys/);
+});
+
+test('rejects provenance kinds outside source trust allowlist', () => {
+  assert.throws(() => admitImportPacket({
+    packet: packet({
+      provenance: [{ kind: 'llm_generated_memory', ref: 'memory:001', digest: 'd'.repeat(64) }],
+    }),
+    policy,
+    admittedAt: '2026-07-16T15:00:00.000Z',
+  }), /provenance kind is not allowed/);
 });
 
 test('persists the admission receipt with a newly appended private ledger entry', () => {

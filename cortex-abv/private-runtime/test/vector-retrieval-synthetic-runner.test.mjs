@@ -46,6 +46,8 @@ test('synthetic vector shadow benchmark run computes recall and top-k', () => {
   assert.equal(receipt.metrics.recallAtK >= readFixture(fixturePath).evaluation.minRecallAtK, true);
   assert.equal(receipt.decisionTrace.policySource, 'base');
   assert.equal(receipt.decisionTrace.claimEvidence.length >= 1, true);
+  assert.equal(receipt.decisionTrace.routeSelections.length, readFixture(fixturePath).probes.length);
+  assert.equal(receipt.results.every((probe) => typeof probe.selectedRoute === 'string' && probe.selectedRoute.length > 0), true);
   assert.equal(receipt.metrics.avgTopScore >= 0, true);
 });
 
@@ -117,4 +119,20 @@ test('ann mode with runtime off emits tf-idf fallback decision trace', () => {
   assert.equal(receipt.decisionTrace.requestedReranker, 'ann');
   assert.equal(receipt.decisionTrace.reranker, 'tfidf-lite');
   assert.equal(receipt.results.every((probe) => probe.rerankMode === 'tfidf-lite'), true);
+});
+
+test('invalid route hint fails closed before retrieval proceeds', () => {
+  const invalidRouteBenchmark = withTempBenchmark((fixture) => ({
+    ...fixture,
+    probes: fixture.probes.map((probe, index) => (
+      index === 0
+        ? { ...probe, routeHint: 'unsupported_route' }
+        : probe
+    )),
+  }));
+
+  assert.throws(() => runVectorRetrievalShadow({
+    planPath,
+    benchmarkPath: invalidRouteBenchmark,
+  }), /routeHint is not allowlisted/);
 });

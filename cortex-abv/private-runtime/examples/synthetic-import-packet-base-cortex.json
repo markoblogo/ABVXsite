@@ -12,14 +12,13 @@
   "observedAt": "2026-07-20T10:00:00.000Z",
   "provenance": [
     {
-      "kind": "cortex_ledger",
+      "kind": "synthetic_fixture",
       "ref": "ledger:base-cortex:market-workforce:2026-07-20:001",
       "digest": "1f9c0f6f4f4a3b8a6f5c3ca31ab9f0b7f0f8d3a9f4d8d6b9f6a2f8b3c7a4d5e6"
     }
   ],
   "permittedUse": [
-    "private_context",
-    "personal_surface_proposal_preparation"
+    "private_context"
   ],
   "returnAuthority": "none",
   "payload": {

@@ -4,6 +4,29 @@
   "version": "v1",
   "authority": "plan",
   "externalSideEffects": false,
+  "ingestionTrustPolicy": {
+    "policyVersion": "memory-guard-v1",
+    "forbiddenPayloadKeys": [
+      "instruction",
+      "instructions",
+      "prompt",
+      "systemPrompt",
+      "toolCall",
+      "toolCalls",
+      "endpoint",
+      "webhook",
+      "secret",
+      "credentials",
+      "env"
+    ],
+    "defaultAllowedPermittedUse": ["private_context"],
+    "provenanceKindAllowlist": [
+      "synthetic_fixture",
+      "repo_snapshot",
+      "public_registry_snapshot",
+      "owner_review_artifact"
+    ]
+  },
   "classificationPolicies": {
     "public": {
       "maxAgeDays": 30,
@@ -23,15 +46,24 @@
   "sourceRules": [
     {
       "source": { "kind": "base_cortex", "id": "base-cortex" },
-      "allowedDataKinds": ["cortex_market_workforce_packet"]
+      "allowedDataKinds": ["cortex_market_workforce_packet"],
+      "trustLevel": "owner_verified_shadow",
+      "allowedPermittedUse": ["private_context"],
+      "allowedProvenanceKinds": ["synthetic_fixture", "owner_review_artifact"]
     },
     {
       "source": { "kind": "owned_project_ecosystem", "id": "index/spike" },
-      "allowedDataKinds": ["index_spike_project_update"]
+      "allowedDataKinds": ["index_spike_project_update"],
+      "trustLevel": "owner_project_public_safe",
+      "allowedPermittedUse": ["private_context", "personal_surface_proposal_preparation"],
+      "allowedProvenanceKinds": ["synthetic_fixture", "repo_snapshot", "public_registry_snapshot"]
     },
     {
       "source": { "kind": "owned_project_ecosystem", "id": "monitor" },
       "allowedDataKinds": ["monitor_project_update"],
+      "trustLevel": "owner_project_guarded",
+      "allowedPermittedUse": ["private_context", "personal_surface_proposal_preparation"],
+      "allowedProvenanceKinds": ["synthetic_fixture", "repo_snapshot", "owner_review_artifact"],
       "classificationPolicy": {
         "public": {
           "maxAgeDays": 7,
@@ -52,6 +84,9 @@
     {
       "source": { "kind": "owned_project_ecosystem", "id": "cropto" },
       "allowedDataKinds": ["cropto_project_update"],
+      "trustLevel": "owner_project_guarded",
+      "allowedPermittedUse": ["private_context", "personal_surface_proposal_preparation"],
+      "allowedProvenanceKinds": ["synthetic_fixture", "repo_snapshot", "owner_review_artifact"],
       "classificationPolicy": {
         "public": {
           "maxAgeDays": 10,

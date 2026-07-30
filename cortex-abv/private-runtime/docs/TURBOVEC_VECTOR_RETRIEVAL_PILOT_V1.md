@@ -52,6 +52,8 @@ The runner computes deterministic retrieval-like recall metrics and writes:
 - per-probe top-k candidates,
 - per-probe recall@k,
 - aggregate recall@k,
+- per-probe retrieval-route selection,
+- required strategy-gate results for route scope, lexical anchors and claim evidence,
 - deterministic TF-IDF/BM25-like rerank scoring (`tfidf-lite`),
 - hard score threshold check against `evaluation.minCandidateScore`,
 - evidence gates: `decisionTrace.claimEvidence` and `decisionTrace.missingEvidence`.
@@ -78,6 +80,8 @@ Decision trace now records runtime readiness and fallback details per run:
 - `decisionTrace.fallbackReason`
 
 This preserves the same governance gates and keeps ANN wiring backward-safe: if runtime is off, retrieval remains deterministic tf-idf, transparent in receipts, and proposal-only.
+
+The current retrieval-route selector is a donor-style contract inspired by the LangGraph Agentic RAG tutorial, but kept local and deterministic: route hint or signal match chooses an allowlisted route, then the same proposal-only receipt chain enforces required strategy gates. No LangGraph runtime, graph executor or agent loop is imported here.
 
 ### Stage 4b: vector runtime readiness shim
 

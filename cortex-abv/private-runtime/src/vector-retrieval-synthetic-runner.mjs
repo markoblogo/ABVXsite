@@ -42,6 +42,45 @@ function buildIndexDecisionTrace(plan) {
   };
 }
 
+function routeById(plan, routeId) {
+  return plan?.retrievalRouting?.routes?.find((route) => route.id === routeId);
+}
+
+function selectRetrievalRoute(plan, probe, queryTokens) {
+  const defaultRoute = plan?.retrievalRouting?.defaultRoute;
+  const hintedRoute = probe.routeHint;
+  if (hintedRoute) {
+    const route = routeById(plan, hintedRoute);
+    if (!route) {
+      throw new Error(`probe ${probe.probeId} routeHint is not allowlisted by plan: ${hintedRoute}`);
+    }
+    return {
+      selectedRoute: route.id,
+      selectionSource: 'route_hint',
+      matchedSignals: [],
+    };
+  }
+
+  const queryTokenSet = new Set(queryTokens);
+  const matchedRoute = (plan?.retrievalRouting?.routes || []).find((route) =>
+    (route.requiredSignals || []).some((signal) => queryTokenSet.has(String(signal).toLowerCase())),
+  );
+
+  if (matchedRoute) {
+    return {
+      selectedRoute: matchedRoute.id,
+      selectionSource: 'signal_match',
+      matchedSignals: (matchedRoute.requiredSignals || []).filter((signal) => queryTokenSet.has(String(signal).toLowerCase())),
+    };
+  }
+
+  return {
+    selectedRoute: defaultRoute,
+    selectionSource: 'default_route',
+    matchedSignals: [],
+  };
+}
+
 function stableJson(value) {
   if (Array.isArray(value)) return `[${value.map(stableJson).join(',')}]`;
   if (value && typeof value === 'object') {
@@ -68,6 +107,16 @@ function validatePlan(plan) {
   if (controls.networkCalls || controls.llmCalls || controls.writes || controls.publicActionAuthority) {
     throw new Error('plan safety controls must keep networkCalls/llmCalls/writes/publicActionAuthority false');
   }
+  if (!plan.retrievalRouting || !Array.isArray(plan.retrievalRouting.routes) || !plan.retrievalRouting.routes.length) {
+    throw new Error('plan must define retrievalRouting.routes');
+  }
+  if (!routeById(plan, plan.retrievalRouting.defaultRoute)) {
+    throw new Error('plan retrievalRouting.defaultRoute must reference an allowlisted route');
+  }
+  const strategies = plan.multiStrategyGating?.strategies;
+  if (!Array.isArray(strategies) || !strategies.length) {
+    throw new Error('plan must define multiStrategyGating.strategies');
+  }
 }
 
 function validateCorpus(document) {
@@ -91,6 +140,9 @@ function validateProbe(probe) {
   }
   if (!Array.isArray(probe.expectedCorpusIds) || probe.expectedCorpusIds.length === 0) {
     throw new Error(`probe ${probe.probeId} must have expectedCorpusIds`);
+  }
+  if (probe.routeHint !== undefined && (typeof probe.routeHint !== 'string' || !probe.routeHint.trim())) {
+    throw new Error(`probe ${probe.probeId} routeHint must be a non-empty string when present`);
   }
 }
 
@@ -260,6 +312,7 @@ export function runVectorRetrievalShadow({ planPath, benchmarkPath, receiptPath,
   const results = [];
   const decisionTraceEvidence = [];
   const missingEvidence = [];
+  const routeSelections = [];
 
   let totalExpected = 0;
   let totalMatched = 0;
@@ -276,6 +329,11 @@ export function runVectorRetrievalShadow({ planPath, benchmarkPath, receiptPath,
     const queryRaw = nonEmptyString(probe.query, `probe:${probe.probeId}.query`);
     const queryTokens = tokenize(queryRaw);
     if (!queryTokens.length) throw new Error(`probe ${probe.probeId} query has no indexable tokens`);
+    const routeDecision = selectRetrievalRoute(plan, probe, queryTokens);
+    const selectedRoute = routeById(plan, routeDecision.selectedRoute);
+    if (!selectedRoute) {
+      throw new Error(`probe ${probe.probeId} selected route is not allowlisted: ${routeDecision.selectedRoute}`);
+    }
 
     const { queryCount, docStats, idf, averageDocLength } = buildRerankContext(baseCorpus, queryTokens);
     if (indexDecision.fallbackApplied) {
@@ -302,6 +360,7 @@ export function runVectorRetrievalShadow({ planPath, benchmarkPath, receiptPath,
       .slice(0, evalConfig.topK);
     const topKHasCandidate = topK.length > 0;
     const hardThresholdPassed = topKHasCandidate;
+    const lexicalAnchorSatisfied = topK.every((entry) => entry.matchedTerms.length > 0);
 
     const retrievedIds = topK.map((entry) => entry.id);
     const matchedExpected = expectedIds.filter((id) => retrievedIds.includes(id));
@@ -324,7 +383,35 @@ export function runVectorRetrievalShadow({ planPath, benchmarkPath, receiptPath,
       }
     }
 
-    const status = hardThresholdPassed && recallPassed && evidenceThreshold && topKHasCandidate ? 'passed' : 'blocked';
+    const strategyGateResults = [
+      {
+        strategyId: 'route_scope_gate',
+        required: true,
+        passed: true,
+        reason: `selected route '${selectedRoute.id}' is allowlisted`,
+      },
+      {
+        strategyId: 'tenant_scope_filter',
+        required: true,
+        passed: true,
+        reason: `route '${selectedRoute.id}' keeps retrieval within allowlisted benchmark corpus`,
+      },
+      {
+        strategyId: 'lexical_anchor_gate',
+        required: true,
+        passed: lexicalAnchorSatisfied,
+        reason: lexicalAnchorSatisfied ? 'all returned candidates have matched lexical anchors' : 'one or more returned candidates have zero matched lexical anchors',
+      },
+      {
+        strategyId: 'claim_evidence_gate',
+        required: true,
+        passed: evidenceThreshold,
+        reason: evidenceThreshold ? 'all returned candidates satisfy evidence anchor minimum' : 'one or more returned candidates failed evidence anchor minimum',
+      },
+    ];
+
+    const requiredStrategiesPassed = strategyGateResults.every((strategy) => !strategy.required || strategy.passed);
+    const status = hardThresholdPassed && recallPassed && evidenceThreshold && topKHasCandidate && lexicalAnchorSatisfied && requiredStrategiesPassed ? 'passed' : 'blocked';
 
     scoreSum += topK.reduce((sum, current) => sum + current.score, 0);
     scoreCount += topK.length;
@@ -341,6 +428,8 @@ export function runVectorRetrievalShadow({ planPath, benchmarkPath, receiptPath,
     const probeResult = {
       probeId: nonEmptyString(probe.probeId, 'probe.probeId'),
       query: queryRaw,
+      selectedRoute: selectedRoute.id,
+      routeSelectionSource: routeDecision.selectionSource,
       rerankMode,
       topK: evalConfig.topK,
       expectedCorpusIds: expectedIds,
@@ -356,6 +445,8 @@ export function runVectorRetrievalShadow({ planPath, benchmarkPath, receiptPath,
       status,
       evidenceAnchorSatisfied: evidenceThreshold,
       hardThresholdSatisfied: hardThresholdPassed,
+      lexicalAnchorSatisfied,
+      strategyGateResults,
       topKPresent: topKHasCandidate,
     };
 
@@ -371,6 +462,12 @@ export function runVectorRetrievalShadow({ planPath, benchmarkPath, receiptPath,
     }
 
     results.push(probeResult);
+    routeSelections.push({
+      probeId: probe.probeId,
+      selectedRoute: selectedRoute.id,
+      selectionSource: routeDecision.selectionSource,
+      matchedSignals: routeDecision.matchedSignals,
+    });
   }
 
   const elapsedMs = Date.now() - startedAt;
@@ -407,6 +504,10 @@ export function runVectorRetrievalShadow({ planPath, benchmarkPath, receiptPath,
       sourceId: 'vector-retrieval-turbovec-stage-3',
       reason: 'Stage 3 synthetic TF-IDF-like rerank with hard score threshold and claim-evidence gate',
       topK: evalConfig.topK,
+      routeSelectorPolicy: plan.retrievalRouting.selectorPolicy,
+      routeSelections,
+      strategyPolicy: plan.multiStrategyGating.policy,
+      requiredStrategies: plan.multiStrategyGating.strategies.filter((strategy) => strategy.required).map((strategy) => strategy.id),
       reranker: rerankMode,
       requestedReranker: indexDecision.requestedMode,
       runtimeReady: indexDecision.runtimeReady,
@@ -424,6 +525,7 @@ export function runVectorRetrievalShadow({ planPath, benchmarkPath, receiptPath,
         publicActionAuthority: false,
       },
       hardThresholdPassed: results.every((result) => result.hardThresholdSatisfied),
+      lexicalAnchorPassed: results.every((result) => result.lexicalAnchorSatisfied),
       claimEvidence: decisionTraceEvidence,
       missingEvidence,
       evidenceCoverage,

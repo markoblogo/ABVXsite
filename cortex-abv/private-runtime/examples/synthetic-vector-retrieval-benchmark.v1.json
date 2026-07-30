@@ -63,6 +63,7 @@
     {
       "probeId": "probe-index-summary",
       "query": "What is the latest Index spike summary about public updates?",
+      "routeHint": "public_reference_lookup",
       "expectedCorpusIds": [
         "pp-index-spike-updates"
       ],
@@ -71,6 +72,7 @@
     {
       "probeId": "probe-monitor-readiness",
       "query": "Show Monitor MN7R dashboard repository readiness status",
+      "routeHint": "public_reference_lookup",
       "expectedCorpusIds": [
         "pp-monitor-mn7r-dashboard"
       ],
@@ -79,6 +81,7 @@
     {
       "probeId": "probe-azurmenton-guides",
       "query": "AzurMenton public guides and onboarding place cards",
+      "routeHint": "tenant_surface_lookup",
       "expectedCorpusIds": [
         "pp-azurmenton-guides",
         "pp-digital-presence-sync"

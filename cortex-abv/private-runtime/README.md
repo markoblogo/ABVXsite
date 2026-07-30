@@ -151,6 +151,8 @@ The pilot is **synthetic** by default and must stay proposal-only until separate
 After fixtures are in place, you can run a local deterministic synthetic benchmark that:
 
 - builds a TF-IDF/BM25-like deterministic rerank pass (local-only stub) over an allowlisted corpus;
+- selects an allowlisted retrieval route per probe before scoring;
+- records a required multi-strategy gate set for route scope, lexical anchors, and claim evidence;
 - applies a hard candidate-score threshold on top-k results;
 - requires evidence anchors for returned candidates via `decisionTrace.claimEvidence`;
 - blocks passage when claim anchors are missing.
@@ -208,6 +210,14 @@ npm run vector-runtime-package-policy:check
 ```
 
 The policy allows network only during an explicit temporary dependency install. It forbids committed venvs, global site-packages, runtime integration, endpoints, LLM calls, writes outside receipts and public action authority.
+
+## Donor-derived local contracts
+
+Three donor patterns are now carried locally without importing their runtime shapes:
+
+- LangGraph Agentic RAG: retrieval-route selection logic plus multi-strategy retrieval gating inside the synthetic/private retrieval plan and runner;
+- OWASP Agent Memory Guard: memory-ingestion trust/scope checks on `permittedUse`, `provenance.kind`, and forbidden payload keys before ledger admission;
+- LangGraph Multi-Agent Supervisor: topology ideas remain reference-only for future orchestration boundaries and are not implemented as a runtime pattern.
 
 ## Vector runtime dependency probe
 

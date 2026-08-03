@@ -15,6 +15,8 @@ const imageSources = [
   "https://*.amazonaws.com",
 ].join(" ");
 
+const plausibleDomains = "https://plausible.io https://*.plausible.io";
+
 function compactCsp(value: string): string {
   return value.replace(/\s{2,}/g, " ").trim();
 }
@@ -26,7 +28,7 @@ export function generateNonce(): string {
 
 export function buildContentSecurityPolicy(nonce: string, options: { reportOnly?: boolean } = {}): string {
   const isDev = process.env.NODE_ENV === "development";
-  const scriptPolicy = `'self' 'nonce-${nonce}' 'strict-dynamic'${isDev ? " 'unsafe-eval'" : ""}`;
+  const scriptPolicy = `'self' 'nonce-${nonce}' 'strict-dynamic' ${plausibleDomains}${isDev ? " 'unsafe-eval'" : ""}`;
   const stylePolicy = options.reportOnly ? `'self' 'nonce-${nonce}'` : "'self' 'unsafe-inline'";
 
   return [
@@ -38,7 +40,7 @@ export function buildContentSecurityPolicy(nonce: string, options: { reportOnly?
     ...(options.reportOnly ? ["style-src-attr 'none'"] : []),
     `img-src ${imageSources}`,
     "font-src 'self' data:",
-    "connect-src 'self'",
+    `connect-src 'self' ${plausibleDomains}`,
     "media-src 'self'",
     "frame-src https://www.youtube.com https://www.youtube-nocookie.com",
     "worker-src 'self' blob:",

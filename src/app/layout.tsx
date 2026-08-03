@@ -226,6 +226,20 @@ export default async function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteIdentityJsonLd) }}
         />
+        <script
+          nonce={nonce}
+          async
+          src="https://plausible.io/js/pa-nFu64zSZvts0V4s1jndxt.js"
+        ></script>
+        <script
+          nonce={nonce}
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+              plausible.init()
+            `,
+          }}
+        />
         <link rel="alternate" type="text/plain" title="ABVX public LLM index" href="/llms.txt" />
         <link rel="alternate" type="application/json" title="ABVX structured content index" href="/content-index.json" />
         <link rel="alternate" type="application/rss+xml" title="ABVX Medium feed" href="https://abvcreative.medium.com/feed" />

@@ -1,0 +1,321 @@
+{
+  "schemaVersion": 1,
+  "version": "0.2.0",
+  "rules": [
+    {
+      "id": "AO-CORE-001",
+      "title": "AUTHOR_OS is the default cognitive contract",
+      "file": "AUTHOR_OS.md",
+      "section": "Purpose",
+      "stability": "CORE",
+      "scope": "global",
+      "domains": [
+        "*"
+      ],
+      "status": "active",
+      "runtime_enabled": true,
+      "evidence_refs": [
+        {
+          "sourceRepository": "local",
+          "document": "cortex-abv/author_os/AUTHOR_OS.md",
+          "stableItemId": "AUTHOR_OS.md:Purpose",
+          "contentType": "markdown",
+          "timestamp": "2026-08-03",
+          "revision": "0.1.0",
+          "privacy": "public"
+        }
+      ],
+      "conflicts": [],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "AO-CORE-002",
+      "title": "Load domain override from explicit domain declaration",
+      "file": "AUTHOR_OS.md",
+      "section": "DomainOverride",
+      "stability": "CORE",
+      "scope": "global",
+      "domains": [
+        "*"
+      ],
+      "status": "active",
+      "runtime_enabled": true,
+      "evidence_refs": [
+        {
+          "sourceRepository": "local",
+          "document": "cortex-abv/author_os/AUTHOR_OS.md",
+          "stableItemId": "AUTHOR_OS.md:DomainOverride",
+          "contentType": "markdown",
+          "timestamp": "2026-08-03",
+          "revision": "0.1.0",
+          "privacy": "public"
+        }
+      ],
+      "conflicts": [
+        "AO-CORE-001"
+      ],
+      "replacement": null,
+      "introduced_in": "0.2.0"
+    },
+    {
+      "id": "AO-STAB-001",
+      "title": "Evidence-first reasoning before inferences",
+      "file": "THINKING.md",
+      "section": "Thinking System Template",
+      "stability": "STABLE",
+      "scope": "global",
+      "domains": [
+        "*"
+      ],
+      "status": "active",
+      "runtime_enabled": true,
+      "evidence_refs": [
+        {
+          "sourceRepository": "local",
+          "document": "cortex-abv/author_os/THINKING.md",
+          "stableItemId": "THINKING.md:Thinking System Template",
+          "contentType": "markdown",
+          "timestamp": "2026-08-03",
+          "revision": "0.1.0",
+          "privacy": "public"
+        }
+      ],
+      "conflicts": [],
+      "introduced_in": "0.2.0"
+    },
+    {
+      "id": "AO-STAB-002",
+      "title": "Core values remain stable unless revised explicitly",
+      "file": "VALUES.md",
+      "section": "Core Intellectual Values (template)",
+      "stability": "STABLE",
+      "scope": "global",
+      "domains": [
+        "*"
+      ],
+      "status": "active",
+      "runtime_enabled": true,
+      "evidence_refs": [
+        {
+          "sourceRepository": "local",
+          "document": "cortex-abv/author_os/VALUES.md",
+          "stableItemId": "VALUES.md:Core Intellectual Values (template)",
+          "contentType": "markdown",
+          "timestamp": "2026-08-03",
+          "revision": "0.1.0",
+          "privacy": "public"
+        }
+      ],
+      "conflicts": [],
+      "introduced_in": "0.2.0"
+    },
+    {
+      "id": "AO-STAB-003",
+      "title": "Voice settings are explicit and bounded",
+      "file": "VOICE.md",
+      "section": "Rules",
+      "stability": "STABLE",
+      "scope": "global",
+      "domains": [
+        "*"
+      ],
+      "status": "active",
+      "runtime_enabled": true,
+      "evidence_refs": [
+        {
+          "sourceRepository": "local",
+          "document": "cortex-abv/author_os/VOICE.md",
+          "stableItemId": "VOICE.md:Rules",
+          "contentType": "markdown",
+          "timestamp": "2026-08-03",
+          "revision": "0.1.0",
+          "privacy": "public"
+        }
+      ],
+      "conflicts": [],
+      "introduced_in": "0.2.0"
+    },
+    {
+      "id": "AO-STAB-004",
+      "title": "Prefer brevity and clarity in append-only copy updates",
+      "file": "WRITING.md",
+      "section": "Writing Principles (template)",
+      "stability": "STABLE",
+      "scope": "global",
+      "domains": [
+        "*"
+      ],
+      "status": "active",
+      "runtime_enabled": true,
+      "evidence_refs": [
+        {
+          "sourceRepository": "local",
+          "document": "cortex-abv/author_os/WRITING.md",
+          "stableItemId": "WRITING.md:Writing Principles (template)",
+          "contentType": "markdown",
+          "timestamp": "2026-08-03",
+          "revision": "0.1.0",
+          "privacy": "public"
+        }
+      ],
+      "conflicts": [],
+      "introduced_in": "0.2.0"
+    },
+    {
+      "id": "AO-STAB-005",
+      "title": "Use rhetorical constraints and reversibility checks",
+      "file": "RHETORIC.md",
+      "section": "Usage policy",
+      "stability": "STABLE",
+      "scope": "global",
+      "domains": [
+        "*"
+      ],
+      "status": "active",
+      "runtime_enabled": true,
+      "evidence_refs": [
+        {
+          "sourceRepository": "local",
+          "document": "cortex-abv/author_os/RHETORIC.md",
+          "stableItemId": "RHETORIC.md:Usage policy",
+          "contentType": "markdown",
+          "timestamp": "2026-08-03",
+          "revision": "0.1.0",
+          "privacy": "public"
+        }
+      ],
+      "conflicts": [],
+      "introduced_in": "0.2.0"
+    },
+    {
+      "id": "AO-STAB-006",
+      "title": "Track intended reader effects as outcome constraints",
+      "file": "READER_EFFECT.md",
+      "section": "Reader Experience Objectives (template)",
+      "stability": "STABLE",
+      "scope": "global",
+      "domains": [
+        "*"
+      ],
+      "status": "active",
+      "runtime_enabled": true,
+      "evidence_refs": [
+        {
+          "sourceRepository": "local",
+          "document": "cortex-abv/author_os/READER_EFFECT.md",
+          "stableItemId": "READER_EFFECT.md:Reader Experience Objectives (template)",
+          "contentType": "markdown",
+          "timestamp": "2026-08-03",
+          "revision": "0.1.0",
+          "privacy": "public"
+        }
+      ],
+      "conflicts": [],
+      "introduced_in": "0.2.0"
+    },
+    {
+      "id": "AO-STAB-007",
+      "title": "Apply English quality filters consistently",
+      "file": "ENGLISH_STYLE.md",
+      "section": "English Language Rules (placeholder)",
+      "stability": "STABLE",
+      "scope": "global",
+      "domains": [
+        "*"
+      ],
+      "status": "active",
+      "runtime_enabled": true,
+      "evidence_refs": [
+        {
+          "sourceRepository": "local",
+          "document": "cortex-abv/author_os/ENGLISH_STYLE.md",
+          "stableItemId": "ENGLISH_STYLE.md:English Language Rules (placeholder)",
+          "contentType": "markdown",
+          "timestamp": "2026-08-03",
+          "revision": "0.1.0",
+          "privacy": "public"
+        }
+      ],
+      "conflicts": [],
+      "introduced_in": "0.2.0"
+    },
+    {
+      "id": "AO-STAB-008",
+      "title": "Keep anti-pattern avoidance mandatory",
+      "file": "ANTI_PATTERNS.md",
+      "section": "Avoidance Contracts",
+      "stability": "STABLE",
+      "scope": "global",
+      "domains": [
+        "*"
+      ],
+      "status": "active",
+      "runtime_enabled": true,
+      "evidence_refs": [
+        {
+          "sourceRepository": "local",
+          "document": "cortex-abv/author_os/ANTI_PATTERNS.md",
+          "stableItemId": "ANTI_PATTERNS.md:Avoidance Contracts",
+          "contentType": "markdown",
+          "timestamp": "2026-08-03",
+          "revision": "0.1.0",
+          "privacy": "public"
+        }
+      ],
+      "conflicts": [],
+      "introduced_in": "0.2.0"
+    },
+    {
+      "id": "AO-STAB-009",
+      "title": "AI domain adds context-specific constraints",
+      "file": "DOMAIN_OVERRIDES/ai.md",
+      "section": "Scope",
+      "stability": "STABLE",
+      "scope": "domain",
+      "domains": [
+        "ai"
+      ],
+      "status": "active",
+      "runtime_enabled": true,
+      "evidence_refs": [
+        {
+          "sourceRepository": "local",
+          "document": "cortex-abv/author_os/DOMAIN_OVERRIDES/ai.md",
+          "stableItemId": "DOMAIN_OVERRIDES/ai.md:Scope",
+          "contentType": "markdown",
+          "timestamp": "2026-08-03",
+          "revision": "0.1.0",
+          "privacy": "public"
+        }
+      ],
+      "conflicts": [],
+      "introduced_in": "0.2.0"
+    },
+    {
+      "id": "AO-STAB-010",
+      "title": "Travel domain adds project-context sensitivity",
+      "file": "DOMAIN_OVERRIDES/travel.md",
+      "section": "Scope",
+      "stability": "EXPERIMENTAL",
+      "scope": "domain",
+      "domains": [
+        "travel"
+      ],
+      "status": "active",
+      "runtime_enabled": true,
+      "evidence_refs": [
+        {
+          "sourceRepository": "local",
+          "document": "cortex-abv/author_os/DOMAIN_OVERRIDES/travel.md",
+          "stableItemId": "DOMAIN_OVERRIDES/travel.md:Scope",
+          "contentType": "markdown",
+          "timestamp": "2026-08-03",
+          "revision": "0.1.0",
+          "privacy": "public"
+        }
+      ],
+      "conflicts": [],
+      "introduced_in": "0.2.0"
+    }
+  ]
+}

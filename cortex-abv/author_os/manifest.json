@@ -1,0 +1,22 @@
+{
+  "name": "ABVx Author Operating System",
+  "version": "0.2.0",
+  "core_files": [
+    "AUTHOR_OS.md",
+    "THINKING.md",
+    "VALUES.md",
+    "VOICE.md",
+    "WRITING.md",
+    "RHETORIC.md",
+    "READER_EFFECT.md",
+    "ENGLISH_STYLE.md",
+    "ANTI_PATTERNS.md"
+  ],
+  "domain_overrides": [
+    "psychology",
+    "ai",
+    "philosophy",
+    "software",
+    "travel"
+  ]
+}

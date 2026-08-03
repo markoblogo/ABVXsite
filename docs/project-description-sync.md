@@ -25,6 +25,52 @@ MN7R, Cropto, and SPIKE SPOT COMMODITY INDEX UKRAINE can still generate bounded 
 
 The job fails closed for missing source files, credentials, invalid profile, invalid claim, provider error, test failure, validation failure, or branch-push rejection. A source SHA change with no supported public copy change makes no PR.
 
+## AUTHOR_OS integration in proposal generation
+
+`scripts/sync-project-descriptions.mjs` now prepends an AUTHOR_OS profile before every prompt-based proposal step:
+
+1. Loads canonical files from `cortex-abv/author_os/` in manifest order;
+2. Loads optional ID factual context (via ID evidence adapter) and one optional domain override;
+3. Adds normalized project context;
+4. Adds current task instructions.
+
+Prompt order is fixed for runtime assembly:
+
+1. ID factual context,
+2. AUTHOR_OS core,
+3. DOMAIN_OVERRIDE (when present),
+- PROJECT_CONTEXT,
+- CURRENT_TASK.
+
+This gives AUTHOR_OS as the default identity layer, with progressively higher-priority specialization above it.
+
+Supported AUTHOR_OS domains: `psychology`, `ai`, `philosophy`, `software`, `travel`, `general`.
+
+`general` never loads a domain override file.
+
+Project-level configuration (optional, proposal-only):
+
+- `autonomousPublicSync.authorOsDomain`
+- `autonomousPublicSync.authorOsProjectContext`
+- `autonomousPublicSync.authorOsTaskInstructions`
+
+Audit metadata is written into `authorOsTrace` in each proposal artifact (debug/inspection only):
+
+- `loaded`
+- `authorOsVersion`
+- `authorOsName`
+- `coreFilesLoaded`
+- `domainOverrideLoaded`
+- `domainOverride`
+- `projectContextLoaded`
+- `taskInstructionsLoaded`
+- `finalPrecedenceOrder`
+
+Scope note:
+
+- This change only wires AUTHOR_OS into the proposal-generation path in this repository (`scripts/sync-project-descriptions.mjs`).
+- `new-book.mjs`, `new-work.mjs`, and `new-series.mjs` are operator-facing input assistants (CLI) and do not generate LLM text today.
+
 ## Bounded authority
 
 The direct profile permits only:

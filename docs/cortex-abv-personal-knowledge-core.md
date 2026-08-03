@@ -8,6 +8,12 @@ Every ingress record must be append-only, evidence-backed, classified, retention
 
 The public repository contains only the static validator contracts and synthetic fixtures in [`cortex-abv/private-runtime/`](../cortex-abv/private-runtime/). It contains no Personal Knowledge Core data, source text, interview records, contact history, credentials, retrieval index, or runtime endpoint.
 
+The boundary between factual identity and behavioral instructions is defined in:
+
+- [`cortex-abv/author_os/ID_INTEGRATION.md`](../cortex-abv/author_os/ID_INTEGRATION.md)
+
+ID is factual input only (`ID_FACTUAL_CONTEXT`) and is never applied as runtime behavior.
+
 ## Cabinet pilot integration map (deferred)
 
 Cabinet was reviewed as a reference implementation for future personal-knowledge/runtime expansion. The current pilot starts with a minimal, read-only Stage 1 and still does not wire Cabinet modules into production ABVXsite/CortexABV loops.

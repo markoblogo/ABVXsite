@@ -8,6 +8,15 @@
 
 Production source for [abvx.xyz](https://abvx.xyz/): the public ABVX ecosystem site for agro-commodity market infrastructure, AI-native systems, publishing, language experiments, books, and writing.
 
+This repository is the public surface only. `ABVX-OS` remains the operational-state owner; `CortexABV-private` remains the private knowledge/runtime owner.
+
+Read first for a fresh coding session:
+
+1. `README.md`
+2. `AGENTS.md`
+3. `docs/project-description-sync.md` when the task touches Cortex-backed copy sync
+4. task-specific docs only
+
 The site is built with Next.js App Router, TypeScript, React, local Markdown content files, local media assets, structured metadata, and public LLM-readable indexes.
 
 ## System Map

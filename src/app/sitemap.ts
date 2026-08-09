@@ -28,6 +28,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${base}`, lastModified: allContentDate, changeFrequency: 'weekly', priority: 1 },
+    { url: `${base}/ami`, lastModified: allContentDate, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${base}/fr/ami`, lastModified: allContentDate, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${base}/focus`, lastModified: focusDate, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/systems`, lastModified: systemsDate, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/books`, lastModified: booksDate, changeFrequency: 'weekly', priority: 0.85 },

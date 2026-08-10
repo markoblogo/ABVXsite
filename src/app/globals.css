@@ -3447,28 +3447,29 @@ a {
 }
 
 .route-native-writing {
-  gap: clamp(0.95rem, 1.9vw, 1.35rem);
+  gap: clamp(0.72rem, 1.35vw, 1rem);
 }
 
 .route-native-writing .page-header {
-  max-width: 1120px;
+  width: min(calc(100vw - 32px), 880px);
+  max-width: 880px;
   margin-inline: auto;
-  padding: clamp(0.9rem, 2.5vw, 1.35rem) clamp(1rem, 3vw, 1.9rem);
+  padding: clamp(0.68rem, 1.65vw, 0.96rem) clamp(0.9rem, 2.4vw, 1.35rem);
 }
 
 .route-native-writing .page-header h1 {
-  max-width: 18ch;
-  font-size: clamp(2.5rem, 5.2vw, 4.3rem);
-  letter-spacing: -0.085em;
-  line-height: 0.88;
+  max-width: none;
+  font-size: clamp(2.4rem, 4.35vw, 3.82rem);
+  letter-spacing: -0.095em;
+  line-height: 0.84;
   text-wrap: balance;
 }
 
 .route-native-writing .page-header p {
-  max-width: 56rem;
+  max-width: 46rem;
   color: color-mix(in srgb, var(--ink) 72%, white 28%);
-  font-size: clamp(1rem, 1.55vw, 1.2rem);
-  line-height: 1.48;
+  font-size: clamp(0.98rem, 1.32vw, 1.12rem);
+  line-height: 1.42;
 }
 
 .native-writing-article__meta {
@@ -3477,7 +3478,7 @@ a {
   gap: 0.65rem 1rem;
   max-width: 760px;
   margin-inline: auto;
-  margin-top: -0.15rem;
+  margin-top: -0.28rem;
   color: color-mix(in srgb, var(--ink) 58%, white 42%);
   font-size: 0.76rem;
   font-weight: 900;
@@ -3489,7 +3490,7 @@ a {
 .native-writing-article__body {
   max-width: 760px;
   margin-inline: auto;
-  margin-top: -0.1rem;
+  margin-top: -0.18rem;
   color: color-mix(in srgb, var(--ink) 92%, white 8%);
   font-size: clamp(1.04rem, 1.22vw, 1.14rem);
   line-height: 1.82;

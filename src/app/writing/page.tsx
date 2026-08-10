@@ -58,6 +58,37 @@ function postExcerpt(post: FeedItem): string {
   return post.excerpt || 'External essay from the ABVX writing archive.';
 }
 
+function sentenceExcerpt(text: string, sentenceLimit = 3): string {
+  const clean = text
+    .replace(/\r\n/g, '\n')
+    .replace(/^#{1,6}\s+/gm, '')
+    .replace(/^[-*]\s+/gm, '')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  if (!clean) return '';
+
+  const sentences = clean.match(/[^.!?]+[.!?]+(?:\s|$)|[^.!?]+$/g)?.map((value) => value.trim()).filter(Boolean) ?? [];
+  const excerpt = sentences.slice(0, sentenceLimit).join(' ').trim();
+  if (!excerpt) return '';
+  return excerpt.length > 420 ? `${excerpt.slice(0, 417).trimEnd()}…` : excerpt;
+}
+
+function featuredAsideExcerpt(post: FeedItem): string | undefined {
+  if (post.source !== 'abvx' || post.coverImage || !post.url.startsWith('/writing/')) return undefined;
+  const slug = post.url.replace(/^\/writing\//, '');
+  const item = getNativeWritingItems().find((candidate) => candidate.slug === slug);
+  if (!item) return undefined;
+
+  const bodyExcerpt = sentenceExcerpt(item.body, 4);
+  if (!bodyExcerpt) return undefined;
+
+  const normalizedSummary = item.summary.replace(/\s+/g, ' ').trim().toLowerCase();
+  const normalizedBodyExcerpt = bodyExcerpt.replace(/\s+/g, ' ').trim().toLowerCase();
+  return normalizedSummary && normalizedSummary !== normalizedBodyExcerpt ? bodyExcerpt : undefined;
+}
+
 function postImage(post: FeedItem) {
   return post.coverImage ? { src: post.coverImage, alt: post.title } : undefined;
 }
@@ -136,6 +167,7 @@ export default async function WritingPage({
             <FeaturedWritingCard
               title={featuredPost.title}
               excerpt={postExcerpt(featuredPost)}
+              asideExcerpt={featuredAsideExcerpt(featuredPost)}
               href={featuredPost.url}
               source={featuredPost.source}
               date={formatDate(featuredPost.publishedAt)}

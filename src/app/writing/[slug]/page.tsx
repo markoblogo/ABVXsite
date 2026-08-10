@@ -68,14 +68,14 @@ export default async function NativeWritingPage({
         }}
       />
       <PageHeader eyebrow="ABVX" title={item.title} summary={item.summary} />
-      <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.2em] text-white/45">
+      <div className="native-writing-article__meta">
         <span>{item.publishedAt ?? 'Undated'}</span>
         <span>{item.type}</span>
         {item.tags.map((tag) => (
           <span key={tag}>{tag}</span>
         ))}
       </div>
-      <MarkdownContent className="text-base text-white/82" children={item.body} />
+      <MarkdownContent className="native-writing-article__body" children={item.body} />
     </div>
   );
 }

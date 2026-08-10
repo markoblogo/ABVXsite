@@ -6,6 +6,7 @@ import { formatWritingSourceLabel } from './writing-source-label';
 export default function FeaturedWritingCard({
   title,
   excerpt,
+  asideExcerpt,
   href,
   source,
   date,
@@ -13,6 +14,7 @@ export default function FeaturedWritingCard({
 }: {
   title: string;
   excerpt: string;
+  asideExcerpt?: string;
   href: string;
   source: string;
   date?: string;
@@ -36,19 +38,26 @@ export default function FeaturedWritingCard({
         </Link>
       ) : null}
       <div className="featured-writing-card__body">
-        <div className="catalogue-card__meta">
-          {sourceLabel}
-          {date ? ` / ${date}` : ''}
-        </div>
-        <h2>
-          <Link href={href} target={target} rel={rel}>
-            {title}
+        <div className="featured-writing-card__copy">
+          <div className="catalogue-card__meta">
+            {sourceLabel}
+            {date ? ` / ${date}` : ''}
+          </div>
+          <h2>
+            <Link href={href} target={target} rel={rel}>
+              {title}
+            </Link>
+          </h2>
+          <p>{excerpt}</p>
+          <Link className="writing-read-link" href={href} target={target} rel={rel}>
+            Read essay -&gt;
           </Link>
-        </h2>
-        <p>{excerpt}</p>
-        <Link className="writing-read-link" href={href} target={target} rel={rel}>
-          Read essay -&gt;
-        </Link>
+        </div>
+        {!image && asideExcerpt ? (
+          <div className="featured-writing-card__aside">
+            <p>{asideExcerpt}</p>
+          </div>
+        ) : null}
       </div>
     </article>
   );

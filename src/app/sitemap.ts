@@ -1,4 +1,4 @@
-import { getArtifacts, getBooks } from '@/content';
+import { getArtifacts, getBooks, getNativeWritingItems } from '@/content';
 import type { MetadataRoute } from 'next';
 
 const base = 'https://abvx.xyz';
@@ -6,6 +6,7 @@ const base = 'https://abvx.xyz';
 export default function sitemap(): MetadataRoute.Sitemap {
   const artifacts = getArtifacts();
   const books = getBooks();
+  const writing = getNativeWritingItems();
 
   function contentDate(item: { updatedAt?: string; publishedAt?: string }): Date | undefined {
     const value = item.updatedAt || item.publishedAt;
@@ -21,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       .sort((a, b) => b.valueOf() - a.valueOf())[0];
   }
 
-  const allContentDate = latestDate([...artifacts, ...books]);
+  const allContentDate = latestDate([...artifacts, ...books, ...writing]);
   const focusDate = latestDate(artifacts.filter((artifact) => artifact.appearsIn.includes('focus')));
   const systemsDate = latestDate(artifacts.filter((artifact) => artifact.appearsIn.includes('systems')));
   const booksDate = latestDate(books);
@@ -54,5 +55,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: book.featured ? 0.75 : 0.6,
   }));
 
-  return [...staticRoutes, ...workRoutes, ...bookRoutes];
+  const writingRoutes: MetadataRoute.Sitemap = writing.map((item) => ({
+    url: `${base}/writing/${item.slug}`,
+    lastModified: contentDate(item),
+    changeFrequency: 'monthly',
+    priority: 0.55,
+  }));
+
+  return [...staticRoutes, ...workRoutes, ...bookRoutes, ...writingRoutes];
 }

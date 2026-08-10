@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function WritingArchiveRow({
   title,
   excerpt,
@@ -11,16 +13,19 @@ export default function WritingArchiveRow({
   source: string;
   date?: string;
 }) {
+  const internal = href.startsWith('/');
+  const target = internal ? undefined : '_blank';
+  const rel = internal ? undefined : 'noopener noreferrer';
   return (
     <article className="writing-archive-row">
       <div className="writing-archive-row__meta">
         {source}
         {date ? ` / ${date}` : ''}
       </div>
-      <a href={href} target="_blank" rel="noopener noreferrer" aria-label={`Read ${title}`}>
+      <Link href={href} target={target} rel={rel} aria-label={`Read ${title}`}>
         <span>{title}</span>
         <span aria-hidden="true">-&gt;</span>
-      </a>
+      </Link>
       {excerpt ? <p>{excerpt}</p> : null}
     </article>
   );

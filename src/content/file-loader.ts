@@ -9,6 +9,8 @@ import type {
   ContentFaq,
   ContentLink,
   ContentLinkType,
+  NativeWriting,
+  NativeWritingType,
   RssFeedConfig,
   Series,
   SiteSection,
@@ -113,6 +115,14 @@ export function readHiddenSlugs(folder: string): Set<string> {
 
 function stringValue(value: unknown, fallback = ''): string {
   return typeof value === 'string' ? value : fallback;
+}
+
+function titleFromSlug(slug: string): string {
+  return slug
+    .split('-')
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ');
 }
 
 function optionalString(value: unknown): string | undefined {
@@ -302,6 +312,33 @@ export function readSeriesFiles(): Series[] {
         category: optionalString(data.group) || 'Series',
         formats: stringArray(data.formats),
         relatedSlugs: stringArray(data.relatedSlugs),
+      };
+    });
+}
+
+export function readNativeWritingFiles(): NativeWriting[] {
+  return readMarkdownFiles('writing')
+    .filter((file) => isVisible(file.data.visibility))
+    .map(({ data, body }) => {
+      const slug = stringValue(data.slug);
+      const fallbackTitle = titleFromSlug(slug);
+      const summary = stringValue(data.summary, body.split(/\n+/).find(Boolean) || fallbackTitle);
+      return {
+        ...baseFields(
+          {
+            ...data,
+            title: stringValue(data.title, fallbackTitle),
+            summary,
+          },
+          body,
+        ),
+        type: stringValue(data.type, 'note') as NativeWritingType,
+        primarySection: 'writing',
+        appearsIn: ['writing'],
+        source: 'abvx',
+        body,
+        coverImage: normalizeImage(data.media),
+        heroImage: normalizeImage(data.heroImage) || normalizeImage(data.media),
       };
     });
 }

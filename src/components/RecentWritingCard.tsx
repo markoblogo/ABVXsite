@@ -1,4 +1,5 @@
 import type { ContentImage } from '@/content';
+import Link from 'next/link';
 import MediaPanel from './MediaPanel';
 
 function WritingPlaceholder() {
@@ -20,13 +21,16 @@ export default function RecentWritingCard({
   date?: string;
   image?: ContentImage;
 }) {
+  const internal = href.startsWith('/');
+  const target = internal ? undefined : '_blank';
+  const rel = internal ? undefined : 'noopener noreferrer';
   return (
     <article className="recent-writing-card">
-      <a
+      <Link
         className="recent-writing-card__media"
         href={href}
-        target="_blank"
-        rel="noopener noreferrer"
+        target={target}
+        rel={rel}
         aria-label={`Read ${title}`}
       >
         {image ? (
@@ -34,21 +38,21 @@ export default function RecentWritingCard({
         ) : (
           <WritingPlaceholder />
         )}
-      </a>
+      </Link>
       <div className="recent-writing-card__body">
         <div className="catalogue-card__meta">
           {source}
           {date ? ` / ${date}` : ''}
         </div>
         <h3>
-          <a href={href} target="_blank" rel="noopener noreferrer">
+          <Link href={href} target={target} rel={rel}>
             {title}
-          </a>
+          </Link>
         </h3>
         <p>{excerpt}</p>
-        <a className="writing-read-link" href={href} target="_blank" rel="noopener noreferrer">
+        <Link className="writing-read-link" href={href} target={target} rel={rel}>
           Read -&gt;
-        </a>
+        </Link>
       </div>
     </article>
   );

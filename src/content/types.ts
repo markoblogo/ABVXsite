@@ -186,3 +186,14 @@ export type Series = {
   primarySeriesSlug?: string;
   seriesSlugs?: string[];
 };
+
+export type NativeWritingType = 'note' | 'article' | 'review' | 'build_log' | 'other';
+
+export type NativeWriting = BaseContentItem<NativeWritingType> & {
+  primarySection: 'writing';
+  appearsIn: ('writing')[];
+  body: string;
+  source: 'abvx';
+  coverImage?: ContentImage;
+  heroImage?: ContentImage;
+};

@@ -54,11 +54,12 @@ function validateFile(file, folder) {
   const { data, body } = parseContentFile(file);
   all.push({ file, folder, data, body });
 
-  for (const field of ['id', 'slug', 'title', 'summary']) {
+  const requiredFields = folder === 'writing' ? ['id', 'slug'] : ['id', 'slug', 'title', 'summary'];
+  for (const field of requiredFields) {
     if (!data[field]) addError(file, `${field} is required`);
   }
 
-  if (!data.type) addError(file, 'type is required');
+  if (!data.type && folder !== 'writing') addError(file, 'type is required');
   if (!validStatus.has(data.status)) addError(file, `status is invalid: ${data.status}`);
   if (!validVisibility.has(data.visibility || 'public')) addError(file, `visibility is invalid: ${data.visibility}`);
 
@@ -103,7 +104,7 @@ function validateFile(file, folder) {
   if (data.needsLinkReview) addWarning(file, 'needsLinkReview is set');
 }
 
-for (const folder of ['books', 'work', 'series']) {
+for (const folder of ['books', 'work', 'series', 'writing']) {
   for (const file of contentFiles(folder)) validateFile(file, folder);
 }
 

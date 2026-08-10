@@ -11,6 +11,7 @@ import {
   mergeFeeds,
   type FeedItem,
 } from '@/lib/feeds';
+import { getNativeWritingItems } from '@/content';
 import { collectionPageJsonLd, defaultOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
 import type { Metadata } from 'next';
 
@@ -49,7 +50,7 @@ function formatDate(iso: string): string {
 
 function normalizeSource(source: string | string[] | undefined): WritingSource {
   const value = Array.isArray(source) ? source[0] : source;
-  if (value === 'medium' || value === 'substack') return value;
+  if (value === 'medium' || value === 'substack' || value === 'abvx') return value;
   return 'all';
 }
 
@@ -59,6 +60,19 @@ function postExcerpt(post: FeedItem): string {
 
 function postImage(post: FeedItem) {
   return post.coverImage ? { src: post.coverImage, alt: post.title } : undefined;
+}
+
+function nativeWritingFeed(): FeedItem[] {
+  return getNativeWritingItems().map((item) => ({
+    source: 'abvx',
+    title: item.title,
+    url: `/writing/${item.slug}`,
+    publishedAt: item.publishedAt || item.updatedAt || new Date().toISOString(),
+    author: 'Anton BV',
+    tags: item.tags,
+    excerpt: item.summary || item.body.split(/\n+/).find(Boolean) || 'Native ABVX writing.',
+    coverImage: item.coverImage?.src,
+  }));
 }
 
 export default async function WritingPage({
@@ -72,7 +86,7 @@ export default async function WritingPage({
     safeFeed(fetchMediumFeed, 'https://abvcreative.medium.com/feed'),
     safeFeed(fetchSubstackFeed, 'https://abvx.substack.com/feed'),
   ]);
-  const allPosts = mergeFeeds(medium, substack);
+  const allPosts = mergeFeeds(nativeWritingFeed(), medium, substack);
   const posts =
     activeSource === 'all' ? allPosts : allPosts.filter((post) => post.source === activeSource);
   const featuredPost = posts[0];
@@ -176,9 +190,12 @@ export default async function WritingPage({
         <SectionPanel title="Writing feed temporarily unavailable" eyebrow="RSS">
           <p>
             Medium and Substack feeds could not be loaded right now, or this source has
-            no recent items. The page will repopulate automatically when the feeds respond.
+            no recent items. Native ABVX writing remains available through this same archive.
           </p>
           <div className="link-strip">
+            <a href="/writing?source=abvx">
+              ABVX
+            </a>
             <a href="https://abvcreative.medium.com/" target="_blank" rel="noopener noreferrer">
               Medium
             </a>

@@ -1,6 +1,6 @@
-import { readBookFiles, readSeriesFiles, readWorkFiles } from './file-loader';
+import { readBookFiles, readNativeWritingFiles, readSeriesFiles, readWorkFiles } from './file-loader';
 import { selectLatestSectionEntry } from './latest-selection.mjs';
-import type { Artifact, Book, Series, SiteSection } from './types';
+import type { Artifact, Book, NativeWriting, Series, SiteSection } from './types';
 
 type RelatedSource = Artifact | Book | Series;
 
@@ -173,6 +173,14 @@ export function getSeriesBySlug(slug: string): Series | undefined {
   return getSeries().find((series) => series.slug === slug);
 }
 
+export function getNativeWritingItems(): NativeWriting[] {
+  return readNativeWritingFiles().sort(byLatest);
+}
+
+export function getNativeWritingBySlug(slug: string): NativeWriting | undefined {
+  return getNativeWritingItems().find((item) => item.slug === slug);
+}
+
 function relatedScore(source: RelatedSource, candidate: RelatedSource): number {
   if (source.slug === candidate.slug) return 0;
   let score = candidate.tags.filter((tag) => source.tags.includes(tag)).length * 8;
@@ -197,7 +205,7 @@ export function getRelatedItems(item: RelatedSource, limit = 6): RelatedSource[]
 }
 
 export function getContentReviewReport() {
-  const items = [...getArtifacts(), ...getBooks(), ...getSeries()];
+  const items = [...getArtifacts(), ...getBooks(), ...getSeries(), ...getNativeWritingItems()];
   return {
     needsCopyReview: items.filter((item) => item.needsCopyReview || item.needsReview),
     needsMediaReview: items.filter(
@@ -228,4 +236,5 @@ export type {
   SiteSection,
   Status,
   Visibility,
+  NativeWriting,
 } from './types';

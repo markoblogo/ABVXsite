@@ -1,11 +1,12 @@
 import Link from 'next/link';
 
-export type WritingSource = 'all' | 'medium' | 'substack';
+export type WritingSource = 'all' | 'medium' | 'substack' | 'abvx';
 
 const sourceLinks: { label: string; value: WritingSource; href: string }[] = [
   { label: 'All', value: 'all', href: '/writing' },
   { label: 'Medium', value: 'medium', href: '/writing?source=medium' },
   { label: 'Substack', value: 'substack', href: '/writing?source=substack' },
+  { label: 'ABVX', value: 'abvx', href: '/writing?source=abvx' },
 ];
 
 export default function WritingSourceLinks({ active }: { active: WritingSource }) {

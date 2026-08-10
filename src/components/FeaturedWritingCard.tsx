@@ -1,4 +1,5 @@
 import type { ContentImage } from '@/content';
+import Link from 'next/link';
 import MediaPanel from './MediaPanel';
 
 function WritingPlaceholder() {
@@ -20,13 +21,16 @@ export default function FeaturedWritingCard({
   date?: string;
   image?: ContentImage;
 }) {
+  const internal = href.startsWith('/');
+  const target = internal ? undefined : '_blank';
+  const rel = internal ? undefined : 'noopener noreferrer';
   return (
     <article className="featured-writing-card">
-      <a
+      <Link
         className="featured-writing-card__media"
         href={href}
-        target="_blank"
-        rel="noopener noreferrer"
+        target={target}
+        rel={rel}
         aria-label={`Read featured essay: ${title}`}
       >
         {image ? (
@@ -34,21 +38,21 @@ export default function FeaturedWritingCard({
         ) : (
           <WritingPlaceholder />
         )}
-      </a>
+      </Link>
       <div className="featured-writing-card__body">
         <div className="catalogue-card__meta">
           {source}
           {date ? ` / ${date}` : ''}
         </div>
         <h2>
-          <a href={href} target="_blank" rel="noopener noreferrer">
+          <Link href={href} target={target} rel={rel}>
             {title}
-          </a>
+          </Link>
         </h2>
         <p>{excerpt}</p>
-        <a className="writing-read-link" href={href} target="_blank" rel="noopener noreferrer">
+        <Link className="writing-read-link" href={href} target={target} rel={rel}>
           Read essay -&gt;
-        </a>
+        </Link>
       </div>
     </article>
   );

@@ -1,4 +1,4 @@
-export type FeedSource = 'medium' | 'substack' | 'mn7r';
+export type FeedSource = 'medium' | 'substack' | 'mn7r' | 'abvx';
 
 export type FeedItem = {
   source: FeedSource;
@@ -18,6 +18,7 @@ export const sourceFallbackCover: Record<FeedSource, string> = {
   medium: '/og/abvx-home.png',
   substack: '/og/abvx-home.png',
   mn7r: '/media/work/mn7r/hero.png',
+  abvx: '/og/abvx-home.png',
 };
 
 export type FeedSourceConfig = {
@@ -45,5 +46,11 @@ export const feedSourceConfigs: Record<FeedSource, FeedSourceConfig> = {
     feedHosts: ['mn7r.com'],
     articleHosts: ['mn7r.com'],
     imageHosts: ['mn7r.com'],
+  },
+  abvx: {
+    source: 'abvx',
+    feedHosts: [],
+    articleHosts: ['abvx.xyz'],
+    imageHosts: ['abvx.xyz'],
   },
 };

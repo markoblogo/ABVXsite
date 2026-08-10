@@ -98,7 +98,7 @@ function nativeWritingFeed(): FeedItem[] {
     source: 'abvx',
     title: item.title,
     url: `/writing/${item.slug}`,
-    publishedAt: item.publishedAt || item.updatedAt || new Date().toISOString(),
+    publishedAt: item.updatedAt || item.publishedAt || new Date().toISOString(),
     author: 'Anton BV',
     tags: item.tags,
     excerpt: item.summary || item.body.split(/\n+/).find(Boolean) || 'Native ABVX writing.',

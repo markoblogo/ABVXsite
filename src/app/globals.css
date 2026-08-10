@@ -3503,6 +3503,21 @@ a {
   max-width: 100%;
 }
 
+.content-markdown a {
+  color: color-mix(in srgb, var(--ink) 86%, var(--accent) 14%);
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-decoration-color: color-mix(in srgb, var(--accent) 62%, var(--ink) 38%);
+  text-underline-offset: 0.14em;
+}
+
+.content-markdown a:hover,
+.content-markdown a:focus-visible {
+  color: var(--ink);
+  text-decoration-color: var(--ink);
+  outline: none;
+}
+
 .native-writing-article__body p {
   margin-block: 0 1.1rem;
 }

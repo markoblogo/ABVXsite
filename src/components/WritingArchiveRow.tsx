@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { formatWritingSourceLabel } from './writing-source-label';
 
 export default function WritingArchiveRow({
   title,
@@ -16,10 +17,11 @@ export default function WritingArchiveRow({
   const internal = href.startsWith('/');
   const target = internal ? undefined : '_blank';
   const rel = internal ? undefined : 'noopener noreferrer';
+  const sourceLabel = formatWritingSourceLabel(source);
   return (
     <article className="writing-archive-row">
       <div className="writing-archive-row__meta">
-        {source}
+        {sourceLabel}
         {date ? ` / ${date}` : ''}
       </div>
       <Link href={href} target={target} rel={rel} aria-label={`Read ${title}`}>

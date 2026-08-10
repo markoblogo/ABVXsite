@@ -1,10 +1,7 @@
 import type { ContentImage } from '@/content';
 import Link from 'next/link';
 import MediaPanel from './MediaPanel';
-
-function WritingPlaceholder() {
-  return <span className="writing-image-placeholder" aria-hidden="true" />;
-}
+import { formatWritingSourceLabel } from './writing-source-label';
 
 export default function RecentWritingCard({
   title,
@@ -24,24 +21,23 @@ export default function RecentWritingCard({
   const internal = href.startsWith('/');
   const target = internal ? undefined : '_blank';
   const rel = internal ? undefined : 'noopener noreferrer';
+  const sourceLabel = formatWritingSourceLabel(source);
   return (
-    <article className="recent-writing-card">
-      <Link
-        className="recent-writing-card__media"
-        href={href}
-        target={target}
-        rel={rel}
-        aria-label={`Read ${title}`}
-      >
-        {image ? (
+    <article className={`recent-writing-card${image ? '' : ' recent-writing-card--text-only'}`}>
+      {image ? (
+        <Link
+          className="recent-writing-card__media"
+          href={href}
+          target={target}
+          rel={rel}
+          aria-label={`Read ${title}`}
+        >
           <MediaPanel image={image} title={title} variant="writing" />
-        ) : (
-          <WritingPlaceholder />
-        )}
-      </Link>
+        </Link>
+      ) : null}
       <div className="recent-writing-card__body">
         <div className="catalogue-card__meta">
-          {source}
+          {sourceLabel}
           {date ? ` / ${date}` : ''}
         </div>
         <h3>

@@ -3547,6 +3547,10 @@ a {
   min-height: 0;
 }
 
+.featured-writing-card--text-only {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .featured-writing-card__media,
 .recent-writing-card__media {
   display: block;
@@ -3667,6 +3671,11 @@ a {
   min-height: 210px;
 }
 
+.recent-writing-card--text-only {
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 0;
+}
+
 .recent-writing-card__media {
   min-height: 0;
   position: relative;
@@ -3691,6 +3700,11 @@ a {
   position: relative;
   z-index: 1;
   grid-column: 2;
+}
+
+.featured-writing-card--text-only .featured-writing-card__body,
+.recent-writing-card--text-only .recent-writing-card__body {
+  grid-column: auto;
 }
 
 .recent-writing-card h3 {

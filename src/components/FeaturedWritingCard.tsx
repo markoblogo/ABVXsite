@@ -1,10 +1,7 @@
 import type { ContentImage } from '@/content';
 import Link from 'next/link';
 import MediaPanel from './MediaPanel';
-
-function WritingPlaceholder() {
-  return <span className="writing-image-placeholder" aria-hidden="true" />;
-}
+import { formatWritingSourceLabel } from './writing-source-label';
 
 export default function FeaturedWritingCard({
   title,
@@ -24,24 +21,23 @@ export default function FeaturedWritingCard({
   const internal = href.startsWith('/');
   const target = internal ? undefined : '_blank';
   const rel = internal ? undefined : 'noopener noreferrer';
+  const sourceLabel = formatWritingSourceLabel(source);
   return (
-    <article className="featured-writing-card">
-      <Link
-        className="featured-writing-card__media"
-        href={href}
-        target={target}
-        rel={rel}
-        aria-label={`Read featured essay: ${title}`}
-      >
-        {image ? (
+    <article className={`featured-writing-card${image ? '' : ' featured-writing-card--text-only'}`}>
+      {image ? (
+        <Link
+          className="featured-writing-card__media"
+          href={href}
+          target={target}
+          rel={rel}
+          aria-label={`Read featured essay: ${title}`}
+        >
           <MediaPanel image={image} title={title} variant="writing" />
-        ) : (
-          <WritingPlaceholder />
-        )}
-      </Link>
+        </Link>
+      ) : null}
       <div className="featured-writing-card__body">
         <div className="catalogue-card__meta">
-          {source}
+          {sourceLabel}
           {date ? ` / ${date}` : ''}
         </div>
         <h2>

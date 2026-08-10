@@ -6,6 +6,7 @@ import { formatWritingSourceLabel } from './writing-source-label';
 export default function RecentWritingCard({
   title,
   excerpt,
+  bodyExcerpt,
   href,
   source,
   date,
@@ -13,6 +14,7 @@ export default function RecentWritingCard({
 }: {
   title: string;
   excerpt: string;
+  bodyExcerpt?: string;
   href: string;
   source: string;
   date?: string;
@@ -46,6 +48,7 @@ export default function RecentWritingCard({
           </Link>
         </h3>
         <p>{excerpt}</p>
+        {!image && bodyExcerpt ? <p className="recent-writing-card__body-excerpt">{bodyExcerpt}</p> : null}
         <Link className="writing-read-link" href={href} target={target} rel={rel}>
           Read -&gt;
         </Link>

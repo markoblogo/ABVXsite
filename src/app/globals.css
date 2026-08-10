@@ -3847,6 +3847,17 @@ a {
   -webkit-line-clamp: 3;
 }
 
+.recent-writing-card__body-excerpt {
+  color: color-mix(in srgb, var(--ink-muted) 92%, var(--ink) 8%);
+  font-size: 0.86rem;
+  line-height: 1.44;
+  -webkit-line-clamp: 4;
+}
+
+.recent-writing-card--text-only .recent-writing-card__body {
+  min-height: 210px;
+}
+
 .recent-writing-card .writing-read-link {
   margin-top: auto;
   padding: 0.45rem 0.55rem;

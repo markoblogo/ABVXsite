@@ -75,13 +75,13 @@ function sentenceExcerpt(text: string, sentenceLimit = 3): string {
   return excerpt.length > 420 ? `${excerpt.slice(0, 417).trimEnd()}…` : excerpt;
 }
 
-function featuredAsideExcerpt(post: FeedItem): string | undefined {
+function nativeBodyExcerpt(post: FeedItem, sentenceLimit = 4): string | undefined {
   if (post.source !== 'abvx' || post.coverImage || !post.url.startsWith('/writing/')) return undefined;
   const slug = post.url.replace(/^\/writing\//, '');
   const item = getNativeWritingItems().find((candidate) => candidate.slug === slug);
   if (!item) return undefined;
 
-  const bodyExcerpt = sentenceExcerpt(item.body, 4);
+  const bodyExcerpt = sentenceExcerpt(item.body, sentenceLimit);
   if (!bodyExcerpt) return undefined;
 
   const normalizedSummary = item.summary.replace(/\s+/g, ' ').trim().toLowerCase();
@@ -167,7 +167,7 @@ export default async function WritingPage({
             <FeaturedWritingCard
               title={featuredPost.title}
               excerpt={postExcerpt(featuredPost)}
-              asideExcerpt={featuredAsideExcerpt(featuredPost)}
+              asideExcerpt={nativeBodyExcerpt(featuredPost, 4)}
               href={featuredPost.url}
               source={featuredPost.source}
               date={formatDate(featuredPost.publishedAt)}
@@ -187,6 +187,7 @@ export default async function WritingPage({
                     key={post.url}
                     title={post.title}
                     excerpt={postExcerpt(post)}
+                    bodyExcerpt={nativeBodyExcerpt(post, 3)}
                     href={post.url}
                     source={post.source}
                     date={formatDate(post.publishedAt)}

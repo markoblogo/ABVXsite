@@ -1584,6 +1584,33 @@
       ]
     },
     {
+      "type": "free-book",
+      "section": "books",
+      "ecosystem": "Business, AI & Marketing",
+      "group": "Business, AI & Marketing",
+      "status": "released",
+      "title": "Your SaaS Bill Is Ridiculous",
+      "summary": "A short, skeptical field guide to open-source tools that can replace expensive SaaS, and to the costs that tend to reappear when you decide to run the software yourself.",
+      "canonicalUrl": "https://abvx.xyz/books/your-saas-bill-is-ridiculous",
+      "tags": [
+        "open source",
+        "SaaS",
+        "self-hosting",
+        "AI tools",
+        "software",
+        "business software"
+      ],
+      "links": [
+        {
+          "type": "pdf",
+          "label": "DOWNLOAD FREE PDF",
+          "url": "/media/books/your-saas-bill-is-ridiculous/your-saas-bill-is-ridiculous.pdf"
+        }
+      ],
+      "updatedAt": "2026-08-12",
+      "related": []
+    },
+    {
       "type": "book",
       "section": "books",
       "ecosystem": "Fiction",

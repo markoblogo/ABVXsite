@@ -168,6 +168,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Business, AI & Marketing
   Tags: branding, marketing psychology, behavioral design, perception, influence, dark patterns, AI, English
 
+- Your SaaS Bill Is Ridiculous
+  URL: https://abvx.xyz/books/your-saas-bill-is-ridiculous
+  Summary: A short, skeptical field guide to open-source tools that can replace expensive SaaS, and to the costs that tend to reappear when you decide to run the software yourself.
+  Group: Business, AI & Marketing
+  Tags: open source, SaaS, self-hosting, AI tools, software, business software
+
 - Future-Proof Your Productivity: Navigating the AI Decade to Accelerate Your Output, Innovate Your Role, and Thrive
   URL: https://abvx.xyz/books/future-proof-productivity
   Summary: A practical manual for using AI, automation, no-code tools and workflow design to increase output, reduce routine work and stay professionally resilient through the AI decade.

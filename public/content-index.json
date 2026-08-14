@@ -146,6 +146,38 @@
       ]
     },
     {
+      "type": "book",
+      "section": "books",
+      "ecosystem": "Business, AI & Marketing",
+      "group": "Business, AI & Marketing",
+      "status": "released",
+      "title": "Burgers, Lipstick & Underwear: What Strange Indicators Really Tell Us About the Economy",
+      "summary": "A sharp, entertaining guide to the strange indicators people use to make the economy readable—from Big Macs and iPhone work-hours to lipstick, freight rates, pollution equivalents, and AI benchmarks.",
+      "canonicalUrl": "https://abvx.xyz/books/burgers-lipstick-underwear",
+      "tags": [
+        "economy",
+        "indices",
+        "data",
+        "markets",
+        "benchmarks",
+        "economic signals"
+      ],
+      "links": [
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0HF5DWCHB"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0HF7SJJ7N"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
       "type": "series",
       "section": "books",
       "ecosystem": "Publishing lines",
@@ -384,6 +416,38 @@
           "relation": "series"
         }
       ]
+    },
+    {
+      "type": "book",
+      "section": "books",
+      "ecosystem": "Language, AI & Toki Pona",
+      "group": "Language, AI & Toki Pona",
+      "status": "released",
+      "title": "Fragments from a Therapist’s Notebook: Short Psychological Observations on Trauma, Identity, Relationships, Anxiety and the Human Mind",
+      "summary": "A psychological notebook of short observations on trauma, identity, relationships, anxiety, grief, addiction and the hidden patterns behind human behavior.",
+      "canonicalUrl": "https://abvx.xyz/books/fragments-from-a-therapists-notebook",
+      "tags": [
+        "psychology",
+        "trauma",
+        "identity",
+        "relationships",
+        "anxiety",
+        "human mind"
+      ],
+      "links": [
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0HF38FS2X"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0HCVPYC5D"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
     },
     {
       "type": "free-edition",
@@ -2099,7 +2163,7 @@
       "group": "Trading & Brokerage Platforms",
       "status": "live",
       "title": "MN7R",
-      "summary": "MN7R is a commodity trading workflow workspace for brokerage teams running Deals, Clients and EXE inside one structured operational system; it includes a public-facing site, a separate public synthetic /demo, public updates published through ABVX, and a governance-first summary update path for site-level facts.",
+      "summary": "Public-facing updates now explicitly reflect execution checkpoints for broker, boss, and EXE operator roles across the Deals, Clients, and EXE workflow areas.",
       "canonicalUrl": "https://abvx.xyz/work/mn7r",
       "tags": [
         "brokerage",
@@ -2136,7 +2200,7 @@
           "url": "https://mn7r.substack.com/"
         }
       ],
-      "updatedAt": "2026-07-21",
+      "updatedAt": "2026-07-28",
       "related": []
     },
     {
@@ -2211,7 +2275,7 @@
       "group": "Market Intelligence, Monitoring & Indexes",
       "status": "live",
       "title": "SPIKE SPOT COMMODITY INDEX UKRAINE",
-      "summary": "SPIKE publishes 13 public positions grouped into Grains Export, Oilseeds Export and Oilseeds Crush, and issues weekly public market-commentary snapshots tracking local grain and oilseed spot context alongside benchmark values.",
+      "summary": "SPIKE publishes 13 public positions grouped into Grains Export, Oilseeds Export and Oilseeds Crush, and now publishes daily public reference snapshots for selected CPT and FCA spot benchmarks in addition to its weekly market-commentary snapshots.",
       "canonicalUrl": "https://abvx.xyz/work/spike-spot-commodity-index-ukraine",
       "tags": [
         "agro-commodities",
@@ -2237,7 +2301,7 @@
           "url": "https://github.com/markoblogo/index"
         }
       ],
-      "updatedAt": "2026-07-21",
+      "updatedAt": "2026-07-28",
       "related": [
         {
           "title": "UGA Index",

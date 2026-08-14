@@ -10,7 +10,7 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 - MN7R
   URL: https://abvx.xyz/work/mn7r
-  Summary: MN7R is a commodity trading workflow workspace for brokerage teams running Deals, Clients and EXE inside one structured operational system; it includes a public-facing site, a separate public synthetic /demo, public updates published through ABVX, and a governance-first summary update path for site-level facts.
+  Summary: Public-facing updates now explicitly reflect execution checkpoints for broker, boss, and EXE operator roles across the Deals, Clients, and EXE workflow areas.
   Group: Trading & Brokerage Platforms
   Tags: brokerage, agro-commodities, deal-workflows, execution, trading-workspace, market-infrastructure
 
@@ -34,7 +34,7 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 - SPIKE SPOT COMMODITY INDEX UKRAINE
   URL: https://abvx.xyz/work/spike-spot-commodity-index-ukraine
-  Summary: SPIKE publishes 13 public positions grouped into Grains Export, Oilseeds Export and Oilseeds Crush, and issues weekly public market-commentary snapshots tracking local grain and oilseed spot context alongside benchmark values.
+  Summary: SPIKE publishes 13 public positions grouped into Grains Export, Oilseeds Export and Oilseeds Crush, and now publishes daily public reference snapshots for selected CPT and FCA spot benchmarks in addition to its weekly market-commentary snapshots.
   Group: Market Intelligence, Monitoring & Indexes
   Tags: agro-commodities, Ukraine, spot-index, market-index, grain, oilseeds, benchmark, market-data
 
@@ -174,6 +174,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Business, AI & Marketing
   Tags: open source, SaaS, self-hosting, AI tools, software, business software
 
+- Burgers, Lipstick & Underwear: What Strange Indicators Really Tell Us About the Economy
+  URL: https://abvx.xyz/books/burgers-lipstick-underwear
+  Summary: A sharp, entertaining guide to the strange indicators people use to make the economy readable—from Big Macs and iPhone work-hours to lipstick, freight rates, pollution equivalents, and AI benchmarks.
+  Group: Business, AI & Marketing
+  Tags: economy, indices, data, markets, benchmarks, economic signals
+
 - Future-Proof Your Productivity: Navigating the AI Decade to Accelerate Your Output, Innovate Your Role, and Thrive
   URL: https://abvx.xyz/books/future-proof-productivity
   Summary: A practical manual for using AI, automation, no-code tools and workflow design to increase output, reduce routine work and stay professionally resilient through the AI decade.
@@ -197,6 +203,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Summary: The Tiny Language Protocol explores Toki Pona and Lojban as opposite but complementary tools for clearer thinking, structured communication and AI-era language design.
   Group: Language, AI & Toki Pona
   Tags: toki-pona, lojban, language, AI, conlang, prompting, philosophy, communication
+
+- Fragments from a Therapist’s Notebook: Short Psychological Observations on Trauma, Identity, Relationships, Anxiety and the Human Mind
+  URL: https://abvx.xyz/books/fragments-from-a-therapists-notebook
+  Summary: A psychological notebook of short observations on trauma, identity, relationships, anxiety, grief, addiction and the hidden patterns behind human behavior.
+  Group: Language, AI & Toki Pona
+  Tags: psychology, trauma, identity, relationships, anxiety, human mind
 
 - Pictiq
   URL: https://abvx.xyz/work/pictiq

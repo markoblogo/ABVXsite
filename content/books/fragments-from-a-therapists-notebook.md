@@ -10,6 +10,7 @@
   "type": "book",
   "status": "released",
   "visibility": "public",
+  "publishedAt": "2026-08-13",
   "homepageEligible": true,
   "primarySection": "books",
   "appearsIn": [

@@ -189,7 +189,6 @@ async function createProposal(target, source) {
       summary: { type: 'string' },
       bodyAppendix: { type: 'string' },
       notes: { type: 'array', items: { type: 'string' } },
-      authorOsTrace: { type: 'object', additionalProperties: true },
       claims: {
         type: 'array',
         items: {

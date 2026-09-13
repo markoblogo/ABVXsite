@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1 — 2026-09-13
+
+- Removed the dormant cross-repository Lab direct-push job from project-description sync.
+- Fixed the governance record and documentation so Lab updates require their own reviewed pull request.
+- Renamed the ABVXsite sync job to describe its actual owner-review proposal behavior.
+
 ## 0.2.0 — 2026-09-13
 
 ### Reliability and maintenance

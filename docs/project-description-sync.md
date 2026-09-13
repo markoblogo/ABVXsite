@@ -148,7 +148,7 @@ For source-specific governance on a new adapter, add in project frontmatter:
 
 Receipts will include this reason and override chain as evidence of why a specific source profile was used.
 
-`cortex-abv/autonomous-public-sync.v1.json` is the authoritative enrolment record. Its Lab target is intentionally disabled until `LAB_REPO_TOKEN` has a separately scoped **Contents: Write** permission for `markoblogo/lab.abvx`. Once present, a separate workflow job checks out only that repository, runs its read-only `sync_home_ledger.py` against the Lab allowlist, and may commit only `docs/index.html`'s marked ledger and its SHA/date provenance snapshot.
+`cortex-abv/autonomous-public-sync.v1.json` is the authoritative enrolment record. Its Lab target remains disabled: Lab updates require their own reviewed pull request and are never activated by a token in this workflow.
 
 ## GitHub setup
 
@@ -158,7 +158,6 @@ Required `markoblogo/ABVXsite` secrets:
 
 - `OPENAI_API_KEY` — copy-generation provider key;
 - `SOURCE_REPOS_TOKEN` — fine-grained GitHub token with read-only **Contents** access to private source repositories;
-- `LAB_REPO_TOKEN` — fine-grained token scoped only to `markoblogo/lab.abvx`, with **Contents: Write**. Its presence activates the isolated Lab freshness job; `SOURCE_REPOS_TOKEN` must also be able to read each repository listed in Lab's source allowlist.
 
 Automatic rollback is deliberately absent in this PR-first mode. If a proposal is incorrect, close/reject the PR and no merge occurs.
 

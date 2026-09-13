@@ -8,7 +8,7 @@
     { "slug": "mn7r", "enabled": true, "target": "abvxsite/main" },
     { "slug": "cropto", "enabled": true, "target": "abvxsite/main" },
     { "slug": "spike-spot-commodity-index-ukraine", "enabled": true, "target": "abvxsite/main" },
-    { "slug": "abvx-lab", "enabled": false, "target": "markoblogo/lab.abvx/main", "reason": "pending_LAB_REPO_TOKEN_with_contents_write" }
+    { "slug": "abvx-lab", "enabled": false, "target": "markoblogo/lab.abvx/main", "reason": "manual_pr_only_no_cross_repository_write" }
   ],
   "requiredGates": ["observed_source_sha", "claim_evidence", "public_copy_validation", "test_sync", "content_validation"],
   "rollback": { "strategy": "git_revert", "automatic": false }

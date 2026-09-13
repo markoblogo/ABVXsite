@@ -8,12 +8,14 @@
   "publishedAt": "2026-05-09",
   "homepageEligible": true,
   "title": "AGENTS.md Generator",
-  "summary": "AGENTS.md Generator is an operational workflow surface for AI-assisted development systems, agent coordination and structured coding workflows.",
+  "summary": "Generate, preserve, and verify lean AGENTS.md, RUNBOOK.md, and machine-readable repository context for AI coding agents.",
   "tags": [
     "ai-dev",
-    "agents",
-    "documentation",
-    "workflow"
+    "agents-md",
+    "repository-context",
+    "runbook",
+    "codex",
+    "cli"
   ],
   "appearsIn": [
     "systems"
@@ -46,17 +48,15 @@
     "src": "/media/work/agentsmd-generator/hero.webp",
     "alt": "AGENTS.md Generator interface",
     "role": "project-screenshot"
-  }
+  },
+  "updatedAt": "2026-09-13"
 }
 ---
 
-AGENTS.md Generator began as a small utility for structured AI-agent instructions, but evolved into a broader operational workflow environment for AI-native development.
+AGENTS.md Generator creates a compact startup contract for AI coding agents, then preserves project-specific instructions across updates. It can generate and verify:
 
-The project helps organize:
-- agent coordination,
-- workflow structure,
-- operational documentation,
-- development-system consistency,
-- AI-assisted coding processes.
+- a lean `AGENTS.md`,
+- an operational `RUNBOOK.md`,
+- and machine-readable repository context.
 
-It now functions as one of the central operational surfaces inside the ABVX AI-native ecosystem, connecting tooling, orchestration logic and protocolized development workflows.
+The tool is designed for repeatable repository onboarding and complements SET's orchestration layer, ABVX Agent Skills' reusable execution workflows, ID's policy contracts, and Git Tweet's release communication.

@@ -14,6 +14,7 @@ import {
 import { getNativeWritingItems } from '@/content';
 import { collectionPageJsonLd, defaultOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 const writingDescription =
   'Applied AI reviews, build logs and essays on systems, validation, agent workflows, decision-making and how ideas survive contact with reality.';
@@ -226,9 +227,9 @@ export default async function WritingPage({
             no recent items. Native ABVX writing remains available through this same archive.
           </p>
           <div className="link-strip">
-            <a href="/writing?source=abvx">
+            <Link href="/writing?source=abvx">
               ABVX
-            </a>
+            </Link>
             <a href="https://abvcreative.medium.com/" target="_blank" rel="noopener noreferrer">
               Medium
             </a>

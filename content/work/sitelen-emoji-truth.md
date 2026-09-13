@@ -7,8 +7,8 @@
   "visibility": "public",
   "publishedAt": "2026-04-28",
   "homepageEligible": false,
-  "title": "sitelen-emoji-truth",
-  "summary": "sitelen-emoji-truth is an experimental visual-language protocol exploring emoji-based semantic compression and symbolic communication systems.",
+  "title": "sitelen-emoji",
+  "summary": "A versioned Toki Pona to emoji mapping and JavaScript/Python helper library, maintained inside the unified Toki Pona Toolkit.",
   "tags": [
     "toki-pona",
     "sitelen-emoji",
@@ -28,7 +28,7 @@
     {
       "type": "github",
       "label": "GitHub",
-      "url": "https://github.com/markoblogo/sitelen-emoji-truth"
+      "url": "https://github.com/markoblogo/toki-pona-translator/tree/main/packages/sitelen-emoji"
     }
   ],
   "featured": false,
@@ -47,16 +47,12 @@
     "src": "/media/work/sitelen-emoji-truth/hero.jpg",
     "alt": "sitelen-emoji-truth protocol preview",
     "role": "project-screenshot"
-  }
+  },
+  "shortTitle": "sitelen-emoji",
+  "updatedAt": "2026-09-13"
 }
 ---
 
-sitelen-emoji-truth is an experimental protocol project exploring emoji as a structured semantic layer rather than decorative reaction language.
+sitelen-emoji is an independently installable component of the [Toki Pona Toolkit](https://github.com/markoblogo/toki-pona-translator).
 
-The system investigates how compressed symbolic systems can function as:
-- lightweight communication protocols,
-- translation surfaces,
-- semantic markers,
-- or visual reasoning tools.
-
-The project belongs to the broader ABVX language-systems ecosystem around toki pona, sitelen pona and constrained communication models.
+A versioned Toki Pona to emoji mapping and JavaScript/Python helper library, maintained inside the unified Toki Pona Toolkit. The unified repository keeps the package history, tests, releases, shared mapping data, translator, publishing skill, and Pictiq interoperability research together while preserving the package's public API.

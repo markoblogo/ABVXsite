@@ -20,9 +20,9 @@ jobs:
       has_changes: ${{ steps.observe.outputs.has_changes }}
       target_slugs: ${{ steps.observe.outputs.target_slugs }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: npm
@@ -36,7 +36,7 @@ jobs:
         run: node scripts/cortex-abv-observe-project-events.mjs --output "$RUNNER_TEMP/cortex-abv-observed-events.json" ${{ inputs.slug && format('--slug {0}', inputs.slug) || '' }}
 
       - name: Save read-only evidence artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: cortex-abv-observed-events
           path: ${{ runner.temp }}/cortex-abv-observed-events.json
@@ -50,9 +50,9 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: npm
@@ -62,7 +62,7 @@ jobs:
       - run: npm run test:sync
 
       - name: Download observed evidence artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: cortex-abv-observed-events
           path: ${{ runner.temp }}/cortex-abv
@@ -152,7 +152,7 @@ jobs:
 
       - name: Save write-side executor evidence artifacts
         if: steps.apply.outputs.applied == 'true'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: cortex-abv-write-side-executor
           path: |
@@ -184,7 +184,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout Lab with its separately scoped write token
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: markoblogo/lab.abvx
           token: ${{ secrets.LAB_REPO_TOKEN }}
@@ -215,7 +215,7 @@ jobs:
 
       - name: Save Lab ledger evidence snapshot
         if: steps.apply-lab.outputs.applied == 'true'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: cortex-abv-lab-home-ledger-snapshot
           path: lab-abvx/docs/assets/home-ledger-snapshot.v1.json

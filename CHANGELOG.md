@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.2.0 — 2026-09-13
+
+### Reliability and maintenance
+- Upgraded Next.js, React, and the related type and lint packages to current releases.
+- Removed known npm audit findings and added a PR CI gate for content, lint, sync tests, production build, and production dependency audit.
+- Updated GitHub Actions runtimes to their Node 24 generations.
+- Fixed existing writing-route lint failures and scoped a Next.js-only lint rule away from the isolated CortexABV runtime.
+- Confirmed the project-copy schema fix that restores scheduled bounded copy proposals while preserving manual owner review.
+
+### Documentation
+- Tightened the repository quick start, verification, release flow, and contributor context.
+- Clarified the public entry points and retained the ABVXsite / ABVX-OS / CortexABV authority boundary.
+
 ## 2026-02-16 — Current Snapshot
 
 ### UX and layout
@@ -22,4 +35,3 @@
 - Added Bing Webmaster verification token support.
 - Added ABVX intent pages/hub linking improvements.
 - Added targeted metadata and structured content updates across key pages.
-

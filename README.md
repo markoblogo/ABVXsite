@@ -1,12 +1,16 @@
 # ABVXsite
 
 [![Website](https://img.shields.io/badge/Website-abvx.xyz-111827?logo=vercel&logoColor=white)](https://abvx.xyz/)
+[![CI](https://github.com/markoblogo/ABVXsite/actions/workflows/ci.yml/badge.svg)](https://github.com/markoblogo/ABVXsite/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/markoblogo/ABVXsite)](https://github.com/markoblogo/ABVXsite/releases)
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=nextdotjs)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=111827)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
 ![License](https://img.shields.io/badge/License-UNLICENSED-lightgrey)
 
-Production source for [abvx.xyz](https://abvx.xyz/): the public ABVX ecosystem site for agro-commodity market infrastructure, AI-native systems, publishing, language experiments, books, and writing.
+Production source for [abvx.xyz](https://abvx.xyz/): one public map of ABVX market infrastructure, AI-native systems, developer tools, publishing, and research.
+
+Start with [Current Focus](https://abvx.xyz/focus) for the production market systems, [Systems](https://abvx.xyz/systems) for tools and protocols, or [ABVX Press](https://abvx.xyz/books) for books and publishing projects.
 
 This repository is the public surface only. `ABVX-OS` remains the operational-state owner; `CortexABV-private` remains the private knowledge/runtime owner.
 
@@ -81,7 +85,7 @@ Detail pages include visible breadcrumb links, entity-oriented "Key facts" block
 Install dependencies:
 
 ```bash
-npm install
+npm ci
 ```
 
 Run the development server:
@@ -233,34 +237,36 @@ Standard checks before pushing:
 npm run content:validate
 npm run content:review
 npm run lint
+npm run test:sync
 npm run build
+npm audit --omit=dev --audit-level=high
 ```
 
-Optional theme smoke check:
+Optional public-shell smoke check:
 
 ```bash
-npm run smoke:theme
+npm run smoke:shell
 ```
 
 The review report is editorial planning output. It can warn about intentionally free resources or items without purchase links. Structural failures should be fixed before deployment.
 
 ## Production Deployment
 
-Production is deployed from the Git repository to Vercel.
+Production is deployed from the Git repository to Vercel. Changes land through a reviewed pull request; Vercel deploys production from `main` after merge.
 
 Recommended release flow:
 
 ```bash
-git checkout main
-git pull origin main
+git switch -c chore/describe-the-change
 npm run content:validate
 npm run content:review
 npm run lint
+npm run test:sync
 npm run build
-git push origin main
+npm audit --omit=dev --audit-level=high
+git push -u origin HEAD
+gh pr create
 ```
-
-If Vercel is connected to `main`, production deployment starts automatically after push.
 
 Manual production deployment, if needed:
 

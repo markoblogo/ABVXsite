@@ -1,5 +1,13 @@
 # AGENTS.md
 
+## Repository contract
+
+- `content/` is the editable public source of truth; regenerate `public/llms.txt` and `public/content-index.json` after public content changes.
+- Preserve public slugs, redirects, media paths, canonical URLs, and the separation from the private `ABVX-OS` and `CortexABV-private` runtimes.
+- CortexABV copy changes remain proposal-only and PR-first. Do not add auto-merge, auto-publish, direct-main writes, or outbound messaging.
+- Before a PR, run `npm run content:validate`, `npm run lint`, `npm run test:sync`, and `npm run build`.
+- Read `docs/project-description-sync.md` before changing project-copy automation and the nested `cortex-abv/private-runtime/AGENTS.md` before changing that snapshot.
+
 # Frontend motion review contract (local)
 
 Use this local contract for UI animation-related changes:

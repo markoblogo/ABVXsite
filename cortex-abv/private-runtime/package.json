@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "node --test test/*.test.mjs",
+    "test:exported-vector-runtime": "node --test test/vector-retrieval-pilot.test.mjs test/vector-retrieval-synthetic-runner.test.mjs test/vector-runtime-shim.test.mjs test/vector-runtime-readiness-runner.test.mjs test/vector-runtime-implementation-poc-dry-run.test.mjs test/vector-runtime-controlled-module-harness.test.mjs test/vector-runtime-controlled-module-harness-dry-run.test.mjs",
     "tenant:check": "node src/check-tenant-project-ai-engine-contract.mjs",
     "vector-retrieval-pilot:check": "node src/check-vector-retrieval-pilot.mjs",
     "vector-retrieval-shadow:run": "node src/vector-retrieval-synthetic-runner.mjs --plan config/vector-retrieval-turbovec-pilot.v1.json --benchmark examples/synthetic-vector-retrieval-benchmark.v1.json --receipt receipts/vector-retrieval-turbovec-shadow-receipt.v1.json",

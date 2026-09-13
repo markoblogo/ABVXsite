@@ -33,6 +33,7 @@ test('queries the synthetic runtime index with evidence-carrying candidates', ()
   const candidates = queryVectorRuntimeIndex({
     index,
     query: 'Monitor MN7R repository readiness status',
+    tenantScope: 'monitor-mn7r',
     topK: 2,
     minCandidateScore: 0.05,
   });
@@ -40,4 +41,17 @@ test('queries the synthetic runtime index with evidence-carrying candidates', ()
   assert.equal(candidates.length > 0, true);
   assert.equal(candidates[0].id, 'pp-monitor-mn7r-dashboard');
   assert.equal(candidates.every((candidate) => Array.isArray(candidate.evidenceRefs) && candidate.evidenceRefs.length > 0), true);
+});
+
+test('never returns a candidate from a sibling tenant', () => {
+  const plan = readJson(planPath);
+  const benchmark = readJson(benchmarkPath);
+  const index = buildVectorRuntimeIndex({ plan, corpus: benchmark.corpus });
+  const candidates = queryVectorRuntimeIndex({
+    index,
+    query: 'public updates project summary status',
+    tenantScope: 'index-spike',
+    topK: 10,
+  });
+  assert.equal(candidates.every((candidate) => candidate.tenant === 'index-spike'), true);
 });

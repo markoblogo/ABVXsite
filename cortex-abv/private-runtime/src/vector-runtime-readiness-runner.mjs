@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto';
-import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { buildVectorRuntimeIndex, queryVectorRuntimeIndex } from './vector-runtime-shim.mjs';
 
@@ -72,10 +72,12 @@ export function runVectorRuntimeReadiness({ planPath, benchmarkPath, receiptPath
   for (const probe of benchmark.probes) {
     const expectedCorpusIds = uniqueSorted(probe.expectedCorpusIds || []);
     if (expectedCorpusIds.length === 0) throw new Error(`probe ${probe.probeId} must have expectedCorpusIds`);
+    if (typeof probe.tenantScope !== 'string' || !probe.tenantScope.trim()) throw new Error(`probe ${probe.probeId} must have tenantScope`);
 
     const candidates = queryVectorRuntimeIndex({
       index,
       query: probe.query,
+      tenantScope: probe.tenantScope,
       topK: evaluation.topK,
       minCandidateScore: evaluation.minCandidateScore,
       k1: evaluation.k1,
@@ -111,6 +113,7 @@ export function runVectorRuntimeReadiness({ planPath, benchmarkPath, receiptPath
     probeResults.push({
       probeId: probe.probeId,
       query: probe.query,
+      tenantScope: probe.tenantScope,
       expectedCorpusIds,
       candidateIds: candidates.map((candidate) => candidate.id),
       matchedExpected,
@@ -175,6 +178,7 @@ export function runVectorRuntimeReadiness({ planPath, benchmarkPath, receiptPath
   };
 
   if (receiptPath) {
+    mkdirSync(path.dirname(receiptPath), { recursive: true });
     writeFileSync(receiptPath, `${JSON.stringify(receipt, null, 2)}\n`);
   }
 
@@ -187,7 +191,7 @@ export function run() {
   const benchmarkPath = option('--benchmark')
     || path.resolve(process.cwd(), 'examples/synthetic-vector-retrieval-benchmark.v1.json');
   const receiptPath = option('--receipt')
-    || path.resolve(process.cwd(), 'receipts/vector-runtime-readiness-receipt.v1.json');
+    || path.resolve(process.cwd(), 'data/vector-runtime/vector-runtime-readiness-receipt.v1.json');
   const receipt = runVectorRuntimeReadiness({
     planPath,
     benchmarkPath,

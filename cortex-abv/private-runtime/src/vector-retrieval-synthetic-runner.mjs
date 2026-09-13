@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto';
-import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 
 const STOP_WORDS = new Set(['the', 'and', 'of', 'a', 'an', 'to', 'in', 'for', 'on', 'with', 'is', 'are', 'was', 'were', 'this', 'that', 'about']);
@@ -113,6 +113,11 @@ function validatePlan(plan) {
   if (!routeById(plan, plan.retrievalRouting.defaultRoute)) {
     throw new Error('plan retrievalRouting.defaultRoute must reference an allowlisted route');
   }
+  for (const route of plan.retrievalRouting.routes) {
+    if (!Array.isArray(route.allowedTenants) || route.allowedTenants.length === 0) {
+      throw new Error(`route ${route.id} must define allowedTenants`);
+    }
+  }
   const strategies = plan.multiStrategyGating?.strategies;
   if (!Array.isArray(strategies) || !strategies.length) {
     throw new Error('plan must define multiStrategyGating.strategies');
@@ -125,6 +130,9 @@ function validateCorpus(document) {
   }
   if (!document.text || typeof document.text !== 'string' || !document.text.trim()) {
     throw new Error(`corpus item ${document.id} must have text`);
+  }
+  if (!document.tenant || typeof document.tenant !== 'string' || !document.tenant.trim()) {
+    throw new Error(`corpus item ${document.id} must have tenant`);
   }
   if (!Array.isArray(document.evidenceRefs) || !document.evidenceRefs.length) {
     throw new Error(`corpus item ${document.id} must have evidenceRefs`);
@@ -143,6 +151,9 @@ function validateProbe(probe) {
   }
   if (probe.routeHint !== undefined && (typeof probe.routeHint !== 'string' || !probe.routeHint.trim())) {
     throw new Error(`probe ${probe.probeId} routeHint must be a non-empty string when present`);
+  }
+  if (!probe.tenantScope || typeof probe.tenantScope !== 'string' || !probe.tenantScope.trim()) {
+    throw new Error(`probe ${probe.probeId} must have tenantScope`);
   }
 }
 
@@ -192,6 +203,7 @@ function buildRerankContext(corpus, queryTokens) {
     return {
       id: doc.id,
       title: doc.title || doc.id,
+      tenant: doc.tenant,
       evidenceRefs: doc.evidenceRefs || [],
       termCounts: counts,
       docLength: [...counts.values()].reduce((sum, value) => sum + value, 0),
@@ -302,8 +314,6 @@ export function runVectorRetrievalShadow({ planPath, benchmarkPath, receiptPath,
   const indexDecision = buildIndexDecisionTrace(plan);
   const rerankMode = indexDecision.selectedMode;
 
-  const corpusIndex = new Set(baseCorpus.map((document) => document.id));
-
   const runAtValue = runAt ? nonEmptyString(runAt, 'runAt') : new Date().toISOString();
   const createdAt = new Date(runAtValue).toISOString();
   const maxRunMs = Number.isInteger(evalConfig.maxRunMs) ? evalConfig.maxRunMs : 2000;
@@ -324,7 +334,6 @@ export function runVectorRetrievalShadow({ planPath, benchmarkPath, receiptPath,
 
   for (const probe of benchmark.probes) {
     const expectedIds = uniqueSorted(probe.expectedCorpusIds);
-    ensureResultIds(corpusIndex, expectedIds);
 
     const queryRaw = nonEmptyString(probe.query, `probe:${probe.probeId}.query`);
     const queryTokens = tokenize(queryRaw);
@@ -334,8 +343,14 @@ export function runVectorRetrievalShadow({ planPath, benchmarkPath, receiptPath,
     if (!selectedRoute) {
       throw new Error(`probe ${probe.probeId} selected route is not allowlisted: ${routeDecision.selectedRoute}`);
     }
+    if (!selectedRoute.allowedTenants.includes(probe.tenantScope)) {
+      throw new Error(`probe ${probe.probeId} tenantScope is not allowlisted by route ${selectedRoute.id}`);
+    }
 
-    const { queryCount, docStats, idf, averageDocLength } = buildRerankContext(baseCorpus, queryTokens);
+    const scopedCorpus = baseCorpus.filter((document) => document.tenant === probe.tenantScope);
+    ensureResultIds(new Set(scopedCorpus.map((document) => document.id)), expectedIds);
+
+    const { queryCount, docStats, idf, averageDocLength } = buildRerankContext(scopedCorpus, queryTokens);
     if (indexDecision.fallbackApplied) {
       const fallbackSignal = indexDecision.fallbackReason;
       if (!fallbackSignal) {
@@ -348,6 +363,7 @@ export function runVectorRetrievalShadow({ planPath, benchmarkPath, receiptPath,
         return {
           id: doc.id,
           title: doc.title,
+          tenant: doc.tenant,
           score,
           matchedTerms,
           evidenceRefs: doc.evidenceRefs || [],
@@ -394,7 +410,7 @@ export function runVectorRetrievalShadow({ planPath, benchmarkPath, receiptPath,
         strategyId: 'tenant_scope_filter',
         required: true,
         passed: true,
-        reason: `route '${selectedRoute.id}' keeps retrieval within allowlisted benchmark corpus`,
+        reason: `all candidates are restricted to tenant '${probe.tenantScope}'`,
       },
       {
         strategyId: 'lexical_anchor_gate',
@@ -429,6 +445,7 @@ export function runVectorRetrievalShadow({ planPath, benchmarkPath, receiptPath,
       probeId: nonEmptyString(probe.probeId, 'probe.probeId'),
       query: queryRaw,
       selectedRoute: selectedRoute.id,
+      tenantScope: probe.tenantScope,
       routeSelectionSource: routeDecision.selectionSource,
       rerankMode,
       topK: evalConfig.topK,
@@ -436,6 +453,7 @@ export function runVectorRetrievalShadow({ planPath, benchmarkPath, receiptPath,
       topCandidates: topK.map((entry) => ({
         id: entry.id,
         title: entry.title,
+        tenant: entry.tenant,
         score: Number(entry.score.toFixed(4)),
         matchedTerms: entry.matchedTerms,
       })),
@@ -465,6 +483,7 @@ export function runVectorRetrievalShadow({ planPath, benchmarkPath, receiptPath,
     routeSelections.push({
       probeId: probe.probeId,
       selectedRoute: selectedRoute.id,
+      tenantScope: probe.tenantScope,
       selectionSource: routeDecision.selectionSource,
       matchedSignals: routeDecision.matchedSignals,
     });
@@ -574,6 +593,7 @@ export function runVectorRetrievalShadow({ planPath, benchmarkPath, receiptPath,
   };
 
   if (receiptPath) {
+    mkdirSync(path.dirname(receiptPath), { recursive: true });
     writeFileSync(receiptPath, `${JSON.stringify(receipt, null, 2)}\n`);
   }
 
@@ -582,11 +602,11 @@ export function runVectorRetrievalShadow({ planPath, benchmarkPath, receiptPath,
 
 export function run() {
   const planPath = option('--plan')
-    || path.resolve(process.cwd(), 'cortex-abv/private-runtime/config/vector-retrieval-turbovec-pilot.v1.json');
+    || path.resolve(process.cwd(), 'config/vector-retrieval-turbovec-pilot.v1.json');
   const benchmarkPath = option('--benchmark')
-    || path.resolve(process.cwd(), 'cortex-abv/private-runtime/examples/synthetic-vector-retrieval-benchmark.v1.json');
+    || path.resolve(process.cwd(), 'examples/synthetic-vector-retrieval-benchmark.v1.json');
   const receiptPath = option('--receipt')
-    || path.resolve(process.cwd(), 'cortex-abv/private-runtime/receipts/vector-retrieval-turbovec-shadow-receipt.v1.json');
+    || path.resolve(process.cwd(), 'data/vector-runtime/vector-retrieval-shadow-receipt.v1.json');
 
   const receipt = runVectorRetrievalShadow({
     planPath,

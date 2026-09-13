@@ -84,6 +84,7 @@ function buildTfidfIndex(corpus) {
   const docFrequencies = new Map();
   const documents = corpus.map((document) => {
     const id = requireNonEmptyString(document.id, 'corpus.id');
+    const tenant = requireNonEmptyString(document.tenant, `corpus.${id}.tenant`);
     const text = requireNonEmptyString(document.text, `corpus.${id}.text`);
     if (!Array.isArray(document.evidenceRefs) || document.evidenceRefs.length === 0) {
       throw new Error(`corpus.${id}.evidenceRefs must be a non-empty array`);
@@ -95,7 +96,7 @@ function buildTfidfIndex(corpus) {
     return {
       id,
       title: document.title || id,
-      tenant: document.tenant,
+      tenant,
       text,
       evidenceRefs: document.evidenceRefs,
       termCounts: counts,
@@ -162,9 +163,10 @@ export function buildVectorRuntimeIndex({ plan, corpus, engineAdapter } = {}) {
   };
 }
 
-export function queryVectorRuntimeIndex({ index, query, topK, minCandidateScore = 0, k1 = 1.5, b = 0.75 } = {}) {
+export function queryVectorRuntimeIndex({ index, query, tenantScope, topK, minCandidateScore = 0, k1 = 1.5, b = 0.75 } = {}) {
   requireObject(index, 'index');
   const queryRaw = requireNonEmptyString(query, 'query');
+  const tenant = requireNonEmptyString(tenantScope, 'tenantScope');
   const queryTokens = tokenize(queryRaw);
   if (queryTokens.length === 0) throw new Error('query must contain at least one indexable token');
   const queryCounts = new Map();
@@ -177,6 +179,7 @@ export function queryVectorRuntimeIndex({ index, query, topK, minCandidateScore 
   const { documents, idf, averageDocLength } = index.fallbackIndex;
 
   return documents
+    .filter((document) => document.tenant === tenant)
     .map((document) => scoreDocument(queryCounts, document, idf, averageDocLength, { k1, b }))
     .filter((candidate) => candidate.score >= threshold)
     .sort((a, bScore) => (bScore.score - a.score) || a.id.localeCompare(bScore.id))

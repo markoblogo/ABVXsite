@@ -24,3 +24,9 @@ test('vector retrieval pilot rejects write authority', () => {
   plan.externalSideEffects = true;
   assert.throws(() => validateVectorRetrievalPilotPlan(plan), /externalSideEffects/);
 });
+
+test('vector retrieval pilot requires an explicit tenant allowlist for every route', () => {
+  const plan = readJson(fixture);
+  delete plan.retrievalRouting.routes[0].allowedTenants;
+  assert.throws(() => validateVectorRetrievalPilotPlan(plan), /allowedTenants/);
+});

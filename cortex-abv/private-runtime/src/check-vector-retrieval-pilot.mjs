@@ -105,6 +105,22 @@ export function validateVectorRetrievalPilotPlan(plan) {
 
   validateIndexInterface(plan.indexInterface);
 
+  requireObject(plan.retrievalRouting, 'retrievalRouting is required');
+  requireArray(plan.retrievalRouting.routes, 'retrievalRouting.routes must be a non-empty array');
+  const routeIds = new Set();
+  for (const route of plan.retrievalRouting.routes) {
+    requireString(route.id, 'retrievalRouting.routes[].id is required');
+    if (routeIds.has(route.id)) throw new Error(`duplicate retrieval route: ${route.id}`);
+    routeIds.add(route.id);
+    requireArray(route.allowedTenants, `retrieval route ${route.id} must define allowedTenants`);
+    if (new Set(route.allowedTenants).size !== route.allowedTenants.length) {
+      throw new Error(`retrieval route ${route.id} has duplicate allowedTenants`);
+    }
+  }
+  if (!routeIds.has(plan.retrievalRouting.defaultRoute)) {
+    throw new Error('retrievalRouting.defaultRoute must reference a declared route');
+  }
+
   requireArray(plan.evaluation?.required || [], 'evaluation.required must be a non-empty array');
   return {
     kind: plan.kind,

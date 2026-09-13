@@ -1,6 +1,6 @@
 {
   "name": "abvxsite",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -25,6 +25,7 @@
     "cortex-abv:status": "node scripts/cortex-abv-status.mjs",
     "cortex-abv:cabinet-stage1-run": "node scripts/cortex-abv-run-cabinet-stage1.mjs",
     "cortex-abv:private-runtime:check": "node scripts/check-cortex-abv-private-runtime-export.mjs",
+    "cortex-abv:vector-export:check": "npm --prefix cortex-abv/private-runtime run test:exported-vector-runtime",
     "cortex-abv:observe-events": "node scripts/cortex-abv-observe-project-events.mjs",
     "cortex-abv:render-receipt": "node scripts/cortex-abv-render-pr-receipt.mjs",
     "cortex-abv:write-side-executor-design:check": "node scripts/check-cortex-abv-write-side-executor-design.mjs",

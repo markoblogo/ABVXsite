@@ -75,7 +75,7 @@ export default async function NativeWritingPage({
           <span key={tag}>{tag}</span>
         ))}
       </div>
-      <MarkdownContent className="native-writing-article__body" children={item.body} />
+      <MarkdownContent className="native-writing-article__body">{item.body}</MarkdownContent>
     </div>
   );
 }

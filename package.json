@@ -1,6 +1,6 @@
 {
-  "name": "notion-personal-site",
-  "version": "0.1.0",
+  "name": "abvxsite",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "smoke:theme": "node scripts/theme-smoke-check.mjs",
+    "smoke:theme": "npm run smoke:shell",
     "export:legacy-content": "node scripts/export-legacy-content.mjs",
     "migrate:public-media": "node scripts/migrate-public-media.mjs",
     "content:new-book": "node scripts/new-book.mjs",
@@ -42,13 +42,14 @@
     "feeds:check": "node scripts/check-feed-covers.mjs",
     "qa:visual": "node scripts/visual-smoke.mjs",
     "qa:csp": "node scripts/csp-check.mjs",
-    "qa:perf": "node scripts/perf-check.mjs"
+    "qa:perf": "node scripts/perf-check.mjs",
+    "smoke:shell": "node scripts/site-shell-smoke-check.mjs"
   },
   "dependencies": {
-    "next": "16.2.6",
+    "next": "16.3.5",
     "next-themes": "^0.4.6",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
   },
   "overrides": {
     "postcss": "^8.5.15"
@@ -56,12 +57,15 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
     "eslint": "^9",
-    "eslint-config-next": "16.2.6",
+    "eslint-config-next": "16.3.5",
     "playwright": "^1.60.0",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=20.9.0"
   }
 }

@@ -3,16 +3,18 @@
   "id": "abvx-lab",
   "slug": "abvx-lab",
   "type": "web-service",
-  "status": "building",
+  "status": "live",
   "visibility": "public",
   "publishedAt": "2026-05-08",
   "homepageEligible": true,
   "title": "ABVX Lab",
-  "summary": "ABVX Lab is the ecosystem front for AI-native development systems, protocols, workflows and operational tooling.",
+  "summary": "The public catalog and control plane for the ABVX AI coding stack: repository context, orchestration, skills, discovery, and proof surfaces.",
   "tags": [
-    "lab",
-    "experiments",
-    "ai-dev"
+    "ai-dev",
+    "developer-tools",
+    "agent-skills",
+    "orchestration",
+    "verification"
   ],
   "appearsIn": [
     "systems"
@@ -46,19 +48,11 @@
     "src": "/media/work/abvx-lab/hero.webp",
     "alt": "ABVX Lab ecosystem landing page",
     "role": "landing-screenshot"
-  }
+  },
+  "updatedAt": "2026-09-13"
 }
 ---
 
-ABVX Lab is the public ecosystem surface for the ABVX AI-native development layer.
+ABVX Lab is the public catalog and control plane for the ABVX AI coding tools stack. It connects repository context, orchestration, reusable skills, discovery, and proof surfaces without collapsing the tools into one product.
 
-The project acts as a structured entry point into:
-- workflows,
-- orchestration systems,
-- protocols,
-- development interfaces,
-- AI-native operational tools.
-
-Rather than representing a single application, the lab functions as a connected environment for experimentation, operational tooling and development-system organization.
-
-It is both a navigation layer and a conceptual map of the broader AI-native ecosystem.
+Use it to understand where AGENTS.md Generator, SET, ABVX Agent Skills, ID, Decision Map, Git Tweet, and companion tools fit in the workflow, then follow the canonical repository or product link for installation and operation.

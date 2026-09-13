@@ -4,28 +4,28 @@ const baseUrl = process.argv[2] || process.env.THEME_SMOKE_URL || 'http://localh
 
 const checks = [
   {
-    name: 'Theme toggle button exists',
-    test: (html) => /aria-label="(Switch to light mode|Switch to dark mode)"/.test(html),
+    name: 'Primary navigation exists',
+    test: (html) => /aria-label="Primary navigation"/.test(html),
   },
   {
-    name: 'ASCII toggle mount exists',
-    test: (html) => /id="ascii-toggle-anchor"/.test(html),
+    name: 'Header brand mark exists',
+    test: (html) => /\/brand\/abv-mark-dark\.png/.test(html),
   },
   {
-    name: 'AsciiTheme source link exists in footer',
-    test: (html) => /github\.com\/markoblogo\/AsciiTheme/.test(html),
+    name: 'Homepage positioning is present',
+    test: (html) => /AI-native systems for complex markets\./.test(html),
   },
   {
-    name: 'World time dock markup exists',
-    test: (html) => /class="time-dock/.test(html),
+    name: 'Primary work actions exist',
+    test: (html) => /Explore the work/.test(html) && /Work with me/.test(html),
   },
   {
-    name: 'Header logo mark exists',
-    test: (html) => /\/brand\/abv-mark\.png/.test(html),
+    name: 'Footer navigation exists',
+    test: (html) => /aria-label="Footer navigation"/.test(html),
   },
   {
-    name: 'ASCII footnote exists',
-    test: (html) => /experimental ASCII theme mode/.test(html),
+    name: 'Machine-readable indexes are linked',
+    test: (html) => /href="\/llms\.txt"/.test(html) && /href="\/content-index\.json"/.test(html),
   },
 ];
 
@@ -40,7 +40,7 @@ async function run() {
   const html = await res.text();
 
   let failed = 0;
-  console.log(`Theme smoke-check target: ${url}`);
+  console.log(`Site shell smoke-check target: ${url}`);
 
   for (const check of checks) {
     const ok = check.test(html);
@@ -54,7 +54,7 @@ async function run() {
   }
 
   console.log('\nAll smoke checks passed.');
-  console.log('Next: run manual visual checklist in docs/theme-smoke-check.md');
+  console.log('Next: run npm run qa:visual for desktop and mobile route coverage.');
 }
 
 run().catch((err) => {

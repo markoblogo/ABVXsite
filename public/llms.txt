@@ -218,7 +218,7 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 - sitelen-layer-plugin
   URL: https://abvx.xyz/work/sitelen-layer-plugin
-  Summary: sitelen-layer-plugin is a rendering layer for sitelen pona and experimental visual-language systems used across ABVX publishing and language projects.
+  Summary: A reusable display layer for switching Toki Pona content among Latin, sitelen pona, and emoji modes, maintained inside the unified Toki Pona Toolkit.
   Group: Language Tools, Protocols & Experiments
   Tags: toki-pona, sitelen-pona, plugin, rendering, publishing, visual-language, language-systems, typography
 
@@ -228,11 +228,11 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Language, AI & Toki Pona
   Tags: Toki Pona, sitelen pona, Charles Dickens, A Christmas Carol, translation, bilingual edition, minimalist language, classic literature
 
-- Toki Pona AI translator
+- Toki Pona Toolkit
   URL: https://abvx.xyz/work/toki-pona-ai-translator
-  Summary: Toki Pona AI translator is an experimental translation interface for converting natural language into toki pona and related visual-script forms.
+  Summary: A unified Toki Pona toolkit for AI translation, sitelen pona and emoji rendering, reusable JavaScript/Python packages, and manuscript QA.
   Group: Publishing systems & protocols
-  Tags: toki-pona, language-ai, translator, ai-service
+  Tags: toki-pona, language-ai, translator, sitelen-pona, sitelen-emoji, npm, pypi
 
 - Chinese Wisdom in toki pona landing
   URL: https://abvx.xyz/work/chinese-wisdom-toki-pona-landing
@@ -288,9 +288,9 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Stoic Wisdom in Toki Pona
   Tags: Toki Pona, sitelen pona, Stoicism, Seneca, On the Shortness of Life, philosophy, translation, minimalist language
 
-- sitelen-emoji-truth
+- sitelen-emoji
   URL: https://abvx.xyz/work/sitelen-emoji-truth
-  Summary: sitelen-emoji-truth is an experimental visual-language protocol exploring emoji-based semantic compression and symbolic communication systems.
+  Summary: A versioned Toki Pona to emoji mapping and JavaScript/Python helper library, maintained inside the unified Toki Pona Toolkit.
   Group: Publishing systems & protocols
   Tags: toki-pona, sitelen-emoji, protocol, publishing
 
@@ -352,9 +352,9 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 - AGENTS.md Generator
   URL: https://abvx.xyz/work/agents-md-generator
-  Summary: AGENTS.md Generator is an operational workflow surface for AI-assisted development systems, agent coordination and structured coding workflows.
+  Summary: Generate, preserve, and verify lean AGENTS.md, RUNBOOK.md, and machine-readable repository context for AI coding agents.
   Group: Workflow & Orchestration
-  Tags: ai-dev, agents, documentation, workflow
+  Tags: ai-dev, agents-md, repository-context, runbook, codex, cli
 
 - AsciiTheme
   URL: https://abvx.xyz/work/ascii-theme
@@ -370,15 +370,15 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 - ABVX Lab
   URL: https://abvx.xyz/work/abvx-lab
-  Summary: ABVX Lab is the ecosystem front for AI-native development systems, protocols, workflows and operational tooling.
+  Summary: The public catalog and control plane for the ABVX AI coding stack: repository context, orchestration, skills, discovery, and proof surfaces.
   Group: Development Surfaces & Interfaces
-  Tags: lab, experiments, ai-dev
+  Tags: ai-dev, developer-tools, agent-skills, orchestration, verification
 
 - git-tweet
   URL: https://abvx.xyz/work/git-tweet
-  Summary: git-tweet is a lightweight development communication system for turning repository activity into structured operational signals and updates.
-  Group: Protocols & Decision Systems
-  Tags: tool, developer-utility
+  Summary: Self-hosted GitHub release announcements for X and Bluesky, with repository-wide release discovery, deduplication, logs, and retries.
+  Group: Workflow & Orchestration
+  Tags: github, release-automation, x, bluesky, self-hosted
 
 - ID
   URL: https://abvx.xyz/work/id
@@ -394,9 +394,9 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 - Decision Map
   URL: https://abvx.xyz/work/decision-map
-  Summary: Decision Map is a protocol for AI-assisted strategic decision-making in product launches, positioning and complex marketing scenarios.
+  Summary: An installable Agent Skill and open protocol for turning complex business, product, and go-to-market decisions into testable options and cascade logs.
   Group: Protocols & Decision Systems
-  Tags: decision-making, protocol, AI, strategic-marketing, product-launch, reasoning, workflow, systems
+  Tags: agent-skill, decision-making, strategy, go-to-market, assumptions, decision-log
 
 ## Standalone utilities
 

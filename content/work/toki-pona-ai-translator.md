@@ -7,13 +7,16 @@
   "visibility": "public",
   "publishedAt": "2026-05-05",
   "homepageEligible": true,
-  "title": "Toki Pona AI translator",
-  "summary": "Toki Pona AI translator is an experimental translation interface for converting natural language into toki pona and related visual-script forms.",
+  "title": "Toki Pona Toolkit",
+  "summary": "A unified Toki Pona toolkit for AI translation, sitelen pona and emoji rendering, reusable JavaScript/Python packages, and manuscript QA.",
   "tags": [
     "toki-pona",
     "language-ai",
     "translator",
-    "ai-service"
+    "sitelen-pona",
+    "sitelen-emoji",
+    "npm",
+    "pypi"
   ],
   "appearsIn": [
     "systems",
@@ -52,16 +55,18 @@
     "src": "/media/work/toki-pona-ai-translator/hero.webp",
     "alt": "Toki Pona AI translator interface",
     "role": "project-screenshot"
-  }
+  },
+  "shortTitle": "Toki Pona Toolkit",
+  "updatedAt": "2026-09-13"
 }
 ---
 
-Toki Pona AI translator is an experimental language interface built around toki pona translation workflows.
+Toki Pona Toolkit is the canonical home for the ABVX Toki Pona software and publishing tools. The monorepository combines:
 
-The system explores how AI-assisted translation, constrained language systems and visual-script interpretation can work together inside a minimal linguistic environment.
+- the AI-assisted translator at [toki.abvx.xyz](https://toki.abvx.xyz),
+- the `sitelen-emoji` JavaScript and Python packages,
+- the `sitelen-layer-plugin` and `sitelen-layer-static` display layers,
+- the `toki-pona-formatting-pass` manuscript QA skill,
+- and the Toki Pona ↔ Pictiq interoperability crosswalk.
 
-The project functions both as:
-- a practical translation tool,
-- and a research surface for simplified semantic systems.
-
-The translator belongs to the broader publishing and language ecosystem around toki pona, sitelen pona and minimalist communication protocols.
+Each package remains independently installable and versioned while sharing one canonical mapping and one tested repository.

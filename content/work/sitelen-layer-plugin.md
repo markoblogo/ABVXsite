@@ -5,7 +5,7 @@
   "title": "sitelen-layer-plugin",
   "shortTitle": "sitelen-layer-plugin",
   "type": "plugin",
-  "status": "live",
+  "status": "released",
   "visibility": "public",
   "publishedAt": "2026-05-11",
   "homepageEligible": true,
@@ -15,7 +15,7 @@
     "books"
   ],
   "group": "Language Tools, Protocols & Experiments",
-  "summary": "sitelen-layer-plugin is a rendering layer for sitelen pona and experimental visual-language systems used across ABVX publishing and language projects.",
+  "summary": "A reusable display layer for switching Toki Pona content among Latin, sitelen pona, and emoji modes, maintained inside the unified Toki Pona Toolkit.",
   "tags": [
     "toki-pona",
     "sitelen-pona",
@@ -30,7 +30,7 @@
     {
       "type": "github",
       "label": "GitHub",
-      "url": "https://github.com/markoblogo/sitelen-layer-plugin"
+      "url": "https://github.com/markoblogo/toki-pona-translator/tree/main/packages/sitelen-layer-plugin"
     }
   ],
   "relatedSlugs": [
@@ -60,20 +60,11 @@
     "role": "project-screenshot",
     "width": 2310,
     "height": 1234
-  }
+  },
+  "updatedAt": "2026-09-13"
 }
 ---
 
-sitelen-layer-plugin is a lightweight rendering and interface layer for sitelen pona and related visual-language systems.
+sitelen-layer-plugin is an independently installable component of the [Toki Pona Toolkit](https://github.com/markoblogo/toki-pona-translator).
 
-The plugin is used across multiple ABVX publishing environments, including:
-- Chinese Wisdom in toki pona,
-- Stoic Wisdom in Toki Pona,
-- Toki Pona Free Kits,
-- and related language/publishing surfaces.
-
-The project focuses on rendering consistency, visual readability and structured integration of sitelen pona into multilingual publishing systems and experimental language interfaces.
-
-Rather than functioning as a standalone application, the plugin acts as infrastructure for language-aware interfaces, symbolic writing systems and publishing-oriented visual layers.
-
-The project belongs both to the Publishing & Language Systems ecosystem and to the broader ABVX Lab development environment.
+A reusable display layer for switching Toki Pona content among Latin, sitelen pona, and emoji modes, maintained inside the unified Toki Pona Toolkit. The unified repository keeps the package history, tests, releases, shared mapping data, translator, publishing skill, and Pictiq interoperability research together while preserving the package's public API.

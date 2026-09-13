@@ -3,15 +3,18 @@
   "id": "git-tweet",
   "slug": "git-tweet",
   "type": "tool",
-  "status": "archive",
+  "status": "live",
   "visibility": "public",
   "publishedAt": "2026-04-23",
-  "homepageEligible": false,
+  "homepageEligible": true,
   "title": "git-tweet",
-  "summary": "git-tweet is a lightweight development communication system for turning repository activity into structured operational signals and updates.",
+  "summary": "Self-hosted GitHub release announcements for X and Bluesky, with repository-wide release discovery, deduplication, logs, and retries.",
   "tags": [
-    "tool",
-    "developer-utility"
+    "github",
+    "release-automation",
+    "x",
+    "bluesky",
+    "self-hosted"
   ],
   "appearsIn": [
     "systems"
@@ -35,7 +38,7 @@
   "needsLinkReview": false,
   "editorialNotes": "Migrated from TypeScript registry; review copy/media/links before final polish.",
   "primarySection": "systems",
-  "group": "Protocols & Decision Systems",
+  "group": "Workflow & Orchestration",
   "media": {
     "src": "/media/work/git-tweet/hero.webp",
     "alt": "git-tweet workflow interface",
@@ -45,14 +48,11 @@
     "src": "/media/work/git-tweet/hero.webp",
     "alt": "git-tweet workflow interface",
     "role": "project-screenshot"
-  }
+  },
+  "updatedAt": "2026-09-13"
 }
 ---
 
-git-tweet is a lightweight operational communication layer for development workflows.
+git-tweet turns new GitHub releases into controlled X and Bluesky announcements. It watches the public repository set, processes releases one at a time, and records delivery state so retries do not create duplicate posts.
 
-The project transforms repository activity and development-state information into structured, readable operational signals.
-
-Originally conceived as a standalone utility, git-tweet now belongs to the broader AI-native ecosystem as part of the workflow and coordination layer around structured development communication.
-
-The project focuses on visibility, operational continuity and lightweight signaling inside active development systems.
+The service is self-hosted and keeps release discovery, message preparation, delivery logs, and retry behavior visible to the operator. It complements AGENTS.md Generator and the wider ABVX toolchain by publishing verified release outcomes rather than raw development activity.

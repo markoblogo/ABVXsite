@@ -1421,7 +1421,7 @@
           "relation": "related"
         },
         {
-          "title": "Toki Pona AI translator",
+          "title": "Toki Pona Toolkit",
           "canonicalUrl": "https://abvx.xyz/work/toki-pona-ai-translator",
           "relation": "related"
         },
@@ -1431,7 +1431,7 @@
           "relation": "related"
         },
         {
-          "title": "sitelen-emoji-truth",
+          "title": "sitelen-emoji",
           "canonicalUrl": "https://abvx.xyz/work/sitelen-emoji-truth",
           "relation": "related"
         },
@@ -2454,14 +2454,16 @@
       "section": "systems",
       "ecosystem": "AI-native Development Systems",
       "group": "Development Surfaces & Interfaces",
-      "status": "building",
+      "status": "live",
       "title": "ABVX Lab",
-      "summary": "ABVX Lab is the ecosystem front for AI-native development systems, protocols, workflows and operational tooling.",
+      "summary": "The public catalog and control plane for the ABVX AI coding stack: repository context, orchestration, skills, discovery, and proof surfaces.",
       "canonicalUrl": "https://abvx.xyz/work/abvx-lab",
       "tags": [
-        "lab",
-        "experiments",
-        "ai-dev"
+        "ai-dev",
+        "developer-tools",
+        "agent-skills",
+        "orchestration",
+        "verification"
       ],
       "links": [
         {
@@ -2475,7 +2477,7 @@
           "url": "https://github.com/markoblogo/lab.abvx"
         }
       ],
-      "updatedAt": "2026-05-08",
+      "updatedAt": "2026-09-13",
       "related": []
     },
     {
@@ -2519,13 +2521,15 @@
       "group": "Workflow & Orchestration",
       "status": "live",
       "title": "AGENTS.md Generator",
-      "summary": "AGENTS.md Generator is an operational workflow surface for AI-assisted development systems, agent coordination and structured coding workflows.",
+      "summary": "Generate, preserve, and verify lean AGENTS.md, RUNBOOK.md, and machine-readable repository context for AI coding agents.",
       "canonicalUrl": "https://abvx.xyz/work/agents-md-generator",
       "tags": [
         "ai-dev",
-        "agents",
-        "documentation",
-        "workflow"
+        "agents-md",
+        "repository-context",
+        "runbook",
+        "codex",
+        "cli"
       ],
       "links": [
         {
@@ -2539,7 +2543,7 @@
           "url": "https://github.com/markoblogo/AGENTS.md_generator"
         }
       ],
-      "updatedAt": "2026-05-09",
+      "updatedAt": "2026-09-13",
       "related": []
     },
     {
@@ -2714,19 +2718,17 @@
       "section": "systems",
       "ecosystem": "AI-native Development Systems",
       "group": "Protocols & Decision Systems",
-      "status": "building",
+      "status": "released",
       "title": "Decision Map",
-      "summary": "Decision Map is a protocol for AI-assisted strategic decision-making in product launches, positioning and complex marketing scenarios.",
+      "summary": "An installable Agent Skill and open protocol for turning complex business, product, and go-to-market decisions into testable options and cascade logs.",
       "canonicalUrl": "https://abvx.xyz/work/decision-map",
       "tags": [
+        "agent-skill",
         "decision-making",
-        "protocol",
-        "AI",
-        "strategic-marketing",
-        "product-launch",
-        "reasoning",
-        "workflow",
-        "systems"
+        "strategy",
+        "go-to-market",
+        "assumptions",
+        "decision-log"
       ],
       "links": [
         {
@@ -2735,21 +2737,24 @@
           "url": "https://github.com/markoblogo/decision-map"
         }
       ],
-      "updatedAt": "2026-05-10",
+      "updatedAt": "2026-09-13",
       "related": []
     },
     {
       "type": "work",
       "section": "systems",
       "ecosystem": "AI-native Development Systems",
-      "group": "Protocols & Decision Systems",
-      "status": "archive",
+      "group": "Workflow & Orchestration",
+      "status": "live",
       "title": "git-tweet",
-      "summary": "git-tweet is a lightweight development communication system for turning repository activity into structured operational signals and updates.",
+      "summary": "Self-hosted GitHub release announcements for X and Bluesky, with repository-wide release discovery, deduplication, logs, and retries.",
       "canonicalUrl": "https://abvx.xyz/work/git-tweet",
       "tags": [
-        "tool",
-        "developer-utility"
+        "github",
+        "release-automation",
+        "x",
+        "bluesky",
+        "self-hosted"
       ],
       "links": [
         {
@@ -2763,7 +2768,7 @@
           "url": "https://github.com/markoblogo/git-tweet"
         }
       ],
-      "updatedAt": "2026-04-23",
+      "updatedAt": "2026-09-13",
       "related": []
     },
     {
@@ -2818,8 +2823,8 @@
       "ecosystem": "Publishing & Language Systems",
       "group": "Publishing systems & protocols",
       "status": "released",
-      "title": "sitelen-emoji-truth",
-      "summary": "sitelen-emoji-truth is an experimental visual-language protocol exploring emoji-based semantic compression and symbolic communication systems.",
+      "title": "sitelen-emoji",
+      "summary": "A versioned Toki Pona to emoji mapping and JavaScript/Python helper library, maintained inside the unified Toki Pona Toolkit.",
       "canonicalUrl": "https://abvx.xyz/work/sitelen-emoji-truth",
       "tags": [
         "toki-pona",
@@ -2836,10 +2841,10 @@
         {
           "type": "github",
           "label": "GitHub",
-          "url": "https://github.com/markoblogo/sitelen-emoji-truth"
+          "url": "https://github.com/markoblogo/toki-pona-translator/tree/main/packages/sitelen-emoji"
         }
       ],
-      "updatedAt": "2026-04-28",
+      "updatedAt": "2026-09-13",
       "related": []
     },
     {
@@ -2847,9 +2852,9 @@
       "section": "systems",
       "ecosystem": "Publishing & Language Systems",
       "group": "Language Tools, Protocols & Experiments",
-      "status": "live",
+      "status": "released",
       "title": "sitelen-layer-plugin",
-      "summary": "sitelen-layer-plugin is a rendering layer for sitelen pona and experimental visual-language systems used across ABVX publishing and language projects.",
+      "summary": "A reusable display layer for switching Toki Pona content among Latin, sitelen pona, and emoji modes, maintained inside the unified Toki Pona Toolkit.",
       "canonicalUrl": "https://abvx.xyz/work/sitelen-layer-plugin",
       "tags": [
         "toki-pona",
@@ -2865,18 +2870,18 @@
         {
           "type": "github",
           "label": "GitHub",
-          "url": "https://github.com/markoblogo/sitelen-layer-plugin"
+          "url": "https://github.com/markoblogo/toki-pona-translator/tree/main/packages/sitelen-layer-plugin"
         }
       ],
-      "updatedAt": "2026-05-11",
+      "updatedAt": "2026-09-13",
       "related": [
         {
-          "title": "Toki Pona AI translator",
+          "title": "Toki Pona Toolkit",
           "canonicalUrl": "https://abvx.xyz/work/toki-pona-ai-translator",
           "relation": "related"
         },
         {
-          "title": "sitelen-emoji-truth",
+          "title": "sitelen-emoji",
           "canonicalUrl": "https://abvx.xyz/work/sitelen-emoji-truth",
           "relation": "related"
         },
@@ -2949,41 +2954,6 @@
       "ecosystem": "Publishing & Language Systems",
       "group": "Publishing systems & protocols",
       "status": "live",
-      "title": "Toki Pona AI translator",
-      "summary": "Toki Pona AI translator is an experimental translation interface for converting natural language into toki pona and related visual-script forms.",
-      "canonicalUrl": "https://abvx.xyz/work/toki-pona-ai-translator",
-      "tags": [
-        "toki-pona",
-        "language-ai",
-        "translator",
-        "ai-service"
-      ],
-      "links": [
-        {
-          "type": "site",
-          "label": "Site",
-          "url": "https://toki.abvx.xyz"
-        },
-        {
-          "type": "github",
-          "label": "GitHub",
-          "url": "https://github.com/markoblogo/toki-pona-translator"
-        },
-        {
-          "type": "youtube",
-          "label": "YouTube",
-          "url": "https://youtu.be/lCAFiDnP2NQ?si=HOEWm4Cr1VVRitPt"
-        }
-      ],
-      "updatedAt": "2026-05-05",
-      "related": []
-    },
-    {
-      "type": "work",
-      "section": "systems",
-      "ecosystem": "Publishing & Language Systems",
-      "group": "Publishing systems & protocols",
-      "status": "live",
       "title": "Toki Pona free kits landing",
       "summary": "Toki Pona Free Kits is a lightweight publishing environment for downloadable reader kits, free translations and companion learning resources.",
       "canonicalUrl": "https://abvx.xyz/work/toki-pona-free-kits-landing",
@@ -3013,6 +2983,44 @@
           "relation": "series"
         }
       ]
+    },
+    {
+      "type": "work",
+      "section": "systems",
+      "ecosystem": "Publishing & Language Systems",
+      "group": "Publishing systems & protocols",
+      "status": "live",
+      "title": "Toki Pona Toolkit",
+      "summary": "A unified Toki Pona toolkit for AI translation, sitelen pona and emoji rendering, reusable JavaScript/Python packages, and manuscript QA.",
+      "canonicalUrl": "https://abvx.xyz/work/toki-pona-ai-translator",
+      "tags": [
+        "toki-pona",
+        "language-ai",
+        "translator",
+        "sitelen-pona",
+        "sitelen-emoji",
+        "npm",
+        "pypi"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://toki.abvx.xyz"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/toki-pona-translator"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/lCAFiDnP2NQ?si=HOEWm4Cr1VVRitPt"
+        }
+      ],
+      "updatedAt": "2026-09-13",
+      "related": []
     },
     {
       "type": "work",

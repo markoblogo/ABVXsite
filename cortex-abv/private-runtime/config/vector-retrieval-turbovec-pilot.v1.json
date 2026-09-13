@@ -9,7 +9,7 @@
   "engineNotes": {
     "goal": "pilot_local_retrieval_only",
     "notes": [
-      "TurboQuant allows local ANN retrieval with compressed index and candidate allowlisting.",
+      "TurboVec provides local ANN retrieval built on TurboQuant with compressed index and candidate allowlisting.",
       "This plan is read-only, proposal-grade, and synthetic-only until governance gates are passed."
     ],
     "reference": "https://github.com/RyanCodrai/turbovec"
@@ -29,12 +29,30 @@
       {
         "id": "public_reference_lookup",
         "description": "Public facts and summary-grade value statements from allowlisted corpus artifacts.",
-        "requiredSignals": ["public", "summary", "status", "updates"]
+        "requiredSignals": [
+          "public",
+          "summary",
+          "status",
+          "updates"
+        ],
+        "allowedTenants": [
+          "index-spike",
+          "monitor-mn7r"
+        ]
       },
       {
         "id": "tenant_surface_lookup",
         "description": "Tenant-scoped guide, onboarding and surface mapping queries.",
-        "requiredSignals": ["guide", "onboarding", "place", "faq"]
+        "requiredSignals": [
+          "guide",
+          "onboarding",
+          "place",
+          "faq"
+        ],
+        "allowedTenants": [
+          "azur-menton",
+          "cortex-abv-personal"
+        ]
       }
     ],
     "selectorPolicy": "deterministic_signal_match_then_default"

@@ -167,6 +167,7 @@ function evaluateProbes({ index, benchmark, evalConfig }) {
     const candidates = queryVectorRuntimeIndex({
       index,
       query: probe.query,
+      tenantScope: probe.tenantScope,
       topK: evalConfig.topK,
       minCandidateScore: evalConfig.minCandidateScore,
       k1: evalConfig.k1,

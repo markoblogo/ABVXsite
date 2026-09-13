@@ -4,7 +4,7 @@
   "version": "v1",
   "createdAt": "2026-07-21T09:00:00.000Z",
   "pilot": "vector-retrieval-turbovec-pilot",
-  "description": "Synthetic corpus and queries for Stage 2 TurboQuant shadow evaluation.",
+  "description": "Synthetic corpus and tenant-scoped queries for the CortexABV vector retrieval shadow pilot.",
   "corpus": [
     {
       "id": "pp-index-spike-updates",
@@ -67,7 +67,8 @@
       "expectedCorpusIds": [
         "pp-index-spike-updates"
       ],
-      "minRecallAtK": 1
+      "minRecallAtK": 1,
+      "tenantScope": "index-spike"
     },
     {
       "probeId": "probe-monitor-readiness",
@@ -76,17 +77,28 @@
       "expectedCorpusIds": [
         "pp-monitor-mn7r-dashboard"
       ],
-      "minRecallAtK": 1
+      "minRecallAtK": 1,
+      "tenantScope": "monitor-mn7r"
     },
     {
       "probeId": "probe-azurmenton-guides",
       "query": "AzurMenton public guides and onboarding place cards",
       "routeHint": "tenant_surface_lookup",
       "expectedCorpusIds": [
-        "pp-azurmenton-guides",
+        "pp-azurmenton-guides"
+      ],
+      "minRecallAtK": 1,
+      "tenantScope": "azur-menton"
+    },
+    {
+      "probeId": "probe-personal-presence",
+      "query": "CortexABV public presence index source links synchronization",
+      "routeHint": "tenant_surface_lookup",
+      "tenantScope": "cortex-abv-personal",
+      "expectedCorpusIds": [
         "pp-digital-presence-sync"
       ],
-      "minRecallAtK": 0.5
+      "minRecallAtK": 1
     }
   ],
   "evaluation": {

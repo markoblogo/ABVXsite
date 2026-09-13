@@ -9,3 +9,9 @@
 
 Research pilot for discovery workflows (mock-only):
 - `docs/pilots/find-partners/mock-run-protocol.md`
+
+## Public vector snapshot
+
+- Treat only the files listed in `EXPORT.md` as the canonical compatibility surface from `CortexABV-private`.
+- Keep vector probes synthetic, tenant-scoped, read-only, and without dependency installation or runtime activation.
+- Do not commit generated receipts or copy the ABVXsite-local activation/effect history into the private runtime without a separate review.

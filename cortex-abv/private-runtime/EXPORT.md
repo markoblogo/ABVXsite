@@ -1,6 +1,16 @@
 # Public export boundary
 
-Source snapshot: local `CortexABV-private` commit `611d76f`.
+Canonical compatibility source: private `CortexABV-private` commit `228e7bb7c34d4bbbb3de8af78cb53222d8b0a5cc`.
+
+The tenant-safe vector shadow core was refreshed from that commit:
+
+- pilot plan and synthetic benchmark;
+- plan validator and synthetic retrieval runner;
+- local TF-IDF fallback shim and readiness runner;
+- matching tenant-isolation and safety tests;
+- concise shadow-pilot documentation.
+
+The remaining activation, wiring, dependency-install, state-transition, effect, and historical receipt files are an older ABVXsite-local research record. They are outside the canonical compatibility surface and require a separate review before any private-runtime import.
 
 This subtree may contain only static code, typed contracts, documentation, tests, and synthetic fixtures. It is an audit/reference copy, not a runtime deployment.
 

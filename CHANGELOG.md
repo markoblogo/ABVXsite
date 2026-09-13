@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.2 — 2026-09-13
+
+- Refreshed the public CortexABV vector shadow snapshot from the canonical private runtime.
+- Enforced tenant filtering before candidate scoring and added cross-tenant regression coverage.
+- Added a reproducible CI check for the exported vector compatibility surface.
+- Tightened the export boundary so vector index artifacts remain local and cannot enter the public snapshot.
+
 ## 0.2.1 — 2026-09-13
 
 - Removed the dormant cross-repository Lab direct-push job from project-description sync.

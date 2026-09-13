@@ -136,3 +136,27 @@ test('invalid route hint fails closed before retrieval proceeds', () => {
     benchmarkPath: invalidRouteBenchmark,
   }), /routeHint is not allowlisted/);
 });
+
+test('tenant scope excludes a stronger sibling-tenant candidate', () => {
+  const scopedBenchmark = withTempBenchmark((fixture) => ({
+    ...fixture,
+    corpus: [
+      ...fixture.corpus,
+      {
+        ...fixture.corpus[0],
+        id: 'sibling-tenant-copy',
+        tenant: 'monitor-mn7r',
+        text: `${fixture.corpus[0].text} Index spike public updates latest summary`,
+      },
+    ],
+    probes: fixture.probes.map((probe, index) => ({
+      ...probe,
+      tenantScope: index === 0 ? 'index-spike' : fixture.corpus.find((item) => probe.expectedCorpusIds.includes(item.id))?.tenant,
+    })),
+  }));
+
+  const receipt = runVectorRetrievalShadow({ planPath, benchmarkPath: scopedBenchmark });
+  const probe = receipt.results.find((result) => result.probeId === 'probe-index-summary');
+  assert.equal(probe.topCandidates.some((candidate) => candidate.id === 'sibling-tenant-copy'), false);
+  assert.equal(probe.tenantScope, 'index-spike');
+});

@@ -23,7 +23,17 @@
   "sortRank": 210,
   "needsCopyReview": false,
   "needsMediaReview": false,
-  "needsLinkReview": false
+  "needsLinkReview": false,
+  "media": {
+    "src": "/media/work/book-landings/hero.webp",
+    "alt": "Book Landings publishing system with a collection of independently deployed book sites",
+    "role": "landing-screenshot"
+  },
+  "heroImage": {
+    "src": "/media/work/book-landings/hero.webp",
+    "alt": "Book Landings publishing system with a collection of independently deployed book sites",
+    "role": "landing-screenshot"
+  }
 }
 ---
 

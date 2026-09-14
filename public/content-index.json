@@ -1643,6 +1643,37 @@
     {
       "type": "book",
       "section": "books",
+      "ecosystem": "Business, AI & Marketing",
+      "group": "Business, AI & Marketing",
+      "status": "released",
+      "title": "The Overexplaining Trap",
+      "summary": "A concise guide to giving clear answers, setting boundaries and resisting the urge to turn every no into a defensive explanation.",
+      "canonicalUrl": "https://abvx.xyz/books/the-overexplaining-trap",
+      "tags": [
+        "boundaries",
+        "communication",
+        "people pleasing",
+        "confidence",
+        "self-help"
+      ],
+      "links": [
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0HDSH454S"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0HFKRFXTX"
+        }
+      ],
+      "updatedAt": "2026-08-17",
+      "related": []
+    },
+    {
+      "type": "book",
+      "section": "books",
       "ecosystem": "Language, AI & Toki Pona",
       "group": "Language, AI & Toki Pona",
       "status": "released",
@@ -1916,6 +1947,37 @@
           "relation": "series"
         }
       ]
+    },
+    {
+      "type": "book",
+      "section": "books",
+      "ecosystem": "Business, AI & Marketing",
+      "group": "Business, AI & Marketing",
+      "status": "released",
+      "title": "What Do I Say Now?",
+      "summary": "A practical workplace communication reference with ready-to-adapt language for difficult conversations, meetings, boundaries, money and bad news.",
+      "canonicalUrl": "https://abvx.xyz/books/what-do-i-say-now",
+      "tags": [
+        "workplace communication",
+        "difficult conversations",
+        "management",
+        "boundaries",
+        "scripts"
+      ],
+      "links": [
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0HFNPV8Q1"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0HFNYBL6Y"
+        }
+      ],
+      "updatedAt": "2026-08-18",
+      "related": []
     },
     {
       "type": "free-book",

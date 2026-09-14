@@ -258,6 +258,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Business, AI & Marketing
   Tags: ham radio, technician class, FCC Element 2, amateur radio, visual study guide
 
+- What Do I Say Now?
+  URL: https://abvx.xyz/books/what-do-i-say-now
+  Summary: A practical workplace communication reference with ready-to-adapt language for difficult conversations, meetings, boundaries, money and bad news.
+  Group: Business, AI & Marketing
+  Tags: workplace communication, difficult conversations, management, boundaries, scripts
+
+- The Overexplaining Trap
+  URL: https://abvx.xyz/books/the-overexplaining-trap
+  Summary: A concise guide to giving clear answers, setting boundaries and resisting the urge to turn every no into a defensive explanation.
+  Group: Business, AI & Marketing
+  Tags: boundaries, communication, people pleasing, confidence, self-help
+
 - Pictiq
   URL: https://abvx.xyz/work/pictiq
   Summary: Pictiq is a minimal visual protocol for short messages across language barriers, built from icon tiles and a simple grammar for pointing, quick signs, stickers and compact phrases.

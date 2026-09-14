@@ -4,59 +4,18 @@
   "version": "v1",
   "authority": "read",
   "externalSideEffects": false,
-  "generatedAt": "2026-07-16T17:10:59.281Z",
+  "generatedAt": "2026-09-14T12:20:35.476Z",
   "sourceIndex": {
     "path": "cortex-abv/public-presence-index.v1.json",
-    "sourceDigest": "fd76b1d3167bb0ce5a3b0ea1c02cd9669f60a941483d08b6197507d889898448"
+    "sourceDigest": "4250ee57d7a49bc41861c1f42a8328e83cb560686fd39c1a79b0a4fec2774fe7"
   },
-  "sourceDigest": "3cac1bfc10fa6b1c61badc0366e882e1998941ca27b8594963b07faeb1718398",
+  "sourceDigest": "8db9f70f3319878c03ed06c8b7b07439e1ca9a1985992f5c5e386c756c2542fb",
   "coverage": {
-    "publicProjectEntities": 31,
+    "publicProjectEntities": 36,
     "explicitlyLinkedRepositories": 22,
-    "cataloguedProjects": 15
+    "cataloguedProjects": 16
   },
   "entries": [
-    {
-      "id": "repository:github:markoblogo/-abvx-shortener",
-      "repository": {
-        "provider": "github",
-        "fullName": "markoblogo/-abvx-shortener",
-        "url": "https://github.com/markoblogo/-abvx-shortener"
-      },
-      "project": {
-        "id": "project:abvx-shortener",
-        "name": "ABVX Shortener",
-        "canonicalUrl": "https://abvx.xyz/work/abvx-shortener",
-        "summary": "ABVX Shortener is a lightweight web and browser-extension system for shortened operational links and compact URL workflows."
-      },
-      "landing": {
-        "canonicalUrl": "https://abvx.xyz/work/abvx-shortener",
-        "host": "abvx.xyz"
-      },
-      "lab": {
-        "catalogued": true,
-        "canonicalUrl": "https://abvx.xyz/systems"
-      },
-      "publicChannels": [
-        {
-          "type": "site",
-          "label": "Site",
-          "url": "https://go.abvx.xyz/"
-        },
-        {
-          "type": "youtube",
-          "label": "YouTube",
-          "url": "https://youtu.be/oEPow5tKjXQ"
-        }
-      ],
-      "provenance": [
-        {
-          "kind": "content_frontmatter",
-          "path": "content/work/abvx-shortener.md",
-          "digest": "d5c8c67867b3d7a976a2d39a9fe8d657738cba92e0cb56e8b9b68689c52de226"
-        }
-      ]
-    },
     {
       "id": "repository:github:markoblogo/abvx-agent-skills",
       "repository": {
@@ -99,6 +58,83 @@
       ]
     },
     {
+      "id": "repository:github:markoblogo/ABVX-OS",
+      "repository": {
+        "provider": "github",
+        "fullName": "markoblogo/ABVX-OS",
+        "url": "https://github.com/markoblogo/ABVX-OS"
+      },
+      "project": {
+        "id": "project:abvx-os",
+        "name": "ABVX OS",
+        "canonicalUrl": "https://abvx.xyz/work/abvx-os",
+        "summary": "A local-first control plane for personal AI work: intake, professional role routing, portfolio state, evidence, and human approval gates."
+      },
+      "landing": {
+        "canonicalUrl": "https://abvx.xyz/work/abvx-os",
+        "host": "abvx.xyz"
+      },
+      "lab": {
+        "catalogued": true,
+        "canonicalUrl": "https://abvx.xyz/systems"
+      },
+      "publicChannels": [
+        {
+          "type": "site",
+          "label": "ABVX",
+          "url": "https://abvx.xyz/"
+        }
+      ],
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/abvx-os.md",
+          "digest": "ff95d2d255088f30affb65a77afed9abdc39b877da2ca74142ab159ddf734cd1"
+        }
+      ]
+    },
+    {
+      "id": "repository:github:markoblogo/abvx-shortener",
+      "repository": {
+        "provider": "github",
+        "fullName": "markoblogo/abvx-shortener",
+        "url": "https://github.com/markoblogo/abvx-shortener"
+      },
+      "project": {
+        "id": "project:abvx-shortener",
+        "name": "ABVX Shortener",
+        "canonicalUrl": "https://abvx.xyz/work/abvx-shortener",
+        "summary": "ABVX Shortener is a lightweight web and browser-extension system for shortened operational links and compact URL workflows."
+      },
+      "landing": {
+        "canonicalUrl": "https://abvx.xyz/work/abvx-shortener",
+        "host": "abvx.xyz"
+      },
+      "lab": {
+        "catalogued": true,
+        "canonicalUrl": "https://abvx.xyz/systems"
+      },
+      "publicChannels": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://go.abvx.xyz/"
+        },
+        {
+          "type": "youtube",
+          "label": "YouTube",
+          "url": "https://youtu.be/oEPow5tKjXQ"
+        }
+      ],
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/abvx-shortener.md",
+          "digest": "029bf7301029d9fadc7461fdbcfca6b02a05e10ac071bdcda7f9351f525169e8"
+        }
+      ]
+    },
+    {
       "id": "repository:github:markoblogo/AGENTS.md_generator",
       "repository": {
         "provider": "github",
@@ -109,7 +145,7 @@
         "id": "project:agents-md-generator",
         "name": "AGENTS.md Generator",
         "canonicalUrl": "https://abvx.xyz/work/agents-md-generator",
-        "summary": "AGENTS.md Generator is an operational workflow surface for AI-assisted development systems, agent coordination and structured coding workflows."
+        "summary": "Generate, preserve, and verify lean AGENTS.md, RUNBOOK.md, and machine-readable repository context for AI coding agents."
       },
       "landing": {
         "canonicalUrl": "https://abvx.xyz/work/agents-md-generator",
@@ -130,7 +166,7 @@
         {
           "kind": "content_frontmatter",
           "path": "content/work/agents-md-generator.md",
-          "digest": "f4590c26b54be2a8b639b12de1da0f20132ed0c694c361ef7980133c96e63750"
+          "digest": "aaf4f2f01f83beda9819114952e3421a0afff5c5d878e15cfbcae891206323c0"
         }
       ]
     },
@@ -253,11 +289,41 @@
       ]
     },
     {
-      "id": "repository:github:markoblogo/cropto-v0",
+      "id": "repository:github:markoblogo/CoqPi",
       "repository": {
         "provider": "github",
-        "fullName": "markoblogo/cropto-v0",
-        "url": "https://github.com/markoblogo/cropto-v0"
+        "fullName": "markoblogo/CoqPi",
+        "url": "https://github.com/markoblogo/CoqPi"
+      },
+      "project": {
+        "id": "project:coqpi",
+        "name": "CoqPi",
+        "canonicalUrl": "https://abvx.xyz/work/coqpi",
+        "summary": "A private multilingual desktop copilot for live calls, interview practice, meeting transcription, and reviewed follow-up."
+      },
+      "landing": {
+        "canonicalUrl": "https://abvx.xyz/work/coqpi",
+        "host": "abvx.xyz"
+      },
+      "lab": {
+        "catalogued": true,
+        "canonicalUrl": "https://abvx.xyz/systems"
+      },
+      "publicChannels": [],
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/coqpi.md",
+          "digest": "19c545517615c77808f00aa24a750802e471bf763602a03efb6378c65c296170"
+        }
+      ]
+    },
+    {
+      "id": "repository:github:markoblogo/cropto",
+      "repository": {
+        "provider": "github",
+        "fullName": "markoblogo/cropto",
+        "url": "https://github.com/markoblogo/cropto"
       },
       "project": {
         "id": "project:last30days-cropto",
@@ -284,7 +350,7 @@
         {
           "kind": "content_frontmatter",
           "path": "content/work/last30days-cropto.md",
-          "digest": "e31e2d397257a8c58aa359757b0bc35aa58edfcecd0e40c42e1b9eac630938fd"
+          "digest": "bfc223999fb5e2c78a730abaa3c3d9f8aea8f1f4dcadd9ad4465d16f1f57ba72"
         }
       ]
     },
@@ -299,7 +365,7 @@
         "id": "project:decision-map",
         "name": "Decision Map",
         "canonicalUrl": "https://abvx.xyz/work/decision-map",
-        "summary": "Decision Map is a protocol for AI-assisted strategic decision-making in product launches, positioning and complex marketing scenarios."
+        "summary": "An installable Agent Skill and open protocol for turning complex business, product, and go-to-market decisions into testable options and cascade logs."
       },
       "landing": {
         "canonicalUrl": "https://abvx.xyz/work/decision-map",
@@ -314,7 +380,7 @@
         {
           "kind": "content_frontmatter",
           "path": "content/work/decision-map.md",
-          "digest": "fc6f132d2e48375fdf25e33d006a0ddfd221e458bf657455d0c1fd8bf5707268"
+          "digest": "119a132a3503a6c4bb56b56bc78c1b437b4b2d30cbe7c94a02e793a723510ee3"
         }
       ]
     },
@@ -329,7 +395,7 @@
         "id": "project:git-tweet",
         "name": "git-tweet",
         "canonicalUrl": "https://abvx.xyz/work/git-tweet",
-        "summary": "git-tweet is a lightweight development communication system for turning repository activity into structured operational signals and updates."
+        "summary": "Self-hosted GitHub release announcements for X and Bluesky, with repository-wide release discovery, deduplication, logs, and retries."
       },
       "landing": {
         "canonicalUrl": "https://abvx.xyz/work/git-tweet",
@@ -350,7 +416,7 @@
         {
           "kind": "content_frontmatter",
           "path": "content/work/git-tweet.md",
-          "digest": "99bd10780c5f7673d51e6562773a359ba6b7cd03a10f54b0081672184774e5e8"
+          "digest": "dfb782aaaaccb3de7f94ef8b2229c06cf457df510249f0c214fd5de07d718113"
         }
       ]
     },
@@ -392,46 +458,10 @@
         "url": "https://github.com/markoblogo/index"
       },
       "project": {
-        "id": "project:spike-spot-commodity-index-ukraine",
-        "name": "SPIKE SPOT COMMODITY INDEX UKRAINE",
-        "canonicalUrl": "https://abvx.xyz/work/spike-spot-commodity-index-ukraine",
-        "summary": "SPIKE SPOT COMMODITY INDEX UKRAINE is a benchmark and reference-price infrastructure project for Ukrainian agro-commodity spot markets."
-      },
-      "landing": {
-        "canonicalUrl": "https://abvx.xyz/work/spike-spot-commodity-index-ukraine",
-        "host": "abvx.xyz"
-      },
-      "lab": {
-        "catalogued": false,
-        "canonicalUrl": "https://abvx.xyz/systems"
-      },
-      "publicChannels": [
-        {
-          "type": "site",
-          "label": "Site",
-          "url": "https://spike.1d3x.com/"
-        }
-      ],
-      "provenance": [
-        {
-          "kind": "content_frontmatter",
-          "path": "content/work/spike-spot-commodity-index-ukraine.md",
-          "digest": "82cb71911f5569f2e2fcdca0b3309b4803175a939c1407af79dd5c2480688268"
-        }
-      ]
-    },
-    {
-      "id": "repository:github:markoblogo/index-uga",
-      "repository": {
-        "provider": "github",
-        "fullName": "markoblogo/index-uga",
-        "url": "https://github.com/markoblogo/index-uga"
-      },
-      "project": {
         "id": "project:uga-index",
         "name": "UGA Index",
         "canonicalUrl": "https://abvx.xyz/work/uga-index",
-        "summary": "UGA Index is a benchmark platform for daily Ukrainian grain and oilseed export price references built with the Ukrainian Grain Association."
+        "summary": "UGA Index is a lightweight public view of SPIKE SPOT INDEX data for the Ukrainian grain market, without a separate database or benchmark pipeline."
       },
       "landing": {
         "canonicalUrl": "https://abvx.xyz/work/uga-index",
@@ -452,7 +482,7 @@
         {
           "kind": "content_frontmatter",
           "path": "content/work/uga-index.md",
-          "digest": "8f5127fcc03d1877211d934b456715d72226be9e556331fe9e8b945bce36385b"
+          "digest": "3ef7c60f1a52e485c9d0f7fd9d3cc14d373655b5eeff6a4c02526e8269a29465"
         }
       ]
     },
@@ -467,7 +497,7 @@
         "id": "project:abvx-lab",
         "name": "ABVX Lab",
         "canonicalUrl": "https://abvx.xyz/work/abvx-lab",
-        "summary": "ABVX Lab is the ecosystem front for AI-native development systems, protocols, workflows and operational tooling."
+        "summary": "The public catalog and control plane for the ABVX AI coding stack: repository context, orchestration, skills, discovery, and proof surfaces."
       },
       "landing": {
         "canonicalUrl": "https://abvx.xyz/work/abvx-lab",
@@ -488,7 +518,7 @@
         {
           "kind": "content_frontmatter",
           "path": "content/work/abvx-lab.md",
-          "digest": "2553dea93d37ce92a834120306eade6f7f367639d936b8e3cb9223dfe0ac976f"
+          "digest": "0c71dde7e35af9393d7b4d788447b962ca4365f12eeeacdc8247dea9bcdb99c4"
         }
       ]
     },
@@ -548,7 +578,7 @@
         "id": "project:mn7r",
         "name": "MN7R",
         "canonicalUrl": "https://abvx.xyz/work/mn7r",
-        "summary": "MN7R is a commodity trading workflow workspace for brokerage teams running Deals, Clients and EXE inside one structured operational system."
+        "summary": "Public-facing updates now explicitly reflect execution checkpoints for broker, boss, and EXE operator roles across the Deals, Clients, and EXE workflow areas."
       },
       "landing": {
         "canonicalUrl": "https://abvx.xyz/work/mn7r",
@@ -588,7 +618,7 @@
         {
           "kind": "content_frontmatter",
           "path": "content/work/mn7r.md",
-          "digest": "30f237805327015a6e9a9895629b084a355eae993773230623893dad02f2dfc9"
+          "digest": "75a1e7438ea980ea52563eec4b9f5505d1849f2e997876379a06e024539bc5ac"
         }
       ]
     },
@@ -618,7 +648,37 @@
         {
           "kind": "content_frontmatter",
           "path": "content/work/pictiq.md",
-          "digest": "b9b06b18b7819f72946f824d626a634b7c8cda9eb5037632db5d138cc9f73099"
+          "digest": "4bfa57396ad7adc8bff7784083e56000211b3f0299ed7430efa633e7840ef392"
+        }
+      ]
+    },
+    {
+      "id": "repository:github:markoblogo/Pocket-OS-Cardputer-ABV",
+      "repository": {
+        "provider": "github",
+        "fullName": "markoblogo/Pocket-OS-Cardputer-ABV",
+        "url": "https://github.com/markoblogo/Pocket-OS-Cardputer-ABV"
+      },
+      "project": {
+        "id": "project:pocket-os-cardputer",
+        "name": "Pocket OS for Cardputer",
+        "canonicalUrl": "https://abvx.xyz/work/pocket-os-cardputer",
+        "summary": "An offline-first Pocket OS for M5Stack Cardputer ADV with music, books, voice notes, journeys, and a Mac companion."
+      },
+      "landing": {
+        "canonicalUrl": "https://abvx.xyz/work/pocket-os-cardputer",
+        "host": "abvx.xyz"
+      },
+      "lab": {
+        "catalogued": true,
+        "canonicalUrl": "https://abvx.xyz/systems"
+      },
+      "publicChannels": [],
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/pocket-os-cardputer.md",
+          "digest": "d425266cf0d63da51336d48b79a2463ec5b693021e893b715845eb8224a0b22b"
         }
       ]
     },
@@ -653,72 +713,6 @@
       ]
     },
     {
-      "id": "repository:github:markoblogo/sitelen-emoji-truth",
-      "repository": {
-        "provider": "github",
-        "fullName": "markoblogo/sitelen-emoji-truth",
-        "url": "https://github.com/markoblogo/sitelen-emoji-truth"
-      },
-      "project": {
-        "id": "project:sitelen-emoji-truth",
-        "name": "sitelen-emoji-truth",
-        "canonicalUrl": "https://abvx.xyz/work/sitelen-emoji-truth",
-        "summary": "sitelen-emoji-truth is an experimental visual-language protocol exploring emoji-based semantic compression and symbolic communication systems."
-      },
-      "landing": {
-        "canonicalUrl": "https://abvx.xyz/work/sitelen-emoji-truth",
-        "host": "abvx.xyz"
-      },
-      "lab": {
-        "catalogued": true,
-        "canonicalUrl": "https://abvx.xyz/systems"
-      },
-      "publicChannels": [
-        {
-          "type": "substack",
-          "label": "Substack",
-          "url": "https://abvx.substack.com/p/freezing-a-moving-target-a-source"
-        }
-      ],
-      "provenance": [
-        {
-          "kind": "content_frontmatter",
-          "path": "content/work/sitelen-emoji-truth.md",
-          "digest": "1465308233e5d2c42baf2540cca82ba8344861f2e1ae91a0d5c87c27ff792c53"
-        }
-      ]
-    },
-    {
-      "id": "repository:github:markoblogo/sitelen-layer-plugin",
-      "repository": {
-        "provider": "github",
-        "fullName": "markoblogo/sitelen-layer-plugin",
-        "url": "https://github.com/markoblogo/sitelen-layer-plugin"
-      },
-      "project": {
-        "id": "project:sitelen-layer-plugin",
-        "name": "sitelen-layer-plugin",
-        "canonicalUrl": "https://abvx.xyz/work/sitelen-layer-plugin",
-        "summary": "sitelen-layer-plugin is a rendering layer for sitelen pona and experimental visual-language systems used across ABVX publishing and language projects."
-      },
-      "landing": {
-        "canonicalUrl": "https://abvx.xyz/work/sitelen-layer-plugin",
-        "host": "abvx.xyz"
-      },
-      "lab": {
-        "catalogued": true,
-        "canonicalUrl": "https://abvx.xyz/systems"
-      },
-      "publicChannels": [],
-      "provenance": [
-        {
-          "kind": "content_frontmatter",
-          "path": "content/work/sitelen-layer-plugin.md",
-          "digest": "ecef7e3afa66a4a63bd70623453ff2bf6cf56a593d53c9ab006511c06d49e350"
-        }
-      ]
-    },
-    {
       "id": "repository:github:markoblogo/toki-pona-translator",
       "repository": {
         "provider": "github",
@@ -727,9 +721,9 @@
       },
       "project": {
         "id": "project:toki-pona-ai-translator",
-        "name": "Toki Pona AI translator",
+        "name": "Toki Pona Toolkit",
         "canonicalUrl": "https://abvx.xyz/work/toki-pona-ai-translator",
-        "summary": "Toki Pona AI translator is an experimental translation interface for converting natural language into toki pona and related visual-script forms."
+        "summary": "A unified Toki Pona toolkit for AI translation, sitelen pona and emoji rendering, reusable JavaScript/Python packages, and manuscript QA."
       },
       "landing": {
         "canonicalUrl": "https://abvx.xyz/work/toki-pona-ai-translator",
@@ -755,7 +749,7 @@
         {
           "kind": "content_frontmatter",
           "path": "content/work/toki-pona-ai-translator.md",
-          "digest": "ce46ed0ef71d044f072dce32ad2cadfc4fba68c57c834ef40383ee0ae53627b6"
+          "digest": "017c02741b39951fd098aab07baee1273bb005006877d91fc6ffafbc2acc5fa5"
         }
       ]
     },
@@ -811,7 +805,7 @@
         "id": "project:ytmamp",
         "name": "YTMamp",
         "canonicalUrl": "https://abvx.xyz/work/ytmamp",
-        "summary": "YTMamp is a macOS app and browser-extension experiment that transforms YouTube Music into a Winamp-inspired player experience."
+        "summary": "A retro desktop remote for YouTube Music with a Chromium companion, waveform, media controls, and a token-protected local integration API."
       },
       "landing": {
         "canonicalUrl": "https://abvx.xyz/work/ytmamp",
@@ -832,27 +826,12 @@
         {
           "kind": "content_frontmatter",
           "path": "content/work/ytmamp.md",
-          "digest": "0e880480463d1858188b66db91d729444f78cfd6e334c40348767d9ce83c5879"
+          "digest": "ffef7b5a96ba345c652f48c88ee579f1e129b49a10ac1532a572d299312c2f0e"
         }
       ]
     }
   ],
   "relations": [
-    {
-      "from": "repository:github:markoblogo/-abvx-shortener",
-      "type": "maps_to",
-      "to": "project:abvx-shortener"
-    },
-    {
-      "from": "project:abvx-shortener",
-      "type": "has_abvx_landing",
-      "to": "https://abvx.xyz/work/abvx-shortener"
-    },
-    {
-      "from": "project:abvx-shortener",
-      "type": "catalogued_by",
-      "to": "lab:abvx"
-    },
     {
       "from": "repository:github:markoblogo/abvx-agent-skills",
       "type": "maps_to",
@@ -865,6 +844,36 @@
     },
     {
       "from": "project:abvx-agent-skills",
+      "type": "catalogued_by",
+      "to": "lab:abvx"
+    },
+    {
+      "from": "repository:github:markoblogo/ABVX-OS",
+      "type": "maps_to",
+      "to": "project:abvx-os"
+    },
+    {
+      "from": "project:abvx-os",
+      "type": "has_abvx_landing",
+      "to": "https://abvx.xyz/work/abvx-os"
+    },
+    {
+      "from": "project:abvx-os",
+      "type": "catalogued_by",
+      "to": "lab:abvx"
+    },
+    {
+      "from": "repository:github:markoblogo/abvx-shortener",
+      "type": "maps_to",
+      "to": "project:abvx-shortener"
+    },
+    {
+      "from": "project:abvx-shortener",
+      "type": "has_abvx_landing",
+      "to": "https://abvx.xyz/work/abvx-shortener"
+    },
+    {
+      "from": "project:abvx-shortener",
       "type": "catalogued_by",
       "to": "lab:abvx"
     },
@@ -929,7 +938,22 @@
       "to": "lab:abvx"
     },
     {
-      "from": "repository:github:markoblogo/cropto-v0",
+      "from": "repository:github:markoblogo/CoqPi",
+      "type": "maps_to",
+      "to": "project:coqpi"
+    },
+    {
+      "from": "project:coqpi",
+      "type": "has_abvx_landing",
+      "to": "https://abvx.xyz/work/coqpi"
+    },
+    {
+      "from": "project:coqpi",
+      "type": "catalogued_by",
+      "to": "lab:abvx"
+    },
+    {
+      "from": "repository:github:markoblogo/cropto",
       "type": "maps_to",
       "to": "project:last30days-cropto"
     },
@@ -986,16 +1010,6 @@
     {
       "from": "repository:github:markoblogo/index",
       "type": "maps_to",
-      "to": "project:spike-spot-commodity-index-ukraine"
-    },
-    {
-      "from": "project:spike-spot-commodity-index-ukraine",
-      "type": "has_abvx_landing",
-      "to": "https://abvx.xyz/work/spike-spot-commodity-index-ukraine"
-    },
-    {
-      "from": "repository:github:markoblogo/index-uga",
-      "type": "maps_to",
       "to": "project:uga-index"
     },
     {
@@ -1049,6 +1063,21 @@
       "to": "https://abvx.xyz/work/pictiq"
     },
     {
+      "from": "repository:github:markoblogo/Pocket-OS-Cardputer-ABV",
+      "type": "maps_to",
+      "to": "project:pocket-os-cardputer"
+    },
+    {
+      "from": "project:pocket-os-cardputer",
+      "type": "has_abvx_landing",
+      "to": "https://abvx.xyz/work/pocket-os-cardputer"
+    },
+    {
+      "from": "project:pocket-os-cardputer",
+      "type": "catalogued_by",
+      "to": "lab:abvx"
+    },
+    {
       "from": "repository:github:markoblogo/SET",
       "type": "maps_to",
       "to": "project:set"
@@ -1060,36 +1089,6 @@
     },
     {
       "from": "project:set",
-      "type": "catalogued_by",
-      "to": "lab:abvx"
-    },
-    {
-      "from": "repository:github:markoblogo/sitelen-emoji-truth",
-      "type": "maps_to",
-      "to": "project:sitelen-emoji-truth"
-    },
-    {
-      "from": "project:sitelen-emoji-truth",
-      "type": "has_abvx_landing",
-      "to": "https://abvx.xyz/work/sitelen-emoji-truth"
-    },
-    {
-      "from": "project:sitelen-emoji-truth",
-      "type": "catalogued_by",
-      "to": "lab:abvx"
-    },
-    {
-      "from": "repository:github:markoblogo/sitelen-layer-plugin",
-      "type": "maps_to",
-      "to": "project:sitelen-layer-plugin"
-    },
-    {
-      "from": "project:sitelen-layer-plugin",
-      "type": "has_abvx_landing",
-      "to": "https://abvx.xyz/work/sitelen-layer-plugin"
-    },
-    {
-      "from": "project:sitelen-layer-plugin",
       "type": "catalogued_by",
       "to": "lab:abvx"
     },

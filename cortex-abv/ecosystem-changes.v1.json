@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "kind": "ABVXEcosystemChangeSet",
+  "observedAt": "2026-09-14T12:14:36.450Z",
+  "changes": [
+    {
+      "nodeId": "market-index",
+      "changedFields": [
+        "canonicalUrl",
+        "release"
+      ]
+    },
+    {
+      "nodeId": "abvx-os",
+      "changedFields": [
+        "canonicalUrl",
+        "release"
+      ]
+    },
+    {
+      "nodeId": "set",
+      "changedFields": [
+        "canonicalUrl",
+        "release"
+      ]
+    },
+    {
+      "nodeId": "coqpi",
+      "changedFields": [
+        "canonicalUrl",
+        "release"
+      ]
+    },
+    {
+      "nodeId": "abvxsite",
+      "changedFields": [
+        "canonicalUrl",
+        "release"
+      ]
+    },
+    {
+      "nodeId": "lab",
+      "changedFields": [
+        "canonicalUrl",
+        "release"
+      ]
+    },
+    {
+      "nodeId": "cropto",
+      "changedFields": [
+        "canonicalUrl",
+        "release"
+      ]
+    },
+    {
+      "nodeId": "book-landings",
+      "changedFields": [
+        "canonicalUrl",
+        "release"
+      ]
+    },
+    {
+      "nodeId": "azurmenton",
+      "changedFields": [
+        "canonicalUrl",
+        "release"
+      ]
+    },
+    {
+      "nodeId": "pictiq",
+      "changedFields": [
+        "canonicalUrl",
+        "release"
+      ]
+    },
+    {
+      "nodeId": "git-tweet",
+      "changedFields": [
+        "canonicalUrl",
+        "release"
+      ]
+    },
+    {
+      "nodeId": "agentsgen",
+      "changedFields": [
+        "canonicalUrl",
+        "release"
+      ]
+    },
+    {
+      "nodeId": "id",
+      "changedFields": [
+        "canonicalUrl",
+        "release"
+      ]
+    },
+    {
+      "nodeId": "ytmamp",
+      "changedFields": [
+        "canonicalUrl",
+        "release"
+      ]
+    },
+    {
+      "nodeId": "skills",
+      "changedFields": [
+        "canonicalUrl",
+        "release"
+      ]
+    },
+    {
+      "nodeId": "decision-map",
+      "changedFields": [
+        "canonicalUrl",
+        "release"
+      ]
+    },
+    {
+      "nodeId": "ascii-theme",
+      "changedFields": [
+        "canonicalUrl",
+        "release"
+      ]
+    },
+    {
+      "nodeId": "shortener",
+      "changedFields": [
+        "canonicalUrl",
+        "release"
+      ]
+    },
+    {
+      "nodeId": "toki-pona",
+      "changedFields": [
+        "canonicalUrl",
+        "release"
+      ]
+    }
+  ]
+}

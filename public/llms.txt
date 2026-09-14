@@ -46,7 +46,7 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 - UGA Index
   URL: https://abvx.xyz/work/uga-index
-  Summary: UGA Index is a benchmark platform for daily Ukrainian grain and oilseed export price references built with the Ukrainian Grain Association.
+  Summary: UGA Index is a lightweight public view of SPIKE SPOT INDEX data for the Ukrainian grain market, without a separate database or benchmark pipeline.
   Group: Market Intelligence, Monitoring & Indexes
   Tags: agro-commodities, market-data, price-indexes, benchmark, Ukraine, grain-markets, oilseeds, market-infrastructure
 
@@ -162,6 +162,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Market Infrastructure & Brokerage
   Tags: brokerage, agro-commodities, spot-market, physical-commodity-markets, execution, workflows, market-infrastructure, trading
 
+- ABVX OS
+  URL: https://abvx.xyz/work/abvx-os
+  Summary: A local-first control plane for personal AI work: intake, professional role routing, portfolio state, evidence, and human approval gates.
+  Group: Personal AI systems
+  Tags: personal-ai, role-routing, local-first, publishing, human-review
+
 - Dark Gestalt: How Brands Hijack Emotions, Distort Perception, and Manufacture Desire
   URL: https://abvx.xyz/books/dark-gestalt
   Summary: A sharp exploration of how brands shape emotion, perception and desire, and how modern behavioral design can manipulate decisions through symbols, shortcuts, narratives and AI-driven persuasion.
@@ -210,6 +216,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Language, AI & Toki Pona
   Tags: psychology, trauma, identity, relationships, anxiety, human mind
 
+- Ham Radio Technician Visual Cram Map 2026–2030: A Diagram-First Guide to FCC Element 2 Concepts, Rules, Calculations, and All 409 Official Question IDs
+  URL: https://abvx.xyz/books/ham-radio-technician-visual-cram-map-2026-2030
+  Summary: A diagram-first companion to the 2026–2030 Technician Class question pool, connecting electricity, components, antennas, signals, operating rules and safety to all 409 official question IDs.
+  Group: Business, AI & Marketing
+  Tags: ham radio, technician class, FCC Element 2, amateur radio, visual study guide
+
 - Pictiq
   URL: https://abvx.xyz/work/pictiq
   Summary: Pictiq is a minimal visual protocol for short messages across language barriers, built from icon tiles and a simple grammar for pointing, quick signs, stickers and compact phrases.
@@ -233,6 +245,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Summary: A unified Toki Pona toolkit for AI translation, sitelen pona and emoji rendering, reusable JavaScript/Python packages, and manuscript QA.
   Group: Publishing systems & protocols
   Tags: toki-pona, language-ai, translator, sitelen-pona, sitelen-emoji, npm, pypi
+
+- Book Landings
+  URL: https://abvx.xyz/work/book-landings
+  Summary: Five independently deployed book and editorial landing sites maintained in one tested Next.js monorepository.
+  Group: Publishing systems & protocols
+  Tags: publishing, books, nextjs, landing-pages, monorepo
 
 - Chinese Wisdom in toki pona landing
   URL: https://abvx.xyz/work/chinese-wisdom-toki-pona-landing
@@ -408,7 +426,7 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 - YTMamp
   URL: https://abvx.xyz/work/ytmamp
-  Summary: YTMamp is a macOS app and browser-extension experiment that transforms YouTube Music into a Winamp-inspired player experience.
+  Summary: A retro desktop remote for YouTube Music with a Chromium companion, waveform, media controls, and a token-protected local integration API.
   Group: Standalone Utilities & Experiments
   Tags: macos, music, tool, youtube-music
 

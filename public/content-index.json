@@ -623,6 +623,37 @@
       ]
     },
     {
+      "type": "book",
+      "section": "books",
+      "ecosystem": "Business, AI & Marketing",
+      "group": "Business, AI & Marketing",
+      "status": "released",
+      "title": "Ham Radio Technician Visual Cram Map 2026–2030: A Diagram-First Guide to FCC Element 2 Concepts, Rules, Calculations, and All 409 Official Question IDs",
+      "summary": "A diagram-first companion to the 2026–2030 Technician Class question pool, connecting electricity, components, antennas, signals, operating rules and safety to all 409 official question IDs.",
+      "canonicalUrl": "https://abvx.xyz/books/ham-radio-technician-visual-cram-map-2026-2030",
+      "tags": [
+        "ham radio",
+        "technician class",
+        "FCC Element 2",
+        "amateur radio",
+        "visual study guide"
+      ],
+      "links": [
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0HDJFP6BY"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0HHZRDSG4"
+        }
+      ],
+      "updatedAt": "2026-09-06",
+      "related": []
+    },
+    {
       "type": "free-edition",
       "section": "books",
       "ecosystem": "Toki Pona Free Kits & Translations",

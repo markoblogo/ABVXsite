@@ -216,6 +216,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Language, AI & Toki Pona
   Tags: psychology, trauma, identity, relationships, anxiety, human mind
 
+- Ham Radio Technician Visual Cram Map 2026–2030: A Diagram-First Guide to FCC Element 2 Concepts, Rules, Calculations, and All 409 Official Question IDs
+  URL: https://abvx.xyz/books/ham-radio-technician-visual-cram-map-2026-2030
+  Summary: A diagram-first companion to the 2026–2030 Technician Class question pool, connecting electricity, components, antennas, signals, operating rules and safety to all 409 official question IDs.
+  Group: Business, AI & Marketing
+  Tags: ham radio, technician class, FCC Element 2, amateur radio, visual study guide
+
 - Pictiq
   URL: https://abvx.xyz/work/pictiq
   Summary: Pictiq is a minimal visual protocol for short messages across language barriers, built from icon tiles and a simple grammar for pointing, quick signs, stickers and compact phrases.

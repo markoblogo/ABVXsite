@@ -1,31 +1,16 @@
 {
   "schemaVersion": 1,
   "kind": "ABVXEcosystemChangeSet",
-  "observedAt": "2026-09-14T12:14:36.450Z",
+  "observedAt": "2026-09-14T12:24:35.656Z",
   "changes": [
     {
-      "nodeId": "market-index",
+      "nodeId": "trade-solutions",
       "changedFields": [
-        "canonicalUrl",
-        "release"
+        "canonicalUrl"
       ]
     },
     {
-      "nodeId": "abvx-os",
-      "changedFields": [
-        "canonicalUrl",
-        "release"
-      ]
-    },
-    {
-      "nodeId": "set",
-      "changedFields": [
-        "canonicalUrl",
-        "release"
-      ]
-    },
-    {
-      "nodeId": "coqpi",
+      "nodeId": "mn7r",
       "changedFields": [
         "canonicalUrl",
         "release"
@@ -34,103 +19,18 @@
     {
       "nodeId": "abvxsite",
       "changedFields": [
-        "canonicalUrl",
         "release"
       ]
     },
     {
-      "nodeId": "lab",
+      "nodeId": "cortex",
       "changedFields": [
         "canonicalUrl",
         "release"
       ]
     },
     {
-      "nodeId": "cropto",
-      "changedFields": [
-        "canonicalUrl",
-        "release"
-      ]
-    },
-    {
-      "nodeId": "book-landings",
-      "changedFields": [
-        "canonicalUrl",
-        "release"
-      ]
-    },
-    {
-      "nodeId": "azurmenton",
-      "changedFields": [
-        "canonicalUrl",
-        "release"
-      ]
-    },
-    {
-      "nodeId": "pictiq",
-      "changedFields": [
-        "canonicalUrl",
-        "release"
-      ]
-    },
-    {
-      "nodeId": "git-tweet",
-      "changedFields": [
-        "canonicalUrl",
-        "release"
-      ]
-    },
-    {
-      "nodeId": "agentsgen",
-      "changedFields": [
-        "canonicalUrl",
-        "release"
-      ]
-    },
-    {
-      "nodeId": "id",
-      "changedFields": [
-        "canonicalUrl",
-        "release"
-      ]
-    },
-    {
-      "nodeId": "ytmamp",
-      "changedFields": [
-        "canonicalUrl",
-        "release"
-      ]
-    },
-    {
-      "nodeId": "skills",
-      "changedFields": [
-        "canonicalUrl",
-        "release"
-      ]
-    },
-    {
-      "nodeId": "decision-map",
-      "changedFields": [
-        "canonicalUrl",
-        "release"
-      ]
-    },
-    {
-      "nodeId": "ascii-theme",
-      "changedFields": [
-        "canonicalUrl",
-        "release"
-      ]
-    },
-    {
-      "nodeId": "shortener",
-      "changedFields": [
-        "canonicalUrl",
-        "release"
-      ]
-    },
-    {
-      "nodeId": "toki-pona",
+      "nodeId": "liqua",
       "changedFields": [
         "canonicalUrl",
         "release"

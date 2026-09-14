@@ -26,7 +26,7 @@
     {
       "type": "github",
       "label": "GitHub",
-      "url": "https://github.com/markoblogo/-abvx-shortener"
+      "url": "https://github.com/markoblogo/abvx-shortener"
     },
     {
       "type": "youtube",

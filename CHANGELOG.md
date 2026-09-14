@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.0 — 2026-09-14
+
+- Added the canonical 24-repository ABVX ecosystem graph and public `/ecosystem.json` registry.
+- Added deterministic impact planning and managed README blocks for cross-repository links.
+- Added hourly repository metadata and release observation with allowlisted direct-to-main synchronization.
+- Added current ABVX OS, CoqPi, Pocket OS and Book Landings pages to `abvx.xyz`.
+- Corrected the UGA-to-SPIKE ownership model and stale Shortener/Cropto repository links.
+
 ## 0.2.2 — 2026-09-13
 
 - Refreshed the public CortexABV vector shadow snapshot from the canonical private runtime.

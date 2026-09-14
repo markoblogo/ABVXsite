@@ -9,7 +9,7 @@
   "homepageEligible": true,
   "title": "UGA Index",
   "shortTitle": "UGA Index",
-  "summary": "UGA Index is a benchmark platform for daily Ukrainian grain and oilseed export price references built with the Ukrainian Grain Association.",
+  "summary": "UGA Index is a lightweight public view of SPIKE SPOT INDEX data for the Ukrainian grain market, without a separate database or benchmark pipeline.",
   "tags": [
     "agro-commodities",
     "market-data",
@@ -33,7 +33,7 @@
     {
       "type": "github",
       "label": "GitHub",
-      "url": "https://github.com/markoblogo/index-uga"
+      "url": "https://github.com/markoblogo/index"
     }
   ],
   "featured": true,
@@ -41,7 +41,7 @@
   "faqs": [
     {
       "question": "What is UGA Index designed to publish?",
-      "answer": "UGA Index is designed to publish methodology-based Ukrainian grain and oilseed export price references, focused on daily benchmark visibility for major commodity positions."
+      "answer": "UGA Index republishes selected SPIKE SPOT INDEX observations for Ukrainian grain and oilseed markets through a dedicated public view."
     },
     {
       "question": "Why does an export price benchmark matter?",
@@ -74,12 +74,6 @@
 }
 ---
 
-UGA Index is a dedicated benchmark platform developed for the Ukrainian Grain Association.
+UGA Index is a lightweight presentation layer for selected SPIKE SPOT COMMODITY INDEX UKRAINE data. It does not maintain a separate database or independent calculation pipeline.
 
-The project publishes daily spot export price references for major Ukrainian grains and oilseeds, with methodology-based benchmark calculation around FOB Black Sea and related export pricing conditions.
-
-The platform is designed to reduce market fragmentation by giving producers, exporters, traders, processors and analysts access to a transparent country-level reference point rather than relying only on scattered bilateral indications.
-
-Because Ukrainian commodity pricing depends on global markets, logistics, ports, freight, insurance, currency conditions and deal flow, a structured public benchmark becomes a useful layer of market coordination and visibility.
-
-UGA Index is positioned as an infrastructure project for market reference data and commodity index transparency.
+This keeps the public UGA view useful while the Ukrainian grain market remains difficult and avoids presenting a second source of truth. SPIKE remains the operational data owner; UGA publishes the relevant subset through its own domain and audience framing.

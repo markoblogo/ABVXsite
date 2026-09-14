@@ -1,0 +1,2382 @@
+{
+  "schemaVersion": 1,
+  "kind": "ABVXEcosystemGraph",
+  "updatedAt": "2026-09-14T12:14:36.450Z",
+  "nodes": [
+    {
+      "id": "trade-solutions",
+      "name": "TS",
+      "repository": "markoblogo/TS",
+      "visibility": "private",
+      "lifecycle": "active",
+      "summary": "Bilingual (EN/BG) marketing site for Trade Solutions with live FX + futures strip, interactive markets map, and dark/light themes",
+      "canonicalUrl": "https://trade-solution.eu/",
+      "propagation": {
+        "website": true,
+        "readme": true,
+        "releaseSocial": false,
+        "shortLinks": "disabled"
+      }
+    },
+    {
+      "id": "mn7r",
+      "name": "mn7r",
+      "repository": "markoblogo/mn7r",
+      "visibility": "private",
+      "lifecycle": "active",
+      "summary": "Private AI-assisted brokerage operating workspace for agro-commodity teams managing deals, clients, EXE workflows, governance, and market context.",
+      "canonicalUrl": "https://mn7r.com/",
+      "propagation": {
+        "website": true,
+        "readme": true,
+        "releaseSocial": false,
+        "shortLinks": "disabled"
+      }
+    },
+    {
+      "id": "market-index",
+      "name": "index",
+      "repository": "markoblogo/index",
+      "visibility": "public",
+      "lifecycle": "active",
+      "summary": "Multi-tenant commodity benchmarks and market intelligence for 1d3x, UGA Index, and SPIKE SPOT INDEX.",
+      "canonicalUrl": "https://1d3x.com/",
+      "propagation": {
+        "website": true,
+        "readme": true,
+        "releaseSocial": true,
+        "shortLinks": "campaigns_only"
+      },
+      "observedHomepageUrl": "https://1d3x.com",
+      "release": {
+        "tag": "v0.2.1",
+        "url": "https://github.com/markoblogo/index/releases/tag/v0.2.1",
+        "publishedAt": "2026-09-14T00:30:33Z"
+      }
+    },
+    {
+      "id": "abvx-os",
+      "name": "ABVX-OS",
+      "repository": "markoblogo/ABVX-OS",
+      "visibility": "public",
+      "lifecycle": "active",
+      "summary": "Local-first control plane for a personal AI operating system: intake, role routing, portfolio state, evidence, and human approval gates.",
+      "canonicalUrl": "https://abvx.xyz/",
+      "propagation": {
+        "website": true,
+        "readme": true,
+        "releaseSocial": true,
+        "shortLinks": "campaigns_only"
+      },
+      "observedHomepageUrl": "https://abvx.xyz/",
+      "release": {
+        "tag": "v0.1.0",
+        "url": "https://github.com/markoblogo/ABVX-OS/releases/tag/v0.1.0",
+        "publishedAt": "2026-09-13T22:49:17Z"
+      }
+    },
+    {
+      "id": "set",
+      "name": "SET",
+      "repository": "markoblogo/SET",
+      "visibility": "public",
+      "lifecycle": "active",
+      "summary": "Review-first GitHub Action and CLI for composing AI-ready repository workflows and exporting inspectable plans.",
+      "canonicalUrl": "https://pypi.org/project/abvx-set/",
+      "propagation": {
+        "website": true,
+        "readme": true,
+        "releaseSocial": true,
+        "shortLinks": "campaigns_only"
+      },
+      "observedHomepageUrl": "https://pypi.org/project/abvx-set/",
+      "release": {
+        "tag": "v0.5.0",
+        "url": "https://github.com/markoblogo/SET/releases/tag/v0.5.0",
+        "publishedAt": "2026-09-13T22:32:09Z"
+      }
+    },
+    {
+      "id": "coqpi",
+      "name": "CoqPi",
+      "repository": "markoblogo/CoqPi",
+      "visibility": "public",
+      "lifecycle": "active",
+      "summary": "Private multilingual desktop copilot for live calls, interview practice, meeting transcription, and reviewed follow-up.",
+      "canonicalUrl": "https://github.com/markoblogo/CoqPi/releases/latest",
+      "propagation": {
+        "website": true,
+        "readme": true,
+        "releaseSocial": true,
+        "shortLinks": "campaigns_only"
+      },
+      "observedHomepageUrl": "https://github.com/markoblogo/CoqPi/releases/latest",
+      "release": {
+        "tag": "v0.3.0",
+        "url": "https://github.com/markoblogo/CoqPi/releases/tag/v0.3.0",
+        "publishedAt": "2026-09-13T22:08:38Z"
+      }
+    },
+    {
+      "id": "abvxsite",
+      "name": "ABVXsite",
+      "repository": "markoblogo/ABVXsite",
+      "visibility": "public",
+      "lifecycle": "active",
+      "summary": "Public map of ABVX market infrastructure, AI-native tools, publishing, research, and writing.",
+      "canonicalUrl": "https://abvx.xyz/",
+      "propagation": {
+        "website": true,
+        "readme": true,
+        "releaseSocial": true,
+        "shortLinks": "campaigns_only"
+      },
+      "observedHomepageUrl": "https://abvx.xyz/",
+      "release": {
+        "tag": "v0.2.2",
+        "url": "https://github.com/markoblogo/ABVXsite/releases/tag/v0.2.2",
+        "publishedAt": "2026-09-13T21:36:10Z"
+      }
+    },
+    {
+      "id": "cortex",
+      "name": "CortexABV-private",
+      "repository": "markoblogo/CortexABV-private",
+      "visibility": "private",
+      "lifecycle": "active",
+      "summary": "Private, local-first CortexABV runtime for tenant-scoped knowledge admission, memory, and human-reviewed proposal governance.",
+      "canonicalUrl": "https://abvx.xyz/systems",
+      "propagation": {
+        "website": true,
+        "readme": true,
+        "releaseSocial": false,
+        "shortLinks": "disabled"
+      }
+    },
+    {
+      "id": "lab",
+      "name": "lab.abvx",
+      "repository": "markoblogo/lab.abvx",
+      "visibility": "public",
+      "lifecycle": "active",
+      "summary": "Public catalog and control plane for the ABVX AI coding tools stack: repo context, orchestration, skills, discovery, and proof surfaces.",
+      "canonicalUrl": "https://lab.abvx.xyz/",
+      "propagation": {
+        "website": true,
+        "readme": true,
+        "releaseSocial": true,
+        "shortLinks": "campaigns_only"
+      },
+      "observedHomepageUrl": "https://lab.abvx.xyz/",
+      "release": {
+        "tag": "v0.2.0",
+        "url": "https://github.com/markoblogo/lab.abvx/releases/tag/v0.2.0",
+        "publishedAt": "2026-09-13T20:39:57Z"
+      }
+    },
+    {
+      "id": "cropto",
+      "name": "cropto",
+      "repository": "markoblogo/cropto",
+      "visibility": "public",
+      "lifecycle": "paused",
+      "summary": "Maintained agricultural commodity infrastructure prototype for indexed market data, document verification, and settlement workflows.",
+      "canonicalUrl": "https://cr0pto.com/",
+      "propagation": {
+        "website": true,
+        "readme": true,
+        "releaseSocial": true,
+        "shortLinks": "campaigns_only"
+      },
+      "observedHomepageUrl": "https://cr0pto.com",
+      "release": {
+        "tag": "v1.2.1",
+        "url": "https://github.com/markoblogo/cropto/releases/tag/v1.2.1",
+        "publishedAt": "2026-09-13T20:22:34Z"
+      }
+    },
+    {
+      "id": "liqua",
+      "name": "liqua",
+      "repository": "markoblogo/liqua",
+      "visibility": "private",
+      "lifecycle": "paused",
+      "summary": "Multi-brand Next.js platform for commodity-market products, with Liqua as the live execution-layer reference.",
+      "canonicalUrl": "https://liqua.cr0pto.com/",
+      "propagation": {
+        "website": true,
+        "readme": true,
+        "releaseSocial": false,
+        "shortLinks": "disabled"
+      }
+    },
+    {
+      "id": "book-landings",
+      "name": "book-landings",
+      "repository": "markoblogo/book-landings",
+      "visibility": "public",
+      "lifecycle": "active",
+      "summary": "Five independently deployed book and editorial landing sites in one tested Next.js monorepo.",
+      "canonicalUrl": "https://books.1d3x.com/",
+      "propagation": {
+        "website": true,
+        "readme": true,
+        "releaseSocial": true,
+        "shortLinks": "campaigns_only"
+      },
+      "observedHomepageUrl": "https://books.1d3x.com",
+      "release": {
+        "tag": "v0.2.0",
+        "url": "https://github.com/markoblogo/book-landings/releases/tag/v0.2.0",
+        "publishedAt": "2026-09-13T14:22:03Z"
+      }
+    },
+    {
+      "id": "azurmenton",
+      "name": "azurmenton",
+      "repository": "markoblogo/azurmenton",
+      "visibility": "public",
+      "lifecycle": "active",
+      "summary": "Multilingual direct-booking platform for three Menton beachfront/beachside apartments, with localized stay guides, Riviera events, weather, map-based trip planning, and a secure booking request flow (EN/FR/IT/UK)",
+      "canonicalUrl": "https://azurmenton.com/",
+      "propagation": {
+        "website": true,
+        "readme": true,
+        "releaseSocial": true,
+        "shortLinks": "campaigns_only"
+      },
+      "observedHomepageUrl": "https://azurmenton.com",
+      "release": {
+        "tag": "v0.2.1",
+        "url": "https://github.com/markoblogo/azurmenton/releases/tag/v0.2.1",
+        "publishedAt": "2026-09-13T13:58:01Z"
+      }
+    },
+    {
+      "id": "pictiq",
+      "name": "pictiq",
+      "repository": "markoblogo/pictiq",
+      "visibility": "public",
+      "lifecycle": "active",
+      "summary": "Pictiq: an open visual-language protocol with canonical SVG symbols, compositional grammar, context packs, and entity-symbol support.",
+      "canonicalUrl": "https://markoblogo.github.io/pictiq/",
+      "propagation": {
+        "website": true,
+        "readme": true,
+        "releaseSocial": true,
+        "shortLinks": "campaigns_only"
+      },
+      "observedHomepageUrl": "https://markoblogo.github.io/pictiq/",
+      "release": {
+        "tag": "v1.2.0",
+        "url": "https://github.com/markoblogo/pictiq/releases/tag/v1.2.0",
+        "publishedAt": "2026-09-13T11:32:03Z"
+      }
+    },
+    {
+      "id": "pocket-os",
+      "name": "Pocket-OS-Cardputer-ABV",
+      "repository": "markoblogo/Pocket-OS-Cardputer-ABV",
+      "visibility": "public",
+      "lifecycle": "active",
+      "summary": "Offline-first Pocket OS for M5Stack Cardputer ADV: music, books, voice notes, journeys, and a Mac companion.",
+      "canonicalUrl": "https://github.com/markoblogo/Pocket-OS-Cardputer-ABV",
+      "propagation": {
+        "website": true,
+        "readme": true,
+        "releaseSocial": true,
+        "shortLinks": "campaigns_only"
+      }
+    },
+    {
+      "id": "git-tweet",
+      "name": "git-tweet",
+      "repository": "markoblogo/git-tweet",
+      "visibility": "public",
+      "lifecycle": "active",
+      "summary": "Self-hosted GitHub release announcements for X and Bluesky, with deduplication, logs, and retries.",
+      "canonicalUrl": "https://git-tweet.abvx.xyz/",
+      "propagation": {
+        "website": true,
+        "readme": true,
+        "releaseSocial": true,
+        "shortLinks": "campaigns_only"
+      },
+      "observedHomepageUrl": "https://git-tweet.abvx.xyz/",
+      "release": {
+        "tag": "v0.3.2",
+        "url": "https://github.com/markoblogo/git-tweet/releases/tag/v0.3.2",
+        "publishedAt": "2026-09-11T18:40:12Z"
+      }
+    },
+    {
+      "id": "agentsgen",
+      "name": "AGENTS.md_generator",
+      "repository": "markoblogo/AGENTS.md_generator",
+      "visibility": "public",
+      "lifecycle": "active",
+      "summary": "Generate, preserve, and verify lean AGENTS.md, RUNBOOK.md, and machine-readable repo context for AI coding agents.",
+      "canonicalUrl": "https://agentsmd.abvx.xyz/",
+      "propagation": {
+        "website": true,
+        "readme": true,
+        "releaseSocial": true,
+        "shortLinks": "campaigns_only"
+      },
+      "observedHomepageUrl": "https://agentsmd.abvx.xyz/",
+      "release": {
+        "tag": "v0.5.1",
+        "url": "https://github.com/markoblogo/AGENTS.md_generator/releases/tag/v0.5.1",
+        "publishedAt": "2026-09-11T17:30:02Z"
+      }
+    },
+    {
+      "id": "id",
+      "name": "ID",
+      "repository": "markoblogo/ID",
+      "visibility": "public",
+      "lifecycle": "active",
+      "summary": "Owner-controlled AI context: reviewed profiles, privacy-filtered exports, semantic diffs, and tested SET/agentsgen handoffs.",
+      "canonicalUrl": "https://pypi.org/project/id-protocol/",
+      "propagation": {
+        "website": true,
+        "readme": true,
+        "releaseSocial": true,
+        "shortLinks": "campaigns_only"
+      },
+      "observedHomepageUrl": "https://pypi.org/project/id-protocol/",
+      "release": {
+        "tag": "v0.5.2",
+        "url": "https://github.com/markoblogo/ID/releases/tag/v0.5.2",
+        "publishedAt": "2026-09-11T16:14:32Z"
+      }
+    },
+    {
+      "id": "ytmamp",
+      "name": "YTMamp",
+      "repository": "markoblogo/YTMamp",
+      "visibility": "public",
+      "lifecycle": "active",
+      "summary": "Retro desktop remote for YouTube Music with a Chromium companion, waveform, media controls, and local integration API.",
+      "canonicalUrl": "https://github.com/markoblogo/YTMamp/releases/latest",
+      "propagation": {
+        "website": true,
+        "readme": true,
+        "releaseSocial": true,
+        "shortLinks": "campaigns_only"
+      },
+      "observedHomepageUrl": "https://github.com/markoblogo/YTMamp/releases/latest",
+      "release": {
+        "tag": "v0.4.0",
+        "url": "https://github.com/markoblogo/YTMamp/releases/tag/v0.4.0",
+        "publishedAt": "2026-09-11T14:59:06Z"
+      }
+    },
+    {
+      "id": "skills",
+      "name": "abvx-agent-skills",
+      "repository": "markoblogo/abvx-agent-skills",
+      "visibility": "public",
+      "lifecycle": "active",
+      "summary": "Reviewable capability layer for coding agents: portable skills, workflow patterns, verification gates, token-efficient execution, and bounded agent loops.",
+      "canonicalUrl": "https://abvx.xyz/work/abvx-agent-skills",
+      "propagation": {
+        "website": true,
+        "readme": true,
+        "releaseSocial": true,
+        "shortLinks": "campaigns_only"
+      },
+      "observedHomepageUrl": "https://abvx.xyz/work/abvx-agent-skills",
+      "release": {
+        "tag": "v0.15.0",
+        "url": "https://github.com/markoblogo/abvx-agent-skills/releases/tag/v0.15.0",
+        "publishedAt": "2026-09-08T19:50:53Z"
+      }
+    },
+    {
+      "id": "decision-map",
+      "name": "decision-map",
+      "repository": "markoblogo/decision-map",
+      "visibility": "public",
+      "lifecycle": "active",
+      "summary": "Installable Agent Skill and open protocol for mapping complex business, product, and go-to-market decisions into testable options and cascade logs.",
+      "canonicalUrl": "https://lab.abvx.xyz/tools/decisionmap/index.html",
+      "propagation": {
+        "website": true,
+        "readme": true,
+        "releaseSocial": true,
+        "shortLinks": "campaigns_only"
+      },
+      "observedHomepageUrl": "https://lab.abvx.xyz/tools/decisionmap/index.html",
+      "release": {
+        "tag": "v0.3.0",
+        "url": "https://github.com/markoblogo/decision-map/releases/tag/v0.3.0",
+        "publishedAt": "2026-09-11T14:24:46Z"
+      }
+    },
+    {
+      "id": "ascii-theme",
+      "name": "AsciiTheme",
+      "repository": "markoblogo/AsciiTheme",
+      "visibility": "public",
+      "lifecycle": "active",
+      "summary": "Drop-in ASCII theme layer for any site. Vanilla, React, Vue and Web Components with four themes, toggles and terminal widgets.",
+      "canonicalUrl": "https://markoblogo.github.io/AsciiTheme/",
+      "propagation": {
+        "website": true,
+        "readme": true,
+        "releaseSocial": true,
+        "shortLinks": "campaigns_only"
+      },
+      "observedHomepageUrl": "https://markoblogo.github.io/AsciiTheme/",
+      "release": {
+        "tag": "v0.3.1",
+        "url": "https://github.com/markoblogo/AsciiTheme/releases/tag/v0.3.1",
+        "publishedAt": "2026-09-11T13:47:46Z"
+      }
+    },
+    {
+      "id": "shortener",
+      "name": "abvx-shortener",
+      "repository": "markoblogo/abvx-shortener",
+      "visibility": "public",
+      "lifecycle": "active",
+      "summary": "Self-hosted short links on your own domain with Cloudflare Workers, an API, CLI, and Chrome extension.",
+      "canonicalUrl": "https://go.abvx.xyz/",
+      "propagation": {
+        "website": true,
+        "readme": true,
+        "releaseSocial": true,
+        "shortLinks": "campaigns_only"
+      },
+      "observedHomepageUrl": "https://go.abvx.xyz",
+      "release": {
+        "tag": "v0.3.1",
+        "url": "https://github.com/markoblogo/abvx-shortener/releases/tag/v0.3.1",
+        "publishedAt": "2026-09-11T13:16:23Z"
+      }
+    },
+    {
+      "id": "toki-pona",
+      "name": "toki-pona-translator",
+      "repository": "markoblogo/toki-pona-translator",
+      "visibility": "public",
+      "lifecycle": "active",
+      "summary": "Toki Pona toolkit: AI translator, sitelen emoji mapping, multilingual display layer, and manuscript QA skill.",
+      "canonicalUrl": "https://toki.abvx.xyz/",
+      "propagation": {
+        "website": true,
+        "readme": true,
+        "releaseSocial": true,
+        "shortLinks": "campaigns_only"
+      },
+      "observedHomepageUrl": "https://toki.abvx.xyz/",
+      "release": {
+        "tag": "sitelen-layer-static-v0.1.1",
+        "url": "https://github.com/markoblogo/toki-pona-translator/releases/tag/sitelen-layer-static-v0.1.1",
+        "publishedAt": "2026-09-08T23:36:28Z"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from": "abvx-os",
+      "type": "uses",
+      "to": "skills",
+      "status": "active",
+      "summary": "Uses shared, reviewable agent capabilities during maintenance.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "ascii-theme",
+      "type": "uses",
+      "to": "skills",
+      "status": "active",
+      "summary": "Uses shared, reviewable agent capabilities during maintenance.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "azurmenton",
+      "type": "uses",
+      "to": "skills",
+      "status": "active",
+      "summary": "Uses shared, reviewable agent capabilities during maintenance.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "book-landings",
+      "type": "uses",
+      "to": "skills",
+      "status": "active",
+      "summary": "Uses shared, reviewable agent capabilities during maintenance.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "coqpi",
+      "type": "uses",
+      "to": "skills",
+      "status": "active",
+      "summary": "Uses shared, reviewable agent capabilities during maintenance.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "cortex",
+      "type": "uses",
+      "to": "skills",
+      "status": "active",
+      "summary": "Uses shared, reviewable agent capabilities during maintenance.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "cropto",
+      "type": "uses",
+      "to": "skills",
+      "status": "active",
+      "summary": "Uses shared, reviewable agent capabilities during maintenance.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "decision-map",
+      "type": "uses",
+      "to": "skills",
+      "status": "active",
+      "summary": "Uses shared, reviewable agent capabilities during maintenance.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "git-tweet",
+      "type": "uses",
+      "to": "skills",
+      "status": "active",
+      "summary": "Uses shared, reviewable agent capabilities during maintenance.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "id",
+      "type": "uses",
+      "to": "skills",
+      "status": "active",
+      "summary": "Uses shared, reviewable agent capabilities during maintenance.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "lab",
+      "type": "uses",
+      "to": "skills",
+      "status": "active",
+      "summary": "Uses shared, reviewable agent capabilities during maintenance.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "liqua",
+      "type": "uses",
+      "to": "skills",
+      "status": "active",
+      "summary": "Uses shared, reviewable agent capabilities during maintenance.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "market-index",
+      "type": "uses",
+      "to": "skills",
+      "status": "active",
+      "summary": "Uses shared, reviewable agent capabilities during maintenance.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "mn7r",
+      "type": "uses",
+      "to": "skills",
+      "status": "active",
+      "summary": "Uses shared, reviewable agent capabilities during maintenance.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "pictiq",
+      "type": "uses",
+      "to": "skills",
+      "status": "active",
+      "summary": "Uses shared, reviewable agent capabilities during maintenance.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "pocket-os",
+      "type": "uses",
+      "to": "skills",
+      "status": "active",
+      "summary": "Uses shared, reviewable agent capabilities during maintenance.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "set",
+      "type": "uses",
+      "to": "skills",
+      "status": "active",
+      "summary": "Uses shared, reviewable agent capabilities during maintenance.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "shortener",
+      "type": "uses",
+      "to": "skills",
+      "status": "active",
+      "summary": "Uses shared, reviewable agent capabilities during maintenance.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "toki-pona",
+      "type": "uses",
+      "to": "skills",
+      "status": "active",
+      "summary": "Uses shared, reviewable agent capabilities during maintenance.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "trade-solutions",
+      "type": "uses",
+      "to": "skills",
+      "status": "active",
+      "summary": "Uses shared, reviewable agent capabilities during maintenance.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "ytmamp",
+      "type": "uses",
+      "to": "skills",
+      "status": "active",
+      "summary": "Uses shared, reviewable agent capabilities during maintenance.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "abvx-os",
+      "type": "uses",
+      "to": "agentsgen",
+      "status": "active",
+      "summary": "Keeps repository guidance and machine-readable context current.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "ascii-theme",
+      "type": "uses",
+      "to": "agentsgen",
+      "status": "active",
+      "summary": "Keeps repository guidance and machine-readable context current.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "azurmenton",
+      "type": "uses",
+      "to": "agentsgen",
+      "status": "active",
+      "summary": "Keeps repository guidance and machine-readable context current.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "book-landings",
+      "type": "uses",
+      "to": "agentsgen",
+      "status": "active",
+      "summary": "Keeps repository guidance and machine-readable context current.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "coqpi",
+      "type": "uses",
+      "to": "agentsgen",
+      "status": "active",
+      "summary": "Keeps repository guidance and machine-readable context current.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "cortex",
+      "type": "uses",
+      "to": "agentsgen",
+      "status": "active",
+      "summary": "Keeps repository guidance and machine-readable context current.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "cropto",
+      "type": "uses",
+      "to": "agentsgen",
+      "status": "active",
+      "summary": "Keeps repository guidance and machine-readable context current.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "decision-map",
+      "type": "uses",
+      "to": "agentsgen",
+      "status": "active",
+      "summary": "Keeps repository guidance and machine-readable context current.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "git-tweet",
+      "type": "uses",
+      "to": "agentsgen",
+      "status": "active",
+      "summary": "Keeps repository guidance and machine-readable context current.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "id",
+      "type": "uses",
+      "to": "agentsgen",
+      "status": "active",
+      "summary": "Keeps repository guidance and machine-readable context current.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "lab",
+      "type": "uses",
+      "to": "agentsgen",
+      "status": "active",
+      "summary": "Keeps repository guidance and machine-readable context current.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "liqua",
+      "type": "uses",
+      "to": "agentsgen",
+      "status": "active",
+      "summary": "Keeps repository guidance and machine-readable context current.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "market-index",
+      "type": "uses",
+      "to": "agentsgen",
+      "status": "active",
+      "summary": "Keeps repository guidance and machine-readable context current.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "mn7r",
+      "type": "uses",
+      "to": "agentsgen",
+      "status": "active",
+      "summary": "Keeps repository guidance and machine-readable context current.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "pictiq",
+      "type": "uses",
+      "to": "agentsgen",
+      "status": "active",
+      "summary": "Keeps repository guidance and machine-readable context current.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "pocket-os",
+      "type": "uses",
+      "to": "agentsgen",
+      "status": "active",
+      "summary": "Keeps repository guidance and machine-readable context current.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "set",
+      "type": "uses",
+      "to": "agentsgen",
+      "status": "active",
+      "summary": "Keeps repository guidance and machine-readable context current.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "shortener",
+      "type": "uses",
+      "to": "agentsgen",
+      "status": "active",
+      "summary": "Keeps repository guidance and machine-readable context current.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "skills",
+      "type": "uses",
+      "to": "agentsgen",
+      "status": "active",
+      "summary": "Keeps repository guidance and machine-readable context current.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "toki-pona",
+      "type": "uses",
+      "to": "agentsgen",
+      "status": "active",
+      "summary": "Keeps repository guidance and machine-readable context current.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "trade-solutions",
+      "type": "uses",
+      "to": "agentsgen",
+      "status": "active",
+      "summary": "Keeps repository guidance and machine-readable context current.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "ytmamp",
+      "type": "uses",
+      "to": "agentsgen",
+      "status": "active",
+      "summary": "Keeps repository guidance and machine-readable context current.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "set",
+      "type": "companion",
+      "to": "agentsgen",
+      "status": "active",
+      "summary": "Composes reviewable workflows around generated repository context.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "set",
+      "type": "integrates_with",
+      "to": "id",
+      "status": "active",
+      "summary": "Consumes reviewed, privacy-filtered context exports.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website",
+          "contract_test"
+        ],
+        "compatibility": "contract"
+      }
+    },
+    {
+      "from": "id",
+      "type": "integrates_with",
+      "to": "agentsgen",
+      "status": "active",
+      "summary": "Exports reviewed context for repository guidance.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website",
+          "contract_test"
+        ],
+        "compatibility": "contract"
+      }
+    },
+    {
+      "from": "lab",
+      "type": "catalogues",
+      "to": "skills",
+      "status": "active",
+      "summary": "Publishes the developer-facing capability catalogue.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "lab",
+      "type": "catalogues",
+      "to": "agentsgen",
+      "status": "active",
+      "summary": "Publishes installation, examples and proof surfaces.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "lab",
+      "type": "catalogues",
+      "to": "set",
+      "status": "active",
+      "summary": "Publishes orchestration documentation and proof surfaces.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "lab",
+      "type": "catalogues",
+      "to": "id",
+      "status": "active",
+      "summary": "Publishes the reviewed-context protocol entry point.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "lab",
+      "type": "catalogues",
+      "to": "decision-map",
+      "status": "active",
+      "summary": "Publishes the decision-mapping skill and protocol.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "abvxsite",
+      "type": "catalogues",
+      "to": "lab",
+      "status": "active",
+      "summary": "Presents the developer-tool catalogue inside the wider ABVX ecosystem.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "abvx-os",
+      "type": "publishes_via",
+      "to": "git-tweet",
+      "status": "active",
+      "summary": "Announces tagged releases through the shared release queue.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "website",
+          "release_social"
+        ],
+        "compatibility": "none"
+      }
+    },
+    {
+      "from": "abvxsite",
+      "type": "publishes_via",
+      "to": "git-tweet",
+      "status": "active",
+      "summary": "Announces tagged releases through the shared release queue.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "website",
+          "release_social"
+        ],
+        "compatibility": "none"
+      }
+    },
+    {
+      "from": "agentsgen",
+      "type": "publishes_via",
+      "to": "git-tweet",
+      "status": "active",
+      "summary": "Announces tagged releases through the shared release queue.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "website",
+          "release_social"
+        ],
+        "compatibility": "none"
+      }
+    },
+    {
+      "from": "ascii-theme",
+      "type": "publishes_via",
+      "to": "git-tweet",
+      "status": "active",
+      "summary": "Announces tagged releases through the shared release queue.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "website",
+          "release_social"
+        ],
+        "compatibility": "none"
+      }
+    },
+    {
+      "from": "azurmenton",
+      "type": "publishes_via",
+      "to": "git-tweet",
+      "status": "active",
+      "summary": "Announces tagged releases through the shared release queue.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "website",
+          "release_social"
+        ],
+        "compatibility": "none"
+      }
+    },
+    {
+      "from": "book-landings",
+      "type": "publishes_via",
+      "to": "git-tweet",
+      "status": "active",
+      "summary": "Announces tagged releases through the shared release queue.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "website",
+          "release_social"
+        ],
+        "compatibility": "none"
+      }
+    },
+    {
+      "from": "coqpi",
+      "type": "publishes_via",
+      "to": "git-tweet",
+      "status": "active",
+      "summary": "Announces tagged releases through the shared release queue.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "website",
+          "release_social"
+        ],
+        "compatibility": "none"
+      }
+    },
+    {
+      "from": "cropto",
+      "type": "publishes_via",
+      "to": "git-tweet",
+      "status": "active",
+      "summary": "Announces tagged releases through the shared release queue.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "website",
+          "release_social"
+        ],
+        "compatibility": "none"
+      }
+    },
+    {
+      "from": "decision-map",
+      "type": "publishes_via",
+      "to": "git-tweet",
+      "status": "active",
+      "summary": "Announces tagged releases through the shared release queue.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "website",
+          "release_social"
+        ],
+        "compatibility": "none"
+      }
+    },
+    {
+      "from": "id",
+      "type": "publishes_via",
+      "to": "git-tweet",
+      "status": "active",
+      "summary": "Announces tagged releases through the shared release queue.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "website",
+          "release_social"
+        ],
+        "compatibility": "none"
+      }
+    },
+    {
+      "from": "lab",
+      "type": "publishes_via",
+      "to": "git-tweet",
+      "status": "active",
+      "summary": "Announces tagged releases through the shared release queue.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "website",
+          "release_social"
+        ],
+        "compatibility": "none"
+      }
+    },
+    {
+      "from": "market-index",
+      "type": "publishes_via",
+      "to": "git-tweet",
+      "status": "active",
+      "summary": "Announces tagged releases through the shared release queue.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "website",
+          "release_social"
+        ],
+        "compatibility": "none"
+      }
+    },
+    {
+      "from": "pictiq",
+      "type": "publishes_via",
+      "to": "git-tweet",
+      "status": "active",
+      "summary": "Announces tagged releases through the shared release queue.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "website",
+          "release_social"
+        ],
+        "compatibility": "none"
+      }
+    },
+    {
+      "from": "pocket-os",
+      "type": "publishes_via",
+      "to": "git-tweet",
+      "status": "active",
+      "summary": "Announces tagged releases through the shared release queue.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "website",
+          "release_social"
+        ],
+        "compatibility": "none"
+      }
+    },
+    {
+      "from": "set",
+      "type": "publishes_via",
+      "to": "git-tweet",
+      "status": "active",
+      "summary": "Announces tagged releases through the shared release queue.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "website",
+          "release_social"
+        ],
+        "compatibility": "none"
+      }
+    },
+    {
+      "from": "shortener",
+      "type": "publishes_via",
+      "to": "git-tweet",
+      "status": "active",
+      "summary": "Announces tagged releases through the shared release queue.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "website",
+          "release_social"
+        ],
+        "compatibility": "none"
+      }
+    },
+    {
+      "from": "skills",
+      "type": "publishes_via",
+      "to": "git-tweet",
+      "status": "active",
+      "summary": "Announces tagged releases through the shared release queue.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "website",
+          "release_social"
+        ],
+        "compatibility": "none"
+      }
+    },
+    {
+      "from": "toki-pona",
+      "type": "publishes_via",
+      "to": "git-tweet",
+      "status": "active",
+      "summary": "Announces tagged releases through the shared release queue.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "website",
+          "release_social"
+        ],
+        "compatibility": "none"
+      }
+    },
+    {
+      "from": "ytmamp",
+      "type": "publishes_via",
+      "to": "git-tweet",
+      "status": "active",
+      "summary": "Announces tagged releases through the shared release queue.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "website",
+          "release_social"
+        ],
+        "compatibility": "none"
+      }
+    },
+    {
+      "from": "abvxsite",
+      "type": "uses",
+      "to": "shortener",
+      "status": "active",
+      "summary": "Uses stable short links for public campaigns and QR destinations.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website",
+          "shortener"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "azurmenton",
+      "type": "uses",
+      "to": "shortener",
+      "status": "active",
+      "summary": "Uses stable short links for public campaigns and QR destinations.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website",
+          "shortener"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "book-landings",
+      "type": "uses",
+      "to": "shortener",
+      "status": "active",
+      "summary": "Uses stable short links for public campaigns and QR destinations.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website",
+          "shortener"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "git-tweet",
+      "type": "uses",
+      "to": "shortener",
+      "status": "active",
+      "summary": "Uses stable short links for public campaigns and QR destinations.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website",
+          "shortener"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "lab",
+      "type": "uses",
+      "to": "shortener",
+      "status": "active",
+      "summary": "Uses stable short links for public campaigns and QR destinations.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website",
+          "shortener"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "market-index",
+      "type": "uses",
+      "to": "shortener",
+      "status": "active",
+      "summary": "Uses stable short links for public campaigns and QR destinations.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website",
+          "shortener"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "pictiq",
+      "type": "uses",
+      "to": "shortener",
+      "status": "active",
+      "summary": "Uses stable short links for public campaigns and QR destinations.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website",
+          "shortener"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "toki-pona",
+      "type": "uses",
+      "to": "shortener",
+      "status": "active",
+      "summary": "Uses stable short links for public campaigns and QR destinations.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website",
+          "shortener"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "trade-solutions",
+      "type": "uses",
+      "to": "shortener",
+      "status": "active",
+      "summary": "Uses stable short links for public campaigns and QR destinations.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website",
+          "shortener"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "toki-pona",
+      "type": "integrates_with",
+      "to": "pictiq",
+      "status": "active",
+      "summary": "Maintains the versioned, non-normative Toki Pona to Pictiq crosswalk.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website",
+          "contract_test"
+        ],
+        "compatibility": "contract"
+      }
+    },
+    {
+      "from": "pictiq",
+      "type": "companion",
+      "to": "toki-pona",
+      "status": "active",
+      "summary": "Links to the optional Toki Pona crosswalk without changing the canonical protocol.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "pocket-os",
+      "type": "integrates_with",
+      "to": "ytmamp",
+      "status": "planned",
+      "summary": "Provides a pocket remote and player-status surface.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website",
+          "contract_test"
+        ],
+        "compatibility": "contract"
+      }
+    },
+    {
+      "from": "pocket-os",
+      "type": "integrates_with",
+      "to": "coqpi",
+      "status": "planned",
+      "summary": "Hands voice notes and push-to-talk sessions to the multilingual copilot.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website",
+          "contract_test"
+        ],
+        "compatibility": "contract"
+      }
+    },
+    {
+      "from": "pocket-os",
+      "type": "companion",
+      "to": "pictiq",
+      "status": "planned",
+      "summary": "Consumes a pinned Pictiq icon pack for offline device UI.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "pocket-os",
+      "type": "integrates_with",
+      "to": "abvx-os",
+      "status": "planned",
+      "summary": "Acts as a portable intake and control surface for the personal AI layer.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website",
+          "contract_test"
+        ],
+        "compatibility": "contract"
+      }
+    },
+    {
+      "from": "coqpi",
+      "type": "integrates_with",
+      "to": "abvx-os",
+      "status": "planned",
+      "summary": "Routes reviewed transcripts and follow-up actions into personal role workflows.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website",
+          "contract_test"
+        ],
+        "compatibility": "contract"
+      }
+    },
+    {
+      "from": "book-landings",
+      "type": "integrates_with",
+      "to": "abvx-os",
+      "status": "planned",
+      "summary": "Publishes approved outputs from the ABVX publishing workflow.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website",
+          "contract_test"
+        ],
+        "compatibility": "contract"
+      }
+    },
+    {
+      "from": "book-landings",
+      "type": "companion",
+      "to": "ascii-theme",
+      "status": "planned",
+      "summary": "Can use the shared theme layer for selected editorial experiences.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "market-index",
+      "type": "supplies_data_to",
+      "to": "mn7r",
+      "status": "active",
+      "summary": "Provides read-only market context for brokerage workflows.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website",
+          "contract_test"
+        ],
+        "compatibility": "contract"
+      }
+    },
+    {
+      "from": "cropto",
+      "type": "companion",
+      "to": "market-index",
+      "status": "active",
+      "summary": "Uses the benchmark layer as market-data context while trading remains paused.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "liqua",
+      "type": "companion",
+      "to": "cropto",
+      "status": "active",
+      "summary": "Keeps the private execution-layer reference aligned with the paused market prototype.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "trade-solutions",
+      "type": "companion",
+      "to": "market-index",
+      "status": "planned",
+      "summary": "Reuses current benchmark and market-strip context on the public front.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "mn7r",
+      "type": "governs_with",
+      "to": "id",
+      "status": "planned",
+      "summary": "Will use reviewed identity and export boundaries for its later agent layer.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "contract_test"
+        ],
+        "compatibility": "contract"
+      }
+    },
+    {
+      "from": "mn7r",
+      "type": "companion",
+      "to": "coqpi",
+      "status": "planned",
+      "summary": "Can use reviewed multilingual call support for brokerage conversations.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "azurmenton",
+      "type": "companion",
+      "to": "pictiq",
+      "status": "planned",
+      "summary": "Can use stable visual-language assets for multilingual guest guidance.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "website"
+        ],
+        "compatibility": "docs"
+      }
+    },
+    {
+      "from": "abvx-os",
+      "type": "integrates_with",
+      "to": "cortex",
+      "status": "planned",
+      "summary": "Uses tenant-scoped, reviewed knowledge admission and retrieval.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "contract_test"
+        ],
+        "compatibility": "contract"
+      }
+    },
+    {
+      "from": "coqpi",
+      "type": "integrates_with",
+      "to": "cortex",
+      "status": "planned",
+      "summary": "Uses tenant-scoped, reviewed knowledge admission and retrieval.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "contract_test"
+        ],
+        "compatibility": "contract"
+      }
+    },
+    {
+      "from": "mn7r",
+      "type": "integrates_with",
+      "to": "cortex",
+      "status": "planned",
+      "summary": "Uses tenant-scoped, reviewed knowledge admission and retrieval.",
+      "propagation": {
+        "watch": [
+          "release",
+          "summary",
+          "canonicalUrl"
+        ],
+        "surfaces": [
+          "readme",
+          "contract_test"
+        ],
+        "compatibility": "contract"
+      }
+    }
+  ]
+}

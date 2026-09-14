@@ -146,6 +146,53 @@
       ]
     },
     {
+      "type": "work",
+      "section": "books",
+      "ecosystem": "Publishing & Language Systems",
+      "group": "Publishing systems & protocols",
+      "status": "live",
+      "title": "Book Landings",
+      "summary": "Five independently deployed book and editorial landing sites maintained in one tested Next.js monorepository.",
+      "canonicalUrl": "https://abvx.xyz/work/book-landings",
+      "tags": [
+        "publishing",
+        "books",
+        "nextjs",
+        "landing-pages",
+        "monorepo"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Books",
+          "url": "https://books.1d3x.com/"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/book-landings"
+        }
+      ],
+      "updatedAt": "2026-09-14",
+      "related": [
+        {
+          "title": "ABVX OS",
+          "canonicalUrl": "https://abvx.xyz/work/abvx-os",
+          "relation": "related"
+        },
+        {
+          "title": "Toki Pona Toolkit",
+          "canonicalUrl": "https://abvx.xyz/work/toki-pona-ai-translator",
+          "relation": "related"
+        },
+        {
+          "title": "Ukrainian Modernism landing",
+          "canonicalUrl": "https://abvx.xyz/work/ukrainian-modernism-landing",
+          "relation": "related"
+        }
+      ]
+    },
+    {
       "type": "book",
       "section": "books",
       "ecosystem": "Business, AI & Marketing",
@@ -1129,7 +1176,18 @@
         }
       ],
       "updatedAt": "2026-05-04",
-      "related": []
+      "related": [
+        {
+          "title": "Toki Pona Toolkit",
+          "canonicalUrl": "https://abvx.xyz/work/toki-pona-ai-translator",
+          "relation": "related"
+        },
+        {
+          "title": "Pocket OS for Cardputer",
+          "canonicalUrl": "https://abvx.xyz/work/pocket-os-cardputer",
+          "relation": "related"
+        }
+      ]
     },
     {
       "type": "translation",
@@ -2002,7 +2060,7 @@
         {
           "type": "github",
           "label": "GitHub",
-          "url": "https://github.com/markoblogo/cropto-v0"
+          "url": "https://github.com/markoblogo/cropto"
         },
         {
           "type": "youtube",
@@ -2040,7 +2098,7 @@
         {
           "type": "github",
           "label": "GitHub",
-          "url": "https://github.com/markoblogo/cropto-v0"
+          "url": "https://github.com/markoblogo/cropto"
         },
         {
           "type": "youtube",
@@ -2079,7 +2137,7 @@
         {
           "type": "github",
           "label": "GitHub",
-          "url": "https://github.com/markoblogo/cropto-v0"
+          "url": "https://github.com/markoblogo/cropto"
         }
       ],
       "updatedAt": "2026-05-05",
@@ -2113,7 +2171,7 @@
         {
           "type": "github",
           "label": "GitHub",
-          "url": "https://github.com/markoblogo/cropto-v0"
+          "url": "https://github.com/markoblogo/cropto"
         }
       ],
       "updatedAt": "2026-05-04",
@@ -2365,7 +2423,7 @@
       "group": "Market Intelligence, Monitoring & Indexes",
       "status": "building",
       "title": "UGA Index",
-      "summary": "UGA Index is a benchmark platform for daily Ukrainian grain and oilseed export price references built with the Ukrainian Grain Association.",
+      "summary": "UGA Index is a lightweight public view of SPIKE SPOT INDEX data for the Ukrainian grain market, without a separate database or benchmark pipeline.",
       "canonicalUrl": "https://abvx.xyz/work/uga-index",
       "tags": [
         "agro-commodities",
@@ -2386,7 +2444,7 @@
         {
           "type": "github",
           "label": "GitHub",
-          "url": "https://github.com/markoblogo/index-uga"
+          "url": "https://github.com/markoblogo/index"
         }
       ],
       "updatedAt": "2026-05-08",
@@ -2483,6 +2541,53 @@
     {
       "type": "work",
       "section": "systems",
+      "ecosystem": "Personal AI systems",
+      "group": "Personal AI systems",
+      "status": "building",
+      "title": "ABVX OS",
+      "summary": "A local-first control plane for personal AI work: intake, professional role routing, portfolio state, evidence, and human approval gates.",
+      "canonicalUrl": "https://abvx.xyz/work/abvx-os",
+      "tags": [
+        "personal-ai",
+        "role-routing",
+        "local-first",
+        "publishing",
+        "human-review"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "ABVX",
+          "url": "https://abvx.xyz/"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/ABVX-OS"
+        }
+      ],
+      "updatedAt": "2026-09-14",
+      "related": [
+        {
+          "title": "CoqPi",
+          "canonicalUrl": "https://abvx.xyz/work/coqpi",
+          "relation": "related"
+        },
+        {
+          "title": "Pocket OS for Cardputer",
+          "canonicalUrl": "https://abvx.xyz/work/pocket-os-cardputer",
+          "relation": "related"
+        },
+        {
+          "title": "Book Landings",
+          "canonicalUrl": "https://abvx.xyz/work/book-landings",
+          "relation": "related"
+        }
+      ]
+    },
+    {
+      "type": "work",
+      "section": "systems",
       "ecosystem": "Standalone Utilities & Experiments",
       "group": "Standalone Utilities & Experiments",
       "status": "live",
@@ -2503,7 +2608,7 @@
         {
           "type": "github",
           "label": "GitHub",
-          "url": "https://github.com/markoblogo/-abvx-shortener"
+          "url": "https://github.com/markoblogo/abvx-shortener"
         },
         {
           "type": "youtube",
@@ -2716,6 +2821,43 @@
     {
       "type": "work",
       "section": "systems",
+      "ecosystem": "Personal AI systems",
+      "group": "Personal AI systems",
+      "status": "building",
+      "title": "CoqPi",
+      "summary": "A private multilingual desktop copilot for live calls, interview practice, meeting transcription, and reviewed follow-up.",
+      "canonicalUrl": "https://abvx.xyz/work/coqpi",
+      "tags": [
+        "multilingual",
+        "calls",
+        "transcription",
+        "interviews",
+        "privacy"
+      ],
+      "links": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/CoqPi"
+        }
+      ],
+      "updatedAt": "2026-09-14",
+      "related": [
+        {
+          "title": "ABVX OS",
+          "canonicalUrl": "https://abvx.xyz/work/abvx-os",
+          "relation": "related"
+        },
+        {
+          "title": "Pocket OS for Cardputer",
+          "canonicalUrl": "https://abvx.xyz/work/pocket-os-cardputer",
+          "relation": "related"
+        }
+      ]
+    },
+    {
+      "type": "work",
+      "section": "systems",
       "ecosystem": "AI-native Development Systems",
       "group": "Protocols & Decision Systems",
       "status": "released",
@@ -2793,6 +2935,53 @@
       ],
       "updatedAt": "2026-04-22",
       "related": []
+    },
+    {
+      "type": "work",
+      "section": "systems",
+      "ecosystem": "Personal AI systems",
+      "group": "Personal AI systems",
+      "status": "building",
+      "title": "Pocket OS for Cardputer",
+      "summary": "An offline-first Pocket OS for M5Stack Cardputer ADV with music, books, voice notes, journeys, and a Mac companion.",
+      "canonicalUrl": "https://abvx.xyz/work/pocket-os-cardputer",
+      "tags": [
+        "cardputer",
+        "offline-first",
+        "music",
+        "voice-notes",
+        "embedded"
+      ],
+      "links": [
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/Pocket-OS-Cardputer-ABV"
+        }
+      ],
+      "updatedAt": "2026-09-14",
+      "related": [
+        {
+          "title": "ABVX OS",
+          "canonicalUrl": "https://abvx.xyz/work/abvx-os",
+          "relation": "related"
+        },
+        {
+          "title": "CoqPi",
+          "canonicalUrl": "https://abvx.xyz/work/coqpi",
+          "relation": "related"
+        },
+        {
+          "title": "YTMamp",
+          "canonicalUrl": "https://abvx.xyz/work/ytmamp",
+          "relation": "related"
+        },
+        {
+          "title": "Pictiq",
+          "canonicalUrl": "https://abvx.xyz/work/pictiq",
+          "relation": "related"
+        }
+      ]
     },
     {
       "type": "work",
@@ -3070,7 +3259,7 @@
       "group": "Standalone Utilities & Experiments",
       "status": "released",
       "title": "YTMamp",
-      "summary": "YTMamp is a macOS app and browser-extension experiment that transforms YouTube Music into a Winamp-inspired player experience.",
+      "summary": "A retro desktop remote for YouTube Music with a Chromium companion, waveform, media controls, and a token-protected local integration API.",
       "canonicalUrl": "https://abvx.xyz/work/ytmamp",
       "tags": [
         "macos",
@@ -3091,7 +3280,18 @@
         }
       ],
       "updatedAt": "2026-04-25",
-      "related": []
+      "related": [
+        {
+          "title": "Pocket OS for Cardputer",
+          "canonicalUrl": "https://abvx.xyz/work/pocket-os-cardputer",
+          "relation": "related"
+        },
+        {
+          "title": "ABVX OS",
+          "canonicalUrl": "https://abvx.xyz/work/abvx-os",
+          "relation": "related"
+        }
+      ]
     }
   ]
 }

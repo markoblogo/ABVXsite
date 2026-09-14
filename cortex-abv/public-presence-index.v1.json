@@ -4,8 +4,8 @@
   "version": "v1",
   "authority": "read",
   "externalSideEffects": false,
-  "generatedAt": "2026-07-16T17:10:59.163Z",
-  "sourceDigest": "fd76b1d3167bb0ce5a3b0ea1c02cd9669f60a941483d08b6197507d889898448",
+  "generatedAt": "2026-09-14T12:22:06.165Z",
+  "sourceDigest": "546cbe4238927d7c27527d8f362dd3ad77c0ef4d08b1d5b4c3f5c0163ad4e605",
   "sources": {
     "site": [
       "README.md",
@@ -156,14 +156,16 @@
       "kind": "project",
       "name": "ABVX Lab",
       "canonicalUrl": "https://abvx.xyz/work/abvx-lab",
-      "summary": "ABVX Lab is the ecosystem front for AI-native development systems, protocols, workflows and operational tooling.",
+      "summary": "The public catalog and control plane for the ABVX AI coding stack: repository context, orchestration, skills, discovery, and proof surfaces.",
       "attributes": {
-        "status": "building",
+        "status": "live",
         "section": "systems",
         "tags": [
-          "lab",
-          "experiments",
-          "ai-dev"
+          "ai-dev",
+          "developer-tools",
+          "agent-skills",
+          "orchestration",
+          "verification"
         ],
         "links": [
           {
@@ -177,13 +179,51 @@
             "url": "https://github.com/markoblogo/lab.abvx"
           }
         ],
-        "updatedAt": "2026-05-08"
+        "updatedAt": "2026-09-13"
       },
       "provenance": [
         {
           "kind": "content_frontmatter",
           "path": "content/work/abvx-lab.md",
-          "digest": "2553dea93d37ce92a834120306eade6f7f367639d936b8e3cb9223dfe0ac976f"
+          "digest": "0c71dde7e35af9393d7b4d788447b962ca4365f12eeeacdc8247dea9bcdb99c4"
+        }
+      ]
+    },
+    {
+      "id": "project:abvx-os",
+      "kind": "project",
+      "name": "ABVX OS",
+      "canonicalUrl": "https://abvx.xyz/work/abvx-os",
+      "summary": "A local-first control plane for personal AI work: intake, professional role routing, portfolio state, evidence, and human approval gates.",
+      "attributes": {
+        "status": "building",
+        "section": "systems",
+        "tags": [
+          "personal-ai",
+          "role-routing",
+          "local-first",
+          "publishing",
+          "human-review"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "ABVX",
+            "url": "https://abvx.xyz/"
+          },
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/ABVX-OS"
+          }
+        ],
+        "updatedAt": "2026-09-14"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/abvx-os.md",
+          "digest": "ff95d2d255088f30affb65a77afed9abdc39b877da2ca74142ab159ddf734cd1"
         }
       ]
     },
@@ -210,7 +250,7 @@
           {
             "type": "github",
             "label": "GitHub",
-            "url": "https://github.com/markoblogo/-abvx-shortener"
+            "url": "https://github.com/markoblogo/abvx-shortener"
           },
           {
             "type": "youtube",
@@ -224,7 +264,7 @@
         {
           "kind": "content_frontmatter",
           "path": "content/work/abvx-shortener.md",
-          "digest": "d5c8c67867b3d7a976a2d39a9fe8d657738cba92e0cb56e8b9b68689c52de226"
+          "digest": "029bf7301029d9fadc7461fdbcfca6b02a05e10ac071bdcda7f9351f525169e8"
         }
       ]
     },
@@ -233,15 +273,17 @@
       "kind": "project",
       "name": "AGENTS.md Generator",
       "canonicalUrl": "https://abvx.xyz/work/agents-md-generator",
-      "summary": "AGENTS.md Generator is an operational workflow surface for AI-assisted development systems, agent coordination and structured coding workflows.",
+      "summary": "Generate, preserve, and verify lean AGENTS.md, RUNBOOK.md, and machine-readable repository context for AI coding agents.",
       "attributes": {
         "status": "live",
         "section": "systems",
         "tags": [
           "ai-dev",
-          "agents",
-          "documentation",
-          "workflow"
+          "agents-md",
+          "repository-context",
+          "runbook",
+          "codex",
+          "cli"
         ],
         "links": [
           {
@@ -255,13 +297,52 @@
             "url": "https://github.com/markoblogo/AGENTS.md_generator"
           }
         ],
-        "updatedAt": "2026-05-09"
+        "updatedAt": "2026-09-13"
       },
       "provenance": [
         {
           "kind": "content_frontmatter",
           "path": "content/work/agents-md-generator.md",
-          "digest": "f4590c26b54be2a8b639b12de1da0f20132ed0c694c361ef7980133c96e63750"
+          "digest": "aaf4f2f01f83beda9819114952e3421a0afff5c5d878e15cfbcae891206323c0"
+        }
+      ]
+    },
+    {
+      "id": "project:ami-books-physical-commodity-markets",
+      "kind": "project",
+      "name": "AMI Books: Physical Commodity Markets",
+      "canonicalUrl": "https://abvx.xyz/work/ami-books-physical-commodity-markets",
+      "summary": "A free professional library of books, field manuals and living product guides for physical commodity brokers, traders, farmers and market operators.",
+      "attributes": {
+        "status": "live",
+        "section": "focus",
+        "tags": [
+          "agro-commodities",
+          "brokerage",
+          "field-manuals",
+          "free-books",
+          "market-infrastructure",
+          "publishing"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Open library",
+            "url": "https://books.1d3x.com/"
+          },
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/book-landings"
+          }
+        ],
+        "updatedAt": "2026-07-18"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/ami-books-physical-commodity-markets.md",
+          "digest": "4d55dd3f112c468b11c27325b1930e502bcbc2daa8446b158273bfe43b609783"
         }
       ]
     },
@@ -392,6 +473,44 @@
       ]
     },
     {
+      "id": "project:book-landings",
+      "kind": "project",
+      "name": "Book Landings",
+      "canonicalUrl": "https://abvx.xyz/work/book-landings",
+      "summary": "Five independently deployed book and editorial landing sites maintained in one tested Next.js monorepository.",
+      "attributes": {
+        "status": "live",
+        "section": "books",
+        "tags": [
+          "publishing",
+          "books",
+          "nextjs",
+          "landing-pages",
+          "monorepo"
+        ],
+        "links": [
+          {
+            "type": "site",
+            "label": "Books",
+            "url": "https://books.1d3x.com/"
+          },
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/book-landings"
+          }
+        ],
+        "updatedAt": "2026-09-14"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/book-landings.md",
+          "digest": "7b1f7c58e747d32ce0a8074c1796335937c08ef7e34cad10837e1f92c71437fd"
+        }
+      ]
+    },
+    {
       "id": "project:chinese-wisdom-toki-pona-landing",
       "kind": "project",
       "name": "Chinese Wisdom in toki pona landing",
@@ -429,11 +548,44 @@
       ]
     },
     {
+      "id": "project:coqpi",
+      "kind": "project",
+      "name": "CoqPi",
+      "canonicalUrl": "https://abvx.xyz/work/coqpi",
+      "summary": "A private multilingual desktop copilot for live calls, interview practice, meeting transcription, and reviewed follow-up.",
+      "attributes": {
+        "status": "building",
+        "section": "systems",
+        "tags": [
+          "multilingual",
+          "calls",
+          "transcription",
+          "interviews",
+          "privacy"
+        ],
+        "links": [
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/CoqPi"
+          }
+        ],
+        "updatedAt": "2026-09-14"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/coqpi.md",
+          "digest": "19c545517615c77808f00aa24a750802e471bf763602a03efb6378c65c296170"
+        }
+      ]
+    },
+    {
       "id": "project:cropto",
       "kind": "project",
       "name": "Cropto",
       "canonicalUrl": "https://abvx.xyz/work/cropto",
-      "summary": "Cropto is a prototype commodity trading platform for indexed spot trading, options and tokenized commodity-linked instruments across Ukraine, Argentina and Brazil.",
+      "summary": "Cropto is an early-stage MVP commodity trading platform offering indexed spot trading, options, and tokenized commodity-linked instruments across Ukraine, Argentina and Brazil; the repository publishes a public monthly indexed-spot update cadence for those markets.",
       "attributes": {
         "status": "building",
         "section": "focus",
@@ -455,7 +607,7 @@
           {
             "type": "github",
             "label": "GitHub",
-            "url": "https://github.com/markoblogo/cropto-v0"
+            "url": "https://github.com/markoblogo/cropto"
           },
           {
             "type": "youtube",
@@ -463,13 +615,13 @@
             "url": "https://youtu.be/zumLJKZQFxc"
           }
         ],
-        "updatedAt": "2026-05-06"
+        "updatedAt": "2026-07-21"
       },
       "provenance": [
         {
           "kind": "content_frontmatter",
           "path": "content/work/cropto.md",
-          "digest": "bd841ba48e4c5c06fc2c677c08dc4f3d077b619cb8ff735d463cd3d55fc9272b"
+          "digest": "05b5b0bf13f2cf122ada98224cc7cf3bcdec644a6ec1bb3600e52d702ae0b363"
         }
       ]
     },
@@ -500,7 +652,7 @@
           {
             "type": "github",
             "label": "GitHub",
-            "url": "https://github.com/markoblogo/cropto-v0"
+            "url": "https://github.com/markoblogo/cropto"
           },
           {
             "type": "youtube",
@@ -514,7 +666,7 @@
         {
           "kind": "content_frontmatter",
           "path": "content/work/cropto-market-risk-deck.md",
-          "digest": "205c8eb04707b11ad42ad9469d173889dc0297c033b8394dd3ac264b4afc2612"
+          "digest": "6bed3da8a8349ece173db69c4d0a0d030b6eb038e8b34ae0fb3a42b22ef0c273"
         }
       ]
     },
@@ -546,7 +698,7 @@
           {
             "type": "github",
             "label": "GitHub",
-            "url": "https://github.com/markoblogo/cropto-v0"
+            "url": "https://github.com/markoblogo/cropto"
           }
         ],
         "updatedAt": "2026-05-05"
@@ -555,7 +707,7 @@
         {
           "kind": "content_frontmatter",
           "path": "content/work/cropto-monitor.md",
-          "digest": "ee640988d515697b95745d4487d24e40b10a6682717eff2c5c902a8315cf7259"
+          "digest": "93aaf5be58738be861ca907a00a9d24511b31ec3880ff37dea0149b5b06670b7"
         }
       ]
     },
@@ -564,19 +716,17 @@
       "kind": "project",
       "name": "Decision Map",
       "canonicalUrl": "https://abvx.xyz/work/decision-map",
-      "summary": "Decision Map is a protocol for AI-assisted strategic decision-making in product launches, positioning and complex marketing scenarios.",
+      "summary": "An installable Agent Skill and open protocol for turning complex business, product, and go-to-market decisions into testable options and cascade logs.",
       "attributes": {
-        "status": "building",
+        "status": "released",
         "section": "systems",
         "tags": [
+          "agent-skill",
           "decision-making",
-          "protocol",
-          "AI",
-          "strategic-marketing",
-          "product-launch",
-          "reasoning",
-          "workflow",
-          "systems"
+          "strategy",
+          "go-to-market",
+          "assumptions",
+          "decision-log"
         ],
         "links": [
           {
@@ -585,13 +735,13 @@
             "url": "https://github.com/markoblogo/decision-map"
           }
         ],
-        "updatedAt": "2026-05-10"
+        "updatedAt": "2026-09-13"
       },
       "provenance": [
         {
           "kind": "content_frontmatter",
           "path": "content/work/decision-map.md",
-          "digest": "fc6f132d2e48375fdf25e33d006a0ddfd221e458bf657455d0c1fd8bf5707268"
+          "digest": "119a132a3503a6c4bb56b56bc78c1b437b4b2d30cbe7c94a02e793a723510ee3"
         }
       ]
     },
@@ -600,13 +750,16 @@
       "kind": "project",
       "name": "git-tweet",
       "canonicalUrl": "https://abvx.xyz/work/git-tweet",
-      "summary": "git-tweet is a lightweight development communication system for turning repository activity into structured operational signals and updates.",
+      "summary": "Self-hosted GitHub release announcements for X and Bluesky, with repository-wide release discovery, deduplication, logs, and retries.",
       "attributes": {
-        "status": "archive",
+        "status": "live",
         "section": "systems",
         "tags": [
-          "tool",
-          "developer-utility"
+          "github",
+          "release-automation",
+          "x",
+          "bluesky",
+          "self-hosted"
         ],
         "links": [
           {
@@ -620,13 +773,13 @@
             "url": "https://github.com/markoblogo/git-tweet"
           }
         ],
-        "updatedAt": "2026-04-23"
+        "updatedAt": "2026-09-13"
       },
       "provenance": [
         {
           "kind": "content_frontmatter",
           "path": "content/work/git-tweet.md",
-          "digest": "99bd10780c5f7673d51e6562773a359ba6b7cd03a10f54b0081672184774e5e8"
+          "digest": "dfb782aaaaccb3de7f94ef8b2229c06cf457df510249f0c214fd5de07d718113"
         }
       ]
     },
@@ -688,7 +841,7 @@
           {
             "type": "github",
             "label": "GitHub",
-            "url": "https://github.com/markoblogo/cropto-v0"
+            "url": "https://github.com/markoblogo/cropto"
           }
         ],
         "updatedAt": "2026-05-04"
@@ -697,7 +850,7 @@
         {
           "kind": "content_frontmatter",
           "path": "content/work/last30days-cropto.md",
-          "digest": "e31e2d397257a8c58aa359757b0bc35aa58edfcecd0e40c42e1b9eac630938fd"
+          "digest": "bfc223999fb5e2c78a730abaa3c3d9f8aea8f1f4dcadd9ad4465d16f1f57ba72"
         }
       ]
     },
@@ -754,7 +907,7 @@
       "kind": "project",
       "name": "MN7R",
       "canonicalUrl": "https://abvx.xyz/work/mn7r",
-      "summary": "MN7R is a commodity trading workflow workspace for brokerage teams running Deals, Clients and EXE inside one structured operational system.",
+      "summary": "Public-facing updates now explicitly reflect execution checkpoints for broker, boss, and EXE operator roles across the Deals, Clients, and EXE workflow areas.",
       "attributes": {
         "status": "live",
         "section": "focus",
@@ -797,13 +950,13 @@
           "enabled": false,
           "reason": "private_repository"
         },
-        "updatedAt": "2026-05-07"
+        "updatedAt": "2026-07-28"
       },
       "provenance": [
         {
           "kind": "content_frontmatter",
           "path": "content/work/mn7r.md",
-          "digest": "30f237805327015a6e9a9895629b084a355eae993773230623893dad02f2dfc9"
+          "digest": "75a1e7438ea980ea52563eec4b9f5505d1849f2e997876379a06e024539bc5ac"
         }
       ]
     },
@@ -880,7 +1033,40 @@
         {
           "kind": "content_frontmatter",
           "path": "content/work/pictiq.md",
-          "digest": "b9b06b18b7819f72946f824d626a634b7c8cda9eb5037632db5d138cc9f73099"
+          "digest": "4bfa57396ad7adc8bff7784083e56000211b3f0299ed7430efa633e7840ef392"
+        }
+      ]
+    },
+    {
+      "id": "project:pocket-os-cardputer",
+      "kind": "project",
+      "name": "Pocket OS for Cardputer",
+      "canonicalUrl": "https://abvx.xyz/work/pocket-os-cardputer",
+      "summary": "An offline-first Pocket OS for M5Stack Cardputer ADV with music, books, voice notes, journeys, and a Mac companion.",
+      "attributes": {
+        "status": "building",
+        "section": "systems",
+        "tags": [
+          "cardputer",
+          "offline-first",
+          "music",
+          "voice-notes",
+          "embedded"
+        ],
+        "links": [
+          {
+            "type": "github",
+            "label": "GitHub",
+            "url": "https://github.com/markoblogo/Pocket-OS-Cardputer-ABV"
+          }
+        ],
+        "updatedAt": "2026-09-14"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/work/pocket-os-cardputer.md",
+          "digest": "d425266cf0d63da51336d48b79a2463ec5b693021e893b715845eb8224a0b22b"
         }
       ]
     },
@@ -917,9 +1103,9 @@
     {
       "id": "project:sitelen-emoji-truth",
       "kind": "project",
-      "name": "sitelen-emoji-truth",
+      "name": "sitelen-emoji",
       "canonicalUrl": "https://abvx.xyz/work/sitelen-emoji-truth",
-      "summary": "sitelen-emoji-truth is an experimental visual-language protocol exploring emoji-based semantic compression and symbolic communication systems.",
+      "summary": "A versioned Toki Pona to emoji mapping and JavaScript/Python helper library, maintained inside the unified Toki Pona Toolkit.",
       "attributes": {
         "status": "released",
         "section": "systems",
@@ -938,16 +1124,16 @@
           {
             "type": "github",
             "label": "GitHub",
-            "url": "https://github.com/markoblogo/sitelen-emoji-truth"
+            "url": "https://github.com/markoblogo/toki-pona-translator/tree/main/packages/sitelen-emoji"
           }
         ],
-        "updatedAt": "2026-04-28"
+        "updatedAt": "2026-09-13"
       },
       "provenance": [
         {
           "kind": "content_frontmatter",
           "path": "content/work/sitelen-emoji-truth.md",
-          "digest": "1465308233e5d2c42baf2540cca82ba8344861f2e1ae91a0d5c87c27ff792c53"
+          "digest": "3ef62e18239758e211dce5602a4d5bb2c98ab633f62c11b7db9235e696918372"
         }
       ]
     },
@@ -956,9 +1142,9 @@
       "kind": "project",
       "name": "sitelen-layer-plugin",
       "canonicalUrl": "https://abvx.xyz/work/sitelen-layer-plugin",
-      "summary": "sitelen-layer-plugin is a rendering layer for sitelen pona and experimental visual-language systems used across ABVX publishing and language projects.",
+      "summary": "A reusable display layer for switching Toki Pona content among Latin, sitelen pona, and emoji modes, maintained inside the unified Toki Pona Toolkit.",
       "attributes": {
-        "status": "live",
+        "status": "released",
         "section": "systems",
         "tags": [
           "toki-pona",
@@ -974,16 +1160,16 @@
           {
             "type": "github",
             "label": "GitHub",
-            "url": "https://github.com/markoblogo/sitelen-layer-plugin"
+            "url": "https://github.com/markoblogo/toki-pona-translator/tree/main/packages/sitelen-layer-plugin"
           }
         ],
-        "updatedAt": "2026-05-11"
+        "updatedAt": "2026-09-13"
       },
       "provenance": [
         {
           "kind": "content_frontmatter",
           "path": "content/work/sitelen-layer-plugin.md",
-          "digest": "ecef7e3afa66a4a63bd70623453ff2bf6cf56a593d53c9ab006511c06d49e350"
+          "digest": "772b37a119cf7531ac00e673e5360136306dbbf75a21ddd3fce03a933f7b6ef6"
         }
       ]
     },
@@ -992,7 +1178,7 @@
       "kind": "project",
       "name": "SPIKE SPOT COMMODITY INDEX UKRAINE",
       "canonicalUrl": "https://abvx.xyz/work/spike-spot-commodity-index-ukraine",
-      "summary": "SPIKE SPOT COMMODITY INDEX UKRAINE is a benchmark and reference-price infrastructure project for Ukrainian agro-commodity spot markets.",
+      "summary": "SPIKE publishes 13 public positions grouped into Grains Export, Oilseeds Export and Oilseeds Crush, and now publishes daily public reference snapshots for selected CPT and FCA spot benchmarks in addition to its weekly market-commentary snapshots.",
       "attributes": {
         "status": "live",
         "section": "focus",
@@ -1020,13 +1206,13 @@
             "url": "https://github.com/markoblogo/index"
           }
         ],
-        "updatedAt": "2026-05-12"
+        "updatedAt": "2026-07-28"
       },
       "provenance": [
         {
           "kind": "content_frontmatter",
           "path": "content/work/spike-spot-commodity-index-ukraine.md",
-          "digest": "82cb71911f5569f2e2fcdca0b3309b4803175a939c1407af79dd5c2480688268"
+          "digest": "6423f9836214123d99cf15530c42b4bdc4f46542ad7ee8fc2e0c495f3571a31b"
         }
       ]
     },
@@ -1070,9 +1256,9 @@
     {
       "id": "project:toki-pona-ai-translator",
       "kind": "project",
-      "name": "Toki Pona AI translator",
+      "name": "Toki Pona Toolkit",
       "canonicalUrl": "https://abvx.xyz/work/toki-pona-ai-translator",
-      "summary": "Toki Pona AI translator is an experimental translation interface for converting natural language into toki pona and related visual-script forms.",
+      "summary": "A unified Toki Pona toolkit for AI translation, sitelen pona and emoji rendering, reusable JavaScript/Python packages, and manuscript QA.",
       "attributes": {
         "status": "live",
         "section": "systems",
@@ -1080,7 +1266,10 @@
           "toki-pona",
           "language-ai",
           "translator",
-          "ai-service"
+          "sitelen-pona",
+          "sitelen-emoji",
+          "npm",
+          "pypi"
         ],
         "links": [
           {
@@ -1099,13 +1288,13 @@
             "url": "https://youtu.be/lCAFiDnP2NQ?si=HOEWm4Cr1VVRitPt"
           }
         ],
-        "updatedAt": "2026-05-05"
+        "updatedAt": "2026-09-13"
       },
       "provenance": [
         {
           "kind": "content_frontmatter",
           "path": "content/work/toki-pona-ai-translator.md",
-          "digest": "ce46ed0ef71d044f072dce32ad2cadfc4fba68c57c834ef40383ee0ae53627b6"
+          "digest": "017c02741b39951fd098aab07baee1273bb005006877d91fc6ffafbc2acc5fa5"
         }
       ]
     },
@@ -1196,7 +1385,7 @@
       "kind": "project",
       "name": "UGA Index",
       "canonicalUrl": "https://abvx.xyz/work/uga-index",
-      "summary": "UGA Index is a benchmark platform for daily Ukrainian grain and oilseed export price references built with the Ukrainian Grain Association.",
+      "summary": "UGA Index is a lightweight public view of SPIKE SPOT INDEX data for the Ukrainian grain market, without a separate database or benchmark pipeline.",
       "attributes": {
         "status": "building",
         "section": "focus",
@@ -1219,7 +1408,7 @@
           {
             "type": "github",
             "label": "GitHub",
-            "url": "https://github.com/markoblogo/index-uga"
+            "url": "https://github.com/markoblogo/index"
           }
         ],
         "updatedAt": "2026-05-08"
@@ -1228,7 +1417,7 @@
         {
           "kind": "content_frontmatter",
           "path": "content/work/uga-index.md",
-          "digest": "8f5127fcc03d1877211d934b456715d72226be9e556331fe9e8b945bce36385b"
+          "digest": "3ef7c60f1a52e485c9d0f7fd9d3cc14d373655b5eeff6a4c02526e8269a29465"
         }
       ]
     },
@@ -1279,7 +1468,7 @@
       "kind": "project",
       "name": "YTMamp",
       "canonicalUrl": "https://abvx.xyz/work/ytmamp",
-      "summary": "YTMamp is a macOS app and browser-extension experiment that transforms YouTube Music into a Winamp-inspired player experience.",
+      "summary": "A retro desktop remote for YouTube Music with a Chromium companion, waveform, media controls, and a token-protected local integration API.",
       "attributes": {
         "status": "released",
         "section": "systems",
@@ -1307,7 +1496,7 @@
         {
           "kind": "content_frontmatter",
           "path": "content/work/ytmamp.md",
-          "digest": "0e880480463d1858188b66db91d729444f78cfd6e334c40348767d9ce83c5879"
+          "digest": "ffef7b5a96ba345c652f48c88ee579f1e129b49a10ac1532a572d299312c2f0e"
         }
       ]
     },
@@ -1344,6 +1533,45 @@
           "kind": "content_frontmatter",
           "path": "content/books/boh-buv-zainiatyi-kanalizatsiieiu.md",
           "digest": "d1c992a4d734b8de30738c1ff783a4614959a5e53148e00d5a07cf5fce16f032"
+        }
+      ]
+    },
+    {
+      "id": "publication:burgers-lipstick-underwear",
+      "kind": "publication",
+      "name": "Burgers, Lipstick & Underwear: What Strange Indicators Really Tell Us About the Economy",
+      "canonicalUrl": "https://abvx.xyz/books/burgers-lipstick-underwear",
+      "summary": "A sharp, entertaining guide to the strange indicators people use to make the economy readable—from Big Macs and iPhone work-hours to lipstick, freight rates, pollution equivalents, and AI benchmarks.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "economy",
+          "indices",
+          "data",
+          "markets",
+          "benchmarks",
+          "economic signals"
+        ],
+        "links": [
+          {
+            "type": "kindle",
+            "label": "Kindle",
+            "url": "https://www.amazon.com/dp/B0HF5DWCHB"
+          },
+          {
+            "type": "paperback",
+            "label": "Paperback",
+            "url": "https://www.amazon.com/dp/B0HF7SJJ7N"
+          }
+        ],
+        "updatedAt": "2026-08-14"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/burgers-lipstick-underwear.md",
+          "digest": "5a0f98f2d23fbba2fbfb80fb74548bb29ea63a2cb35ad8b505eb5d3346d67829"
         }
       ]
     },
@@ -1635,6 +1863,45 @@
           "kind": "content_frontmatter",
           "path": "content/books/epictetus-enchiridion-toki-pona.md",
           "digest": "478b02d4e8b7a4bd3b96821ff860d285f6b4df5ffab03ccd6b94eec97f725ea8"
+        }
+      ]
+    },
+    {
+      "id": "publication:fragments-from-a-therapists-notebook",
+      "kind": "publication",
+      "name": "Fragments from a Therapist’s Notebook: Short Psychological Observations on Trauma, Identity, Relationships, Anxiety and the Human Mind",
+      "canonicalUrl": "https://abvx.xyz/books/fragments-from-a-therapists-notebook",
+      "summary": "A psychological notebook of short observations on trauma, identity, relationships, anxiety, grief, addiction and the hidden patterns behind human behavior.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "psychology",
+          "trauma",
+          "identity",
+          "relationships",
+          "anxiety",
+          "human mind"
+        ],
+        "links": [
+          {
+            "type": "kindle",
+            "label": "Kindle",
+            "url": "https://www.amazon.com/dp/B0HF38FS2X"
+          },
+          {
+            "type": "paperback",
+            "label": "Paperback",
+            "url": "https://www.amazon.com/dp/B0HCVPYC5D"
+          }
+        ],
+        "updatedAt": "2026-08-13"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/fragments-from-a-therapists-notebook.md",
+          "digest": "dc1841fc795043675a3d75e5d763fb72642a8853b761c554cd92b44703d90db6"
         }
       ]
     },
@@ -2619,6 +2886,40 @@
       ]
     },
     {
+      "id": "publication:your-saas-bill-is-ridiculous",
+      "kind": "publication",
+      "name": "Your SaaS Bill Is Ridiculous",
+      "canonicalUrl": "https://abvx.xyz/books/your-saas-bill-is-ridiculous",
+      "summary": "A short, skeptical field guide to open-source tools that can replace expensive SaaS, and to the costs that tend to reappear when you decide to run the software yourself.",
+      "attributes": {
+        "status": "released",
+        "section": "books",
+        "tags": [
+          "open source",
+          "SaaS",
+          "self-hosting",
+          "AI tools",
+          "software",
+          "business software"
+        ],
+        "links": [
+          {
+            "type": "pdf",
+            "label": "DOWNLOAD FREE PDF",
+            "url": "/media/books/your-saas-bill-is-ridiculous/your-saas-bill-is-ridiculous.pdf"
+          }
+        ],
+        "updatedAt": "2026-08-12"
+      },
+      "provenance": [
+        {
+          "kind": "content_frontmatter",
+          "path": "content/books/your-saas-bill-is-ridiculous.md",
+          "digest": "1bfbb004e8460a8a8719d0c31809afb67a8d015b616bac88c3cb93d1a4b62960"
+        }
+      ]
+    },
+    {
       "id": "series:chinese-wisdom-toki-pona",
       "kind": "series",
       "name": "Chinese Wisdom in toki pona",
@@ -2816,376 +3117,376 @@
       ]
     },
     {
-      "id": "writing-item:medium:adajepa-the-world-model-that-changes-its-mind-when-reality-disagrees",
+      "id": "writing-item:medium:how-anthropic-s-sales-team-actually-uses-ai",
       "kind": "writing_item",
-      "name": "AdaJEPA: The World Model That Changes Its Mind When Reality Disagrees",
-      "canonicalUrl": "https://abvcreative.medium.com/adajepa-the-world-model-that-changes-its-mind-when-reality-disagrees-3ec546f79080?source=rss-7ec8b9d56ffd------2",
+      "name": "How Anthropic’s Sales Team Actually Uses AI",
+      "canonicalUrl": "https://abvcreative.medium.com/how-anthropics-sales-team-actually-uses-ai-35abfa2982c0?source=rss-7ec8b9d56ffd------2",
       "summary": null,
       "attributes": {
-        "publishedAt": "Wed, 15 Jul 2026 17:33:47 GMT"
+        "publishedAt": "Sat, 05 Sep 2026 09:52:01 GMT"
       },
       "provenance": [
         {
           "kind": "rss_item",
           "path": "https://abvcreative.medium.com/feed",
-          "digest": "61d3b706d921c2de56e8bb6d5247ff66d7573e6073bd55cf4a9a47e1af7fe60d"
+          "digest": "f06d3b94448932c5fc4b899190b00187d9d5369456a4e9125d78270adb01495c"
         }
       ]
     },
     {
-      "id": "writing-item:medium:ai-coding-tools-made-developers-faster-then-the-system-hit-a-wall",
+      "id": "writing-item:medium:how-small-can-a-useful-local-ai-model-actually-get",
       "kind": "writing_item",
-      "name": "AI Coding Tools Made Developers Faster. Then the System Hit a Wall.",
-      "canonicalUrl": "https://abvcreative.medium.com/ai-coding-tools-made-developers-faster-then-the-system-hit-a-wall-29f509f96daa?source=rss-7ec8b9d56ffd------2",
+      "name": "How Small Can a Useful Local AI Model Actually Get?",
+      "canonicalUrl": "https://abvcreative.medium.com/how-small-can-a-useful-local-ai-model-actually-get-9679e788292a?source=rss-7ec8b9d56ffd------2",
       "summary": null,
       "attributes": {
-        "publishedAt": "Thu, 09 Jul 2026 13:30:20 GMT"
+        "publishedAt": "Thu, 27 Aug 2026 11:52:34 GMT"
       },
       "provenance": [
         {
           "kind": "rss_item",
           "path": "https://abvcreative.medium.com/feed",
-          "digest": "4e3e784d44a83c4553b768ed8f8601a2481ee9e3d827146681b278b4d3636d2d"
+          "digest": "eb5aa87f99dbeda73a94acaf72e40f2be1c1241bc14a9725ac2515e82f903357"
         }
       ]
     },
     {
-      "id": "writing-item:medium:ai-trusts-nerdwallet-that-may-still-be-terrible-news-for-nerdwallet",
+      "id": "writing-item:medium:i-accidentally-built-a-small-operating-stack-for-ai-coding-agents",
       "kind": "writing_item",
-      "name": "AI Trusts NerdWallet. That May Still Be Terrible News for NerdWallet.",
-      "canonicalUrl": "https://abvcreative.medium.com/ai-trusts-nerdwallet-that-may-still-be-terrible-news-for-nerdwallet-ee1f76e81baf?source=rss-7ec8b9d56ffd------2",
+      "name": "I Accidentally Built a Small Operating Stack for AI Coding Agents",
+      "canonicalUrl": "https://abvcreative.medium.com/i-accidentally-built-a-small-operating-stack-for-ai-coding-agents-f8ad00d716af?source=rss-7ec8b9d56ffd------2",
       "summary": null,
       "attributes": {
-        "publishedAt": "Wed, 08 Jul 2026 12:11:45 GMT"
+        "publishedAt": "Mon, 07 Sep 2026 14:48:43 GMT"
       },
       "provenance": [
         {
           "kind": "rss_item",
           "path": "https://abvcreative.medium.com/feed",
-          "digest": "0c2062bd068737febb0dc12fb1186c0be0b0a71350217f3afcf8931765153dab"
+          "digest": "5750ded884bd8aa441edda6229e7f3db02c7dc1676c3f59f7bb2e42b4b291948"
         }
       ]
     },
     {
-      "id": "writing-item:medium:babeltele-when-ai-stops-speaking-human",
+      "id": "writing-item:medium:i-built-a-tiny-visual-protocol-for-when-words-are-too-much",
       "kind": "writing_item",
-      "name": "BabelTele: When AI Stops Speaking Human",
-      "canonicalUrl": "https://abvcreative.medium.com/babeltele-when-ai-stops-speaking-human-943006e83a7d?source=rss-7ec8b9d56ffd------2",
+      "name": "I Built a Tiny Visual Protocol for When Words Are Too Much",
+      "canonicalUrl": "https://abvcreative.medium.com/i-built-a-tiny-visual-protocol-for-when-words-are-too-much-9c86ac61bd73?source=rss-7ec8b9d56ffd------2",
       "summary": null,
       "attributes": {
-        "publishedAt": "Fri, 10 Jul 2026 14:48:28 GMT"
+        "publishedAt": "Thu, 27 Aug 2026 12:16:24 GMT"
       },
       "provenance": [
         {
           "kind": "rss_item",
           "path": "https://abvcreative.medium.com/feed",
-          "digest": "150819f377c1be26f7bc87248bca6cd37a38c2416ad91f97451b9d36bb62e8a2"
+          "digest": "4d3bf992d2a8acd47bbaf86ad9712debeec7076e43531a1bb4ec3906b805ce64"
         }
       ]
     },
     {
-      "id": "writing-item:medium:chatgpt-does-not-pick-sources-the-way-seos-think-it-does",
+      "id": "writing-item:medium:local-ai-is-getting-slightly-ridiculous",
       "kind": "writing_item",
-      "name": "ChatGPT Does Not Pick Sources the Way SEOs Think It Does",
-      "canonicalUrl": "https://abvcreative.medium.com/chatgpt-does-not-pick-sources-the-way-seos-think-it-does-73009e7c30df?source=rss-7ec8b9d56ffd------2",
+      "name": "Local AI Is Getting Slightly Ridiculous",
+      "canonicalUrl": "https://abvcreative.medium.com/local-ai-is-getting-slightly-ridiculous-38fee6196847?source=rss-7ec8b9d56ffd------2",
       "summary": null,
       "attributes": {
-        "publishedAt": "Mon, 06 Jul 2026 14:52:28 GMT"
+        "publishedAt": "Tue, 01 Sep 2026 11:59:30 GMT"
       },
       "provenance": [
         {
           "kind": "rss_item",
           "path": "https://abvcreative.medium.com/feed",
-          "digest": "392cd03b883f1020f90593aa6230cba5afcb617ab008028ea4d2e572689f7ab2"
+          "digest": "6dae3d80cd69f9f9968da7826715579dcf953db68979e0cf31e5ce15f05b497f"
         }
       ]
     },
     {
-      "id": "writing-item:medium:claude-science-anthropic-has-built-the-research-workbench-universities-never-did",
+      "id": "writing-item:medium:maybe-all-neural-networks-learn-the-same-thing",
       "kind": "writing_item",
-      "name": "Claude Science: Anthropic Has Built the Research Workbench Universities Never Did",
-      "canonicalUrl": "https://abvcreative.medium.com/claude-science-anthropic-has-built-the-research-workbench-universities-never-did-7298d5ffa4ca?source=rss-7ec8b9d56ffd------2",
+      "name": "Maybe All Neural Networks Learn the Same Thing",
+      "canonicalUrl": "https://abvcreative.medium.com/maybe-all-neural-networks-learn-the-same-thing-08d44273c94d?source=rss-7ec8b9d56ffd------2",
       "summary": null,
       "attributes": {
-        "publishedAt": "Sat, 11 Jul 2026 10:24:39 GMT"
+        "publishedAt": "Wed, 02 Sep 2026 08:53:43 GMT"
       },
       "provenance": [
         {
           "kind": "rss_item",
           "path": "https://abvcreative.medium.com/feed",
-          "digest": "452ec559fa37d925c54dfae190855d4de037f8279f9b824eb7a265b0de36bc30"
+          "digest": "3c0b3b664828e4fd0800c4dabe9e566f5696957c212bd3b8d209bef69d05554b"
         }
       ]
     },
     {
-      "id": "writing-item:medium:inkling-is-not-the-best-ai-model-that-may-be-the-point",
+      "id": "writing-item:medium:pictiq-can-now-be-written-not-just-viewed",
       "kind": "writing_item",
-      "name": "Inkling Is Not the Best AI Model. That May Be the Point.",
-      "canonicalUrl": "https://abvcreative.medium.com/inkling-is-not-the-best-ai-model-that-may-be-the-point-d05de57d7360?source=rss-7ec8b9d56ffd------2",
+      "name": "Pictiq Can Now Be Written, Not Just Viewed",
+      "canonicalUrl": "https://abvcreative.medium.com/pictiq-can-now-be-written-not-just-viewed-bea970f09f00?source=rss-7ec8b9d56ffd------2",
       "summary": null,
       "attributes": {
-        "publishedAt": "Thu, 16 Jul 2026 14:16:46 GMT"
+        "publishedAt": "Sun, 13 Sep 2026 12:05:53 GMT"
       },
       "provenance": [
         {
           "kind": "rss_item",
           "path": "https://abvcreative.medium.com/feed",
-          "digest": "3a9f95e4cc4974da2930ed8f3e247e23d669d4c7fce283f2d01458e6d819eb72"
+          "digest": "583e120a776218ca102e9229c254cc1babac02a260041dafc35e4b6d78dc73ab"
         }
       ]
     },
     {
-      "id": "writing-item:medium:the-ai-will-take-your-job-says-the-chat-log-from-people-who-already-use-ai",
+      "id": "writing-item:medium:terence-tao-thinks-mathematics-may-soon-have-too-many-proofs",
       "kind": "writing_item",
-      "name": "The AI Will Take Your Job, Says the Chat Log From People Who Already Use AI",
-      "canonicalUrl": "https://abvcreative.medium.com/the-ai-will-take-your-job-says-the-chat-log-from-people-who-already-use-ai-665523415248?source=rss-7ec8b9d56ffd------2",
+      "name": "Terence Tao Thinks Mathematics May Soon Have Too Many Proofs",
+      "canonicalUrl": "https://abvcreative.medium.com/terence-tao-thinks-mathematics-may-soon-have-too-many-proofs-696ce3a0d326?source=rss-7ec8b9d56ffd------2",
       "summary": null,
       "attributes": {
-        "publishedAt": "Fri, 03 Jul 2026 14:49:23 GMT"
+        "publishedAt": "Mon, 07 Sep 2026 10:57:16 GMT"
       },
       "provenance": [
         {
           "kind": "rss_item",
           "path": "https://abvcreative.medium.com/feed",
-          "digest": "b68dd16e9210bae8aee9c71c737e73c5d713ebc27c78fbf43ccc010d0a6dd2a1"
+          "digest": "d20a47e42d93e78581b99c9cfe1eeeff9ceb8145c1b903e95c19b7d25863dc17"
         }
       ]
     },
     {
-      "id": "writing-item:medium:the-aristotelian-correction-why-neural-networks-may-only-converge-locally",
+      "id": "writing-item:medium:we-want-ai-just-not-the-data-centers-next-door",
       "kind": "writing_item",
-      "name": "The Aristotelian Correction: Why Neural Networks May Only Converge Locally",
-      "canonicalUrl": "https://abvcreative.medium.com/the-aristotelian-correction-why-neural-networks-may-only-converge-locally-c872e736b12d?source=rss-7ec8b9d56ffd------2",
+      "name": "We Want AI. Just Not the Data Centers Next Door.",
+      "canonicalUrl": "https://abvcreative.medium.com/we-want-ai-just-not-the-data-centers-next-door-d6c5ca997ce2?source=rss-7ec8b9d56ffd------2",
       "summary": null,
       "attributes": {
-        "publishedAt": "Wed, 01 Jul 2026 13:41:40 GMT"
+        "publishedAt": "Tue, 08 Sep 2026 21:03:35 GMT"
       },
       "provenance": [
         {
           "kind": "rss_item",
           "path": "https://abvcreative.medium.com/feed",
-          "digest": "dd772806a6eb22e55aa7cde1b16768a16ec065ea4bb84b1c63fe5bce9aa2e4bb"
+          "digest": "dc22922e43c5899e26c07917806073c1bdd7302346ee54b8b546fbd83c7f7ee1"
         }
       ]
     },
     {
-      "id": "writing-item:medium:the-death-of-the-chat-window-openai-just-showed-what-the-next-interface-looks-like",
+      "id": "writing-item:medium:what-if-a-transformer-could-keep-thinking-between-tokens",
       "kind": "writing_item",
-      "name": "The Death of the Chat Window: OpenAI Just Showed What the Next Interface Looks Like",
-      "canonicalUrl": "https://abvcreative.medium.com/the-death-of-the-chat-window-openai-just-showed-what-the-next-interface-looks-like-25e342fc1dd7?source=rss-7ec8b9d56ffd------2",
+      "name": "What If a Transformer Could Keep Thinking Between Tokens?",
+      "canonicalUrl": "https://abvcreative.medium.com/what-if-a-transformer-could-keep-thinking-between-tokens-3ac23898e013?source=rss-7ec8b9d56ffd------2",
       "summary": null,
       "attributes": {
-        "publishedAt": "Sat, 04 Jul 2026 18:05:31 GMT"
+        "publishedAt": "Mon, 14 Sep 2026 11:33:07 GMT"
       },
       "provenance": [
         {
           "kind": "rss_item",
           "path": "https://abvcreative.medium.com/feed",
-          "digest": "6473cee34d68ec7af4e64b5c7aaa51e14e2303a99b66381cb20bc3c5a7f5bb84"
+          "digest": "582ed749c5c7a623f7e881c61a83aa54e76b8d542f2fe55db94c28bb324ae8bf"
         }
       ]
     },
     {
-      "id": "writing-item:substack:before-you-launch-your-vibe-coded-app-please-check-the-doors",
+      "id": "writing-item:substack:how-to-become-successful-and-beautiful-in-the-ai-era",
       "kind": "writing_item",
-      "name": "Before You Launch Your Vibe-Coded App, Please Check the Doors",
-      "canonicalUrl": "https://abvx.substack.com/p/before-you-launch-your-vibe-coded",
+      "name": "How to Become Successful and Beautiful in the AI Era",
+      "canonicalUrl": "https://abvx.substack.com/p/how-to-become-successful-and-beautiful",
       "summary": null,
       "attributes": {
-        "publishedAt": "Thu, 09 Jul 2026 17:30:30 GMT"
+        "publishedAt": "Tue, 01 Sep 2026 09:02:06 GMT"
       },
       "provenance": [
         {
           "kind": "rss_item",
           "path": "https://abvx.substack.com/feed",
-          "digest": "e5ed231b6f70e484f822a8895dde89d588a14f21dc1b79cf9e2d11d397fa0194"
+          "digest": "2c394bd51fdc9f54774a7da2e1b64a98d874c32499cac52bd56db9f432a8b176"
         }
       ]
     },
     {
-      "id": "writing-item:substack:first-we-removed-the-keyboard-now-meta-wants-to-remove-the-microphone",
+      "id": "writing-item:substack:i-accidentally-built-a-small-operating-stack-for-ai-coding-agents",
       "kind": "writing_item",
-      "name": "First We Removed the Keyboard. Now Meta Wants to Remove the Microphone.",
-      "canonicalUrl": "https://abvx.substack.com/p/first-we-removed-the-keyboard-now",
+      "name": "I Accidentally Built a Small Operating Stack for AI Coding Agents",
+      "canonicalUrl": "https://abvx.substack.com/p/i-accidentally-built-a-small-operating",
       "summary": null,
       "attributes": {
-        "publishedAt": "Fri, 10 Jul 2026 15:38:08 GMT"
+        "publishedAt": "Mon, 07 Sep 2026 14:54:02 GMT"
       },
       "provenance": [
         {
           "kind": "rss_item",
           "path": "https://abvx.substack.com/feed",
-          "digest": "699269b5a6290245844dfc7ced97f5c83d280c83bb35f88acfce5ba833e20f8f"
+          "digest": "a24ed2c76c86f2a85a45b437a373614d082e0d45a969c7155d770d3448eed4d2"
         }
       ]
     },
     {
-      "id": "writing-item:substack:how-to-build-an-agent-that-actually-gets-better-over-time",
+      "id": "writing-item:substack:i-built-a-tiny-visual-protocol-for-when-words-are-too-much",
       "kind": "writing_item",
-      "name": "How to Build an Agent That Actually Gets Better Over Time",
-      "canonicalUrl": "https://abvx.substack.com/p/how-to-build-an-agent-that-actually",
+      "name": "I Built a Tiny Visual Protocol for When Words Are Too Much",
+      "canonicalUrl": "https://abvx.substack.com/p/i-built-a-tiny-visual-protocol-for",
       "summary": null,
       "attributes": {
-        "publishedAt": "Wed, 08 Jul 2026 15:08:00 GMT"
+        "publishedAt": "Thu, 27 Aug 2026 12:23:40 GMT"
       },
       "provenance": [
         {
           "kind": "rss_item",
           "path": "https://abvx.substack.com/feed",
-          "digest": "40a2f05b49a0e9439333a76ccd5e87016a8efaee58a5229c927f848d5b17b819"
+          "digest": "b21f622301d0fba8909f485fb3d25422da93b49afa4abc7c49e3e4881abb1825"
         }
       ]
     },
     {
-      "id": "writing-item:substack:mythos-and-the-end-of-comfortable-cybersecurity",
+      "id": "writing-item:substack:if-you-re-betting-on-agi-follow-the-bottleneck-down-the-stack",
       "kind": "writing_item",
-      "name": "Mythos and the End of Comfortable Cybersecurity",
-      "canonicalUrl": "https://abvx.substack.com/p/mythos-and-the-end-of-comfortable",
+      "name": "If You’re Betting on AGI, Follow the Bottleneck Down the Stack",
+      "canonicalUrl": "https://abvx.substack.com/p/if-youre-betting-on-agi-follow-the",
       "summary": null,
       "attributes": {
-        "publishedAt": "Tue, 30 Jun 2026 19:09:38 GMT"
+        "publishedAt": "Wed, 26 Aug 2026 10:44:28 GMT"
       },
       "provenance": [
         {
           "kind": "rss_item",
           "path": "https://abvx.substack.com/feed",
-          "digest": "cb773843d0e795b30205fa9ba2e98a3080aa3d2e604a2243648488917d3d3a86"
+          "digest": "f375de7364292387bd7991a3ed721e71248fde4ab4358503f6d8eab40885fc5e"
         }
       ]
     },
     {
-      "id": "writing-item:substack:paid-newsletters-in-2026-the-paywall-is-not-the-product",
+      "id": "writing-item:substack:ilya-sutskever-may-finally-be-about-to-show-us-what-ssi-has-been-building",
       "kind": "writing_item",
-      "name": "Paid Newsletters in 2026: The Paywall Is Not the Product",
-      "canonicalUrl": "https://abvx.substack.com/p/paid-newsletters-in-2026-the-paywall",
+      "name": "Ilya Sutskever May Finally Be About to Show Us What SSI Has Been Building",
+      "canonicalUrl": "https://abvx.substack.com/p/ilya-sutskever-may-finally-be-about",
       "summary": null,
       "attributes": {
-        "publishedAt": "Sun, 28 Jun 2026 17:03:56 GMT"
+        "publishedAt": "Thu, 27 Aug 2026 11:24:52 GMT"
       },
       "provenance": [
         {
           "kind": "rss_item",
           "path": "https://abvx.substack.com/feed",
-          "digest": "c62d0315aa91ba841a4ac86ea4e9bd66ae6d6ab84c1dd028d2c44facc233ade8"
+          "digest": "513a0a0e7100cf94d35806eb500c5146d6f42d0c5339d091751bea154a8bb650"
         }
       ]
     },
     {
-      "id": "writing-item:substack:posting-on-linkedin-is-cringe-burning-300k-on-leads-is-worse",
+      "id": "writing-item:substack:let-your-ai-tell-you-what-s-wrong-with-you",
       "kind": "writing_item",
-      "name": "Posting on LinkedIn Is Cringe. Burning $300K on Leads Is Worse.",
-      "canonicalUrl": "https://abvx.substack.com/p/posting-on-linkedin-is-cringe-burning",
+      "name": "Let Your AI Tell You What’s Wrong With You",
+      "canonicalUrl": "https://abvx.substack.com/p/let-your-ai-tell-you-whats-wrong",
       "summary": null,
       "attributes": {
-        "publishedAt": "Sat, 04 Jul 2026 17:34:29 GMT"
+        "publishedAt": "Sat, 05 Sep 2026 10:31:05 GMT"
       },
       "provenance": [
         {
           "kind": "rss_item",
           "path": "https://abvx.substack.com/feed",
-          "digest": "33d9a975dfe6f120a5280b5066d7f64d37a0db072088852ffd52bb99da6313b4"
+          "digest": "7b107bee7e7a12b68aa15670cc493abaf7a70e294e6b89a03a755525e5a48ef3"
         }
       ]
     },
     {
-      "id": "writing-item:substack:stop-prompting-ai-start-engineering-loops",
+      "id": "writing-item:substack:my-10-year-ai-probability-list",
       "kind": "writing_item",
-      "name": "Stop Prompting AI. Start Engineering Loops.",
-      "canonicalUrl": "https://abvx.substack.com/p/stop-prompting-ai-start-engineering",
+      "name": "My 10-Year AI Probability List",
+      "canonicalUrl": "https://abvx.substack.com/p/my-10-year-ai-probability-list",
       "summary": null,
       "attributes": {
-        "publishedAt": "Mon, 29 Jun 2026 16:08:35 GMT"
+        "publishedAt": "Mon, 14 Sep 2026 11:24:30 GMT"
       },
       "provenance": [
         {
           "kind": "rss_item",
           "path": "https://abvx.substack.com/feed",
-          "digest": "ceaabf6b1a7a249986fe2b275ad75da7c601ee98b1cfb1f45056ed97b398b6cf"
+          "digest": "a42d7ca8f5098e5f08bc47f81f358b0877180dd49f4b93f5a975da8d49c84630"
         }
       ]
     },
     {
-      "id": "writing-item:substack:the-first-herculaneum-scroll-has-finally-been-read",
+      "id": "writing-item:substack:pictiq-can-now-be-written-not-just-viewed",
       "kind": "writing_item",
-      "name": "The First Herculaneum Scroll Has Finally Been Read",
-      "canonicalUrl": "https://abvx.substack.com/p/the-first-herculaneum-scroll-has",
+      "name": "Pictiq Can Now Be Written, Not Just Viewed",
+      "canonicalUrl": "https://abvx.substack.com/p/pictiq-can-now-be-written-not-just",
       "summary": null,
       "attributes": {
-        "publishedAt": "Mon, 06 Jul 2026 15:48:46 GMT"
+        "publishedAt": "Sun, 13 Sep 2026 12:01:18 GMT"
       },
       "provenance": [
         {
           "kind": "rss_item",
           "path": "https://abvx.substack.com/feed",
-          "digest": "87d360ddeae43034eff15492f6fbcf4901d2f1810236876f047f80bfab3f38ee"
+          "digest": "bdc6bbfcdbb1ddba1392793d77d119e878d5fc2344ff571027b96c272b10f4e1"
         }
       ]
     },
     {
-      "id": "writing-item:substack:the-great-wrapper-panic",
+      "id": "writing-item:substack:please-stop-sending-me-your-chatgpt-answers",
       "kind": "writing_item",
-      "name": "The Great Wrapper Panic",
-      "canonicalUrl": "https://abvx.substack.com/p/the-great-wrapper-panic",
+      "name": "Please Stop Sending Me Your ChatGPT Answers",
+      "canonicalUrl": "https://abvx.substack.com/p/please-stop-sending-me-your-chatgpt",
       "summary": null,
       "attributes": {
-        "publishedAt": "Wed, 24 Jun 2026 10:58:05 GMT"
+        "publishedAt": "Tue, 08 Sep 2026 20:45:42 GMT"
       },
       "provenance": [
         {
           "kind": "rss_item",
           "path": "https://abvx.substack.com/feed",
-          "digest": "b494691266d0ec528a962a608f1e14d7ea7cad3ba25cfcc0a998990b0edd5c8a"
+          "digest": "7f010113afdbe5391f886747ea5ce070d2b8aab799b29aabecb49519318506ca"
         }
       ]
     },
     {
-      "id": "writing-item:substack:the-hitchhiker-s-guide-to-agentic-ai-finally-a-map-for-the-whole-machine",
+      "id": "writing-item:substack:the-five-stages-of-ai-grief-for-software-developers",
       "kind": "writing_item",
-      "name": "The Hitchhiker’s Guide to Agentic AI: Finally, a Map for the Whole Machine",
-      "canonicalUrl": "https://abvx.substack.com/p/the-hitchhikers-guide-to-agentic",
+      "name": "The Five Stages of AI Grief for Software Developers",
+      "canonicalUrl": "https://abvx.substack.com/p/the-five-stages-of-ai-grief-for-software",
       "summary": null,
       "attributes": {
-        "publishedAt": "Fri, 03 Jul 2026 17:21:12 GMT"
+        "publishedAt": "Wed, 02 Sep 2026 09:14:45 GMT"
       },
       "provenance": [
         {
           "kind": "rss_item",
           "path": "https://abvx.substack.com/feed",
-          "digest": "fa3cdc4f9dcafd8426a23d0a98d64b1b8a889e609deb08b4a52f81533889e439"
+          "digest": "cc3cdcb9d8bcba698a430212f2ff0897b1faf7e32dcf01426251f10f8d79e416"
         }
       ]
     },
     {
-      "id": "writing-item:substack:what-should-you-build-in-the-age-of-ai",
+      "id": "writing-item:substack:your-ai-s-encrypted-thoughts-may-not-be-encrypted-enough",
       "kind": "writing_item",
-      "name": "What Should You Build in the Age of AI?",
-      "canonicalUrl": "https://abvx.substack.com/p/what-should-you-build-in-the-age",
+      "name": "Your AI’s Encrypted Thoughts May Not Be Encrypted Enough",
+      "canonicalUrl": "https://abvx.substack.com/p/your-ais-encrypted-thoughts-may-not",
       "summary": null,
       "attributes": {
-        "publishedAt": "Wed, 15 Jul 2026 16:11:54 GMT"
+        "publishedAt": "Mon, 07 Sep 2026 10:37:01 GMT"
       },
       "provenance": [
         {
           "kind": "rss_item",
           "path": "https://abvx.substack.com/feed",
-          "digest": "a99fa4fdb562203658a91dd0677a7e008b932681db29317f2b0dc5a279916a3a"
+          "digest": "b11dc73f3b1c1a0ac77da2035d7c4920fa51a51b9cc4bd4aec6e668df21dcccf"
         }
       ]
     },
     {
-      "id": "writing-item:substack:what-will-agi-actually-look-like",
+      "id": "writing-item:substack:your-newsletter-subscription-may-soon-have-a-price-just-for-you",
       "kind": "writing_item",
-      "name": "What Will AGI Actually Look Like?",
-      "canonicalUrl": "https://abvx.substack.com/p/what-will-agi-actually-look-like",
+      "name": "Your Newsletter Subscription May Soon Have a Price Just for You",
+      "canonicalUrl": "https://abvx.substack.com/p/your-newsletter-subscription-may",
       "summary": null,
       "attributes": {
-        "publishedAt": "Thu, 16 Jul 2026 13:17:25 GMT"
+        "publishedAt": "Mon, 24 Aug 2026 12:07:49 GMT"
       },
       "provenance": [
         {
           "kind": "rss_item",
           "path": "https://abvx.substack.com/feed",
-          "digest": "778ec34aa3cf6dc6d74e735aae12e5c977629ed8ecb316091ad78a82bf42f503"
+          "digest": "2f520c4c4b455f74e96e5ecb7b4c74d4ee1db5393a3069de6094922a98263f4a"
         }
       ]
     },
@@ -3240,6 +3541,11 @@
     {
       "from": "lab:abvx",
       "type": "catalogues",
+      "to": "project:abvx-os"
+    },
+    {
+      "from": "lab:abvx",
+      "type": "catalogues",
       "to": "project:abvx-shortener"
     },
     {
@@ -3270,6 +3576,11 @@
     {
       "from": "lab:abvx",
       "type": "catalogues",
+      "to": "project:coqpi"
+    },
+    {
+      "from": "lab:abvx",
+      "type": "catalogues",
       "to": "project:decision-map"
     },
     {
@@ -3281,6 +3592,11 @@
       "from": "lab:abvx",
       "type": "catalogues",
       "to": "project:id"
+    },
+    {
+      "from": "lab:abvx",
+      "type": "catalogues",
+      "to": "project:pocket-os-cardputer"
     },
     {
       "from": "lab:abvx",
@@ -3365,12 +3681,22 @@
     {
       "from": "site:abvx",
       "type": "contains",
+      "to": "project:abvx-os"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
       "to": "project:abvx-shortener"
     },
     {
       "from": "site:abvx",
       "type": "contains",
       "to": "project:agents-md-generator"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:ami-books-physical-commodity-markets"
     },
     {
       "from": "site:abvx",
@@ -3390,7 +3716,17 @@
     {
       "from": "site:abvx",
       "type": "contains",
+      "to": "project:book-landings"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
       "to": "project:chinese-wisdom-toki-pona-landing"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:coqpi"
     },
     {
       "from": "site:abvx",
@@ -3446,6 +3782,11 @@
       "from": "site:abvx",
       "type": "contains",
       "to": "project:pictiq"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "project:pocket-os-cardputer"
     },
     {
       "from": "site:abvx",
@@ -3510,6 +3851,11 @@
     {
       "from": "site:abvx",
       "type": "contains",
+      "to": "publication:burgers-lipstick-underwear"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
       "to": "publication:chinese-wisdom-reader-guide"
     },
     {
@@ -3536,6 +3882,11 @@
       "from": "site:abvx",
       "type": "contains",
       "to": "publication:epictetus-enchiridion-toki-pona"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
+      "to": "publication:fragments-from-a-therapists-notebook"
     },
     {
       "from": "site:abvx",
@@ -3640,6 +3991,11 @@
     {
       "from": "site:abvx",
       "type": "contains",
+      "to": "publication:your-saas-bill-is-ridiculous"
+    },
+    {
+      "from": "site:abvx",
+      "type": "contains",
       "to": "series:chinese-wisdom-toki-pona"
     },
     {
@@ -3665,112 +4021,112 @@
     {
       "from": "writing:medium",
       "type": "publishes",
-      "to": "writing-item:medium:adajepa-the-world-model-that-changes-its-mind-when-reality-disagrees"
+      "to": "writing-item:medium:how-anthropic-s-sales-team-actually-uses-ai"
     },
     {
       "from": "writing:medium",
       "type": "publishes",
-      "to": "writing-item:medium:ai-coding-tools-made-developers-faster-then-the-system-hit-a-wall"
+      "to": "writing-item:medium:how-small-can-a-useful-local-ai-model-actually-get"
     },
     {
       "from": "writing:medium",
       "type": "publishes",
-      "to": "writing-item:medium:ai-trusts-nerdwallet-that-may-still-be-terrible-news-for-nerdwallet"
+      "to": "writing-item:medium:i-accidentally-built-a-small-operating-stack-for-ai-coding-agents"
     },
     {
       "from": "writing:medium",
       "type": "publishes",
-      "to": "writing-item:medium:babeltele-when-ai-stops-speaking-human"
+      "to": "writing-item:medium:i-built-a-tiny-visual-protocol-for-when-words-are-too-much"
     },
     {
       "from": "writing:medium",
       "type": "publishes",
-      "to": "writing-item:medium:chatgpt-does-not-pick-sources-the-way-seos-think-it-does"
+      "to": "writing-item:medium:local-ai-is-getting-slightly-ridiculous"
     },
     {
       "from": "writing:medium",
       "type": "publishes",
-      "to": "writing-item:medium:claude-science-anthropic-has-built-the-research-workbench-universities-never-did"
+      "to": "writing-item:medium:maybe-all-neural-networks-learn-the-same-thing"
     },
     {
       "from": "writing:medium",
       "type": "publishes",
-      "to": "writing-item:medium:inkling-is-not-the-best-ai-model-that-may-be-the-point"
+      "to": "writing-item:medium:pictiq-can-now-be-written-not-just-viewed"
     },
     {
       "from": "writing:medium",
       "type": "publishes",
-      "to": "writing-item:medium:the-ai-will-take-your-job-says-the-chat-log-from-people-who-already-use-ai"
+      "to": "writing-item:medium:terence-tao-thinks-mathematics-may-soon-have-too-many-proofs"
     },
     {
       "from": "writing:medium",
       "type": "publishes",
-      "to": "writing-item:medium:the-aristotelian-correction-why-neural-networks-may-only-converge-locally"
+      "to": "writing-item:medium:we-want-ai-just-not-the-data-centers-next-door"
     },
     {
       "from": "writing:medium",
       "type": "publishes",
-      "to": "writing-item:medium:the-death-of-the-chat-window-openai-just-showed-what-the-next-interface-looks-like"
+      "to": "writing-item:medium:what-if-a-transformer-could-keep-thinking-between-tokens"
     },
     {
       "from": "writing:substack",
       "type": "publishes",
-      "to": "writing-item:substack:before-you-launch-your-vibe-coded-app-please-check-the-doors"
+      "to": "writing-item:substack:how-to-become-successful-and-beautiful-in-the-ai-era"
     },
     {
       "from": "writing:substack",
       "type": "publishes",
-      "to": "writing-item:substack:first-we-removed-the-keyboard-now-meta-wants-to-remove-the-microphone"
+      "to": "writing-item:substack:i-accidentally-built-a-small-operating-stack-for-ai-coding-agents"
     },
     {
       "from": "writing:substack",
       "type": "publishes",
-      "to": "writing-item:substack:how-to-build-an-agent-that-actually-gets-better-over-time"
+      "to": "writing-item:substack:i-built-a-tiny-visual-protocol-for-when-words-are-too-much"
     },
     {
       "from": "writing:substack",
       "type": "publishes",
-      "to": "writing-item:substack:mythos-and-the-end-of-comfortable-cybersecurity"
+      "to": "writing-item:substack:if-you-re-betting-on-agi-follow-the-bottleneck-down-the-stack"
     },
     {
       "from": "writing:substack",
       "type": "publishes",
-      "to": "writing-item:substack:paid-newsletters-in-2026-the-paywall-is-not-the-product"
+      "to": "writing-item:substack:ilya-sutskever-may-finally-be-about-to-show-us-what-ssi-has-been-building"
     },
     {
       "from": "writing:substack",
       "type": "publishes",
-      "to": "writing-item:substack:posting-on-linkedin-is-cringe-burning-300k-on-leads-is-worse"
+      "to": "writing-item:substack:let-your-ai-tell-you-what-s-wrong-with-you"
     },
     {
       "from": "writing:substack",
       "type": "publishes",
-      "to": "writing-item:substack:stop-prompting-ai-start-engineering-loops"
+      "to": "writing-item:substack:my-10-year-ai-probability-list"
     },
     {
       "from": "writing:substack",
       "type": "publishes",
-      "to": "writing-item:substack:the-first-herculaneum-scroll-has-finally-been-read"
+      "to": "writing-item:substack:pictiq-can-now-be-written-not-just-viewed"
     },
     {
       "from": "writing:substack",
       "type": "publishes",
-      "to": "writing-item:substack:the-great-wrapper-panic"
+      "to": "writing-item:substack:please-stop-sending-me-your-chatgpt-answers"
     },
     {
       "from": "writing:substack",
       "type": "publishes",
-      "to": "writing-item:substack:the-hitchhiker-s-guide-to-agentic-ai-finally-a-map-for-the-whole-machine"
+      "to": "writing-item:substack:the-five-stages-of-ai-grief-for-software-developers"
     },
     {
       "from": "writing:substack",
       "type": "publishes",
-      "to": "writing-item:substack:what-should-you-build-in-the-age-of-ai"
+      "to": "writing-item:substack:your-ai-s-encrypted-thoughts-may-not-be-encrypted-enough"
     },
     {
       "from": "writing:substack",
       "type": "publishes",
-      "to": "writing-item:substack:what-will-agi-actually-look-like"
+      "to": "writing-item:substack:your-newsletter-subscription-may-soon-have-a-price-just-for-you"
     }
   ]
 }

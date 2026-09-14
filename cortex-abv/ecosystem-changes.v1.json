@@ -1,38 +1,17 @@
 {
   "schemaVersion": 1,
   "kind": "ABVXEcosystemChangeSet",
-  "observedAt": "2026-09-14T12:24:35.656Z",
+  "observedAt": "2026-09-14T13:07:24.347Z",
   "changes": [
     {
-      "nodeId": "trade-solutions",
-      "changedFields": [
-        "canonicalUrl"
-      ]
-    },
-    {
-      "nodeId": "mn7r",
-      "changedFields": [
-        "canonicalUrl",
-        "release"
-      ]
-    },
-    {
-      "nodeId": "abvxsite",
+      "nodeId": "ytmamp",
       "changedFields": [
         "release"
       ]
     },
     {
-      "nodeId": "cortex",
+      "nodeId": "toki-pona",
       "changedFields": [
-        "canonicalUrl",
-        "release"
-      ]
-    },
-    {
-      "nodeId": "liqua",
-      "changedFields": [
-        "canonicalUrl",
         "release"
       ]
     }

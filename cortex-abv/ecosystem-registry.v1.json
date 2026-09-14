@@ -4,9 +4,9 @@
   "version": "v1",
   "authority": "read",
   "externalSideEffects": false,
-  "generatedAt": "2026-09-14T12:24:35.656Z",
+  "generatedAt": "2026-09-14T12:46:47.737Z",
   "source": "cortex-abv/ecosystem-graph.v1.json",
-  "sourceDigest": "25d4577c82c3f211d9b58e808130949bd27b70fb6be510da8cfb02bd0e4d9636",
+  "sourceDigest": "7cae4e169d1feb28dc18ad77f6a6518988281296e0352d5597e63c2090700fa9",
   "coverage": {
     "nodes": 24,
     "publicNodes": 20,
@@ -157,9 +157,9 @@
       },
       "observedHomepageUrl": "https://github.com/markoblogo/CoqPi/releases/latest",
       "release": {
-        "tag": "v0.3.0",
-        "url": "https://github.com/markoblogo/CoqPi/releases/tag/v0.3.0",
-        "publishedAt": "2026-09-13T22:08:38Z"
+        "tag": "v0.3.1",
+        "url": "https://github.com/markoblogo/CoqPi/releases/tag/v0.3.1",
+        "publishedAt": "2026-09-14T12:41:17Z"
       }
     },
     {
@@ -241,9 +241,9 @@
       },
       "observedHomepageUrl": "https://git-tweet.abvx.xyz/",
       "release": {
-        "tag": "v0.3.2",
-        "url": "https://github.com/markoblogo/git-tweet/releases/tag/v0.3.2",
-        "publishedAt": "2026-09-11T18:40:12Z"
+        "tag": "v0.4.1",
+        "url": "https://github.com/markoblogo/git-tweet/releases/tag/v0.4.1",
+        "publishedAt": "2026-09-14T12:45:50Z"
       }
     },
     {
@@ -424,9 +424,9 @@
       },
       "observedHomepageUrl": "https://go.abvx.xyz",
       "release": {
-        "tag": "v0.3.1",
-        "url": "https://github.com/markoblogo/abvx-shortener/releases/tag/v0.3.1",
-        "publishedAt": "2026-09-11T13:16:23Z"
+        "tag": "v0.4.0",
+        "url": "https://github.com/markoblogo/abvx-shortener/releases/tag/v0.4.0",
+        "publishedAt": "2026-09-14T12:46:00Z"
       }
     },
     {

@@ -6,13 +6,13 @@
   "externalSideEffects": false,
   "generatedAt": "2026-09-14T13:07:24.347Z",
   "source": "cortex-abv/ecosystem-graph.v1.json",
-  "sourceDigest": "f8aa76f8581a0320b6d983b8caec62d55c13739d4d50dbd63e6be19f67286817",
+  "sourceDigest": "d12a89fbc66b644217fbe422eb26a8c76dd1b5520fabdb7ceffd3d618271a464",
   "coverage": {
     "nodes": 24,
     "publicNodes": 20,
     "privateNodes": 4,
-    "activeRelations": 85,
-    "plannedRelations": 14
+    "activeRelations": 86,
+    "plannedRelations": 13
   },
   "nodes": [
     {
@@ -1914,8 +1914,8 @@
       "from": "pocket-os",
       "type": "integrates_with",
       "to": "ytmamp",
-      "status": "planned",
-      "summary": "Provides a pocket remote and player-status surface.",
+      "status": "active",
+      "summary": "Controls YTMamp through the versioned, token-protected cast API and checks the shared contract in CI.",
       "propagation": {
         "watch": [
           "release",

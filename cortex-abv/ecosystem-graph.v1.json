@@ -2072,8 +2072,8 @@
       "from": "pocket-os",
       "type": "integrates_with",
       "to": "ytmamp",
-      "status": "planned",
-      "summary": "Provides a pocket remote and player-status surface.",
+      "status": "active",
+      "summary": "Controls YTMamp through the versioned, token-protected cast API and checks the shared contract in CI.",
       "propagation": {
         "watch": [
           "release",

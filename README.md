@@ -375,7 +375,8 @@ docs/                 Editorial workflow and project documentation
 <!-- ABVX:ECOSYSTEM:BEGIN -->
 ## ABVX ecosystem
 
-- [lab.abvx](https://lab.abvx.xyz/) — Presents the developer-tool catalogue inside the wider ABVX ecosystem.
+- [lab.abvx](https://lab.abvx.xyz/) — Presents the developer-tool catalogue inside the wider ABVX ecosystem. Current release: `v0.2.0`.
+- [abvx-shortener](https://go.abvx.xyz/) — Uses stable short links for public campaigns and QR destinations. Current release: `v0.3.1`.
 
 _This block is generated from the reviewed ABVX ecosystem registry._
 <!-- ABVX:ECOSYSTEM:END -->

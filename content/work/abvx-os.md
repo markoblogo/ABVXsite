@@ -23,7 +23,17 @@
   "sortRank": 90,
   "needsCopyReview": false,
   "needsMediaReview": false,
-  "needsLinkReview": false
+  "needsLinkReview": false,
+  "media": {
+    "src": "/media/work/abvx-os/hero.webp",
+    "alt": "ABVX OS personal AI workspace illustrated as an ASCII terminal overlooking a coastal landscape",
+    "role": "project-screenshot"
+  },
+  "heroImage": {
+    "src": "/media/work/abvx-os/hero.webp",
+    "alt": "ABVX OS personal AI workspace illustrated as an ASCII terminal overlooking a coastal landscape",
+    "role": "project-screenshot"
+  }
 }
 ---
 

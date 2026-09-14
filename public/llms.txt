@@ -210,11 +210,29 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Language, AI & Toki Pona
   Tags: toki-pona, lojban, language, AI, conlang, prompting, philosophy, communication
 
+- Project Management Certification in 2026
+  URL: https://abvx.xyz/books/project-management-certification-in-2026
+  Summary: A compact orientation to PMP certification: what it represents, who it suits, eligibility, the exam ecosystem, and the July 2026 changes.
+  Group: Business, AI & Marketing
+  Tags: project management, PMP, certification, PMBOK, career decisions
+
 - Fragments from a Therapist’s Notebook: Short Psychological Observations on Trauma, Identity, Relationships, Anxiety and the Human Mind
   URL: https://abvx.xyz/books/fragments-from-a-therapists-notebook
   Summary: A psychological notebook of short observations on trauma, identity, relationships, anxiety, grief, addiction and the hidden patterns behind human behavior.
   Group: Language, AI & Toki Pona
   Tags: psychology, trauma, identity, relationships, anxiety, human mind
+
+- The Human Backup Plan
+  URL: https://abvx.xyz/books/the-human-backup-plan
+  Summary: A practical continuity system that helps family or trusted people keep essential accounts, assets, documents and responsibilities running when the owner cannot.
+  Group: Business, AI & Marketing
+  Tags: continuity planning, digital assets, family preparedness, business handover, personal operations
+
+- Solar Proposal Decoder
+  URL: https://abvx.xyz/books/solar-proposal-decoder
+  Summary: A homeowner’s field guide and write-in decision system for extracting, normalizing and challenging the details hidden across competing solar proposals.
+  Group: Business, AI & Marketing
+  Tags: solar proposals, homeowners, quote comparison, financing, buyer workbook
 
 - Ham Radio Technician Visual Cram Map 2026–2030: A Diagram-First Guide to FCC Element 2 Concepts, Rules, Calculations, and All 409 Official Question IDs
   URL: https://abvx.xyz/books/ham-radio-technician-visual-cram-map-2026-2030

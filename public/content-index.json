@@ -1221,6 +1221,37 @@
       ]
     },
     {
+      "type": "book",
+      "section": "books",
+      "ecosystem": "Business, AI & Marketing",
+      "group": "Business, AI & Marketing",
+      "status": "released",
+      "title": "Project Management Certification in 2026",
+      "summary": "A compact orientation to PMP certification: what it represents, who it suits, eligibility, the exam ecosystem, and the July 2026 changes.",
+      "canonicalUrl": "https://abvx.xyz/books/project-management-certification-in-2026",
+      "tags": [
+        "project management",
+        "PMP",
+        "certification",
+        "PMBOK",
+        "career decisions"
+      ],
+      "links": [
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0HHTMHW3Z"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0HHTQMBVR"
+        }
+      ],
+      "updatedAt": "2026-09-04",
+      "related": []
+    },
+    {
       "type": "translation",
       "section": "books",
       "ecosystem": "Stoic Wisdom in Toki Pona",
@@ -1270,6 +1301,32 @@
           "relation": "series"
         }
       ]
+    },
+    {
+      "type": "book",
+      "section": "books",
+      "ecosystem": "Business, AI & Marketing",
+      "group": "Business, AI & Marketing",
+      "status": "released",
+      "title": "Solar Proposal Decoder",
+      "summary": "A homeowner’s field guide and write-in decision system for extracting, normalizing and challenging the details hidden across competing solar proposals.",
+      "canonicalUrl": "https://abvx.xyz/books/solar-proposal-decoder",
+      "tags": [
+        "solar proposals",
+        "homeowners",
+        "quote comparison",
+        "financing",
+        "buyer workbook"
+      ],
+      "links": [
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0HJ3VVDK8"
+        }
+      ],
+      "updatedAt": "2026-09-07",
+      "related": []
     },
     {
       "type": "free-book",
@@ -1458,6 +1515,37 @@
           "relation": "series"
         }
       ]
+    },
+    {
+      "type": "book",
+      "section": "books",
+      "ecosystem": "Business, AI & Marketing",
+      "group": "Business, AI & Marketing",
+      "status": "released",
+      "title": "The Human Backup Plan",
+      "summary": "A practical continuity system that helps family or trusted people keep essential accounts, assets, documents and responsibilities running when the owner cannot.",
+      "canonicalUrl": "https://abvx.xyz/books/the-human-backup-plan",
+      "tags": [
+        "continuity planning",
+        "digital assets",
+        "family preparedness",
+        "business handover",
+        "personal operations"
+      ],
+      "links": [
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0HFTTG5FH"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0HFTT2K3S"
+        }
+      ],
+      "updatedAt": "2026-08-19",
+      "related": []
     },
     {
       "type": "book",

@@ -414,6 +414,37 @@
       "related": []
     },
     {
+      "type": "book",
+      "section": "books",
+      "ecosystem": "Fiction",
+      "group": "Fiction",
+      "status": "released",
+      "title": "Don Quixote in Neverland",
+      "summary": "A literary fantasy collision between Don Quixote and Neverland, where chivalric delusion meets a world determined never to grow up.",
+      "canonicalUrl": "https://abvx.xyz/books/don-quixote-in-neverland",
+      "tags": [
+        "Don Quixote",
+        "Neverland",
+        "literary fantasy",
+        "adventure",
+        "classic remix"
+      ],
+      "links": [
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0HGC4GZX8"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0HGCXRB9N"
+        }
+      ],
+      "updatedAt": "2026-08-24",
+      "related": []
+    },
+    {
       "type": "translation",
       "section": "books",
       "ecosystem": "Stoic Wisdom in Toki Pona",
@@ -877,6 +908,37 @@
           "relation": "series"
         }
       ]
+    },
+    {
+      "type": "book",
+      "section": "books",
+      "ecosystem": "Fiction",
+      "group": "Fiction",
+      "status": "released",
+      "title": "Marcus Aurelius’ Guide to the Zombie Apocalypse",
+      "summary": "A darkly comic survival guide that puts Stoic ideas about control, judgment and resilience to work during a thoroughly unreasonable apocalypse.",
+      "canonicalUrl": "https://abvx.xyz/books/marcus-aurelius-zombie-apocalypse",
+      "tags": [
+        "Marcus Aurelius",
+        "Stoicism",
+        "zombies",
+        "humor",
+        "survival satire"
+      ],
+      "links": [
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0HDSBCSYD"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0HFLKS316"
+        }
+      ],
+      "updatedAt": "2026-08-17",
+      "related": []
     },
     {
       "type": "translation",
@@ -1548,6 +1610,37 @@
       "related": []
     },
     {
+      "type": "translation",
+      "section": "books",
+      "ecosystem": "Language, AI & Toki Pona",
+      "group": "Language, AI & Toki Pona",
+      "status": "released",
+      "title": "The Odyssey: Toki Pona Edition with Sitelen Pona",
+      "summary": "Homer’s Odyssey retold in Toki Pona with Sitelen Pona, presenting the ancient journey through a deliberately small modern language.",
+      "canonicalUrl": "https://abvx.xyz/books/the-odyssey-toki-pona-sitelen-pona",
+      "tags": [
+        "Homer",
+        "Odyssey",
+        "Toki Pona",
+        "Sitelen Pona",
+        "classical literature"
+      ],
+      "links": [
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0HHSK3Y45"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0HHSMS6KQ"
+        }
+      ],
+      "updatedAt": "2026-09-04",
+      "related": []
+    },
+    {
       "type": "book",
       "section": "books",
       "ecosystem": "Language, AI & Toki Pona",
@@ -2046,6 +2139,32 @@
           "relation": "series"
         }
       ]
+    },
+    {
+      "type": "book",
+      "section": "books",
+      "ecosystem": "Practical Guides & Reference",
+      "group": "Practical Guides & Reference",
+      "status": "released",
+      "title": "Французькі правила й дорожні знаки українською",
+      "summary": "Кольоровий практичний довідник для українців, які вивчають французькі правила і знаки з нуля або переносять до Франції наявний водійський досвід.",
+      "canonicalUrl": "https://abvx.xyz/books/french-road-rules-signs-ukrainian",
+      "tags": [
+        "France",
+        "road signs",
+        "driving",
+        "Ukrainian",
+        "practical reference"
+      ],
+      "links": [
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0HJ3WMYKD"
+        }
+      ],
+      "updatedAt": "2026-09-07",
+      "related": []
     },
     {
       "type": "work",

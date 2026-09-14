@@ -120,6 +120,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Fiction
   Tags: fiction, absurdist fiction, literary novella, Ukrainian, original, faith, loneliness, Christmas
 
+- Французькі правила й дорожні знаки українською
+  URL: https://abvx.xyz/books/french-road-rules-signs-ukrainian
+  Summary: Кольоровий практичний довідник для українців, які вивчають французькі правила і знаки з нуля або переносять до Франції наявний водійський досвід.
+  Group: Practical Guides & Reference
+  Tags: France, road signs, driving, Ukrainian, practical reference
+
 - God Was Busy With the Plumbing
   URL: https://abvx.xyz/books/god-was-busy-with-the-plumbing
   Summary: An English translation of the Ukrainian absurdist literary novella about Jonathan Swanson, a former artist turned handyman, whose quiet pre-Christmas days collapse into a strange hospital night of plumbing, doctors, prophets, Brahms, and possible secret space programs. A darkly funny story about loneliness, faith, work, the body, snow, and the small mercies that remain when the world cannot be fully repaired.
@@ -131,6 +137,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Summary: A free professional library of books, field manuals and living product guides for physical commodity brokers, traders, farmers and market operators.
   Group: Market Fronts & Partner Landings
   Tags: agro-commodities, brokerage, field-manuals, free-books, market-infrastructure, publishing
+
+- Marcus Aurelius’ Guide to the Zombie Apocalypse
+  URL: https://abvx.xyz/books/marcus-aurelius-zombie-apocalypse
+  Summary: A darkly comic survival guide that puts Stoic ideas about control, judgment and resilience to work during a thoroughly unreasonable apocalypse.
+  Group: Fiction
+  Tags: Marcus Aurelius, Stoicism, zombies, humor, survival satire
+
+- Don Quixote in Neverland
+  URL: https://abvx.xyz/books/don-quixote-in-neverland
+  Summary: A literary fantasy collision between Don Quixote and Neverland, where chivalric delusion meets a world determined never to grow up.
+  Group: Fiction
+  Tags: Don Quixote, Neverland, literary fantasy, adventure, classic remix
 
 - MN7R Product Guide
   URL: https://abvx.xyz/books/mn7r-product-guide
@@ -263,6 +281,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Summary: A unified Toki Pona toolkit for AI translation, sitelen pona and emoji rendering, reusable JavaScript/Python packages, and manuscript QA.
   Group: Publishing systems & protocols
   Tags: toki-pona, language-ai, translator, sitelen-pona, sitelen-emoji, npm, pypi
+
+- The Odyssey: Toki Pona Edition with Sitelen Pona
+  URL: https://abvx.xyz/books/the-odyssey-toki-pona-sitelen-pona
+  Summary: Homer’s Odyssey retold in Toki Pona with Sitelen Pona, presenting the ancient journey through a deliberately small modern language.
+  Group: Language, AI & Toki Pona
+  Tags: Homer, Odyssey, Toki Pona, Sitelen Pona, classical literature
 
 - Book Landings
   URL: https://abvx.xyz/work/book-landings

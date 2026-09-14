@@ -39,6 +39,10 @@ const standaloneGroups = [
     description: 'Standalone books where language systems, Toki Pona and AI-native thinking become the main subject.',
   },
   {
+    title: 'Practical Guides & Reference',
+    description: 'Applied guides, visual references and decision tools for practical real-world situations.',
+  },
+  {
     title: 'Fiction',
     description: 'Original fiction and translations outside the non-fiction and classical translation lines.',
   },

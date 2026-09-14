@@ -4,9 +4,9 @@
   "version": "v1",
   "authority": "read",
   "externalSideEffects": false,
-  "generatedAt": "2026-09-14T12:46:47.737Z",
+  "generatedAt": "2026-09-14T13:07:24.347Z",
   "source": "cortex-abv/ecosystem-graph.v1.json",
-  "sourceDigest": "7cae4e169d1feb28dc18ad77f6a6518988281296e0352d5597e63c2090700fa9",
+  "sourceDigest": "f8aa76f8581a0320b6d983b8caec62d55c13739d4d50dbd63e6be19f67286817",
   "coverage": {
     "nodes": 24,
     "publicNodes": 20,
@@ -466,9 +466,9 @@
       },
       "observedHomepageUrl": "https://toki.abvx.xyz/",
       "release": {
-        "tag": "sitelen-layer-static-v0.1.1",
-        "url": "https://github.com/markoblogo/toki-pona-translator/releases/tag/sitelen-layer-static-v0.1.1",
-        "publishedAt": "2026-09-08T23:36:28Z"
+        "tag": "v1.1.0",
+        "url": "https://github.com/markoblogo/toki-pona-translator/releases/tag/v1.1.0",
+        "publishedAt": "2026-09-14T12:54:06Z"
       }
     },
     {
@@ -503,9 +503,9 @@
       },
       "observedHomepageUrl": "https://github.com/markoblogo/YTMamp/releases/latest",
       "release": {
-        "tag": "v0.4.0",
-        "url": "https://github.com/markoblogo/YTMamp/releases/tag/v0.4.0",
-        "publishedAt": "2026-09-11T14:59:06Z"
+        "tag": "v0.4.1",
+        "url": "https://github.com/markoblogo/YTMamp/releases/tag/v0.4.1",
+        "publishedAt": "2026-09-14T13:01:50Z"
       }
     }
   ],

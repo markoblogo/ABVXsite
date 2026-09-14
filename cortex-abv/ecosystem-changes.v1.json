@@ -1,22 +1,16 @@
 {
   "schemaVersion": 1,
   "kind": "ABVXEcosystemChangeSet",
-  "observedAt": "2026-09-14T12:46:47.737Z",
+  "observedAt": "2026-09-14T13:07:24.347Z",
   "changes": [
     {
-      "nodeId": "coqpi",
+      "nodeId": "ytmamp",
       "changedFields": [
         "release"
       ]
     },
     {
-      "nodeId": "git-tweet",
-      "changedFields": [
-        "release"
-      ]
-    },
-    {
-      "nodeId": "shortener",
+      "nodeId": "toki-pona",
       "changedFields": [
         "release"
       ]

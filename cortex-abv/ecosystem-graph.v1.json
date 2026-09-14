@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "ABVXEcosystemGraph",
-  "updatedAt": "2026-09-14T12:14:36.450Z",
+  "updatedAt": "2026-09-14T12:24:35.656Z",
   "nodes": [
     {
       "id": "trade-solutions",
@@ -16,7 +16,8 @@
         "readme": true,
         "releaseSocial": false,
         "shortLinks": "disabled"
-      }
+      },
+      "observedHomepageUrl": "https://trade-solution.eu/"
     },
     {
       "id": "mn7r",
@@ -31,6 +32,12 @@
         "readme": true,
         "releaseSocial": false,
         "shortLinks": "disabled"
+      },
+      "observedHomepageUrl": "https://mn7r.com/",
+      "release": {
+        "tag": "v1.1.1",
+        "url": "https://github.com/markoblogo/mn7r/releases/tag/v1.1.1",
+        "publishedAt": "2026-09-14T08:30:38Z"
       }
     },
     {
@@ -133,9 +140,9 @@
       },
       "observedHomepageUrl": "https://abvx.xyz/",
       "release": {
-        "tag": "v0.2.2",
-        "url": "https://github.com/markoblogo/ABVXsite/releases/tag/v0.2.2",
-        "publishedAt": "2026-09-13T21:36:10Z"
+        "tag": "v0.3.0",
+        "url": "https://github.com/markoblogo/ABVXsite/releases/tag/v0.3.0",
+        "publishedAt": "2026-09-14T12:24:10Z"
       }
     },
     {
@@ -151,6 +158,12 @@
         "readme": true,
         "releaseSocial": false,
         "shortLinks": "disabled"
+      },
+      "observedHomepageUrl": "https://abvx.xyz",
+      "release": {
+        "tag": "v0.3.0",
+        "url": "https://github.com/markoblogo/CortexABV-private/releases/tag/v0.3.0",
+        "publishedAt": "2026-09-13T21:27:48Z"
       }
     },
     {
@@ -208,6 +221,12 @@
         "readme": true,
         "releaseSocial": false,
         "shortLinks": "disabled"
+      },
+      "observedHomepageUrl": "https://liqua.cr0pto.com",
+      "release": {
+        "tag": "v0.2.1",
+        "url": "https://github.com/markoblogo/liqua/releases/tag/v0.2.1",
+        "publishedAt": "2026-09-13T15:44:27Z"
       }
     },
     {

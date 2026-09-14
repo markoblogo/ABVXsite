@@ -371,3 +371,11 @@ docs/                 Editorial workflow and project documentation
 - Preserve slugs, media paths, redirects, and public URLs unless the task explicitly says otherwise.
 - Regenerate `public/llms.txt` and `public/content-index.json` after public content changes.
 - Run the full verification chain before reporting production readiness.
+
+<!-- ABVX:ECOSYSTEM:BEGIN -->
+## ABVX ecosystem
+
+- [lab.abvx](https://lab.abvx.xyz/) — Presents the developer-tool catalogue inside the wider ABVX ecosystem.
+
+_This block is generated from the reviewed ABVX ecosystem registry._
+<!-- ABVX:ECOSYSTEM:END -->

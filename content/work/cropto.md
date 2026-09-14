@@ -32,7 +32,7 @@
     {
       "type": "github",
       "label": "GitHub",
-      "url": "https://github.com/markoblogo/cropto-v0"
+      "url": "https://github.com/markoblogo/cropto"
     },
     {
       "type": "youtube",

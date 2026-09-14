@@ -1,0 +1,63 @@
+name: Sync ABVX ecosystem
+
+on:
+  workflow_dispatch:
+    inputs:
+      force_readme_sync:
+        description: Refresh every managed README block even when repository metadata is unchanged
+        required: false
+        type: boolean
+        default: false
+  schedule:
+    - cron: '23 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: abvx-ecosystem-sync
+  cancel-in-progress: false
+
+jobs:
+  observe-publish-and-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          token: ${{ secrets.ECOSYSTEM_SYNC_TOKEN }}
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - name: Observe allowlisted repositories
+        id: observe
+        env:
+          ECOSYSTEM_SYNC_TOKEN: ${{ secrets.ECOSYSTEM_SYNC_TOKEN }}
+        run: npm run ecosystem:observe
+
+      - name: Regenerate and verify the public registry
+        if: steps.observe.outputs.has_changes == 'true' || inputs.force_readme_sync == true
+        run: |
+          npm run ecosystem:generate
+          npm run ecosystem:check
+          node --test test/ecosystem-registry.test.mjs
+
+      - name: Publish registry changes directly to main
+        if: steps.observe.outputs.has_changes == 'true'
+        run: |
+          git config user.name 'abvx-ecosystem[bot]'
+          git config user.email 'abvx-ecosystem[bot]@users.noreply.github.com'
+          git add cortex-abv/ecosystem-graph.v1.json cortex-abv/ecosystem-registry.v1.json cortex-abv/ecosystem-changes.v1.json public/ecosystem.json
+          git commit -m 'ecosystem-sync: publish observed repository changes'
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Update managed README blocks in sequence
+        if: steps.observe.outputs.has_changes == 'true' || inputs.force_readme_sync == true
+        env:
+          ECOSYSTEM_SYNC_TOKEN: ${{ secrets.ECOSYSTEM_SYNC_TOKEN }}
+        run: npm run ecosystem:sync-readmes

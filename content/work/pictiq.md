@@ -33,6 +33,10 @@
       "url": "https://github.com/markoblogo/pictiq"
     }
   ],
+  "relatedSlugs": [
+    "toki-pona-ai-translator",
+    "pocket-os-cardputer"
+  ],
   "featured": true,
   "sortRank": 180,
   "needsCopyReview": false,

@@ -23,9 +23,9 @@ const personJsonLd = {
     'ABVX',
   ],
   url: 'https://abvx.xyz',
-  jobTitle: 'AI-native Systems, Market Infrastructure, and Strategic Product Development',
+  jobTitle: 'Product, Growth, GTM, and AI-native Systems',
   description:
-    'Builder of AI-native operating systems for complex markets, with current focus on international agro-commodity brokerage, market intelligence, trading workflows and agentic development infrastructure.',
+    'Senior product, marketing and growth operator building AI-native systems, market infrastructure, strategic GTM workflows, brands, books and public knowledge products.',
   identifier: [
     {
       '@type': 'PropertyValue',
@@ -52,6 +52,9 @@ const personJsonLd = {
     'AI-native development',
     'Agentic workflows',
     'AI-assisted brokerage workflows',
+    'Product marketing',
+    'Growth strategy',
+    'Market entry',
     'Workflow automation',
     'Signal extraction',
     'Document processing',

@@ -2,6 +2,7 @@ import { getArtifacts, getBooks, getNativeWritingItems } from '@/content';
 import type { MetadataRoute } from 'next';
 
 const base = 'https://abvx.xyz';
+const aboutUpdatedAt = new Date('2026-09-15T00:00:00.000Z');
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const artifacts = getArtifacts();
@@ -35,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/systems`, lastModified: systemsDate, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/books`, lastModified: booksDate, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${base}/writing`, changeFrequency: 'weekly', priority: 0.75 },
-    { url: `${base}/about`, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/about`, lastModified: aboutUpdatedAt, changeFrequency: 'monthly', priority: 0.75 },
     { url: `${base}/llmo`, lastModified: allContentDate, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/work-with-me`, changeFrequency: 'monthly', priority: 0.65 },
     { url: `${base}/toki-pona`, lastModified: booksDate, changeFrequency: 'monthly', priority: 0.65 },

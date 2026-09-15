@@ -1,46 +1,79 @@
+import FAQSection from '@/components/FAQSection';
 import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
+import type { ContentFaq } from '@/content';
 import { socialLinks } from '@/content/navigation';
-import { aboutPageJsonLd, defaultOgImage, metadataWithImage } from '@/lib/seo';
+import { aboutPageJsonLd, defaultOgImage, faqPageJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
 const aboutDescription =
-  'About Anton Biletskyi-Volokh: AI-native systems for complex markets, agro-commodity brokerage infrastructure, agentic development workflows, strategic product systems and collaboration context.';
+  'About Anton Biletskyi-Volokh: product, growth and AI-native systems leader with 20+ years across technology, international GTM, brand, market infrastructure and publishing.';
 
 export const metadata: Metadata = metadataWithImage({
-  title: 'About / Method - AI-native systems for complex markets',
+  title: 'About Anton - Product, growth and AI-native systems',
   description: aboutDescription,
   canonicalPath: '/about',
   image: defaultOgImage,
 });
 
+const proofPoints = [
+  { label: 'Experience', value: '20+ years across product, growth, brand and international business' },
+  { label: 'Technology work', value: '30+ technology and startup projects across AI, Web3 and digital products' },
+  { label: 'Brand building', value: '20+ consumer and hospitality brands created' },
+  { label: 'Operations', value: '50+ hospitality venues managed or co-owned' },
+  { label: 'Location', value: 'France-based, remote / hybrid, EU work authorization' },
+  { label: 'Languages', value: 'Ukrainian, Russian, English and improving French' },
+];
+
+const aboutFaqs: ContentFaq[] = [
+  {
+    question: 'What kind of work is Anton Biletskyi-Volokh best suited for?',
+    answer:
+      'Anton is best suited for product, GTM, growth, AI-native workflow and market-infrastructure work where the product is complex, the market needs clearer framing, and strategy must become executable systems.',
+  },
+  {
+    question: 'What is the practical experience behind ABVX?',
+    answer:
+      'The public ABVX work builds on 20+ years across strategic marketing, product, brand, international business and operations, including 30+ technology and startup projects, 20+ consumer and hospitality brands, and 50+ managed or co-owned venues.',
+  },
+  {
+    question: 'Is ABVX a portfolio, a company or a publishing system?',
+    answer:
+      'ABVX is Anton’s public working index: part portfolio, part systems catalogue, part publishing surface and part proof layer for current work in AI-native systems, market infrastructure, books and applied strategy.',
+  },
+  {
+    question: 'How should a potential employer or client read this site?',
+    answer:
+      'Start with About for the professional frame, Focus for agro-commodity and market-infrastructure work, Systems for AI-native operating tools, Books for publishing and knowledge-product experiments, and Writing for applied AI and validation thinking.',
+  },
+];
+
 const buildAreas = [
   {
-    title: 'Agro-commodity market infrastructure',
-    text: 'Digital systems for physical commodity brokerage, trading workflows, market intelligence, local commodity indexes, liquidity layers and structured execution.',
+    title: 'Product, GTM and growth systems',
+    text: 'Positioning, market-entry logic, launch systems, sales enablement and growth work for products that need a clearer path from idea to revenue.',
   },
   {
-    title: 'AI-native development systems',
-    text: 'Agentic workflows, Codex-style development systems, reusable agent skills, project instruction layers and validation-gated workflows.',
+    title: 'AI-native operating workflows',
+    text: 'Agentic development systems, validation gates, reusable skills and disciplined AI-assisted production workflows for complex knowledge work.',
   },
   {
-    title: 'Strategic product and go-to-market systems',
-    text: 'Brand architecture, product narratives, validation frameworks, launch systems, market-entry strategy and commercial storytelling for complex products.',
+    title: 'Market infrastructure and data products',
+    text: 'Digital systems for brokerage, market intelligence, commodity indexes, monitoring, execution coordination and decision support.',
   },
   {
-    title: 'Publishing and language infrastructure',
-    text: 'Books, translation systems, reader kits, constructed-language experiments and publishing workflows that turn ideas into durable public assets.',
+    title: 'Brand, content and publishing machines',
+    text: 'Brand architecture, editorial systems, books, landing pages and public knowledge products that package complex expertise into usable assets.',
   },
 ];
 
 const methodQuestions = [
-  'What needs to be measured?',
-  'What needs to be standardized?',
-  'What needs to be made visible?',
-  'What needs to be automated?',
-  'What needs to be explained well enough that people can use it?',
-  'What can AI agents help execute, verify or accelerate?',
+  'Clarify the market, user, buyer and decision context.',
+  'Turn the product into a simple, testable proposition.',
+  'Build the operating system: workflows, content, data, tools and feedback loops.',
+  'Use AI agents where they improve speed, validation or throughput.',
+  'Make the result legible enough that customers, partners and teams can act on it.',
 ];
 
 const operatingLines = [
@@ -80,14 +113,13 @@ const machineIndexes = [
 ];
 
 const bestFitWork = [
-  'AI-native product development',
-  'agro-commodity market infrastructure',
-  'international brokerage and trading workflows',
-  'B2B/B2C strategic marketing',
-  'market intelligence and operational dashboards',
-  'agentic development workflows',
-  'go-to-market systems for complex products',
-  'publishing and knowledge-product infrastructure',
+  'Head of Product Marketing / GTM',
+  'CMO / Head of Growth for early-stage or international products',
+  'AI-native product and workflow development',
+  'Market infrastructure, data products and operational dashboards',
+  'B2B/B2C strategic marketing and category creation',
+  'Go-to-market systems for complex technical products',
+  'Publishing, knowledge-product and content systems',
 ];
 
 const currentProjectLinks = [
@@ -116,68 +148,67 @@ export default function AboutPage() {
   return (
     <div className="route-about about-page grid gap-8">
       <JsonLd id="jsonld-about-page" data={aboutPageJsonLd()} />
+      <JsonLd id="jsonld-about-faq" data={faqPageJsonLd({ id: `${SITE_URL}/about#faq`, faqs: aboutFaqs })} />
       <PageHeader
-        eyebrow="About / Method"
-        title="AI-native systems for complex markets."
-        summary="I build agentic development tools and agro-commodity market infrastructure."
+        eyebrow="About"
+        title="Product and growth systems for complex markets."
+        summary="I help turn complex products, markets and bodies of knowledge into clear propositions, useful systems and executable growth paths."
       />
 
       <section className="about-intro" aria-labelledby="about-positioning-title">
         <div>
           <div className="eyebrow">Positioning</div>
-          <h2 id="about-positioning-title">Markets need operating systems.</h2>
+          <h2 id="about-positioning-title">Between product, market and system.</h2>
         </div>
         <div className="about-intro__copy">
           <p>
-            I build AI-native operating systems, market infrastructure and strategic
-            workflows for complex B2B and B2C environments.
+            I am a senior product, marketing and growth operator with 20+ years of
+            experience across technology, consumer products, hospitality and
+            international business.
           </p>
           <p>
-            My current focus is international agro-commodity brokerage and trading
-            infrastructure: digital workspaces, market-intelligence layers,
-            commodity-index systems, execution workflows and AI-assisted tools for
-            grain and oilseed markets.
+            My strongest work is in environments where the product is promising but
+            not yet easy to explain, sell, operate or scale: new categories,
+            international launches, complex B2B systems, AI products, market-data
+            tools, publishing systems and businesses that need sharper positioning.
           </p>
           <p>
-            Before moving deeper into AI-native development, I spent more than 25
-            years working across strategic marketing, creative direction, product
-            development, brand systems, go-to-market strategy and international
-            business communication. That background shapes how I build now.
+            I have worked with 30+ technology and startup projects, created 20+
+            consumer and hospitality brands, and managed or co-owned 50+ venues.
+            That mix matters: I think in product, brand, customer behavior,
+            operations and commercial execution at the same time.
           </p>
           <p>
-            I do not treat software as isolated apps. I treat it as operational
-            infrastructure: systems that help people see markets more clearly,
-            coordinate work, validate decisions, package expertise and move from
-            strategy to execution.
-          </p>
-          <p>
-            ABVX is the working surface for this approach. It brings together
-            agro-market infrastructure, AI-agent workflows, developer tools,
-            publishing systems, language experiments and strategic content into
-            one public ecosystem.
+            ABVX is my public working index. It shows the current shape of the
+            work: agro-commodity market infrastructure, AI-agent workflows,
+            strategic product systems, books, language experiments and public
+            writing on applied AI and validation.
           </p>
         </div>
       </section>
 
       <section className="about-signal-grid" aria-label="Current relevance">
-        <article>
-          <span>Current center</span>
-          <strong>International agro-commodity brokerage infrastructure</strong>
-        </article>
-        <article>
-          <span>AI layer</span>
-          <strong>Agent-assisted workflows, validation gates and operating discipline</strong>
-        </article>
-        <article>
-          <span>Business layer</span>
-          <strong>Strategic marketing, product systems and go-to-market execution</strong>
-        </article>
+        {proofPoints.slice(0, 3).map((item) => (
+          <article key={item.label}>
+            <span>{item.label}</span>
+            <strong>{item.value}</strong>
+          </article>
+        ))}
+      </section>
+
+      <section className="about-proof" aria-label="Professional proof points">
+        {proofPoints.slice(3).map((item) => (
+          <article key={item.label}>
+            <span>{item.label}</span>
+            <p>{item.value}</p>
+          </article>
+        ))}
       </section>
 
       <section className="about-section" aria-labelledby="about-build-title">
         <div className="about-section__header">
-          <div className="eyebrow">What I build</div>
-          <h2 id="about-build-title">Four operating lines.</h2>
+          <div className="eyebrow">What I do</div>
+          <h2 id="about-build-title">Useful when things are not yet obvious.</h2>
         </div>
         <div className="about-card-grid">
           {buildAreas.map((item, index) => (
@@ -198,13 +229,13 @@ export default function AboutPage() {
       <section className="about-method" aria-labelledby="about-method-title">
         <div className="about-method__statement">
           <div className="eyebrow">How I work</div>
-          <h2 id="about-method-title">I usually start with the system, not the surface.</h2>
+          <h2 id="about-method-title">Strategy has to become something people can use.</h2>
           <p>
-            Before designing a site, writing a deck, building a tool or shaping a
-            launch, I look for the operating structure underneath. The final output
-            can be a product, dashboard, protocol, agent workflow, website, book,
-            index, pitch deck, market interface or launch system. The method stays
-            the same: turn messy expertise into usable infrastructure.
+            I usually start by finding the structure under the mess: what the buyer
+            is trying to decide, what the market does not yet understand, what the
+            team keeps repeating manually, and what proof is needed before the next
+            bet. The output can be a GTM plan, product narrative, dashboard, agent
+            workflow, launch system, book, website or operating process.
           </p>
         </div>
         <ol className="about-method__questions">
@@ -230,6 +261,13 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <FAQSection
+        id="about-faq-title"
+        eyebrow="For employers and clients"
+        title="How to read this site."
+        faqs={aboutFaqs}
+      />
+
       <section className="about-section" aria-labelledby="about-machine-title">
         <div className="about-section__header">
           <div className="eyebrow">Machine-readable index</div>
@@ -251,14 +289,16 @@ export default function AboutPage() {
           <div className="eyebrow">Work with me</div>
           <h2 id="about-work-title">Work with me</h2>
           <p>
-            I am open to consulting, partnerships, grant-backed projects and
-            selected full-time or fractional roles where the work involves complex
-            systems, market infrastructure, product strategy, AI-native workflows,
-            publishing systems or go-to-market.
+            I am open to consulting, partnerships and selected full-time or
+            fractional roles where product, market and execution are tightly linked.
+            Good fits include Head of Product Marketing, GTM, CMO/Head of Growth,
+            AI-native product work, market infrastructure and complex B2B/B2C
+            launches.
           </p>
           <p>
-            Best fit: teams building something complex, technical, market-facing
-            and not yet fully structured.
+            Best fit: teams building something complex, technical or market-facing
+            where the product needs a sharper proposition, a working growth system,
+            or a clearer operational layer.
           </p>
           <div className="link-strip">
             <a href={email || '/about'}>Contact</a>
@@ -282,7 +322,12 @@ export default function AboutPage() {
 
       {linkedIn ? (
         <section className="about-career-note" aria-label="Career timeline">
-          <p>For the full career timeline, see LinkedIn.</p>
+          <p>
+            Education includes the University of Oxford Saïd Business School
+            programme in AI and Digital Transformation in Government, Kyiv National
+            University of Culture and Arts, and Bridgestone Corporate University.
+            For the full career timeline, see LinkedIn.
+          </p>
           <a href={linkedIn} target="_blank" rel="noopener noreferrer">
             LinkedIn profile -&gt;
           </a>

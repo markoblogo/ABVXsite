@@ -1847,6 +1847,7 @@ a {
 .about-intro > *,
 .about-intro__copy,
 .about-card,
+.about-proof article,
 .about-line-card,
 .about-method__statement,
 .about-method__questions,
@@ -1876,13 +1877,15 @@ a {
   line-height: 1.48;
 }
 
-.about-signal-grid {
+.about-signal-grid,
+.about-proof {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
-.about-signal-grid article {
+.about-signal-grid article,
+.about-proof article {
   display: grid;
   min-height: 150px;
   align-content: space-between;
@@ -1894,7 +1897,13 @@ a {
   padding: 1rem;
 }
 
-.about-signal-grid span {
+.about-proof article {
+  min-height: 120px;
+  background: var(--paper);
+}
+
+.about-signal-grid span,
+.about-proof span {
   width: fit-content;
   border: 1px solid var(--line);
   background: var(--ink);
@@ -1907,6 +1916,11 @@ a {
   text-transform: uppercase;
 }
 
+.about-proof span {
+  background: var(--route-accent);
+  color: var(--ink);
+}
+
 .about-signal-grid strong {
   display: block;
   max-width: 22rem;
@@ -1916,6 +1930,15 @@ a {
   line-height: 0.98;
   text-transform: uppercase;
   text-wrap: balance;
+}
+
+.about-proof p {
+  max-width: 24rem;
+  color: var(--ink);
+  font-size: clamp(1rem, 1.5vw, 1.22rem);
+  font-weight: 850;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
 }
 
 .about-section {
@@ -3938,7 +3961,8 @@ a {
 
   .about-card-grid,
   .about-line-grid,
-  .about-signal-grid {
+  .about-signal-grid,
+  .about-proof {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -4012,7 +4036,8 @@ a {
 
   .about-card-grid,
   .about-line-grid,
-  .about-signal-grid {
+  .about-signal-grid,
+  .about-proof {
     grid-template-columns: minmax(0, 1fr);
   }
 

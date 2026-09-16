@@ -345,8 +345,11 @@ Examples:
 - `/blog` redirects to `/writing`.
 - `/cropto`, `/projects`, `/tech-lab`, `/lang-lab`, `/abvx-press`, and `/links` render compatibility pages with canonical targets.
 - `/llmo`, `/work-with-me`, and `/toki-pona` are indexable gateway pages with self-canonical metadata.
+- `/work-with-me/[slug]` contains focused high-intent service pages for AI GTM, AI workflow systems, LLMO, KDP publishing automation, agro-market infrastructure, and complex-product marketing.
 
 Some slug aliases are also redirected to their canonical content routes.
+
+See `docs/traffic-growth-plan.md` for the current SEO/LLMO traffic-growth operating plan, autonomous implementation layer, and human-required distribution steps.
 
 ## Repository Map
 

@@ -11,7 +11,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 const homeDescription =
-  'Anton Biletskyi-Volokh builds AI-native operating systems for complex markets: agro-commodity brokerage, trading workflows, market intelligence and agentic development infrastructure.';
+  'Anton Biletskyi-Volokh builds AI-native operating systems for complex markets: market infrastructure, publishing systems, strategic GTM, LLMO and agentic development workflows.';
 
 export const metadata: Metadata = metadataWithImage({
   title: 'ABVX',
@@ -128,7 +128,7 @@ export default async function Home() {
       <HeroPoster
         eyebrow="ABVX / AI-NATIVE SYSTEMS"
         title="AI-native systems for complex markets."
-        summary="I build agentic development tools and agro-commodity market infrastructure: brokerage workspaces, market-intelligence layers, commodity-index systems and validation-gated AI workflows."
+        summary="I build agentic development tools, market infrastructure, publishing systems, LLMO surfaces and validation-gated AI workflows for work that is hard to explain and harder to operationalize."
       >
         <TagList tags={heroLabels} />
         <div className="hero-actions">
@@ -153,17 +153,18 @@ export default async function Home() {
         <div className="about-snapshot__copy">
           <p>
             I build infrastructure where markets, data, operational processes,
-            AI agents and strategic marketing intersect. The current center is
-            international agro-commodity brokerage and trading infrastructure.
+            AI agents and strategic marketing intersect. The current work spans
+            market infrastructure, AI-native workflow systems, publishing
+            automation, LLMO and strategic GTM.
           </p>
           <p>
-            The work spans brokerage workspaces, market-intelligence surfaces,
-            local commodity indexes, execution workflows and AI-assisted tools
-            for grain and oilseed markets.
+            In agro-commodity markets, that becomes brokerage workspaces,
+            market-intelligence surfaces, local commodity indexes, execution
+            workflows and AI-assisted tools for grain and oilseed markets.
           </p>
           <p>
             Before moving deeper into AI-native development, I spent more than
-            25 years across strategic marketing, creative direction, product
+            20 years across strategic marketing, creative direction, product
             development, brand systems, go-to-market strategy and international
             business communication. That background shapes how I build now.
           </p>

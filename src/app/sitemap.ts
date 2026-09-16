@@ -1,8 +1,10 @@
 import { getArtifacts, getBooks, getNativeWritingItems } from '@/content';
+import { servicePages } from '@/content/service-pages';
 import type { MetadataRoute } from 'next';
 
 const base = 'https://abvx.xyz';
 const aboutUpdatedAt = new Date('2026-09-15T00:00:00.000Z');
+const trafficLandingUpdatedAt = new Date('2026-09-16T00:00:00.000Z');
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const artifacts = getArtifacts();
@@ -38,9 +40,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/writing`, changeFrequency: 'weekly', priority: 0.75 },
     { url: `${base}/about`, lastModified: aboutUpdatedAt, changeFrequency: 'monthly', priority: 0.75 },
     { url: `${base}/llmo`, lastModified: allContentDate, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${base}/work-with-me`, changeFrequency: 'monthly', priority: 0.65 },
+    { url: `${base}/work-with-me`, lastModified: trafficLandingUpdatedAt, changeFrequency: 'monthly', priority: 0.72 },
     { url: `${base}/toki-pona`, lastModified: booksDate, changeFrequency: 'monthly', priority: 0.65 },
   ];
+
+  const serviceRoutes: MetadataRoute.Sitemap = servicePages.map((page) => ({
+    url: `${base}/work-with-me/${page.slug}`,
+    lastModified: trafficLandingUpdatedAt,
+    changeFrequency: 'monthly',
+    priority: 0.68,
+  }));
 
   const workRoutes: MetadataRoute.Sitemap = artifacts.map((artifact) => ({
     url: `${base}/work/${artifact.slug}`,
@@ -63,5 +72,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.55,
   }));
 
-  return [...staticRoutes, ...workRoutes, ...bookRoutes, ...writingRoutes];
+  return [...staticRoutes, ...serviceRoutes, ...workRoutes, ...bookRoutes, ...writingRoutes];
 }

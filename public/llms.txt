@@ -82,6 +82,44 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Market Fronts & Partner Landings
   Tags: commodities, logistics, supply-chain, trading, execution, market-signals, landing
 
+## Work with Anton: focused service pages
+
+- AI GTM consultant for complex products
+  URL: https://abvx.xyz/work-with-me/ai-gtm-consultant
+  Summary: Positioning, launch narrative and execution systems for AI, technical and market-facing products that are hard to explain, sell or scale.
+  Group: Focused collaboration entry points
+  Tags: AI GTM, positioning, product marketing, complex products, launch systems
+
+- AI workflow systems for teams that need execution discipline
+  URL: https://abvx.xyz/work-with-me/ai-workflow-systems
+  Summary: Agentic workflows, project instruction layers, validation gates and human review loops for teams adopting AI without losing control.
+  Group: Focused collaboration entry points
+  Tags: AI workflows, agentic systems, Codex, validation gates, operations
+
+- LLMO consultant for agent-ready visibility
+  URL: https://abvx.xyz/work-with-me/llmo-consultant
+  Summary: Search and answer-engine readiness for people, products and portfolios: structured pages, machine-readable indexes, FAQ schema and citation-friendly content.
+  Group: Focused collaboration entry points
+  Tags: LLMO, SEO, AI search, answer engines, structured data
+
+- KDP publishing automation and AI-assisted book production
+  URL: https://abvx.xyz/work-with-me/kdp-publishing-automation
+  Summary: Fast, gated nonfiction publishing systems for market discovery, source-dependent drafting, layout, QA, commercial packaging and post-publication learning.
+  Group: Focused collaboration entry points
+  Tags: KDP, publishing automation, AI books, book production, commercial packaging
+
+- Agro-commodity market infrastructure and brokerage systems
+  URL: https://abvx.xyz/work-with-me/agro-commodity-market-infrastructure
+  Summary: Brokerage workflows, market-intelligence surfaces, commodity-index logic and execution-layer systems for physical grain and oilseed markets.
+  Group: Focused collaboration entry points
+  Tags: agro commodities, brokerage, market intelligence, commodity indexes, grain markets
+
+- Product marketing for complex products and systems
+  URL: https://abvx.xyz/work-with-me/product-marketing-complex-products
+  Summary: Narrative, positioning, offer design and proof architecture for products that cross technical, operational and commercial boundaries.
+  Group: Focused collaboration entry points
+  Tags: product marketing, complex products, positioning, B2B, category design
+
 ## Publishing lines
 
 - Modernisme Ukrainien

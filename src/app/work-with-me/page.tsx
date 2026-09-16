@@ -1,9 +1,10 @@
 import Link from 'next/link';
+import { servicePages } from '@/content/service-pages';
 
 export const metadata = {
   title: 'Work With Me - AI-native systems and market infrastructure',
   description:
-    'Consulting, partnerships, grant-backed projects and selected roles for AI-native product development, agro-commodity market infrastructure, agentic workflows and strategic go-to-market systems.',
+    'Consulting, partnerships, grant-backed projects and selected roles for AI-native product development, market infrastructure, LLMO, KDP publishing automation and strategic go-to-market systems.',
   alternates: { canonical: 'https://abvx.xyz/work-with-me' },
 };
 
@@ -27,8 +28,8 @@ export default function WorkWithMe() {
         </h1>
         <p className="mt-2 text-zinc-700 dark:text-zinc-300">
           I work with teams building complex, technical and market-facing systems:
-          agro-commodity infrastructure, agentic development workflows, market
-          intelligence layers and go-to-market systems that need structure.
+          AI-native workflows, market infrastructure, publishing systems, LLMO
+          surfaces and go-to-market systems that need structure.
         </p>
         <p className="mt-3 text-sm font-medium text-zinc-600 dark:text-zinc-300">
           Available for consulting, partnerships, grant-backed collaborations and selected full-time or fractional roles.
@@ -51,6 +52,25 @@ export default function WorkWithMe() {
           Working in Paris time (CET/CEST).
         </p>
       </header>
+
+      <section className="flex flex-col gap-4" id="focused-entry-points">
+        <div>
+          <h2 className="text-lg font-semibold">Focused entry points</h2>
+          <p className="mt-2 max-w-3xl text-sm text-zinc-600 dark:text-zinc-300">
+            If you arrived with a specific problem, start with the closest page. Each page maps the buyer problem,
+            useful outputs, public evidence and common fit questions.
+          </p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2">
+          {servicePages.map((page) => (
+            <Link className="wm-card rounded-xl p-5 no-underline" href={`/work-with-me/${page.slug}`} key={page.slug}>
+              <span className="wm-chip">{page.eyebrow}</span>
+              <h3 className="mt-3 text-base font-semibold">{page.shortTitle}</h3>
+              <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">{page.summary}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
 
       <section className="flex flex-col gap-4" id="engagements">
         <h2 className="text-lg font-semibold">How I help teams ship</h2>
@@ -118,7 +138,7 @@ export default function WorkWithMe() {
       <section className="flex flex-col gap-3">
         <h2 className="text-lg font-semibold">Credibility snapshot</h2>
         <ul className="list-disc space-y-1 pl-4 text-sm text-zinc-700 dark:text-zinc-300">
-          <li>25+ years across strategic marketing, creative direction, product development and international business communication.</li>
+          <li>20+ years across strategic marketing, product, growth, brand and international business communication.</li>
           <li>Hands-on agro-market infrastructure work around MN7R, Cropto, commodity indexes, monitoring and brokerage workflows.</li>
           <li>AI-native development stack: agent skills, project instruction layers, validation-gated workflows and LLMO infrastructure.</li>
         </ul>

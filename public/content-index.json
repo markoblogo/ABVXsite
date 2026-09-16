@@ -2751,6 +2751,162 @@
       "related": []
     },
     {
+      "type": "service-page",
+      "section": "services",
+      "ecosystem": "Work with Anton",
+      "group": "Focused collaboration entry points",
+      "status": "available",
+      "title": "Agro-commodity market infrastructure and brokerage systems",
+      "summary": "Brokerage workflows, market-intelligence surfaces, commodity-index logic and execution-layer systems for physical grain and oilseed markets.",
+      "canonicalUrl": "https://abvx.xyz/work-with-me/agro-commodity-market-infrastructure",
+      "tags": [
+        "agro commodities",
+        "brokerage",
+        "market intelligence",
+        "commodity indexes",
+        "grain markets"
+      ],
+      "links": [],
+      "updatedAt": "2026-09-16",
+      "related": [
+        {
+          "title": "Work with Anton",
+          "canonicalUrl": "https://abvx.xyz/work-with-me",
+          "relation": "parent"
+        }
+      ]
+    },
+    {
+      "type": "service-page",
+      "section": "services",
+      "ecosystem": "Work with Anton",
+      "group": "Focused collaboration entry points",
+      "status": "available",
+      "title": "AI GTM consultant for complex products",
+      "summary": "Positioning, launch narrative and execution systems for AI, technical and market-facing products that are hard to explain, sell or scale.",
+      "canonicalUrl": "https://abvx.xyz/work-with-me/ai-gtm-consultant",
+      "tags": [
+        "AI GTM",
+        "positioning",
+        "product marketing",
+        "complex products",
+        "launch systems"
+      ],
+      "links": [],
+      "updatedAt": "2026-09-16",
+      "related": [
+        {
+          "title": "Work with Anton",
+          "canonicalUrl": "https://abvx.xyz/work-with-me",
+          "relation": "parent"
+        }
+      ]
+    },
+    {
+      "type": "service-page",
+      "section": "services",
+      "ecosystem": "Work with Anton",
+      "group": "Focused collaboration entry points",
+      "status": "available",
+      "title": "AI workflow systems for teams that need execution discipline",
+      "summary": "Agentic workflows, project instruction layers, validation gates and human review loops for teams adopting AI without losing control.",
+      "canonicalUrl": "https://abvx.xyz/work-with-me/ai-workflow-systems",
+      "tags": [
+        "AI workflows",
+        "agentic systems",
+        "Codex",
+        "validation gates",
+        "operations"
+      ],
+      "links": [],
+      "updatedAt": "2026-09-16",
+      "related": [
+        {
+          "title": "Work with Anton",
+          "canonicalUrl": "https://abvx.xyz/work-with-me",
+          "relation": "parent"
+        }
+      ]
+    },
+    {
+      "type": "service-page",
+      "section": "services",
+      "ecosystem": "Work with Anton",
+      "group": "Focused collaboration entry points",
+      "status": "available",
+      "title": "KDP publishing automation and AI-assisted book production",
+      "summary": "Fast, gated nonfiction publishing systems for market discovery, source-dependent drafting, layout, QA, commercial packaging and post-publication learning.",
+      "canonicalUrl": "https://abvx.xyz/work-with-me/kdp-publishing-automation",
+      "tags": [
+        "KDP",
+        "publishing automation",
+        "AI books",
+        "book production",
+        "commercial packaging"
+      ],
+      "links": [],
+      "updatedAt": "2026-09-16",
+      "related": [
+        {
+          "title": "Work with Anton",
+          "canonicalUrl": "https://abvx.xyz/work-with-me",
+          "relation": "parent"
+        }
+      ]
+    },
+    {
+      "type": "service-page",
+      "section": "services",
+      "ecosystem": "Work with Anton",
+      "group": "Focused collaboration entry points",
+      "status": "available",
+      "title": "LLMO consultant for agent-ready visibility",
+      "summary": "Search and answer-engine readiness for people, products and portfolios: structured pages, machine-readable indexes, FAQ schema and citation-friendly content.",
+      "canonicalUrl": "https://abvx.xyz/work-with-me/llmo-consultant",
+      "tags": [
+        "LLMO",
+        "SEO",
+        "AI search",
+        "answer engines",
+        "structured data"
+      ],
+      "links": [],
+      "updatedAt": "2026-09-16",
+      "related": [
+        {
+          "title": "Work with Anton",
+          "canonicalUrl": "https://abvx.xyz/work-with-me",
+          "relation": "parent"
+        }
+      ]
+    },
+    {
+      "type": "service-page",
+      "section": "services",
+      "ecosystem": "Work with Anton",
+      "group": "Focused collaboration entry points",
+      "status": "available",
+      "title": "Product marketing for complex products and systems",
+      "summary": "Narrative, positioning, offer design and proof architecture for products that cross technical, operational and commercial boundaries.",
+      "canonicalUrl": "https://abvx.xyz/work-with-me/product-marketing-complex-products",
+      "tags": [
+        "product marketing",
+        "complex products",
+        "positioning",
+        "B2B",
+        "category design"
+      ],
+      "links": [],
+      "updatedAt": "2026-09-16",
+      "related": [
+        {
+          "title": "Work with Anton",
+          "canonicalUrl": "https://abvx.xyz/work-with-me",
+          "relation": "parent"
+        }
+      ]
+    },
+    {
       "type": "work",
       "section": "systems",
       "ecosystem": "AI-native Development Systems",

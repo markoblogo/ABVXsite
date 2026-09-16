@@ -5,6 +5,51 @@ import { contentFiles, parseContentFile } from './content-lib.mjs';
 const SITE_URL = 'https://abvx.xyz';
 const outputDir = path.join(process.cwd(), 'public');
 
+const servicePages = [
+  {
+    slug: 'ai-gtm-consultant',
+    title: 'AI GTM consultant for complex products',
+    summary:
+      'Positioning, launch narrative and execution systems for AI, technical and market-facing products that are hard to explain, sell or scale.',
+    tags: ['AI GTM', 'positioning', 'product marketing', 'complex products', 'launch systems'],
+  },
+  {
+    slug: 'ai-workflow-systems',
+    title: 'AI workflow systems for teams that need execution discipline',
+    summary:
+      'Agentic workflows, project instruction layers, validation gates and human review loops for teams adopting AI without losing control.',
+    tags: ['AI workflows', 'agentic systems', 'Codex', 'validation gates', 'operations'],
+  },
+  {
+    slug: 'llmo-consultant',
+    title: 'LLMO consultant for agent-ready visibility',
+    summary:
+      'Search and answer-engine readiness for people, products and portfolios: structured pages, machine-readable indexes, FAQ schema and citation-friendly content.',
+    tags: ['LLMO', 'SEO', 'AI search', 'answer engines', 'structured data'],
+  },
+  {
+    slug: 'kdp-publishing-automation',
+    title: 'KDP publishing automation and AI-assisted book production',
+    summary:
+      'Fast, gated nonfiction publishing systems for market discovery, source-dependent drafting, layout, QA, commercial packaging and post-publication learning.',
+    tags: ['KDP', 'publishing automation', 'AI books', 'book production', 'commercial packaging'],
+  },
+  {
+    slug: 'agro-commodity-market-infrastructure',
+    title: 'Agro-commodity market infrastructure and brokerage systems',
+    summary:
+      'Brokerage workflows, market-intelligence surfaces, commodity-index logic and execution-layer systems for physical grain and oilseed markets.',
+    tags: ['agro commodities', 'brokerage', 'market intelligence', 'commodity indexes', 'grain markets'],
+  },
+  {
+    slug: 'product-marketing-complex-products',
+    title: 'Product marketing for complex products and systems',
+    summary:
+      'Narrative, positioning, offer design and proof architecture for products that cross technical, operational and commercial boundaries.',
+    tags: ['product marketing', 'complex products', 'positioning', 'B2B', 'category design'],
+  },
+];
+
 function readItems(folder) {
   return contentFiles(folder)
     .map((filePath) => {
@@ -74,6 +119,27 @@ function uniqueByUrl(items) {
 
 const rawItems = [...readItems('work'), ...readItems('books'), ...readItems('series')];
 const bySlug = new Map(rawItems.map((item) => [item.slug, item]));
+
+const serviceIndexItems = servicePages.map((page) => ({
+  type: 'service-page',
+  section: 'services',
+  ecosystem: 'Work with Anton',
+  group: 'Focused collaboration entry points',
+  status: 'available',
+  title: page.title,
+  summary: page.summary,
+  canonicalUrl: `${SITE_URL}/work-with-me/${page.slug}`,
+  tags: page.tags,
+  links: [],
+  updatedAt: '2026-09-16',
+  related: [
+    {
+      title: 'Work with Anton',
+      canonicalUrl: `${SITE_URL}/work-with-me`,
+      relation: 'parent',
+    },
+  ],
+}));
 
 function relationObjects(item) {
   const related = [];
@@ -147,8 +213,7 @@ function publicIndexItem(item) {
   };
 }
 
-const indexItems = rawItems
-  .map(publicIndexItem)
+const indexItems = [...rawItems.map(publicIndexItem), ...serviceIndexItems]
   .sort((a, b) => a.section.localeCompare(b.section) || a.title.localeCompare(b.title));
 
 function isFocus(item) {
@@ -196,6 +261,22 @@ function llmsSection(title, items) {
   return `## ${title}\n\n${lines || '- No public items.'}`;
 }
 
+function serviceLlmsLine(page) {
+  return [
+    `- ${page.title}`,
+    `  URL: ${SITE_URL}/work-with-me/${page.slug}`,
+    `  Summary: ${page.summary}`,
+    '  Group: Focused collaboration entry points',
+    `  Tags: ${page.tags.join(', ')}`,
+  ].join('\n');
+}
+
+function serviceLlmsSection() {
+  return `## Work with Anton: focused service pages\n\n${servicePages
+    .map(serviceLlmsLine)
+    .join('\n\n')}`;
+}
+
 const llms = [
   '# ABVX public LLM index',
   '',
@@ -208,6 +289,8 @@ const llms = [
   'Primary layers: Focus = market infrastructure; Systems = operational systems architecture; Books = publishing and intellectual layer; Writing = essays and field notes.',
   '',
   llmsSection('Focus systems', rawItems.filter(isFocus)),
+  '',
+  serviceLlmsSection(),
   '',
   llmsSection('Publishing lines', rawItems.filter(isPublishingLine)),
   '',

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "ABVXEcosystemGraph",
-  "updatedAt": "2026-09-14T13:07:24.347Z",
+  "updatedAt": "2026-09-16T17:06:36.318Z",
   "nodes": [
     {
       "id": "trade-solutions",
@@ -119,9 +119,9 @@
       },
       "observedHomepageUrl": "https://github.com/markoblogo/CoqPi/releases/latest",
       "release": {
-        "tag": "v0.3.1",
-        "url": "https://github.com/markoblogo/CoqPi/releases/tag/v0.3.1",
-        "publishedAt": "2026-09-14T12:41:17Z"
+        "tag": "v0.3.2",
+        "url": "https://github.com/markoblogo/CoqPi/releases/tag/v0.3.2",
+        "publishedAt": "2026-09-16T16:33:17Z"
       }
     },
     {

@@ -1197,12 +1197,12 @@ a {
 
 .page-header h1,
 .hero-poster h1 {
-  max-width: 13ch;
-  font-size: clamp(3.8rem, 13vw, 11rem);
+  max-width: 12ch;
+  font-size: clamp(3.6rem, 11.4vw, 9.4rem);
   font-stretch: condensed;
   font-weight: 950;
-  letter-spacing: -0.115em;
-  line-height: 0.76;
+  letter-spacing: -0.078em;
+  line-height: 0.82;
   text-transform: uppercase;
 }
 
@@ -1212,6 +1212,19 @@ a {
   color: var(--ink-muted);
   font-size: clamp(1.05rem, 2vw, 1.45rem);
   line-height: 1.35;
+}
+
+.hero-poster p {
+  position: relative;
+  z-index: 2;
+  max-width: min(100%, 48rem);
+  width: fit-content;
+  background: color-mix(in srgb, var(--paper) 86%, white 14%);
+  border-left: 3px solid var(--line);
+  padding: 0.35rem 0.8rem 0.45rem;
+  color: color-mix(in srgb, var(--ink) 70%, var(--paper) 30%);
+  font-size: clamp(1.08rem, 1.65vw, 1.3rem);
+  line-height: 1.45;
 }
 
 .hero-poster {
@@ -1265,6 +1278,7 @@ a {
 .hero-poster__motif {
   position: absolute;
   inset: 0;
+  z-index: 0;
   pointer-events: none;
 }
 
@@ -1272,6 +1286,7 @@ a {
   position: absolute;
   display: block;
   border: 1px solid var(--line);
+  opacity: 0.78;
 }
 
 .hero-poster__motif span:nth-child(1) {
@@ -1284,9 +1299,9 @@ a {
 }
 
 .hero-poster__motif span:nth-child(2) {
-  right: 24%;
-  bottom: 18%;
-  width: clamp(5rem, 13vw, 11rem);
+  right: 20%;
+  bottom: 6%;
+  width: clamp(4.5rem, 11vw, 9rem);
   aspect-ratio: 1;
   background: var(--accent);
   box-shadow: 14px 14px 0 var(--ink);
@@ -1295,11 +1310,12 @@ a {
 }
 
 .hero-poster__motif span:nth-child(3) {
-  left: 47%;
+  left: 51%;
   top: 0;
   width: 1px;
   height: 100%;
   background: var(--line);
+  opacity: 0.5;
   transform-origin: top;
   animation: lineBreath 14s ease-in-out infinite alternate;
 }

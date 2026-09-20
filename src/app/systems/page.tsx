@@ -46,6 +46,7 @@ const ecosystems = [
           'stoic-wisdom-toki-pona-landing',
           'ukrainian-modernism-landing',
           'toki-pona-free-kits-landing',
+          'pictiq-landing',
         ],
       },
       {

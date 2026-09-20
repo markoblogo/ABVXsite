@@ -249,7 +249,12 @@ export default function BooksPage() {
                 </div>
                 <div className="books-mixed-grid">
                   {groupBooks.map((book) => (
-                    <BookCatalogueCard key={book.id} book={book} tone="book" variantLabel="BOOK" />
+                    <BookCatalogueCard
+                      key={book.id}
+                      book={book}
+                      tone={bookTone(book)}
+                      variantLabel={itemLabel(book)}
+                    />
                   ))}
                 </div>
               </section>

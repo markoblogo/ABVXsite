@@ -310,11 +310,23 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Business, AI & Marketing
   Tags: boundaries, communication, people pleasing, confidence, self-help
 
+- Pictiq: A Visual Protocol for Short Messages
+  URL: https://abvx.xyz/books/pictiq-handbook-v1
+  Summary: A free illustrated 95-page field guide to the Pictiq visual protocol: its Core lexicon, context packs, portable layouts and visual-language experiments.
+  Group: Language, AI & Toki Pona
+  Tags: Pictiq, visual protocol, language systems, icons, free book, AI
+
 - Pictiq
   URL: https://abvx.xyz/work/pictiq
-  Summary: Pictiq is a minimal visual protocol for short messages across language barriers, built from icon tiles and a simple grammar for pointing, quick signs, stickers and compact phrases.
+  Summary: A minimal visual protocol for short messages across language barriers, built from icon tiles and a simple grammar for pointing, quick signs, stickers and compact phrases.
   Group: Publishing systems & protocols
   Tags: pictiq, colang, visual protocol, icons, language barriers, constructed language, translation, publishing systems
+
+- Pictiq site
+  URL: https://abvx.xyz/work/pictiq-landing
+  Summary: A visual home for Pictiq: a minimal icon-tile protocol for short messages across language barriers, designed for pointing, quick signs, stickers and compact phrases.
+  Group: Publishing systems & protocols
+  Tags: Pictiq, visual protocol, language systems, publishing, icons
 
 - sitelen-layer-plugin
   URL: https://abvx.xyz/work/sitelen-layer-plugin

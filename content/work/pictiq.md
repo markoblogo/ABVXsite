@@ -9,7 +9,7 @@
   "homepageEligible": true,
   "title": "Pictiq",
   "shortTitle": "Pictiq",
-  "summary": "Pictiq is a minimal visual protocol for short messages across language barriers, built from icon tiles and a simple grammar for pointing, quick signs, stickers and compact phrases.",
+  "summary": "A minimal visual protocol for short messages across language barriers, built from icon tiles and a simple grammar for pointing, quick signs, stickers and compact phrases.",
   "primarySection": "books",
   "appearsIn": [
     "books",
@@ -27,6 +27,11 @@
     "publishing systems"
   ],
   "links": [
+    {
+      "type": "site",
+      "label": "Pictiq site",
+      "url": "https://pictiq.abvx.xyz/"
+    },
     {
       "type": "github",
       "label": "GitHub",

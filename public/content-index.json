@@ -1249,7 +1249,7 @@
       "group": "Publishing systems & protocols",
       "status": "live",
       "title": "Pictiq",
-      "summary": "Pictiq is a minimal visual protocol for short messages across language barriers, built from icon tiles and a simple grammar for pointing, quick signs, stickers and compact phrases.",
+      "summary": "A minimal visual protocol for short messages across language barriers, built from icon tiles and a simple grammar for pointing, quick signs, stickers and compact phrases.",
       "canonicalUrl": "https://abvx.xyz/work/pictiq",
       "tags": [
         "pictiq",
@@ -1262,6 +1262,11 @@
         "publishing systems"
       ],
       "links": [
+        {
+          "type": "site",
+          "label": "Pictiq site",
+          "url": "https://pictiq.abvx.xyz/"
+        },
         {
           "type": "github",
           "label": "GitHub",
@@ -1281,6 +1286,48 @@
           "relation": "related"
         }
       ]
+    },
+    {
+      "type": "free-edition",
+      "section": "books",
+      "ecosystem": "Language, AI & Toki Pona",
+      "group": "Language, AI & Toki Pona",
+      "status": "released",
+      "title": "Pictiq: A Visual Protocol for Short Messages",
+      "summary": "A free illustrated 95-page field guide to the Pictiq visual protocol: its Core lexicon, context packs, portable layouts and visual-language experiments.",
+      "canonicalUrl": "https://abvx.xyz/books/pictiq-handbook-v1",
+      "tags": [
+        "Pictiq",
+        "visual protocol",
+        "language systems",
+        "icons",
+        "free book",
+        "AI"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Pictiq site",
+          "url": "https://pictiq.abvx.xyz/"
+        },
+        {
+          "type": "pdf",
+          "label": "Download PDF",
+          "url": "https://raw.githubusercontent.com/markoblogo/pictiq/main/books/handbook-v1/pictiq-handbook-v1.0.pdf"
+        },
+        {
+          "type": "epub",
+          "label": "Download EPUB",
+          "url": "https://raw.githubusercontent.com/markoblogo/pictiq/main/books/handbook-v1/pictiq-handbook-v1.0.epub"
+        },
+        {
+          "type": "github",
+          "label": "Handbook files",
+          "url": "https://github.com/markoblogo/pictiq/tree/main/books/handbook-v1"
+        }
+      ],
+      "updatedAt": "2026-05-04",
+      "related": []
     },
     {
       "type": "book",
@@ -3391,6 +3438,48 @@
       ],
       "updatedAt": "2026-04-22",
       "related": []
+    },
+    {
+      "type": "work",
+      "section": "systems",
+      "ecosystem": "Publishing & Language Systems",
+      "group": "Publishing systems & protocols",
+      "status": "live",
+      "title": "Pictiq site",
+      "summary": "A visual home for Pictiq: a minimal icon-tile protocol for short messages across language barriers, designed for pointing, quick signs, stickers and compact phrases.",
+      "canonicalUrl": "https://abvx.xyz/work/pictiq-landing",
+      "tags": [
+        "Pictiq",
+        "visual protocol",
+        "language systems",
+        "publishing",
+        "icons"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Visit Pictiq",
+          "url": "https://pictiq.abvx.xyz/"
+        },
+        {
+          "type": "github",
+          "label": "Project on GitHub",
+          "url": "https://github.com/markoblogo/pictiq"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Pictiq",
+          "canonicalUrl": "https://abvx.xyz/work/pictiq",
+          "relation": "related"
+        },
+        {
+          "title": "Pictiq: A Visual Protocol for Short Messages",
+          "canonicalUrl": "https://abvx.xyz/books/pictiq-handbook-v1",
+          "relation": "related"
+        }
+      ]
     },
     {
       "type": "work",

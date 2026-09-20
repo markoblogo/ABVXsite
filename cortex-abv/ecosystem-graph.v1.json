@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "ABVXEcosystemGraph",
-  "updatedAt": "2026-09-16T17:06:36.318Z",
+  "updatedAt": "2026-09-20T12:28:16.658Z",
   "nodes": [
     {
       "id": "trade-solutions",
@@ -285,7 +285,7 @@
         "releaseSocial": true,
         "shortLinks": "campaigns_only"
       },
-      "observedHomepageUrl": "https://markoblogo.github.io/pictiq/",
+      "observedHomepageUrl": "https://pictiq.abvx.xyz/",
       "release": {
         "tag": "v1.2.0",
         "url": "https://github.com/markoblogo/pictiq/releases/tag/v1.2.0",

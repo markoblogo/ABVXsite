@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "kind": "ABVXEcosystemChangeSet",
-  "observedAt": "2026-09-16T17:06:36.318Z",
+  "observedAt": "2026-09-20T12:28:16.658Z",
   "changes": [
     {
-      "nodeId": "coqpi",
+      "nodeId": "pictiq",
       "changedFields": [
-        "release"
+        "canonicalUrl"
       ]
     }
   ]

@@ -4,9 +4,9 @@
   "version": "v1",
   "authority": "read",
   "externalSideEffects": false,
-  "generatedAt": "2026-09-16T17:06:36.318Z",
+  "generatedAt": "2026-09-20T12:28:16.658Z",
   "source": "cortex-abv/ecosystem-graph.v1.json",
-  "sourceDigest": "06991c7c900fcd82bdcb8f2a66e419e8f88e80bc62a8ddd898e45be64b7b5e3b",
+  "sourceDigest": "54408f5ce87e60d8940952d0f5c5e46fe43c39f0c58d8638a6251cdb71f835d4",
   "coverage": {
     "nodes": 24,
     "publicNodes": 20,
@@ -365,7 +365,7 @@
         "releaseSocial": true,
         "shortLinks": "campaigns_only"
       },
-      "observedHomepageUrl": "https://markoblogo.github.io/pictiq/",
+      "observedHomepageUrl": "https://pictiq.abvx.xyz/",
       "release": {
         "tag": "v1.2.0",
         "url": "https://github.com/markoblogo/pictiq/releases/tag/v1.2.0",

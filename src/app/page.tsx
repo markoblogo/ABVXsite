@@ -4,7 +4,7 @@ import JsonLd from '@/components/JsonLd';
 import MarqueeTicker from '@/components/MarqueeTicker';
 import SectionPanel from '@/components/SectionPanel';
 import TagList from '@/components/TagList';
-import { getLatestHomepageWork, getLatestSectionEntryBook } from '@/content';
+import { getLatestSectionEntryBook, getLatestSectionEntryWork } from '@/content';
 import { fetchMediumFeed, fetchMn7rFeed, fetchSubstackFeed, type FeedItem } from '@/lib/feeds';
 import { collectionPageJsonLd, defaultOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
 import type { Metadata } from 'next';
@@ -95,8 +95,8 @@ export default async function Home() {
     safeLatestFeed('mn7r', fetchMn7rFeed, 'https://mn7r.com/rss.xml'),
   ]);
 
-  const latestFocus = getLatestHomepageWork('focus', 'mn7r-blog');
-  const latestSystem = getLatestHomepageWork('systems');
+  const latestFocus = getLatestSectionEntryWork('focus', 'mn7r-blog');
+  const latestSystem = getLatestSectionEntryWork('systems');
   const latestBook = getLatestSectionEntryBook('books');
 
   return (
@@ -182,7 +182,7 @@ export default async function Home() {
             summary={latestFocus?.summary || fallbackLatest.focus.summary}
             href={latestFocus ? `/work/${latestFocus.slug}` : '/focus'}
             label="Current Focus"
-            detail={formatDate(latestFocus?.publishedAt)}
+            detail={formatDate(latestFocus?.updatedAt || latestFocus?.publishedAt)}
             image={latestFocus?.thumbnail}
             cta="Open focus item"
           />
@@ -191,7 +191,7 @@ export default async function Home() {
             summary={latestSystem?.summary || fallbackLatest.systems.summary}
             href={latestSystem ? `/work/${latestSystem.slug}` : '/systems'}
             label="Systems Catalogue"
-            detail={formatDate(latestSystem?.publishedAt)}
+            detail={formatDate(latestSystem?.updatedAt || latestSystem?.publishedAt)}
             image={latestSystem?.thumbnail}
             cta="Open system"
           />
@@ -200,7 +200,7 @@ export default async function Home() {
             summary={latestBook?.summary || fallbackLatest.books.summary}
             href={latestBook ? `/books/${latestBook.slug}` : '/books'}
             label="ABVX Press"
-            detail={formatDate(latestBook?.publishedAt)}
+            detail={formatDate(latestBook?.updatedAt || latestBook?.publishedAt)}
             image={latestBook?.coverImage}
             cta="Open book"
           />

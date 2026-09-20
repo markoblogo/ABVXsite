@@ -5,6 +5,8 @@
   "type": "book-companion",
   "status": "live",
   "visibility": "public",
+  "publishedAt": "2026-09-20",
+  "homepageEligible": true,
   "title": "Pictiq site",
   "shortTitle": "Pictiq site",
   "summary": "A visual home for Pictiq: a minimal icon-tile protocol for short messages across language barriers, designed for pointing, quick signs, stickers and compact phrases.",

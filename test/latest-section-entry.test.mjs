@@ -16,3 +16,17 @@ test('selects the newest item actually shown in a section', () => {
 test('can exclude an item only when the caller explicitly needs a unique card', () => {
   assert.equal(selectLatestSectionEntry(items, 'systems', 'cropto')?.slug, 'blue-jay-vodka');
 });
+
+test('does not require a manual homepage flag for a newly published section item', () => {
+  const newerItem = {
+    slug: 'pictiq-landing',
+    title: 'Pictiq site',
+    appearsIn: ['systems', 'books'],
+    primarySection: 'systems',
+    publishedAt: '2026-09-20',
+    homepageEligible: false,
+    sortRank: 185,
+  };
+
+  assert.equal(selectLatestSectionEntry([...items, newerItem], 'systems')?.slug, 'pictiq-landing');
+});

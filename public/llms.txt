@@ -154,6 +154,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 ## Books
 
+- No Further Claims
+  URL: https://abvx.xyz/books/no-further-claims
+  Summary: A deadpan small-town novel about civic paperwork, private memories, public myths, and what happens when an absurd local story becomes useful enough that nobody wants to correct it.
+  Group: Fiction
+  Tags: fiction, small-town satire, deadpan fiction, comic novel, civic absurdity, American small-town fiction
+
 - Бог був зайнятий каналізацією
   URL: https://abvx.xyz/books/boh-buv-zainiatyi-kanalizatsiieiu
   Summary: Абсурдистська повість про колишнього художника й майстра з ремонту Джонатана Свонсона, який напередодні Різдва вирушає до лікарні через аварію в каналізації й потрапляє в ніч дивних зустрічей. Темна, смішна й тиха історія про самотність, віру, тіло, роботу, сніг і маленькі форми милосердя.

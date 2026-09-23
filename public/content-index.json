@@ -1243,6 +1243,43 @@
       ]
     },
     {
+      "type": "book",
+      "section": "books",
+      "ecosystem": "Fiction",
+      "group": "Fiction",
+      "status": "released",
+      "title": "No Further Claims",
+      "summary": "A deadpan small-town novel about civic paperwork, private memories, public myths, and what happens when an absurd local story becomes useful enough that nobody wants to correct it.",
+      "canonicalUrl": "https://abvx.xyz/books/no-further-claims",
+      "tags": [
+        "fiction",
+        "small-town satire",
+        "deadpan fiction",
+        "comic novel",
+        "civic absurdity",
+        "American small-town fiction"
+      ],
+      "links": [
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0HKTBFFJM"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0HKTFR8ND"
+        },
+        {
+          "type": "site",
+          "label": "Pictiq",
+          "url": "https://pictiq.abvx.xyz/"
+        }
+      ],
+      "updatedAt": "2026-09-23",
+      "related": []
+    },
+    {
       "type": "work",
       "section": "books",
       "ecosystem": "Publishing & Language Systems",

@@ -454,6 +454,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Ukrainian Modernism
   Tags: ukrainian-modernism, translation, french, kosynka
 
+- Jeanne la bataillonneuse: suivi de Miss Adrienne
+  URL: https://abvx.xyz/books/geo-chkouroupiy-jeanne-la-bataillonneuse
+  Summary: Deux récits de Géo Chkouroupiy traversent la guerre et la révolution de 1917, puis l’usine, le chômage et les mirages de la ville industrielle. Une édition française originale du modernisme ukrainien.
+  Group: Ukrainian Modernism
+  Tags: Modernisme ukrainien, Géo Chkouroupiy, Geo Shkurupii, Ukrainian literature, French translation, Ukrainian modernism, Executed Renaissance, futurism
+
 - Iouri Ianovski: Le Maitre du navire
   URL: https://abvx.xyz/books/iouri-ianovski-le-maitre-du-navire
   Summary: La première traduction française intégrale du roman maritime et cinématographique d’Iouri Ianovski, œuvre fondatrice du modernisme ukrainien et de l’avant-garde des années 1920.

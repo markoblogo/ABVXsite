@@ -819,6 +819,53 @@
       ]
     },
     {
+      "type": "translation",
+      "section": "books",
+      "ecosystem": "Ukrainian Modernism",
+      "group": "Ukrainian Modernism",
+      "status": "released",
+      "title": "Jeanne la bataillonneuse: suivi de Miss Adrienne",
+      "summary": "Deux récits de Géo Chkouroupiy traversent la guerre et la révolution de 1917, puis l’usine, le chômage et les mirages de la ville industrielle. Une édition française originale du modernisme ukrainien.",
+      "canonicalUrl": "https://abvx.xyz/books/geo-chkouroupiy-jeanne-la-bataillonneuse",
+      "tags": [
+        "Modernisme ukrainien",
+        "Géo Chkouroupiy",
+        "Geo Shkurupii",
+        "Ukrainian literature",
+        "French translation",
+        "Ukrainian modernism",
+        "Executed Renaissance",
+        "futurism",
+        "Jeanne la bataillonneuse",
+        "Miss Adrienne"
+      ],
+      "links": [
+        {
+          "type": "series",
+          "label": "Series",
+          "url": "https://ukrmodernism.abvx.xyz/fr"
+        },
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.fr/dp/B0HL4NC2CZ"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.fr/dp/B0HL658793"
+        }
+      ],
+      "updatedAt": "2026-09-27",
+      "related": [
+        {
+          "title": "Modernisme Ukrainien",
+          "canonicalUrl": "https://abvx.xyz/books/modernisme-ukrainien",
+          "relation": "series"
+        }
+      ]
+    },
+    {
       "type": "book",
       "section": "books",
       "ecosystem": "Business, AI & Marketing",
@@ -1169,6 +1216,11 @@
           "title": "Ukrainian Modernism landing",
           "canonicalUrl": "https://abvx.xyz/work/ukrainian-modernism-landing",
           "relation": "companion"
+        },
+        {
+          "title": "Jeanne la bataillonneuse: suivi de Miss Adrienne",
+          "canonicalUrl": "https://abvx.xyz/books/geo-chkouroupiy-jeanne-la-bataillonneuse",
+          "relation": "member"
         },
         {
           "title": "Hryhorii Kosynka: Dans les seigles et autres nouvelles",

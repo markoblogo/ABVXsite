@@ -20,7 +20,6 @@ const labels: Record<string, string> = {
   'series-site': 'Series site',
   medium: 'Medium',
   substack: 'Substack',
-  other: 'Open',
 };
 
 const priority: Record<string, number> = {

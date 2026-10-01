@@ -405,6 +405,11 @@
           "url": "https://www.amazon.com/dp/B0FTLQXWY1"
         },
         {
+          "type": "other",
+          "label": "Books2Read",
+          "url": "https://books2read.com/u/4ABOvJ"
+        },
+        {
           "type": "youtube",
           "label": "YouTube",
           "url": "https://youtu.be/QjZgzs845yI"

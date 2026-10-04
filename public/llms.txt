@@ -147,7 +147,6 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Summary: A starting point for people who are new to this work, and a guide to the wider ABVX site.
   Section: About
 
-
 - Publishing as Infrastructure
   URL: https://abvx.xyz/editorial/books/publishing-as-infrastructure
   Summary: How BWA Express books grow into dedicated websites, open tools, language protocols, learning resources and reusable publishing infrastructure.
@@ -177,6 +176,7 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/editorial/books/stoic-wisdom-in-toki-pona
   Summary: How Marcus Aurelius’ Meditations grew into a five-book Stoic line with free learning resources and English, toki pona, sitelen pona and emoji pona editions.
   Section: Books
+
 ## Publishing lines
 
 - Modernisme Ukrainien

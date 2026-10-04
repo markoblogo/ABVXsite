@@ -1,5 +1,6 @@
 import { getArtifacts, getBooks, getNativeWritingItems } from '@/content';
 import { servicePages } from '@/content/service-pages';
+import { getEditorialArticles } from '@/content/editorials';
 import type { MetadataRoute } from 'next';
 
 const base = 'https://abvx.xyz';
@@ -10,6 +11,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const artifacts = getArtifacts();
   const books = getBooks();
   const writing = getNativeWritingItems();
+  const editorialRoutes: MetadataRoute.Sitemap = getEditorialArticles().map((article) => ({
+    url: `${base}${article.href}`,
+    changeFrequency: 'monthly',
+    priority: 0.55,
+  }));
 
   function contentDate(item: { updatedAt?: string; publishedAt?: string }): Date | undefined {
     const value = item.updatedAt || item.publishedAt;
@@ -72,5 +78,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.55,
   }));
 
-  return [...staticRoutes, ...serviceRoutes, ...workRoutes, ...bookRoutes, ...writingRoutes];
+  return [...staticRoutes, ...serviceRoutes, ...workRoutes, ...bookRoutes, ...writingRoutes, ...editorialRoutes];
 }

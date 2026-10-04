@@ -3,6 +3,28 @@
   "generatedFrom": "/content",
   "items": [
     {
+      "type": "editorial",
+      "section": "about",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "About This Page",
+      "summary": "A starting point for people who are new to this work, and a guide to the wider ABVX site.",
+      "canonicalUrl": "https://abvx.xyz/editorial/about/about-this-page",
+      "tags": [
+        "About",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to About",
+          "url": "https://abvx.xyz/about"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "translation",
       "section": "books",
       "ecosystem": "Language, AI & Toki Pona",
@@ -2121,6 +2143,28 @@
       "related": []
     },
     {
+      "type": "editorial",
+      "section": "books",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Why I Publish Books",
+      "summary": "The ideas and publishing practice behind BWA Express, from Ukrainian Modernism and Toki Pona to business books and fiction.",
+      "canonicalUrl": "https://abvx.xyz/editorial/books/why-i-publish-books",
+      "tags": [
+        "Books",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Books",
+          "url": "https://abvx.xyz/books"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "free-book",
       "section": "books",
       "ecosystem": "Business, AI & Marketing",
@@ -2889,6 +2933,28 @@
         }
       ],
       "updatedAt": "2026-05-08",
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "What I’m Focused on Now",
+      "summary": "The current work behind Focus: building infrastructure for agricultural and grain trading, especially in Ukraine.",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/what-im-focused-on-now",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        }
+      ],
       "related": []
     },
     {
@@ -3892,6 +3958,28 @@
       ]
     },
     {
+      "type": "editorial",
+      "section": "systems",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Why I Build Systems",
+      "summary": "How software, digital infrastructure, interfaces, tools and experiments come together across different areas of work.",
+      "canonicalUrl": "https://abvx.xyz/editorial/systems/why-i-build-systems",
+      "tags": [
+        "Systems",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Systems",
+          "url": "https://abvx.xyz/systems"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "work",
       "section": "systems",
       "ecosystem": "Standalone Utilities & Experiments",
@@ -3931,6 +4019,28 @@
           "relation": "related"
         }
       ]
+    },
+    {
+      "type": "editorial",
+      "section": "writing",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Why I Write",
+      "summary": "How Medium, Substack and the ABVX personal blog serve different roles in one stream of writing.",
+      "canonicalUrl": "https://abvx.xyz/editorial/writing/why-i-write",
+      "tags": [
+        "Writing",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Writing",
+          "url": "https://abvx.xyz/writing"
+        }
+      ],
+      "related": []
     }
   ]
 }

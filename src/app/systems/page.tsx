@@ -1,6 +1,7 @@
 import ProjectCatalogueCard from '@/components/ProjectCatalogueCard';
 import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
+import EditorialSectionLink from '@/components/EditorialSectionLink';
 import { getArtifactsBySection } from '@/content';
 import type { Artifact } from '@/content';
 import { toPublicArtifact } from '@/content/public-props';
@@ -149,7 +150,7 @@ export default function SystemsPage() {
         eyebrow="Systems Catalogue"
         title="Systems Catalogue"
         summary="AI-native development systems, agentic workflows, reusable skillpacks, orchestration layers, protocols, tools and technical companion systems."
-      />
+      ><EditorialSectionLink section="systems" /></PageHeader>
 
       {ecosystems.map((ecosystem) => {
         const titleId = slugifyFragment(ecosystem.title);

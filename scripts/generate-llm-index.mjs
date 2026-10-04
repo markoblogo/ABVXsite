@@ -1,9 +1,10 @@
-import { writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { contentFiles, parseContentFile } from './content-lib.mjs';
 
 const SITE_URL = 'https://abvx.xyz';
 const outputDir = path.join(process.cwd(), 'public');
+const editorialPages = JSON.parse(readFileSync(path.join(process.cwd(), 'content/editorial/index.json'), 'utf8'));
 
 const servicePages = [
   {
@@ -213,7 +214,21 @@ function publicIndexItem(item) {
   };
 }
 
-const indexItems = [...rawItems.map(publicIndexItem), ...serviceIndexItems]
+const editorialIndexItems = editorialPages.map((page) => ({
+  type: 'editorial',
+  section: page.section,
+  ecosystem: 'Editorial pages',
+  group: 'Editorial pages',
+  status: 'published',
+  title: page.title,
+  summary: page.summary,
+  canonicalUrl: `${SITE_URL}/editorial/${page.section}/${page.slug}`,
+  tags: [page.sectionTitle, 'editorial'],
+  links: [{ type: 'section', label: `Back to ${page.sectionTitle}`, url: `${SITE_URL}/${page.section}` }],
+  related: [],
+}));
+
+const indexItems = [...rawItems.map(publicIndexItem), ...serviceIndexItems, ...editorialIndexItems]
   .sort((a, b) => a.section.localeCompare(b.section) || a.title.localeCompare(b.title));
 
 function isFocus(item) {
@@ -291,6 +306,10 @@ const llms = [
   llmsSection('Focus systems', rawItems.filter(isFocus)),
   '',
   serviceLlmsSection(),
+  '',
+  `## Section editorials\n\n${editorialPages
+    .map((page) => `- ${page.title}\n  URL: ${SITE_URL}/editorial/${page.section}/${page.slug}\n  Summary: ${page.summary}\n  Section: ${page.sectionTitle}`)
+    .join('\n\n')}`,
   '',
   llmsSection('Publishing lines', rawItems.filter(isPublishingLine)),
   '',

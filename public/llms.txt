@@ -120,6 +120,33 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Focused collaboration entry points
   Tags: product marketing, complex products, positioning, B2B, category design
 
+## Section editorials
+
+- What I’m Focused on Now
+  URL: https://abvx.xyz/editorial/focus/what-im-focused-on-now
+  Summary: The current work behind Focus: building infrastructure for agricultural and grain trading, especially in Ukraine.
+  Section: Focus
+
+- Why I Build Systems
+  URL: https://abvx.xyz/editorial/systems/why-i-build-systems
+  Summary: How software, digital infrastructure, interfaces, tools and experiments come together across different areas of work.
+  Section: Systems
+
+- Why I Publish Books
+  URL: https://abvx.xyz/editorial/books/why-i-publish-books
+  Summary: The ideas and publishing practice behind BWA Express, from Ukrainian Modernism and Toki Pona to business books and fiction.
+  Section: Books
+
+- Why I Write
+  URL: https://abvx.xyz/editorial/writing/why-i-write
+  Summary: How Medium, Substack and the ABVX personal blog serve different roles in one stream of writing.
+  Section: Writing
+
+- About This Page
+  URL: https://abvx.xyz/editorial/about/about-this-page
+  Summary: A starting point for people who are new to this work, and a guide to the wider ABVX site.
+  Section: About
+
 ## Publishing lines
 
 - Modernisme Ukrainien

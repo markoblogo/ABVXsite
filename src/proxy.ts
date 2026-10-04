@@ -17,6 +17,7 @@ export function proxy(request: NextRequest) {
   const nonce = generateNonce();
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set('x-nonce', nonce);
+  requestHeaders.set('x-site-pathname', pathname);
   setCspHeaders(requestHeaders, nonce);
 
   if (LEGACY_NOTION_PATH_RE.test(pathname)) {

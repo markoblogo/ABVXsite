@@ -24,13 +24,23 @@ export async function generateMetadata({
     };
   }
 
-  return metadataWithImage({
+  const translations = getNativeWritingItems().filter((candidate) =>
+    item.translationGroup && candidate.translationGroup === item.translationGroup && candidate.language);
+  const metadata = metadataWithImage({
     title: item.title,
     description: item.summary,
     canonicalPath: `/writing/${item.slug}`,
     image: imageMetadata(item.heroImage || item.coverImage, defaultOgImage, 'page'),
     type: 'article',
   });
+  return {
+    ...metadata,
+    alternates: {
+      ...metadata.alternates,
+      ...(translations.length > 1 ? { languages: Object.fromEntries(translations.map((translation) =>
+        [translation.language!, `${SITE_URL}/writing/${translation.slug}`])) } : {}),
+    },
+  };
 }
 
 export default async function NativeWritingPage({
@@ -52,6 +62,7 @@ export default async function NativeWritingPage({
           '@context': 'https://schema.org',
           '@type': 'Article',
           headline: item.title,
+          inLanguage: item.language || 'en',
           description: item.summary,
           datePublished: item.publishedAt,
           dateModified: item.updatedAt || item.publishedAt,
@@ -75,6 +86,15 @@ export default async function NativeWritingPage({
           <span key={tag}>{tag}</span>
         ))}
       </div>
+      {item.translationGroup ? (
+        <nav aria-label={item.language === 'uk' ? 'Інші мови' : 'Autres langues'} className="link-strip">
+          {getNativeWritingItems().filter((translation) => translation.translationGroup === item.translationGroup && translation.slug !== item.slug).map((translation) => (
+            <a key={translation.slug} href={`/writing/${translation.slug}`} hrefLang={translation.language} lang={translation.language}>
+              {translation.language === 'uk' ? 'Українською' : 'Français'}
+            </a>
+          ))}
+        </nav>
+      ) : null}
       <MarkdownContent className="native-writing-article__body">{item.body}</MarkdownContent>
     </div>
   );

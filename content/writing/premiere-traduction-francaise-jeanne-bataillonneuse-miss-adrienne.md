@@ -4,6 +4,8 @@
   "slug": "premiere-traduction-francaise-jeanne-bataillonneuse-miss-adrienne",
   "title": "Première traduction française de Jeanne la bataillonneuse et Miss Adrienne de Géo Chkouroupiy",
   "type": "article",
+  "language": "fr",
+  "translationGroup": "chkouroupiy-french-publication",
   "status": "live",
   "visibility": "public",
   "summary": "Publication de la première traduction française de Jeanne la bataillonneuse et Miss Adrienne de Géo Chkouroupiy, dans le cadre du projet Modernisme ukrainien consacré aux écrivains ukrainiens des années 1920-1930.",
@@ -68,7 +70,7 @@ L’édition comprend également une préface, une note sur les textes et la tra
 
 ## Le projet *Modernisme ukrainien*
 
-Cette publication fait partie de mon projet [**Modernisme ukrainien**](https://ukrmodernism.abvx.xyz/), consacré à la traduction en français et à la redécouverte d’auteurs ukrainiens des années 1920 et 1930.
+Cette publication fait partie de mon projet [**Modernisme ukrainien**](https://ukrmodernism.abvx.xyz/fr), consacré à la traduction en français et à la redécouverte d’auteurs ukrainiens des années 1920 et 1930.
 
 L’idée est assez simple : rendre accessibles en français des œuvres majeures qui restent encore étonnamment peu connues, tout en les présentant comme ce qu’elles étaient réellement, une partie du modernisme européen.
 
@@ -101,4 +103,6 @@ Les traduire aujourd’hui ne consiste donc pas seulement à récupérer des doc
 **Géo Chkouroupiy, *Jeanne la bataillonneuse : suivi de Miss Adrienne***
 [Kindle](https://www.amazon.fr/dp/B0HL4NC2CZ) | [Paperback](https://www.amazon.fr/dp/B0HL658793)
 
-Découvrir le projet : [Modernisme ukrainien](https://ukrmodernism.abvx.xyz/)
+Découvrir le projet : [Modernisme ukrainien](https://ukrmodernism.abvx.xyz/fr)
+
+[Le livre sur ABVX](/books/geo-chkouroupiy-jeanne-la-bataillonneuse) · [La collection](/books/modernisme-ukrainien)

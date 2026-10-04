@@ -4,6 +4,8 @@
   "slug": "vyishov-pershyi-frantsuzkyi-pereklad-jeanne-bataillonneuse",
   "title": "Вийшов перший французький переклад Jeanne la bataillonneuse та Miss Adrienne Гео Шкурупія",
   "type": "article",
+  "language": "uk",
+  "translationGroup": "chkouroupiy-french-publication",
   "status": "live",
   "visibility": "public",
   "summary": "На Amazon вийшов перший французький переклад Jeanne la bataillonneuse та Miss Adrienne Гео Шкурупія, частина проєкту Modernisme ukrainien про українську літературу 1920–1930-х років.",
@@ -67,7 +69,7 @@
 
 ## Проєкт *Modernisme ukrainien*
 
-Ця книга є частиною мого проєкту [**Modernisme ukrainien**](https://ukrmodernism.abvx.xyz/), присвяченого перекладу французькою та поверненню в європейський читацький контекст української літератури 1920–1930-х років.
+Ця книга є частиною мого проєкту [**Modernisme ukrainien**](https://ukrmodernism.abvx.xyz/uk), присвяченого перекладу французькою та поверненню в європейський читацький контекст української літератури 1920–1930-х років.
 
 Його ідея проста: зробити французькою доступними важливі українські тексти, які досі залишаються маловідомими, і показати їх не лише як документи трагічної історії, а як повноцінну частину **європейського модернізму**.
 
@@ -102,4 +104,6 @@
 **Géo Chkouroupiy, *Jeanne la bataillonneuse : suivi de Miss Adrienne***
 [Kindle](https://www.amazon.fr/dp/B0HL4NC2CZ) | [Paperback](https://www.amazon.fr/dp/B0HL658793)
 
-Проєкт: [Modernisme ukrainien](https://ukrmodernism.abvx.xyz/)
+Проєкт: [Modernisme ukrainien](https://ukrmodernism.abvx.xyz/uk)
+
+[Книга на ABVX](/books/geo-chkouroupiy-jeanne-la-bataillonneuse) · [Серія](/books/modernisme-ukrainien)

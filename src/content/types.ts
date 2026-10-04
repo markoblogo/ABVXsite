@@ -190,6 +190,8 @@ export type Series = {
 export type NativeWritingType = 'note' | 'article' | 'review' | 'build_log' | 'other';
 
 export type NativeWriting = BaseContentItem<NativeWritingType> & {
+  language?: 'en' | 'fr' | 'uk';
+  translationGroup?: string;
   primarySection: 'writing';
   appearsIn: ('writing')[];
   body: string;

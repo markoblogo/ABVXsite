@@ -1,37 +1,107 @@
 import type { ReactNode } from 'react';
 
 type Block =
-  | { type: 'heading'; level: 3 | 4; text: string }
+  | { type: 'heading'; level: 2 | 3 | 4; text: string }
   | { type: 'paragraph'; text: string }
   | { type: 'list'; items: string[] };
 
+type InlineMatch = {
+  index: number;
+  end: number;
+  label?: string;
+  href?: string;
+  strong?: string;
+  italic?: string;
+  underscoreItalic?: string;
+};
+
 function inlineMarkdownNodes(text: string): ReactNode[] {
-  const pattern = /\[([^\]]+)\]\(([^)\s]+)\)/g;
+  const pattern = /\[([^\]]+)\]\(([^)\s]+)\)|(\*\*(.+?)\*\*(?!\*))|(__(.+?)__)|(\*(.+?)\*)/g;
+  const regularMatches: InlineMatch[] = Array.from(text.matchAll(pattern), (match) => {
+    const [full, label, href, , boldA, , boldB, , italic] = match;
+    return {
+      index: match.index ?? 0,
+      end: (match.index ?? 0) + full.length,
+      ...(label ? { label } : {}),
+      ...(href ? { href } : {}),
+      ...((boldA || boldB) ? { strong: boldA || boldB } : {}),
+      ...(italic ? { italic } : {}),
+    };
+  });
+  const underscoreMatches: InlineMatch[] = [];
+  let openUnderscore = -1;
+  const characters = Array.from(text);
+  const isWord = (character: string | undefined) =>
+    character !== undefined && /[\p{L}\p{N}_]/u.test(character);
+
+  let offset = 0;
+  for (let characterIndex = 0; characterIndex < characters.length; characterIndex += 1) {
+    const index = offset;
+    const character = characters[characterIndex];
+    offset += character.length;
+    if (character !== '_' || characters[characterIndex - 1] === '_' || characters[characterIndex + 1] === '_') continue;
+
+    const previous = characters[characterIndex - 1];
+    const next = characters[characterIndex + 1];
+    const canOpen = !isWord(previous) && next !== undefined && !/\s/u.test(next);
+    const canClose = previous !== undefined && !/\s/u.test(previous) && !isWord(next);
+
+    if (canClose && openUnderscore >= 0) {
+      const content = text.slice(openUnderscore + 1, index);
+      if (content && !/^\s|\s$/u.test(content)) {
+        underscoreMatches.push({
+          index: openUnderscore,
+          end: index + 1,
+          underscoreItalic: content,
+        });
+        openUnderscore = -1;
+        continue;
+      }
+    }
+
+    if (canOpen) openUnderscore = index;
+  }
+
   const nodes: ReactNode[] = [];
   let cursor = 0;
+  let regularIndex = 0;
+  let underscoreIndex = 0;
 
-  for (const match of text.matchAll(pattern)) {
-    const index = match.index ?? 0;
-    const [full, label, href] = match;
+  while (regularIndex < regularMatches.length || underscoreIndex < underscoreMatches.length) {
+    const regular = regularMatches[regularIndex];
+    const underscore = underscoreMatches[underscoreIndex];
+    const match = !underscore || (regular && regular.index <= underscore.index) ? regular : underscore;
+    if (!match) break;
+    if (match === regular) regularIndex += 1;
+    else underscoreIndex += 1;
+
+    const { index, end, label, href, strong, italic, underscoreItalic } = match;
+    if (index < cursor) continue;
     if (index > cursor) nodes.push(text.slice(cursor, index));
-    const external = /^(https?:\/\/|mailto:)/i.test(href);
-    nodes.push(
-      <a
-        key={`link-${index}-${href}`}
-        href={href}
-        {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-      >
-        {label}
-      </a>,
-    );
-    cursor = index + full.length;
+    if (href) {
+      const external = /^(https?:\/\/|mailto:)/i.test(href);
+      nodes.push(
+        <a
+          key={`link-${index}-${href}`}
+          href={href}
+          {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+        >
+          {inlineMarkdownNodes(label || href)}
+        </a>,
+      );
+    } else if (strong) {
+      nodes.push(<strong key={`strong-${index}`}>{inlineMarkdownNodes(strong)}</strong>);
+    } else if (italic || underscoreItalic) {
+      nodes.push(<em key={`em-${index}`}>{inlineMarkdownNodes(italic || underscoreItalic || '')}</em>);
+    }
+    cursor = end;
   }
 
   if (cursor < text.length) nodes.push(text.slice(cursor));
   return nodes.length ? nodes : [text];
 }
 
-function parseMarkdownBlocks(markdown: string): Block[] {
+function parseMarkdownBlocks(markdown: string, headingOffset: 0 | 1): Block[] {
   const blocks: Block[] = [];
   const lines = markdown.replace(/\r\n/g, '\n').split('\n');
   let paragraph: string[] = [];
@@ -64,7 +134,7 @@ function parseMarkdownBlocks(markdown: string): Block[] {
       flushList();
       blocks.push({
         type: 'heading',
-        level: heading[1].length === 2 ? 3 : 4,
+        level: Math.min(4, heading[1].length + headingOffset) as 2 | 3 | 4,
         text: heading[2].trim(),
       });
       continue;
@@ -89,18 +159,20 @@ function parseMarkdownBlocks(markdown: string): Block[] {
 export default function MarkdownContent({
   children,
   className,
+  headingOffset = 1,
 }: {
   children: string;
   className?: string;
+  headingOffset?: 0 | 1;
 }) {
-  const blocks = parseMarkdownBlocks(children);
+  const blocks = parseMarkdownBlocks(children, headingOffset);
   if (!blocks.length) return null;
 
   return (
     <div className={['content-markdown', className].filter(Boolean).join(' ')}>
       {blocks.map((block, index): ReactNode => {
         if (block.type === 'heading') {
-          const Heading = `h${block.level}` as 'h3' | 'h4';
+          const Heading = `h${block.level}` as 'h2' | 'h3' | 'h4';
           return <Heading key={`${block.type}-${index}`}>{inlineMarkdownNodes(block.text)}</Heading>;
         }
 

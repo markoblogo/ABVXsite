@@ -1,5 +1,6 @@
 import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
+import EditorialSectionLink from '@/components/EditorialSectionLink';
 import FeaturedWritingCard from '@/components/FeaturedWritingCard';
 import RecentWritingCard from '@/components/RecentWritingCard';
 import SectionPanel from '@/components/SectionPanel';
@@ -154,7 +155,7 @@ export default async function WritingPage({
         eyebrow="Writing"
         title="Writing"
         summary="Applied AI reviews, build logs and essays on systems, validation, agent workflows, decision-making and how ideas survive contact with reality."
-      />
+      ><EditorialSectionLink section="writing" /></PageHeader>
 
       <WritingSourceLinks active={activeSource} />
 

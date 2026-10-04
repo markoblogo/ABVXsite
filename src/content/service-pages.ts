@@ -168,7 +168,7 @@ export const servicePages: ServicePage[] = [
     ],
     related: [
       { label: 'ABVX Press', href: '/books', note: 'Public catalogue of books and publishing projects.' },
-      { label: 'Book Landing', href: '/work/book-landing', note: 'Book landing system for portfolio and product pages.' },
+      { label: 'Book Landing', href: '/work/book-landings', note: 'Book landing system for portfolio and product pages.' },
       { label: 'Ham Radio Technician Visual Cram Map', href: '/books/ham-radio-technician-visual-cram-map-2026-2030', note: 'Example of a diagram-first KDP product.' },
     ],
     faqs: [

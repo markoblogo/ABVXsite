@@ -252,7 +252,7 @@ export const amiCopy: Record<AmiLocale, AmiCopy> = {
     alternatePath: '/ami',
     languageLabel: 'Français',
     alternateLabel: 'English',
-    title: 'AMI — Agro Market Infrastructure',
+    title: 'AMI — Infrastructure des marchés agricoles',
     description:
       'AMI est la porte d’entrée publique d’un écosystème d’infrastructure agro-commodities: opérations de courtage, intelligence de marché, couches de benchmark, outils de trading et couche de connaissance IA gouvernée pour les marchés physiques.',
     heroEyebrow: 'Agro Market Infrastructure',

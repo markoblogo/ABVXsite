@@ -1,6 +1,7 @@
 import FAQSection from '@/components/FAQSection';
 import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
+import EditorialSectionLink from '@/components/EditorialSectionLink';
 import type { ContentFaq } from '@/content';
 import { socialLinks } from '@/content/navigation';
 import { aboutPageJsonLd, defaultOgImage, faqPageJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
@@ -153,7 +154,7 @@ export default function AboutPage() {
         eyebrow="About"
         title="Product and growth systems for complex markets."
         summary="I help turn complex products, markets and bodies of knowledge into clear propositions, useful systems and executable growth paths."
-      />
+      ><EditorialSectionLink section="about" /></PageHeader>
 
       <section className="about-intro" aria-labelledby="about-positioning-title">
         <div>

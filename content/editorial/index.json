@@ -1,0 +1,47 @@
+[
+  {
+    "section": "focus",
+    "sectionTitle": "Focus",
+    "slug": "what-im-focused-on-now",
+    "title": "What I’m Focused on Now",
+    "summary": "The current work behind Focus: building infrastructure for agricultural and grain trading, especially in Ukraine.",
+    "linkLabel": "Why this focus",
+    "source": "focus.md"
+  },
+  {
+    "section": "systems",
+    "sectionTitle": "Systems",
+    "slug": "why-i-build-systems",
+    "title": "Why I Build Systems",
+    "summary": "How software, digital infrastructure, interfaces, tools and experiments come together across different areas of work.",
+    "linkLabel": "Why I build systems",
+    "source": "systems.md"
+  },
+  {
+    "section": "books",
+    "sectionTitle": "Books",
+    "slug": "why-i-publish-books",
+    "title": "Why I Publish Books",
+    "summary": "The ideas and publishing practice behind BWA Express, from Ukrainian Modernism and Toki Pona to business books and fiction.",
+    "linkLabel": "Why I publish books",
+    "source": "books.md"
+  },
+  {
+    "section": "writing",
+    "sectionTitle": "Writing",
+    "slug": "why-i-write",
+    "title": "Why I Write",
+    "summary": "How Medium, Substack and the ABVX personal blog serve different roles in one stream of writing.",
+    "linkLabel": "Why I write",
+    "source": "writing.md"
+  },
+  {
+    "section": "about",
+    "sectionTitle": "About",
+    "slug": "about-this-page",
+    "title": "About This Page",
+    "summary": "A starting point for people who are new to this work, and a guide to the wider ABVX site.",
+    "linkLabel": "About this page",
+    "source": "about.md"
+  }
+]

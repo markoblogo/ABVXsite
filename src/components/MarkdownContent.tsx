@@ -30,14 +30,19 @@ function inlineMarkdownNodes(text: string): ReactNode[] {
   });
   const underscoreMatches: InlineMatch[] = [];
   let openUnderscore = -1;
+  const characters = Array.from(text);
   const isWord = (character: string | undefined) =>
     character !== undefined && /[\p{L}\p{N}_]/u.test(character);
 
-  for (let index = 0; index < text.length; index += 1) {
-    if (text[index] !== '_' || text[index - 1] === '_' || text[index + 1] === '_') continue;
+  let offset = 0;
+  for (let characterIndex = 0; characterIndex < characters.length; characterIndex += 1) {
+    const index = offset;
+    const character = characters[characterIndex];
+    offset += character.length;
+    if (character !== '_' || characters[characterIndex - 1] === '_' || characters[characterIndex + 1] === '_') continue;
 
-    const previous = text[index - 1];
-    const next = text[index + 1];
+    const previous = characters[characterIndex - 1];
+    const next = characters[characterIndex + 1];
     const canOpen = !isWord(previous) && next !== undefined && !/\s/u.test(next);
     const canClose = previous !== undefined && !/\s/u.test(previous) && !isWord(next);
 

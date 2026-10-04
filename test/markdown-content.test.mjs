@@ -10,10 +10,10 @@ const require = createRequire(import.meta.url);
 const compiled = ts.transpileModule(readFileSync(new URL('../src/components/MarkdownContent.tsx', import.meta.url), 'utf8'), {
   compilerOptions: { jsx: ts.JsxEmit.ReactJSX, module: ts.ModuleKind.CommonJS },
 }).outputText;
-const module = { exports: {} };
-new Function('require', 'module', 'exports', compiled)(require, module, module.exports);
-const MarkdownContent = module.exports.default;
-const render = (children) => renderToStaticMarkup(createElement(MarkdownContent, { children }));
+const compiledModule = { exports: {} };
+new Function('require', 'module', 'exports', compiled)(require, compiledModule, compiledModule.exports);
+const MarkdownContent = compiledModule.exports.default;
+const render = (children) => renderToStaticMarkup(createElement(MarkdownContent, null, children));
 
 test('renders the publication title with italic inside bold', () => {
   assert.ok(render('**Géo Chkouroupiy, *Jeanne la bataillonneuse : suivi de Miss Adrienne***')

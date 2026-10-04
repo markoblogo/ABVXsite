@@ -73,6 +73,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const writingRoutes: MetadataRoute.Sitemap = writing.map((item) => ({
     url: `${base}/writing/${item.slug}`,
+    ...(item.translationGroup ? { alternates: { languages: Object.fromEntries(
+      writing.filter((translation) => translation.translationGroup === item.translationGroup && translation.language)
+        .map((translation) => [translation.language!, `${base}/writing/${translation.slug}`]),
+    ) } } : {}),
     lastModified: contentDate(item),
     changeFrequency: 'monthly',
     priority: 0.55,

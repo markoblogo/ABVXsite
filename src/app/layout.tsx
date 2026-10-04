@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import './globals.css';
 
+import { getNativeWritingBySlug, getNativeWritingItems } from '@/content';
+
+import DocumentLanguage from '@/components/DocumentLanguage';
 import SiteFooter from '@/components/SiteFooter';
 import SiteHeader from '@/components/SiteHeader';
 import { defaultOgImage } from '@/lib/seo';
@@ -219,10 +222,15 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   await connection();
-  const nonce = (await headers()).get('x-nonce') || undefined;
+  const requestHeaders = await headers();
+  const nonce = requestHeaders.get('x-nonce') || undefined;
+  const pathname = requestHeaders.get('x-site-pathname') || '/';
+  const writingSlug = pathname.match(/^\/writing\/([^/]+)$/)?.[1];
+  const language = pathname.startsWith('/fr/') ? 'fr'
+    : writingSlug ? getNativeWritingBySlug(writingSlug)?.language || 'en' : 'en';
 
   return (
-    <html lang="en">
+    <html lang={language}>
       <head>
         <script
           nonce={nonce}
@@ -249,6 +257,7 @@ export default async function RootLayout({
         <link rel="alternate" type="application/rss+xml" title="ABVX Substack feed" href="https://abvx.substack.com/feed" />
       </head>
       <body>
+        <DocumentLanguage writingLanguages={Object.fromEntries(getNativeWritingItems().map((item) => [`/writing/${item.slug}`, item.language || 'en']))} />
         <SiteHeader />
         <main className="site-main">{children}</main>
         <SiteFooter />

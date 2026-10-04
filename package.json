@@ -43,11 +43,12 @@
     "cortex-abv:observe-public-repositories": "node scripts/cortex-abv-observe-public-project-repositories.mjs",
     "cortex-abv:compare-repository-snapshots": "node scripts/cortex-abv-compare-repository-observation-snapshots.mjs",
     "cortex-abv:write-side-artifact": "node scripts/cortex-abv-write-side-review-artifact.mjs",
-    "test:sync": "node --test test/project-description-sync.test.mjs test/cortex-abv-write-side-policy.test.mjs test/cortex-abv-owner-review-decision.test.mjs test/cortex-abv-write-side-executor-design.test.mjs test/cortex-abv-executor-wiring-boundary.test.mjs test/cortex-abv-actual-executor-wiring.test.mjs test/latest-section-entry.test.mjs test/cortex-abv.test.mjs test/cortex-abv-private-runtime-export.test.mjs test/cortex-abv-public-presence.test.mjs test/cortex-abv-project-registry.test.mjs test/cortex-abv-repository-observer.test.mjs test/cortex-abv-repository-change-proposal.test.mjs test/ecosystem-registry.test.mjs",
+    "test:sync": "node --test test/markdown-content.test.mjs test/project-description-sync.test.mjs test/cortex-abv-write-side-policy.test.mjs test/cortex-abv-owner-review-decision.test.mjs test/cortex-abv-write-side-executor-design.test.mjs test/cortex-abv-executor-wiring-boundary.test.mjs test/cortex-abv-actual-executor-wiring.test.mjs test/latest-section-entry.test.mjs test/cortex-abv.test.mjs test/cortex-abv-private-runtime-export.test.mjs test/cortex-abv-public-presence.test.mjs test/cortex-abv-project-registry.test.mjs test/cortex-abv-repository-observer.test.mjs test/cortex-abv-repository-change-proposal.test.mjs test/ecosystem-registry.test.mjs",
     "media:review": "node scripts/media-optimization-report.mjs",
     "media:derivatives": "node scripts/generate-image-derivatives.mjs",
     "feeds:check": "node scripts/check-feed-covers.mjs",
     "qa:visual": "node scripts/visual-smoke.mjs",
+    "qa:seo": "node scripts/seo-discovery-check.mjs",
     "qa:csp": "node scripts/csp-check.mjs",
     "qa:perf": "node scripts/perf-check.mjs",
     "smoke:shell": "node scripts/site-shell-smoke-check.mjs"

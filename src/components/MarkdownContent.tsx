@@ -16,7 +16,7 @@ type InlineMatch = {
 };
 
 function inlineMarkdownNodes(text: string): ReactNode[] {
-  const pattern = /\[([^\]]+)\]\(([^)\s]+)\)|(\*\*(.+?)\*\*)|(__(.+?)__)|(\*(.+?)\*)/g;
+  const pattern = /\[([^\]]+)\]\(([^)\s]+)\)|(\*\*(.+?)\*\*(?!\*))|(__(.+?)__)|(\*(.+?)\*)/g;
   const regularMatches: InlineMatch[] = Array.from(text.matchAll(pattern), (match) => {
     const [full, label, href, , boldA, , boldB, , italic] = match;
     return {
@@ -86,13 +86,13 @@ function inlineMarkdownNodes(text: string): ReactNode[] {
           href={href}
           {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
         >
-          {label}
+          {inlineMarkdownNodes(label || href)}
         </a>,
       );
     } else if (strong) {
-      nodes.push(<strong key={`strong-${index}`}>{strong}</strong>);
+      nodes.push(<strong key={`strong-${index}`}>{inlineMarkdownNodes(strong)}</strong>);
     } else if (italic || underscoreItalic) {
-      nodes.push(<em key={`em-${index}`}>{italic || underscoreItalic}</em>);
+      nodes.push(<em key={`em-${index}`}>{inlineMarkdownNodes(italic || underscoreItalic || '')}</em>);
     }
     cursor = end;
   }

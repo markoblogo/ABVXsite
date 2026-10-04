@@ -336,6 +336,9 @@ export function readNativeWritingFiles(): NativeWriting[] {
         primarySection: 'writing',
         appearsIn: ['writing'],
         source: 'abvx',
+        language: ['en', 'fr', 'uk'].includes(stringValue(data.language))
+          ? stringValue(data.language) as 'en' | 'fr' | 'uk' : undefined,
+        translationGroup: stringValue(data.translationGroup) || undefined,
         body,
         coverImage: normalizeImage(data.media),
         heroImage: normalizeImage(data.heroImage) || normalizeImage(data.media),

@@ -1,4 +1,5 @@
 import FAQSection from '@/components/FAQSection';
+import EditorialSectionLink from '@/components/EditorialSectionLink';
 import BookCatalogueCard from '@/components/BookCatalogueCard';
 import ProjectCatalogueCard from '@/components/ProjectCatalogueCard';
 import JsonLd from '@/components/JsonLd';
@@ -236,6 +237,7 @@ export default async function FocusPage() {
             </Link>
           ))}
         </div>
+        <EditorialSectionLink section="focus" />
       </PageHeader>
 
       <section className="focus-explainer" aria-labelledby="agro-market-infrastructure-title">

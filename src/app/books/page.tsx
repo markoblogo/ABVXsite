@@ -1,4 +1,5 @@
 import BookCatalogueCard from '@/components/BookCatalogueCard';
+import EditorialSectionLink from '@/components/EditorialSectionLink';
 import CompanionCatalogueCard from '@/components/CompanionCatalogueCard';
 import JsonLd from '@/components/JsonLd';
 import MediaPanel from '@/components/MediaPanel';
@@ -193,7 +194,7 @@ export default function BooksPage() {
         eyebrow="ABVX Press"
         title="ABVX Press"
         summary="Books, translations, series and publishing projects across AI, strategy, language, culture, markets and systems thinking."
-      />
+      ><EditorialSectionLink section="books" /></PageHeader>
 
       <SectionPanel title="Publishing as infrastructure" eyebrow="Press">
         <p>

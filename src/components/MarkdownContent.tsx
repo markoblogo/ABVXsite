@@ -1,29 +1,35 @@
 import type { ReactNode } from 'react';
 
 type Block =
-  | { type: 'heading'; level: 3 | 4; text: string }
+  | { type: 'heading'; level: 2 | 3 | 4; text: string }
   | { type: 'paragraph'; text: string }
   | { type: 'list'; items: string[] };
 
 function inlineMarkdownNodes(text: string): ReactNode[] {
-  const pattern = /\[([^\]]+)\]\(([^)\s]+)\)/g;
+  const pattern = /\[([^\]]+)\]\(([^)\s]+)\)|(\*\*(.+?)\*\*)|(__(.+?)__)|(\*(.+?)\*)|(_(.+?)_)/g;
   const nodes: ReactNode[] = [];
   let cursor = 0;
 
   for (const match of text.matchAll(pattern)) {
     const index = match.index ?? 0;
-    const [full, label, href] = match;
+    const [full, label, href, , boldA, , boldB, , italicA, , italicB] = match;
     if (index > cursor) nodes.push(text.slice(cursor, index));
-    const external = /^(https?:\/\/|mailto:)/i.test(href);
-    nodes.push(
-      <a
-        key={`link-${index}-${href}`}
-        href={href}
-        {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-      >
-        {label}
-      </a>,
-    );
+    if (href) {
+      const external = /^(https?:\/\/|mailto:)/i.test(href);
+      nodes.push(
+        <a
+          key={`link-${index}-${href}`}
+          href={href}
+          {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+        >
+          {label}
+        </a>,
+      );
+    } else if (boldA || boldB) {
+      nodes.push(<strong key={`strong-${index}`}>{boldA || boldB}</strong>);
+    } else if (italicA || italicB) {
+      nodes.push(<em key={`em-${index}`}>{italicA || italicB}</em>);
+    }
     cursor = index + full.length;
   }
 
@@ -31,7 +37,7 @@ function inlineMarkdownNodes(text: string): ReactNode[] {
   return nodes.length ? nodes : [text];
 }
 
-function parseMarkdownBlocks(markdown: string): Block[] {
+function parseMarkdownBlocks(markdown: string, headingOffset: 0 | 1): Block[] {
   const blocks: Block[] = [];
   const lines = markdown.replace(/\r\n/g, '\n').split('\n');
   let paragraph: string[] = [];
@@ -64,7 +70,7 @@ function parseMarkdownBlocks(markdown: string): Block[] {
       flushList();
       blocks.push({
         type: 'heading',
-        level: heading[1].length === 2 ? 3 : 4,
+        level: Math.min(4, heading[1].length + headingOffset) as 2 | 3 | 4,
         text: heading[2].trim(),
       });
       continue;
@@ -89,18 +95,20 @@ function parseMarkdownBlocks(markdown: string): Block[] {
 export default function MarkdownContent({
   children,
   className,
+  headingOffset = 1,
 }: {
   children: string;
   className?: string;
+  headingOffset?: 0 | 1;
 }) {
-  const blocks = parseMarkdownBlocks(children);
+  const blocks = parseMarkdownBlocks(children, headingOffset);
   if (!blocks.length) return null;
 
   return (
     <div className={['content-markdown', className].filter(Boolean).join(' ')}>
       {blocks.map((block, index): ReactNode => {
         if (block.type === 'heading') {
-          const Heading = `h${block.level}` as 'h3' | 'h4';
+          const Heading = `h${block.level}` as 'h2' | 'h3' | 'h4';
           return <Heading key={`${block.type}-${index}`}>{inlineMarkdownNodes(block.text)}</Heading>;
         }
 

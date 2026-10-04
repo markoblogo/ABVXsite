@@ -43,5 +43,68 @@
     "summary": "A starting point for people who are new to this work, and a guide to the wider ABVX site.",
     "linkLabel": "About this page",
     "source": "about.md"
+  },
+  {
+    "section": "books",
+    "sectionTitle": "Books",
+    "slug": "publishing-as-infrastructure",
+    "title": "Publishing as Infrastructure",
+    "summary": "How BWA Express books grow into dedicated websites, open tools, language protocols, learning resources and reusable publishing infrastructure.",
+    "linkLabel": "Explore the publishing infrastructure",
+    "source": "publishing-as-infrastructure.md",
+    "language": "en"
+  },
+  {
+    "section": "books",
+    "sectionTitle": "Books",
+    "slug": "modernisme-ukrainien-en",
+    "title": "Modernisme Ukrainien",
+    "summary": "How a French-language publishing project introduces readers to Ukrainian modernist literature through translated fiction and the cultural history of the 1920s.",
+    "linkLabel": "Read in English",
+    "source": "modernisme-ukrainien-en.md",
+    "language": "en",
+    "translationGroup": "modernisme-ukrainien"
+  },
+  {
+    "section": "books",
+    "sectionTitle": "Books",
+    "slug": "modernisme-ukrainien-fr",
+    "title": "Modernisme ukrainien",
+    "summary": "Comment une ligne éditoriale fait découvrir la littérature moderniste ukrainienne en français, entre traductions, contexte historique et voix des années 1920.",
+    "linkLabel": "Lire en français",
+    "source": "modernisme-ukrainien-fr.md",
+    "language": "fr",
+    "translationGroup": "modernisme-ukrainien"
+  },
+  {
+    "section": "books",
+    "sectionTitle": "Books",
+    "slug": "modernisme-ukrainien-uk",
+    "title": "Український модернізм французькою",
+    "summary": "Як видавнича серія знайомить франкомовного читача з українським модернізмом через переклади, історичний контекст і літературу 1920-х років.",
+    "linkLabel": "Читати українською",
+    "source": "modernisme-ukrainien-uk.md",
+    "language": "uk",
+    "translationGroup": "modernisme-ukrainien"
+  },
+  {
+    "section": "books",
+    "sectionTitle": "Books",
+    "slug": "chinese-wisdom-in-toki-pona",
+    "title": "Chinese Wisdom in Toki Pona",
+    "summary": "Why a small Toki Pona publishing line brings together the Dao De Jing, Sun Tzu, Mozi and the Heart Sutra through philosophical compression and slow reading.",
+    "linkLabel": "Why Chinese philosophy in toki pona?",
+    "source": "chinese-wisdom-in-toki-pona.md",
+    "language": "en"
+  },
+  {
+    "section": "books",
+    "sectionTitle": "Books",
+    "slug": "stoic-wisdom-in-toki-pona",
+    "title": "Stoic Wisdom in Toki Pona",
+    "summary": "How Marcus Aurelius’ Meditations grew into a five-book Stoic line with free learning resources and English, toki pona, sitelen pona and emoji pona editions.",
+    "linkLabel": "Why Stoicism in toki pona?",
+    "source": "stoic-wisdom-in-toki-pona.md",
+    "language": "en"
   }
 ]

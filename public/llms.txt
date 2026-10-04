@@ -147,6 +147,36 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Summary: A starting point for people who are new to this work, and a guide to the wider ABVX site.
   Section: About
 
+
+- Publishing as Infrastructure
+  URL: https://abvx.xyz/editorial/books/publishing-as-infrastructure
+  Summary: How BWA Express books grow into dedicated websites, open tools, language protocols, learning resources and reusable publishing infrastructure.
+  Section: Books
+
+- Modernisme Ukrainien
+  URL: https://abvx.xyz/editorial/books/modernisme-ukrainien-en
+  Summary: How a French-language publishing project introduces readers to Ukrainian modernist literature through translated fiction and the cultural history of the 1920s.
+  Section: Books
+
+- Modernisme ukrainien
+  URL: https://abvx.xyz/editorial/books/modernisme-ukrainien-fr
+  Summary: Comment une ligne éditoriale fait découvrir la littérature moderniste ukrainienne en français, entre traductions, contexte historique et voix des années 1920.
+  Section: Books
+
+- Український модернізм французькою
+  URL: https://abvx.xyz/editorial/books/modernisme-ukrainien-uk
+  Summary: Як видавнича серія знайомить франкомовного читача з українським модернізмом через переклади, історичний контекст і літературу 1920-х років.
+  Section: Books
+
+- Chinese Wisdom in Toki Pona
+  URL: https://abvx.xyz/editorial/books/chinese-wisdom-in-toki-pona
+  Summary: Why a small Toki Pona publishing line brings together the Dao De Jing, Sun Tzu, Mozi and the Heart Sutra through philosophical compression and slow reading.
+  Section: Books
+
+- Stoic Wisdom in Toki Pona
+  URL: https://abvx.xyz/editorial/books/stoic-wisdom-in-toki-pona
+  Summary: How Marcus Aurelius’ Meditations grew into a five-book Stoic line with free learning resources and English, toki pona, sitelen pona and emoji pona editions.
+  Section: Books
 ## Publishing lines
 
 - Modernisme Ukrainien

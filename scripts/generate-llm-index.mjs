@@ -222,9 +222,16 @@ const editorialIndexItems = editorialPages.map((page) => ({
   status: 'published',
   title: page.title,
   summary: page.summary,
+  ...(page.language ? { language: page.language } : {}),
+  ...(page.translationGroup ? { translationGroup: page.translationGroup } : {}),
   canonicalUrl: `${SITE_URL}/editorial/${page.section}/${page.slug}`,
   tags: [page.sectionTitle, 'editorial'],
-  links: [{ type: 'section', label: `Back to ${page.sectionTitle}`, url: `${SITE_URL}/${page.section}` }],
+  links: [
+    { type: 'section', label: `Back to ${page.sectionTitle}`, url: `${SITE_URL}/${page.section}` },
+    ...(page.translationGroup ? editorialPages
+      .filter((translation) => translation.translationGroup === page.translationGroup && translation.slug !== page.slug)
+      .map((translation) => ({ type: 'translation', label: translation.linkLabel, language: translation.language, url: `${SITE_URL}/editorial/${translation.section}/${translation.slug}` })) : []),
+  ],
   related: [],
 }));
 

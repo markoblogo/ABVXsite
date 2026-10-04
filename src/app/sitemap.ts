@@ -11,8 +11,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const artifacts = getArtifacts();
   const books = getBooks();
   const writing = getNativeWritingItems();
-  const editorialRoutes: MetadataRoute.Sitemap = getEditorialArticles().map((article) => ({
+  const editorialArticles = getEditorialArticles();
+  const editorialRoutes: MetadataRoute.Sitemap = editorialArticles.map((article) => ({
     url: `${base}${article.href}`,
+    ...(article.translationGroup ? { alternates: { languages: Object.fromEntries(
+      editorialArticles.filter((translation) => translation.translationGroup === article.translationGroup && translation.language)
+        .map((translation) => [translation.language!, `${base}${translation.href}`]),
+    ) } } : {}),
     changeFrequency: 'monthly',
     priority: 0.55,
   }));

@@ -18,13 +18,21 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const article = getEditorialArticle(section, slug);
   if (!article) return { title: 'Editorial' };
 
-  return metadataWithImage({
+  const metadata = metadataWithImage({
     title: article.title,
     description: article.summary,
     canonicalPath: article.href,
     image: defaultOgImage,
     type: 'article',
   });
+  if (!article.translationGroup) return metadata;
+
+  const languages = Object.fromEntries(
+    getEditorialArticles()
+      .filter((translation) => translation.translationGroup === article.translationGroup && translation.language)
+      .map((translation) => [translation.language!, `${SITE_URL}${translation.href}`]),
+  );
+  return { ...metadata, alternates: { ...metadata.alternates, languages } };
 }
 
 export default async function EditorialArticlePage({ params }: PageProps) {
@@ -55,7 +63,7 @@ export default async function EditorialArticlePage({ params }: PageProps) {
           { label: article.title },
         ]}
       />
-      <article>
+      <article lang={article.language || 'en'}>
         <PageHeader eyebrow={`${article.sectionTitle} · Editorial`} title={article.title} summary={article.summary} />
         <MarkdownContent className="editorial-article-body" headingOffset={0}>
           {article.body}

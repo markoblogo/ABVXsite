@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import { getEditorialForSection } from '@/content/editorials';
+import { getEditorialArticle, getEditorialForSection } from '@/content/editorials';
 
-export default function EditorialSectionLink({ section }: { section: string }) {
-  const article = getEditorialForSection(section);
+export default function EditorialSectionLink({ section, slug }: { section: string; slug?: string }) {
+  const article = slug ? getEditorialArticle(section, slug) : getEditorialForSection(section);
   if (!article) return null;
 
   return (

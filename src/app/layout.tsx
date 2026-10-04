@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 import { getNativeWritingBySlug, getNativeWritingItems } from '@/content';
+import { getEditorialArticles } from '@/content/editorials';
 
 import DocumentLanguage from '@/components/DocumentLanguage';
 import SiteFooter from '@/components/SiteFooter';
@@ -226,8 +227,9 @@ export default async function RootLayout({
   const nonce = requestHeaders.get('x-nonce') || undefined;
   const pathname = requestHeaders.get('x-site-pathname') || '/';
   const writingSlug = pathname.match(/^\/writing\/([^/]+)$/)?.[1];
+  const editorialLanguages = Object.fromEntries(getEditorialArticles().filter((article) => article.language).map((article) => [article.href, article.language!]));
   const language = pathname.startsWith('/fr/') ? 'fr'
-    : writingSlug ? getNativeWritingBySlug(writingSlug)?.language || 'en' : 'en';
+    : writingSlug ? getNativeWritingBySlug(writingSlug)?.language || 'en' : editorialLanguages[pathname] || 'en';
 
   return (
     <html lang={language}>
@@ -257,7 +259,7 @@ export default async function RootLayout({
         <link rel="alternate" type="application/rss+xml" title="ABVX Substack feed" href="https://abvx.substack.com/feed" />
       </head>
       <body>
-        <DocumentLanguage writingLanguages={Object.fromEntries(getNativeWritingItems().map((item) => [`/writing/${item.slug}`, item.language || 'en']))} />
+        <DocumentLanguage writingLanguages={{ ...Object.fromEntries(getNativeWritingItems().map((item) => [`/writing/${item.slug}`, item.language || 'en'])), ...editorialLanguages }} />
         <SiteHeader />
         <main className="site-main">{children}</main>
         <SiteFooter />

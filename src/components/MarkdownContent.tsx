@@ -6,13 +6,13 @@ type Block =
   | { type: 'list'; items: string[] };
 
 function inlineMarkdownNodes(text: string): ReactNode[] {
-  const pattern = /\[([^\]]+)\]\(([^)\s]+)\)|(\*\*(.+?)\*\*)|(__(.+?)__)|(\*(.+?)\*)|(_(.+?)_)/g;
+  const pattern = /\[([^\]]+)\]\(([^)\s]+)\)|(\*\*(.+?)\*\*)|(__(.+?)__)|(\*(.+?)\*)|(?<![\p{L}\p{N}_])(_([^_\s](?:.*?[^_\s])?))_(?![\p{L}\p{N}_])/gu;
   const nodes: ReactNode[] = [];
   let cursor = 0;
 
   for (const match of text.matchAll(pattern)) {
     const index = match.index ?? 0;
-    const [full, label, href, , boldA, , boldB, , italicA, , italicB] = match;
+    const [full, label, href, , boldA, , boldB, , italicA, , italicUnderscore] = match;
     if (index > cursor) nodes.push(text.slice(cursor, index));
     if (href) {
       const external = /^(https?:\/\/|mailto:)/i.test(href);
@@ -27,8 +27,8 @@ function inlineMarkdownNodes(text: string): ReactNode[] {
       );
     } else if (boldA || boldB) {
       nodes.push(<strong key={`strong-${index}`}>{boldA || boldB}</strong>);
-    } else if (italicA || italicB) {
-      nodes.push(<em key={`em-${index}`}>{italicA || italicB}</em>);
+    } else if (italicA || italicUnderscore) {
+      nodes.push(<em key={`em-${index}`}>{italicA || italicUnderscore}</em>);
     }
     cursor = index + full.length;
   }

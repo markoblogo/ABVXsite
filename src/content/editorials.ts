@@ -2,12 +2,17 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import editorialConfig from '../../content/editorial/index.json';
 
-export type EditorialArticle = (typeof editorialConfig)[number] & { body: string; href: string };
+type EditorialConfigEntry = (typeof editorialConfig)[number] & { language?: string; translationGroup?: string };
+
+export type EditorialArticle = EditorialConfigEntry & { body: string; href: string };
 
 const editorialDirectory = path.join(process.cwd(), 'content/editorial');
+let editorialArticlesCache: EditorialArticle[] | undefined;
 
 export function getEditorialArticles(): EditorialArticle[] {
-  return editorialConfig.map((article) => {
+  if (editorialArticlesCache) return editorialArticlesCache;
+
+  editorialArticlesCache = (editorialConfig as EditorialConfigEntry[]).map((article) => {
     const markdown = readFileSync(path.join(editorialDirectory, article.source), 'utf8').replace(/\r\n/g, '\n');
     const [titleLine, ...bodyLines] = markdown.trim().split('\n');
     const sourceTitle = titleLine.match(/^#\s+\*\*(.+?)\*\*\s*$/)?.[1] ?? titleLine.replace(/^#\s+/, '');
@@ -22,6 +27,7 @@ export function getEditorialArticles(): EditorialArticle[] {
       href: `/editorial/${article.section}/${article.slug}`,
     };
   });
+  return editorialArticlesCache;
 }
 
 export function getEditorialArticle(section: string, slug: string): EditorialArticle | undefined {

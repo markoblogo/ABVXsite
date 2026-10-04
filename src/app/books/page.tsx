@@ -8,6 +8,8 @@ import SectionPanel from '@/components/SectionPanel';
 import ActionLinks from '@/components/ActionLinks';
 import TagList from '@/components/TagList';
 import { getArtifactsBySection, getBooks, getSeries } from '@/content';
+import { getEditorialArticles } from '@/content/editorials';
+import type { EditorialArticle } from '@/content/editorials';
 import type { Artifact, Book, Series } from '@/content';
 import { artifactListItem, bookListItem, booksOgImage, collectionPageJsonLd, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
 import type { Metadata } from 'next';
@@ -29,6 +31,12 @@ const officialSeriesSlugs = [
   'toki-pona-free-kits',
   'mn7r-commodity-brokerage-library',
 ];
+
+const editorialSlugsBySeries: Record<string, string[]> = {
+  'modernisme-ukrainien': ['modernisme-ukrainien-en', 'modernisme-ukrainien-fr', 'modernisme-ukrainien-uk'],
+  'chinese-wisdom-toki-pona': ['chinese-wisdom-in-toki-pona'],
+  'stoic-wisdom-toki-pona': ['stoic-wisdom-in-toki-pona'],
+};
 
 const standaloneGroups = [
   {
@@ -88,9 +96,11 @@ function seriesSortValue(item: Book | Artifact) {
 function SeriesLine({
   series,
   items,
+  editorialArticles = [],
 }: {
   series: Series;
   items: Array<{ kind: 'book'; item: Book } | { kind: 'artifact'; item: Artifact }>;
+  editorialArticles?: EditorialArticle[];
 }) {
   const bookCount = items.filter((entry) => entry.kind === 'book' && (entry.item.type === 'book' || entry.item.type === 'translation')).length;
   const freeCount = items.filter((entry) => entry.kind === 'book' && !(entry.item.type === 'book' || entry.item.type === 'translation')).length;
@@ -104,6 +114,11 @@ function SeriesLine({
           <div className="eyebrow">Official publishing line</div>
           <h3>{series.title}</h3>
           <p>{series.summary}</p>
+          {editorialArticles.length ? (
+            <div className="flex flex-wrap gap-x-4 gap-y-1 pt-2">
+              {editorialArticles.map((article) => <EditorialSectionLink key={article.slug} article={article} />)}
+            </div>
+          ) : null}
           <div className="books-series-line__meta">
             <span>{bookCount} books</span>
             {freeCount ? <span>{freeCount} free resources</span> : null}
@@ -146,6 +161,9 @@ function SeriesLine({
 }
 
 export default function BooksPage() {
+  const editorialArticles = getEditorialArticles();
+  const booksEditorial = editorialArticles.find((article) => article.section === 'books');
+  const publishingArticle = editorialArticles.find((article) => article.slug === 'publishing-as-infrastructure');
   const books = getBooks();
   const series = getSeries();
   const publishingArtifacts = getArtifactsBySection('books');
@@ -194,7 +212,7 @@ export default function BooksPage() {
         eyebrow="ABVX Press"
         title="ABVX Press"
         summary="Books, translations, series and publishing projects across AI, strategy, language, culture, markets and systems thinking."
-      ><EditorialSectionLink section="books" /></PageHeader>
+      ><EditorialSectionLink article={booksEditorial} /></PageHeader>
 
       <SectionPanel title="Publishing as infrastructure" eyebrow="Press">
         <p>
@@ -203,6 +221,7 @@ export default function BooksPage() {
           readable, visible and reusable. Some support systems also appear in
           Systems when they are technical projects in their own right.
         </p>
+        <EditorialSectionLink article={publishingArticle} />
       </SectionPanel>
 
       <section className="home-section" aria-labelledby="book-series-title">
@@ -215,6 +234,10 @@ export default function BooksPage() {
             <SeriesLine
               key={line.id}
               series={line}
+              editorialArticles={(editorialSlugsBySeries[line.slug] || []).flatMap((slug) => {
+                const article = editorialArticles.find((candidate) => candidate.slug === slug);
+                return article ? [article] : [];
+              })}
               items={[
                 ...bookItems
                   .filter((book) => belongsToSeries(book, line.slug))

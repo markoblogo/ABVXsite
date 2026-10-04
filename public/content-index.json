@@ -295,6 +295,29 @@
       ]
     },
     {
+      "type": "editorial",
+      "section": "books",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Chinese Wisdom in Toki Pona",
+      "summary": "Why a small Toki Pona publishing line brings together the Dao De Jing, Sun Tzu, Mozi and the Heart Sutra through philosophical compression and slow reading.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/editorial/books/chinese-wisdom-in-toki-pona",
+      "tags": [
+        "Books",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Books",
+          "url": "https://abvx.xyz/books"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "translation",
       "section": "books",
       "ecosystem": "Stoic Wisdom in Toki Pona",
@@ -1213,6 +1236,42 @@
       ]
     },
     {
+      "type": "editorial",
+      "section": "books",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Modernisme ukrainien",
+      "summary": "Comment une ligne éditoriale fait découvrir la littérature moderniste ukrainienne en français, entre traductions, contexte historique et voix des années 1920.",
+      "language": "fr",
+      "translationGroup": "modernisme-ukrainien",
+      "canonicalUrl": "https://abvx.xyz/editorial/books/modernisme-ukrainien-fr",
+      "tags": [
+        "Books",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Books",
+          "url": "https://abvx.xyz/books"
+        },
+        {
+          "type": "translation",
+          "label": "Read in English",
+          "language": "en",
+          "url": "https://abvx.xyz/editorial/books/modernisme-ukrainien-en"
+        },
+        {
+          "type": "translation",
+          "label": "Читати українською",
+          "language": "uk",
+          "url": "https://abvx.xyz/editorial/books/modernisme-ukrainien-uk"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "series",
       "section": "books",
       "ecosystem": "Publishing lines",
@@ -1275,6 +1334,42 @@
           "relation": "member"
         }
       ]
+    },
+    {
+      "type": "editorial",
+      "section": "books",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Modernisme Ukrainien",
+      "summary": "How a French-language publishing project introduces readers to Ukrainian modernist literature through translated fiction and the cultural history of the 1920s.",
+      "language": "en",
+      "translationGroup": "modernisme-ukrainien",
+      "canonicalUrl": "https://abvx.xyz/editorial/books/modernisme-ukrainien-en",
+      "tags": [
+        "Books",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Books",
+          "url": "https://abvx.xyz/books"
+        },
+        {
+          "type": "translation",
+          "label": "Lire en français",
+          "language": "fr",
+          "url": "https://abvx.xyz/editorial/books/modernisme-ukrainien-fr"
+        },
+        {
+          "type": "translation",
+          "label": "Читати українською",
+          "language": "uk",
+          "url": "https://abvx.xyz/editorial/books/modernisme-ukrainien-uk"
+        }
+      ],
+      "related": []
     },
     {
       "type": "translation",
@@ -1474,6 +1569,29 @@
         }
       ],
       "updatedAt": "2026-09-04",
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "books",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Publishing as Infrastructure",
+      "summary": "How BWA Express books grow into dedicated websites, open tools, language protocols, learning resources and reusable publishing infrastructure.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/editorial/books/publishing-as-infrastructure",
+      "tags": [
+        "Books",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Books",
+          "url": "https://abvx.xyz/books"
+        }
+      ],
       "related": []
     },
     {
@@ -1688,6 +1806,29 @@
           "relation": "member"
         }
       ]
+    },
+    {
+      "type": "editorial",
+      "section": "books",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Stoic Wisdom in Toki Pona",
+      "summary": "How Marcus Aurelius’ Meditations grew into a five-book Stoic line with free learning resources and English, toki pona, sitelen pona and emoji pona editions.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/editorial/books/stoic-wisdom-in-toki-pona",
+      "tags": [
+        "Books",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Books",
+          "url": "https://abvx.xyz/books"
+        }
+      ],
+      "related": []
     },
     {
       "type": "translation",
@@ -2386,6 +2527,42 @@
           "relation": "series"
         }
       ]
+    },
+    {
+      "type": "editorial",
+      "section": "books",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Український модернізм французькою",
+      "summary": "Як видавнича серія знайомить франкомовного читача з українським модернізмом через переклади, історичний контекст і літературу 1920-х років.",
+      "language": "uk",
+      "translationGroup": "modernisme-ukrainien",
+      "canonicalUrl": "https://abvx.xyz/editorial/books/modernisme-ukrainien-uk",
+      "tags": [
+        "Books",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Books",
+          "url": "https://abvx.xyz/books"
+        },
+        {
+          "type": "translation",
+          "label": "Read in English",
+          "language": "en",
+          "url": "https://abvx.xyz/editorial/books/modernisme-ukrainien-en"
+        },
+        {
+          "type": "translation",
+          "label": "Lire en français",
+          "language": "fr",
+          "url": "https://abvx.xyz/editorial/books/modernisme-ukrainien-fr"
+        }
+      ],
+      "related": []
     },
     {
       "type": "book",

@@ -5,14 +5,73 @@ type Block =
   | { type: 'paragraph'; text: string }
   | { type: 'list'; items: string[] };
 
+type InlineMatch = {
+  index: number;
+  end: number;
+  label?: string;
+  href?: string;
+  strong?: string;
+  italic?: string;
+  underscoreItalic?: string;
+};
+
 function inlineMarkdownNodes(text: string): ReactNode[] {
-  const pattern = /\[([^\]]+)\]\(([^)\s]+)\)|(\*\*(.+?)\*\*)|(__(.+?)__)|(\*(.+?)\*)|(?<![\p{L}\p{N}_])(_([^_\s](?:.*?[^_\s])?))_(?![\p{L}\p{N}_])/gu;
+  const pattern = /\[([^\]]+)\]\(([^)\s]+)\)|(\*\*(.+?)\*\*)|(__(.+?)__)|(\*(.+?)\*)/g;
+  const regularMatches: InlineMatch[] = Array.from(text.matchAll(pattern), (match) => {
+    const [full, label, href, , boldA, , boldB, , italic] = match;
+    return {
+      index: match.index ?? 0,
+      end: (match.index ?? 0) + full.length,
+      ...(label ? { label } : {}),
+      ...(href ? { href } : {}),
+      ...((boldA || boldB) ? { strong: boldA || boldB } : {}),
+      ...(italic ? { italic } : {}),
+    };
+  });
+  const underscoreMatches: InlineMatch[] = [];
+  let openUnderscore = -1;
+  const isWord = (character: string | undefined) =>
+    character !== undefined && /[\p{L}\p{N}_]/u.test(character);
+
+  for (let index = 0; index < text.length; index += 1) {
+    if (text[index] !== '_' || text[index - 1] === '_' || text[index + 1] === '_') continue;
+
+    const previous = text[index - 1];
+    const next = text[index + 1];
+    const canOpen = !isWord(previous) && next !== undefined && !/\s/u.test(next);
+    const canClose = previous !== undefined && !/\s/u.test(previous) && !isWord(next);
+
+    if (canClose && openUnderscore >= 0) {
+      const content = text.slice(openUnderscore + 1, index);
+      if (content && !/^\s|\s$/u.test(content)) {
+        underscoreMatches.push({
+          index: openUnderscore,
+          end: index + 1,
+          underscoreItalic: content,
+        });
+        openUnderscore = -1;
+        continue;
+      }
+    }
+
+    if (canOpen) openUnderscore = index;
+  }
+
   const nodes: ReactNode[] = [];
   let cursor = 0;
+  let regularIndex = 0;
+  let underscoreIndex = 0;
 
-  for (const match of text.matchAll(pattern)) {
-    const index = match.index ?? 0;
-    const [full, label, href, , boldA, , boldB, , italicA, , italicUnderscore] = match;
+  while (regularIndex < regularMatches.length || underscoreIndex < underscoreMatches.length) {
+    const regular = regularMatches[regularIndex];
+    const underscore = underscoreMatches[underscoreIndex];
+    const match = !underscore || (regular && regular.index <= underscore.index) ? regular : underscore;
+    if (!match) break;
+    if (match === regular) regularIndex += 1;
+    else underscoreIndex += 1;
+
+    const { index, end, label, href, strong, italic, underscoreItalic } = match;
+    if (index < cursor) continue;
     if (index > cursor) nodes.push(text.slice(cursor, index));
     if (href) {
       const external = /^(https?:\/\/|mailto:)/i.test(href);
@@ -25,12 +84,12 @@ function inlineMarkdownNodes(text: string): ReactNode[] {
           {label}
         </a>,
       );
-    } else if (boldA || boldB) {
-      nodes.push(<strong key={`strong-${index}`}>{boldA || boldB}</strong>);
-    } else if (italicA || italicUnderscore) {
-      nodes.push(<em key={`em-${index}`}>{italicA || italicUnderscore}</em>);
+    } else if (strong) {
+      nodes.push(<strong key={`strong-${index}`}>{strong}</strong>);
+    } else if (italic || underscoreItalic) {
+      nodes.push(<em key={`em-${index}`}>{italic || underscoreItalic}</em>);
     }
-    cursor = index + full.length;
+    cursor = end;
   }
 
   if (cursor < text.length) nodes.push(text.slice(cursor));

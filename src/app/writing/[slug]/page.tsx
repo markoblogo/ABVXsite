@@ -6,6 +6,9 @@ import { defaultOgImage, imageMetadata, metadataWithImage, SITE_URL } from '@/li
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
+const languageLabels = { en: 'English', fr: 'Français', uk: 'Українською' };
+const translationNavLabels = { en: 'Other languages', fr: 'Autres langues', uk: 'Інші мови' };
+
 export function generateStaticParams() {
   return getNativeWritingItems().map((item) => ({ slug: item.slug }));
 }
@@ -87,10 +90,10 @@ export default async function NativeWritingPage({
         ))}
       </div>
       {item.translationGroup ? (
-        <nav aria-label={item.language === 'uk' ? 'Інші мови' : 'Autres langues'} className="link-strip">
-          {getNativeWritingItems().filter((translation) => translation.translationGroup === item.translationGroup && translation.slug !== item.slug).map((translation) => (
+        <nav aria-label={translationNavLabels[item.language || 'en']} className="link-strip">
+          {getNativeWritingItems().filter((translation) => translation.translationGroup === item.translationGroup && translation.slug !== item.slug && translation.language).map((translation) => (
             <a key={translation.slug} href={`/writing/${translation.slug}`} hrefLang={translation.language} lang={translation.language}>
-              {translation.language === 'uk' ? 'Українською' : 'Français'}
+              {languageLabels[translation.language || 'en']}
             </a>
           ))}
         </nav>

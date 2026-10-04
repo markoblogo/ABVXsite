@@ -40,7 +40,7 @@
   "needsReview": false,
   "homepageEligible": false,
   "publishedAt": "2026-09-27",
-  "updatedAt": "2026-09-27",
+  "updatedAt": "2026-10-04",
   "media": {
     "src": "/media/books/jeanne-la-bataillonneuse/promo.png",
     "alt": "Promotional image for Géo Chkouroupiy’s Jeanne la bataillonneuse: suivi de Miss Adrienne",

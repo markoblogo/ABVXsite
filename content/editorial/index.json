@@ -106,5 +106,99 @@
     "linkLabel": "Why Stoicism in toki pona?",
     "source": "stoic-wisdom-in-toki-pona.md",
     "language": "en"
+  },
+  {
+    "section": "books",
+    "sectionTitle": "Books",
+    "slug": "toki-pona-free-kits-translations",
+    "title": "Toki Pona Free Kits & Translations",
+    "summary": "How free books, translations and reader resources make the Toki Pona publishing ecosystem easier to enter, explore and learn from.",
+    "linkLabel": "Explore the free library",
+    "source": "toki-pona-free-kits-translations.md",
+    "language": "en"
+  },
+  {
+    "section": "books",
+    "sectionTitle": "Books",
+    "slug": "mn7r-commodity-brokerage-library-en",
+    "title": "MN7R Commodity Brokerage Library",
+    "summary": "Why MN7R documents the operational work behind physical commodity and agro brokerage, from market knowledge and logistics to contracts and execution.",
+    "linkLabel": "Read in English",
+    "source": "mn7r-commodity-brokerage-library-en.md",
+    "language": "en",
+    "translationGroup": "mn7r-commodity-brokerage-library"
+  },
+  {
+    "section": "books",
+    "sectionTitle": "Books",
+    "slug": "mn7r-commodity-brokerage-library-uk",
+    "title": "MN7R Commodity Brokerage Library",
+    "summary": "Як MN7R документує операційну роботу фізичної товарної та аграрної торгівлі: знання ринку, логістику, контракти й виконання угод.",
+    "linkLabel": "Читати українською",
+    "source": "mn7r-commodity-brokerage-library-uk.md",
+    "language": "uk",
+    "translationGroup": "mn7r-commodity-brokerage-library"
+  },
+  {
+    "section": "books",
+    "sectionTitle": "Books",
+    "slug": "business-ai-marketing",
+    "title": "Business, AI & Marketing",
+    "summary": "Why a shelf of independent books brings together marketing, productivity, AI, psychology and practical business systems without forming a formal series.",
+    "linkLabel": "Explore the ideas behind these books",
+    "source": "business-ai-marketing.md",
+    "language": "en"
+  },
+  {
+    "section": "books",
+    "sectionTitle": "Books",
+    "slug": "language-ai-toki-pona",
+    "title": "Language, AI & Toki Pona",
+    "summary": "Experiments in constructed languages, Toki Pona, AI, machine reasoning, visual language and the ways language can shape thought.",
+    "linkLabel": "Explore the language experiments",
+    "source": "language-ai-toki-pona.md",
+    "language": "en"
+  },
+  {
+    "section": "books",
+    "sectionTitle": "Books",
+    "slug": "practical-guides-reference-en",
+    "title": "Practical Guides & Reference",
+    "summary": "A small and growing category for practical guides, visual references and compact tools for real-world decisions, beginning with French road rules for Ukrainians.",
+    "linkLabel": "Read in English",
+    "source": "practical-guides-reference-en.md",
+    "language": "en",
+    "translationGroup": "practical-guides-reference"
+  },
+  {
+    "section": "books",
+    "sectionTitle": "Books",
+    "slug": "practical-guides-reference-uk",
+    "title": "Практичні довідники та посібники",
+    "summary": "Про невеликий розділ практичних посібників, візуальних довідників і компактних інструментів для реальних життєвих ситуацій.",
+    "linkLabel": "Читати українською",
+    "source": "practical-guides-reference-uk.md",
+    "language": "uk",
+    "translationGroup": "practical-guides-reference"
+  },
+  {
+    "section": "books",
+    "sectionTitle": "Books",
+    "slug": "fiction",
+    "title": "Fiction",
+    "summary": "Absurdism, dark humour, literary mashups and genre collisions across the standalone fiction catalogue, with Good Dog remaining a separate emerging line.",
+    "linkLabel": "Explore the fiction",
+    "source": "fiction.md",
+    "language": "en"
+  },
+  {
+    "section": "books",
+    "sectionTitle": "Books",
+    "slug": "publishing-systems-protocols",
+    "title": "Publishing Systems & Protocols",
+    "summary": "The tools, protocols, production systems, landing sites and language infrastructure that grow around books and make publishing experiments reusable.",
+    "linkLabel": "Explore the publishing systems",
+    "source": "publishing-systems-protocols.md",
+    "language": "en"
   }
 ]

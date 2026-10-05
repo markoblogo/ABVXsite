@@ -36,24 +36,30 @@ const editorialSlugsBySeries: Record<string, string[]> = {
   'modernisme-ukrainien': ['modernisme-ukrainien-en', 'modernisme-ukrainien-fr', 'modernisme-ukrainien-uk'],
   'chinese-wisdom-toki-pona': ['chinese-wisdom-in-toki-pona'],
   'stoic-wisdom-toki-pona': ['stoic-wisdom-in-toki-pona'],
+  'toki-pona-free-kits': ['toki-pona-free-kits-translations'],
+  'mn7r-commodity-brokerage-library': ['mn7r-commodity-brokerage-library-en', 'mn7r-commodity-brokerage-library-uk'],
 };
 
 const standaloneGroups = [
   {
     title: 'Business, AI & Marketing',
     description: 'Independent strategy, marketing, productivity and AI books outside the formal publishing series.',
+    editorialSlugs: ['business-ai-marketing'],
   },
   {
     title: 'Language, AI & Toki Pona',
     description: 'Standalone books where language systems, Toki Pona and AI-native thinking become the main subject.',
+    editorialSlugs: ['language-ai-toki-pona'],
   },
   {
     title: 'Practical Guides & Reference',
     description: 'Applied guides, visual references and decision tools for practical real-world situations.',
+    editorialSlugs: ['practical-guides-reference-en', 'practical-guides-reference-uk'],
   },
   {
     title: 'Fiction',
     description: 'Original fiction and translations outside the non-fiction and classical translation lines.',
+    editorialSlugs: ['fiction'],
   },
 ];
 
@@ -164,6 +170,7 @@ export default function BooksPage() {
   const editorialArticles = getEditorialArticles();
   const booksEditorial = editorialArticles.find((article) => article.section === 'books');
   const publishingArticle = editorialArticles.find((article) => article.slug === 'publishing-as-infrastructure');
+  const publishingSystemsArticle = editorialArticles.find((article) => article.slug === 'publishing-systems-protocols');
   const books = getBooks();
   const series = getSeries();
   const publishingArtifacts = getArtifactsBySection('books');
@@ -270,6 +277,14 @@ export default function BooksPage() {
                 <div className="books-standalone-group__header">
                   <h3>{group.title}</h3>
                   <p>{group.description}</p>
+                  {group.editorialSlugs?.length ? (
+                    <div className="flex flex-wrap gap-x-4 gap-y-1 pt-2">
+                      {group.editorialSlugs.flatMap((slug) => {
+                        const article = editorialArticles.find((candidate) => candidate.slug === slug);
+                        return article ? [<EditorialSectionLink key={article.slug} article={article} />] : [];
+                      })}
+                    </div>
+                  ) : null}
                 </div>
                 <div className="books-mixed-grid">
                   {groupBooks.map((book) => (
@@ -297,6 +312,7 @@ export default function BooksPage() {
               the publishing work: translation, reader kits, visual protocols,
               AI visibility and companion sites.
             </p>
+            <EditorialSectionLink article={publishingSystemsArticle} />
           </div>
           <div className="books-mixed-grid">
             {publishingSystems.map((artifact) => (

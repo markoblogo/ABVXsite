@@ -1,10 +1,5 @@
-# **What I’m Focused on Now**
+# **Current Focus: Agro Commodity Trading Infrastructure**
 
-Focus is where I keep the work that currently takes most of my attention. It is not a permanent list of my businesses or interests. Those are spread across Systems, Books and Writing. Focus is narrower: it shows what I am actively trying to build, improve and move forward now.
+Focus is a snapshot of where my attention is concentrated now. I am originally from Ukraine and live in France, and I am building tools around the practical conditions of Ukrainian agricultural trade: distributed market information, logistics, counterparties and the daily work of brokers and traders. The aim is to connect useful operating surfaces, not to imply that one platform can replace the relationships and judgment on which a physical market depends.
 
-At the moment, much of that work is around infrastructure for the agricultural and grain trading sector, particularly in Ukraine. I am originally from Ukraine, although I currently live in France, and this is an area where my business interests and my interest in supporting Ukrainian companies naturally meet. Agriculture and grain exports remain deeply important to the Ukrainian economy and to the country’s connection with international markets.
-
-The systems we are building are intended to make the work of brokers and traders more connected and less fragmented. This includes ERP tools, market monitoring, commodity and logistics data, connections between trading partners, grain brokerage, freight brokerage and tools that help companies understand what is happening across markets and supply chains. The larger goal is not simply to automate individual tasks, but to connect participants who currently work across separate spreadsheets, messages, databases and workflows into a more coherent infrastructure.
-
-This focus is not necessarily permanent. I also work in publishing, language, software and a number of experimental projects. At another point, publishing may become the main focus here and agricultural systems may move back into the broader Systems catalogue. That is the purpose of this section: to show not everything I do, but where most of my attention is going now.
-
+This work spans brokerage software, market monitoring, reference-price projects and public product fronts. The portfolio can change as projects mature; this page records the current direction and links to the systems, use cases and field manuals that make it more concrete.

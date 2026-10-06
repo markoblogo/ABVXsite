@@ -3086,6 +3086,66 @@
       ]
     },
     {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Agro Commodity Market Ecosystem Map",
+      "summary": "A practical map of trading, monitoring, benchmark and market-front layers in physical commodity infrastructure.",
+      "language": "en",
+      "translationGroup": "focus-agro-commodity-market-ecosystem-map",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/agro-commodity-market-ecosystem-map-en",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Дослідити карту екосистеми",
+          "language": "uk",
+          "url": "https://abvx.xyz/editorial/focus/agro-commodity-market-ecosystem-map-uk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Agro Market Infrastructure Is Not One Product Category",
+      "summary": "Why commodity-market infrastructure is better understood as connected capabilities than as a single platform type.",
+      "language": "en",
+      "translationGroup": "focus-not-one-product-category",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/not-one-product-category-en",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Читати визначення",
+          "language": "uk",
+          "url": "https://abvx.xyz/editorial/focus/not-one-product-category-uk"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "work",
       "section": "focus",
       "ecosystem": "Agro Market Infrastructure Systems",
@@ -3122,6 +3182,126 @@
           "relation": "series"
         }
       ]
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Benchmark and Index Layer for Physical Commodities",
+      "summary": "What a commodity benchmark contributes, and why methodology, scope and observation records matter.",
+      "language": "en",
+      "translationGroup": "focus-commodity-benchmark-index-layer",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/commodity-benchmark-index-layer-en",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Дослідити індекси й орієнтири",
+          "language": "uk",
+          "url": "https://abvx.xyz/editorial/focus/commodity-benchmark-index-layer-uk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Books and Field Manuals for Agro-Commodity Markets",
+      "summary": "A guide to practical books and free manuals on physical commodity brokerage, spot markets and operating workflows.",
+      "language": "en",
+      "translationGroup": "focus-agro-commodity-books-field-manuals",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/agro-commodity-books-field-manuals-en",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Переглянути бібліотеку Focus",
+          "language": "uk",
+          "url": "https://abvx.xyz/editorial/focus/agro-commodity-books-field-manuals-uk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Comparing Ukrainian Grain and Oilseed Spot References",
+      "summary": "How to compare physical-market indications with attention to location, basis, quality, date and methodology.",
+      "language": "en",
+      "translationGroup": "focus-compare-ukrainian-spot-references",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/compare-ukrainian-spot-references-en",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Читати про порівняння орієнтирів",
+          "language": "uk",
+          "url": "https://abvx.xyz/editorial/focus/compare-ukrainian-spot-references-uk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Connecting Market Fronts to Underlying Infrastructure",
+      "summary": "How commercial pages can explain the systems, data and operational capabilities behind an agro-market offer.",
+      "language": "en",
+      "translationGroup": "focus-connect-market-fronts-to-infrastructure",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/connect-market-fronts-to-infrastructure-en",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Читати про публічний рівень",
+          "language": "uk",
+          "url": "https://abvx.xyz/editorial/focus/connect-market-fronts-to-infrastructure-uk"
+        }
+      ],
+      "related": []
     },
     {
       "type": "work",
@@ -3234,6 +3414,66 @@
       "related": []
     },
     {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Current Focus: Agro Commodity Trading Infrastructure",
+      "summary": "A first-person overview of the work currently centered on Ukrainian grain and oilseed markets, brokerage workflows and connected market infrastructure.",
+      "language": "en",
+      "translationGroup": "focus-current-market-infrastructure",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/what-im-focused-on-now",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Чому саме цей фокус",
+          "language": "uk",
+          "url": "https://abvx.xyz/editorial/focus/potochnyi-fokus-infrastruktura-ahrarnoi-torhivli"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Inspecting Agro Benchmark Methodology and Reference Pricing",
+      "summary": "What analysts and market participants should inspect before using an agricultural benchmark as a reference.",
+      "language": "en",
+      "translationGroup": "focus-inspect-agro-benchmark-methodology",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/inspect-agro-benchmark-methodology-en",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Читати про перевірку індексу",
+          "language": "uk",
+          "url": "https://abvx.xyz/editorial/focus/inspect-agro-benchmark-methodology-uk"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "work",
       "section": "focus",
       "ecosystem": "Agro Market Infrastructure Systems",
@@ -3302,6 +3542,126 @@
         }
       ],
       "updatedAt": "2026-05-03",
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Market Fronts and Partner Landings",
+      "summary": "How public product pages and partner landings connect market infrastructure to clear explanations and next steps.",
+      "language": "en",
+      "translationGroup": "focus-agro-market-front-partner-layer",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/agro-market-front-partner-layer-en",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Дослідити публічні сторінки",
+          "language": "uk",
+          "url": "https://abvx.xyz/editorial/focus/agro-market-front-partner-layer-uk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Market Fronts and Partner Landings in Focus",
+      "summary": "A guide to the public-facing pages, partnership concepts and product narratives around agro-market infrastructure.",
+      "language": "en",
+      "translationGroup": "focus-market-fronts-partner-landings-focus",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/market-fronts-partner-landings-focus-en",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Переглянути цю групу",
+          "language": "uk",
+          "url": "https://abvx.xyz/editorial/focus/market-fronts-partner-landings-focus-uk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Market Intelligence, Monitoring and Indexes in Focus",
+      "summary": "How monitoring tools, market signals and public reference indexes help participants inspect fragmented agro-market information.",
+      "language": "en",
+      "translationGroup": "focus-market-intelligence-monitoring-indexes-focus",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/market-intelligence-monitoring-indexes-focus-en",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Переглянути цю групу",
+          "language": "uk",
+          "url": "https://abvx.xyz/editorial/focus/market-intelligence-monitoring-indexes-focus-uk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Market Memory and Workflows for Brokerage Teams",
+      "summary": "How shared client context, deal notes and next actions can reduce operational fragmentation in brokerage work.",
+      "language": "en",
+      "translationGroup": "focus-brokerage-market-memory-workflows",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/brokerage-market-memory-workflows-en",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Читати про брокерський сценарій",
+          "language": "uk",
+          "url": "https://abvx.xyz/editorial/focus/brokerage-market-memory-workflows-uk"
+        }
+      ],
       "related": []
     },
     {
@@ -3417,6 +3777,96 @@
       ]
     },
     {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Monitoring and Intelligence for Agro Markets",
+      "summary": "How market monitors organize price, freight, logistics, weather, policy and news signals into inspectable context.",
+      "language": "en",
+      "translationGroup": "focus-agro-market-monitoring-intelligence-layer",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/agro-market-monitoring-intelligence-layer-en",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Дослідити моніторинг і аналітику",
+          "language": "uk",
+          "url": "https://abvx.xyz/editorial/focus/agro-market-monitoring-intelligence-layer-uk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Monitoring Logistics and Market Context for Agro Trade",
+      "summary": "How to bring freight, ports, weather, policy and market signals into a reviewable operating picture.",
+      "language": "en",
+      "translationGroup": "focus-monitor-agro-market-logistics-context",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/monitor-agro-market-logistics-context-en",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Читати про моніторинг ринку",
+          "language": "uk",
+          "url": "https://abvx.xyz/editorial/focus/monitor-agro-market-logistics-context-uk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Preparing Agro Market Information for AI Discovery",
+      "summary": "How consistent titles, dates, source context and structured pages make commodity information easier for AI systems to retrieve.",
+      "language": "en",
+      "translationGroup": "focus-ai-ready-agro-market-data",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/ai-ready-agro-market-data-en",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Читати про пошук за допомогою ШІ",
+          "language": "uk",
+          "url": "https://abvx.xyz/editorial/focus/ai-ready-agro-market-data-uk"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "work",
       "section": "focus",
       "ecosystem": "Agro Market Infrastructure Systems",
@@ -3507,6 +3957,66 @@
       "related": []
     },
     {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Trading and Brokerage Layer for Agro Commodities",
+      "summary": "How brokerage platforms can connect counterparties, deal context, follow-up and execution work without obscuring human responsibility.",
+      "language": "en",
+      "translationGroup": "focus-agro-trading-brokerage-layer",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/agro-trading-brokerage-layer-en",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Дослідити торговельний рівень",
+          "language": "uk",
+          "url": "https://abvx.xyz/editorial/focus/agro-trading-brokerage-layer-uk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Trading and Brokerage Platforms in Focus",
+      "summary": "An overview of platforms that support deal flow, brokerage coordination and trading workflows in physical agro markets.",
+      "language": "en",
+      "translationGroup": "focus-trading-brokerage-platforms-focus",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/trading-brokerage-platforms-focus-en",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Переглянути цю групу",
+          "language": "uk",
+          "url": "https://abvx.xyz/editorial/focus/trading-brokerage-platforms-focus-uk"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "work",
       "section": "focus",
       "ecosystem": "Agro Market Infrastructure Systems",
@@ -3546,9 +4056,11 @@
       "ecosystem": "Editorial pages",
       "group": "Editorial pages",
       "status": "published",
-      "title": "What I’m Focused on Now",
-      "summary": "The current work behind Focus: building infrastructure for agricultural and grain trading, especially in Ukraine.",
-      "canonicalUrl": "https://abvx.xyz/editorial/focus/what-im-focused-on-now",
+      "title": "Use Cases for Agro Commodity Market Infrastructure",
+      "summary": "A guide to the decisions supported by spot references, market context, brokerage workflows and AI-readable information.",
+      "language": "en",
+      "translationGroup": "focus-agro-market-infrastructure-use-cases",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/agro-market-infrastructure-use-cases-en",
       "tags": [
         "Focus",
         "editorial"
@@ -3558,6 +4070,672 @@
           "type": "section",
           "label": "Back to Focus",
           "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Дослідити сценарії використання",
+          "language": "uk",
+          "url": "https://abvx.xyz/editorial/focus/agro-market-infrastructure-use-cases-uk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "What Agro Commodity Market Infrastructure Means",
+      "summary": "A pillar guide to the digital, operational and methodological layers around physical grain and oilseed markets.",
+      "language": "en",
+      "translationGroup": "focus-agro-commodity-market-infrastructure",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/agro-commodity-market-infrastructure-en",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Читати про інфраструктуру",
+          "language": "uk",
+          "url": "https://abvx.xyz/editorial/focus/agro-commodity-market-infrastructure-uk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Why Physical Agro Markets Are Fragmented",
+      "summary": "How location, quality, logistics, timing and bilateral relationships create different market contexts for agricultural commodities.",
+      "language": "en",
+      "translationGroup": "focus-why-physical-agro-markets-are-fragmented",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/why-physical-agro-markets-are-fragmented-en",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Читати, чому це важливо",
+          "language": "uk",
+          "url": "https://abvx.xyz/editorial/focus/why-physical-agro-markets-are-fragmented-uk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Зв’язок публічних сторінок із ринковою інфраструктурою",
+      "summary": "Як комерційні сторінки можуть пояснювати системи, дані й операційні можливості за аграрною пропозицією.",
+      "language": "uk",
+      "translationGroup": "focus-connect-market-fronts-to-infrastructure",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/connect-market-fronts-to-infrastructure-uk",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Read the market-front use case",
+          "language": "en",
+          "url": "https://abvx.xyz/editorial/focus/connect-market-fronts-to-infrastructure-en"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Індекси й орієнтири фізичних товарних ринків",
+      "summary": "Що дає товарний орієнтир і чому важливі його методологія, охоплення та записи спостережень.",
+      "language": "uk",
+      "translationGroup": "focus-commodity-benchmark-index-layer",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/commodity-benchmark-index-layer-uk",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Explore benchmarks and indexes",
+          "language": "en",
+          "url": "https://abvx.xyz/editorial/focus/commodity-benchmark-index-layer-en"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Інфраструктура аграрного ринку — не одна категорія продуктів",
+      "summary": "Чому інфраструктуру товарного ринку краще розуміти як пов’язані можливості, а не один тип платформи.",
+      "language": "uk",
+      "translationGroup": "focus-not-one-product-category",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/not-one-product-category-uk",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Read the definition",
+          "language": "en",
+          "url": "https://abvx.xyz/editorial/focus/not-one-product-category-en"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Карта екосистеми ринку аграрних товарів",
+      "summary": "Практична карта торговельного, аналітичного, індексного та публічного рівнів інфраструктури фізичних товарних ринків.",
+      "language": "uk",
+      "translationGroup": "focus-agro-commodity-market-ecosystem-map",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/agro-commodity-market-ecosystem-map-uk",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Explore the ecosystem map",
+          "language": "en",
+          "url": "https://abvx.xyz/editorial/focus/agro-commodity-market-ecosystem-map-en"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Книги та практичні посібники з аграрних товарних ринків",
+      "summary": "Огляд практичних книг і безкоштовних посібників про брокерство фізичних товарів, спотові ринки та операційні процеси.",
+      "language": "uk",
+      "translationGroup": "focus-agro-commodity-books-field-manuals",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/agro-commodity-books-field-manuals-uk",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Explore the Focus library",
+          "language": "en",
+          "url": "https://abvx.xyz/editorial/focus/agro-commodity-books-field-manuals-en"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Моніторинг логістики та ринкового контексту аграрної торгівлі",
+      "summary": "Як зібрати фрахт, порти, погоду, політику та ринкові сигнали у придатну до перевірки картину операцій.",
+      "language": "uk",
+      "translationGroup": "focus-monitor-agro-market-logistics-context",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/monitor-agro-market-logistics-context-uk",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Read the monitoring use case",
+          "language": "en",
+          "url": "https://abvx.xyz/editorial/focus/monitor-agro-market-logistics-context-en"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Моніторинг та аналітика аграрних ринків",
+      "summary": "Як системи моніторингу впорядковують цінові, логістичні, погодні, політичні та новинні сигнали у зрозумілий контекст.",
+      "language": "uk",
+      "translationGroup": "focus-agro-market-monitoring-intelligence-layer",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/agro-market-monitoring-intelligence-layer-uk",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Explore monitoring and intelligence",
+          "language": "en",
+          "url": "https://abvx.xyz/editorial/focus/agro-market-monitoring-intelligence-layer-en"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Перевірка методології аграрного індексу та довідкової ціни",
+      "summary": "Що аналітикам та учасникам ринку варто перевірити перед використанням аграрного індексу як орієнтира.",
+      "language": "uk",
+      "translationGroup": "focus-inspect-agro-benchmark-methodology",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/inspect-agro-benchmark-methodology-uk",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Read the benchmark use case",
+          "language": "en",
+          "url": "https://abvx.xyz/editorial/focus/inspect-agro-benchmark-methodology-en"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Підготовка ринкової інформації до пошуку за допомогою ШІ",
+      "summary": "Як послідовні назви, дати, контекст джерел і структуровані сторінки полегшують пошук товарної інформації системами ШІ.",
+      "language": "uk",
+      "translationGroup": "focus-ai-ready-agro-market-data",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/ai-ready-agro-market-data-uk",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Read the AI-discovery use case",
+          "language": "en",
+          "url": "https://abvx.xyz/editorial/focus/ai-ready-agro-market-data-en"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Порівняння спотових орієнтирів українського зерна й олійних культур",
+      "summary": "Як порівнювати сигнали фізичного ринку з урахуванням локації, базису, якості, дати й методології.",
+      "language": "uk",
+      "translationGroup": "focus-compare-ukrainian-spot-references",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/compare-ukrainian-spot-references-uk",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Read the spot-reference use case",
+          "language": "en",
+          "url": "https://abvx.xyz/editorial/focus/compare-ukrainian-spot-references-en"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Поточний фокус: інфраструктура торгівлі аграрними товарами",
+      "summary": "Огляд роботи, зосередженої на українських ринках зерна й олійних культур, брокерських процесах та пов’язаній ринковій інфраструктурі.",
+      "language": "uk",
+      "translationGroup": "focus-current-market-infrastructure",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/potochnyi-fokus-infrastruktura-ahrarnoi-torhivli",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Why this focus",
+          "language": "en",
+          "url": "https://abvx.xyz/editorial/focus/what-im-focused-on-now"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Публічні сторінки ринку та партнерські пропозиції",
+      "summary": "Як публічні сторінки продуктів і партнерські лендінги пов’язують ринкову інфраструктуру з чіткими поясненнями та наступними кроками.",
+      "language": "uk",
+      "translationGroup": "focus-agro-market-front-partner-layer",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/agro-market-front-partner-layer-uk",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Explore market fronts",
+          "language": "en",
+          "url": "https://abvx.xyz/editorial/focus/agro-market-front-partner-layer-en"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Публічні сторінки та партнерські лендінги у фокусі",
+      "summary": "Огляд публічних сторінок, партнерських концепцій і продуктових пояснень навколо інфраструктури аграрного ринку.",
+      "language": "uk",
+      "translationGroup": "focus-market-fronts-partner-landings-focus",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/market-fronts-partner-landings-focus-uk",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Explore this focus group",
+          "language": "en",
+          "url": "https://abvx.xyz/editorial/focus/market-fronts-partner-landings-focus-en"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Ринкова аналітика, моніторинг та індекси у фокусі",
+      "summary": "Як інструменти моніторингу, ринкові сигнали й публічні індекси допомагають аналізувати розпорошену інформацію аграрного ринку.",
+      "language": "uk",
+      "translationGroup": "focus-market-intelligence-monitoring-indexes-focus",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/market-intelligence-monitoring-indexes-focus-uk",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Explore this focus group",
+          "language": "en",
+          "url": "https://abvx.xyz/editorial/focus/market-intelligence-monitoring-indexes-focus-en"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Ринкова пам’ять і процеси брокерської команди",
+      "summary": "Як спільний контекст клієнтів, нотатки про угоди й наступні дії зменшують фрагментацію брокерської роботи.",
+      "language": "uk",
+      "translationGroup": "focus-brokerage-market-memory-workflows",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/brokerage-market-memory-workflows-uk",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Read the brokerage use case",
+          "language": "en",
+          "url": "https://abvx.xyz/editorial/focus/brokerage-market-memory-workflows-en"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Сценарії використання інфраструктури аграрного ринку",
+      "summary": "Огляд рішень, яким допомагають спотові орієнтири, ринковий контекст, брокерські процеси та структурована інформація для ШІ.",
+      "language": "uk",
+      "translationGroup": "focus-agro-market-infrastructure-use-cases",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/agro-market-infrastructure-use-cases-uk",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Explore infrastructure use cases",
+          "language": "en",
+          "url": "https://abvx.xyz/editorial/focus/agro-market-infrastructure-use-cases-en"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Торговельний і брокерський рівень аграрного ринку",
+      "summary": "Як брокерські платформи поєднують контрагентів, контекст угод, подальші дії та виконання, зберігаючи відповідальність людей.",
+      "language": "uk",
+      "translationGroup": "focus-agro-trading-brokerage-layer",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/agro-trading-brokerage-layer-uk",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Explore the trading layer",
+          "language": "en",
+          "url": "https://abvx.xyz/editorial/focus/agro-trading-brokerage-layer-en"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Торговельні та брокерські платформи у фокусі",
+      "summary": "Огляд платформ для роботи з потоком угод, брокерської координації та торговельних процесів на фізичних аграрних ринках.",
+      "language": "uk",
+      "translationGroup": "focus-trading-brokerage-platforms-focus",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/trading-brokerage-platforms-focus-uk",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Explore this focus group",
+          "language": "en",
+          "url": "https://abvx.xyz/editorial/focus/trading-brokerage-platforms-focus-en"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Чому фізичні аграрні ринки фрагментовані",
+      "summary": "Як географія, якість, логістика, час і двосторонні відносини формують різні контексти аграрного ринку.",
+      "language": "uk",
+      "translationGroup": "focus-why-physical-agro-markets-are-fragmented",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/why-physical-agro-markets-are-fragmented-uk",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Read why it matters",
+          "language": "en",
+          "url": "https://abvx.xyz/editorial/focus/why-physical-agro-markets-are-fragmented-en"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Що означає інфраструктура ринку аграрних товарів",
+      "summary": "Основний матеріал про цифрові, операційні та методологічні рівні фізичних ринків зерна й олійних культур.",
+      "language": "uk",
+      "translationGroup": "focus-agro-commodity-market-infrastructure",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/agro-commodity-market-infrastructure-uk",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Read the infrastructure guide",
+          "language": "en",
+          "url": "https://abvx.xyz/editorial/focus/agro-commodity-market-infrastructure-en"
         }
       ],
       "related": []

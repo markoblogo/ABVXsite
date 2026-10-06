@@ -122,9 +122,9 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 ## Section editorials
 
-- What I’m Focused on Now
+- Current Focus: Agro Commodity Trading Infrastructure
   URL: https://abvx.xyz/editorial/focus/what-im-focused-on-now
-  Summary: The current work behind Focus: building infrastructure for agricultural and grain trading, especially in Ukraine.
+  Summary: A first-person overview of the work currently centered on Ukrainian grain and oilseed markets, brokerage workflows and connected market infrastructure.
   Section: Focus
 
 - Why I Build Systems
@@ -291,6 +291,201 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/editorial/books/publishing-systems-protocols
   Summary: The tools, protocols, production systems, landing sites and language infrastructure that grow around books and make publishing experiments reusable.
   Section: Books
+
+- Поточний фокус: інфраструктура торгівлі аграрними товарами
+  URL: https://abvx.xyz/editorial/focus/potochnyi-fokus-infrastruktura-ahrarnoi-torhivli
+  Summary: Огляд роботи, зосередженої на українських ринках зерна й олійних культур, брокерських процесах та пов’язаній ринковій інфраструктурі.
+  Section: Focus
+
+- What Agro Commodity Market Infrastructure Means
+  URL: https://abvx.xyz/editorial/focus/agro-commodity-market-infrastructure-en
+  Summary: A pillar guide to the digital, operational and methodological layers around physical grain and oilseed markets.
+  Section: Focus
+
+- Що означає інфраструктура ринку аграрних товарів
+  URL: https://abvx.xyz/editorial/focus/agro-commodity-market-infrastructure-uk
+  Summary: Основний матеріал про цифрові, операційні та методологічні рівні фізичних ринків зерна й олійних культур.
+  Section: Focus
+
+- Agro Market Infrastructure Is Not One Product Category
+  URL: https://abvx.xyz/editorial/focus/not-one-product-category-en
+  Summary: Why commodity-market infrastructure is better understood as connected capabilities than as a single platform type.
+  Section: Focus
+
+- Інфраструктура аграрного ринку — не одна категорія продуктів
+  URL: https://abvx.xyz/editorial/focus/not-one-product-category-uk
+  Summary: Чому інфраструктуру товарного ринку краще розуміти як пов’язані можливості, а не один тип платформи.
+  Section: Focus
+
+- Why Physical Agro Markets Are Fragmented
+  URL: https://abvx.xyz/editorial/focus/why-physical-agro-markets-are-fragmented-en
+  Summary: How location, quality, logistics, timing and bilateral relationships create different market contexts for agricultural commodities.
+  Section: Focus
+
+- Чому фізичні аграрні ринки фрагментовані
+  URL: https://abvx.xyz/editorial/focus/why-physical-agro-markets-are-fragmented-uk
+  Summary: Як географія, якість, логістика, час і двосторонні відносини формують різні контексти аграрного ринку.
+  Section: Focus
+
+- Agro Commodity Market Ecosystem Map
+  URL: https://abvx.xyz/editorial/focus/agro-commodity-market-ecosystem-map-en
+  Summary: A practical map of trading, monitoring, benchmark and market-front layers in physical commodity infrastructure.
+  Section: Focus
+
+- Карта екосистеми ринку аграрних товарів
+  URL: https://abvx.xyz/editorial/focus/agro-commodity-market-ecosystem-map-uk
+  Summary: Практична карта торговельного, аналітичного, індексного та публічного рівнів інфраструктури фізичних товарних ринків.
+  Section: Focus
+
+- Trading and Brokerage Layer for Agro Commodities
+  URL: https://abvx.xyz/editorial/focus/agro-trading-brokerage-layer-en
+  Summary: How brokerage platforms can connect counterparties, deal context, follow-up and execution work without obscuring human responsibility.
+  Section: Focus
+
+- Торговельний і брокерський рівень аграрного ринку
+  URL: https://abvx.xyz/editorial/focus/agro-trading-brokerage-layer-uk
+  Summary: Як брокерські платформи поєднують контрагентів, контекст угод, подальші дії та виконання, зберігаючи відповідальність людей.
+  Section: Focus
+
+- Monitoring and Intelligence for Agro Markets
+  URL: https://abvx.xyz/editorial/focus/agro-market-monitoring-intelligence-layer-en
+  Summary: How market monitors organize price, freight, logistics, weather, policy and news signals into inspectable context.
+  Section: Focus
+
+- Моніторинг та аналітика аграрних ринків
+  URL: https://abvx.xyz/editorial/focus/agro-market-monitoring-intelligence-layer-uk
+  Summary: Як системи моніторингу впорядковують цінові, логістичні, погодні, політичні та новинні сигнали у зрозумілий контекст.
+  Section: Focus
+
+- Benchmark and Index Layer for Physical Commodities
+  URL: https://abvx.xyz/editorial/focus/commodity-benchmark-index-layer-en
+  Summary: What a commodity benchmark contributes, and why methodology, scope and observation records matter.
+  Section: Focus
+
+- Індекси й орієнтири фізичних товарних ринків
+  URL: https://abvx.xyz/editorial/focus/commodity-benchmark-index-layer-uk
+  Summary: Що дає товарний орієнтир і чому важливі його методологія, охоплення та записи спостережень.
+  Section: Focus
+
+- Market Fronts and Partner Landings
+  URL: https://abvx.xyz/editorial/focus/agro-market-front-partner-layer-en
+  Summary: How public product pages and partner landings connect market infrastructure to clear explanations and next steps.
+  Section: Focus
+
+- Публічні сторінки ринку та партнерські пропозиції
+  URL: https://abvx.xyz/editorial/focus/agro-market-front-partner-layer-uk
+  Summary: Як публічні сторінки продуктів і партнерські лендінги пов’язують ринкову інфраструктуру з чіткими поясненнями та наступними кроками.
+  Section: Focus
+
+- Use Cases for Agro Commodity Market Infrastructure
+  URL: https://abvx.xyz/editorial/focus/agro-market-infrastructure-use-cases-en
+  Summary: A guide to the decisions supported by spot references, market context, brokerage workflows and AI-readable information.
+  Section: Focus
+
+- Сценарії використання інфраструктури аграрного ринку
+  URL: https://abvx.xyz/editorial/focus/agro-market-infrastructure-use-cases-uk
+  Summary: Огляд рішень, яким допомагають спотові орієнтири, ринковий контекст, брокерські процеси та структурована інформація для ШІ.
+  Section: Focus
+
+- Comparing Ukrainian Grain and Oilseed Spot References
+  URL: https://abvx.xyz/editorial/focus/compare-ukrainian-spot-references-en
+  Summary: How to compare physical-market indications with attention to location, basis, quality, date and methodology.
+  Section: Focus
+
+- Порівняння спотових орієнтирів українського зерна й олійних культур
+  URL: https://abvx.xyz/editorial/focus/compare-ukrainian-spot-references-uk
+  Summary: Як порівнювати сигнали фізичного ринку з урахуванням локації, базису, якості, дати й методології.
+  Section: Focus
+
+- Monitoring Logistics and Market Context for Agro Trade
+  URL: https://abvx.xyz/editorial/focus/monitor-agro-market-logistics-context-en
+  Summary: How to bring freight, ports, weather, policy and market signals into a reviewable operating picture.
+  Section: Focus
+
+- Моніторинг логістики та ринкового контексту аграрної торгівлі
+  URL: https://abvx.xyz/editorial/focus/monitor-agro-market-logistics-context-uk
+  Summary: Як зібрати фрахт, порти, погоду, політику та ринкові сигнали у придатну до перевірки картину операцій.
+  Section: Focus
+
+- Market Memory and Workflows for Brokerage Teams
+  URL: https://abvx.xyz/editorial/focus/brokerage-market-memory-workflows-en
+  Summary: How shared client context, deal notes and next actions can reduce operational fragmentation in brokerage work.
+  Section: Focus
+
+- Ринкова пам’ять і процеси брокерської команди
+  URL: https://abvx.xyz/editorial/focus/brokerage-market-memory-workflows-uk
+  Summary: Як спільний контекст клієнтів, нотатки про угоди й наступні дії зменшують фрагментацію брокерської роботи.
+  Section: Focus
+
+- Inspecting Agro Benchmark Methodology and Reference Pricing
+  URL: https://abvx.xyz/editorial/focus/inspect-agro-benchmark-methodology-en
+  Summary: What analysts and market participants should inspect before using an agricultural benchmark as a reference.
+  Section: Focus
+
+- Перевірка методології аграрного індексу та довідкової ціни
+  URL: https://abvx.xyz/editorial/focus/inspect-agro-benchmark-methodology-uk
+  Summary: Що аналітикам та учасникам ринку варто перевірити перед використанням аграрного індексу як орієнтира.
+  Section: Focus
+
+- Connecting Market Fronts to Underlying Infrastructure
+  URL: https://abvx.xyz/editorial/focus/connect-market-fronts-to-infrastructure-en
+  Summary: How commercial pages can explain the systems, data and operational capabilities behind an agro-market offer.
+  Section: Focus
+
+- Зв’язок публічних сторінок із ринковою інфраструктурою
+  URL: https://abvx.xyz/editorial/focus/connect-market-fronts-to-infrastructure-uk
+  Summary: Як комерційні сторінки можуть пояснювати системи, дані й операційні можливості за аграрною пропозицією.
+  Section: Focus
+
+- Preparing Agro Market Information for AI Discovery
+  URL: https://abvx.xyz/editorial/focus/ai-ready-agro-market-data-en
+  Summary: How consistent titles, dates, source context and structured pages make commodity information easier for AI systems to retrieve.
+  Section: Focus
+
+- Підготовка ринкової інформації до пошуку за допомогою ШІ
+  URL: https://abvx.xyz/editorial/focus/ai-ready-agro-market-data-uk
+  Summary: Як послідовні назви, дати, контекст джерел і структуровані сторінки полегшують пошук товарної інформації системами ШІ.
+  Section: Focus
+
+- Trading and Brokerage Platforms in Focus
+  URL: https://abvx.xyz/editorial/focus/trading-brokerage-platforms-focus-en
+  Summary: An overview of platforms that support deal flow, brokerage coordination and trading workflows in physical agro markets.
+  Section: Focus
+
+- Торговельні та брокерські платформи у фокусі
+  URL: https://abvx.xyz/editorial/focus/trading-brokerage-platforms-focus-uk
+  Summary: Огляд платформ для роботи з потоком угод, брокерської координації та торговельних процесів на фізичних аграрних ринках.
+  Section: Focus
+
+- Market Intelligence, Monitoring and Indexes in Focus
+  URL: https://abvx.xyz/editorial/focus/market-intelligence-monitoring-indexes-focus-en
+  Summary: How monitoring tools, market signals and public reference indexes help participants inspect fragmented agro-market information.
+  Section: Focus
+
+- Ринкова аналітика, моніторинг та індекси у фокусі
+  URL: https://abvx.xyz/editorial/focus/market-intelligence-monitoring-indexes-focus-uk
+  Summary: Як інструменти моніторингу, ринкові сигнали й публічні індекси допомагають аналізувати розпорошену інформацію аграрного ринку.
+  Section: Focus
+
+- Market Fronts and Partner Landings in Focus
+  URL: https://abvx.xyz/editorial/focus/market-fronts-partner-landings-focus-en
+  Summary: A guide to the public-facing pages, partnership concepts and product narratives around agro-market infrastructure.
+  Section: Focus
+
+- Публічні сторінки та партнерські лендінги у фокусі
+  URL: https://abvx.xyz/editorial/focus/market-fronts-partner-landings-focus-uk
+  Summary: Огляд публічних сторінок, партнерських концепцій і продуктових пояснень навколо інфраструктури аграрного ринку.
+  Section: Focus
+
+- Books and Field Manuals for Agro-Commodity Markets
+  URL: https://abvx.xyz/editorial/focus/agro-commodity-books-field-manuals-en
+  Summary: A guide to practical books and free manuals on physical commodity brokerage, spot markets and operating workflows.
+  Section: Focus
+
+- Книги та практичні посібники з аграрних товарних ринків
+  URL: https://abvx.xyz/editorial/focus/agro-commodity-books-field-manuals-uk
+  Summary: Огляд практичних книг і безкоштовних посібників про брокерство фізичних товарів, спотові ринки та операційні процеси.
+  Section: Focus
 
 ## Publishing lines
 

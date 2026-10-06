@@ -177,6 +177,51 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Summary: How Marcus Aurelius’ Meditations grew into a five-book Stoic line with free learning resources and English, toki pona, sitelen pona and emoji pona editions.
   Section: Books
 
+- Toki Pona Free Kits & Translations
+  URL: https://abvx.xyz/editorial/books/toki-pona-free-kits-translations
+  Summary: How free books, translations and reader resources make the Toki Pona publishing ecosystem easier to enter, explore and learn from.
+  Section: Books
+
+- MN7R Commodity Brokerage Library
+  URL: https://abvx.xyz/editorial/books/mn7r-commodity-brokerage-library-en
+  Summary: Why MN7R documents the operational work behind physical commodity and agro brokerage, from market knowledge and logistics to contracts and execution.
+  Section: Books
+
+- MN7R Commodity Brokerage Library
+  URL: https://abvx.xyz/editorial/books/mn7r-commodity-brokerage-library-uk
+  Summary: Як MN7R документує операційну роботу фізичної товарної та аграрної торгівлі: знання ринку, логістику, контракти й виконання угод.
+  Section: Books
+
+- Business, AI & Marketing
+  URL: https://abvx.xyz/editorial/books/business-ai-marketing
+  Summary: Why a shelf of independent books brings together marketing, productivity, AI, psychology and practical business systems without forming a formal series.
+  Section: Books
+
+- Language, AI & Toki Pona
+  URL: https://abvx.xyz/editorial/books/language-ai-toki-pona
+  Summary: Experiments in constructed languages, Toki Pona, AI, machine reasoning, visual language and the ways language can shape thought.
+  Section: Books
+
+- Practical Guides & Reference
+  URL: https://abvx.xyz/editorial/books/practical-guides-reference-en
+  Summary: A small and growing category for practical guides, visual references and compact tools for real-world decisions, beginning with French road rules for Ukrainians.
+  Section: Books
+
+- Практичні довідники та посібники
+  URL: https://abvx.xyz/editorial/books/practical-guides-reference-uk
+  Summary: Про невеликий розділ практичних посібників, візуальних довідників і компактних інструментів для реальних життєвих ситуацій.
+  Section: Books
+
+- Fiction
+  URL: https://abvx.xyz/editorial/books/fiction
+  Summary: Absurdism, dark humour, literary mashups and genre collisions across the standalone fiction catalogue, with Good Dog remaining a separate emerging line.
+  Section: Books
+
+- Publishing Systems & Protocols
+  URL: https://abvx.xyz/editorial/books/publishing-systems-protocols
+  Summary: The tools, protocols, production systems, landing sites and language infrastructure that grow around books and make publishing experiments reusable.
+  Section: Books
+
 ## Publishing lines
 
 - Modernisme Ukrainien
@@ -209,7 +254,31 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Official publishing lines
   Tags: brokerage, agro-commodities, market-infrastructure, trading, execution, workflows, MN7R, commodity-markets
 
+- Good Dogs of the Apocalypse
+  URL: https://abvx.xyz/good-dogs-of-the-apocalypse
+  Summary: Follow Mriya, a former shelter dog, through a System-changed world in a darkly comic canine LitRPG series about survival, community, and the freedom to choose.
+  Group: Official publishing lines
+  Tags: LitRPG, System Apocalypse, post-apocalyptic fantasy, dark comedy, canine protagonist, found family, Good Dogs of the Apocalypse
+
 ## Books
+
+- Good Dog, Bad System: A Darkly Comic System Apocalypse LitRPG
+  URL: https://abvx.xyz/books/good-dog-bad-system
+  Summary: Meet Mriya, an older shelter dog navigating a System apocalypse where survival, loyalty, and the right to choose matter more than a class.
+  Group: Good Dogs of the Apocalypse
+  Tags: LitRPG, System Apocalypse, post-apocalyptic fantasy, dark comedy, canine protagonist, found family, Mriya
+
+- Good Dog, Bad District: A Darkly Comic System Apocalypse LitRPG (Good Dogs of the Apocalypse Book 2)
+  URL: https://abvx.xyz/books/good-dog-bad-district
+  Summary: In Good Dog, Bad District, Mriya and her pack face a failing water line, rival dog-led groups, and a System that offers shortcuts with a price.
+  Group: Good Dogs of the Apocalypse
+  Tags: LitRPG, System Apocalypse, post-apocalyptic fantasy, dark comedy, canine protagonist, found family, Mriya
+
+- Good Dog, Bad Authority: A Darkly Comic System Apocalypse LitRPG (Good Dogs of the Apocalypse Book 3)
+  URL: https://abvx.xyz/books/good-dog-bad-authority
+  Summary: In Good Dog, Bad Authority, Mriya faces a damaged delivery, disputed evidence, and pressure to become the one authority everyone depends on.
+  Group: Good Dogs of the Apocalypse
+  Tags: LitRPG, System Apocalypse, post-apocalyptic fantasy, dark comedy, canine protagonist, found family, Mriya
 
 - No Further Claims
   URL: https://abvx.xyz/books/no-further-claims
@@ -414,6 +483,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Summary: Homer’s Odyssey retold in Toki Pona with Sitelen Pona, presenting the ancient journey through a deliberately small modern language.
   Group: Language, AI & Toki Pona
   Tags: Homer, Odyssey, Toki Pona, Sitelen Pona, classical literature
+
+- The Strange Case of Dr. Jekyll and Mr. Hyde: Toki Pona Edition with Sitelen Pona
+  URL: https://abvx.xyz/books/the-strange-case-of-dr-jekyll-and-mr-hyde-in-toki-pona
+  Summary: Read Robert Louis Stevenson’s Jekyll and Hyde in English, Toki Pona, and sitelen pona in a layered literary edition.
+  Group: Language, AI & Toki Pona
+  Tags: Toki Pona, sitelen pona, Robert Louis Stevenson, Jekyll and Hyde, literary translation, classic literature
 
 - Book Landings
   URL: https://abvx.xyz/work/book-landings

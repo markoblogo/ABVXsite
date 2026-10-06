@@ -7,15 +7,16 @@ export default function EditorialSectionLink({
   section,
   slug,
 }: {
-  article?: Pick<EditorialArticle, 'href' | 'linkLabel'>;
+  article?: Pick<EditorialArticle, 'href' | 'linkLabel'> & Partial<Pick<EditorialArticle, 'language'>>;
   section?: string;
   slug?: string;
 }) {
   const editorial = article ?? (section ? (slug ? getEditorialArticle(section, slug) : getEditorialForSection(section)) : undefined);
   if (!editorial) return null;
+  const language = editorial.language || 'en';
 
   return (
-    <Link className="editorial-section-link" href={editorial.href}>
+    <Link className="editorial-section-link" href={editorial.href} lang={language} hrefLang={language}>
       {editorial.linkLabel} <span aria-hidden="true">→</span>
     </Link>
   );

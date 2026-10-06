@@ -130,6 +130,15 @@ const focusUseCases = [
   'Prepare market data and project pages for AI-assisted discovery, retrieval and structured understanding.',
 ];
 
+function FocusEditorialLinks({ en, uk }: { en: string; uk: string }) {
+  return (
+    <div className="flex flex-wrap gap-x-4 gap-y-1 pt-2" aria-label="Related articles in English and Ukrainian">
+      <EditorialSectionLink section="focus" slug={en} />
+      <EditorialSectionLink section="focus" slug={uk} />
+    </div>
+  );
+}
+
 function itemsForGroup(artifacts: Artifact[], slugs: readonly string[]): Artifact[] {
   const bySlug = new Map(artifacts.map((artifact) => [artifact.slug, artifact]));
   return slugs.map((slug) => bySlug.get(slug)).filter((item): item is Artifact => Boolean(item));
@@ -237,7 +246,7 @@ export default async function FocusPage() {
             </Link>
           ))}
         </div>
-        <EditorialSectionLink section="focus" />
+        <FocusEditorialLinks en="what-im-focused-on-now" uk="potochnyi-fokus-infrastruktura-ahrarnoi-torhivli" />
       </PageHeader>
 
       <section className="focus-explainer" aria-labelledby="agro-market-infrastructure-title">
@@ -254,6 +263,7 @@ export default async function FocusPage() {
             agent-assisted brokerage, signal extraction, document processing and CRM/execution
             coordination around physical commodity markets.
           </p>
+          <FocusEditorialLinks en="agro-commodity-market-infrastructure-en" uk="agro-commodity-market-infrastructure-uk" />
         </div>
 
         <div className="focus-explainer-grid">
@@ -267,6 +277,7 @@ export default async function FocusPage() {
               <Link href="/work/uga-index">UGA Index</Link>, and intelligence terminals like{' '}
               <Link href="/work/cropto-monitor">Cropto Monitor</Link>.
             </p>
+            <FocusEditorialLinks en="not-one-product-category-en" uk="not-one-product-category-uk" />
           </section>
           <section className="focus-explainer-panel">
             <div className="eyebrow">Why it matters</div>
@@ -277,6 +288,7 @@ export default async function FocusPage() {
               turns that fragmented context into repeatable workflows, reference points and shared
               market language.
             </p>
+            <FocusEditorialLinks en="why-physical-agro-markets-are-fragmented-en" uk="why-physical-agro-markets-are-fragmented-uk" />
           </section>
         </div>
       </section>
@@ -289,12 +301,17 @@ export default async function FocusPage() {
             The focus area is organized as an ecosystem rather than a flat portfolio. Each layer
             supports a different part of market coordination.
           </p>
+          <FocusEditorialLinks en="agro-commodity-market-ecosystem-map-en" uk="agro-commodity-market-ecosystem-map-uk" />
         </div>
         <div className="focus-layer-grid">
           {infrastructureLayers.map((layer) => (
             <section key={layer.title} className="focus-layer-panel">
               <h3>{layer.title}</h3>
               <p>{layer.description}</p>
+              {layer.title === "Trading and brokerage layer" ? <FocusEditorialLinks en="agro-trading-brokerage-layer-en" uk="agro-trading-brokerage-layer-uk" /> : null}
+              {layer.title === "Monitoring and intelligence layer" ? <FocusEditorialLinks en="agro-market-monitoring-intelligence-layer-en" uk="agro-market-monitoring-intelligence-layer-uk" /> : null}
+              {layer.title === "Benchmark and index layer" ? <FocusEditorialLinks en="commodity-benchmark-index-layer-en" uk="commodity-benchmark-index-layer-uk" /> : null}
+              {layer.title === "Market front and partner layer" ? <FocusEditorialLinks en="agro-market-front-partner-layer-en" uk="agro-market-front-partner-layer-uk" /> : null}
               <div className="focus-layer-links">
                 {layer.links.map((label) => {
                   const item = linkByLabel(label);
@@ -319,10 +336,19 @@ export default async function FocusPage() {
             These projects are built around concrete market operations: reference pricing,
             monitoring, brokerage workflows, partner entry points and AI-readable public context.
           </p>
+          <FocusEditorialLinks en="agro-market-infrastructure-use-cases-en" uk="agro-market-infrastructure-use-cases-uk" />
         </div>
         <ol className="focus-use-case-list">
-          {focusUseCases.map((item) => (
-            <li key={item}>{item}</li>
+          {focusUseCases.map((item, index) => (
+            <li key={item}>
+              {item}
+              {index === 0 ? <FocusEditorialLinks en="compare-ukrainian-spot-references-en" uk="compare-ukrainian-spot-references-uk" /> : null}
+              {index === 1 ? <FocusEditorialLinks en="monitor-agro-market-logistics-context-en" uk="monitor-agro-market-logistics-context-uk" /> : null}
+              {index === 2 ? <FocusEditorialLinks en="brokerage-market-memory-workflows-en" uk="brokerage-market-memory-workflows-uk" /> : null}
+              {index === 3 ? <FocusEditorialLinks en="inspect-agro-benchmark-methodology-en" uk="inspect-agro-benchmark-methodology-uk" /> : null}
+              {index === 4 ? <FocusEditorialLinks en="connect-market-fronts-to-infrastructure-en" uk="connect-market-fronts-to-infrastructure-uk" /> : null}
+              {index === 5 ? <FocusEditorialLinks en="ai-ready-agro-market-data-en" uk="ai-ready-agro-market-data-uk" /> : null}
+            </li>
           ))}
         </ol>
       </section>
@@ -338,6 +364,9 @@ export default async function FocusPage() {
               <div className="eyebrow">Focus group</div>
               <h2 id={titleId}>{group.title}</h2>
               <p>{group.description}</p>
+              {group.title === "Trading & Brokerage Platforms" ? <FocusEditorialLinks en="trading-brokerage-platforms-focus-en" uk="trading-brokerage-platforms-focus-uk" /> : null}
+              {group.title === "Market Intelligence, Monitoring & Indexes" ? <FocusEditorialLinks en="market-intelligence-monitoring-indexes-focus-en" uk="market-intelligence-monitoring-indexes-focus-uk" /> : null}
+              {group.title === "Market Fronts & Partner Landings" ? <FocusEditorialLinks en="market-fronts-partner-landings-focus-en" uk="market-fronts-partner-landings-focus-uk" /> : null}
             </div>
             <div className={group.variant === 'primary' ? 'focus-platform-grid' : 'focus-product-grid'}>
               {groupItems.map((artifact) => (
@@ -359,6 +388,7 @@ export default async function FocusPage() {
             <div className="eyebrow">Focus library</div>
             <h2 id="books-field-manuals">{focusBookGroup.title}</h2>
             <p>{focusBookGroup.description}</p>
+            <FocusEditorialLinks en="agro-commodity-books-field-manuals-en" uk="agro-commodity-books-field-manuals-uk" />
           </div>
           <div className="focus-book-grid">
             {listedBooks.map((book) => (

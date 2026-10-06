@@ -321,7 +321,7 @@ export default async function BookDetailPage({
 
   return (
     <article className="detail-page detail-page--book">
-      <JsonLd id="jsonld-book-item" data={bookJsonLd(book, relatedItems.map((related) => related.item))} />
+      <JsonLd id="jsonld-book-item" data={bookJsonLd(book, relatedItems.map((related) => related.item), primarySeries)} />
       {book.faqs?.length ? (
         <JsonLd
           id="jsonld-book-faq"
@@ -343,7 +343,7 @@ export default async function BookDetailPage({
         items={[
           { label: 'ABVX', href: '/' },
           { label: 'Books', href: '/books' },
-          ...(primarySeries ? [{ label: primarySeries.shortTitle || primarySeries.title, href: `/books/${primarySeries.slug}` }] : []),
+          ...(primarySeries ? [{ label: primarySeries.shortTitle || primarySeries.title, href: primarySeries.canonicalPath || `/books/${primarySeries.slug}` }] : []),
           { label: title },
         ]}
       />

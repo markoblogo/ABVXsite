@@ -364,7 +364,11 @@ export function artifactJsonLd(artifact: Artifact, relatedItems: Array<Artifact 
   };
 }
 
-export function bookJsonLd(book: Book, relatedItems: Array<Artifact | Book> = []) {
+export function bookJsonLd(
+  book: Book,
+  relatedItems: Array<Artifact | Book> = [],
+  primarySeries?: Pick<Book, 'slug' | 'canonicalPath'>,
+) {
   const url = `${SITE_URL}${book.canonicalPath || `/books/${book.slug}`}`;
   const image = book.heroImage || book.coverImage;
   const imageSchema = imageObject(image, book.title);
@@ -394,7 +398,10 @@ export function bookJsonLd(book: Book, relatedItems: Array<Artifact | Book> = []
   const isPartOf = [
     { '@id': `${SITE_URL}/#website` },
     ...(book.primarySeriesSlug
-      ? [{ '@type': 'CreativeWorkSeries', '@id': `${SITE_URL}/books/${book.primarySeriesSlug}#series` }]
+      ? [{
+          '@type': 'CreativeWorkSeries',
+          '@id': `${SITE_URL}${primarySeries?.canonicalPath || `/books/${primarySeries?.slug || book.primarySeriesSlug}`}#series`,
+        }]
       : []),
     ...(!book.primarySeriesSlug && book.series ? [{ '@type': 'CreativeWorkSeries', name: book.series }] : []),
   ];

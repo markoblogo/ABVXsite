@@ -30,3 +30,8 @@ test('preserves word underscores while rendering standalone emphasis', () => {
 test('keeps authored HTML escaped', () => {
   assert.ok(render('<script>alert(1)</script>').includes('&lt;script&gt;'));
 });
+
+test('renders ordered reading sequences as an ordered list', () => {
+  const html = render('1. **First book**\n2. *Second book*\n3. Third book');
+  assert.ok(html.includes('<ol><li><strong>First book</strong></li><li><em>Second book</em></li><li>Third book</li></ol>'));
+});

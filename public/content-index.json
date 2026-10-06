@@ -247,6 +247,29 @@
       "related": []
     },
     {
+      "type": "editorial",
+      "section": "books",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Business, AI & Marketing",
+      "summary": "Why a shelf of independent books brings together marketing, productivity, AI, psychology and practical business systems without forming a formal series.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/editorial/books/business-ai-marketing",
+      "tags": [
+        "Books",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Books",
+          "url": "https://abvx.xyz/books"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "series",
       "section": "books",
       "ecosystem": "Publishing lines",
@@ -546,6 +569,29 @@
       ]
     },
     {
+      "type": "editorial",
+      "section": "books",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Fiction",
+      "summary": "Absurdism, dark humour, literary mashups and genre collisions across the standalone fiction catalogue, with Good Dog remaining a separate emerging line.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/editorial/books/fiction",
+      "tags": [
+        "Books",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Books",
+          "url": "https://abvx.xyz/books"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "book",
       "section": "books",
       "ecosystem": "Language, AI & Toki Pona",
@@ -700,6 +746,167 @@
           "title": "Бог був зайнятий каналізацією",
           "canonicalUrl": "https://abvx.xyz/books/boh-buv-zainiatyi-kanalizatsiieiu",
           "relation": "related"
+        }
+      ]
+    },
+    {
+      "type": "book",
+      "section": "books",
+      "ecosystem": "Good Dogs of the Apocalypse",
+      "group": "Good Dogs of the Apocalypse",
+      "status": "released",
+      "title": "Good Dog, Bad Authority: A Darkly Comic System Apocalypse LitRPG (Good Dogs of the Apocalypse Book 3)",
+      "summary": "In Good Dog, Bad Authority, Mriya faces a damaged delivery, disputed evidence, and pressure to become the one authority everyone depends on.",
+      "canonicalUrl": "https://abvx.xyz/books/good-dog-bad-authority",
+      "tags": [
+        "LitRPG",
+        "System Apocalypse",
+        "post-apocalyptic fantasy",
+        "dark comedy",
+        "canine protagonist",
+        "found family",
+        "Mriya"
+      ],
+      "links": [
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0HLZVJ7DF"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0HLZQH34P"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Good Dogs of the Apocalypse",
+          "canonicalUrl": "https://abvx.xyz/good-dogs-of-the-apocalypse",
+          "relation": "series"
+        }
+      ]
+    },
+    {
+      "type": "book",
+      "section": "books",
+      "ecosystem": "Good Dogs of the Apocalypse",
+      "group": "Good Dogs of the Apocalypse",
+      "status": "released",
+      "title": "Good Dog, Bad District: A Darkly Comic System Apocalypse LitRPG (Good Dogs of the Apocalypse Book 2)",
+      "summary": "In Good Dog, Bad District, Mriya and her pack face a failing water line, rival dog-led groups, and a System that offers shortcuts with a price.",
+      "canonicalUrl": "https://abvx.xyz/books/good-dog-bad-district",
+      "tags": [
+        "LitRPG",
+        "System Apocalypse",
+        "post-apocalyptic fantasy",
+        "dark comedy",
+        "canine protagonist",
+        "found family",
+        "Mriya"
+      ],
+      "links": [
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0HLJ9VMWB"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0HLLKRHRW"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Good Dogs of the Apocalypse",
+          "canonicalUrl": "https://abvx.xyz/good-dogs-of-the-apocalypse",
+          "relation": "series"
+        }
+      ]
+    },
+    {
+      "type": "book",
+      "section": "books",
+      "ecosystem": "Good Dogs of the Apocalypse",
+      "group": "Good Dogs of the Apocalypse",
+      "status": "released",
+      "title": "Good Dog, Bad System: A Darkly Comic System Apocalypse LitRPG",
+      "summary": "Meet Mriya, an older shelter dog navigating a System apocalypse where survival, loyalty, and the right to choose matter more than a class.",
+      "canonicalUrl": "https://abvx.xyz/books/good-dog-bad-system",
+      "tags": [
+        "LitRPG",
+        "System Apocalypse",
+        "post-apocalyptic fantasy",
+        "dark comedy",
+        "canine protagonist",
+        "found family",
+        "Mriya"
+      ],
+      "links": [
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0HDGH24QK"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0HL9DDF3N"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Good Dogs of the Apocalypse",
+          "canonicalUrl": "https://abvx.xyz/good-dogs-of-the-apocalypse",
+          "relation": "series"
+        }
+      ]
+    },
+    {
+      "type": "series",
+      "section": "books",
+      "ecosystem": "Publishing lines",
+      "group": "Official publishing lines",
+      "status": "released",
+      "title": "Good Dogs of the Apocalypse",
+      "summary": "Follow Mriya, a former shelter dog, through a System-changed world in a darkly comic canine LitRPG series about survival, community, and the freedom to choose.",
+      "canonicalUrl": "https://abvx.xyz/good-dogs-of-the-apocalypse",
+      "tags": [
+        "LitRPG",
+        "System Apocalypse",
+        "post-apocalyptic fantasy",
+        "dark comedy",
+        "canine protagonist",
+        "found family",
+        "Good Dogs of the Apocalypse"
+      ],
+      "links": [
+        {
+          "type": "series",
+          "label": "Amazon series page",
+          "url": "https://www.amazon.com/dp/B0HLJBGX95?binding=kindle_edition&ref=dbs_dp_rwt_sb_pc_tkin"
+        }
+      ],
+      "updatedAt": null,
+      "related": [
+        {
+          "title": "Good Dog, Bad Authority: A Darkly Comic System Apocalypse LitRPG (Good Dogs of the Apocalypse Book 3)",
+          "canonicalUrl": "https://abvx.xyz/books/good-dog-bad-authority",
+          "relation": "member"
+        },
+        {
+          "title": "Good Dog, Bad District: A Darkly Comic System Apocalypse LitRPG (Good Dogs of the Apocalypse Book 2)",
+          "canonicalUrl": "https://abvx.xyz/books/good-dog-bad-district",
+          "relation": "member"
+        },
+        {
+          "title": "Good Dog, Bad System: A Darkly Comic System Apocalypse LitRPG",
+          "canonicalUrl": "https://abvx.xyz/books/good-dog-bad-system",
+          "relation": "member"
         }
       ]
     },
@@ -914,6 +1121,29 @@
           "relation": "series"
         }
       ]
+    },
+    {
+      "type": "editorial",
+      "section": "books",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Language, AI & Toki Pona",
+      "summary": "Experiments in constructed languages, Toki Pona, AI, machine reasoning, visual language and the ways language can shape thought.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/editorial/books/language-ai-toki-pona",
+      "tags": [
+        "Books",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Books",
+          "url": "https://abvx.xyz/books"
+        }
+      ],
+      "related": []
     },
     {
       "type": "book",
@@ -1147,6 +1377,66 @@
           "relation": "member"
         }
       ]
+    },
+    {
+      "type": "editorial",
+      "section": "books",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "MN7R Commodity Brokerage Library",
+      "summary": "Why MN7R documents the operational work behind physical commodity and agro brokerage, from market knowledge and logistics to contracts and execution.",
+      "language": "en",
+      "translationGroup": "mn7r-commodity-brokerage-library",
+      "canonicalUrl": "https://abvx.xyz/editorial/books/mn7r-commodity-brokerage-library-en",
+      "tags": [
+        "Books",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Books",
+          "url": "https://abvx.xyz/books"
+        },
+        {
+          "type": "translation",
+          "label": "Читати українською",
+          "language": "uk",
+          "url": "https://abvx.xyz/editorial/books/mn7r-commodity-brokerage-library-uk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "books",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "MN7R Commodity Brokerage Library",
+      "summary": "Як MN7R документує операційну роботу фізичної товарної та аграрної торгівлі: знання ринку, логістику, контракти й виконання угод.",
+      "language": "uk",
+      "translationGroup": "mn7r-commodity-brokerage-library",
+      "canonicalUrl": "https://abvx.xyz/editorial/books/mn7r-commodity-brokerage-library-uk",
+      "tags": [
+        "Books",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Books",
+          "url": "https://abvx.xyz/books"
+        },
+        {
+          "type": "translation",
+          "label": "Read in English",
+          "language": "en",
+          "url": "https://abvx.xyz/editorial/books/mn7r-commodity-brokerage-library-en"
+        }
+      ],
+      "related": []
     },
     {
       "type": "free-book",
@@ -1541,6 +1831,36 @@
       "related": []
     },
     {
+      "type": "editorial",
+      "section": "books",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Practical Guides & Reference",
+      "summary": "A small and growing category for practical guides, visual references and compact tools for real-world decisions, beginning with French road rules for Ukrainians.",
+      "language": "en",
+      "translationGroup": "practical-guides-reference",
+      "canonicalUrl": "https://abvx.xyz/editorial/books/practical-guides-reference-en",
+      "tags": [
+        "Books",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Books",
+          "url": "https://abvx.xyz/books"
+        },
+        {
+          "type": "translation",
+          "label": "Читати українською",
+          "language": "uk",
+          "url": "https://abvx.xyz/editorial/books/practical-guides-reference-uk"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "book",
       "section": "books",
       "ecosystem": "Business, AI & Marketing",
@@ -1581,6 +1901,29 @@
       "summary": "How BWA Express books grow into dedicated websites, open tools, language protocols, learning resources and reusable publishing infrastructure.",
       "language": "en",
       "canonicalUrl": "https://abvx.xyz/editorial/books/publishing-as-infrastructure",
+      "tags": [
+        "Books",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Books",
+          "url": "https://abvx.xyz/books"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "books",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Publishing Systems & Protocols",
+      "summary": "The tools, protocols, production systems, landing sites and language infrastructure that grow around books and make publishing experiments reusable.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/editorial/books/publishing-systems-protocols",
       "tags": [
         "Books",
         "editorial"
@@ -1976,6 +2319,38 @@
       "related": []
     },
     {
+      "type": "translation",
+      "section": "books",
+      "ecosystem": "Language, AI & Toki Pona",
+      "group": "Language, AI & Toki Pona",
+      "status": "released",
+      "title": "The Strange Case of Dr. Jekyll and Mr. Hyde: Toki Pona Edition with Sitelen Pona",
+      "summary": "Read Robert Louis Stevenson’s Jekyll and Hyde in English, Toki Pona, and sitelen pona in a layered literary edition.",
+      "canonicalUrl": "https://abvx.xyz/books/the-strange-case-of-dr-jekyll-and-mr-hyde-in-toki-pona",
+      "tags": [
+        "Toki Pona",
+        "sitelen pona",
+        "Robert Louis Stevenson",
+        "Jekyll and Hyde",
+        "literary translation",
+        "classic literature"
+      ],
+      "links": [
+        {
+          "type": "kindle",
+          "label": "Kindle",
+          "url": "https://www.amazon.com/dp/B0HLZXS3YK"
+        },
+        {
+          "type": "paperback",
+          "label": "Paperback",
+          "url": "https://www.amazon.com/dp/B0HLZXLDBP"
+        }
+      ],
+      "updatedAt": null,
+      "related": []
+    },
+    {
       "type": "book",
       "section": "books",
       "ecosystem": "Language, AI & Toki Pona",
@@ -2199,6 +2574,29 @@
           "relation": "member"
         }
       ]
+    },
+    {
+      "type": "editorial",
+      "section": "books",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Toki Pona Free Kits & Translations",
+      "summary": "How free books, translations and reader resources make the Toki Pona publishing ecosystem easier to enter, explore and learn from.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/editorial/books/toki-pona-free-kits-translations",
+      "tags": [
+        "Books",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Books",
+          "url": "https://abvx.xyz/books"
+        }
+      ],
+      "related": []
     },
     {
       "type": "translation",
@@ -2527,6 +2925,36 @@
           "relation": "series"
         }
       ]
+    },
+    {
+      "type": "editorial",
+      "section": "books",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Практичні довідники та посібники",
+      "summary": "Про невеликий розділ практичних посібників, візуальних довідників і компактних інструментів для реальних життєвих ситуацій.",
+      "language": "uk",
+      "translationGroup": "practical-guides-reference",
+      "canonicalUrl": "https://abvx.xyz/editorial/books/practical-guides-reference-uk",
+      "tags": [
+        "Books",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Books",
+          "url": "https://abvx.xyz/books"
+        },
+        {
+          "type": "translation",
+          "label": "Read in English",
+          "language": "en",
+          "url": "https://abvx.xyz/editorial/books/practical-guides-reference-en"
+        }
+      ],
+      "related": []
     },
     {
       "type": "editorial",

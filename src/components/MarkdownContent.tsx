@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 type Block =
   | { type: 'heading'; level: 2 | 3 | 4; text: string }
   | { type: 'paragraph'; text: string }
-  | { type: 'list'; items: string[] };
+  | { type: 'list'; items: string[]; ordered: boolean };
 
 type InlineMatch = {
   index: number;
@@ -106,6 +106,7 @@ function parseMarkdownBlocks(markdown: string, headingOffset: 0 | 1): Block[] {
   const lines = markdown.replace(/\r\n/g, '\n').split('\n');
   let paragraph: string[] = [];
   let list: string[] = [];
+  let orderedList = false;
 
   function flushParagraph() {
     if (!paragraph.length) return;
@@ -115,8 +116,9 @@ function parseMarkdownBlocks(markdown: string, headingOffset: 0 | 1): Block[] {
 
   function flushList() {
     if (!list.length) return;
-    blocks.push({ type: 'list', items: list });
+    blocks.push({ type: 'list', items: list, ordered: orderedList });
     list = [];
+    orderedList = false;
   }
 
   for (const rawLine of lines) {
@@ -141,9 +143,13 @@ function parseMarkdownBlocks(markdown: string, headingOffset: 0 | 1): Block[] {
     }
 
     const unordered = line.match(/^[-*]\s+(.+)$/);
-    if (unordered) {
+    const ordered = line.match(/^\d+[.)]\s+(.+)$/);
+    if (unordered || ordered) {
       flushParagraph();
-      list.push(unordered[1].trim());
+      const nextIsOrdered = Boolean(ordered);
+      if (list.length && orderedList !== nextIsOrdered) flushList();
+      if (!list.length) orderedList = nextIsOrdered;
+      list.push((ordered || unordered)![1].trim());
       continue;
     }
 
@@ -177,12 +183,13 @@ export default function MarkdownContent({
         }
 
         if (block.type === 'list') {
+          const ListTag = block.ordered ? 'ol' : 'ul';
           return (
-            <ul key={`${block.type}-${index}`}>
+            <ListTag key={`${block.type}-${index}`}>
               {block.items.map((item, itemIndex) => (
                 <li key={`${item}-${itemIndex}`}>{inlineMarkdownNodes(item)}</li>
               ))}
-            </ul>
+            </ListTag>
           );
         }
 

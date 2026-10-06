@@ -122,6 +122,11 @@ function SeriesLine({
           <div className="eyebrow">Official publishing line</div>
           <h3>{series.canonicalPath ? <Link href={series.canonicalPath}>{series.title}</Link> : series.title}</h3>
           <p>{series.summary}</p>
+          {series.description ? (
+            <Link className="editorial-section-link" href={series.canonicalPath || `/books/${series.slug}`}>
+              Series overview <span aria-hidden="true">→</span>
+            </Link>
+          ) : null}
           {editorialArticles.length ? (
             <div className="flex flex-wrap gap-x-4 gap-y-1 pt-2">
               {editorialArticles.map((article) => <EditorialSectionLink key={article.slug} article={article} />)}

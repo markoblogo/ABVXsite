@@ -18,6 +18,146 @@
     "source": "systems.md"
   },
   {
+    "section": "systems",
+    "sectionTitle": "Systems",
+    "slug": "agro-market-infrastructure-systems",
+    "title": "Agro Market Infrastructure Systems for Physical Commodity Markets",
+    "summary": "How trading workflows, market intelligence, benchmarks and public market fronts fit together around physical grain and oilseed operations.",
+    "linkLabel": "Explore agro-market infrastructure",
+    "source": "systems/agro-market-infrastructure-systems.md",
+    "language": "en"
+  },
+  {
+    "section": "systems",
+    "sectionTitle": "Systems",
+    "slug": "trading-brokerage-platforms",
+    "title": "Trading & Brokerage Platforms for Agro-Commodity Workflows",
+    "summary": "A guide to digital trading and brokerage platforms that organize counterparties, deal flow and execution in physical commodity markets.",
+    "linkLabel": "Explore trading and brokerage platforms",
+    "source": "systems/trading-brokerage-platforms.md",
+    "language": "en"
+  },
+  {
+    "section": "systems",
+    "sectionTitle": "Systems",
+    "slug": "monitoring-intelligence",
+    "title": "Commodity Market Monitoring & Intelligence Systems",
+    "summary": "How market terminals, signal monitoring and commodity indexes help organize fragmented price, logistics and market information.",
+    "linkLabel": "Explore monitoring and intelligence",
+    "source": "systems/monitoring-intelligence.md",
+    "language": "en"
+  },
+  {
+    "section": "systems",
+    "sectionTitle": "Systems",
+    "slug": "market-fronts-landings",
+    "title": "Market Fronts & Landing Pages for Commodity Infrastructure",
+    "summary": "Why commodity-market platforms need clear public fronts that explain their offer, operating model and paths for partners and users.",
+    "linkLabel": "Explore market fronts and landings",
+    "source": "systems/market-fronts-landings.md",
+    "language": "en"
+  },
+  {
+    "section": "systems",
+    "sectionTitle": "Systems",
+    "slug": "publishing-language-systems",
+    "title": "Publishing & Language Systems: Infrastructure Around Books",
+    "summary": "How companion sites, translation tools and language protocols extend publishing beyond the printed or digital book.",
+    "linkLabel": "Explore publishing and language systems",
+    "source": "systems/publishing-language-systems.md",
+    "language": "en"
+  },
+  {
+    "section": "systems",
+    "sectionTitle": "Systems",
+    "slug": "publishing-companion-sites",
+    "title": "Publishing Companion Sites for Book Series and Editions",
+    "summary": "How dedicated book and series websites give readers context, related resources and a next step beyond retailer listings.",
+    "linkLabel": "Explore publishing companion sites",
+    "source": "systems/publishing-companion-sites.md",
+    "language": "en"
+  },
+  {
+    "section": "systems",
+    "sectionTitle": "Systems",
+    "slug": "language-tools-protocols-experiments",
+    "title": "Language Tools, Protocols & Experiments for Toki Pona",
+    "summary": "A practical overview of translation, visual rendering and communication protocols in ABVX language-system projects.",
+    "linkLabel": "Explore language tools and protocols",
+    "source": "systems/language-tools-protocols-experiments.md",
+    "language": "en"
+  },
+  {
+    "section": "systems",
+    "sectionTitle": "Systems",
+    "slug": "ai-native-development-systems",
+    "title": "AI-Native Development Systems for Structured Software Work",
+    "summary": "An overview of workflows, development surfaces and protocols that make AI-assisted software work more reviewable and repeatable.",
+    "linkLabel": "Explore AI-native development systems",
+    "source": "systems/ai-native-development-systems.md",
+    "language": "en"
+  },
+  {
+    "section": "systems",
+    "sectionTitle": "Systems",
+    "slug": "workflow-orchestration",
+    "title": "AI Workflow & Orchestration for Reviewable Development",
+    "summary": "How orchestration, repository instructions and reusable agent skills structure AI-assisted coding from context through validation.",
+    "linkLabel": "Explore workflow and orchestration",
+    "source": "systems/workflow-orchestration.md",
+    "language": "en"
+  },
+  {
+    "section": "systems",
+    "sectionTitle": "Systems",
+    "slug": "development-surfaces-interfaces",
+    "title": "Development Surfaces & Interfaces for AI-Native Tools",
+    "summary": "How developer-facing catalogues and interface systems make AI-native tools easier to discover, inspect and use.",
+    "linkLabel": "Explore development surfaces and interfaces",
+    "source": "systems/development-surfaces-interfaces.md",
+    "language": "en"
+  },
+  {
+    "section": "systems",
+    "sectionTitle": "Systems",
+    "slug": "protocols-decision-systems",
+    "title": "Protocols & Decision Systems for AI-Native Coordination",
+    "summary": "How structured identifiers, decision protocols and release workflows help coordinate tools, people and AI-assisted work.",
+    "linkLabel": "Explore protocols and decision systems",
+    "source": "systems/protocols-decision-systems.md",
+    "language": "en"
+  },
+  {
+    "section": "systems",
+    "sectionTitle": "Systems",
+    "slug": "standalone-utilities-experiments",
+    "title": "Standalone Utilities & Experiments: Independent Digital Tools",
+    "summary": "A guide to small utilities and independent experiments that solve focused problems outside the main ABVX systems ecosystems.",
+    "linkLabel": "Explore standalone utilities and experiments",
+    "source": "systems/standalone-utilities-experiments.md",
+    "language": "en"
+  },
+  {
+    "section": "systems",
+    "sectionTitle": "Systems",
+    "slug": "commercial-sites-interfaces",
+    "title": "Commercial Sites & Interfaces for Brands and Services",
+    "summary": "A look at public websites and service interfaces that present a commercial offer and give visitors a clear path to learn more.",
+    "linkLabel": "Explore commercial sites and interfaces",
+    "source": "systems/commercial-sites-interfaces.md",
+    "language": "en"
+  },
+  {
+    "section": "systems",
+    "sectionTitle": "Systems",
+    "slug": "standalone-utilities",
+    "title": "Standalone Utilities for Focused Digital Workflows",
+    "summary": "Two independent tools for lightweight music control and stable operational links, designed around focused everyday tasks.",
+    "linkLabel": "Explore standalone utilities",
+    "source": "systems/standalone-utilities.md",
+    "language": "en"
+  },
+  {
     "section": "books",
     "sectionTitle": "Books",
     "slug": "why-i-publish-books",

@@ -3,6 +3,7 @@ import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import EditorialSectionLink from '@/components/EditorialSectionLink';
 import { getArtifactsBySection } from '@/content';
+import { getEditorialArticles } from '@/content/editorials';
 import type { Artifact } from '@/content';
 import { toPublicArtifact } from '@/content/public-props';
 import { artifactListItem, collectionPageJsonLd, itemListJsonLd, metadataWithImage, SITE_URL, systemsOgImage } from '@/lib/seo';
@@ -98,6 +99,26 @@ const ecosystems = [
   },
 ] as const;
 
+const ecosystemEditorialSlugs: Record<string, string> = {
+  'Agro Market Infrastructure Systems': 'agro-market-infrastructure-systems',
+  'Publishing & Language Systems': 'publishing-language-systems',
+  'AI-native Development Systems': 'ai-native-development-systems',
+  'Standalone Utilities & Experiments': 'standalone-utilities-experiments',
+};
+
+const subgroupEditorialSlugs: Record<string, string> = {
+  'Trading & Brokerage Platforms': 'trading-brokerage-platforms',
+  'Monitoring & Intelligence': 'monitoring-intelligence',
+  'Market Fronts & Landings': 'market-fronts-landings',
+  'Publishing Companion Sites': 'publishing-companion-sites',
+  'Language Tools, Protocols & Experiments': 'language-tools-protocols-experiments',
+  'Workflow & Orchestration': 'workflow-orchestration',
+  'Development Surfaces & Interfaces': 'development-surfaces-interfaces',
+  'Protocols & Decision Systems': 'protocols-decision-systems',
+  'Commercial Sites & Interfaces': 'commercial-sites-interfaces',
+  'Standalone Utilities': 'standalone-utilities',
+};
+
 type SystemsGroup = (typeof ecosystems)[number]['groups'][number];
 
 function itemsForSlugs(artifacts: Artifact[], slugs: readonly string[], usedSlugs: Set<string>): Artifact[] {
@@ -122,6 +143,7 @@ function slugifyFragment(value: string): string {
 
 export default function SystemsPage() {
   const artifacts = getArtifactsBySection('systems');
+  const editorialBySlug = new Map(getEditorialArticles().map((article) => [article.slug, article]));
   const listedArtifacts = ecosystems.flatMap((ecosystem) => ecosystem.groups.flatMap((group) => group.slugs));
   const listedItems = itemsForSlugs(artifacts, listedArtifacts, new Set<string>());
   const usedSlugs = new Set<string>();
@@ -166,6 +188,7 @@ export default function SystemsPage() {
               <div className="eyebrow">Operational ecosystem</div>
               <h2 id={titleId}>{ecosystem.title}</h2>
               <p>{ecosystem.description}</p>
+              <EditorialSectionLink article={editorialBySlug.get(ecosystemEditorialSlugs[ecosystem.title])} />
             </div>
             <div className="systems-ecosystem__groups">
               {renderedGroups.map((group) => {
@@ -175,6 +198,7 @@ export default function SystemsPage() {
                     <div className="systems-subgroup__header">
                       <h3 id={groupId}>{group.title}</h3>
                       {'description' in group && group.description ? <p>{group.description}</p> : null}
+                    <EditorialSectionLink article={editorialBySlug.get(subgroupEditorialSlugs[group.title])} />
                     </div>
                     <div className="systems-grid">
                       {group.items.map((artifact) => (

@@ -3920,6 +3920,75 @@
       "related": []
     },
     {
+      "type": "editorial",
+      "section": "systems",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Agro Market Infrastructure Systems for Physical Commodity Markets",
+      "summary": "How trading workflows, market intelligence, benchmarks and public market fronts fit together around physical grain and oilseed operations.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/editorial/systems/agro-market-infrastructure-systems",
+      "tags": [
+        "Systems",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Systems",
+          "url": "https://abvx.xyz/systems"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "systems",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "AI Workflow & Orchestration for Reviewable Development",
+      "summary": "How orchestration, repository instructions and reusable agent skills structure AI-assisted coding from context through validation.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/editorial/systems/workflow-orchestration",
+      "tags": [
+        "Systems",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Systems",
+          "url": "https://abvx.xyz/systems"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "systems",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "AI-Native Development Systems for Structured Software Work",
+      "summary": "An overview of workflows, development surfaces and protocols that make AI-assisted software work more reviewable and repeatable.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/editorial/systems/ai-native-development-systems",
+      "tags": [
+        "Systems",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Systems",
+          "url": "https://abvx.xyz/systems"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "work",
       "section": "systems",
       "ecosystem": "AI-native Development Systems",
@@ -4087,6 +4156,52 @@
       ]
     },
     {
+      "type": "editorial",
+      "section": "systems",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Commercial Sites & Interfaces for Brands and Services",
+      "summary": "A look at public websites and service interfaces that present a commercial offer and give visitors a clear path to learn more.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/editorial/systems/commercial-sites-interfaces",
+      "tags": [
+        "Systems",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Systems",
+          "url": "https://abvx.xyz/systems"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "systems",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Commodity Market Monitoring & Intelligence Systems",
+      "summary": "How market terminals, signal monitoring and commodity indexes help organize fragmented price, logistics and market information.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/editorial/systems/monitoring-intelligence",
+      "tags": [
+        "Systems",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Systems",
+          "url": "https://abvx.xyz/systems"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "work",
       "section": "systems",
       "ecosystem": "Personal AI systems",
@@ -4151,6 +4266,29 @@
       "related": []
     },
     {
+      "type": "editorial",
+      "section": "systems",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Development Surfaces & Interfaces for AI-Native Tools",
+      "summary": "How developer-facing catalogues and interface systems make AI-native tools easier to discover, inspect and use.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/editorial/systems/development-surfaces-interfaces",
+      "tags": [
+        "Systems",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Systems",
+          "url": "https://abvx.xyz/systems"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "work",
       "section": "systems",
       "ecosystem": "AI-native Development Systems",
@@ -4202,6 +4340,52 @@
         }
       ],
       "updatedAt": "2026-04-22",
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "systems",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Language Tools, Protocols & Experiments for Toki Pona",
+      "summary": "A practical overview of translation, visual rendering and communication protocols in ABVX language-system projects.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/editorial/systems/language-tools-protocols-experiments",
+      "tags": [
+        "Systems",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Systems",
+          "url": "https://abvx.xyz/systems"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "systems",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Market Fronts & Landing Pages for Commodity Infrastructure",
+      "summary": "Why commodity-market platforms need clear public fronts that explain their offer, operating model and paths for partners and users.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/editorial/systems/market-fronts-landings",
+      "tags": [
+        "Systems",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Systems",
+          "url": "https://abvx.xyz/systems"
+        }
+      ],
       "related": []
     },
     {
@@ -4292,6 +4476,75 @@
           "relation": "related"
         }
       ]
+    },
+    {
+      "type": "editorial",
+      "section": "systems",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Protocols & Decision Systems for AI-Native Coordination",
+      "summary": "How structured identifiers, decision protocols and release workflows help coordinate tools, people and AI-assisted work.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/editorial/systems/protocols-decision-systems",
+      "tags": [
+        "Systems",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Systems",
+          "url": "https://abvx.xyz/systems"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "systems",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Publishing & Language Systems: Infrastructure Around Books",
+      "summary": "How companion sites, translation tools and language protocols extend publishing beyond the printed or digital book.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/editorial/systems/publishing-language-systems",
+      "tags": [
+        "Systems",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Systems",
+          "url": "https://abvx.xyz/systems"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "systems",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Publishing Companion Sites for Book Series and Editions",
+      "summary": "How dedicated book and series websites give readers context, related resources and a next step beyond retailer listings.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/editorial/systems/publishing-companion-sites",
+      "tags": [
+        "Systems",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Systems",
+          "url": "https://abvx.xyz/systems"
+        }
+      ],
+      "related": []
     },
     {
       "type": "work",
@@ -4412,6 +4665,52 @@
       ]
     },
     {
+      "type": "editorial",
+      "section": "systems",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Standalone Utilities & Experiments: Independent Digital Tools",
+      "summary": "A guide to small utilities and independent experiments that solve focused problems outside the main ABVX systems ecosystems.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/editorial/systems/standalone-utilities-experiments",
+      "tags": [
+        "Systems",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Systems",
+          "url": "https://abvx.xyz/systems"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "systems",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Standalone Utilities for Focused Digital Workflows",
+      "summary": "Two independent tools for lightweight music control and stable operational links, designed around focused everyday tasks.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/editorial/systems/standalone-utilities",
+      "tags": [
+        "Systems",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Systems",
+          "url": "https://abvx.xyz/systems"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "work",
       "section": "systems",
       "ecosystem": "Publishing & Language Systems",
@@ -4519,6 +4818,29 @@
         }
       ],
       "updatedAt": "2026-09-13",
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "systems",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "Trading & Brokerage Platforms for Agro-Commodity Workflows",
+      "summary": "A guide to digital trading and brokerage platforms that organize counterparties, deal flow and execution in physical commodity markets.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/editorial/systems/trading-brokerage-platforms",
+      "tags": [
+        "Systems",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Systems",
+          "url": "https://abvx.xyz/systems"
+        }
+      ],
       "related": []
     },
     {

@@ -21,6 +21,11 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "mn7r.com" },
     ],
   },
+  async rewrites() {
+    return [
+      { source: "/good-dogs-of-the-apocalypse", destination: "/books/good-dogs-of-the-apocalypse" },
+    ];
+  },
   async headers() {
     const securityHeaders = [
       { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
@@ -60,6 +65,9 @@ const nextConfig: NextConfig = {
       { source: "/ecosystems/:slug/", destination: "/systems", permanent: true },
       { source: "/blog", destination: "/writing", permanent: true },
       { source: "/blog/", destination: "/writing", permanent: true },
+      { source: "/books/good-dogs-of-the-apocalypse", destination: "/good-dogs-of-the-apocalypse", permanent: true },
+      { source: "/books/good-dogs-of-the-apocalypse/", destination: "/good-dogs-of-the-apocalypse", permanent: true },
+      { source: "/good-dogs-of-the-apocalypse/", destination: "/good-dogs-of-the-apocalypse", permanent: true },
       // Preserve common slug aliases from media/project naming.
       { source: "/work/agentsmd-generator", destination: "/work/agents-md-generator", permanent: true },
       { source: "/work/agentsmd-generator/", destination: "/work/agents-md-generator", permanent: true },

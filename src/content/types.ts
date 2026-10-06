@@ -100,6 +100,8 @@ type BaseContentItem<TType extends string> = {
   id: string;
   slug: string;
   title: string;
+  seoTitle?: string;
+  canonicalPath?: string;
   shortTitle?: string;
   type: TType;
   primarySection: SiteSection;
@@ -156,6 +158,8 @@ export type Series = {
   id: string;
   slug: string;
   title: string;
+  seoTitle?: string;
+  canonicalPath?: string;
   shortTitle?: string;
   type: 'series';
   primarySection: 'books';

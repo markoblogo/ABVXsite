@@ -8,7 +8,7 @@ export default function BookCatalogueCard({
   book,
   variantLabel,
   tone,
-  mediaVariant = 'book',
+  mediaVariant,
   metaOverride,
 }: {
   book: Book;
@@ -18,17 +18,18 @@ export default function BookCatalogueCard({
   metaOverride?: string;
 }) {
   const title = book.displayTitle || book.shortTitle || book.title;
+  const resolvedMediaVariant = mediaVariant || (book.coverImage?.role === 'mockup' ? 'landscape' : 'book');
   const mediaRole = book.coverImage?.mediaRole || 'mockup';
 
   return (
     <article
       className={`book-catalogue-card${tone ? ` book-catalogue-card--${tone}` : ''}${
-        mediaVariant === 'landscape' ? ' book-catalogue-card--landscape' : ''
+        resolvedMediaVariant === 'landscape' ? ' book-catalogue-card--landscape' : ''
       }`}
       data-media-role={mediaRole}
     >
       <Link className="book-catalogue-card__cover-link" href={`/books/${book.slug}`} aria-label={title}>
-        <MediaPanel image={book.coverImage} title={title} variant={mediaVariant === 'landscape' ? 'project' : 'book'} />
+        <MediaPanel image={book.coverImage} title={title} variant={resolvedMediaVariant === 'landscape' ? 'project' : 'book'} />
       </Link>
       <div className="catalogue-card__body">
         {variantLabel ? <div className="catalogue-type-label">{variantLabel}</div> : null}

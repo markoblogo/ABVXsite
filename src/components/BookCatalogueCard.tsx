@@ -39,6 +39,11 @@ export default function BookCatalogueCard({
         </h3>
         {book.subtitle ? <p className="book-catalogue-card__subtitle">{book.subtitle}</p> : null}
         <p>{book.summary}</p>
+        {book.description ? (
+          <Link className="editorial-section-link" href={book.canonicalPath || `/books/${book.slug}`}>
+            Book overview <span aria-hidden="true">→</span>
+          </Link>
+        ) : null}
         <TagList tags={book.tags.slice(0, 4)} />
         <ActionLinks links={book.links} limit={4} compact />
       </div>

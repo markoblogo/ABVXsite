@@ -291,6 +291,7 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/editorial/books/publishing-systems-protocols
   Summary: The tools, protocols, production systems, landing sites and language infrastructure that grow around books and make publishing experiments reusable.
   Section: Books
+
 ## Publishing lines
 
 - Modernisme Ukrainien

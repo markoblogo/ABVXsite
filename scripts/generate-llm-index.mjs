@@ -61,6 +61,7 @@ function readItems(folder) {
 }
 
 function canonicalPath(item) {
+  if (item.canonicalPath) return item.canonicalPath;
   if (item.folder === 'work') return `/work/${item.slug}`;
   return `/books/${item.slug}`;
 }

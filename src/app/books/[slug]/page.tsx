@@ -151,9 +151,9 @@ export async function generateMetadata({
   const image = imageMetadata(book.heroImage || book.coverImage, booksOgImage, book.type === 'series' ? 'project' : 'book');
 
   return metadataWithImage({
-    title: book.title,
+    title: book.seoTitle || book.title,
     description: book.summary,
-    canonicalPath: `/books/${book.slug}`,
+    canonicalPath: book.canonicalPath || `/books/${book.slug}`,
     image,
     type: book.type === 'series' ? 'website' : 'book',
   });
@@ -204,7 +204,7 @@ export default async function BookDetailPage({
           data={breadcrumbJsonLd([
             { name: 'ABVX', url: SITE_URL },
             { name: 'ABVX Press', url: `${SITE_URL}/books` },
-            { name: title, url: `${SITE_URL}/books/${book.slug}` },
+            { name: title, url: `${SITE_URL}${book.canonicalPath || `/books/${book.slug}`}` },
           ])}
         />
         <BreadcrumbNav
@@ -336,7 +336,7 @@ export default async function BookDetailPage({
         data={breadcrumbJsonLd([
           { name: 'ABVX', url: SITE_URL },
           { name: 'ABVX Press', url: `${SITE_URL}/books` },
-          { name: title, url: `${SITE_URL}/books/${book.slug}` },
+          { name: title, url: `${SITE_URL}${book.canonicalPath || `/books/${book.slug}`}` },
         ])}
       />
       <BreadcrumbNav

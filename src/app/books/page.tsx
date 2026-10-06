@@ -13,6 +13,7 @@ import type { EditorialArticle } from '@/content/editorials';
 import type { Artifact, Book, Series } from '@/content';
 import { artifactListItem, bookListItem, booksOgImage, collectionPageJsonLd, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 const booksDescription =
   'Books, translations, series and publishing projects across AI, strategy, language, culture, markets and systems thinking.';
@@ -30,6 +31,7 @@ const officialSeriesSlugs = [
   'stoic-wisdom-toki-pona',
   'toki-pona-free-kits',
   'mn7r-commodity-brokerage-library',
+  'good-dogs-of-the-apocalypse',
 ];
 
 const editorialSlugsBySeries: Record<string, string[]> = {
@@ -118,7 +120,7 @@ function SeriesLine({
       <div className={`books-series-line__top${image ? ' books-series-line__top--with-media' : ''}`}>
         <div className="books-series-line__header">
           <div className="eyebrow">Official publishing line</div>
-          <h3>{series.title}</h3>
+          <h3>{series.canonicalPath ? <Link href={series.canonicalPath}>{series.title}</Link> : series.title}</h3>
           <p>{series.summary}</p>
           {editorialArticles.length ? (
             <div className="flex flex-wrap gap-x-4 gap-y-1 pt-2">
@@ -206,7 +208,7 @@ export default function BooksPage() {
           items: [
             ...officialSeries.map((line) => ({
               name: line.title,
-              url: `${SITE_URL}/books/${line.slug}`,
+              url: `${SITE_URL}${line.canonicalPath || `/books/${line.slug}`}`,
               type: 'CreativeWorkSeries',
               image: (line.heroImage || line.media)?.src ? `${SITE_URL}${(line.heroImage || line.media)!.src}` : undefined,
             })),

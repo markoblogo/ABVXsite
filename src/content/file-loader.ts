@@ -222,6 +222,8 @@ function baseFields(data: RawRecord, body: string) {
     id: stringValue(data.id, stringValue(data.slug)),
     slug: stringValue(data.slug),
     title: stringValue(data.title),
+    seoTitle: optionalString(data.seoTitle),
+    canonicalPath: optionalString(data.canonicalPath),
     shortTitle: optionalString(data.shortTitle),
     status: stringValue(data.status, 'archive') as Status,
     visibility: visibilityFor(data.visibility),

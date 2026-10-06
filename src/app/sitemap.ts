@@ -70,7 +70,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const bookRoutes: MetadataRoute.Sitemap = books.map((book) => ({
-    url: `${base}/books/${book.slug}`,
+    url: `${base}${book.canonicalPath || `/books/${book.slug}`}`,
     lastModified: contentDate(book),
     changeFrequency: 'monthly',
     priority: book.featured ? 0.75 : 0.6,

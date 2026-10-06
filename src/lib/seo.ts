@@ -280,7 +280,7 @@ function linkOfType(item: { links: Array<{ type: string; url: string }> }, type:
 function relatedItemSchemas(items: Array<Artifact | Book>) {
   return items.map((item) => {
     const isBook = 'coverImage' in item;
-    const itemUrl = `${SITE_URL}/${isBook ? 'books' : 'work'}/${item.slug}`;
+    const itemUrl = `${SITE_URL}${item.canonicalPath || `/${isBook ? 'books' : 'work'}/${item.slug}`}`;
     return {
       '@type': isBook ? (item.type === 'series' ? 'CreativeWorkSeries' : 'Book') : artifactSchemaType(item.type as Artifact['type']),
       '@id': `${itemUrl}${isBook ? (item.type === 'series' ? '#series' : '#book') : '#work'}`,
@@ -365,7 +365,7 @@ export function artifactJsonLd(artifact: Artifact, relatedItems: Array<Artifact 
 }
 
 export function bookJsonLd(book: Book, relatedItems: Array<Artifact | Book> = []) {
-  const url = `${SITE_URL}/books/${book.slug}`;
+  const url = `${SITE_URL}${book.canonicalPath || `/books/${book.slug}`}`;
   const image = book.heroImage || book.coverImage;
   const imageSchema = imageObject(image, book.title);
   const relatedSchemas = relatedItemSchemas(relatedItems);
@@ -440,7 +440,7 @@ export function bookJsonLd(book: Book, relatedItems: Array<Artifact | Book> = []
 export function bookListItem(book: Book) {
   return {
     name: book.title,
-    url: `${SITE_URL}/books/${book.slug}`,
+    url: `${SITE_URL}${book.canonicalPath || `/books/${book.slug}`}`,
     type: book.type === 'series' ? 'CreativeWorkSeries' : 'Book',
     image: (book.heroImage || book.coverImage)?.src ? absoluteUrl((book.heroImage || book.coverImage)!.src) : undefined,
   };

@@ -132,6 +132,76 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Summary: How software, digital infrastructure, interfaces, tools and experiments come together across different areas of work.
   Section: Systems
 
+- Agro Market Infrastructure Systems for Physical Commodity Markets
+  URL: https://abvx.xyz/editorial/systems/agro-market-infrastructure-systems
+  Summary: How trading workflows, market intelligence, benchmarks and public market fronts fit together around physical grain and oilseed operations.
+  Section: Systems
+
+- Trading & Brokerage Platforms for Agro-Commodity Workflows
+  URL: https://abvx.xyz/editorial/systems/trading-brokerage-platforms
+  Summary: A guide to digital trading and brokerage platforms that organize counterparties, deal flow and execution in physical commodity markets.
+  Section: Systems
+
+- Commodity Market Monitoring & Intelligence Systems
+  URL: https://abvx.xyz/editorial/systems/monitoring-intelligence
+  Summary: How market terminals, signal monitoring and commodity indexes help organize fragmented price, logistics and market information.
+  Section: Systems
+
+- Market Fronts & Landing Pages for Commodity Infrastructure
+  URL: https://abvx.xyz/editorial/systems/market-fronts-landings
+  Summary: Why commodity-market platforms need clear public fronts that explain their offer, operating model and paths for partners and users.
+  Section: Systems
+
+- Publishing & Language Systems: Infrastructure Around Books
+  URL: https://abvx.xyz/editorial/systems/publishing-language-systems
+  Summary: How companion sites, translation tools and language protocols extend publishing beyond the printed or digital book.
+  Section: Systems
+
+- Publishing Companion Sites for Book Series and Editions
+  URL: https://abvx.xyz/editorial/systems/publishing-companion-sites
+  Summary: How dedicated book and series websites give readers context, related resources and a next step beyond retailer listings.
+  Section: Systems
+
+- Language Tools, Protocols & Experiments for Toki Pona
+  URL: https://abvx.xyz/editorial/systems/language-tools-protocols-experiments
+  Summary: A practical overview of translation, visual rendering and communication protocols in ABVX language-system projects.
+  Section: Systems
+
+- AI-Native Development Systems for Structured Software Work
+  URL: https://abvx.xyz/editorial/systems/ai-native-development-systems
+  Summary: An overview of workflows, development surfaces and protocols that make AI-assisted software work more reviewable and repeatable.
+  Section: Systems
+
+- AI Workflow & Orchestration for Reviewable Development
+  URL: https://abvx.xyz/editorial/systems/workflow-orchestration
+  Summary: How orchestration, repository instructions and reusable agent skills structure AI-assisted coding from context through validation.
+  Section: Systems
+
+- Development Surfaces & Interfaces for AI-Native Tools
+  URL: https://abvx.xyz/editorial/systems/development-surfaces-interfaces
+  Summary: How developer-facing catalogues and interface systems make AI-native tools easier to discover, inspect and use.
+  Section: Systems
+
+- Protocols & Decision Systems for AI-Native Coordination
+  URL: https://abvx.xyz/editorial/systems/protocols-decision-systems
+  Summary: How structured identifiers, decision protocols and release workflows help coordinate tools, people and AI-assisted work.
+  Section: Systems
+
+- Standalone Utilities & Experiments: Independent Digital Tools
+  URL: https://abvx.xyz/editorial/systems/standalone-utilities-experiments
+  Summary: A guide to small utilities and independent experiments that solve focused problems outside the main ABVX systems ecosystems.
+  Section: Systems
+
+- Commercial Sites & Interfaces for Brands and Services
+  URL: https://abvx.xyz/editorial/systems/commercial-sites-interfaces
+  Summary: A look at public websites and service interfaces that present a commercial offer and give visitors a clear path to learn more.
+  Section: Systems
+
+- Standalone Utilities for Focused Digital Workflows
+  URL: https://abvx.xyz/editorial/systems/standalone-utilities
+  Summary: Two independent tools for lightweight music control and stable operational links, designed around focused everyday tasks.
+  Section: Systems
+
 - Why I Publish Books
   URL: https://abvx.xyz/editorial/books/why-i-publish-books
   Summary: The ideas and publishing practice behind BWA Express, from Ukrainian Modernism and Toki Pona to business books and fiction.

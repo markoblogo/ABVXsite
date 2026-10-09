@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!article) return { title: 'Editorial' };
 
   const metadata = metadataWithImage({
-    title: article.title,
+    title: article.seoTitle || article.title,
     description: article.summary,
     canonicalPath: article.href,
     image: defaultOgImage,
@@ -56,6 +56,8 @@ export default async function EditorialArticlePage({ params }: PageProps) {
           '@context': 'https://schema.org',
           '@type': 'Article',
           headline: article.title,
+          datePublished: article.publishedAt,
+          dateModified: article.updatedAt || article.publishedAt,
           description: article.summary,
           mainEntityOfPage: canonicalUrl,
           isPartOf: { '@id': `${SITE_URL}/#website` },

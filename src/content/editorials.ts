@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import editorialConfig from '../../content/editorial/index.json';
 
-type EditorialConfigEntry = (typeof editorialConfig)[number] & { language?: string; translationGroup?: string };
+type EditorialConfigEntry = (typeof editorialConfig)[number] & { language?: string; translationGroup?: string; seoTitle?: string; publishedAt?: string; updatedAt?: string };
 
 export type EditorialArticle = EditorialConfigEntry & { body: string; href: string };
 

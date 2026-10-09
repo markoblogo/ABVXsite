@@ -1,3 +1,4 @@
+import pageMetadata from '../../content/pages.json';
 import HeroPoster from '@/components/HeroPoster';
 import HomepageLatestCard from '@/components/HomepageLatestCard';
 import JsonLd from '@/components/JsonLd';
@@ -14,7 +15,7 @@ const homeDescription =
   'Anton Biletskyi-Volokh builds AI-native operating systems for complex markets: market infrastructure, publishing systems, strategic GTM, LLMO and agentic development workflows.';
 
 export const metadata: Metadata = metadataWithImage({
-  title: 'ABVX',
+  title: pageMetadata['/'].seoTitle,
   description: homeDescription,
   canonicalPath: '/',
   image: defaultOgImage,

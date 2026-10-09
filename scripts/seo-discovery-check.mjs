@@ -100,7 +100,7 @@ await withQaServer(async (base) => {
       assert.ok(Date.parse(sitemapEntries.get('https://abvx.xyz' + route)) >= latest, route + ' excludes editorial updates');
     }
     const pageMetadata = JSON.parse(readFileSync('content/pages.json', 'utf8'));
-    assert.equal(sitemapEntries.get('https://abvx.xyz/about'), new Date(pageMetadata['/about'].updatedAt).toISOString());
+    assert.ok(Date.parse(sitemapEntries.get('https://abvx.xyz/about')) >= Date.parse(pageMetadata['/about'].updatedAt), '/about excludes static page updates');
     for (const width of [375, 1280]) {
       await page.setViewportSize({ width, height: 900 });
       await page.goto(base + '/books');

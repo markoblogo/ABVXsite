@@ -5927,6 +5927,35 @@
     {
       "type": "work",
       "section": "systems",
+      "ecosystem": "Commercial Sites & Interfaces",
+      "group": "Commercial Sites & Interfaces",
+      "status": "building",
+      "title": "TDM Enduro Tours",
+      "summary": "Website redesign for Kyiv enduro and ATV rides, with a refreshed logo, Ukrainian copy, new visual assets, ride-selection interfaces and a playable mini-game.",
+      "canonicalUrl": "https://abvx.xyz/work/tdm-enduro-tours",
+      "tags": [
+        "website-redesign",
+        "brand-identity",
+        "copywriting",
+        "enduro",
+        "ATV",
+        "Kyiv",
+        "commercial-site",
+        "interactive-game"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Site",
+          "url": "https://tdm.abvx.xyz/"
+        }
+      ],
+      "updatedAt": "2026-10-09",
+      "related": []
+    },
+    {
+      "type": "work",
+      "section": "systems",
       "ecosystem": "Publishing & Language Systems",
       "group": "Publishing systems & protocols",
       "status": "live",

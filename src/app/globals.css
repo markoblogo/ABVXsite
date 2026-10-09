@@ -4786,6 +4786,10 @@ a {
   filter: saturate(0.9) contrast(1.04);
 }
 
+.work-detail-hero[data-work-slug="tdm-enduro-tours"] .work-detail-hero__media img {
+  object-position: right top;
+}
+
 .work-detail-hero__media .media-panel--project[data-media-role="book-cover"] img {
   object-fit: contain;
 }

@@ -15,7 +15,7 @@ export default function WorkDetailHero({
   const channels = socialLinks(artifact.links);
 
   return (
-    <header className={`work-detail-hero${image ? ' work-detail-hero--with-media' : ''}`}>
+    <header className={`work-detail-hero${image ? ' work-detail-hero--with-media' : ''}`} data-work-slug={artifact.slug}>
       <div className="work-detail-hero__copy">
         <div className="eyebrow">{artifact.group || artifact.type} / {artifact.status}</div>
         <h1>{artifact.title}</h1>

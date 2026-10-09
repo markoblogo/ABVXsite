@@ -320,10 +320,17 @@ export default function AboutPage() {
             ))}
             <li>
               <h3>{brandCollaboration.title}</h3>
-              <p>{brandCollaboration.summary}</p>
-              <a href={brandCollaboration.url} target="_blank" rel="noopener noreferrer">
-                {brandCollaboration.linkLabel}
-              </a>
+              <ul>
+                {brandCollaboration.offers.map((offer) => (
+                  <li key={offer.id}>
+                    <strong>{offer.title}</strong>
+                    <p>{offer.summary}</p>
+                    <a href={offer.url} target="_blank" rel="noopener noreferrer">
+                      {offer.linkLabel}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </li>
           </ul>
         </div>

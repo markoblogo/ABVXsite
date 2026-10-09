@@ -1,9 +1,23 @@
 {
   "id": "content-brand-collaborations",
   "title": "Content & Brand Collaborations",
-  "summary": "Sponsored videos, AI tool demonstrations, newsletter placements, and creative technology partnerships.",
-  "linkLabel": "Explore sponsorship options ↗",
-  "footerLabel": "Brand Collaborations ↗",
-  "url": "https://workspace.passionfroot.me/abv",
-  "canonicalPath": "/about#about-work-title"
+  "canonicalPath": "/about#about-work-title",
+  "offers": [
+    {
+      "id": "technology-b2b-partnerships",
+      "title": "Technology & B2B Partnerships",
+      "summary": "Sponsored technical content, AI product demonstrations, developer tools, SaaS reviews, and newsletter collaborations across YouTube, Substack, and LinkedIn.",
+      "linkLabel": "Explore technology partnerships ↗",
+      "footerLabel": "Tech & B2B Collaborations ↗",
+      "url": "https://workspace.passionfroot.me/abv"
+    },
+    {
+      "id": "creative-content-ugc",
+      "title": "Creative Content & UGC",
+      "summary": "Creative product videos, short-form content, visual storytelling, and UGC production for brands across Instagram, X, and YouTube.",
+      "linkLabel": "Explore creative collaborations ↗",
+      "footerLabel": "Creative Content & UGC ↗",
+      "url": "https://collabstr.com/abvx"
+    }
+  ]
 }

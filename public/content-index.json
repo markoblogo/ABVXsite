@@ -4825,14 +4825,19 @@
       "group": "Content and brand collaborations",
       "status": "available",
       "title": "Content & Brand Collaborations",
-      "summary": "Sponsored videos, AI tool demonstrations, newsletter placements, and creative technology partnerships.",
+      "summary": "Technology & B2B Partnerships: Sponsored technical content, AI product demonstrations, developer tools, SaaS reviews, and newsletter collaborations across YouTube, Substack, and LinkedIn. Creative Content & UGC: Creative product videos, short-form content, visual storytelling, and UGC production for brands across Instagram, X, and YouTube.",
       "canonicalUrl": "https://abvx.xyz/about#about-work-title",
       "tags": [],
       "links": [
         {
           "type": "site",
-          "label": "Explore sponsorship options ↗",
+          "label": "Explore technology partnerships ↗",
           "url": "https://workspace.passionfroot.me/abv"
+        },
+        {
+          "type": "site",
+          "label": "Explore creative collaborations ↗",
+          "url": "https://collabstr.com/abvx"
         }
       ],
       "related": []

@@ -244,10 +244,10 @@ const collaborationIndexItem = {
   group: 'Content and brand collaborations',
   status: 'available',
   title: collaboration.title,
-  summary: collaboration.summary,
+  summary: collaboration.offers.map((offer) => `${offer.title}: ${offer.summary}`).join(' '),
   canonicalUrl: `${SITE_URL}${collaboration.canonicalPath}`,
   tags: [],
-  links: [{ type: 'site', label: collaboration.linkLabel, url: collaboration.url }],
+  links: collaboration.offers.map((offer) => ({ type: 'site', label: offer.linkLabel, url: offer.url })),
   related: [],
 };
 
@@ -330,7 +330,9 @@ const llms = [
   '',
   serviceLlmsSection(),
   '',
-  `## Content and brand collaborations\n\n- ${collaboration.title}\n  URL: ${SITE_URL}${collaboration.canonicalPath}\n  Summary: ${collaboration.summary}\n  ${collaboration.linkLabel}: ${collaboration.url}`,
+  `## ${collaboration.title}\n\n${collaboration.offers
+    .map((offer) => `- ${offer.title}\n  URL: ${SITE_URL}${collaboration.canonicalPath}\n  Summary: ${offer.summary}\n  ${offer.linkLabel}: ${offer.url}`)
+    .join('\n\n')}`,
   '',
   `## Section editorials\n\n${editorialPages
     .map((page) => `- ${page.title}\n  URL: ${SITE_URL}/editorial/${page.section}/${page.slug}\n  Summary: ${page.summary}\n  Section: ${page.sectionTitle}`)

@@ -111,16 +111,27 @@ for (const folder of ['books', 'work', 'series', 'writing']) {
 const collaborationFile = 'content/collaborations.json';
 try {
   const collaboration = JSON.parse(readFileSync(collaborationFile, 'utf8'));
-  for (const field of ['id', 'title', 'summary', 'linkLabel', 'footerLabel', 'url', 'canonicalPath']) {
+  for (const field of ['id', 'title', 'canonicalPath']) {
     if (typeof collaboration[field] !== 'string' || !collaboration[field].trim()) {
       addError(collaborationFile, `${field} must be a non-empty string`);
     }
   }
-  if (typeof collaboration.url === 'string' && !collaboration.url.startsWith('https://')) {
-    addError(collaborationFile, 'url must use HTTPS');
-  }
-  if (typeof collaboration.url === 'string' && !isUrl(collaboration.url)) {
-    addError(collaborationFile, 'url is invalid');
+  if (!Array.isArray(collaboration.offers) || !collaboration.offers.length) {
+    addError(collaborationFile, 'offers must be a non-empty array');
+  } else {
+    const ids = new Set();
+    for (const [index, offer] of collaboration.offers.entries()) {
+      for (const field of ['id', 'title', 'summary', 'linkLabel', 'footerLabel', 'url']) {
+        if (typeof offer?.[field] !== 'string' || !offer[field].trim()) {
+          addError(collaborationFile, `offers[${index}].${field} must be a non-empty string`);
+        }
+      }
+      if (typeof offer?.url === 'string' && (!offer.url.startsWith('https://') || !isUrl(offer.url))) {
+        addError(collaborationFile, `offers[${index}].url must be a valid HTTPS URL`);
+      }
+      if (ids.has(offer?.id)) addError(collaborationFile, `offers[${index}].id must be unique`);
+      ids.add(offer?.id);
+    }
   }
   if (typeof collaboration.canonicalPath === 'string' && !collaboration.canonicalPath.startsWith('/')) {
     addError(collaborationFile, 'canonicalPath must be a local path');

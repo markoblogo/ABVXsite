@@ -223,7 +223,7 @@ export function itemListJsonLd({
 }: {
   id: string;
   name: string;
-  items: Array<{ name: string; url: string; type?: string; image?: string }>;
+  items: Array<{ name: string; url: string; type?: string; image?: string; uploadDate?: string; thumbnailUrl?: string }>;
 }) {
   return {
     '@context': 'https://schema.org',
@@ -239,6 +239,8 @@ export function itemListJsonLd({
         name: item.name,
         url: item.url,
         ...(item.image ? { image: item.image } : {}),
+        ...(item.uploadDate ? { uploadDate: item.uploadDate } : {}),
+        ...(item.thumbnailUrl ? { thumbnailUrl: item.thumbnailUrl } : {}),
       },
     })),
   };

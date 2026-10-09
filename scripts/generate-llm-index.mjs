@@ -5,6 +5,7 @@ import { contentFiles, parseContentFile } from './content-lib.mjs';
 const SITE_URL = 'https://abvx.xyz';
 const outputDir = path.join(process.cwd(), 'public');
 const collaboration = JSON.parse(readFileSync(path.join(process.cwd(), 'content/collaborations.json'), 'utf8'));
+const youtube = JSON.parse(readFileSync(path.join(process.cwd(), 'content/youtube.json'), 'utf8'));
 const editorialPages = JSON.parse(readFileSync(path.join(process.cwd(), 'content/editorial/index.json'), 'utf8'));
 
 const servicePages = [
@@ -259,7 +260,13 @@ const collaborationIndexItem = {
   related: [],
 };
 
-const indexItems = [...rawItems.map(publicIndexItem), ...serviceIndexItems, ...editorialIndexItems, collaborationIndexItem]
+const youtubeIndexItem = {
+  type: 'video-feed', section: 'writing', ecosystem: 'Writing', group: 'YouTube', status: 'live',
+  title: youtube.title, summary: youtube.summary, canonicalUrl: `${SITE_URL}/writing`,
+  tags: ['youtube', 'video'], links: [{ type: 'youtube', label: 'YouTube channel', url: youtube.channelUrl }], related: [],
+};
+
+const indexItems = [...rawItems.map(publicIndexItem), ...serviceIndexItems, ...editorialIndexItems, collaborationIndexItem, youtubeIndexItem]
   .sort((a, b) => a.section.localeCompare(b.section) || a.title.localeCompare(b.title));
 
 function isFocus(item) {
@@ -331,6 +338,7 @@ const llms = [
   'Summary: ABVX is Anton Biletskyi-Volokh’s public work index: product, growth, GTM, AI-native systems, market infrastructure, publishing lines, books, language tools and standalone utilities.',
   'About Anton: https://abvx.xyz/about',
   'Work with Anton: https://abvx.xyz/work-with-me',
+  `YouTube videos in Writing: ${SITE_URL}/writing?source=youtube. ${youtube.summary}`,
   'Machine-readable index: https://abvx.xyz/content-index.json',
   'Primary layers: Focus = market infrastructure; Systems = operational systems architecture; Books = publishing and intellectual layer; Writing = essays and field notes.',
   '',

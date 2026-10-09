@@ -1,3 +1,5 @@
+import youtubeSettings from '../../../content/youtube.json';
+import { fetchYoutubeFeed } from '@/lib/youtube-feed';
 import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import EditorialSectionLink from '@/components/EditorialSectionLink';
@@ -52,12 +54,12 @@ function formatDate(iso: string): string {
 
 function normalizeSource(source: string | string[] | undefined): WritingSource {
   const value = Array.isArray(source) ? source[0] : source;
-  if (value === 'medium' || value === 'substack' || value === 'abvx') return value;
+  if (value === 'medium' || value === 'substack' || value === 'abvx' || value === 'youtube') return value;
   return 'all';
 }
 
 function postExcerpt(post: FeedItem): string {
-  return post.excerpt || 'External essay from the ABVX writing archive.';
+  return post.excerpt || (post.source === 'youtube' ? 'Video from ABV Creative on YouTube.' : 'External essay from the ABVX writing archive.');
 }
 
 function sentenceExcerpt(text: string, sentenceLimit = 3): string {
@@ -115,11 +117,12 @@ export default async function WritingPage({
 }) {
   const params = searchParams ? await searchParams : {};
   const activeSource = normalizeSource(params.source);
-  const [medium, substack] = await Promise.all([
+  const [medium, substack, youtube] = await Promise.all([
     safeFeed(fetchMediumFeed, 'https://abvcreative.medium.com/feed'),
     safeFeed(fetchSubstackFeed, 'https://abvx.substack.com/feed'),
+    safeFeed((url) => fetchYoutubeFeed(url, youtubeSettings), youtubeSettings.feedUrl),
   ]);
-  const allPosts = mergeFeeds(nativeWritingFeed(), medium, substack);
+  const allPosts = mergeFeeds(nativeWritingFeed(), medium, substack, youtube);
   const posts =
     activeSource === 'all' ? allPosts : allPosts.filter((post) => post.source === activeSource);
   const featuredPost = posts[0];
@@ -146,7 +149,8 @@ export default async function WritingPage({
           items: allPosts.slice(0, 20).map((post) => ({
             name: post.title,
             url: post.url,
-            type: 'Article',
+            type: post.source === 'youtube' ? 'VideoObject' : 'Article',
+            ...(post.source === 'youtube' ? { uploadDate: post.publishedAt, thumbnailUrl: post.coverImage } : {}),
             image: post.coverImage,
           })),
         })}
@@ -159,11 +163,18 @@ export default async function WritingPage({
 
       <WritingSourceLinks active={activeSource} />
 
+      {activeSource === 'youtube' && !posts.length ? (
+        <SectionPanel title="New videos" eyebrow="YouTube">
+          <p>New public videos will appear here automatically as they are published.</p>
+          <a href={youtubeSettings.channelUrl} target="_blank" rel="noopener noreferrer">Open YouTube channel -&gt;</a>
+        </SectionPanel>
+      ) : null}
+
       {featuredPost ? (
         <>
           <section className="writing-section writing-section--featured" aria-labelledby="featured-writing-title">
             <div className="writing-section__header">
-              <div className="eyebrow">Latest essay</div>
+              <div className="eyebrow">{featuredPost.source === 'youtube' ? 'Latest video' : 'Latest essay'}</div>
               <h2 id="featured-writing-title">Featured latest</h2>
             </div>
             <FeaturedWritingCard
@@ -221,7 +232,7 @@ export default async function WritingPage({
             </section>
           ) : null}
         </>
-      ) : (
+      ) : activeSource === 'youtube' ? null : (
         <SectionPanel title="Writing feed temporarily unavailable" eyebrow="RSS">
           <p>
             Medium and Substack feeds could not be loaded right now, or this source has

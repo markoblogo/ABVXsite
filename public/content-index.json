@@ -6381,6 +6381,28 @@
       "related": []
     },
     {
+      "type": "video-feed",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "ABV Creative on YouTube",
+      "summary": "Applied AI reviews, technical demonstrations and creative experiments. Writing shows the latest public videos published after this connection, plus one initial demonstration video.",
+      "canonicalUrl": "https://abvx.xyz/writing",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "YouTube channel",
+          "url": "https://www.youtube.com/@ABV_Creative"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "writing",
       "section": "writing",
       "ecosystem": "Writing",

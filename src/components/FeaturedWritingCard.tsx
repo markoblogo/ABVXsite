@@ -1,3 +1,4 @@
+import YouTubeEmbed from './YouTubeEmbed';
 import type { ContentImage } from '@/content';
 import Link from 'next/link';
 import MediaPanel from './MediaPanel';
@@ -26,7 +27,11 @@ export default function FeaturedWritingCard({
   const sourceLabel = formatWritingSourceLabel(source);
   return (
     <article className={`featured-writing-card${image ? '' : ' featured-writing-card--text-only'}`}>
-      {image ? (
+      {source === 'youtube' ? (
+        <div className="featured-writing-card__media">
+          <YouTubeEmbed href={href} title={title} />
+        </div>
+      ) : image ? (
         <Link
           className="featured-writing-card__media"
           href={href}
@@ -50,7 +55,7 @@ export default function FeaturedWritingCard({
           </h2>
           <p>{excerpt}</p>
           <Link className="writing-read-link" href={href} target={target} rel={rel}>
-            Read essay -&gt;
+            {source === 'youtube' ? 'Watch on YouTube' : 'Read essay'} -&gt;
           </Link>
         </div>
         {!image && asideExcerpt ? (

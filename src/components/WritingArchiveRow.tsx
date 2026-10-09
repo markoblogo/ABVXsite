@@ -1,3 +1,4 @@
+import YouTubeEmbed from './YouTubeEmbed';
 import Link from 'next/link';
 import { formatWritingSourceLabel } from './writing-source-label';
 
@@ -24,10 +25,11 @@ export default function WritingArchiveRow({
         {sourceLabel}
         {date ? ` / ${date}` : ''}
       </div>
-      <Link href={href} target={target} rel={rel} aria-label={`Read ${title}`}>
+      <Link href={href} target={target} rel={rel} aria-label={`${source === 'youtube' ? 'Watch' : 'Read'} ${title}`}>
         <span>{title}</span>
         <span aria-hidden="true">-&gt;</span>
       </Link>
+      {source === 'youtube' ? <YouTubeEmbed href={href} title={title} /> : null}
       {excerpt ? <p>{excerpt}</p> : null}
     </article>
   );

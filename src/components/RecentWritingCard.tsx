@@ -1,3 +1,4 @@
+import YouTubeEmbed from './YouTubeEmbed';
 import type { ContentImage } from '@/content';
 import Link from 'next/link';
 import MediaPanel from './MediaPanel';
@@ -26,7 +27,11 @@ export default function RecentWritingCard({
   const sourceLabel = formatWritingSourceLabel(source);
   return (
     <article className={`recent-writing-card${image ? '' : ' recent-writing-card--text-only'}`}>
-      {image ? (
+      {source === 'youtube' ? (
+        <div className="recent-writing-card__media">
+          <YouTubeEmbed href={href} title={title} />
+        </div>
+      ) : image ? (
         <Link
           className="recent-writing-card__media"
           href={href}
@@ -50,7 +55,7 @@ export default function RecentWritingCard({
         <p>{excerpt}</p>
         {!image && bodyExcerpt ? <p className="recent-writing-card__body-excerpt">{bodyExcerpt}</p> : null}
         <Link className="writing-read-link" href={href} target={target} rel={rel}>
-          Read -&gt;
+          {source === 'youtube' ? 'Watch on YouTube' : 'Read'} -&gt;
         </Link>
       </div>
     </article>

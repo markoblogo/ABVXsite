@@ -1,4 +1,4 @@
-export type FeedSource = 'medium' | 'substack' | 'mn7r' | 'abvx';
+export type FeedSource = 'medium' | 'substack' | 'mn7r' | 'abvx' | 'youtube';
 
 export type FeedItem = {
   source: FeedSource;
@@ -15,6 +15,7 @@ export const FEED_REVALIDATE_SECONDS = 900;
 export const IMAGE_FETCH_TIMEOUT_MS = 4500;
 
 export const sourceFallbackCover: Record<FeedSource, string> = {
+  youtube: '/og/abvx-home.png',
   medium: '/og/abvx-home.png',
   substack: '/og/abvx-home.png',
   mn7r: '/media/work/mn7r/hero.png',
@@ -29,6 +30,12 @@ export type FeedSourceConfig = {
 };
 
 export const feedSourceConfigs: Record<FeedSource, FeedSourceConfig> = {
+  youtube: {
+    source: 'youtube',
+    feedHosts: ['www.youtube.com'],
+    articleHosts: ['www.youtube.com'],
+    imageHosts: ['i.ytimg.com'],
+  },
   medium: {
     source: 'medium',
     feedHosts: ['abvcreative.medium.com'],

@@ -1,3 +1,6 @@
+'use client';
+
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import BrandMark from './BrandMark';
 import SocialIcon from './SocialIcon';
@@ -40,6 +43,8 @@ function SocialLinkButton({ item }: { item: SocialLink }) {
 }
 
 export default function SiteFooter() {
+  const pathname = usePathname();
+
   return (
     <footer className="site-footer">
       <div className="site-footer__inner">
@@ -89,6 +94,11 @@ export default function SiteFooter() {
               <SocialLinkButton key={`${item.label}-${item.href}`} item={item} />
             ))}
           </div>
+          {pathname === '/' ? (
+            <div className="site-footer__links">
+              <FooterNavLink item={{ label: 'Brand Collaborations ↗', href: 'https://workspace.passionfroot.me/abv', external: true }} />
+            </div>
+          ) : null}
         </section>
       </div>
     </footer>

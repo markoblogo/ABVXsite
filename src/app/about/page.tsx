@@ -317,6 +317,13 @@ export default function AboutPage() {
             {bestFitWork.map((item) => (
               <li key={item}>{item}</li>
             ))}
+            <li>
+              <h3>Content &amp; Brand Collaborations</h3>
+              <p>Sponsored videos, AI tool demonstrations, newsletter placements, and creative technology partnerships.</p>
+              <a href="https://workspace.passionfroot.me/abv" target="_blank" rel="noopener noreferrer">
+                Explore sponsorship options ↗
+              </a>
+            </li>
           </ul>
         </div>
       </section>

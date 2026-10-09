@@ -4,6 +4,7 @@ import { contentFiles, parseContentFile } from './content-lib.mjs';
 
 const SITE_URL = 'https://abvx.xyz';
 const outputDir = path.join(process.cwd(), 'public');
+const collaboration = JSON.parse(readFileSync(path.join(process.cwd(), 'content/collaborations.json'), 'utf8'));
 const editorialPages = JSON.parse(readFileSync(path.join(process.cwd(), 'content/editorial/index.json'), 'utf8'));
 
 const servicePages = [
@@ -236,7 +237,21 @@ const editorialIndexItems = editorialPages.map((page) => ({
   related: [],
 }));
 
-const indexItems = [...rawItems.map(publicIndexItem), ...serviceIndexItems, ...editorialIndexItems]
+const collaborationIndexItem = {
+  type: 'collaboration',
+  section: 'services',
+  ecosystem: 'Work with Anton',
+  group: 'Content and brand collaborations',
+  status: 'available',
+  title: collaboration.title,
+  summary: collaboration.summary,
+  canonicalUrl: `${SITE_URL}${collaboration.canonicalPath}`,
+  tags: [],
+  links: [{ type: 'site', label: collaboration.linkLabel, url: collaboration.url }],
+  related: [],
+};
+
+const indexItems = [...rawItems.map(publicIndexItem), ...serviceIndexItems, ...editorialIndexItems, collaborationIndexItem]
   .sort((a, b) => a.section.localeCompare(b.section) || a.title.localeCompare(b.title));
 
 function isFocus(item) {
@@ -314,6 +329,8 @@ const llms = [
   llmsSection('Focus systems', rawItems.filter(isFocus)),
   '',
   serviceLlmsSection(),
+  '',
+  `## Content and brand collaborations\n\n- ${collaboration.title}\n  URL: ${SITE_URL}${collaboration.canonicalPath}\n  Summary: ${collaboration.summary}\n  ${collaboration.linkLabel}: ${collaboration.url}`,
   '',
   `## Section editorials\n\n${editorialPages
     .map((page) => `- ${page.title}\n  URL: ${SITE_URL}/editorial/${page.section}/${page.slug}\n  Summary: ${page.summary}\n  Section: ${page.sectionTitle}`)

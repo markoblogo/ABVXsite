@@ -311,7 +311,7 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 - What Agro Commodity Market Infrastructure Means
   URL: https://abvx.xyz/editorial/focus/agro-commodity-market-infrastructure-en
-  Summary: A pillar guide to the digital, operational and methodological layers around physical grain and oilseed markets.
+  Summary: A practical map of agro commodity infrastructure, with an ABVX project scenario and a reusable observation-to-execution handoff record.
   Section: Focus
 
 - Що означає інфраструктура ринку аграрних товарів
@@ -401,7 +401,7 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 - Comparing Ukrainian Grain and Oilseed Spot References
   URL: https://abvx.xyz/editorial/focus/compare-ukrainian-spot-references-en
-  Summary: How to compare physical-market indications with attention to location, basis, quality, date and methodology.
+  Summary: A worked comparison of Ukrainian grain spot conditions, showing delivery-cost adjustments, sensitivity and the evidence needed before comparing references.
   Section: Focus
 
 - Порівняння спотових орієнтирів українського зерна й олійних культур

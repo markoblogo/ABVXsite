@@ -64,6 +64,7 @@ function readItems(folder) {
 function canonicalPath(item) {
   if (item.canonicalPath) return item.canonicalPath;
   if (item.folder === 'work') return `/work/${item.slug}`;
+  if (item.folder === 'writing') return `/writing/${item.slug}`;
   return `/books/${item.slug}`;
 }
 
@@ -73,17 +74,20 @@ function canonicalUrl(item) {
 
 function itemSection(item) {
   if (item.folder === 'books' || item.folder === 'series') return 'books';
+  if (item.folder === 'writing') return 'writing';
   return item.primarySection || item.appearsIn?.[0] || 'systems';
 }
 
 function itemKind(item) {
   if (item.folder === 'work') return 'work';
+  if (item.folder === 'writing') return 'writing';
   if (item.folder === 'series') return 'series';
   return item.type || 'book';
 }
 
 function ecosystemLabel(item) {
   if (item.folder === 'series') return 'Publishing lines';
+  if (item.folder === 'writing') return 'Writing';
   if (item.folder === 'books') return item.group || item.series || 'Books';
   if (item.primarySection === 'focus' || item.appearsIn?.includes('focus')) return 'Agro Market Infrastructure Systems';
   if (['Publishing Companion Sites', 'Language Tools, Protocols & Experiments', 'Publishing systems & protocols'].includes(item.group)) {
@@ -120,7 +124,7 @@ function uniqueByUrl(items) {
   });
 }
 
-const rawItems = [...readItems('work'), ...readItems('books'), ...readItems('series')];
+const rawItems = [...readItems('work'), ...readItems('books'), ...readItems('series'), ...readItems('writing')];
 const bySlug = new Map(rawItems.map((item) => [item.slug, item]));
 
 const serviceIndexItems = servicePages.map((page) => ({
@@ -208,6 +212,8 @@ function publicIndexItem(item) {
     status: item.status || null,
     title: item.title,
     summary: item.summary,
+    ...(item.language ? { language: item.language } : {}),
+    ...(item.translationGroup ? { translationGroup: item.translationGroup } : {}),
     canonicalUrl: canonicalUrl(item),
     tags: cleanTags(item.tags),
     links: cleanLinks(item.links),
@@ -224,6 +230,8 @@ const editorialIndexItems = editorialPages.map((page) => ({
   status: 'published',
   title: page.title,
   summary: page.summary,
+  publishedAt: page.publishedAt,
+  updatedAt: page.updatedAt || page.publishedAt,
   ...(page.language ? { language: page.language } : {}),
   ...(page.translationGroup ? { translationGroup: page.translationGroup } : {}),
   canonicalUrl: `${SITE_URL}/editorial/${page.section}/${page.slug}`,
@@ -345,6 +353,11 @@ const llms = [
   llmsSection('AI-native systems', rawItems.filter(isAiNative)),
   '',
   llmsSection('Standalone utilities', rawItems.filter(isStandaloneUtility)),
+  '',
+  llmsSection('Other public systems', rawItems.filter((item) => item.folder === 'work' &&
+    !isFocus(item) && !isAiNative(item) && !isStandaloneUtility(item) && !isBooksEcosystemItem(item))),
+  '',
+  llmsSection('Writing: essays and field notes', rawItems.filter((item) => item.folder === 'writing')),
   '',
   '## Notes for crawlers and LLM agents',
   '',

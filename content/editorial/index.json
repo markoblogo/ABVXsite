@@ -8,7 +8,9 @@
     "linkLabel": "Why this focus",
     "source": "focus.md",
     "language": "en",
-    "translationGroup": "focus-current-market-infrastructure"
+    "translationGroup": "focus-current-market-infrastructure",
+    "publishedAt": "2026-10-04",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "systems",
@@ -17,7 +19,9 @@
     "title": "Why I Build Systems",
     "summary": "How software, digital infrastructure, interfaces, tools and experiments come together across different areas of work.",
     "linkLabel": "Why I build systems",
-    "source": "systems.md"
+    "source": "systems.md",
+    "publishedAt": "2026-10-04",
+    "updatedAt": "2026-10-04"
   },
   {
     "section": "systems",
@@ -27,7 +31,9 @@
     "summary": "How trading workflows, market intelligence, benchmarks and public market fronts fit together around physical grain and oilseed operations.",
     "linkLabel": "Explore agro-market infrastructure",
     "source": "systems/agro-market-infrastructure-systems.md",
-    "language": "en"
+    "language": "en",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "systems",
@@ -37,7 +43,9 @@
     "summary": "A guide to digital trading and brokerage platforms that organize counterparties, deal flow and execution in physical commodity markets.",
     "linkLabel": "Explore trading and brokerage platforms",
     "source": "systems/trading-brokerage-platforms.md",
-    "language": "en"
+    "language": "en",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "systems",
@@ -47,7 +55,9 @@
     "summary": "How market terminals, signal monitoring and commodity indexes help organize fragmented price, logistics and market information.",
     "linkLabel": "Explore monitoring and intelligence",
     "source": "systems/monitoring-intelligence.md",
-    "language": "en"
+    "language": "en",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "systems",
@@ -57,7 +67,9 @@
     "summary": "Why commodity-market platforms need clear public fronts that explain their offer, operating model and paths for partners and users.",
     "linkLabel": "Explore market fronts and landings",
     "source": "systems/market-fronts-landings.md",
-    "language": "en"
+    "language": "en",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "systems",
@@ -67,7 +79,9 @@
     "summary": "How companion sites, translation tools and language protocols extend publishing beyond the printed or digital book.",
     "linkLabel": "Explore publishing and language systems",
     "source": "systems/publishing-language-systems.md",
-    "language": "en"
+    "language": "en",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "systems",
@@ -77,7 +91,9 @@
     "summary": "How dedicated book and series websites give readers context, related resources and a next step beyond retailer listings.",
     "linkLabel": "Explore publishing companion sites",
     "source": "systems/publishing-companion-sites.md",
-    "language": "en"
+    "language": "en",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "systems",
@@ -87,7 +103,9 @@
     "summary": "A practical overview of translation, visual rendering and communication protocols in ABVX language-system projects.",
     "linkLabel": "Explore language tools and protocols",
     "source": "systems/language-tools-protocols-experiments.md",
-    "language": "en"
+    "language": "en",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "systems",
@@ -97,7 +115,9 @@
     "summary": "An overview of workflows, development surfaces and protocols that make AI-assisted software work more reviewable and repeatable.",
     "linkLabel": "Explore AI-native development systems",
     "source": "systems/ai-native-development-systems.md",
-    "language": "en"
+    "language": "en",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "systems",
@@ -107,7 +127,9 @@
     "summary": "How orchestration, repository instructions and reusable agent skills structure AI-assisted coding from context through validation.",
     "linkLabel": "Explore workflow and orchestration",
     "source": "systems/workflow-orchestration.md",
-    "language": "en"
+    "language": "en",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "systems",
@@ -117,7 +139,9 @@
     "summary": "How developer-facing catalogues and interface systems make AI-native tools easier to discover, inspect and use.",
     "linkLabel": "Explore development surfaces and interfaces",
     "source": "systems/development-surfaces-interfaces.md",
-    "language": "en"
+    "language": "en",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "systems",
@@ -127,7 +151,9 @@
     "summary": "How structured identifiers, decision protocols and release workflows help coordinate tools, people and AI-assisted work.",
     "linkLabel": "Explore protocols and decision systems",
     "source": "systems/protocols-decision-systems.md",
-    "language": "en"
+    "language": "en",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "systems",
@@ -137,7 +163,9 @@
     "summary": "A guide to small utilities and independent experiments that solve focused problems outside the main ABVX systems ecosystems.",
     "linkLabel": "Explore standalone utilities and experiments",
     "source": "systems/standalone-utilities-experiments.md",
-    "language": "en"
+    "language": "en",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "systems",
@@ -147,7 +175,9 @@
     "summary": "A look at public websites and service interfaces that present a commercial offer and give visitors a clear path to learn more.",
     "linkLabel": "Explore commercial sites and interfaces",
     "source": "systems/commercial-sites-interfaces.md",
-    "language": "en"
+    "language": "en",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "systems",
@@ -157,7 +187,9 @@
     "summary": "Two independent tools for lightweight music control and stable operational links, designed around focused everyday tasks.",
     "linkLabel": "Explore standalone utilities",
     "source": "systems/standalone-utilities.md",
-    "language": "en"
+    "language": "en",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "books",
@@ -166,7 +198,9 @@
     "title": "Why I Publish Books",
     "summary": "The ideas and publishing practice behind BWA Express, from Ukrainian Modernism and Toki Pona to business books and fiction.",
     "linkLabel": "Why I publish books",
-    "source": "books.md"
+    "source": "books.md",
+    "publishedAt": "2026-10-04",
+    "updatedAt": "2026-10-04"
   },
   {
     "section": "writing",
@@ -175,7 +209,9 @@
     "title": "Why I Write",
     "summary": "How Medium, Substack and the ABVX personal blog serve different roles in one stream of writing.",
     "linkLabel": "Why I write",
-    "source": "writing.md"
+    "source": "writing.md",
+    "publishedAt": "2026-10-04",
+    "updatedAt": "2026-10-04"
   },
   {
     "section": "about",
@@ -184,7 +220,9 @@
     "title": "About This Page",
     "summary": "A starting point for people who are new to this work, and a guide to the wider ABVX site.",
     "linkLabel": "About this page",
-    "source": "about.md"
+    "source": "about.md",
+    "publishedAt": "2026-10-04",
+    "updatedAt": "2026-10-04"
   },
   {
     "section": "books",
@@ -194,7 +232,9 @@
     "summary": "How BWA Express books grow into dedicated websites, open tools, language protocols, learning resources and reusable publishing infrastructure.",
     "linkLabel": "Explore the publishing infrastructure",
     "source": "publishing-as-infrastructure.md",
-    "language": "en"
+    "language": "en",
+    "publishedAt": "2026-10-04",
+    "updatedAt": "2026-10-04"
   },
   {
     "section": "books",
@@ -205,7 +245,10 @@
     "linkLabel": "Read in English",
     "source": "modernisme-ukrainien-en.md",
     "language": "en",
-    "translationGroup": "modernisme-ukrainien"
+    "translationGroup": "modernisme-ukrainien",
+    "publishedAt": "2026-10-04",
+    "updatedAt": "2026-10-09",
+    "seoTitle": "Modernisme Ukrainien: Translation & Publishing Guide"
   },
   {
     "section": "books",
@@ -216,7 +259,9 @@
     "linkLabel": "Lire en français",
     "source": "modernisme-ukrainien-fr.md",
     "language": "fr",
-    "translationGroup": "modernisme-ukrainien"
+    "translationGroup": "modernisme-ukrainien",
+    "publishedAt": "2026-10-04",
+    "updatedAt": "2026-10-04"
   },
   {
     "section": "books",
@@ -227,7 +272,9 @@
     "linkLabel": "Читати українською",
     "source": "modernisme-ukrainien-uk.md",
     "language": "uk",
-    "translationGroup": "modernisme-ukrainien"
+    "translationGroup": "modernisme-ukrainien",
+    "publishedAt": "2026-10-04",
+    "updatedAt": "2026-10-04"
   },
   {
     "section": "books",
@@ -237,7 +284,9 @@
     "summary": "Why a small Toki Pona publishing line brings together the Dao De Jing, Sun Tzu, Mozi and the Heart Sutra through philosophical compression and slow reading.",
     "linkLabel": "Why Chinese philosophy in toki pona?",
     "source": "chinese-wisdom-in-toki-pona.md",
-    "language": "en"
+    "language": "en",
+    "publishedAt": "2026-10-04",
+    "updatedAt": "2026-10-04"
   },
   {
     "section": "books",
@@ -247,7 +296,10 @@
     "summary": "How Marcus Aurelius’ Meditations grew into a five-book Stoic line with free learning resources and English, toki pona, sitelen pona and emoji pona editions.",
     "linkLabel": "Why Stoicism in toki pona?",
     "source": "stoic-wisdom-in-toki-pona.md",
-    "language": "en"
+    "language": "en",
+    "publishedAt": "2026-10-04",
+    "updatedAt": "2026-10-09",
+    "seoTitle": "Stoic Wisdom in Toki Pona: Reading & Translation Guide"
   },
   {
     "section": "books",
@@ -257,7 +309,10 @@
     "summary": "How free books, translations and reader resources make the Toki Pona publishing ecosystem easier to enter, explore and learn from.",
     "linkLabel": "Explore the free library",
     "source": "toki-pona-free-kits-translations.md",
-    "language": "en"
+    "language": "en",
+    "publishedAt": "2026-10-05",
+    "updatedAt": "2026-10-09",
+    "seoTitle": "Toki Pona Free Kits: Translations & Reader Resources"
   },
   {
     "section": "books",
@@ -268,7 +323,10 @@
     "linkLabel": "Read in English",
     "source": "mn7r-commodity-brokerage-library-en.md",
     "language": "en",
-    "translationGroup": "mn7r-commodity-brokerage-library"
+    "translationGroup": "mn7r-commodity-brokerage-library",
+    "publishedAt": "2026-10-05",
+    "updatedAt": "2026-10-09",
+    "seoTitle": "MN7R Commodity Brokerage Library: Why These Manuals"
   },
   {
     "section": "books",
@@ -279,7 +337,10 @@
     "linkLabel": "Читати українською",
     "source": "mn7r-commodity-brokerage-library-uk.md",
     "language": "uk",
-    "translationGroup": "mn7r-commodity-brokerage-library"
+    "translationGroup": "mn7r-commodity-brokerage-library",
+    "publishedAt": "2026-10-05",
+    "updatedAt": "2026-10-09",
+    "seoTitle": "Бібліотека MN7R: посібники з товарного брокериджу"
   },
   {
     "section": "books",
@@ -289,7 +350,9 @@
     "summary": "Why a shelf of independent books brings together marketing, productivity, AI, psychology and practical business systems without forming a formal series.",
     "linkLabel": "Explore the ideas behind these books",
     "source": "business-ai-marketing.md",
-    "language": "en"
+    "language": "en",
+    "publishedAt": "2026-10-05",
+    "updatedAt": "2026-10-05"
   },
   {
     "section": "books",
@@ -299,7 +362,9 @@
     "summary": "Experiments in constructed languages, Toki Pona, AI, machine reasoning, visual language and the ways language can shape thought.",
     "linkLabel": "Explore the language experiments",
     "source": "language-ai-toki-pona.md",
-    "language": "en"
+    "language": "en",
+    "publishedAt": "2026-10-05",
+    "updatedAt": "2026-10-05"
   },
   {
     "section": "books",
@@ -310,7 +375,9 @@
     "linkLabel": "Read in English",
     "source": "practical-guides-reference-en.md",
     "language": "en",
-    "translationGroup": "practical-guides-reference"
+    "translationGroup": "practical-guides-reference",
+    "publishedAt": "2026-10-05",
+    "updatedAt": "2026-10-05"
   },
   {
     "section": "books",
@@ -321,7 +388,9 @@
     "linkLabel": "Читати українською",
     "source": "practical-guides-reference-uk.md",
     "language": "uk",
-    "translationGroup": "practical-guides-reference"
+    "translationGroup": "practical-guides-reference",
+    "publishedAt": "2026-10-05",
+    "updatedAt": "2026-10-05"
   },
   {
     "section": "books",
@@ -331,7 +400,9 @@
     "summary": "Absurdism, dark humour, literary mashups and genre collisions across the standalone fiction catalogue, with Good Dog remaining a separate emerging line.",
     "linkLabel": "Explore the fiction",
     "source": "fiction.md",
-    "language": "en"
+    "language": "en",
+    "publishedAt": "2026-10-05",
+    "updatedAt": "2026-10-05"
   },
   {
     "section": "books",
@@ -341,7 +412,9 @@
     "summary": "The tools, protocols, production systems, landing sites and language infrastructure that grow around books and make publishing experiments reusable.",
     "linkLabel": "Explore the publishing systems",
     "source": "publishing-systems-protocols.md",
-    "language": "en"
+    "language": "en",
+    "publishedAt": "2026-10-05",
+    "updatedAt": "2026-10-05"
   },
   {
     "section": "focus",
@@ -352,7 +425,9 @@
     "linkLabel": "Чому саме цей фокус",
     "source": "focus/potochnyi-fokus-infrastruktura-ahrarnoi-torhivli.md",
     "language": "uk",
-    "translationGroup": "focus-current-market-infrastructure"
+    "translationGroup": "focus-current-market-infrastructure",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -363,7 +438,9 @@
     "linkLabel": "Read the infrastructure guide",
     "source": "focus/agro-commodity-market-infrastructure-en.md",
     "language": "en",
-    "translationGroup": "focus-agro-commodity-market-infrastructure"
+    "translationGroup": "focus-agro-commodity-market-infrastructure",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -374,7 +451,9 @@
     "linkLabel": "Читати про інфраструктуру",
     "source": "focus/agro-commodity-market-infrastructure-uk.md",
     "language": "uk",
-    "translationGroup": "focus-agro-commodity-market-infrastructure"
+    "translationGroup": "focus-agro-commodity-market-infrastructure",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -385,7 +464,9 @@
     "linkLabel": "Read the definition",
     "source": "focus/not-one-product-category-en.md",
     "language": "en",
-    "translationGroup": "focus-not-one-product-category"
+    "translationGroup": "focus-not-one-product-category",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -396,7 +477,9 @@
     "linkLabel": "Читати визначення",
     "source": "focus/not-one-product-category-uk.md",
     "language": "uk",
-    "translationGroup": "focus-not-one-product-category"
+    "translationGroup": "focus-not-one-product-category",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -407,7 +490,9 @@
     "linkLabel": "Read why it matters",
     "source": "focus/why-physical-agro-markets-are-fragmented-en.md",
     "language": "en",
-    "translationGroup": "focus-why-physical-agro-markets-are-fragmented"
+    "translationGroup": "focus-why-physical-agro-markets-are-fragmented",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -418,7 +503,9 @@
     "linkLabel": "Читати, чому це важливо",
     "source": "focus/why-physical-agro-markets-are-fragmented-uk.md",
     "language": "uk",
-    "translationGroup": "focus-why-physical-agro-markets-are-fragmented"
+    "translationGroup": "focus-why-physical-agro-markets-are-fragmented",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -429,7 +516,9 @@
     "linkLabel": "Explore the ecosystem map",
     "source": "focus/agro-commodity-market-ecosystem-map-en.md",
     "language": "en",
-    "translationGroup": "focus-agro-commodity-market-ecosystem-map"
+    "translationGroup": "focus-agro-commodity-market-ecosystem-map",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -440,7 +529,9 @@
     "linkLabel": "Дослідити карту екосистеми",
     "source": "focus/agro-commodity-market-ecosystem-map-uk.md",
     "language": "uk",
-    "translationGroup": "focus-agro-commodity-market-ecosystem-map"
+    "translationGroup": "focus-agro-commodity-market-ecosystem-map",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -451,7 +542,9 @@
     "linkLabel": "Explore the trading layer",
     "source": "focus/agro-trading-brokerage-layer-en.md",
     "language": "en",
-    "translationGroup": "focus-agro-trading-brokerage-layer"
+    "translationGroup": "focus-agro-trading-brokerage-layer",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -462,7 +555,9 @@
     "linkLabel": "Дослідити торговельний рівень",
     "source": "focus/agro-trading-brokerage-layer-uk.md",
     "language": "uk",
-    "translationGroup": "focus-agro-trading-brokerage-layer"
+    "translationGroup": "focus-agro-trading-brokerage-layer",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -473,7 +568,9 @@
     "linkLabel": "Explore monitoring and intelligence",
     "source": "focus/agro-market-monitoring-intelligence-layer-en.md",
     "language": "en",
-    "translationGroup": "focus-agro-market-monitoring-intelligence-layer"
+    "translationGroup": "focus-agro-market-monitoring-intelligence-layer",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -484,7 +581,9 @@
     "linkLabel": "Дослідити моніторинг і аналітику",
     "source": "focus/agro-market-monitoring-intelligence-layer-uk.md",
     "language": "uk",
-    "translationGroup": "focus-agro-market-monitoring-intelligence-layer"
+    "translationGroup": "focus-agro-market-monitoring-intelligence-layer",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -495,7 +594,9 @@
     "linkLabel": "Explore benchmarks and indexes",
     "source": "focus/commodity-benchmark-index-layer-en.md",
     "language": "en",
-    "translationGroup": "focus-commodity-benchmark-index-layer"
+    "translationGroup": "focus-commodity-benchmark-index-layer",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -506,7 +607,9 @@
     "linkLabel": "Дослідити індекси й орієнтири",
     "source": "focus/commodity-benchmark-index-layer-uk.md",
     "language": "uk",
-    "translationGroup": "focus-commodity-benchmark-index-layer"
+    "translationGroup": "focus-commodity-benchmark-index-layer",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -517,7 +620,9 @@
     "linkLabel": "Explore market fronts",
     "source": "focus/agro-market-front-partner-layer-en.md",
     "language": "en",
-    "translationGroup": "focus-agro-market-front-partner-layer"
+    "translationGroup": "focus-agro-market-front-partner-layer",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -528,7 +633,9 @@
     "linkLabel": "Дослідити публічні сторінки",
     "source": "focus/agro-market-front-partner-layer-uk.md",
     "language": "uk",
-    "translationGroup": "focus-agro-market-front-partner-layer"
+    "translationGroup": "focus-agro-market-front-partner-layer",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -539,7 +646,9 @@
     "linkLabel": "Explore infrastructure use cases",
     "source": "focus/agro-market-infrastructure-use-cases-en.md",
     "language": "en",
-    "translationGroup": "focus-agro-market-infrastructure-use-cases"
+    "translationGroup": "focus-agro-market-infrastructure-use-cases",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -550,7 +659,9 @@
     "linkLabel": "Дослідити сценарії використання",
     "source": "focus/agro-market-infrastructure-use-cases-uk.md",
     "language": "uk",
-    "translationGroup": "focus-agro-market-infrastructure-use-cases"
+    "translationGroup": "focus-agro-market-infrastructure-use-cases",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -561,7 +672,9 @@
     "linkLabel": "Read the spot-reference use case",
     "source": "focus/compare-ukrainian-spot-references-en.md",
     "language": "en",
-    "translationGroup": "focus-compare-ukrainian-spot-references"
+    "translationGroup": "focus-compare-ukrainian-spot-references",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -572,7 +685,9 @@
     "linkLabel": "Читати про порівняння орієнтирів",
     "source": "focus/compare-ukrainian-spot-references-uk.md",
     "language": "uk",
-    "translationGroup": "focus-compare-ukrainian-spot-references"
+    "translationGroup": "focus-compare-ukrainian-spot-references",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -583,7 +698,9 @@
     "linkLabel": "Read the monitoring use case",
     "source": "focus/monitor-agro-market-logistics-context-en.md",
     "language": "en",
-    "translationGroup": "focus-monitor-agro-market-logistics-context"
+    "translationGroup": "focus-monitor-agro-market-logistics-context",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -594,7 +711,9 @@
     "linkLabel": "Читати про моніторинг ринку",
     "source": "focus/monitor-agro-market-logistics-context-uk.md",
     "language": "uk",
-    "translationGroup": "focus-monitor-agro-market-logistics-context"
+    "translationGroup": "focus-monitor-agro-market-logistics-context",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -605,7 +724,9 @@
     "linkLabel": "Read the brokerage use case",
     "source": "focus/brokerage-market-memory-workflows-en.md",
     "language": "en",
-    "translationGroup": "focus-brokerage-market-memory-workflows"
+    "translationGroup": "focus-brokerage-market-memory-workflows",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -616,7 +737,9 @@
     "linkLabel": "Читати про брокерський сценарій",
     "source": "focus/brokerage-market-memory-workflows-uk.md",
     "language": "uk",
-    "translationGroup": "focus-brokerage-market-memory-workflows"
+    "translationGroup": "focus-brokerage-market-memory-workflows",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -627,7 +750,9 @@
     "linkLabel": "Read the benchmark use case",
     "source": "focus/inspect-agro-benchmark-methodology-en.md",
     "language": "en",
-    "translationGroup": "focus-inspect-agro-benchmark-methodology"
+    "translationGroup": "focus-inspect-agro-benchmark-methodology",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -638,7 +763,9 @@
     "linkLabel": "Читати про перевірку індексу",
     "source": "focus/inspect-agro-benchmark-methodology-uk.md",
     "language": "uk",
-    "translationGroup": "focus-inspect-agro-benchmark-methodology"
+    "translationGroup": "focus-inspect-agro-benchmark-methodology",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -649,7 +776,9 @@
     "linkLabel": "Read the market-front use case",
     "source": "focus/connect-market-fronts-to-infrastructure-en.md",
     "language": "en",
-    "translationGroup": "focus-connect-market-fronts-to-infrastructure"
+    "translationGroup": "focus-connect-market-fronts-to-infrastructure",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -660,7 +789,9 @@
     "linkLabel": "Читати про публічний рівень",
     "source": "focus/connect-market-fronts-to-infrastructure-uk.md",
     "language": "uk",
-    "translationGroup": "focus-connect-market-fronts-to-infrastructure"
+    "translationGroup": "focus-connect-market-fronts-to-infrastructure",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -671,7 +802,9 @@
     "linkLabel": "Read the AI-discovery use case",
     "source": "focus/ai-ready-agro-market-data-en.md",
     "language": "en",
-    "translationGroup": "focus-ai-ready-agro-market-data"
+    "translationGroup": "focus-ai-ready-agro-market-data",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -682,7 +815,9 @@
     "linkLabel": "Читати про пошук за допомогою ШІ",
     "source": "focus/ai-ready-agro-market-data-uk.md",
     "language": "uk",
-    "translationGroup": "focus-ai-ready-agro-market-data"
+    "translationGroup": "focus-ai-ready-agro-market-data",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -693,7 +828,9 @@
     "linkLabel": "Explore this focus group",
     "source": "focus/trading-brokerage-platforms-focus-en.md",
     "language": "en",
-    "translationGroup": "focus-trading-brokerage-platforms-focus"
+    "translationGroup": "focus-trading-brokerage-platforms-focus",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -704,7 +841,9 @@
     "linkLabel": "Переглянути цю групу",
     "source": "focus/trading-brokerage-platforms-focus-uk.md",
     "language": "uk",
-    "translationGroup": "focus-trading-brokerage-platforms-focus"
+    "translationGroup": "focus-trading-brokerage-platforms-focus",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -715,7 +854,9 @@
     "linkLabel": "Explore this focus group",
     "source": "focus/market-intelligence-monitoring-indexes-focus-en.md",
     "language": "en",
-    "translationGroup": "focus-market-intelligence-monitoring-indexes-focus"
+    "translationGroup": "focus-market-intelligence-monitoring-indexes-focus",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -726,7 +867,9 @@
     "linkLabel": "Переглянути цю групу",
     "source": "focus/market-intelligence-monitoring-indexes-focus-uk.md",
     "language": "uk",
-    "translationGroup": "focus-market-intelligence-monitoring-indexes-focus"
+    "translationGroup": "focus-market-intelligence-monitoring-indexes-focus",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -737,7 +880,9 @@
     "linkLabel": "Explore this focus group",
     "source": "focus/market-fronts-partner-landings-focus-en.md",
     "language": "en",
-    "translationGroup": "focus-market-fronts-partner-landings-focus"
+    "translationGroup": "focus-market-fronts-partner-landings-focus",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -748,7 +893,9 @@
     "linkLabel": "Переглянути цю групу",
     "source": "focus/market-fronts-partner-landings-focus-uk.md",
     "language": "uk",
-    "translationGroup": "focus-market-fronts-partner-landings-focus"
+    "translationGroup": "focus-market-fronts-partner-landings-focus",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -759,7 +906,9 @@
     "linkLabel": "Explore the Focus library",
     "source": "focus/agro-commodity-books-field-manuals-en.md",
     "language": "en",
-    "translationGroup": "focus-agro-commodity-books-field-manuals"
+    "translationGroup": "focus-agro-commodity-books-field-manuals",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   },
   {
     "section": "focus",
@@ -770,6 +919,8 @@
     "linkLabel": "Переглянути бібліотеку Focus",
     "source": "focus/agro-commodity-books-field-manuals-uk.md",
     "language": "uk",
-    "translationGroup": "focus-agro-commodity-books-field-manuals"
+    "translationGroup": "focus-agro-commodity-books-field-manuals",
+    "publishedAt": "2026-10-06",
+    "updatedAt": "2026-10-06"
   }
 ]

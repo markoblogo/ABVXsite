@@ -1,4 +1,6 @@
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { contentFiles, parseContentFile } from './content-lib.mjs';
 import { chromium } from 'playwright';
 import { withQaServer } from './qa-server.mjs';
 
@@ -46,11 +48,74 @@ await withQaServer(async (base) => {
     assert.ok(xml.includes('hreflang="uk"'));
     const routes = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]);
     assert.equal(new Set(routes).size, routes.length);
+    const titles = new Map();
     for (const url of routes) {
       const response = await page.request.get(base + new URL(url).pathname);
       assert.equal(response.status(), 200, url);
+      const html = await response.text();
+      const title = html.match(/<title>(.*?)<\/title>/s)?.[1];
+      assert.ok(title, url + ' missing title');
+      assert.ok(!titles.has(title), `Duplicate title: ${url} and ${titles.get(title)}`);
+      titles.set(title, url);
     }
-    console.log(`SEO discovery checks passed: ${routes.length} sitemap routes, localized HTML, reciprocal hreflang, navigation, Markdown and book links.`);
+
+    const indexResponse = await page.request.get(base + '/content-index.json');
+    assert.equal(indexResponse.status(), 200);
+    const index = await indexResponse.json();
+    const llmsResponse = await page.request.get(base + '/llms.txt');
+    assert.equal(llmsResponse.status(), 200);
+    const llms = await llmsResponse.text();
+    const indexUrls = new Set(index.items.map((item) => item.canonicalUrl));
+    for (const folder of ['work', 'books', 'series', 'writing']) {
+      for (const file of contentFiles(folder)) {
+        const { data } = parseContentFile(file);
+        const path = data.canonicalPath || `/${folder === 'series' ? 'books' : folder}/${data.slug}`;
+        const url = 'https://abvx.xyz' + path;
+        if (['private', 'draft'].includes(data.visibility)) {
+          assert.ok(!indexUrls.has(url), url + ' leaked non-public content');
+          assert.ok(!llms.includes('URL: ' + url + '\n'), url + ' leaked into llms');
+        } else {
+          assert.ok(indexUrls.has(url), url + ' missing from JSON index');
+          assert.ok(llms.includes('URL: ' + url + '\n'), url + ' missing from llms');
+        }
+      }
+    }
+
+    const editorials = JSON.parse(readFileSync('content/editorial/index.json', 'utf8'));
+    const sitemapEntries = new Map([...xml.matchAll(/<url>(.*?)<\/url>/gs)].map((match) => {
+      const entry = match[1];
+      return [entry.match(/<loc>(.*?)<\/loc>/)?.[1], entry.match(/<lastmod>(.*?)<\/lastmod>/)?.[1]];
+    }));
+    for (const article of editorials) {
+      assert.ok(Number.isFinite(Date.parse(article.publishedAt)), article.slug + ' invalid publication date');
+      assert.ok(Date.parse(article.updatedAt) >= Date.parse(article.publishedAt), article.slug + ' reversed dates');
+      const url = `https://abvx.xyz/editorial/${article.section}/${article.slug}`;
+      assert.equal(sitemapEntries.get(url), new Date(article.updatedAt).toISOString(), url + ' stale lastmod');
+      const indexed = index.items.find((item) => item.canonicalUrl === url);
+      assert.equal(indexed?.updatedAt, article.updatedAt, url + ' stale index date');
+    }
+    for (const route of ['/about', '/focus']) {
+      const sources = editorials.filter((article) => article.section === route.slice(1));
+      const latest = Math.max(...sources.map((article) => Date.parse(article.updatedAt)));
+      assert.ok(Date.parse(sitemapEntries.get('https://abvx.xyz' + route)) >= latest, route + ' excludes editorial updates');
+    }
+    const pageMetadata = JSON.parse(readFileSync('content/pages.json', 'utf8'));
+    assert.ok(Date.parse(sitemapEntries.get('https://abvx.xyz/about')) >= Date.parse(pageMetadata['/about'].updatedAt), '/about excludes static page updates');
+    for (const width of [375, 1280]) {
+      await page.setViewportSize({ width, height: 900 });
+      await page.goto(base + '/books');
+      const hub = page.locator('main a[href="/toki-pona"]');
+      assert.equal(await hub.count(), 1);
+      await hub.click();
+      await page.waitForURL(base + '/toki-pona');
+      for (const path of ['/books/the-strange-case-of-dr-jekyll-and-mr-hyde-in-toki-pona', '/books/stoic-wisdom-toki-pona', '/work/toki-pona-ai-translator']) {
+        assert.equal(await page.locator(`main a[href="${path}"]`).count(), 1);
+      }
+      assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), 'Toki Pona horizontal overflow');
+    }
+    await page.goto(base);
+    assert.ok((await page.title()).startsWith('AI-native Systems & Market Infrastructure'));
+    console.log(`SEO discovery checks passed: ${routes.length} unique page titles and routes, complete public indexes, editorial dates, localized metadata and mobile/desktop Toki Pona navigation.`);
   } finally {
     await browser.close();
   }

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { getArtifactBySlug, getBookBySlug } from '@/content';
 
 export const metadata = {
   title: 'Toki Pona Books, Tools, and Language Systems',
@@ -8,6 +9,9 @@ export const metadata = {
 };
 
 export default function TokiPonaPillar() {
+  const books = ['the-strange-case-of-dr-jekyll-and-mr-hyde-in-toki-pona', 'stoic-wisdom-toki-pona']
+    .flatMap((slug) => { const book = getBookBySlug(slug); return book ? [book] : []; });
+  const translator = getArtifactBySlug('toki-pona-ai-translator');
   return (
     <div className="flex flex-col gap-10">
       <header className="flex flex-col gap-3">
@@ -21,6 +25,14 @@ export default function TokiPonaPillar() {
       <section className="rounded-xl border border-black/10 bg-black/5 p-6 text-sm text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300">
         <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">Where to go next</h2>
         <ul className="mt-3 list-disc space-y-1 pl-4">
+          {books.map((book) => (
+            <li key={book.slug}>
+              <Link className="underline" href={book.canonicalPath || `/books/${book.slug}`}>{book.title}</Link>
+            </li>
+          ))}
+          {translator ? (
+            <li><Link className="underline" href={`/work/${translator.slug}`}>{translator.title}</Link></li>
+          ) : null}
           <li>
             <Link className="underline" href="/systems">Systems</Link>: find language tools and related technical projects.
           </li>

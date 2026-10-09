@@ -284,6 +284,11 @@ export default function BooksPage() {
                 <div className="books-standalone-group__header">
                   <h3>{group.title}</h3>
                   <p>{group.description}</p>
+                  {group.title === 'Language, AI & Toki Pona' ? (
+                    <Link href="/toki-pona" className="editorial-section-link">
+                      Explore Toki Pona books and tools <span aria-hidden="true">→</span>
+                    </Link>
+                  ) : null}
                   {group.editorialSlugs?.length ? (
                     <div className="flex flex-wrap gap-x-4 gap-y-1 pt-2">
                       {group.editorialSlugs.flatMap((slug) => {

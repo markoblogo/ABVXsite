@@ -957,6 +957,70 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Standalone Utilities & Experiments
   Tags: macos, music, tool, youtube-music
 
+## Other public systems
+
+- CoqPi
+  URL: https://abvx.xyz/work/coqpi
+  Summary: A private multilingual desktop copilot for live calls, interview practice, meeting transcription, and reviewed follow-up.
+  Group: Personal AI systems
+  Tags: multilingual, calls, transcription, interviews, privacy
+
+- AzurMenton
+  URL: https://abvx.xyz/work/azurmenton
+  Summary: AzurMenton is a hospitality booking and presentation platform for seaside apartments in Menton, France.
+  Group: Commercial Sites & Interfaces
+  Tags: hospitality, booking, apartments, France, Menton, travel, presentation-site, web-interface
+
+- Pocket OS for Cardputer
+  URL: https://abvx.xyz/work/pocket-os-cardputer
+  Summary: An offline-first Pocket OS for M5Stack Cardputer ADV with music, books, voice notes, journeys, and a Mac companion.
+  Group: Personal AI systems
+  Tags: cardputer, offline-first, music, voice-notes, embedded
+
+- Blue Jay Vodka
+  URL: https://abvx.xyz/work/blue-jay-vodka
+  Summary: Blue Jay Vodka is a brand landing page built around the product’s alpine identity and the idea “Intelligent by Nature.”
+  Group: Commercial Sites & Interfaces
+  Tags: blue-jay-vodka, brand-landing, web-design, commercial-site
+
+- TDM Enduro Tours
+  URL: https://abvx.xyz/work/tdm-enduro-tours
+  Summary: Website redesign for Kyiv enduro and ATV rides, with a refreshed logo, Ukrainian copy, new visual assets, ride-selection interfaces and a playable mini-game.
+  Group: Commercial Sites & Interfaces
+  Tags: website-redesign, brand-identity, copywriting, enduro, ATV, Kyiv, commercial-site, interactive-game
+
+## Writing: essays and field notes
+
+- A Personal Blog, Finally
+  URL: https://abvx.xyz/writing/a-personal-blog-finally
+  Summary: A place for the things that do not fit into professional feeds.
+  Group: writing
+  Tags: personal, notes, life
+
+- Marmite Oatmeal
+  URL: https://abvx.xyz/writing/marmite-oatmeal
+  Summary: A very simple savoury oatmeal that my children and I genuinely love.
+  Group: writing
+  Tags: cookbook, breakfast, marmite
+
+- Première traduction française de Jeanne la bataillonneuse et Miss Adrienne de Géo Chkouroupiy
+  URL: https://abvx.xyz/writing/premiere-traduction-francaise-jeanne-bataillonneuse-miss-adrienne
+  Summary: Publication de la première traduction française de Jeanne la bataillonneuse et Miss Adrienne de Géo Chkouroupiy, dans le cadre du projet Modernisme ukrainien consacré aux écrivains ukrainiens des années 1920-1930.
+  Group: writing
+  Tags: Géo Chkouroupiy, Geo Shkurupii, Modernisme ukrainien, Ukrainian literature, French translation, Jeanne la bataillonneuse, Miss Adrienne
+
+- Two New Books
+  URL: https://abvx.xyz/writing/two-new-books
+  Summary: A short note about two very different books published within a few days: one psychological and fragmentary, the other about strange economic indicators and the...
+  Group: writing
+  Tags: books, psychology, economics
+
+- Вийшов перший французький переклад Jeanne la bataillonneuse та Miss Adrienne Гео Шкурупія
+  URL: https://abvx.xyz/writing/vyishov-pershyi-frantsuzkyi-pereklad-jeanne-bataillonneuse
+  Summary: На Amazon вийшов перший французький переклад Jeanne la bataillonneuse та Miss Adrienne Гео Шкурупія, частина проєкту Modernisme ukrainien про українську літературу 1920–1930-х років.
+  Group: writing
+  Tags: Гео Шкурупій, Géo Chkouroupiy, Geo Shkurupii, Modernisme ukrainien, українська література, французький переклад, Jeanne la bataillonneuse, Miss Adrienne
+
 ## Notes for crawlers and LLM agents
 
 - Canonical pages use https://abvx.xyz URLs.

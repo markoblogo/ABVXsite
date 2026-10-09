@@ -1,10 +1,10 @@
+import pageMetadata from '../../content/pages.json';
 import { getArtifacts, getBooks, getNativeWritingItems } from '@/content';
 import { servicePages } from '@/content/service-pages';
 import { getEditorialArticles } from '@/content/editorials';
 import type { MetadataRoute } from 'next';
 
 const base = 'https://abvx.xyz';
-const aboutUpdatedAt = new Date('2026-09-15T00:00:00.000Z');
 const trafficLandingUpdatedAt = new Date('2026-09-16T00:00:00.000Z');
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const editorialArticles = getEditorialArticles();
   const editorialRoutes: MetadataRoute.Sitemap = editorialArticles.map((article) => ({
     url: `${base}${article.href}`,
+    lastModified: contentDate(article),
     ...(article.translationGroup ? { alternates: { languages: Object.fromEntries(
       editorialArticles.filter((translation) => translation.translationGroup === article.translationGroup && translation.language)
         .map((translation) => [translation.language!, `${base}${translation.href}`]),
@@ -36,10 +37,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       .sort((a, b) => b.valueOf() - a.valueOf())[0];
   }
 
-  const allContentDate = latestDate([...artifacts, ...books, ...writing]);
-  const focusDate = latestDate(artifacts.filter((artifact) => artifact.appearsIn.includes('focus')));
-  const systemsDate = latestDate(artifacts.filter((artifact) => artifact.appearsIn.includes('systems')));
-  const booksDate = latestDate(books);
+  const allContentDate = latestDate([...artifacts, ...books, ...writing, ...editorialArticles, ...Object.values(pageMetadata)]);
+  const focusDate = latestDate([
+    ...artifacts.filter((artifact) => artifact.appearsIn.includes('focus')),
+    ...editorialArticles.filter((article) => article.section === 'focus'),
+  ]);
+  const systemsDate = latestDate([
+    ...artifacts.filter((artifact) => artifact.appearsIn.includes('systems')),
+    ...editorialArticles.filter((article) => article.section === 'systems'),
+  ]);
+  const booksDate = latestDate([...books, ...editorialArticles.filter((article) => article.section === 'books'), pageMetadata['/books']]);
+  const writingDate = latestDate([...writing, ...editorialArticles.filter((article) => article.section === 'writing')]);
+  const aboutDate = latestDate([pageMetadata['/about'], ...editorialArticles.filter((article) => article.section === 'about')]);
+  const tokiPonaDate = latestDate([...books, pageMetadata['/toki-pona']]);
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${base}`, lastModified: allContentDate, changeFrequency: 'weekly', priority: 1 },
@@ -48,11 +58,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/focus`, lastModified: focusDate, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/systems`, lastModified: systemsDate, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/books`, lastModified: booksDate, changeFrequency: 'weekly', priority: 0.85 },
-    { url: `${base}/writing`, changeFrequency: 'weekly', priority: 0.75 },
-    { url: `${base}/about`, lastModified: aboutUpdatedAt, changeFrequency: 'monthly', priority: 0.75 },
+    { url: `${base}/writing`, lastModified: writingDate, changeFrequency: 'weekly', priority: 0.75 },
+    { url: `${base}/about`, lastModified: aboutDate, changeFrequency: 'monthly', priority: 0.75 },
     { url: `${base}/llmo`, lastModified: allContentDate, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/work-with-me`, lastModified: trafficLandingUpdatedAt, changeFrequency: 'monthly', priority: 0.72 },
-    { url: `${base}/toki-pona`, lastModified: booksDate, changeFrequency: 'monthly', priority: 0.65 },
+    { url: `${base}/toki-pona`, lastModified: tokiPonaDate, changeFrequency: 'monthly', priority: 0.65 },
   ];
 
   const serviceRoutes: MetadataRoute.Sitemap = servicePages.map((page) => ({

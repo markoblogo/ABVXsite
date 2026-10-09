@@ -1,3 +1,4 @@
+import { brandCollaboration } from '@/content/collaborations';
 import FAQSection from '@/components/FAQSection';
 import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
@@ -318,10 +319,10 @@ export default function AboutPage() {
               <li key={item}>{item}</li>
             ))}
             <li>
-              <h3>Content &amp; Brand Collaborations</h3>
-              <p>Sponsored videos, AI tool demonstrations, newsletter placements, and creative technology partnerships.</p>
-              <a href="https://workspace.passionfroot.me/abv" target="_blank" rel="noopener noreferrer">
-                Explore sponsorship options ↗
+              <h3>{brandCollaboration.title}</h3>
+              <p>{brandCollaboration.summary}</p>
+              <a href={brandCollaboration.url} target="_blank" rel="noopener noreferrer">
+                {brandCollaboration.linkLabel}
               </a>
             </li>
           </ul>

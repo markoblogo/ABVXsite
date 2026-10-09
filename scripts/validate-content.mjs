@@ -1,4 +1,4 @@
-import { existsSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import {
   contentFiles,
@@ -108,6 +108,27 @@ for (const folder of ['books', 'work', 'series', 'writing']) {
   for (const file of contentFiles(folder)) validateFile(file, folder);
 }
 
+const collaborationFile = 'content/collaborations.json';
+try {
+  const collaboration = JSON.parse(readFileSync(collaborationFile, 'utf8'));
+  for (const field of ['id', 'title', 'summary', 'linkLabel', 'footerLabel', 'url', 'canonicalPath']) {
+    if (typeof collaboration[field] !== 'string' || !collaboration[field].trim()) {
+      addError(collaborationFile, `${field} must be a non-empty string`);
+    }
+  }
+  if (typeof collaboration.url === 'string' && !collaboration.url.startsWith('https://')) {
+    addError(collaborationFile, 'url must use HTTPS');
+  }
+  if (typeof collaboration.url === 'string' && !isUrl(collaboration.url)) {
+    addError(collaborationFile, 'url is invalid');
+  }
+  if (typeof collaboration.canonicalPath === 'string' && !collaboration.canonicalPath.startsWith('/')) {
+    addError(collaborationFile, 'canonicalPath must be a local path');
+  }
+} catch (error) {
+  addError(collaborationFile, error.message);
+}
+
 const bySlug = new Map();
 for (const item of all) {
   const slug = item.data.slug;
@@ -129,4 +150,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Content validation passed: ${all.length} files checked.`);
+console.log(`Content validation passed: ${all.length + 1} files checked.`);

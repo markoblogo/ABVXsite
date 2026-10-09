@@ -4819,6 +4819,25 @@
       ]
     },
     {
+      "type": "collaboration",
+      "section": "services",
+      "ecosystem": "Work with Anton",
+      "group": "Content and brand collaborations",
+      "status": "available",
+      "title": "Content & Brand Collaborations",
+      "summary": "Sponsored videos, AI tool demonstrations, newsletter placements, and creative technology partnerships.",
+      "canonicalUrl": "https://abvx.xyz/about#about-work-title",
+      "tags": [],
+      "links": [
+        {
+          "type": "site",
+          "label": "Explore sponsorship options ↗",
+          "url": "https://workspace.passionfroot.me/abv"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "service-page",
       "section": "services",
       "ecosystem": "Work with Anton",

@@ -120,12 +120,17 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Focused collaboration entry points
   Tags: product marketing, complex products, positioning, B2B, category design
 
-## Content and brand collaborations
+## Content & Brand Collaborations
 
-- Content & Brand Collaborations
+- Technology & B2B Partnerships
   URL: https://abvx.xyz/about#about-work-title
-  Summary: Sponsored videos, AI tool demonstrations, newsletter placements, and creative technology partnerships.
-  Explore sponsorship options ↗: https://workspace.passionfroot.me/abv
+  Summary: Sponsored technical content, AI product demonstrations, developer tools, SaaS reviews, and newsletter collaborations across YouTube, Substack, and LinkedIn.
+  Explore technology partnerships ↗: https://workspace.passionfroot.me/abv
+
+- Creative Content & UGC
+  URL: https://abvx.xyz/about#about-work-title
+  Summary: Creative product videos, short-form content, visual storytelling, and UGC production for brands across Instagram, X, and YouTube.
+  Explore creative collaborations ↗: https://collabstr.com/abvx
 
 ## Section editorials
 

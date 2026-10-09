@@ -93,7 +93,9 @@ export default function SiteFooter() {
           </div>
           <HomeOnly>
             <div className="site-footer__links">
-              <FooterNavLink item={{ label: brandCollaboration.footerLabel, href: brandCollaboration.url, external: true }} />
+              {brandCollaboration.offers.map((offer) => (
+                <FooterNavLink key={offer.id} item={{ label: offer.footerLabel, href: offer.url, external: true }} />
+              ))}
             </div>
           </HomeOnly>
         </section>

@@ -1,213 +1,48 @@
-# Content Editing
+# Content editing
 
-The redesigned ABVX site uses a Git-based content registry for core pages. Notion is no longer required to render `/`, `/focus`, `/systems`, `/books`, `/writing`, `/about`, `/work/[slug]`, or `/books/[slug]`.
+Use this guide for a small public-content change. [Content workflow](content-workflow.md) owns the complete format and field rules; the [release checklist](editorial-seo-checklist.md) owns publication checks.
 
-## Files
+## Choose the owning source
 
-- `src/content/types.ts` defines allowed sections, types, statuses, and shared fields.
-- `src/content/artifacts.ts` contains non-book work items.
-- `src/content/books.ts` contains publishing items.
-- `src/content/index.ts` exposes read helpers for pages.
+| Task | Source |
+| --- | --- |
+| Add/update a Focus or Systems project | `content/work/<slug>.md` |
+| Add/update a book, translation, free edition, or companion | `content/books/<slug>.md` |
+| Add/update an official series | `content/series/<slug>.md` |
+| Add/update a native Writing article | `content/writing/<slug>.md` |
+| Add/update a section guide or translation | `content/editorial/<slug>.md` and `content/editorial/index.json` |
+| Change core-page SEO title or substantive update date | `content/pages.json` |
+| Change shared sponsorship/UGC offers | `content/collaborations.json` |
+| Change YouTube channel/cutoff/pinned test video | `content/youtube.json` |
 
-## Shared Fields
+`src/content/types.ts` and the loaders define behavior, not the ordinary editing surface. `src/content/artifacts.ts` and `src/content/books.ts` contain legacy fallbacks; file content overrides them by slug. Do not add new catalogue items there.
 
-Every content item uses the same base shape:
+## Add a project, book, or series
 
-```ts
-{
-  id: 'stable-id',
-  slug: 'public-url-slug',
-  title: 'Public title',
-  type: 'allowed-type',
-  primarySection: 'focus',
-  appearsIn: ['focus', 'systems'],
-  status: 'building',
-  publishedAt: '2026-05-09',
-  updatedAt: '2026-05-09',
-  summary: 'Short public card summary.',
-  description: 'Longer detail-page text.',
-  tags: ['tag-one', 'tag-two'],
-  links: [{ type: 'website', label: 'Website', url: 'https://example.com' }],
-  featured: true,
-  sortRank: 10,
-  needsReview: false,
-}
-```
+1. Copy the corresponding `_template.md`, or use `npm run content:new-work`, `content:new-book`, or `content:new-series`. Use `content:new-writing` for a native article. Review generator defaults before making it public.
+2. Keep JSON frontmatter between `---` delimiters and place detail-page Markdown after it. Use the template's supported fields and link types (`site`, `github`, `amazon`, `pdf`, etc.), not arbitrary legacy aliases.
+3. Set a unique, stable `id`/`slug`, title, summary, actual dates, status, and visibility. Remove empty placeholder links. Add only verified public URLs and claims.
+4. Select `primarySection`, useful `appearsIn` cross-listing, and an existing catalogue group. Focus market projects may appear in both Focus and Systems; ordinary Systems utilities need not appear in Focus.
+5. Place images/PDFs under `public/media/<kind>/<slug>/` and reference `/media/...` paths. Prefer existing WebP derivatives, include descriptive alt text, and preserve image-role semantics. Keep review notes/flags internal.
 
-Use public-facing text only. Do not add private notes, internal IDs, unverified claims, or secret URLs.
+`publishedAt` records publication; `updatedAt` changes for substantive public updates, not for every build. Latest-section cards resolve `updatedAt` before `publishedAt`; inspect their eligibility helper before assuming a new item will be selected on the homepage.
 
-If a title is known but the URL is not verified, leave `links: []` and set `needsReview: true`.
+Book and series links use existing identifiers/relationships. A companion's canonical detail route follows its record family, not every catalogue where it appears. Preserve custom `canonicalPath` values and published aliases.
 
-Local media should live under `public/media/books`, `public/media/projects`, or `public/media/series`. Reference it with public paths such as `/media/projects/example.png`; preserve the real file extension and do not use temporary Notion asset URLs or old Next.js image optimizer URLs in content records.
+## Editorial and multilingual guides
 
-## Add a Focus Project
+Use the [editorial checklist](editorial-seo-checklist.md). Map every requested section once, give each article a distinct purpose, and add its link at the matching heading. Pair translations with the same `translationGroup`, correct language code, and localized link label. Keep dates and `seoTitle` in the editorial index; verify visible language links, canonical routes, and alternates after building.
 
-Use `src/content/artifacts.ts`.
+## Collaboration links
 
-Focus projects are current work around agro-commodity trading infrastructure. They usually appear in both `/focus` and `/systems`.
+Edit each offer in `content/collaborations.json` once. About and the footer consume that shared source, including labels and URLs. Keep external links opening in a new tab with `rel="noopener noreferrer"`; retain the `Collaboration Click` tracking class and verify narrow-screen wrapping.
 
-```ts
-{
-  id: 'new-market-system',
-  slug: 'new-market-system',
-  title: 'New Market System',
-  type: 'market-infrastructure',
-  primarySection: 'focus',
-  appearsIn: ['focus', 'systems'],
-  status: 'building',
-  summary: 'Digital market workflow for physical agro-commodity trading.',
-  description:
-    'Longer public explanation of what the system does and where it fits in the market infrastructure work.',
-  tags: ['agro-commodities', 'market-infrastructure', 'workflow'],
-  thumbnail: {
-    src: '/media/projects/new-market-system.png',
-    alt: 'New Market System interface screenshot',
-  },
-  links: [{ type: 'website', label: 'Site', url: 'https://example.com' }],
-  featured: false,
-  sortRank: 50,
-  needsReview: true,
-}
-```
+## YouTube
 
-After adding it, the item should appear on `/focus`, `/systems`, `/work/new-market-system`, and sitemap.
+See [Writing sources and pinned-video behavior](site-operations.md#youtube-policy). The channel feed imports only publications after the cutoff. The single initial exception has locally stored metadata so it survives feed rollover or failure. Content validation checks its configuration. Do not lower the cutoff to import the old channel archive unless requested.
 
-## Add a Systems Artifact
+## Complete one reviewable change
 
-Use `src/content/artifacts.ts`.
+Update content, section links, relationships, media, and both machine indexes together. Run `npm run llms:generate`; commit its outputs without hand edits. Follow the [release checklist](editorial-seo-checklist.md), open one PR, and verify the production merge SHA and canonical URLs after publication.
 
-Systems artifacts include web services, tools, protocols, AI workflows, language experiments, research, build logs, and book companions.
-
-Allowed `ArtifactType` values:
-
-- `market-infrastructure`
-- `web-service`
-- `tool`
-- `protocol`
-- `ai-workflow`
-- `language-experiment`
-- `book-companion`
-- `research`
-- `build-log`
-
-Example:
-
-```ts
-{
-  id: 'new-agent-tool',
-  slug: 'new-agent-tool',
-  title: 'New Agent Tool',
-  type: 'ai-workflow',
-  primarySection: 'systems',
-  appearsIn: ['systems'],
-  status: 'live',
-  summary: 'Small AI-development workflow tool for repeatable project setup.',
-  description:
-    'Public detail text explaining the workflow, intended use, and current state.',
-  tags: ['ai-dev', 'agents', 'workflow'],
-  thumbnail: {
-    src: '/media/projects/new-agent-tool.png',
-    alt: 'New Agent Tool screenshot',
-  },
-  links: [{ type: 'github', label: 'GitHub', url: 'https://github.com/markoblogo/example' }],
-  featured: false,
-  sortRank: 140,
-  needsReview: false,
-}
-```
-
-After adding it, the item should appear on `/systems`, `/work/new-agent-tool`, and sitemap.
-
-## Add a Book
-
-Use `src/content/books.ts`.
-
-Allowed `BookType` values:
-
-- `book`
-- `series`
-- `translation`
-- `free-edition`
-- `companion`
-
-Example:
-
-```ts
-{
-  id: 'new-book',
-  slug: 'new-book',
-  title: 'New Book',
-  type: 'book',
-  primarySection: 'books',
-  appearsIn: ['books'],
-  status: 'released',
-  publishedAt: '2026-05-09',
-  summary: 'Short public summary for cards and metadata.',
-  description:
-    'Longer detail-page text with public context, series notes, or edition notes.',
-  tags: ['books', 'strategy'],
-  coverImage: {
-    src: '/media/books/new-book.png',
-    alt: 'New Book cover',
-  },
-  links: [
-    { type: 'amazon', label: 'Amazon', url: 'https://www.amazon.com/example' },
-    { type: 'pdf', label: 'PDF', url: '/media/books/new-book.pdf' },
-  ],
-  featured: false,
-  sortRank: 90,
-  needsReview: false,
-}
-```
-
-After adding it, the item should appear on `/books`, `/books/new-book`, and sitemap.
-
-## Add a Cross-Listed Item
-
-Use `primarySection` for the canonical home and `appearsIn` for additional visibility.
-
-Examples:
-
-- A book landing page can be canonical in `books` and appear in `systems`.
-- A market infrastructure project can be canonical in `focus` and appear in `systems`.
-- A language publishing project can be canonical in `books` and appear in `systems`.
-
-Example book companion:
-
-```ts
-{
-  id: 'new-book-companion',
-  slug: 'new-book-companion',
-  title: 'New Book Companion',
-  type: 'companion',
-  primarySection: 'books',
-  appearsIn: ['books', 'systems'],
-  status: 'live',
-  summary: 'Companion landing page and technical support layer for a book series.',
-  description:
-    'Public context for the companion, related publishing project, and system role.',
-  tags: ['book-companion', 'landing', 'publishing'],
-  coverImage: {
-    src: '/media/series/new-book-companion.png',
-    alt: 'New Book Companion cover',
-  },
-  links: [{ type: 'book-site', label: 'Site', url: 'https://example.com' }],
-  featured: true,
-  sortRank: 45,
-  needsReview: false,
-}
-```
-
-The canonical detail route is still `/books/new-book-companion` because it lives in `src/content/books.ts`.
-
-## Review Checklist
-
-Before committing content changes:
-
-- Confirm the slug is stable and unique.
-- Confirm all URLs are public and verified.
-- Confirm summaries are public-facing and concise.
-- Confirm `primarySection` reflects the canonical home.
-- Confirm `appearsIn` has only useful cross-listing sections.
-- Run `npm run lint`.
-- Run `npm run build`.
+Bulk edits must keep the same source ownership and stable identifiers. A passed build does not establish link correctness, publication, or search indexing.

@@ -1,70 +1,43 @@
-# ABVX Traffic Growth Plan
+# ABVX traffic and presentation plan
 
-Last updated: 2026-09-16.
+Reviewed: 2026-10-09. This is a plan and measurement reference, not automatic publication authority. Further presentation/features are **deferred at the owner's request** until a later session with refreshed site evidence.
 
 ## Goal
 
-Increase qualified discovery for ABVX without turning the site into a generic blog farm. The priority is to make the existing portfolio easier for humans, search engines, and LLM/answer engines to understand, cite, and route.
+Help potential clients, employers, readers, and technology/creative partners understand Anton's work, inspect evidence, and choose a useful next step. Search traffic is one channel; qualified contacts, collaborations, and book-link intent are separate outcomes.
 
-## Implemented autonomous layer
+## Implemented baseline
 
-The site now has a focused `/work-with-me` conversion layer with six indexable, canonical service-entry pages:
+- Focus, Systems, and Books have linked editorial guides; Focus includes English/Ukrainian pairs. Localized records, canonical paths, language alternates, and dates live in the content sources.
+- `/work-with-me` links six existing service pages: AI GTM, AI workflow systems, LLMO, KDP publishing automation, agro-market infrastructure, and complex-product marketing. Improve their evidence before creating more pages for the same intent.
+- About/footer share technology/B2B and creative/UGC offers from `content/collaborations.json`.
+- Public identity/schema, page titles, canonical routes, sitemap, and machine indexes are maintained in source and checked during releases. `/toki-pona` is an indexable gateway rather than a disconnected private experiment.
+- Writing combines native articles, Medium/Substack, and new embedded YouTube videos. The initial demonstration has pinned local metadata; subsequent videos remain limited to the latest channel-feed entries. See [Site operations](site-operations.md).
+- Three existing editorial pages were strengthened with worked examples. Direct thematic links were published through relevant Medium/Substack articles, YouTube descriptions, and project READMEs, including Index. External placements must be reread live before assuming they remain unchanged.
+- Plausible has separate Book Link Click, Contact Click, and Collaboration Click goals. Tracking definitions and complete 28-day comparison rules are in [Site operations](site-operations.md#analytics).
 
-- `/work-with-me/ai-gtm-consultant`
-- `/work-with-me/ai-workflow-systems`
-- `/work-with-me/llmo-consultant`
-- `/work-with-me/kdp-publishing-automation`
-- `/work-with-me/agro-commodity-market-infrastructure`
-- `/work-with-me/product-marketing-complex-products`
+Local verification establishes structure and behavior, not search demand, successful Google sitemap processing, indexing, rankings, or AI citations. Reopen Search Console evidence before calling an old indexing/sitemap issue resolved.
 
-Each page should include:
+## Proposed next package — deferred, not implemented
 
-- page-specific metadata and canonical URL;
-- concrete buyer problem, deliverables, proof points, related ABVX evidence, and CTA;
-- visible FAQ content plus `FAQPage` JSON-LD;
-- breadcrumb schema;
-- inclusion in sitemap, `llms.txt`, and `content-index.json`.
+1. **Three evidence-led project cases.** Start with MN7R, an AI-workflow project, and TDM. Add task, Anton's specific role, delivered work, and a public screenshot/demo/repository. Use before/after assets where available. Do not invent business gains or represent a prototype as a production customer result.
+2. **Selected work on the homepage.** Make those cases easy to find without relying solely on the latest updated item. Keep the existing visual language and avoid adding another broad catalogue.
+3. **Service-to-evidence links.** Connect the existing service pages to their strongest cases and make detailed engagement formats reachable from About. Avoid duplicate service pages and generic proof statements.
+4. **Demand-led SEO edits.** Use Search Console to choose 5–10 pages with actual impressions, then inspect queries, position, clicks, title/intro fit, and relevant internal links. Determine whether the bottleneck is indexing, ranking, click-through, or demand before producing more guides.
+5. **One durable video page as a pilot.** A selected video could gain a permanent page with a player, original explanation/example, and project links. This is not currently provided by automatic Writing-feed ingestion; do not start an archive or mass transcript import implicitly.
 
-## Current technical baseline
+Before resuming: fetch current `main`, inspect new public updates, check live analytics/search evidence, and reconfirm the requested slice. These proposals do not authorize client outreach or publication to other platforms.
 
-- `/sitemap.xml` lists canonical public routes.
-- `/llms.txt` provides a readable public map for LLM agents.
-- `/content-index.json` provides structured public inventory.
-- Core About, Work, Books, LLMO, and Work-with-me pages use page-specific metadata and structured data.
-- Public pages should avoid local paths, draft labels, internal editorial flags, and duplicate indexable content.
+## Measurement
 
-## What Codex can do autonomously
+Use two complete 28-day periods with identical filters and goal definitions; exclude the current partial day. Do not infer historical separated goals from outbound-link totals or attribute earlier traffic increases to later publications. Small samples and owner visits limit conclusions.
 
-1. Add or refine canonical public pages where the site already has enough evidence.
-2. Add schema, metadata, internal links, FAQ blocks, sitemap entries, and LLM index entries.
-3. Create landing-page copy from existing portfolio evidence without inventing credentials.
-4. Run local build, visual QA, generated-index checks, commit, push, CI checks, and public-route verification.
-5. Prepare measurement reports from available analytics screenshots or exported data.
+Track discovery (Search Console impressions, queries, clicks, indexed pages), site entry/referrers (Plausible), and separate book/contact/collaboration intent. A link click is not a sale, delivered inquiry, or booking. Report unavailable data explicitly rather than filling it with zero.
 
-## What requires Anton
+## Evidence and permission boundaries
 
-1. Connect and verify Google Search Console if it is not already active.
-2. Share or publish the new pages from LinkedIn, Medium, Substack, YouTube descriptions, Behance, GitHub profiles, Amazon author pages, and book back matter.
-3. Decide which offers are actually available commercially, including minimum engagement size and preferred contact channel.
-4. Provide external social proof, testimonials, case permissions, logos, or anonymized client examples if they can be used publicly.
-5. Choose whether to create dedicated public articles for the strongest search intents or keep the site as a portfolio/offer surface.
+Repository work can use reviewed public content and existing assets. New client names/logos, testimonials, private metrics, case permissions, commercially available offers, or pricing require source evidence and owner decisions. Platform publications/messages require the user's authorization; authenticated access alone is not permission to publish.
 
-## Measurement loop
+Keep canonical routes and paired localization intact. Do not publish generic SEO filler, duplicate pages, invented credentials, unsupported traction, or promises of ranking/AI citation. The existing machine indexes aid consumers but are not a substitute for original useful content and human distribution.
 
-Weekly traffic review should track:
-
-- total visits and unique visitors;
-- entry pages;
-- source/referrer mix;
-- clicks or visits to `/work-with-me` and service pages;
-- search queries and impressions from Search Console when available;
-- pages with high bounce and no onward click.
-
-Low traffic is expected at this stage. The first target is not viral scale; it is correct indexing, clear routing, and enough external signals for Google/LLMs to understand the portfolio.
-
-## Guardrails
-
-- Do not invent credentials, client results, or public traction.
-- Do not publish generic SEO filler.
-- Do not create indexable duplicate pages for the same intent.
-- Do not rely on LLMO alone; external links and human distribution are still required.
+Procedure: [Content editing](content-editing.md) → [release checklist](editorial-seo-checklist.md) → [operations/measurement](site-operations.md).

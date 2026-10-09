@@ -9,7 +9,7 @@ export default function YouTubeEmbed({ href, title }: { href: string; title: str
   if (!videoId || !/^[\w-]{11}$/.test(videoId)) return null;
   return (
     <iframe
-      className="aspect-video w-full border-0"
+      className="youtube-embed aspect-video w-full border-0"
       src={`https://www.youtube-nocookie.com/embed/${videoId}?rel=0&playsinline=1`}
       title={title}
       loading="lazy"

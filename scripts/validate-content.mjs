@@ -11,6 +11,7 @@ import {
   validVisibility,
 } from './content-lib.mjs';
 import { validateSyncConfig } from './project-description-sync-lib.mjs';
+import { validateYoutubeSettings } from './youtube-settings-lib.mjs';
 
 const errors = [];
 const warnings = [];
@@ -140,6 +141,14 @@ try {
   addError(collaborationFile, error.message);
 }
 
+const youtubeFile = 'content/youtube.json';
+try {
+  const youtube = JSON.parse(readFileSync(youtubeFile, 'utf8'));
+  for (const message of validateYoutubeSettings(youtube)) addError(youtubeFile, message);
+} catch (error) {
+  addError(youtubeFile, error.message);
+}
+
 const bySlug = new Map();
 for (const item of all) {
   const slug = item.data.slug;
@@ -161,4 +170,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Content validation passed: ${all.length + 1} files checked.`);
+console.log(`Content validation passed: ${all.length + 2} files checked.`);

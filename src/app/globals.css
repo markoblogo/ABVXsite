@@ -3881,6 +3881,24 @@ a {
   min-height: 0;
 }
 
+.recent-writing-card--video {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.recent-writing-card--video .recent-writing-card__media {
+  border-right: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.recent-writing-card--video .recent-writing-card__body {
+  grid-column: 1;
+}
+
+.youtube-embed {
+  display: block;
+  min-height: 200px;
+}
+
 .recent-writing-card__media {
   min-height: 0;
   position: relative;
@@ -3982,6 +4000,11 @@ a {
   letter-spacing: 0.12em;
   line-height: 1.2;
   text-transform: uppercase;
+}
+
+.writing-archive-row__video {
+  grid-column: 1 / -1;
+  width: min(100%, 720px);
 }
 
 .writing-archive-row a {

@@ -1,5 +1,7 @@
 # AGENTS.md
 
+Read `README.md` for the current site/content map, then the task-specific guide. Use `docs/content-editing.md` for content, `docs/editorial-seo-checklist.md` for releases, and `docs/site-operations.md` for feeds/analytics. Do not load all CortexABV docs for ordinary editorial tasks.
+
 ## Repository contract
 
 - `content/` is the editable public source of truth; regenerate `public/llms.txt` and `public/content-index.json` after public content changes.

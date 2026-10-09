@@ -6387,7 +6387,7 @@
       "group": "YouTube",
       "status": "live",
       "title": "ABV Creative on YouTube",
-      "summary": "Applied AI reviews, technical demonstrations and creative experiments. Writing shows the latest public videos published after this connection, plus one initial demonstration video.",
+      "summary": "Applied AI reviews, technical demonstrations and creative experiments. Writing shows the latest public videos published after this connection, plus one pinned demonstration video preserved independently of the channel feed.",
       "canonicalUrl": "https://abvx.xyz/writing",
       "tags": [
         "youtube",

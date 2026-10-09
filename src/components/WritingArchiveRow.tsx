@@ -29,8 +29,8 @@ export default function WritingArchiveRow({
         <span>{title}</span>
         <span aria-hidden="true">-&gt;</span>
       </Link>
-      {source === 'youtube' ? <YouTubeEmbed href={href} title={title} /> : null}
       {excerpt ? <p>{excerpt}</p> : null}
+      {source === 'youtube' ? <div className="writing-archive-row__video"><YouTubeEmbed href={href} title={title} /></div> : null}
     </article>
   );
 }

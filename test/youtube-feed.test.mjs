@@ -6,6 +6,7 @@ import { createRequire } from 'node:module';
 import ts from 'typescript';
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
+import { validateYoutubeSettings } from '../scripts/youtube-settings-lib.mjs';
 
 const require = createRequire(import.meta.url);
 const modules = new Map();
@@ -72,4 +73,45 @@ test('renders a lazy privacy-enhanced embedded player and rejects arbitrary ifra
   assert.ok(html.includes('loading="lazy"'));
   assert.ok(html.includes('title="AI &amp; tools"'));
   assert.equal(renderToStaticMarkup(createElement(YouTubeEmbed, { href: 'https://evil.example/watch?v=RsxiDWDj2Rg', title: 'bad' })), '');
+});
+
+const configuredSettings = JSON.parse(readFileSync('content/youtube.json', 'utf8'));
+test('keeps the initial video when it leaves the channel feed, without duplicating it', () => {
+  const pinned = { ...settings, initialVideo: configuredSettings.initialVideo };
+  const missing = parseYoutubeFeed(entry('NewVideo001', '2026-10-10T10:00:00Z'), pinned, now);
+  assert.equal(missing.length, 2);
+  assert.equal(missing[1].title, configuredSettings.initialVideo.title);
+  assert.equal(missing[1].publishedAt, '2026-10-09T11:31:00.000Z');
+  assert.equal(parseYoutubeFeed(entry('RsxiDWDj2Rg', '2026-10-09T11:31:00Z'), pinned, now).length, 1);
+  assert.equal(parseYoutubeFeed('', { ...pinned, initialVideo: { ...pinned.initialVideo, publishedAt: 'bad' } }, now).length, 0);
+});
+
+test('retains pinned metadata when YouTube is unavailable', async () => {
+  const original = globalThis.fetch;
+  globalThis.fetch = async () => new Response('', { status: 503 });
+  try {
+    const videos = await fetchYoutubeFeed(configuredSettings.feedUrl, configuredSettings);
+    assert.equal(videos.length, 1);
+    assert.equal(videos[0].url, 'https://www.youtube.com/watch?v=RsxiDWDj2Rg');
+  } finally { globalThis.fetch = original; }
+});
+
+test('validates channel/feed URLs, IDs, timestamps and pinned metadata', () => {
+  assert.deepEqual(validateYoutubeSettings(configuredSettings), []);
+  for (const patch of [
+    { publishedAfter: 'not-a-date' },
+    { publishedAfter: '2026-02-30T12:00:00Z' },
+    { channelId: 'UCinvalid' },
+    { feedUrl: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCother' },
+    { feedUrl: `${configuredSettings.feedUrl}&channel_id=${configuredSettings.channelId}` },
+    { feedUrl: configuredSettings.feedUrl.replace('https:', 'http:') },
+    { channelUrl: 'https://evil.example/@ABV_Creative' },
+    { channelUrl: 'https://user:secret@www.youtube.com/@ABV_Creative' },
+    { channelUrl: 'https://www.youtube.com/channel/UCother' },
+    { initialVideoId: '../invalid' },
+    { initialVideo: undefined },
+    { initialVideo: { ...configuredSettings.initialVideo, publishedAt: '2026-10-10T12:00:00Z' } },
+    { initialVideo: { ...configuredSettings.initialVideo, title: '' } },
+  ]) assert.ok(validateYoutubeSettings({ ...configuredSettings, ...patch }).length > 0, JSON.stringify(patch));
+  assert.ok(validateYoutubeSettings(null).length > 0);
 });

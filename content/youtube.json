@@ -1,9 +1,14 @@
 {
   "title": "ABV Creative on YouTube",
-  "summary": "Applied AI reviews, technical demonstrations and creative experiments. Writing shows the latest public videos published after this connection, plus one initial demonstration video.",
+  "summary": "Applied AI reviews, technical demonstrations and creative experiments. Writing shows the latest public videos published after this connection, plus one pinned demonstration video preserved independently of the channel feed.",
   "channelId": "UCwivRjryrkmZ3bMHUmNtykg",
   "channelUrl": "https://www.youtube.com/@ABV_Creative",
   "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCwivRjryrkmZ3bMHUmNtykg",
   "publishedAfter": "2026-10-09T19:52:23Z",
-  "initialVideoId": "RsxiDWDj2Rg"
+  "initialVideoId": "RsxiDWDj2Rg",
+  "initialVideo": {
+    "title": "ChatGPT Can Now Turn AI-Generated Logos Into Editable SVGs",
+    "publishedAt": "2026-10-09T11:31:00Z",
+    "summary": "ChatGPT can already design your logo. Now it can turn that logo into an editable vector file, right inside the chat. Meet Vectorize, a ChatGPT plugin that converts AI-generated logos and images into scalable SVG graphics."
+  }
 }

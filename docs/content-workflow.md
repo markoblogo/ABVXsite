@@ -6,6 +6,8 @@ Do not edit public books, work items, or series in `src/content/books.ts` or `sr
 
 ## Structure
 
+Use [Content editing](content-editing.md) to choose the owning source. Alongside the catalogue folders below, native articles live in `content/writing/`, editorial guides and localization metadata in `content/editorial/`, core-page metadata in `content/pages.json`, shared offers in `content/collaborations.json`, and YouTube settings/pinned metadata in `content/youtube.json`. Feed/cache and analytics behavior are documented in [Site operations](site-operations.md).
+
 ```text
 content/
   books/
@@ -237,15 +239,6 @@ Validation fails on structural errors. Review flags only warn.
 
 ## Preview And Deployment
 
-Before Vercel preview or production:
+Use the [editorial release checklist](editorial-seo-checklist.md) as the single detailed verification/release procedure. It includes generated indexes, CI checks, build-dependent SEO checks, responsive review, and merge-SHA production verification.
 
-```bash
-npm run content:validate
-npm run content:review
-npm run lint
-npm run build
-```
-
-Use Vercel preview to visually check changed pages before merging.
-
-Ask Codex for bulk edits when many records need consistent changes, such as renaming groups, changing cross-listing, updating link types, or replacing media paths.
+Preview is for visual review. Publication requires the production deployment and canonical-route checks; Google indexing is a separate observation. Prefer one complete PR over separate content, link, and index patches.

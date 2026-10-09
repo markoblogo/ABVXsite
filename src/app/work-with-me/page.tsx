@@ -151,7 +151,7 @@ export default function WorkWithMe() {
         </p>
         <div className="flex flex-wrap gap-3">
           <a
-            className="wm-btn wm-btn--primary"
+            className="wm-btn wm-btn--primary plausible-event-name=Contact+Click"
             href="https://www.linkedin.com/in/abvcreative/"
             target="_blank"
             rel="noopener noreferrer"
@@ -159,7 +159,7 @@ export default function WorkWithMe() {
             LinkedIn DM
           </a>
           <a
-            className="wm-btn wm-btn--secondary"
+            className="wm-btn wm-btn--secondary plausible-event-name=Contact+Click"
             href="mailto:a.biletskiy@gmail.com"
           >
             Email

@@ -133,10 +133,10 @@ export default async function WorkWithMeServicePage({ params }: PageProps) {
           Send what you are building, who needs to understand it, and what decision or launch moment is blocked.
         </p>
         <div className="flex flex-wrap gap-3">
-          <a className="wm-btn wm-btn--primary" href="https://www.linkedin.com/in/abvcreative/" target="_blank" rel="noopener noreferrer">
+          <a className="wm-btn wm-btn--primary plausible-event-name=Contact+Click" href="https://www.linkedin.com/in/abvcreative/" target="_blank" rel="noopener noreferrer">
             LinkedIn DM
           </a>
-          <a className="wm-btn wm-btn--secondary" href="mailto:a.biletskiy@gmail.com">
+          <a className="wm-btn wm-btn--secondary plausible-event-name=Contact+Click" href="mailto:a.biletskiy@gmail.com">
             Email
           </a>
           <Link className="wm-btn wm-btn--secondary" href="/work-with-me">

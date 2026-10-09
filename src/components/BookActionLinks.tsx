@@ -72,7 +72,7 @@ export default function BookActionLinks({
       {visibleLinks.map((link) => (
         <a
           key={`${link.type}-${link.url}`}
-          className={isPrimary(link) ? 'book-action-links__link book-action-links__link--primary' : 'book-action-links__link'}
+          className={`plausible-event-name=Book+Link+Click ${isPrimary(link) ? 'book-action-links__link book-action-links__link--primary' : 'book-action-links__link'}`}
           href={link.url}
           target="_blank"
           rel="noopener noreferrer"

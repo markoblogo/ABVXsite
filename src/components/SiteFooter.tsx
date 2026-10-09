@@ -12,10 +12,10 @@ import {
   type SocialLink,
 } from '@/content/navigation';
 
-function FooterNavLink({ item }: { item: FooterLink }) {
+function FooterNavLink({ item, className }: { item: FooterLink; className?: string }) {
   if (item.external) {
     return (
-      <a href={item.href} target="_blank" rel="noopener noreferrer">
+      <a className={className} href={item.href} target="_blank" rel="noopener noreferrer">
         {item.label}
       </a>
     );
@@ -29,7 +29,7 @@ function SocialLinkButton({ item }: { item: SocialLink }) {
 
   return (
     <a
-      className="site-footer__social-link"
+      className={`site-footer__social-link${['email', 'telegram', 'whatsapp'].includes(item.icon) ? ' plausible-event-name=Contact+Click' : ''}`}
       href={item.href}
       aria-label={item.label}
       title={item.label}
@@ -94,7 +94,7 @@ export default function SiteFooter() {
           <HomeOnly>
             <div className="site-footer__links">
               {brandCollaboration.offers.map((offer) => (
-                <FooterNavLink key={offer.id} item={{ label: offer.footerLabel, href: offer.url, external: true }} />
+                <FooterNavLink className="plausible-event-name=Collaboration+Click" key={offer.id} item={{ label: offer.footerLabel, href: offer.url, external: true }} />
               ))}
             </div>
           </HomeOnly>

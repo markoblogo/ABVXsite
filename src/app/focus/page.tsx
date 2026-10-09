@@ -413,7 +413,7 @@ export default async function FocusPage() {
           commodity data products, standards, indexes, AI-assisted workflows and
           practical collaboration in physical agro-commodity markets.
         </p>
-        <Link className="panel-link" href="mailto:a.biletskiy@gmail.com">
+        <Link className="panel-link plausible-event-name=Contact+Click" href="mailto:a.biletskiy@gmail.com">
           Start a conversation
         </Link>
       </SectionPanel>

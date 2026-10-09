@@ -282,7 +282,7 @@ export default function AmiLanding({ locale }: Props) {
               external
               eventName="AMI Contact Click"
               props={{ locale, type: 'email' }}
-              className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-zinc-200"
+              className="plausible-event-name=Contact+Click rounded-full bg-white px-5 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-zinc-200"
             >
               Email directly
             </AmiTrackedLink>
@@ -291,7 +291,7 @@ export default function AmiLanding({ locale }: Props) {
               external
               eventName="AMI Contact Click"
               props={{ locale, type: 'linkedin' }}
-              className="rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white transition hover:border-white/45 hover:bg-white/6"
+              className="plausible-event-name=Contact+Click rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white transition hover:border-white/45 hover:bg-white/6"
             >
               LinkedIn ↗
             </AmiTrackedLink>

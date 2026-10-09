@@ -303,13 +303,13 @@ export default function AboutPage() {
             or a clearer operational layer.
           </p>
           <div className="link-strip">
-            <a href={email || '/about'}>Contact</a>
+            <a className={email ? 'plausible-event-name=Contact+Click' : undefined} href={email || '/about'}>Contact</a>
             {linkedIn ? (
-              <a href={linkedIn} target="_blank" rel="noopener noreferrer">
+              <a className="plausible-event-name=Contact+Click" href={linkedIn} target="_blank" rel="noopener noreferrer">
                 LinkedIn
               </a>
             ) : null}
-            {email ? <a href={email}>Email</a> : null}
+            {email ? <a className="plausible-event-name=Contact+Click" href={email}>Email</a> : null}
           </div>
         </div>
         <div className="about-work__fit">
@@ -325,7 +325,7 @@ export default function AboutPage() {
                   <li key={offer.id}>
                     <strong>{offer.title}</strong>
                     <p>{offer.summary}</p>
-                    <a href={offer.url} target="_blank" rel="noopener noreferrer">
+                    <a className="plausible-event-name=Collaboration+Click" href={offer.url} target="_blank" rel="noopener noreferrer">
                       {offer.linkLabel}
                     </a>
                   </li>

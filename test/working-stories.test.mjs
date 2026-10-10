@@ -35,6 +35,20 @@ function compile(relative, imports = {}) {
 const normalized = (patch = {}) => ({ ...metadata(), summary: 'Public summary', language: 'en', source: 'ws-001.md', body, book: { include: true, status: 'draft' }, ...patch });
 const releaseIndex = (stories) => ({ items: stories.map((story) => lib.publicWorkingStory(story, stories)) });
 
+test('preserves optional SEO metadata separately from the public title and manuscript', () => fixture(({ dir, write }) => {
+  const seoTitle = 'A search-specific title';
+  const seoDescription = 'A search-specific description';
+  write('ws-001.md', metadata({ seoTitle, seoDescription }));
+  const [story] = lib.readWorkingStories(dir);
+  assert.equal(story.seoTitle, seoTitle);
+  assert.equal(story.seoDescription, seoDescription);
+  assert.equal(story.title, metadata().title);
+  assert.ok(!lib.workingStoriesExport([story]).manuscript.includes(seoTitle));
+  for (const patch of [{ seoTitle: '' }, { seoDescription: 42 }]) {
+    assert.ok(lib.validateWorkingStory(metadata(patch), body).length);
+  }
+}));
+
 test('runtime publication remains frozen to the generated index when a future date passes', () => {
   const current = normalized();
   const future = normalized({ date: '2027-01-01', slug: 'future-story', story_id: 'ws-002' });

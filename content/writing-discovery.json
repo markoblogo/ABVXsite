@@ -1,0 +1,443 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "source": "youtube",
+      "title": "40 AI Agents Built a Superman Flight Simulator in 7 Hours (45M Tokens)",
+      "url": "/writing/40-ai-agents-superman-flight-simulator",
+      "publishedAt": "2026-10-10T15:20:37.000Z",
+      "excerpt": "Watch my SKYFLY video and read practical notes on the reported 40-agent workflow, 45 million tokens, browser architecture and checks that matter beyond a demo.",
+      "coverImage": "https://i.ytimg.com/vi/6q2JG0gCyDg/hqdefault.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=6q2JG0gCyDg",
+      "addedAt": "2026-10-10T16:06:30.000Z",
+      "addedAtBasis": "production"
+    },
+    {
+      "source": "abvx",
+      "title": "A Personal Blog, Finally",
+      "url": "/writing/a-personal-blog-finally",
+      "publishedAt": "2026-08-10T00:00:00.000Z",
+      "excerpt": "A place for the things that do not fit into professional feeds.",
+      "addedAt": "2026-08-10T00:00:00.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "abvx",
+      "title": "Where Is AI Startup Funding Actually Going? I Analyzed 7,740 Companies",
+      "url": "/writing/ai-startup-funding-trends-7740-companies",
+      "publishedAt": "2026-10-10T00:00:00.000Z",
+      "excerpt": "I analyzed 7,740 AI startups across 20 use cases to see where funding is growing, from voice agents and robotics to Legal AI and mega-rounds.",
+      "coverImage": "/media/writing/ai-startup-funding-trends-7740-companies/cover.png",
+      "addedAt": "2026-10-10T16:06:30.000Z",
+      "addedAtBasis": "production"
+    },
+    {
+      "source": "abvx",
+      "title": "How I Work With AI Agents in 2026",
+      "url": "/writing/how-i-work-with-ai-agents-2026",
+      "publishedAt": "2026-10-10T00:00:00.000Z",
+      "excerpt": "My practical AI agent workflow in 2026: orchestrator agents, 20–40 subagents, long-running sessions, taste gates, automation and why AI-native work keeps changing.",
+      "coverImage": "/media/writing/how-i-work-with-ai-agents-2026/cover.png",
+      "addedAt": "2026-10-10T16:06:30.000Z",
+      "addedAtBasis": "production"
+    },
+    {
+      "source": "abvx",
+      "title": "Marmite Oatmeal",
+      "url": "/writing/marmite-oatmeal",
+      "publishedAt": "2026-08-10T00:00:00.000Z",
+      "excerpt": "A very simple savoury oatmeal that my children and I genuinely love.",
+      "addedAt": "2026-08-10T00:00:00.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "abvx",
+      "title": "Première traduction française de Jeanne la bataillonneuse et Miss Adrienne de Géo Chkouroupiy",
+      "url": "/writing/premiere-traduction-francaise-jeanne-bataillonneuse-miss-adrienne",
+      "publishedAt": "2026-09-27T00:00:00.000Z",
+      "excerpt": "Publication de la première traduction française de Jeanne la bataillonneuse et Miss Adrienne de Géo Chkouroupiy, dans le cadre du projet Modernisme ukrainien consacré aux écrivains ukrainiens des années 1920-1930.",
+      "coverImage": "/media/books/jeanne-la-bataillonneuse/promo.png",
+      "addedAt": "2026-09-27T00:00:00.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "abvx",
+      "title": "Two New Books",
+      "url": "/writing/two-new-books",
+      "publishedAt": "2026-08-14T00:00:00.000Z",
+      "excerpt": "A short note about two very different books published within a few days: one psychological and fragmentary, the other about strange economic indicators and the...",
+      "addedAt": "2026-08-14T00:00:00.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "abvx",
+      "title": "Вийшов перший французький переклад Jeanne la bataillonneuse та Miss Adrienne Гео Шкурупія",
+      "url": "/writing/vyishov-pershyi-frantsuzkyi-pereklad-jeanne-bataillonneuse",
+      "publishedAt": "2026-09-27T00:00:00.000Z",
+      "excerpt": "На Amazon вийшов перший французький переклад Jeanne la bataillonneuse та Miss Adrienne Гео Шкурупія, частина проєкту Modernisme ukrainien про українську літературу 1920–1930-х років.",
+      "coverImage": "/media/books/jeanne-la-bataillonneuse/promo.png",
+      "addedAt": "2026-09-27T00:00:00.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "abvx",
+      "title": "When the Flour Bag Became Part of the Product",
+      "url": "/writing/working-stories/when-the-flour-bag-became-part-of-the-product",
+      "publishedAt": "2026-10-10T00:00:00.000Z",
+      "excerpt": "How reusable flour packaging became part of the value proposition, helping a Ukrainian exporter differentiate a commodity without changing the flour.",
+      "coverImage": "/media/working-stories/flour-meets-fashion/grano-detail.webp",
+      "addedAt": "2026-10-10T12:17:48.000Z",
+      "addedAtBasis": "production"
+    },
+    {
+      "source": "medium",
+      "title": "AI Can Prove Your Code Correct. But Can You Trust the Proof?",
+      "url": "https://abvcreative.medium.com/ai-can-prove-your-code-correct-but-can-you-trust-the-proof-66812a234a65",
+      "publishedAt": "2026-10-04T14:26:40.000Z",
+      "excerpt": "Claude used Lean and TLA+ to find bugs in the Agent SDK and generated 16 PRs. The harder problem is not proving the model. It is proving…",
+      "coverImage": "https://cdn-images-1.medium.com/max/1536/1*f0iQulvH6obycDQ6dQ8wpA.png",
+      "addedAt": "2026-10-04T14:26:40.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "medium",
+      "title": "China Is Already Regulating AI. That Changes the “But China” Debate",
+      "url": "https://abvcreative.medium.com/china-is-already-regulating-ai-that-changes-the-but-china-debate-6afd88e0ce2b",
+      "publishedAt": "2026-09-27T11:15:09.000Z",
+      "excerpt": "The usual argument says any U.S. restraint on frontier AI simply hands the race to Beijing. Matt Sheehan’s conversation with Ezra Klein, and China’s own 2026 AI safety framework, suggest a more complicated reality. Yeste",
+      "coverImage": "https://cdn-images-1.medium.com/max/1024/1*vTHvi-e5G_Boo5yN4Vj74w.png",
+      "addedAt": "2026-09-27T11:15:09.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "medium",
+      "title": "HapticVLA: Teaching Robots to Handle Fragile Objects Without Touch Sensors",
+      "url": "https://abvcreative.medium.com/hapticvla-teaching-robots-to-handle-fragile-objects-without-touch-sensors-608540fd1818",
+      "publishedAt": "2026-10-08T11:50:07.000Z",
+      "excerpt": "A new robotics paper shows how tactile feedback can train a vision-language-action model that no longer needs touch sensors during deployment. The result: 86.7% success handling jars, waffles and eggs. One of the biggest",
+      "coverImage": "https://cdn-images-1.medium.com/max/1024/1*60OG0E8sU9yUlInm-Ber-g.png",
+      "addedAt": "2026-10-08T11:50:07.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "medium",
+      "title": "No A/B Test? This Method Tries to Measure Ad Incrementality After the Budget Already Changed",
+      "url": "https://abvcreative.medium.com/no-a-b-test-this-method-tries-to-measure-ad-incrementality-after-the-budget-already-changed-242ca66071f4",
+      "publishedAt": "2026-10-01T14:32:53.000Z",
+      "excerpt": "A new Trinity College Dublin paper turns budget cuts, channel launches and campaign pauses into quasi-experiments, then estimates the sales that would have happened anyway. There is a very common marketing measurement pr",
+      "coverImage": "https://cdn-images-1.medium.com/max/1024/1*DLlb954pa3dffMucc9cibw.png",
+      "addedAt": "2026-10-01T14:32:53.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "medium",
+      "title": "Prompt Engineering Is Dead. Long Live Asking Better Questions.",
+      "url": "https://abvcreative.medium.com/prompt-engineering-is-dead-long-live-asking-better-questions-ac9ea54c431c",
+      "publishedAt": "2026-09-23T12:53:48.000Z",
+      "excerpt": "Models are getting better at understanding us. That still doesn’t make “do something with this” a good instruction. People have been declaring prompt engineering dead for years. I’ve never particularly liked the term any",
+      "coverImage": "https://cdn-images-1.medium.com/max/1024/1*J-HwD-aw5NmZjz605JQnSw.png",
+      "addedAt": "2026-09-23T12:53:48.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "medium",
+      "title": "Stop Using LLMs as Classifiers. Use Them as Feature Extractors Instead.",
+      "url": "https://abvcreative.medium.com/stop-using-llms-as-classifiers-use-them-as-feature-extractors-instead-53a92e53081c",
+      "publishedAt": "2026-09-28T12:52:39.000Z",
+      "excerpt": "Asking an LLM “is this a complaint?” works surprisingly well.",
+      "coverImage": "https://cdn-images-1.medium.com/max/1536/1*1Sebbgyc1ycEKkrvNoKI_A.png",
+      "addedAt": "2026-09-28T12:52:39.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "medium",
+      "title": "The AI Assistant Wars Have Started. The Real Breakthrough Is Removing Setup.",
+      "url": "https://abvcreative.medium.com/the-ai-assistant-wars-have-started-the-real-breakthrough-is-removing-setup-2dcacf54b51f",
+      "publishedAt": "2026-09-29T14:51:34.000Z",
+      "excerpt": "OpenClaw proved persistent agents were useful. Grok Bot, Instinct and Muse are turning the same idea into something normal people can…",
+      "coverImage": "https://cdn-images-1.medium.com/max/1536/1*dsdzblYm5ShFq3mK74QiTg.png",
+      "addedAt": "2026-09-29T14:51:34.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "medium",
+      "title": "The Most Powerful Button on the Internet Might Be the One You Have to Click Twice",
+      "url": "https://abvcreative.medium.com/the-most-powerful-button-on-the-internet-might-be-the-one-you-have-to-click-twice-4ff5fc5ce017",
+      "publishedAt": "2026-09-19T10:04:58.000Z",
+      "excerpt": "A new NBER experiment suggests that consent interfaces don’t need to remove choices to change behavior. They just need to make one choice slightly more annoying. I love research papers about extremely mundane things that",
+      "coverImage": "https://cdn-images-1.medium.com/max/1024/1*PKxG3WyZvzh8CDQbtNWGqQ.png",
+      "addedAt": "2026-09-19T10:04:58.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "medium",
+      "title": "We’re Starting to Compile Biology",
+      "url": "https://abvcreative.medium.com/were-starting-to-compile-biology-d7b4854da513",
+      "publishedAt": "2026-09-26T13:28:43.000Z",
+      "excerpt": "Google DeepMind has mapped the predicted effects of 9 billion DNA mutations. Elsewhere, researchers compile Verilog into living cells and simulate an entire bacterium on a computer. Biology is becoming strangely programm",
+      "coverImage": "https://cdn-images-1.medium.com/max/1024/1*mg1PUkEWckOE18u9n8NlsQ.png",
+      "addedAt": "2026-09-26T13:28:43.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "medium",
+      "title": "Your AI Coding Agent Is Fast. Your Development Team Still Isn’t.",
+      "url": "https://abvcreative.medium.com/your-ai-coding-agent-is-fast-your-development-team-still-isnt-be3981a2d716",
+      "publishedAt": "2026-10-10T10:49:08.000Z",
+      "excerpt": "Giving every developer an AI agent won’t fix a broken software development lifecycle. You need to redesign the entire SDLC, from tickets and documentation to CI/CD, QA, and team rules. Imagine you own a restaurant. You’v",
+      "coverImage": "https://cdn-images-1.medium.com/max/1024/1*IHQbmw9MOBuy6AjRJDtWUw.png",
+      "addedAt": "2026-10-10T10:49:08.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "substack",
+      "title": "A 23-Year-Old College Dropout Built a $10 Billion AI Assistant. The Story Is Better Than the Headline.",
+      "url": "https://abvx.substack.com/p/a-23-year-old-college-dropout-built",
+      "publishedAt": "2026-10-01T14:08:42.000Z",
+      "excerpt": "This is almost too perfect a Silicon Valley story. A 23-year-old student drops out of college. Builds an AI assistant. Seven months later, investors are throwing billions at him. The startup is still invite-only. Most pe",
+      "coverImage": "https://substackcdn.com/image/fetch/$s_!vSkx!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6878cab9-effb-49d7-8cd8-1a742fe46d40_1536x1024.png",
+      "addedAt": "2026-10-01T14:08:42.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "substack",
+      "title": "A Few Things We Agreed On About AI, Power, Status, and the People Who Got Us Into This Mess",
+      "url": "https://abvx.substack.com/p/a-few-things-we-agreed-on-about-ai",
+      "publishedAt": "2026-09-26T15:58:09.000Z",
+      "excerpt": "Over the weekend, a few friends and I had a small Zoom debate about AI, civilization, work, power and the usual cheerful subjects one discusses instead of simply opening a bottle of wine and talking about football. We di",
+      "coverImage": "https://substackcdn.com/image/fetch/$s_!R865!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fda3bd7af-6613-413c-936c-3d58f1c5f2f0_1536x1024.png",
+      "addedAt": "2026-09-26T15:58:09.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "substack",
+      "title": "AI Coding Makes Us Faster. Except When It Doesn't.",
+      "url": "https://abvx.substack.com/p/ai-coding-makes-us-faster-except",
+      "publishedAt": "2026-09-19T09:57:21.000Z",
+      "excerpt": "There is a particularly good AI experiment from METR that I keep thinking about because it measured something almost nobody measures: whether AI coding tools actually make experienced developers faster. METR: Early-2025 ",
+      "coverImage": "https://substackcdn.com/image/fetch/$s_!gGR_!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F42b03b75-45c7-4243-a25a-c30c718f5ff6_1536x1024.png",
+      "addedAt": "2026-09-19T09:57:21.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "substack",
+      "title": "AI Is an Exoskeleton for the Brain",
+      "url": "https://abvx.substack.com/p/ai-is-an-exoskeleton-for-the-brain",
+      "publishedAt": "2026-09-17T15:13:49.000Z",
+      "excerpt": "I’ve been working in IT and around technology and information for more than a decade. I can clearly see the accumulation. Every year I know more. I recognize patterns faster. I make fewer stupid mistakes, or at least inv",
+      "coverImage": "https://substackcdn.com/image/fetch/$s_!5kh6!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F92eecc74-c1a2-4889-a73b-d26456be3cfb_1536x1024.png",
+      "addedAt": "2026-09-17T15:13:49.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "substack",
+      "title": "AI Isn't Just Replacing Jobs. It's Rewriting How Companies Work.",
+      "url": "https://abvx.substack.com/p/ai-isnt-just-replacing-jobs-its-rewriting",
+      "publishedAt": "2026-10-10T10:19:10.000Z",
+      "excerpt": "I’ve been following the AI employment debate for a while, partly because I’ve invested in several AI-native companies and spend a lot of time thinking about how they operate. And I find both popular narratives increasing",
+      "coverImage": "https://substackcdn.com/image/fetch/$s_!0aEq!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1d2e0d3c-bc3c-4205-9ca7-6d1ebaf1e9b8_1536x1024.png",
+      "addedAt": "2026-10-10T10:19:10.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "substack",
+      "title": "AI Shopping Is Already Here. It Just Isn’t Clicking “Buy” Yet.",
+      "url": "https://abvx.substack.com/p/ai-shopping-is-already-here-it-just",
+      "publishedAt": "2026-09-27T11:28:16.000Z",
+      "excerpt": "I already have AI agents constantly monitoring hotel and flight prices. And I regularly give Codex a very sophisticated financial instruction: “Find it cheaper.” It works surprisingly often. Not in the futuristic sense w",
+      "coverImage": "https://substackcdn.com/image/fetch/$s_!sSCU!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2666d36d-aee2-4490-a868-10d7627fc6e0_1536x1024.png",
+      "addedAt": "2026-09-27T11:28:16.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "substack",
+      "title": "Can Democracy Survive AI?",
+      "url": "https://abvx.substack.com/p/can-democracy-survive-ai",
+      "publishedAt": "2026-10-04T14:08:58.000Z",
+      "excerpt": "Daron Acemoglu has been returning to a question that I think deserves much more attention: what happens to democracy if AI massively concentrates economic power? Acemoglu is an interesting person to make this argument. H",
+      "coverImage": "https://substackcdn.com/image/fetch/$s_!WY64!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbd685ad3-eac6-4dbd-934c-46c95ceade91_1536x1024.png",
+      "addedAt": "2026-10-04T14:08:58.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "substack",
+      "title": "GPT-6 Astra Helped Break a 59-Year-Old Plasma Physics Conjecture",
+      "url": "https://abvx.substack.com/p/gpt-6-astra-helped-break-a-59-year",
+      "publishedAt": "2026-10-08T12:04:14.000Z",
+      "excerpt": "Another interesting entry in the growing collection of scientific problems where AI has started doing something more useful than summarizing papers. Physicist Matt Landreman from the University of Maryland has published ",
+      "coverImage": "https://substackcdn.com/image/fetch/$s_!EKmi!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F195270ad-9cc2-483e-af2c-76c238cdead3_1536x1024.png",
+      "addedAt": "2026-10-08T12:04:14.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "substack",
+      "title": "Has the Internet Gotten Worse, or Are We Just Getting Old?",
+      "url": "https://abvx.substack.com/p/has-the-internet-gotten-worse-or",
+      "publishedAt": "2026-09-25T17:52:25.000Z",
+      "excerpt": "a16z recently published a column by NYU professor Ruby Thelot arguing something mildly offensive to anyone over thirty: the internet is probably fine. You’re just getting old. His target is the now-famous idea of “enshit",
+      "coverImage": "https://substackcdn.com/image/fetch/$s_!IlVL!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe905fa54-9a4b-410a-b00a-cfb0465d57bf_1536x1024.png",
+      "addedAt": "2026-09-25T17:52:25.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "substack",
+      "title": "Inside China's AI Slop Factories: 50 Phones, 100 Accounts, and an Excel Spreadsheet",
+      "url": "https://abvx.substack.com/p/inside-chinas-ai-slop-factories-50",
+      "publishedAt": "2026-10-09T10:37:31.000Z",
+      "excerpt": "British and Australian researchers have finally investigated one of the great mysteries of the modern internet: How do AI slop factories produce so much garbage? The answer is surprisingly sophisticated. A new study publ",
+      "coverImage": "https://substackcdn.com/image/fetch/$s_!Fozj!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3011cc3c-4418-41d2-9726-47e431613d7e_1536x1024.png",
+      "addedAt": "2026-10-09T10:37:31.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "substack",
+      "title": "My 10-Year AI Probability List",
+      "url": "https://abvx.substack.com/p/my-10-year-ai-probability-list",
+      "publishedAt": "2026-09-14T11:24:30.000Z",
+      "excerpt": "People happily put “AI propaganda,” “cyberattacks” and “human extinction” into the same bucket called AI risk , despite these being events with wildly different probabilities and consequences. So here is my completely su",
+      "coverImage": "https://substackcdn.com/image/fetch/$s_!iDrp!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F854af17e-a6e4-4dbe-947e-571ee582869e_1536x1024.png",
+      "addedAt": "2026-09-14T11:24:30.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "substack",
+      "title": "OpenAI Academy Now Has 14 Courses. The Curriculum Says a Lot About Where AI Work Is Going.",
+      "url": "https://abvx.substack.com/p/openai-academy-now-has-14-courses",
+      "publishedAt": "2026-09-29T15:34:37.000Z",
+      "excerpt": "OpenAI just expanded OpenAI Academy into a fairly serious training platform. The catalog now contains 14 free, self-paced courses , organized around four broad roles: people using AI at work, developers building with AI,",
+      "coverImage": "https://substackcdn.com/image/fetch/$s_!eN0V!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5806241f-2399-4bf4-b96a-4a1339e3ef30_1536x1024.png",
+      "addedAt": "2026-09-29T15:34:37.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "substack",
+      "title": "Pictiq Can Now Be Written, Not Just Viewed",
+      "url": "https://abvx.substack.com/p/pictiq-can-now-be-written-not-just",
+      "publishedAt": "2026-09-13T12:01:18.000Z",
+      "excerpt": "For most of its existence, Pictiq had a slightly embarrassing problem. It was supposed to be a visual language, but actually writing anything in it required knowing rather too much about GitHub, JSON, internal IDs and th",
+      "coverImage": "https://substackcdn.com/image/fetch/$s_!of9E!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdb2ebe89-94c1-46e6-a7c4-48f9b89f9e30_1536x1024.png",
+      "addedAt": "2026-09-13T12:01:18.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "substack",
+      "title": "Please Stop Sending Me Your ChatGPT Answers",
+      "url": "https://abvx.substack.com/p/please-stop-sending-me-your-chatgpt",
+      "publishedAt": "2026-09-08T20:45:42.000Z",
+      "excerpt": "There is a new internet habit that is beginning to drive me insane. You disagree with someone in the comments. You write a few sentences explaining why. And five minutes later you receive 1,400 words copied directly from",
+      "coverImage": "https://substackcdn.com/image/fetch/$s_!JruK!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F97a34582-3e02-4f1c-ba82-6f6b367ea66a_1536x1024.png",
+      "addedAt": "2026-09-08T20:45:42.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "substack",
+      "title": "The AI Jobs Panic Already Happened. In 1961.",
+      "url": "https://abvx.substack.com/p/the-ai-jobs-panic-already-happened",
+      "publishedAt": "2026-09-20T19:09:27.000Z",
+      "excerpt": "Sixty-five years ago, America was already asking whether machines would produce more with fewer workers, destroy entry-level jobs, make retraining pointless, and eventually break the link between work and income. They go",
+      "coverImage": "https://substackcdn.com/image/fetch/$s_!zqys!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3ac8d22e-6a84-45b8-a46d-d03ecb6edfca_1536x1024.png",
+      "addedAt": "2026-09-20T19:09:27.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "substack",
+      "title": "The Biggest AI Risk Is Thinking Too Small",
+      "url": "https://abvx.substack.com/p/the-biggest-ai-risk-is-thinking-too",
+      "publishedAt": "2026-09-16T16:32:45.000Z",
+      "excerpt": "I increasingly think one of the biggest risks in AI right now is surprisingly mundane: spending the next three years building something that isn’t ambitious enough. Everything that used to qualify as a decent software st",
+      "coverImage": "https://substackcdn.com/image/fetch/$s_!xtwc!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0833772c-359a-4570-910c-9af6ca8b7fa9_1536x1024.png",
+      "addedAt": "2026-09-16T16:32:45.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "substack",
+      "title": "The Four Levels of AI Writing",
+      "url": "https://abvx.substack.com/p/the-four-levels-of-ai-writing",
+      "publishedAt": "2026-09-16T21:22:11.000Z",
+      "excerpt": "More than half of new articles published online may already be AI-generated. And yet humans still seem to be winning the attention game. A recent Graphite analysis found that AI-generated articles had overtaken human-wri",
+      "coverImage": "https://substackcdn.com/image/fetch/$s_!m3WR!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2c3d1159-5df5-4e6d-bd69-5da305621e0f_1536x1024.png",
+      "addedAt": "2026-09-16T21:22:11.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "substack",
+      "title": "The Skills I Think Matter Most in the AI Transition",
+      "url": "https://abvx.substack.com/p/the-skills-i-think-matter-most-in",
+      "publishedAt": "2026-09-23T15:09:15.000Z",
+      "excerpt": "I’ve written quite a lot about the skills adults should develop for a world with increasingly capable AI. The reason is simple: I think we’re heading into one of the largest macroeconomic shocks of our lifetimes. Not nec",
+      "coverImage": "https://substackcdn.com/image/fetch/$s_!2Ex5!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F49735011-11b3-4fd2-a7de-f40dcd2a37c4_1536x1024.png",
+      "addedAt": "2026-09-23T15:09:15.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "substack",
+      "title": "Who Gets Rich From AI?",
+      "url": "https://abvx.substack.com/p/who-gets-rich-from-ai",
+      "publishedAt": "2026-10-02T19:13:02.000Z",
+      "excerpt": "There is a fairly comfortable story about AI. Models get better. Productivity rises. Intelligence becomes cheaper. Everyone gets richer. I think the first three parts are probably true. The fourth is much less obvious. A",
+      "coverImage": "https://substackcdn.com/image/fetch/$s_!Upou!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffe28727b-b72c-4909-aae8-e368906737df_1536x1024.png",
+      "addedAt": "2026-10-02T19:13:02.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "substack",
+      "title": "Your AI Agent Read Your Email and Bought You a More Expensive Flight",
+      "url": "https://abvx.substack.com/p/your-ai-agent-read-your-email-and",
+      "publishedAt": "2026-09-28T13:09:28.000Z",
+      "excerpt": "A few days ago I wrote about AI shopping already being here . My argument was that everyone is waiting for agents to press Buy , while the important shift is already happening earlier. AI searches, compares prices, build",
+      "coverImage": "https://substackcdn.com/image/fetch/$s_!9EZ1!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffcdcfe0f-a97f-40f6-af0f-cfbd53a599e5_1536x1024.png",
+      "addedAt": "2026-09-28T13:09:28.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "youtube",
+      "title": "40 AI Agents Built a Superman Flight Simulator in 7 Hours (45M Tokens)",
+      "url": "https://www.youtube.com/watch?v=6q2JG0gCyDg",
+      "publishedAt": "2026-10-10T15:20:37.000Z",
+      "excerpt": "What happens when you unleash an army of AI coding agents on a single project? Apparently, you get a browser-based Superman flight simulator. Developer vakovalskii built SKYFLY, a surprisingly ambitious 3D flying game wh",
+      "coverImage": "https://i.ytimg.com/vi/6q2JG0gCyDg/hqdefault.jpg",
+      "addedAt": "2026-10-10T15:20:37.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "youtube",
+      "title": "Someone Put Claude AI on a 2007 Nokia. Yes, Really.",
+      "url": "https://www.youtube.com/watch?v=jEIPftaweBM",
+      "publishedAt": "2026-10-10T14:39:44.000Z",
+      "excerpt": "Remember when phones had buttons, batteries lasted forever, and Snake was peak entertainment? Well, someone just brought Claude AI to a Nokia from 2007. Developer Emir Karşıyakalı created an open-source AI chat client fo",
+      "coverImage": "https://i.ytimg.com/vi/jEIPftaweBM/hqdefault.jpg",
+      "addedAt": "2026-10-10T14:39:44.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "youtube",
+      "title": "ChatGPT Can Now Turn AI-Generated Logos Into Editable SVGs",
+      "url": "https://www.youtube.com/watch?v=RsxiDWDj2Rg",
+      "publishedAt": "2026-10-09T11:31:00.000Z",
+      "excerpt": "ChatGPT can already design your logo. Now it can turn that logo into an editable vector file, right inside the chat Meet Vectorize, a ChatGPT plugin that converts AI-generated logos and images into scalable SVG graphics.",
+      "coverImage": "https://i.ytimg.com/vi/RsxiDWDj2Rg/hqdefault.jpg",
+      "addedAt": "2026-10-09T11:31:00.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "youtube",
+      "title": "Claude Code Tried to Make Me Watch 60 Videos at Once. I'm Scared.",
+      "url": "https://www.youtube.com/watch?v=vZW-Z4pYqzU",
+      "publishedAt": "2026-10-10T14:30:51.000Z",
+      "excerpt": "I was watching Claude Code coordinate its army of AI agents. And suddenly, things got a little terrifying. The task? Working with 60 videos simultaneously. Claude decided that the most efficient way for me to review the ",
+      "coverImage": "https://i.ytimg.com/vi/vZW-Z4pYqzU/hqdefault.jpg",
+      "addedAt": "2026-10-10T14:30:51.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "youtube",
+      "title": "Someone Made a Digital Spider That Crawls Across Web Pages",
+      "url": "https://www.youtube.com/watch?v=x5uo-P2Vf_I",
+      "publishedAt": "2026-10-10T15:05:02.000Z",
+      "excerpt": "I have absolutely no idea why someone made this. But I'm incredibly glad it exists. Someone turned the concept of a web crawler into an actual digital spider. A glowing, eight-legged creature crawling across text, links,",
+      "coverImage": "https://i.ytimg.com/vi/x5uo-P2Vf_I/hqdefault.jpg",
+      "addedAt": "2026-10-10T15:05:02.000Z",
+      "addedAtBasis": "legacy-source"
+    }
+  ]
+}

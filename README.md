@@ -44,6 +44,7 @@ Stack: Next.js 16 App Router, React 19, TypeScript, Tailwind CSS 4, local Markdo
 | `content/pages.json` | Core-page SEO titles and update dates |
 | `content/collaborations.json` | Shared technology/B2B and creative/UGC offers on About and in the footer |
 | `content/youtube.json` | Channel, publication cutoff, and initial demonstration video |
+| `content/writing-discovery.json` | First-addition times and retained public feed metadata |
 | `public/media/` | Public images and documents referenced by content |
 
 Use existing templates or `npm run content:new-work`, `content:new-book`, `content:new-series`, and `content:new-writing`. Check visibility and remove empty placeholder URLs before publication. Catalogue copy belongs in `content/`; do not add new records to legacy TypeScript fallback registries.
@@ -84,7 +85,9 @@ The [editorial release checklist](docs/editorial-seo-checklist.md) is the detail
 
 ## Writing and measurement
 
-Writing merges local articles, [Working Stories](docs/working-stories.md), Medium, Substack, and YouTube. Working Stories also has its own [chronological index](https://abvx.xyz/writing/working-stories); book-eligible stories export with `npm run export:working-stories` into ignored local `exports/` files. YouTube uses embedded, responsive players without autoplay. New videos are selected by their publication time, with one initial test exception backed by local metadata. Feed/page revalidation is 15 minutes and depends on requests; the public YouTube feed is limited to its latest 15 entries, so this is not a permanent archive of subsequent uploads. Feed failures do not prevent the other sources from rendering.
+Writing merges local articles, [Working Stories](docs/working-stories.md), Medium, Substack, and YouTube. Writing and the two homepage publication slots share chronology by first registration on ABVX; source publication dates remain separate. `npm run writing:register` records native additions during prebuild. The hourly feed workflow retains discovered posts and immutable timestamps, and publishes only when metadata changes. Feed failures preserve the saved list. See [Site operations](docs/site-operations.md) for timing, historical migration, and the narrowly authorized workflow.
+
+Working Stories also has its own [chronological index](https://abvx.xyz/writing/working-stories); book-eligible stories export with `npm run export:working-stories` into ignored local `exports/` files. YouTube retains its new-publication cutoff and one initial test exception. Featured players, compact recent previews and text-only archive rows retain their existing layouts.
 
 Plausible tracks `Book Link Click`, `Contact Click`, and `Collaboration Click` separately. These measure link intent, not completed purchases, messages, or bookings. Dashboard goals and historical limitations are documented in [Site operations](docs/site-operations.md).
 

@@ -28,16 +28,20 @@ Global identity metadata is in `src/app/layout.tsx`; shared schema and metadata 
 | Substack | `https://abvx.substack.com/feed` | Article cards linking to the source |
 | YouTube | `content/youtube.json` | Featured player, compact recent preview, and text-only archive links |
 
-The homepage separately reads Medium, Substack, and `https://mn7r.com/rss.xml` for its latest-source cards. MN7R RSS is not currently part of the Writing archive.
+Writing and the two existing homepage publication slots use the same mixed-source list, sorted by immutable `addedAt` (UTC) from `content/writing-discovery.json`. The slots can both contain any source; labels and links describe their actual destinations. A native video companion opens ABVX, while ordinary YouTube cards open YouTube. The separate MN7R homepage card still reads `https://mn7r.com/rss.xml`; MN7R is not part of Writing.
 
-Feed HTTP access uses allowlisted hosts in `src/lib/feed-types.ts` and `src/lib/feed-http.ts`; failures yield an empty source rather than fail the entire page. Feed requests and Writing revalidate after 900 seconds. This is request-driven cache revalidation, not a background scheduler or an exact delivery deadline.
+Feed HTTP access retains the existing host allowlists and parsers. The hourly `writing-feed-sync.yml` workflow records first additions and refreshes public metadata with `npm run writing:sync`; a manual workflow dispatch is available. It reuses the existing `ECOSYSTEM_SYNC_TOKEN`, commits only the discovery registry, and triggers the normal deployment. GitHub schedule delays and deployment time mean this is not an exact delivery deadline. No change means no commit/deployment. Source failures preserve stored items, including videos that leave YouTube's 15-entry feed.
+
+Native Writing and Working Stories are registered by `npm run writing:register` during prebuild. Commit the changed registry with the approved source. Rebuilds, edits, `updatedAt`, and feed retries never reset `addedAt`. Original publication/upload dates remain separate and continue to supply article/video metadata. Writing cards display the addition date; the article itself retains its original publication date. Same-time additions use original publication time, then URL as a deterministic tie-breaker.
+
+Historical migration uses `addedAtBasis: legacy-source` where the first appearance is unknown; this is a fallback, not recovered evidence. The three October 10 pilot pages use production-ready time `16:06:30Z` (GitHub deployment 6983374035), and the flour case uses `12:17:48Z` (6980593513), marked `production`. New registrations use `observed`: the time they enter the site's committed publication registry, followed by deployment. Do not rewrite historical times on every sync or treat them as source publication dates.
 
 ### YouTube policy
 
 - Channel: `UCwivRjryrkmZ3bMHUmNtykg`, [ABV Creative](https://www.youtube.com/@ABV_Creative).
 - Cutoff: `publishedAfter` in `content/youtube.json`, initially `2026-10-09T19:52:23Z`.
 - Include videos published **strictly after** the cutoff, plus `initialVideoId` (`RsxiDWDj2Rg`) as one pinned test exception. `initialVideo` stores its title, actual publication time, and summary locally. An updated timestamp does not import an older upload.
-- The public channel feed provides its latest 15 entries. Subsequent uploads are not persisted. The initial exception is retained from local metadata when absent from the feed, including during feed failure.
+- The public channel feed provides its latest 15 entries. Subsequent discovered uploads are persisted in the Writing registry. The initial exception is retained from local metadata when absent from the feed, including during feed failure.
 - Parsing validates channel, ID, title, and publication time; duplicate, invalid, and future-dated entries are ignored. Invalid cutoff configuration produces no videos. `content:validate` rejects invalid channel/feed URLs, inconsistent IDs, dates, or incomplete pinned metadata before release.
 - `src/components/YouTubeEmbed.tsx` validates the watch URL and constructs a `youtube-nocookie.com` iframe. Players are lazy-loaded, responsive, inline on supported mobile browsers, and do not autoplay. They use 16:9 where space permits and a minimum height of 200 px on narrow screens. The featured publication keeps its inline player. Recent videos use the same image/body layout as articles; their preview opens a native modal with a full-size player, which is removed on close to stop playback. Archive rows contain only text and a YouTube link, without previews or players.
 - No API key, webhook, paid service, or new dependency is required. Do not widen iframe permissions or allowed hosts for a routine feed change.

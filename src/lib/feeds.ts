@@ -13,6 +13,7 @@ import {
   uniqueStrings,
 } from './feed-text';
 import type { FeedItem, FeedSource } from './feed-types';
+import { sortWritingItems } from './writing-chronology.mjs';
 
 export type { FeedItem } from './feed-types';
 
@@ -107,7 +108,5 @@ export async function fetchMn7rFeed(feedUrl: string): Promise<FeedItem[]> {
 }
 
 export function mergeFeeds(...lists: FeedItem[][]): FeedItem[] {
-  const merged = lists.flat();
-  merged.sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1));
-  return merged;
+  return sortWritingItems(lists.flat());
 }

@@ -7,6 +7,7 @@ Read `README.md` for the current site/content map, then the task-specific guide.
 - `content/` is the editable public source of truth; regenerate `public/llms.txt` and `public/content-index.json` after public content changes.
 - Preserve public slugs, redirects, media paths, canonical URLs, and the separation from the private `ABVX-OS` and `CortexABV-private` runtimes.
 - CortexABV copy changes remain proposal-only and PR-first unless the operation is the allowlisted ecosystem sync. Ecosystem sync may write generated registry files, marked README blocks, reviewed public project metadata, and release announcements directly to `main`; it must never change arbitrary code or text outside those surfaces.
+- Owner-authorized Writing feed sync may update only `content/writing-discovery.json` directly on `main`. It records public feed metadata and immutable first-addition timestamps; this exception does not authorize code, article-body, media or other content changes.
 - Before a PR, run `npm run content:validate`, `npm run lint`, `npm run test:sync`, and `npm run build`.
 - Read `docs/project-description-sync.md` before changing project-copy automation and the nested `cortex-abv/private-runtime/AGENTS.md` before changing that snapshot.
 

@@ -6,7 +6,9 @@ import MarqueeTicker from '@/components/MarqueeTicker';
 import SectionPanel from '@/components/SectionPanel';
 import TagList from '@/components/TagList';
 import { getLatestSectionEntryBook, getLatestSectionEntryWork } from '@/content';
-import { fetchMediumFeed, fetchMn7rFeed, fetchSubstackFeed, type FeedItem } from '@/lib/feeds';
+import { fetchMn7rFeed, type FeedItem } from '@/lib/feeds';
+import { getWritingFeed } from '@/lib/writing-feed';
+import { writingCardSource } from '@/lib/writing-chronology.mjs';
 import { collectionPageJsonLd, defaultOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -48,16 +50,6 @@ const fallbackLatest = {
     summary:
       'Books, translations, series and publishing projects across AI, strategy, language, culture, markets and systems thinking.',
   },
-  medium: {
-    title: 'Medium',
-    summary:
-      'Applied AI reviews, product notes, and research breakdowns from the Medium archive.',
-  },
-  substack: {
-    title: 'Substack',
-    summary:
-      'Longer essays and field notes on validation, decisions, automation, and AI-native work.',
-  },
   mn7rBlog: {
     title: 'MN7R Blog',
     summary:
@@ -90,11 +82,8 @@ function formatDate(iso?: string): string | undefined {
 }
 
 export default async function Home() {
-  const [mediumLatest, substackLatest, mn7rLatest] = await Promise.all([
-    safeLatestFeed('medium', fetchMediumFeed, 'https://abvcreative.medium.com/feed'),
-    safeLatestFeed('substack', fetchSubstackFeed, 'https://abvx.substack.com/feed'),
-    safeLatestFeed('mn7r', fetchMn7rFeed, 'https://mn7r.com/rss.xml'),
-  ]);
+  const mn7rLatest = await safeLatestFeed('mn7r', fetchMn7rFeed, 'https://mn7r.com/rss.xml');
+  const latestWriting = getWritingFeed().slice(0, 2);
 
   const latestFocus = getLatestSectionEntryWork('focus', 'mn7r-blog');
   const latestSystem = getLatestSectionEntryWork('systems');
@@ -205,24 +194,22 @@ export default async function Home() {
             image={latestBook?.coverImage}
             cta="Open book"
           />
-          <HomepageLatestCard
-            title={mediumLatest?.title || fallbackLatest.medium.title}
-            summary={mediumLatest?.excerpt || fallbackLatest.medium.summary}
-            href={mediumLatest?.url}
-            label="Medium"
-            detail={formatDate(mediumLatest?.publishedAt)}
-            image={mediumLatest?.coverImage ? { src: mediumLatest.coverImage, alt: mediumLatest.title } : undefined}
-            cta="Read on Medium"
-          />
-          <HomepageLatestCard
-            title={substackLatest?.title || fallbackLatest.substack.title}
-            summary={substackLatest?.excerpt || fallbackLatest.substack.summary}
-            href={substackLatest?.url}
-            label="Substack"
-            detail={formatDate(substackLatest?.publishedAt)}
-            image={substackLatest?.coverImage ? { src: substackLatest.coverImage, alt: substackLatest.title } : undefined}
-            cta="Read on Substack"
-          />
+          {[0, 1].map((slot) => {
+            const post = latestWriting[slot];
+            const source = post ? writingCardSource(post) : { label: 'Writing', cta: 'Read on ABVX' };
+            return (
+              <HomepageLatestCard
+                key={post?.url || `writing-${slot}`}
+                title={post?.title || 'Writing'}
+                summary={post?.excerpt || 'Essays, working stories and practical video notes from ABVX.'}
+                href={post?.url || '/writing'}
+                label={source.label}
+                detail={formatDate(post?.addedAt || post?.publishedAt)}
+                image={post?.coverImage ? { src: post.coverImage, alt: post.title } : undefined}
+                cta={source.cta}
+              />
+            );
+          })}
           <HomepageLatestCard
             title={mn7rLatest?.title || fallbackLatest.mn7rBlog.title}
             summary={mn7rLatest?.excerpt || fallbackLatest.mn7rBlog.summary}

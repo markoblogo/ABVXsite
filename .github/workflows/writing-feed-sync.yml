@@ -1,0 +1,39 @@
+name: Sync Writing discoveries
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '41 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: writing-feed-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+          token: ${{ secrets.ECOSYSTEM_SYNC_TOKEN }}
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run writing:sync
+      - run: npm run content:validate
+      - run: node --test test/writing-chronology.test.mjs
+      - name: Publish only the discovery registry
+        run: |
+          if git diff --quiet -- content/writing-discovery.json; then exit 0; fi
+          git config user.name 'abvx-writing[bot]'
+          git config user.email 'abvx-writing[bot]@users.noreply.github.com'
+          git add content/writing-discovery.json
+          git commit -m 'writing-sync: record first additions and refresh feed metadata'
+          git pull --rebase origin main
+          git push origin HEAD:main

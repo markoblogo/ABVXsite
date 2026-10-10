@@ -1,3 +1,4 @@
+import { cache } from 'react';
 import { indexedWorkingStories, queryWorkingStories, readWorkingStories, relatedWorkingStories, workingStoryPath } from './working-stories-lib.mjs';
 import publicIndex from '../../public/content-index.json';
 import type { FeedItem } from '@/lib/feed-types';
@@ -5,8 +6,10 @@ import type { FeedItem } from '@/lib/feed-types';
 export type WorkingStory = ReturnType<typeof readWorkingStories>[number];
 export { workingStoryPath };
 
+const readIndexedStories = cache(() => indexedWorkingStories(readWorkingStories(), publicIndex));
+
 export function getWorkingStories(query: { topic?: string; cluster?: string; sourceSession?: string } = {}): WorkingStory[] {
-  return queryWorkingStories(indexedWorkingStories(readWorkingStories(), publicIndex), query);
+  return queryWorkingStories(readIndexedStories(), query);
 }
 
 export function getWorkingStoryBySlug(slug: string): WorkingStory | undefined {

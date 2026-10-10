@@ -60,6 +60,8 @@ See [Content editing](docs/content-editing.md) for task recipes and [Content wor
 
 ## Verify and publish
 
+Repeatable ABVX OS publication uses [the consumer handoff](docs/abvx-os-publishing.md). `npm run content:release-check` runs the editorial gates once and saves ignored results; `content:production-check` checks discovery against the live domain after deployment.
+
 Work from current `origin/main` in a clean ABVXsite checkout or suitable worktree. Keep unrelated changes out of the branch; use `codex/` for Codex branches.
 
 The CI gate is:

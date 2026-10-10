@@ -2,6 +2,8 @@
 
 Use this guide for a small public-content change. [Content workflow](content-workflow.md) owns the complete format and field rules; the [release checklist](editorial-seo-checklist.md) owns publication checks.
 
+For repeatable ABVX OS handoffs, use [the publication fast path](abvx-os-publishing.md): ready Markdown/media, source-specific approval, consumer dry-run/apply, one release check and separate production proof.
+
 ## Choose the owning source
 
 | Task | Source |

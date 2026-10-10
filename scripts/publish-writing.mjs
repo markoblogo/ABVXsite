@@ -11,6 +11,7 @@ function parseArgs(argv) {
     else if (token === '--write') args.write = true;
   }
   if (!args.packet) throw new Error('Usage: node scripts/publish-writing.mjs --packet <path> [--dry-run|--write]');
+  if (args.dryRun && args.write) throw new Error('Choose dry-run or write, not both');
   if (!args.dryRun && !args.write) args.dryRun = true;
   return args;
 }
@@ -46,6 +47,7 @@ function frontmatterFrom(packet) {
     homepageEligible: false,
     publishedAt: packet.enrichment.date_published,
     updatedAt: packet.enrichment.date_modified,
+    language: packet.payload.language || 'en',
     ...(packet.payload.cover_image
       ? { media: { src: packet.payload.cover_image, alt: packet.payload.image_alt || `${packet.title} cover` } }
       : {}),
@@ -54,8 +56,24 @@ function frontmatterFrom(packet) {
 
 const args = parseArgs(process.argv);
 const packet = loadPacket(args.packet);
+if (packet.project !== 'abvxsite' || packet.surface !== 'writing'
+  || packet.consumer_operation?.id !== 'abvx.publish-writing'
+  || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(packet.slug || '')) {
+  throw new Error('Invalid native Writing packet target or slug');
+}
+if (!packet.title || !Array.isArray(packet.payload?.body_lines) || !packet.payload.body_lines.length
+  || !packet.payload.body_lines.every(line => typeof line === 'string' && line.trim())
+  || !packet.enrichment?.meta_description || !Array.isArray(packet.enrichment.tags)
+  || !['en', 'fr', 'uk'].includes(packet.payload.language || 'en')) {
+  throw new Error('Invalid native Writing text, metadata or language');
+}
+if (packet.payload.source_markdown || packet.payload.media_assets?.length || packet.payload.video_url
+  || packet.payload.subtitle || packet.payload.external_links?.length) {
+  throw new Error('Unsupported native Writing fields require project-specific review');
+}
 const targetFile = filePathFor(packet.slug);
 const exists = existsSync(targetFile);
+if (exists) throw new Error(`Refusing to overwrite existing writing item: ${targetFile}`);
 const report = {
   operation: 'abvx.publish-writing',
   mode: args.write ? 'WRITE' : 'DRY_RUN',
@@ -76,5 +94,5 @@ if (exists) {
 }
 
 mkdirSync(path.dirname(targetFile), { recursive: true });
-writeFileSync(targetFile, serializeFrontmatter(frontmatterFrom(packet), bodyFrom(packet)));
+writeFileSync(targetFile, serializeFrontmatter(frontmatterFrom(packet), bodyFrom(packet)), { flag: 'wx' });
 console.log(JSON.stringify({ ...report, written: true }, null, 2));

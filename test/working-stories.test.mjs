@@ -188,6 +188,7 @@ test('story template reuses article typography, emits SEO and hides internal met
     './JsonLd': compile('src/components/JsonLd.tsx', { 'next/headers': { headers: async () => new Headers() } }),
     './MarkdownContent': compile('src/components/MarkdownContent.tsx'),
     './MediaPanel': compile('src/components/MediaPanel.tsx'),
+    './WorkingStoryArticle.module.css': { default: { body: 'story-body', illustration: 'story-illustration', caption: 'story-caption' }, __esModule: true },
     './PageHeader': compile('src/components/PageHeader.tsx'),
   }).default;
   const story = normalized();

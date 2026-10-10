@@ -95,6 +95,11 @@ await withQaServer(async (base) => {
           for (const width of [320, 390, 768, 1280]) {
             await page.setViewportSize({ width, height: 900 });
             assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), 'illustrated Working Story overflow');
+            const figure = page.locator('.working-story-body .media-panel--writing').first();
+            const layout = await figure.evaluate((element) => ({ width: element.getBoundingClientRect().width, maxHeight: getComputedStyle(element).maxHeight, aspectRatio: getComputedStyle(element).aspectRatio }));
+            assert.equal(layout.maxHeight, 'none', 'article media must not use the compact-card height');
+            assert.equal(layout.aspectRatio, 'auto', 'article media must preserve original proportions');
+            assert.ok(layout.width > Math.min(width - 100, 600), 'article cover must span the reading column');
           }
         }
         if (story.caseStudy) {

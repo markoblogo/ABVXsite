@@ -6,6 +6,7 @@ import MediaPanel from './MediaPanel';
 import PageHeader from './PageHeader';
 import { SITE_URL } from '@/lib/seo';
 import Link from 'next/link';
+import styles from './WorkingStoryArticle.module.css';
 
 export default function WorkingStoryArticle({ story, related }: { story: WorkingStory; related: WorkingStory[] }) {
   const url = `${SITE_URL}${workingStoryPath(story)}`;
@@ -27,7 +28,7 @@ export default function WorkingStoryArticle({ story, related }: { story: Working
         <span>{story.date}</span>
         {story.topics.map((topic) => <span key={topic}>{topic}</span>)}
       </div>
-      <div className="native-writing-article__body working-story-body">
+      <div className={`native-writing-article__body working-story-body ${styles.body}`}>
         {story.coverImage ? <MediaPanel image={story.coverImage} title={story.title} variant="writing" priority /> : null}
         {story.body.split(/(?=^## )/m).map((section, index) => {
           const heading = section.match(/^## (.+)\n/)?.[1];
@@ -36,9 +37,9 @@ export default function WorkingStoryArticle({ story, related }: { story: Working
             <section key={index}>
               <MarkdownContent>{section}</MarkdownContent>
               {illustrations.map((image) => (
-                <div className="working-story-illustration" key={image.src}>
+                <div className={`working-story-illustration ${styles.illustration}`} key={image.src}>
                   <MediaPanel image={image} title={story.title} variant="writing" />
-                  <p className="working-story-caption">{image.caption}</p>
+                  <p className={styles.caption}>{image.caption}</p>
                 </div>
               ))}
               {illustrations.length && story.caseStudy && heading === story.illustrations?.[0]?.afterHeading ? (

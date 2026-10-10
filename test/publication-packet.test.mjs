@@ -6,6 +6,21 @@ import path from 'node:path';
 import os from 'node:os';
 import { execFileSync } from 'node:child_process';
 import { planWorkingStory, applyWorkingStory } from '../scripts/publish-working-story.mjs';
+import { validateNativeWritingVideo, videoFeedTimestamp } from '../src/content/native-writing-video.mjs';
+
+test('native video fields are paired, calendar-valid and timezone-aware for direct content edits', () => {
+  const valid = { videoUrl: 'https://www.youtube.com/watch?v=6q2JG0gCyDg', videoUploadedAt: '2026-10-10T23:30:00-05:00' };
+  const now = Date.parse('2026-10-12T00:00:00Z');
+  assert.deepEqual(validateNativeWritingVideo({}, now), []);
+  assert.deepEqual(validateNativeWritingVideo(valid, now), []);
+  for (const patch of [{ videoUrl: undefined }, { videoUrl: 'https://example.com/watch?v=6q2JG0gCyDg' },
+    { videoUploadedAt: undefined }, { videoUploadedAt: 'bad' }, { videoUploadedAt: '2026-10-10T23:30:00' },
+    { videoUploadedAt: '2026-02-30T12:00:00Z' }, { videoUploadedAt: '2099-01-01T00:00:00Z' }]) {
+    assert.ok(validateNativeWritingVideo({ ...valid, ...patch }, now).length, JSON.stringify(patch));
+  }
+  // Feed merging compares timestamps lexicographically; normalization must preserve chronological order.
+  assert.ok(videoFeedTimestamp(valid.videoUploadedAt) > '2026-10-11T02:00:00.000Z');
+});
 
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const writingCommand = new URL('../scripts/publish-writing.mjs', import.meta.url).pathname;

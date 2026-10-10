@@ -1,5 +1,6 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
+import { validateNativeWritingVideo } from './native-writing-video.mjs';
 import type {
   Artifact,
   ArtifactType,
@@ -323,6 +324,8 @@ export function readNativeWritingFiles(): NativeWriting[] {
     .filter((file) => isVisible(file.data.visibility))
     .map(({ data, body }) => {
       const slug = stringValue(data.slug);
+      const videoErrors = validateNativeWritingVideo(data);
+      if (videoErrors.length) throw new Error(`Writing ${slug}: ${videoErrors.join('; ')}`);
       const fallbackTitle = titleFromSlug(slug);
       const summary = stringValue(data.summary, body.split(/\n+/).find(Boolean) || fallbackTitle);
       return {

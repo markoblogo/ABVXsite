@@ -33,3 +33,7 @@ npm run content:production-check
 ```
 
 This reuses existing SEO/discovery/mobile checks against the public domain; it does not establish deployment SHA or Search Console indexing. Keep those as separate evidence. See [the editorial release checklist](editorial-seo-checklist.md) and [Working Stories schema/export](working-stories.md).
+
+## First-addition chronology
+
+Native Writing and Working Stories register an immutable UTC `addedAt` in `content/writing-discovery.json` during the release prebuild. Include that file in the source PR. Preserve the author's `publishedAt` and YouTube `videoUploadedAt`; editing an existing record must not renew its first-addition time. Writing and the two homepage publication slots use this common registry. RSS discovery is a site-owned hourly workflow, independent of the private OS runtime; later deployments and retries retain the registered times.

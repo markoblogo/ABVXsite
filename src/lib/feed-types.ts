@@ -5,6 +5,7 @@ export type FeedItem = {
   title: string;
   url: string;
   publishedAt: string;
+  addedAt?: string;
   author?: string;
   tags?: string[];
   excerpt?: string;

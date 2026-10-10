@@ -14,8 +14,9 @@ import { validateSyncConfig } from './project-description-sync-lib.mjs';
 import { validateYoutubeSettings } from './youtube-settings-lib.mjs';
 import { readWorkingStories } from '../src/content/working-stories-lib.mjs';
 import { validateNativeWritingVideo } from '../src/content/native-writing-video.mjs';
+import { validateWritingDiscovery } from '../src/lib/writing-chronology.mjs';
 
-const errors = [];
+const errors = validateWritingDiscovery(JSON.parse(readFileSync('content/writing-discovery.json', 'utf8')));
 const warnings = [];
 const all = [];
 

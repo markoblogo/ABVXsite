@@ -1,5 +1,4 @@
 import youtubeSettings from '../../../content/youtube.json';
-import { fetchYoutubeFeed } from '@/lib/youtube-feed';
 import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import EditorialSectionLink from '@/components/EditorialSectionLink';
@@ -8,15 +7,9 @@ import RecentWritingCard from '@/components/RecentWritingCard';
 import SectionPanel from '@/components/SectionPanel';
 import WritingArchiveRow from '@/components/WritingArchiveRow';
 import WritingSourceLinks, { type WritingSource } from '@/components/WritingSourceLinks';
-import {
-  fetchMediumFeed,
-  fetchSubstackFeed,
-  mergeFeeds,
-  type FeedItem,
-} from '@/lib/feeds';
+import type { FeedItem } from '@/lib/feed-types';
+import { getWritingFeed } from '@/lib/writing-feed';
 import { getNativeWritingItems } from '@/content';
-import { videoFeedTimestamp } from '@/content/native-writing-video.mjs';
-import { workingStoriesFeed } from '@/content/working-stories';
 import workingStoriesSeries from '../../../content/working-stories.json';
 import { collectionPageJsonLd, defaultOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
 import type { Metadata } from 'next';
@@ -36,14 +29,6 @@ export const revalidate = 900;
 
 const RECENT_POST_COUNT = 6;
 const ARCHIVE_POST_LIMIT = 30;
-
-async function safeFeed(fetcher: (url: string) => Promise<FeedItem[]>, url: string) {
-  try {
-    return await fetcher(url);
-  } catch {
-    return [];
-  }
-}
 
 function formatDate(iso: string): string {
   const date = new Date(iso);
@@ -100,20 +85,6 @@ function postImage(post: FeedItem) {
   return post.coverImage ? { src: post.coverImage, alt: post.title } : undefined;
 }
 
-function nativeWritingFeed(): FeedItem[] {
-  return getNativeWritingItems().map((item) => ({
-    source: item.videoUrl ? 'youtube' : 'abvx',
-    title: item.title,
-    url: `/writing/${item.slug}`,
-    publishedAt: item.videoUploadedAt ? videoFeedTimestamp(item.videoUploadedAt) : item.updatedAt || item.publishedAt || new Date().toISOString(),
-    author: 'Anton BV',
-    tags: item.tags,
-    excerpt: item.summary || item.body.split(/\n+/).find(Boolean) || 'Native ABVX writing.',
-    coverImage: item.coverImage?.src,
-    videoUrl: item.videoUrl,
-  }));
-}
-
 export default async function WritingPage({
   searchParams,
 }: {
@@ -121,14 +92,7 @@ export default async function WritingPage({
 }) {
   const params = searchParams ? await searchParams : {};
   const activeSource = normalizeSource(params.source);
-  const [medium, substack, youtube] = await Promise.all([
-    safeFeed(fetchMediumFeed, 'https://abvcreative.medium.com/feed'),
-    safeFeed(fetchSubstackFeed, 'https://abvx.substack.com/feed'),
-    safeFeed((url) => fetchYoutubeFeed(url, youtubeSettings), youtubeSettings.feedUrl),
-  ]);
-  const native = nativeWritingFeed();
-  const ownedVideos = new Set(native.map(post => post.videoUrl).filter(Boolean));
-  const allPosts = mergeFeeds(native, workingStoriesFeed(), medium, substack, youtube.filter(post => !ownedVideos.has(post.url)));
+  const allPosts = getWritingFeed();
   const posts =
     activeSource === 'all' ? allPosts : allPosts.filter((post) => post.source === activeSource);
   const featuredPost = posts[0];
@@ -190,7 +154,7 @@ export default async function WritingPage({
               href={featuredPost.url}
               source={featuredPost.source}
               videoUrl={featuredPost.videoUrl}
-              date={formatDate(featuredPost.publishedAt)}
+              date={formatDate(featuredPost.addedAt || featuredPost.publishedAt)}
               image={postImage(featuredPost)}
             />
           </section>
@@ -211,7 +175,7 @@ export default async function WritingPage({
                     href={post.url}
                     source={post.source}
                     videoUrl={post.videoUrl}
-                    date={formatDate(post.publishedAt)}
+                    date={formatDate(post.addedAt || post.publishedAt)}
                     image={postImage(post)}
                   />
                 ))}
@@ -233,7 +197,7 @@ export default async function WritingPage({
                     excerpt={post.excerpt}
                     href={post.url}
                     source={post.source}
-                    date={formatDate(post.publishedAt)}
+                    date={formatDate(post.addedAt || post.publishedAt)}
                   />
                 ))}
               </div>

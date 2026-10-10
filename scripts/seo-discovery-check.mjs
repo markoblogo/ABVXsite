@@ -36,7 +36,7 @@ await withQaServer(async (base) => {
     await page.locator('a[href="' + ukrainian + '"]').click();
     assert.equal(await page.locator('html').getAttribute('lang'), 'uk');
     await page.locator('header a[href="/books"]').first().click();
-    await page.waitForURL(base + '/books');
+    await page.waitForURL(base + '/books', { waitUntil: 'domcontentloaded' });
     await page.waitForFunction(() => document.documentElement.lang === 'en');
     assert.equal(await page.locator('html').getAttribute('lang'), 'en');
     await visit(base + '/work-with-me/kdp-publishing-automation');
@@ -120,7 +120,7 @@ await withQaServer(async (base) => {
       await visit(base + '/writing');
       assert.equal(await page.locator(`main a[href="${seriesRoute}"]`).count(), 1);
       await page.locator(`main a[href="${seriesRoute}"]`).click();
-      await page.waitForURL(base + seriesRoute);
+      await page.waitForURL(base + seriesRoute, { waitUntil: 'domcontentloaded' });
       assert.equal(await page.locator('h1').textContent(), 'Working Stories');
       assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'), 'https://abvx.xyz' + seriesRoute);
       if (!publicStories.length) assert.ok((await page.locator('main').innerText()).includes(workingSeries.emptyState));
@@ -167,7 +167,7 @@ await withQaServer(async (base) => {
       const hub = page.locator('main a[href="/toki-pona"]');
       assert.equal(await hub.count(), 1);
       await hub.click();
-      await page.waitForURL(base + '/toki-pona');
+      await page.waitForURL(base + '/toki-pona', { waitUntil: 'domcontentloaded' });
       for (const path of ['/books/the-strange-case-of-dr-jekyll-and-mr-hyde-in-toki-pona', '/books/stoic-wisdom-toki-pona', '/work/toki-pona-ai-translator']) {
         assert.equal(await page.locator(`main a[href="${path}"]`).count(), 1);
       }

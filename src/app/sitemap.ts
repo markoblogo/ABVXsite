@@ -2,6 +2,8 @@ import pageMetadata from '../../content/pages.json';
 import { getArtifacts, getBooks, getNativeWritingItems } from '@/content';
 import { servicePages } from '@/content/service-pages';
 import { getEditorialArticles } from '@/content/editorials';
+import { getWorkingStories, workingStoryPath } from '@/content/working-stories';
+import workingStoriesSeries from '../../content/working-stories.json';
 import type { MetadataRoute } from 'next';
 
 const base = 'https://abvx.xyz';
@@ -11,6 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const artifacts = getArtifacts();
   const books = getBooks();
   const writing = getNativeWritingItems();
+  const stories = getWorkingStories();
+  const storyDates = stories.map((story) => ({ publishedAt: story.date, updatedAt: story.updatedAt }));
   const editorialArticles = getEditorialArticles();
   const editorialRoutes: MetadataRoute.Sitemap = editorialArticles.map((article) => ({
     url: `${base}${article.href}`,
@@ -37,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       .sort((a, b) => b.valueOf() - a.valueOf())[0];
   }
 
-  const allContentDate = latestDate([...artifacts, ...books, ...writing, ...editorialArticles, ...Object.values(pageMetadata)]);
+  const allContentDate = latestDate([...artifacts, ...books, ...writing, ...storyDates, ...editorialArticles, ...Object.values(pageMetadata)]);
   const focusDate = latestDate([
     ...artifacts.filter((artifact) => artifact.appearsIn.includes('focus')),
     ...editorialArticles.filter((article) => article.section === 'focus'),
@@ -47,7 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...editorialArticles.filter((article) => article.section === 'systems'),
   ]);
   const booksDate = latestDate([...books, ...editorialArticles.filter((article) => article.section === 'books'), pageMetadata['/books']]);
-  const writingDate = latestDate([...writing, ...editorialArticles.filter((article) => article.section === 'writing')]);
+  const writingDate = latestDate([...writing, ...storyDates, workingStoriesSeries, ...editorialArticles.filter((article) => article.section === 'writing')]);
   const aboutDate = latestDate([pageMetadata['/about'], ...editorialArticles.filter((article) => article.section === 'about')]);
   const tokiPonaDate = latestDate([...books, pageMetadata['/toki-pona']]);
 
@@ -59,6 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/systems`, lastModified: systemsDate, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/books`, lastModified: booksDate, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${base}/writing`, lastModified: writingDate, changeFrequency: 'weekly', priority: 0.75 },
+    { url: `${base}${workingStoriesSeries.canonicalPath}`, lastModified: latestDate([...storyDates, workingStoriesSeries]), changeFrequency: 'weekly', priority: 0.6 },
     { url: `${base}/about`, lastModified: aboutDate, changeFrequency: 'monthly', priority: 0.75 },
     { url: `${base}/llmo`, lastModified: allContentDate, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/work-with-me`, lastModified: trafficLandingUpdatedAt, changeFrequency: 'monthly', priority: 0.72 },
@@ -97,5 +102,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.55,
   }));
 
-  return [...staticRoutes, ...serviceRoutes, ...workRoutes, ...bookRoutes, ...writingRoutes, ...editorialRoutes];
+  const storyRoutes: MetadataRoute.Sitemap = stories.map((story) => ({
+    url: `${base}${workingStoryPath(story)}`, lastModified: contentDate({ publishedAt: story.date, updatedAt: story.updatedAt }),
+    changeFrequency: 'monthly', priority: 0.55,
+  }));
+  return [...staticRoutes, ...serviceRoutes, ...workRoutes, ...bookRoutes, ...writingRoutes, ...editorialRoutes, ...storyRoutes];
 }

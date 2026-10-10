@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs';
 import { contentFiles, parseContentFile } from './content-lib.mjs';
 import { chromium } from 'playwright';
 import { withQaServer } from './qa-server.mjs';
+import { publishedWorkingStories, readWorkingStories, workingStoryPath } from '../src/content/working-stories-lib.mjs';
 
 const french = '/writing/premiere-traduction-francaise-jeanne-bataillonneuse-miss-adrienne';
 const ukrainian = '/writing/vyishov-pershyi-frantsuzkyi-pereklad-jeanne-bataillonneuse';
@@ -66,6 +67,37 @@ await withQaServer(async (base) => {
     assert.equal(llmsResponse.status(), 200);
     const llms = await llmsResponse.text();
     const indexUrls = new Set(index.items.map((item) => item.canonicalUrl));
+    const seriesRoute = '/writing/working-stories';
+    assert.ok(indexUrls.has('https://abvx.xyz' + seriesRoute));
+    assert.ok(llms.includes('URL: https://abvx.xyz' + seriesRoute + '\n'));
+    assert.ok(routes.includes('https://abvx.xyz' + seriesRoute));
+    const publicStories = publishedWorkingStories(readWorkingStories());
+    const publicStoryUrls = new Set(publicStories.map((story) => 'https://abvx.xyz' + workingStoryPath(story)));
+    for (const story of readWorkingStories()) {
+      const url = 'https://abvx.xyz' + workingStoryPath(story);
+      const visible = publicStoryUrls.has(url);
+      assert.equal(indexUrls.has(url), visible, url + ' JSON visibility');
+      assert.equal(llms.includes('URL: ' + url + '\n'), visible, url + ' LLM visibility');
+      assert.equal(routes.includes(url), visible, url + ' sitemap visibility');
+      if (visible) {
+        const record = index.items.find((item) => item.canonicalUrl === url);
+        for (const field of ['story_id', 'cluster', 'period', 'book', 'source_session', 'source']) assert.ok(!(field in record), field + ' leaked publicly');
+        await page.goto(base + workingStoryPath(story));
+        assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'), url);
+        assert.equal(await page.locator('html').getAttribute('lang'), story.language);
+      }
+    }
+    for (const width of [360, 390, 768, 1280]) {
+      await page.setViewportSize({ width, height: 900 });
+      await page.goto(base + '/writing');
+      assert.equal(await page.locator(`main a[href="${seriesRoute}"]`).count(), 1);
+      await page.locator(`main a[href="${seriesRoute}"]`).click();
+      await page.waitForURL(base + seriesRoute);
+      assert.equal(await page.locator('h1').textContent(), 'Working Stories');
+      assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'), 'https://abvx.xyz' + seriesRoute);
+      if (!publicStories.length) assert.ok((await page.locator('main').innerText()).includes('The first Working Story will appear'));
+      assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), 'Working Stories horizontal overflow');
+    }
     for (const folder of ['work', 'books', 'series', 'writing']) {
       for (const file of contentFiles(folder)) {
         const { data } = parseContentFile(file);

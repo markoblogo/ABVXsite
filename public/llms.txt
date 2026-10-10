@@ -1022,6 +1022,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: Гео Шкурупій, Géo Chkouroupiy, Geo Shkurupii, Modernisme ukrainien, українська література, французький переклад, Jeanne la bataillonneuse, Miss Adrienne
 
+## Working Stories
+
+- Working Stories
+  URL: https://abvx.xyz/writing/working-stories
+  Summary: Cases, experiments, mistakes and unusual decisions from my professional life.
+
 ## Notes for crawlers and LLM agents
 
 - Canonical pages use https://abvx.xyz URLs.

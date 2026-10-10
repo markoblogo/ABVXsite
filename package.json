@@ -43,7 +43,7 @@
     "cortex-abv:observe-public-repositories": "node scripts/cortex-abv-observe-public-project-repositories.mjs",
     "cortex-abv:compare-repository-snapshots": "node scripts/cortex-abv-compare-repository-observation-snapshots.mjs",
     "cortex-abv:write-side-artifact": "node scripts/cortex-abv-write-side-review-artifact.mjs",
-    "test:sync": "node --test test/youtube-feed.test.mjs test/markdown-content.test.mjs test/project-description-sync.test.mjs test/cortex-abv-write-side-policy.test.mjs test/cortex-abv-owner-review-decision.test.mjs test/cortex-abv-write-side-executor-design.test.mjs test/cortex-abv-executor-wiring-boundary.test.mjs test/cortex-abv-actual-executor-wiring.test.mjs test/latest-section-entry.test.mjs test/cortex-abv.test.mjs test/cortex-abv-private-runtime-export.test.mjs test/cortex-abv-public-presence.test.mjs test/cortex-abv-project-registry.test.mjs test/cortex-abv-repository-observer.test.mjs test/cortex-abv-repository-change-proposal.test.mjs test/ecosystem-registry.test.mjs test/working-stories.test.mjs",
+    "test:sync": "node --test test/youtube-feed.test.mjs test/markdown-content.test.mjs test/project-description-sync.test.mjs test/cortex-abv-write-side-policy.test.mjs test/cortex-abv-owner-review-decision.test.mjs test/cortex-abv-write-side-executor-design.test.mjs test/cortex-abv-executor-wiring-boundary.test.mjs test/cortex-abv-actual-executor-wiring.test.mjs test/latest-section-entry.test.mjs test/cortex-abv.test.mjs test/cortex-abv-private-runtime-export.test.mjs test/cortex-abv-public-presence.test.mjs test/cortex-abv-project-registry.test.mjs test/cortex-abv-repository-observer.test.mjs test/cortex-abv-repository-change-proposal.test.mjs test/ecosystem-registry.test.mjs test/working-stories.test.mjs test/publication-packet.test.mjs",
     "media:review": "node scripts/media-optimization-report.mjs",
     "media:derivatives": "node scripts/generate-image-derivatives.mjs",
     "feeds:check": "node scripts/check-feed-covers.mjs",
@@ -52,7 +52,10 @@
     "qa:csp": "node scripts/csp-check.mjs",
     "qa:perf": "node scripts/perf-check.mjs",
     "smoke:shell": "node scripts/site-shell-smoke-check.mjs",
-    "export:working-stories": "node scripts/export-working-stories.mjs"
+    "export:working-stories": "node scripts/export-working-stories.mjs",
+    "content:publish-working-story": "node scripts/publish-working-story.mjs",
+    "content:release-check": "node scripts/editorial-release-check.mjs",
+    "content:production-check": "QA_BASE_URL=https://abvx.xyz npm run qa:seo"
   },
   "dependencies": {
     "next": "16.3.8",

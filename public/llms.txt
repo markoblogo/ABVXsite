@@ -1046,6 +1046,16 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/working-stories
   Summary: Cases, experiments, mistakes and unusual decisions from my professional life.
 
+- The Vodka Bottle That Remembered Who Made It
+  URL: https://abvx.xyz/writing/working-stories/vodka-bottle-sms-marketing-storytelling
+  Summary: Twenty years ago, we gave budget vodka bottles unique numbers and fictional biographies delivered by SMS. Then I met a customer who believed one imaginary bottling-line worker made better vodka.
+  Topics: branding, sms-marketing, consumer-psychology, interactive-packaging, storytelling, fmcg, digital-innovation, gestalt-marketing
+
+- We Put Baking Mixes in Milk Bottles. Then the Export Buyers Noticed.
+  URL: https://abvx.xyz/writing/working-stories/baking-mixes-in-milk-bottles-branding-case-study
+  Summary: A Ukrainian flour producer wanted better margins without major investment. We turned ordinary baking mixes into colourful glass bottles, built a consumer brand, and discovered an unexpected opportunity in export markets.
+  Topics: branding, packaging, product-development, creative-direction, food-industry, marketing, export
+
 - When the Flour Bag Became Part of the Product
   URL: https://abvx.xyz/writing/working-stories/when-the-flour-bag-became-part-of-the-product
   Summary: How reusable flour packaging became part of the value proposition, helping a Ukrainian exporter differentiate a commodity without changing the flour.

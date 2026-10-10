@@ -4,9 +4,9 @@ import { parseMarkdownSource } from './markdown-source.mjs';
 
 /** @typedef {{src: string, alt: string, width: number, height: number}} StoryImage */
 /** @typedef {StoryImage & {caption: string, afterHeading: string}} StoryIllustration */
-/** @typedef {{title: string, slug: string, date: string, type: 'working-story', series: 'working-stories', story_id: string, cluster: string, period: string | null, topics: string[], book: {include: boolean, status: string}, visibility: string, summary: string, language: 'en' | 'fr' | 'uk', updatedAt?: string, source_session?: string, coverImage?: StoryImage, illustrations?: StoryIllustration[], caseStudy?: {label: string, url: string}, source: string, body: string}} WorkingStory */
+/** @typedef {{title: string, slug: string, date: string, type: 'working-story', series: 'working-stories', story_id: string, cluster: string, period: string | null, topics: string[], book: {include: boolean, status: string}, visibility: string, summary: string, language: 'en' | 'fr' | 'uk', seoTitle?: string, seoDescription?: string, updatedAt?: string, source_session?: string, coverImage?: StoryImage, illustrations?: StoryIllustration[], caseStudy?: {label: string, url: string}, source: string, body: string}} WorkingStory */
 
-const fields = new Set(['title', 'slug', 'date', 'type', 'series', 'story_id', 'cluster', 'period', 'topics', 'book', 'visibility', 'summary', 'language', 'updatedAt', 'source_session', 'coverImage', 'illustrations', 'caseStudy']);
+const fields = new Set(['title', 'slug', 'date', 'type', 'series', 'story_id', 'cluster', 'period', 'topics', 'book', 'visibility', 'summary', 'language', 'seoTitle', 'seoDescription', 'updatedAt', 'source_session', 'coverImage', 'illustrations', 'caseStudy']);
 const bookStatuses = new Set(['draft', 'selected', 'edited', 'final', 'excluded']);
 const text = (value) => typeof value === 'string' && value.trim().length > 0;
 const validDate = (value) => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value)
@@ -34,6 +34,9 @@ export function validateWorkingStory(data, body) {
   }
   if (data.visibility !== undefined && !['public', 'draft', 'private'].includes(data.visibility)) errors.push('visibility must be public, draft, or private');
   if (data.summary !== undefined && !text(data.summary)) errors.push('summary must be a non-empty string when provided');
+  for (const field of ['seoTitle', 'seoDescription']) {
+    if (data[field] !== undefined && !text(data[field])) errors.push(`${field} must be a non-empty string when provided`);
+  }
   if (data.language !== undefined && !['en', 'fr', 'uk'].includes(data.language)) errors.push('language must be en, fr, or uk');
   if (data.updatedAt !== undefined && (!validDate(data.updatedAt) || data.updatedAt < data.date)) errors.push('updatedAt must be a real date on or after date');
   if (data.source_session !== undefined && (typeof data.source_session !== 'string' || !/^session-\d{3,}$/.test(data.source_session))) errors.push('source_session must be a neutral session-001-style identifier');
@@ -87,6 +90,8 @@ export function readWorkingStories(directory = path.join(process.cwd(), 'content
       book: { include: data.book.include ?? true, status: data.book.status },
       visibility: data.visibility ?? 'draft', summary: data.summary ?? data.title,
       language: data.language ?? 'en', ...(data.updatedAt ? { updatedAt: data.updatedAt } : {}),
+      ...(data.seoTitle ? { seoTitle: data.seoTitle } : {}),
+      ...(data.seoDescription ? { seoDescription: data.seoDescription } : {}),
       ...(data.source_session ? { source_session: data.source_session } : {}), source, body,
       ...(data.coverImage ? { coverImage: data.coverImage } : {}),
       ...(data.illustrations ? { illustrations: data.illustrations } : {}),

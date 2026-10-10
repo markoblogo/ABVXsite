@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const story = getWorkingStoryBySlug(slug);
   if (!story) notFound();
   return metadataWithImage({
-    title: story.title, description: story.summary, canonicalPath: workingStoryPath(story), image: imageMetadata(story.coverImage, defaultOgImage, 'page'), type: 'article',
+    title: story.seoTitle || story.title, description: story.seoDescription || story.summary, canonicalPath: workingStoryPath(story), image: imageMetadata(story.coverImage, defaultOgImage, 'page'), type: 'article',
   });
 }
 

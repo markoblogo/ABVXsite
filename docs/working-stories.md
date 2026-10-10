@@ -39,6 +39,8 @@ This example is documentation only; do not publish it as placeholder content.
 
 Optional `source_session` uses a neutral `session-001`-style identifier. One session can produce multiple independently published stories and span several clusters. Optional `summary` falls back to the title, `language` defaults to `en` (`en`, `uk`, `fr` supported), and `updatedAt` must be a real date on/after publication.
 
+Optional `seoTitle` and `seoDescription` override the page metadata title/description. They must be non-empty strings; without them the public title/summary remain the defaults. The visible story heading, feed excerpt and manuscript export keep the author-facing title, summary and prose.
+
 Optional website media and references live in frontmatter, keeping them out of manuscript exports:
 
 - `coverImage`: `{ "src": "/media/working-stories/example.webp", "alt": "Description", "width": 1200, "height": 674 }`. Used in the article, Writing feed, social metadata and public index.

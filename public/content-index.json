@@ -6515,6 +6515,38 @@
       "related": []
     },
     {
+      "type": "working-story",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "Working Stories",
+      "status": "published",
+      "title": "The Vodka Bottle That Remembered Who Made It",
+      "summary": "Twenty years ago, we gave budget vodka bottles unique numbers and fictional biographies delivered by SMS. Then I met a customer who believed one imaginary bottling-line worker made better vodka.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/working-stories/vodka-bottle-sms-marketing-storytelling",
+      "tags": [
+        "branding",
+        "sms-marketing",
+        "consumer-psychology",
+        "interactive-packaging",
+        "storytelling",
+        "fmcg",
+        "digital-innovation",
+        "gestalt-marketing"
+      ],
+      "publishedAt": "2026-10-10",
+      "updatedAt": "2026-10-10",
+      "image": "https://abvx.xyz/media/working-stories/vodka-sms/vodka-bottle-remembers.png",
+      "links": [
+        {
+          "type": "section",
+          "label": "Working Stories",
+          "url": "https://abvx.xyz/writing/working-stories"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "writing",
       "section": "writing",
       "ecosystem": "Writing",
@@ -6530,6 +6562,42 @@
       ],
       "links": [],
       "updatedAt": "2026-08-14",
+      "related": []
+    },
+    {
+      "type": "working-story",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "Working Stories",
+      "status": "published",
+      "title": "We Put Baking Mixes in Milk Bottles. Then the Export Buyers Noticed.",
+      "summary": "A Ukrainian flour producer wanted better margins without major investment. We turned ordinary baking mixes into colourful glass bottles, built a consumer brand, and discovered an unexpected opportunity in export markets.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/working-stories/baking-mixes-in-milk-bottles-branding-case-study",
+      "tags": [
+        "branding",
+        "packaging",
+        "product-development",
+        "creative-direction",
+        "food-industry",
+        "marketing",
+        "export"
+      ],
+      "publishedAt": "2026-10-10",
+      "updatedAt": "2026-10-10",
+      "image": "https://abvx.xyz/media/working-stories/sweetheart-bottle/range.jpeg",
+      "links": [
+        {
+          "type": "section",
+          "label": "Working Stories",
+          "url": "https://abvx.xyz/writing/working-stories"
+        },
+        {
+          "type": "case-study",
+          "label": "See the Sweetheart Bottle visual case study on Behance",
+          "url": "https://www.behance.net/gallery/209137621/Sweetheart-Bottle-All-Natural-Baking-Mixes-in-Bottles"
+        }
+      ],
       "related": []
     },
     {

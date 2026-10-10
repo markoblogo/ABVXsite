@@ -20,3 +20,5 @@ Use this local contract for UI animation-related changes:
 - Ensure cleanup on unmount/re-render (`revert`, `kill`, clear timers/callbacks).
 - Scope selectors to component root; avoid global selectors for dynamic DOM bindings.
 - For each animation change, add a short motion-review note with selector scope + verification path.
+
+For owner-authorized new native Writing/Working Story publications, follow `docs/abvx-os-publishing.md` including private OS closeout after production. Reuse the existing release receipt; do not rerun successful checks just to create telemetry. Keep deployed-SHA verification separate and do not send authored content to Cortex.

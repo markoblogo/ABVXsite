@@ -1,6 +1,8 @@
 import { spawnSync } from 'node:child_process';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
+import { editorialTreeDigest } from './editorial-checks-tree.mjs';
 
 const args = process.argv.slice(2);
 if (args.some(arg => arg !== '--webpack')) throw new Error('Only the local --webpack build fallback is supported');
@@ -24,8 +26,9 @@ for (const name of [...checks, 'dependency-audit']) {
     : ['run', name, ...(name === 'build' && args.includes('--webpack') ? ['--', '--webpack'] : [])];
   const checkStarted = performance.now();
   const result = spawnSync('npm', commandArgs, { encoding: 'utf8', maxBuffer: 4 * 1024 * 1024 });
-  writeFileSync(path.join(output, `${name.replaceAll(':', '-')}.log`), (result.stdout || '') + (result.stderr || ''));
-  receipt.checks.push({ name, status: result.status === 0 ? 'PASS' : 'FAIL', durationMs: Math.round(performance.now() - checkStarted) });
+  const log=(result.stdout || '') + (result.stderr || '');
+  writeFileSync(path.join(output, `${name.replaceAll(':', '-')}.log`), log);
+  receipt.checks.push({ name, status: result.status === 0 ? 'PASS' : 'FAIL', sha256:createHash('sha256').update(log).digest('hex'), durationMs: Math.round(performance.now() - checkStarted) });
   save();
   console.log(`${name}: ${receipt.checks.at(-1).status}`);
   if (result.status !== 0) {
@@ -34,5 +37,6 @@ for (const name of [...checks, 'dependency-audit']) {
     process.exit(1);
   }
 }
+receipt.treeDigest = editorialTreeDigest();
 receipt.result = 'PASS'; receipt.durationMs = Math.round(performance.now() - started); save();
 console.log('Editorial release checks passed; receipt and logs: exports/editorial-checks/. Commit intended generated indexes with the source. Production remains a separate gate.');

@@ -92,6 +92,49 @@ test('symlink destinations cannot redirect publication outside the consumer chec
   assert.throws(() => planWorkingStory(packet(), root), /Symlink/);
 }));
 
+test('existing cover and illustration files still require individual approved descriptors', () => fixture(root => {
+  const value = withMedia(root);
+  const illustration = '/media/stories/illustration.png';
+  const data = { ...metadata,
+    coverImage: { src: '/media/stories/cover.png', alt: 'Cover', width: 1, height: 1 },
+    illustrations: [{ src: illustration, alt: 'Example', caption: 'An approved example', width: 1, height: 1, afterHeading: 'A choice' }] };
+  const story = packet(data);
+  story.payload.media_assets = value.payload.media_assets;
+  mkdirSync(path.join(root, 'public/media/stories'), { recursive: true });
+  for (const src of [data.coverImage.src, illustration]) {
+    writeFileSync(path.join(root, `public${src}`), readFileSync(value.payload.media_assets[0].source));
+  }
+  assert.throws(() => planWorkingStory(story, root), /Missing approved media/);
+  story.payload.media_assets = [];
+  assert.throws(() => planWorkingStory(story, root), /Missing approved media/);
+  assert.equal(existsSync(path.join(root, 'content')), false);
+}));
+
+test('approved existing images are verified and reused; tampered or invalid bytes are refused', () => fixture(root => {
+  const value = withMedia(root);
+  const asset = value.payload.media_assets[0];
+  const target = path.join(root, `public${asset.target}`);
+  mkdirSync(path.dirname(target), { recursive: true });
+  const approved = readFileSync(asset.source);
+  writeFileSync(target, approved);
+  asset.source = target;
+  const plan = planWorkingStory(value, root);
+  assert.equal(plan.media[0].reused, true);
+  const bad = structuredClone(value);
+  bad.payload.media_assets[0].sha256 = '0'.repeat(64);
+  assert.throws(() => planWorkingStory(bad, root), /media hash/);
+  writeFileSync(target, 'not an image');
+  assert.throws(() => planWorkingStory(value, root), /media hash/);
+  asset.sha256 = hash(readFileSync(target));
+  assert.throws(() => planWorkingStory(value, root), /declared image type/);
+  assert.equal(existsSync(path.join(root, 'content')), false);
+  writeFileSync(target, approved);
+  // Reused files are never overwritten during application.
+  applyWorkingStory(plan);
+  assert.deepEqual(readFileSync(target), approved);
+  assert.equal(readFileSync(plan.targetFile, 'utf8'), value.payload.source_markdown);
+}));
+
 test('failed exclusive write rolls back newly copied assets and preserves existing content', () => fixture(root => {
   const plan = planWorkingStory(withMedia(root), root);
   mkdirSync(path.dirname(plan.targetFile), { recursive: true });

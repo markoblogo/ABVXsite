@@ -147,6 +147,21 @@ test('distinguishes a failed upstream from a valid feed containing only the pinn
     assert.equal(available.upstreamAvailable, true);
     globalThis.fetch = async () => new Response('<html>Access denied</html>');
     assert.equal((await fetchYoutubeFeedWithStatus(configuredSettings.feedUrl, configuredSettings)).upstreamAvailable, false);
+    const channel = `<yt:channelId>${configuredSettings.channelId}</yt:channelId>`;
+    for (const broken of [
+      `<feed>${channel}`,
+      `<feed>${channel}<entry><title>Partial</title></feed>`,
+      `<feed>${channel}<entry></entry`,
+      `<feed>${channel}<entry malformed></entry></feed>`,
+      `<feed>${channel}</feed><feed/>`,
+      `<feed>${channel}<![CDATA[unfinished</feed>`,
+      `<feed>${channel}</feed>unexpected`,
+    ]) {
+      globalThis.fetch = async () => new Response(broken);
+      assert.equal((await fetchYoutubeFeedWithStatus(configuredSettings.feedUrl, configuredSettings)).upstreamAvailable, false, broken);
+    }
+    globalThis.fetch = async () => new Response(`<?xml version="1.0"?><feed xmlns="http://www.w3.org/2005/Atom">${channel}<!-- comment --><entry><title><![CDATA[AI < tools]]></title><link href="https://example.com/?a=1&amp;b=2"/></entry></feed>`);
+    assert.equal((await fetchYoutubeFeedWithStatus(configuredSettings.feedUrl, configuredSettings)).upstreamAvailable, true);
   } finally { globalThis.fetch = original; }
 });
 

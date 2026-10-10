@@ -1,3 +1,4 @@
+import { cache } from 'react';
 import { readBookFiles, readNativeWritingFiles, readSeriesFiles, readWorkFiles } from './file-loader';
 import { selectLatestSectionEntry } from './latest-selection.mjs';
 import { withCatalogueTimes } from './catalogue-chronology.mjs';
@@ -67,9 +68,9 @@ function seriesAsBooks(seriesItems: Series[]): Book[] {
   }));
 }
 
-export function getArtifacts(): Artifact[] {
+export const getArtifacts = cache(function getArtifacts(): Artifact[] {
   return readWorkFiles().sort(byPublicOrder);
-}
+});
 
 export function getArtifactsBySection(section: SiteSection): Artifact[] {
   return getArtifacts().filter((artifact) => appearsInSection(artifact, section));
@@ -84,9 +85,9 @@ export function getLatestArtifact(section: SiteSection): Artifact | undefined {
   return [...getArtifactsBySection(section)].sort(byLatest)[0];
 }
 
-export function getBooks(): Book[] {
+export const getBooks = cache(function getBooks(): Book[] {
   return [...readBookFiles(), ...seriesAsBooks(readSeriesFiles())].sort(byPublicOrder);
-}
+});
 
 export function getBooksBySection(section: SiteSection): Book[] {
   return getBooks().filter((book) => appearsInSection(book, section));
@@ -167,17 +168,17 @@ export function getWorkByGroup(group: string): Artifact[] {
   return getArtifacts().filter((artifact) => artifact.group === group);
 }
 
-export function getSeries(): Series[] {
+export const getSeries = cache(function getSeries(): Series[] {
   return readSeriesFiles().sort(byPublicOrder);
-}
+});
 
 export function getSeriesBySlug(slug: string): Series | undefined {
   return getSeries().find((series) => series.slug === slug);
 }
 
-export function getNativeWritingItems(): NativeWriting[] {
+export const getNativeWritingItems = cache(function getNativeWritingItems(): NativeWriting[] {
   return readNativeWritingFiles().sort(byLatest);
-}
+});
 
 export function getNativeWritingBySlug(slug: string): NativeWriting | undefined {
   return getNativeWritingItems().find((item) => item.slug === slug);

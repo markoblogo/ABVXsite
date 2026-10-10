@@ -13,10 +13,13 @@ await withQaServer(async (base) => {
   const browser = await chromium.launch({ headless: true });
   try {
     const page = await browser.newPage();
+    // SEO assertions inspect server metadata and hydrated navigation, not remote
+    // image/analytics completion. Third-party resources must not block this gate.
+    const visit = url => page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30_000 });
     for (const [route, language] of [['/', 'en'], ['/fr/ami', 'fr'], [french, 'fr'], [ukrainian, 'uk']]) {
       const serverHtml = await page.request.get(base + route);
       assert.match(await serverHtml.text(), new RegExp(`<html[^>]*lang="${language}"`), route + ' server language');
-      const response = await page.goto(base + route);
+      const response = await visit(base + route);
       assert.equal(response.status(), 200, route);
       assert.equal(await page.locator('html').getAttribute('lang'), language, route);
       if (route.startsWith('/writing/')) {
@@ -29,14 +32,14 @@ await withQaServer(async (base) => {
         assert.ok(!text.includes('**'), route + ' leaked Markdown');
       }
     }
-    await page.goto(base + french);
+    await visit(base + french);
     await page.locator('a[href="' + ukrainian + '"]').click();
     assert.equal(await page.locator('html').getAttribute('lang'), 'uk');
     await page.locator('header a[href="/books"]').first().click();
     await page.waitForURL(base + '/books');
     await page.waitForFunction(() => document.documentElement.lang === 'en');
     assert.equal(await page.locator('html').getAttribute('lang'), 'en');
-    await page.goto(base + '/work-with-me/kdp-publishing-automation');
+    await visit(base + '/work-with-me/kdp-publishing-automation');
     assert.equal(await page.locator('a[href="/work/book-landing"]').count(), 0);
     const link = page.locator('main a[href="/work/book-landings"]').first();
     assert.ok(await link.count());
@@ -86,7 +89,7 @@ await withQaServer(async (base) => {
       if (visible) {
         const record = index.items.find((item) => item.canonicalUrl === url);
         for (const field of ['story_id', 'cluster', 'period', 'book', 'source_session', 'source']) assert.ok(!(field in record), field + ' leaked publicly');
-        await page.goto(base + workingStoryPath(story));
+        await visit(base + workingStoryPath(story));
         assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'), url);
         assert.equal(await page.locator('html').getAttribute('lang'), story.language);
         if (story.coverImage) {
@@ -114,7 +117,7 @@ await withQaServer(async (base) => {
     }
     for (const width of [360, 390, 768, 1280]) {
       await page.setViewportSize({ width, height: 900 });
-      await page.goto(base + '/writing');
+      await visit(base + '/writing');
       assert.equal(await page.locator(`main a[href="${seriesRoute}"]`).count(), 1);
       await page.locator(`main a[href="${seriesRoute}"]`).click();
       await page.waitForURL(base + seriesRoute);
@@ -160,7 +163,7 @@ await withQaServer(async (base) => {
     assert.ok(Date.parse(sitemapEntries.get('https://abvx.xyz/about')) >= Date.parse(pageMetadata['/about'].updatedAt), '/about excludes static page updates');
     for (const width of [375, 1280]) {
       await page.setViewportSize({ width, height: 900 });
-      await page.goto(base + '/books');
+      await visit(base + '/books');
       const hub = page.locator('main a[href="/toki-pona"]');
       assert.equal(await hub.count(), 1);
       await hub.click();
@@ -170,7 +173,7 @@ await withQaServer(async (base) => {
       }
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), 'Toki Pona horizontal overflow');
     }
-    await page.goto(base);
+    await visit(base);
     assert.ok((await page.title()).startsWith('AI-native Systems & Market Infrastructure'));
     console.log(`SEO discovery checks passed: ${routes.length} unique page titles and routes, complete public indexes, editorial dates, localized metadata and mobile/desktop Toki Pona navigation.`);
   } finally {

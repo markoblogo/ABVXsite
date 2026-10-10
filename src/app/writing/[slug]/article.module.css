@@ -1,0 +1,31 @@
+.body {
+  width: 100%;
+  min-width: 0;
+}
+
+.body :global(.media-panel--writing) {
+  aspect-ratio: auto;
+  max-height: none;
+  margin-block: 0 1.1rem;
+}
+
+.body :global(.media-panel--writing) img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+}
+
+.body pre {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 1rem;
+  margin-block: 1rem;
+  border: 1px solid var(--ink);
+  white-space: pre;
+  font-size: 0.85em;
+  line-height: 1.5;
+}
+
+.body iframe {
+  margin-bottom: 1.5rem;
+}

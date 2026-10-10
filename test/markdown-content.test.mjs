@@ -35,3 +35,10 @@ test('renders ordered reading sequences as an ordered list', () => {
   const html = render('1. **First book**\n2. *Second book*\n3. Third book');
   assert.ok(html.includes('<ol><li><strong>First book</strong></li><li><em>Second book</em></li><li>Third book</li></ol>'));
 });
+
+test('preserves agent hierarchy whitespace and escapes markup inside fenced blocks', () => {
+  const text = '```\nMe\n└── Orchestrator\n    ├── Agent\n<script>literal</script>\n```\n\n## Next section';
+  const html = render(text);
+  assert.ok(html.includes('<pre><code>Me\n└── Orchestrator\n    ├── Agent\n&lt;script&gt;literal&lt;/script&gt;</code></pre>'));
+  assert.ok(html.includes('<h3>Next section</h3>'));
+});

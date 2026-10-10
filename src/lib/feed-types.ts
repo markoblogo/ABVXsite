@@ -9,6 +9,7 @@ export type FeedItem = {
   tags?: string[];
   excerpt?: string;
   coverImage?: string;
+  videoUrl?: string;
 };
 
 export const FEED_REVALIDATE_SECONDS = 900;

@@ -101,14 +101,15 @@ function postImage(post: FeedItem) {
 
 function nativeWritingFeed(): FeedItem[] {
   return getNativeWritingItems().map((item) => ({
-    source: 'abvx',
+    source: item.videoUrl ? 'youtube' : 'abvx',
     title: item.title,
     url: `/writing/${item.slug}`,
-    publishedAt: item.updatedAt || item.publishedAt || new Date().toISOString(),
+    publishedAt: item.videoUploadedAt || item.updatedAt || item.publishedAt || new Date().toISOString(),
     author: 'Anton BV',
     tags: item.tags,
     excerpt: item.summary || item.body.split(/\n+/).find(Boolean) || 'Native ABVX writing.',
     coverImage: item.coverImage?.src,
+    videoUrl: item.videoUrl,
   }));
 }
 
@@ -124,7 +125,9 @@ export default async function WritingPage({
     safeFeed(fetchSubstackFeed, 'https://abvx.substack.com/feed'),
     safeFeed((url) => fetchYoutubeFeed(url, youtubeSettings), youtubeSettings.feedUrl),
   ]);
-  const allPosts = mergeFeeds(nativeWritingFeed(), workingStoriesFeed(), medium, substack, youtube);
+  const native = nativeWritingFeed();
+  const ownedVideos = new Set(native.map(post => post.videoUrl).filter(Boolean));
+  const allPosts = mergeFeeds(native, workingStoriesFeed(), medium, substack, youtube.filter(post => !ownedVideos.has(post.url)));
   const posts =
     activeSource === 'all' ? allPosts : allPosts.filter((post) => post.source === activeSource);
   const featuredPost = posts[0];
@@ -185,6 +188,7 @@ export default async function WritingPage({
               asideExcerpt={nativeBodyExcerpt(featuredPost, 4)}
               href={featuredPost.url}
               source={featuredPost.source}
+              videoUrl={featuredPost.videoUrl}
               date={formatDate(featuredPost.publishedAt)}
               image={postImage(featuredPost)}
             />
@@ -205,6 +209,7 @@ export default async function WritingPage({
                     bodyExcerpt={nativeBodyExcerpt(post, 3)}
                     href={post.url}
                     source={post.source}
+                    videoUrl={post.videoUrl}
                     date={formatDate(post.publishedAt)}
                     image={postImage(post)}
                   />

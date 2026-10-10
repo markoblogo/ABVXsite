@@ -1,10 +1,14 @@
 import JsonLd from '@/components/JsonLd';
 import MarkdownContent from '@/components/MarkdownContent';
+import MediaPanel from '@/components/MediaPanel';
 import PageHeader from '@/components/PageHeader';
 import { getNativeWritingBySlug, getNativeWritingItems } from '@/content';
 import { defaultOgImage, imageMetadata, metadataWithImage, SITE_URL } from '@/lib/seo';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
+import styles from './article.module.css';
+import YouTubeEmbed, { youtubeVideoId } from '@/components/YouTubeEmbed';
 
 const languageLabels = { en: 'English', fr: 'Français', uk: 'Українською' };
 const translationNavLabels = { en: 'Other languages', fr: 'Autres langues', uk: 'Інші мови' };
@@ -30,7 +34,7 @@ export async function generateMetadata({
   const translations = getNativeWritingItems().filter((candidate) =>
     item.translationGroup && candidate.translationGroup === item.translationGroup && candidate.language);
   const metadata = metadataWithImage({
-    title: item.title,
+    title: item.seoTitle || item.title,
     description: item.summary,
     canonicalPath: `/writing/${item.slug}`,
     image: imageMetadata(item.heroImage || item.coverImage, defaultOgImage, 'page'),
@@ -56,6 +60,7 @@ export default async function NativeWritingPage({
   if (!item) notFound();
 
   const url = `${SITE_URL}/writing/${item.slug}`;
+  const videoId = item.videoUrl ? youtubeVideoId(item.videoUrl) : null;
 
   return (
     <div className="route-native-writing grid gap-8">
@@ -71,9 +76,12 @@ export default async function NativeWritingPage({
           dateModified: item.updatedAt || item.publishedAt,
           url,
           mainEntityOfPage: url,
+          ...(item.heroImage || item.coverImage ? { image: new URL((item.heroImage || item.coverImage)!.src, SITE_URL).href } : {}),
           author: {
             '@type': 'Person',
-            name: 'Anton BV',
+            '@id': `${SITE_URL}/#person`,
+            name: 'Anton Biletskyi-Volokh',
+            url: `${SITE_URL}/about`,
           },
           publisher: {
             '@type': 'Organization',
@@ -81,8 +89,20 @@ export default async function NativeWritingPage({
           },
         }}
       />
-      <PageHeader eyebrow="ABVX" title={item.title} summary={item.summary} />
+      {videoId ? <JsonLd id="jsonld-native-video" data={{
+        '@context': 'https://schema.org', '@type': 'VideoObject',
+        name: item.title, description: item.summary,
+        uploadDate: item.videoUploadedAt,
+        thumbnailUrl: `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`,
+        embedUrl: `https://www.youtube-nocookie.com/embed/${videoId}`,
+        url, mainEntityOfPage: url,
+        creator: { '@type': 'Person', '@id': `${SITE_URL}/#person`, name: 'Anton Biletskyi-Volokh' },
+      }} /> : null}
+      <PageHeader eyebrow="ABVX" title={item.title} summary={item.summary}>
+        <Link className="editorial-section-link" href="/writing">Writing <span aria-hidden="true">→</span></Link>
+      </PageHeader>
       <div className="native-writing-article__meta">
+        <Link href="/about">Anton Biletskyi-Volokh</Link>
         <span>{item.publishedAt ?? 'Undated'}</span>
         <span>{item.type}</span>
         {item.tags.map((tag) => (
@@ -98,7 +118,11 @@ export default async function NativeWritingPage({
           ))}
         </nav>
       ) : null}
-      <MarkdownContent className="native-writing-article__body">{item.body}</MarkdownContent>
+      <div className={`native-writing-article__body ${styles.body}`}>
+        {item.videoUrl ? <YouTubeEmbed href={item.videoUrl} title={item.title} />
+          : item.heroImage || item.coverImage ? <MediaPanel image={item.heroImage || item.coverImage} title={item.title} variant="writing" priority /> : null}
+        <MarkdownContent>{item.body}</MarkdownContent>
+      </div>
     </div>
   );
 }

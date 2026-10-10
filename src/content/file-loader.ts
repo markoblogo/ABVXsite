@@ -338,6 +338,8 @@ export function readNativeWritingFiles(): NativeWriting[] {
         primarySection: 'writing',
         appearsIn: ['writing'],
         source: 'abvx',
+        videoUrl: optionalString(data.videoUrl),
+        videoUploadedAt: optionalString(data.videoUploadedAt),
         language: ['en', 'fr', 'uk'].includes(stringValue(data.language))
           ? stringValue(data.language) as 'en' | 'fr' | 'uk' : undefined,
         translationGroup: stringValue(data.translationGroup) || undefined,

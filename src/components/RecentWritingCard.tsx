@@ -10,6 +10,7 @@ export default function RecentWritingCard({
   bodyExcerpt,
   href,
   source,
+  videoUrl,
   date,
   image,
 }: {
@@ -18,6 +19,7 @@ export default function RecentWritingCard({
   bodyExcerpt?: string;
   href: string;
   source: string;
+  videoUrl?: string;
   date?: string;
   image?: ContentImage;
 }) {
@@ -29,7 +31,7 @@ export default function RecentWritingCard({
     <article className={`recent-writing-card${source === 'youtube' || image ? '' : ' recent-writing-card--text-only'}`}>
       {source === 'youtube' ? (
         <div className="recent-writing-card__media">
-          <YouTubePreview href={href} title={title} image={image} />
+          <YouTubePreview href={videoUrl || href} title={title} image={image} />
         </div>
       ) : image ? (
         <Link
@@ -55,7 +57,7 @@ export default function RecentWritingCard({
         <p>{excerpt}</p>
         {!image && bodyExcerpt ? <p className="recent-writing-card__body-excerpt">{bodyExcerpt}</p> : null}
         <Link className="writing-read-link" href={href} target={target} rel={rel}>
-          {source === 'youtube' ? 'Watch on YouTube' : 'Read'} -&gt;
+          {source === 'youtube' ? (internal ? 'Watch and read notes' : 'Watch on YouTube') : 'Read'} -&gt;
         </Link>
       </div>
     </article>

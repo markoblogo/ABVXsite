@@ -1,24 +1,14 @@
 import { createHash } from 'node:crypto';
-import { existsSync, lstatSync, mkdirSync, readFileSync, writeFileSync, unlinkSync, realpathSync } from 'node:fs';
+import { existsSync, readFileSync, realpathSync } from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { parseMarkdownSource } from '../src/content/markdown-source.mjs';
 import { readWorkingStories, validateWorkingStory, workingStoryPath } from '../src/content/working-stories-lib.mjs';
 
+import { safePublicationTarget as safeTarget, planApprovedMedia, applyPublication } from './publication-media.mjs';
+
 const hash = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const fail = (message) => { throw new Error(message); };
-
-function safeTarget(root, relative) {
-  const absolute = path.join(root, relative);
-  // Existing symlink parents must not redirect writes outside this checkout.
-  let current = root;
-  if (lstatSync(root).isSymbolicLink()) fail('Checkout root must not be a symlink');
-  for (const part of relative.split('/')) {
-    current = path.join(current, part);
-    if (existsSync(current) && lstatSync(current).isSymbolicLink()) fail(`Symlink target refused: ${relative}`);
-  }
-  return absolute;
-}
 
 export function planWorkingStory(packet, root = process.cwd()) {
   root = path.resolve(root);
@@ -40,26 +30,7 @@ export function planWorkingStory(packet, root = process.cwd()) {
   const targetFile = safeTarget(root, `content/working-stories/${data.story_id}-${data.slug}.md`);
   if (existsSync(targetFile)) fail('Story file already exists');
   const referenced = new Set([data.coverImage, ...(data.illustrations || [])].filter(Boolean).map(image => image.src));
-  const media = [];
-  const targets = new Set();
-  for (const asset of packet.payload.media_assets || []) {
-    if (!referenced.has(asset.target) || targets.has(asset.target)) fail('Unreferenced or duplicate media destination');
-    if (!path.isAbsolute(asset.source)) fail('Media source must be an absolute local path');
-    const bytes = readFileSync(asset.source);
-    if (hash(bytes) !== asset.sha256) fail('Approved media hash mismatch');
-    const image = bytes.subarray(0, 12);
-    const recognized = asset.target.endsWith('.png') ? image.subarray(0, 8).equals(Buffer.from([137,80,78,71,13,10,26,10]))
-      : /\.jpe?g$/.test(asset.target) ? image[0] === 255 && image[1] === 216 && image[2] === 255
-      : image.subarray(0, 4).toString() === 'RIFF' && image.subarray(8, 12).toString() === 'WEBP';
-    if (!recognized) fail('Media bytes do not match the declared image type');
-    const target = safeTarget(root, `public${asset.target}`);
-    if (existsSync(target) && !readFileSync(target).equals(bytes)) fail('Media destination contains different bytes');
-    media.push({ target, bytes, reused: existsSync(target) });
-    targets.add(asset.target);
-  }
-  for (const src of referenced) {
-    if (!targets.has(src)) fail(`Missing approved media: ${src}`);
-  }
+  const media = planApprovedMedia(referenced, packet.payload.media_assets, root);
   return { source, targetFile, media, report: {
     operation: 'abvx.publish-working-story', slug: data.slug, storyId: data.story_id,
     canonicalPath: workingStoryPath(data), targetFile, sourceSha256: packet.payload.source_sha256,
@@ -68,22 +39,7 @@ export function planWorkingStory(packet, root = process.cwd()) {
   } };
 }
 
-export function applyWorkingStory(plan) {
-  const created = [];
-  try {
-    for (const asset of plan.media.filter(asset => !asset.reused)) {
-      mkdirSync(path.dirname(asset.target), { recursive: true });
-      writeFileSync(asset.target, asset.bytes, { flag: 'wx' });
-      created.push(asset.target);
-    }
-    mkdirSync(path.dirname(plan.targetFile), { recursive: true });
-    writeFileSync(plan.targetFile, plan.source, { flag: 'wx' });
-    created.push(plan.targetFile);
-  } catch (error) {
-    for (const file of created.reverse()) unlinkSync(file);
-    throw error;
-  }
-}
+export const applyWorkingStory = applyPublication;
 
 if (process.argv[1] && import.meta.url === pathToFileURL(realpathSync(process.argv[1])).href) {
   const args = process.argv.slice(2);

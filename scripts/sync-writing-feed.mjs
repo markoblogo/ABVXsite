@@ -28,22 +28,28 @@ export async function syncWritingFeed({ external = false, bootstrap = false } = 
   const items = nativeDiscoveryItems(Date.parse(now));
   if (external) {
     const { fetchMediumFeed, fetchSubstackFeed } = loadFeedModule(path.resolve('src/lib/feeds.ts'));
-    const { fetchYoutubeFeed } = loadFeedModule(path.resolve('src/lib/youtube-feed.ts'));
+    const { fetchYoutubeFeedWithStatus } = loadFeedModule(path.resolve('src/lib/youtube-feed.ts'));
     const youtube = JSON.parse(readFileSync('content/youtube.json', 'utf8'));
     const responses = await Promise.allSettled([
       fetchMediumFeed('https://abvcreative.medium.com/feed'),
       fetchSubstackFeed('https://abvx.substack.com/feed'),
-      fetchYoutubeFeed(youtube.feedUrl, youtube),
+      fetchYoutubeFeedWithStatus(youtube.feedUrl, youtube),
     ]);
     for (const [index, result] of responses.entries()) {
-      if (result.status === 'fulfilled' && result.value.length) items.push(...result.value);
+      const value = result.status === 'fulfilled' ? result.value : null;
+      const fetched = Array.isArray(value) ? value : value?.items || [];
+      const upstreamAvailable = Array.isArray(value) ? Boolean(value.length) : value?.upstreamAvailable;
+      if (upstreamAvailable && fetched.length) items.push(...fetched);
       else {
         const source = ['medium', 'substack', 'youtube'][index];
         const fallback = await fetchWritingSourceFallback(source);
         if (fallback.length) {
           items.push(...fallback);
           console.log(`Writing source ${source}: ${fallback.length} records via ABVX fallback.`);
-        } else console.warn(`Writing source ${source} unavailable/empty; preserving stored posts.`);
+        } else {
+          items.push(...fetched);
+          console.warn(`Writing source ${source} unavailable/empty; preserving stored posts.`);
+        }
       }
     }
   }

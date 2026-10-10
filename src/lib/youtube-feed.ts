@@ -51,6 +51,13 @@ export function parseYoutubeFeed(xml: string, settings: YoutubeFeedSettings, now
 }
 
 export async function fetchYoutubeFeed(feedUrl: string, settings: YoutubeFeedSettings): Promise<FeedItem[]> {
+  return (await fetchYoutubeFeedWithStatus(feedUrl, settings)).items;
+}
+
+export async function fetchYoutubeFeedWithStatus(feedUrl: string, settings: YoutubeFeedSettings) {
   const xml = await fetchAllowedText(feedUrl, 'youtube', 'feed');
-  return parseYoutubeFeed(xml || '', settings);
+  return {
+    items: parseYoutubeFeed(xml || '', settings),
+    upstreamAvailable: Boolean(xml && /<feed\b/i.test(xml) && getTag(xml, 'yt:channelId')?.trim() === settings.channelId),
+  };
 }

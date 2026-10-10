@@ -1022,6 +1022,24 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: Гео Шкурупій, Géo Chkouroupiy, Geo Shkurupii, Modernisme ukrainien, українська література, французький переклад, Jeanne la bataillonneuse, Miss Adrienne
 
+- 40 AI Agents Built a Superman Flight Simulator in 7 Hours (45M Tokens)
+  URL: https://abvx.xyz/writing/40-ai-agents-superman-flight-simulator
+  Summary: Watch my SKYFLY video and read practical notes on the reported 40-agent workflow, 45 million tokens, browser architecture and checks that matter beyond a demo.
+  Group: writing
+  Tags: AI agents, agentic coding, multi-agent development, SKYFLY, Three.js, token budgets
+
+- How I Work With AI Agents in 2026
+  URL: https://abvx.xyz/writing/how-i-work-with-ai-agents-2026
+  Summary: My practical AI agent workflow in 2026: orchestrator agents, 20–40 subagents, long-running sessions, taste gates, automation and why AI-native work keeps changing.
+  Group: writing
+  Tags: AI agents, multi-agent orchestration, agent workflows, AI automation, human review
+
+- Where Is AI Startup Funding Actually Going? I Analyzed 7,740 Companies
+  URL: https://abvx.xyz/writing/ai-startup-funding-trends-7740-companies
+  Summary: I analyzed 7,740 AI startups across 20 use cases to see where funding is growing, from voice agents and robotics to Legal AI and mega-rounds.
+  Group: writing
+  Tags: AI startup funding, AI research, MCP, Anysite, voice agents, robotics, Legal AI
+
 ## Working Stories
 
 - Working Stories

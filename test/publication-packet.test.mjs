@@ -34,6 +34,55 @@ function withMedia(root) {
   return value;
 }
 
+function nativePacket(data) {
+  const source = `---\n${JSON.stringify(data, null, 2)}\n---\n\n${body}\n`;
+  return { schema_version: 'v1', mode: 'REPORT_ONLY_HANDOFF', project: 'abvxsite', surface: 'writing',
+    slug: data.slug, title: data.title, kind: data.type,
+    consumer_operation: { id: 'abvx.publish-writing' },
+    payload: { source_markdown: source, source_sha256: hash(source), body_lines: [body], language: 'en', date_published: data.publishedAt, media_assets: [] },
+    enrichment: { meta_description: data.summary, tags: [] } };
+}
+
+test('signed native packets preserve exact metadata/media and require approved reused images', () => fixture(root => {
+  const asset = withMedia(root).payload.media_assets[0];
+  const value = nativePacket({ id: 'a-native-note', slug: 'a-native-note', title: 'A note', seoTitle: 'A search title',
+    primarySection: 'writing', type: 'article', summary: 'Test.', status: 'live', visibility: 'public', publishedAt: '2020-01-01', language: 'en',
+    media: { src: asset.target, alt: 'Approved image', width: 1, height: 1 } });
+  const file = path.join(root, 'packet.json');
+  const run = (packetValue, mode = '--dry-run') => {
+    writeFileSync(file, JSON.stringify(packetValue));
+    return execFileSync(process.execPath, [writingCommand, '--packet', file, mode], { cwd: root, stdio: 'pipe' });
+  };
+  mkdirSync(path.join(root, 'public/media/stories'), { recursive: true });
+  writeFileSync(path.join(root, `public${asset.target}`), readFileSync(asset.source));
+  assert.throws(() => run(value), /Missing approved media/);
+  value.payload.media_assets = [asset];
+  const bad = structuredClone(value);
+  bad.payload.source_markdown += 'tampered';
+  assert.throws(() => run(bad), /source hash/);
+  const result = JSON.parse(run(value));
+  assert.equal(result.media[0].reused, true);
+  assert.equal(existsSync(path.join(root, 'content')), false);
+  run(value, '--write');
+  assert.equal(readFileSync(path.join(root, 'content/writing/a-native-note.md'), 'utf8'), value.payload.source_markdown);
+}));
+
+test('signed video packets require a valid YouTube URL, upload date and matching thumbnail', () => fixture(root => {
+  const data = { id: 'a-video', slug: 'a-video', title: 'A video', primarySection: 'writing', type: 'article', summary: 'Video notes.',
+    status: 'live', visibility: 'public', publishedAt: '2020-01-01', language: 'en',
+    videoUrl: 'https://www.youtube.com/watch?v=6q2JG0gCyDg', videoUploadedAt: '2020-01-01T10:00:00Z',
+    media: { src: 'https://i.ytimg.com/vi/6q2JG0gCyDg/hqdefault.jpg', alt: 'Video', width: 480, height: 360 } };
+  const file = path.join(root, 'packet.json');
+  const run = (sourceData) => {
+    writeFileSync(file, JSON.stringify(nativePacket(sourceData)));
+    return execFileSync(process.execPath, [writingCommand, '--packet', file, '--dry-run'], { cwd: root, stdio: 'pipe' });
+  };
+  assert.throws(() => run({ ...data, videoUrl: 'https://example.com/video' }), /Invalid YouTube/);
+  assert.throws(() => run({ ...data, videoUploadedAt: '2099-01-01T00:00:00Z' }), /Invalid YouTube/);
+  assert.throws(() => run({ ...data, media: { ...data.media, src: 'https://i.ytimg.com/vi/abcdefghijk/hqdefault.jpg' } }), /matching YouTube thumbnail/);
+  assert.equal(JSON.parse(run(data)).mode, 'DRY_RUN');
+}));
+
 test('dry-run makes no changes; apply preserves exact source and approved media bytes', () => fixture(root => {
   const value = withMedia(root);
   const plan = planWorkingStory(value, root);
@@ -148,7 +197,7 @@ test('native Writing packets preserve author body and language; unsafe or unsupp
   const value = { project: 'abvxsite', surface: 'writing', slug: 'a-native-note', title: 'A note', kind: 'note',
     consumer_operation: { id: 'abvx.publish-writing' },
     payload: { body_lines: [body], language: 'uk' },
-    enrichment: { meta_description: 'A test note.', tags: [], date_published: '2020-01-01', date_modified: '2020-01-01' } };
+    enrichment: { seo_title: 'A note for Search', meta_description: 'A test note.', tags: [], date_published: '2020-01-01', date_modified: '2020-01-01' } };
   const file = path.join(root, 'packet.json');
   const run = (packetValue, mode) => {
     writeFileSync(file, JSON.stringify(packetValue));
@@ -161,6 +210,7 @@ test('native Writing packets preserve author body and language; unsafe or unsupp
   run(value, '--write');
   const output = readFileSync(path.join(root, 'content/writing/a-native-note.md'), 'utf8');
   assert.ok(output.includes('"language": "uk"'));
+  assert.ok(output.includes('"seoTitle": "A note for Search"'));
   assert.ok(output.endsWith(`${body}\n`));
   assert.throws(() => run(value, '--dry-run'));
 }));

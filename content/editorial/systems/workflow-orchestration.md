@@ -15,3 +15,7 @@ This separation keeps general project rules distinct from task-specific procedur
 Structured workflows define stages such as intake, inspection, implementation, verification and handoff. Checkpoints let a person review consequential decisions and prevent a tool from treating an attempted action as a completed result. The purpose is dependable execution, not maximum autonomy.
 
 These projects explore practical ways to organize AI coding work so it is easier to understand, test and continue. Visit the linked project pages for each system's specific scope and implementation.
+
+## Examples from practice
+
+[How I Work With AI Agents in 2026](/writing/how-i-work-with-ai-agents-2026) describes my orchestrator workflow, parallel tasks, review gates and the parts I choose to automate. For a concrete build to inspect, [the SKYFLY video and technical notes](/writing/40-ai-agents-superman-flight-simulator) separate the reported agent and token counts from questions about architecture, repeatability and product quality.

@@ -6,6 +6,8 @@ The ABVX catalogue groups these experiments into three related areas: workflow a
 
 ## From prompts to operations
 
+For an account of these choices in day-to-day work, read [How I Work With AI Agents in 2026](/writing/how-i-work-with-ai-agents-2026), including orchestrator roles, review checkpoints and automation boundaries.
+
 A prompt is one moment in a larger chain of work. An agent may need to inspect a repository, find the applicable instructions, choose a bounded method, change files, run checks and report what the evidence proves. When these steps are explicit, a team can review how work moved from request to result.
 
 This does not mean automating every judgment. Some decisions depend on project owners, external approval or information a tool cannot verify. A well-designed workflow makes those boundaries clear instead of hiding them behind a successful code-generation step.

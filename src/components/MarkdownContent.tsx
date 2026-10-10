@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 type Block =
   | { type: 'heading'; level: 2 | 3 | 4; text: string }
   | { type: 'paragraph'; text: string }
+  | { type: 'code'; text: string }
   | { type: 'list'; items: string[]; ordered: boolean };
 
 type InlineMatch = {
@@ -107,6 +108,7 @@ function parseMarkdownBlocks(markdown: string, headingOffset: 0 | 1): Block[] {
   let paragraph: string[] = [];
   let list: string[] = [];
   let orderedList = false;
+  let code: string[] | null = null;
 
   function flushParagraph() {
     if (!paragraph.length) return;
@@ -123,6 +125,19 @@ function parseMarkdownBlocks(markdown: string, headingOffset: 0 | 1): Block[] {
 
   for (const rawLine of lines) {
     const line = rawLine.trim();
+    if (/^```[\w-]*$/.test(line) && (code === null || line === '```')) {
+      flushParagraph();
+      flushList();
+      if (code !== null) {
+        blocks.push({ type: 'code', text: code.join('\n') });
+        code = null;
+      } else code = [];
+      continue;
+    }
+    if (code !== null) {
+      code.push(rawLine);
+      continue;
+    }
 
     if (!line) {
       flushParagraph();
@@ -159,6 +174,7 @@ function parseMarkdownBlocks(markdown: string, headingOffset: 0 | 1): Block[] {
 
   flushParagraph();
   flushList();
+  if (code !== null) blocks.push({ type: 'code', text: code.join('\n') });
   return blocks;
 }
 
@@ -177,6 +193,7 @@ export default function MarkdownContent({
   return (
     <div className={['content-markdown', className].filter(Boolean).join(' ')}>
       {blocks.map((block, index): ReactNode => {
+        if (block.type === 'code') return <pre key={`code-${index}`}><code>{block.text}</code></pre>;
         if (block.type === 'heading') {
           const Heading = `h${block.level}` as 'h2' | 'h3' | 'h4';
           return <Heading key={`${block.type}-${index}`}>{inlineMarkdownNodes(block.text)}</Heading>;

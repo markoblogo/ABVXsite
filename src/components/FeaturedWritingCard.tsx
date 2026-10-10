@@ -10,6 +10,7 @@ export default function FeaturedWritingCard({
   asideExcerpt,
   href,
   source,
+  videoUrl,
   date,
   image,
 }: {
@@ -18,6 +19,7 @@ export default function FeaturedWritingCard({
   asideExcerpt?: string;
   href: string;
   source: string;
+  videoUrl?: string;
   date?: string;
   image?: ContentImage;
 }) {
@@ -29,7 +31,7 @@ export default function FeaturedWritingCard({
     <article className={`featured-writing-card${image ? '' : ' featured-writing-card--text-only'}`}>
       {source === 'youtube' ? (
         <div className="featured-writing-card__media">
-          <YouTubeEmbed href={href} title={title} />
+          <YouTubeEmbed href={videoUrl || href} title={title} />
         </div>
       ) : image ? (
         <Link
@@ -55,7 +57,7 @@ export default function FeaturedWritingCard({
           </h2>
           <p>{excerpt}</p>
           <Link className="writing-read-link" href={href} target={target} rel={rel}>
-            {source === 'youtube' ? 'Watch on YouTube' : 'Read essay'} -&gt;
+            {source === 'youtube' ? (internal ? 'Watch and read notes' : 'Watch on YouTube') : 'Read essay'} -&gt;
           </Link>
         </div>
         {!image && asideExcerpt ? (

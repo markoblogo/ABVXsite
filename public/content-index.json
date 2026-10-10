@@ -5309,7 +5309,7 @@
       "title": "AI Workflow & Orchestration for Reviewable Development",
       "summary": "How orchestration, repository instructions and reusable agent skills structure AI-assisted coding from context through validation.",
       "publishedAt": "2026-10-06",
-      "updatedAt": "2026-10-06",
+      "updatedAt": "2026-10-10",
       "language": "en",
       "canonicalUrl": "https://abvx.xyz/editorial/systems/workflow-orchestration",
       "tags": [
@@ -5334,7 +5334,7 @@
       "title": "AI-Native Development Systems for Structured Software Work",
       "summary": "An overview of workflows, development surfaces and protocols that make AI-assisted software work more reviewable and repeatable.",
       "publishedAt": "2026-10-06",
-      "updatedAt": "2026-10-06",
+      "updatedAt": "2026-10-10",
       "language": "en",
       "canonicalUrl": "https://abvx.xyz/editorial/systems/ai-native-development-systems",
       "tags": [
@@ -6368,6 +6368,39 @@
       "ecosystem": "Writing",
       "group": null,
       "status": "live",
+      "title": "40 AI Agents Built a Superman Flight Simulator in 7 Hours (45M Tokens)",
+      "summary": "Watch my SKYFLY video and read practical notes on the reported 40-agent workflow, 45 million tokens, browser architecture and checks that matter beyond a demo.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/40-ai-agents-superman-flight-simulator",
+      "tags": [
+        "AI agents",
+        "agentic coding",
+        "multi-agent development",
+        "SKYFLY",
+        "Three.js",
+        "token budgets"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=6q2JG0gCyDg"
+        },
+        {
+          "type": "github",
+          "label": "SKYFLY source and licence",
+          "url": "https://github.com/vakovalskii/skyfly"
+        }
+      ],
+      "updatedAt": "2026-10-10",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
       "title": "A Personal Blog, Finally",
       "summary": "A place for the things that do not fit into professional feeds.",
       "canonicalUrl": "https://abvx.xyz/writing/a-personal-blog-finally",
@@ -6400,6 +6433,27 @@
           "url": "https://www.youtube.com/@ABV_Creative"
         }
       ],
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "How I Work With AI Agents in 2026",
+      "summary": "My practical AI agent workflow in 2026: orchestrator agents, 20–40 subagents, long-running sessions, taste gates, automation and why AI-native work keeps changing.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/how-i-work-with-ai-agents-2026",
+      "tags": [
+        "AI agents",
+        "multi-agent orchestration",
+        "agent workflows",
+        "AI automation",
+        "human review"
+      ],
+      "links": [],
+      "updatedAt": "2026-10-10",
       "related": []
     },
     {
@@ -6511,6 +6565,29 @@
           "url": "https://www.behance.net/gallery/222816209/Flour-Meets-Fashion-Global-Packaging-Strategy"
         }
       ],
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Where Is AI Startup Funding Actually Going? I Analyzed 7,740 Companies",
+      "summary": "I analyzed 7,740 AI startups across 20 use cases to see where funding is growing, from voice agents and robotics to Legal AI and mega-rounds.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/ai-startup-funding-trends-7740-companies",
+      "tags": [
+        "AI startup funding",
+        "AI research",
+        "MCP",
+        "Anysite",
+        "voice agents",
+        "robotics",
+        "Legal AI"
+      ],
+      "links": [],
+      "updatedAt": "2026-10-10",
       "related": []
     },
     {

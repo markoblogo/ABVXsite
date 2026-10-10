@@ -33,6 +33,29 @@ function compile(relative, imports = {}) {
   return compiledModule.exports;
 }
 const normalized = (patch = {}) => ({ ...metadata(), summary: 'Public summary', language: 'en', source: 'ws-001.md', body, book: { include: true, status: 'draft' }, ...patch });
+const releaseIndex = (stories) => ({ items: stories.map((story) => lib.publicWorkingStory(story, stories)) });
+
+test('runtime publication remains frozen to the generated index when a future date passes', () => {
+  const current = normalized();
+  const future = normalized({ date: '2027-01-01', slug: 'future-story', story_id: 'ws-002' });
+  const index = releaseIndex(lib.publishedWorkingStories([current, future], Date.parse('2026-10-10')));
+  assert.deepEqual(lib.indexedWorkingStories([current, future], index).map(s => s.story_id), ['ws-001']);
+  const nextRelease = releaseIndex(lib.publishedWorkingStories([current, future], Date.parse('2027-01-02')));
+  assert.deepEqual(lib.indexedWorkingStories([current, future], nextRelease).map(s => s.story_id), ['ws-002', 'ws-001']);
+  assert.deepEqual(lib.indexedWorkingStories([{ ...current, visibility: 'private' }], index), []);
+});
+
+test('optional story media validates local paths, alt text, dimensions and existing placement headings', () => {
+  const image = { src: '/media/stories/test.webp', alt: 'A visual concept', width: 1200, height: 674 };
+  const illustration = { ...image, caption: 'Concept illustration.', afterHeading: 'A decision' };
+  assert.deepEqual(lib.validateWorkingStory(metadata({ coverImage: image, illustrations: [illustration], caseStudy: { label: 'View case', url: 'https://www.behance.net/gallery/1/case' } }), body), []);
+  for (const patch of [{ coverImage: { ...image, src: '/media/../private.png' } }, { coverImage: { ...image, alt: '' } }, { coverImage: { ...image, width: 0 } }, { illustrations: [{ ...illustration, afterHeading: 'Missing heading' }] }, { caseStudy: { label: 'Case', url: 'javascript:alert(1)' } }]) assert.ok(lib.validateWorkingStory(metadata(patch), body).length);
+  const story = normalized({ coverImage: image, illustrations: [illustration], caseStudy: { label: 'View case', url: 'https://www.behance.net/gallery/1/case' } });
+  const index = lib.publicWorkingStory(story, [story]);
+  assert.equal(index.image, 'https://abvx.xyz/media/stories/test.webp');
+  assert.equal(index.links[1].url, story.caseStudy.url);
+  assert.ok(!lib.workingStoriesExport([story]).manuscript.includes('https://www.behance.net'));
+});
 
 test('loads dedicated stories with stable IDs, defaults and preserved Markdown', () => fixture(({ dir, write }) => {
   write('ws-001.md', metadata({ visibility: undefined }));
@@ -164,10 +187,11 @@ test('story template reuses article typography, emits SEO and hides internal met
     '@/content/working-stories': lib, '@/lib/seo': { SITE_URL: 'https://abvx.xyz' },
     './JsonLd': compile('src/components/JsonLd.tsx', { 'next/headers': { headers: async () => new Headers() } }),
     './MarkdownContent': compile('src/components/MarkdownContent.tsx'),
+    './MediaPanel': compile('src/components/MediaPanel.tsx'),
     './PageHeader': compile('src/components/PageHeader.tsx'),
   }).default;
   const story = normalized();
-  const render = async (related) => new Response(await renderToReadableStream(createElement(component, { story, related }))).text();
+  const render = async (related, currentStory = story) => new Response(await renderToReadableStream(createElement(component, { story: currentStory, related }))).text();
   const html = await render([]);
   assert.ok(html.includes('native-writing-article__body'));
   assert.ok(html.includes('<em>story</em>'));
@@ -179,11 +203,18 @@ test('story template reuses article typography, emits SEO and hides internal met
   assert.ok(related.includes('More Working Stories from this project'));
   assert.ok(related.includes('href="/writing/working-stories/second"'));
   assert.ok(related.includes('Second public title'));
+  const image = { src: '/media/stories/test.webp', alt: 'Concept artwork', width: 1200, height: 674 };
+  const illustrated = await render([], normalized({ coverImage: image, illustrations: [{ ...image, caption: 'A concept, not a production photograph.', afterHeading: 'A decision' }], caseStudy: { label: 'See visual case', url: 'https://www.behance.net/gallery/1/case' } }));
+  assert.equal((illustrated.match(/<img /g) || []).length, 2);
+  assert.ok(illustrated.includes('alt="Concept artwork"'));
+  assert.ok(illustrated.includes('A concept, not a production photograph.'));
+  assert.ok(illustrated.indexOf('Still <strong>original</strong>') < illustrated.indexOf('working-story-illustration'));
+  assert.ok(illustrated.includes('target="_blank" rel="noopener noreferrer"'));
 });
 
 test('server adapter retrieves the dedicated collection and contributes normal ABVX feed items', () => fixture(({ root, write }) => {
   write('ws-001.md', metadata({ source_session: 'session-001' }));
-  const adapter = compile('src/content/working-stories.ts', { './working-stories-lib.mjs': lib });
+  const adapter = compile('src/content/working-stories.ts', { './working-stories-lib.mjs': lib, '../../public/content-index.json': releaseIndex([normalized()]) });
   const cwd = process.cwd();
   try {
     process.chdir(root);
@@ -197,15 +228,16 @@ test('server adapter retrieves the dedicated collection and contributes normal A
   } finally { process.chdir(cwd); }
 }));
 
-test('future route builds public params, canonical article metadata and 404s hidden/unknown stories', async () => {
+test('story route renders dynamically, supplies canonical metadata and 404s unknown stories even with no static params', async () => {
   const story = normalized();
   const route = compile('src/app/writing/working-stories/[slug]/page.tsx', {
     '@/content/working-stories': { getWorkingStories: () => [story], getWorkingStoryBySlug: (slug) => slug === story.slug ? story : undefined, getRelatedWorkingStories: () => [], workingStoryPath: lib.workingStoryPath },
     '@/components/WorkingStoryArticle': { default: () => null, __esModule: true },
-    '@/lib/seo': { defaultOgImage: { src: '/og.png' }, metadataWithImage: (options) => options },
+    '@/lib/seo': { defaultOgImage: { src: '/og.png' }, imageMetadata: (image, fallback) => image || fallback, metadataWithImage: (options) => options },
     'next/navigation': { notFound: () => { throw new Error('404'); } },
   });
-  assert.deepEqual(route.generateStaticParams(), [{ slug: story.slug }]);
+  assert.equal(route.dynamic, 'force-dynamic');
+  assert.equal(route.generateStaticParams, undefined);
   const metadata = await route.generateMetadata({ params: Promise.resolve({ slug: story.slug }) });
   assert.equal(metadata.canonicalPath, '/writing/working-stories/test-only-story');
   assert.equal(metadata.type, 'article');
@@ -218,7 +250,7 @@ test('sitemap discovers published stories and series while excluding private and
   write('ws-001.md', metadata({ updatedAt: '2021-01-01' }));
   write('private.md', metadata({ story_id: 'ws-002', slug: 'private', visibility: 'private' }));
   write('future.md', metadata({ story_id: 'ws-003', slug: 'future', date: '2099-01-01' }));
-  const adapter = compile('src/content/working-stories.ts', { './working-stories-lib.mjs': lib });
+  const adapter = compile('src/content/working-stories.ts', { './working-stories-lib.mjs': lib, '../../public/content-index.json': releaseIndex([normalized()]) });
   const series = JSON.parse(readFileSync(path.join(repo, 'content/working-stories.json')));
   const sitemap = compile('src/app/sitemap.ts', {
     '../../content/pages.json': JSON.parse(readFileSync(path.join(repo, 'content/pages.json'))),
@@ -235,5 +267,8 @@ test('sitemap discovers published stories and series while excluding private and
     assert.equal(entries.length, 2);
     assert.equal(entries.find((item) => item.url.endsWith('/test-only-story')).lastModified.toISOString(), '2021-01-01T00:00:00.000Z');
     assert.ok(!routes.some((item) => /\/(private|future)$/.test(item.url)));
+    for (const url of ['https://abvx.xyz', 'https://abvx.xyz/ami', 'https://abvx.xyz/fr/ami', 'https://abvx.xyz/llmo']) {
+      assert.ok(routes.find(item => item.url === url).lastModified >= new Date(series.updatedAt), url + ' must include the series update date');
+    }
   } finally { process.chdir(cwd); }
 }));

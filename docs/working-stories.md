@@ -1,6 +1,6 @@
 # Working Stories
 
-A dedicated editorial collection, not a second CMS or a book outline. No stories are published initially. Sources use the existing Markdown renderer and **JSON frontmatter** parser.
+A dedicated editorial collection, not a second CMS or a book outline. Sources use the existing Markdown renderer and **JSON frontmatter** parser.
 
 ## Add a story
 
@@ -39,9 +39,17 @@ This example is documentation only; do not publish it as placeholder content.
 
 Optional `source_session` uses a neutral `session-001`-style identifier. One session can produce multiple independently published stories and span several clusters. Optional `summary` falls back to the title, `language` defaults to `en` (`en`, `uk`, `fr` supported), and `updatedAt` must be a real date on/after publication.
 
+Optional website media and references live in frontmatter, keeping them out of manuscript exports:
+
+- `coverImage`: `{ "src": "/media/working-stories/example.webp", "alt": "Description", "width": 1200, "height": 674 }`. Used in the article, Writing feed, social metadata and public index.
+- `illustrations`: an array of the same image fields plus `caption` and `afterHeading`. The latter must exactly match an existing `##` heading; images appear after that section. Use captions that distinguish concepts from production photographs.
+- `caseStudy`: `{ "label": "See the visual case study on Behance", "url": "https://www.behance.net/gallery/..." }`. Appears after the first illustrated section and in the public index. Links open in a new tab.
+
+Keep images in `public/media/`, use their actual dimensions, and include descriptive alt text. The validator checks local image paths, existence and heading placement. Preserve original artwork rather than browser controls from screenshots.
+
 ## Publish and relate
 
-`visibility` defaults to `draft`; set it explicitly to `public` and use a publication `date` on/before today UTC to publish. `private`, `draft` and future-dated stories do not enter public pages, feeds, sitemap or discovery indexes. A date change still requires the normal build/deployment and index regeneration; there is no scheduled publishing service.
+`visibility` defaults to `draft`; set it explicitly to `public` and use a publication `date` on/before today UTC when generating a release. `private`, `draft` and future-dated stories do not enter that release's discovery index. Runtime pages, feeds, related links and sitemap use the published Working Story URLs in the generated `public/content-index.json` as their release snapshot. Passing a future date does not publish a story automatically: regenerate both indexes, rebuild and deploy together. There is no scheduled publishing service.
 
 Publication is independent of `book.status` and `book.include`. A public story excluded from the book remains publicly available.
 

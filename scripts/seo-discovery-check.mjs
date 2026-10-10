@@ -3,7 +3,9 @@ import { readFileSync } from 'node:fs';
 import { contentFiles, parseContentFile } from './content-lib.mjs';
 import { chromium } from 'playwright';
 import { withQaServer } from './qa-server.mjs';
-import { publishedWorkingStories, readWorkingStories, workingStoryPath } from '../src/content/working-stories-lib.mjs';
+import { indexedWorkingStories, readWorkingStories, workingStoryPath } from '../src/content/working-stories-lib.mjs';
+
+const workingSeries = JSON.parse(readFileSync('content/working-stories.json', 'utf8'));
 
 const french = '/writing/premiere-traduction-francaise-jeanne-bataillonneuse-miss-adrienne';
 const ukrainian = '/writing/vyishov-pershyi-frantsuzkyi-pereklad-jeanne-bataillonneuse';
@@ -71,7 +73,9 @@ await withQaServer(async (base) => {
     assert.ok(indexUrls.has('https://abvx.xyz' + seriesRoute));
     assert.ok(llms.includes('URL: https://abvx.xyz' + seriesRoute + '\n'));
     assert.ok(routes.includes('https://abvx.xyz' + seriesRoute));
-    const publicStories = publishedWorkingStories(readWorkingStories());
+    const publicStories = indexedWorkingStories(readWorkingStories(), index);
+    const missingStory = await page.request.get(base + '/writing/working-stories/unknown-story-for-qa');
+    assert.equal(missingStory.status(), 404, 'unknown Working Story must not return 500');
     const publicStoryUrls = new Set(publicStories.map((story) => 'https://abvx.xyz' + workingStoryPath(story)));
     for (const story of readWorkingStories()) {
       const url = 'https://abvx.xyz' + workingStoryPath(story);
@@ -85,6 +89,22 @@ await withQaServer(async (base) => {
         await page.goto(base + workingStoryPath(story));
         assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'), url);
         assert.equal(await page.locator('html').getAttribute('lang'), story.language);
+        if (story.coverImage) {
+          assert.equal(await page.locator('meta[property="og:image"]').getAttribute('content'), 'https://abvx.xyz' + story.coverImage.src);
+          assert.equal(await page.locator('.working-story-body img').count(), 1 + (story.illustrations || []).length);
+          for (const width of [320, 390, 768, 1280]) {
+            await page.setViewportSize({ width, height: 900 });
+            assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), 'illustrated Working Story overflow');
+          }
+        }
+        if (story.caseStudy) {
+          const links = page.locator(`main a[href="${story.caseStudy.url}"]`);
+          assert.ok(await links.count());
+          for (const link of await links.all()) {
+            assert.equal(await link.getAttribute('target'), '_blank');
+            assert.equal(await link.getAttribute('rel'), 'noopener noreferrer');
+          }
+        }
       }
     }
     for (const width of [360, 390, 768, 1280]) {
@@ -95,7 +115,7 @@ await withQaServer(async (base) => {
       await page.waitForURL(base + seriesRoute);
       assert.equal(await page.locator('h1').textContent(), 'Working Stories');
       assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'), 'https://abvx.xyz' + seriesRoute);
-      if (!publicStories.length) assert.ok((await page.locator('main').innerText()).includes('The first Working Story will appear'));
+      if (!publicStories.length) assert.ok((await page.locator('main').innerText()).includes(workingSeries.emptyState));
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), 'Working Stories horizontal overflow');
     }
     for (const folder of ['work', 'books', 'series', 'writing']) {

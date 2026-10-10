@@ -1028,6 +1028,11 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/working-stories
   Summary: Cases, experiments, mistakes and unusual decisions from my professional life.
 
+- When the Flour Bag Became Part of the Product
+  URL: https://abvx.xyz/writing/working-stories/when-the-flour-bag-became-part-of-the-product
+  Summary: How reusable flour packaging became part of the value proposition, helping a Ukrainian exporter differentiate a commodity without changing the flour.
+  Topics: branding, packaging, marketing, export, creative-direction, agriculture
+
 ## Notes for crawlers and LLM agents
 
 - Canonical pages use https://abvx.xyz URLs.

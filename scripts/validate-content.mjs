@@ -152,7 +152,12 @@ try {
 
 let storyCount = 0;
 try {
-  storyCount = readWorkingStories().length;
+  const stories = readWorkingStories();
+  storyCount = stories.length;
+  for (const story of stories) {
+    checkImage(story.source, story.coverImage, 'coverImage');
+    for (const [index, image] of (story.illustrations || []).entries()) checkImage(story.source, image, `illustrations[${index}]`);
+  }
   const file = 'content/working-stories.json';
   const series = JSON.parse(readFileSync(file, 'utf8'));
   for (const field of ['title', 'summary', 'emptyState']) {

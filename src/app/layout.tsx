@@ -3,7 +3,7 @@ import './globals.css';
 
 import { getNativeWritingBySlug, getNativeWritingItems } from '@/content';
 import { getEditorialArticles } from '@/content/editorials';
-import { getWorkingStoryBySlug } from '@/content/working-stories';
+import { getWorkingStories, workingStoryPath } from '@/content/working-stories';
 
 import DocumentLanguage from '@/components/DocumentLanguage';
 import SiteFooter from '@/components/SiteFooter';
@@ -229,9 +229,10 @@ export default async function RootLayout({
   const pathname = requestHeaders.get('x-site-pathname') || '/';
   const writingSlug = pathname.match(/^\/writing\/([^/]+)$/)?.[1];
   const storySlug = pathname.match(/^\/writing\/working-stories\/([^/]+)$/)?.[1];
+  const storyLanguages = Object.fromEntries(getWorkingStories().map((story) => [workingStoryPath(story), story.language]));
   const editorialLanguages = Object.fromEntries(getEditorialArticles().filter((article) => article.language).map((article) => [article.href, article.language!]));
   const language = pathname.startsWith('/fr/') ? 'fr'
-    : storySlug ? getWorkingStoryBySlug(storySlug)?.language || 'en'
+    : storySlug ? storyLanguages[pathname] || 'en'
       : writingSlug ? getNativeWritingBySlug(writingSlug)?.language || 'en' : editorialLanguages[pathname] || 'en';
 
   return (
@@ -262,7 +263,7 @@ export default async function RootLayout({
         <link rel="alternate" type="application/rss+xml" title="ABVX Substack feed" href="https://abvx.substack.com/feed" />
       </head>
       <body>
-        <DocumentLanguage writingLanguages={{ ...Object.fromEntries(getNativeWritingItems().map((item) => [`/writing/${item.slug}`, item.language || 'en'])), ...editorialLanguages }} />
+        <DocumentLanguage writingLanguages={{ ...Object.fromEntries(getNativeWritingItems().map((item) => [`/writing/${item.slug}`, item.language || 'en'])), ...editorialLanguages, ...storyLanguages }} />
         <SiteHeader />
         <main className="site-main">{children}</main>
         <SiteFooter />

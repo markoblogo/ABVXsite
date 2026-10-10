@@ -26,7 +26,7 @@ Global identity metadata is in `src/app/layout.tsx`; shared schema and metadata 
 | --- | --- | --- |
 | Medium | `https://abvcreative.medium.com/feed` | Article cards linking to the source |
 | Substack | `https://abvx.substack.com/feed` | Article cards linking to the source |
-| YouTube | `content/youtube.json` | Embedded player, title, date, excerpt, and optional source link |
+| YouTube | `content/youtube.json` | Featured player, compact recent preview, and text-only archive links |
 
 The homepage separately reads Medium, Substack, and `https://mn7r.com/rss.xml` for its latest-source cards. MN7R RSS is not currently part of the Writing archive.
 
@@ -39,7 +39,7 @@ Feed HTTP access uses allowlisted hosts in `src/lib/feed-types.ts` and `src/lib/
 - Include videos published **strictly after** the cutoff, plus `initialVideoId` (`RsxiDWDj2Rg`) as one pinned test exception. `initialVideo` stores its title, actual publication time, and summary locally. An updated timestamp does not import an older upload.
 - The public channel feed provides its latest 15 entries. Subsequent uploads are not persisted. The initial exception is retained from local metadata when absent from the feed, including during feed failure.
 - Parsing validates channel, ID, title, and publication time; duplicate, invalid, and future-dated entries are ignored. Invalid cutoff configuration produces no videos. `content:validate` rejects invalid channel/feed URLs, inconsistent IDs, dates, or incomplete pinned metadata before release.
-- `src/components/YouTubeEmbed.tsx` validates the watch URL and constructs a `youtube-nocookie.com` iframe. Players are lazy-loaded, responsive, inline on supported mobile browsers, and do not autoplay. They use 16:9 where space permits and a minimum height of 200 px on narrow screens; video-specific recent cards use full-width media and archive players occupy a separate full-width grid row.
+- `src/components/YouTubeEmbed.tsx` validates the watch URL and constructs a `youtube-nocookie.com` iframe. Players are lazy-loaded, responsive, inline on supported mobile browsers, and do not autoplay. They use 16:9 where space permits and a minimum height of 200 px on narrow screens. The featured publication keeps its inline player. Recent videos use the same image/body layout as articles; their preview opens a native modal with a full-size player, which is removed on close to stop playback. Archive rows contain only text and a YouTube link, without previews or players.
 - No API key, webhook, paid service, or new dependency is required. Do not widen iframe permissions or allowed hosts for a routine feed change.
 
 If a video is missing, check publication time, the configured cutoff/exception, presence in the latest-15 feed, embed availability, and cache age. Test the real player and 375/390 px layouts when changing embed UI. A displayed thumbnail is not proof of successful playback.

@@ -1,4 +1,3 @@
-import YouTubeEmbed from './YouTubeEmbed';
 import Link from 'next/link';
 import { formatWritingSourceLabel } from './writing-source-label';
 
@@ -30,7 +29,6 @@ export default function WritingArchiveRow({
         <span aria-hidden="true">-&gt;</span>
       </Link>
       {excerpt ? <p>{excerpt}</p> : null}
-      {source === 'youtube' ? <div className="writing-archive-row__video"><YouTubeEmbed href={href} title={title} /></div> : null}
     </article>
   );
 }

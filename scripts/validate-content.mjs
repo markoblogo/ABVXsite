@@ -13,6 +13,7 @@ import {
 import { validateSyncConfig } from './project-description-sync-lib.mjs';
 import { validateYoutubeSettings } from './youtube-settings-lib.mjs';
 import { readWorkingStories } from '../src/content/working-stories-lib.mjs';
+import { validateNativeWritingVideo } from '../src/content/native-writing-video.mjs';
 
 const errors = [];
 const warnings = [];
@@ -55,6 +56,9 @@ function checkImage(file, image, field) {
 function validateFile(file, folder) {
   const { data, body } = parseContentFile(file);
   all.push({ file, folder, data, body });
+  if (folder === 'writing') {
+    for (const message of validateNativeWritingVideo(data)) addError(file, message);
+  }
 
   const requiredFields = folder === 'writing' ? ['id', 'slug'] : ['id', 'slug', 'title', 'summary'];
   for (const field of requiredFields) {

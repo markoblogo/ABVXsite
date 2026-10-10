@@ -15,6 +15,7 @@ import {
   type FeedItem,
 } from '@/lib/feeds';
 import { getNativeWritingItems } from '@/content';
+import { videoFeedTimestamp } from '@/content/native-writing-video.mjs';
 import { workingStoriesFeed } from '@/content/working-stories';
 import workingStoriesSeries from '../../../content/working-stories.json';
 import { collectionPageJsonLd, defaultOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
@@ -104,7 +105,7 @@ function nativeWritingFeed(): FeedItem[] {
     source: item.videoUrl ? 'youtube' : 'abvx',
     title: item.title,
     url: `/writing/${item.slug}`,
-    publishedAt: item.videoUploadedAt || item.updatedAt || item.publishedAt || new Date().toISOString(),
+    publishedAt: item.videoUploadedAt ? videoFeedTimestamp(item.videoUploadedAt) : item.updatedAt || item.publishedAt || new Date().toISOString(),
     author: 'Anton BV',
     tags: item.tags,
     excerpt: item.summary || item.body.split(/\n+/).find(Boolean) || 'Native ABVX writing.',

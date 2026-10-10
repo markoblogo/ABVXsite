@@ -1,0 +1,551 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "kind": "books",
+      "slug": "boh-buv-zainiatyi-kanalizatsiieiu",
+      "addedAt": null,
+      "basis": "legacy-unknown"
+    },
+    {
+      "kind": "books",
+      "slug": "burgers-lipstick-underwear",
+      "addedAt": "2026-08-14T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "books",
+      "slug": "chinese-wisdom-reader-guide",
+      "addedAt": null,
+      "basis": "legacy-unknown"
+    },
+    {
+      "kind": "books",
+      "slug": "christmas-carol-toki-pona",
+      "addedAt": "2026-04-24T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "books",
+      "slug": "cicero-toki-pona",
+      "addedAt": null,
+      "basis": "legacy-unknown"
+    },
+    {
+      "kind": "books",
+      "slug": "dao-de-jing-toki-pona",
+      "addedAt": null,
+      "basis": "legacy-unknown"
+    },
+    {
+      "kind": "books",
+      "slug": "dark-gestalt",
+      "addedAt": "2026-04-12T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "books",
+      "slug": "don-quixote-in-neverland",
+      "addedAt": "2026-08-24T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "books",
+      "slug": "epictetus-enchiridion-toki-pona",
+      "addedAt": null,
+      "basis": "legacy-unknown"
+    },
+    {
+      "kind": "books",
+      "slug": "fragments-from-a-therapists-notebook",
+      "addedAt": "2026-08-13T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "books",
+      "slug": "french-road-rules-signs-ukrainian",
+      "addedAt": "2026-09-07T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "books",
+      "slug": "future-proof-productivity",
+      "addedAt": "2026-04-06T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "books",
+      "slug": "geo-chkouroupiy-jeanne-la-bataillonneuse",
+      "addedAt": "2026-09-27T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "books",
+      "slug": "god-was-busy-with-the-plumbing",
+      "addedAt": null,
+      "basis": "legacy-unknown"
+    },
+    {
+      "kind": "books",
+      "slug": "good-dog-bad-authority",
+      "addedAt": "2026-10-06T14:16:40.000Z",
+      "basis": "production"
+    },
+    {
+      "kind": "books",
+      "slug": "good-dog-bad-district",
+      "addedAt": "2026-10-06T14:16:40.000Z",
+      "basis": "production"
+    },
+    {
+      "kind": "books",
+      "slug": "good-dog-bad-system",
+      "addedAt": "2026-10-06T14:16:40.000Z",
+      "basis": "production"
+    },
+    {
+      "kind": "books",
+      "slug": "ham-radio-technician-visual-cram-map-2026-2030",
+      "addedAt": "2026-09-06T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "books",
+      "slug": "heart-sutra-toki-pona",
+      "addedAt": null,
+      "basis": "legacy-unknown"
+    },
+    {
+      "kind": "books",
+      "slug": "hryhorii-kosynka-dans-les-seigles",
+      "addedAt": null,
+      "basis": "legacy-unknown"
+    },
+    {
+      "kind": "books",
+      "slug": "iouri-ianovski-le-maitre-du-navire",
+      "addedAt": null,
+      "basis": "legacy-unknown"
+    },
+    {
+      "kind": "books",
+      "slug": "llmo-seo-revolution",
+      "addedAt": "2026-04-18T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "books",
+      "slug": "maik-johansen-le-voyage-du-savant-docteur-leonardo",
+      "addedAt": null,
+      "basis": "legacy-unknown"
+    },
+    {
+      "kind": "books",
+      "slug": "marcus-aurelius-meditations-toki-pona",
+      "addedAt": null,
+      "basis": "legacy-unknown"
+    },
+    {
+      "kind": "books",
+      "slug": "marcus-aurelius-zombie-apocalypse",
+      "addedAt": "2026-08-17T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "books",
+      "slug": "mn7r-agro-commodity-brokerage-en-free-edition",
+      "addedAt": "2026-05-23T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "books",
+      "slug": "mn7r-agro-commodity-brokerage-ua-free-edition",
+      "addedAt": "2026-05-17T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "books",
+      "slug": "mn7r-product-guide",
+      "addedAt": "2026-06-16T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "books",
+      "slug": "mykola-khvylovy-la-zone-du-sanatorium",
+      "addedAt": null,
+      "basis": "legacy-unknown"
+    },
+    {
+      "kind": "books",
+      "slug": "no-further-claims",
+      "addedAt": "2026-09-23T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "books",
+      "slug": "pictiq-handbook-v1",
+      "addedAt": "2026-05-04T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "books",
+      "slug": "project-management-certification-in-2026",
+      "addedAt": "2026-09-04T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "books",
+      "slug": "seneca-shortness-of-life-toki-pona",
+      "addedAt": null,
+      "basis": "legacy-unknown"
+    },
+    {
+      "kind": "books",
+      "slug": "solar-proposal-decoder",
+      "addedAt": "2026-09-07T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "books",
+      "slug": "spot-market-handbook-en-free-edition",
+      "addedAt": "2026-06-17T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "books",
+      "slug": "spot-market-handbook-ua-free-edition",
+      "addedAt": "2026-05-31T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "books",
+      "slug": "sunzi-art-of-war-toki-pona",
+      "addedAt": null,
+      "basis": "legacy-unknown"
+    },
+    {
+      "kind": "books",
+      "slug": "the-human-backup-plan",
+      "addedAt": "2026-08-19T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "books",
+      "slug": "the-odyssey-toki-pona-sitelen-pona",
+      "addedAt": "2026-09-04T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "books",
+      "slug": "the-overexplaining-trap",
+      "addedAt": "2026-08-17T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "books",
+      "slug": "the-strange-case-of-dr-jekyll-and-mr-hyde-in-toki-pona",
+      "addedAt": "2026-10-06T14:16:40.000Z",
+      "basis": "production"
+    },
+    {
+      "kind": "books",
+      "slug": "the-tiny-language-protocol",
+      "addedAt": "2026-05-12T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "books",
+      "slug": "toki-pona-machine-mind",
+      "addedAt": "2026-05-01T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "books",
+      "slug": "toki-pona-readers-kit",
+      "addedAt": null,
+      "basis": "legacy-unknown"
+    },
+    {
+      "kind": "books",
+      "slug": "valerian-pidmohylny-la-ville",
+      "addedAt": null,
+      "basis": "legacy-unknown"
+    },
+    {
+      "kind": "books",
+      "slug": "what-do-i-say-now",
+      "addedAt": "2026-08-18T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "books",
+      "slug": "your-saas-bill-is-ridiculous",
+      "addedAt": "2026-08-12T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "series",
+      "slug": "chinese-wisdom-toki-pona",
+      "addedAt": null,
+      "basis": "legacy-unknown"
+    },
+    {
+      "kind": "series",
+      "slug": "good-dogs-of-the-apocalypse",
+      "addedAt": null,
+      "basis": "legacy-unknown"
+    },
+    {
+      "kind": "series",
+      "slug": "mn7r-commodity-brokerage-library",
+      "addedAt": "2026-05-17T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "series",
+      "slug": "modernisme-ukrainien",
+      "addedAt": null,
+      "basis": "legacy-unknown"
+    },
+    {
+      "kind": "series",
+      "slug": "stoic-wisdom-toki-pona",
+      "addedAt": null,
+      "basis": "legacy-unknown"
+    },
+    {
+      "kind": "series",
+      "slug": "toki-pona-free-kits",
+      "addedAt": null,
+      "basis": "legacy-unknown"
+    },
+    {
+      "kind": "work",
+      "slug": "1d3x",
+      "addedAt": "2026-05-27T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "abvx-agent-skills",
+      "addedAt": "2026-06-03T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "abvx-lab",
+      "addedAt": "2026-05-08T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "abvx-os",
+      "addedAt": "2026-09-14T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "abvx-shortener",
+      "addedAt": "2026-04-24T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "agents-md-generator",
+      "addedAt": "2026-05-09T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "ami-books-physical-commodity-markets",
+      "addedAt": "2026-07-18T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "ascii-theme",
+      "addedAt": "2026-05-07T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "azurmenton",
+      "addedAt": "2026-05-17T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "blue-jay-vodka",
+      "addedAt": "2026-07-14T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "book-landings",
+      "addedAt": "2026-09-14T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "chinese-wisdom-toki-pona-landing",
+      "addedAt": null,
+      "basis": "legacy-unknown"
+    },
+    {
+      "kind": "work",
+      "slug": "coqpi",
+      "addedAt": "2026-09-14T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "cropto",
+      "addedAt": "2026-05-06T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "cropto-market-risk-deck",
+      "addedAt": "2026-05-01T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "cropto-monitor",
+      "addedAt": "2026-05-05T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "decision-map",
+      "addedAt": "2026-05-10T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "git-tweet",
+      "addedAt": "2026-04-23T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "id",
+      "addedAt": "2026-04-22T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "last30days-cropto",
+      "addedAt": "2026-05-04T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "liqua",
+      "addedAt": "2026-05-03T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "mn7r",
+      "addedAt": "2026-05-07T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "mn7r-blog",
+      "addedAt": "2026-05-17T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "pictiq",
+      "addedAt": "2026-05-04T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "pictiq-landing",
+      "addedAt": "2026-09-20T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "pocket-os-cardputer",
+      "addedAt": "2026-09-14T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "set",
+      "addedAt": "2026-05-03T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "sitelen-emoji-truth",
+      "addedAt": "2026-04-28T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "sitelen-layer-plugin",
+      "addedAt": "2026-05-11T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "spike-spot-commodity-index-ukraine",
+      "addedAt": "2026-05-12T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "stoic-wisdom-toki-pona-landing",
+      "addedAt": null,
+      "basis": "legacy-unknown"
+    },
+    {
+      "kind": "work",
+      "slug": "tdm-enduro-tours",
+      "addedAt": "2026-10-09T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "toki-pona-ai-translator",
+      "addedAt": "2026-05-05T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "toki-pona-free-kits-landing",
+      "addedAt": null,
+      "basis": "legacy-unknown"
+    },
+    {
+      "kind": "work",
+      "slug": "trade-solution-eu",
+      "addedAt": "2026-05-02T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "uga-index",
+      "addedAt": "2026-05-08T00:00:00.000Z",
+      "basis": "legacy-source"
+    },
+    {
+      "kind": "work",
+      "slug": "ukrainian-modernism-landing",
+      "addedAt": null,
+      "basis": "legacy-unknown"
+    },
+    {
+      "kind": "work",
+      "slug": "ytmamp",
+      "addedAt": "2026-04-25T00:00:00.000Z",
+      "basis": "legacy-source"
+    }
+  ]
+}

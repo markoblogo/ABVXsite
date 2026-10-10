@@ -15,8 +15,10 @@ import { validateYoutubeSettings } from './youtube-settings-lib.mjs';
 import { readWorkingStories } from '../src/content/working-stories-lib.mjs';
 import { validateNativeWritingVideo } from '../src/content/native-writing-video.mjs';
 import { validateWritingDiscovery } from '../src/lib/writing-chronology.mjs';
+import { validateCatalogueDiscovery } from '../src/content/catalogue-chronology.mjs';
 
 const errors = validateWritingDiscovery(JSON.parse(readFileSync('content/writing-discovery.json', 'utf8')));
+errors.push(...validateCatalogueDiscovery(JSON.parse(readFileSync('content/catalogue-discovery.json', 'utf8'))));
 const warnings = [];
 const all = [];
 

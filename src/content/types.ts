@@ -110,6 +110,7 @@ type BaseContentItem<TType extends string> = {
   visibility?: Visibility;
   publishedAt?: string;
   updatedAt?: string;
+  catalogueAddedAt?: string | null;
   homepageEligible?: boolean;
   summary: string;
   description?: string;

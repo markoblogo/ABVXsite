@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "npm run writing:register && npm run llms:generate && npm run ecosystem:generate",
+    "prebuild": "npm run catalogue:register && npm run writing:register && npm run llms:generate && npm run ecosystem:generate",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
@@ -57,7 +57,8 @@
     "content:release-check": "node scripts/editorial-release-check.mjs",
     "content:production-check": "QA_BASE_URL=https://abvx.xyz npm run qa:seo",
     "writing:register": "node scripts/sync-writing-feed.mjs",
-    "writing:sync": "node scripts/sync-writing-feed.mjs --external"
+    "writing:sync": "node scripts/sync-writing-feed.mjs --external",
+    "catalogue:register": "node scripts/register-catalogue.mjs"
   },
   "dependencies": {
     "next": "16.3.8",

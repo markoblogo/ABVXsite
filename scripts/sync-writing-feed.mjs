@@ -5,6 +5,7 @@ import { contentFiles, parseContentFile } from './content-lib.mjs';
 import { readWorkingStories, workingStoryPath } from '../src/content/working-stories-lib.mjs';
 import { registerWritingItems, validateWritingDiscovery } from '../src/lib/writing-chronology.mjs';
 import { loadFeedModule } from './load-feed-modules.mjs';
+import { fetchWritingSourceFallback } from './writing-source-fallback.mjs';
 
 export function nativeDiscoveryItems(now = Date.now()) {
   const writing = contentFiles('writing').flatMap(file => {
@@ -36,7 +37,14 @@ export async function syncWritingFeed({ external = false, bootstrap = false } = 
     ]);
     for (const [index, result] of responses.entries()) {
       if (result.status === 'fulfilled' && result.value.length) items.push(...result.value);
-      else console.warn(`Writing source ${['Medium', 'Substack', 'YouTube'][index]} unavailable/empty; preserving stored posts.`);
+      else {
+        const source = ['medium', 'substack', 'youtube'][index];
+        const fallback = await fetchWritingSourceFallback(source);
+        if (fallback.length) {
+          items.push(...fallback);
+          console.log(`Writing source ${source}: ${fallback.length} records via ABVX fallback.`);
+        } else console.warn(`Writing source ${source} unavailable/empty; preserving stored posts.`);
+      }
     }
   }
   const updated = registerWritingItems(registry, items, { now, bootstrap });

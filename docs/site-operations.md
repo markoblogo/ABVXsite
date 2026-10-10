@@ -34,6 +34,8 @@ Feed HTTP access retains the existing host allowlists and parsers. The hourly `w
 
 Native Writing and Working Stories are registered by `npm run writing:register` during prebuild. Commit the changed registry with the approved source. Rebuilds, edits, `updatedAt`, and feed retries never reset `addedAt`. Original publication/upload dates remain separate and continue to supply article/video metadata. Writing cards display the addition date; the article itself retains its original publication date. Same-time additions use original publication time, then URL as a deterministic tie-breaker.
 
+If a feed is unavailable from the GitHub runner, sync retries through the public, cached `/api/writing/feed/<source>` endpoint on ABVX. That endpoint accepts only Medium, Substack and YouTube, exposes public metadata rather than article bodies, and reuses the same fixed URLs, parsers and host allowlists. If both paths fail, keep the saved source. The endpoint is marked `noindex`; it is not a new editorial page or a general URL proxy.
+
 Historical migration uses `addedAtBasis: legacy-source` where the first appearance is unknown; this is a fallback, not recovered evidence. The three October 10 pilot pages use production-ready time `16:06:30Z` (GitHub deployment 6983374035), and the flour case uses `12:17:48Z` (6980593513), marked `production`. New registrations use `observed`: the time they enter the site's committed publication registry, followed by deployment. Do not rewrite historical times on every sync or treat them as source publication dates.
 
 ### YouTube policy

@@ -3,6 +3,7 @@ import test from 'node:test';
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { loadFeedModule } from '../scripts/load-feed-modules.mjs';
+import { fetchWritingSourceFallback } from '../scripts/writing-source-fallback.mjs';
 import { registerWritingItems, mergeWritingItems, sortWritingItems, writingCardSource, validateWritingDiscovery, writingUrlKey } from '../src/lib/writing-chronology.mjs';
 
 const now = '2026-10-12T10:00:00.000Z';
@@ -87,4 +88,19 @@ test('homepage and Writing share the same feed without adding homepage slots', (
   assert.ok(home.includes('[0, 1].map'));
   assert.ok(writing.includes('const allPosts = getWritingFeed()'));
   assert.ok(!home.includes('mediumLatest'));
+});
+
+test('public fallback accepts only recognized source metadata and survives endpoint failures', async () => {
+  const item = post('https://abvx.substack.com/p/test', '2026-10-10', 'substack');
+  const calls = [];
+  const fetcher = async url => {
+    calls.push(url);
+    return Response.json([item, { ...item, source: 'medium' }, { ...item, url: 'https://evil.example/test' }]);
+  };
+  assert.deepEqual(await fetchWritingSourceFallback('substack', fetcher), [item]);
+  assert.deepEqual(calls, ['https://abvx.xyz/api/writing/feed/substack']);
+  assert.deepEqual(await fetchWritingSourceFallback('../private', fetcher), []);
+  assert.equal(calls.length, 1);
+  assert.deepEqual(await fetchWritingSourceFallback('substack', async () => new Response('', { status: 503 })), []);
+  assert.deepEqual(await fetchWritingSourceFallback('substack', async () => { throw new Error('Offline'); }), []);
 });

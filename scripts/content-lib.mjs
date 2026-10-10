@@ -2,6 +2,7 @@ import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 
 import path from 'node:path';
 import readline from 'node:readline/promises';
 import { stdin as input, stdout as output } from 'node:process';
+import { parseMarkdownSource } from '../src/content/markdown-source.mjs';
 
 export const contentRoot = path.join(process.cwd(), 'content');
 export const mediaRoot = path.join(process.cwd(), 'public', 'media');
@@ -73,17 +74,7 @@ export function serializeFrontmatter(data, body = '') {
 }
 
 export function parseContentFile(filePath) {
-  const source = readFileSync(filePath, 'utf8');
-  if (!source.startsWith('---')) {
-    throw new Error(`${filePath}: missing frontmatter`);
-  }
-  const end = source.indexOf('\n---', 3);
-  if (end === -1) {
-    throw new Error(`${filePath}: unterminated frontmatter`);
-  }
-  const raw = source.slice(3, end).trim();
-  const body = source.slice(end + 4).replace(/^\s*\n/, '').trim();
-  return { data: JSON.parse(raw), body };
+  return parseMarkdownSource(readFileSync(filePath, 'utf8'), filePath);
 }
 
 export function contentFiles(folder) {

@@ -1,6 +1,6 @@
-import { existsSync, readdirSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
-import { parseContentFile } from '../../scripts/content-lib.mjs';
+import { parseMarkdownSource } from './markdown-source.mjs';
 
 /** @typedef {{title: string, slug: string, date: string, type: 'working-story', series: 'working-stories', story_id: string, cluster: string, period: string | null, topics: string[], book: {include: boolean, status: string}, visibility: string, summary: string, language: 'en' | 'fr' | 'uk', updatedAt?: string, source_session?: string, source: string, body: string}} WorkingStory */
 
@@ -45,7 +45,8 @@ export function readWorkingStories(directory = path.join(process.cwd(), 'content
   const ids = new Set();
   const slugs = new Set();
   return readdirSync(directory).filter((name) => name.endsWith('.md') && !name.startsWith('_')).sort().map((source) => {
-    const { data, body } = parseContentFile(path.join(directory, source));
+    const filePath = path.join(directory, source);
+    const { data, body } = parseMarkdownSource(readFileSync(filePath, 'utf8'), filePath);
     const errors = validateWorkingStory(data, body);
     if (errors.length) throw new Error(`${source}: ${errors.join('; ')}`);
     if (ids.has(data.story_id)) errors.push(`duplicate story_id: ${data.story_id}`);

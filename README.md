@@ -39,6 +39,7 @@ Stack: Next.js 16 App Router, React 19, TypeScript, Tailwind CSS 4, local Markdo
 | --- | --- |
 | `content/work/`, `content/books/`, `content/series/` | Project, book, and series records with JSON frontmatter |
 | `content/writing/` | Native articles |
+| `content/working-stories/` + `content/working-stories.json` | Dedicated professional stories and series introduction |
 | `content/editorial/` + `content/editorial/index.json` | Section guides, translations, relationships, and localized metadata |
 | `content/pages.json` | Core-page SEO titles and update dates |
 | `content/collaborations.json` | Shared technology/B2B and creative/UGC offers on About and in the footer |
@@ -81,7 +82,7 @@ The [editorial release checklist](docs/editorial-seo-checklist.md) is the detail
 
 ## Writing and measurement
 
-Writing merges local articles with Medium, Substack, and YouTube. YouTube uses embedded, responsive players without autoplay. New videos are selected by their publication time, with one initial test exception backed by local metadata. Feed/page revalidation is 15 minutes and depends on requests; the public YouTube feed is limited to its latest 15 entries, so this is not a permanent archive of subsequent uploads. Feed failures do not prevent the other sources from rendering.
+Writing merges local articles, [Working Stories](docs/working-stories.md), Medium, Substack, and YouTube. Working Stories also has its own [chronological index](https://abvx.xyz/writing/working-stories); book-eligible stories export with `npm run export:working-stories` into ignored local `exports/` files. YouTube uses embedded, responsive players without autoplay. New videos are selected by their publication time, with one initial test exception backed by local metadata. Feed/page revalidation is 15 minutes and depends on requests; the public YouTube feed is limited to its latest 15 entries, so this is not a permanent archive of subsequent uploads. Feed failures do not prevent the other sources from rendering.
 
 Plausible tracks `Book Link Click`, `Contact Click`, and `Collaboration Click` separately. These measure link intent, not completed purchases, messages, or bookings. Dashboard goals and historical limitations are documented in [Site operations](docs/site-operations.md).
 
@@ -102,6 +103,7 @@ Optional Search Console/Bing verification overrides are `GOOGLE_SITE_VERIFICATIO
 For an agent session, read `AGENTS.md`, this README, then only the relevant guide:
 
 - [Content editing](docs/content-editing.md) / [content format](docs/content-workflow.md)
+- [Working Stories workflow and manuscript export](docs/working-stories.md)
 - [Editorial SEO release checklist](docs/editorial-seo-checklist.md)
 - [Site operations and measurement](docs/site-operations.md)
 - [Traffic growth plan](docs/traffic-growth-plan.md)

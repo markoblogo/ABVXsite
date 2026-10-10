@@ -15,6 +15,8 @@ import {
   type FeedItem,
 } from '@/lib/feeds';
 import { getNativeWritingItems } from '@/content';
+import { workingStoriesFeed } from '@/content/working-stories';
+import workingStoriesSeries from '../../../content/working-stories.json';
 import { collectionPageJsonLd, defaultOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -122,7 +124,7 @@ export default async function WritingPage({
     safeFeed(fetchSubstackFeed, 'https://abvx.substack.com/feed'),
     safeFeed((url) => fetchYoutubeFeed(url, youtubeSettings), youtubeSettings.feedUrl),
   ]);
-  const allPosts = mergeFeeds(nativeWritingFeed(), medium, substack, youtube);
+  const allPosts = mergeFeeds(nativeWritingFeed(), workingStoriesFeed(), medium, substack, youtube);
   const posts =
     activeSource === 'all' ? allPosts : allPosts.filter((post) => post.source === activeSource);
   const featuredPost = posts[0];
@@ -159,7 +161,7 @@ export default async function WritingPage({
         eyebrow="Writing"
         title="Writing"
         summary="Applied AI reviews, build logs and essays on systems, validation, agent workflows, decision-making and how ideas survive contact with reality."
-      ><EditorialSectionLink section="writing" /></PageHeader>
+      ><EditorialSectionLink section="writing" /> <Link className="editorial-section-link" href={workingStoriesSeries.canonicalPath}>{workingStoriesSeries.title} <span aria-hidden="true">→</span></Link></PageHeader>
 
       <WritingSourceLinks active={activeSource} />
 

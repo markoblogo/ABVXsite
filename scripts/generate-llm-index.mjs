@@ -1,12 +1,21 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { contentFiles, parseContentFile } from './content-lib.mjs';
+import { publishedWorkingStories, publicWorkingStory, readWorkingStories } from '../src/content/working-stories-lib.mjs';
 
 const SITE_URL = 'https://abvx.xyz';
 const outputDir = path.join(process.cwd(), 'public');
 const collaboration = JSON.parse(readFileSync(path.join(process.cwd(), 'content/collaborations.json'), 'utf8'));
 const youtube = JSON.parse(readFileSync(path.join(process.cwd(), 'content/youtube.json'), 'utf8'));
 const editorialPages = JSON.parse(readFileSync(path.join(process.cwd(), 'content/editorial/index.json'), 'utf8'));
+const workingSeries = JSON.parse(readFileSync(path.join(process.cwd(), 'content/working-stories.json'), 'utf8'));
+const workingStories = publishedWorkingStories(readWorkingStories());
+const workingIndexItems = workingStories.map((story) => publicWorkingStory(story, workingStories));
+const workingSeriesIndexItem = {
+  type: 'editorial-series', section: 'writing', ecosystem: 'Writing', group: 'Working Stories', status: 'live',
+  title: workingSeries.title, summary: workingSeries.summary, canonicalUrl: `${SITE_URL}${workingSeries.canonicalPath}`,
+  updatedAt: workingSeries.updatedAt, tags: [], links: [{ type: 'section', label: 'Writing', url: `${SITE_URL}/writing` }], related: [],
+};
 
 const servicePages = [
   {
@@ -266,7 +275,7 @@ const youtubeIndexItem = {
   tags: ['youtube', 'video'], links: [{ type: 'youtube', label: 'YouTube channel', url: youtube.channelUrl }], related: [],
 };
 
-const indexItems = [...rawItems.map(publicIndexItem), ...serviceIndexItems, ...editorialIndexItems, collaborationIndexItem, youtubeIndexItem]
+const indexItems = [...rawItems.map(publicIndexItem), ...serviceIndexItems, ...editorialIndexItems, collaborationIndexItem, youtubeIndexItem, workingSeriesIndexItem, ...workingIndexItems]
   .sort((a, b) => a.section.localeCompare(b.section) || a.title.localeCompare(b.title));
 
 function isFocus(item) {
@@ -366,6 +375,10 @@ const llms = [
     !isFocus(item) && !isAiNative(item) && !isStandaloneUtility(item) && !isBooksEcosystemItem(item))),
   '',
   llmsSection('Writing: essays and field notes', rawItems.filter((item) => item.folder === 'writing')),
+  '',
+  `## Working Stories\n\n${[workingSeriesIndexItem, ...workingIndexItems].map((item) =>
+    `- ${item.title}\n  URL: ${item.canonicalUrl}\n  Summary: ${item.summary}${item.tags.length ? `\n  Topics: ${item.tags.join(', ')}` : ''}`
+  ).join('\n\n')}`,
   '',
   '## Notes for crawlers and LLM agents',
   '',

@@ -12,6 +12,7 @@ import {
 } from './content-lib.mjs';
 import { validateSyncConfig } from './project-description-sync-lib.mjs';
 import { validateYoutubeSettings } from './youtube-settings-lib.mjs';
+import { readWorkingStories } from '../src/content/working-stories-lib.mjs';
 
 const errors = [];
 const warnings = [];
@@ -149,6 +150,20 @@ try {
   addError(youtubeFile, error.message);
 }
 
+let storyCount = 0;
+try {
+  storyCount = readWorkingStories().length;
+  const file = 'content/working-stories.json';
+  const series = JSON.parse(readFileSync(file, 'utf8'));
+  for (const field of ['title', 'summary', 'emptyState']) {
+    if (typeof series[field] !== 'string' || !series[field].trim()) addError(file, `${field} must be a non-empty string`);
+  }
+  if (series.id !== 'working-stories' || series.canonicalPath !== '/writing/working-stories') addError(file, 'series ID and route must match Working Stories');
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(series.updatedAt) || !Number.isFinite(Date.parse(series.updatedAt)) || new Date(series.updatedAt).toISOString().slice(0, 10) !== series.updatedAt) addError(file, 'updatedAt must be a real YYYY-MM-DD date');
+} catch (error) {
+  addError('content/working-stories', error.message);
+}
+
 const bySlug = new Map();
 for (const item of all) {
   const slug = item.data.slug;
@@ -170,4 +185,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Content validation passed: ${all.length + 2} files checked.`);
+console.log(`Content validation passed: ${all.length + 3 + storyCount} files checked.`);

@@ -6503,6 +6503,26 @@
       "related": []
     },
     {
+      "type": "editorial-series",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "Working Stories",
+      "status": "live",
+      "title": "Working Stories",
+      "summary": "Cases, experiments, mistakes and unusual decisions from my professional life.",
+      "canonicalUrl": "https://abvx.xyz/writing/working-stories",
+      "updatedAt": "2026-10-10",
+      "tags": [],
+      "links": [
+        {
+          "type": "section",
+          "label": "Writing",
+          "url": "https://abvx.xyz/writing"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "writing",
       "section": "writing",
       "ecosystem": "Writing",

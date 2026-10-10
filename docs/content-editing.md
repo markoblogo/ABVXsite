@@ -10,6 +10,7 @@ Use this guide for a small public-content change. [Content workflow](content-wor
 | Add/update a book, translation, free edition, or companion | `content/books/<slug>.md` |
 | Add/update an official series | `content/series/<slug>.md` |
 | Add/update a native Writing article | `content/writing/<slug>.md` |
+| Add a Working Story / change its series introduction | `content/working-stories/<file>.md` / `content/working-stories.json`; see [workflow and export](working-stories.md) |
 | Add/update a section guide or translation | `content/editorial/<slug>.md` and `content/editorial/index.json` |
 | Change core-page SEO title or substantive update date | `content/pages.json` |
 | Change shared sponsorship/UGC offers | `content/collaborations.json` |

@@ -3,6 +3,7 @@ import './globals.css';
 
 import { getNativeWritingBySlug, getNativeWritingItems } from '@/content';
 import { getEditorialArticles } from '@/content/editorials';
+import { getWorkingStoryBySlug } from '@/content/working-stories';
 
 import DocumentLanguage from '@/components/DocumentLanguage';
 import SiteFooter from '@/components/SiteFooter';
@@ -227,9 +228,11 @@ export default async function RootLayout({
   const nonce = requestHeaders.get('x-nonce') || undefined;
   const pathname = requestHeaders.get('x-site-pathname') || '/';
   const writingSlug = pathname.match(/^\/writing\/([^/]+)$/)?.[1];
+  const storySlug = pathname.match(/^\/writing\/working-stories\/([^/]+)$/)?.[1];
   const editorialLanguages = Object.fromEntries(getEditorialArticles().filter((article) => article.language).map((article) => [article.href, article.language!]));
   const language = pathname.startsWith('/fr/') ? 'fr'
-    : writingSlug ? getNativeWritingBySlug(writingSlug)?.language || 'en' : editorialLanguages[pathname] || 'en';
+    : storySlug ? getWorkingStoryBySlug(storySlug)?.language || 'en'
+      : writingSlug ? getNativeWritingBySlug(writingSlug)?.language || 'en' : editorialLanguages[pathname] || 'en';
 
   return (
     <html lang={language}>

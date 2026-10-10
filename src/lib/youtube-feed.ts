@@ -51,6 +51,44 @@ export function parseYoutubeFeed(xml: string, settings: YoutubeFeedSettings, now
 }
 
 export async function fetchYoutubeFeed(feedUrl: string, settings: YoutubeFeedSettings): Promise<FeedItem[]> {
+  return (await fetchYoutubeFeedWithStatus(feedUrl, settings)).items;
+}
+
+// Availability must come from a complete Atom envelope, never the pinned item.
+function hasCompleteAtomDocument(xml: string): boolean {
+  const tags = /<!--[\s\S]*?-->|<!\[CDATA\[[\s\S]*?\]\]>|<\?[\s\S]*?\?>|<\/?[A-Za-z_][\w:.-]*(?:\s+[A-Za-z_][\w:.-]*\s*=\s*(?:"[^"<]*"|'[^'<]*'))*\s*\/?>/g;
+  const stack: string[] = [];
+  let end = 0;
+  let rootSeen = false;
+  let match: RegExpExecArray | null;
+  while ((match = tags.exec(xml))) {
+    const between = xml.slice(end, match.index);
+    if (between.includes('<') || (!stack.length && between.trim())) return false;
+    end = match.index + match[0].length;
+    const tag = match[0];
+    if (tag.startsWith('<!--') || tag.startsWith('<?')) continue;
+    if (tag.startsWith('<![CDATA[')) {
+      if (!stack.length) return false;
+      continue;
+    }
+    const name = /^<\/?([\w:.-]+)/.exec(tag)![1];
+    if (tag.startsWith('</')) {
+      if (!/^<\/[\w:.-]+\s*>$/.test(tag) || stack.pop() !== name) return false;
+    } else {
+      if (!stack.length) {
+        if (rootSeen || name !== 'feed') return false;
+        rootSeen = true;
+      }
+      if (!tag.endsWith('/>')) stack.push(name);
+    }
+  }
+  return rootSeen && !stack.length && !xml.slice(end).trim();
+}
+
+export async function fetchYoutubeFeedWithStatus(feedUrl: string, settings: YoutubeFeedSettings) {
   const xml = await fetchAllowedText(feedUrl, 'youtube', 'feed');
-  return parseYoutubeFeed(xml || '', settings);
+  return {
+    items: parseYoutubeFeed(xml || '', settings),
+    upstreamAvailable: Boolean(xml && hasCompleteAtomDocument(xml) && getTag(xml, 'yt:channelId')?.trim() === settings.channelId),
+  };
 }

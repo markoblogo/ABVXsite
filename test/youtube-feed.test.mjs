@@ -25,7 +25,7 @@ function load(file) {
   new Function('require', 'module', 'exports', output)(localRequire, compiledModule, compiledModule.exports);
   return compiledModule.exports;
 }
-const { parseYoutubeFeed, fetchYoutubeFeed } = load(path.resolve('src/lib/youtube-feed.ts'));
+const { parseYoutubeFeed, fetchYoutubeFeed, fetchYoutubeFeedWithStatus } = load(path.resolve('src/lib/youtube-feed.ts'));
 const YouTubeEmbed = load(path.resolve('src/components/YouTubeEmbed.tsx')).default;
 const RecentWritingCard = load(path.resolve('src/components/RecentWritingCard.tsx')).default;
 const WritingArchiveRow = load(path.resolve('src/components/WritingArchiveRow.tsx')).default;
@@ -131,6 +131,37 @@ test('retains pinned metadata when YouTube is unavailable', async () => {
     const videos = await fetchYoutubeFeed(configuredSettings.feedUrl, configuredSettings);
     assert.equal(videos.length, 1);
     assert.equal(videos[0].url, 'https://www.youtube.com/watch?v=RsxiDWDj2Rg');
+  } finally { globalThis.fetch = original; }
+});
+
+test('distinguishes a failed upstream from a valid feed containing only the pinned video', async () => {
+  const original = globalThis.fetch;
+  try {
+    globalThis.fetch = async () => new Response('', { status: 503 });
+    const missing = await fetchYoutubeFeedWithStatus(configuredSettings.feedUrl, configuredSettings);
+    assert.equal(missing.items.length, 1);
+    assert.equal(missing.upstreamAvailable, false);
+    globalThis.fetch = async () => new Response(`<feed><yt:channelId>${configuredSettings.channelId}</yt:channelId></feed>`);
+    const available = await fetchYoutubeFeedWithStatus(configuredSettings.feedUrl, configuredSettings);
+    assert.equal(available.items.length, 1);
+    assert.equal(available.upstreamAvailable, true);
+    globalThis.fetch = async () => new Response('<html>Access denied</html>');
+    assert.equal((await fetchYoutubeFeedWithStatus(configuredSettings.feedUrl, configuredSettings)).upstreamAvailable, false);
+    const channel = `<yt:channelId>${configuredSettings.channelId}</yt:channelId>`;
+    for (const broken of [
+      `<feed>${channel}`,
+      `<feed>${channel}<entry><title>Partial</title></feed>`,
+      `<feed>${channel}<entry></entry`,
+      `<feed>${channel}<entry malformed></entry></feed>`,
+      `<feed>${channel}</feed><feed/>`,
+      `<feed>${channel}<![CDATA[unfinished</feed>`,
+      `<feed>${channel}</feed>unexpected`,
+    ]) {
+      globalThis.fetch = async () => new Response(broken);
+      assert.equal((await fetchYoutubeFeedWithStatus(configuredSettings.feedUrl, configuredSettings)).upstreamAvailable, false, broken);
+    }
+    globalThis.fetch = async () => new Response(`<?xml version="1.0"?><feed xmlns="http://www.w3.org/2005/Atom">${channel}<!-- comment --><entry><title><![CDATA[AI < tools]]></title><link href="https://example.com/?a=1&amp;b=2"/></entry></feed>`);
+    assert.equal((await fetchYoutubeFeedWithStatus(configuredSettings.feedUrl, configuredSettings)).upstreamAvailable, true);
   } finally { globalThis.fetch = original; }
 });
 

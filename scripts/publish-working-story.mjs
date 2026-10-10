@@ -58,8 +58,7 @@ export function planWorkingStory(packet, root = process.cwd()) {
     targets.add(asset.target);
   }
   for (const src of referenced) {
-    const target = safeTarget(root, `public${src}`);
-    if (!targets.has(src) && !existsSync(target)) fail(`Missing approved media: ${src}`);
+    if (!targets.has(src)) fail(`Missing approved media: ${src}`);
   }
   return { source, targetFile, media, report: {
     operation: 'abvx.publish-working-story', slug: data.slug, storyId: data.story_id,

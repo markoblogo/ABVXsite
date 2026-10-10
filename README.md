@@ -85,7 +85,7 @@ The [editorial release checklist](docs/editorial-seo-checklist.md) is the detail
 
 ## Writing and measurement
 
-Writing merges local articles, [Working Stories](docs/working-stories.md), Medium, Substack, and YouTube. Writing and the two homepage publication slots share chronology by first registration on ABVX; source publication dates remain separate. `npm run writing:register` records native additions during prebuild. The hourly feed workflow retains discovered posts and immutable timestamps, and publishes only when metadata changes. Feed failures preserve the saved list. See [Site operations](docs/site-operations.md) for timing, historical migration, and the narrowly authorized workflow.
+Writing merges local articles, [Working Stories](docs/working-stories.md), Medium, Substack, and YouTube. Writing and the three homepage publication slots share chronology by first registration on ABVX; source publication dates remain separate. `npm run writing:register` records native additions during prebuild. The hourly feed workflow retains discovered posts and immutable timestamps, and publishes only when metadata changes. Feed failures preserve the saved list. See [Site operations](docs/site-operations.md) for timing, historical migration, and the narrowly authorized workflow.
 
 Working Stories also has its own [chronological index](https://abvx.xyz/writing/working-stories); book-eligible stories export with `npm run export:working-stories` into ignored local `exports/` files. YouTube retains its new-publication cutoff and one initial test exception. Featured players, compact recent previews and text-only archive rows retain their existing layouts.
 

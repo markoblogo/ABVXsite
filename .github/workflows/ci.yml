@@ -31,4 +31,5 @@ jobs:
       - run: npm run test:sync
       - run: npm run cortex-abv:vector-export:check
       - run: npm run build
+      - run: git diff --exit-code -- content/catalogue-discovery.json
       - run: npm audit --omit=dev --audit-level=high

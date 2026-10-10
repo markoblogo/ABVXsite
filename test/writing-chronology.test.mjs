@@ -84,8 +84,8 @@ test('invalid, future, duplicate and unsafe registry entries are rejected', () =
 test('homepage and Writing share the same feed without adding homepage slots', () => {
   const home = readFileSync('src/app/page.tsx', 'utf8');
   const writing = readFileSync('src/app/writing/page.tsx', 'utf8');
-  assert.ok(home.includes('getWritingFeed().slice(0, 2)'));
-  assert.ok(home.includes('[0, 1].map'));
+  assert.ok(home.includes('getWritingFeed().slice(0, 3)'));
+  assert.ok(home.includes('[0, 1, 2].map'));
   assert.ok(writing.includes('const allPosts = getWritingFeed()'));
   assert.ok(!home.includes('mediumLatest'));
 });

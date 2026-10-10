@@ -6,7 +6,6 @@ import MarqueeTicker from '@/components/MarqueeTicker';
 import SectionPanel from '@/components/SectionPanel';
 import TagList from '@/components/TagList';
 import { getLatestSectionEntryBook, getLatestSectionEntryWork } from '@/content';
-import { fetchMn7rFeed, type FeedItem } from '@/lib/feeds';
 import { getWritingFeed } from '@/lib/writing-feed';
 import { writingCardSource } from '@/lib/writing-chronology.mjs';
 import { collectionPageJsonLd, defaultOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
@@ -50,25 +49,7 @@ const fallbackLatest = {
     summary:
       'Books, translations, series and publishing projects across AI, strategy, language, culture, markets and systems thinking.',
   },
-  mn7rBlog: {
-    title: 'MN7R Blog',
-    summary:
-      'Operational notes, brokerage workflows, execution systems and market infrastructure research from the MN7R ecosystem.',
-  },
 };
-
-async function safeLatestFeed(
-  source: FeedItem['source'],
-  fetcher: (url: string) => Promise<FeedItem[]>,
-  url: string,
-): Promise<FeedItem | null> {
-  try {
-    const items = await fetcher(url);
-    return items.find((item) => item.source === source) || items[0] || null;
-  } catch {
-    return null;
-  }
-}
 
 function formatDate(iso?: string): string | undefined {
   if (!iso) return undefined;
@@ -82,8 +63,7 @@ function formatDate(iso?: string): string | undefined {
 }
 
 export default async function Home() {
-  const mn7rLatest = await safeLatestFeed('mn7r', fetchMn7rFeed, 'https://mn7r.com/rss.xml');
-  const latestWriting = getWritingFeed().slice(0, 2);
+  const latestWriting = getWritingFeed().slice(0, 3);
 
   const latestFocus = getLatestSectionEntryWork('focus', 'mn7r-blog');
   const latestSystem = getLatestSectionEntryWork('systems');
@@ -172,7 +152,7 @@ export default async function Home() {
             summary={latestFocus?.summary || fallbackLatest.focus.summary}
             href={latestFocus ? `/work/${latestFocus.slug}` : '/focus'}
             label="Current Focus"
-            detail={formatDate(latestFocus?.updatedAt || latestFocus?.publishedAt)}
+            detail={formatDate(latestFocus?.catalogueAddedAt || undefined)}
             image={latestFocus?.thumbnail}
             cta="Open focus item"
           />
@@ -181,20 +161,20 @@ export default async function Home() {
             summary={latestSystem?.summary || fallbackLatest.systems.summary}
             href={latestSystem ? `/work/${latestSystem.slug}` : '/systems'}
             label="Systems Catalogue"
-            detail={formatDate(latestSystem?.updatedAt || latestSystem?.publishedAt)}
+            detail={formatDate(latestSystem?.catalogueAddedAt || undefined)}
             image={latestSystem?.thumbnail}
             cta="Open system"
           />
           <HomepageLatestCard
             title={latestBook?.title || fallbackLatest.books.title}
             summary={latestBook?.summary || fallbackLatest.books.summary}
-            href={latestBook ? `/books/${latestBook.slug}` : '/books'}
+            href={latestBook ? latestBook.canonicalPath || `/books/${latestBook.slug}` : '/books'}
             label="ABVX Press"
-            detail={formatDate(latestBook?.updatedAt || latestBook?.publishedAt)}
+            detail={formatDate(latestBook?.catalogueAddedAt || undefined)}
             image={latestBook?.coverImage}
             cta="Open book"
           />
-          {[0, 1].map((slot) => {
+          {[0, 1, 2].map((slot) => {
             const post = latestWriting[slot];
             const source = post ? writingCardSource(post) : { label: 'Writing', cta: 'Read on ABVX' };
             return (
@@ -210,15 +190,6 @@ export default async function Home() {
               />
             );
           })}
-          <HomepageLatestCard
-            title={mn7rLatest?.title || fallbackLatest.mn7rBlog.title}
-            summary={mn7rLatest?.excerpt || fallbackLatest.mn7rBlog.summary}
-            href={mn7rLatest?.url || 'https://mn7r.com/blog'}
-            label="MN7R Blog"
-            detail={formatDate(mn7rLatest?.publishedAt)}
-            image={mn7rLatest?.coverImage ? { src: mn7rLatest.coverImage, alt: mn7rLatest.title, role: 'rss-image', mediaRole: 'rss-image' } : undefined}
-            cta="Read on MN7R"
-          />
         </div>
       </section>
 

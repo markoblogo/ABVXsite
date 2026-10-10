@@ -1,5 +1,7 @@
 import { readBookFiles, readNativeWritingFiles, readSeriesFiles, readWorkFiles } from './file-loader';
 import { selectLatestSectionEntry } from './latest-selection.mjs';
+import { withCatalogueTimes } from './catalogue-chronology.mjs';
+import catalogueDiscovery from '../../content/catalogue-discovery.json';
 import type { Artifact, Book, NativeWriting, Series, SiteSection } from './types';
 
 type RelatedSource = Artifact | Book | Series;
@@ -102,10 +104,10 @@ export function getLatestHomepageBook(): Book | undefined {
 }
 
 export function getLatestSectionEntryBook(section: SiteSection): Book | undefined {
-  return getBooksBySection(section)
+  const items = getBooksBySection(section)
     .filter((book) => book.type !== 'series')
-    .filter((book) => book.primarySection === section)
-    .sort(byLatest)[0];
+    .filter((book) => book.primarySection === section);
+  return selectLatestSectionEntry(withCatalogueTimes(items, 'books', catalogueDiscovery), section) as Book | undefined;
 }
 
 export function getBookBySlug(slug: string): Book | undefined {
@@ -154,7 +156,7 @@ export function getLatestHomepageWork(section: SiteSection, excludedSlug?: strin
 }
 
 export function getLatestSectionEntryWork(section: SiteSection, excludedSlug?: string): Artifact | undefined {
-  return selectLatestSectionEntry(getArtifactsBySection(section), section, excludedSlug) as Artifact | undefined;
+  return selectLatestSectionEntry(withCatalogueTimes(getArtifactsBySection(section), 'work', catalogueDiscovery), section, excludedSlug) as Artifact | undefined;
 }
 
 export function getFeaturedWork(section?: SiteSection): Artifact[] {

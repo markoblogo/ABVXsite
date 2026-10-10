@@ -28,7 +28,7 @@ Global identity metadata is in `src/app/layout.tsx`; shared schema and metadata 
 | Substack | `https://abvx.substack.com/feed` | Article cards linking to the source |
 | YouTube | `content/youtube.json` | Featured player, compact recent preview, and text-only archive links |
 
-Writing and the two existing homepage publication slots use the same mixed-source list, sorted by immutable `addedAt` (UTC) from `content/writing-discovery.json`. The slots can both contain any source; labels and links describe their actual destinations. A native video companion opens ABVX, while ordinary YouTube cards open YouTube. The separate MN7R homepage card still reads `https://mn7r.com/rss.xml`; MN7R is not part of Writing.
+Writing and the three existing homepage publication slots use the same mixed-source list, sorted by immutable `addedAt` (UTC) from `content/writing-discovery.json`. Each slot can contain any source; labels and links describe their actual destinations. A native video companion opens ABVX, while ordinary YouTube cards open YouTube. MN7R is not part of this publication list.
 
 Feed HTTP access retains the existing host allowlists and parsers. The hourly `writing-feed-sync.yml` workflow records first additions and refreshes public metadata with `npm run writing:sync`; a manual workflow dispatch is available. It reuses the existing `ECOSYSTEM_SYNC_TOKEN`, commits only the discovery registry, and triggers the normal deployment. GitHub schedule delays and deployment time mean this is not an exact delivery deadline. No change means no commit/deployment. Source failures preserve stored items, including videos that leave YouTube's 15-entry feed.
 
@@ -51,6 +51,12 @@ Historical migration uses `addedAtBasis: legacy-source` where the first appearan
 If a video is missing, check publication time, the configured cutoff/exception, presence in the latest-15 feed, embed availability, and cache age. Test the real player and 375/390 px layouts when changing embed UI. A displayed thumbnail is not proof of successful playback.
 
 The generated public indexes describe the configured YouTube source; they do not persist every remote video. Dedicated video pages or a permanent archive remain separate, unimplemented features.
+
+## Catalogue addition chronology
+
+The homepage Focus, Systems and Books cards use immutable first-addition times from `content/catalogue-discovery.json`, rather than `updatedAt`, GitHub activity or releases of existing products. `npm run catalogue:register` runs before builds; commit its output with each new public work/book/series record. CI rejects uncommitted registration changes. Existing timestamps survive edits, removals, re-additions and repeated builds. Equal-time additions use the existing catalogue rank/title tie-breaker.
+
+The initial migration uses known source publication dates (`legacy-source`); undated legacy entries remain `null` (`legacy-unknown`) and do not compete for latest cards. The four Good Dogs/Jekyll book records use the verified production deployment time of PR26 (`production`, 2026-10-06T14:16:40.000Z). `--bootstrap` is migration-only; ordinary registration always records current UTC once (`observed`). Original content publication/update dates remain unchanged.
 
 ## Analytics
 

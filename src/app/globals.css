@@ -3583,6 +3583,33 @@ a {
   line-height: 1.82;
 }
 
+.working-story-body {
+  width: 100%;
+  min-width: 0;
+}
+
+.working-story-body .media-panel--writing {
+  aspect-ratio: auto;
+  max-height: none;
+  margin-block: 0 1.1rem;
+}
+
+.working-story-body .media-panel--writing img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+}
+
+.working-story-illustration {
+  margin-block: 1.6rem;
+}
+
+.working-story-caption {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: color-mix(in srgb, var(--ink) 65%, white 35%);
+}
+
 .native-writing-article__body p,
 .native-writing-article__body ul,
 .native-writing-article__body h3,

@@ -41,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       .sort((a, b) => b.valueOf() - a.valueOf())[0];
   }
 
-  const allContentDate = latestDate([...artifacts, ...books, ...writing, ...storyDates, ...editorialArticles, ...Object.values(pageMetadata)]);
+  const allContentDate = latestDate([...artifacts, ...books, ...writing, ...storyDates, workingStoriesSeries, ...editorialArticles, ...Object.values(pageMetadata)]);
   const focusDate = latestDate([
     ...artifacts.filter((artifact) => artifact.appearsIn.includes('focus')),
     ...editorialArticles.filter((article) => article.section === 'focus'),

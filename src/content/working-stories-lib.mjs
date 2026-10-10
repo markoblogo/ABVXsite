@@ -2,9 +2,11 @@ import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 import { parseMarkdownSource } from './markdown-source.mjs';
 
-/** @typedef {{title: string, slug: string, date: string, type: 'working-story', series: 'working-stories', story_id: string, cluster: string, period: string | null, topics: string[], book: {include: boolean, status: string}, visibility: string, summary: string, language: 'en' | 'fr' | 'uk', updatedAt?: string, source_session?: string, source: string, body: string}} WorkingStory */
+/** @typedef {{src: string, alt: string, width: number, height: number}} StoryImage */
+/** @typedef {StoryImage & {caption: string, afterHeading: string}} StoryIllustration */
+/** @typedef {{title: string, slug: string, date: string, type: 'working-story', series: 'working-stories', story_id: string, cluster: string, period: string | null, topics: string[], book: {include: boolean, status: string}, visibility: string, summary: string, language: 'en' | 'fr' | 'uk', updatedAt?: string, source_session?: string, coverImage?: StoryImage, illustrations?: StoryIllustration[], caseStudy?: {label: string, url: string}, source: string, body: string}} WorkingStory */
 
-const fields = new Set(['title', 'slug', 'date', 'type', 'series', 'story_id', 'cluster', 'period', 'topics', 'book', 'visibility', 'summary', 'language', 'updatedAt', 'source_session']);
+const fields = new Set(['title', 'slug', 'date', 'type', 'series', 'story_id', 'cluster', 'period', 'topics', 'book', 'visibility', 'summary', 'language', 'updatedAt', 'source_session', 'coverImage', 'illustrations', 'caseStudy']);
 const bookStatuses = new Set(['draft', 'selected', 'edited', 'final', 'excluded']);
 const text = (value) => typeof value === 'string' && value.trim().length > 0;
 const validDate = (value) => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value)
@@ -35,6 +37,31 @@ export function validateWorkingStory(data, body) {
   if (data.language !== undefined && !['en', 'fr', 'uk'].includes(data.language)) errors.push('language must be en, fr, or uk');
   if (data.updatedAt !== undefined && (!validDate(data.updatedAt) || data.updatedAt < data.date)) errors.push('updatedAt must be a real date on or after date');
   if (data.source_session !== undefined && (typeof data.source_session !== 'string' || !/^session-\d{3,}$/.test(data.source_session))) errors.push('source_session must be a neutral session-001-style identifier');
+  const checkImage = (image, field, illustration = false) => {
+    if (!image || typeof image !== 'object' || Array.isArray(image)) { errors.push(`${field} must be an image object`); return; }
+    const allowed = illustration ? ['src', 'alt', 'width', 'height', 'caption', 'afterHeading'] : ['src', 'alt', 'width', 'height'];
+    for (const key of Object.keys(image)) if (!allowed.includes(key)) errors.push(`unsupported ${field} field: ${key}`);
+    if (typeof image.src !== 'string' || !/^\/media\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(?:webp|png|jpe?g)$/.test(image.src)) errors.push(`${field}.src must be a local media image path`);
+    if (!text(image.alt)) errors.push(`${field}.alt is required`);
+    for (const dimension of ['width', 'height']) if (!Number.isInteger(image[dimension]) || image[dimension] <= 0) errors.push(`${field}.${dimension} must be a positive integer`);
+    if (illustration) {
+      if (!text(image.caption)) errors.push(`${field}.caption is required`);
+      if (!text(image.afterHeading) || !body?.split('\n').includes(`## ${image.afterHeading}`)) errors.push(`${field}.afterHeading must match a story heading`);
+    }
+  };
+  if (data.coverImage !== undefined) checkImage(data.coverImage, 'coverImage');
+  if (data.illustrations !== undefined) {
+    if (!Array.isArray(data.illustrations)) errors.push('illustrations must be an array');
+    else data.illustrations.forEach((image, index) => checkImage(image, `illustrations[${index}]`, true));
+  }
+  if (data.caseStudy !== undefined) {
+    if (!data.caseStudy || typeof data.caseStudy !== 'object' || Array.isArray(data.caseStudy)) errors.push('caseStudy must be an object');
+    else {
+      if (!text(data.caseStudy.label)) errors.push('caseStudy.label is required');
+      try { if (new URL(data.caseStudy.url).protocol !== 'https:') throw new Error(); } catch { errors.push('caseStudy.url must be an HTTPS URL'); }
+      for (const key of Object.keys(data.caseStudy)) if (!['label', 'url'].includes(key)) errors.push(`unsupported caseStudy field: ${key}`);
+    }
+  }
   if (!text(body)) errors.push('story body must not be empty');
   return errors;
 }
@@ -61,6 +88,9 @@ export function readWorkingStories(directory = path.join(process.cwd(), 'content
       visibility: data.visibility ?? 'draft', summary: data.summary ?? data.title,
       language: data.language ?? 'en', ...(data.updatedAt ? { updatedAt: data.updatedAt } : {}),
       ...(data.source_session ? { source_session: data.source_session } : {}), source, body,
+      ...(data.coverImage ? { coverImage: data.coverImage } : {}),
+      ...(data.illustrations ? { illustrations: data.illustrations } : {}),
+      ...(data.caseStudy ? { caseStudy: data.caseStudy } : {}),
     };
   });
 }
@@ -76,6 +106,13 @@ export function publishedWorkingStories(stories, now = Date.now()) {
   const today = new Date(now).toISOString().slice(0, 10);
   return stories.filter((story) => story.type === 'working-story' && story.visibility === 'public' && story.date <= today)
     .sort((a, b) => -compareWorkingStories(a, b));
+}
+
+/** Runtime publication follows the generated deployment index, never a moving clock. */
+export function indexedWorkingStories(stories, index) {
+  const urls = new Set(index.items.filter((item) => item.type === 'working-story').map((item) => item.canonicalUrl));
+  return stories.filter((story) => story.type === 'working-story' && story.visibility === 'public'
+    && urls.has(`https://abvx.xyz${workingStoryPath(story)}`)).sort((a, b) => -compareWorkingStories(a, b));
 }
 
 /** @param {WorkingStory[]} stories @param {{topic?: string, cluster?: string, sourceSession?: string}} query */
@@ -106,7 +143,9 @@ export function publicWorkingStory(story, published) {
     title: story.title, summary: story.summary, language: story.language,
     canonicalUrl: `https://abvx.xyz${workingStoryPath(story)}`, tags: story.topics,
     publishedAt: story.date, updatedAt: story.updatedAt || story.date,
-    links: [{ type: 'section', label: 'Working Stories', url: 'https://abvx.xyz/writing/working-stories' }],
+    ...(story.coverImage ? { image: `https://abvx.xyz${story.coverImage.src}` } : {}),
+    links: [{ type: 'section', label: 'Working Stories', url: 'https://abvx.xyz/writing/working-stories' },
+      ...(story.caseStudy ? [{ type: 'case-study', ...story.caseStudy }] : [])],
     related: relatedWorkingStories(story, published).map((candidate) => ({
       title: candidate.title, canonicalUrl: `https://abvx.xyz${workingStoryPath(candidate)}`, relation: 'same-project',
     })),

@@ -6479,6 +6479,41 @@
       "related": []
     },
     {
+      "type": "working-story",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "Working Stories",
+      "status": "published",
+      "title": "When the Flour Bag Became Part of the Product",
+      "summary": "How reusable flour packaging became part of the value proposition, helping a Ukrainian exporter differentiate a commodity without changing the flour.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/working-stories/when-the-flour-bag-became-part-of-the-product",
+      "tags": [
+        "branding",
+        "packaging",
+        "marketing",
+        "export",
+        "creative-direction",
+        "agriculture"
+      ],
+      "publishedAt": "2026-10-10",
+      "updatedAt": "2026-10-10",
+      "image": "https://abvx.xyz/media/working-stories/flour-meets-fashion/grano-detail.webp",
+      "links": [
+        {
+          "type": "section",
+          "label": "Working Stories",
+          "url": "https://abvx.xyz/writing/working-stories"
+        },
+        {
+          "type": "case-study",
+          "label": "See the visual case study on Behance",
+          "url": "https://www.behance.net/gallery/222816209/Flour-Meets-Fashion-Global-Packaging-Strategy"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "editorial",
       "section": "writing",
       "ecosystem": "Editorial pages",

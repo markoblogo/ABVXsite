@@ -8,6 +8,7 @@ const imageSources = [
   "https://*.substackcdn.com",
   "https://substack-post-media.s3.amazonaws.com",
   "https://mn7r.com",
+  "https://i.ytimg.com",
   "https://images.unsplash.com",
   "https://cdn.discordapp.com",
   "https://*.notion.site",

@@ -1,4 +1,4 @@
-export default function YouTubeEmbed({ href, title }: { href: string; title: string }) {
+export function youtubeVideoId(href: string): string | null {
   let videoId: string | null = null;
   try {
     const url = new URL(href);
@@ -6,7 +6,12 @@ export default function YouTubeEmbed({ href, title }: { href: string; title: str
   } catch {
     return null;
   }
-  if (!videoId || !/^[\w-]{11}$/.test(videoId)) return null;
+  return videoId && /^[\w-]{11}$/.test(videoId) ? videoId : null;
+}
+
+export default function YouTubeEmbed({ href, title }: { href: string; title: string }) {
+  const videoId = youtubeVideoId(href);
+  if (!videoId) return null;
   return (
     <iframe
       className="youtube-embed aspect-video w-full border-0"

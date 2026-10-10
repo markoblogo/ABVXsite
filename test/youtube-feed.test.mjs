@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { createRequire } from 'node:module';
 import ts from 'typescript';
@@ -17,12 +17,19 @@ function load(file) {
   const output = ts.transpileModule(readFileSync(file, 'utf8'), {
     compilerOptions: { jsx: ts.JsxEmit.ReactJSX, module: ts.ModuleKind.CommonJS },
   }).outputText;
-  const localRequire = (name) => name.startsWith('.') ? load(path.resolve(path.dirname(file), `${name}.ts`)) : require(name);
+  const localRequire = (name) => {
+    if (!name.startsWith('.')) return require(name);
+    const base = path.resolve(path.dirname(file), name);
+    return load(['.ts', '.tsx'].map((extension) => `${base}${extension}`).find(existsSync));
+  };
   new Function('require', 'module', 'exports', output)(localRequire, compiledModule, compiledModule.exports);
   return compiledModule.exports;
 }
 const { parseYoutubeFeed, fetchYoutubeFeed } = load(path.resolve('src/lib/youtube-feed.ts'));
 const YouTubeEmbed = load(path.resolve('src/components/YouTubeEmbed.tsx')).default;
+const RecentWritingCard = load(path.resolve('src/components/RecentWritingCard.tsx')).default;
+const WritingArchiveRow = load(path.resolve('src/components/WritingArchiveRow.tsx')).default;
+const FeaturedWritingCard = load(path.resolve('src/components/FeaturedWritingCard.tsx')).default;
 const settings = { channelId: 'UCexample', publishedAfter: '2026-10-09T19:52:23Z', initialVideoId: 'RsxiDWDj2Rg' };
 const now = Date.parse('2026-10-12T00:00:00Z');
 function entry(id, published, { channel = 'UCexample', updated = published, title = 'AI &amp; tools' } = {}) {
@@ -73,6 +80,37 @@ test('renders a lazy privacy-enhanced embedded player and rejects arbitrary ifra
   assert.ok(html.includes('loading="lazy"'));
   assert.ok(html.includes('title="AI &amp; tools"'));
   assert.equal(renderToStaticMarkup(createElement(YouTubeEmbed, { href: 'https://evil.example/watch?v=RsxiDWDj2Rg', title: 'bad' })), '');
+});
+
+const videoCard = {
+  title: 'AI & tools', excerpt: 'A practical video demonstration.',
+  href: 'https://www.youtube.com/watch?v=RsxiDWDj2Rg', source: 'youtube', date: 'Oct 09, 2026',
+  image: { src: 'https://i.ytimg.com/vi/RsxiDWDj2Rg/hqdefault.jpg', alt: 'AI & tools' },
+};
+
+test('recent videos render a compact play preview without loading a player before interaction', () => {
+  const html = renderToStaticMarkup(createElement(RecentWritingCard, videoCard));
+  assert.ok(html.includes('aria-label="Play AI &amp; tools"'));
+  assert.ok(html.includes('aria-haspopup="dialog"'));
+  assert.ok(html.includes('<img'));
+  assert.ok(html.includes('Watch on YouTube'));
+  assert.ok(!html.includes('<iframe'));
+  assert.ok(!html.includes('recent-writing-card--video'));
+});
+
+test('archived videos retain only their text and secure outbound watch link', () => {
+  const html = renderToStaticMarkup(createElement(WritingArchiveRow, videoCard));
+  assert.ok(html.includes('A practical video demonstration.'));
+  assert.ok(html.includes('aria-label="Watch AI &amp; tools"'));
+  assert.ok(html.includes('target="_blank" rel="noopener noreferrer"'));
+  assert.ok(!/<iframe|<img|<dialog|<button/.test(html));
+});
+
+test('featured videos keep their inline embedded player', () => {
+  const html = renderToStaticMarkup(createElement(FeaturedWritingCard, videoCard));
+  assert.ok(html.includes('<iframe'));
+  assert.ok(html.includes('https://www.youtube-nocookie.com/embed/RsxiDWDj2Rg'));
+  assert.ok(!html.includes('youtube-preview'));
 });
 
 const configuredSettings = JSON.parse(readFileSync('content/youtube.json', 'utf8'));

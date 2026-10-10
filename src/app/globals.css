@@ -3881,22 +3881,79 @@ a {
   min-height: 0;
 }
 
-.recent-writing-card--video {
-  grid-template-columns: minmax(0, 1fr);
-}
-
-.recent-writing-card--video .recent-writing-card__media {
-  border-right: 0;
-  border-bottom: 1px solid var(--line);
-}
-
-.recent-writing-card--video .recent-writing-card__body {
-  grid-column: 1;
-}
-
 .youtube-embed {
   display: block;
   min-height: 200px;
+}
+
+.youtube-preview {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: var(--ink);
+  cursor: pointer;
+}
+
+.youtube-preview:focus-visible {
+  outline: 3px solid var(--route-accent);
+  outline-offset: -3px;
+}
+
+.youtube-preview__play {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--paper);
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 1.25rem;
+}
+
+.youtube-preview-dialog {
+  width: min(900px, calc(100vw - 24px));
+  max-width: none;
+  max-height: calc(100dvh - 24px);
+  margin: auto;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.youtube-preview-dialog::backdrop {
+  background: rgb(0 0 0 / 75%);
+}
+
+.youtube-preview-dialog__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--line);
+  overflow-wrap: anywhere;
+}
+
+.youtube-preview-dialog__header button {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  background: var(--ink);
+  color: var(--paper);
+  cursor: pointer;
+}
+
+.youtube-preview-dialog__header button:focus-visible {
+  outline: 3px solid var(--route-accent);
+  outline-offset: 2px;
 }
 
 .recent-writing-card__media {
@@ -4000,11 +4057,6 @@ a {
   letter-spacing: 0.12em;
   line-height: 1.2;
   text-transform: uppercase;
-}
-
-.writing-archive-row__video {
-  grid-column: 1 / -1;
-  width: min(100%, 720px);
 }
 
 .writing-archive-row a {

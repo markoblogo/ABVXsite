@@ -6966,6 +6966,53 @@
       "ecosystem": "Writing",
       "group": "Working Stories",
       "status": "published",
+      "title": "We Offered a Full Refund on Chinese Tires. Only 5% Came Back.",
+      "summary": "How a money-back guarantee helped us sell an unfamiliar tire brand in a market where everybody assumed Chinese meant cheap.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/working-stories/chinese-truck-tires-money-back-guarantee",
+      "tags": [
+        "risk-reversal",
+        "money-back-guarantee",
+        "consumer-psychology",
+        "product-positioning",
+        "b2b-marketing",
+        "sales-strategy",
+        "customer-trust"
+      ],
+      "publishedAt": "2026-10-11",
+      "updatedAt": "2026-10-11",
+      "image": "https://abvx.xyz/media/working-stories/chinese-truck-tires-money-back-guarantee.png",
+      "links": [
+        {
+          "type": "section",
+          "label": "Working Stories",
+          "url": "https://abvx.xyz/writing/working-stories"
+        }
+      ],
+      "related": [
+        {
+          "title": "We Stopped Selling Tires. We Started Selling Kilometers.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/selling-truck-tire-mileage-instead-of-tires",
+          "relation": "same-project"
+        },
+        {
+          "title": "We Sold the Same Tires Through Three Different Networks. One Had to Look Cheap.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/price-perception-three-tire-service-brands",
+          "relation": "same-project"
+        },
+        {
+          "title": "Why Truck Drivers Preferred Teddy Bears to Pocket Knives",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/truck-driver-loyalty-program-childrens-toys",
+          "relation": "same-project"
+        }
+      ]
+    },
+    {
+      "type": "working-story",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "Working Stories",
+      "status": "published",
       "title": "We Put Baking Mixes in Milk Bottles. Then the Export Buyers Noticed.",
       "summary": "A Ukrainian flour producer wanted better margins without major investment. We turned ordinary baking mixes into colourful glass bottles, built a consumer brand, and discovered an unexpected opportunity in export markets.",
       "language": "en",
@@ -7029,6 +7076,11 @@
       ],
       "related": [
         {
+          "title": "We Offered a Full Refund on Chinese Tires. Only 5% Came Back.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/chinese-truck-tires-money-back-guarantee",
+          "relation": "same-project"
+        },
+        {
           "title": "We Stopped Selling Tires. We Started Selling Kilometers.",
           "canonicalUrl": "https://abvx.xyz/writing/working-stories/selling-truck-tire-mileage-instead-of-tires",
           "relation": "same-project"
@@ -7070,6 +7122,11 @@
         }
       ],
       "related": [
+        {
+          "title": "We Offered a Full Refund on Chinese Tires. Only 5% Came Back.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/chinese-truck-tires-money-back-guarantee",
+          "relation": "same-project"
+        },
         {
           "title": "We Sold the Same Tires Through Three Different Networks. One Had to Look Cheap.",
           "canonicalUrl": "https://abvx.xyz/writing/working-stories/price-perception-three-tire-service-brands",
@@ -7195,6 +7252,11 @@
         }
       ],
       "related": [
+        {
+          "title": "We Offered a Full Refund on Chinese Tires. Only 5% Came Back.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/chinese-truck-tires-money-back-guarantee",
+          "relation": "same-project"
+        },
         {
           "title": "We Stopped Selling Tires. We Started Selling Kilometers.",
           "canonicalUrl": "https://abvx.xyz/writing/working-stories/selling-truck-tire-mileage-instead-of-tires",

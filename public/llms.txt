@@ -1098,6 +1098,11 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/working-stories
   Summary: Cases, experiments, mistakes and unusual decisions from my professional life.
 
+- We Offered a Full Refund on Chinese Tires. Only 5% Came Back.
+  URL: https://abvx.xyz/writing/working-stories/chinese-truck-tires-money-back-guarantee
+  Summary: How a money-back guarantee helped us sell an unfamiliar tire brand in a market where everybody assumed Chinese meant cheap.
+  Topics: risk-reversal, money-back-guarantee, consumer-psychology, product-positioning, b2b-marketing, sales-strategy, customer-trust
+
 - We Stopped Selling Tires. We Started Selling Kilometers.
   URL: https://abvx.xyz/writing/working-stories/selling-truck-tire-mileage-instead-of-tires
   Summary: How we made expensive commercial tires easier to sell by changing the unit of value, and eventually turned tire ownership into a service.

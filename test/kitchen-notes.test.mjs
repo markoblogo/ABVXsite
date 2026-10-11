@@ -25,3 +25,9 @@ test('duplicate collection navigation fails before publication/build', () => {
   assert.ok(validateKitchenNotes(data, '[More Kitchen Notes](/writing/kitchen-notes)').some(error => error.includes('duplicate')));
   assert.deepEqual(validateKitchenNotes(data, '[Related recipe](/writing/marmite-oatmeal)'), []);
 });
+
+test('duplicate collection navigation is rejected for notes without restricting other articles', () => {
+  const body = '[Kitchen Notes](/writing/kitchen-notes)';
+  assert.ok(validateKitchenNotes({ type: 'note', collection: 'kitchen-notes' }, body).some(error => error.includes('duplicate')));
+  assert.deepEqual(validateKitchenNotes({ type: 'article' }, body), []);
+});

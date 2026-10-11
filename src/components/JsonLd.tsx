@@ -1,4 +1,5 @@
 import { headers } from 'next/headers';
+import { serializeJsonLd } from '@/lib/json-ld.mjs';
 
 type JsonLdProps = {
   id: string;
@@ -13,7 +14,7 @@ export default async function JsonLd({ id, data }: JsonLdProps) {
       id={id}
       nonce={nonce}
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      dangerouslySetInnerHTML={{ __html: serializeJsonLd(data) }}
     />
   );
 }

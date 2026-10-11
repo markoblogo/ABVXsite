@@ -10,6 +10,7 @@ import { createElement } from 'react';
 import { renderToReadableStream } from 'react-dom/server';
 import { serializeFrontmatter } from '../scripts/content-lib.mjs';
 import * as lib from '../src/content/working-stories-lib.mjs';
+import * as jsonLd from '../src/lib/json-ld.mjs';
 
 const repo = path.resolve(new URL('..', import.meta.url).pathname);
 const require = createRequire(import.meta.url);
@@ -200,7 +201,7 @@ test('real public-index generator includes only published stories and the empty-
 test('story template reuses article typography, emits SEO and hides internal metadata and empty relationships', async () => {
   const component = compile('src/components/WorkingStoryArticle.tsx', {
     '@/content/working-stories': lib, '@/lib/seo': { SITE_URL: 'https://abvx.xyz' },
-    './JsonLd': compile('src/components/JsonLd.tsx', { 'next/headers': { headers: async () => new Headers() } }),
+    './JsonLd': compile('src/components/JsonLd.tsx', { 'next/headers': { headers: async () => new Headers() }, '@/lib/json-ld.mjs': jsonLd }),
     './MarkdownContent': compile('src/components/MarkdownContent.tsx'),
     './MediaPanel': compile('src/components/MediaPanel.tsx'),
     './WorkingStoryArticle.module.css': { default: { body: 'story-body', illustration: 'story-illustration', caption: 'story-caption' }, __esModule: true },

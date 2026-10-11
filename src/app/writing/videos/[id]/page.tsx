@@ -6,7 +6,7 @@ import YouTubeEmbed from '@/components/YouTubeEmbed';
 import PageHeader from '@/components/PageHeader';
 import { getNativeWritingItems } from '@/content';
 import { getVideoWritingItems } from '@/lib/writing-feed';
-import { videoId, videoPageJsonLd } from '@/lib/youtube-pages.mjs';
+import { videoId, videoPageJsonLd, findVideoCompanion } from '@/lib/youtube-pages.mjs';
 import { metadataWithImage } from '@/lib/seo';
 import styles from '../../[slug]/article.module.css';
 
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
 export default async function VideoPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const companion = getNativeWritingItems().find(item => videoId(item.videoUrl) === id);
+  const companion = findVideoCompanion(getNativeWritingItems(), id);
   if (companion) permanentRedirect(`/writing/${companion.slug}`);
   const item = getVideoWritingItems().find(video => videoId(video.videoUrl) === id);
   if (!item) notFound();

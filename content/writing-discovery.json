@@ -514,28 +514,6 @@
     },
     {
       "source": "youtube",
-      "title": "Odyssey-3: AI Generates Interactive Worlds in Real Time (And You Can Play Them)",
-      "url": "https://www.youtube.com/watch?v=KbObKhxwReA",
-      "publishedAt": "2026-10-11T13:53:07.000Z",
-      "excerpt": "What if AI could generate an entire world while you're exploring it? Not a video. Not a traditional game. An interactive environment that responds to your actions in real time. Meet Odyssey-3, a new AI world model that g",
-      "coverImage": "https://i.ytimg.com/vi/KbObKhxwReA/hqdefault.jpg",
-      "videoDescription": "What if AI could generate an entire world while you're exploring it?\nNot a video. Not a traditional game. An interactive environment that responds to your actions in real time.\nMeet Odyssey-3, a new AI world model that generates environments from text prompts or images and lets you explore them as they evolve.\nAnd yes, you can apparently become a seal, a cat, or someone kayaking through an AI-generated world. Walking like a normal human is also an option, although considerably less interesting.\n\nWhat Odyssey-3 can do:\n- Generate interactive 3D-like environments from text prompts\n- Use images as starting points for new worlds\n- Let you explore in first-person or third-person view\n- Move the camera independently\n- Introduce new events while the world is being generated\n- Predict how objects move and interact using learned physics\nBut here's where things get interesting.\n\nOdyssey-3 Pro scored 66.1 on Physics-IQ Verified, achieving the highest reported video-to-video benchmark result using best-of-8 sampling.\nThe benchmark tests how accurately AI models predict the continuation of real physical experiments, covering everything from fluid dynamics to optics and mechanics.\nAnd Odyssey isn't building this technology just for entertainment.\n\nThe company is exploring applications in robotics, autonomous vehicles, and AI agents that need to understand and interact with physical environments.\nI tried Odyssey-3 Flash in the browser.\nThe waiting time was around five minutes. Then I got roughly five minutes to explore before being sent back to the queue.\nFive minutes to play God. Five minutes to wait. Apparently, even AI-generated universes have capacity limits.\nStill, this is a fascinating glimpse of a future where worlds aren't designed in advance. They're generated as you experience them.\n\nTry Odyssey-3:\nhttps://experience.odyssey.systems/\nOfficial announcement:\nhttps://odyssey.systems/meet-odyssey-3\n\n#Odyssey3 #AIWorldModels #GenerativeAI #InteractiveAI #ArtificialIntelligence",
-      "addedAt": "2026-10-11T15:19:15.947Z",
-      "addedAtBasis": "observed"
-    },
-    {
-      "source": "youtube",
-      "title": "ChatGPT Can Now Turn AI-Generated Logos Into Editable SVGs",
-      "url": "https://www.youtube.com/watch?v=RsxiDWDj2Rg",
-      "publishedAt": "2026-10-09T11:31:00.000Z",
-      "excerpt": "ChatGPT can already design your logo. Now it can turn that logo into an editable vector file, right inside the chat Meet Vectorize, a ChatGPT plugin that converts AI-generated logos and images into scalable SVG graphics.",
-      "coverImage": "https://i.ytimg.com/vi/RsxiDWDj2Rg/hqdefault.jpg",
-      "videoDescription": "ChatGPT can already design your logo. Now it can turn that logo into an editable vector file, right inside the chat\n\nMeet Vectorize, a ChatGPT plugin that converts AI-generated logos and images into scalable SVG graphics.\n\nHere's what you can do:\n- Generate a logo with ChatGPT\n- Convert PNG, JPEG, or WebP into editable SVG\n- Adjust colors and smooth vector curves\n- Remove backgrounds\n- Preview and refine your design\n- Download your vector logo or create a complete brand kit\nNo complicated workflow. No switching between multiple design tools.\n\nFrom a simple text prompt to an editable vector logo, all inside ChatGPT.\n\nTry Vectorize:\nhttps://chatgpt.com/plugins/plugin_asdk_app_6aa5c87fee8c8191be7798ec35595249?open_in_app\n\n#ChatGPT #Vectorize #AILogoDesign #SVG #AITools",
-      "addedAt": "2026-10-09T11:31:00.000Z",
-      "addedAtBasis": "legacy-source"
-    },
-    {
-      "source": "youtube",
       "title": "Claude Code Built a GTA Mod for SimCity 3000 in Just 2 Hours",
       "url": "https://www.youtube.com/watch?v=cQS3nbBe6JM",
       "publishedAt": "2026-10-11T13:37:46.000Z",
@@ -554,6 +532,28 @@
       "coverImage": "https://i.ytimg.com/vi/jEIPftaweBM/hqdefault.jpg",
       "videoDescription": "Remember when phones had buttons, batteries lasted forever, and Snake was peak entertainment?\nWell, someone just brought Claude AI to a Nokia from 2007.\n\nDeveloper Emir Karşıyakalı created an open-source AI chat client for Nokia Series 40 phones, including the legendary Nokia 6300.\nAnd yes, it actually works.\n\nYou can type questions on a physical keypad, send them to Claude, and get AI-generated responses on that tiny 240×320 screen.\nNo touchscreen. No modern smartphone. Just good old Java ME, a small Go server, and some wonderfully unnecessary engineering.\n\nThe project has since evolved into AIKON, supporting ChatGPT, Gemini, and Grok alongside Claude.\nThe AI runs remotely, but the nostalgia is 100% local.\n2007 hardware. 2026 intelligence.\n\nGitHub: https://github.com/emir/claude-s40\n\n#ClaudeAI #Nokia #RetroTech #ArtificialIntelligence #Shorts",
       "addedAt": "2026-10-10T14:39:44.000Z",
+      "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "youtube",
+      "title": "Odyssey-3: AI Generates Interactive Worlds in Real Time (And You Can Play Them)",
+      "url": "https://www.youtube.com/watch?v=KbObKhxwReA",
+      "publishedAt": "2026-10-11T13:53:07.000Z",
+      "excerpt": "What if AI could generate an entire world while you're exploring it? Not a video. Not a traditional game. An interactive environment that responds to your actions in real time. Meet Odyssey-3, a new AI world model that g",
+      "coverImage": "https://i.ytimg.com/vi/KbObKhxwReA/hqdefault.jpg",
+      "videoDescription": "What if AI could generate an entire world while you're exploring it?\nNot a video. Not a traditional game. An interactive environment that responds to your actions in real time.\nMeet Odyssey-3, a new AI world model that generates environments from text prompts or images and lets you explore them as they evolve.\nAnd yes, you can apparently become a seal, a cat, or someone kayaking through an AI-generated world. Walking like a normal human is also an option, although considerably less interesting.\n\nWhat Odyssey-3 can do:\n- Generate interactive 3D-like environments from text prompts\n- Use images as starting points for new worlds\n- Let you explore in first-person or third-person view\n- Move the camera independently\n- Introduce new events while the world is being generated\n- Predict how objects move and interact using learned physics\nBut here's where things get interesting.\n\nOdyssey-3 Pro scored 66.1 on Physics-IQ Verified, achieving the highest reported video-to-video benchmark result using best-of-8 sampling.\nThe benchmark tests how accurately AI models predict the continuation of real physical experiments, covering everything from fluid dynamics to optics and mechanics.\nAnd Odyssey isn't building this technology just for entertainment.\n\nThe company is exploring applications in robotics, autonomous vehicles, and AI agents that need to understand and interact with physical environments.\nI tried Odyssey-3 Flash in the browser.\nThe waiting time was around five minutes. Then I got roughly five minutes to explore before being sent back to the queue.\nFive minutes to play God. Five minutes to wait. Apparently, even AI-generated universes have capacity limits.\nStill, this is a fascinating glimpse of a future where worlds aren't designed in advance. They're generated as you experience them.\n\nTry Odyssey-3:\nhttps://experience.odyssey.systems/\nOfficial announcement:\nhttps://odyssey.systems/meet-odyssey-3\n\n#Odyssey3 #AIWorldModels #GenerativeAI #InteractiveAI #ArtificialIntelligence",
+      "addedAt": "2026-10-11T15:19:15.947Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
+      "title": "ChatGPT Can Now Turn AI-Generated Logos Into Editable SVGs",
+      "url": "https://www.youtube.com/watch?v=RsxiDWDj2Rg",
+      "publishedAt": "2026-10-09T11:31:00.000Z",
+      "excerpt": "ChatGPT can already design your logo. Now it can turn that logo into an editable vector file, right inside the chat Meet Vectorize, a ChatGPT plugin that converts AI-generated logos and images into scalable SVG graphics.",
+      "coverImage": "https://i.ytimg.com/vi/RsxiDWDj2Rg/hqdefault.jpg",
+      "videoDescription": "ChatGPT can already design your logo. Now it can turn that logo into an editable vector file, right inside the chat\n\nMeet Vectorize, a ChatGPT plugin that converts AI-generated logos and images into scalable SVG graphics.\n\nHere's what you can do:\n- Generate a logo with ChatGPT\n- Convert PNG, JPEG, or WebP into editable SVG\n- Adjust colors and smooth vector curves\n- Remove backgrounds\n- Preview and refine your design\n- Download your vector logo or create a complete brand kit\nNo complicated workflow. No switching between multiple design tools.\n\nFrom a simple text prompt to an editable vector logo, all inside ChatGPT.\n\nTry Vectorize:\nhttps://chatgpt.com/plugins/plugin_asdk_app_6aa5c87fee8c8191be7798ec35595249?open_in_app\n\n#ChatGPT #Vectorize #AILogoDesign #SVG #AITools",
+      "addedAt": "2026-10-09T11:31:00.000Z",
       "addedAtBasis": "legacy-source"
     },
     {

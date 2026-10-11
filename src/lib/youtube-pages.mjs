@@ -5,12 +5,18 @@ export function videoId(value) {
   return key.startsWith('https://www.youtube.com/watch?') ? new URL(key).searchParams.get('v') : null;
 }
 
+export function findVideoCompanion(native, id, now = Date.now()) {
+  return native.find(item => videoId(item.videoUrl) === id
+    && (item.visibility === undefined || item.visibility === 'public')
+    && (item.status === undefined || item.status === 'live')
+    && Date.parse(item.publishedAt) <= now);
+}
+
 // The registry remains canonical; authored companions supersede automatic pages.
 export function automaticVideoItems(registry, native = [], now = Date.now()) {
-  const authored = new Set(native.map(item => videoId(item.videoUrl)).filter(Boolean));
   return registry.items.flatMap(item => {
     const id = item.source === 'youtube' ? videoId(item.url) : null;
-    if (!id || authored.has(id) || Date.parse(item.publishedAt) > now) return [];
+    if (!id || findVideoCompanion(native, id, now) || Date.parse(item.publishedAt) > now) return [];
     return [{ ...item, videoUrl: item.url, url: `/writing/videos/${id}` }];
   });
 }

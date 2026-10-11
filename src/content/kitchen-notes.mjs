@@ -2,12 +2,12 @@ const text = value => typeof value === 'string' && Boolean(value.trim());
 export function validateKitchenNotes(data, body = '') {
   const errors = [];
   if (data.collection !== undefined && data.collection !== 'kitchen-notes') errors.push('Unsupported Writing collection');
+  if (data.collection === 'kitchen-notes' && /\[[^\]]+\]\(\/writing\/kitchen-notes\)/.test(body)) errors.push('Kitchen Notes navigation is supplied by the page; remove the duplicate collection link from the body');
   if (data.type !== 'recipe') {
     if (data.recipe !== undefined) errors.push('Structured recipe requires type recipe');
     return errors;
   }
   if (data.collection !== 'kitchen-notes') errors.push('Recipe requires kitchen-notes collection');
-  if (/\[[^\]]+\]\(\/writing\/kitchen-notes\)/.test(body)) errors.push('Kitchen Notes navigation is supplied by the page; remove the duplicate collection link from the recipe body');
   const recipe = data.recipe;
   if (!recipe || typeof recipe !== 'object' || Array.isArray(recipe)) return [...errors, 'Recipe requires structured ingredients and instructions'];
   const fields = new Set(['recipeYield', 'ingredients', 'instructions', 'timingText', 'variations']);

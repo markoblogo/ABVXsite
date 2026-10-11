@@ -481,6 +481,26 @@
     },
     {
       "source": "youtube",
+      "title": "My $0 API Key Trying to Access OpenAI, Claude & Gemini",
+      "url": "https://www.youtube.com/watch?v=2po93Gv-MuY",
+      "publishedAt": "2026-10-11T14:17:58.000Z",
+      "excerpt": "My API key has exactly $0.00 in credits. But does that stop him from approaching the biggest AI models on the planet? Absolutely not. OpenAI. Anthropic Claude. Google Gemini. Three AI giants. One broke little API key. An",
+      "coverImage": "https://i.ytimg.com/vi/2po93Gv-MuY/hqdefault.jpg",
+      "addedAt": "2026-10-11T15:19:15.947Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
+      "title": "Anthropic CEO: AI Could Double Human Lifespan in 5–10 Years",
+      "url": "https://www.youtube.com/watch?v=6OFAvsQ2XTw",
+      "publishedAt": "2026-10-11T14:05:33.000Z",
+      "excerpt": "What if AI could help humans live to 150? Dario Amodei, CEO of Anthropic, believes artificial intelligence could accelerate medical research so dramatically that human lifespans might double within the next decade. His r",
+      "coverImage": "https://i.ytimg.com/vi/6OFAvsQ2XTw/hqdefault.jpg",
+      "addedAt": "2026-10-11T15:19:15.947Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "40 AI Agents Built a Superman Flight Simulator in 7 Hours (45M Tokens)",
       "url": "https://www.youtube.com/watch?v=6q2JG0gCyDg",
       "publishedAt": "2026-10-10T15:20:37.000Z",
@@ -508,6 +528,16 @@
       "coverImage": "https://i.ytimg.com/vi/jEIPftaweBM/hqdefault.jpg",
       "addedAt": "2026-10-10T14:39:44.000Z",
       "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "youtube",
+      "title": "Odyssey-3: AI Generates Interactive Worlds in Real Time (And You Can Play Them)",
+      "url": "https://www.youtube.com/watch?v=KbObKhxwReA",
+      "publishedAt": "2026-10-11T13:53:07.000Z",
+      "excerpt": "What if AI could generate an entire world while you're exploring it? Not a video. Not a traditional game. An interactive environment that responds to your actions in real time. Meet Odyssey-3, a new AI world model that g",
+      "coverImage": "https://i.ytimg.com/vi/KbObKhxwReA/hqdefault.jpg",
+      "addedAt": "2026-10-11T15:19:15.947Z",
+      "addedAtBasis": "observed"
     },
     {
       "source": "youtube",

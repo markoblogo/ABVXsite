@@ -6543,6 +6543,95 @@
       "ecosystem": "Writing",
       "group": null,
       "status": "live",
+      "title": "Homemade Ginger Beer: One Week, Lots of Ginger, and a Very Spicy Experiment",
+      "summary": "My son and I made naturally fermented ginger beer using fresh ginger, sugar and water. Five days for the starter, another day for carbonation, and one surprisingly good spicy experiment.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/homemade-ginger-beer-ginger-bug-recipe",
+      "tags": [
+        "ginger-beer",
+        "ginger-bug",
+        "fermentation",
+        "homemade-drinks",
+        "ginger-ale",
+        "recipes",
+        "kitchen-experiments"
+      ],
+      "links": [],
+      "updatedAt": "2026-10-11",
+      "related": [
+        {
+          "title": "Kitchen Notes",
+          "canonicalUrl": "https://abvx.xyz/writing/kitchen-notes",
+          "relation": "collection"
+        }
+      ],
+      "collection": "kitchen-notes",
+      "contentType": "recipe",
+      "recipe": {
+        "recipeYield": "Approximately 3–3.5 litres, depending on evaporation and straining losses",
+        "timingText": "Approximately 30 minutes of active work, excluding daily starter feeding. Allow around 5–7 days for the ginger bug, then 12–36 hours for bottle carbonation; temperature and culture activity can make fermentation take longer. Chill before serving.",
+        "ingredients": [
+          {
+            "name": "water for the ginger bug",
+            "quantityText": "400 ml"
+          },
+          {
+            "name": "freshly grated ginger for the ginger bug",
+            "quantityText": "1½–2 tablespoons"
+          },
+          {
+            "name": "sugar for the ginger bug, preferably cane sugar",
+            "quantityText": "2 tablespoons"
+          },
+          {
+            "name": "freshly grated ginger for daily starter feeding",
+            "quantityText": "Approximately 1 teaspoon each day"
+          },
+          {
+            "name": "sugar for daily starter feeding",
+            "quantityText": "Approximately 1 teaspoon each day"
+          },
+          {
+            "name": "water for the ginger beer base",
+            "quantityText": "3 litres"
+          },
+          {
+            "name": "fresh ginger root for the ginger beer base, finely grated",
+            "quantityText": "200–250 g"
+          },
+          {
+            "name": "sugar for the ginger beer base",
+            "quantityText": "200 g"
+          },
+          {
+            "name": "strained liquid from the active ginger bug",
+            "quantityText": "The prepared starter; final strained volume varies"
+          },
+          {
+            "name": "fresh hot pepper for the optional spicy bottle",
+            "quantityText": "One small slice, approximately 2–3 mm thick"
+          }
+        ],
+        "instructions": [
+          "Start the ginger bug: stir 400 ml water, 1½–2 tablespoons freshly grated ginger and 2 tablespoons sugar in a clean container. Cover with a clean cloth and leave in a shaded place at room temperature.",
+          "Feed once a day with approximately 1 teaspoon freshly grated ginger and 1 teaspoon sugar; stir and cover again. Allow around 5–7 days, sometimes longer, until clearly bubbly with a fresh, mildly fermented smell. The author’s starter was active on day five. Discard and restart if fuzzy mould, a rotten smell or obvious spoilage appears.",
+          "Bring 3 litres water to a boil. Add 200–250 g grated fresh ginger and 200 g sugar, stir and return to a gentle boil. Reduce the heat and simmer for approximately 15 minutes.",
+          "Cool the infusion completely to room temperature. Strain out the ginger, strain the active ginger bug liquid and stir that liquid into the cooled infusion.",
+          "Pour into clean, food-grade PET bottles designed for carbonated drinks, leaving some space at the top. For the spicy variation, add one 2–3 mm slice of fresh hot pepper to one bottle immediately after filling.",
+          "Check the sealed bottles frequently as carbonation develops. The author’s batch took approximately 24 hours; roughly 12–36 hours or longer may be needed depending on temperature and culture activity. Firmness indicates pressure, not completed fermentation. Refrigerate promptly once sufficiently carbonated.",
+          "Keep chilled and open slowly, preferably over a sink. Fermentation and pressure may continue. Do not use ordinary glass bottles that are not designed for pressure. Natural fermentation can produce alcohol and does not guarantee zero alcohol; for a strictly alcohol-free drink, especially for children, use ginger syrup mixed with carbonated water instead."
+        ],
+        "variations": [
+          "Spicy ginger beer: add a 2–3 mm slice of fresh hot pepper to one freshly filled bottle and leave it through the same secondary fermentation period."
+        ]
+      }
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
       "title": "How I Work With AI Agents in 2026",
       "summary": "My practical AI agent workflow in 2026: orchestrator agents, 20–40 subagents, long-running sessions, taste gates, automation and why AI-native work keeps changing.",
       "language": "en",

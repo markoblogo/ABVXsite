@@ -14,7 +14,7 @@ This repository owns the public presentation and its editable content. `ABVX-OS`
 | [Focus](https://abvx.xyz/focus) | Agro-commodity trading, brokerage, intelligence, benchmarks, and partner fronts |
 | [Systems](https://abvx.xyz/systems) | Market, publishing/language, AI-development, and commercial/utility systems |
 | [Books](https://abvx.xyz/books) | ABVX Press books, translations, series, free resources, and companions |
-| [Writing](https://abvx.xyz/writing) | Native articles, Medium/Substack feeds, and embedded new YouTube videos |
+| [Writing](https://abvx.xyz/writing) | Native articles, Medium/Substack feeds, and automatic YouTube watch pages |
 | [About](https://abvx.xyz/about) | Background, working method, contact, and technology/creative collaborations |
 | [Work with me](https://abvx.xyz/work-with-me) | Engagement formats and six focused service pages |
 

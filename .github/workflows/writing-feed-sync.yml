@@ -3,7 +3,7 @@ name: Sync Writing discoveries
 on:
   workflow_dispatch:
   schedule:
-    - cron: '41 * * * *'
+    - cron: '2,17,32,47 * * * *'
 
 permissions:
   contents: write
@@ -26,14 +26,15 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run writing:sync
+      - run: npm run llms:generate
       - run: npm run content:validate
-      - run: node --test test/writing-chronology.test.mjs
-      - name: Publish only the discovery registry
+      - run: node --test test/writing-chronology.test.mjs test/youtube-pages.test.mjs test/youtube-feed.test.mjs
+      - name: Publish only discoveries and generated indexes
         run: |
-          if git diff --quiet -- content/writing-discovery.json; then exit 0; fi
+          if git diff --quiet -- content/writing-discovery.json public/content-index.json public/llms.txt; then exit 0; fi
           git config user.name 'abvx-writing[bot]'
           git config user.email 'abvx-writing[bot]@users.noreply.github.com'
-          git add content/writing-discovery.json
+          git add content/writing-discovery.json public/content-index.json public/llms.txt
           git commit -m 'writing-sync: record first additions and refresh feed metadata'
           git pull --rebase origin main
           git push origin HEAD:main

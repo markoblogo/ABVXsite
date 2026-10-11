@@ -19,3 +19,9 @@ test('Recipe schema uses visible quantities and steps without inventing precise 
   assert.equal(data.image,'https://abvx.xyz/media/cover.png');
   for(const key of ['prepTime','cookTime','totalTime','nutrition','aggregateRating']) assert.equal(data[key],undefined);
 });
+
+test('duplicate collection navigation fails before publication/build', () => {
+  const data = { type: 'recipe', collection: 'kitchen-notes', media: { src: '/cover.png' }, recipe };
+  assert.ok(validateKitchenNotes(data, '[More Kitchen Notes](/writing/kitchen-notes)').some(error => error.includes('duplicate')));
+  assert.deepEqual(validateKitchenNotes(data, '[Related recipe](/writing/marmite-oatmeal)'), []);
+});

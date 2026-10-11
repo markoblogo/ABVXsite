@@ -9,6 +9,40 @@ YouTube videos in Writing: https://abvx.xyz/writing?source=youtube. Applied AI r
 Machine-readable index: https://abvx.xyz/content-index.json
 Primary layers: Focus = market infrastructure; Systems = operational systems architecture; Books = publishing and intellectual layer; Writing = essays and field notes.
 
+## YouTube watch pages
+
+- My $0 API Key Trying to Access OpenAI, Claude & Gemini
+  URL: https://abvx.xyz/writing/videos/2po93Gv-MuY
+  Summary: My API key has exactly $0.00 in credits. But does that stop him from approaching the biggest AI models on the planet? Absolutely not. OpenAI. Anthropic Claude. Google Gemini. Three AI giants. One broke little API key. An
+
+- Anthropic CEO: AI Could Double Human Lifespan in 5–10 Years
+  URL: https://abvx.xyz/writing/videos/6OFAvsQ2XTw
+  Summary: What if AI could help humans live to 150? Dario Amodei, CEO of Anthropic, believes artificial intelligence could accelerate medical research so dramatically that human lifespans might double within the next decade. His r
+
+- Claude Code Built a GTA Mod for SimCity 3000 in Just 2 Hours
+  URL: https://abvx.xyz/writing/videos/cQS3nbBe6JM
+  Summary: What if you could turn almost any PC game into something completely different using AI? And what if Claude Code could handle the modding process for you? Meet Universal Modder, an open-source collection of AI agent skill
+
+- Someone Put Claude AI on a 2007 Nokia. Yes, Really.
+  URL: https://abvx.xyz/writing/videos/jEIPftaweBM
+  Summary: Remember when phones had buttons, batteries lasted forever, and Snake was peak entertainment? Well, someone just brought Claude AI to a Nokia from 2007. Developer Emir Karşıyakalı created an open-source AI chat client fo
+
+- Odyssey-3: AI Generates Interactive Worlds in Real Time (And You Can Play Them)
+  URL: https://abvx.xyz/writing/videos/KbObKhxwReA
+  Summary: What if AI could generate an entire world while you're exploring it? Not a video. Not a traditional game. An interactive environment that responds to your actions in real time. Meet Odyssey-3, a new AI world model that g
+
+- ChatGPT Can Now Turn AI-Generated Logos Into Editable SVGs
+  URL: https://abvx.xyz/writing/videos/RsxiDWDj2Rg
+  Summary: ChatGPT can already design your logo. Now it can turn that logo into an editable vector file, right inside the chat Meet Vectorize, a ChatGPT plugin that converts AI-generated logos and images into scalable SVG graphics.
+
+- Claude Code Tried to Make Me Watch 60 Videos at Once. I'm Scared.
+  URL: https://abvx.xyz/writing/videos/vZW-Z4pYqzU
+  Summary: I was watching Claude Code coordinate its army of AI agents. And suddenly, things got a little terrifying. The task? Working with 60 videos simultaneously. Claude decided that the most efficient way for me to review the
+
+- Someone Made a Digital Spider That Crawls Across Web Pages
+  URL: https://abvx.xyz/writing/videos/x5uo-P2Vf_I
+  Summary: I have absolutely no idea why someone made this. But I'm incredibly glad it exists. Someone turned the concept of a web crawler into an actual digital spider. A glowing, eight-legged creature crawling across text, links,
+
 ## Focus systems
 
 - MN7R

@@ -1,3 +1,5 @@
+import { automaticVideoItems } from './youtube-pages.mjs';
+
 const sources = new Set(['abvx', 'medium', 'substack', 'youtube']);
 const bases = new Set(['observed', 'legacy-source', 'production']);
 
@@ -30,6 +32,7 @@ export function validateWritingDiscovery(data, now = Date.now()) {
       || new Date(time).toISOString() !== item.addedAt || time > now) errors.push(`Invalid addedAt: ${item.url}`);
     if (!sources.has(item.source) || !bases.has(item.addedAtBasis) || typeof item.title !== 'string' || !item.title.trim()
       || !Number.isFinite(Date.parse(item.publishedAt))) errors.push(`Invalid Writing metadata: ${item.url}`);
+    if (item.videoDescription !== undefined && (item.source !== 'youtube' || typeof item.videoDescription !== 'string' || item.videoDescription.length > 10000)) errors.push(`Invalid video description: ${item.url}`);
     const local = key.startsWith('/');
     if (!local && item.source !== 'youtube') {
       const host = key ? new URL(key).hostname : '';
@@ -60,6 +63,7 @@ export function registerWritingItems(registry, items, { now = new Date().toISOSt
       ...(item.excerpt ? { excerpt: item.excerpt } : {}),
       ...(item.coverImage ? { coverImage: item.coverImage } : {}),
       ...(item.videoUrl ? { videoUrl: item.videoUrl } : {}),
+      ...((item.videoDescription ?? existing?.videoDescription) !== undefined ? { videoDescription: item.videoDescription ?? existing?.videoDescription } : {}),
       addedAt: existing?.addedAt || (bootstrap ? published : now),
       addedAtBasis: existing?.addedAtBasis || (bootstrap ? 'legacy-source' : 'observed'),
     });
@@ -69,8 +73,8 @@ export function registerWritingItems(registry, items, { now = new Date().toISOSt
 
 export function mergeWritingItems(native, registry) {
   const dates = new Map(registry.items.map(item => [writingUrlKey(item.url), item]));
-  const videos = new Set(native.map(item => writingUrlKey(item.videoUrl)).filter(Boolean));
-  const external = registry.items.filter(item => !item.url.startsWith('/') && !videos.has(writingUrlKey(item.url)));
+  const external = registry.items.filter(item => !item.url.startsWith('/') && item.source !== 'youtube');
+  external.push(...automaticVideoItems(registry, native));
   return sortWritingItems([...native.map(item => ({
     ...item, addedAt: dates.get(writingUrlKey(item.url))?.addedAt || item.publishedAt,
   })), ...external]);

@@ -61,7 +61,7 @@ function validateFile(file, folder) {
   const { data, body } = parseContentFile(file);
   all.push({ file, folder, data, body });
   if (folder === 'writing') {
-    for (const message of [...validateNativeWritingVideo(data), ...validateKitchenNotes(data)]) addError(file, message);
+    for (const message of [...validateNativeWritingVideo(data), ...validateKitchenNotes(data, body)]) addError(file, message);
   }
 
   const requiredFields = folder === 'writing' ? ['id', 'slug'] : ['id', 'slug', 'title', 'summary'];

@@ -1,3 +1,4 @@
+import { automaticVideoItems } from '../src/lib/youtube-pages.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { contentFiles, parseContentFile } from './content-lib.mjs';
@@ -94,6 +95,35 @@ await withQaServer(async (base) => {
     assert.ok(indexUrls.has('https://abvx.xyz/writing/kitchen-notes'));
     assert.ok(xml.includes('https://abvx.xyz/writing/kitchen-notes'));
     assert.ok(await page.locator('main a[href="/writing/marmite-oatmeal"]').count());
+
+    const nativeVideos = contentFiles('writing').map(file => parseContentFile(file).data).filter(item => item.visibility === 'public' && item.status === 'live');
+    const videos = automaticVideoItems(JSON.parse(readFileSync('content/writing-discovery.json', 'utf8')), nativeVideos);
+    for (const video of videos) {
+      const route = video.url;
+      assert.ok(indexUrls.has('https://abvx.xyz' + route), route + ' missing index');
+      assert.ok(llms.includes('URL: https://abvx.xyz' + route + '\n'), route + ' missing llms');
+      assert.ok(xml.includes('https://abvx.xyz' + route), route + ' missing sitemap');
+      await visit(base + route);
+      assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'), 'https://abvx.xyz' + route);
+      const schema = JSON.parse(await page.locator('#jsonld-watch-video').textContent());
+      assert.equal(schema['@type'], 'VideoObject');
+      assert.equal(schema.uploadDate, video.publishedAt);
+      assert.equal(schema.description, video.videoDescription || video.excerpt || video.title);
+      assert.equal(await page.locator('main iframe.youtube-embed').count(), 1);
+      if (video.videoDescription) assert.ok((await page.locator('.native-writing-article__body').innerText()).includes(video.videoDescription));
+      await page.setViewportSize({ width: 390, height: 844 });
+      assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), route + ' mobile overflow');
+      await page.setViewportSize({ width: 1280, height: 900 });
+    }
+    await visit(base + '/writing');
+    for (const video of videos) assert.ok(await page.locator('main a[href="' + video.url + '"]').count(), video.url + ' missing Writing link');
+    const companion = nativeVideos.find(item => item.videoUrl);
+    if (companion) {
+      const id = new URL(companion.videoUrl).searchParams.get('v');
+      const redirect = await page.request.get(base + '/writing/videos/' + id, { maxRedirects: 0 });
+      assert.equal(redirect.status(), 308);
+      assert.ok(redirect.headers().location.endsWith('/writing/' + companion.slug));
+    }
 
     const seriesRoute = '/writing/working-stories';
     assert.ok(indexUrls.has('https://abvx.xyz' + seriesRoute));

@@ -1,3 +1,4 @@
+import { getVideoWritingItems } from '@/lib/writing-feed';
 import kitchenNotes from '../../content/kitchen-notes.json';
 import pageMetadata from '../../content/pages.json';
 import { getArtifacts, getBooks, getNativeWritingItems } from '@/content';
@@ -108,5 +109,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${base}${workingStoryPath(story)}`, lastModified: contentDate({ publishedAt: story.date, updatedAt: story.updatedAt }),
     changeFrequency: 'monthly', priority: 0.55,
   }));
-  return [...staticRoutes, ...serviceRoutes, ...workRoutes, ...bookRoutes, ...writingRoutes, ...editorialRoutes, ...storyRoutes];
+  const videoRoutes: MetadataRoute.Sitemap = getVideoWritingItems().map(item => ({
+    url: base + item.url, lastModified: new Date(item.publishedAt), changeFrequency: 'monthly', priority: 0.55,
+  }));
+  return [...videoRoutes, ...staticRoutes, ...serviceRoutes, ...workRoutes, ...bookRoutes, ...writingRoutes, ...editorialRoutes, ...storyRoutes];
 }

@@ -20,7 +20,7 @@ Global identity metadata is in `src/app/layout.tsx`; shared schema and metadata 
 
 ## Writing sources
 
-`src/app/writing/page.tsx` merges native `content/writing/` records with the following feeds, sorted by publication date:
+`src/app/writing/page.tsx` uses the committed native/discovery registry with immutable first-addition chronology:
 
 | Source | Feed/configuration | Display |
 | --- | --- | --- |
@@ -28,13 +28,13 @@ Global identity metadata is in `src/app/layout.tsx`; shared schema and metadata 
 | Substack | `https://abvx.substack.com/feed` | Article cards linking to the source |
 | YouTube | `content/youtube.json` | Featured player, compact recent preview, and text-only archive links |
 
-Writing and the three existing homepage publication slots use the same mixed-source list, sorted by immutable `addedAt` (UTC) from `content/writing-discovery.json`. Each slot can contain any source; labels and links describe their actual destinations. A native video companion opens ABVX, while ordinary YouTube cards open YouTube. MN7R is not part of this publication list.
+Writing and the three existing homepage publication slots use the same mixed-source list, sorted by immutable `addedAt` (UTC) from `content/writing-discovery.json`. Each slot can contain any source; labels and links describe their actual destinations. A native video companion opens ABVX, while imported YouTube cards open their automatic ABVX watch page. MN7R is not part of this publication list.
 
-Feed HTTP access retains the existing host allowlists and parsers. The hourly `writing-feed-sync.yml` workflow records first additions and refreshes public metadata with `npm run writing:sync`; a manual workflow dispatch is available. It reuses the existing `ECOSYSTEM_SYNC_TOKEN`, commits only the discovery registry, and triggers the normal deployment. GitHub schedule delays and deployment time mean this is not an exact delivery deadline. No change means no commit/deployment. Source failures preserve stored items, including videos that leave YouTube's 15-entry feed.
+Feed HTTP access retains the existing host allowlists and parsers. The approximately 15-minute `writing-feed-sync.yml` workflow records first additions and refreshes public metadata with `npm run writing:sync`; a manual workflow dispatch is available. It reuses the existing `ECOSYSTEM_SYNC_TOKEN`, commits only the discovery registry and its two generated machine indexes, and triggers the normal deployment. GitHub schedule delays and deployment time mean this is not an exact delivery deadline. No change means no commit/deployment. Source failures preserve stored items, including videos that leave YouTube's 15-entry feed.
 
 Native Writing and Working Stories are registered by `npm run writing:register` during prebuild. Commit the changed registry with the approved source. Rebuilds, edits, `updatedAt`, and feed retries never reset `addedAt`. Original publication/upload dates remain separate and continue to supply article/video metadata. Writing cards display the addition date; the article itself retains its original publication date. Same-time additions use original publication time, then URL as a deterministic tie-breaker.
 
-If a feed is unavailable from the GitHub runner, sync retries through the public, cached `/api/writing/feed/<source>` endpoint on ABVX. That endpoint accepts only Medium, Substack and YouTube, exposes public metadata rather than article bodies, and reuses the same fixed URLs, parsers and host allowlists. If both paths fail, keep the saved source. The endpoint is marked `noindex`; it is not a new editorial page or a general URL proxy.
+If a feed is unavailable from the GitHub runner, sync retries through the public `/api/writing/feed/<source>` endpoint on ABVX. That endpoint accepts only Medium, Substack and YouTube, exposes public metadata rather than article bodies, and reuses the same fixed URLs, parsers and host allowlists. If both paths fail, keep the saved source. The endpoint is marked `noindex`; it is not a new editorial page or a general URL proxy.
 
 Historical migration uses `addedAtBasis: legacy-source` where the first appearance is unknown; this is a fallback, not recovered evidence. The three October 10 pilot pages use production-ready time `16:06:30Z` (GitHub deployment 6983374035), and the flour case uses `12:17:48Z` (6980593513), marked `production`. New registrations use `observed`: the time they enter the site's committed publication registry, followed by deployment. Do not rewrite historical times on every sync or treat them as source publication dates.
 
@@ -50,7 +50,9 @@ Historical migration uses `addedAtBasis: legacy-source` where the first appearan
 
 If a video is missing, check publication time, the configured cutoff/exception, presence in the latest-15 feed, embed availability, and cache age. Test the real player and 375/390 px layouts when changing embed UI. A displayed thumbnail is not proof of successful playback.
 
-The generated public indexes describe the configured YouTube source; they do not persist every remote video. Dedicated video pages or a permanent archive remain separate, unimplemented features.
+Discovered YouTube videos now receive `/writing/videos/<video-id>` watch pages from the committed registry: main embedded player, complete owner-written feed description when available, actual upload date, self-canonical metadata and VideoObject. They appear in sitemap, content-index and llms.txt. Short descriptions retained before this change use their stored excerpt until a successful source refresh; no transcript or authored analysis is invented. A native authored companion supersedes its automatic watch page; that route permanently redirects to the companion and is excluded from the automatic sitemap/index set.
+
+The public fallback endpoint sends `no-store`; YouTube's upstream fetch also bypasses the framework data cache. This removes the former two layers of stale metadata on top of the hourly schedule. The scheduler may still be late, YouTube may update its feed late, and a new discovery requires a deployment; 15 minutes is a polling cadence, not a delivery guarantee. Diagnostics are available from the existing workflow logs. No API key, transcript scraper, new service or model is introduced.
 
 ## Catalogue addition chronology
 

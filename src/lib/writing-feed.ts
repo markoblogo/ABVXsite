@@ -2,6 +2,7 @@ import { getNativeWritingItems } from '@/content';
 import { workingStoriesFeed } from '@/content/working-stories';
 import discovery from '../../content/writing-discovery.json';
 import type { FeedItem } from './feed-types';
+import { automaticVideoItems } from './youtube-pages.mjs';
 import { mergeWritingItems } from './writing-chronology.mjs';
 
 export function getWritingFeed(): FeedItem[] {
@@ -13,4 +14,8 @@ export function getWritingFeed(): FeedItem[] {
     coverImage: item.coverImage?.src, videoUrl: item.videoUrl,
   }));
   return mergeWritingItems([...native, ...workingStoriesFeed()], discovery);
+}
+
+export function getVideoWritingItems(): FeedItem[] {
+  return automaticVideoItems(discovery, getNativeWritingItems());
 }

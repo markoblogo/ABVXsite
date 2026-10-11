@@ -1,5 +1,6 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
+import { automaticVideoItems } from '../src/lib/youtube-pages.mjs';
 import { contentFiles, parseContentFile } from './content-lib.mjs';
 import { publishedWorkingStories, publicWorkingStory, readWorkingStories } from '../src/content/working-stories-lib.mjs';
 
@@ -279,7 +280,17 @@ const youtubeIndexItem = {
   tags: ['youtube', 'video'], links: [{ type: 'youtube', label: 'YouTube channel', url: youtube.channelUrl }], related: [],
 };
 
-const indexItems = [...rawItems.map(publicIndexItem), ...serviceIndexItems, ...editorialIndexItems, collaborationIndexItem, youtubeIndexItem, kitchenIndexItem, workingSeriesIndexItem, ...workingIndexItems]
+const discovery = JSON.parse(readFileSync('content/writing-discovery.json', 'utf8'));
+const nativeVideos = contentFiles('writing').map(file => parseContentFile(file).data).filter(item => item.visibility === 'public' && item.status === 'live' && Date.parse(item.publishedAt) <= Date.now());
+const videoPages = automaticVideoItems(discovery, nativeVideos);
+const videoIndexItems = videoPages.map(item => ({
+  type: 'video', section: 'writing', ecosystem: 'Writing', group: 'YouTube', status: 'live',
+  title: item.title, summary: item.excerpt || item.title, canonicalUrl: SITE_URL + item.url,
+  publishedAt: item.publishedAt, tags: ['youtube', 'video'],
+  links: [{ type: 'youtube', label: 'Watch on YouTube', url: item.videoUrl }], related: [],
+}));
+
+const indexItems = [...videoIndexItems, ...rawItems.map(publicIndexItem), ...serviceIndexItems, ...editorialIndexItems, collaborationIndexItem, youtubeIndexItem, kitchenIndexItem, workingSeriesIndexItem, ...workingIndexItems]
   .sort((a, b) => a.section.localeCompare(b.section) || a.title.localeCompare(b.title));
 
 function isFocus(item) {
@@ -354,6 +365,8 @@ const llms = [
   `YouTube videos in Writing: ${SITE_URL}/writing?source=youtube. ${youtube.summary}`,
   'Machine-readable index: https://abvx.xyz/content-index.json',
   'Primary layers: Focus = market infrastructure; Systems = operational systems architecture; Books = publishing and intellectual layer; Writing = essays and field notes.',
+  '',
+  `## YouTube watch pages\n\n${videoPages.map(item => `- ${item.title}\n  URL: ${SITE_URL}${item.url}\n  Summary: ${(item.excerpt || item.title).trim()}`).join('\n\n')}`,
   '',
   llmsSection('Focus systems', rawItems.filter(isFocus)),
   '',

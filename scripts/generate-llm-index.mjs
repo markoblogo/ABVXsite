@@ -70,7 +70,7 @@ function readItems(folder) {
   return contentFiles(folder)
     .map((filePath) => {
       const { data } = parseContentFile(filePath);
-      return { folder, ...data };
+      return { folder, ...(folder === 'writing' ? { status: 'archive' } : {}), ...data };
     })
     .filter((item) => item.visibility !== 'private' && item.visibility !== 'draft')
     .filter((item) => item.folder !== 'writing' || !item.videoUrl || isPublishedWriting(item, publicationNow));
@@ -283,7 +283,7 @@ const youtubeIndexItem = {
 };
 
 const discovery = JSON.parse(readFileSync('content/writing-discovery.json', 'utf8'));
-const nativeVideos = contentFiles('writing').map(file => parseContentFile(file).data).filter(item => item.visibility === 'public' && item.status === 'live' && isPublishedWriting(item, publicationNow));
+const nativeVideos = contentFiles('writing').map(file => ({ status: 'archive', ...parseContentFile(file).data })).filter(item => isPublishedWriting(item, publicationNow));
 const videoPages = automaticVideoItems(discovery, nativeVideos, publicationNow);
 const videoIndexItems = videoPages.map(item => ({
   type: 'video', section: 'writing', ecosystem: 'Writing', group: 'YouTube', status: 'live',

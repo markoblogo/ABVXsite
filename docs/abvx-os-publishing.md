@@ -22,9 +22,9 @@ After applying in a clean branch:
 npm run content:release-check
 ```
 
-This runs the existing content/ecosystem checks, lint, sync/vector tests, build, SEO checks and dependency audit once, stopping at the first failure. `prebuild` regenerates `public/llms.txt`, `public/content-index.json` and ecosystem output. Review and commit intended changes in one PR. Local results/logs are saved under ignored `exports/editorial-checks/`; the receipt records HEAD, dirty state, build mode and check outcomes. A dirty checkout receipt is not proof of a deployed commit.
+This selects one fail-fast profile. `full` runs content/ecosystem validation, lint, sync/vector tests, build, full SEO QA and dependency audit. `publication-v1` runs content/ecosystem validation, `test:publication`, build, scoped SEO QA and dependency audit. It does not rerun lint or unrelated private Cortex tests when Git proves the code unchanged. The dependency audit overlaps the read-only lint/test phase. For a known content-only diff, SEO QA checks only the changed native publications and their hubs; otherwise it retains the full audit. Pass `-- --base <full-base-SHA>` when the automatic `origin/main` merge-base is unavailable. `prebuild` regenerates `public/llms.txt`, `public/content-index.json` and ecosystem output. Review and commit intended changes in one PR. Local results/logs are saved under ignored `exports/editorial-checks/`; the receipt records HEAD, dirty state, build mode and check outcomes. A dirty checkout receipt is not proof of a deployed commit.
 
-If local Turbopack worker ports are blocked, use `npm run content:release-check -- --webpack`; CI still runs the normal production build. Run `npm ci` first for a new checkout or changed dependency/lockfile. For a story manuscript export use the existing `export:working-stories`, separately from website publication.
+If local Turbopack worker ports are blocked, use `npm run content:release-check -- --webpack`; Code-change CI still runs the normal production build; content-only CI uses the profile below. Run `npm ci` first for a new checkout or changed dependency/lockfile. For a story manuscript export use the existing `export:working-stories`, separately from website publication.
 
 After passing CI/Preview and the authorized merge, confirm Production READY for the merge SHA and check the actual page/media/links. From a checkout matching deployed content:
 
@@ -32,7 +32,7 @@ After passing CI/Preview and the authorized merge, confirm Production READY for 
 npm run content:production-check
 ```
 
-This reuses existing SEO/discovery/mobile checks against the public domain; it does not establish deployment SHA or Search Console indexing. Keep those as separate evidence. See [the editorial release checklist](editorial-seo-checklist.md) and [Working Stories schema/export](working-stories.md).
+This selects publication-scoped SEO/discovery/mobile checks for a content-only diff, or the full audit for code/route/dependency changes. After merge, use `-- --base <merge-first-parent-SHA>`; an omitted/unknown base safely falls back to full checks. It does not establish deployment SHA or Search Console indexing. Keep those as separate evidence. See [the editorial release checklist](editorial-seo-checklist.md) and [Working Stories schema/export](working-stories.md).
 
 ## First-addition chronology
 
@@ -53,7 +53,17 @@ Use the [OS publication cycle contract](https://github.com/markoblogo/ABVX-OS/bl
 1. Start the OS cycle once, freeze member IDs, prepare the supplied source and use the actual emitted packet path. Do not reconstruct paths or restart a timer on correction.
 2. The consumer dry-run checks source hashes, media, structured fields and duplicate recipe collection navigation before any build. Apply the approved source, then register native/catalogue additions and regenerate indexes once for the complete pool.
 3. Run `content:release-check` once on the final tree. Reuse the hashed receipt for every approved member; do not run each member's build separately or rerun checks to collect telemetry. If source changes, fix all known issues together before a new full check.
-4. Create one PR; let CI and Vercel Preview run concurrently. Merge once after required checks; wait for the production merge SHA, then run production discovery QA once for the release.
+4. Create one PR immediately after the final receipt and commit. Run `npm run content:release-ready -- --preview --pr <number>` to wait for CI and Vercel Preview together (5-second polling, 10-minute bound). Inspect review feedback before the authorized merge. Update the clean site checkout to the merge SHA, then run `npm run content:release-ready -- --production --pr <number>`: it waits for that exact latest Production SHA, runs QA immediately, and rechecks deployment identity. It never commits, pushes or merges. Do not run a second production QA after this succeeds.
 5. Close one OS cycle. Cortex transfer is idempotent and retriable independently via `publication transfer`; an unavailable Cortex must not cause another site publication. Automatic feed watch pages reuse the site's validated registry; they are not falsely counted as owner-approved native OS publication trials.
 
 Do not claim a timing gain from this checklist alone. Keep preparation, failed checks, successful checks, PR/CI, deployment and production verification distinct when diagnosing latency. The recipe baseline was 19m01s end-to-end; its two local release-check runs were 2m16s (failed) and 3m16s (passed). The latter is not the whole publication duration.
+
+## Publication QA profile v1
+
+The site computes scope from Git against a known base, including staged, unstaged and untracked files locally. The narrow allowlist is public, already-due native Writing/Working Story Markdown, newly added image assets, the three Writing discovery outputs, and Markdown documentation. Every changed material is checked, including every pool member. Unknown history, deletions, non-live/future content, slug/collection changes, existing image replacement, shared code, lockfiles or other content select full QA. A manual route list cannot override this classifier.
+
+Publication QA checks changed pages, canonical/title/heading, available media, recipe/video structured data, mobile overflow, homepage/Writing/collection hubs, collection links and membership in sitemap/JSON/LLM indexes. Full QA additionally retains the whole-site route/title/localization/browser audit; its HTTP route checks now overlap with a concurrency limit of six. A narrow run is not a claim that every unrelated page was retested.
+
+The full profile runs eight local gates. The publication profile runs six actual gates, including the Next build; omitted lint/sync/vector gates are never recorded as PASS. A content-only CI run keeps content/ecosystem validation, publication tests and dependency audit, then regenerates discovery instead of repeating that Next compilation. Vercel Preview and Production still build the application. Code changes and unavailable baselines keep the full CI build. Check receipts store `qaScope` and `checkProfile`; OS includes the profile in the workload hash so historical full and scoped runs cannot qualify as matching measurements. Old outcomes remain unchanged.
+
+Close OS immediately after verified production. Cortex transfer may retry later without a new publication or altered elapsed timer. Do not wait for Search Console indexing to close a publication; indexing is a separate later result. The read-only readiness helper saves ignored phase durations for diagnosing provider waiting versus agent gaps.

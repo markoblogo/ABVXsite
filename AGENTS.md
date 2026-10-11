@@ -8,7 +8,7 @@ Read `README.md` for the current site/content map, then the task-specific guide.
 - Preserve public slugs, redirects, media paths, canonical URLs, and the separation from the private `ABVX-OS` and `CortexABV-private` runtimes.
 - CortexABV copy changes remain proposal-only and PR-first unless the operation is the allowlisted ecosystem sync. Ecosystem sync may write generated registry files, marked README blocks, reviewed public project metadata, and release announcements directly to `main`; it must never change arbitrary code or text outside those surfaces.
 - Owner-authorized Writing feed sync may update only `content/writing-discovery.json`, `public/content-index.json` and `public/llms.txt` directly on `main`. It records public feed metadata and immutable first-addition timestamps; this exception does not authorize code, article-body, media or other content changes.
-- Before a PR, run `npm run content:validate`, `npm run lint`, `npm run test:sync`, and `npm run build`.
+- Before a code PR, run `npm run content:validate`, `npm run lint`, `npm run test:sync`, and `npm run build`. For owner-authorized native content-only publications, use `npm run content:release-check`: its Git classifier may select the documented six-gate `publication-v1` profile. Never manually omit gates or mark skipped lint/private-runtime tests as PASS; unknown or code-changing scope uses `full`.
 - Read `docs/project-description-sync.md` before changing project-copy automation and the nested `cortex-abv/private-runtime/AGENTS.md` before changing that snapshot.
 
 # Frontend motion review contract (local)

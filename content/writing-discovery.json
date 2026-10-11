@@ -481,6 +481,16 @@
     },
     {
       "source": "youtube",
+      "title": "Claude Code Built a GTA Mod for SimCity 3000 in Just 2 Hours",
+      "url": "https://www.youtube.com/watch?v=cQS3nbBe6JM",
+      "publishedAt": "2026-10-11T13:37:46.000Z",
+      "excerpt": "What if you could turn almost any PC game into something completely different using AI? And what if Claude Code could handle the modding process for you? Meet Universal Modder, an open-source collection of AI agent skill",
+      "coverImage": "https://i.ytimg.com/vi/cQS3nbBe6JM/hqdefault.jpg",
+      "addedAt": "2026-10-11T14:48:33.057Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Someone Put Claude AI on a 2007 Nokia. Yes, Really.",
       "url": "https://www.youtube.com/watch?v=jEIPftaweBM",
       "publishedAt": "2026-10-10T14:39:44.000Z",

@@ -15,14 +15,17 @@ export function isPublishedWriting(item, now = Date.now()) {
 // companion while that same deployment still advertises its automatic page.
 export function publishedWritingItems(native, now = Date.now(), companions) {
   return native.filter(item => isPublishedWriting(item, now)
-    && (!item.videoUrl || companions === undefined || companions[videoId(item.videoUrl)] === item.slug));
+    && (!item.videoUrl || companions === undefined
+      || (Array.isArray(companions[videoId(item.videoUrl)])
+        ? companions[videoId(item.videoUrl)].includes(item.slug)
+        : companions[videoId(item.videoUrl)] === item.slug)));
 }
 
 export function videoCompanionSnapshot(native, now = Date.now()) {
   const companions = {};
   for (const item of publishedWritingItems(native, now)) {
     const id = videoId(item.videoUrl);
-    if (id && item.slug && !companions[id]) companions[id] = item.slug;
+    if (id && item.slug) companions[id] = [...new Set([...(Object.hasOwn(companions, id) ? companions[id] : []), item.slug])].sort();
   }
   return companions;
 }

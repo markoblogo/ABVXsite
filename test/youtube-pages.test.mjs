@@ -1,5 +1,10 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
+import { mkdtempSync, cpSync, mkdirSync, writeFileSync, readFileSync, rmSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
+import os from 'node:os';
+import path from 'node:path';
+import { serializeFrontmatter } from '../scripts/content-lib.mjs';
 import { serializeJsonLd } from '../src/lib/json-ld.mjs';
 import { automaticVideoItems, videoPageJsonLd, findVideoCompanion, publishedWritingItems, videoCompanionSnapshot } from '../src/lib/youtube-pages.mjs';
 import { mergeWritingItems, registerWritingItems } from '../src/lib/writing-chronology.mjs';
@@ -74,7 +79,7 @@ test('a scheduled companion activates only with regenerated discovery, not the r
     assert.deepEqual(mergeWritingItems(available, registry, time).map(item => item.url), ['/writing/videos/NewVideo001']);
   }
   const refreshed = videoCompanionSnapshot([companion], after);
-  assert.deepEqual(refreshed, { NewVideo001: 'scheduled' });
+  assert.deepEqual(refreshed, { NewVideo001: ['scheduled'] });
   const released = publishedWritingItems([companion], after, refreshed);
   assert.equal(findVideoCompanion(released, 'NewVideo001', after), companion);
   assert.deepEqual(automaticVideoItems(registry, released, after), []);
@@ -87,4 +92,36 @@ test('a stale or mismatched snapshot cannot revive an inactive companion', () =>
   for (const item of [{ ...companion, status: 'archive' }, { ...companion, visibility: 'private' }, { ...companion, slug: 'unreleased' }]) {
     assert.deepEqual(publishedWritingItems([item], now, { NewVideo001: 'released' }), []);
   }
+});
+
+
+test('all released translations of one video remain discoverable', () => {
+  const now = Date.parse('2026-10-12T12:00:00Z');
+  const companion = { ...video, videoUrl: video.url, status: 'live', slug: 'notes', url: '/writing/notes' };
+  const translation = { ...companion, slug: 'notes-fr', url: '/writing/notes-fr', language: 'fr' };
+  const snapshot = videoCompanionSnapshot([translation, companion], now);
+  assert.deepEqual(snapshot, { NewVideo001: ['notes', 'notes-fr'] });
+  const available = publishedWritingItems([companion, translation], now, snapshot);
+  assert.deepEqual(available, [companion, translation]);
+  assert.deepEqual(automaticVideoItems({ items: [video] }, available, now), []);
+  assert.deepEqual(new Set(mergeWritingItems(available, { items: [video] }, now).map(item => item.url)), new Set(['/writing/notes', '/writing/notes-fr']));
+});
+
+test('index generator honors default public visibility and records every released companion', () => {
+  const repo = path.resolve(new URL('..', import.meta.url).pathname);
+  const root = mkdtempSync(path.join(os.tmpdir(), 'abvx-video-index-'));
+  try {
+    cpSync(path.join(repo, 'content'), path.join(root, 'content'), { recursive: true });
+    mkdirSync(path.join(root, 'public'));
+    const data = { type: 'note', status: 'live', publishedAt: '2020-01-01T00:00:00Z', title: 'Fixture video companion', summary: 'Fixture summary', videoUrl: video.url, videoUploadedAt: '2020-01-01T00:00:00Z' };
+    for (const [slug, patch] of [['fixture-video', {}], ['fixture-video-fr', { language: 'fr' }], ['fixture-future', { publishedAt: '2099-01-01T00:00:00Z' }], ['fixture-inactive', { status: 'archive' }], ['fixture-default-status', { status: undefined }]]) {
+      writeFileSync(path.join(root, 'content/writing', slug + '.md'), serializeFrontmatter({ ...data, slug, ...patch }, 'Owner fixture text.'));
+    }
+    execFileSync(process.execPath, [path.join(repo, 'scripts/generate-llm-index.mjs')], { cwd: root, stdio: 'pipe' });
+    const index = JSON.parse(readFileSync(path.join(root, 'public/content-index.json')));
+    assert.deepEqual(index.videoCompanions.NewVideo001, ['fixture-video', 'fixture-video-fr']);
+    const urls = new Set(index.items.map(item => item.canonicalUrl));
+    for (const slug of ['fixture-video', 'fixture-video-fr']) assert.ok(urls.has('https://abvx.xyz/writing/' + slug));
+    for (const slug of ['fixture-future', 'fixture-inactive', 'fixture-default-status']) assert.ok(!urls.has('https://abvx.xyz/writing/' + slug));
+  } finally { rmSync(root, { recursive: true, force: true }); }
 });

@@ -2,11 +2,32 @@
 
 ABVX OS prepares and records source-specific approval; this repository owns file writes, validation, rendering and deployment. Reuse the existing content packet flow, as for Azur Menton. No runtime ABVX OS dependency is added.
 
+## Routine publication: data only
+
+Use a clean dedicated branch at the current main SHA. Keep OS packets outside the site checkout. The standard command supports one or several already-approved Writing/Working Story packets:
+
+```sh
+npm run content:publish -- --base <full-main-SHA> --packet <absolute-path> --dry-run
+npm run content:publish -- --base <full-main-SHA> --packet <absolute-path> --write
+# For a pool, repeat --packet for all members in BOTH commands.
+npm run prebuild
+npm run content:publication-boundary -- --base <full-main-SHA>
+npm run content:release-check -- --base <full-main-SHA>
+```
+
+The command plans the entire pool before writes, preserves complete approved source bytes and SEO fields, validates every media descriptor, rejects duplicate member/story IDs and conflicting shared assets, and rolls back files it created if any write fails. Existing files are never overwritten. It accepts existing Writing kinds (including Kitchen Notes recipes and video companions) and Working Stories. Legacy text-only packets remain available through the lower-level consumers, but the routine lane requires complete approved source Markdown.
+
+The release boundary allows only native source files, new image assets and three generated discovery files. Documentation, application code, templates, dependencies, workflows, new collections/types/routes and unrelated catalogue edits belong to a separate engineering PR. Unsupported requirements are reported for that separate release; do not patch renderer code while publishing a post. CI enforces the same boundary and fails if regenerating Writing discovery changes committed outputs. Do not hand-edit generated indexes.
+
+This is process and write separation within the current repository, not independent hosting: Vercel still builds and deploys the site. No CMS, extra repository, runtime OS dependency or automatic merge authority is introduced. The existing scoped release receipt and production evidence remain required. A dedicated content service can be considered later only if measurements show site builds dominate latency.
+
+Lower-level compatibility consumers remain available:
+
 | Packet | Command | Result |
 | --- | --- | --- |
-| `abvx.writing` | `npm run content:publish-writing -- --packet <absolute-path> --dry-run` | Native Writing plan; use `--write` after review |
-| `abvx.working-story` | `npm run content:publish-working-story -- --packet <absolute-path> --dry-run` | Validated story/media plan; use `--write` after review |
-| `abvx.work` | Existing `content:publish-project` | Existing work-record procedure |
+| `abvx.writing` | `content:publish-writing` | Existing single-member consumer |
+| `abvx.working-story` | `content:publish-working-story` | Existing single-member consumer |
+| `abvx.work` | `content:publish-project` | Separate catalogue procedure |
 
 For Working Stories, the packet includes `payload.source_markdown` with complete, ready JSON-frontmatter Markdown and `source_sha256`. It also includes the matching title/slug, `date_published`, `language` and body in `body_lines`. The existing source validator owns all story metadata rules, including neutral internal IDs and placement headings. The source must explicitly be public and dated on/before today. Every referenced cover and illustration requires a `media_assets` entry with absolute local `source`, public `/media/...` `target` and approved byte `sha256`, including existing site files. The list may be empty only for stories without images; targets must be referenced by the story. For reuse, the source may point to the existing `public/media/...` file: its hash and image signature are checked before matching bytes are reused without overwriting. Conflicting assets, missing descriptors, source changes, duplicate IDs/slugs, symlink destinations and unsupported contracts fail before content writes. The source is saved byte-for-byte, not regenerated from enrichment.
 
@@ -51,7 +72,7 @@ Use the [OS publication cycle contract](https://github.com/markoblogo/ABVX-OS/bl
 ## Routine singles and pools: shortest complete path
 
 1. Start the OS cycle once, freeze member IDs, prepare the supplied source and use the actual emitted packet path. Do not reconstruct paths or restart a timer on correction.
-2. The consumer dry-run checks source hashes, media, structured fields and duplicate recipe collection navigation before any build. Apply the approved source, then register native/catalogue additions and regenerate indexes once for the complete pool.
+2. Use `content:publish` with every pool packet to dry-run and apply once; all members are validated before any write. Regenerate once with `prebuild`, verify `content:publication-boundary` against the branch base, then freeze the tree. Catalogue changes are a separate release.
 3. Run `content:release-check` once on the final tree. Reuse the hashed receipt for every approved member; do not run each member's build separately or rerun checks to collect telemetry. If source changes, fix all known issues together before a new full check.
 4. Create one PR immediately after the final receipt and commit. Run `npm run content:release-ready -- --preview --pr <number>` to wait for CI and Vercel Preview together (5-second polling, 10-minute bound). Inspect review feedback before the authorized merge. Update the clean site checkout to the merge SHA, then run `npm run content:release-ready -- --production --pr <number>`: it waits for that exact latest Production SHA, runs QA immediately, and rechecks deployment identity. It never commits, pushes or merges. Do not run a second production QA after this succeeds.
 5. Close one OS cycle. Cortex transfer is idempotent and retriable independently via `publication transfer`; an unavailable Cortex must not cause another site publication. Automatic feed watch pages reuse the site's validated registry; they are not falsely counted as owner-approved native OS publication trials.
@@ -60,7 +81,7 @@ Do not claim a timing gain from this checklist alone. Keep preparation, failed c
 
 ## Publication QA profile v1
 
-The site computes scope from Git against a known base, including staged, unstaged and untracked files locally. The narrow allowlist is public, already-due native Writing/Working Story Markdown, newly added image assets, the three Writing discovery outputs, and Markdown documentation. Every changed material is checked, including every pool member. Unknown history, deletions, non-live/future content, slug/collection changes, existing image replacement, shared code, lockfiles or other content select full QA. A manual route list cannot override this classifier.
+The site computes scope from Git against a known base, including staged, unstaged and untracked files locally. The narrow allowlist is public, already-due native Writing/Working Story Markdown, newly added image assets, the three Writing discovery outputs, only. Markdown documentation is a separate engineering/docs release. Every changed material is checked, including every pool member. Unknown history, deletions, non-live/future content, slug/collection changes, existing image replacement, shared code, lockfiles or other content select full QA. A manual route list cannot override this classifier.
 
 Publication QA checks changed pages, canonical/title/heading, available media, recipe/video structured data, mobile overflow, homepage/Writing/collection hubs, collection links and membership in sitemap/JSON/LLM indexes. Full QA additionally retains the whole-site route/title/localization/browser audit; its HTTP route checks now overlap with a concurrency limit of six. A narrow run is not a claim that every unrelated page was retested.
 

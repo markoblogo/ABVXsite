@@ -4,7 +4,6 @@ import path from 'node:path';
 import { parseMarkdownSource } from '../src/content/markdown-source.mjs';
 
 const generated = new Set(['content/writing-discovery.json','public/content-index.json','public/llms.txt']);
-const docs = /^(?:README\.md|AGENTS\.md|CHANGELOG\.md|docs\/.+\.md)$/;
 const native = /^content\/(writing|working-stories)\/[^/]+\.md$/;
 const full = reason => ({profile:'full', reason, routes:[], hubs:[]});
 export function publicationScope(base, head='HEAD', cwd=process.cwd(), includeWorking=false) {
@@ -24,7 +23,7 @@ export function publicationScope(base, head='HEAD', cwd=process.cwd(), includeWo
   const routes=new Set(), hubs=new Set(['/', '/writing']);
   for(const [file,status] of changed) {
    if(!['A','M'].includes(status)) return full('deletion-or-special-change');
-   if(generated.has(file)||docs.test(file)) continue;
+   if(generated.has(file)) continue;
    if(/^public\/media\/.+\.(?:png|jpe?g|webp)$/i.test(file)&&status==='A') continue;
    const match=file.match(native);
    if(!match) return full('shared-code-or-other-content');

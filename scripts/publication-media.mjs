@@ -36,16 +36,29 @@ export function planApprovedMedia(referenced, descriptors, root) {
 }
 
 export function applyPublication(plan) {
+  return applyPublications([plan]);
+}
+
+// One rollback boundary for an approved pool; no partial publication on write failure.
+export function applyPublications(plans) {
   const created = [];
   try {
-    for (const asset of plan.media.filter(asset => !asset.reused)) {
+    const media = new Map();
+    for (const plan of plans) for (const asset of plan.media) {
+      const previous = media.get(asset.target);
+      if (previous && !previous.bytes.equals(asset.bytes)) throw new Error("Conflicting pool media bytes");
+      media.set(asset.target, asset);
+    }
+    for (const asset of [...media.values()].filter(asset => !asset.reused)) {
       mkdirSync(path.dirname(asset.target), { recursive: true });
       writeFileSync(asset.target, asset.bytes, { flag: 'wx' });
       created.push(asset.target);
     }
-    mkdirSync(path.dirname(plan.targetFile), { recursive: true });
-    writeFileSync(plan.targetFile, plan.source, { flag: 'wx' });
-    created.push(plan.targetFile);
+    for (const plan of plans) {
+      mkdirSync(path.dirname(plan.targetFile), { recursive: true });
+      writeFileSync(plan.targetFile, plan.source, { flag: 'wx' });
+      created.push(plan.targetFile);
+    }
   } catch (error) {
     for (const file of created.reverse()) unlinkSync(file);
     throw error;

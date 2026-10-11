@@ -36,10 +36,17 @@ jobs:
       - run: npm run content:validate
       - run: npm run ecosystem:check
       - run: npm run lint
+        if: steps.scope.outputs.publication != 'true'
       - run: npm run test:sync
+        if: steps.scope.outputs.publication != 'true'
+      - run: npm run test:publication
+        if: steps.scope.outputs.publication == 'true'
       - run: npm run cortex-abv:vector-export:check
+        if: steps.scope.outputs.publication != 'true'
       - run: npm run build
-        if: steps.scope.outputs.build != 'false'
+        if: steps.scope.outputs.build != 'false' && steps.scope.outputs.publication != 'true'
+      - run: npm run prebuild
+        if: steps.scope.outputs.publication == 'true'
       - run: git diff --exit-code -- content/catalogue-discovery.json
         if: steps.scope.outputs.build != 'false'
       - run: npm audit --omit=dev --audit-level=high

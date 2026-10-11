@@ -40,3 +40,7 @@ Use the existing editorial checklist and `content:release-check` once on the com
 - **CHEAP:** review page-filtered Search Console/Plausible results after sufficient new data. Machine-index completeness helps discovery but does not prove Google indexing, rankings or traffic growth.
 
 No new dependency, CMS, paid service, blanket cron change or external-content auto-rewrite was added.
+
+## Publication pipeline update — 2026-10-11
+
+Content-only publications now use Git-derived targeted SEO/browser QA, while the full sitemap HTTP sweep uses six concurrent requests. Local dependency audit overlaps independent tests. A classifier-proven content-only diff uses publication tests and omits unchanged-code lint/private Cortex tests, retaining six real local gates including build and audit. Content-only CI regenerates discovery instead of compiling Next a second time; local and Vercel builds remain required. The read-only readiness helper polls at five-second intervals and starts production QA as soon as the exact merge SHA succeeds, retaining its phase duration. OS records the QA tier in workload comparability. These are implemented mechanisms, not an end-to-end speedup claim: measure the next real single publication or comparable frozen pool separately from the prior full-check baselines.

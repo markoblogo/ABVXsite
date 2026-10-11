@@ -1,3 +1,5 @@
+import { publicationScope, publicationBase } from './publication-scope.mjs';
+import { publicationQa, boundedMap } from './publication-qa.mjs';
 import { automaticVideoItems } from '../src/lib/youtube-pages.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -5,6 +7,11 @@ import { contentFiles, parseContentFile } from './content-lib.mjs';
 import { chromium } from 'playwright';
 import { withQaServer } from './qa-server.mjs';
 import { indexedWorkingStories, readWorkingStories, workingStoryPath } from '../src/content/working-stories-lib.mjs';
+
+const args = process.argv.slice(2);
+if (args.length && (args.length !== 2 || args[0] !== '--base' || !/^[a-f0-9]{40}$/i.test(args[1]))) throw new Error('Expected --base <commit SHA>');
+const scope = publicationScope(args[1] || publicationBase(), 'HEAD', process.cwd(), true);
+if (scope.profile === 'publication-v1') { await publicationQa(scope); process.exit(0); }
 
 const workingSeries = JSON.parse(readFileSync('content/working-stories.json', 'utf8'));
 
@@ -56,7 +63,7 @@ await withQaServer(async (base) => {
     const routes = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]);
     assert.equal(new Set(routes).size, routes.length);
     const titles = new Map();
-    for (const url of routes) {
+    await boundedMap(routes, async (url) => {
       const response = await page.request.get(base + new URL(url).pathname);
       assert.equal(response.status(), 200, url);
       const html = await response.text();
@@ -64,7 +71,7 @@ await withQaServer(async (base) => {
       assert.ok(title, url + ' missing title');
       assert.ok(!titles.has(title), `Duplicate title: ${url} and ${titles.get(title)}`);
       titles.set(title, url);
-    }
+    });
 
     const indexResponse = await page.request.get(base + '/content-index.json');
     assert.equal(indexResponse.status(), 200);

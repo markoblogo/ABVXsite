@@ -1,4 +1,5 @@
 import { execFileSync } from 'node:child_process';
+import { publicationScope } from './publication-scope.mjs';
 import { fileURLToPath } from 'node:url';
 
 const documentation = /^(?:README\.md|AGENTS\.md|CHANGELOG\.md|docs\/.+\.md)$/;
@@ -23,6 +24,7 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
   const base = mode === '--vercel' ? process.env.VERCEL_GIT_PREVIOUS_SHA : process.env.CI_BASE_SHA;
   const result = deploymentScope(base);
   console.log(`build=${result.build}`);
+  if (mode === '--ci') console.log(`publication=${publicationScope(base).profile === 'publication-v1'}`);
   console.log(`reason=${result.reason}`);
   // Vercel ignored-build convention: 0 skips, 1 builds. CI always succeeds;
   // its output gates only the application build, not the other checks.

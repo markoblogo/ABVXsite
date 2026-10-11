@@ -127,3 +127,5 @@ _This block is generated from the reviewed ABVX ecosystem registry._
 Kitchen Notes: native recipes and existing food notes use the shared Writing collection; see [recipe fields and local export](docs/kitchen-notes.md).
 
 Routine native publications use [scoped release QA and short transition commands](docs/abvx-os-publishing.md#publication-qa-profile-v1). Full QA remains automatic for code, routing, dependencies or uncertain scope; the site still requires a successful Vercel build and production SHA proof.
+
+Routine approved posts and cases use the [data-only publication lane](docs/abvx-os-publishing.md#routine-publication-data-only), with one atomic pool plan and an enforced Git boundary. Template/schema changes use separate engineering releases.

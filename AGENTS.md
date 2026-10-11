@@ -22,3 +22,7 @@ Use this local contract for UI animation-related changes:
 - For each animation change, add a short motion-review note with selector scope + verification path.
 
 For owner-authorized new native Writing/Working Story publications, follow `docs/abvx-os-publishing.md` including private OS closeout after production. Reuse the existing release receipt; do not rerun successful checks just to create telemetry. Keep deployed-SHA verification separate and do not send authored content to Cortex.
+
+## Routine native publication boundary
+
+Use `content:publish -- --base <main-SHA> --packet <path> --dry-run|--write` for standard approved Writing/Working Story singles or pools; repeat `--packet` for a pool. Start from a clean dedicated branch at that base. Run prebuild once and `content:publication-boundary` before the one release check. Do not modify code, templates, dependencies, documentation or collection definitions in a routine publication PR. Unsupported features require a separate engineering task/PR. Preserve production/OS closeout evidence; never disable reviews to hide failures.

@@ -47,6 +47,14 @@ jobs:
         if: steps.scope.outputs.build != 'false' && steps.scope.outputs.publication != 'true'
       - run: npm run prebuild
         if: steps.scope.outputs.publication == 'true'
+      - name: Enforce the publication data boundary
+        if: steps.scope.outputs.publication == 'true'
+        env:
+          CI_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: npm run content:publication-boundary -- --base "$CI_BASE_SHA"
+      - name: Check committed Writing discovery outputs
+        if: steps.scope.outputs.publication == 'true'
+        run: git diff --exit-code -- content/writing-discovery.json public/content-index.json public/llms.txt
       - run: git diff --exit-code -- content/catalogue-discovery.json
         if: steps.scope.outputs.build != 'false'
       - run: npm audit --omit=dev --audit-level=high

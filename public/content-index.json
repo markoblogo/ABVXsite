@@ -7029,6 +7029,53 @@
       ],
       "related": [
         {
+          "title": "We Stopped Selling Tires. We Started Selling Kilometers.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/selling-truck-tire-mileage-instead-of-tires",
+          "relation": "same-project"
+        },
+        {
+          "title": "Why Truck Drivers Preferred Teddy Bears to Pocket Knives",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/truck-driver-loyalty-program-childrens-toys",
+          "relation": "same-project"
+        }
+      ]
+    },
+    {
+      "type": "working-story",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "Working Stories",
+      "status": "published",
+      "title": "We Stopped Selling Tires. We Started Selling Kilometers.",
+      "summary": "How we made expensive commercial tires easier to sell by changing the unit of value, and eventually turned tire ownership into a service.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/working-stories/selling-truck-tire-mileage-instead-of-tires",
+      "tags": [
+        "b2b-marketing",
+        "value-based-pricing",
+        "total-cost-of-ownership",
+        "fleet-management",
+        "service-business-models",
+        "retreading",
+        "automotive"
+      ],
+      "publishedAt": "2026-10-11",
+      "updatedAt": "2026-10-11",
+      "image": "https://abvx.xyz/media/working-stories/selling-truck-tire-mileage-instead-of-tires.png",
+      "links": [
+        {
+          "type": "section",
+          "label": "Working Stories",
+          "url": "https://abvx.xyz/writing/working-stories"
+        }
+      ],
+      "related": [
+        {
+          "title": "We Sold the Same Tires Through Three Different Networks. One Had to Look Cheap.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/price-perception-three-tire-service-brands",
+          "relation": "same-project"
+        },
+        {
           "title": "Why Truck Drivers Preferred Teddy Bears to Pocket Knives",
           "canonicalUrl": "https://abvx.xyz/writing/working-stories/truck-driver-loyalty-program-childrens-toys",
           "relation": "same-project"
@@ -7148,6 +7195,11 @@
         }
       ],
       "related": [
+        {
+          "title": "We Stopped Selling Tires. We Started Selling Kilometers.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/selling-truck-tire-mileage-instead-of-tires",
+          "relation": "same-project"
+        },
         {
           "title": "We Sold the Same Tires Through Three Different Networks. One Had to Look Cheap.",
           "canonicalUrl": "https://abvx.xyz/writing/working-stories/price-perception-three-tire-service-brands",

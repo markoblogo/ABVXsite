@@ -1098,6 +1098,11 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/working-stories
   Summary: Cases, experiments, mistakes and unusual decisions from my professional life.
 
+- We Stopped Selling Tires. We Started Selling Kilometers.
+  URL: https://abvx.xyz/writing/working-stories/selling-truck-tire-mileage-instead-of-tires
+  Summary: How we made expensive commercial tires easier to sell by changing the unit of value, and eventually turned tire ownership into a service.
+  Topics: b2b-marketing, value-based-pricing, total-cost-of-ownership, fleet-management, service-business-models, retreading, automotive
+
 - We Sold the Same Tires Through Three Different Networks. One Had to Look Cheap.
   URL: https://abvx.xyz/writing/working-stories/price-perception-three-tire-service-brands
   Summary: Our premium tire-service network had a problem: budget customers assumed it was too expensive to visit. So I created two additional brands, including one deliberately designed to look cheap.

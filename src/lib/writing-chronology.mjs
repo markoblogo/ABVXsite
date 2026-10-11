@@ -1,4 +1,4 @@
-import { automaticVideoItems } from './youtube-pages.mjs';
+import { automaticVideoItems, isPublishedWriting } from './youtube-pages.mjs';
 
 const sources = new Set(['abvx', 'medium', 'substack', 'youtube']);
 const bases = new Set(['observed', 'legacy-source', 'production']);
@@ -71,10 +71,11 @@ export function registerWritingItems(registry, items, { now = new Date().toISOSt
   return { version: 1, items: [...records.values()].sort((a, b) => a.url.localeCompare(b.url)) };
 }
 
-export function mergeWritingItems(native, registry) {
+export function mergeWritingItems(native, registry, now = Date.now()) {
+  native = native.filter(item => isPublishedWriting(item, now));
   const dates = new Map(registry.items.map(item => [writingUrlKey(item.url), item]));
   const external = registry.items.filter(item => !item.url.startsWith('/') && item.source !== 'youtube');
-  external.push(...automaticVideoItems(registry, native));
+  external.push(...automaticVideoItems(registry, native, now));
   return sortWritingItems([...native.map(item => ({
     ...item, addedAt: dates.get(writingUrlKey(item.url))?.addedAt || item.publishedAt,
   })), ...external]);

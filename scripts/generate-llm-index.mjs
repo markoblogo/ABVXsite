@@ -1,10 +1,11 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
-import { automaticVideoItems } from '../src/lib/youtube-pages.mjs';
+import { automaticVideoItems, videoCompanionSnapshot, isPublishedWriting } from '../src/lib/youtube-pages.mjs';
 import { contentFiles, parseContentFile } from './content-lib.mjs';
 import { publishedWorkingStories, publicWorkingStory, readWorkingStories } from '../src/content/working-stories-lib.mjs';
 
 const SITE_URL = 'https://abvx.xyz';
+const publicationNow = Date.now();
 const outputDir = path.join(process.cwd(), 'public');
 const collaboration = JSON.parse(readFileSync(path.join(process.cwd(), 'content/collaborations.json'), 'utf8'));
 const youtube = JSON.parse(readFileSync(path.join(process.cwd(), 'content/youtube.json'), 'utf8'));
@@ -71,7 +72,8 @@ function readItems(folder) {
       const { data } = parseContentFile(filePath);
       return { folder, ...data };
     })
-    .filter((item) => item.visibility !== 'private' && item.visibility !== 'draft');
+    .filter((item) => item.visibility !== 'private' && item.visibility !== 'draft')
+    .filter((item) => item.folder !== 'writing' || !item.videoUrl || isPublishedWriting(item, publicationNow));
 }
 
 function canonicalPath(item) {
@@ -281,8 +283,8 @@ const youtubeIndexItem = {
 };
 
 const discovery = JSON.parse(readFileSync('content/writing-discovery.json', 'utf8'));
-const nativeVideos = contentFiles('writing').map(file => parseContentFile(file).data).filter(item => item.visibility === 'public' && item.status === 'live' && Date.parse(item.publishedAt) <= Date.now());
-const videoPages = automaticVideoItems(discovery, nativeVideos);
+const nativeVideos = contentFiles('writing').map(file => parseContentFile(file).data).filter(item => item.visibility === 'public' && item.status === 'live' && isPublishedWriting(item, publicationNow));
+const videoPages = automaticVideoItems(discovery, nativeVideos, publicationNow);
 const videoIndexItems = videoPages.map(item => ({
   type: 'video', section: 'writing', ecosystem: 'Writing', group: 'YouTube', status: 'live',
   title: item.title, summary: item.excerpt || item.title, canonicalUrl: SITE_URL + item.url,
@@ -415,6 +417,7 @@ writeFileSync(
     {
       site: SITE_URL,
       generatedFrom: '/content',
+      videoCompanions: videoCompanionSnapshot(nativeVideos, publicationNow),
       items: indexItems,
     },
     null,

@@ -1,4 +1,4 @@
-import { getVideoWritingItems } from '@/lib/writing-feed';
+import { getVideoWritingItems, getPublishedNativeWritingItems } from '@/lib/writing-feed';
 import kitchenNotes from '../../content/kitchen-notes.json';
 import pageMetadata from '../../content/pages.json';
 import { getArtifacts, getBooks, getNativeWritingItems } from '@/content';
@@ -14,7 +14,8 @@ const trafficLandingUpdatedAt = new Date('2026-09-16T00:00:00.000Z');
 export default function sitemap(): MetadataRoute.Sitemap {
   const artifacts = getArtifacts();
   const books = getBooks();
-  const writing = getNativeWritingItems();
+  const releasedVideos = new Set(getPublishedNativeWritingItems().filter(item => item.videoUrl).map(item => item.slug));
+  const writing = getNativeWritingItems().filter(item => !item.videoUrl || releasedVideos.has(item.slug));
   const stories = getWorkingStories();
   const storyDates = stories.map((story) => ({ publishedAt: story.date, updatedAt: story.updatedAt }));
   const editorialArticles = getEditorialArticles();

@@ -5,11 +5,30 @@ export function videoId(value) {
   return key.startsWith('https://www.youtube.com/watch?') ? new URL(key).searchParams.get('v') : null;
 }
 
-export function findVideoCompanion(native, id, now = Date.now()) {
-  return native.find(item => videoId(item.videoUrl) === id
-    && (item.visibility === undefined || item.visibility === 'public')
+export function isPublishedWriting(item, now = Date.now()) {
+  return (item.visibility === undefined || item.visibility === 'public')
     && (item.status === undefined || item.status === 'live')
-    && Date.parse(item.publishedAt) <= now);
+    && Date.parse(item.publishedAt) <= now;
+}
+
+// A deployed index is the release boundary; the wall clock cannot activate a
+// companion while that same deployment still advertises its automatic page.
+export function publishedWritingItems(native, now = Date.now(), companions) {
+  return native.filter(item => isPublishedWriting(item, now)
+    && (!item.videoUrl || companions === undefined || companions[videoId(item.videoUrl)] === item.slug));
+}
+
+export function videoCompanionSnapshot(native, now = Date.now()) {
+  const companions = {};
+  for (const item of publishedWritingItems(native, now)) {
+    const id = videoId(item.videoUrl);
+    if (id && item.slug && !companions[id]) companions[id] = item.slug;
+  }
+  return companions;
+}
+
+export function findVideoCompanion(native, id, now = Date.now()) {
+  return native.find(item => videoId(item.videoUrl) === id && isPublishedWriting(item, now));
 }
 
 // The registry remains canonical; authored companions supersede automatic pages.

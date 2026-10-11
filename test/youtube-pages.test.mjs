@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { serializeJsonLd } from '../src/lib/json-ld.mjs';
-import { automaticVideoItems, videoPageJsonLd, findVideoCompanion } from '../src/lib/youtube-pages.mjs';
+import { automaticVideoItems, videoPageJsonLd, findVideoCompanion, publishedWritingItems, videoCompanionSnapshot } from '../src/lib/youtube-pages.mjs';
 import { mergeWritingItems, registerWritingItems } from '../src/lib/writing-chronology.mjs';
 const video = { source: 'youtube', title: 'My video', url: 'https://www.youtube.com/watch?v=NewVideo001', publishedAt: '2026-10-10T10:00:00.000Z', addedAt: '2026-10-10T11:00:00.000Z', addedAtBasis: 'observed', excerpt: 'Short', videoDescription: 'Full description\nSecond paragraph' };
 test('feed video opens its stable watch page, preserves description and first-added time', () => {
@@ -45,4 +45,46 @@ test('feed descriptions cannot end a JSON-LD script or insert HTML', () => {
   assert.ok(!serialized.includes('<'));
   assert.equal(JSON.parse(serialized).description, description);
   assert.equal(serializeJsonLd(undefined), undefined);
+});
+
+
+test('inactive native cards do not suppress automatic pages in Writing or homepage feeds', () => {
+  const now = Date.parse('2026-10-11T12:00:00Z');
+  const native = { ...video, url: '/writing/inactive-companion', videoUrl: video.url, slug: 'inactive-companion', visibility: 'public' };
+  for (const status of ['archive', 'building', 'draft']) {
+    const inactive = { ...native, status };
+    assert.deepEqual(videoCompanionSnapshot([inactive], now), {});
+    assert.deepEqual(mergeWritingItems([inactive], { items: [video] }, now).map(item => item.url), ['/writing/videos/NewVideo001']);
+    assert.equal(findVideoCompanion([inactive], 'NewVideo001', now), undefined);
+  }
+});
+
+test('a scheduled companion activates only with regenerated discovery, not the runtime clock', () => {
+  const before = Date.parse('2026-10-11T12:00:00Z');
+  const after = Date.parse('2026-10-12T12:00:00Z');
+  const companion = { ...video, url: '/writing/scheduled', videoUrl: video.url, slug: 'scheduled', publishedAt: '2026-10-12T10:00:00Z', visibility: 'public', status: 'live' };
+  const registry = { items: [video] };
+  const snapshot = videoCompanionSnapshot([companion], before);
+  assert.deepEqual(snapshot, {});
+  for (const time of [before, after]) {
+    const available = publishedWritingItems([companion], time, snapshot);
+    assert.deepEqual(available, []);
+    assert.equal(findVideoCompanion(available, 'NewVideo001', time), undefined);
+    assert.deepEqual(automaticVideoItems(registry, available, time).map(item => item.url), ['/writing/videos/NewVideo001']);
+    assert.deepEqual(mergeWritingItems(available, registry, time).map(item => item.url), ['/writing/videos/NewVideo001']);
+  }
+  const refreshed = videoCompanionSnapshot([companion], after);
+  assert.deepEqual(refreshed, { NewVideo001: 'scheduled' });
+  const released = publishedWritingItems([companion], after, refreshed);
+  assert.equal(findVideoCompanion(released, 'NewVideo001', after), companion);
+  assert.deepEqual(automaticVideoItems(registry, released, after), []);
+  assert.deepEqual(mergeWritingItems(released, registry, after).map(item => item.url), ['/writing/scheduled']);
+});
+
+test('a stale or mismatched snapshot cannot revive an inactive companion', () => {
+  const now = Date.parse('2026-10-12T12:00:00Z');
+  const companion = { videoUrl: video.url, slug: 'released', publishedAt: video.publishedAt, status: 'live', visibility: 'public' };
+  for (const item of [{ ...companion, status: 'archive' }, { ...companion, visibility: 'private' }, { ...companion, slug: 'unreleased' }]) {
+    assert.deepEqual(publishedWritingItems([item], now, { NewVideo001: 'released' }), []);
+  }
 });

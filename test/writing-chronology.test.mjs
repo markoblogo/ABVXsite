@@ -56,7 +56,7 @@ test('native companion replaces the feed video and a removed native record does 
   assert.equal(result.length, 1);
   assert.equal(result[0].url, native.url);
   assert.equal(result[0].addedAt, now);
-  assert.equal(mergeWritingItems([], registry)[0].url, video.url);
+  assert.equal(mergeWritingItems([], registry)[0].url, '/writing/videos/NewVideo001');
 });
 
 test('card labels describe the actual destination across four sources', () => {

@@ -184,3 +184,11 @@ test('validates channel/feed URLs, IDs, timestamps and pinned metadata', () => {
   ]) assert.ok(validateYoutubeSettings({ ...configuredSettings, ...patch }).length > 0, JSON.stringify(patch));
   assert.ok(validateYoutubeSettings(null).length > 0);
 });
+
+test('full owner description survives parsing beyond the card excerpt and keeps paragraphs', () => {
+  const full = 'Owner description &amp; context.\n\n' + 'Useful details. '.repeat(35);
+  const xml = entry('NewVideo001', '2026-10-11T12:00:00Z').replace('Useful &amp; practical.', full);
+  const item = parseYoutubeFeed('<feed>' + xml + '</feed>', settings, now)[0];
+  assert.equal(item.excerpt.length, 220);
+  assert.equal(item.videoDescription, full.replace('&amp;', '&').trim());
+});

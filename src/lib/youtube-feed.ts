@@ -29,6 +29,7 @@ export function parseYoutubeFeed(xml: string, settings: YoutubeFeedSettings, now
       publishedAt: new Date(published).toISOString(),
       author: decodeHtmlEntities(getTag(getTag(entry, 'author') || '', 'name') || '').trim() || undefined,
       excerpt: stripHtml(decodeCdata(getTag(entry, 'media:description') || '')).slice(0, 220) || undefined,
+      videoDescription: decodeHtmlEntities(decodeCdata(getTag(entry, 'media:description') || '')).trim().slice(0, 10000),
       coverImage: getTagAttribute(entry, 'media:thumbnail', 'url')?.startsWith('https://i.ytimg.com/')
         ? decodeHtmlEntities(getTagAttribute(entry, 'media:thumbnail', 'url')!)
         : `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`,

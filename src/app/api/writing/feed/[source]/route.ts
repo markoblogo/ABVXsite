@@ -2,6 +2,8 @@ import { fetchMediumFeed, fetchSubstackFeed } from '@/lib/feeds';
 import { fetchYoutubeFeed } from '@/lib/youtube-feed';
 import youtubeSettings from '../../../../../../content/youtube.json';
 
+export const dynamic = 'force-dynamic';
+
 // Public metadata only, fixed providers only. The existing parsers/host policy apply.
 export async function GET(_request: Request, { params }: { params: Promise<{ source: string }> }) {
   const { source } = await params;
@@ -12,7 +14,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ sou
   else return Response.json({ error: 'Unknown Writing source' }, { status: 404 });
   if (!items.length) return Response.json({ error: 'Feed unavailable' }, { status: 503 });
   return Response.json(items, { headers: {
-    'Cache-Control': 'public, s-maxage=900, stale-while-revalidate=900',
+    'Cache-Control': 'no-store',
     'X-Robots-Tag': 'noindex',
   } });
 }

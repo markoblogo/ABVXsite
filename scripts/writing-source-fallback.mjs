@@ -3,7 +3,7 @@ import { writingUrlKey } from '../src/lib/writing-chronology.mjs';
 export async function fetchWritingSourceFallback(source, fetcher = fetch) {
   if (!['medium', 'substack', 'youtube'].includes(source)) return [];
   try {
-    const response = await fetcher(`https://abvx.xyz/api/writing/feed/${source}`, { signal: AbortSignal.timeout(20000) });
+    const response = await fetcher(`https://abvx.xyz/api/writing/feed/${source}`, { signal: AbortSignal.timeout(20000), cache: 'no-store' });
     if (!response.ok) return [];
     const items = await response.json();
     if (!Array.isArray(items)) return [];

@@ -89,7 +89,7 @@ if (packet.payload.source_markdown) {
     || data.publishedAt !== packet.payload.date_published) throw new Error('Packet metadata/body conflicts with approved source');
   if (data.visibility !== 'public' || data.status !== 'live'
     || !Number.isFinite(Date.parse(data.publishedAt)) || Date.parse(data.publishedAt) > Date.now()) throw new Error('Only ready public writing dated on/before today may be published');
-  const videoErrors = [...validateNativeWritingVideo(data), ...validateKitchenNotes(data)];
+  const videoErrors = [...validateNativeWritingVideo(data), ...validateKitchenNotes(data, body)];
   if (videoErrors.length) throw new Error(`Invalid YouTube video fields: ${videoErrors.join('; ')}`);
   const referenced = new Set([data.media, data.heroImage].filter(Boolean).map(image => image.src).filter(src => !src.startsWith('https://')));
   for (const image of [data.media, data.heroImage].filter(Boolean)) {

@@ -181,6 +181,7 @@ test('real public-index generator includes only published stories and the empty-
     cpSync(path.join(repo, relative), path.join(root, relative));
   }
   mkdirSync(path.join(root, 'public'));
+  writeFileSync(path.join(root, 'content/writing-discovery.json'), JSON.stringify({ version: 1, items: [] }));
   write('ws-001.md', metadata());
   write('private.md', metadata({ story_id: 'ws-002', slug: 'private-story', visibility: 'private' }));
   write('future.md', metadata({ story_id: 'ws-003', slug: 'future-story', date: '2099-01-01' }));
@@ -271,6 +272,7 @@ test('sitemap discovers published stories and series while excluding private and
     '../../content/pages.json': JSON.parse(readFileSync(path.join(repo, 'content/pages.json'))),
     '../../content/working-stories.json': series,
     '../../content/kitchen-notes.json': JSON.parse(readFileSync(path.join(repo, 'content/kitchen-notes.json'))),
+    '@/lib/writing-feed': { getVideoWritingItems: () => [] },
     '@/content': { getArtifacts: () => [], getBooks: () => [], getNativeWritingItems: () => [] },
     '@/content/service-pages': { servicePages: [] }, '@/content/editorials': { getEditorialArticles: () => [] },
     '@/content/working-stories': adapter,

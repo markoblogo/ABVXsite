@@ -1,4 +1,4 @@
-import { spawnSync } from 'node:child_process';
+import { spawn, spawnSync } from 'node:child_process';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
@@ -21,19 +21,38 @@ const save = () => {
   receipt.durationMs = Math.round(performance.now() - started);
   writeFileSync(path.join(output, 'receipt.json'), JSON.stringify(receipt, null, 2) + '\n');
 };
-for (const name of [...checks, 'dependency-audit']) {
+async function runCheck(name) {
   const commandArgs = name === 'dependency-audit' ? ['audit', '--omit=dev', '--audit-level=high']
     : ['run', name, ...(name === 'build' && args.includes('--webpack') ? ['--', '--webpack'] : [])];
   const checkStarted = performance.now();
-  const result = spawnSync('npm', commandArgs, { encoding: 'utf8', maxBuffer: 4 * 1024 * 1024 });
-  const log=(result.stdout || '') + (result.stderr || '');
-  writeFileSync(path.join(output, `${name.replaceAll(':', '-')}.log`), log);
-  receipt.checks.push({ name, status: result.status === 0 ? 'PASS' : 'FAIL', sha256:createHash('sha256').update(log).digest('hex'), durationMs: Math.round(performance.now() - checkStarted) });
-  save();
-  console.log(`${name}: ${receipt.checks.at(-1).status}`);
-  if (result.status !== 0) {
+  const log = await new Promise(resolve => {
+    const child = spawn('npm', commandArgs, { stdio: ['ignore', 'pipe', 'pipe'] });
+    let output = '', bytes = 0;
+    const append = chunk => {
+      bytes += chunk.length;
+      if (bytes > 4 * 1024 * 1024) { child.kill('SIGTERM'); return; }
+      output += chunk.toString();
+    };
+    child.stdout.on('data', append); child.stderr.on('data', append);
+    child.on('error', error => { output += error.message; });
+    child.on('close', status => resolve({ output, status: bytes > 4 * 1024 * 1024 ? null : status }));
+  });
+  writeFileSync(path.join(output, `${name.replaceAll(':', '-')}.log`), log.output);
+  return { name, status: log.status === 0 ? 'PASS' : 'FAIL',
+    sha256: createHash('sha256').update(log.output).digest('hex'),
+    durationMs: Math.round(performance.now() - checkStarted) };
+}
+// Source checks fail early. Independent read-only checks share a phase; build
+// and browser QA remain sequential. Receipt order stays compatible with OS.
+const phases = [['content:validate'], ['ecosystem:check'], ['lint', 'test:sync', 'cortex-abv:vector-export:check'], ['build'], ['qa:seo'], ['dependency-audit']];
+if (phases.flat().join('|') !== [...checks, 'dependency-audit'].join('|')) throw new Error('Release gate order changed');
+for (const phase of phases) {
+  const results = await Promise.all(phase.map(runCheck));
+  receipt.checks.push(...results); save();
+  for (const check of results) console.log(`${check.name}: ${check.status}`);
+  if (results.some(check => check.status !== 'PASS')) {
     receipt.result = 'FAIL'; save();
-    console.error(result.error?.message || (result.stderr || result.stdout || '').split('\n').slice(-15).join('\n'));
+    console.error('Release check failed; see the retained log for each failed gate.');
     process.exit(1);
   }
 }

@@ -1,3 +1,4 @@
+import { validateKitchenNotes } from './kitchen-notes.mjs';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 import { validateNativeWritingVideo } from './native-writing-video.mjs';
@@ -12,6 +13,7 @@ import type {
   ContentLinkType,
   NativeWriting,
   NativeWritingType,
+  RecipeRecord,
   RssFeedConfig,
   Series,
   SiteSection,
@@ -324,7 +326,7 @@ export function readNativeWritingFiles(): NativeWriting[] {
     .filter((file) => isVisible(file.data.visibility))
     .map(({ data, body }) => {
       const slug = stringValue(data.slug);
-      const videoErrors = validateNativeWritingVideo(data);
+      const videoErrors = [...validateNativeWritingVideo(data), ...validateKitchenNotes(data)];
       if (videoErrors.length) throw new Error(`Writing ${slug}: ${videoErrors.join('; ')}`);
       const fallbackTitle = titleFromSlug(slug);
       const summary = stringValue(data.summary, body.split(/\n+/).find(Boolean) || fallbackTitle);
@@ -341,6 +343,9 @@ export function readNativeWritingFiles(): NativeWriting[] {
         primarySection: 'writing',
         appearsIn: ['writing'],
         source: 'abvx',
+        collection: data.collection as 'kitchen-notes' | undefined,
+        recipe: data.recipe as RecipeRecord | undefined,
+        seoDescription: optionalString(data.seoDescription),
         videoUrl: optionalString(data.videoUrl),
         videoUploadedAt: optionalString(data.videoUploadedAt),
         language: ['en', 'fr', 'uk'].includes(stringValue(data.language))

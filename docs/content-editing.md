@@ -49,3 +49,5 @@ See [Writing sources and pinned-video behavior](site-operations.md#youtube-polic
 Update content, section links, relationships, media, and both machine indexes together. Run `npm run llms:generate`; commit its outputs without hand edits. Follow the [release checklist](editorial-seo-checklist.md), open one PR, and verify the production merge SHA and canonical URLs after publication.
 
 Bulk edits must keep the same source ownership and stable identifiers. A passed build does not establish link correctness, publication, or search indexing.
+
+Kitchen Notes recipe fields and local cookbook export: [guide](kitchen-notes.md).

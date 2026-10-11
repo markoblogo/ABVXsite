@@ -72,6 +72,29 @@ await withQaServer(async (base) => {
     assert.equal(llmsResponse.status(), 200);
     const llms = await llmsResponse.text();
     const indexUrls = new Set(index.items.map((item) => item.canonicalUrl));
+    // The structured recipe and its visible quick reference must remain identical.
+    for (const file of contentFiles('writing')) {
+      const {data} = parseContentFile(file);
+      if (data.type !== 'recipe' || data.visibility !== 'public') continue;
+      const route='/writing/'+data.slug;
+      assert.ok(indexUrls.has('https://abvx.xyz'+route), route+' missing machine index');
+      assert.ok(xml.includes('https://abvx.xyz'+route), route+' missing sitemap');
+      await visit(base+route);
+      const recipe=JSON.parse(await page.locator('#jsonld-recipe').textContent());
+      assert.equal(recipe['@type'],'Recipe');
+      const visible=await page.locator('.section-panel').last().innerText();
+      for(const ingredient of recipe.recipeIngredient) assert.ok(visible.includes(ingredient));
+      for(const step of recipe.recipeInstructions) assert.ok(visible.includes(step.text));
+      assert.equal(await page.locator('main a[href="/writing/kitchen-notes"]').count(),1);
+      await page.setViewportSize({width:390,height:844});
+      assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), route+' mobile overflow');
+      await page.setViewportSize({width:1280,height:900});
+    }
+    await visit(base+'/writing/kitchen-notes');
+    assert.ok(indexUrls.has('https://abvx.xyz/writing/kitchen-notes'));
+    assert.ok(xml.includes('https://abvx.xyz/writing/kitchen-notes'));
+    assert.ok(await page.locator('main a[href="/writing/marmite-oatmeal"]').count());
+
     const seriesRoute = '/writing/working-stories';
     assert.ok(indexUrls.has('https://abvx.xyz' + seriesRoute));
     assert.ok(llms.includes('URL: https://abvx.xyz' + seriesRoute + '\n'));

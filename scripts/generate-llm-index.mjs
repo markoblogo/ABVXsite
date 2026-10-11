@@ -8,6 +8,8 @@ const outputDir = path.join(process.cwd(), 'public');
 const collaboration = JSON.parse(readFileSync(path.join(process.cwd(), 'content/collaborations.json'), 'utf8'));
 const youtube = JSON.parse(readFileSync(path.join(process.cwd(), 'content/youtube.json'), 'utf8'));
 const editorialPages = JSON.parse(readFileSync(path.join(process.cwd(), 'content/editorial/index.json'), 'utf8'));
+const kitchenNotes = JSON.parse(readFileSync('content/kitchen-notes.json', 'utf8'));
+const kitchenIndexItem = {type:'editorial-series',section:'writing',ecosystem:'Writing',group:kitchenNotes.title,status:'live',title:kitchenNotes.title,summary:kitchenNotes.summary,canonicalUrl:`${SITE_URL}${kitchenNotes.canonicalPath}`,updatedAt:kitchenNotes.updatedAt,tags:[],links:[],related:[]};
 const workingSeries = JSON.parse(readFileSync(path.join(process.cwd(), 'content/working-stories.json'), 'utf8'));
 const workingStories = publishedWorkingStories(readWorkingStories());
 const workingIndexItems = workingStories.map((story) => publicWorkingStory(story, workingStories));
@@ -228,7 +230,9 @@ function publicIndexItem(item) {
     tags: cleanTags(item.tags),
     links: cleanLinks(item.links),
     updatedAt: item.updatedAt || item.publishedAt || null,
-    related: relationObjects(item),
+    related: [...relationObjects(item), ...(item.collection === kitchenNotes.id ? [{title:kitchenNotes.title,canonicalUrl:`${SITE_URL}${kitchenNotes.canonicalPath}`,relation:'collection'}] : [])],
+    ...(item.collection ? {collection:item.collection} : {}),
+    ...(item.recipe ? {contentType:'recipe',recipe:item.recipe} : {}),
   };
 }
 
@@ -275,7 +279,7 @@ const youtubeIndexItem = {
   tags: ['youtube', 'video'], links: [{ type: 'youtube', label: 'YouTube channel', url: youtube.channelUrl }], related: [],
 };
 
-const indexItems = [...rawItems.map(publicIndexItem), ...serviceIndexItems, ...editorialIndexItems, collaborationIndexItem, youtubeIndexItem, workingSeriesIndexItem, ...workingIndexItems]
+const indexItems = [...rawItems.map(publicIndexItem), ...serviceIndexItems, ...editorialIndexItems, collaborationIndexItem, youtubeIndexItem, kitchenIndexItem, workingSeriesIndexItem, ...workingIndexItems]
   .sort((a, b) => a.section.localeCompare(b.section) || a.title.localeCompare(b.title));
 
 function isFocus(item) {
@@ -379,6 +383,8 @@ const llms = [
   `## Working Stories\n\n${[workingSeriesIndexItem, ...workingIndexItems].map((item) =>
     `- ${item.title}\n  URL: ${item.canonicalUrl}\n  Summary: ${item.summary}${item.tags.length ? `\n  Topics: ${item.tags.join(', ')}` : ''}`
   ).join('\n\n')}`,
+  '',
+  `## Kitchen Notes\n\n- ${kitchenNotes.title}\n  URL: ${kitchenIndexItem.canonicalUrl}\n  Summary: ${kitchenNotes.summary}`,
   '',
   '## Notes for crawlers and LLM agents',
   '',

@@ -992,11 +992,23 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 ## Writing: essays and field notes
 
+- 5 Y Combinator Startup Rules Founders Keep Ignoring
+  URL: https://abvx.xyz/writing/y-combinator-startup-advice-five-rules-founders-ignore
+  Summary: Y Combinator published 22 essential startup rules in 2017. Most sound obvious. Here are five that remain particularly easy to ignore and why they matter.
+  Group: writing
+  Tags: startups, y-combinator, entrepreneurship, product-market-fit, go-to-market, founder-advice, startup-growth
+
 - A Personal Blog, Finally
   URL: https://abvx.xyz/writing/a-personal-blog-finally
   Summary: A place for the things that do not fit into professional feeds.
   Group: writing
   Tags: personal, notes, life
+
+- An Oatmeal Pancake with Melted Cheese and Jam. Yes, Both.
+  URL: https://abvx.xyz/writing/oatmeal-egg-pancake-cheese-jam
+  Summary: Three tablespoons of oats, one egg, a little milk, melted cheese and cherry jam. My surprisingly good breakfast recipe, complete with an unnecessary airborne pancake manoeuvre.
+  Group: writing
+  Tags: cooking, breakfast, oatmeal, oat-pancakes, recipes, sweet-and-savory, kitchen-experiments
 
 - Marmite Oatmeal
   URL: https://abvx.xyz/writing/marmite-oatmeal
@@ -1046,6 +1058,16 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/working-stories
   Summary: Cases, experiments, mistakes and unusual decisions from my professional life.
 
+- We Sold the Same Tires Through Three Different Networks. One Had to Look Cheap.
+  URL: https://abvx.xyz/writing/working-stories/price-perception-three-tire-service-brands
+  Summary: Our premium tire-service network had a problem: budget customers assumed it was too expensive to visit. So I created two additional brands, including one deliberately designed to look cheap.
+  Topics: brand-positioning, market-segmentation, consumer-psychology, price-perception, retail-marketing, customer-experience, brand-architecture, automotive, b2b-marketing
+
+- Why Truck Drivers Preferred Teddy Bears to Pocket Knives
+  URL: https://abvx.xyz/writing/working-stories/truck-driver-loyalty-program-childrens-toys
+  Summary: We built a loyalty program for long-haul truck drivers, offering tools, blankets and automotive accessories. Then we added plush toys and discovered what really motivated our customers.
+  Topics: loyalty-programs, b2b-marketing, consumer-psychology, customer-experience, emotional-marketing, fleet-management, customer-retention, gestalt-marketing
+
 - The Vodka Bottle That Remembered Who Made It
   URL: https://abvx.xyz/writing/working-stories/vodka-bottle-sms-marketing-storytelling
   Summary: Twenty years ago, we gave budget vodka bottles unique numbers and fictional biographies delivered by SMS. Then I met a customer who believed one imaginary bottling-line worker made better vodka.
@@ -1060,6 +1082,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/working-stories/when-the-flour-bag-became-part-of-the-product
   Summary: How reusable flour packaging became part of the value proposition, helping a Ukrainian exporter differentiate a commodity without changing the flour.
   Topics: branding, packaging, marketing, export, creative-direction, agriculture
+
+## Kitchen Notes
+
+- Kitchen Notes
+  URL: https://abvx.xyz/writing/kitchen-notes
+  Summary: Personal kitchen experiments, everyday recipes and small discoveries about food.
 
 ## Notes for crawlers and LLM agents
 

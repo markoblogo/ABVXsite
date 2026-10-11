@@ -123,3 +123,5 @@ For an agent session, read `AGENTS.md`, this README, then only the relevant guid
 
 _This block is generated from the reviewed ABVX ecosystem registry._
 <!-- ABVX:ECOSYSTEM:END -->
+
+Kitchen Notes: native recipes and existing food notes use the shared Writing collection; see [recipe fields and local export](docs/kitchen-notes.md).

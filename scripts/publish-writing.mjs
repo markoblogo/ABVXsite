@@ -1,3 +1,4 @@
+import { validateKitchenNotes } from '../src/content/kitchen-notes.mjs';
 import { readFileSync, existsSync } from 'node:fs';
 import { serializeFrontmatter } from './content-lib.mjs';
 import { createHash } from 'node:crypto';
@@ -76,6 +77,7 @@ const exists = existsSync(targetFile);
 if (exists) throw new Error(`Refusing to overwrite existing writing item: ${targetFile}`);
 let source = serializeFrontmatter(frontmatterFrom(packet), bodyFrom(packet));
 let media = [];
+if (!packet.payload.source_markdown && packet.kind === 'recipe') throw new Error('Recipes require approved structured source Markdown');
 if (packet.payload.source_markdown) {
   source = packet.payload.source_markdown;
   if (packet.schema_version !== 'v1' || packet.mode !== 'REPORT_ONLY_HANDOFF'
@@ -87,7 +89,7 @@ if (packet.payload.source_markdown) {
     || data.publishedAt !== packet.payload.date_published) throw new Error('Packet metadata/body conflicts with approved source');
   if (data.visibility !== 'public' || data.status !== 'live'
     || !Number.isFinite(Date.parse(data.publishedAt)) || Date.parse(data.publishedAt) > Date.now()) throw new Error('Only ready public writing dated on/before today may be published');
-  const videoErrors = validateNativeWritingVideo(data);
+  const videoErrors = [...validateNativeWritingVideo(data), ...validateKitchenNotes(data)];
   if (videoErrors.length) throw new Error(`Invalid YouTube video fields: ${videoErrors.join('; ')}`);
   const referenced = new Set([data.media, data.heroImage].filter(Boolean).map(image => image.src).filter(src => !src.startsWith('https://')));
   for (const image of [data.media, data.heroImage].filter(Boolean)) {

@@ -229,3 +229,16 @@ test('native Writing packets preserve author body and language; unsafe or unsupp
   assert.ok(output.endsWith(`${body}\n`));
   assert.throws(() => run(value, '--dry-run'));
 }));
+
+test('native recipe consumer preserves approved fields and rejects incomplete recipes before writes', () => fixture(root => {
+  const asset=withMedia(root).payload.media_assets[0];
+  const data={id:'test-recipe',slug:'test-recipe',title:'A breakfast',primarySection:'writing',type:'recipe',collection:'kitchen-notes',summary:'Test.',status:'live',visibility:'public',publishedAt:'2020-01-01',language:'en',media:{src:asset.target,alt:'Breakfast',width:1,height:1},recipe:{recipeYield:'One serving',ingredients:[{name:'oats',quantityText:'3 tablespoons'}],instructions:['Mix and cook.']}};
+  const file=path.join(root,'recipe-packet.json');
+  const run=value => {value.payload.media_assets=[asset];writeFileSync(file,JSON.stringify(value));return execFileSync(process.execPath,[writingCommand,'--packet',file,'--write'],{cwd:root,stdio:'pipe'});};
+  const invalid=nativePacket({...data,recipe:{...data.recipe,instructions:[]}});
+  assert.throws(() => run(invalid), /Recipe instructions/);
+  assert.equal(existsSync(path.join(root,'content/writing/test-recipe.md')),false);
+  assert.equal(existsSync(path.join(root,`public${asset.target}`)),false);
+  const valid=nativePacket(data);run(valid);
+  assert.equal(readFileSync(path.join(root,'content/writing/test-recipe.md'),'utf8'),valid.payload.source_markdown);
+}));

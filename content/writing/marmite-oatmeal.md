@@ -22,7 +22,8 @@
   "needsReview": false,
   "homepageEligible": false,
   "publishedAt": "2026-08-10",
-  "updatedAt": "2026-08-10T13:53:00Z"
+  "updatedAt": "2026-08-10T13:53:00Z",
+  "collection": "kitchen-notes"
 }
 ---
 

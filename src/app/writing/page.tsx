@@ -1,3 +1,4 @@
+import kitchenNotes from '../../../content/kitchen-notes.json';
 import youtubeSettings from '../../../content/youtube.json';
 import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
@@ -129,7 +130,7 @@ export default async function WritingPage({
         eyebrow="Writing"
         title="Writing"
         summary="Applied AI reviews, build logs and essays on systems, validation, agent workflows, decision-making and how ideas survive contact with reality."
-      ><EditorialSectionLink section="writing" /> <Link className="editorial-section-link" href={workingStoriesSeries.canonicalPath}>{workingStoriesSeries.title} <span aria-hidden="true">→</span></Link></PageHeader>
+      ><EditorialSectionLink section="writing" /> <Link className="editorial-section-link" href={workingStoriesSeries.canonicalPath}>{workingStoriesSeries.title} <span aria-hidden="true">→</span></Link> <Link className="editorial-section-link" href={kitchenNotes.canonicalPath}>{kitchenNotes.title} <span aria-hidden="true">→</span></Link></PageHeader>
 
       <WritingSourceLinks active={activeSource} />
 

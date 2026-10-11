@@ -192,9 +192,20 @@ export type Series = {
   seriesSlugs?: string[];
 };
 
-export type NativeWritingType = 'note' | 'article' | 'review' | 'build_log' | 'other';
+export type NativeWritingType = 'note' | 'article' | 'review' | 'build_log' | 'other' | 'recipe';
+
+export type RecipeRecord = {
+  recipeYield: string;
+  ingredients: Array<{ name: string; quantityText: string }>;
+  instructions: string[];
+  timingText?: string;
+  variations?: string[];
+};
 
 export type NativeWriting = BaseContentItem<NativeWritingType> & {
+  collection?: 'kitchen-notes';
+  recipe?: RecipeRecord;
+  seoDescription?: string;
   videoUrl?: string;
   videoUploadedAt?: string;
   language?: 'en' | 'fr' | 'uk';

@@ -6401,6 +6401,29 @@
       "ecosystem": "Writing",
       "group": null,
       "status": "live",
+      "title": "5 Y Combinator Startup Rules Founders Keep Ignoring",
+      "summary": "Y Combinator published 22 essential startup rules in 2017. Most sound obvious. Here are five that remain particularly easy to ignore and why they matter.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/y-combinator-startup-advice-five-rules-founders-ignore",
+      "tags": [
+        "startups",
+        "y-combinator",
+        "entrepreneurship",
+        "product-market-fit",
+        "go-to-market",
+        "founder-advice",
+        "startup-growth"
+      ],
+      "links": [],
+      "updatedAt": "2026-10-11",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
       "title": "A Personal Blog, Finally",
       "summary": "A place for the things that do not fit into professional feeds.",
       "canonicalUrl": "https://abvx.xyz/writing/a-personal-blog-finally",
@@ -6441,6 +6464,85 @@
       "ecosystem": "Writing",
       "group": null,
       "status": "live",
+      "title": "An Oatmeal Pancake with Melted Cheese and Jam. Yes, Both.",
+      "summary": "Three tablespoons of oats, one egg, a little milk, melted cheese and cherry jam. My surprisingly good breakfast recipe, complete with an unnecessary airborne pancake manoeuvre.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/oatmeal-egg-pancake-cheese-jam",
+      "tags": [
+        "cooking",
+        "breakfast",
+        "oatmeal",
+        "oat-pancakes",
+        "recipes",
+        "sweet-and-savory",
+        "kitchen-experiments"
+      ],
+      "links": [],
+      "updatedAt": "2026-10-11",
+      "related": [
+        {
+          "title": "Kitchen Notes",
+          "url": "https://abvx.xyz/writing/kitchen-notes",
+          "type": "collection"
+        }
+      ],
+      "collection": "kitchen-notes",
+      "contentType": "recipe",
+      "recipe": {
+        "recipeYield": "One generous breakfast",
+        "ingredients": [
+          {
+            "name": "rolled oats",
+            "quantityText": "3 tablespoons, or one good handful"
+          },
+          {
+            "name": "egg",
+            "quantityText": "1"
+          },
+          {
+            "name": "milk",
+            "quantityText": "30–50 ml"
+          },
+          {
+            "name": "salt",
+            "quantityText": "A small pinch"
+          },
+          {
+            "name": "butter",
+            "quantityText": "A little, for frying"
+          },
+          {
+            "name": "mature cheddar or raclette cheese",
+            "quantityText": "To taste; amount not specified"
+          },
+          {
+            "name": "cherry or strawberry jam, mixed red-fruit preserves or honey",
+            "quantityText": "To taste; amount not specified"
+          }
+        ],
+        "instructions": [
+          "Mix oats, egg, milk and salt thoroughly with a fork. Rest for a few minutes.",
+          "Heat a frying pan over medium heat with a little butter. Spread the mixture into a round pancake.",
+          "Cook until the underside is golden and the top holds together, then flip.",
+          "Put grated mature cheddar or sliced raclette on the cooked side and fold in half.",
+          "Turn once more and cook briefly until the cheese melts.",
+          "Top with jam or honey and serve warm."
+        ],
+        "timingText": "Roughly ten minutes, perhaps a little longer if the oats rest.",
+        "variations": [
+          "No filling",
+          "Honey instead of jam",
+          "Protein powder with more milk as needed",
+          "Bottled egg whites were tested but the author preferred a whole egg"
+        ]
+      }
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
       "title": "How I Work With AI Agents in 2026",
       "summary": "My practical AI agent workflow in 2026: orchestrator agents, 20–40 subagents, long-running sessions, taste gates, automation and why AI-native work keeps changing.",
       "language": "en",
@@ -6454,6 +6556,20 @@
       ],
       "links": [],
       "updatedAt": "2026-10-10",
+      "related": []
+    },
+    {
+      "type": "editorial-series",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "Kitchen Notes",
+      "status": "live",
+      "title": "Kitchen Notes",
+      "summary": "Personal kitchen experiments, everyday recipes and small discoveries about food.",
+      "canonicalUrl": "https://abvx.xyz/writing/kitchen-notes",
+      "updatedAt": "2026-10-11",
+      "tags": [],
+      "links": [],
       "related": []
     },
     {
@@ -6472,7 +6588,14 @@
       ],
       "links": [],
       "updatedAt": "2026-08-10T13:53:00Z",
-      "related": []
+      "related": [
+        {
+          "title": "Kitchen Notes",
+          "url": "https://abvx.xyz/writing/kitchen-notes",
+          "type": "collection"
+        }
+      ],
+      "collection": "kitchen-notes"
     },
     {
       "type": "writing",
@@ -6606,6 +6729,45 @@
       "ecosystem": "Writing",
       "group": "Working Stories",
       "status": "published",
+      "title": "We Sold the Same Tires Through Three Different Networks. One Had to Look Cheap.",
+      "summary": "Our premium tire-service network had a problem: budget customers assumed it was too expensive to visit. So I created two additional brands, including one deliberately designed to look cheap.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/working-stories/price-perception-three-tire-service-brands",
+      "tags": [
+        "brand-positioning",
+        "market-segmentation",
+        "consumer-psychology",
+        "price-perception",
+        "retail-marketing",
+        "customer-experience",
+        "brand-architecture",
+        "automotive",
+        "b2b-marketing"
+      ],
+      "publishedAt": "2026-10-11",
+      "updatedAt": "2026-10-11",
+      "image": "https://abvx.xyz/media/working-stories/price-perception-three-tire-service-brands.png",
+      "links": [
+        {
+          "type": "section",
+          "label": "Working Stories",
+          "url": "https://abvx.xyz/writing/working-stories"
+        }
+      ],
+      "related": [
+        {
+          "title": "Why Truck Drivers Preferred Teddy Bears to Pocket Knives",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/truck-driver-loyalty-program-childrens-toys",
+          "relation": "same-project"
+        }
+      ]
+    },
+    {
+      "type": "working-story",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "Working Stories",
+      "status": "published",
       "title": "When the Flour Bag Became Part of the Product",
       "summary": "How reusable flour packaging became part of the value proposition, helping a Ukrainian exporter differentiate a commodity without changing the flour.",
       "language": "en",
@@ -6681,6 +6843,44 @@
         }
       ],
       "related": []
+    },
+    {
+      "type": "working-story",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "Working Stories",
+      "status": "published",
+      "title": "Why Truck Drivers Preferred Teddy Bears to Pocket Knives",
+      "summary": "We built a loyalty program for long-haul truck drivers, offering tools, blankets and automotive accessories. Then we added plush toys and discovered what really motivated our customers.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/working-stories/truck-driver-loyalty-program-childrens-toys",
+      "tags": [
+        "loyalty-programs",
+        "b2b-marketing",
+        "consumer-psychology",
+        "customer-experience",
+        "emotional-marketing",
+        "fleet-management",
+        "customer-retention",
+        "gestalt-marketing"
+      ],
+      "publishedAt": "2026-10-11",
+      "updatedAt": "2026-10-11",
+      "image": "https://abvx.xyz/media/working-stories/truck-driver-loyalty-program-childrens-toys.png",
+      "links": [
+        {
+          "type": "section",
+          "label": "Working Stories",
+          "url": "https://abvx.xyz/writing/working-stories"
+        }
+      ],
+      "related": [
+        {
+          "title": "We Sold the Same Tires Through Three Different Networks. One Had to Look Cheap.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/price-perception-three-tire-service-brands",
+          "relation": "same-project"
+        }
+      ]
     },
     {
       "type": "editorial-series",

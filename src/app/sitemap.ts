@@ -1,3 +1,4 @@
+import kitchenNotes from '../../content/kitchen-notes.json';
 import pageMetadata from '../../content/pages.json';
 import { getArtifacts, getBooks, getNativeWritingItems } from '@/content';
 import { servicePages } from '@/content/service-pages';
@@ -64,6 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/books`, lastModified: booksDate, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${base}/writing`, lastModified: writingDate, changeFrequency: 'weekly', priority: 0.75 },
     { url: `${base}${workingStoriesSeries.canonicalPath}`, lastModified: latestDate([...storyDates, workingStoriesSeries]), changeFrequency: 'weekly', priority: 0.6 },
+    { url: `${base}${kitchenNotes.canonicalPath}`, lastModified: latestDate([...writing.filter(item => item.collection === kitchenNotes.id), kitchenNotes]), changeFrequency: 'monthly', priority: 0.55 },
     { url: `${base}/about`, lastModified: aboutDate, changeFrequency: 'monthly', priority: 0.75 },
     { url: `${base}/llmo`, lastModified: allContentDate, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/work-with-me`, lastModified: trafficLandingUpdatedAt, changeFrequency: 'monthly', priority: 0.72 },

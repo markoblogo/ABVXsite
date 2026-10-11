@@ -176,7 +176,7 @@ test('empty collection exports a manuscript header and an empty manifest', () =>
 }));
 
 test('real public-index generator includes only published stories and the empty-capable series', () => fixture(({ root, write }) => {
-  for (const relative of ['content/collaborations.json', 'content/youtube.json', 'content/working-stories.json', 'content/editorial/index.json']) {
+  for (const relative of ['content/kitchen-notes.json', 'content/collaborations.json', 'content/youtube.json', 'content/working-stories.json', 'content/editorial/index.json']) {
     mkdirSync(path.dirname(path.join(root, relative)), { recursive: true });
     cpSync(path.join(repo, relative), path.join(root, relative));
   }
@@ -270,6 +270,7 @@ test('sitemap discovers published stories and series while excluding private and
   const sitemap = compile('src/app/sitemap.ts', {
     '../../content/pages.json': JSON.parse(readFileSync(path.join(repo, 'content/pages.json'))),
     '../../content/working-stories.json': series,
+    '../../content/kitchen-notes.json': JSON.parse(readFileSync(path.join(repo, 'content/kitchen-notes.json'))),
     '@/content': { getArtifacts: () => [], getBooks: () => [], getNativeWritingItems: () => [] },
     '@/content/service-pages': { servicePages: [] }, '@/content/editorials': { getEditorialArticles: () => [] },
     '@/content/working-stories': adapter,

@@ -52,6 +52,16 @@
     },
     {
       "source": "abvx",
+      "title": "An Oatmeal Pancake with Melted Cheese and Jam. Yes, Both.",
+      "url": "/writing/oatmeal-egg-pancake-cheese-jam",
+      "publishedAt": "2026-10-11T00:00:00.000Z",
+      "excerpt": "Three tablespoons of oats, one egg, a little milk, melted cheese and cherry jam. My surprisingly good breakfast recipe, complete with an unnecessary airborne pancake manoeuvre.",
+      "coverImage": "/media/writing/oatmeal-egg-pancake-cheese-jam.png",
+      "addedAt": "2026-10-11T13:11:16.861Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "abvx",
       "title": "Première traduction française de Jeanne la bataillonneuse et Miss Adrienne de Géo Chkouroupiy",
       "url": "/writing/premiere-traduction-francaise-jeanne-bataillonneuse-miss-adrienne",
       "publishedAt": "2026-09-27T00:00:00.000Z",
@@ -91,6 +101,26 @@
     },
     {
       "source": "abvx",
+      "title": "We Sold the Same Tires Through Three Different Networks. One Had to Look Cheap.",
+      "url": "/writing/working-stories/price-perception-three-tire-service-brands",
+      "publishedAt": "2026-10-11T00:00:00.000Z",
+      "excerpt": "Our premium tire-service network had a problem: budget customers assumed it was too expensive to visit. So I created two additional brands, including one deliberately designed to look cheap.",
+      "coverImage": "/media/working-stories/price-perception-three-tire-service-brands.png",
+      "addedAt": "2026-10-11T13:11:16.861Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "abvx",
+      "title": "Why Truck Drivers Preferred Teddy Bears to Pocket Knives",
+      "url": "/writing/working-stories/truck-driver-loyalty-program-childrens-toys",
+      "publishedAt": "2026-10-11T00:00:00.000Z",
+      "excerpt": "We built a loyalty program for long-haul truck drivers, offering tools, blankets and automotive accessories. Then we added plush toys and discovered what really motivated our customers.",
+      "coverImage": "/media/working-stories/truck-driver-loyalty-program-childrens-toys.png",
+      "addedAt": "2026-10-11T13:11:16.861Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "abvx",
       "title": "The Vodka Bottle That Remembered Who Made It",
       "url": "/writing/working-stories/vodka-bottle-sms-marketing-storytelling",
       "publishedAt": "2026-10-10T00:00:00.000Z",
@@ -108,6 +138,16 @@
       "coverImage": "/media/working-stories/flour-meets-fashion/grano-detail.webp",
       "addedAt": "2026-10-10T12:17:48.000Z",
       "addedAtBasis": "production"
+    },
+    {
+      "source": "abvx",
+      "title": "5 Y Combinator Startup Rules Founders Keep Ignoring",
+      "url": "/writing/y-combinator-startup-advice-five-rules-founders-ignore",
+      "publishedAt": "2026-10-11T00:00:00.000Z",
+      "excerpt": "Y Combinator published 22 essential startup rules in 2017. Most sound obvious. Here are five that remain particularly easy to ignore and why they matter.",
+      "coverImage": "/media/writing/y-combinator-startup-advice-five-rules-founders-ignore.png",
+      "addedAt": "2026-10-11T13:11:16.861Z",
+      "addedAtBasis": "observed"
     },
     {
       "source": "medium",

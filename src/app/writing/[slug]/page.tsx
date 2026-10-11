@@ -1,3 +1,6 @@
+import collection from '../../../../content/kitchen-notes.json';
+import { recipeJsonLd } from '@/content/kitchen-notes.mjs';
+import SectionPanel from '@/components/SectionPanel';
 import JsonLd from '@/components/JsonLd';
 import MarkdownContent from '@/components/MarkdownContent';
 import MediaPanel from '@/components/MediaPanel';
@@ -35,7 +38,7 @@ export async function generateMetadata({
     item.translationGroup && candidate.translationGroup === item.translationGroup && candidate.language);
   const metadata = metadataWithImage({
     title: item.seoTitle || item.title,
-    description: item.summary,
+    description: item.seoDescription || item.summary,
     canonicalPath: `/writing/${item.slug}`,
     image: imageMetadata(item.heroImage || item.coverImage, defaultOgImage, 'page'),
     type: 'article',
@@ -89,6 +92,7 @@ export default async function NativeWritingPage({
           },
         }}
       />
+      {item.recipe ? <JsonLd id="jsonld-recipe" data={recipeJsonLd(item, SITE_URL)} /> : null}
       {videoId ? <JsonLd id="jsonld-native-video" data={{
         '@context': 'https://schema.org', '@type': 'VideoObject',
         name: item.title, description: item.summary,
@@ -105,6 +109,7 @@ export default async function NativeWritingPage({
         <Link href="/about">Anton Biletskyi-Volokh</Link>
         <span>{item.publishedAt ?? 'Undated'}</span>
         <span>{item.type}</span>
+        {item.collection === collection.id ? <Link href={collection.canonicalPath}>{collection.title}</Link> : null}
         {item.tags.map((tag) => (
           <span key={tag}>{tag}</span>
         ))}
@@ -122,6 +127,14 @@ export default async function NativeWritingPage({
         {item.videoUrl ? <YouTubeEmbed href={item.videoUrl} title={item.title} />
           : item.heroImage || item.coverImage ? <MediaPanel image={item.heroImage || item.coverImage} title={item.title} variant="writing" priority /> : null}
         <MarkdownContent>{item.body}</MarkdownContent>
+        {item.recipe ? <SectionPanel title="Recipe at a glance" eyebrow={collection.title}>
+          <p>{item.recipe.recipeYield}. {item.recipe.timingText}</p>
+          <h3>Ingredients</h3>
+          <ul>{item.recipe.ingredients.map(ingredient => <li key={ingredient.name}>{ingredient.quantityText} {ingredient.name}</li>)}</ul>
+          <h3>Method</h3>
+          <ol>{item.recipe.instructions.map((step, index) => <li key={index}>{step}</li>)}</ol>
+          {item.recipe.variations?.length ? <><h3>Variations</h3><ul>{item.recipe.variations.map(variation => <li key={variation}>{variation}</li>)}</ul></> : null}
+        </SectionPanel> : null}
       </div>
     </div>
   );

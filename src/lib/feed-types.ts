@@ -12,6 +12,8 @@ export type FeedItem = {
   coverImage?: string;
   videoUrl?: string;
   videoDescription?: string;
+  status?: string;
+  visibility?: string;
 };
 
 export const FEED_REVALIDATE_SECONDS = 900;

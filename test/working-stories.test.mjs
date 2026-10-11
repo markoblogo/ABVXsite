@@ -269,12 +269,17 @@ test('sitemap discovers published stories and series while excluding private and
   write('future.md', metadata({ story_id: 'ws-003', slug: 'future', date: '2099-01-01' }));
   const adapter = compile('src/content/working-stories.ts', { './working-stories-lib.mjs': lib, '../../public/content-index.json': releaseIndex([normalized()]) });
   const series = JSON.parse(readFileSync(path.join(repo, 'content/working-stories.json')));
+  const nativeVideos = [
+    { slug: 'released-video', videoUrl: 'https://www.youtube.com/watch?v=NewVideo001', publishedAt: '2020-01-01' },
+    { slug: 'future-video', videoUrl: 'https://www.youtube.com/watch?v=NewVideo002', publishedAt: '2099-01-01' },
+    { slug: 'archive-video', videoUrl: 'https://www.youtube.com/watch?v=NewVideo003', publishedAt: '2020-01-01', status: 'archive' },
+  ];
   const sitemap = compile('src/app/sitemap.ts', {
     '../../content/pages.json': JSON.parse(readFileSync(path.join(repo, 'content/pages.json'))),
     '../../content/working-stories.json': series,
     '../../content/kitchen-notes.json': JSON.parse(readFileSync(path.join(repo, 'content/kitchen-notes.json'))),
-    '@/lib/writing-feed': { getVideoWritingItems: () => [] },
-    '@/content': { getArtifacts: () => [], getBooks: () => [], getNativeWritingItems: () => [] },
+    '@/lib/writing-feed': { getVideoWritingItems: () => [], getPublishedNativeWritingItems: () => [nativeVideos[0]] },
+    '@/content': { getArtifacts: () => [], getBooks: () => [], getNativeWritingItems: () => nativeVideos },
     '@/content/service-pages': { servicePages: [] }, '@/content/editorials': { getEditorialArticles: () => [] },
     '@/content/working-stories': adapter,
   }).default;
@@ -282,6 +287,8 @@ test('sitemap discovers published stories and series while excluding private and
   try {
     process.chdir(root);
     const routes = sitemap();
+    assert.ok(routes.some(item => item.url.endsWith('/writing/released-video')));
+    assert.ok(!routes.some(item => /\/(future-video|archive-video)$/.test(item.url)));
     const entries = routes.filter((item) => item.url.includes('/writing/working-stories'));
     assert.equal(entries.length, 2);
     assert.equal(entries.find((item) => item.url.endsWith('/test-only-story')).lastModified.toISOString(), '2021-01-01T00:00:00.000Z');

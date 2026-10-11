@@ -6482,8 +6482,8 @@
       "related": [
         {
           "title": "Kitchen Notes",
-          "url": "https://abvx.xyz/writing/kitchen-notes",
-          "type": "collection"
+          "canonicalUrl": "https://abvx.xyz/writing/kitchen-notes",
+          "relation": "collection"
         }
       ],
       "collection": "kitchen-notes",
@@ -6591,8 +6591,8 @@
       "related": [
         {
           "title": "Kitchen Notes",
-          "url": "https://abvx.xyz/writing/kitchen-notes",
-          "type": "collection"
+          "canonicalUrl": "https://abvx.xyz/writing/kitchen-notes",
+          "relation": "collection"
         }
       ],
       "collection": "kitchen-notes"

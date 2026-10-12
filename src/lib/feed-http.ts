@@ -75,7 +75,7 @@ export async function fetchAllowedText(
   const candidate = safeHttpUrl(url);
   if (!candidate || candidate.startsWith('/') || !isAllowedFeedUrl(candidate, source, kind)) return null;
   const res = await fetchWithTimeout(candidate, IMAGE_FETCH_TIMEOUT_MS, {
-    ...(source === 'youtube' && kind === 'feed' ? { cache: 'no-store' as const }
+    ...(kind === 'feed' ? { cache: 'no-store' as const }
       : { next: { revalidate: FEED_REVALIDATE_SECONDS } }),
   });
   if (!res?.ok) return null;

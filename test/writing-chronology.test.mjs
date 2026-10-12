@@ -104,3 +104,24 @@ test('public fallback accepts only recognized source metadata and survives endpo
   assert.deepEqual(await fetchWritingSourceFallback('substack', async () => new Response('', { status: 503 })), []);
   assert.deepEqual(await fetchWritingSourceFallback('substack', async () => { throw new Error('Offline'); }), []);
 });
+
+test('all external feed polls bypass the data cache and see newly published entries', async (t) => {
+  const { fetchAllowedText } = loadFeedModule(path.resolve('src/lib/feed-http.ts'));
+  const stored = new Map();
+  let upstream = 'previous feed';
+  t.mock.method(globalThis, 'fetch', async (url, init) => {
+    if (init.cache === 'no-store') return new Response(upstream);
+    if (!stored.has(url)) stored.set(url, upstream);
+    return new Response(stored.get(url));
+  });
+  for (const [source, url] of [
+    ['substack', 'https://abvx.substack.com/feed'],
+    ['medium', 'https://abvcreative.medium.com/feed'],
+    ['youtube', 'https://www.youtube.com/feeds/videos.xml?channel_id=UCexample'],
+  ]) {
+    upstream = 'previous feed';
+    assert.equal(await fetchAllowedText(url, source, 'feed'), 'previous feed');
+    upstream = 'newly published entry';
+    assert.equal(await fetchAllowedText(url, source, 'feed'), upstream, source);
+  }
+});

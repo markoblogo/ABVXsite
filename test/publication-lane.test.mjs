@@ -98,3 +98,12 @@ test('a later write collision rolls back earlier pool files without changing exi
   assert.equal(existsSync(first),false);assert.equal(readFileSync(occupied,'utf8'),'original');
  }finally{rmSync(root,{recursive:true,force:true});}
 });
+test('different Working Story IDs cannot publish the same slug in a pool',()=>fixture(({root,invoke,inputs})=>{
+ const first=packet(inputs,'shared-story',true);
+ const second=structuredClone(first.value);
+ second.payload.source_markdown=second.payload.source_markdown.replace('"story_id":"ws-001"','"story_id":"ws-002"');
+ second.payload.source_sha256=hash(second.payload.source_markdown);
+ const secondFile=path.join(inputs,'second-story.json');writeFileSync(secondFile,JSON.stringify(second));
+ assert.throws(()=>invoke(['--packet',first.file,'--packet',secondFile,'--write']),/Duplicate/);
+ assert.equal(existsSync(path.join(root,'content')),false);
+}));

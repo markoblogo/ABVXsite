@@ -4,13 +4,14 @@ import { pathToFileURL } from 'node:url';
 import { contentFiles, parseContentFile } from './content-lib.mjs';
 import { readWorkingStories, workingStoryPath } from '../src/content/working-stories-lib.mjs';
 import { registerWritingItems, validateWritingDiscovery } from '../src/lib/writing-chronology.mjs';
+import { isPublishedWriting } from '../src/lib/youtube-pages.mjs';
 import { loadFeedModule } from './load-feed-modules.mjs';
 import { fetchWritingSourceFallback } from './writing-source-fallback.mjs';
 
 export function nativeDiscoveryItems(now = Date.now()) {
   const writing = contentFiles('writing').flatMap(file => {
     const { data } = parseContentFile(file);
-    if (data.visibility !== 'public' || data.status !== 'live' || !data.publishedAt || Date.parse(data.publishedAt) > now) return [];
+    if (!isPublishedWriting({ status: 'archive', ...data }, now)) return [];
     return [{ source: data.videoUrl ? 'youtube' : 'abvx', title: data.title, url: `/writing/${data.slug}`,
       publishedAt: data.videoUploadedAt || data.publishedAt, excerpt: data.summary,
       coverImage: data.media?.src || data.heroImage?.src, videoUrl: data.videoUrl }];

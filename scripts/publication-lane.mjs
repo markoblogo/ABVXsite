@@ -44,11 +44,11 @@ export function planPublicationPool(packets, base, root=process.cwd()) {
   if (packet.surface==='working-stories') return planWorkingStory(packet,root);
   throw new Error('Unsupported routine publication surface');
  });
- const files=new Set(), ids=new Set(), assets=new Map();
+ const files=new Set(), ids=new Set(), storySlugs=new Set(), assets=new Map();
  for (const plan of plans) {
   const {data}=parseMarkdownSource(plan.source);
-  if (files.has(plan.targetFile) || (data.story_id && ids.has(data.story_id))) throw new Error('Duplicate publication member or story ID');
-  files.add(plan.targetFile);if(data.story_id) ids.add(data.story_id);
+  if (files.has(plan.targetFile) || (data.story_id && (ids.has(data.story_id) || storySlugs.has(data.slug)))) throw new Error('Duplicate publication member or story ID');
+  files.add(plan.targetFile);if(data.story_id) { ids.add(data.story_id); storySlugs.add(data.slug); }
   for (const asset of plan.media) {
    if (assets.has(asset.target) && !assets.get(asset.target).equals(asset.bytes)) throw new Error('Conflicting pool media bytes');
    assets.set(asset.target,asset.bytes);

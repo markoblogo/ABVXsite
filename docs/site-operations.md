@@ -95,3 +95,5 @@ For Vercel access failures, distinguish provider/network failure, expired authen
 Core site rendering requires no CMS credentials. Optional site verification overrides are documented in the README; project-copy automation secrets belong only to its approved workflow. Preserve the [CortexABV boundary](../cortex-abv/README.md) and the separate [ecosystem sync allowlist](ecosystem-sync.md).
 
 References: [Plausible custom events](https://plausible.io/docs/custom-event-goals), [outbound tracking](https://plausible.io/docs/outbound-link-click-tracking), [YouTube player parameters](https://developers.google.com/youtube/player_parameters), [Google AI features](https://developers.google.com/search/docs/appearance/ai-features).
+
+Native video companions retain every eligible translation in the release index. Permanent watch redirects use `videoRedirects`, chosen from immutable first-addition chronology; registering a later translation or editing its date does not replace the primary. SEO QA uses deployed companion eligibility. See [the native release rules](abvx-os-publishing.md#stable-native-video-release).

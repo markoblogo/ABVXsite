@@ -3,7 +3,7 @@ import { workingStoriesFeed } from '@/content/working-stories';
 import discovery from '../../content/writing-discovery.json';
 import publicIndex from '../../public/content-index.json';
 import type { FeedItem } from './feed-types';
-import { automaticVideoItems, publishedWritingItems } from './youtube-pages.mjs';
+import { automaticVideoItems, publishedWritingItems, findVideoCompanion } from './youtube-pages.mjs';
 import { mergeWritingItems } from './writing-chronology.mjs';
 
 export function getPublishedNativeWritingItems(): ReturnType<typeof getNativeWritingItems> {
@@ -23,4 +23,8 @@ export function getWritingFeed(): FeedItem[] {
 
 export function getVideoWritingItems(): FeedItem[] {
   return automaticVideoItems(discovery, getPublishedNativeWritingItems());
+}
+
+export function getVideoCompanion(id: string) {
+  return findVideoCompanion(getPublishedNativeWritingItems(), id, Date.now(), publicIndex.videoRedirects);
 }

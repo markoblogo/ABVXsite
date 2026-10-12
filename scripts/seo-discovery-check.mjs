@@ -1,6 +1,6 @@
 import { publicationScope, publicationBase } from './publication-scope.mjs';
 import { publicationQa, boundedMap } from './publication-qa.mjs';
-import { automaticVideoItems } from '../src/lib/youtube-pages.mjs';
+import { automaticVideoItems, publishedWritingItems, findVideoCompanion } from '../src/lib/youtube-pages.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { contentFiles, parseContentFile } from './content-lib.mjs';
@@ -103,7 +103,7 @@ await withQaServer(async (base) => {
     assert.ok(xml.includes('https://abvx.xyz/writing/kitchen-notes'));
     assert.ok(await page.locator('main a[href="/writing/marmite-oatmeal"]').count());
 
-    const nativeVideos = contentFiles('writing').map(file => parseContentFile(file).data).filter(item => item.visibility === 'public' && item.status === 'live');
+    const nativeVideos = publishedWritingItems(contentFiles('writing').map(file => ({ status: 'archive', ...parseContentFile(file).data })), Date.now(), index.videoCompanions);
     const videos = automaticVideoItems(JSON.parse(readFileSync('content/writing-discovery.json', 'utf8')), nativeVideos);
     for (const video of videos) {
       const route = video.url;
@@ -124,7 +124,8 @@ await withQaServer(async (base) => {
     }
     await visit(base + '/writing');
     for (const video of videos) assert.ok(await page.locator('main a[href="' + video.url + '"]').count(), video.url + ' missing Writing link');
-    const companion = nativeVideos.find(item => item.videoUrl);
+    const companionId = Object.keys(index.videoRedirects || {})[0];
+    const companion = companionId ? findVideoCompanion(nativeVideos, companionId, Date.now(), index.videoRedirects) : undefined;
     if (companion) {
       const id = new URL(companion.videoUrl).searchParams.get('v');
       const redirect = await page.request.get(base + '/writing/videos/' + id, { maxRedirects: 0 });

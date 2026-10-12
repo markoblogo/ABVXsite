@@ -6,7 +6,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { serializeFrontmatter } from '../scripts/content-lib.mjs';
 import { serializeJsonLd } from '../src/lib/json-ld.mjs';
-import { automaticVideoItems, videoPageJsonLd, findVideoCompanion, publishedWritingItems, videoCompanionSnapshot } from '../src/lib/youtube-pages.mjs';
+import { automaticVideoItems, videoPageJsonLd, findVideoCompanion, publishedWritingItems, videoCompanionSnapshot, videoRedirectSnapshot } from '../src/lib/youtube-pages.mjs';
 import { mergeWritingItems, registerWritingItems } from '../src/lib/writing-chronology.mjs';
 const video = { source: 'youtube', title: 'My video', url: 'https://www.youtube.com/watch?v=NewVideo001', publishedAt: '2026-10-10T10:00:00.000Z', addedAt: '2026-10-10T11:00:00.000Z', addedAtBasis: 'observed', excerpt: 'Short', videoDescription: 'Full description\nSecond paragraph' };
 test('feed video opens its stable watch page, preserves description and first-added time', () => {
@@ -117,11 +117,37 @@ test('index generator honors default public visibility and records every release
     for (const [slug, patch] of [['fixture-video', {}], ['fixture-video-fr', { language: 'fr' }], ['fixture-future', { publishedAt: '2099-01-01T00:00:00Z' }], ['fixture-inactive', { status: 'archive' }], ['fixture-default-status', { status: undefined }]]) {
       writeFileSync(path.join(root, 'content/writing', slug + '.md'), serializeFrontmatter({ ...data, slug, ...patch }, 'Owner fixture text.'));
     }
+    const sync = () => execFileSync(process.execPath, [path.join(repo, 'scripts/sync-writing-feed.mjs')], { cwd: root, stdio: 'pipe' });
+    sync();
+    const registered = JSON.parse(readFileSync(path.join(root, 'content/writing-discovery.json')));
+    const firstAdded = registered.items.find(item => item.url === '/writing/fixture-video')?.addedAt;
+    assert.ok(firstAdded, 'default-public companion must register its immutable addedAt');
+    sync();
+    assert.equal(JSON.parse(readFileSync(path.join(root, 'content/writing-discovery.json'))).items.find(item => item.url === '/writing/fixture-video').addedAt, firstAdded);
+    for (const slug of ['fixture-future', 'fixture-inactive', 'fixture-default-status']) assert.ok(!registered.items.some(item => item.url === '/writing/' + slug));
     execFileSync(process.execPath, [path.join(repo, 'scripts/generate-llm-index.mjs')], { cwd: root, stdio: 'pipe' });
     const index = JSON.parse(readFileSync(path.join(root, 'public/content-index.json')));
     assert.deepEqual(index.videoCompanions.NewVideo001, ['fixture-video', 'fixture-video-fr']);
+    assert.equal(index.videoRedirects.NewVideo001, 'fixture-video');
     const urls = new Set(index.items.map(item => item.canonicalUrl));
     for (const slug of ['fixture-video', 'fixture-video-fr']) assert.ok(urls.has('https://abvx.xyz/writing/' + slug));
     for (const slug of ['fixture-future', 'fixture-inactive', 'fixture-default-status']) assert.ok(!urls.has('https://abvx.xyz/writing/' + slug));
   } finally { rmSync(root, { recursive: true, force: true }); }
+});
+
+test('video permanent redirects keep the first-added companion when translations reorder or backdate', () => {
+  const now = Date.parse('2026-10-12T12:00:00Z');
+  const original = { videoUrl: video.url, slug: 'original', status: 'live', publishedAt: '2026-10-10T10:00:00Z' };
+  const translated = { ...original, slug: 'translated', language: 'fr', publishedAt: '2020-01-01T00:00:00Z' };
+  const registry = { items: [
+    { url: '/writing/original', addedAt: '2026-10-10T12:00:00.000Z' },
+    { url: '/writing/translated', addedAt: '2026-10-12T11:00:00.000Z' },
+  ] };
+  for (const native of [[translated, original], [original, translated]]) {
+    const redirects = videoRedirectSnapshot(native, registry, now);
+    assert.deepEqual(redirects, { NewVideo001: 'original' });
+    assert.equal(findVideoCompanion(native, 'NewVideo001', now, redirects), original);
+    assert.equal(publishedWritingItems(native, now, videoCompanionSnapshot(native, now)).length, 2);
+  }
+  assert.equal(findVideoCompanion([translated], 'NewVideo001', now, { NewVideo001: 'original' }), undefined);
 });

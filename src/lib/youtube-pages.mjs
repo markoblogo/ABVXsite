@@ -30,8 +30,26 @@ export function videoCompanionSnapshot(native, now = Date.now()) {
   return companions;
 }
 
-export function findVideoCompanion(native, id, now = Date.now()) {
-  return native.find(item => videoId(item.videoUrl) === id && isPublishedWriting(item, now));
+// All translations remain released; the redirect chooses the first-added local
+// companion. Immutable discovery timestamps survive copy/date/order changes.
+export function videoRedirectSnapshot(native, registry, now = Date.now()) {
+  const firstAdded = new Map(registry.items.map(item => [item.url, Date.parse(item.addedAt)]));
+  const companions = publishedWritingItems(native, now).filter(item => videoId(item.videoUrl) && item.slug);
+  const timestamp = item => firstAdded.get(`/writing/${item.slug}`) ?? Infinity;
+  companions.sort((a, b) => timestamp(a) - timestamp(b) || a.slug.localeCompare(b.slug));
+  const redirects = {};
+  for (const item of companions) {
+    const id = videoId(item.videoUrl);
+    if (!Object.hasOwn(redirects, id)) redirects[id] = item.slug;
+  }
+  return redirects;
+}
+
+export function findVideoCompanion(native, id, now = Date.now(), redirects) {
+  const candidates = native.filter(item => videoId(item.videoUrl) === id && isPublishedWriting(item, now));
+  if (redirects !== undefined) return candidates.find(item => item.slug === redirects[id]);
+  return candidates.sort((a, b) => Date.parse(a.publishedAt) - Date.parse(b.publishedAt)
+    || (a.slug || '').localeCompare(b.slug || ''))[0];
 }
 
 // The registry remains canonical; authored companions supersede automatic pages.

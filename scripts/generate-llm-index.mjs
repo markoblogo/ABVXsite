@@ -1,6 +1,6 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
-import { automaticVideoItems, videoCompanionSnapshot, isPublishedWriting } from '../src/lib/youtube-pages.mjs';
+import { automaticVideoItems, videoCompanionSnapshot, videoRedirectSnapshot, isPublishedWriting } from '../src/lib/youtube-pages.mjs';
 import { contentFiles, parseContentFile } from './content-lib.mjs';
 import { publishedWorkingStories, publicWorkingStory, readWorkingStories } from '../src/content/working-stories-lib.mjs';
 
@@ -418,6 +418,7 @@ writeFileSync(
       site: SITE_URL,
       generatedFrom: '/content',
       videoCompanions: videoCompanionSnapshot(nativeVideos, publicationNow),
+      videoRedirects: videoRedirectSnapshot(nativeVideos, discovery, publicationNow),
       items: indexItems,
     },
     null,

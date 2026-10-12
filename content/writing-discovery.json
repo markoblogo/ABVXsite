@@ -401,6 +401,16 @@
     },
     {
       "source": "substack",
+      "title": "Linus Torvalds Just Let Claude Code Write Linux Kernel Patches. And the World Hasn't Ended.",
+      "url": "https://abvx.substack.com/p/linus-torvalds-just-let-claude-code",
+      "publishedAt": "2026-10-12T15:51:22.000Z",
+      "excerpt": "Well, this is going to upset some people. Linus Torvalds has published a series of Linux kernel patches written with Claude Code. Yes, that Linus Torvalds. The man who created Linux, maintains its kernel, and has spent d",
+      "coverImage": "https://substackcdn.com/image/fetch/$s_!e4dG!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2b1851f1-7089-4b00-94b6-0569f6359788_1280x859.jpeg",
+      "addedAt": "2026-10-12T16:24:25.823Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "substack",
       "title": "My 10-Year AI Probability List",
       "url": "https://abvx.substack.com/p/my-10-year-ai-probability-list",
       "publishedAt": "2026-09-14T11:24:30.000Z",

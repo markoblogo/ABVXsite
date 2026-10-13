@@ -33,7 +33,7 @@ const ecosystems = [
       },
       {
         title: 'Market Fronts & Landings',
-        slugs: ['ami-books-physical-commodity-markets', 'liqua', 'trade-solution-eu', 'cropto-market-risk-deck'],
+        slugs: ['ami', 'ami-books-physical-commodity-markets', 'liqua', 'trade-solution-eu', 'cropto-market-risk-deck'],
       },
     ],
   },
@@ -144,6 +144,8 @@ function slugifyFragment(value: string): string {
 export default function SystemsPage() {
   const artifacts = getArtifactsBySection('systems');
   const editorialBySlug = new Map(getEditorialArticles().map((article) => [article.slug, article]));
+  const amiEditorials = getEditorialArticles().filter((article) => article.translationGroup === 'ami-agro-market-infrastructure')
+    .map(({ href, linkLabel, language }) => ({ href, linkLabel, language }));
   const listedArtifacts = ecosystems.flatMap((ecosystem) => ecosystem.groups.flatMap((group) => group.slugs));
   const listedItems = itemsForSlugs(artifacts, listedArtifacts, new Set<string>());
   const usedSlugs = new Set<string>();
@@ -206,6 +208,7 @@ export default function SystemsPage() {
                           key={artifact.id}
                           artifact={toPublicArtifact(artifact)}
                           meta={group.title}
+                          editorialArticles={artifact.slug === 'ami' ? amiEditorials : undefined}
                         />
                       ))}
                     </div>

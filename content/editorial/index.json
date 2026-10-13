@@ -922,5 +922,47 @@
     "translationGroup": "focus-agro-commodity-books-field-manuals",
     "publishedAt": "2026-10-06",
     "updatedAt": "2026-10-06"
+  },
+  {
+    "section": "focus",
+    "sectionTitle": "Focus",
+    "slug": "ami-infrastructure-marches-agricoles-fr",
+    "title": "AMI : construire une infrastructure numérique pour les marchés agricoles",
+    "summary": "Découvrez AMI, un écosystème reliant le courtage agricole avec MN7R, les indices de prix 1D3X, l'intelligence de marché et les outils d'exécution des contrats.",
+    "linkLabel": "Lire en français",
+    "source": "ami-infrastructure-marches-agricoles-fr.md",
+    "language": "fr",
+    "translationGroup": "ami-agro-market-infrastructure",
+    "seoTitle": "AMI : infrastructure numérique pour le négoce agricole, MN7R et 1D3X",
+    "publishedAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  {
+    "section": "focus",
+    "sectionTitle": "Focus",
+    "slug": "ami-agro-market-infrastructure-uk",
+    "title": "AMI: будуємо цифрову інфраструктуру аграрного ринку України",
+    "summary": "AMI об'єднує MN7R, зернові індекси 1D3X, аналітику, агроброкеридж, логістику та цифрові інструменти торгівлі в єдину інфраструктуру аграрного ринку.",
+    "linkLabel": "Читати українською",
+    "source": "ami-agro-market-infrastructure-uk.md",
+    "language": "uk",
+    "translationGroup": "ami-agro-market-infrastructure",
+    "seoTitle": "AMI: цифрова інфраструктура агроринку, MN7R, 1D3X та зернові індекси",
+    "publishedAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  {
+    "section": "focus",
+    "sectionTitle": "Focus",
+    "slug": "ami-agro-market-infrastructure",
+    "title": "AMI: Building Infrastructure for Physical Commodity Markets",
+    "summary": "Discover AMI, an agricultural market infrastructure ecosystem connecting MN7R brokerage software, 1D3X commodity indices, market intelligence and execution workflows.",
+    "linkLabel": "Read in English",
+    "source": "ami-agro-market-infrastructure.md",
+    "language": "en",
+    "translationGroup": "ami-agro-market-infrastructure",
+    "seoTitle": "AMI Agro Market Infrastructure: MN7R, 1D3X and Commodity Trading Systems",
+    "publishedAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
   }
 ]

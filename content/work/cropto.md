@@ -3,13 +3,13 @@
   "id": "cropto",
   "slug": "cropto",
   "type": "trading-platform",
-  "status": "building",
+  "status": "research",
   "visibility": "public",
   "publishedAt": "2026-05-06",
   "homepageEligible": true,
   "title": "Cropto",
   "shortTitle": "Cropto",
-  "summary": "Cropto is an early-stage MVP commodity trading platform offering indexed spot trading, options, and tokenized commodity-linked instruments across Ukraine, Argentina and Brazil; the repository publishes a public monthly indexed-spot update cadence for those markets.",
+  "summary": "Cropto explores indexed trading, commodity-linked instruments and settlement traceability. Standalone application development is paused while work prioritizes the wider AMI ecosystem.",
   "tags": [
     "cropto",
     "agro-commodities",
@@ -54,6 +54,7 @@
     "enabled": true,
     "mode": "direct_main",
     "target": "abvxsite",
+    "authorOsProjectContext": "Owner-provided AMI introductions (2026-10-13) confirm that standalone Cropto development is paused while work prioritizes the AMI ecosystem. Preserve this state; active development or a current update cadence requires new owner confirmation.",
     "allowedPatchFields": [
       "summary",
       "bodyAppendix",
@@ -96,7 +97,7 @@
     "alt": "Cropto trading platform interface",
     "role": "project-screenshot"
   },
-  "updatedAt": "2026-07-21"
+  "updatedAt": "2026-10-14"
 }
 ---
 
@@ -114,8 +115,6 @@ The platform currently focuses on indexed spot markets, options and tokenized co
 
 Users can choose a commodity market, connect a wallet, create or take orders, track margin and settlement, and manage indexed commodity exposure.
 
-Cropto is currently in active prototype development and testing with virtual contracts, while public waitlist onboarding remains open.
+Standalone application development is currently paused while work prioritizes the wider AMI ecosystem. The existing prototypes remain experimental.
 
 The repository includes a concrete Railway deployment path and a public verification target at https://cropto.abvx.xyz.
-
-The repository publishes a public monthly indexed-spot update cadence for Ukraine, Argentina and Brazil.

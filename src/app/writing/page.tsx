@@ -10,6 +10,7 @@ import WritingArchiveRow from '@/components/WritingArchiveRow';
 import WritingSourceLinks, { type WritingSource } from '@/components/WritingSourceLinks';
 import type { FeedItem } from '@/lib/feed-types';
 import { getWritingFeed } from '@/lib/writing-feed';
+import { writingWindow } from '@/lib/writing-window.mjs';
 import { getNativeWritingItems } from '@/content';
 import workingStoriesSeries from '../../../content/working-stories.json';
 import { collectionPageJsonLd, defaultOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
@@ -27,9 +28,6 @@ export const metadata: Metadata = metadataWithImage({
 });
 
 export const revalidate = 900;
-
-const RECENT_POST_COUNT = 6;
-const ARCHIVE_POST_LIMIT = 30;
 
 function formatDate(iso: string): string {
   const date = new Date(iso);
@@ -96,9 +94,7 @@ export default async function WritingPage({
   const allPosts = getWritingFeed();
   const posts =
     activeSource === 'all' ? allPosts : allPosts.filter((post) => post.source === activeSource);
-  const featuredPost = posts[0];
-  const recentPosts = posts.slice(1, RECENT_POST_COUNT + 1);
-  const archivePosts = posts.slice(RECENT_POST_COUNT + 1, RECENT_POST_COUNT + 1 + ARCHIVE_POST_LIMIT);
+  const {featuredPost, recentPosts, archivePosts} = writingWindow(posts);
 
   return (
     <div className="route-writing writing-page grid gap-8">

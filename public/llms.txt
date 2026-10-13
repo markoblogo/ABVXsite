@@ -71,7 +71,7 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 - Cropto
   URL: https://abvx.xyz/work/cropto
-  Summary: Cropto is an early-stage MVP commodity trading platform offering indexed spot trading, options, and tokenized commodity-linked instruments across Ukraine, Argentina and Brazil; the repository publishes a public monthly indexed-spot update cadence for those markets.
+  Summary: Cropto explores indexed trading, commodity-linked instruments and settlement traceability. Standalone application development is paused while work prioritizes the wider AMI ecosystem.
   Group: Trading & Brokerage Platforms
   Tags: cropto, agro-commodities, trading-platform, indexed-trading, options, tokenized-assets, market-infrastructure
 

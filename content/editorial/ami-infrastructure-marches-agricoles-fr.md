@@ -92,7 +92,7 @@ Plutôt un écosystème de systèmes complémentaires.
 
 ## **MN7R : l'environnement opérationnel des courtiers**
 
-L'un des éléments centraux de cet écosystème est [MN7R](https://mn7r.com/?utm_source=chatgpt.com).
+L'un des éléments centraux de cet écosystème est [MN7R](https://mn7r.com/).
 
 MN7R est un environnement de travail destiné aux courtiers en matières premières agricoles, avec des fonctionnalités d'assistance par intelligence artificielle.
 
@@ -168,7 +168,7 @@ C'est un élément important du projet : le système se développe au contact de
 
 ## **1D3X : comprendre les prix des marchés physiques**
 
-Le deuxième élément majeur de l'écosystème est [1D3X](https://1d3x.com/?utm_source=chatgpt.com).
+Le deuxième élément majeur de l'écosystème est [1D3X](https://1d3x.com/).
 
 Si MN7R concerne les opérations commerciales, 1D3X concerne les informations de marché sur lesquelles reposent ces opérations.
 
@@ -204,7 +204,7 @@ D'où l'intérêt des indices de prix régionaux.
 
 Avec nos partenaires professionnels, nous avons développé des infrastructures d'indices pour les marchés agricoles ukrainiens, notamment dans le cadre de projets associés à l'**Ukrainian Grain Association** et à **Spike Brokers**.
 
-Parmi ces projets figurent [UGA Index](https://uga.1d3x.com/) et [SPIKE SPOT INDEX](https://spike.1d3x.com/?utm_source=chatgpt.com).
+Parmi ces projets figurent [UGA Index](https://uga.1d3x.com/) et [SPIKE SPOT INDEX](https://spike.1d3x.com/).
 
 L'objectif n'est pas simplement d'afficher un graphique supplémentaire sur un site internet.
 
@@ -324,7 +324,7 @@ Je préfère faire cette distinction plutôt que de présenter l'ensemble comme 
 
 ## **Cropto : explorer une autre couche de l'infrastructure**
 
-Il existe également une direction plus expérimentale : [Cropto](https://cr0pto.com/?utm_source=chatgpt.com).
+Il existe également une direction plus expérimentale : [Cropto](https://cr0pto.com/).
 
 Ce projet explore les contrats numériques portant sur les matières premières, la vérification documentaire, les opérations liées aux indices et la traçabilité des règlements.
 

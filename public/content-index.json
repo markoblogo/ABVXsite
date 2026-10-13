@@ -6991,6 +6991,88 @@
       "related": []
     },
     {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "The Soviet Garlic Cheese Salad with Too Many Names",
+      "summary": "Belochka, Kremlin Salad, Tenderness, Kiss Salad... This simple garlic cheese salad had dozens of names but always appeared on our family holiday table.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/soviet-garlic-cheese-salad-belochka",
+      "tags": [
+        "soviet-food",
+        "ukrainian-food",
+        "family-recipes",
+        "garlic-cheese-salad",
+        "processed-cheese",
+        "nostalgic-recipes",
+        "holiday-food"
+      ],
+      "links": [],
+      "updatedAt": "2026-10-13",
+      "related": [
+        {
+          "title": "Kitchen Notes",
+          "canonicalUrl": "https://abvx.xyz/writing/kitchen-notes",
+          "relation": "collection"
+        }
+      ],
+      "collection": "kitchen-notes",
+      "contentType": "recipe",
+      "recipe": {
+        "recipeYield": "Number of portions not specified",
+        "ingredients": [
+          {
+            "name": "processed cheese",
+            "quantityText": "Amount not specified; finely grated"
+          },
+          {
+            "name": "Emmental or another mild hard cheese",
+            "quantityText": "Amount not specified; grated"
+          },
+          {
+            "name": "hard-boiled eggs",
+            "quantityText": "1–2, grated"
+          },
+          {
+            "name": "fresh garlic",
+            "quantityText": "Generously, crushed"
+          },
+          {
+            "name": "dried garlic",
+            "quantityText": "A little"
+          },
+          {
+            "name": "black pepper",
+            "quantityText": "To taste"
+          },
+          {
+            "name": "paprika",
+            "quantityText": "A pinch"
+          },
+          {
+            "name": "mild mayonnaise",
+            "quantityText": "Enough for a thick, creamy consistency"
+          },
+          {
+            "name": "salt",
+            "quantityText": "Optional, to taste"
+          },
+          {
+            "name": "finely grated carrots or ready-made carottes râpées",
+            "quantityText": "Optional; amount not specified"
+          }
+        ],
+        "instructions": [
+          "Finely grate the processed cheese, Emmental or another mild hard cheese, and one or two hard-boiled eggs.",
+          "Add generously crushed fresh garlic, a little dried garlic, black pepper and a pinch of paprika. Add salt if desired.",
+          "Mix with mild mayonnaise until thick and creamy. Add finely grated carrots if desired.",
+          "Serve in a small bowl, spread on bread, or use as a condiment alongside steak or Olivier salad."
+        ]
+      }
+    },
+    {
       "type": "working-story",
       "section": "writing",
       "ecosystem": "Writing",

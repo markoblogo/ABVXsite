@@ -1068,6 +1068,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: Géo Chkouroupiy, Geo Shkurupii, Modernisme ukrainien, Ukrainian literature, French translation, Jeanne la bataillonneuse, Miss Adrienne
 
+- The Soviet Garlic Cheese Salad with Too Many Names
+  URL: https://abvx.xyz/writing/soviet-garlic-cheese-salad-belochka
+  Summary: Belochka, Kremlin Salad, Tenderness, Kiss Salad... This simple garlic cheese salad had dozens of names but always appeared on our family holiday table.
+  Group: writing
+  Tags: soviet-food, ukrainian-food, family-recipes, garlic-cheese-salad, processed-cheese, nostalgic-recipes, holiday-food
+
 - Two New Books
   URL: https://abvx.xyz/writing/two-new-books
   Summary: A short note about two very different books published within a few days: one psychological and fragmentary, the other about strange economic indicators and the...

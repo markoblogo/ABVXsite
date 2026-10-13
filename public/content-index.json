@@ -6997,6 +6997,76 @@
       "related": []
     },
     {
+      "type": "working-story",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "Working Stories",
+      "status": "published",
+      "title": "Our Tire-Fitter School Was Too Good. That Was the Problem.",
+      "summary": "We invested two months in training entry-level tire fitters. Some couldn't afford to finish. Others were recruited by competitors as service-station managers. Eventually, we realised that more training wasn't necessarily better.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/working-stories/employee-training-overtraining-tire-fitter-school",
+      "tags": [
+        "employee-training",
+        "corporate-learning",
+        "onboarding",
+        "employee-retention",
+        "workforce-development",
+        "management",
+        "organizational-design",
+        "corporate-culture",
+        "automotive",
+        "business-efficiency"
+      ],
+      "publishedAt": "2026-10-13",
+      "updatedAt": "2026-10-13",
+      "image": "https://abvx.xyz/media/working-stories/employee-training-overtraining-tire-fitter-school.png",
+      "links": [
+        {
+          "type": "section",
+          "label": "Working Stories",
+          "url": "https://abvx.xyz/writing/working-stories"
+        }
+      ],
+      "related": [
+        {
+          "title": "The Sales Department Wasn't Selling. The Call Center Was.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/sales-department-not-selling-business-turnaround",
+          "relation": "same-project"
+        },
+        {
+          "title": "We Broke One Company Into Many. Not to Grow, but to Survive.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/belarus-business-restructuring-franchise-resilience",
+          "relation": "same-project"
+        },
+        {
+          "title": "We Tried to Replace 1C with Oracle. Then We Did the Opposite.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/oracle-vs-1c-erp-digital-transformation-case",
+          "relation": "same-project"
+        },
+        {
+          "title": "We Offered a Full Refund on Chinese Tires. Only 5% Came Back.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/chinese-truck-tires-money-back-guarantee",
+          "relation": "same-project"
+        },
+        {
+          "title": "We Stopped Selling Tires. We Started Selling Kilometers.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/selling-truck-tire-mileage-instead-of-tires",
+          "relation": "same-project"
+        },
+        {
+          "title": "We Sold the Same Tires Through Three Different Networks. One Had to Look Cheap.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/price-perception-three-tire-service-brands",
+          "relation": "same-project"
+        },
+        {
+          "title": "Why Truck Drivers Preferred Teddy Bears to Pocket Knives",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/truck-driver-loyalty-program-childrens-toys",
+          "relation": "same-project"
+        }
+      ]
+    },
+    {
       "type": "writing",
       "section": "writing",
       "ecosystem": "Writing",
@@ -7115,6 +7185,11 @@
         }
       ],
       "related": [
+        {
+          "title": "Our Tire-Fitter School Was Too Good. That Was the Problem.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/employee-training-overtraining-tire-fitter-school",
+          "relation": "same-project"
+        },
         {
           "title": "We Broke One Company Into Many. Not to Grow, but to Survive.",
           "canonicalUrl": "https://abvx.xyz/writing/working-stories/belarus-business-restructuring-franchise-resilience",
@@ -7312,6 +7387,11 @@
       ],
       "related": [
         {
+          "title": "Our Tire-Fitter School Was Too Good. That Was the Problem.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/employee-training-overtraining-tire-fitter-school",
+          "relation": "same-project"
+        },
+        {
           "title": "The Sales Department Wasn't Selling. The Call Center Was.",
           "canonicalUrl": "https://abvx.xyz/writing/working-stories/sales-department-not-selling-business-turnaround",
           "relation": "same-project"
@@ -7373,6 +7453,11 @@
         }
       ],
       "related": [
+        {
+          "title": "Our Tire-Fitter School Was Too Good. That Was the Problem.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/employee-training-overtraining-tire-fitter-school",
+          "relation": "same-project"
+        },
         {
           "title": "The Sales Department Wasn't Selling. The Call Center Was.",
           "canonicalUrl": "https://abvx.xyz/writing/working-stories/sales-department-not-selling-business-turnaround",
@@ -7474,6 +7559,11 @@
       ],
       "related": [
         {
+          "title": "Our Tire-Fitter School Was Too Good. That Was the Problem.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/employee-training-overtraining-tire-fitter-school",
+          "relation": "same-project"
+        },
+        {
           "title": "The Sales Department Wasn't Selling. The Call Center Was.",
           "canonicalUrl": "https://abvx.xyz/writing/working-stories/sales-department-not-selling-business-turnaround",
           "relation": "same-project"
@@ -7535,6 +7625,11 @@
         }
       ],
       "related": [
+        {
+          "title": "Our Tire-Fitter School Was Too Good. That Was the Problem.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/employee-training-overtraining-tire-fitter-school",
+          "relation": "same-project"
+        },
         {
           "title": "The Sales Department Wasn't Selling. The Call Center Was.",
           "canonicalUrl": "https://abvx.xyz/writing/working-stories/sales-department-not-selling-business-turnaround",
@@ -7599,6 +7694,11 @@
         }
       ],
       "related": [
+        {
+          "title": "Our Tire-Fitter School Was Too Good. That Was the Problem.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/employee-training-overtraining-tire-fitter-school",
+          "relation": "same-project"
+        },
         {
           "title": "The Sales Department Wasn't Selling. The Call Center Was.",
           "canonicalUrl": "https://abvx.xyz/writing/working-stories/sales-department-not-selling-business-turnaround",
@@ -7744,6 +7844,11 @@
         }
       ],
       "related": [
+        {
+          "title": "Our Tire-Fitter School Was Too Good. That Was the Problem.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/employee-training-overtraining-tire-fitter-school",
+          "relation": "same-project"
+        },
         {
           "title": "The Sales Department Wasn't Selling. The Call Center Was.",
           "canonicalUrl": "https://abvx.xyz/writing/working-stories/sales-department-not-selling-business-turnaround",

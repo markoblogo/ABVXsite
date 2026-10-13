@@ -1128,6 +1128,11 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/working-stories
   Summary: Cases, experiments, mistakes and unusual decisions from my professional life.
 
+- Our Tire-Fitter School Was Too Good. That Was the Problem.
+  URL: https://abvx.xyz/writing/working-stories/employee-training-overtraining-tire-fitter-school
+  Summary: We invested two months in training entry-level tire fitters. Some couldn't afford to finish. Others were recruited by competitors as service-station managers. Eventually, we realised that more training wasn't necessarily better.
+  Topics: employee-training, corporate-learning, onboarding, employee-retention, workforce-development, management, organizational-design, corporate-culture, automotive, business-efficiency
+
 - The Sales Department Wasn't Selling. The Call Center Was.
   URL: https://abvx.xyz/writing/working-stories/sales-department-not-selling-business-turnaround
   Summary: A leading commercial tire distributor was losing money despite owning most of its market. The salespeople earned the biggest commissions, while the underpaid customer-service team did most of the selling.

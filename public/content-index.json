@@ -6991,6 +6991,71 @@
       "related": []
     },
     {
+      "type": "working-story",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "Working Stories",
+      "status": "published",
+      "title": "The Sales Department Wasn't Selling. The Call Center Was.",
+      "summary": "A leading commercial tire distributor was losing money despite owning most of its market. The salespeople earned the biggest commissions, while the underpaid customer-service team did most of the selling.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/working-stories/sales-department-not-selling-business-turnaround",
+      "tags": [
+        "crisis-management",
+        "business-turnaround",
+        "sales-incentives",
+        "organizational-design",
+        "management",
+        "customer-service",
+        "business-efficiency",
+        "corporate-restructuring",
+        "b2b-sales",
+        "leadership"
+      ],
+      "publishedAt": "2026-10-13",
+      "updatedAt": "2026-10-13",
+      "image": "https://abvx.xyz/media/working-stories/sales-department-not-selling-business-turnaround.png",
+      "links": [
+        {
+          "type": "section",
+          "label": "Working Stories",
+          "url": "https://abvx.xyz/writing/working-stories"
+        }
+      ],
+      "related": [
+        {
+          "title": "We Broke One Company Into Many. Not to Grow, but to Survive.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/belarus-business-restructuring-franchise-resilience",
+          "relation": "same-project"
+        },
+        {
+          "title": "We Tried to Replace 1C with Oracle. Then We Did the Opposite.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/oracle-vs-1c-erp-digital-transformation-case",
+          "relation": "same-project"
+        },
+        {
+          "title": "We Offered a Full Refund on Chinese Tires. Only 5% Came Back.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/chinese-truck-tires-money-back-guarantee",
+          "relation": "same-project"
+        },
+        {
+          "title": "We Stopped Selling Tires. We Started Selling Kilometers.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/selling-truck-tire-mileage-instead-of-tires",
+          "relation": "same-project"
+        },
+        {
+          "title": "We Sold the Same Tires Through Three Different Networks. One Had to Look Cheap.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/price-perception-three-tire-service-brands",
+          "relation": "same-project"
+        },
+        {
+          "title": "Why Truck Drivers Preferred Teddy Bears to Pocket Knives",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/truck-driver-loyalty-program-childrens-toys",
+          "relation": "same-project"
+        }
+      ]
+    },
+    {
       "type": "writing",
       "section": "writing",
       "ecosystem": "Writing",
@@ -7155,6 +7220,11 @@
       ],
       "related": [
         {
+          "title": "The Sales Department Wasn't Selling. The Call Center Was.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/sales-department-not-selling-business-turnaround",
+          "relation": "same-project"
+        },
+        {
           "title": "We Tried to Replace 1C with Oracle. Then We Did the Opposite.",
           "canonicalUrl": "https://abvx.xyz/writing/working-stories/oracle-vs-1c-erp-digital-transformation-case",
           "relation": "same-project"
@@ -7211,6 +7281,11 @@
         }
       ],
       "related": [
+        {
+          "title": "The Sales Department Wasn't Selling. The Call Center Was.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/sales-department-not-selling-business-turnaround",
+          "relation": "same-project"
+        },
         {
           "title": "We Broke One Company Into Many. Not to Grow, but to Survive.",
           "canonicalUrl": "https://abvx.xyz/writing/working-stories/belarus-business-restructuring-franchise-resilience",
@@ -7307,6 +7382,11 @@
       ],
       "related": [
         {
+          "title": "The Sales Department Wasn't Selling. The Call Center Was.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/sales-department-not-selling-business-turnaround",
+          "relation": "same-project"
+        },
+        {
           "title": "We Broke One Company Into Many. Not to Grow, but to Survive.",
           "canonicalUrl": "https://abvx.xyz/writing/working-stories/belarus-business-restructuring-franchise-resilience",
           "relation": "same-project"
@@ -7363,6 +7443,11 @@
         }
       ],
       "related": [
+        {
+          "title": "The Sales Department Wasn't Selling. The Call Center Was.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/sales-department-not-selling-business-turnaround",
+          "relation": "same-project"
+        },
         {
           "title": "We Broke One Company Into Many. Not to Grow, but to Survive.",
           "canonicalUrl": "https://abvx.xyz/writing/working-stories/belarus-business-restructuring-franchise-resilience",
@@ -7422,6 +7507,11 @@
         }
       ],
       "related": [
+        {
+          "title": "The Sales Department Wasn't Selling. The Call Center Was.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/sales-department-not-selling-business-turnaround",
+          "relation": "same-project"
+        },
         {
           "title": "We Broke One Company Into Many. Not to Grow, but to Survive.",
           "canonicalUrl": "https://abvx.xyz/writing/working-stories/belarus-business-restructuring-franchise-resilience",
@@ -7562,6 +7652,11 @@
         }
       ],
       "related": [
+        {
+          "title": "The Sales Department Wasn't Selling. The Call Center Was.",
+          "canonicalUrl": "https://abvx.xyz/writing/working-stories/sales-department-not-selling-business-turnaround",
+          "relation": "same-project"
+        },
         {
           "title": "We Broke One Company Into Many. Not to Grow, but to Survive.",
           "canonicalUrl": "https://abvx.xyz/writing/working-stories/belarus-business-restructuring-franchise-resilience",

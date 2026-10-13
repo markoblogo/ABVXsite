@@ -1110,6 +1110,11 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/working-stories
   Summary: Cases, experiments, mistakes and unusual decisions from my professional life.
 
+- The Sales Department Wasn't Selling. The Call Center Was.
+  URL: https://abvx.xyz/writing/working-stories/sales-department-not-selling-business-turnaround
+  Summary: A leading commercial tire distributor was losing money despite owning most of its market. The salespeople earned the biggest commissions, while the underpaid customer-service team did most of the selling.
+  Topics: crisis-management, business-turnaround, sales-incentives, organizational-design, management, customer-service, business-efficiency, corporate-restructuring, b2b-sales, leadership
+
 - We Broke One Company Into Many. Not to Grow, but to Survive.
   URL: https://abvx.xyz/writing/working-stories/belarus-business-restructuring-franchise-resilience
   Summary: A leading tire distributor in Belarus operated its warehouses, service stations and headquarters through one company. We redesigned the structure to reduce the risk of one disruption affecting the entire network.

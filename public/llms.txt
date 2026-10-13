@@ -1110,6 +1110,11 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/working-stories
   Summary: Cases, experiments, mistakes and unusual decisions from my professional life.
 
+- We Tried to Replace 1C with Oracle. Then We Did the Opposite.
+  URL: https://abvx.xyz/writing/working-stories/oracle-vs-1c-erp-digital-transformation-case
+  Summary: We spent years implementing Oracle, but employees still needed the old accounting system. Then I moved to another company in the group and tried the opposite approach.
+  Topics: digital-transformation, erp, oracle-erp, 1c-enterprise, business-process-optimization, legacy-modernization, it-consulting, crisis-management, business-systems
+
 - We Offered a Full Refund on Chinese Tires. Only 5% Came Back.
   URL: https://abvx.xyz/writing/working-stories/chinese-truck-tires-money-back-guarantee
   Summary: How a money-back guarantee helped us sell an unfamiliar tire brand in a market where everybody assumed Chinese meant cheap.

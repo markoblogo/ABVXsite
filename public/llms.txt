@@ -31,9 +31,17 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/KbObKhxwReA
   Summary: What if AI could generate an entire world while you're exploring it? Not a video. Not a traditional game. An interactive environment that responds to your actions in real time. Meet Odyssey-3, a new AI world model that g
 
+- GTA 5 Gets Spider-Man 2 Web-Swinging! AI-Assisted Game Mod
+  URL: https://abvx.xyz/writing/videos/ogc-oZoebH0
+  Summary: Spider-Man 2's web-swinging mechanics are now running inside GTA 5. And AI coding agents helped make it possible. Meet Web of Los Santos, a GTA V mod that brings Spider-Man 2-inspired movement into Los Santos. Web-swingi
+
 - ChatGPT Can Now Turn AI-Generated Logos Into Editable SVGs
   URL: https://abvx.xyz/writing/videos/RsxiDWDj2Rg
   Summary: ChatGPT can already design your logo. Now it can turn that logo into an editable vector file, right inside the chat Meet Vectorize, a ChatGPT plugin that converts AI-generated logos and images into scalable SVG graphics.
+
+- Every Startup Founder Has That ONE Deal That Never Closes
+  URL: https://abvx.xyz/writing/videos/U-cVLltmoRM
+  Summary: "We love your product!" "The team is really excited!" "Just waiting for final approval." "We should have everything signed next week." Three months later... Still closing. Any day now. Founders, drop a ❤️ if this feels p
 
 - Claude Code Tried to Make Me Watch 60 Videos at Once. I'm Scared.
   URL: https://abvx.xyz/writing/videos/vZW-Z4pYqzU

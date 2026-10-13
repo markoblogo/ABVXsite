@@ -6638,6 +6638,52 @@
       "related": []
     },
     {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Every Startup Founder Has That ONE Deal That Never Closes",
+      "summary": "\"We love your product!\" \"The team is really excited!\" \"Just waiting for final approval.\" \"We should have everything signed next week.\" Three months later... Still closing. Any day now. Founders, drop a ❤️ if this feels p",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/U-cVLltmoRM",
+      "publishedAt": "2026-10-13T13:50:29.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=U-cVLltmoRM"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "GTA 5 Gets Spider-Man 2 Web-Swinging! AI-Assisted Game Mod",
+      "summary": "Spider-Man 2's web-swinging mechanics are now running inside GTA 5. And AI coding agents helped make it possible. Meet Web of Los Santos, a GTA V mod that brings Spider-Man 2-inspired movement into Los Santos. Web-swingi",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/ogc-oZoebH0",
+      "publishedAt": "2026-10-13T13:38:01.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=ogc-oZoebH0"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "writing",
       "section": "writing",
       "ecosystem": "Writing",

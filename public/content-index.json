@@ -3237,6 +3237,101 @@
       "ecosystem": "Agro Market Infrastructure Systems",
       "group": "Market Fronts & Partner Landings",
       "status": "live",
+      "title": "AMI — Infrastructure for Physical Commodity Markets",
+      "summary": "Digital infrastructure for physical commodity markets, connecting brokerage operations, reference-price indices, market intelligence and execution workflows.",
+      "canonicalUrl": "https://abvx.xyz/work/ami",
+      "tags": [
+        "agro-commodities",
+        "market-infrastructure",
+        "brokerage",
+        "market-data",
+        "ai"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Explore AMI",
+          "url": "https://ami.1d3x.com/"
+        }
+      ],
+      "updatedAt": "2026-10-13",
+      "related": [
+        {
+          "title": "MN7R",
+          "canonicalUrl": "https://abvx.xyz/work/mn7r",
+          "relation": "related"
+        },
+        {
+          "title": "1D3X",
+          "canonicalUrl": "https://abvx.xyz/work/1d3x",
+          "relation": "related"
+        },
+        {
+          "title": "SPIKE SPOT COMMODITY INDEX UKRAINE",
+          "canonicalUrl": "https://abvx.xyz/work/spike-spot-commodity-index-ukraine",
+          "relation": "related"
+        },
+        {
+          "title": "UGA Index",
+          "canonicalUrl": "https://abvx.xyz/work/uga-index",
+          "relation": "related"
+        },
+        {
+          "title": "Cropto",
+          "canonicalUrl": "https://abvx.xyz/work/cropto",
+          "relation": "related"
+        },
+        {
+          "title": "AMI Books: Physical Commodity Markets",
+          "canonicalUrl": "https://abvx.xyz/work/ami-books-physical-commodity-markets",
+          "relation": "related"
+        }
+      ]
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "AMI : construire une infrastructure numérique pour les marchés agricoles",
+      "summary": "Découvrez AMI, un écosystème reliant le courtage agricole avec MN7R, les indices de prix 1D3X, l'intelligence de marché et les outils d'exécution des contrats.",
+      "publishedAt": "2026-10-13",
+      "updatedAt": "2026-10-13",
+      "language": "fr",
+      "translationGroup": "ami-agro-market-infrastructure",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/ami-infrastructure-marches-agricoles-fr",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Читати українською",
+          "language": "uk",
+          "url": "https://abvx.xyz/editorial/focus/ami-agro-market-infrastructure-uk"
+        },
+        {
+          "type": "translation",
+          "label": "Read in English",
+          "language": "en",
+          "url": "https://abvx.xyz/editorial/focus/ami-agro-market-infrastructure"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "work",
+      "section": "focus",
+      "ecosystem": "Agro Market Infrastructure Systems",
+      "group": "Market Fronts & Partner Landings",
+      "status": "live",
       "title": "AMI Books: Physical Commodity Markets",
       "summary": "A free professional library of books, field manuals and living product guides for physical commodity brokers, traders, farmers and market operators.",
       "canonicalUrl": "https://abvx.xyz/work/ami-books-physical-commodity-markets",
@@ -3268,6 +3363,82 @@
           "relation": "series"
         }
       ]
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "AMI: Building Infrastructure for Physical Commodity Markets",
+      "summary": "Discover AMI, an agricultural market infrastructure ecosystem connecting MN7R brokerage software, 1D3X commodity indices, market intelligence and execution workflows.",
+      "publishedAt": "2026-10-13",
+      "updatedAt": "2026-10-13",
+      "language": "en",
+      "translationGroup": "ami-agro-market-infrastructure",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/ami-agro-market-infrastructure",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Lire en français",
+          "language": "fr",
+          "url": "https://abvx.xyz/editorial/focus/ami-infrastructure-marches-agricoles-fr"
+        },
+        {
+          "type": "translation",
+          "label": "Читати українською",
+          "language": "uk",
+          "url": "https://abvx.xyz/editorial/focus/ami-agro-market-infrastructure-uk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "focus",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "AMI: будуємо цифрову інфраструктуру аграрного ринку України",
+      "summary": "AMI об'єднує MN7R, зернові індекси 1D3X, аналітику, агроброкеридж, логістику та цифрові інструменти торгівлі в єдину інфраструктуру аграрного ринку.",
+      "publishedAt": "2026-10-13",
+      "updatedAt": "2026-10-13",
+      "language": "uk",
+      "translationGroup": "ami-agro-market-infrastructure",
+      "canonicalUrl": "https://abvx.xyz/editorial/focus/ami-agro-market-infrastructure-uk",
+      "tags": [
+        "Focus",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Focus",
+          "url": "https://abvx.xyz/focus"
+        },
+        {
+          "type": "translation",
+          "label": "Lire en français",
+          "language": "fr",
+          "url": "https://abvx.xyz/editorial/focus/ami-infrastructure-marches-agricoles-fr"
+        },
+        {
+          "type": "translation",
+          "label": "Read in English",
+          "language": "en",
+          "url": "https://abvx.xyz/editorial/focus/ami-agro-market-infrastructure"
+        }
+      ],
+      "related": []
     },
     {
       "type": "editorial",

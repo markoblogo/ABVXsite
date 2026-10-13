@@ -6,6 +6,7 @@ import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import SectionPanel from '@/components/SectionPanel';
 import { getArtifactsBySection, getBooksBySection } from '@/content';
+import { getEditorialArticles } from '@/content/editorials';
 import type { Artifact, Book, ContentFaq } from '@/content';
 import { toPublicArtifact } from '@/content/public-props';
 import { fetchMn7rFeed, type FeedItem } from '@/lib/feeds';
@@ -208,7 +209,10 @@ function feedCardProps(artifact: Artifact, latest: FeedItem | null) {
 export default async function FocusPage() {
   const artifacts = getArtifactsBySection('focus');
   const books = getBooksBySection('focus').filter((book) => book.type !== 'series');
-  const listedArtifacts = focusGroups.flatMap((group) => itemsForGroup(artifacts, group.slugs));
+  const ami = artifacts.find((artifact) => artifact.slug === 'ami');
+  const amiEditorials = getEditorialArticles().filter((article) => article.translationGroup === 'ami-agro-market-infrastructure')
+    .map(({ href, linkLabel, language }) => ({ href, linkLabel, language }));
+  const listedArtifacts = [...(ami ? [ami] : []), ...focusGroups.flatMap((group) => itemsForGroup(artifacts, group.slugs))];
   const listedBooks = booksForGroup(books, focusBookGroup.slugs);
   const mn7rBlog = artifacts.find((artifact) => artifact.slug === 'mn7r-blog');
   const mn7rLatest = await safeLatestMn7rFeed(mn7rBlog?.rssFeed?.enabled ? mn7rBlog.rssFeed.url : undefined);
@@ -265,6 +269,10 @@ export default async function FocusPage() {
           </p>
           <FocusEditorialLinks en="agro-commodity-market-infrastructure-en" uk="agro-commodity-market-infrastructure-uk" />
         </div>
+
+        {ami ? (
+          <ProjectCatalogueCard artifact={toPublicArtifact(ami)} meta="Agro Market Infrastructure · Ecosystem overview" tone="focus" editorialArticles={amiEditorials} />
+        ) : null}
 
         <div className="focus-explainer-grid">
           <section className="focus-explainer-panel">

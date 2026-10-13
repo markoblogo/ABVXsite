@@ -4,6 +4,7 @@ import ActionLinks from './ActionLinks';
 import MediaPanel from './MediaPanel';
 import SocialLinks from './SocialLinks';
 import TagList from './TagList';
+import EditorialSectionLink from './EditorialSectionLink';
 import Link from 'next/link';
 
 export default function ProjectCatalogueCard({
@@ -14,6 +15,7 @@ export default function ProjectCatalogueCard({
   summary,
   image,
   tone = 'systems',
+  editorialArticles = [],
 }: {
   artifact: Artifact;
   meta?: string;
@@ -22,6 +24,7 @@ export default function ProjectCatalogueCard({
   summary?: string;
   image?: ContentImage;
   tone?: 'focus' | 'systems';
+  editorialArticles?: { href: string; linkLabel: string; language?: string }[];
 }) {
   const social = socialLinks(artifact.links);
   const cardHref = href || `/work/${artifact.slug}`;
@@ -59,6 +62,11 @@ export default function ProjectCatalogueCard({
         <TagList tags={artifact.tags.slice(0, 4)} />
         <ActionLinks links={operationalLinks(artifact.links)} limit={4} compact />
         <SocialLinks links={social} compact />
+        {editorialArticles.length ? (
+          <nav aria-label={`${cardTitle} articles`} className="flex flex-wrap gap-x-4 gap-y-2">
+            {editorialArticles.map((article) => <EditorialSectionLink key={article.href} article={article} />)}
+          </nav>
+        ) : null}
       </div>
     </article>
   );

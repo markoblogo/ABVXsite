@@ -357,6 +357,12 @@
     },
     {
       "kind": "work",
+      "slug": "ami",
+      "addedAt": "2026-10-13T21:07:54.663Z",
+      "basis": "observed"
+    },
+    {
+      "kind": "work",
       "slug": "ami-books-physical-commodity-markets",
       "addedAt": "2026-07-18T00:00:00.000Z",
       "basis": "legacy-source"

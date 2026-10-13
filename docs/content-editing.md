@@ -36,6 +36,10 @@ Book and series links use existing identifiers/relationships. A companion's cano
 
 Use the [editorial checklist](editorial-seo-checklist.md). Map every requested section once, give each article a distinct purpose, and add its link at the matching heading. Pair translations with the same `translationGroup`, correct language code, and localized link label. Keep dates and `seoTitle` in the editorial index; verify visible language links, canonical routes, and alternates after building.
 
+### Project cards with localized editorial reading
+
+AMI uses one project record (`content/work/ami.md`, `/work/ami`) and three audience-adapted guides in the `ami-agro-market-infrastructure` editorial translation group. Focus lists the project once in its infrastructure explainer; Systems lists it in Market Fronts & Landings. Both cards pass the same small `href`/`linkLabel`/`language` projection to the optional `ProjectCatalogueCard.editorialArticles` prop, reusing `EditorialSectionLink`. Keep one article route per language under `/editorial/focus/`, including when linked from Systems; the existing editorial renderer and sitemap supply reciprocal language alternates. The project brief stays distinct from the three full articles.
+
 ## Collaboration links
 
 Edit each offer in `content/collaborations.json` once. About and the footer consume that shared source, including labels and URLs. Keep external links opening in a new tab with `rel="noopener noreferrer"`; retain the `Collaboration Click` tracking class and verify narrow-screen wrapping.

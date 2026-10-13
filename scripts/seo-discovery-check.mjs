@@ -122,7 +122,8 @@ await withQaServer(async (base) => {
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), route + ' mobile overflow');
       await page.setViewportSize({ width: 1280, height: 900 });
     }
-    await visit(base + '/writing');
+    // The combined Writing view has a bounded archive; older videos remain in the source filter.
+    await visit(base + '/writing?source=youtube');
     for (const video of videos) assert.ok(await page.locator('main a[href="' + video.url + '"]').count(), video.url + ' missing Writing link');
     const companionId = Object.keys(index.videoRedirects || {})[0];
     const companion = companionId ? findVideoCompanion(nativeVideos, companionId, Date.now(), index.videoRedirects) : undefined;

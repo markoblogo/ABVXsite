@@ -5513,3 +5513,13 @@ a {
     transform: none !important;
   }
 }
+
+/* The Focus overview introduces the ecosystem without repeating a full-width hero. */
+@media (min-width: 768px) {
+  .focus-explainer > .project-catalogue-card {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  }
+  .focus-explainer > .project-catalogue-card .media-panel {
+    height: 100%;
+  }
+}

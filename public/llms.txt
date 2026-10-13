@@ -57,6 +57,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 ## Focus systems
 
+- AMI — Infrastructure for Physical Commodity Markets
+  URL: https://abvx.xyz/work/ami
+  Summary: Digital infrastructure for physical commodity markets, connecting brokerage operations, reference-price indices, market intelligence and execution workflows.
+  Group: Market Fronts & Partner Landings
+  Tags: agro-commodities, market-infrastructure, brokerage, market-data, ai
+
 - MN7R
   URL: https://abvx.xyz/work/mn7r
   Summary: Public-facing updates now explicitly reflect execution checkpoints for broker, boss, and EXE operator roles across the Deals, Clients, and EXE workflow areas.
@@ -544,6 +550,21 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Книги та практичні посібники з аграрних товарних ринків
   URL: https://abvx.xyz/editorial/focus/agro-commodity-books-field-manuals-uk
   Summary: Огляд практичних книг і безкоштовних посібників про брокерство фізичних товарів, спотові ринки та операційні процеси.
+  Section: Focus
+
+- AMI : construire une infrastructure numérique pour les marchés agricoles
+  URL: https://abvx.xyz/editorial/focus/ami-infrastructure-marches-agricoles-fr
+  Summary: Découvrez AMI, un écosystème reliant le courtage agricole avec MN7R, les indices de prix 1D3X, l'intelligence de marché et les outils d'exécution des contrats.
+  Section: Focus
+
+- AMI: будуємо цифрову інфраструктуру аграрного ринку України
+  URL: https://abvx.xyz/editorial/focus/ami-agro-market-infrastructure-uk
+  Summary: AMI об'єднує MN7R, зернові індекси 1D3X, аналітику, агроброкеридж, логістику та цифрові інструменти торгівлі в єдину інфраструктуру аграрного ринку.
+  Section: Focus
+
+- AMI: Building Infrastructure for Physical Commodity Markets
+  URL: https://abvx.xyz/editorial/focus/ami-agro-market-infrastructure
+  Summary: Discover AMI, an agricultural market infrastructure ecosystem connecting MN7R brokerage software, 1D3X commodity indices, market intelligence and execution workflows.
   Section: Focus
 
 ## Publishing lines

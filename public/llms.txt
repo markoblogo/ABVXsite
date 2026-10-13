@@ -19,6 +19,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/6OFAvsQ2XTw
   Summary: What if AI could help humans live to 150? Dario Amodei, CEO of Anthropic, believes artificial intelligence could accelerate medical research so dramatically that human lifespans might double within the next decade. His r
 
+- Claude Code May Have Discovered a New Planet. NASA Is Checking.
+  URL: https://abvx.xyz/writing/videos/BD4-rrzeqKA
+  Summary: What if an AI coding agent helped discover a planet that astronomers had missed for seven years? And what if NASA actually agreed to investigate? That's exactly what's happening. Independent researcher Pavel Rabtsevich u
+
 - Claude Code Built a GTA Mod for SimCity 3000 in Just 2 Hours
   URL: https://abvx.xyz/writing/videos/cQS3nbBe6JM
   Summary: What if you could turn almost any PC game into something completely different using AI? And what if Claude Code could handle the modding process for you? Meet Universal Modder, an open-source collection of AI agent skill

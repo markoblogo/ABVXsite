@@ -614,6 +614,17 @@
     },
     {
       "source": "youtube",
+      "title": "Claude Code May Have Discovered a New Planet. NASA Is Checking.",
+      "url": "https://www.youtube.com/watch?v=BD4-rrzeqKA",
+      "publishedAt": "2026-10-13T14:57:06.000Z",
+      "excerpt": "What if an AI coding agent helped discover a planet that astronomers had missed for seven years? And what if NASA actually agreed to investigate? That's exactly what's happening. Independent researcher Pavel Rabtsevich u",
+      "coverImage": "https://i.ytimg.com/vi/BD4-rrzeqKA/hqdefault.jpg",
+      "videoDescription": "What if an AI coding agent helped discover a planet that astronomers had missed for seven years?\nAnd what if NASA actually agreed to investigate?\nThat's exactly what's happening.\nIndependent researcher Pavel Rabtsevich used Claude Code and OpenAI Codex to analyze archived data from NASA's TESS space telescope.\nThe result? A possible new exoplanet orbiting a star approximately 116 light-years from Earth.\n\nHere's what the AI-assisted investigation uncovered:\n- A star called TIC 4206066\n- A mysterious 0.05% drop in brightness every 3.18 days\n- Each dip lasts approximately two hours\n- The signal is consistent with a planet roughly 1.4 times Earth's radius\n- Similar signals appear in telescope data collected years apart\n\nClaude Code handled much of the technical work: processing telescope data, writing transit-detection algorithms, analyzing light curves, checking neighboring stars, and testing alternative explanations.\n\nThe human researcher directed the investigation, challenged the results, and established the criteria for success or failure.\nAnd here's where it gets really interesting.\n\nNASA's TESS mission has approved follow-up observations under Director's Discretionary Target Program 100. The observations are scheduled for October 31 to November 26, 2026. tess.mit.edu\n\nThe planet isn't confirmed yet. The signal could have another explanation, and that's precisely what the new observations will investigate.\nBut the implications are fascinating.\n\nWe're watching AI coding agents move beyond generating software and into actual scientific research.\n\nOne researcher. Public NASA data. A few AI agents. And possibly an entirely new world.\nThe video shows an interactive 3D visualization of the candidate planetary system, created by the researcher.\n\nExplore the system in 3D:\nhttps://tic4206066.pages.dev/\nOriginal discovery thread:\nhttps://x.com/p_rabtsevich/status/2107803696058822742\nResearch data and code:\nhttps://doi.org/10.5281/zenodo.22999133\nNASA TESS observation program:\nhttps://tess.mit.edu/science/ddt/\n\n#ClaudeCode #OpenAICodex #NASA #Exoplanet #AIAgents #SpaceExploration",
+      "addedAt": "2026-10-13T15:22:21.652Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Claude Code Built a GTA Mod for SimCity 3000 in Just 2 Hours",
       "url": "https://www.youtube.com/watch?v=cQS3nbBe6JM",
       "publishedAt": "2026-10-11T13:37:46.000Z",

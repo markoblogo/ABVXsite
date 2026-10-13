@@ -6620,6 +6620,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude Code May Have Discovered a New Planet. NASA Is Checking.",
+      "summary": "What if an AI coding agent helped discover a planet that astronomers had missed for seven years? And what if NASA actually agreed to investigate? That's exactly what's happening. Independent researcher Pavel Rabtsevich u",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/BD4-rrzeqKA",
+      "publishedAt": "2026-10-13T14:57:06.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=BD4-rrzeqKA"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude Code Tried to Make Me Watch 60 Videos at Once. I'm Scared.",
       "summary": "I was watching Claude Code coordinate its army of AI agents. And suddenly, things got a little terrifying. The task? Working with 60 videos simultaneously. Claude decided that the most efficient way for me to review the ",
       "canonicalUrl": "https://abvx.xyz/writing/videos/vZW-Z4pYqzU",

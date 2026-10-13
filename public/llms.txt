@@ -1110,6 +1110,11 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/working-stories
   Summary: Cases, experiments, mistakes and unusual decisions from my professional life.
 
+- We Broke One Company Into Many. Not to Grow, but to Survive.
+  URL: https://abvx.xyz/writing/working-stories/belarus-business-restructuring-franchise-resilience
+  Summary: A leading tire distributor in Belarus operated its warehouses, service stations and headquarters through one company. We redesigned the structure to reduce the risk of one disruption affecting the entire network.
+  Topics: crisis-management, business-restructuring, business-continuity, franchising, operational-risk, organizational-design, corporate-strategy, belarus, management
+
 - We Tried to Replace 1C with Oracle. Then We Did the Opposite.
   URL: https://abvx.xyz/writing/working-stories/oracle-vs-1c-erp-digital-transformation-case
   Summary: We spent years implementing Oracle, but employees still needed the old accounting system. Then I moved to another company in the group and tried the opposite approach.

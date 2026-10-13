@@ -6638,6 +6638,29 @@
       "related": []
     },
     {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Did Target Know a Teenager Was Pregnant Before She Did? I Finally Asked.",
+      "summary": "Target's pregnancy prediction algorithm became legendary after a teenager received baby-product coupons before her father knew she was pregnant. I later met someone who said she'd worked on the model and asked one question.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/target-pregnancy-prediction-algorithm-story",
+      "tags": [
+        "predictive-analytics",
+        "data-science",
+        "consumer-behavior",
+        "privacy",
+        "marketing-psychology",
+        "machine-learning",
+        "retail-analytics"
+      ],
+      "links": [],
+      "updatedAt": "2026-10-13",
+      "related": []
+    },
+    {
       "type": "video",
       "section": "writing",
       "ecosystem": "Writing",

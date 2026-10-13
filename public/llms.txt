@@ -1100,6 +1100,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: AI agents, agentic coding, multi-agent development, SKYFLY, Three.js, token budgets
 
+- Did Target Know a Teenager Was Pregnant Before She Did? I Finally Asked.
+  URL: https://abvx.xyz/writing/target-pregnancy-prediction-algorithm-story
+  Summary: Target's pregnancy prediction algorithm became legendary after a teenager received baby-product coupons before her father knew she was pregnant. I later met someone who said she'd worked on the model and asked one question.
+  Group: writing
+  Tags: predictive-analytics, data-science, consumer-behavior, privacy, marketing-psychology, machine-learning, retail-analytics
+
 - How I Work With AI Agents in 2026
   URL: https://abvx.xyz/writing/how-i-work-with-ai-agents-2026
   Summary: My practical AI agent workflow in 2026: orchestrator agents, 20–40 subagents, long-running sessions, taste gates, automation and why AI-native work keeps changing.

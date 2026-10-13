@@ -6810,6 +6810,78 @@
       "related": []
     },
     {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "My Father's Saturday Morning Sausage Pancakes",
+      "summary": "My father used to make these simple sausage pancakes on Saturday mornings. Thick slices of Doktorskaya sausage, garlic, egg batter and a little butter.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/soviet-sausage-pancakes-childhood-breakfast",
+      "tags": [
+        "breakfast",
+        "soviet-food",
+        "childhood-recipes",
+        "sausage",
+        "comfort-food",
+        "family-recipes"
+      ],
+      "links": [],
+      "updatedAt": "2026-10-13",
+      "related": [
+        {
+          "title": "Kitchen Notes",
+          "canonicalUrl": "https://abvx.xyz/writing/kitchen-notes",
+          "relation": "collection"
+        }
+      ],
+      "collection": "kitchen-notes",
+      "contentType": "recipe",
+      "recipe": {
+        "recipeYield": "Yield depends on the number of sausage slices",
+        "ingredients": [
+          {
+            "name": "Doktorskaya, good-quality bologna or similar cooked sausage",
+            "quantityText": "As desired; cut into 1–1.5 cm rounds"
+          },
+          {
+            "name": "fresh garlic",
+            "quantityText": "Thin slivers for 3–4 pockets in each sausage slice"
+          },
+          {
+            "name": "flour",
+            "quantityText": "A little for coating, plus enough to thicken the batter"
+          },
+          {
+            "name": "egg",
+            "quantityText": "1"
+          },
+          {
+            "name": "milk",
+            "quantityText": "A splash"
+          },
+          {
+            "name": "salt",
+            "quantityText": "To taste"
+          },
+          {
+            "name": "black or white pepper",
+            "quantityText": "To taste"
+          },
+          {
+            "name": "butter, or a mixture of butter and vegetable oil",
+            "quantityText": "For frying; amount not specified"
+          }
+        ],
+        "instructions": [
+          "Cut sausage into 1–1.5 cm rounds. Make three or four small pockets in each slice and insert thin slivers of fresh garlic. Add pepper if desired and lightly coat in flour.",
+          "Mix an egg, a splash of milk, flour, salt and pepper into a smooth batter thick enough to coat the sausage.",
+          "Dip the slices in batter and fry in a preheated pan with butter or butter and vegetable oil. Cook both sides until the batter is golden, cooked through and slightly crispy."
+        ]
+      }
+    },
+    {
       "type": "video",
       "section": "writing",
       "ecosystem": "Writing",

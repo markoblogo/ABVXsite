@@ -7,7 +7,7 @@ function dateValue(item) {
 export function selectLatestSectionEntry(items, section, excludedSlug) {
   return items
     .filter((item) => item.slug !== excludedSlug)
-    .filter((item) => item.appearsIn.includes(section))
+    .filter((item) => item.primarySection === section && item.appearsIn.includes(section))
     .filter((item) => item.catalogueAddedAt !== null)
     .sort((a, b) => {
       const dateDifference = dateValue(b) - dateValue(a);

@@ -72,7 +72,7 @@ That distinction became central to AMI.
 
 ## **MN7R: The operational layer**
 
-One of the core products is [MN7R](https://mn7r.com/?utm_source=chatgpt.com), an AI-assisted operating system for agricultural commodity brokers.
+One of the core products is [MN7R](https://mn7r.com/), an AI-assisted operating system for agricultural commodity brokers.
 
 MN7R grew around the actual work of brokerage teams.
 
@@ -130,7 +130,7 @@ That matters because the system is being developed around actual commercial work
 
 ## **1D3X: Understanding what the market is doing**
 
-The second major part of AMI is [1D3X](https://1d3x.com/?utm_source=chatgpt.com).
+The second major part of AMI is [1D3X](https://1d3x.com/).
 
 If MN7R is concerned with brokerage operations, 1D3X is concerned with the market information on which those operations depend.
 
@@ -150,7 +150,7 @@ This is why local commodity indices matter.
 
 Working with industry partners, we developed index infrastructure for Ukrainian agricultural markets, including projects associated with the **Ukrainian Grain Association** and **Spike Brokers**.
 
-These include [UGA Index](https://uga.1d3x.com/) and [SPIKE SPOT INDEX](https://spike.1d3x.com/?utm_source=chatgpt.com).
+These include [UGA Index](https://uga.1d3x.com/) and [SPIKE SPOT INDEX](https://spike.1d3x.com/).
 
 The purpose isn't simply to display another price chart.
 
@@ -256,7 +256,7 @@ I prefer to be explicit about those differences rather than present everything a
 
 There is also a more experimental direction.
 
-[Cropto](https://cr0pto.com/?utm_source=chatgpt.com) explores digital commodity contracts, document verification, indexed trading workflows and settlement traceability.
+[Cropto](https://cr0pto.com/) explores digital commodity contracts, document verification, indexed trading workflows and settlement traceability.
 
 This is where blockchain becomes relevant.
 

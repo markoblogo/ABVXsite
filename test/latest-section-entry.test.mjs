@@ -34,7 +34,7 @@ test('legacy unknown dates do not invent freshness; new items receive observed f
   assert.equal(legacy.items[0].addedAt,null);
   assert.equal(legacy.items[0].basis,'legacy-unknown');
   const updated = registerCatalogueItems(legacy,[{kind:'books',slug:'new-book'}],{now:'2026-10-10T00:00:00.000Z'});
-  const books = [{slug:'legacy',title:'Legacy',appearsIn:['books'],sortRank:0,updatedAt:'2026-10-10'}, {slug:'new-book',title:'New',appearsIn:['books'],sortRank:999}];
+  const books = [{slug:'legacy',title:'Legacy',appearsIn:['books'],primarySection:'books',sortRank:0,updatedAt:'2026-10-10'}, {slug:'new-book',title:'New',appearsIn:['books'],primarySection:'books',sortRank:999}];
   assert.equal(selectLatestSectionEntry(withCatalogueTimes(books,'books',updated),'books')?.slug,'new-book');
   assert.equal(selectLatestSectionEntry(withCatalogueTimes([books[0]],'books',legacy),'books'),undefined);
 });
@@ -64,4 +64,14 @@ test('does not require a manual homepage flag for a newly published section item
   };
 
   assert.equal(selectLatestSectionEntry([...items, newerItem], 'systems')?.slug, 'pictiq-landing');
+});
+
+
+test('cross-listed new products announce only in their primary section', () => {
+  const ami = {slug:'ami',title:'AMI',primarySection:'focus',appearsIn:['focus','systems'],catalogueAddedAt:'2026-10-13T22:00:00.000Z',sortRank:1};
+  assert.equal(selectLatestSectionEntry([...items,ami],'focus')?.slug,'ami');
+  assert.equal(selectLatestSectionEntry([...items,ami],'systems')?.slug,'blue-jay-vodka');
+  const system = {...ami,slug:'new-system',primarySection:'systems',catalogueAddedAt:'2026-10-14T00:00:00.000Z'};
+  assert.equal(selectLatestSectionEntry([...items,ami,system],'focus')?.slug,'ami');
+  assert.equal(selectLatestSectionEntry([...items,ami,system],'systems')?.slug,'new-system');
 });

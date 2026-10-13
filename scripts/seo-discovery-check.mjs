@@ -1,6 +1,8 @@
 import { publicationScope, publicationBase } from './publication-scope.mjs';
 import { publicationQa, boundedMap } from './publication-qa.mjs';
 import { automaticVideoItems, publishedWritingItems, findVideoCompanion } from '../src/lib/youtube-pages.mjs';
+import { mergeWritingItems } from '../src/lib/writing-chronology.mjs';
+import { visibleWritingItems } from '../src/lib/writing-window.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { contentFiles, parseContentFile } from './content-lib.mjs';
@@ -124,7 +126,12 @@ await withQaServer(async (base) => {
     }
     // The combined Writing view has a bounded archive; older videos remain in the source filter.
     await visit(base + '/writing?source=youtube');
-    for (const video of videos) assert.ok(await page.locator('main a[href="' + video.url + '"]').count(), video.url + ' missing Writing link');
+    const youtubeFeed = mergeWritingItems(nativeVideos.filter(item => item.videoUrl).map(item => ({
+      source: 'youtube', url: '/writing/' + item.slug, title: item.title,
+      publishedAt: item.videoUploadedAt || item.publishedAt || '',
+      videoUrl: item.videoUrl, status: item.status, visibility: item.visibility,
+    })), JSON.parse(readFileSync('content/writing-discovery.json', 'utf8'))).filter(item => item.source === 'youtube');
+    for (const video of visibleWritingItems(youtubeFeed)) assert.ok(await page.locator('main a[href="' + video.url + '"]').count(), video.url + ' missing Writing link');
     const companionId = Object.keys(index.videoRedirects || {})[0];
     const companion = companionId ? findVideoCompanion(nativeVideos, companionId, Date.now(), index.videoRedirects) : undefined;
     if (companion) {

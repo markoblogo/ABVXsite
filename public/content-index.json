@@ -3297,7 +3297,7 @@
       "title": "AMI : construire une infrastructure numérique pour les marchés agricoles",
       "summary": "Découvrez AMI, un écosystème reliant le courtage agricole avec MN7R, les indices de prix 1D3X, l'intelligence de marché et les outils d'exécution des contrats.",
       "publishedAt": "2026-10-13",
-      "updatedAt": "2026-10-13",
+      "updatedAt": "2026-10-14",
       "language": "fr",
       "translationGroup": "ami-agro-market-infrastructure",
       "canonicalUrl": "https://abvx.xyz/editorial/focus/ami-infrastructure-marches-agricoles-fr",
@@ -3373,7 +3373,7 @@
       "title": "AMI: Building Infrastructure for Physical Commodity Markets",
       "summary": "Discover AMI, an agricultural market infrastructure ecosystem connecting MN7R brokerage software, 1D3X commodity indices, market intelligence and execution workflows.",
       "publishedAt": "2026-10-13",
-      "updatedAt": "2026-10-13",
+      "updatedAt": "2026-10-14",
       "language": "en",
       "translationGroup": "ami-agro-market-infrastructure",
       "canonicalUrl": "https://abvx.xyz/editorial/focus/ami-agro-market-infrastructure",
@@ -3411,7 +3411,7 @@
       "title": "AMI: будуємо цифрову інфраструктуру аграрного ринку України",
       "summary": "AMI об'єднує MN7R, зернові індекси 1D3X, аналітику, агроброкеридж, логістику та цифрові інструменти торгівлі в єдину інфраструктуру аграрного ринку.",
       "publishedAt": "2026-10-13",
-      "updatedAt": "2026-10-13",
+      "updatedAt": "2026-10-14",
       "language": "uk",
       "translationGroup": "ami-agro-market-infrastructure",
       "canonicalUrl": "https://abvx.xyz/editorial/focus/ami-agro-market-infrastructure-uk",
@@ -3573,9 +3573,9 @@
       "section": "focus",
       "ecosystem": "Agro Market Infrastructure Systems",
       "group": "Trading & Brokerage Platforms",
-      "status": "building",
+      "status": "research",
       "title": "Cropto",
-      "summary": "Cropto is an early-stage MVP commodity trading platform offering indexed spot trading, options, and tokenized commodity-linked instruments across Ukraine, Argentina and Brazil; the repository publishes a public monthly indexed-spot update cadence for those markets.",
+      "summary": "Cropto explores indexed trading, commodity-linked instruments and settlement traceability. Standalone application development is paused while work prioritizes the wider AMI ecosystem.",
       "canonicalUrl": "https://abvx.xyz/work/cropto",
       "tags": [
         "cropto",
@@ -3603,7 +3603,7 @@
           "url": "https://youtu.be/zumLJKZQFxc"
         }
       ],
-      "updatedAt": "2026-07-21",
+      "updatedAt": "2026-10-14",
       "related": []
     },
     {

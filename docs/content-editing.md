@@ -40,6 +40,8 @@ Use the [editorial checklist](editorial-seo-checklist.md). Map every requested s
 
 AMI uses one project record (`content/work/ami.md`, `/work/ami`) and three audience-adapted guides in the `ami-agro-market-infrastructure` editorial translation group. Focus lists the project once in its infrastructure explainer; Systems lists it in Market Fronts & Landings. Both cards pass the same small `href`/`linkLabel`/`language` projection to the optional `ProjectCatalogueCard.editorialArticles` prop, reusing `EditorialSectionLink`. Keep one article route per language under `/editorial/focus/`, including when linked from Systems; the existing editorial renderer and sitemap supply reciprocal language alternates. The project brief stays distinct from the three full articles.
 
+Homepage catalogue news uses immutable first-addition timestamps and each item's `primarySection`; `appearsIn` controls additional listings, not duplicate homepage announcements. Cross-listed AMI therefore announces in Focus, while Systems retains its latest primary product. The Writing page and SEO link check share `writing-window.mjs` (one featured, six recent, thirty archive rows); older retained videos still receive individual route/index checks. AMI product links use canonical URLs without generated ChatGPT campaign attribution. Cropto's project-copy context preserves the owner-confirmed pause of standalone development.
+
 ## Collaboration links
 
 Edit each offer in `content/collaborations.json` once. About and the footer consume that shared source, including labels and URLs. Keep external links opening in a new tab with `rel="noopener noreferrer"`; retain the `Collaboration Click` tracking class and verify narrow-screen wrapping.

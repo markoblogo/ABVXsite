@@ -1056,6 +1056,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: cookbook, breakfast, marmite
 
+- My Father's Saturday Morning Sausage Pancakes
+  URL: https://abvx.xyz/writing/soviet-sausage-pancakes-childhood-breakfast
+  Summary: My father used to make these simple sausage pancakes on Saturday mornings. Thick slices of Doktorskaya sausage, garlic, egg batter and a little butter.
+  Group: writing
+  Tags: breakfast, soviet-food, childhood-recipes, sausage, comfort-food, family-recipes
+
 - Première traduction française de Jeanne la bataillonneuse et Miss Adrienne de Géo Chkouroupiy
   URL: https://abvx.xyz/writing/premiere-traduction-francaise-jeanne-bataillonneuse-miss-adrienne
   Summary: Publication de la première traduction française de Jeanne la bataillonneuse et Miss Adrienne de Géo Chkouroupiy, dans le cadre du projet Modernisme ukrainien consacré aux écrivains ukrainiens des années 1920-1930.

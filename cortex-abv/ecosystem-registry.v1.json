@@ -4,9 +4,9 @@
   "version": "v1",
   "authority": "read",
   "externalSideEffects": false,
-  "generatedAt": "2026-09-23T17:11:59.557Z",
+  "generatedAt": "2026-10-13T20:34:18.856Z",
   "source": "cortex-abv/ecosystem-graph.v1.json",
-  "sourceDigest": "37e306491379129b73c5305de7906ab91ab2d250fcc0dd79fcef7cd749ab52c1",
+  "sourceDigest": "bc623b9a720034198934a203ba277975fa510693016a1bf2878018233de03880",
   "coverage": {
     "nodes": 24,
     "publicNodes": 20,
@@ -445,9 +445,9 @@
       },
       "observedHomepageUrl": "https://abvx.xyz/work/abvx-agent-skills",
       "release": {
-        "tag": "v0.15.0",
-        "url": "https://github.com/markoblogo/abvx-agent-skills/releases/tag/v0.15.0",
-        "publishedAt": "2026-09-08T19:50:53Z"
+        "tag": "v0.16.1",
+        "url": "https://github.com/markoblogo/abvx-agent-skills/releases/tag/v0.16.1",
+        "publishedAt": "2026-10-13T20:04:13Z"
       }
     },
     {

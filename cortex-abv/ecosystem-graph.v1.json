@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "ABVXEcosystemGraph",
-  "updatedAt": "2026-09-23T17:11:59.557Z",
+  "updatedAt": "2026-10-13T20:34:18.856Z",
   "nodes": [
     {
       "id": "trade-solutions",
@@ -407,9 +407,9 @@
       },
       "observedHomepageUrl": "https://abvx.xyz/work/abvx-agent-skills",
       "release": {
-        "tag": "v0.15.0",
-        "url": "https://github.com/markoblogo/abvx-agent-skills/releases/tag/v0.15.0",
-        "publishedAt": "2026-09-08T19:50:53Z"
+        "tag": "v0.16.1",
+        "url": "https://github.com/markoblogo/abvx-agent-skills/releases/tag/v0.16.1",
+        "publishedAt": "2026-10-13T20:04:13Z"
       }
     },
     {

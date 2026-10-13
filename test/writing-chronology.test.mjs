@@ -105,7 +105,7 @@ test('public fallback accepts only recognized source metadata and survives endpo
   assert.deepEqual(await fetchWritingSourceFallback('substack', async () => { throw new Error('Offline'); }), []);
 });
 
-test('all external feed polls bypass the data cache and see newly published entries', async (t) => {
+test('Writing feed polls bypass the data cache and see newly published entries', async (t) => {
   const { fetchAllowedText } = loadFeedModule(path.resolve('src/lib/feed-http.ts'));
   const stored = new Map();
   let upstream = 'previous feed';
@@ -123,5 +123,26 @@ test('all external feed polls bypass the data cache and see newly published entr
     assert.equal(await fetchAllowedText(url, source, 'feed'), 'previous feed');
     upstream = 'newly published entry';
     assert.equal(await fetchAllowedText(url, source, 'feed'), upstream, source);
+  }
+});
+
+test('MN7R render-time feeds preserve ISR caching while Writing articles keep their cache', async (t) => {
+  const { fetchAllowedText } = loadFeedModule(path.resolve('src/lib/feed-http.ts'));
+  const calls = [];
+  t.mock.method(globalThis, 'fetch', async (url, init) => {
+    calls.push({ url, init });
+    return new Response('feed or article');
+  });
+  for (const [source, url, kind] of [
+    ['mn7r', 'https://mn7r.com/feed', 'feed'],
+    ['mn7r', 'https://mn7r.com/post', 'article'],
+    ['substack', 'https://abvx.substack.com/p/post', 'article'],
+    ['medium', 'https://abvcreative.medium.com/post', 'article'],
+    ['youtube', 'https://www.youtube.com/watch?v=Example0001', 'article'],
+  ]) {
+    assert.equal(await fetchAllowedText(url, source, kind), 'feed or article');
+    const init = calls.at(-1).init;
+    assert.equal(init.cache, undefined, `${source}/${kind} must not disable ISR`);
+    assert.equal(init.next?.revalidate, 900, `${source}/${kind}`);
   }
 });

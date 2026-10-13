@@ -33,7 +33,7 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 - ChatGPT Can Now Turn AI-Generated Logos Into Editable SVGs
   URL: https://abvx.xyz/writing/videos/RsxiDWDj2Rg
-  Summary: ChatGPT can already design your logo. Now it can turn that logo into an editable vector file, right inside the chat Meet Vectorize, a ChatGPT plugin that converts AI-generated logos and images into scalable SVG graphics.
+  Summary: ChatGPT can already design your logo. Now it can turn that logo into an editable vector file, right inside the chat. Meet Vectorize, a ChatGPT plugin that converts AI-generated logos and images into scalable SVG graphics.
 
 - Claude Code Tried to Make Me Watch 60 Videos at Once. I'm Scared.
   URL: https://abvx.xyz/writing/videos/vZW-Z4pYqzU

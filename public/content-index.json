@@ -6913,6 +6913,29 @@
       "related": []
     },
     {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "CoqPi: AI Meeting & Interview Assistant | Cinematic App Demo",
+      "summary": "Prepare for meetings, practise interview answers, and keep useful context close during multilingual conversations. Meet CoqPi, a local-first desktop communication assistant. This 23-second cinematic app demo uses CoqPi’s",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/rqKXx_Z5AR0",
+      "publishedAt": "2026-10-14T16:54:09.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=rqKXx_Z5AR0"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "writing",
       "section": "writing",
       "ecosystem": "Writing",

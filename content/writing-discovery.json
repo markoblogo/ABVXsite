@@ -773,6 +773,17 @@
     },
     {
       "source": "youtube",
+      "title": "CoqPi: AI Meeting & Interview Assistant | Cinematic App Demo",
+      "url": "https://www.youtube.com/watch?v=rqKXx_Z5AR0",
+      "publishedAt": "2026-10-14T16:54:09.000Z",
+      "excerpt": "Prepare for meetings, practise interview answers, and keep useful context close during multilingual conversations. Meet CoqPi, a local-first desktop communication assistant. This 23-second cinematic app demo uses CoqPi’s",
+      "coverImage": "https://i.ytimg.com/vi/rqKXx_Z5AR0/hqdefault.jpg",
+      "videoDescription": "Prepare for meetings, practise interview answers, and keep useful context close during multilingual conversations. Meet CoqPi, a local-first desktop communication assistant.\n\nThis 23-second cinematic app demo uses CoqPi’s actual React components: meeting preparation, conversation practice, and the answer-first call panel. The screens contain synthetic demonstration data. No microphone recording or live AI generation was used to produce this video.\n\nExplore CoqPi: https://github.com/markoblogo/CoqPi\nOur video-production methods: https://github.com/markoblogo/framewright\n\nCreated with Flute by Web Prodigies, using camera movement and depth of field around real React UI. Original instrumental music was created locally and added after the Flute export.\nFlute: https://github.com/webprodigies-org/flute\n\nCoqPi is an MVP. Real-call latency and speaker attribution still require further validation. Its OpenAI-backed features send selected audio or text to OpenAI.\n\n#CoqPi #AIAssistant #ProductDemo",
+      "addedAt": "2026-10-14T17:17:24.655Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "ChatGPT Can Now Turn AI-Generated Logos Into Editable SVGs",
       "url": "https://www.youtube.com/watch?v=RsxiDWDj2Rg",
       "publishedAt": "2026-10-09T11:31:00.000Z",

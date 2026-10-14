@@ -195,8 +195,8 @@ export async function generateMetadata({
   );
 
   return metadataWithImage({
-    title: artifact.title,
-    description: artifact.summary,
+    title: artifact.seoTitle || artifact.title,
+    description: artifact.seoDescription || artifact.summary,
     canonicalPath: `/work/${artifact.slug}`,
     image,
   });

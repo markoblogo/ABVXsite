@@ -16,6 +16,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const books = getBooks();
   const releasedVideos = new Set(getPublishedNativeWritingItems().filter(item => item.videoUrl).map(item => item.slug));
   const writing = getNativeWritingItems().filter(item => !item.videoUrl || releasedVideos.has(item.slug));
+  const videos = getVideoWritingItems();
+  const videoDates = videos.map(item=>({publishedAt:item.publishedAt}));
   const stories = getWorkingStories();
   const storyDates = stories.map((story) => ({ publishedAt: story.date, updatedAt: story.updatedAt }));
   const editorialArticles = getEditorialArticles();
@@ -44,32 +46,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
       .sort((a, b) => b.valueOf() - a.valueOf())[0];
   }
 
-  const allContentDate = latestDate([...artifacts, ...books, ...writing, ...storyDates, workingStoriesSeries, ...editorialArticles, ...Object.values(pageMetadata)]);
+  const allContentDate = latestDate([...artifacts, ...books, ...writing, ...storyDates, ...videoDates, workingStoriesSeries, ...editorialArticles, ...Object.values(pageMetadata)]);
   const focusDate = latestDate([
     ...artifacts.filter((artifact) => artifact.appearsIn.includes('focus')),
-    ...editorialArticles.filter((article) => article.section === 'focus'),
+    ...editorialArticles.filter((article) => article.section === 'focus'),pageMetadata['/focus'],
   ]);
   const systemsDate = latestDate([
     ...artifacts.filter((artifact) => artifact.appearsIn.includes('systems')),
-    ...editorialArticles.filter((article) => article.section === 'systems'),
+    ...editorialArticles.filter((article) => article.section === 'systems'),pageMetadata['/systems'],
   ]);
   const booksDate = latestDate([...books, ...editorialArticles.filter((article) => article.section === 'books'), pageMetadata['/books']]);
-  const writingDate = latestDate([...writing, ...storyDates, workingStoriesSeries, ...editorialArticles.filter((article) => article.section === 'writing')]);
+  const writingDate = latestDate([...writing, ...storyDates, ...videoDates, workingStoriesSeries, ...editorialArticles.filter((article) => article.section === 'writing')]);
   const aboutDate = latestDate([pageMetadata['/about'], ...editorialArticles.filter((article) => article.section === 'about')]);
-  const tokiPonaDate = latestDate([...books, pageMetadata['/toki-pona']]);
+  const tokiPonaDate = latestDate([...books.filter(book => ['the-strange-case-of-dr-jekyll-and-mr-hyde-in-toki-pona','stoic-wisdom-toki-pona'].includes(book.slug)),...artifacts.filter(item=>item.slug==='toki-pona-ai-translator'), pageMetadata['/toki-pona']]);
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${base}`, lastModified: allContentDate, changeFrequency: 'weekly', priority: 1 },
-    { url: `${base}/ami`, lastModified: allContentDate, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${base}/fr/ami`, lastModified: allContentDate, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${base}/ami`, lastModified: contentDate(pageMetadata['/ami']), alternates:{languages:{en:`${base}/ami`,fr:`${base}/fr/ami`}}, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${base}/fr/ami`, lastModified: contentDate(pageMetadata['/fr/ami']), alternates:{languages:{en:`${base}/ami`,fr:`${base}/fr/ami`}}, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${base}/focus`, lastModified: focusDate, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/systems`, lastModified: systemsDate, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/books`, lastModified: booksDate, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${base}/writing/archive`, lastModified: latestDate([...writing,...storyDates,...videoDates,pageMetadata['/writing/archive']]),changeFrequency:'weekly',priority:0.55 },
     { url: `${base}/writing`, lastModified: writingDate, changeFrequency: 'weekly', priority: 0.75 },
     { url: `${base}${workingStoriesSeries.canonicalPath}`, lastModified: latestDate([...storyDates, workingStoriesSeries]), changeFrequency: 'weekly', priority: 0.6 },
     { url: `${base}${kitchenNotes.canonicalPath}`, lastModified: latestDate([...writing.filter(item => item.collection === kitchenNotes.id), kitchenNotes]), changeFrequency: 'monthly', priority: 0.55 },
     { url: `${base}/about`, lastModified: aboutDate, changeFrequency: 'monthly', priority: 0.75 },
-    { url: `${base}/llmo`, lastModified: allContentDate, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/llmo`, lastModified: contentDate(pageMetadata['/llmo']), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/work-with-me`, lastModified: trafficLandingUpdatedAt, changeFrequency: 'monthly', priority: 0.72 },
     { url: `${base}/toki-pona`, lastModified: tokiPonaDate, changeFrequency: 'monthly', priority: 0.65 },
   ];
@@ -110,7 +113,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${base}${workingStoryPath(story)}`, lastModified: contentDate({ publishedAt: story.date, updatedAt: story.updatedAt }),
     changeFrequency: 'monthly', priority: 0.55,
   }));
-  const videoRoutes: MetadataRoute.Sitemap = getVideoWritingItems().map(item => ({
+  const videoRoutes: MetadataRoute.Sitemap = videos.map(item => ({
     url: base + item.url, lastModified: new Date(item.publishedAt), changeFrequency: 'monthly', priority: 0.55,
   }));
   return [...videoRoutes, ...staticRoutes, ...serviceRoutes, ...workRoutes, ...bookRoutes, ...writingRoutes, ...editorialRoutes, ...storyRoutes];

@@ -226,6 +226,7 @@ function baseFields(data: RawRecord, body: string) {
     slug: stringValue(data.slug),
     title: stringValue(data.title),
     seoTitle: optionalString(data.seoTitle),
+    seoDescription: optionalString(data.seoDescription),
     canonicalPath: optionalString(data.canonicalPath),
     shortTitle: optionalString(data.shortTitle),
     status: stringValue(data.status, 'archive') as Status,

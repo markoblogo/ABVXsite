@@ -7,6 +7,7 @@ import { createHash } from 'node:crypto';
 import { parseMarkdownSource } from '../src/content/markdown-source.mjs';
 import { safePublicationTarget, planApprovedMedia, applyPublication } from './publication-media.mjs';
 import { validateNativeWritingVideo } from '../src/content/native-writing-video.mjs';
+import { staticPublicationRoutes } from './publication-routes.mjs';
 
 function parseArgs(argv) {
   const args = { packet: '', dryRun: false, write: false };
@@ -59,6 +60,7 @@ function frontmatterFrom(packet) {
 
 export function planWriting(packet, root = process.cwd()) {
   root = path.resolve(root);
+  if(staticPublicationRoutes(root).has('/writing/'+packet.slug)) throw Error('Writing slug is reserved for a static hub');
   if (packet.project !== 'abvxsite' || packet.surface !== 'writing'
     || packet.consumer_operation?.id !== 'abvx.publish-writing'
     || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(packet.slug || '')) {

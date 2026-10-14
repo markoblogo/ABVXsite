@@ -22,3 +22,10 @@ test('a native video companion consumes a slot in the same window as automatic v
   assert.deepEqual(visibleWritingItems([]),[]);
   assert.deepEqual(visibleWritingItems(posts.slice(0,1)),posts.slice(0,1));
 });
+
+test('More posts receives all hidden entries in source order without repeating the initial window',()=>{
+ const posts=Array.from({length:100},(_,i)=>({url:'/writing/post-'+i}));
+ const window=writingWindow(posts);
+ assert.deepEqual([...visibleWritingItems(posts),...window.remainingPosts],posts);
+ assert.equal(window.remainingPosts.length,63);assert.deepEqual(writingWindow([]).remainingPosts,[]);
+});

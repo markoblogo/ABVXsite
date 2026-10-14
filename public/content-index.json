@@ -6969,6 +6969,20 @@
       "related": []
     },
     {
+      "type": "editorial-series",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "Writing",
+      "status": "live",
+      "title": "Complete Writing Archive",
+      "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
+      "canonicalUrl": "https://abvx.xyz/writing/archive",
+      "updatedAt": "2026-10-14T17:33:36.000Z",
+      "tags": [],
+      "links": [],
+      "related": []
+    },
+    {
       "type": "video",
       "section": "writing",
       "ecosystem": "Writing",
@@ -8157,7 +8171,7 @@
         "business-systems"
       ],
       "publishedAt": "2026-10-13",
-      "updatedAt": "2026-10-13",
+      "updatedAt": "2026-10-14",
       "image": "https://abvx.xyz/media/working-stories/oracle-vs-1c-erp-digital-transformation-case.png",
       "links": [
         {

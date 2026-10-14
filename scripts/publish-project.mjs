@@ -1,3 +1,5 @@
+import { planCatalogue } from './publish-catalogue.mjs';
+import { applyPublication } from './publication-media.mjs';
 import { mkdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { serializeFrontmatter } from './content-lib.mjs';
@@ -55,6 +57,13 @@ function frontmatterFrom(packet) {
 
 const args = parseArgs(process.argv);
 const packet = loadPacket(args.packet);
+if (packet.payload?.source_markdown) {
+  if (args.dryRun && args.write) throw Error('Choose dry-run or write, not both');
+  const plan=planCatalogue(packet);
+  if(args.write) applyPublication(plan);
+  console.log(JSON.stringify({...plan.report,mode:args.write?'WRITE':'DRY_RUN'},null,2));
+  process.exit(0);
+}
 const targetFile = filePathFor(packet.slug);
 const exists = existsSync(targetFile);
 const report = {

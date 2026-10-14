@@ -24,7 +24,7 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
   const base = mode === '--vercel' ? process.env.VERCEL_GIT_PREVIOUS_SHA : process.env.CI_BASE_SHA;
   const result = deploymentScope(base);
   console.log(`build=${result.build}`);
-  if (mode === '--ci') console.log(`publication=${publicationScope(base).profile === 'publication-v1'}`);
+  if (mode === '--ci') console.log(`publication=${['publication-v1','catalogue-v1'].includes(publicationScope(base).profile)}`);
   console.log(`reason=${result.reason}`);
   // Vercel ignored-build convention: 0 skips, 1 builds. CI always succeeds;
   // its output gates only the application build, not the other checks.

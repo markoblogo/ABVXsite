@@ -152,7 +152,7 @@ export async function generateMetadata({
 
   return metadataWithImage({
     title: book.seoTitle || book.title,
-    description: book.summary,
+    description: book.seoDescription || book.summary,
     canonicalPath: book.canonicalPath || `/books/${book.slug}`,
     image,
     type: book.type === 'series' ? 'website' : 'book',

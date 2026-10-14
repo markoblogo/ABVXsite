@@ -5536,3 +5536,11 @@ a {
     height: 100%;
   }
 }
+
+.writing-more-button {
+  justify-self: start; margin-top: 1.5rem; padding: .75rem 1rem;
+  border: 1px solid currentColor; background: transparent; color: inherit;
+  font: inherit; cursor: pointer;
+}
+.writing-more-button:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+.writing-more-button:hover { text-decoration: underline; }

@@ -1,3 +1,4 @@
+import { officialSeriesSlugs, bookStandaloneGroups as standaloneGroups } from '@/lib/catalogue-config.mjs';
 import BookCatalogueCard from '@/components/BookCatalogueCard';
 import EditorialSectionLink from '@/components/EditorialSectionLink';
 import CompanionCatalogueCard from '@/components/CompanionCatalogueCard';
@@ -25,14 +26,7 @@ export const metadata: Metadata = metadataWithImage({
   image: booksOgImage,
 });
 
-const officialSeriesSlugs = [
-  'modernisme-ukrainien',
-  'chinese-wisdom-toki-pona',
-  'stoic-wisdom-toki-pona',
-  'toki-pona-free-kits',
-  'mn7r-commodity-brokerage-library',
-  'good-dogs-of-the-apocalypse',
-];
+
 
 const editorialSlugsBySeries: Record<string, string[]> = {
   'modernisme-ukrainien': ['modernisme-ukrainien-en', 'modernisme-ukrainien-fr', 'modernisme-ukrainien-uk'],
@@ -42,28 +36,7 @@ const editorialSlugsBySeries: Record<string, string[]> = {
   'mn7r-commodity-brokerage-library': ['mn7r-commodity-brokerage-library-en', 'mn7r-commodity-brokerage-library-uk'],
 };
 
-const standaloneGroups = [
-  {
-    title: 'Business, AI & Marketing',
-    description: 'Independent strategy, marketing, productivity and AI books outside the formal publishing series.',
-    editorialSlugs: ['business-ai-marketing'],
-  },
-  {
-    title: 'Language, AI & Toki Pona',
-    description: 'Standalone books where language systems, Toki Pona and AI-native thinking become the main subject.',
-    editorialSlugs: ['language-ai-toki-pona'],
-  },
-  {
-    title: 'Practical Guides & Reference',
-    description: 'Applied guides, visual references and decision tools for practical real-world situations.',
-    editorialSlugs: ['practical-guides-reference-en', 'practical-guides-reference-uk'],
-  },
-  {
-    title: 'Fiction',
-    description: 'Original fiction and translations outside the non-fiction and classical translation lines.',
-    editorialSlugs: ['fiction'],
-  },
-];
+
 
 function belongsToSeries(item: Book | Artifact, slug: string) {
   return item.primarySeriesSlug === slug || item.seriesSlugs?.includes(slug);

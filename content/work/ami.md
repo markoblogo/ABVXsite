@@ -22,6 +22,11 @@
   ],
   "links": [
     {
+      "type": "youtube",
+      "label": "Launch video",
+      "url": "https://youtu.be/QnpLjwhj6Fs"
+    },
+    {
       "type": "site",
       "label": "Explore AMI",
       "url": "https://ami.1d3x.com/"
@@ -64,3 +69,5 @@ AMI is the market-facing overview of Agro Market Infrastructure, connecting brok
 The ecosystem brings together [MN7R](/work/mn7r), [1D3X](/work/1d3x), [SPIKE SPOT INDEX](/work/spike-spot-commodity-index-ukraine), [UGA Index](/work/uga-index), [Cropto](/work/cropto) and the [AMI Books library](/work/ami-books-physical-commodity-markets). Individual products retain their own scope and maturity; the landing does not imply that every integration is already implemented.
 
 Open the [AMI landing](https://ami.1d3x.com/) or read the audience-adapted project introductions: [English](/editorial/focus/ami-agro-market-infrastructure), [Français](/editorial/focus/ami-infrastructure-marches-agricoles-fr), [Українська](/editorial/focus/ami-agro-market-infrastructure-uk).
+
+[How these launch videos were made →](/writing/brag-ai-agent-skill-launch-videos-review)

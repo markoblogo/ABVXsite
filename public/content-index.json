@@ -3249,6 +3249,11 @@
       ],
       "links": [
         {
+          "type": "youtube",
+          "label": "Launch video",
+          "url": "https://youtu.be/QnpLjwhj6Fs"
+        },
+        {
           "type": "site",
           "label": "Explore AMI",
           "url": "https://ami.1d3x.com/"
@@ -5546,6 +5551,11 @@
       ],
       "links": [
         {
+          "type": "youtube",
+          "label": "Launch video",
+          "url": "https://youtu.be/y2OW5f8QEXo"
+        },
+        {
           "type": "site",
           "label": "Site",
           "url": "https://markoblogo.github.io/AsciiTheme/"
@@ -7054,6 +7064,31 @@
       ],
       "links": [],
       "updatedAt": "2026-10-10",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "I Tested /brag: An AI Agent Skill That Turns Projects into Launch Videos",
+      "summary": "I tested /brag, an open-source agent skill that turns software projects into 20-second launch videos. Two projects, two results, and a much simpler promotional workflow.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/brag-ai-agent-skill-launch-videos-review",
+      "tags": [
+        "ai-agents",
+        "agent-skills",
+        "codex",
+        "claude-code",
+        "ai-video",
+        "product-launch",
+        "developer-tools",
+        "hyperframes",
+        "ai-native-workflows"
+      ],
+      "links": [],
+      "updatedAt": "2026-10-14",
       "related": []
     },
     {

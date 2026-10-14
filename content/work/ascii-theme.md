@@ -20,6 +20,11 @@
   ],
   "links": [
     {
+      "type": "youtube",
+      "label": "Launch video",
+      "url": "https://youtu.be/y2OW5f8QEXo"
+    },
+    {
       "type": "site",
       "label": "Site",
       "url": "https://markoblogo.github.io/AsciiTheme/"
@@ -64,3 +69,5 @@ The project includes:
 - minimal visual systems.
 
 AsciiTheme belongs to the broader AI-native ecosystem as a development-interface layer rather than a standalone design experiment.
+
+[How these launch videos were made →](/writing/brag-ai-agent-skill-launch-videos-review)

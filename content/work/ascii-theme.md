@@ -56,7 +56,8 @@
     "src": "/media/work/asciitheme/hero.png",
     "alt": "AsciiTheme interface preview",
     "role": "project-screenshot"
-  }
+  },
+  "updatedAt": "2026-10-14"
 }
 ---
 

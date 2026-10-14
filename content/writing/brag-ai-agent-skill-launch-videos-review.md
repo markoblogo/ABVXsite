@@ -303,7 +303,6 @@ Not that AI can make another video.
 
 **It's that presenting something you've built no longer has to become a project of its own.**
 
----
 
 ### Try it yourself
 

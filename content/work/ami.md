@@ -37,7 +37,7 @@
   "needsReview": false,
   "homepageEligible": true,
   "publishedAt": "2026-10-13",
-  "updatedAt": "2026-10-13",
+  "updatedAt": "2026-10-14",
   "media": {
     "src": "/media/work/ami/hero.png",
     "alt": "AMI landing page presenting digital infrastructure for physical commodity markets and its brokerage, price-index and publishing products.",

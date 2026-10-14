@@ -664,6 +664,17 @@
     },
     {
       "source": "youtube",
+      "title": "He Built a 3D Little Prince Game in 16 Days Using Claude Opus 5.5",
+      "url": "https://www.youtube.com/watch?v=7JJ47rmMU7w",
+      "publishedAt": "2026-10-14T14:16:40.000Z",
+      "excerpt": "What if one developer could turn a classic novel into a playable 3D game in just 16 days? Apparently, that's exactly what happened. Developer Sac (@Saccc_c) used Claude Opus 5.5, Tripo AI, and Blender to create The Littl",
+      "coverImage": "https://i.ytimg.com/vi/7JJ47rmMU7w/hqdefault.jpg",
+      "videoDescription": "What if one developer could turn a classic novel into a playable 3D game in just 16 days?\nApparently, that's exactly what happened.\nDeveloper Sac (@Saccc_c) used Claude Opus 5.5, Tripo AI, and Blender to create The Little Prince: Across the Stars, a browser-based 3D adventure inspired by Antoine de Saint-Exupéry's legendary book.\nAnd the result is surprisingly beautiful.\n\nInstead of simply reading about the Little Prince's adventures, you can step into his universe, explore tiny planets floating above the clouds, and experience familiar moments from the story in 3D.\n\nHere's how the game was built:\n- Claude Opus 5.5: AI-assisted coding, game logic, and development\n- Tripo AI: Generating 3D characters, objects, and environments\n- Blender: Processing models, assembling scenes, and creating visuals\n- Unity: Bringing everything together into a playable browser game\n- 16 days: From concept to a publicly playable experience\nEven the promotional trailer was reportedly created using Claude Opus 5.5 and Blender from a single prompt.\nAnd here's another interesting detail.\n\nThe developer plans to open-source the entire project and publish a detailed breakdown of the development process.\nThis isn't just another AI-generated 3D demo.\nIt's an example of how AI coding agents, generative 3D tools, and traditional game engines can work together to dramatically accelerate independent game development.\nOf course, AI doesn't replace the need for creative direction, good taste, or game design.\nBut it certainly changes how much one person can build.\nSixteen days. One developer. A universe inspired by The Little Prince.\nAnd you can play it right now.\n\nPlay The Little Prince: Across the Stars:\nhttps://littleprince.dev/\nFor the best experience, use a recent Chrome or Edge browser with WebGPU support. The game may require some time to load.\n\nOriginal creator: @Saccc_c\n\n#ClaudeCode #ClaudeOpus #VibeCoding\n #AIGameDevelopment #TheLittlePrince #Shorts",
+      "addedAt": "2026-10-14T14:20:44.234Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Claude Code May Have Discovered a New Planet. NASA Is Checking.",
       "url": "https://www.youtube.com/watch?v=BD4-rrzeqKA",
       "publishedAt": "2026-10-13T14:57:06.000Z",

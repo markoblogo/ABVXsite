@@ -6957,6 +6957,29 @@
       "related": []
     },
     {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "He Built a 3D Little Prince Game in 16 Days Using Claude Opus 5.5",
+      "summary": "What if one developer could turn a classic novel into a playable 3D game in just 16 days? Apparently, that's exactly what happened. Developer Sac (@Saccc_c) used Claude Opus 5.5, Tripo AI, and Blender to create The Littl",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/7JJ47rmMU7w",
+      "publishedAt": "2026-10-14T14:16:40.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=7JJ47rmMU7w"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "writing",
       "section": "writing",
       "ecosystem": "Writing",

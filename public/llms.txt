@@ -1143,6 +1143,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: AI startup funding, AI research, MCP, Anysite, voice agents, robotics, Legal AI
 
+- Your Company Was Built for Expensive Intelligence. AI Just Changed the Price.
+  URL: https://abvx.xyz/writing/ai-native-business-models-redesign-industries
+  Summary: Most companies were designed around expensive human intelligence. AI changes that assumption. The opportunity isn't to automate existing workflows, but to rebuild entire businesses around what's now possible.
+  Group: writing
+  Tags: ai-native-business, ai-agents, business-model-innovation, digital-transformation, workflow-automation, vertical-ai, industry-disruption, future-of-work
+
 ## Working Stories
 
 - Working Stories

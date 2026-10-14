@@ -126,3 +126,14 @@ test('the same atomic lane handles approved project and book sources without reg
  for(const value of values) assert.equal(readFileSync(path.join(root,'content',value.value.surface,value.value.slug+'.md'),'utf8'),value.source);
  assert.equal(JSON.parse(invoke(['--check'])).profile,'catalogue-v1');
 }));
+test('a work/book pool with duplicate catalogue identities writes neither member',()=>fixture(({root,invoke,inputs})=>{
+ const files=['work','books'].map(folder=>{
+  const value=packet(inputs,folder+'-packet');
+  const data={id:'shared',slug:'shared',title:'Shared',type:folder==='work'?'tool':'book',group:folder==='work'?'Standalone Utilities':'Fiction',primarySection:folder==='work'?'systems':'books',appearsIn:[folder==='work'?'systems':'books'],status:'building',visibility:'public',summary:'Approved summary',tags:[],links:[],publishedAt:'2020-01-01'};
+  const source='---\n'+JSON.stringify(data)+'\n---\n\n'+value.value.payload.body_lines[0]+'\n';
+  Object.assign(value.value,{surface:folder,kind:data.type,slug:data.slug,title:data.title,consumer_operation:{id:folder==='work'?'abvx.publish-project':'abvx.publish-book'}});
+  Object.assign(value.value.payload,{source_markdown:source,source_sha256:hash(source)});writeFileSync(value.file,JSON.stringify(value.value));return value.file;
+ });
+ assert.throws(()=>invoke([...files.flatMap(file=>['--packet',file]),'--write']),/Duplicate catalogue/);
+ assert.equal(existsSync(path.join(root,'content')),false);
+}));

@@ -1,6 +1,7 @@
 import { getVideoWritingItems, getPublishedNativeWritingItems } from '@/lib/writing-feed';
 import kitchenNotes from '../../content/kitchen-notes.json';
 import pageMetadata from '../../content/pages.json';
+import publicIndex from '../../public/content-index.json';
 import { getArtifacts, getBooks, getNativeWritingItems } from '@/content';
 import { servicePages } from '@/content/service-pages';
 import { getEditorialArticles } from '@/content/editorials';
@@ -67,7 +68,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/focus`, lastModified: focusDate, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/systems`, lastModified: systemsDate, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/books`, lastModified: booksDate, changeFrequency: 'weekly', priority: 0.85 },
-    { url: `${base}/writing/archive`, lastModified: latestDate([...writing,...storyDates,...videoDates,pageMetadata['/writing/archive']]),changeFrequency:'weekly',priority:0.55 },
+    { url: `${base}/writing/archive`, lastModified: contentDate({updatedAt:publicIndex.items.find(item=>item.canonicalUrl===`${base}/writing/archive`)?.updatedAt||pageMetadata['/writing/archive'].updatedAt}),changeFrequency:'weekly',priority:0.55 },
     { url: `${base}/writing`, lastModified: writingDate, changeFrequency: 'weekly', priority: 0.75 },
     { url: `${base}${workingStoriesSeries.canonicalPath}`, lastModified: latestDate([...storyDates, workingStoriesSeries]), changeFrequency: 'weekly', priority: 0.6 },
     { url: `${base}${kitchenNotes.canonicalPath}`, lastModified: latestDate([...writing.filter(item => item.collection === kitchenNotes.id), kitchenNotes]), changeFrequency: 'monthly', priority: 0.55 },

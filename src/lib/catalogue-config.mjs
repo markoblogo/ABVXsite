@@ -1,5 +1,9 @@
 // Shared rendered catalogue configuration: pages and publication preflight use
 // the same group and series membership instead of duplicating placement rules.
+/** @param {{primarySeriesSlug?:string,seriesSlugs?:string[]}} book @param {string[]} displayedSeries */
+export function isStandaloneCatalogueBook(book,displayedSeries) {
+ return !book.primarySeriesSlug&&!displayedSeries.some(slug=>book.seriesSlugs?.includes(slug));
+}
 /** @type {Array<{title:string,description:string,groups:Array<{title:string,description?:string,slugs:string[]}>}>} */
 export const systemsEcosystems = [
   {

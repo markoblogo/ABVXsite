@@ -43,13 +43,17 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/ogc-oZoebH0
   Summary: Spider-Man 2's web-swinging mechanics are now running inside GTA 5. And AI coding agents helped make it possible. Meet Web of Los Santos, a GTA V mod that brings Spider-Man 2-inspired movement into Los Santos. Web-swingi
 
+- Jeanne la bataillonneuse — Géo Chkouroupiy | Bande-annonce
+  URL: https://abvx.xyz/writing/videos/PmhWa-V00zc
+  Summary: Découvrez « Jeanne la bataillonneuse, suivi de Miss Adrienne » de Géo Chkouroupiy, en traduction française dans la collection Modernisme ukrainien. La guerre et la révolution de 1917. Puis l’usine, le chômage et les mira
+
 - AMI — Digital Infrastructure for Physical Commodity Markets
   URL: https://abvx.xyz/writing/videos/QnpLjwhj6Fs
   Summary: AMI — Agro Market Infrastructure — brings together projects for commodity brokerage operations, private market indices, and market knowledge. This short introduction highlights three parts of AMI: • MN7R — a private work
 
 - ChatGPT Can Now Turn AI-Generated Logos Into Editable SVGs
   URL: https://abvx.xyz/writing/videos/RsxiDWDj2Rg
-  Summary: ChatGPT can already design your logo. Now it can turn that logo into an editable vector file, right inside the chat Meet Vectorize, a ChatGPT plugin that converts AI-generated logos and images into scalable SVG graphics.
+  Summary: ChatGPT can already design your logo. Now it can turn that logo into an editable vector file, right inside the chat. Meet Vectorize, a ChatGPT plugin that converts AI-generated logos and images into scalable SVG graphics.
 
 - Every Startup Founder Has That ONE Deal That Never Closes
   URL: https://abvx.xyz/writing/videos/U-cVLltmoRM

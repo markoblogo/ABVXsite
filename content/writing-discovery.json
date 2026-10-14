@@ -699,6 +699,17 @@
     },
     {
       "source": "youtube",
+      "title": "AMI — Digital Infrastructure for Physical Commodity Markets",
+      "url": "https://www.youtube.com/watch?v=QnpLjwhj6Fs",
+      "publishedAt": "2026-10-14T12:36:47.000Z",
+      "excerpt": "AMI — Agro Market Infrastructure — brings together projects for commodity brokerage operations, private market indices, and market knowledge. This short introduction highlights three parts of AMI: • MN7R — a private work",
+      "coverImage": "https://i.ytimg.com/vi/QnpLjwhj6Fs/hqdefault.jpg",
+      "videoDescription": "AMI — Agro Market Infrastructure — brings together projects for commodity brokerage operations, private market indices, and market knowledge.\n\nThis short introduction highlights three parts of AMI:\n\n• MN7R — a private workspace for commodity brokerage, connecting bids, offers, matches, trades, and execution follow-up.\n• SSI — Spike Spot Index, a private index of the Ukrainian grain market.\n• AMI / 1D3X Books — practical knowledge for brokers, traders, farmers, and market operators.\n\nExplore the projects or discuss a partnership:\nhttps://ami.1d3x.com/\n\nThe SSI screen shown in this video is a website preview, not a live price feed.\n\n#CommodityMarkets #AgriTech #AMI",
+      "addedAt": "2026-10-14T12:51:08.610Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "ChatGPT Can Now Turn AI-Generated Logos Into Editable SVGs",
       "url": "https://www.youtube.com/watch?v=RsxiDWDj2Rg",
       "publishedAt": "2026-10-09T11:31:00.000Z",
@@ -740,6 +751,17 @@
       "videoDescription": "I have absolutely no idea why someone made this. But I'm incredibly glad it exists.\nSomeone turned the concept of a web crawler into an actual digital spider.\n\nA glowing, eight-legged creature crawling across text, links, and references on a web page.\nIt's a creative coding experiment built with JavaScript and CSS, turning something normally invisible into a strangely beautiful digital creature.\nIs it useful? Probably not.\nIs it mesmerizing? Absolutely.\n\nSometimes the internet produces something that doesn't need a purpose. It just needs to exist.\nThis is why I still love the weird side of the internet.\n\nOriginal creation by @rybinfx:\nhttps://x.com/rybinfx/status/2105700296760688790\n\n#CreativeCoding #WebCrawler #JavaScript #DigitalArt #GenerativeArt #Shorts",
       "addedAt": "2026-10-10T15:05:02.000Z",
       "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "youtube",
+      "title": "AsciiTheme — ASCII Themes & Widgets for JavaScript Websites",
+      "url": "https://www.youtube.com/watch?v=y2OW5f8QEXo",
+      "publishedAt": "2026-10-14T12:34:07.000Z",
+      "excerpt": "Give your website an optional ASCII look with AsciiTheme, an open-source JavaScript library with four themes and interactive widgets. This short demo shows the light, dark, sepia, and matrix themes, plus progress bars, s",
+      "coverImage": "https://i.ytimg.com/vi/y2OW5f8QEXo/hqdefault.jpg",
+      "videoDescription": "Give your website an optional ASCII look with AsciiTheme, an open-source JavaScript library with four themes and interactive widgets.\n\nThis short demo shows the light, dark, sepia, and matrix themes, plus progress bars, status indicators, and ASCII boxes.\n\nUse AsciiTheme with vanilla JavaScript, React, Vue, or Web Components. Zero runtime dependencies.\n\nExplore the code and documentation:\nhttps://github.com/markoblogo/AsciiTheme\n\nInstall:\nnpm i @abvx/ascii-theme\n\n#AsciiTheme #ASCII #WebDevelopment",
+      "addedAt": "2026-10-14T12:51:08.610Z",
+      "addedAtBasis": "observed"
     }
   ]
 }

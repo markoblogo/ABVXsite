@@ -42,6 +42,19 @@ await withQaServer(async (base) => {
         assert.ok(!text.includes('**'), route + ' leaked Markdown');
       }
     }
+    for (const [route, id] of [
+      ['/good-dogs-of-the-apocalypse', '89kTx1LhEP0'],
+      ['/books/geo-chkouroupiy-jeanne-la-bataillonneuse', 'PmhWa-V00zc'],
+    ]) {
+      await visit(base + route);
+      const player = page.locator('.book-video-section iframe');
+      assert.equal(await player.count(), 1, route + ' trailer count');
+      assert.equal(await player.getAttribute('src'), `https://www.youtube-nocookie.com/embed/${id}?rel=0&playsinline=1`, route);
+      assert.equal(await player.getAttribute('loading'), 'lazy', route);
+      assert.equal(await player.getAttribute('referrerpolicy'), 'strict-origin-when-cross-origin', route);
+      assert.ok(await player.getAttribute('title'), route + ' accessible player title');
+      assert.equal(await page.locator('.book-video-section figcaption a').getAttribute('href'), `https://youtu.be/${id}`, route);
+    }
     await visit(base + french);
     await page.locator('a[href="' + ukrainian + '"]').click();
     assert.equal(await page.locator('html').getAttribute('lang'), 'uk');

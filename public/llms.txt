@@ -1151,6 +1151,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: predictive-analytics, data-science, consumer-behavior, privacy, marketing-psychology, machine-learning, retail-analytics
 
+- From Launch Videos to Book Trailers: Another Experiment With AI Agent Skills
+  URL: https://abvx.xyz/writing/from-launch-videos-to-book-trailers-ai-agent-skills
+  Summary: After testing /brag on software projects, I used Codex, local Kokoro narration and sound design to create French and English book trailers.
+  Group: writing
+  Tags: ai-agents, agent-skills, codex, ai-video, book-trailers, kokoro, hyperframes, publishing
+
 - How I Work With AI Agents in 2026
   URL: https://abvx.xyz/writing/how-i-work-with-ai-agents-2026
   Summary: My practical AI agent workflow in 2026: orchestrator agents, 20–40 subagents, long-running sessions, taste gates, automation and why AI-native work keeps changing.

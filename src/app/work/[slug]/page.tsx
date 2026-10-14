@@ -1,6 +1,6 @@
 import JsonLd from '@/components/JsonLd';
 import FAQSection from '@/components/FAQSection';
-import MediaPanel from '@/components/MediaPanel';
+import { YouTubeFigure, youtubeVideoId } from '@/components/YouTubeEmbed';
 import SocialLinks from '@/components/SocialLinks';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import WorkBrief from '@/components/WorkBrief';
@@ -25,11 +25,6 @@ import { notFound } from 'next/navigation';
 
 export function generateStaticParams() {
   return getArtifacts().map((artifact) => ({ slug: artifact.slug }));
-}
-
-function youtubeEmbedUrl(url: string): string | undefined {
-  const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([^?&/]+)/);
-  return match?.[1] ? `https://www.youtube.com/embed/${match[1]}` : undefined;
 }
 
 function tagOverlap(a: string[], b: string[]): number {
@@ -222,7 +217,7 @@ export default async function WorkDetailPage({
   const mn7rBlogRelatedImage =
     mn7rBlogRelated?.kind === 'artifact' ? await latestMn7rBlogImage(mn7rBlogRelated.item.rssFeed?.url) : undefined;
   const youtube = artifact.links.find((link) => link.type === 'youtube');
-  const videoUrl = youtube ? youtubeEmbedUrl(youtube.url) : undefined;
+  const videoUrl = youtube && youtubeVideoId(youtube.url) ? youtube.url : undefined;
   const publicArtifact = toPublicArtifact(artifact);
   const channels = socialLinks(publicArtifact.links);
   const breadcrumbSection = breadcrumbSectionFor(artifact);
@@ -261,6 +256,16 @@ export default async function WorkDetailPage({
 
       <WorkBrief artifact={publicArtifact} />
 
+      {videoUrl ? (
+        <section className="work-video-section" aria-labelledby="work-video-title">
+          <div className="work-video-section__header">
+            <div className="eyebrow">Media</div>
+            <h2 id="work-video-title">Video / Demo</h2>
+          </div>
+          <YouTubeFigure href={videoUrl} title={`${artifact.title} — project video`} />
+        </section>
+      ) : null}
+
       <FAQSection
         id="work-faq-title"
         eyebrow={artifact.type === 'market-index' ? 'Methodology FAQ' : 'FAQ'}
@@ -275,16 +280,6 @@ export default async function WorkDetailPage({
             <h2 id="work-social-title">Social / Channels</h2>
           </div>
           <SocialLinks links={channels} />
-        </section>
-      ) : null}
-
-      {videoUrl ? (
-        <section className="work-video-section" aria-labelledby="work-video-title">
-          <div className="work-video-section__header">
-            <div className="eyebrow">Media</div>
-            <h2 id="work-video-title">Video / Demo</h2>
-          </div>
-          <MediaPanel videoUrl={videoUrl} title={artifact.title} variant="video" />
         </section>
       ) : null}
 

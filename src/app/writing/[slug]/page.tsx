@@ -126,7 +126,7 @@ export default async function NativeWritingPage({
       <div className={`native-writing-article__body ${styles.body}`}>
         {item.videoUrl ? <YouTubeEmbed href={item.videoUrl} title={item.title} />
           : item.heroImage || item.coverImage ? <MediaPanel image={item.heroImage || item.coverImage} title={item.title} variant="writing" priority /> : null}
-        <MarkdownContent>{item.body}</MarkdownContent>
+        <MarkdownContent embedVideos>{item.body}</MarkdownContent>
         {item.recipe ? <SectionPanel title="Recipe at a glance" eyebrow={collection.title}>
           <p>{item.recipe.recipeYield}. {item.recipe.timingText}</p>
           <h3>Ingredients</h3>

@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { YouTubeFigure, youtubeVideoId } from './YouTubeEmbed';
 
 type Block =
   | { type: 'heading'; level: 2 | 3 | 4; text: string }
@@ -9,6 +10,7 @@ type Block =
 type InlineMatch = {
   index: number;
   end: number;
+  code?: string;
   label?: string;
   href?: string;
   strong?: string;
@@ -17,12 +19,13 @@ type InlineMatch = {
 };
 
 function inlineMarkdownNodes(text: string): ReactNode[] {
-  const pattern = /\[([^\]]+)\]\(([^)\s]+)\)|(\*\*(.+?)\*\*(?!\*))|(__(.+?)__)|(\*(.+?)\*)/g;
+  const pattern = /`([^`\n]+)`|\[([^\]]+)\]\(([^)\s]+)\)|(\*\*(.+?)\*\*(?!\*))|(__(.+?)__)|(\*(.+?)\*)/g;
   const regularMatches: InlineMatch[] = Array.from(text.matchAll(pattern), (match) => {
-    const [full, label, href, , boldA, , boldB, , italic] = match;
+    const [full, code, label, href, , boldA, , boldB, , italic] = match;
     return {
       index: match.index ?? 0,
       end: (match.index ?? 0) + full.length,
+      ...(code ? { code } : {}),
       ...(label ? { label } : {}),
       ...(href ? { href } : {}),
       ...((boldA || boldB) ? { strong: boldA || boldB } : {}),
@@ -76,10 +79,12 @@ function inlineMarkdownNodes(text: string): ReactNode[] {
     if (match === regular) regularIndex += 1;
     else underscoreIndex += 1;
 
-    const { index, end, label, href, strong, italic, underscoreItalic } = match;
+    const { index, end, code, label, href, strong, italic, underscoreItalic } = match;
     if (index < cursor) continue;
     if (index > cursor) nodes.push(text.slice(cursor, index));
-    if (href) {
+    if (code) {
+      nodes.push(<code key={`inline-code-${index}`}>{code}</code>);
+    } else if (href) {
       const external = /^(https?:\/\/|mailto:)/i.test(href);
       nodes.push(
         <a
@@ -182,10 +187,12 @@ export default function MarkdownContent({
   children,
   className,
   headingOffset = 1,
+  embedVideos = false,
 }: {
   children: string;
   className?: string;
   headingOffset?: 0 | 1;
+  embedVideos?: boolean;
 }) {
   const blocks = parseMarkdownBlocks(children, headingOffset);
   if (!blocks.length) return null;
@@ -210,6 +217,12 @@ export default function MarkdownContent({
           );
         }
 
+        // Only an entire labelled link paragraph opts into video rendering.
+        // Inline links, lists and code examples keep ordinary Markdown behavior.
+        const video = embedVideos ? block.text.match(/^\[([^\]\n]+)\]\((https:\/\/[^\s)]+)\)$/) : null;
+        if (video && youtubeVideoId(video[2])) {
+          return <YouTubeFigure key={`video-${index}`} href={video[2]} title={video[1]} />;
+        }
         return <p key={`${block.type}-${index}`}>{inlineMarkdownNodes(block.text)}</p>;
       })}
     </div>

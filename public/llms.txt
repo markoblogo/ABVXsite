@@ -1009,6 +1009,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Workflow & Orchestration
   Tags: ai-dev, agent-skills, codex, workflows, validation
 
+- Framewright
+  URL: https://abvx.xyz/work/framewright
+  Summary: Video-production workflows and agent skills for choosing tools, combining methods and retaining evidence from real exports.
+  Group: Workflow & Orchestration
+  Tags: video-production, agent-skills, workflow-routing, evidence
+
 - ABVX Lab
   URL: https://abvx.xyz/work/abvx-lab
   Summary: The public catalog and control plane for the ABVX AI coding stack: repository context, orchestration, skills, discovery, and proof surfaces.

@@ -5880,6 +5880,57 @@
       "section": "systems",
       "ecosystem": "AI-native Development Systems",
       "group": "Workflow & Orchestration",
+      "status": "building",
+      "title": "Framewright",
+      "summary": "Video-production workflows and agent skills for choosing tools, combining methods and retaining evidence from real exports.",
+      "canonicalUrl": "https://abvx.xyz/work/framewright",
+      "tags": [
+        "video-production",
+        "agent-skills",
+        "workflow-routing",
+        "evidence"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "ABVX Lab",
+          "url": "https://lab.abvx.xyz/tools/framewright/"
+        },
+        {
+          "type": "github",
+          "label": "GitHub",
+          "url": "https://github.com/markoblogo/framewright"
+        },
+        {
+          "type": "youtube",
+          "label": "Identity film",
+          "url": "https://youtu.be/s3BBP698_r8"
+        }
+      ],
+      "updatedAt": "2026-10-14",
+      "related": [
+        {
+          "title": "ABVX Agent Skills",
+          "canonicalUrl": "https://abvx.xyz/work/abvx-agent-skills",
+          "relation": "related"
+        },
+        {
+          "title": "SET",
+          "canonicalUrl": "https://abvx.xyz/work/set",
+          "relation": "related"
+        },
+        {
+          "title": "CoqPi",
+          "canonicalUrl": "https://abvx.xyz/work/coqpi",
+          "relation": "related"
+        }
+      ]
+    },
+    {
+      "type": "work",
+      "section": "systems",
+      "ecosystem": "AI-native Development Systems",
+      "group": "Workflow & Orchestration",
       "status": "live",
       "title": "git-tweet",
       "summary": "Self-hosted GitHub release announcements for X and Bluesky, with repository-wide release discovery, deduplication, logs, and retries.",

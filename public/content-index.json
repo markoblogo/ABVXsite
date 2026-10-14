@@ -5784,11 +5784,11 @@
     {
       "type": "work",
       "section": "systems",
-      "ecosystem": "Personal AI systems",
-      "group": "Personal AI systems",
+      "ecosystem": "Standalone Utilities",
+      "group": "Standalone Utilities",
       "status": "building",
       "title": "CoqPi",
-      "summary": "A private multilingual desktop copilot for live calls, interview practice, meeting transcription, and reviewed follow-up.",
+      "summary": "A multilingual desktop copilot for call preparation, interview practice, meeting transcription and reviewed follow-up.",
       "canonicalUrl": "https://abvx.xyz/work/coqpi",
       "tags": [
         "multilingual",
@@ -5802,9 +5802,14 @@
           "type": "github",
           "label": "GitHub",
           "url": "https://github.com/markoblogo/CoqPi"
+        },
+        {
+          "type": "youtube",
+          "label": "Product demo",
+          "url": "https://youtu.be/rqKXx_Z5AR0"
         }
       ],
-      "updatedAt": "2026-09-14",
+      "updatedAt": "2026-10-14",
       "related": [
         {
           "title": "ABVX OS",

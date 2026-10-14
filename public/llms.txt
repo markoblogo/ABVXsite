@@ -1049,8 +1049,8 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 - CoqPi
   URL: https://abvx.xyz/work/coqpi
-  Summary: A private multilingual desktop copilot for live calls, interview practice, meeting transcription, and reviewed follow-up.
-  Group: Personal AI systems
+  Summary: A multilingual desktop copilot for call preparation, interview practice, meeting transcription and reviewed follow-up.
+  Group: Standalone Utilities
   Tags: multilingual, calls, transcription, interviews, privacy
 
 - AzurMenton

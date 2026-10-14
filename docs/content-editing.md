@@ -28,6 +28,8 @@ For repeatable ABVX OS handoffs, use [the publication fast path](abvx-os-publish
 4. Select `primarySection`, useful `appearsIn` cross-listing, and an existing catalogue group. Focus market projects may appear in both Focus and Systems; ordinary Systems utilities need not appear in Focus.
 5. Place images/PDFs under `public/media/<kind>/<slug>/` and reference `/media/...` paths. Prefer existing WebP derivatives, include descriptive alt text, and preserve image-role semantics. Keep review notes/flags internal.
 
+Standalone utilities opt into the Systems subgroup with `primarySection: "systems"`, `appearsIn: ["systems"]` and `group: "Standalone Utilities"`. New records are included in the catalogue and its structured item list from metadata; no page slug-array edit is needed. Existing pinned items retain their order. Project videos use the existing `youtube` link and shared detail-page player.
+
 `publishedAt` records publication; `updatedAt` changes for substantive public updates, not for every build. Latest-section cards resolve `updatedAt` before `publishedAt`; inspect their eligibility helper before assuming a new item will be selected on the homepage.
 
 Book and series links use existing identifiers/relationships. A companion's canonical detail route follows its record family, not every catalogue where it appears. Preserve custom `canonicalPath` values and published aliases.

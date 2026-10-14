@@ -23,6 +23,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/7JJ47rmMU7w
   Summary: What if one developer could turn a classic novel into a playable 3D game in just 16 days? Apparently, that's exactly what happened. Developer Sac (@Saccc_c) used Claude Opus 5.5, Tripo AI, and Blender to create The Littl
 
+- Good Dogs of the Apocalypse | A Darkly Comic LitRPG Series
+  URL: https://abvx.xyz/writing/videos/89kTx1LhEP0
+  Summary: The world changed. The dogs read the fine print. Meet Mriya, a former shelter dog navigating a city rewritten by the System. Good Dogs of the Apocalypse is a darkly comic, dog-centered LitRPG series about survival, found
+
 - Claude Code May Have Discovered a New Planet. NASA Is Checking.
   URL: https://abvx.xyz/writing/videos/BD4-rrzeqKA
   Summary: What if an AI coding agent helped discover a planet that astronomers had missed for seven years? And what if NASA actually agreed to investigate? That's exactly what's happening. Independent researcher Pavel Rabtsevich u

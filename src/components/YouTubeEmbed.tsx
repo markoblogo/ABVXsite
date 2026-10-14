@@ -14,6 +14,10 @@ export function youtubeVideoId(href: string): string | null {
   }
 }
 
+export function findYouTubeVideo(links: readonly { type: string; url: string }[]) {
+  return links.find(link => link.type === 'youtube' && youtubeVideoId(link.url));
+}
+
 export default function YouTubeEmbed({ href, title }: { href: string; title: string }) {
   const videoId = youtubeVideoId(href);
   if (!videoId) return null;

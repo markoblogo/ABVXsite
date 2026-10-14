@@ -1,6 +1,6 @@
 import JsonLd from '@/components/JsonLd';
 import FAQSection from '@/components/FAQSection';
-import { YouTubeFigure, youtubeVideoId } from '@/components/YouTubeEmbed';
+import { YouTubeFigure, findYouTubeVideo } from '@/components/YouTubeEmbed';
 import SocialLinks from '@/components/SocialLinks';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import WorkBrief from '@/components/WorkBrief';
@@ -216,8 +216,7 @@ export default async function WorkDetailPage({
   const mn7rBlogRelated = relatedItems.find((related) => related.kind === 'artifact' && related.item.slug === 'mn7r-blog');
   const mn7rBlogRelatedImage =
     mn7rBlogRelated?.kind === 'artifact' ? await latestMn7rBlogImage(mn7rBlogRelated.item.rssFeed?.url) : undefined;
-  const youtube = artifact.links.find((link) => link.type === 'youtube');
-  const videoUrl = youtube && youtubeVideoId(youtube.url) ? youtube.url : undefined;
+  const videoUrl = findYouTubeVideo(artifact.links)?.url;
   const publicArtifact = toPublicArtifact(artifact);
   const channels = socialLinks(publicArtifact.links);
   const breadcrumbSection = breadcrumbSectionFor(artifact);

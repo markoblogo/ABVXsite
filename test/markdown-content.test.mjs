@@ -17,7 +17,7 @@ function loadComponent(name) {
   return compiledModule.exports;
 }
 const MarkdownContent = loadComponent('MarkdownContent').default;
-const { youtubeVideoId } = loadComponent('YouTubeEmbed');
+const { youtubeVideoId, findYouTubeVideo } = loadComponent('YouTubeEmbed');
 const render = (children, props = {}) => renderToStaticMarkup(createElement(MarkdownContent, props, children));
 
 test('renders the publication title with italic inside bold', () => {
@@ -74,4 +74,11 @@ test('validates supported video URL hosts, credentials and IDs before embedding'
 
 test('renders inline commands literally without interpreting links or emphasis', () => {
   assert.ok(render('Run `/brag --voice` and `[literal](https://youtu.be/QnpLjwhj6Fs) *literal*`', { embedVideos: true }).includes('<code>[literal](https://youtu.be/QnpLjwhj6Fs) *literal*</code>'));
+});
+
+test('selects an embeddable project video after preserved channel and unsupported links', () => {
+  const video={type:'youtube',url:'https://youtu.be/QnpLjwhj6Fs'};
+  const old=[{type:'youtube',url:'https://www.youtube.com/@ABV_Creative'},{type:'youtube',url:'https://youtu.be/bad'},{type:'site',url:'https://youtu.be/y2OW5f8QEXo'}];
+  assert.equal(findYouTubeVideo([...old,video]),video);
+  assert.equal(findYouTubeVideo(old),undefined);
 });

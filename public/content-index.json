@@ -804,9 +804,14 @@
           "type": "paperback",
           "label": "Paperback",
           "url": "https://www.amazon.com/dp/B0HLZQH34P"
+        },
+        {
+          "type": "youtube",
+          "label": "Series trailer",
+          "url": "https://youtu.be/89kTx1LhEP0"
         }
       ],
-      "updatedAt": null,
+      "updatedAt": "2026-10-14",
       "related": [
         {
           "title": "Good Dogs of the Apocalypse",
@@ -843,9 +848,14 @@
           "type": "paperback",
           "label": "Paperback",
           "url": "https://www.amazon.com/dp/B0HLLKRHRW"
+        },
+        {
+          "type": "youtube",
+          "label": "Series trailer",
+          "url": "https://youtu.be/89kTx1LhEP0"
         }
       ],
-      "updatedAt": null,
+      "updatedAt": "2026-10-14",
       "related": [
         {
           "title": "Good Dogs of the Apocalypse",
@@ -882,9 +892,14 @@
           "type": "paperback",
           "label": "Paperback",
           "url": "https://www.amazon.com/dp/B0HL9DDF3N"
+        },
+        {
+          "type": "youtube",
+          "label": "Series trailer",
+          "url": "https://youtu.be/89kTx1LhEP0"
         }
       ],
-      "updatedAt": null,
+      "updatedAt": "2026-10-14",
       "related": [
         {
           "title": "Good Dogs of the Apocalypse",
@@ -916,9 +931,14 @@
           "type": "series",
           "label": "Amazon series page",
           "url": "https://www.amazon.com/dp/B0HLJBGX95?binding=kindle_edition&ref=dbs_dp_rwt_sb_pc_tkin"
+        },
+        {
+          "type": "youtube",
+          "label": "Series trailer",
+          "url": "https://youtu.be/89kTx1LhEP0"
         }
       ],
-      "updatedAt": null,
+      "updatedAt": "2026-10-14",
       "related": [
         {
           "title": "Good Dog, Bad Authority: A Darkly Comic System Apocalypse LitRPG (Good Dogs of the Apocalypse Book 3)",
@@ -1141,9 +1161,14 @@
           "type": "paperback",
           "label": "Paperback",
           "url": "https://www.amazon.fr/dp/B0HL658793"
+        },
+        {
+          "type": "youtube",
+          "label": "Bande-annonce",
+          "url": "https://youtu.be/PmhWa-V00zc"
         }
       ],
-      "updatedAt": "2026-09-27",
+      "updatedAt": "2026-10-14",
       "related": [
         {
           "title": "Modernisme Ukrainien",

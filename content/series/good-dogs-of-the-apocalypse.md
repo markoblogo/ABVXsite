@@ -28,6 +28,11 @@
       "type": "series",
       "label": "Amazon series page",
       "url": "https://www.amazon.com/dp/B0HLJBGX95?binding=kindle_edition&ref=dbs_dp_rwt_sb_pc_tkin"
+    },
+    {
+      "type": "youtube",
+      "label": "Series trailer",
+      "url": "https://youtu.be/89kTx1LhEP0"
     }
   ],
   "sortRank": 60,
@@ -49,7 +54,8 @@
     "role": "landing-screenshot",
     "width": 1400,
     "height": 934
-  }
+  },
+  "updatedAt": "2026-10-14"
 }
 ---
 

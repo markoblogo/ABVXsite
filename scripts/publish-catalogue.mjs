@@ -4,6 +4,21 @@ import { existsSync } from 'node:fs';
 import { parseMarkdownSource } from '../src/content/markdown-source.mjs';
 import { validLinkTypes, validStatus } from './content-lib.mjs';
 import { safePublicationTarget, planApprovedMedia } from './publication-media.mjs';
+import path from 'node:path';
+import { parseContentFile } from './content-lib.mjs';
+import { systemsEcosystems, officialSeriesSlugs, bookStandaloneGroups } from '../src/lib/catalogue-config.mjs';
+
+function renderablePlacement(folder,data,root) {
+ if(folder==='work') return systemsEcosystems.some(ecosystem=>ecosystem.groups.some(group=>group.title===data.group||group.slugs.includes(data.slug)));
+ const series=[data.primarySeriesSlug,...(Array.isArray(data.seriesSlugs)?data.seriesSlugs:[])];
+ const displayed=officialSeriesSlugs.some(slug=>{
+  const file=path.join(root,'content/series',slug+'.md');
+  if(!series.includes(slug)||!existsSync(file)) return false;
+  const {data:line}=parseContentFile(file);
+  return line.slug===slug&&(line.visibility||'public')==='public';
+ });
+ return displayed||(!data.primarySeriesSlug&&bookStandaloneGroups.some(group=>group.title===data.group));
+}
 
 // Reuse the approved-source/media/atomic-write path; never synthesize product facts.
 export function planCatalogue(packet, root=process.cwd()) {
@@ -29,6 +44,7 @@ export function planCatalogue(packet, root=process.cwd()) {
  const section=folder==='books'?'books':'systems';
  if((data.primarySection||section)!==section||(data.appearsIn||[section]).some(value=>value!==section)) throw Error('New catalogue placement needs a separate engineering release');
  if(!catalogueTypes[folder].has(data.type)) throw Error('New catalogue types need a separate engineering release');
+ if(!renderablePlacement(folder,data,root)) throw Error('Catalogue placement must match a rendered group or public official series');
  if(data.canonicalPath&&data.canonicalPath!==`/${folder}/${data.slug}`) throw Error('Custom routes need a separate engineering release');
  const targetFile=safePublicationTarget(root,`content/${folder}/${data.slug}.md`);
  if(existsSync(targetFile)) throw Error('Refusing to overwrite existing catalogue item');

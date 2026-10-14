@@ -5,6 +5,15 @@ import { withQaServer } from './qa-server.mjs';
 import { videoId as youtubeVideoId } from '../src/lib/youtube-pages.mjs';
 import { contentFiles, parseContentFile } from './content-lib.mjs';
 
+export function internalPagePaths(hrefs,base='https://abvx.xyz') {
+ const origin=new URL(base).origin;
+ const paths=new Set();
+ for(const href of hrefs) {
+  const url=new URL(href,base);
+  if(url.origin===origin&&!/\.(?:pdf|epub|png|jpe?g|webp|avif|gif|svg|ico|zip|mp4|mp3)$/i.test(url.pathname)) paths.add(url.pathname);
+ }
+ return [...paths];
+}
 export async function boundedMap(values, fn, concurrency=6) {
  let next=0;
  await Promise.all(Array.from({length:Math.min(concurrency,values.length)},async()=>{
@@ -62,8 +71,8 @@ export async function publicationQa(scope) {
      if(videos.length) assert.ok(await page.locator('main iframe').count(),route+' player');
      for(const link of data.links||[]) assert.ok(await page.locator('main a').evaluateAll((links,url)=>links.some(a=>a.getAttribute('href')===url),link.url),route+' outbound link');
     }
-    const internal=await page.locator('main a[href]').evaluateAll(links=>links.map(a=>a.getAttribute('href')).filter(href=>href.startsWith('/')));
-    await boundedMap([...new Set(internal)].map(href=>new URL(href,'https://abvx.xyz').pathname).filter(route=>!/\.(?:pdf|epub|png|jpe?g|webp|zip)$/i.test(route)),async route=>{await get(route);});
+    const internal=await page.locator('main a[href]').evaluateAll(links=>links.map(a=>a.getAttribute('href')));
+    await boundedMap(internalPagePaths(internal,url),async route=>{await get(route);});
     const images=await page.locator('main img').evaluateAll(imgs=>imgs.map(img=>img.getAttribute('src')).filter(Boolean));
     await boundedMap([...new Set(images)].filter(src=>src.startsWith('/')),async src=>{await get(src);});
     for(const width of [320,390,1280]) {

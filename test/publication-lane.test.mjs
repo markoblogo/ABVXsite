@@ -47,6 +47,11 @@ test('invalid second member and duplicate story IDs leave the entire pool unwrit
  assert.throws(()=>invoke(['--packet',c.file,'--packet',d.file,'--write']),/Duplicate/);
  assert.equal(existsSync(path.join(root,'content')),false);
 }));
+test('reserved archive slugs are rejected before the entire native pool writes',()=>fixture(({root,invoke,inputs})=>{
+ const a=packet(inputs,'safe-post'),b=packet(inputs,'archive');
+ assert.throws(()=>invoke(['--packet',a.file,'--packet',b.file,'--write']),/reserved/);
+ assert.equal(existsSync(path.join(root,'content')),false);
+}));
 test('unknown base, pending application changes and committed engineering changes are refused',()=>fixture(({root,invoke,inputs,git})=>{
  const a=packet(inputs,'a-note');
  assert.throws(()=>execFileSync(process.execPath,[command,'--base','0'.repeat(40),'--packet',a.file,'--write'],{cwd:root,stdio:'pipe'}));
@@ -111,7 +116,7 @@ test('different Working Story IDs cannot publish the same slug in a pool',()=>fi
 test('the same atomic lane handles approved project and book sources without regenerating product metadata',()=>fixture(({root,invoke,inputs})=>{
  const values=['work','books'].map(folder=>{
   const value=packet(inputs,folder+'-example');
-  const data={id:folder+'-example',slug:folder+'-example',title:folder+'-example',type:folder==='work'?'tool':'book',primarySection:folder==='work'?'systems':'books',appearsIn:[folder==='work'?'systems':'books'],status:'building',visibility:'public',summary:'Approved product summary',tags:[],links:[],publishedAt:'2020-01-01',seoTitle:'Distinct product title'};
+  const data={id:folder+'-example',slug:folder+'-example',title:folder+'-example',type:folder==='work'?'tool':'book',group:folder==='work'?'Standalone Utilities':'Fiction',primarySection:folder==='work'?'systems':'books',appearsIn:[folder==='work'?'systems':'books'],status:'building',visibility:'public',summary:'Approved product summary',tags:[],links:[],publishedAt:'2020-01-01',seoTitle:'Distinct product title'};
   const source='---\n'+JSON.stringify(data)+'\n---\n\n'+value.value.payload.body_lines[0]+'\n';
   Object.assign(value.value,{surface:folder,kind:data.type,consumer_operation:{id:folder==='work'?'abvx.publish-project':'abvx.publish-book'}});
   Object.assign(value.value.payload,{source_markdown:source,source_sha256:hash(source)});writeFileSync(value.file,JSON.stringify(value.value));return {...value,source};

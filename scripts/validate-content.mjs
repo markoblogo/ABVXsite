@@ -1,4 +1,5 @@
 import { publicationMetadataErrors } from './publication-metadata.mjs';
+import { staticPublicationRoutes } from './publication-routes.mjs';
 import { validateKitchenNotes } from '../src/content/kitchen-notes.mjs';
 import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
@@ -179,7 +180,7 @@ try {
   addError('content/working-stories', error.message);
 }
 
-const routes=new Map();
+const routes=new Map([...staticPublicationRoutes()].map(route=>[route,'static application route']));
 for(const item of all) {
  if((item.data.visibility||'public')!=='public') continue;
  const route=item.data.canonicalPath||`/${item.folder==='work'?'work':item.folder==='writing'?'writing':'books'}/${item.data.slug}`;

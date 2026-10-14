@@ -795,6 +795,17 @@
     },
     {
       "source": "youtube",
+      "title": "Framewright: Choose the Right Tools for Your Next Promo Video",
+      "url": "https://www.youtube.com/watch?v=s3BBP698_r8",
+      "publishedAt": "2026-10-14T17:33:36.000Z",
+      "excerpt": "A software launch. A book trailer. A cinematic interface demo. Different briefs need different video workflows. Framewright is an evolving collection of video-production methods, agent skills and lessons from real ABVX p",
+      "coverImage": "https://i.ytimg.com/vi/s3BBP698_r8/hqdefault.jpg",
+      "videoDescription": "A software launch. A book trailer. A cinematic interface demo. Different briefs need different video workflows.\n\nFramewright is an evolving collection of video-production methods, agent skills and lessons from real ABVX projects. Choose a route, combine tools when a deliverable needs it, and retain the steps, checks and known limitations for the next experiment.\n\nExplore Framewright: https://github.com/markoblogo/framewright\n\nThis 30-second introduction was created with Remotion and its official agent skills, using Framewright's existing cover and an original locally composed instrumental. It is an authored motion-graphics film, not a recording of a video editor or a one-click generation service.\n\nRemotion: https://github.com/remotion-dev/remotion\nOfficial Remotion skills: https://github.com/remotion-dev/skills\n\n#Framewright #Remotion #VideoProduction",
+      "addedAt": "2026-10-14T17:55:15.561Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Every Startup Founder Has That ONE Deal That Never Closes",
       "url": "https://www.youtube.com/watch?v=U-cVLltmoRM",
       "publishedAt": "2026-10-13T13:50:29.000Z",

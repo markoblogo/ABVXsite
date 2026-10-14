@@ -63,6 +63,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/RsxiDWDj2Rg
   Summary: ChatGPT can already design your logo. Now it can turn that logo into an editable vector file, right inside the chat. Meet Vectorize, a ChatGPT plugin that converts AI-generated logos and images into scalable SVG graphics.
 
+- Framewright: Choose the Right Tools for Your Next Promo Video
+  URL: https://abvx.xyz/writing/videos/s3BBP698_r8
+  Summary: A software launch. A book trailer. A cinematic interface demo. Different briefs need different video workflows. Framewright is an evolving collection of video-production methods, agent skills and lessons from real ABVX p
+
 - Every Startup Founder Has That ONE Deal That Never Closes
   URL: https://abvx.xyz/writing/videos/U-cVLltmoRM
   Summary: "We love your product!" "The team is really excited!" "Just waiting for final approval." "We should have everything signed next week." Three months later... Still closing. Any day now. Founders, drop a ❤️ if this feels p

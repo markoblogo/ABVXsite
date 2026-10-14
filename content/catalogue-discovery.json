@@ -429,6 +429,12 @@
     },
     {
       "kind": "work",
+      "slug": "framewright",
+      "addedAt": "2026-10-14T18:03:56.709Z",
+      "basis": "observed"
+    },
+    {
+      "kind": "work",
       "slug": "git-tweet",
       "addedAt": "2026-04-23T00:00:00.000Z",
       "basis": "legacy-source"

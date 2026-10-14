@@ -147,7 +147,8 @@ export default function SystemsPage() {
   const editorialBySlug = new Map(getEditorialArticles().map((article) => [article.slug, article]));
   const amiEditorials = getEditorialArticles().filter((article) => article.translationGroup === 'ami-agro-market-infrastructure')
     .map(({ href, linkLabel, language }) => ({ href, linkLabel, language }));
-  const listedArtifacts = ecosystems.flatMap((ecosystem) => ecosystem.groups.flatMap((group) => systemsGroupSlugs(group, artifacts)));
+  const pinnedSlugs = new Set(ecosystems.flatMap(ecosystem => ecosystem.groups.flatMap(group => [...group.slugs])));
+  const listedArtifacts = ecosystems.flatMap((ecosystem) => ecosystem.groups.flatMap((group) => systemsGroupSlugs(group, artifacts, pinnedSlugs)));
   const listedItems = itemsForSlugs(artifacts, listedArtifacts, new Set<string>());
   const usedSlugs = new Set<string>();
 
@@ -180,7 +181,7 @@ export default function SystemsPage() {
       {ecosystems.map((ecosystem) => {
         const titleId = slugifyFragment(ecosystem.title);
         const renderedGroups = ecosystem.groups
-          .map((group: SystemsGroup) => ({ ...group, items: itemsForSlugs(artifacts, systemsGroupSlugs(group, artifacts), usedSlugs) }))
+          .map((group: SystemsGroup) => ({ ...group, items: itemsForSlugs(artifacts, systemsGroupSlugs(group, artifacts, pinnedSlugs), usedSlugs) }))
           .filter((group) => group.items.length);
 
         if (!renderedGroups.length) return null;

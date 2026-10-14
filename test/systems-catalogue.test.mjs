@@ -20,3 +20,10 @@ test('standalone subgroup and legacy ecosystem share machine-discovery classific
  assert.equal(isStandaloneUtilityGroup('Personal AI systems'),false);
  assert.equal(isStandaloneUtilityGroup(undefined),false);
 });
+
+test('new workflow tools opt in without moving a project pinned to another subgroup', () => {
+ const group={title:'Workflow & Orchestration',slugs:['set','agents-md-generator']};
+ const items=[{slug:'framewright',group:group.title,sortRank:125},{slug:'git-tweet',group:group.title},{slug:'set',group:group.title}];
+ assert.deepEqual(systemsGroupSlugs(group,items,new Set(['set','agents-md-generator','git-tweet'])),['set','agents-md-generator','framewright']);
+ assert.deepEqual(group.slugs,['set','agents-md-generator']);
+});

@@ -33,7 +33,8 @@
     "height": 1024,
     "alt": "Collage introducing the /brag AI agent skill, with a robot director and launch-video examples for AMI and AsciiTheme.",
     "role": "generic-thumbnail"
-  }
+  },
+  "updatedAt": "2026-10-14"
 }
 ---
 
@@ -346,3 +347,5 @@ The repository's README documents both approaches.
 And if you want to see what the results look like outside the original examples, the two videos above were produced while testing the tool on my own projects.
 
 Related: [How I Work With AI Agents in 2026](/writing/how-i-work-with-ai-agents-2026).
+
+Continue the experiment: [From Launch Videos to Book Trailers: Another Experiment With AI Agent Skills](/writing/from-launch-videos-to-book-trailers-ai-agent-skills).

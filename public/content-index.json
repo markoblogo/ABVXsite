@@ -6959,6 +6959,31 @@
       "related": []
     },
     {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "From Launch Videos to Book Trailers: Another Experiment With AI Agent Skills",
+      "summary": "After testing /brag on software projects, I used Codex, local Kokoro narration and sound design to create French and English book trailers.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/from-launch-videos-to-book-trailers-ai-agent-skills",
+      "tags": [
+        "ai-agents",
+        "agent-skills",
+        "codex",
+        "ai-video",
+        "book-trailers",
+        "kokoro",
+        "hyperframes",
+        "publishing",
+        "sound-design"
+      ],
+      "links": [],
+      "updatedAt": "2026-10-14",
+      "related": []
+    },
+    {
       "type": "video",
       "section": "writing",
       "ecosystem": "Writing",

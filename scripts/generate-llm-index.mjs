@@ -1,4 +1,5 @@
 import { isStandaloneUtilityGroup } from '../src/lib/systems-catalogue.mjs';
+import { writingArchiveLastModified } from '../src/lib/writing-archive.mjs';
 import { readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { automaticVideoItems, videoCompanionSnapshot, videoRedirectSnapshot, isPublishedWriting } from '../src/lib/youtube-pages.mjs';
@@ -294,7 +295,7 @@ const videoIndexItems = videoPages.map(item => ({
   links: [{ type: 'youtube', label: 'Watch on YouTube', url: item.videoUrl }], related: [],
 }));
 
-archiveIndexItem.updatedAt=[archiveIndexItem.updatedAt,...rawItems.filter(item=>item.folder==='writing').map(item=>item.updatedAt||item.publishedAt),...workingStories.map(item=>item.updatedAt||item.date),...videoIndexItems.map(item=>item.publishedAt)].filter(value=>Number.isFinite(Date.parse(value))).sort((a,b)=>Date.parse(b)-Date.parse(a))[0];
+archiveIndexItem.updatedAt=writingArchiveLastModified({items:[...videoIndexItems,...rawItems.map(publicIndexItem),...workingIndexItems]},discovery,archiveIndexItem.updatedAt);
 const indexItems = [archiveIndexItem, ...videoIndexItems, ...rawItems.map(publicIndexItem), ...serviceIndexItems, ...editorialIndexItems, collaborationIndexItem, youtubeIndexItem, kitchenIndexItem, workingSeriesIndexItem, ...workingIndexItems]
   .sort((a, b) => a.section.localeCompare(b.section) || a.title.localeCompare(b.title));
 

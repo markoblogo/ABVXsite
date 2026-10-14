@@ -42,3 +42,9 @@ Native OS `publication begin/check/complete-cycle` still owns only Writing/Worki
 For each next release, inspect the scoped receipt and the exact deployed SHA once. Keep editorial source/claim review, contextual links and image alt text per material. Review per-page Search Console/Bing indexing and 28-day impressions/clicks separately; publication or sitemap inclusion does not guarantee indexing or rankings.
 
 References: [Google sitemap and lastmod guidance](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap), [localized versions](https://developers.google.com/search/docs/specialty/international/localized-versions), [structured-data policies](https://developers.google.com/search/docs/appearance/structured-data/sd-policies), [people-first content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content).
+
+## Post-merge review follow-up
+
+Review of the released PR identified four additional boundaries. Catalogue pools now reject repeated IDs/slugs across work/book surfaces before any write. Approved catalogue media keeps the existing optional-dimension schema; explicitly supplied dimensions must be positive finite numbers, while source hashes, image signatures and alt text remain required. A book assigned through `seriesSlugs` to a displayed official series is excluded from standalone groups, preserving secondary-only series membership without duplicate cards. The complete archive's modification date includes immutable first-addition timestamps for its actual native/story/video members; unrelated external-feed additions do not update it. The generator owns that date and sitemap reuses the generated archive record, with a browser-QA equality assertion.
+
+These are engineering corrections, not measured publication observations. The follow-up remains a separate reviewed release after PR #87.

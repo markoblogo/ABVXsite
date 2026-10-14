@@ -1,4 +1,4 @@
-import { officialSeriesSlugs, bookStandaloneGroups as standaloneGroups } from '@/lib/catalogue-config.mjs';
+import { officialSeriesSlugs, bookStandaloneGroups as standaloneGroups, isStandaloneCatalogueBook } from '@/lib/catalogue-config.mjs';
 import BookCatalogueCard from '@/components/BookCatalogueCard';
 import EditorialSectionLink from '@/components/EditorialSectionLink';
 import CompanionCatalogueCard from '@/components/CompanionCatalogueCard';
@@ -158,7 +158,7 @@ export default function BooksPage() {
     .map((slug) => series.find((item) => item.slug === slug))
     .filter((item): item is Series => Boolean(item));
   const bookItems = books.filter((book) => book.type !== 'series');
-  const standaloneBooks = bookItems.filter((book) => !book.primarySeriesSlug);
+  const standaloneBooks = bookItems.filter((book) => isStandaloneCatalogueBook(book,officialSeries.map(line=>line.slug)));
   const publishingSystems = publishingArtifacts.filter(
     (artifact) =>
       artifact.group === 'Publishing systems & protocols' ||

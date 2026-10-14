@@ -99,6 +99,9 @@ await withQaServer(async (base) => {
     const indexResponse = await page.request.get(base + '/content-index.json');
     assert.equal(indexResponse.status(), 200);
     const index = await indexResponse.json();
+    const archiveIndex=index.items.find(item=>item.canonicalUrl==='https://abvx.xyz/writing/archive');
+    const archiveXml=[...xml.matchAll(/<url>([\s\S]*?)<\/url>/g)].find(match=>match[1].includes('<loc>https://abvx.xyz/writing/archive</loc>'))?.[1];
+    assert.equal(Date.parse(archiveXml?.match(/<lastmod>(.*?)<\/lastmod>/)?.[1]),Date.parse(archiveIndex?.updatedAt),'archive sitemap/index modification dates');
     const llmsResponse = await page.request.get(base + '/llms.txt');
     assert.equal(llmsResponse.status(), 200);
     const llms = await llmsResponse.text();

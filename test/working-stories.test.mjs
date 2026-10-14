@@ -275,6 +275,7 @@ test('sitemap discovers published stories and series while excluding private and
     { slug: 'archive-video', videoUrl: 'https://www.youtube.com/watch?v=NewVideo003', publishedAt: '2020-01-01', status: 'archive' },
   ];
   const sitemap = compile('src/app/sitemap.ts', {
+    '../../public/content-index.json': {items:[{canonicalUrl:'https://abvx.xyz/writing/archive',updatedAt:'2026-10-14T19:00:00.000Z'}]},
     '../../content/pages.json': JSON.parse(readFileSync(path.join(repo, 'content/pages.json'))),
     '../../content/working-stories.json': series,
     '../../content/kitchen-notes.json': JSON.parse(readFileSync(path.join(repo, 'content/kitchen-notes.json'))),
@@ -293,9 +294,10 @@ test('sitemap discovers published stories and series while excluding private and
     assert.equal(entries.length, 2);
     assert.equal(entries.find((item) => item.url.endsWith('/test-only-story')).lastModified.toISOString(), '2021-01-01T00:00:00.000Z');
     assert.ok(!routes.some((item) => /\/(private|future)$/.test(item.url)));
-    for (const url of ['https://abvx.xyz', 'https://abvx.xyz/writing/archive']) {
+    for (const url of ['https://abvx.xyz']) {
       assert.ok(routes.find(item => item.url === url).lastModified >= new Date(series.updatedAt), url + ' must include the series update date');
     }
+    assert.equal(routes.find(item=>item.url==='https://abvx.xyz/writing/archive').lastModified.toISOString(),'2026-10-14T19:00:00.000Z','archive date must reuse the deployed discovery snapshot');
     const pages=JSON.parse(readFileSync(path.join(repo,'content/pages.json')));
     for(const route of ['/ami','/fr/ami','/llmo']) assert.equal(routes.find(item=>item.url==='https://abvx.xyz'+route).lastModified.toISOString(),new Date(pages[route].updatedAt).toISOString(),route+' must ignore unrelated series publication');
   } finally { process.chdir(cwd); }

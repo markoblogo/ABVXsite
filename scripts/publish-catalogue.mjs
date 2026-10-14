@@ -49,7 +49,10 @@ export function planCatalogue(packet, root=process.cwd()) {
  const targetFile=safePublicationTarget(root,`content/${folder}/${data.slug}.md`);
  if(existsSync(targetFile)) throw Error('Refusing to overwrite existing catalogue item');
  const images=[data.media,data.heroImage].filter(Boolean);
- for(const image of images) if(typeof image.src!=='string'||!image.src.startsWith('/media/')||!image.alt||!(image.width>0)||!(image.height>0)) throw Error('Catalogue images require local paths, alt text and positive dimensions');
+ for(const image of images) {
+  if(typeof image.src!=='string'||!image.src.startsWith('/media/')||typeof image.alt!=='string'||!image.alt.trim()) throw Error('Catalogue images require local paths and alt text');
+  if(['width','height'].some(key=>image[key]!==undefined&&(!Number.isFinite(image[key])||image[key]<=0))) throw Error('Explicit catalogue image dimensions must be positive numbers');
+ }
  const media=planApprovedMedia(new Set(images.map(image=>image.src)),packet.payload.media_assets,root);
  return {source,targetFile,media,report:{operation,targetFile,slug:data.slug,title:data.title,media:media.map(({target,reused})=>({target,reused}))}};
 }

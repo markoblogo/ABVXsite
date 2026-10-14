@@ -6,7 +6,15 @@ import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { planCatalogue } from '../scripts/publish-catalogue.mjs';
 import { applyPublications } from '../scripts/publication-media.mjs';
+import { isStandaloneCatalogueBook } from '../src/lib/catalogue-config.mjs';
 const hash=source=>createHash('sha256').update(source).digest('hex');
+test('a book in a displayed secondary series is not also rendered as standalone',()=>{
+ const book={group:'Fiction',seriesSlugs:['good-dogs-of-the-apocalypse']};
+ assert.equal(isStandaloneCatalogueBook(book,['good-dogs-of-the-apocalypse']),false);
+ assert.equal(isStandaloneCatalogueBook(book,[]),true);
+ assert.equal(isStandaloneCatalogueBook({group:'Fiction'},['good-dogs-of-the-apocalypse']),true);
+ assert.equal(isStandaloneCatalogueBook({primarySeriesSlug:'another-series'},[]),false);
+});
 function packet(folder='work',patch={}) {
  const data={id:'example',slug:'example',title:'Example',type:folder==='work'?'tool':'book',group:folder==='work'?'Standalone Utilities':'Fiction',status:'building',visibility:'public',publishedAt:'2020-01-01',primarySection:folder==='work'?'systems':'books',appearsIn:[folder==='work'?'systems':'books'],summary:'Useful summary',tags:[],links:[{type:'github',label:'Source',url:'https://github.com/example/project'}],seoTitle:'Explicit search title',...patch};
  const body='Author approved product description.';const source='---\n'+JSON.stringify(data)+'\n---\n\n'+body+'\n';
@@ -45,5 +53,18 @@ test('unsigned sources, source conflicts, unsupported placement and unapproved m
   const legacy=packet();delete legacy.payload.source_markdown;assert.throws(()=>planCatalogue(legacy,root),/approved/);
   const conflict=packet();conflict.title='Different';assert.throws(()=>planCatalogue(conflict,root),/conflicts/);
   assert.equal(existsSync(path.join(root,'content')),false);
+ }finally{rmSync(root,{recursive:true,force:true});}
+});
+test('standard catalogue media can omit dimensions while explicit invalid values fail',()=>{
+ const root=mkdtempSync(path.join(tmpdir(),'abvx-catalogue-image-'));
+ try {
+  const bytes=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+a7xkAAAAASUVORK5CYII=','base64');
+  const source=path.join(root,'input.png');writeFileSync(source,bytes);
+  for(const folder of ['work','books']) {
+   const value=packet(folder,{media:{src:'/media/example.png',alt:'Approved cover',role:'generic-thumbnail'}});
+   value.payload.media_assets=[{source,target:'/media/example.png',sha256:hash(bytes)}];
+   assert.equal(planCatalogue(value,root).media.length,1);
+   for(const width of [0,-1,'100',null]) assert.throws(()=>planCatalogue(packet(folder,{media:{src:'/media/example.png',alt:'Cover',width}}),root),/dimension/);
+  }
  }finally{rmSync(root,{recursive:true,force:true});}
 });

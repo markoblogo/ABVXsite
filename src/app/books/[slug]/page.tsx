@@ -7,6 +7,7 @@ import JsonLd from '@/components/JsonLd';
 import MarkdownContent from '@/components/MarkdownContent';
 import MediaPanel from '@/components/MediaPanel';
 import TagList from '@/components/TagList';
+import { findYouTubeVideo, YouTubeFigure } from '@/components/YouTubeEmbed';
 import { getArtifacts, getArtifactsBySection, getBookBySlug, getBooks, type Artifact, type Book, type ContentImage } from '@/content';
 import { fetchMn7rFeed } from '@/lib/feeds';
 import {
@@ -25,11 +26,6 @@ import type { ReactNode } from 'react';
 
 export function generateStaticParams() {
   return getBooks().map((book) => ({ slug: book.slug }));
-}
-
-function youtubeEmbedUrl(url: string): string | undefined {
-  const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([^?&/]+)/);
-  return match?.[1] ? `https://www.youtube.com/embed/${match[1]}` : undefined;
 }
 
 function formatFormats(formats?: string[]): string | undefined {
@@ -171,15 +167,14 @@ export default async function BookDetailPage({
   const image = book.heroImage || book.coverImage;
   const title = book.displayTitle || book.shortTitle || book.title;
   const audioLink = book.links.find((link) => link.type === 'audio');
-  const youtube = book.links.find((link) => link.type === 'youtube' && youtubeEmbedUrl(link.url));
-  const videoUrl = youtube ? youtubeEmbedUrl(youtube.url) : undefined;
-  const videoSection = videoUrl ? (
+  const youtube = findYouTubeVideo(book.links);
+  const videoSection = youtube ? (
     <section className="book-video-section" aria-labelledby="book-video-title">
       <div className="book-video-section__header">
         <div className="eyebrow">Media</div>
         <h2 id="book-video-title">Watch / Context</h2>
       </div>
-      <MediaPanel videoUrl={videoUrl} title={title} variant="video" />
+      <YouTubeFigure href={youtube.url} title={`${title} video`} />
     </section>
   ) : null;
 

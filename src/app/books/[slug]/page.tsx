@@ -171,6 +171,17 @@ export default async function BookDetailPage({
   const image = book.heroImage || book.coverImage;
   const title = book.displayTitle || book.shortTitle || book.title;
   const audioLink = book.links.find((link) => link.type === 'audio');
+  const youtube = book.links.find((link) => link.type === 'youtube' && youtubeEmbedUrl(link.url));
+  const videoUrl = youtube ? youtubeEmbedUrl(youtube.url) : undefined;
+  const videoSection = videoUrl ? (
+    <section className="book-video-section" aria-labelledby="book-video-title">
+      <div className="book-video-section__header">
+        <div className="eyebrow">Media</div>
+        <h2 id="book-video-title">Watch / Context</h2>
+      </div>
+      <MediaPanel videoUrl={videoUrl} title={title} variant="video" />
+    </section>
+  ) : null;
 
   if (book.type === 'series') {
     const relatedItems = [
@@ -252,6 +263,8 @@ export default async function BookDetailPage({
           ) : null}
         </section>
 
+        {videoSection}
+
         {relatedItems.length ? (
           <section className="home-section" aria-labelledby="series-related-title">
             <div className="home-section__header">
@@ -294,8 +307,6 @@ export default async function BookDetailPage({
   const mn7rBlogRelated = relatedItems.find((related) => related.kind === 'artifact' && related.item.slug === 'mn7r-blog');
   const mn7rBlogRelatedImage =
     mn7rBlogRelated?.kind === 'artifact' ? await latestMn7rBlogImage(mn7rBlogRelated.item.rssFeed?.url) : undefined;
-  const youtube = book.links.find((link) => link.type === 'youtube');
-  const videoUrl = youtube ? youtubeEmbedUrl(youtube.url) : undefined;
   const formats = formatFormats(book.availableFormats?.length ? book.availableFormats : book.formats);
   const buyLinks = purchaseLinks(book);
   const primarySeries = book.primarySeriesSlug ? getBookBySlug(book.primarySeriesSlug) : undefined;
@@ -387,15 +398,7 @@ export default async function BookDetailPage({
 
       <FAQSection id="book-faq-title" title="Reader questions." faqs={book.faqs || []} />
 
-      {videoUrl ? (
-        <section className="book-video-section" aria-labelledby="book-video-title">
-          <div className="book-video-section__header">
-            <div className="eyebrow">Media</div>
-            <h2 id="book-video-title">Watch / Context</h2>
-          </div>
-          <MediaPanel videoUrl={videoUrl} title={title} variant="video" />
-        </section>
-      ) : null}
+      {videoSection}
 
       {relatedItems.length ? (
         <section className="home-section" aria-labelledby="related-books-title">

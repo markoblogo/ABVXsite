@@ -34,6 +34,11 @@
       "type": "paperback",
       "label": "Paperback",
       "url": "https://www.amazon.com/dp/B0HLZQH34P"
+    },
+    {
+      "type": "youtube",
+      "label": "Series trailer",
+      "url": "https://youtu.be/89kTx1LhEP0"
     }
   ],
   "formats": [
@@ -56,7 +61,8 @@
     "role": "mockup",
     "width": 1400,
     "height": 934
-  }
+  },
+  "updatedAt": "2026-10-14"
 }
 ---
 

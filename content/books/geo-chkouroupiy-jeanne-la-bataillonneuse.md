@@ -42,6 +42,11 @@
       "type": "paperback",
       "label": "Paperback",
       "url": "https://www.amazon.fr/dp/B0HL658793"
+    },
+    {
+      "type": "youtube",
+      "label": "Bande-annonce",
+      "url": "https://youtu.be/PmhWa-V00zc"
     }
   ],
   "featured": false,
@@ -66,7 +71,7 @@
     "modernisme-ukrainien"
   ],
   "publishedAt": "2026-09-27",
-  "updatedAt": "2026-09-27"
+  "updatedAt": "2026-10-14"
 }
 ---
 

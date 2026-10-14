@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { systemsGroupSlugs } from '../src/lib/systems-catalogue.mjs';
+import { systemsGroupSlugs, isStandaloneUtilityGroup } from '../src/lib/systems-catalogue.mjs';
 test('a new standalone utility joins the catalogue and discovery without page edits', () => {
  const group={title:'Standalone Utilities',slugs:['ytmamp','abvx-shortener']};
  const artifacts=[{slug:'coqpi',group:'Standalone Utilities',sortRank:120},{slug:'other',group:'Commercial Sites & Interfaces'},{slug:'ytmamp',group:'Standalone Utilities'}];
@@ -12,4 +12,11 @@ test('pinned order stays stable and metadata additions sort deterministically', 
  const items=[{slug:'z',group:group.title,sortRank:2},{slug:'a',group:group.title,sortRank:2},{slug:'first',group:group.title,sortRank:1}];
  assert.deepEqual(systemsGroupSlugs(group,items),['pinned','first','a','z']);
  assert.deepEqual(systemsGroupSlugs({...group,title:'Other group'},items),['pinned']);
+});
+
+test('standalone subgroup and legacy ecosystem share machine-discovery classification', () => {
+ assert.equal(isStandaloneUtilityGroup('Standalone Utilities'),true);
+ assert.equal(isStandaloneUtilityGroup('Standalone Utilities & Experiments'),true);
+ assert.equal(isStandaloneUtilityGroup('Personal AI systems'),false);
+ assert.equal(isStandaloneUtilityGroup(undefined),false);
 });

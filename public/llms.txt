@@ -1039,6 +1039,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Standalone Utilities & Experiments
   Tags: web-service, utility, shortener
 
+- CoqPi
+  URL: https://abvx.xyz/work/coqpi
+  Summary: A multilingual desktop copilot for call preparation, interview practice, meeting transcription and reviewed follow-up.
+  Group: Standalone Utilities
+  Tags: multilingual, calls, transcription, interviews, privacy
+
 - YTMamp
   URL: https://abvx.xyz/work/ytmamp
   Summary: A retro desktop remote for YouTube Music with a Chromium companion, waveform, media controls, and a token-protected local integration API.
@@ -1046,12 +1052,6 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Tags: macos, music, tool, youtube-music
 
 ## Other public systems
-
-- CoqPi
-  URL: https://abvx.xyz/work/coqpi
-  Summary: A multilingual desktop copilot for call preparation, interview practice, meeting transcription and reviewed follow-up.
-  Group: Standalone Utilities
-  Tags: multilingual, calls, transcription, interviews, privacy
 
 - AzurMenton
   URL: https://abvx.xyz/work/azurmenton

@@ -9,3 +9,7 @@ export function systemsGroupSlugs(group, artifacts) {
   for (const item of additions) { if (!seen.has(item.slug)) { pinned.push(item.slug); seen.add(item.slug); } }
   return pinned;
 }
+
+export function isStandaloneUtilityGroup(group) {
+  return group === 'Standalone Utilities' || group === 'Standalone Utilities & Experiments';
+}

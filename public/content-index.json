@@ -5784,7 +5784,7 @@
     {
       "type": "work",
       "section": "systems",
-      "ecosystem": "Standalone Utilities",
+      "ecosystem": "Standalone Utilities & Experiments",
       "group": "Standalone Utilities",
       "status": "building",
       "title": "CoqPi",

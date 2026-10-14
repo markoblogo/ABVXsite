@@ -57,3 +57,9 @@ Update content, section links, relationships, media, and both machine indexes to
 Bulk edits must keep the same source ownership and stable identifiers. A passed build does not establish link correctness, publication, or search indexing.
 
 Kitchen Notes recipe fields and local cookbook export: [guide](kitchen-notes.md).
+
+## Videos inside Writing articles
+
+Put a labelled HTTPS YouTube link in its own paragraph, e.g. `[AMI — launch video](https://youtu.be/VIDEO_ID)`. Native Writing renders each supported standalone video link as a responsive, lazy, privacy-enhanced player with the original URL as a fallback link. Inline references, lists and fenced code remain ordinary Markdown. Other Markdown surfaces keep link rendering unless they explicitly enable video blocks. Do not use the single `videoUrl` companion field for a multi-project review: it remains an ordinary article in the Writing feed.
+
+Project detail pages reuse the same player below their brief from the first supported `youtube` link in the existing project `links` array. Catalogue cards are unchanged. Keep previous channel/demo links when adding a newly featured project video. Without a verified original upload date, do not invent VideoObject metadata.

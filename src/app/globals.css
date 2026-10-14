@@ -3883,7 +3883,19 @@ a {
 
 .youtube-embed {
   display: block;
-  min-height: 200px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.youtube-figure {
+  margin: 0;
+  min-width: 0;
+}
+
+.youtube-figure figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
 }
 
 .youtube-preview {
@@ -5011,7 +5023,7 @@ a {
   padding: clamp(1rem, 3vw, 1.5rem);
 }
 
-.work-video-section .media-panel--video {
+.work-video-section .youtube-figure {
   border: 1px solid var(--line);
 }
 

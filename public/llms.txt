@@ -1145,6 +1145,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: AI agents, multi-agent orchestration, agent workflows, AI automation, human review
 
+- I Tested /brag: An AI Agent Skill That Turns Projects into Launch Videos
+  URL: https://abvx.xyz/writing/brag-ai-agent-skill-launch-videos-review
+  Summary: I tested /brag, an open-source agent skill that turns software projects into 20-second launch videos. Two projects, two results, and a much simpler promotional workflow.
+  Group: writing
+  Tags: ai-agents, agent-skills, codex, claude-code, ai-video, product-launch, developer-tools, hyperframes
+
 - Where Is AI Startup Funding Actually Going? I Analyzed 7,740 Companies
   URL: https://abvx.xyz/writing/ai-startup-funding-trends-7740-companies
   Summary: I analyzed 7,740 AI startups across 20 use cases to see where funding is growing, from voice agents and robotics to Legal AI and mega-rounds.

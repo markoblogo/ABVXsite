@@ -1,3 +1,4 @@
+import { isStandaloneUtilityGroup } from '../src/lib/systems-catalogue.mjs';
 import { readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { automaticVideoItems, videoCompanionSnapshot, videoRedirectSnapshot, isPublishedWriting } from '../src/lib/youtube-pages.mjs';
@@ -111,7 +112,7 @@ function ecosystemLabel(item) {
   if (['Workflow & Orchestration', 'Development Surfaces & Interfaces', 'Protocols & Decision Systems'].includes(item.group)) {
     return 'AI-native Development Systems';
   }
-  if (item.group === 'Standalone Utilities & Experiments') return 'Standalone Utilities & Experiments';
+  if (isStandaloneUtilityGroup(item.group)) return 'Standalone Utilities & Experiments';
   return item.group || item.primarySection || item.folder;
 }
 
@@ -307,7 +308,7 @@ function isAiNative(item) {
 }
 
 function isStandaloneUtility(item) {
-  return item.folder === 'work' && item.group === 'Standalone Utilities & Experiments';
+  return item.folder === 'work' && isStandaloneUtilityGroup(item.group);
 }
 
 function isPublishingLine(item) {

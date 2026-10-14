@@ -1,7 +1,9 @@
+import { publicationMetadataErrors } from './publication-metadata.mjs';
 import { execFileSync } from 'node:child_process';
 import { readFileSync, realpathSync } from 'node:fs';
 import { pathToFileURL } from 'node:url';
 import { planWriting } from './publish-writing.mjs';
+import { planCatalogue } from './publish-catalogue.mjs';
 import { planWorkingStory } from './publish-working-story.mjs';
 import { applyPublications } from './publication-media.mjs';
 import { publicationScope } from './publication-scope.mjs';
@@ -13,11 +15,12 @@ function git(root, ...args) {
 }
 export function assertPublicationBoundary(base, root=process.cwd()) {
  const scope = publicationScope(base, 'HEAD', root, true);
- if (scope.profile !== 'publication-v1') throw new Error(`Outside publication boundary: ${scope.reason}. Use a separate engineering release.`);
+ if (!['publication-v1','catalogue-v1'].includes(scope.profile)) throw new Error(`Outside publication boundary: ${scope.reason}. Use a separate engineering release.`);
  return scope;
 }
 function validateRoutineWriting(source) {
  const {data} = parseMarkdownSource(source);
+ const errors=publicationMetadataErrors(data);if(errors.length) throw Error(errors.join('; '));
  if (!['note','article','review','build_log','other','recipe'].includes(data.type)) throw new Error('New publication types need a separate engineering release');
  for (const key of ['title','summary','seoTitle','seoDescription']) {
   if ((['title','summary'].includes(key)||data[key]!==undefined) && (typeof data[key]!=='string'||!data[key].trim())) throw new Error(`Invalid publication ${key}`);
@@ -36,11 +39,13 @@ export function planPublicationPool(packets, base, root=process.cwd()) {
  if (git(root,'status','--porcelain','--untracked-files=all')) throw new Error('Routine publication requires a clean checkout; keep packets outside the site');
  if (git(root,'diff','--name-only',base,'HEAD','--')) throw new Error('Start from the base in a fresh publication branch; use a separate engineering release for other changes');
  if (!packets.length) throw new Error('At least one approved packet required');
+ if(new Set(packets.map(p=>['work','books'].includes(p.surface)?'catalogue':'writing')).size>1) throw new Error('Use separate catalogue and Writing releases');
  const plans=packets.map(packet=>{
   if (typeof packet.payload?.source_markdown!=='string') throw new Error('Routine publication requires the complete approved source');
   if (packet.surface==='writing') {
    const plan=planWriting(packet,root);validateRoutineWriting(plan.source);return plan;
   }
+  if (['work','books'].includes(packet.surface)) return planCatalogue(packet,root);
   if (packet.surface==='working-stories') return planWorkingStory(packet,root);
   throw new Error('Unsupported routine publication surface');
  });

@@ -101,6 +101,7 @@ type BaseContentItem<TType extends string> = {
   slug: string;
   title: string;
   seoTitle?: string;
+  seoDescription?: string;
   canonicalPath?: string;
   shortTitle?: string;
   type: TType;

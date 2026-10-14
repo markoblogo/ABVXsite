@@ -40,3 +40,20 @@ test('committed pools stay scoped; deletions, slug changes and existing media ed
   writeFileSync(path.join(root,'content/writing/old.md'),post('old'));rmSync(path.join(root,'content/writing/old.md'));assert.equal(publicationScope(base,'HEAD',root,true).profile,'full');
  } finally{rmSync(root,{recursive:true,force:true});}
 });
+
+test('catalogue data and media choose scoped QA, while route changes, engineering and mixed families fail closed',()=>{
+ const root=mkdtempSync(path.join(tmpdir(),'abvx-catalogue-scope-'));
+ const git=(...args)=>execFileSync('git',args,{cwd:root,encoding:'utf8'}).trim();
+ const source=(slug,patch={})=>'---\n'+JSON.stringify({id:slug,slug,title:slug,type:'tool',status:'building',visibility:'public',publishedAt:'2020-01-01',primarySection:'systems',appearsIn:['systems'],...patch})+'\n---\nDescription.';
+ try {
+  git('init','-q');writeFileSync(path.join(root,'README.md'),'base');git('add','.');git('-c','user.name=Test','-c','user.email=test@example.invalid','commit','-qm','base');const base=git('rev-parse','HEAD');
+  mkdirSync(path.join(root,'content/work'),{recursive:true});mkdirSync(path.join(root,'content/books'),{recursive:true});
+  writeFileSync(path.join(root,'content/work/tool.md'),source('tool'));
+  writeFileSync(path.join(root,'content/books/book.md'),source('book',{primarySection:'books',appearsIn:['books'],status:'released',type:'book'}));
+  const scope=publicationScope(base,'HEAD',root,true);assert.equal(scope.profile,'catalogue-v1');assert.deepEqual(scope.routes,['/books/book','/work/tool']);assert.deepEqual(scope.hubs,['/','/books','/systems']);
+  writeFileSync(path.join(root,'content/work/tool.md'),source('tool',{canonicalPath:'/custom'}));assert.equal(publicationScope(base,'HEAD',root,true).profile,'full');
+  writeFileSync(path.join(root,'content/work/tool.md'),source('tool'));
+  mkdirSync(path.join(root,'content/writing'));writeFileSync(path.join(root,'content/writing/post.md'),source('post',{primarySection:'writing',status:'live'}));assert.equal(publicationScope(base,'HEAD',root,true).profile,'full');
+  rmSync(path.join(root,'content/writing'),{recursive:true});writeFileSync(path.join(root,'package.json'),'{}');assert.equal(publicationScope(base,'HEAD',root,true).profile,'full');
+ }finally{rmSync(root,{recursive:true,force:true});}
+});

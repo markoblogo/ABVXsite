@@ -17,5 +17,17 @@
   },
   "/systems": {
     "updatedAt": "2026-10-14"
+  },
+  "/ami": {
+    "updatedAt": "2026-10-09"
+  },
+  "/fr/ami": {
+    "updatedAt": "2026-10-09"
+  },
+  "/llmo": {
+    "updatedAt": "2026-05-15"
+  },
+  "/writing/archive": {
+    "updatedAt": "2026-10-14"
   }
 }

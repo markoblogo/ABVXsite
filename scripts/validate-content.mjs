@@ -1,3 +1,4 @@
+import { publicationMetadataErrors } from './publication-metadata.mjs';
 import { validateKitchenNotes } from '../src/content/kitchen-notes.mjs';
 import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
@@ -60,6 +61,7 @@ function checkImage(file, image, field) {
 function validateFile(file, folder) {
   const { data, body } = parseContentFile(file);
   all.push({ file, folder, data, body });
+  for(const error of publicationMetadataErrors(data)) addError(file,error);
   if (folder === 'writing') {
     for (const message of [...validateNativeWritingVideo(data), ...validateKitchenNotes(data, body)]) addError(file, message);
   }
@@ -177,6 +179,13 @@ try {
   addError('content/working-stories', error.message);
 }
 
+const routes=new Map();
+for(const item of all) {
+ if((item.data.visibility||'public')!=='public') continue;
+ const route=item.data.canonicalPath||`/${item.folder==='work'?'work':item.folder==='writing'?'writing':'books'}/${item.data.slug}`;
+ if(routes.has(route)) addError(item.file,`duplicate public route ${route} with ${routes.get(route)}`);
+ else routes.set(route,item.file);
+}
 const bySlug = new Map();
 for (const item of all) {
   const slug = item.data.slug;

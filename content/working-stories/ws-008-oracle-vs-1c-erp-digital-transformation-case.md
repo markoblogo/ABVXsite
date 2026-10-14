@@ -8,6 +8,7 @@
   "type": "working-story",
   "visibility": "public",
   "language": "en",
+  "updatedAt": "2026-10-14",
   "date": "2026-10-13",
   "series": "working-stories",
   "story_id": "ws-008",
@@ -241,7 +242,7 @@ Just a much more economical implementation.
 
 If I were approaching the same problem from scratch, I would separate two tasks much more clearly.
 
-First, understand and optimise the [business processes](/focus/brokerage-market-memory-workflows-en).
+First, understand and optimise the [business processes](/editorial/focus/brokerage-market-memory-workflows-en).
 
 Then decide which technology should support them.
 

@@ -15,8 +15,9 @@ for (let i = 0; i < args.length; i++) {
 const output = path.join(process.cwd(), 'exports/editorial-checks');
 mkdirSync(output, { recursive: true });
 const qaScope = publicationScope(base, 'HEAD', process.cwd(), true);
-const checkProfile = qaScope.profile === 'publication-v1' ? 'publication-v1' : 'full';
-const checks = checkProfile === 'publication-v1'
+const checkProfile = qaScope.profile;
+const contentOnly = ['publication-v1','catalogue-v1'].includes(checkProfile);
+const checks = contentOnly
   ? ['content:validate', 'ecosystem:check', 'test:publication', 'build', 'qa:seo', 'dependency-audit']
   : ['content:validate', 'ecosystem:check', 'lint', 'test:sync', 'cortex-abv:vector-export:check', 'build', 'qa:seo', 'dependency-audit'];
 const started = performance.now();
@@ -56,7 +57,7 @@ async function runCheck(name) {
 // Source checks fail early. Independent read-only checks share a phase; build
 // and browser QA remain sequential. Receipt order stays compatible with OS.
 const phases = [['content:validate'], ['ecosystem:check'],
-  checkProfile === 'publication-v1' ? ['test:publication', 'dependency-audit'] : ['lint', 'test:sync', 'cortex-abv:vector-export:check', 'dependency-audit'], ['build'], ['qa:seo']];
+  contentOnly ? ['test:publication', 'dependency-audit'] : ['lint', 'test:sync', 'cortex-abv:vector-export:check', 'dependency-audit'], ['build'], ['qa:seo']];
 const order = checks;
 if (new Set(phases.flat()).size !== order.length) throw new Error('Release gate coverage changed');
 for (const phase of phases) {

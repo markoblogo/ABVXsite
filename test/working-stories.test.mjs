@@ -177,7 +177,7 @@ test('empty collection exports a manuscript header and an empty manifest', () =>
 }));
 
 test('real public-index generator includes only published stories and the empty-capable series', () => fixture(({ root, write }) => {
-  for (const relative of ['content/kitchen-notes.json', 'content/collaborations.json', 'content/youtube.json', 'content/working-stories.json', 'content/editorial/index.json']) {
+  for (const relative of ['content/pages.json', 'content/kitchen-notes.json', 'content/collaborations.json', 'content/youtube.json', 'content/working-stories.json', 'content/editorial/index.json']) {
     mkdirSync(path.dirname(path.join(root, relative)), { recursive: true });
     cpSync(path.join(repo, relative), path.join(root, relative));
   }
@@ -293,8 +293,10 @@ test('sitemap discovers published stories and series while excluding private and
     assert.equal(entries.length, 2);
     assert.equal(entries.find((item) => item.url.endsWith('/test-only-story')).lastModified.toISOString(), '2021-01-01T00:00:00.000Z');
     assert.ok(!routes.some((item) => /\/(private|future)$/.test(item.url)));
-    for (const url of ['https://abvx.xyz', 'https://abvx.xyz/ami', 'https://abvx.xyz/fr/ami', 'https://abvx.xyz/llmo']) {
+    for (const url of ['https://abvx.xyz', 'https://abvx.xyz/writing/archive']) {
       assert.ok(routes.find(item => item.url === url).lastModified >= new Date(series.updatedAt), url + ' must include the series update date');
     }
+    const pages=JSON.parse(readFileSync(path.join(repo,'content/pages.json')));
+    for(const route of ['/ami','/fr/ami','/llmo']) assert.equal(routes.find(item=>item.url==='https://abvx.xyz'+route).lastModified.toISOString(),new Date(pages[route].updatedAt).toISOString(),route+' must ignore unrelated series publication');
   } finally { process.chdir(cwd); }
 }));

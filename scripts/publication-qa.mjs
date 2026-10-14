@@ -1,6 +1,8 @@
+import { readSeoDocument, assertSeoPage } from './seo-page-contract.mjs';
 import assert from 'node:assert/strict';
 import { chromium } from 'playwright';
 import { withQaServer } from './qa-server.mjs';
+import { videoId as youtubeVideoId } from '../src/lib/youtube-pages.mjs';
 import { contentFiles, parseContentFile } from './content-lib.mjs';
 
 export async function boundedMap(values, fn, concurrency=6) {
@@ -10,8 +12,8 @@ export async function boundedMap(values, fn, concurrency=6) {
  }));
 }
 export async function publicationQa(scope) {
- assert.equal(scope.profile,'publication-v1');assert.ok(scope.routes.length);
- const sources=[...contentFiles('writing'),...contentFiles('working-stories')].map(file=>parseContentFile(file));
+ assert.ok(['publication-v1','catalogue-v1'].includes(scope.profile));assert.ok(scope.routes.length);
+ const sources=[...contentFiles('writing'),...contentFiles('working-stories'),...contentFiles('work'),...contentFiles('books')].map(file=>({...parseContentFile(file),folder:file.replaceAll('\\','/').split('/').at(-2)}));
  await withQaServer(async base=>{
   const browser=await chromium.launch({headless:true});
   try {
@@ -32,13 +34,14 @@ export async function publicationQa(scope) {
     assert.ok(urls.includes(url),route+' sitemap');
     assert.ok(index.items.some(item=>item.canonicalUrl===url),route+' index');
     assert.ok(llms.includes('URL: '+url+'\n'),route+' LLM index');
-    const source=sources.find(({data})=>route===`/writing/${data.type==='working-story'?'working-stories/':''}${data.slug}`);
+    const source=sources.find(({data,folder})=>route===(scope.profile==='catalogue-v1'?`/${folder}/${data.slug}`:`/writing/${data.type==='working-story'?'working-stories/':''}${data.slug}`));
     assert.ok(source,route+' source');const {data}=source;
     const response=await page.goto(base+route,{waitUntil:'domcontentloaded',timeout:30_000});
     assert.equal(response.status(),200,route);assert.equal(new URL(page.url()).pathname,route,'unexpected redirect');
     assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'),url);
-    assert.equal((await page.locator('h1').textContent()).trim(),data.title);
+    assert.equal((await page.locator('h1').textContent()).trim(),source.folder==='books'?(data.displayTitle||data.shortTitle||data.title):data.title);
     assert.ok(await page.title(),route+' title');
+    assertSeoPage(await page.evaluate(readSeoDocument,await response.text()),url,response.headers()['x-robots-tag']);
     const main=await page.locator('main').innerText();
     const schema=await page.locator('script[type="application/ld+json"]').allTextContents();
     const objects=schema.flatMap(text=>{const value=JSON.parse(text);return value['@graph']||[value];});
@@ -52,13 +55,22 @@ export async function publicationQa(scope) {
      assert.equal(await page.locator('main iframe[src*="youtube-nocookie.com/embed/"]').count(),1,'video embed');
      assert.ok(objects.some(item=>item['@type']==='VideoObject'&&Number.isFinite(Date.parse(item.uploadDate))),'video metadata');
     }
+    if(scope.profile==='catalogue-v1') {
+     const type=source.folder==='books'?'Book':undefined;
+     assert.ok(objects.some(item=>item.url===url && (!type||item['@type']===type)),route+' entity metadata');
+     const videos=(data.links||[]).filter(link=>link.type==='youtube'&&youtubeVideoId(link.url));
+     if(videos.length) assert.ok(await page.locator('main iframe').count(),route+' player');
+     for(const link of data.links||[]) assert.ok(await page.locator('main a').evaluateAll((links,url)=>links.some(a=>a.getAttribute('href')===url),link.url),route+' outbound link');
+    }
+    const internal=await page.locator('main a[href]').evaluateAll(links=>links.map(a=>a.getAttribute('href')).filter(href=>href.startsWith('/')));
+    await boundedMap([...new Set(internal)].map(href=>new URL(href,'https://abvx.xyz').pathname).filter(route=>!/\.(?:pdf|epub|png|jpe?g|webp|zip)$/i.test(route)),async route=>{await get(route);});
     const images=await page.locator('main img').evaluateAll(imgs=>imgs.map(img=>img.getAttribute('src')).filter(Boolean));
     await boundedMap([...new Set(images)].filter(src=>src.startsWith('/')),async src=>{await get(src);});
     for(const width of [320,390,1280]) {
      await page.setViewportSize({width,height:900});
      assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),route+' overflow');
     }
-    const collection=data.type==='working-story'?'/writing/working-stories':data.collection==='kitchen-notes'?'/writing/kitchen-notes':'/writing';
+    const collection=scope.profile==='catalogue-v1'?(source.folder==='books'?'/books':'/systems'):data.type==='working-story'?'/writing/working-stories':data.collection==='kitchen-notes'?'/writing/kitchen-notes':'/writing';
     const hub=await (await get(collection)).text();assert.ok(hub.includes(`href="${route}"`),route+' collection link');
    }
    console.log(`Publication QA passed: ${scope.routes.length} materials, ${scope.hubs.length} hubs, media, metadata, mobile and public indexes. Scope: ${JSON.stringify(scope)}`);

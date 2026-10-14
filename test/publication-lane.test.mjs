@@ -107,3 +107,17 @@ test('different Working Story IDs cannot publish the same slug in a pool',()=>fi
  assert.throws(()=>invoke(['--packet',first.file,'--packet',secondFile,'--write']),/Duplicate/);
  assert.equal(existsSync(path.join(root,'content')),false);
 }));
+
+test('the same atomic lane handles approved project and book sources without regenerating product metadata',()=>fixture(({root,invoke,inputs})=>{
+ const values=['work','books'].map(folder=>{
+  const value=packet(inputs,folder+'-example');
+  const data={id:folder+'-example',slug:folder+'-example',title:folder+'-example',type:folder==='work'?'tool':'book',primarySection:folder==='work'?'systems':'books',appearsIn:[folder==='work'?'systems':'books'],status:'building',visibility:'public',summary:'Approved product summary',tags:[],links:[],publishedAt:'2020-01-01',seoTitle:'Distinct product title'};
+  const source='---\n'+JSON.stringify(data)+'\n---\n\n'+value.value.payload.body_lines[0]+'\n';
+  Object.assign(value.value,{surface:folder,kind:data.type,consumer_operation:{id:folder==='work'?'abvx.publish-project':'abvx.publish-book'}});
+  Object.assign(value.value.payload,{source_markdown:source,source_sha256:hash(source)});writeFileSync(value.file,JSON.stringify(value.value));return {...value,source};
+ });
+ const args=values.flatMap(value=>['--packet',value.file]);
+ invoke([...args,'--write']);
+ for(const value of values) assert.equal(readFileSync(path.join(root,'content',value.value.surface,value.value.slug+'.md'),'utf8'),value.source);
+ assert.equal(JSON.parse(invoke(['--check'])).profile,'catalogue-v1');
+}));

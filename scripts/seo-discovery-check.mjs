@@ -1,3 +1,5 @@
+import { readSeoDocument, assertSeoPage } from './seo-page-contract.mjs';
+import { writingArchiveItems } from '../src/lib/writing-archive.mjs';
 import { publicationScope, publicationBase } from './publication-scope.mjs';
 import { publicationQa, boundedMap } from './publication-qa.mjs';
 import { automaticVideoItems, publishedWritingItems, findVideoCompanion } from '../src/lib/youtube-pages.mjs';
@@ -13,7 +15,7 @@ import { indexedWorkingStories, readWorkingStories, workingStoryPath } from '../
 const args = process.argv.slice(2);
 if (args.length && (args.length !== 2 || args[0] !== '--base' || !/^[a-f0-9]{40}$/i.test(args[1]))) throw new Error('Expected --base <commit SHA>');
 const scope = publicationScope(args[1] || publicationBase(), 'HEAD', process.cwd(), true);
-if (scope.profile === 'publication-v1') { await publicationQa(scope); process.exit(0); }
+if (['publication-v1','catalogue-v1'].includes(scope.profile)) { await publicationQa(scope); process.exit(0); }
 
 const workingSeries = JSON.parse(readFileSync('content/working-stories.json', 'utf8'));
 
@@ -64,15 +66,34 @@ await withQaServer(async (base) => {
     assert.ok(xml.includes('hreflang="uk"'));
     const routes = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]);
     assert.equal(new Set(routes).size, routes.length);
-    const titles = new Map();
+    const titles = new Map(), seoPages = new Map();
     await boundedMap(routes, async (url) => {
       const response = await page.request.get(base + new URL(url).pathname);
       assert.equal(response.status(), 200, url);
       const html = await response.text();
-      const title = html.match(/<title>(.*?)<\/title>/s)?.[1];
+      const record=await page.evaluate(readSeoDocument,html);
+      assertSeoPage(record,url,response.headers()['x-robots-tag']);seoPages.set(url,record);
+      const title=record.title;
       assert.ok(title, url + ' missing title');
       assert.ok(!titles.has(title), `Duplicate title: ${url} and ${titles.get(title)}`);
       titles.set(title, url);
+    });
+
+    const internal=new Set();
+    for(const [url,record] of seoPages) {
+      for(const [language,target] of record.alternates) {
+        const peer=seoPages.get(target);
+        assert.ok(peer,target+' alternate absent from sitemap');
+        if(language!=='x-default') assert.ok(peer.alternates.some(([lang,href])=>lang===record.lang&&href===url),url+' nonreciprocal alternate');
+      }
+      for(const href of record.links) {
+        const target=new URL(href,url);
+        if(target.origin==='https://abvx.xyz'&&!/\.(?:png|jpe?g|webp|pdf|json|txt|xml|zip|epub)$/i.test(target.pathname)&&!target.pathname.startsWith('/api/')) internal.add(target.pathname);
+      }
+    }
+    const known=new Set(routes.map(url=>new URL(url).pathname));
+    await boundedMap([...internal].filter(route=>!known.has(route)),async route=>{
+      const response=await page.request.get(base+route);assert.ok(response.status()<400,route+' broken internal link');
     });
 
     const indexResponse = await page.request.get(base + '/content-index.json');
@@ -82,6 +103,11 @@ await withQaServer(async (base) => {
     assert.equal(llmsResponse.status(), 200);
     const llms = await llmsResponse.text();
     const indexUrls = new Set(index.items.map((item) => item.canonicalUrl));
+    const archive=await page.request.get(base+'/writing/archive');assert.equal(archive.status(),200);
+    const archiveRecord=await page.evaluate(readSeoDocument,await archive.text());
+    for(const item of writingArchiveItems(index)) assert.ok(archiveRecord.links.includes(item.url),item.url+' missing complete archive link');
+    assert.ok(seoPages.get('https://abvx.xyz/writing').links.includes('/writing/archive'),'Writing must link to complete archive');
+
     // The structured recipe and its visible quick reference must remain identical.
     for (const file of contentFiles('writing')) {
       const {data} = parseContentFile(file);
@@ -124,8 +150,21 @@ await withQaServer(async (base) => {
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), route + ' mobile overflow');
       await page.setViewportSize({ width: 1280, height: 900 });
     }
+    await visit(base+'/writing');
+    const more=page.getByRole('button',{name:'More posts',exact:false});
+    // Interaction checks use the rendered row count, avoiding a second feed implementation.
+    if(await more.count()) {
+      const before=await page.locator('.writing-archive-row').count();
+      await more.click();
+      await page.waitForFunction(count=>document.querySelectorAll('.writing-archive-row').length>count,before);
+      const after=await page.locator('.writing-archive-row').count();assert.ok(after>before&&after-before<=30,'More posts batch size');
+      await page.setViewportSize({width:390,height:844});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'More posts mobile overflow');
+      await page.setViewportSize({width:1280,height:900});
+    }
     // The combined Writing view has a bounded archive; older videos remain in the source filter.
     await visit(base + '/writing?source=youtube');
+    const filteredList=JSON.parse(await page.locator('#jsonld-writing-list').textContent());
+    for(const element of filteredList.itemListElement) assert.ok(await page.locator('main a').evaluateAll((links,url)=>links.some(a=>a.getAttribute('href')===url),element.item.url),element.item.url+' structured list differs from selected source');
     const youtubeFeed = mergeWritingItems(nativeVideos.filter(item => item.videoUrl).map(item => ({
       source: 'youtube', url: '/writing/' + item.slug, title: item.title,
       publishedAt: item.videoUploadedAt || item.publishedAt || '',
@@ -229,6 +268,7 @@ await withQaServer(async (base) => {
       assert.ok(Date.parse(sitemapEntries.get('https://abvx.xyz' + route)) >= latest, route + ' excludes editorial updates');
     }
     const pageMetadata = JSON.parse(readFileSync('content/pages.json', 'utf8'));
+    for(const route of ['/ami','/fr/ami','/llmo']) assert.equal(sitemapEntries.get('https://abvx.xyz'+route),new Date(pageMetadata[route].updatedAt).toISOString(),route+' unrelated publication changed lastmod');
     assert.ok(Date.parse(sitemapEntries.get('https://abvx.xyz/about')) >= Date.parse(pageMetadata['/about'].updatedAt), '/about excludes static page updates');
     for (const width of [375, 1280]) {
       await page.setViewportSize({ width, height: 900 });

@@ -16,6 +16,7 @@ const kitchenIndexItem = {type:'editorial-series',section:'writing',ecosystem:'W
 const workingSeries = JSON.parse(readFileSync(path.join(process.cwd(), 'content/working-stories.json'), 'utf8'));
 const workingStories = publishedWorkingStories(readWorkingStories());
 const workingIndexItems = workingStories.map((story) => publicWorkingStory(story, workingStories));
+const archiveIndexItem = {type:'editorial-series',section:'writing',ecosystem:'Writing',group:'Writing',status:'live',title:'Complete Writing Archive',summary:'All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.',canonicalUrl:SITE_URL+'/writing/archive',updatedAt:JSON.parse(readFileSync('content/pages.json','utf8'))['/writing/archive'].updatedAt,tags:[],links:[],related:[]};
 const workingSeriesIndexItem = {
   type: 'editorial-series', section: 'writing', ecosystem: 'Writing', group: 'Working Stories', status: 'live',
   title: workingSeries.title, summary: workingSeries.summary, canonicalUrl: `${SITE_URL}${workingSeries.canonicalPath}`,
@@ -293,7 +294,8 @@ const videoIndexItems = videoPages.map(item => ({
   links: [{ type: 'youtube', label: 'Watch on YouTube', url: item.videoUrl }], related: [],
 }));
 
-const indexItems = [...videoIndexItems, ...rawItems.map(publicIndexItem), ...serviceIndexItems, ...editorialIndexItems, collaborationIndexItem, youtubeIndexItem, kitchenIndexItem, workingSeriesIndexItem, ...workingIndexItems]
+archiveIndexItem.updatedAt=[archiveIndexItem.updatedAt,...rawItems.filter(item=>item.folder==='writing').map(item=>item.updatedAt||item.publishedAt),...workingStories.map(item=>item.updatedAt||item.date),...videoIndexItems.map(item=>item.publishedAt)].filter(value=>Number.isFinite(Date.parse(value))).sort((a,b)=>Date.parse(b)-Date.parse(a))[0];
+const indexItems = [archiveIndexItem, ...videoIndexItems, ...rawItems.map(publicIndexItem), ...serviceIndexItems, ...editorialIndexItems, collaborationIndexItem, youtubeIndexItem, kitchenIndexItem, workingSeriesIndexItem, ...workingIndexItems]
   .sort((a, b) => a.section.localeCompare(b.section) || a.title.localeCompare(b.title));
 
 function isFocus(item) {
@@ -394,6 +396,8 @@ const llms = [
   llmsSection('Other public systems', rawItems.filter((item) => item.folder === 'work' &&
     !isFocus(item) && !isAiNative(item) && !isStandaloneUtility(item) && !isBooksEcosystemItem(item))),
   '',
+  `## Complete Writing Archive\n\n- Complete Writing Archive\n  URL: ${archiveIndexItem.canonicalUrl}\n  Summary: ${archiveIndexItem.summary}`,
+
   llmsSection('Writing: essays and field notes', rawItems.filter((item) => item.folder === 'writing')),
   '',
   `## Working Stories\n\n${[workingSeriesIndexItem, ...workingIndexItems].map((item) =>

@@ -6,6 +6,7 @@ export function writingWindow(posts) {
   return {
     featuredPost: posts[0],
     recentPosts: posts.slice(1, RECENT_POST_COUNT + 1),
+    remainingPosts: posts.slice(RECENT_POST_COUNT + 1 + ARCHIVE_POST_LIMIT),
     archivePosts: posts.slice(RECENT_POST_COUNT + 1, RECENT_POST_COUNT + 1 + ARCHIVE_POST_LIMIT),
   };
 }

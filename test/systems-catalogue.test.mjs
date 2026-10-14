@@ -27,3 +27,8 @@ test('new workflow tools opt in without moving a project pinned to another subgr
  assert.deepEqual(systemsGroupSlugs(group,items,new Set(['set','agents-md-generator','git-tweet'])),['set','agents-md-generator','framewright']);
  assert.deepEqual(group.slugs,['set','agents-md-generator']);
 });
+
+test('metadata registration works for every existing group without moving pinned members',()=>{
+ const group={title:'Development Surfaces & Interfaces',slugs:['existing']};
+ assert.deepEqual(systemsGroupSlugs(group,[{slug:'new',group:group.title},{slug:'pinned-elsewhere',group:group.title}],new Set(['existing','pinned-elsewhere'])),['existing','new']);
+});

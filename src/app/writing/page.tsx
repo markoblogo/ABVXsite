@@ -6,6 +6,7 @@ import EditorialSectionLink from '@/components/EditorialSectionLink';
 import FeaturedWritingCard from '@/components/FeaturedWritingCard';
 import RecentWritingCard from '@/components/RecentWritingCard';
 import SectionPanel from '@/components/SectionPanel';
+import WritingMorePosts from '@/components/WritingMorePosts';
 import WritingArchiveRow from '@/components/WritingArchiveRow';
 import WritingSourceLinks, { type WritingSource } from '@/components/WritingSourceLinks';
 import type { FeedItem } from '@/lib/feed-types';
@@ -94,7 +95,7 @@ export default async function WritingPage({
   const allPosts = getWritingFeed();
   const posts =
     activeSource === 'all' ? allPosts : allPosts.filter((post) => post.source === activeSource);
-  const {featuredPost, recentPosts, archivePosts} = writingWindow(posts);
+  const {featuredPost, recentPosts, archivePosts, remainingPosts} = writingWindow(posts);
 
   return (
     <div className="route-writing writing-page grid gap-8">
@@ -113,7 +114,7 @@ export default async function WritingPage({
         data={itemListJsonLd({
           id: `${SITE_URL}/writing#items`,
           name: 'ABVX writing archive',
-          items: allPosts.slice(0, 20).map((post) => ({
+          items: posts.slice(0, 20).map((post) => ({
             name: post.title,
             url: post.url,
             type: post.source === 'youtube' ? 'VideoObject' : 'Article',
@@ -129,6 +130,7 @@ export default async function WritingPage({
       ><EditorialSectionLink section="writing" /> <Link className="editorial-section-link" href={workingStoriesSeries.canonicalPath}>{workingStoriesSeries.title} <span aria-hidden="true">→</span></Link> <Link className="editorial-section-link" href={kitchenNotes.canonicalPath}>{kitchenNotes.title} <span aria-hidden="true">→</span></Link></PageHeader>
 
       <WritingSourceLinks active={activeSource} />
+      <Link className="editorial-section-link" href="/writing/archive">Complete archive <span aria-hidden="true">→</span></Link>
 
       {activeSource === 'youtube' && !posts.length ? (
         <SectionPanel title="New videos" eyebrow="YouTube">
@@ -198,6 +200,7 @@ export default async function WritingPage({
                   />
                 ))}
               </div>
+              <WritingMorePosts key={activeSource} posts={remainingPosts.map(post=>({title:post.title,excerpt:post.excerpt,href:post.url,source:post.source,date:formatDate(post.addedAt||post.publishedAt)}))}/>
             </section>
           ) : null}
         </>

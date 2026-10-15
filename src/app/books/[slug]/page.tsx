@@ -1,3 +1,4 @@
+import EditorialSectionLink from '@/components/EditorialSectionLink';
 import BookActionLinks from '@/components/BookActionLinks';
 import BookDetailHero from '@/components/BookDetailHero';
 import BookRelatedCard from '@/components/BookRelatedCard';
@@ -379,6 +380,7 @@ export default async function BookDetailPage({
           <div className="eyebrow">ABVX Press</div>
           <h2 id="book-about-title">About this book</h2>
           <MarkdownContent>{book.description || book.summary}</MarkdownContent>
+          {book.editorialSlug ? <EditorialSectionLink section="books" slug={book.editorialSlug} /> : null}
         </div>
 
         {contextRows.length ? (

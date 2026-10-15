@@ -407,7 +407,7 @@ export default async function FocusPage() {
                 tone={book.type === 'free-book' || book.type === 'free-edition' || book.type === 'companion' ? 'free-resource' : 'book'}
                 variantLabel={book.type === 'free-book' || book.type === 'free-edition' ? 'FREE RESOURCE' : 'BOOK'}
                 mediaVariant="landscape"
-                metaOverride="Безкоштовне українське видання"
+                metaOverride={book.language === 'uk' ? 'Безкоштовне українське видання' : undefined}
               />
             ))}
           </div>

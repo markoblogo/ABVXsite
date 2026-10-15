@@ -18,7 +18,7 @@
     "mn7r-commodity-brokerage-library"
   ],
   "primarySeriesSlug": "mn7r-commodity-brokerage-library",
-  "series": "MN7R Commodity Brokerage Library",
+  "series": "AMI books",
   "group": "Market Infrastructure & Brokerage",
   "featured": true,
   "homepageEligible": true,
@@ -40,6 +40,11 @@
   ],
   "links": [
     {
+      "type": "site",
+      "label": "AMI books",
+      "url": "https://books.1d3x.com/"
+    },
+    {
       "type": "pdf",
       "label": "PDF",
       "url": "https://mn7r.com/books/contract-execution-officer-handbook.pdf"
@@ -50,7 +55,7 @@
       "url": "https://mn7r.com/books/contract-execution-officer-handbook.epub"
     },
     {
-      "type": "site",
+      "type": "other",
       "label": "Book website",
       "url": "https://books.1d3x.com/books/contract-execution-officer-handbook"
     },

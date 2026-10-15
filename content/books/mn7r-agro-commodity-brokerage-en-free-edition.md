@@ -17,7 +17,7 @@
     "mn7r-commodity-brokerage-library"
   ],
   "primarySeriesSlug": "mn7r-commodity-brokerage-library",
-  "series": "MN7R Commodity Brokerage Library",
+  "series": "AMI books",
   "group": "Market Infrastructure & Brokerage",
   "featured": true,
   "homepageEligible": true,
@@ -39,6 +39,11 @@
   ],
   "links": [
     {
+      "type": "site",
+      "label": "AMI books",
+      "url": "https://books.1d3x.com/"
+    },
+    {
       "type": "pdf",
       "label": "PDF",
       "url": "https://mn7r.com/book/mn7r-agro-commodity-brokerage-en.pdf"
@@ -59,12 +64,12 @@
       "url": "https://github.com/markoblogo/mn7r-public-assets/releases/download/book-assets-2026-09-23/mn7r-agro-commodity-brokerage-en-audio.m4b"
     },
     {
-      "type": "site",
+      "type": "other",
       "label": "Book announcement",
       "url": "https://mn7r.com/blog/mn7r-book-en-free-edition"
     },
     {
-      "type": "site",
+      "type": "other",
       "label": "MN7R",
       "url": "https://mn7r.com/"
     },

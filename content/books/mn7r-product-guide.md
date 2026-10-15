@@ -18,7 +18,7 @@
     "mn7r-commodity-brokerage-library"
   ],
   "primarySeriesSlug": "mn7r-commodity-brokerage-library",
-  "series": "MN7R Commodity Brokerage Library",
+  "series": "AMI books",
   "group": "Market Infrastructure & Brokerage",
   "featured": true,
   "homepageEligible": false,
@@ -41,6 +41,11 @@
   "links": [
     {
       "type": "site",
+      "label": "AMI books",
+      "url": "https://books.1d3x.com/"
+    },
+    {
+      "type": "other",
       "label": "How to use",
       "url": "https://mn7r.com/how-to-use"
     },
@@ -55,7 +60,7 @@
       "url": "https://mn7r.com/mn7r-guide/mn7r-product-guide.epub"
     },
     {
-      "type": "site",
+      "type": "other",
       "label": "MN7R",
       "url": "https://mn7r.com/"
     },

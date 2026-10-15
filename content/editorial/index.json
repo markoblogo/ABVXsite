@@ -318,29 +318,29 @@
     "section": "books",
     "sectionTitle": "Books",
     "slug": "mn7r-commodity-brokerage-library-en",
-    "title": "MN7R Commodity Brokerage Library",
+    "title": "AMI books",
     "summary": "Why MN7R documents the operational work behind physical commodity and agro brokerage, from market knowledge and logistics to contracts and execution.",
     "linkLabel": "Read in English",
     "source": "mn7r-commodity-brokerage-library-en.md",
     "language": "en",
     "translationGroup": "mn7r-commodity-brokerage-library",
     "publishedAt": "2026-10-05",
-    "updatedAt": "2026-10-09",
-    "seoTitle": "MN7R Commodity Brokerage Library: Why These Manuals"
+    "updatedAt": "2026-10-15",
+    "seoTitle": "AMI books: Why These Manuals"
   },
   {
     "section": "books",
     "sectionTitle": "Books",
     "slug": "mn7r-commodity-brokerage-library-uk",
-    "title": "MN7R Commodity Brokerage Library",
+    "title": "AMI books",
     "summary": "Як MN7R документує операційну роботу фізичної товарної та аграрної торгівлі: знання ринку, логістику, контракти й виконання угод.",
     "linkLabel": "Читати українською",
     "source": "mn7r-commodity-brokerage-library-uk.md",
     "language": "uk",
     "translationGroup": "mn7r-commodity-brokerage-library",
     "publishedAt": "2026-10-05",
-    "updatedAt": "2026-10-09",
-    "seoTitle": "Бібліотека MN7R: посібники з товарного брокериджу"
+    "updatedAt": "2026-10-15",
+    "seoTitle": "AMI books: посібники з товарного брокериджу"
   },
   {
     "section": "books",

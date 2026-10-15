@@ -2,8 +2,8 @@
 {
   "id": "mn7r-commodity-brokerage-library",
   "slug": "mn7r-commodity-brokerage-library",
-  "title": "MN7R Commodity Brokerage Library",
-  "shortTitle": "MN7R Brokerage Library",
+  "title": "AMI books",
+  "shortTitle": "AMI books",
   "type": "series",
   "status": "building",
   "visibility": "public",
@@ -25,7 +25,12 @@
   "links": [
     {
       "type": "site",
-      "label": "Site",
+      "label": "AMI books",
+      "url": "https://books.1d3x.com/"
+    },
+    {
+      "type": "other",
+      "label": "MN7R website",
       "url": "https://mn7r.com/"
     }
   ],
@@ -39,18 +44,19 @@
   "group": "Official publishing lines",
   "media": {
     "src": "/media/series/mn7r-commodity-brokerage-library/hero.webp",
-    "alt": "MN7R Commodity Brokerage Library publishing line",
+    "alt": "AMI books professional commodity library",
     "role": "landing-screenshot"
   },
   "heroImage": {
     "src": "/media/series/mn7r-commodity-brokerage-library/hero.webp",
-    "alt": "MN7R Commodity Brokerage Library publishing line",
+    "alt": "AMI books professional commodity library",
     "role": "landing-screenshot"
-  }
+  },
+  "updatedAt": "2026-10-15"
 }
 ---
 
-MN7R Commodity Brokerage Library is a publishing line focused on operational commodity brokerage, execution systems, market infrastructure and real-world agro-trading workflows.
+AMI books is a publishing line focused on operational commodity brokerage, execution systems, market infrastructure and real-world agro-trading workflows.
 
 The project connects:
 - brokerage practice,

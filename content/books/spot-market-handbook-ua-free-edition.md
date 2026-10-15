@@ -17,7 +17,7 @@
     "mn7r-commodity-brokerage-library"
   ],
   "primarySeriesSlug": "mn7r-commodity-brokerage-library",
-  "series": "MN7R Commodity Brokerage Library",
+  "series": "AMI books",
   "group": "Market Infrastructure & Brokerage",
   "featured": true,
   "homepageEligible": true,
@@ -39,6 +39,11 @@
   ],
   "links": [
     {
+      "type": "site",
+      "label": "AMI books",
+      "url": "https://books.1d3x.com/"
+    },
+    {
       "type": "pdf",
       "label": "PDF",
       "url": "https://spike.1d3x.com/files/spot-market-handbook-ua.pdf"
@@ -49,7 +54,7 @@
       "url": "https://spike.1d3x.com/files/spot-market-handbook-ua.epub"
     },
     {
-      "type": "site",
+      "type": "other",
       "label": "Про проект",
       "url": "https://spike.1d3x.com/uk/about"
     },

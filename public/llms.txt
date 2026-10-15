@@ -79,6 +79,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/QnpLjwhj6Fs
   Summary: AMI — Agro Market Infrastructure — brings together projects for commodity brokerage operations, private market indices, and market knowledge. This short introduction highlights three parts of AMI: • MN7R — a private work
 
+- Free Commodity Market Guides | Explore the AMI Books Library
+  URL: https://abvx.xyz/writing/videos/RpxHRWhH4Yw
+  Summary: Explore the work behind a physical commodity deal: brokerage, spot-market pricing, logistics, contract execution, and modern team workflows. Visit the AMI Books library: https://books.1d3x.com/ Project overview: https://
+
 - CoqPi: AI Meeting & Interview Assistant | Cinematic App Demo
   URL: https://abvx.xyz/writing/videos/rqKXx_Z5AR0
   Summary: Prepare for meetings, practise interview answers, and keep useful context close during multilingual conversations. Meet CoqPi, a local-first desktop communication assistant. This 23-second cinematic app demo uses CoqPi’s

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtempSync,rmSync,existsSync,mkdirSync,writeFileSync,readFileSync } from 'node:fs';
+import { mkdtempSync,rmSync,existsSync,mkdirSync,writeFileSync,readFileSync,readdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
@@ -125,4 +125,51 @@ test('book video additions reject URL forms unsupported by its renderer before c
  old.links.push({type:'youtube',url:'https://www.youtube-nocookie.com/embed/bbbbbbbbbbb'});
  const updated=addCatalogueVideo('---\n'+JSON.stringify(old)+'\n---\nText.','/books/example','https://youtu.be/aaaaaaaaaaa');
  assert.ok(updated.includes('https://youtu.be/aaaaaaaaaaa'));
+});
+
+test('real public series use their series source through the complete CLI, including undated and canonical-root records',()=>{
+ const root=mkdtempSync(path.join(tmpdir(),'abvx-real-series-video-'));
+ const command=fileURLToPath(new URL('../scripts/catalogue-video.mjs',import.meta.url));
+ try {
+  const directory=path.join(root,'content/series');mkdirSync(directory,{recursive:true});let count=0;
+  for(const name of readdirSync('content/series').filter(name=>name.endsWith('.md')&&!name.startsWith('_'))) {
+   const source=readFileSync(path.join('content/series',name),'utf8');const data=JSON.parse(source.slice(3,source.indexOf('\n---',3)));
+   const file=path.join(directory,name);writeFileSync(file,source);
+   const link=data.links.find(link=>link.type==='youtube')?.url||'https://youtu.be/aaaaaaaaaaa';
+   const args=[command,'--route','/books/'+data.slug,'--video',link];
+   const run=extra=>execFileSync(process.execPath,[...args,...extra],{cwd:root,encoding:'utf8',stdio:['ignore','pipe','pipe']});
+   if(data.visibility==='private') {assert.throws(()=>run(['--write']));assert.equal(readFileSync(file,'utf8'),source);continue;}
+   const dry=JSON.parse(run([]));assert.equal(dry.sourceFile,'content/series/'+name);assert.equal(readFileSync(file,'utf8'),source);
+   run(['--write']);const result=readFileSync(file,'utf8'),after=JSON.parse(result.slice(3,result.indexOf('\n---',3)));
+   assert.equal(after.publishedAt,data.publishedAt);assert.equal(result.slice(result.indexOf('\n---',3)),source.slice(source.indexOf('\n---',3)));
+   assert.ok(!existsSync(path.join(root,'content/books',name)));
+   if(data.canonicalPath) {
+    const canonical=execFileSync(process.execPath,[command,'--route',data.canonicalPath,'--video',link],{cwd:root,encoding:'utf8'});
+    assert.equal(JSON.parse(canonical).changed,false);
+   }
+   count++;
+  }
+  assert.ok(count>=5,'real published series covered');
+ }finally{rmSync(root,{recursive:true,force:true});}
+});
+
+test('series-only publication convention permits an absent date without inventing it',async()=>{
+ const {addCatalogueVideo}=await import('../scripts/catalogue-video.mjs');
+ const data={slug:'example',type:'series',status:'released',visibility:'public',links:[]};
+ const source=patch=>'---\n'+JSON.stringify({...data,...patch})+'\n---\nReleased legacy series.';
+ const result=addCatalogueVideo(source({}),'/books/example','https://youtu.be/aaaaaaaaaaa');
+ assert.equal(JSON.parse(result.slice(3,result.indexOf('\n---',3))).publishedAt,undefined);
+ for(const patch of [{publishedAt:'2999-01-01'},{visibility:'private'},{type:'book'}])assert.throws(()=>addCatalogueVideo(source(patch),'/books/example','https://youtu.be/aaaaaaaaaaa'));
+});
+
+
+test('book/series source ambiguity is rejected for both the book alias and root canonical',async()=>{
+ const {resolveCatalogueVideoSource}=await import('../scripts/catalogue-video.mjs');
+ const root=mkdtempSync(path.join(tmpdir(),'abvx-series-ambiguity-'));
+ try {
+  for(const folder of ['books','series']) {mkdirSync(path.join(root,'content',folder),{recursive:true});writeFileSync(path.join(root,'content',folder,'duplicate.md'),'untouched');}
+  for(const route of ['/books/duplicate','/duplicate'])assert.throws(()=>resolveCatalogueVideoSource(route,root),/unambiguous/);
+  assert.throws(()=>resolveCatalogueVideoSource('/books/../duplicate',root),/Unsupported/);
+  assert.equal(readFileSync(path.join(root,'content/books/duplicate.md'),'utf8'),'untouched');
+ }finally{rmSync(root,{recursive:true,force:true});}
 });

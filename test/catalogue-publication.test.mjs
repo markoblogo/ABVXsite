@@ -167,9 +167,31 @@ test('book/series source ambiguity is rejected for both the book alias and root 
  const {resolveCatalogueVideoSource}=await import('../scripts/catalogue-video.mjs');
  const root=mkdtempSync(path.join(tmpdir(),'abvx-series-ambiguity-'));
  try {
-  for(const folder of ['books','series']) {mkdirSync(path.join(root,'content',folder),{recursive:true});writeFileSync(path.join(root,'content',folder,'duplicate.md'),'untouched');}
+  for(const folder of ['books','series']) {mkdirSync(path.join(root,'content',folder),{recursive:true});writeFileSync(path.join(root,'content',folder,'duplicate.md'),'---\n'+JSON.stringify({slug:'duplicate',type:'series',canonicalPath:'/duplicate'})+'\n---\nuntouched');}
   for(const route of ['/books/duplicate','/duplicate'])assert.throws(()=>resolveCatalogueVideoSource(route,root),/unambiguous/);
   assert.throws(()=>resolveCatalogueVideoSource('/books/../duplicate',root),/Unsupported/);
-  assert.equal(readFileSync(path.join(root,'content/books/duplicate.md'),'utf8'),'untouched');
+  assert.ok(readFileSync(path.join(root,'content/books/duplicate.md'),'utf8').endsWith('untouched'));
+ }finally{rmSync(root,{recursive:true,force:true});}
+});
+
+test('the CLI resolves a declared canonical path independently of the series slug',()=>{
+ const root=mkdtempSync(path.join(tmpdir(),'abvx-canonical-series-video-'));
+ const command=fileURLToPath(new URL('../scripts/catalogue-video.mjs',import.meta.url));
+ const data={slug:'foo',type:'series',status:'released',visibility:'public',canonicalPath:'/bar',links:[]};
+ const source='---\n'+JSON.stringify(data)+'\n---\nOriginal series prose.\n';
+ try {
+  const file=path.join(root,'content/series/foo.md');mkdirSync(path.dirname(file),{recursive:true});
+  for(const route of ['/bar','/books/foo']) {
+   writeFileSync(file,source);
+   const args=[command,'--route',route,'--video','https://youtu.be/aaaaaaaaaaa'];
+   const run=extra=>JSON.parse(execFileSync(process.execPath,[...args,...extra],{cwd:root,encoding:'utf8',stdio:['ignore','pipe','pipe']}));
+   assert.equal(run([]).sourceFile,'content/series/foo.md');assert.equal(readFileSync(file,'utf8'),source);
+   assert.equal(run(['--write']).changed,true);const written=readFileSync(file,'utf8');
+   const after=JSON.parse(written.slice(3,written.indexOf('\n---',3)));assert.equal(after.slug,'foo');assert.equal(after.canonicalPath,'/bar');assert.equal(after.publishedAt,undefined);
+   assert.equal(run(['--write']).changed,false);assert.equal(readFileSync(file,'utf8'),written);
+  }
+  const duplicate=path.join(root,'content/series/another.md');writeFileSync(duplicate,'---\n'+JSON.stringify({...data,slug:'another'})+'\n---\nOther prose.');
+  assert.throws(()=>execFileSync(process.execPath,[command,'--route','/bar','--video','https://youtu.be/aaaaaaaaaaa','--write'],{cwd:root,stdio:['ignore','pipe','pipe']}));
+  assert.ok(!existsSync(path.join(root,'content/series/bar.md')));
  }finally{rmSync(root,{recursive:true,force:true});}
 });

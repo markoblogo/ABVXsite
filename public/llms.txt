@@ -59,6 +59,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/PmhWa-V00zc
   Summary: Découvrez « Jeanne la bataillonneuse, suivi de Miss Adrienne » de Géo Chkouroupiy, en traduction française dans la collection Modernisme ukrainien. La guerre et la révolution de 1917. Puis l’usine, le chômage et les mira
 
+- Брокеридж зернових та олійних: безкоштовний практичний гід MN7R
+  URL: https://abvx.xyz/writing/videos/qer7WfdIWLI
+  Summary: Як працює ринок зернових та олійних — від першого офера до контракту та виконання угоди? Безкоштовний практичний гід MN7R українською допомагає побачити зв’язок між товаром, якістю, ціною, логістикою та людьми. 📘 Завант
+
 - AMI — Digital Infrastructure for Physical Commodity Markets
   URL: https://abvx.xyz/writing/videos/QnpLjwhj6Fs
   Summary: AMI — Agro Market Infrastructure — brings together projects for commodity brokerage operations, private market indices, and market knowledge. This short introduction highlights three parts of AMI: • MN7R — a private work

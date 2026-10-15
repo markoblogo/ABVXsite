@@ -7015,7 +7015,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-15T14:53:30.715Z",
+      "updatedAt": "2026-10-15T15:21:02.841Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8495,6 +8495,29 @@
       ],
       "links": [],
       "updatedAt": "2026-10-14",
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Брокеридж зернових та олійних: безкоштовний практичний гід MN7R",
+      "summary": "Як працює ринок зернових та олійних — від першого офера до контракту та виконання угоди? Безкоштовний практичний гід MN7R українською допомагає побачити зв’язок між товаром, якістю, ціною, логістикою та людьми. 📘 Завант",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/qer7WfdIWLI",
+      "publishedAt": "2026-10-15T15:05:07.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=qer7WfdIWLI"
+        }
+      ],
       "related": []
     },
     {

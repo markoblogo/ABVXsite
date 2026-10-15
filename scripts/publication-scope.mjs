@@ -41,7 +41,7 @@ export function publicationScope(base, head='HEAD', cwd=process.cwd(), includeWo
    const catalogue=['work','books'].includes(match[1]);families.add(catalogue?'catalogue':'writing');
    if(catalogue && !catalogueTypes[match[1]].has(data.type)) return full('unsupported-catalogue-type');
    const section=match[1]==='books'?'books':'systems';
-   const stableVideo=previous&&isCatalogueVideoAddition(previous,current);
+   const stableVideo=previous&&isCatalogueVideoAddition(previous,current,match[1]);
    if(catalogue && ((data.primarySection||section)!==section || (data.appearsIn!==undefined&&!Array.isArray(data.appearsIn)) || (data.appearsIn||[]).some(value=>value!==section&&!(stableVideo&&value==='focus')))) return full('unsupported-catalogue-placement');
    if(catalogue&&stableVideo&&data.appearsIn?.includes('focus'))hubs.add('/focus');
    const route=catalogue?`/${match[1]}/${data.slug}`:`/writing/${match[1]==='working-stories'?'working-stories/':''}${data.slug}`;

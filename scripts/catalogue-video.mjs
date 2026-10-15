@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { parseMarkdownSource } from '../src/content/markdown-source.mjs';
 import { videoId } from '../src/lib/youtube-pages.mjs';
-import { catalogueTypes, publicationMetadataErrors } from './publication-metadata.mjs';
+import { publicationMetadataErrors } from './publication-metadata.mjs';
 
 export function catalogueVideoId(value) {
  try {
@@ -20,23 +20,31 @@ export function catalogueVideoId(value) {
   return id?videoId('https://www.youtube.com/watch?v='+encodeURIComponent(id)):null;
  } catch {return null;}
 }
-export function isCatalogueVideoAddition(previous,current) {
+// Books still use the legacy URL matcher; project cards use the strict shared
+// embed. Accept only a URL that the target card can actually render.
+export function catalogueCardVideoId(value,folder='work') {
+ const id=catalogueVideoId(value);
+ if(!id||folder!=='books')return id;
+ const rendered=value.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([^?&/]+)/)?.[1];
+ return rendered===id?id:null;
+}
+export function isCatalogueVideoAddition(previous,current,folder='work') {
  const strip=data=>Object.fromEntries(Object.entries(data).filter(([key])=>!['links','updatedAt'].includes(key)));
  const before=previous.data.links||[], after=current.data.links||[];
  return Date.parse(current.data.updatedAt)>=Date.parse(previous.data.updatedAt||previous.data.publishedAt)&&Date.parse(current.data.updatedAt)<=Date.now()
   &&previous.body===current.body&&JSON.stringify(strip(previous.data))===JSON.stringify(strip(current.data))
   &&Array.isArray(before)&&Array.isArray(after)&&after.length===before.length+1
   &&JSON.stringify(after.slice(0,-1))===JSON.stringify(before)
-  &&after.at(-1).type==='youtube'&&Boolean(catalogueVideoId(after.at(-1).url))
-  &&!before.some(link=>link.type==='youtube'&&catalogueVideoId(link.url));
+  &&after.at(-1).type==='youtube'&&Boolean(catalogueCardVideoId(after.at(-1).url,folder))
+  &&!before.some(link=>link.type==='youtube'&&catalogueCardVideoId(link.url,folder));
 }
 export function addCatalogueVideo(source,route,href,date=new Date().toISOString().slice(0,10)) {
  const match=route.match(/^\/(books|work)\/([a-z0-9]+(?:-[a-z0-9]+)*)$/);
- if(!match||!catalogueVideoId(href))throw Error('Expected an existing /books/<slug> or /work/<slug> and a supported HTTPS YouTube video');
+ if(!match||!catalogueCardVideoId(href,match[1]))throw Error('Expected an existing /books/<slug> or /work/<slug> and a supported HTTPS YouTube video');
  const {data}=parseMarkdownSource(source);
- if(data.slug!==match[2]||(data.canonicalPath&&data.canonicalPath!==route)||data.visibility!=='public'||!['live','released','building','research','archive'].includes(data.status)||!catalogueTypes[match[1]].has(data.type)||!(Date.parse(data.publishedAt)<=Date.now()))throw Error('Expected an existing public, published catalogue card');
+ if(data.slug!==match[2]||(data.canonicalPath&&data.canonicalPath!==route)||data.visibility!=='public'||!['live','released','building','research','archive'].includes(data.status)||(typeof data.type!=='string'||!data.type.trim())||!(Date.parse(data.publishedAt)<=Date.now()))throw Error('Expected an existing public, published catalogue card');
  if(!Array.isArray(data.links))throw Error('Card links must be an array');
- const current=data.links.find(link=>link.type==='youtube'&&catalogueVideoId(link.url));
+ const current=data.links.find(link=>link.type==='youtube'&&catalogueCardVideoId(link.url,match[1]));
  if(current) {
   if(catalogueVideoId(current.url)===catalogueVideoId(href))return source;
   throw Error('A different playable video already exists; review replacement separately');

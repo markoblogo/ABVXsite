@@ -52,6 +52,11 @@
       "type": "site",
       "label": "Про проект",
       "url": "https://spike.1d3x.com/uk/about"
+    },
+    {
+      "type": "youtube",
+      "label": "Book trailer",
+      "url": "https://youtu.be/Kx1ftrOWQm8"
     }
   ],
   "relatedSlugs": [
@@ -78,7 +83,8 @@
     "src": "/media/books/spot-market-handbook-ua-free-edition/cover.webp",
     "alt": "Обкладинка книги Практичний гайд зі спотового ринку",
     "role": "book-cover"
-  }
+  },
+  "updatedAt": "2026-10-15"
 }
 ---
 

@@ -32,3 +32,18 @@ test('catalogue evidence rejects watch-page iframes and follows the book-rendera
  assert.throws(()=>assertCatalogueVideo(data,[{src:'https://www.youtube.com/watch?v=aaaaaaaaaaa',title:'Trailer'}],'books'));
  assert.throws(()=>assertCatalogueVideo(data,[{src:'https://youtu.be/aaaaaaaaaaa',title:'Trailer'}],'books'));
 });
+
+
+test('internal download checks do not buffer large media but still reject missing targets', async () => {
+ const { assertInternalLink } = await import('../scripts/publication-qa.mjs');
+ const calls = [];
+ const client = {
+  get: async url => { calls.push(['GET', url]); return { status: () => 200, dispose: async () => {} }; },
+  head: async url => { calls.push(['HEAD', url]); return { status: () => url.includes('missing') ? 404 : 200, dispose: async () => {} }; },
+ };
+ await assertInternalLink(client, 'https://abvx.xyz/books/example');
+ await assertInternalLink(client, 'https://abvx.xyz/media/audiobook.MP3?download=1');
+ await assertInternalLink(client, 'https://abvx.xyz/media/audiobook.m4b');
+ assert.deepEqual(calls.map(call => call[0]), ['GET', 'HEAD', 'HEAD']);
+ await assert.rejects(assertInternalLink(client, 'https://abvx.xyz/media/missing.mp3'), /broken internal link/);
+});

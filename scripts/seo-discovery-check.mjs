@@ -1,7 +1,7 @@
 import { readSeoDocument, assertSeoPage } from './seo-page-contract.mjs';
 import { writingArchiveItems } from '../src/lib/writing-archive.mjs';
 import { publicationScope, publicationBase } from './publication-scope.mjs';
-import { publicationQa, boundedMap } from './publication-qa.mjs';
+import { publicationQa, boundedMap, assertInternalLink } from './publication-qa.mjs';
 import { automaticVideoItems, publishedWritingItems, findVideoCompanion } from '../src/lib/youtube-pages.mjs';
 import { mergeWritingItems } from '../src/lib/writing-chronology.mjs';
 import { visibleWritingItems } from '../src/lib/writing-window.mjs';
@@ -125,7 +125,7 @@ await withQaServer(async (base) => {
     }
     const known=new Set(routes.map(url=>new URL(url).pathname));
     await boundedMap([...internal].filter(route=>!known.has(route)),async route=>{
-      const response=await page.request.get(base+route);assert.ok(response.status()<400,route+' broken internal link');
+      await assertInternalLink(page.request, base + route);
     });
 
     const indexResponse = await page.request.get(base + '/content-index.json');

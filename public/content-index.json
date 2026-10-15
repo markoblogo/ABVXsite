@@ -254,9 +254,14 @@
           "type": "paperback",
           "label": "Paperback",
           "url": "https://www.amazon.com/dp/B0HF7SJJ7N"
+        },
+        {
+          "type": "youtube",
+          "label": "Book trailer",
+          "url": "https://youtu.be/GVrbTMZxbpg"
         }
       ],
-      "updatedAt": "2026-08-14",
+      "updatedAt": "2026-10-15",
       "related": []
     },
     {

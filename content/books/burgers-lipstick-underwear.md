@@ -11,6 +11,7 @@
   "status": "released",
   "visibility": "public",
   "publishedAt": "2026-08-14",
+  "updatedAt": "2026-10-15",
   "homepageEligible": true,
   "primarySection": "books",
   "appearsIn": [
@@ -37,6 +38,11 @@
       "type": "paperback",
       "label": "Paperback",
       "url": "https://www.amazon.com/dp/B0HF7SJJ7N"
+    },
+    {
+      "type": "youtube",
+      "label": "Book trailer",
+      "url": "https://youtu.be/GVrbTMZxbpg"
     }
   ],
   "formats": [

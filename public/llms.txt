@@ -75,6 +75,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/s3BBP698_r8
   Summary: A software launch. A book trailer. A cinematic interface demo. Different briefs need different video workflows. Framewright is an evolving collection of video-production methods, agent skills and lessons from real ABVX p
 
+- MN7R Product Guide | Commodity Brokerage Workflow Explained
+  URL: https://abvx.xyz/writing/videos/TISOtCghMVY
+  Summary: Brokerage is more than closing a deal. Explore the clients, offers, execution, roles and AI-assisted operating support behind the MN7R workspace. Read the free English MN7R Product Guide — PDF and EPUB: https://abvx.xyz/
+
 - Every Startup Founder Has That ONE Deal That Never Closes
   URL: https://abvx.xyz/writing/videos/U-cVLltmoRM
   Summary: "We love your product!" "The team is really excited!" "Just waiting for final approval." "We should have everything signed next week." Three months later... Still closing. Any day now. Founders, drop a ❤️ if this feels p

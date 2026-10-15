@@ -1,7 +1,7 @@
 import { readSeoDocument, assertSeoPage } from './seo-page-contract.mjs';
 import { writingArchiveItems } from '../src/lib/writing-archive.mjs';
 import { publicationScope, publicationBase } from './publication-scope.mjs';
-import { publicationQa, boundedMap, assertInternalLink } from './publication-qa.mjs';
+import { publicationQa, boundedMap, assertInternalLink, assertCatalogueVideo, assertCatalogueDownloads } from './publication-qa.mjs';
 import { automaticVideoItems, publishedWritingItems, findVideoCompanion } from '../src/lib/youtube-pages.mjs';
 import { mergeWritingItems } from '../src/lib/writing-chronology.mjs';
 import { visibleWritingItems } from '../src/lib/writing-window.mjs';
@@ -17,6 +17,7 @@ if (args.length && (args.length !== 2 || args[0] !== '--base' || !/^[a-f0-9]{40}
 const scope = publicationScope(args[1] || publicationBase(), 'HEAD', process.cwd(), true);
 if (['publication-v1','catalogue-v1'].includes(scope.profile)) { await publicationQa(scope); process.exit(0); }
 
+const catalogueSources=['work','books','series'].flatMap(folder=>contentFiles(folder).map(file=>({...parseContentFile(file),folder:folder==='series'?'books':folder})));
 const workingSeries = JSON.parse(readFileSync('content/working-stories.json', 'utf8'));
 
 const french = '/writing/premiere-traduction-francaise-jeanne-bataillonneuse-miss-adrienne';
@@ -131,6 +132,12 @@ await withQaServer(async (base) => {
       const response = await page.request.get(base + new URL(url).pathname);
       assert.equal(response.status(), 200, url);
       const html = await response.text();
+      const catalogue=catalogueSources.find(({data,folder})=>url==='https://abvx.xyz'+(data.canonicalPath||`/${folder}/${data.slug}`));
+      if(catalogue){
+        const frames=await page.evaluate(html=>[...new DOMParser().parseFromString(html,'text/html').querySelectorAll('main iframe')].map(frame=>({src:frame.getAttribute('src'),title:frame.getAttribute('title'),loading:frame.getAttribute('loading'),referrerPolicy:frame.getAttribute('referrerpolicy')})),html);
+        assertCatalogueVideo(catalogue.data,frames,catalogue.folder);
+        if(catalogue.folder==='books'&&catalogue.data.type!=='series'&&catalogue.data.links?.some(link=>link.type==='audio'))await assertCatalogueDownloads(page.request,catalogue.data,base,catalogue.folder);
+      }
       const record=await page.evaluate(readSeoDocument,html);
       assertSeoPage(record,url,response.headers()['x-robots-tag']);seoPages.set(url,record);
       const title=record.title;

@@ -5,14 +5,16 @@ import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import path from 'node:path';
 import {parseMarkdownSource} from '../src/content/markdown-source.mjs';
+import {isAllowedAudioUrl} from '../src/lib/media-policy.mjs';
 import {publicationMetadataErrors} from './publication-metadata.mjs';
 import {addCatalogueVideo,catalogueSourceData,catalogueCardVideoId,resolveCatalogueVideoSource} from './catalogue-video.mjs';
 const imageKeys=['media','heroImage'];
 const extensions={pdf:/\.pdf$/i,epub:/\.epub$/i,audio:/\.(?:mp3|m4a|ogg|wav|flac|aac|opus)$/i,audiobook:/\.(?:m4b|mp3|m4a)$/i,image:/\.(?:png|jpe?g|webp)$/i};
-export function validCatalogueMedia(link,folder='work') {
+export function validCatalogueMedia(link,folder='work',kind=undefined) {
  if(!link||typeof link.label!=='string'||!link.label.trim()||typeof link.url!=='string')return false;
  if(link.type==='youtube')return Boolean(catalogueCardVideoId(link.url,folder));
  if(!extensions[link.type])return false;
+ if(link.type==='audio'&&folder==='books'&&kind!=='series'&&!isAllowedAudioUrl(link.url))return false;
  try {
   const url=new URL(link.url,'https://abvx.xyz');
   if(url.protocol!=='https:'||url.username||url.password||url.port||url.hash)return false;
@@ -26,7 +28,7 @@ export function isCatalogueMediaAddition(previous,current,folder='work') {
  if(previous.body!==current.body||!isDeepStrictEqual(strip(before),strip(after))||after.visibility!=='public'||!['live','released','building','research','archive'].includes(after.status)||publicationMetadataErrors(after).length||!after.updatedAt||Date.parse(after.updatedAt)>Date.now()||Date.parse(after.updatedAt)<Date.parse(before.updatedAt||before.publishedAt||'1970-01-01'))return false;
  if(!Array.isArray(before.links)||!Array.isArray(after.links)||after.links.length<before.links.length||!isDeepStrictEqual(after.links.slice(0,before.links.length),before.links))return false;
  const additions=after.links.slice(before.links.length);
- if(!additions.every(link=>validCatalogueMedia(link,folder)))return false;
+ if(!additions.every(link=>validCatalogueMedia(link,folder,after.type)))return false;
  for(const type of ['youtube','audio']){
   const added=additions.filter(link=>link.type===type);
   if(added.length>1||added.length&&before.links.some(link=>link.type===type&&(type!=='youtube'||catalogueCardVideoId(link.url,folder))))return false;
@@ -42,7 +44,8 @@ export function isCatalogueMediaAddition(previous,current,folder='work') {
 }
 export function addCatalogueMedia(source,route,descriptor,date=new Date().toISOString().slice(0,10)) {
  const {data,target}=catalogueSourceData(source,route);
- if(!validCatalogueMedia(descriptor,target.folder))throw Error('Unsupported media descriptor: use a labelled HTTPS or /media/ file URL');
+ if(descriptor.type==='audio'&&target.folder==='books'&&data.type!=='series'&&!isAllowedAudioUrl(descriptor.url))throw Error('Playable book audio must use CSP-permitted site or GitHub media hosts');
+ if(!validCatalogueMedia(descriptor,target.folder,data.type))throw Error('Unsupported media descriptor: use a labelled HTTPS or /media/ file URL');
  if(descriptor.type==='youtube'){
   const result=addCatalogueVideo(source,route,descriptor.url,date);
   if(result===source)return source;

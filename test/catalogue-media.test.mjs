@@ -6,7 +6,7 @@ const original={slug:'guide',title:'Guide',type:'free-book',visibility:'public',
 const source=data=>'---\n'+JSON.stringify(data)+'\n---\nApproved prose.\n';
 const parsed=data=>parseMarkdownSource(source(data));
 test('additive catalogue media preserves approved text, chronology, links and the shared video path',()=>{
- for(const descriptor of [{type:'pdf',label:'PDF',url:'https://example.com/book.pdf'},{type:'epub',label:'EPUB',url:'/media/books/guide/book.epub'},{type:'audio',label:'Audio',url:'https://example.com/book.mp3'},{type:'audiobook',label:'Audiobook',url:'https://example.com/book.m4b'},{type:'youtube',label:'Trailer',url:'https://youtu.be/aaaaaaaaaaa'},{type:'image',label:'Guide cover',url:'/media/books/guide/cover.webp'}]){
+ for(const descriptor of [{type:'pdf',label:'PDF',url:'https://example.com/book.pdf'},{type:'epub',label:'EPUB',url:'/media/books/guide/book.epub'},{type:'audio',label:'Audio',url:'https://github.com/owner/assets/releases/download/v1/book.mp3'},{type:'audiobook',label:'Audiobook',url:'https://example.com/book.m4b'},{type:'youtube',label:'Trailer',url:'https://youtu.be/aaaaaaaaaaa'},{type:'image',label:'Guide cover',url:'/media/books/guide/cover.webp'}]){
   const result=addCatalogueMedia(source(original),'/books/guide',descriptor,'2026-10-15');
   const current=parseMarkdownSource(result);
   assert.equal(current.body,parsed(original).body);assert.equal(current.data.publishedAt,original.publishedAt);
@@ -21,8 +21,8 @@ test('media-only recognition rejects edits, replacements, hidden sources, invali
  for(const change of [{...added,title:'Changed'}, {...added,visibility:'private'}, {...added,updatedAt:'2999-01-01'}, {...added,updatedAt:'2026-02-30'}, {...added,links:added.links.slice(1)}, {...added,links:[...original.links,{type:'site',label:'Website',url:'https://example.com/new'}]}])assert.equal(isCatalogueMediaAddition(parsed(original),parsed(change),'books'),false);
  assert.equal(isCatalogueMediaAddition(parsed(original),{...parsed(added),body:'Changed prose'},'books'),false);
  for(const descriptor of [{type:'pdf',label:'Bad',url:'javascript:alert(1)'},{type:'pdf',label:'Bad',url:'https://example.com/'},{type:'image',label:'Cover',url:'/media/../cover.webp'},{type:'audio',label:'',url:'https://example.com/book.mp3'}])assert.throws(()=>addCatalogueMedia(source(original),'/books/guide',descriptor));
- const withAudio={...original,links:[...original.links,{type:'audio',label:'Audio',url:'https://example.com/old.mp3'}]};
- assert.throws(()=>addCatalogueMedia(source(withAudio),'/books/guide',{type:'audio',label:'Audio',url:'https://example.com/new.mp3'}),/replacement/i);
+ const withAudio={...original,links:[...original.links,{type:'audio',label:'Audio',url:'https://github.com/owner/assets/releases/download/v1/old.mp3'}]};
+ assert.throws(()=>addCatalogueMedia(source(withAudio),'/books/guide',{type:'audio',label:'Audio',url:'https://github.com/owner/assets/releases/download/v1/new.mp3'}),/replacement/i);
  const withCover={...original,media:{src:'/media/old.webp',alt:'Old'}};
  assert.throws(()=>addCatalogueMedia(source(withCover),'/books/guide',{type:'image',label:'New',url:'/media/new.webp'}),/replacement/i);
 });
@@ -48,4 +48,16 @@ test('the real media CLI dry-runs, writes once and resolves a series canonical p
   assert.equal(run(['--write']).changed,false);assert.equal(readFileSync(file,'utf8'),written);
   assert.equal(parseMarkdownSource(written).data.publishedAt,undefined);
  }finally{rmSync(root,{recursive:true,force:true});}
+});
+
+test('playable book audio rejects CSP-blocked hosts before source changes and scoped approval',()=>{
+ for(const url of ['https://example.com/book.mp3','https://github.com.example.com/book.mp3','https://github.com:444/book.mp3']){
+  const audio={type:'audio',label:'Audio',url};
+  assert.throws(()=>addCatalogueMedia(source(original),'/books/guide',audio),'blocked audio must not be written');
+  assert.equal(isCatalogueMediaAddition(parsed(original),parsed({...original,updatedAt:'2026-10-15',links:[...original.links,audio]}),'books'),false,'blocked audio must not qualify for scoped QA');
+ }
+ for(const url of ['/media/books/guide/book.mp3','https://abvx.xyz/media/books/guide/book.mp3','https://github.com/owner/assets/releases/download/v1/book.mp3','https://release-assets.githubusercontent.com/book.mp3']){
+  const result=addCatalogueMedia(source(original),'/books/guide',{type:'audio',label:'Audio',url},'2026-10-15');
+  assert.ok(result.includes(url));
+ }
 });

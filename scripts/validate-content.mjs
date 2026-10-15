@@ -1,3 +1,4 @@
+import { isAllowedAudioUrl } from '../src/lib/media-policy.mjs';
 import { publicationMetadataErrors } from './publication-metadata.mjs';
 import { staticPublicationRoutes } from './publication-routes.mjs';
 import { validateKitchenNotes } from '../src/content/kitchen-notes.mjs';
@@ -102,6 +103,8 @@ function validateFile(file, folder) {
   if (!Array.isArray(data.links)) {
     addError(file, 'links must be an array');
   } else {
+    const audio=data.links.find(link=>link.type==='audio');
+    if(folder==='books'&&data.type!=='series'&&audio&&!isAllowedAudioUrl(audio.url))addError(file,'playable audio URL is blocked by the media CSP');
     for (const [index, link] of data.links.entries()) {
       if (!validLinkTypes.has(link.type)) addError(file, `links[${index}].type is invalid: ${link.type}`);
       if (!link.label) addError(file, `links[${index}].label is required`);

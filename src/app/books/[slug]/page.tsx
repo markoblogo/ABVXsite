@@ -1,3 +1,4 @@
+import { YouTubeFigure, youtubeVideoId } from '@/components/YouTubeEmbed';
 import BookAudioPlayer from '@/components/BookAudioPlayer';
 import EditorialSectionLink from '@/components/EditorialSectionLink';
 import BookActionLinks from '@/components/BookActionLinks';
@@ -173,15 +174,14 @@ export default async function BookDetailPage({
   const image = book.heroImage || book.coverImage;
   const title = book.displayTitle || book.shortTitle || book.title;
   const audioLink = book.links.find((link) => link.type === 'audio');
-  const youtube = book.links.find((link) => link.type === 'youtube' && youtubeEmbedUrl(link.url));
-  const videoUrl = youtube ? youtubeEmbedUrl(youtube.url) : undefined;
-  const videoSection = videoUrl ? (
+  const youtube = book.links.find((link) => link.type === 'youtube' && youtubeEmbedUrl(link.url) && youtubeVideoId(link.url));
+  const videoSection = youtube ? (
     <section className="book-video-section" aria-labelledby="book-video-title">
       <div className="book-video-section__header">
         <div className="eyebrow">Media</div>
         <h2 id="book-video-title">Watch / Context</h2>
       </div>
-      <MediaPanel videoUrl={videoUrl} title={title} variant="video" />
+      <YouTubeFigure href={youtube.url} title={title} />
     </section>
   ) : null;
 

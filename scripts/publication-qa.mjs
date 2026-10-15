@@ -5,6 +5,7 @@ import { withQaServer } from './qa-server.mjs';
 import { catalogueVideoId, catalogueCardVideoId } from './catalogue-video.mjs';
 import { contentFiles, parseContentFile } from './content-lib.mjs';
 import { catalogueHubs } from './publication-scope.mjs';
+import { isAllowedAudioUrl } from '../src/lib/media-policy.mjs';
 
 export function internalPagePaths(hrefs,base='https://abvx.xyz') {
  const origin=new URL(base).origin;
@@ -37,7 +38,7 @@ export function assertCatalogueVideo(data,frames,folder='work') {
  const first=(data.links||[]).find(link=>link.type==='youtube'&&catalogueCardVideoId(link.url,folder));
  if(!first)return;
  const id=catalogueVideoId(first.url);
- assert.ok(frames.some(frame=>typeof frame.src==='string'&&frame.src.match(/^https:\/\/www\.youtube(?:-nocookie)?\.com\/embed\/([\w-]{11})(?:[?#]|$)/)?.[1]===id&&frame.title?.trim()),'exact catalogue video and accessible title');
+ assert.ok(frames.some(frame=>typeof frame.src==='string'&&frame.src.match(/^https:\/\/www\.youtube-nocookie\.com\/embed\/([\w-]{11})(?:[?#]|$)/)?.[1]===id&&frame.title?.trim()&&frame.loading==='lazy'&&frame.referrerPolicy==='strict-origin-when-cross-origin'),'exact lazy privacy-enhanced catalogue video and accessible title');
 }
 export function assertCatalogueImage(data,images) {
  const image=data.heroImage||data.media||data.coverImage;
@@ -48,12 +49,17 @@ export function assertCatalogueImage(data,images) {
   return src===image.src&&rendered.loaded;
  }),'requested catalogue image must render successfully');
 }
-export async function assertCatalogueDownloads(request,data,base) {
+export async function assertCatalogueDownloads(request,data,base,folder='work') {
+ const audio=folder==='books'&&data.type!=='series'?(data.links||[]).find(link=>link.type==='audio'):null;
+ assert.ok(!audio||isAllowedAudioUrl(audio.url),'playable book audio is blocked by media CSP');
  await boundedMap((data.links||[]).filter(link=>['pdf','epub','audio','audiobook'].includes(link.type)),async link=>{
   const url=new URL(link.url,'https://abvx.xyz');
   const target=url.origin==='https://abvx.xyz'?new URL(url.pathname+url.search,base).href:url.href;
   const response=await request.head(target);
-  try{assert.ok(response.status()>=200&&response.status()<400,target+' catalogue media unavailable');}
+  try{
+   assert.ok(response.status()>=200&&response.status()<400,target+' catalogue media unavailable');
+   if(link===audio)assert.ok(isAllowedAudioUrl(response.url(),base)||isAllowedAudioUrl(response.url()),'playable audio redirect is blocked by media CSP');
+  }
   finally{await response.dispose();}
  });
 }
@@ -109,7 +115,7 @@ export async function publicationQa(scope) {
     if(scope.profile==='catalogue-v1') {
      const type=source.folder==='books'?(data.type==='series'?'CreativeWorkSeries':'Book'):undefined;
      assert.ok(objects.some(item=>item.url===url && (!type||item['@type']===type)),route+' entity metadata');
-     assertCatalogueVideo(data,await page.locator('main iframe').evaluateAll(frames=>frames.map(frame=>({src:frame.getAttribute('src'),title:frame.getAttribute('title')}))),source.folder);
+     assertCatalogueVideo(data,await page.locator('main iframe').evaluateAll(frames=>frames.map(frame=>({src:frame.getAttribute('src'),title:frame.getAttribute('title'),loading:frame.getAttribute('loading'),referrerPolicy:frame.getAttribute('referrerpolicy')}))),source.folder);
      for(const link of data.links||[]) assert.ok(await page.locator('main a').evaluateAll((links,url)=>links.some(a=>a.getAttribute('href')===url),link.url),route+' outbound link');
      const image=data.heroImage||data.media||data.coverImage;
      if(image){
@@ -119,7 +125,7 @@ export async function publicationQa(scope) {
       }),image.src);
       assertCatalogueImage(data,await page.locator('main img').evaluateAll(images=>images.map(img=>({src:img.getAttribute('src'),loaded:img.complete&&img.naturalWidth>0}))));
      }
-     await assertCatalogueDownloads(page.request,data,base);
+     await assertCatalogueDownloads(page.request,data,base,source.folder);
      if(source.folder==='books'&&data.type!=='series'&&data.links?.some(link=>link.type==='audio')){
       assert.equal(await page.locator('audio').getAttribute('src'),null,'audio must remain opt-in');
       assert.equal(await page.locator('audio').getAttribute('preload'),'none');

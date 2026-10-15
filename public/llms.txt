@@ -745,6 +745,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Market Infrastructure & Brokerage
   Tags: brokerage, agro-commodities, spot-market, physical-commodity-markets, execution, workflows, market-infrastructure, trading
 
+- The Contract Execution Officer Handbook
+  URL: https://abvx.xyz/books/contract-execution-officer-handbook
+  Summary: A practical guide to physical commodity contract execution, from commercial handover and contract formation to logistics, documentary control, payment reconciliation and closeout. Developed by the MN7R Team, with operational checklists, real-world scenarios and supervised AI-assisted workflows.
+  Group: Market Infrastructure & Brokerage
+  Tags: commodity-contract-execution, trade-operations, commodity-brokerage, logistics, documentation, payment-control, MN7R, agro-commodities
+
 - ABVX OS
   URL: https://abvx.xyz/work/abvx-os
   Summary: A local-first control plane for personal AI work: intake, professional role routing, portfolio state, evidence, and human approval gates.

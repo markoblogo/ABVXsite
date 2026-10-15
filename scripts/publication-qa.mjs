@@ -10,9 +10,16 @@ export function internalPagePaths(hrefs,base='https://abvx.xyz') {
  const paths=new Set();
  for(const href of hrefs) {
   const url=new URL(href,base);
-  if(url.origin===origin&&!/\.(?:pdf|epub|png|jpe?g|webp|avif|gif|svg|ico|zip|mp4|mp3)$/i.test(url.pathname)) paths.add(url.pathname);
+  if(url.origin===origin&&!/\.(?:pdf|epub|png|jpe?g|webp|avif|gif|svg|ico|zip|mp4|mp3|m4b|m4a|ogg|wav|flac|aac|opus|webm)$/i.test(url.pathname)) paths.add(url.pathname);
  }
  return [...paths];
+}
+// Binary downloads need link availability proof, not a buffered body transfer.
+export async function assertInternalLink(request, url) {
+ const method = internalPagePaths([url], url).length ? 'get' : 'head';
+ const response = await request[method](url);
+ try { assert.ok(response.status() >= 200 && response.status() < 400, url + ' broken internal link'); }
+ finally { await response.dispose(); }
 }
 export async function boundedMap(values, fn, concurrency=6) {
  let next=0;

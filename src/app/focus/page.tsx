@@ -60,6 +60,7 @@ const focusBookGroup = {
     'mn7r-agro-commodity-brokerage-en-free-edition',
     'mn7r-agro-commodity-brokerage-ua-free-edition',
     'spot-market-handbook-ua-free-edition',
+    'contract-execution-officer-handbook',
   ],
 } as const;
 

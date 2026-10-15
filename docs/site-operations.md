@@ -60,6 +60,14 @@ The homepage Focus, Systems and Books cards use immutable first-addition times f
 
 The initial migration uses known source publication dates (`legacy-source`); undated legacy entries remain `null` (`legacy-unknown`) and do not compete for latest cards. The four Good Dogs/Jekyll book records use the verified production deployment time of PR26 (`production`, 2026-10-06T14:16:40.000Z). `--bootstrap` is migration-only; ordinary registration always records current UTC once (`observed`). Original content publication/update dates remain unchanged.
 
+## Catalogue media operations
+
+Use [the additive-media handoff](abvx-os-publishing.md#shared-additive-media-route) for existing project, book and series cards. `catalogue-video.mjs` resolves sources from metadata across `content/work/`, `content/books/` and `content/series/`, including declared root series canonicals. Use the dry-run's `sourceFile` rather than assuming a route maps directly to a filename.
+
+`src/lib/media-policy.mjs` supplies the same audio origins to CSP, preflight and QA. Individual book audio attaches its source only after a reader requests playback; its final redirect host must remain allowed. Download availability uses HEAD, including binary links in scoped QA. Project/book/series trailers share the lazy privacy-enhanced player. Routine media additions preserve placement and original publication/addition dates.
+
+Catalogue timing is recorded privately with its own workload/version, exact base/head/merge, selected QA profile, corrections and continuous elapsed time. It is not automatically a native OS publication cycle or Cortex-qualified trial. Retain failed attempts; do not reset timers or infer causal savings from different cards or profiles.
+
 ## Analytics
 
 The existing Plausible script is loaded by `src/app/layout.tsx`. Existing links carry the official CSS-based event classes; adding tracking does not require converting a server component to a client component.

@@ -13,7 +13,7 @@ This repository owns the public presentation and its editable content. `ABVX-OS`
 | --- | --- |
 | [Focus](https://abvx.xyz/focus) | Agro-commodity trading, brokerage, intelligence, benchmarks, and partner fronts |
 | [Systems](https://abvx.xyz/systems) | Market, publishing/language, AI-development, and commercial/utility systems |
-| [Books](https://abvx.xyz/books) | ABVX Press books, translations, series, free resources, and companions |
+| [Books](https://abvx.xyz/books) | Books from ABVX Press and AMI Press, translations, series, free resources, and companions |
 | [Writing](https://abvx.xyz/writing) | Native articles, Medium/Substack feeds, and automatic YouTube watch pages |
 | [About](https://abvx.xyz/about) | Background, working method, contact, and technology/creative collaborations |
 | [Work with me](https://abvx.xyz/work-with-me) | Engagement formats and six focused service pages |
@@ -61,7 +61,16 @@ See [Content editing](docs/content-editing.md) for task recipes and [Content wor
 
 ## Verify and publish
 
-Repeatable ABVX OS publication uses [the consumer handoff](docs/abvx-os-publishing.md). `npm run content:release-check` runs the editorial gates once and saves ignored results; `content:production-check` checks discovery against the live domain after deployment.
+Use the [publication handoff](docs/abvx-os-publishing.md) for the complete procedure:
+
+| Change | Preparation | Release scope |
+| --- | --- | --- |
+| New native article or Working Story | Approved full-source packets through `content:publish` | `publication-v1` when eligible |
+| New project or book in an existing catalogue placement | Separate full-source catalogue packets through `content:publish` | `catalogue-v1` when eligible |
+| Add a video, first image, PDF, EPUB, audio or audiobook link to an existing project/book/series | `content:add-media`; `content:add-video` remains compatible | `catalogue-v1` for supported additive changes |
+| Shared code, new series/routes/placements, replacements or uncertain scope | Separate reviewed engineering change | `full` |
+
+Singles and pools share the same path; native and catalogue packet pools stay separate. The Git classifier selects the profile. Never manually omit gates. `content:release-check` records one final-tree receipt under ignored `exports/editorial-checks/`; reuse it for measurement rather than rebuilding for each member. Catalogue observations retain separate workload versions and are not automatically native OS/Cortex learning cycles.
 
 Work from current `origin/main` in a clean ABVXsite checkout or suitable worktree. Keep unrelated changes out of the branch; use `codex/` for Codex branches.
 
@@ -77,23 +86,33 @@ npm run build
 npm audit --omit=dev --audit-level=high
 ```
 
+The CI build is skipped for a proven documentation-only diff; other CI checks remain required. Documentation changes do not need a local application build or browser sweep unless the change also affects rendered behavior.
+
 Run `npm run qa:seo` **after** a successful build for content, route, or metadata changes. `npm run content:review` is an optional editorial report; its warnings are separate from structural validation failures. Use targeted mobile/visual checks when rendered pages change.
 
 Open one PR containing the complete source/link/index change. Passing CI and a Vercel Preview are review evidence. After the approved merge to `main`, confirm the Vercel **production deployment for the merge SHA**, then verify the canonical public URLs and relevant sitemap/index entries. A merge or preview alone does not prove publication or Google indexing.
+
+Use `npm run content:release-ready -- --preview --pr <number>` to wait for CI/Preview. Review feedback before the authorized merge, then use a clean checkout at the merge SHA and `npm run content:release-ready -- --production --pr <number>`. The latter verifies the latest Production SHA before and after live QA; do not repeat that audit after success. Documentation-only changes may intentionally skip a Vercel deployment: verify their merged files on GitHub, without claiming a new website deployment.
 
 The [editorial release checklist](docs/editorial-seo-checklist.md) is the detailed procedure. [Site operations](docs/site-operations.md) covers feeds, analytics, diagnostics, and the repository map.
 
 ## Writing and measurement
 
-Writing merges local articles, [Working Stories](docs/working-stories.md), Medium, Substack, and YouTube. Writing and the three homepage publication slots share chronology by first registration on ABVX; source publication dates remain separate. `npm run writing:register` records native additions during prebuild. The hourly feed workflow retains discovered posts and immutable timestamps, and publishes only when metadata changes. Feed failures preserve the saved list. See [Site operations](docs/site-operations.md) for timing, historical migration, and the narrowly authorized workflow.
+Writing merges local articles, [Working Stories](docs/working-stories.md), Medium, Substack, and YouTube. Writing and the three homepage publication slots share chronology by first registration on ABVX; source publication dates remain separate. `npm run writing:register` records native additions during prebuild. The approximately 15-minute feed workflow retains discovered posts and immutable timestamps, and publishes only when metadata changes. Feed failures preserve the saved list. See [Site operations](docs/site-operations.md) for timing, historical migration, and the narrowly authorized workflow.
 
-Working Stories also has its own [chronological index](https://abvx.xyz/writing/working-stories); book-eligible stories export with `npm run export:working-stories` into ignored local `exports/` files. YouTube retains its new-publication cutoff and one initial test exception. Featured players, compact recent previews and text-only archive rows retain their existing layouts.
+Working Stories also has its own [chronological index](https://abvx.xyz/writing/working-stories); book-eligible stories export with `npm run export:working-stories` into ignored local `exports/` files. YouTube retains its new-publication cutoff and one initial test exception. The recent view contains one featured item, six recent items and thirty initial archive rows. **More posts** reveals up to thirty additional rows per click; the [complete server-rendered archive](https://abvx.xyz/writing/archive) keeps older local publications linked for discovery.
 
 Plausible tracks `Book Link Click`, `Contact Click`, and `Collaboration Click` separately. These measure link intent, not completed purchases, messages, or bookings. Dashboard goals and historical limitations are documented in [Site operations](docs/site-operations.md).
 
 Canonical domain: `https://abvx.xyz`. Public discovery surfaces: [sitemap.xml](https://abvx.xyz/sitemap.xml), [llms.txt](https://abvx.xyz/llms.txt), [content-index.json](https://abvx.xyz/content-index.json), and [ecosystem.json](https://abvx.xyz/ecosystem.json). Structured metadata, alternates, and indexes support discovery; they do not guarantee rankings, AI citations, or traffic.
 
 See the [traffic growth plan](docs/traffic-growth-plan.md) for implemented work, measurement, and proposed next improvements. Proposed work is not an instruction to start it automatically.
+
+## Catalogue media
+
+Project, book and series trailers reuse the shared lazy `youtube-nocookie.com` player with an accessible title and original YouTube fallback link. A trailer update preserves the existing prose, links, canonical path and first-addition time; it changes `updatedAt` and the generated indexes.
+
+Individual book audio loads only after the reader requests playback. Playable audio must use the site's shared CSP allowlist (ABVX, GitHub and release-assets.githubusercontent.com), including the final redirect host. Work/series audio and `audiobook` links are downloads. Release QA checks binary availability with HEAD rather than downloading entire files; a HEAD response alone does not prove playback. See [media preparation and safeguards](docs/abvx-os-publishing.md#shared-additive-media-route).
 
 ## Integrations and boundaries
 
@@ -108,7 +127,9 @@ Optional Search Console/Bing verification overrides are `GOOGLE_SITE_VERIFICATIO
 For an agent session, read `AGENTS.md`, this README, then only the relevant guide:
 
 - [Content editing](docs/content-editing.md) / [content format](docs/content-workflow.md)
+- [Publication commands, media updates and measurement boundaries](docs/abvx-os-publishing.md)
 - [Working Stories workflow and manuscript export](docs/working-stories.md)
+- [Kitchen Notes recipes and local cookbook export](docs/kitchen-notes.md)
 - [Editorial SEO release checklist](docs/editorial-seo-checklist.md)
 - [Site operations and measurement](docs/site-operations.md)
 - [Traffic growth plan](docs/traffic-growth-plan.md)
@@ -123,9 +144,3 @@ For an agent session, read `AGENTS.md`, this README, then only the relevant guid
 
 _This block is generated from the reviewed ABVX ecosystem registry._
 <!-- ABVX:ECOSYSTEM:END -->
-
-Kitchen Notes: native recipes and existing food notes use the shared Writing collection; see [recipe fields and local export](docs/kitchen-notes.md).
-
-Routine native publications use [scoped release QA and short transition commands](docs/abvx-os-publishing.md#publication-qa-profile-v1). Full QA remains automatic for code, routing, dependencies or uncertain scope; the site still requires a successful Vercel build and production SHA proof.
-
-Routine approved posts and cases use the [data-only publication lane](docs/abvx-os-publishing.md#routine-publication-data-only), with one atomic pool plan and an enforced Git boundary. Template/schema changes use separate engineering releases.

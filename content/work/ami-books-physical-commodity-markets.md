@@ -32,6 +32,11 @@
       "type": "github",
       "label": "GitHub",
       "url": "https://github.com/markoblogo/book-landings"
+    },
+    {
+      "type": "youtube",
+      "label": "Launch video",
+      "url": "https://youtu.be/RpxHRWhH4Yw"
     }
   ],
   "featured": false,

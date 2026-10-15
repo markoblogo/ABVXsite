@@ -53,6 +53,11 @@
       "type": "site",
       "label": "Book website",
       "url": "https://books.1d3x.com/books/contract-execution-officer-handbook"
+    },
+    {
+      "type": "youtube",
+      "label": "Book trailer",
+      "url": "https://youtu.be/k7DYPrNV7ZY"
     }
   ],
   "relatedSlugs": [

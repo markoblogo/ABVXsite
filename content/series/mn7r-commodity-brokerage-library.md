@@ -32,6 +32,11 @@
       "type": "other",
       "label": "MN7R website",
       "url": "https://mn7r.com/"
+    },
+    {
+      "type": "youtube",
+      "label": "Series trailer",
+      "url": "https://youtu.be/vAPgNupIp2s"
     }
   ],
   "featured": true,

@@ -21,6 +21,11 @@ export async function assertInternalLink(request, url) {
  try { assert.ok(response.status() >= 200 && response.status() < 400, url + ' broken internal link'); }
  finally { await response.dispose(); }
 }
+export async function checkInternalLinks(request, hrefs, sourceUrl, requestBase = sourceUrl) {
+ const origin = new URL(sourceUrl).origin;
+ const targets = new Set(hrefs.map(href => new URL(href, sourceUrl)).filter(url => url.origin === origin).map(url => url.pathname + url.search));
+ await boundedMap([...targets], target => assertInternalLink(request, new URL(target, requestBase).href));
+}
 export async function boundedMap(values, fn, concurrency=6) {
  let next=0;
  await Promise.all(Array.from({length:Math.min(concurrency,values.length)},async()=>{
@@ -84,7 +89,7 @@ export async function publicationQa(scope) {
      for(const link of data.links||[]) assert.ok(await page.locator('main a').evaluateAll((links,url)=>links.some(a=>a.getAttribute('href')===url),link.url),route+' outbound link');
     }
     const internal=await page.locator('main a[href]').evaluateAll(links=>links.map(a=>a.getAttribute('href')));
-    await boundedMap(internalPagePaths(internal,url),async route=>{await get(route);});
+    await checkInternalLinks(page.request, internal, url, base);
     const images=await page.locator('main img').evaluateAll(imgs=>imgs.map(img=>img.getAttribute('src')).filter(Boolean));
     await boundedMap([...new Set(images)].filter(src=>src.startsWith('/')),async src=>{await get(src);});
     for(const width of [320,390,1280]) {

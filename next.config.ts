@@ -58,6 +58,9 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Preserve published audio URLs after moving identical files to Releases.
+      { source: "/media/books/mn7r-agro-commodity-brokerage-en-free-edition/audiobook.mp3", destination: "https://github.com/markoblogo/mn7r-public-assets/releases/download/book-assets-2026-09-23/mn7r-agro-commodity-brokerage-en-audio.mp3", permanent: true },
+      { source: "/media/books/mn7r-agro-commodity-brokerage-en-free-edition/audiobook.m4b", destination: "https://github.com/markoblogo/mn7r-public-assets/releases/download/book-assets-2026-09-23/mn7r-agro-commodity-brokerage-en-audio.m4b", permanent: true },
       // Preserve legacy URLs while moving the public IA to Focus / Systems / Books / Writing / About.
       { source: "/ecosystems", destination: "/systems", permanent: true },
       { source: "/ecosystems/", destination: "/systems", permanent: true },

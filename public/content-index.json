@@ -7010,7 +7010,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-15T13:21:01.299Z",
+      "updatedAt": "2026-10-15T13:44:50.731Z",
       "tags": [],
       "links": [],
       "related": []
@@ -7668,6 +7668,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=jEIPftaweBM"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Spot-Market Handbook | How Physical Commodity Markets Work",
+      "summary": "A quote is only the beginning. Explore how grain, logistics, delivery terms and liquidity connect in physical commodity markets. Read Spot-Market Handbook — free English edition, available as PDF and EPUB: https://abvx.x",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/7hkMaEjINZA",
+      "publishedAt": "2026-10-15T13:30:07.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=7hkMaEjINZA"
         }
       ],
       "related": []

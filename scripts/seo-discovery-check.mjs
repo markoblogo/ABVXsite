@@ -44,6 +44,38 @@ await withQaServer(async (base) => {
         assert.ok(!text.includes('**'), route + ' leaked Markdown');
       }
     }
+    const authoredBooks = contentFiles('books').map(file => parseContentFile(file).data).filter(book => book.visibility === 'public');
+    for (const book of authoredBooks.filter(book => book.editorialSlug || book.publisher)) {
+      const route = book.canonicalPath || '/books/' + book.slug;
+      await visit(base + route);
+      if (book.publisher) {
+        const schema = JSON.parse(await page.locator('#jsonld-book-item').textContent());
+        assert.equal(schema.publisher.name, book.publisher, route + ' publisher mismatch');
+      }
+      if (book.editorialSlug) {
+        const articleRoute = '/editorial/books/' + book.editorialSlug;
+        const read = page.locator('.book-detail-main a[href="' + articleRoute + '"]');
+        assert.equal(await read.count(), 1, route + ' missing editorial link');
+        assert.match(await read.innerText(), /Read in English/);
+        assert.ok((await page.locator('.book-detail-main .book-detail-copy-panel').innerText()).length < 2000, route + ' must retain a short overview');
+        await read.click();
+        await page.waitForURL(base + articleRoute, { waitUntil: 'domcontentloaded' });
+        assert.ok((await page.locator('.editorial-article-body').innerText()).length > 2000, articleRoute + ' missing full article');
+        assert.ok(await page.locator('.editorial-article-body a[href="' + route + '"]').count(), articleRoute + ' missing product return link');
+        for (const hub of ['/books', ...(book.appearsIn?.includes('focus') ? ['/focus'] : [])]) {
+          await visit(base + hub);
+          const card = page.locator('.book-catalogue-card').filter({ has: page.locator('h3 a[href="' + route + '"]') });
+          assert.equal(await card.locator('a[href="' + articleRoute + '"]').count(), 1, hub + ' missing article action');
+          if (hub === '/focus' && book.language !== 'uk') assert.ok(!(await card.locator('.catalogue-card__meta').innerText()).includes('українське'), route + ' wrong edition language');
+        }
+        await page.setViewportSize({ width: 375, height: 900 });
+        for (const path of [route, articleRoute]) {
+          await visit(base + path);
+          assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), path + ' mobile overflow');
+        }
+        await page.setViewportSize({ width: 1280, height: 900 });
+      }
+    }
     await visit(base + french);
     await page.locator('a[href="' + ukrainian + '"]').click();
     assert.equal(await page.locator('html').getAttribute('lang'), 'uk');
@@ -273,6 +305,7 @@ await withQaServer(async (base) => {
     const pageMetadata = JSON.parse(readFileSync('content/pages.json', 'utf8'));
     for(const route of ['/ami','/fr/ami','/llmo']) assert.equal(sitemapEntries.get('https://abvx.xyz'+route),new Date(pageMetadata[route].updatedAt).toISOString(),route+' unrelated publication changed lastmod');
     assert.ok(Date.parse(sitemapEntries.get('https://abvx.xyz/about')) >= Date.parse(pageMetadata['/about'].updatedAt), '/about excludes static page updates');
+    assert.ok(Date.parse(sitemapEntries.get('https://abvx.xyz/focus')) >= Date.parse(pageMetadata['/focus'].updatedAt), '/focus excludes static page updates');
     for (const width of [375, 1280]) {
       await page.setViewportSize({ width, height: 900 });
       await visit(base + '/books');

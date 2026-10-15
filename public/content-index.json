@@ -2398,6 +2398,32 @@
       ]
     },
     {
+      "type": "editorial",
+      "section": "books",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "The Contract Execution Officer Handbook: What Happens After a Commodity Trade Is Agreed?",
+      "summary": "A practical guide to physical commodity contract execution: trade handover, documentation, logistics, inspections, payments, controls and MN7R workflows.",
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15",
+      "language": "en",
+      "translationGroup": "contract-execution-officer-handbook",
+      "canonicalUrl": "https://abvx.xyz/editorial/books/contract-execution-officer-handbook",
+      "tags": [
+        "Books",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Books",
+          "url": "https://abvx.xyz/books"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "book",
       "section": "books",
       "ecosystem": "Business, AI & Marketing",

@@ -1,5 +1,6 @@
 import type { Book } from '@/content';
 import ActionLinks from './ActionLinks';
+import EditorialSectionLink from './EditorialSectionLink';
 import MediaPanel from './MediaPanel';
 import TagList from './TagList';
 import Link from 'next/link';
@@ -39,7 +40,9 @@ export default function BookCatalogueCard({
         </h3>
         {book.subtitle ? <p className="book-catalogue-card__subtitle">{book.subtitle}</p> : null}
         <p>{book.summary}</p>
-        {book.description ? (
+        {book.editorialSlug ? (
+          <EditorialSectionLink section="books" slug={book.editorialSlug} />
+        ) : book.description ? (
           <Link className="editorial-section-link" href={book.canonicalPath || `/books/${book.slug}`}>
             Book overview <span aria-hidden="true">→</span>
           </Link>

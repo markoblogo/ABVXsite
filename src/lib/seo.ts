@@ -422,7 +422,7 @@ export function bookJsonLd(
     author: book.author ? { '@type': 'Person', name: book.author } : { '@id': `${SITE_URL}/#person` },
     creator: book.author ? { '@type': 'Person', name: book.author } : { '@id': `${SITE_URL}/#person` },
     translator: book.translator ? { '@type': 'Person', name: book.translator } : undefined,
-    publisher: { '@id': `${SITE_URL}/#organization` },
+    publisher: book.publisher ? { '@type': 'Organization', name: book.publisher } : { '@id': `${SITE_URL}/#organization` },
     audience: audienceFromTags(book.tags),
     about: book.tags.map((tag) => ({ '@type': 'Thing', name: tag })),
     inLanguage: book.language,

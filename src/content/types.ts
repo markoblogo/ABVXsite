@@ -139,6 +139,8 @@ export type Artifact = BaseContentItem<ArtifactType> & {
 };
 
 export type Book = BaseContentItem<BookType> & {
+  publisher?: string;
+  editorialSlug?: string;
   subtitle?: string;
   displayTitle?: string;
   coverImage?: ContentImage;

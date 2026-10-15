@@ -619,6 +619,11 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Summary: Discover AMI, an agricultural market infrastructure ecosystem connecting MN7R brokerage software, 1D3X commodity indices, market intelligence and execution workflows.
   Section: Focus
 
+- The Contract Execution Officer Handbook: What Happens After a Commodity Trade Is Agreed?
+  URL: https://abvx.xyz/editorial/books/contract-execution-officer-handbook
+  Summary: A practical guide to physical commodity contract execution: trade handover, documentation, logistics, inspections, payments, controls and MN7R workflows.
+  Section: Books
+
 ## Publishing lines
 
 - Modernisme Ukrainien

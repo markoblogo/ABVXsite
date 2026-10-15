@@ -277,6 +277,8 @@ export function readBookFiles(): Book[] {
         originalLanguage: optionalString(data.originalLanguage),
         editionRole: optionalString(data.editionRole),
         author: optionalString(data.author),
+        publisher: optionalString(data.publisher),
+        editorialSlug: optionalString(data.editorialSlug),
         translator: nullableString(data.translator),
         translationOf: nullableString(data.translationOf),
       };

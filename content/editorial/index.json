@@ -964,5 +964,19 @@
     "seoTitle": "AMI Agro Market Infrastructure: MN7R, 1D3X and Commodity Trading Systems",
     "publishedAt": "2026-10-13",
     "updatedAt": "2026-10-14"
+  },
+  {
+    "section": "books",
+    "sectionTitle": "Books",
+    "slug": "contract-execution-officer-handbook",
+    "title": "The Contract Execution Officer Handbook: What Happens After a Commodity Trade Is Agreed?",
+    "summary": "A practical guide to physical commodity contract execution: trade handover, documentation, logistics, inspections, payments, controls and MN7R workflows.",
+    "linkLabel": "Read in English",
+    "source": "contract-execution-officer-handbook.md",
+    "language": "en",
+    "translationGroup": "contract-execution-officer-handbook",
+    "seoTitle": "What Happens After a Commodity Trade Is Agreed? | MN7R Handbook",
+    "publishedAt": "2026-10-15",
+    "updatedAt": "2026-10-15"
   }
 ]

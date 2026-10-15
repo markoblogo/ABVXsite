@@ -1,5 +1,5 @@
 // One data-only addition path for existing project/book cards. No release authority.
-import { readFileSync, writeFileSync, realpathSync } from 'node:fs';
+import { readFileSync, writeFileSync, realpathSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
@@ -38,32 +38,48 @@ export function isCatalogueVideoAddition(previous,current,folder='work') {
   &&after.at(-1).type==='youtube'&&Boolean(catalogueCardVideoId(after.at(-1).url,folder))
   &&!before.some(link=>link.type==='youtube'&&catalogueCardVideoId(link.url,folder));
 }
+function catalogueTarget(route) {
+ const normal=route.match(/^\/(books|work)\/([a-z0-9]+(?:-[a-z0-9]+)*)$/);
+ if(normal)return {folder:normal[1],slug:normal[2],canonicalSeries:false};
+ const canonical=route.match(/^\/([a-z0-9]+(?:-[a-z0-9]+)*)$/);
+ if(canonical)return {folder:'books',slug:canonical[1],canonicalSeries:true};
+ throw Error('Unsupported catalogue route');
+}
+export function resolveCatalogueVideoSource(route,root=process.cwd()) {
+ root=realpathSync(root);const target=catalogueTarget(route);
+ const folders=target.folder==='books'?['books','series']:['work'];
+ const candidates=folders.map(folder=>path.join(root,'content',folder,target.slug+'.md')).filter(existsSync);
+ if(candidates.length!==1)throw Error('Expected one unambiguous existing catalogue source');
+ const file=candidates[0];if(realpathSync(file)!==file)throw Error('Symlink source is not allowed');
+ return file;
+}
 export function addCatalogueVideo(source,route,href,date=new Date().toISOString().slice(0,10)) {
- const match=route.match(/^\/(books|work)\/([a-z0-9]+(?:-[a-z0-9]+)*)$/);
- if(!match||!catalogueCardVideoId(href,match[1]))throw Error('Expected an existing /books/<slug> or /work/<slug> and a supported HTTPS YouTube video');
+ const target=catalogueTarget(route);
+ if(!catalogueCardVideoId(href,target.folder))throw Error('Expected an existing /books/<slug> or /work/<slug> and a supported HTTPS YouTube video');
  const {data}=parseMarkdownSource(source);
- if(data.slug!==match[2]||(data.canonicalPath&&data.canonicalPath!==route)||data.visibility!=='public'||!['live','released','building','research','archive'].includes(data.status)||(typeof data.type!=='string'||!data.type.trim())||!(Date.parse(data.publishedAt)<=Date.now()))throw Error('Expected an existing public, published catalogue card');
+ const series=target.folder==='books'&&data.type==='series';
+ const canonicalMatches=!data.canonicalPath||data.canonicalPath===route||(series&&data.canonicalPath==='/'+target.slug);
+ const due=data.publishedAt===undefined?series:Date.parse(data.publishedAt)<=Date.now();
+ if(data.slug!==target.slug||!canonicalMatches||(target.canonicalSeries&&(!series||data.canonicalPath!==route))||data.visibility!=='public'||!['live','released','building','research','archive'].includes(data.status)||(typeof data.type!=='string'||!data.type.trim())||!due)throw Error('Expected an existing public, published catalogue card');
  if(!Array.isArray(data.links))throw Error('Card links must be an array');
- const current=data.links.find(link=>link.type==='youtube'&&catalogueCardVideoId(link.url,match[1]));
+ const current=data.links.find(link=>link.type==='youtube'&&catalogueCardVideoId(link.url,target.folder));
  if(current) {
   if(catalogueVideoId(current.url)===catalogueVideoId(href))return source;
   throw Error('A different playable video already exists; review replacement separately');
  }
  data.updatedAt=date;
  if(publicationMetadataErrors(data).length||Date.parse(date)>Date.now())throw Error('Invalid release date');
- data.links.push({type:'youtube',label:match[1]==='books'?'Book trailer':'Launch video',url:href});
+ data.links.push({type:'youtube',label:series?'Series trailer':target.folder==='books'?'Book trailer':'Launch video',url:href});
  const end=source.indexOf('\n---',3);
  return '---\n'+JSON.stringify(data,null,2)+source.slice(end);
 }
 function main(args) {
  const write=args.at(-1)==='--write';if(write)args=args.slice(0,-1);
  if(args.length!==4||args[0]!=='--route'||args[2]!=='--video')throw Error('Expected --route /books/<slug>|/work/<slug> --video <YouTube URL> [--write]; default is dry-run');
- const route=args[1];if(!/^\/(books|work)\/[a-z0-9]+(?:-[a-z0-9]+)*$/.test(route))throw Error('Unsupported catalogue route');
- const root=realpathSync(process.cwd()), file=path.join(root,'content',route+'.md');
- if(realpathSync(file)!==file)throw Error('Symlink source is not allowed');
+ const route=args[1],root=realpathSync(process.cwd()),file=resolveCatalogueVideoSource(route,root);
  const source=readFileSync(file,'utf8'),result=addCatalogueVideo(source,route,args[3]);
  const sha=value=>createHash('sha256').update(value).digest('hex');
  if(write&&result!==source)writeFileSync(file,result);
- console.log(JSON.stringify({route,video:args[3],mode:write?'write':'dry-run',changed:result!==source,sourceSha256:sha(source),resultSha256:sha(result)}));
+ console.log(JSON.stringify({route,sourceFile:path.relative(root,file),video:args[3],mode:write?'write':'dry-run',changed:result!==source,sourceSha256:sha(source),resultSha256:sha(result)}));
 }
 if(process.argv[1]&&fileURLToPath(import.meta.url)===process.argv[1])main(process.argv.slice(2));

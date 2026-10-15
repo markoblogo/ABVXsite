@@ -75,3 +75,15 @@ test('existing Focus-cross-listed catalogue video additions stay scoped; other e
   writeFileSync(file,source(added)+'\nChanged prose.');assert.equal(publicationScope(base,'HEAD',root,true).profile,'full');
  } finally {rmSync(root,{recursive:true,force:true});}
 });
+
+test('updating an existing legacy catalogue type still selects full QA',()=>{
+ const root=mkdtempSync(path.join(tmpdir(),'abvx-legacy-video-scope-'));
+ const git=(...args)=>execFileSync('git',args,{cwd:root,encoding:'utf8'}).trim();
+ const data={slug:'legacy',title:'Legacy',type:'index-infrastructure',visibility:'public',status:'live',publishedAt:'2020-01-01',primarySection:'systems',appearsIn:['systems'],links:[]};
+ const file=path.join(root,'content/work/legacy.md');const source=value=>'---\n'+JSON.stringify(value)+'\n---\nExisting description.';
+ try {
+  git('init','-q');mkdirSync(path.dirname(file),{recursive:true});writeFileSync(file,source(data));git('add','.');git('-c','user.name=Test','-c','user.email=test@example.invalid','commit','-qm','base');const base=git('rev-parse','HEAD');
+  writeFileSync(file,source({...data,updatedAt:'2026-10-15',links:[{type:'youtube',url:'https://youtu.be/aaaaaaaaaaa'}]}));
+  assert.equal(publicationScope(base,'HEAD',root,true).reason,'unsupported-catalogue-type');
+ } finally {rmSync(root,{recursive:true,force:true});}
+});

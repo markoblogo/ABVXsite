@@ -24,3 +24,11 @@ test('catalogue video evidence requires the selected video, not an arbitrary ifr
  assertCatalogueVideo(data,[{src:'https://www.youtube-nocookie.com/embed/aaaaaaaaaaa?rel=0',title:'Book trailer'}]);
  for(const frame of [{src:'https://www.youtube.com/embed/bbbbbbbbbbb',title:'Wrong'}, {src:'https://evil.example/embed/aaaaaaaaaaa',title:'Fake'}, {src:'https://www.youtube.com/embed/aaaaaaaaaaa',title:' '}])assert.throws(()=>assertCatalogueVideo(data,[frame]));
 });
+
+
+test('catalogue evidence rejects watch-page iframes and follows the book-renderable link',()=>{
+ const data={links:[{type:'youtube',url:'https://www.youtube-nocookie.com/embed/bbbbbbbbbbb'},{type:'youtube',url:'https://youtu.be/aaaaaaaaaaa'}]};
+ assertCatalogueVideo(data,[{src:'https://www.youtube.com/embed/aaaaaaaaaaa',title:'Trailer'}],'books');
+ assert.throws(()=>assertCatalogueVideo(data,[{src:'https://www.youtube.com/watch?v=aaaaaaaaaaa',title:'Trailer'}],'books'));
+ assert.throws(()=>assertCatalogueVideo(data,[{src:'https://youtu.be/aaaaaaaaaaa',title:'Trailer'}],'books'));
+});

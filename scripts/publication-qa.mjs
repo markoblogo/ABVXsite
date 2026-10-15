@@ -2,7 +2,7 @@ import { readSeoDocument, assertSeoPage } from './seo-page-contract.mjs';
 import assert from 'node:assert/strict';
 import { chromium } from 'playwright';
 import { withQaServer } from './qa-server.mjs';
-import { catalogueVideoId } from './catalogue-video.mjs';
+import { catalogueVideoId, catalogueCardVideoId } from './catalogue-video.mjs';
 import { contentFiles, parseContentFile } from './content-lib.mjs';
 
 export function internalPagePaths(hrefs,base='https://abvx.xyz') {
@@ -20,11 +20,11 @@ export async function boundedMap(values, fn, concurrency=6) {
   while(next<values.length) {const i=next++;await fn(values[i],i);}
  }));
 }
-export function assertCatalogueVideo(data,frames) {
- const first=(data.links||[]).find(link=>link.type==='youtube'&&catalogueVideoId(link.url));
+export function assertCatalogueVideo(data,frames,folder='work') {
+ const first=(data.links||[]).find(link=>link.type==='youtube'&&catalogueCardVideoId(link.url,folder));
  if(!first)return;
  const id=catalogueVideoId(first.url);
- assert.ok(frames.some(frame=>catalogueVideoId(frame.src)===id&&frame.title?.trim()),'exact catalogue video and accessible title');
+ assert.ok(frames.some(frame=>typeof frame.src==='string'&&frame.src.match(/^https:\/\/www\.youtube(?:-nocookie)?\.com\/embed\/([\w-]{11})(?:[?#]|$)/)?.[1]===id&&frame.title?.trim()),'exact catalogue video and accessible title');
 }
 export async function publicationQa(scope) {
  assert.ok(['publication-v1','catalogue-v1'].includes(scope.profile));assert.ok(scope.routes.length);
@@ -73,7 +73,7 @@ export async function publicationQa(scope) {
     if(scope.profile==='catalogue-v1') {
      const type=source.folder==='books'?'Book':undefined;
      assert.ok(objects.some(item=>item.url===url && (!type||item['@type']===type)),route+' entity metadata');
-     assertCatalogueVideo(data,await page.locator('main iframe').evaluateAll(frames=>frames.map(frame=>({src:frame.getAttribute('src'),title:frame.getAttribute('title')}))));
+     assertCatalogueVideo(data,await page.locator('main iframe').evaluateAll(frames=>frames.map(frame=>({src:frame.getAttribute('src'),title:frame.getAttribute('title')}))),source.folder);
      for(const link of data.links||[]) assert.ok(await page.locator('main a').evaluateAll((links,url)=>links.some(a=>a.getAttribute('href')===url),link.url),route+' outbound link');
     }
     const internal=await page.locator('main a[href]').evaluateAll(links=>links.map(a=>a.getAttribute('href')));

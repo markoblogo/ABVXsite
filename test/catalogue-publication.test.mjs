@@ -102,3 +102,27 @@ test('shared add-video CLI dry-runs, writes exactly one card and repeats without
   assert.equal(run(['--write']).changed,false);assert.equal(readFileSync(file,'utf8'),written);
  }finally{rmSync(root,{recursive:true,force:true});}
 });
+
+
+test('existing legacy project and series types can receive a video without changing type',async()=>{
+ const {addCatalogueVideo}=await import('../scripts/catalogue-video.mjs');
+ for(const [folder,type] of [['work','index-infrastructure'],['books','series']]) {
+  const data={slug:'existing',type,visibility:'public',status:'live',publishedAt:'2020-01-01',links:[]};
+  const source='---\n'+JSON.stringify(data)+'\n---\nExisting description.';
+  const result=addCatalogueVideo(source,`/${folder}/existing`,'https://youtu.be/aaaaaaaaaaa');
+  assert.equal(JSON.parse(result.slice(3,result.indexOf('\n---',3))).type,type);
+ }
+});
+test('book video additions reject URL forms unsupported by its renderer before changing the source',async()=>{
+ const {addCatalogueVideo,catalogueCardVideoId}=await import('../scripts/catalogue-video.mjs');
+ const source=packet('books').payload.source_markdown;
+ for(const url of ['https://www.youtube-nocookie.com/embed/aaaaaaaaaaa','https://www.youtube.com/watch?t=1&v=aaaaaaaaaaa']) {
+  assert.equal(catalogueCardVideoId(url,'books'),null);
+  assert.throws(()=>addCatalogueVideo(source,'/books/example',url));
+  assert.equal(catalogueCardVideoId(url,'work'),'aaaaaaaaaaa');
+ }
+ const old=JSON.parse(source.slice(3,source.indexOf('\n---',3)));
+ old.links.push({type:'youtube',url:'https://www.youtube-nocookie.com/embed/bbbbbbbbbbb'});
+ const updated=addCatalogueVideo('---\n'+JSON.stringify(old)+'\n---\nText.','/books/example','https://youtu.be/aaaaaaaaaaa');
+ assert.ok(updated.includes('https://youtu.be/aaaaaaaaaaa'));
+});

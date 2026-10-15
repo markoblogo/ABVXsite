@@ -3007,9 +3007,14 @@
           "type": "site",
           "label": "Про проект",
           "url": "https://spike.1d3x.com/uk/about"
+        },
+        {
+          "type": "youtube",
+          "label": "Book trailer",
+          "url": "https://youtu.be/Kx1ftrOWQm8"
         }
       ],
-      "updatedAt": "2026-05-31",
+      "updatedAt": "2026-10-15",
       "related": [
         {
           "title": "1D3X",

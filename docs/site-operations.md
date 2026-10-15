@@ -54,11 +54,23 @@ Discovered YouTube videos now receive `/writing/videos/<video-id>` watch pages f
 
 The public fallback endpoint sends `no-store`; upstream Writing feed fetches for Substack, Medium and YouTube also bypass the framework data cache. MN7R feed fetches retain their 900-second revalidation cache because Focus and related work/book pages fetch them during rendering. Article/image lookups keep their existing cache. This prevents the fallback API from serving an older cached RSS response to a successful sync. The scheduler may still be late, YouTube may update its feed late, and a new discovery requires a deployment; 15 minutes is a polling cadence, not a delivery guarantee. Diagnostics are available from the existing workflow logs. No API key, transcript scraper, new service or model is introduced.
 
+### Archive and load-more behavior
+
+Writing initially renders one featured item, six recent items and thirty archive rows. **More posts** reveals up to thirty more rows per click. `/writing/archive` is the complete server-rendered archive for older local publications; it remains linked independently of the client interaction. `writing-window.mjs` owns the recent window and `writing-archive.mjs` owns archive selection. Keep retained video route checks distinct from assertions against the bounded recent view.
+
 ## Catalogue addition chronology
 
 The homepage Focus, Systems and Books cards use immutable first-addition times from `content/catalogue-discovery.json`, rather than `updatedAt`, GitHub activity or releases of existing products. `npm run catalogue:register` runs before builds; commit its output with each new public work/book/series record. CI rejects uncommitted registration changes. Existing timestamps survive edits, removals, re-additions and repeated builds. Equal-time additions use the existing catalogue rank/title tie-breaker.
 
 The initial migration uses known source publication dates (`legacy-source`); undated legacy entries remain `null` (`legacy-unknown`) and do not compete for latest cards. The four Good Dogs/Jekyll book records use the verified production deployment time of PR26 (`production`, 2026-10-06T14:16:40.000Z). `--bootstrap` is migration-only; ordinary registration always records current UTC once (`observed`). Original content publication/update dates remain unchanged.
+
+## Catalogue media operations
+
+Use [the additive-media handoff](abvx-os-publishing.md#shared-additive-media-route) for existing project, book and series cards. `catalogue-video.mjs` resolves sources from metadata across `content/work/`, `content/books/` and `content/series/`, including declared root series canonicals. Use the dry-run's `sourceFile` rather than assuming a route maps directly to a filename.
+
+`src/lib/media-policy.mjs` supplies the same audio origins to CSP, preflight and QA. Individual book audio attaches its source only after a reader requests playback; its final redirect host must remain allowed. Download availability uses HEAD, including binary links in scoped QA. Project/book/series trailers share the lazy privacy-enhanced player. Routine media additions preserve placement and original publication/addition dates.
+
+Catalogue timing is recorded privately with its own workload/version, exact base/head/merge, selected QA profile, corrections and continuous elapsed time. It is not automatically a native OS publication cycle or Cortex-qualified trial. Retain failed attempts; do not reset timers or infer causal savings from different cards or profiles.
 
 ## Analytics
 
@@ -92,7 +104,7 @@ When dependency installation or audit fails, fix and commit the consistent `pack
 
 For Vercel access failures, distinguish provider/network failure, expired authentication, and protected Preview access. Use existing authorized CLI/connector access or an authenticated browser; do not weaken security or certificate validation. GitHub deployment status can corroborate the deployed SHA, but verify the canonical public route before claiming content is live.
 
-Core site rendering requires no CMS credentials. Optional site verification overrides are documented in the README; project-copy automation secrets belong only to its approved workflow. Preserve the [CortexABV boundary](../cortex-abv/README.md) and the separate [ecosystem sync allowlist](ecosystem-sync.md).
+Core site rendering requires no CMS credentials or YouTube API key. Optional site verification overrides are `GOOGLE_SITE_VERIFICATION` and `BING_SITE_VERIFICATION`; project-copy automation secrets belong only to its approved workflow. Preserve the [CortexABV boundary](../cortex-abv/README.md) and the separate [ecosystem sync allowlist](ecosystem-sync.md).
 
 References: [Plausible custom events](https://plausible.io/docs/custom-event-goals), [outbound tracking](https://plausible.io/docs/outbound-link-click-tracking), [YouTube player parameters](https://developers.google.com/youtube/player_parameters), [Google AI features](https://developers.google.com/search/docs/appearance/ai-features).
 

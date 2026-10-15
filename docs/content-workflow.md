@@ -122,7 +122,7 @@ After generation:
 
 ## Links
 
-Allowed link types:
+Common link types (the complete compatibility allowlist is `validLinkTypes` in `scripts/content-lib.mjs`):
 
 - `site`
 - `github`
@@ -132,6 +132,9 @@ Allowed link types:
 - `kindle`
 - `paperback`
 - `pdf`
+- `epub`
+- `audio`
+- `audiobook`
 - `series`
 - `medium`
 - `substack`
@@ -167,7 +170,7 @@ Examples:
 
 Use this for agro-commodity infrastructure projects that are also technical systems.
 
-Books do not use `primarySection` in files because books are canonically in `/books`; use `appearsIn` to cross-list a book into `focus` or `systems`.
+Books are canonically owned by Books; optional `primarySection` must be `books`. Use `appearsIn` for additional catalogue listings; cross-listing does not create another detail page or homepage announcement. New cross-listings require the full release path rather than a routine media update.
 
 ## Groups And Series
 
@@ -175,18 +178,21 @@ Books do not use `primarySection` in files because books are canonically in `/bo
 
 Examples:
 
-- `Trading services`
-- `Landing pages`
-- `AI/dev stack`
-- `Language & AI`
+- `Trading & Brokerage Platforms`
+- `Market Fronts & Landings`
+- `Workflow & Orchestration`
+- `Standalone Utilities`
 
-`series` groups books into a publishing line.
+Use the existing rendered groups and official series in `src/lib/catalogue-config.mjs`; a free-form group label can leave a new card absent from its hub. Pinned placements take priority over metadata.
+
+`primarySeriesSlug` and `seriesSlugs` associate books with official series records; `series` is the publishing-line display label.
 
 Examples:
 
 - `Ukrainian Modernism`
 - `Toki Pona Classics`
 - `Chinese Wisdom in Toki Pona`
+- `AMI books`
 
 ## Sorting And Featured
 
@@ -242,3 +248,7 @@ Validation fails on structural errors. Review flags only warn.
 Use the [editorial release checklist](editorial-seo-checklist.md) as the single detailed verification/release procedure. It includes generated indexes, CI checks, build-dependent SEO checks, responsive review, and merge-SHA production verification.
 
 Preview is for visual review. Publication requires the production deployment and canonical-route checks; Google indexing is a separate observation. Prefer one complete PR over separate content, link, and index patches.
+
+## Book publisher and editorial reading
+
+Use `publisher` for the actual publisher when it differs from ABVX; Book JSON-LD honors it. `editorialSlug` links a short book overview to the full article under `/editorial/books/<slug>` with **Read in English →**. Keep the full SEO article in its editorial source/index, remove service notes before publication, and preserve a return link to the book. See [book trailers and audio](content-editing.md#book-and-series-trailers) and the release checklist for media and date checks.

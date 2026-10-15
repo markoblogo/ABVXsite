@@ -1,4 +1,4 @@
-import { isCatalogueVideoAddition } from './catalogue-video.mjs';
+import { isCatalogueMediaAddition } from './catalogue-media.mjs';
 import { catalogueTypes } from './publication-metadata.mjs';
 import { execFileSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
@@ -6,8 +6,14 @@ import path from 'node:path';
 import { parseMarkdownSource } from '../src/content/markdown-source.mjs';
 
 const generated = new Set(['content/writing-discovery.json','content/catalogue-discovery.json','public/content-index.json','public/llms.txt']);
-const native = /^content\/(writing|working-stories|work|books)\/[^/]+\.md$/;
+const native = /^content\/(writing|working-stories|work|books|series)\/[^/]+\.md$/;
 const full = reason => ({profile:'full', reason, routes:[], hubs:[]});
+export function catalogueHubs(data,folder='work') {
+ if(data.appearsIn!==undefined&&!Array.isArray(data.appearsIn))return null;
+ const sections=[data.primarySection||(folder==='work'?'systems':'books'),...(data.appearsIn||[])];
+ if(sections.some(section=>!['focus','systems','books'].includes(section)))return null;
+ return [...new Set(sections.map(section=>'/'+section))].sort();
+}
 export function publicationScope(base, head='HEAD', cwd=process.cwd(), includeWorking=false) {
  if (!/^[a-f0-9]{40}$/i.test(base || '')) return full('unknown-base');
  try {
@@ -31,22 +37,25 @@ export function publicationScope(base, head='HEAD', cwd=process.cwd(), includeWo
    if(!match) return full('shared-code-or-other-content');
    const current=parseMarkdownSource(readFileSync(path.join(cwd,file),'utf8'));
    const {data}=current;let previous;
+   const series=match[1]==='series'&&data.type==='series';
    const date=data.publishedAt || data.date;
-   if(data.visibility!=='public'||(match[1]==='writing'&&data.status!=='live')||(['work','books'].includes(match[1])&&!['live','released','building','research','archive'].includes(data.status))||!(Date.parse(date)<=Date.now())||!/^[-a-z0-9]+$/.test(data.slug||'')) return full('non-live-or-invalid-publication');
+   if(data.visibility!=='public'||(match[1]==='writing'&&data.status!=='live')||(['work','books','series'].includes(match[1])&&!['live','released','building','research','archive'].includes(data.status))||!(Date.parse(date)<=Date.now()||(series&&date===undefined))||!/^[-a-z0-9]+$/.test(data.slug||'')) return full('non-live-or-invalid-publication');
    if(status==='M') {
     previous=parseMarkdownSource(git('show',`${base}:${file}`));
     const prior=previous.data;
     if(prior.slug!==data.slug || prior.collection!==data.collection || prior.canonicalPath!==data.canonicalPath || prior.primarySection!==data.primarySection || JSON.stringify(prior.appearsIn)!==JSON.stringify(data.appearsIn)) return full('route-or-collection-change');
    }
-   const catalogue=['work','books'].includes(match[1]);families.add(catalogue?'catalogue':'writing');
-   if(catalogue && !catalogueTypes[match[1]].has(data.type)) return full('unsupported-catalogue-type');
-   const section=match[1]==='books'?'books':'systems';
-   const stableVideo=previous&&isCatalogueVideoAddition(previous,current,match[1]);
-   if(catalogue && ((data.primarySection||section)!==section || (data.appearsIn!==undefined&&!Array.isArray(data.appearsIn)) || (data.appearsIn||[]).some(value=>value!==section&&!(stableVideo&&value==='focus')))) return full('unsupported-catalogue-placement');
-   if(catalogue&&stableVideo&&data.appearsIn?.includes('focus'))hubs.add('/focus');
-   const route=catalogue?`/${match[1]}/${data.slug}`:`/writing/${match[1]==='working-stories'?'working-stories/':''}${data.slug}`;
+   const catalogue=['work','books','series'].includes(match[1]);families.add(catalogue?'catalogue':'writing');
+   const folder=series?'books':match[1];
+   const stableMedia=catalogue&&previous&&isCatalogueMediaAddition(previous,current,folder);
+   if(catalogue && (series?!stableMedia:!catalogueTypes[folder]?.has(data.type))) return full('unsupported-catalogue-type');
+   const section=folder==='books'?'books':'systems';
+   const placements=catalogue&&stableMedia?catalogueHubs(data,folder):null;
+   if(catalogue && (stableMedia?!placements:((data.primarySection||section)!==section || (data.appearsIn!==undefined&&!Array.isArray(data.appearsIn)) || (data.appearsIn||[]).some(value=>value!==section)))) return full('unsupported-catalogue-placement');
+   if(placements)for(const hub of placements)hubs.add(hub);
+   const route=catalogue?(series&&stableMedia&&data.canonicalPath||`/${folder}/${data.slug}`):`/writing/${match[1]==='working-stories'?'working-stories/':''}${data.slug}`;
    if(data.canonicalPath&&data.canonicalPath!==route) return full('custom-route');
-   routes.add(route);hubs.add(catalogue?(match[1]==='books'?'/books':'/systems'):'/writing');
+   routes.add(route);if(!placements)hubs.add(catalogue?(folder==='books'?'/books':'/systems'):'/writing');
    if(!catalogue) hubs.add('/writing/archive');
    if(match[1]==='working-stories') hubs.add('/writing/working-stories');
    if(data.collection==='kitchen-notes') hubs.add('/writing/kitchen-notes');

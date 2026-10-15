@@ -63,15 +63,19 @@ export function resolveCatalogueVideoSource(route,root=process.cwd()) {
  const file=candidates[0];if(realpathSync(file)!==file)throw Error('Symlink source is not allowed');
  return file;
 }
-export function addCatalogueVideo(source,route,href,date=new Date().toISOString().slice(0,10)) {
+export function catalogueSourceData(source,route) {
  const target=catalogueTarget(route);
- if(!catalogueCardVideoId(href,target.folder))throw Error('Expected an existing /books/<slug> or /work/<slug> and a supported HTTPS YouTube video');
  const {data}=parseMarkdownSource(source);
  const series=target.folder==='books'&&data.type==='series';
  const canonicalMatches=!data.canonicalPath||data.canonicalPath===route||(series&&/^\/[a-z0-9]+(?:-[a-z0-9]+)*$/.test(data.canonicalPath||''));
  const due=data.publishedAt===undefined?series:Date.parse(data.publishedAt)<=Date.now();
  if((!target.canonicalSeries&&data.slug!==target.slug)||!canonicalMatches||(target.canonicalSeries&&(!series||data.canonicalPath!==route))||data.visibility!=='public'||!['live','released','building','research','archive'].includes(data.status)||(typeof data.type!=='string'||!data.type.trim())||!due)throw Error('Expected an existing public, published catalogue card');
  if(!Array.isArray(data.links))throw Error('Card links must be an array');
+ return {data,target,series};
+}
+export function addCatalogueVideo(source,route,href,date=new Date().toISOString().slice(0,10)) {
+ const {data,target,series}=catalogueSourceData(source,route);
+ if(!catalogueCardVideoId(href,target.folder))throw Error('Expected an existing /books/<slug> or /work/<slug> and a supported HTTPS YouTube video');
  const current=data.links.find(link=>link.type==='youtube'&&catalogueCardVideoId(link.url,target.folder));
  if(current) {
   if(catalogueVideoId(current.url)===catalogueVideoId(href))return source;

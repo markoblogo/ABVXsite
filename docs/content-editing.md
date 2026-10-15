@@ -74,3 +74,6 @@ Project additions in every existing Systems subgroup now use their `group` metad
 
 
 Book audio downloads may use the existing public MN7R Releases assets. Keep stable legacy media URLs as redirects when removing local duplicates, preserve verified file identity, and permit only the required media hosts in CSP. The shared audio player assigns its source and starts playback only after the reader requests it; the initial page must not request audio bytes. Scoped and full QA retain binary-link availability checks through HEAD instead of buffering downloads.
+
+
+For first media and additive download/audio links on existing project, book or series cards, use `content:add-media` and the [shared additive-media release route](abvx-os-publishing.md#shared-additive-media-route). Existing Focus/Systems/Books listings are verified together. This reuses catalogue-v1 rather than defining a separate release process per section; unknown scope and shared code retain full QA.

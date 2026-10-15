@@ -10,7 +10,9 @@ function run(fail = '', publication = false) {
     mkdirSync(path.join(root, 'src/content'), {recursive:true});
     copyFileSync('src/content/markdown-source.mjs',path.join(root,'src/content/markdown-source.mjs'));
     mkdirSync(path.join(root, 'scripts')); mkdirSync(path.join(root, 'bin'));
-    for (const file of ['editorial-release-check.mjs', 'editorial-checks-tree.mjs', 'publication-scope.mjs', 'publication-metadata.mjs']) copyFileSync('scripts/' + file, path.join(root, 'scripts', file));
+    mkdirSync(path.join(root,'src/lib'),{recursive:true});
+    for(const file of ['youtube-pages.mjs','writing-chronology.mjs'])copyFileSync('src/lib/'+file,path.join(root,'src/lib',file));
+    for (const file of ['editorial-release-check.mjs', 'editorial-checks-tree.mjs', 'publication-scope.mjs', 'publication-metadata.mjs', 'catalogue-video.mjs']) copyFileSync('scripts/' + file, path.join(root, 'scripts', file));
     writeFileSync(path.join(root, '.gitignore'), 'exports/\nevents\n');
     execFileSync('git', ['init', '-q'], { cwd: root });
     const npm = path.join(root, 'bin/npm');

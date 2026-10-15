@@ -1,8 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtempSync,rmSync,existsSync,mkdirSync,writeFileSync } from 'node:fs';
+import { mkdtempSync,rmSync,existsSync,mkdirSync,writeFileSync,readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
+import { execFileSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { planCatalogue } from '../scripts/publish-catalogue.mjs';
 import { applyPublications } from '../scripts/publication-media.mjs';
@@ -66,5 +68,37 @@ test('standard catalogue media can omit dimensions while explicit invalid values
    assert.equal(planCatalogue(value,root).media.length,1);
    for(const width of [0,-1,'100',null]) assert.throws(()=>planCatalogue(packet(folder,{media:{src:'/media/example.png',alt:'Cover',width}}),root),/dimension/);
   }
+ }finally{rmSync(root,{recursive:true,force:true});}
+});
+
+test('existing book and project video additions preserve prose and links, are idempotent and refuse replacement',async()=>{
+ const {addCatalogueVideo}=await import('../scripts/catalogue-video.mjs');
+ for(const folder of ['books','work']) {
+  const data={id:'example',slug:'example',type:folder==='books'?'book':'tool',visibility:'public',status:'released',publishedAt:'2020-01-01',links:[{type:'youtube',url:'https://www.youtube.com/@channel'},{type:'pdf',url:'https://example.com/book.pdf'}]};
+  const suffix='\n---\n\nApproved text.\n\n    Keep indentation.\n';
+  const source='---\n'+JSON.stringify(data)+suffix;
+  const route=`/${folder}/example`,result=addCatalogueVideo(source,route,'https://youtu.be/aaaaaaaaaaa','2026-01-01');
+  assert.ok(result.endsWith(suffix));
+  const parsed=JSON.parse(result.slice(3,result.indexOf('\n---',3)));
+  assert.deepEqual(parsed.links.slice(0,-1),data.links);assert.equal(parsed.updatedAt,'2026-01-01');
+  assert.equal(addCatalogueVideo(result,route,'https://www.youtube.com/watch?v=aaaaaaaaaaa','2026-01-02'),result);
+  assert.throws(()=>addCatalogueVideo(result,route,'https://youtu.be/bbbbbbbbbbb'),/different playable video/);
+  for(const [target,url] of [[`/${folder}/other`,'https://youtu.be/aaaaaaaaaaa'],['/books/../example','https://youtu.be/aaaaaaaaaaa'],[route,'https://evil.example/aaaaaaaaaaa'],[route,'https://www.youtube.com/@channel'],[route,'https://www.youtube.com/watch?v=aaaaaaaaaaa%26extra']])assert.throws(()=>addCatalogueVideo(source,target,url));
+  assert.throws(()=>addCatalogueVideo(source.replace('"public"','"private"'),route,'https://youtu.be/aaaaaaaaaaa'));
+  assert.throws(()=>addCatalogueVideo(source,route,'https://youtu.be/aaaaaaaaaaa','2026-02-31'));
+ }
+});
+
+test('shared add-video CLI dry-runs, writes exactly one card and repeats without edits',()=>{
+ const root=mkdtempSync(path.join(tmpdir(),'abvx-add-video-'));
+ try {
+  const file=path.join(root,'content/books/example.md');mkdirSync(path.dirname(file),{recursive:true});
+  const source=packet('books').payload.source_markdown;writeFileSync(file,source);
+  const command=fileURLToPath(new URL('../scripts/catalogue-video.mjs',import.meta.url));
+  const args=[command,'--route','/books/example','--video','https://youtu.be/aaaaaaaaaaa'];
+  const run=extra=>JSON.parse(execFileSync(process.execPath,[...args,...extra],{cwd:root,encoding:'utf8'}));
+  assert.equal(run([]).mode,'dry-run');assert.equal(readFileSync(file,'utf8'),source);
+  assert.equal(run(['--write']).changed,true);const written=readFileSync(file,'utf8');
+  assert.equal(run(['--write']).changed,false);assert.equal(readFileSync(file,'utf8'),written);
  }finally{rmSync(root,{recursive:true,force:true});}
 });

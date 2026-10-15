@@ -87,3 +87,35 @@ test('updating an existing legacy catalogue type still selects full QA',()=>{
   assert.equal(publicationScope(base,'HEAD',root,true).reason,'unsupported-catalogue-type');
  } finally {rmSync(root,{recursive:true,force:true});}
 });
+
+test('an existing project video checks every unchanged catalogue placement, including primary Focus',()=>{
+ const root=mkdtempSync(path.join(tmpdir(),'abvx-media-placement-'));
+ const git=(...args)=>execFileSync('git',args,{cwd:root,encoding:'utf8'}).trim();
+ const original={slug:'library',title:'Library',type:'book-companion',visibility:'public',status:'live',publishedAt:'2020-01-01',primarySection:'focus',appearsIn:['focus','systems','books'],links:[]};
+ const source=data=>'---\n'+JSON.stringify(data)+'\n---\nApproved prose.';
+ const file=path.join(root,'content/work/library.md');
+ try {
+  git('init','-q');mkdirSync(path.dirname(file),{recursive:true});writeFileSync(file,source(original));git('add','.');git('-c','user.name=Test','-c','user.email=test@example.invalid','commit','-qm','base');const base=git('rev-parse','HEAD');
+  const added={...original,updatedAt:'2026-10-15',links:[{type:'youtube',label:'Launch video',url:'https://youtu.be/aaaaaaaaaaa'}]};
+  writeFileSync(file,source(added));const scope=publicationScope(base,'HEAD',root,true);
+  assert.equal(scope.profile,'catalogue-v1');assert.deepEqual(scope.routes,['/work/library']);assert.deepEqual(scope.hubs,['/','/books','/focus','/systems']);
+  for(const patch of [{title:'Different'}, {primarySection:'systems'}, {appearsIn:['systems']}, {appearsIn:['focus','unknown']}]){
+   writeFileSync(file,source({...added,...patch}));assert.equal(publicationScope(base,'HEAD',root,true).profile,'full');
+  }
+ }finally{rmSync(root,{recursive:true,force:true});}
+});
+
+test('unchanged published series media use their canonical route and existing legacy date convention',()=>{
+ const root=mkdtempSync(path.join(tmpdir(),'abvx-series-media-'));
+ const git=(...args)=>execFileSync('git',args,{cwd:root,encoding:'utf8'}).trim();
+ const data={slug:'line',title:'Line',type:'series',status:'released',visibility:'public',primarySection:'books',appearsIn:['books'],canonicalPath:'/existing-line',links:[]};
+ const file=path.join(root,'content/series/line.md');const source=data=>'---\n'+JSON.stringify(data)+'\n---\nOriginal series prose.';
+ try{
+  git('init','-q');mkdirSync(path.dirname(file),{recursive:true});writeFileSync(file,source(data));git('add','.');git('-c','user.name=Test','-c','user.email=test@example.invalid','commit','-qm','base');const base=git('rev-parse','HEAD');
+  const added={...data,updatedAt:'2026-10-15',links:[{type:'pdf',label:'Catalogue',url:'https://example.com/line.pdf'}]};
+  writeFileSync(file,source(added));const scope=publicationScope(base,'HEAD',root,true);
+  assert.equal(scope.profile,'catalogue-v1');assert.deepEqual(scope.routes,['/existing-line']);assert.deepEqual(scope.hubs,['/','/books']);
+  writeFileSync(file,source({...added,canonicalPath:'/different-line'}));assert.equal(publicationScope(base,'HEAD',root,true).profile,'full');
+  writeFileSync(file,source({...added,title:'Changed'}));assert.equal(publicationScope(base,'HEAD',root,true).profile,'full');
+ }finally{rmSync(root,{recursive:true,force:true});}
+});

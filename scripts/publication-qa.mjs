@@ -4,6 +4,7 @@ import { chromium } from 'playwright';
 import { withQaServer } from './qa-server.mjs';
 import { catalogueVideoId, catalogueCardVideoId } from './catalogue-video.mjs';
 import { contentFiles, parseContentFile } from './content-lib.mjs';
+import { catalogueHubs } from './publication-scope.mjs';
 
 export function internalPagePaths(hrefs,base='https://abvx.xyz') {
  const origin=new URL(base).origin;
@@ -38,9 +39,30 @@ export function assertCatalogueVideo(data,frames,folder='work') {
  const id=catalogueVideoId(first.url);
  assert.ok(frames.some(frame=>typeof frame.src==='string'&&frame.src.match(/^https:\/\/www\.youtube(?:-nocookie)?\.com\/embed\/([\w-]{11})(?:[?#]|$)/)?.[1]===id&&frame.title?.trim()),'exact catalogue video and accessible title');
 }
+export function assertCatalogueImage(data,images) {
+ const image=data.heroImage||data.media||data.coverImage;
+ if(!image)return;
+ assert.ok(images.some(rendered=>{
+  const url=new URL(rendered.src,'https://abvx.xyz');
+  const src=url.pathname==='/_next/image'?url.searchParams.get('url'):rendered.src;
+  return src===image.src&&rendered.loaded;
+ }),'requested catalogue image must render successfully');
+}
+export async function assertCatalogueDownloads(request,data,base) {
+ await boundedMap((data.links||[]).filter(link=>['pdf','epub','audio','audiobook'].includes(link.type)),async link=>{
+  const url=new URL(link.url,'https://abvx.xyz');
+  const target=url.origin==='https://abvx.xyz'?new URL(url.pathname+url.search,base).href:url.href;
+  const response=await request.head(target);
+  try{assert.ok(response.status()>=200&&response.status()<400,target+' catalogue media unavailable');}
+  finally{await response.dispose();}
+ });
+}
 export async function publicationQa(scope) {
  assert.ok(['publication-v1','catalogue-v1'].includes(scope.profile));assert.ok(scope.routes.length);
- const sources=[...contentFiles('writing'),...contentFiles('working-stories'),...contentFiles('work'),...contentFiles('books')].map(file=>({...parseContentFile(file),folder:file.replaceAll('\\','/').split('/').at(-2)}));
+ const sources=[...contentFiles('writing'),...contentFiles('working-stories'),...contentFiles('work'),...contentFiles('books'),...contentFiles('series')].map(file=>{
+  const folder=file.replaceAll('\\','/').split('/').at(-2);
+  return {...parseContentFile(file),folder:folder==='series'?'books':folder};
+ });
  await withQaServer(async base=>{
   const browser=await chromium.launch({headless:true});
   try {
@@ -50,8 +72,10 @@ export async function publicationQa(scope) {
    const urls=[...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>m[1]);
    assert.equal(new Set(urls).size,urls.length,'duplicate sitemap URL');
    assert.equal(new Set(index.items.map(item=>item.canonicalUrl)).size,index.items.length,'duplicate index URL');
+   const hubHtml=new Map();
    await boundedMap(scope.hubs,async route=>{
     const html=await (await get(route)).text();assert.match(html,/<h1[\s>]/,route+' heading');
+    hubHtml.set(route,html);
     const canonical=html.match(/<link\b[^>]*rel="canonical"[^>]*href="([^"]+)"/)?.[1];
     assert.ok(canonical,route+' canonical');
     assert.equal(new URL(canonical).href,new URL('https://abvx.xyz'+route).href,route+' canonical');
@@ -61,7 +85,7 @@ export async function publicationQa(scope) {
     assert.ok(urls.includes(url),route+' sitemap');
     assert.ok(index.items.some(item=>item.canonicalUrl===url),route+' index');
     assert.ok(llms.includes('URL: '+url+'\n'),route+' LLM index');
-    const source=sources.find(({data,folder})=>route===(scope.profile==='catalogue-v1'?`/${folder}/${data.slug}`:`/writing/${data.type==='working-story'?'working-stories/':''}${data.slug}`));
+    const source=sources.find(({data,folder})=>route===(scope.profile==='catalogue-v1'?(data.canonicalPath||`/${folder}/${data.slug}`):`/writing/${data.type==='working-story'?'working-stories/':''}${data.slug}`));
     assert.ok(source,route+' source');const {data}=source;
     const response=await page.goto(base+route,{waitUntil:'domcontentloaded',timeout:30_000});
     assert.equal(response.status(),200,route);assert.equal(new URL(page.url()).pathname,route,'unexpected redirect');
@@ -83,10 +107,24 @@ export async function publicationQa(scope) {
      assert.ok(objects.some(item=>item['@type']==='VideoObject'&&Number.isFinite(Date.parse(item.uploadDate))),'video metadata');
     }
     if(scope.profile==='catalogue-v1') {
-     const type=source.folder==='books'?'Book':undefined;
+     const type=source.folder==='books'?(data.type==='series'?'CreativeWorkSeries':'Book'):undefined;
      assert.ok(objects.some(item=>item.url===url && (!type||item['@type']===type)),route+' entity metadata');
      assertCatalogueVideo(data,await page.locator('main iframe').evaluateAll(frames=>frames.map(frame=>({src:frame.getAttribute('src'),title:frame.getAttribute('title')}))),source.folder);
      for(const link of data.links||[]) assert.ok(await page.locator('main a').evaluateAll((links,url)=>links.some(a=>a.getAttribute('href')===url),link.url),route+' outbound link');
+     const image=data.heroImage||data.media||data.coverImage;
+     if(image){
+      await page.waitForFunction(src=>[...document.querySelectorAll('main img')].some(img=>{
+       const url=new URL(img.getAttribute('src'),location.href);
+       return (url.pathname==='/_next/image'?url.searchParams.get('url'):img.getAttribute('src'))===src&&img.complete&&img.naturalWidth>0;
+      }),image.src);
+      assertCatalogueImage(data,await page.locator('main img').evaluateAll(images=>images.map(img=>({src:img.getAttribute('src'),loaded:img.complete&&img.naturalWidth>0}))));
+     }
+     await assertCatalogueDownloads(page.request,data,base);
+     if(source.folder==='books'&&data.type!=='series'&&data.links?.some(link=>link.type==='audio')){
+      assert.equal(await page.locator('audio').getAttribute('src'),null,'audio must remain opt-in');
+      assert.equal(await page.locator('audio').getAttribute('preload'),'none');
+     }
+     for(const hub of catalogueHubs(data,source.folder)||[])assert.ok(hubHtml.get(hub)?.includes(`href="${route}"`),route+' missing from '+hub);
     }
     const internal=await page.locator('main a[href]').evaluateAll(links=>links.map(a=>a.getAttribute('href')));
     await checkInternalLinks(page.request, internal, url, base);
@@ -96,7 +134,7 @@ export async function publicationQa(scope) {
      await page.setViewportSize({width,height:900});
      assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),route+' overflow');
     }
-    const collection=scope.profile==='catalogue-v1'?(source.folder==='books'?'/books':'/systems'):data.type==='working-story'?'/writing/working-stories':data.collection==='kitchen-notes'?'/writing/kitchen-notes':'/writing';
+    const collection=scope.profile==='catalogue-v1'?'/'+(data.primarySection||(source.folder==='books'?'books':'systems')):data.type==='working-story'?'/writing/working-stories':data.collection==='kitchen-notes'?'/writing/kitchen-notes':'/writing';
     const hub=await (await get(collection)).text();assert.ok(hub.includes(`href="${route}"`),route+' collection link');
    }
    console.log(`Publication QA passed: ${scope.routes.length} materials, ${scope.hubs.length} hubs, media, metadata, mobile and public indexes. Scope: ${JSON.stringify(scope)}`);

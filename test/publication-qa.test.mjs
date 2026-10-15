@@ -58,3 +58,14 @@ test('scoped link QA retains binary links and fails a missing M4B through the re
  assert.deepEqual(calls,[['GET','http://localhost:3000/books/related'],['HEAD','http://localhost:3000/media/book.mp3'],['HEAD','http://localhost:3000/media/book.m4b?download=1']]);
  await assert.rejects(checkInternalLinks(client,['/media/missing.m4b'],'https://abvx.xyz/books/new'),/broken internal link/);
 });
+
+test('catalogue media proves the requested image and HEAD-checks download assets',async()=>{
+ const {assertCatalogueImage,assertCatalogueDownloads}=await import('../scripts/publication-qa.mjs');
+ const data={media:{src:'/media/new.webp',alt:'Cover'},links:[{type:'pdf',url:'https://example.com/book.pdf'},{type:'audio',url:'/media/book.mp3'}]};
+ assertCatalogueImage(data,[{src:'/_next/image?url=%2Fmedia%2Fnew.webp&w=640&q=75',loaded:true}]);
+ for(const image of [{src:'/media/old.webp',loaded:true},{src:'/media/new.webp',loaded:false}])assert.throws(()=>assertCatalogueImage(data,[image]));
+ const calls=[];const client={head:async url=>{calls.push(url);return {status:()=>url.includes('missing')?404:200,dispose:async()=>{}};}};
+ await assertCatalogueDownloads(client,data,'http://127.0.0.1:3210');
+ assert.deepEqual(calls,['https://example.com/book.pdf','http://127.0.0.1:3210/media/book.mp3']);
+ await assert.rejects(assertCatalogueDownloads(client,{links:[{type:'audiobook',url:'https://example.com/missing.m4b'}]},'http://localhost:3000'),/unavailable/);
+});

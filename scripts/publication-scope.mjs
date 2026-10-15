@@ -1,3 +1,4 @@
+import { isCatalogueVideoAddition } from './catalogue-video.mjs';
 import { catalogueTypes } from './publication-metadata.mjs';
 import { execFileSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
@@ -28,16 +29,21 @@ export function publicationScope(base, head='HEAD', cwd=process.cwd(), includeWo
    if(/^public\/media\/.+\.(?:png|jpe?g|webp)$/i.test(file)&&status==='A') continue;
    const match=file.match(native);
    if(!match) return full('shared-code-or-other-content');
-   const {data}=parseMarkdownSource(readFileSync(path.join(cwd,file),'utf8'));
+   const current=parseMarkdownSource(readFileSync(path.join(cwd,file),'utf8'));
+   const {data}=current;let previous;
    const date=data.publishedAt || data.date;
    if(data.visibility!=='public'||(match[1]==='writing'&&data.status!=='live')||(['work','books'].includes(match[1])&&!['live','released','building','research','archive'].includes(data.status))||!(Date.parse(date)<=Date.now())||!/^[-a-z0-9]+$/.test(data.slug||'')) return full('non-live-or-invalid-publication');
    if(status==='M') {
-    const previous=parseMarkdownSource(git('show',`${base}:${file}`)).data;
-    if(previous.slug!==data.slug || previous.collection!==data.collection || previous.canonicalPath!==data.canonicalPath || previous.primarySection!==data.primarySection || JSON.stringify(previous.appearsIn)!==JSON.stringify(data.appearsIn)) return full('route-or-collection-change');
+    previous=parseMarkdownSource(git('show',`${base}:${file}`));
+    const prior=previous.data;
+    if(prior.slug!==data.slug || prior.collection!==data.collection || prior.canonicalPath!==data.canonicalPath || prior.primarySection!==data.primarySection || JSON.stringify(prior.appearsIn)!==JSON.stringify(data.appearsIn)) return full('route-or-collection-change');
    }
    const catalogue=['work','books'].includes(match[1]);families.add(catalogue?'catalogue':'writing');
    if(catalogue && !catalogueTypes[match[1]].has(data.type)) return full('unsupported-catalogue-type');
-   if(catalogue && ((data.primarySection||(match[1]==='books'?'books':'systems'))!==(match[1]==='books'?'books':'systems') || (data.appearsIn!==undefined&&!Array.isArray(data.appearsIn)) || (data.appearsIn||[]).some(section=>section!==(match[1]==='books'?'books':'systems')))) return full('unsupported-catalogue-placement');
+   const section=match[1]==='books'?'books':'systems';
+   const stableVideo=previous&&isCatalogueVideoAddition(previous,current);
+   if(catalogue && ((data.primarySection||section)!==section || (data.appearsIn!==undefined&&!Array.isArray(data.appearsIn)) || (data.appearsIn||[]).some(value=>value!==section&&!(stableVideo&&value==='focus')))) return full('unsupported-catalogue-placement');
+   if(catalogue&&stableVideo&&data.appearsIn?.includes('focus'))hubs.add('/focus');
    const route=catalogue?`/${match[1]}/${data.slug}`:`/writing/${match[1]==='working-stories'?'working-stories/':''}${data.slug}`;
    if(data.canonicalPath&&data.canonicalPath!==route) return full('custom-route');
    routes.add(route);hubs.add(catalogue?(match[1]==='books'?'/books':'/systems'):'/writing');

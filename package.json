@@ -63,6 +63,7 @@
     "content:release-ready": "node scripts/release-ready.mjs",
     "test:publication": "node --test test/writing-window.test.mjs test/publication-lane.test.mjs test/production-command.test.mjs test/publication-scope.test.mjs test/publication-qa.test.mjs test/release-ready.test.mjs test/youtube-pages.test.mjs test/youtube-feed.test.mjs test/markdown-content.test.mjs test/working-stories.test.mjs test/publication-packet.test.mjs test/writing-chronology.test.mjs test/kitchen-notes.test.mjs test/catalogue-publication.test.mjs test/seo-page-contract.test.mjs test/writing-archive.test.mjs test/systems-catalogue.test.mjs test/latest-section-entry.test.mjs",
     "content:publish": "node scripts/publication-lane.mjs",
+    "content:add-video": "node scripts/catalogue-video.mjs",
     "content:publication-boundary": "node scripts/publication-lane.mjs --check"
   },
   "dependencies": {

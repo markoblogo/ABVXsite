@@ -57,3 +57,21 @@ test('catalogue data and media choose scoped QA, while route changes, engineerin
   rmSync(path.join(root,'content/writing'),{recursive:true});writeFileSync(path.join(root,'package.json'),'{}');assert.equal(publicationScope(base,'HEAD',root,true).profile,'full');
  }finally{rmSync(root,{recursive:true,force:true});}
 });
+
+test('existing Focus-cross-listed catalogue video additions stay scoped; other edits still require full QA',()=>{
+ const root=mkdtempSync(path.join(tmpdir(),'abvx-video-scope-'));
+ const git=(...args)=>execFileSync('git',args,{cwd:root,encoding:'utf8'}).trim();
+ const original={id:'guide',slug:'guide',title:'Guide',type:'free-book',status:'released',visibility:'public',publishedAt:'2020-01-01',primarySection:'books',appearsIn:['books','focus'],links:[{type:'pdf',url:'https://example.com/book.pdf'}]};
+ const file=path.join(root,'content/books/guide.md');
+ const source=data=>'---\n'+JSON.stringify(data)+'\n---\nApproved prose.';
+ const added={...original,updatedAt:'2026-10-15',links:[...original.links,{type:'youtube',label:'Book trailer',url:'https://youtu.be/aaaaaaaaaaa'}]};
+ try {
+  git('init','-q');mkdirSync(path.dirname(file),{recursive:true});writeFileSync(file,source(original));git('add','.');git('-c','user.name=Test','-c','user.email=test@example.invalid','commit','-qm','base');const base=git('rev-parse','HEAD');
+  writeFileSync(file,source(added));const scope=publicationScope(base,'HEAD',root,true);
+  assert.equal(scope.profile,'catalogue-v1');assert.deepEqual(scope.hubs,['/','/books','/focus']);
+  for(const data of [{...added,title:'Changed'}, {...added,appearsIn:['books']}, {...added,links:added.links.slice(1)}]) {
+   writeFileSync(file,source(data));assert.equal(publicationScope(base,'HEAD',root,true).profile,'full');
+  }
+  writeFileSync(file,source(added)+'\nChanged prose.');assert.equal(publicationScope(base,'HEAD',root,true).profile,'full');
+ } finally {rmSync(root,{recursive:true,force:true});}
+});

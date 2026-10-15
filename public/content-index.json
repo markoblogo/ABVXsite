@@ -6866,6 +6866,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Agri-Commodity Brokerage | A Practical Guide to Grains & Oilseeds Markets",
+      "summary": "A market needs more than a price. Agri-Commodity Brokerage explores the people, products, logistics and terms that connect supply with demand in physical grains and oilseeds markets. Explore the book and download the fre",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/H6l1leVo34A",
+      "publishedAt": "2026-10-15T20:27:42.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=H6l1leVo34A"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "AMI — Digital Infrastructure for Physical Commodity Markets",
       "summary": "AMI — Agro Market Infrastructure — brings together projects for commodity brokerage operations, private market indices, and market knowledge. This short introduction highlights three parts of AMI: • MN7R — a private work",
       "canonicalUrl": "https://abvx.xyz/writing/videos/QnpLjwhj6Fs",
@@ -7132,7 +7155,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-15T16:44:56.964Z",
+      "updatedAt": "2026-10-15T20:42:07.929Z",
       "tags": [],
       "links": [],
       "related": []

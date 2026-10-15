@@ -23,7 +23,7 @@
   "featured": true,
   "homepageEligible": false,
   "publishedAt": "2026-06-17",
-  "updatedAt": "2026-06-17",
+  "updatedAt": "2026-10-15",
   "sortRank": 60,
   "summary": "A practical English handbook on how physical agricultural commodity markets actually work: basis, logistics, liquidity, benchmarks, indices and market intelligence beyond futures screens.",
   "tags": [
@@ -49,6 +49,11 @@
       "type": "epub",
       "label": "EPUB",
       "url": "https://spike.1d3x.com/files/spot-market-handbook-en.epub"
+    },
+    {
+      "type": "youtube",
+      "label": "Book trailer",
+      "url": "https://youtu.be/7hkMaEjINZA"
     }
   ],
   "relatedSlugs": [

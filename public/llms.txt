@@ -103,6 +103,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/U-cVLltmoRM
   Summary: "We love your product!" "The team is really excited!" "Just waiting for final approval." "We should have everything signed next week." Three months later... Still closing. Any day now. Founders, drop a ❤️ if this feels p
 
+- Physical Commodity Markets: A Practical Book Collection | AMI Books
+  URL: https://abvx.xyz/writing/videos/vAPgNupIp2s
+  Summary: A commodity deal connects a market, a product, and people. Explore a growing collection of practical books about the work behind that deal. Discover the library: https://books.1d3x.com/ The collection brings together gui
+
 - Claude Code Tried to Make Me Watch 60 Videos at Once. I'm Scared.
   URL: https://abvx.xyz/writing/videos/vZW-Z4pYqzU
   Summary: I was watching Claude Code coordinate its army of AI agents. And suddenly, things got a little terrifying. The task? Working with 60 videos simultaneously. Claude decided that the most efficient way for me to review the

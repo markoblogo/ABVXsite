@@ -7195,7 +7195,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-15T21:19:02.613Z",
+      "updatedAt": "2026-10-15T21:50:47.768Z",
       "tags": [],
       "links": [],
       "related": []
@@ -7839,6 +7839,29 @@
           "relation": "same-project"
         }
       ]
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Physical Commodity Markets: A Practical Book Collection | AMI Books",
+      "summary": "A commodity deal connects a market, a product, and people. Explore a growing collection of practical books about the work behind that deal. Discover the library: https://books.1d3x.com/ The collection brings together gui",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/vAPgNupIp2s",
+      "publishedAt": "2026-10-15T21:47:22.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=vAPgNupIp2s"
+        }
+      ],
+      "related": []
     },
     {
       "type": "writing",

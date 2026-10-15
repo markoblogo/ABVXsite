@@ -51,6 +51,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/KbObKhxwReA
   Summary: What if AI could generate an entire world while you're exploring it? Not a video. Not a traditional game. An interactive environment that responds to your actions in real time. Meet Odyssey-3, a new AI world model that g
 
+- Як працює спотовий ринок зерна? Безкоштовний практичний гайд українською
+  URL: https://abvx.xyz/writing/videos/Kx1ftrOWQm8
+  Summary: Чому ціна на зерно може відрізнятися навіть в один день? Базис поставки, якість, місце й логістика допомагають зрозуміти ціну фізичного аграрного ринку. 📘 «Практичний гайд по спотовому ринку» — безкоштовна українська кн
+
 - GTA 5 Gets Spider-Man 2 Web-Swinging! AI-Assisted Game Mod
   URL: https://abvx.xyz/writing/videos/ogc-oZoebH0
   Summary: Spider-Man 2's web-swinging mechanics are now running inside GTA 5. And AI coding agents helped make it possible. Meet Web of Los Santos, a GTA V mod that brings Spider-Man 2-inspired movement into Los Santos. Web-swingi

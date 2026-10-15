@@ -7025,7 +7025,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-15T15:21:02.841Z",
+      "updatedAt": "2026-10-15T16:21:11.987Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8569,6 +8569,29 @@
         }
       ],
       "updatedAt": "2026-10-04",
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Як працює спотовий ринок зерна? Безкоштовний практичний гайд українською",
+      "summary": "Чому ціна на зерно може відрізнятися навіть в один день? Базис поставки, якість, місце й логістика допомагають зрозуміти ціну фізичного аграрного ринку. 📘 «Практичний гайд по спотовому ринку» — безкоштовна українська кн",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/Kx1ftrOWQm8",
+      "publishedAt": "2026-10-15T16:01:21.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=Kx1ftrOWQm8"
+        }
+      ],
       "related": []
     }
   ]

@@ -47,6 +47,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/jEIPftaweBM
   Summary: Remember when phones had buttons, batteries lasted forever, and Snake was peak entertainment? Well, someone just brought Claude AI to a Nokia from 2007. Developer Emir Karşıyakalı created an open-source AI chat client fo
 
+- Contract Execution Officer Handbook | From Commodity Deal to Closeout
+  URL: https://abvx.xyz/writing/videos/k7DYPrNV7ZY
+  Summary: A signed commodity contract is only the beginning. The Contract Execution Officer Handbook explores the work that follows: documents, logistics, inspections, payment control, financial reconciliation and contract closeou
+
 - Odyssey-3: AI Generates Interactive Worlds in Real Time (And You Can Play Them)
   URL: https://abvx.xyz/writing/videos/KbObKhxwReA
   Summary: What if AI could generate an entire world while you're exploring it? Not a video. Not a traditional game. An interactive environment that responds to your actions in real time. Meet Odyssey-3, a new AI world model that g

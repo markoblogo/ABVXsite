@@ -7096,9 +7096,32 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-15T16:21:11.987Z",
+      "updatedAt": "2026-10-15T16:44:56.964Z",
       "tags": [],
       "links": [],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Contract Execution Officer Handbook | From Commodity Deal to Closeout",
+      "summary": "A signed commodity contract is only the beginning. The Contract Execution Officer Handbook explores the work that follows: documents, logistics, inspections, payment control, financial reconciliation and contract closeou",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/k7DYPrNV7ZY",
+      "publishedAt": "2026-10-15T16:27:00.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=k7DYPrNV7ZY"
+        }
+      ],
       "related": []
     },
     {

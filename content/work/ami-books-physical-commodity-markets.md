@@ -25,7 +25,7 @@
   "links": [
     {
       "type": "site",
-      "label": "Open library",
+      "label": "AMI books",
       "url": "https://books.1d3x.com/"
     },
     {
@@ -51,7 +51,8 @@
     "src": "/media/work/ami-books-physical-commodity-markets/hero.png",
     "alt": "AMI Books library for physical commodity markets",
     "role": "landing-screenshot"
-  }
+  },
+  "updatedAt": "2026-10-15"
 }
 ---
 
@@ -61,4 +62,4 @@ The library makes free guides, field manuals and living product editions availab
 
 Its editions cover brokerage practice, spot-market work, contract execution, logistics and the operational systems behind commodity deals. Readers can open or download the formats available for each book, including PDF, EPUB and audio editions where published.
 
-The project is part of the MN7R Commodity Brokerage Library and turns agro-commodity operating knowledge into a practical, reusable public resource.
+The project is part of AMI books and turns agro-commodity operating knowledge into a practical, reusable public resource.

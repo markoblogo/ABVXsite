@@ -1,6 +1,6 @@
-# **MN7R Commodity Brokerage Library**
+# **AMI books**
 
-The **MN7R Commodity Brokerage Library** grew out of practical work in physical commodity markets.
+The **AMI books** grew out of practical work in physical commodity markets.
 
 Most books about trading tend to focus on financial markets, speculation, charts, strategies or investment.
 
@@ -214,7 +214,7 @@ AI is beginning to change how commercial teams research markets, process informa
 
 And each new operational problem creates another subject worth documenting.
 
-So the **MN7R Commodity Brokerage Library** is intended to remain a living professional library.
+So the **AMI books** is intended to remain a living professional library.
 
 Not a collection of books about predicting prices.
 

@@ -51,7 +51,7 @@ const focusGroups = [
 ] as const;
 
 const focusBookGroup = {
-  title: 'Books & Field Manuals',
+  title: 'AMI books',
   description:
     'Publishing surfaces, practical manuals and free editions connected to agro-commodity brokerage, operational market workflows and the MN7R infrastructure ecosystem.',
   slugs: [

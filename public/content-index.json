@@ -100,6 +100,11 @@
       ],
       "links": [
         {
+          "type": "site",
+          "label": "AMI books",
+          "url": "https://books.1d3x.com/"
+        },
+        {
           "type": "pdf",
           "label": "PDF",
           "url": "https://mn7r.com/book/mn7r-agro-commodity-brokerage-en.pdf"
@@ -120,12 +125,12 @@
           "url": "https://github.com/markoblogo/mn7r-public-assets/releases/download/book-assets-2026-09-23/mn7r-agro-commodity-brokerage-en-audio.m4b"
         },
         {
-          "type": "site",
+          "type": "other",
           "label": "Book announcement",
           "url": "https://mn7r.com/blog/mn7r-book-en-free-edition"
         },
         {
-          "type": "site",
+          "type": "other",
           "label": "MN7R",
           "url": "https://mn7r.com/"
         },
@@ -178,11 +183,145 @@
           "relation": "related"
         },
         {
-          "title": "MN7R Commodity Brokerage Library",
+          "title": "AMI books",
           "canonicalUrl": "https://abvx.xyz/books/mn7r-commodity-brokerage-library",
           "relation": "series"
         }
       ]
+    },
+    {
+      "type": "series",
+      "section": "books",
+      "ecosystem": "Publishing lines",
+      "group": "Official publishing lines",
+      "status": "building",
+      "title": "AMI books",
+      "summary": "Publishing line focused on agro-commodity brokerage, execution workflows, market infrastructure and operational trading systems.",
+      "canonicalUrl": "https://abvx.xyz/books/mn7r-commodity-brokerage-library",
+      "tags": [
+        "brokerage",
+        "agro-commodities",
+        "market-infrastructure",
+        "trading",
+        "execution",
+        "workflows",
+        "MN7R",
+        "commodity-markets"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "AMI books",
+          "url": "https://books.1d3x.com/"
+        },
+        {
+          "type": "other",
+          "label": "MN7R website",
+          "url": "https://mn7r.com/"
+        }
+      ],
+      "updatedAt": "2026-10-15",
+      "related": [
+        {
+          "title": "AMI Books: Physical Commodity Markets",
+          "canonicalUrl": "https://abvx.xyz/work/ami-books-physical-commodity-markets",
+          "relation": "companion"
+        },
+        {
+          "title": "The Contract Execution Officer Handbook",
+          "canonicalUrl": "https://abvx.xyz/books/contract-execution-officer-handbook",
+          "relation": "member"
+        },
+        {
+          "title": "Agri-Commodity Brokerage: A Practical Guide for Brokers",
+          "canonicalUrl": "https://abvx.xyz/books/mn7r-agro-commodity-brokerage-en-free-edition",
+          "relation": "member"
+        },
+        {
+          "title": "Брокеридж на ринках зернових та олійних",
+          "canonicalUrl": "https://abvx.xyz/books/mn7r-agro-commodity-brokerage-ua-free-edition",
+          "relation": "member"
+        },
+        {
+          "title": "MN7R Product Guide",
+          "canonicalUrl": "https://abvx.xyz/books/mn7r-product-guide",
+          "relation": "member"
+        },
+        {
+          "title": "Spot-Market Handbook",
+          "canonicalUrl": "https://abvx.xyz/books/spot-market-handbook-en-free-edition",
+          "relation": "member"
+        },
+        {
+          "title": "Практичний гайд зі спотового ринку: фізичний аграрний ринок",
+          "canonicalUrl": "https://abvx.xyz/books/spot-market-handbook-ua-free-edition",
+          "relation": "member"
+        }
+      ]
+    },
+    {
+      "type": "editorial",
+      "section": "books",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "AMI books",
+      "summary": "Why MN7R documents the operational work behind physical commodity and agro brokerage, from market knowledge and logistics to contracts and execution.",
+      "publishedAt": "2026-10-05",
+      "updatedAt": "2026-10-15",
+      "language": "en",
+      "translationGroup": "mn7r-commodity-brokerage-library",
+      "canonicalUrl": "https://abvx.xyz/editorial/books/mn7r-commodity-brokerage-library-en",
+      "tags": [
+        "Books",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Books",
+          "url": "https://abvx.xyz/books"
+        },
+        {
+          "type": "translation",
+          "label": "Читати українською",
+          "language": "uk",
+          "url": "https://abvx.xyz/editorial/books/mn7r-commodity-brokerage-library-uk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "editorial",
+      "section": "books",
+      "ecosystem": "Editorial pages",
+      "group": "Editorial pages",
+      "status": "published",
+      "title": "AMI books",
+      "summary": "Як MN7R документує операційну роботу фізичної товарної та аграрної торгівлі: знання ринку, логістику, контракти й виконання угод.",
+      "publishedAt": "2026-10-05",
+      "updatedAt": "2026-10-15",
+      "language": "uk",
+      "translationGroup": "mn7r-commodity-brokerage-library",
+      "canonicalUrl": "https://abvx.xyz/editorial/books/mn7r-commodity-brokerage-library-uk",
+      "tags": [
+        "Books",
+        "editorial"
+      ],
+      "links": [
+        {
+          "type": "section",
+          "label": "Back to Books",
+          "url": "https://abvx.xyz/books"
+        },
+        {
+          "type": "translation",
+          "label": "Read in English",
+          "language": "en",
+          "url": "https://abvx.xyz/editorial/books/mn7r-commodity-brokerage-library-en"
+        }
+      ],
+      "related": []
     },
     {
       "type": "work",
@@ -1390,135 +1529,6 @@
       ]
     },
     {
-      "type": "series",
-      "section": "books",
-      "ecosystem": "Publishing lines",
-      "group": "Official publishing lines",
-      "status": "building",
-      "title": "MN7R Commodity Brokerage Library",
-      "summary": "Publishing line focused on agro-commodity brokerage, execution workflows, market infrastructure and operational trading systems.",
-      "canonicalUrl": "https://abvx.xyz/books/mn7r-commodity-brokerage-library",
-      "tags": [
-        "brokerage",
-        "agro-commodities",
-        "market-infrastructure",
-        "trading",
-        "execution",
-        "workflows",
-        "MN7R",
-        "commodity-markets"
-      ],
-      "links": [
-        {
-          "type": "site",
-          "label": "Site",
-          "url": "https://mn7r.com/"
-        }
-      ],
-      "updatedAt": "2026-05-17",
-      "related": [
-        {
-          "title": "AMI Books: Physical Commodity Markets",
-          "canonicalUrl": "https://abvx.xyz/work/ami-books-physical-commodity-markets",
-          "relation": "companion"
-        },
-        {
-          "title": "The Contract Execution Officer Handbook",
-          "canonicalUrl": "https://abvx.xyz/books/contract-execution-officer-handbook",
-          "relation": "member"
-        },
-        {
-          "title": "Agri-Commodity Brokerage: A Practical Guide for Brokers",
-          "canonicalUrl": "https://abvx.xyz/books/mn7r-agro-commodity-brokerage-en-free-edition",
-          "relation": "member"
-        },
-        {
-          "title": "Брокеридж на ринках зернових та олійних",
-          "canonicalUrl": "https://abvx.xyz/books/mn7r-agro-commodity-brokerage-ua-free-edition",
-          "relation": "member"
-        },
-        {
-          "title": "MN7R Product Guide",
-          "canonicalUrl": "https://abvx.xyz/books/mn7r-product-guide",
-          "relation": "member"
-        },
-        {
-          "title": "Spot-Market Handbook",
-          "canonicalUrl": "https://abvx.xyz/books/spot-market-handbook-en-free-edition",
-          "relation": "member"
-        },
-        {
-          "title": "Практичний гайд зі спотового ринку: фізичний аграрний ринок",
-          "canonicalUrl": "https://abvx.xyz/books/spot-market-handbook-ua-free-edition",
-          "relation": "member"
-        }
-      ]
-    },
-    {
-      "type": "editorial",
-      "section": "books",
-      "ecosystem": "Editorial pages",
-      "group": "Editorial pages",
-      "status": "published",
-      "title": "MN7R Commodity Brokerage Library",
-      "summary": "Why MN7R documents the operational work behind physical commodity and agro brokerage, from market knowledge and logistics to contracts and execution.",
-      "publishedAt": "2026-10-05",
-      "updatedAt": "2026-10-09",
-      "language": "en",
-      "translationGroup": "mn7r-commodity-brokerage-library",
-      "canonicalUrl": "https://abvx.xyz/editorial/books/mn7r-commodity-brokerage-library-en",
-      "tags": [
-        "Books",
-        "editorial"
-      ],
-      "links": [
-        {
-          "type": "section",
-          "label": "Back to Books",
-          "url": "https://abvx.xyz/books"
-        },
-        {
-          "type": "translation",
-          "label": "Читати українською",
-          "language": "uk",
-          "url": "https://abvx.xyz/editorial/books/mn7r-commodity-brokerage-library-uk"
-        }
-      ],
-      "related": []
-    },
-    {
-      "type": "editorial",
-      "section": "books",
-      "ecosystem": "Editorial pages",
-      "group": "Editorial pages",
-      "status": "published",
-      "title": "MN7R Commodity Brokerage Library",
-      "summary": "Як MN7R документує операційну роботу фізичної товарної та аграрної торгівлі: знання ринку, логістику, контракти й виконання угод.",
-      "publishedAt": "2026-10-05",
-      "updatedAt": "2026-10-09",
-      "language": "uk",
-      "translationGroup": "mn7r-commodity-brokerage-library",
-      "canonicalUrl": "https://abvx.xyz/editorial/books/mn7r-commodity-brokerage-library-uk",
-      "tags": [
-        "Books",
-        "editorial"
-      ],
-      "links": [
-        {
-          "type": "section",
-          "label": "Back to Books",
-          "url": "https://abvx.xyz/books"
-        },
-        {
-          "type": "translation",
-          "label": "Read in English",
-          "language": "en",
-          "url": "https://abvx.xyz/editorial/books/mn7r-commodity-brokerage-library-en"
-        }
-      ],
-      "related": []
-    },
-    {
       "type": "free-book",
       "section": "books",
       "ecosystem": "Market Infrastructure & Brokerage",
@@ -1543,6 +1553,11 @@
       "links": [
         {
           "type": "site",
+          "label": "AMI books",
+          "url": "https://books.1d3x.com/"
+        },
+        {
+          "type": "other",
           "label": "How to use",
           "url": "https://mn7r.com/how-to-use"
         },
@@ -1557,7 +1572,7 @@
           "url": "https://mn7r.com/mn7r-guide/mn7r-product-guide.epub"
         },
         {
-          "type": "site",
+          "type": "other",
           "label": "MN7R",
           "url": "https://mn7r.com/"
         },
@@ -1605,7 +1620,7 @@
           "relation": "related"
         },
         {
-          "title": "MN7R Commodity Brokerage Library",
+          "title": "AMI books",
           "canonicalUrl": "https://abvx.xyz/books/mn7r-commodity-brokerage-library",
           "relation": "series"
         }
@@ -2141,6 +2156,11 @@
       ],
       "links": [
         {
+          "type": "site",
+          "label": "AMI books",
+          "url": "https://books.1d3x.com/"
+        },
+        {
           "type": "pdf",
           "label": "PDF",
           "url": "https://spike.1d3x.com/files/spot-market-handbook-en.pdf"
@@ -2194,7 +2214,7 @@
           "relation": "related"
         },
         {
-          "title": "MN7R Commodity Brokerage Library",
+          "title": "AMI books",
           "canonicalUrl": "https://abvx.xyz/books/mn7r-commodity-brokerage-library",
           "relation": "series"
         }
@@ -2358,6 +2378,11 @@
       ],
       "links": [
         {
+          "type": "site",
+          "label": "AMI books",
+          "url": "https://books.1d3x.com/"
+        },
+        {
           "type": "pdf",
           "label": "PDF",
           "url": "https://mn7r.com/books/contract-execution-officer-handbook.pdf"
@@ -2368,7 +2393,7 @@
           "url": "https://mn7r.com/books/contract-execution-officer-handbook.epub"
         },
         {
-          "type": "site",
+          "type": "other",
           "label": "Book website",
           "url": "https://books.1d3x.com/books/contract-execution-officer-handbook"
         },
@@ -2401,7 +2426,7 @@
           "relation": "related"
         },
         {
-          "title": "MN7R Commodity Brokerage Library",
+          "title": "AMI books",
           "canonicalUrl": "https://abvx.xyz/books/mn7r-commodity-brokerage-library",
           "relation": "series"
         }
@@ -3012,6 +3037,11 @@
       ],
       "links": [
         {
+          "type": "site",
+          "label": "AMI books",
+          "url": "https://books.1d3x.com/"
+        },
+        {
           "type": "pdf",
           "label": "PDF",
           "url": "https://mn7r.com/book/mn7r-agro-commodity-brokerage-ua.pdf"
@@ -3022,7 +3052,7 @@
           "url": "https://mn7r.com/book/mn7r-agro-commodity-brokerage-ua.epub"
         },
         {
-          "type": "site",
+          "type": "other",
           "label": "Book announcement",
           "url": "https://mn7r.com/blog/mn7r-book-ua-free-edition"
         },
@@ -3070,7 +3100,7 @@
           "relation": "related"
         },
         {
-          "title": "MN7R Commodity Brokerage Library",
+          "title": "AMI books",
           "canonicalUrl": "https://abvx.xyz/books/mn7r-commodity-brokerage-library",
           "relation": "series"
         }
@@ -3101,6 +3131,11 @@
       ],
       "links": [
         {
+          "type": "site",
+          "label": "AMI books",
+          "url": "https://books.1d3x.com/"
+        },
+        {
           "type": "pdf",
           "label": "PDF",
           "url": "https://spike.1d3x.com/files/spot-market-handbook-ua.pdf"
@@ -3111,7 +3146,7 @@
           "url": "https://spike.1d3x.com/files/spot-market-handbook-ua.epub"
         },
         {
-          "type": "site",
+          "type": "other",
           "label": "Про проект",
           "url": "https://spike.1d3x.com/uk/about"
         },
@@ -3154,7 +3189,7 @@
           "relation": "related"
         },
         {
-          "title": "MN7R Commodity Brokerage Library",
+          "title": "AMI books",
           "canonicalUrl": "https://abvx.xyz/books/mn7r-commodity-brokerage-library",
           "relation": "series"
         }
@@ -3508,7 +3543,7 @@
       "links": [
         {
           "type": "site",
-          "label": "Open library",
+          "label": "AMI books",
           "url": "https://books.1d3x.com/"
         },
         {
@@ -3517,10 +3552,10 @@
           "url": "https://github.com/markoblogo/book-landings"
         }
       ],
-      "updatedAt": "2026-07-18",
+      "updatedAt": "2026-10-15",
       "related": [
         {
-          "title": "MN7R Commodity Brokerage Library",
+          "title": "AMI books",
           "canonicalUrl": "https://abvx.xyz/books/mn7r-commodity-brokerage-library",
           "relation": "series"
         }

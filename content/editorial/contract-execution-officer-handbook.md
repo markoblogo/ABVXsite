@@ -237,7 +237,7 @@ It's successful when the agreement has actually been executed, the obligations a
 That's the part worth getting right.
 
 **Explore the book:**  
-[The Contract Execution Officer Handbook — MN7R Commodity Brokerage Library](https://books.1d3x.com/books/contract-execution-officer-handbook)
+[The Contract Execution Officer Handbook — AMI books](https://books.1d3x.com/books/contract-execution-officer-handbook)
 
 **Explore the platform:**  
 [MN7R — Physical Commodity Brokerage & Execution](https://mn7r.com/)

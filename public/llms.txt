@@ -373,12 +373,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Summary: How free books, translations and reader resources make the Toki Pona publishing ecosystem easier to enter, explore and learn from.
   Section: Books
 
-- MN7R Commodity Brokerage Library
+- AMI books
   URL: https://abvx.xyz/editorial/books/mn7r-commodity-brokerage-library-en
   Summary: Why MN7R documents the operational work behind physical commodity and agro brokerage, from market knowledge and logistics to contracts and execution.
   Section: Books
 
-- MN7R Commodity Brokerage Library
+- AMI books
   URL: https://abvx.xyz/editorial/books/mn7r-commodity-brokerage-library-uk
   Summary: Як MN7R документує операційну роботу фізичної товарної та аграрної торгівлі: знання ринку, логістику, контракти й виконання угод.
   Section: Books
@@ -654,7 +654,7 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Official publishing lines
   Tags: Toki Pona, free books, translation, learning, sitelen pona, reader kits
 
-- MN7R Commodity Brokerage Library
+- AMI books
   URL: https://abvx.xyz/books/mn7r-commodity-brokerage-library
   Summary: Publishing line focused on agro-commodity brokerage, execution workflows, market infrastructure and operational trading systems.
   Group: Official publishing lines

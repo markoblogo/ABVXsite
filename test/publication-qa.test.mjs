@@ -20,15 +20,15 @@ test('requests are bounded, overlap, cover every item and propagate failure',asy
 
 test('catalogue video evidence requires the selected video, not an arbitrary iframe',()=>{
  const data={links:[{type:'youtube',url:'https://www.youtube.com/@channel'},{type:'youtube',url:'https://youtu.be/aaaaaaaaaaa'}]};
- assertCatalogueVideo(data,[{src:'https://www.youtube.com/embed/aaaaaaaaaaa',title:'Book trailer'}]);
- assertCatalogueVideo(data,[{src:'https://www.youtube-nocookie.com/embed/aaaaaaaaaaa?rel=0',title:'Book trailer'}]);
+ assert.throws(()=>assertCatalogueVideo(data,[{src:'https://www.youtube.com/embed/aaaaaaaaaaa',title:'Book trailer',loading:'lazy',referrerPolicy:'strict-origin-when-cross-origin'}]));
+ assertCatalogueVideo(data,[{src:'https://www.youtube-nocookie.com/embed/aaaaaaaaaaa?rel=0',title:'Book trailer',loading:'lazy',referrerPolicy:'strict-origin-when-cross-origin'}]);
  for(const frame of [{src:'https://www.youtube.com/embed/bbbbbbbbbbb',title:'Wrong'}, {src:'https://evil.example/embed/aaaaaaaaaaa',title:'Fake'}, {src:'https://www.youtube.com/embed/aaaaaaaaaaa',title:' '}])assert.throws(()=>assertCatalogueVideo(data,[frame]));
 });
 
 
 test('catalogue evidence rejects watch-page iframes and follows the book-renderable link',()=>{
  const data={links:[{type:'youtube',url:'https://www.youtube-nocookie.com/embed/bbbbbbbbbbb'},{type:'youtube',url:'https://youtu.be/aaaaaaaaaaa'}]};
- assertCatalogueVideo(data,[{src:'https://www.youtube.com/embed/aaaaaaaaaaa',title:'Trailer'}],'books');
+ assertCatalogueVideo(data,[{src:'https://www.youtube-nocookie.com/embed/aaaaaaaaaaa',title:'Trailer',loading:'lazy',referrerPolicy:'strict-origin-when-cross-origin'}],'books');
  assert.throws(()=>assertCatalogueVideo(data,[{src:'https://www.youtube.com/watch?v=aaaaaaaaaaa',title:'Trailer'}],'books'));
  assert.throws(()=>assertCatalogueVideo(data,[{src:'https://youtu.be/aaaaaaaaaaa',title:'Trailer'}],'books'));
 });
@@ -68,4 +68,24 @@ test('catalogue media proves the requested image and HEAD-checks download assets
  await assertCatalogueDownloads(client,data,'http://127.0.0.1:3210');
  assert.deepEqual(calls,['https://example.com/book.pdf','http://127.0.0.1:3210/media/book.mp3']);
  await assert.rejects(assertCatalogueDownloads(client,{links:[{type:'audiobook',url:'https://example.com/missing.m4b'}]},'http://localhost:3000'),/unavailable/);
+});
+
+
+test('catalogue video QA rejects eager and referrer-unsafe privacy-host frames',()=>{
+ const data={links:[{type:'youtube',url:'https://youtu.be/aaaaaaaaaaa'}]};
+ const frame={src:'https://www.youtube-nocookie.com/embed/aaaaaaaaaaa',title:'Trailer',loading:'lazy',referrerPolicy:'strict-origin-when-cross-origin'};
+ assertCatalogueVideo(data,[frame]);
+ for(const patch of [{loading:undefined},{loading:'eager'},{referrerPolicy:undefined},{referrerPolicy:'unsafe-url'}])assert.throws(()=>assertCatalogueVideo(data,[{...frame,...patch}]));
+});
+test('playable audio QA rejects CSP-blocked initial and redirect hosts, while download-only links remain allowed',async()=>{
+ const {assertCatalogueDownloads}=await import('../scripts/publication-qa.mjs');
+ const blocked={type:'audio',url:'https://example.com/book.mp3'};
+ const client={head:async url=>({status:()=>200,url:()=>url,dispose:async()=>{}})};
+ await assert.rejects(assertCatalogueDownloads(client,{type:'book',links:[blocked]},'https://abvx.xyz','books'),/CSP/);
+ await assertCatalogueDownloads(client,{type:'series',links:[blocked]},'https://abvx.xyz','books');
+ await assertCatalogueDownloads(client,{type:'tool',links:[blocked]},'https://abvx.xyz','work');
+ const allowed={type:'audio',url:'https://github.com/owner/assets/releases/download/v1/book.mp3'};
+ await assertCatalogueDownloads(client,{type:'book',links:[allowed]},'https://abvx.xyz','books');
+ const redirected={head:async()=>({status:()=>200,url:()=>blocked.url,dispose:async()=>{}})};
+ await assert.rejects(assertCatalogueDownloads(redirected,{type:'book',links:[allowed]},'https://abvx.xyz','books'),/redirect.*CSP/);
 });

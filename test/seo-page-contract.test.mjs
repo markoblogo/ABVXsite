@@ -1,3 +1,4 @@
+import * as mediaPolicy from '../src/lib/media-policy.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { assertSeoPage } from '../scripts/seo-page-contract.mjs';
@@ -27,7 +28,7 @@ test('Book structured data honors the declared publisher and preserves the site 
 
 
 test('audio releases have narrow media CSP permission and old URLs redirect to identical published assets',async()=>{
- const load=file=>{const m={exports:{}};new Function('module','exports',ts.transpileModule(readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText)(m,m.exports);return m.exports;};
+ const load=file=>{const m={exports:{}};new Function('require','module','exports',ts.transpileModule(readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText)(()=>mediaPolicy,m,m.exports);return m.exports;};
  const csp=load('src/lib/csp-policy.ts').buildContentSecurityPolicy('test-nonce');
  assert.equal(csp.split(';').map(x=>x.trim()).find(x=>x.startsWith('media-src ')),"media-src 'self' https://github.com https://release-assets.githubusercontent.com");
  const redirects=await load('next.config.ts').default.redirects();

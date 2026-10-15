@@ -67,6 +67,11 @@
       "type": "site",
       "label": "MN7R",
       "url": "https://mn7r.com/"
+    },
+    {
+      "type": "youtube",
+      "label": "Book trailer",
+      "url": "https://youtu.be/H6l1leVo34A"
     }
   ],
   "relatedSlugs": [

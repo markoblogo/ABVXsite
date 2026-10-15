@@ -23,7 +23,7 @@
   "featured": true,
   "homepageEligible": false,
   "publishedAt": "2026-06-16",
-  "updatedAt": "2026-06-16",
+  "updatedAt": "2026-10-15",
   "sortRank": 60,
   "summary": "A public guide to the current MN7R product: brokerage workflow, execution discipline, role model, AI operating support and public-safe demo surfaces.",
   "tags": [
@@ -58,6 +58,11 @@
       "type": "site",
       "label": "MN7R",
       "url": "https://mn7r.com/"
+    },
+    {
+      "type": "youtube",
+      "label": "Book trailer",
+      "url": "https://youtu.be/TISOtCghMVY"
     }
   ],
   "relatedSlugs": [

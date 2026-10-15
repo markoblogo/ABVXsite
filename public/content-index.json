@@ -1550,9 +1550,14 @@
           "type": "site",
           "label": "MN7R",
           "url": "https://mn7r.com/"
+        },
+        {
+          "type": "youtube",
+          "label": "Book trailer",
+          "url": "https://youtu.be/TISOtCghMVY"
         }
       ],
-      "updatedAt": "2026-06-16",
+      "updatedAt": "2026-10-15",
       "related": [
         {
           "title": "MN7R",

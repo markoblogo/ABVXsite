@@ -2134,9 +2134,14 @@
           "type": "epub",
           "label": "EPUB",
           "url": "https://spike.1d3x.com/files/spot-market-handbook-en.epub"
+        },
+        {
+          "type": "youtube",
+          "label": "Book trailer",
+          "url": "https://youtu.be/7hkMaEjINZA"
         }
       ],
-      "updatedAt": "2026-06-17",
+      "updatedAt": "2026-10-15",
       "related": [
         {
           "title": "1D3X",

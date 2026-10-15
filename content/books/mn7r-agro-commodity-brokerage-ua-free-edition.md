@@ -52,6 +52,11 @@
       "type": "site",
       "label": "Book announcement",
       "url": "https://mn7r.com/blog/mn7r-book-ua-free-edition"
+    },
+    {
+      "type": "youtube",
+      "label": "Book trailer",
+      "url": "https://youtu.be/qer7WfdIWLI"
     }
   ],
   "relatedSlugs": [
@@ -79,7 +84,8 @@
     "src": "/media/books/mn7r-agro-commodity-brokerage-ua-free-edition/cover.webp",
     "alt": "Брокеридж на ринках зернових та олійних, безкоштовна українська книга MN7R",
     "role": "book-cover"
-  }
+  },
+  "updatedAt": "2026-10-15"
 }
 ---
 

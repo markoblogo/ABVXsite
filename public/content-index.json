@@ -2918,9 +2918,14 @@
           "type": "site",
           "label": "Book announcement",
           "url": "https://mn7r.com/blog/mn7r-book-ua-free-edition"
+        },
+        {
+          "type": "youtube",
+          "label": "Book trailer",
+          "url": "https://youtu.be/qer7WfdIWLI"
         }
       ],
-      "updatedAt": "2026-05-17",
+      "updatedAt": "2026-10-15",
       "related": [
         {
           "title": "MN7R",

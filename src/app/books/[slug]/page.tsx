@@ -1,3 +1,4 @@
+import BookAudioPlayer from '@/components/BookAudioPlayer';
 import EditorialSectionLink from '@/components/EditorialSectionLink';
 import BookActionLinks from '@/components/BookActionLinks';
 import BookDetailHero from '@/components/BookDetailHero';
@@ -368,9 +369,7 @@ export default async function BookDetailPage({
             <h2 id="book-audio-title">Listen / Preview</h2>
           </div>
           <div className="book-detail-copy-panel">
-            <audio controls preload="none" style={{ width: '100%' }}>
-              <source src={audioLink.url} type="audio/mpeg" />
-            </audio>
+            <BookAudioPlayer src={audioLink.url} title={title} />
           </div>
         </section>
       ) : null}

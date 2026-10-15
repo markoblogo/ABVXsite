@@ -47,3 +47,14 @@ test('internal download checks do not buffer large media but still reject missin
  assert.deepEqual(calls.map(call => call[0]), ['GET', 'HEAD', 'HEAD']);
  await assert.rejects(assertInternalLink(client, 'https://abvx.xyz/media/missing.mp3'), /broken internal link/);
 });
+
+
+test('scoped link QA retains binary links and fails a missing M4B through the real scoped helper', async () => {
+ const { checkInternalLinks } = await import('../scripts/publication-qa.mjs');
+ const calls=[];
+ const response = status => ({status:()=>status,dispose:async()=>{}});
+ const client={get:async url=>{calls.push(['GET',url]);return response(200);},head:async url=>{calls.push(['HEAD',url]);return response(url.includes('missing')?404:200);}};
+ await checkInternalLinks(client, ['/books/related','/media/book.mp3','https://abvx.xyz/media/book.m4b?download=1','https://outside.example/file.m4b'], 'https://abvx.xyz/books/new', 'http://localhost:3000');
+ assert.deepEqual(calls,[['GET','http://localhost:3000/books/related'],['HEAD','http://localhost:3000/media/book.mp3'],['HEAD','http://localhost:3000/media/book.m4b?download=1']]);
+ await assert.rejects(checkInternalLinks(client,['/media/missing.m4b'],'https://abvx.xyz/books/new'),/broken internal link/);
+});

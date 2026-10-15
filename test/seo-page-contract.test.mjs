@@ -24,3 +24,16 @@ test('Book structured data honors the declared publisher and preserves the site 
  assert.deepEqual(seoModule.exports.bookJsonLd({...book,publisher:'AMI Press'}).publisher,{'@type':'Organization',name:'AMI Press'});
  assert.deepEqual(seoModule.exports.bookJsonLd(book).publisher,{'@id':'https://abvx.xyz/#organization'});
 });
+
+
+test('audio releases have narrow media CSP permission and old URLs redirect to identical published assets',async()=>{
+ const load=file=>{const m={exports:{}};new Function('module','exports',ts.transpileModule(readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText)(m,m.exports);return m.exports;};
+ const csp=load('src/lib/csp-policy.ts').buildContentSecurityPolicy('test-nonce');
+ assert.equal(csp.split(';').map(x=>x.trim()).find(x=>x.startsWith('media-src ')),"media-src 'self' https://github.com https://release-assets.githubusercontent.com");
+ const redirects=await load('next.config.ts').default.redirects();
+ for(const ext of ['mp3','m4b']) {
+  const rule=redirects.find(r=>r.source==='/media/books/mn7r-agro-commodity-brokerage-en-free-edition/audiobook.'+ext);
+  assert.equal(rule?.destination,'https://github.com/markoblogo/mn7r-public-assets/releases/download/book-assets-2026-09-23/mn7r-agro-commodity-brokerage-en-audio.'+ext);
+  assert.equal(rule?.permanent,true);
+ }
+});

@@ -82,3 +82,12 @@ test('selects an embeddable project video after preserved channel and unsupporte
   assert.equal(findYouTubeVideo([...old,video]),video);
   assert.equal(findYouTubeVideo(old),undefined);
 });
+
+
+test('book audio has no source until the reader requests playback', () => {
+ const Player=loadComponent('BookAudioPlayer').default;
+ const html=renderToStaticMarkup(createElement(Player,{src:'https://github.com/example/audio.mp3',title:'Example'}));
+ assert.match(html, /Listen to audiobook/);
+ assert.match(html, /preload="none"/);
+ assert.doesNotMatch(html, /<source|src=|autoPlay|autoplay/);
+});

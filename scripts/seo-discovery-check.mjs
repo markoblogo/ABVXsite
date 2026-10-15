@@ -76,6 +76,34 @@ await withQaServer(async (base) => {
         await page.setViewportSize({ width: 1280, height: 900 });
       }
     }
+    const audioBook = authoredBooks.find(book => book.slug === 'mn7r-agro-commodity-brokerage-en-free-edition');
+    const audioLink = audioBook?.links?.find(link => link.type === 'audio');
+    if (audioLink?.url.startsWith('https://github.com/markoblogo/mn7r-public-assets/')) {
+      const requests = [];
+      const trackMedia = request => { if (request.resourceType() === 'media') requests.push(request.url()); };
+      page.on('request', trackMedia);
+      try {
+        await visit(base + '/books/' + audioBook.slug);
+        const audio = page.locator('audio');
+        assert.equal(await audio.getAttribute('src'), null, 'audio source must wait for reader request');
+        assert.equal(requests.length, 0, 'audio fetched before user action');
+        await page.getByRole('button', { name: 'Listen to audiobook', exact: true }).click();
+        await page.waitForFunction(() => { const audio = document.querySelector('audio'); return audio && audio.currentTime > 0 && !audio.paused; }, null, { timeout: 20_000 });
+        assert.equal(await audio.getAttribute('src'), audioLink.url);
+        assert.ok(requests.length > 0, 'requested audio did not load');
+        await audio.evaluate(audio => { audio.pause(); audio.removeAttribute('src'); audio.load(); });
+      } finally { page.off('request', trackMedia); }
+      for (const [type, extension] of [['audio', 'mp3'], ['audiobook', 'm4b']]) {
+        const link = audioBook.links.find(link => link.type === type);
+        const response = await page.request.head(link.url);
+        assert.equal(response.status(), 200, type + ' download unavailable');
+        await response.dispose();
+        const legacy = await page.request.head(base + '/media/books/' + audioBook.slug + '/audiobook.' + extension, { maxRedirects: 0 });
+        assert.equal(legacy.status(), 308, 'legacy audio link must redirect');
+        assert.equal(legacy.headers().location, link.url, 'legacy audio destination');
+        await legacy.dispose();
+      }
+    }
     await visit(base + french);
     await page.locator('a[href="' + ukrainian + '"]').click();
     assert.equal(await page.locator('html').getAttribute('lang'), 'uk');

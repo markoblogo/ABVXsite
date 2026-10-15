@@ -42,7 +42,7 @@ export function buildContentSecurityPolicy(nonce: string, options: { reportOnly?
     `img-src ${imageSources}`,
     "font-src 'self' data:",
     `connect-src 'self' ${plausibleDomains}`,
-    "media-src 'self'",
+    "media-src 'self' https://github.com https://release-assets.githubusercontent.com",
     "frame-src https://www.youtube.com https://www.youtube-nocookie.com",
     "worker-src 'self' blob:",
     "manifest-src 'self'",

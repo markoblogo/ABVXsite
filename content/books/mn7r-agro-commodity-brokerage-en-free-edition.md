@@ -51,12 +51,12 @@
     {
       "type": "audio",
       "label": "Audio",
-      "url": "/media/books/mn7r-agro-commodity-brokerage-en-free-edition/audiobook.mp3"
+      "url": "https://github.com/markoblogo/mn7r-public-assets/releases/download/book-assets-2026-09-23/mn7r-agro-commodity-brokerage-en-audio.mp3"
     },
     {
       "type": "audiobook",
       "label": "Audiobook",
-      "url": "/media/books/mn7r-agro-commodity-brokerage-en-free-edition/audiobook.m4b"
+      "url": "https://github.com/markoblogo/mn7r-public-assets/releases/download/book-assets-2026-09-23/mn7r-agro-commodity-brokerage-en-audio.m4b"
     },
     {
       "type": "site",
@@ -97,7 +97,8 @@
     "src": "/media/books/mn7r-agro-commodity-brokerage-en-free-edition/cover.webp",
     "alt": "Agri-Commodity Brokerage, the English MN7R practical guide for brokers",
     "role": "book-cover"
-  }
+  },
+  "updatedAt": "2026-10-15"
 }
 ---
 

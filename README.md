@@ -3,138 +3,53 @@
 [![Website](https://img.shields.io/badge/Website-abvx.xyz-111827?logo=vercel&logoColor=white)](https://abvx.xyz/)
 [![CI](https://github.com/markoblogo/ABVXsite/actions/workflows/ci.yml/badge.svg)](https://github.com/markoblogo/ABVXsite/actions/workflows/ci.yml)
 
-Public website and working portfolio of **Anton Biletskyi-Volokh**: product and go-to-market work, agro-commodity market infrastructure, AI-assisted workflows, books, language projects, and applied-AI writing.
+Public website and working portfolio of **Anton Biletskyi-Volokh**: agro-commodity market infrastructure, software projects, AI-assisted workflows, books and writing.
 
-This repository owns the public presentation and its editable content. `ABVX-OS` owns operational state; `CortexABV-private` owns the private knowledge/runtime layer. No private runtime is deployed by this site.
+## Explore
 
-## Explore the site
-
-| Page | Purpose |
+| Page | Content |
 | --- | --- |
-| [Focus](https://abvx.xyz/focus) | Agro-commodity trading, brokerage, intelligence, benchmarks, and partner fronts |
-| [Systems](https://abvx.xyz/systems) | Market, publishing/language, AI-development, and commercial/utility systems |
-| [Books](https://abvx.xyz/books) | Books from ABVX Press and AMI Press, translations, series, free resources, and companions |
-| [Writing](https://abvx.xyz/writing) | Native articles, Medium/Substack feeds, and automatic YouTube watch pages |
-| [About](https://abvx.xyz/about) | Background, working method, contact, and technology/creative collaborations |
-| [Work with me](https://abvx.xyz/work-with-me) | Engagement formats and six focused service pages |
+| [Focus](https://abvx.xyz/focus) | Agro-commodity projects, brokerage, market intelligence and AMI |
+| [Systems](https://abvx.xyz/systems) | Market infrastructure, publishing/language tools, AI workflows and standalone utilities |
+| [Books](https://abvx.xyz/books) | Books, translations, series, free editions and companions |
+| [Writing](https://abvx.xyz/writing) | Native articles, Working Stories, Kitchen Notes, Medium, Substack and YouTube |
+| [About](https://abvx.xyz/about) / [Work with me](https://abvx.xyz/work-with-me) | Background, collaborations, services and contact |
 
-Projects live at `/work/[slug]`, books/series at `/books/[slug]` unless a record declares a custom canonical path, native writing at `/writing/[slug]`, and editorial guides at `/editorial/[section]/[slug]`. Published slugs and compatibility redirects are preserved.
+Writing retains discovered publications, provides **More posts** and a [complete archive](https://abvx.xyz/writing/archive). Project, book and series pages support trailers; book audio loads on reader request.
 
-## Start locally
+## Run locally
 
-Use **Node.js 24** to match CI; `package.json` declares the minimum supported engine. Install from the committed lockfile:
+Use **Node.js 24** to match CI, and the committed lockfile:
 
-```bash
+```sh
 npm ci
 npm run dev
 ```
 
-Open `http://localhost:3000`. For a local production server, run `npm run build` followed by `npm run start`.
+Open `http://localhost:3000`. For a production build, use `npm run build`, then `npm run start`.
 
-Stack: Next.js 16 App Router, React 19, TypeScript, Tailwind CSS 4, local Markdown/JSON and media, Vercel. Exact dependency versions live in `package.json` and `package-lock.json`.
+Stack: Next.js 16 App Router, React 19, TypeScript, Tailwind CSS 4 and Vercel. Exact versions are in `package.json` and `package-lock.json`.
 
-## Edit the source, regenerate the outputs
+## Content and development
 
-| Source | Owns |
+Editable public sources live in `content/`: projects, books, series, native articles, Working Stories, editorial guides and page metadata. Local assets live in `public/media/`. Regenerate `public/llms.txt` and `public/content-index.json` with `npm run llms:generate` after public content changes; commit outputs with their sources.
+
+Use the appropriate guide instead of copying a publication process into each task:
+
+| Task | Guide |
 | --- | --- |
-| `content/work/`, `content/books/`, `content/series/` | Project, book, and series records with JSON frontmatter |
-| `content/writing/` | Native articles |
-| `content/working-stories/` + `content/working-stories.json` | Dedicated professional stories and series introduction |
-| `content/editorial/` + `content/editorial/index.json` | Section guides, translations, relationships, and localized metadata |
-| `content/pages.json` | Core-page SEO titles and update dates |
-| `content/collaborations.json` | Shared technology/B2B and creative/UGC offers on About and in the footer |
-| `content/youtube.json` | Channel, publication cutoff, and initial demonstration video |
-| `content/writing-discovery.json` | First-addition times and retained public feed metadata |
-| `public/media/` | Public images and documents referenced by content |
+| Edit content, media, placement or localized guides | [Content editing](docs/content-editing.md) · [Fields and format](docs/content-workflow.md) |
+| Publish posts/cards or add catalogue media; record measurements | [Publication handoff](docs/abvx-os-publishing.md) |
+| Validate, review and verify a release | [Editorial SEO checklist](docs/editorial-seo-checklist.md) |
+| Diagnose feeds, discovery, analytics or runtime behavior | [Site operations](docs/site-operations.md) |
+| Export story/recipe collections | [Working Stories](docs/working-stories.md) · [Kitchen Notes](docs/kitchen-notes.md) |
+| Work on integrations | [CortexABV adapter](cortex-abv/README.md) · [Copy sync](docs/project-description-sync.md) · [Ecosystem sync](docs/ecosystem-sync.md) |
 
-Use existing templates or `npm run content:new-work`, `content:new-book`, `content:new-series`, and `content:new-writing`. Check visibility and remove empty placeholder URLs before publication. Catalogue copy belongs in `content/`; do not add new records to legacy TypeScript fallback registries.
+Agents read `AGENTS.md`, this README, then only the relevant guide. Preserve public slugs, canonical URLs, redirects and existing media paths. Use reviewed PRs and the documented release checks; a successful Preview is not proof of production publication or search indexing.
 
-After public content changes:
+This repository owns public presentation. `ABVX-OS` and `CortexABV-private` own separate private operational/knowledge state; no private runtime is deployed by the site. Keep secrets and private measurement records out of public content.
 
-```bash
-npm run llms:generate
-```
-
-Commit `public/llms.txt` and `public/content-index.json` together with their sources. Do not hand-edit generated indexes. `prebuild` also regenerates these indexes and the ecosystem projection.
-
-See [Content editing](docs/content-editing.md) for task recipes and [Content workflow](docs/content-workflow.md) for the file format, fields, visibility, and review flags.
-
-## Verify and publish
-
-Use the [publication handoff](docs/abvx-os-publishing.md) for the complete procedure:
-
-| Change | Preparation | Release scope |
-| --- | --- | --- |
-| New native article or Working Story | Approved full-source packets through `content:publish` | `publication-v1` when eligible |
-| New project or book in an existing catalogue placement | Separate full-source catalogue packets through `content:publish` | `catalogue-v1` when eligible |
-| Add a video, first image, PDF, EPUB, audio or audiobook link to an existing project/book/series | `content:add-media`; `content:add-video` remains compatible | `catalogue-v1` for supported additive changes |
-| Shared code, new series/routes/placements, replacements or uncertain scope | Separate reviewed engineering change | `full` |
-
-Singles and pools share the same path; native and catalogue packet pools stay separate. The Git classifier selects the profile. Never manually omit gates. `content:release-check` records one final-tree receipt under ignored `exports/editorial-checks/`; reuse it for measurement rather than rebuilding for each member. Catalogue observations retain separate workload versions and are not automatically native OS/Cortex learning cycles.
-
-Work from current `origin/main` in a clean ABVXsite checkout or suitable worktree. Keep unrelated changes out of the branch; use `codex/` for Codex branches.
-
-The CI gate is:
-
-```bash
-npm run content:validate
-npm run ecosystem:check
-npm run lint
-npm run test:sync
-npm run cortex-abv:vector-export:check
-npm run build
-npm audit --omit=dev --audit-level=high
-```
-
-The CI build is skipped for a proven documentation-only diff; other CI checks remain required. Documentation changes do not need a local application build or browser sweep unless the change also affects rendered behavior.
-
-Run `npm run qa:seo` **after** a successful build for content, route, or metadata changes. `npm run content:review` is an optional editorial report; its warnings are separate from structural validation failures. Use targeted mobile/visual checks when rendered pages change.
-
-Open one PR containing the complete source/link/index change. Passing CI and a Vercel Preview are review evidence. After the approved merge to `main`, confirm the Vercel **production deployment for the merge SHA**, then verify the canonical public URLs and relevant sitemap/index entries. A merge or preview alone does not prove publication or Google indexing.
-
-Use `npm run content:release-ready -- --preview --pr <number>` to wait for CI/Preview. Review feedback before the authorized merge, then use a clean checkout at the merge SHA and `npm run content:release-ready -- --production --pr <number>`. The latter verifies the latest Production SHA before and after live QA; do not repeat that audit after success. Documentation-only changes may intentionally skip a Vercel deployment: verify their merged files on GitHub, without claiming a new website deployment.
-
-The [editorial release checklist](docs/editorial-seo-checklist.md) is the detailed procedure. [Site operations](docs/site-operations.md) covers feeds, analytics, diagnostics, and the repository map.
-
-## Writing and measurement
-
-Writing merges local articles, [Working Stories](docs/working-stories.md), Medium, Substack, and YouTube. Writing and the three homepage publication slots share chronology by first registration on ABVX; source publication dates remain separate. `npm run writing:register` records native additions during prebuild. The approximately 15-minute feed workflow retains discovered posts and immutable timestamps, and publishes only when metadata changes. Feed failures preserve the saved list. See [Site operations](docs/site-operations.md) for timing, historical migration, and the narrowly authorized workflow.
-
-Working Stories also has its own [chronological index](https://abvx.xyz/writing/working-stories); book-eligible stories export with `npm run export:working-stories` into ignored local `exports/` files. YouTube retains its new-publication cutoff and one initial test exception. The recent view contains one featured item, six recent items and thirty initial archive rows. **More posts** reveals up to thirty additional rows per click; the [complete server-rendered archive](https://abvx.xyz/writing/archive) keeps older local publications linked for discovery.
-
-Plausible tracks `Book Link Click`, `Contact Click`, and `Collaboration Click` separately. These measure link intent, not completed purchases, messages, or bookings. Dashboard goals and historical limitations are documented in [Site operations](docs/site-operations.md).
-
-Canonical domain: `https://abvx.xyz`. Public discovery surfaces: [sitemap.xml](https://abvx.xyz/sitemap.xml), [llms.txt](https://abvx.xyz/llms.txt), [content-index.json](https://abvx.xyz/content-index.json), and [ecosystem.json](https://abvx.xyz/ecosystem.json). Structured metadata, alternates, and indexes support discovery; they do not guarantee rankings, AI citations, or traffic.
-
-See the [traffic growth plan](docs/traffic-growth-plan.md) for implemented work, measurement, and proposed next improvements. Proposed work is not an instruction to start it automatically.
-
-## Catalogue media
-
-Project, book and series trailers reuse the shared lazy `youtube-nocookie.com` player with an accessible title and original YouTube fallback link. A trailer update preserves the existing prose, links, canonical path and first-addition time; it changes `updatedAt` and the generated indexes.
-
-Individual book audio loads only after the reader requests playback. Playable audio must use the site's shared CSP allowlist (ABVX, GitHub and release-assets.githubusercontent.com), including the final redirect host. Work/series audio and `audiobook` links are downloads. Release QA checks binary availability with HEAD rather than downloading entire files; a HEAD response alone does not prove playback. See [media preparation and safeguards](docs/abvx-os-publishing.md#shared-additive-media-route).
-
-## Integrations and boundaries
-
-The [CortexABV public-site adapter](cortex-abv/README.md) documents public presence, project registries, read-only repository observation, approved copy proposals, and the static private-runtime export snapshot. Normal project-copy updates are PR-first; executor designs do not enable automatic merging or outbound communications.
-
-The separate [ecosystem sync](docs/ecosystem-sync.md) has narrowly authorized generated/managed writes. Preserve this README's ecosystem markers and never use that exception to publish arbitrary code or unmarked prose.
-
-Optional Search Console/Bing verification overrides are `GOOGLE_SITE_VERIFICATION` and `BING_SITE_VERIFICATION`. Site rendering and YouTube ingestion need no CMS token or YouTube API key. Copy-sync credentials are workflow-specific; never commit secrets. See [project description sync](docs/project-description-sync.md) before touching that integration.
-
-## Documentation map
-
-For an agent session, read `AGENTS.md`, this README, then only the relevant guide:
-
-- [Content editing](docs/content-editing.md) / [content format](docs/content-workflow.md)
-- [Publication commands, media updates and measurement boundaries](docs/abvx-os-publishing.md)
-- [Working Stories workflow and manuscript export](docs/working-stories.md)
-- [Kitchen Notes recipes and local cookbook export](docs/kitchen-notes.md)
-- [Editorial SEO release checklist](docs/editorial-seo-checklist.md)
-- [Site operations and measurement](docs/site-operations.md)
-- [Traffic growth plan](docs/traffic-growth-plan.md)
-- [Design review](docs/design-taste-review.md) / [shell smoke check](docs/site-shell-smoke-check.md)
-- [CortexABV adapter](cortex-abv/README.md) / [copy sync](docs/project-description-sync.md) / [ecosystem sync](docs/ecosystem-sync.md)
+Public discovery: [sitemap](https://abvx.xyz/sitemap.xml), [LLM index](https://abvx.xyz/llms.txt), [content index](https://abvx.xyz/content-index.json), [ecosystem registry](https://abvx.xyz/ecosystem.json).
 
 <!-- ABVX:ECOSYSTEM:BEGIN -->
 ## ABVX ecosystem

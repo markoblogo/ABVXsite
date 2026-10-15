@@ -54,6 +54,10 @@ Discovered YouTube videos now receive `/writing/videos/<video-id>` watch pages f
 
 The public fallback endpoint sends `no-store`; upstream Writing feed fetches for Substack, Medium and YouTube also bypass the framework data cache. MN7R feed fetches retain their 900-second revalidation cache because Focus and related work/book pages fetch them during rendering. Article/image lookups keep their existing cache. This prevents the fallback API from serving an older cached RSS response to a successful sync. The scheduler may still be late, YouTube may update its feed late, and a new discovery requires a deployment; 15 minutes is a polling cadence, not a delivery guarantee. Diagnostics are available from the existing workflow logs. No API key, transcript scraper, new service or model is introduced.
 
+### Archive and load-more behavior
+
+Writing initially renders one featured item, six recent items and thirty archive rows. **More posts** reveals up to thirty more rows per click. `/writing/archive` is the complete server-rendered archive for older local publications; it remains linked independently of the client interaction. `writing-window.mjs` owns the recent window and `writing-archive.mjs` owns archive selection. Keep retained video route checks distinct from assertions against the bounded recent view.
+
 ## Catalogue addition chronology
 
 The homepage Focus, Systems and Books cards use immutable first-addition times from `content/catalogue-discovery.json`, rather than `updatedAt`, GitHub activity or releases of existing products. `npm run catalogue:register` runs before builds; commit its output with each new public work/book/series record. CI rejects uncommitted registration changes. Existing timestamps survive edits, removals, re-additions and repeated builds. Equal-time additions use the existing catalogue rank/title tie-breaker.
@@ -100,7 +104,7 @@ When dependency installation or audit fails, fix and commit the consistent `pack
 
 For Vercel access failures, distinguish provider/network failure, expired authentication, and protected Preview access. Use existing authorized CLI/connector access or an authenticated browser; do not weaken security or certificate validation. GitHub deployment status can corroborate the deployed SHA, but verify the canonical public route before claiming content is live.
 
-Core site rendering requires no CMS credentials. Optional site verification overrides are documented in the README; project-copy automation secrets belong only to its approved workflow. Preserve the [CortexABV boundary](../cortex-abv/README.md) and the separate [ecosystem sync allowlist](ecosystem-sync.md).
+Core site rendering requires no CMS credentials or YouTube API key. Optional site verification overrides are `GOOGLE_SITE_VERIFICATION` and `BING_SITE_VERIFICATION`; project-copy automation secrets belong only to its approved workflow. Preserve the [CortexABV boundary](../cortex-abv/README.md) and the separate [ecosystem sync allowlist](ecosystem-sync.md).
 
 References: [Plausible custom events](https://plausible.io/docs/custom-event-goals), [outbound tracking](https://plausible.io/docs/outbound-link-click-tracking), [YouTube player parameters](https://developers.google.com/youtube/player_parameters), [Google AI features](https://developers.google.com/search/docs/appearance/ai-features).
 

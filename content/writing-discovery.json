@@ -83,6 +83,16 @@
     },
     {
       "source": "abvx",
+      "title": "Your AI Isn't Underperforming. You're Just Asking It to Do Too Little.",
+      "url": "/writing/how-to-be-more-ambitious-with-ai-agents",
+      "publishedAt": "2026-10-17T00:00:00.000Z",
+      "excerpt": "We're using increasingly powerful AI models to complete surprisingly small tasks. Felix Rieseberg's framework shows how to ask for better outcomes, deeper analysis and genuinely useful agent workflows.",
+      "coverImage": "/media/writing/how-to-be-more-ambitious-with-ai-agents.png",
+      "addedAt": "2026-10-17T22:58:55.785Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "abvx",
       "title": "Marmite Oatmeal",
       "url": "/writing/marmite-oatmeal",
       "publishedAt": "2026-08-10T00:00:00.000Z",

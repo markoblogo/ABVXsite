@@ -7246,7 +7246,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-17T21:51:22.282Z",
+      "updatedAt": "2026-10-17T22:58:55.785Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8885,6 +8885,31 @@
           "url": "https://abvx.xyz/writing"
         }
       ],
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Your AI Isn't Underperforming. You're Just Asking It to Do Too Little.",
+      "summary": "We're using increasingly powerful AI models to complete surprisingly small tasks. Felix Rieseberg's framework shows how to ask for better outcomes, deeper analysis and genuinely useful agent workflows.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/how-to-be-more-ambitious-with-ai-agents",
+      "tags": [
+        "ai-agents",
+        "agentic-workflows",
+        "prompt-engineering",
+        "claude",
+        "codex",
+        "ai-productivity",
+        "multi-agent-systems",
+        "agent-skills",
+        "ai-native-development"
+      ],
+      "links": [],
+      "updatedAt": "2026-10-17",
       "related": []
     },
     {

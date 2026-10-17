@@ -1269,6 +1269,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: AI startup funding, AI research, MCP, Anysite, voice agents, robotics, Legal AI
 
+- Your AI Isn't Underperforming. You're Just Asking It to Do Too Little.
+  URL: https://abvx.xyz/writing/how-to-be-more-ambitious-with-ai-agents
+  Summary: We're using increasingly powerful AI models to complete surprisingly small tasks. Felix Rieseberg's framework shows how to ask for better outcomes, deeper analysis and genuinely useful agent workflows.
+  Group: writing
+  Tags: ai-agents, agentic-workflows, prompt-engineering, claude, codex, ai-productivity, multi-agent-systems, agent-skills
+
 - Your Company Was Built for Expensive Intelligence. AI Just Changed the Price.
   URL: https://abvx.xyz/writing/ai-native-business-models-redesign-industries
   Summary: Most companies were designed around expensive human intelligence. AI changes that assumption. The opportunity isn't to automate existing workflows, but to rebuild entire businesses around what's now possible.

@@ -7223,7 +7223,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-17T16:39:48.612Z",
+      "updatedAt": "2026-10-17T18:41:24.948Z",
       "tags": [],
       "links": [],
       "related": []
@@ -7593,6 +7593,29 @@
       ],
       "links": [],
       "updatedAt": "2026-10-14",
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "I Turned an Instagram Reel Into 4 Minutes of Ambient Music Using GPT-6 + Codex",
+      "summary": "What if you could turn a random Instagram Reel into an entire ambient music track in just 12 minutes? Here's the experiment. I found a video of a musician creating strange, atmospheric sounds using everyday electrical de",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/_kzkJ6FKM28",
+      "publishedAt": "2026-10-17T18:33:45.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=_kzkJ6FKM28"
+        }
+      ],
       "related": []
     },
     {

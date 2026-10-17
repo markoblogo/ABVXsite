@@ -11,6 +11,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 ## YouTube watch pages
 
+- I Turned an Instagram Reel Into 4 Minutes of Ambient Music Using GPT-6 + Codex
+  URL: https://abvx.xyz/writing/videos/_kzkJ6FKM28
+  Summary: What if you could turn a random Instagram Reel into an entire ambient music track in just 12 minutes? Here's the experiment. I found a video of a musician creating strange, atmospheric sounds using everyday electrical de
+
 - My $0 API Key Trying to Access OpenAI, Claude & Gemini
   URL: https://abvx.xyz/writing/videos/2po93Gv-MuY
   Summary: My API key has exactly $0.00 in credits. But does that stop him from approaching the biggest AI models on the planet? Absolutely not. OpenAI. Anthropic Claude. Google Gemini. Three AI giants. One broke little API key. An

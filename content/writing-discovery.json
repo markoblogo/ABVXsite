@@ -749,6 +749,17 @@
     },
     {
       "source": "youtube",
+      "title": "Claude Opus 5.5 Turned a Viral Video Into a Playable 3D Game in 40 Minutes",
+      "url": "https://www.youtube.com/watch?v=CM0Ig3q7pqk",
+      "publishedAt": "2026-10-17T20:20:30.000Z",
+      "excerpt": "What if you could take a viral video, give it to an AI, and turn it into an actual video game? Not just a visual recreation. A fully explorable 3D world. And what if the entire process took just 40 minutes? About a year ",
+      "coverImage": "https://i.ytimg.com/vi/CM0Ig3q7pqk/hqdefault.jpg",
+      "videoDescription": "What if you could take a viral video, give it to an AI, and turn it into an actual video game?\nNot just a visual recreation. A fully explorable 3D world.\nAnd what if the entire process took just 40 minutes?\n\nAbout a year ago, a video featuring an enormous, seemingly endless fortress went viral on Twitter.\nYesterday, I gave that video to Claude Opus 5.5, connected it to an AI image generator for creating assets, provided specialized Three.js development skills, and asked for one thing:\n\"Build me a game like this. But make it possible to actually reach the roof of the fortress.\"\nAnd Claude took the assignment rather seriously.\nFirst, it analyzed the original video and calculated what exploring this massive structure would actually involve.\n\nThe results were ridiculous:\n- 2.2 kilometers of walking to reach the roof\n- 46 minutes at normal walking speed\n- Two movement modes: walking and sprinting with Shift\n- A fully explorable fortress with interconnected interior spaces\nThen it built the game.\n\nWhat Claude created in approximately 40 minutes:\n- A playable 3D fortress inspired by the original video\n- Procedurally assembled architecture and explorable interiors\n- AI-generated visual assets\n- A physics and movement system\n- Original background music\n- Walking and sprinting mechanics\n- A guided navigation system that automatically leads you to the roof\n\nAll running directly in your browser.\nNo traditional game development pipeline. No manually building hundreds of rooms. Just Claude Opus 5.5, Three.js, AI-generated assets, and a prompt.\nAnd here's what I find most interesting.\n\nWe're getting dangerously close to the era of personal video games.\nSee something interesting on the internet? Turn it into a game.\nWant to explore a fictional world? Generate it.\nWish your favorite game had different mechanics, environments, or an entirely new storyline? Just ask.\nOf course, this experiment still has bugs. I could spend another few hours adding gameplay mechanics, improving the environments, and polishing everything.\nBut I think I'll stop here.\nBecause the interesting part isn't whether the game is perfect.\nIt's that a single person can now turn a random internet video into an explorable world in less than an hour.\nAnd that's a pretty remarkable change.\n\nPlay the game yourself:\nhttps://claude.ai/artifact/78NPvbJMLcQikzukVq7BqW\n\nTip: Click the Guide button to automatically navigate through the fortress and reach the roof. Or explore it yourself, if you've got 46 minutes to spare.\n\n#ClaudeCode #ClaudeOpus #VibeCoding #AIGameDevelopment #ThreeJS #AIAgents",
+      "addedAt": "2026-10-17T20:39:42.404Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Claude Code Built a GTA Mod for SimCity 3000 in Just 2 Hours",
       "url": "https://www.youtube.com/watch?v=cQS3nbBe6JM",
       "publishedAt": "2026-10-11T13:37:46.000Z",

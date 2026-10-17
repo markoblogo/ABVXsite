@@ -7215,6 +7215,29 @@
       "related": []
     },
     {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Claude Opus 5.5 Turned a Viral Video Into a Playable 3D Game in 40 Minutes",
+      "summary": "What if you could take a viral video, give it to an AI, and turn it into an actual video game? Not just a visual recreation. A fully explorable 3D world. And what if the entire process took just 40 minutes? About a year ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/CM0Ig3q7pqk",
+      "publishedAt": "2026-10-17T20:20:30.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=CM0Ig3q7pqk"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "editorial-series",
       "section": "writing",
       "ecosystem": "Writing",
@@ -7223,7 +7246,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-17T18:41:24.948Z",
+      "updatedAt": "2026-10-17T20:39:42.404Z",
       "tags": [],
       "links": [],
       "related": []

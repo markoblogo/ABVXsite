@@ -7246,7 +7246,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-17T20:39:42.404Z",
+      "updatedAt": "2026-10-17T21:15:22.724Z",
       "tags": [],
       "links": [],
       "related": []
@@ -7318,6 +7318,29 @@
       ],
       "links": [],
       "updatedAt": "2026-10-13",
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Disco Coffee Showdown: Shoot or Decaf? | Gameplay & Both Endings",
+      "summary": "Jay and Silent Bob meet coffee-crazed alien worms in Disco Coffee Showdown: a 26-second browser music game built with PlayMCP. Watch real gameplay, learn the tap-versus-hold twist, and see both coffee-soaked endings. PLA",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/WLBxcM5JQ3U",
+      "publishedAt": "2026-10-17T20:41:12.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=WLBxcM5JQ3U"
+        }
+      ],
       "related": []
     },
     {
@@ -7479,6 +7502,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=7JJ47rmMU7w"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "He Shot the Coffee. The Aliens Thanked Him. #Shorts",
+      "summary": "Jay brought a laser. The coffee aliens brought a loyalty card. Watch the worms win in this 20-second Disco Coffee Showdown gameplay comedy. Game (copy URL): https://playmcp.io/g/g_4FzN0mD8 Desktop browser · Disco Coffee ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/RsUVTrr3Dmc",
+      "publishedAt": "2026-10-17T20:52:49.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=RsUVTrr3Dmc"
         }
       ],
       "related": []
@@ -7975,6 +8021,29 @@
         }
       ],
       "updatedAt": "2026-10-04",
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Silent Bob Won by Doing Less ☕ #Shorts",
+      "summary": "Jay makes things worse. Silent Bob holds the solution. The decaf route wins in this 20-second Disco Coffee Showdown gameplay comedy. Game (copy URL): https://playmcp.io/g/g_4FzN0mD8 Desktop browser · Disco Coffee Showdow",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/lky20OJaAqo",
+      "publishedAt": "2026-10-17T20:56:30.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=lky20OJaAqo"
+        }
+      ],
       "related": []
     },
     {

@@ -7192,6 +7192,29 @@
       "related": []
     },
     {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Claude Code: Sonnet + Opus + Haiku. A Smarter AI Agent Setup",
+      "summary": "What if you could make Claude Code more efficient by giving each AI model a different job? Instead of using the most expensive model for everything, try a smarter multi-model setup: Sonnet does the coding. Opus provides ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/hBU0WpTTbes",
+      "publishedAt": "2026-10-17T16:19:49.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=hBU0WpTTbes"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "editorial-series",
       "section": "writing",
       "ecosystem": "Writing",
@@ -7200,7 +7223,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-15T21:50:47.768Z",
+      "updatedAt": "2026-10-17T16:39:48.612Z",
       "tags": [],
       "links": [],
       "related": []

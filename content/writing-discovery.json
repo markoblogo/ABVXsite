@@ -751,6 +751,17 @@
     },
     {
       "source": "youtube",
+      "title": "Claude Code: Sonnet + Opus + Haiku. A Smarter AI Agent Setup",
+      "url": "https://www.youtube.com/watch?v=hBU0WpTTbes",
+      "publishedAt": "2026-10-17T16:19:49.000Z",
+      "excerpt": "What if you could make Claude Code more efficient by giving each AI model a different job? Instead of using the most expensive model for everything, try a smarter multi-model setup: Sonnet does the coding. Opus provides ",
+      "coverImage": "https://i.ytimg.com/vi/hBU0WpTTbes/hqdefault.jpg",
+      "videoDescription": "What if you could make Claude Code more efficient by giving each AI model a different job?\nInstead of using the most expensive model for everything, try a smarter multi-model setup:\nSonnet does the coding. Opus provides expert advice. Haiku explores the codebase.\nThree models. Three roles. One coordinated workflow.\n\nHere's how it works:\n- Claude Sonnet: Your main coding agent. Handles implementation, edits, testing, and everyday development.\n- Claude Opus: Your senior advisor. Reviews complex decisions, helps solve difficult problems, and provides guidance when Sonnet gets stuck.\n- Claude Haiku: Your research assistant. Explores repositories, reads files, searches for dependencies, and reports findings.\n\nThe goal? Better resource allocation, potentially lower costs, and less unnecessary work for your most powerful models.\n\nStep 1: Install the multi-model configuration\nnpx claude-code-templates@latest --setting model/sonnet-opus-advisor-haiku-subagents\n\nDuring installation, choose where the settings should apply: User, Project, or Local.\n\nStep 2: Make your Haiku subagents read-only\nHere's an additional improvement I recommend.\nWhen Haiku subagents investigate your codebase, they don't necessarily need permission to modify anything.\nLet them research. Let Sonnet make the changes.\n\nYou can enforce this behavior using two Claude Code hooks:\nSubagents Explore Only: Uses SubagentStart to instruct subagents to investigate and report findings without modifying files.\nSubagent Read Only Guard: Uses PreToolUse to block common file-writing tools and state-changing commands when invoked by subagents.\n\nInstall both:\nnpx claude-code-templates@latest --setting hooks/subagents-explore-only --hook security/subagent-read-only-guard\n\nYour main agent keeps its normal permissions, while research subagents work under additional restrictions. Note that the guard does not cover every possible write mechanism, including write-capable MCP tools.\n\n DEV Community\nWhy does this matter?\nBecause more powerful AI models aren't always the answer.\nSometimes the biggest improvement comes from giving the right task to the right model.\nLet Haiku do the research.\nLet Sonnet do the work.\nLet Opus handle the hard questions.\nSave this configuration and try it in your next Claude Code session.\n\nClaude Code Templates on GitHub:\nhttps://github.com/davila7/claude-code-templates\n\n#ClaudeCode #ClaudeAI #AIAgents #VibeCoding #AgenticCoding",
+      "addedAt": "2026-10-17T16:39:48.612Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Someone Put Claude AI on a 2007 Nokia. Yes, Really.",
       "url": "https://www.youtube.com/watch?v=jEIPftaweBM",
       "publishedAt": "2026-10-10T14:39:44.000Z",

@@ -47,6 +47,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/H6l1leVo34A
   Summary: A market needs more than a price. Agri-Commodity Brokerage explores the people, products, logistics and terms that connect supply with demand in physical grains and oilseeds markets. Explore the book and download the fre
 
+- Claude Code: Sonnet + Opus + Haiku. A Smarter AI Agent Setup
+  URL: https://abvx.xyz/writing/videos/hBU0WpTTbes
+  Summary: What if you could make Claude Code more efficient by giving each AI model a different job? Instead of using the most expensive model for everything, try a smarter multi-model setup: Sonnet does the coding. Opus provides
+
 - Someone Put Claude AI on a 2007 Nokia. Yes, Really.
   URL: https://abvx.xyz/writing/videos/jEIPftaweBM
   Summary: Remember when phones had buttons, batteries lasted forever, and Snake was peak entertainment? Well, someone just brought Claude AI to a Nokia from 2007. Developer Emir Karşıyakalı created an open-source AI chat client fo

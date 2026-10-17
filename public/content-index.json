@@ -7246,7 +7246,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-17T21:15:22.724Z",
+      "updatedAt": "2026-10-17T21:51:22.282Z",
       "tags": [],
       "links": [],
       "related": []
@@ -7722,6 +7722,29 @@
       "updatedAt": "2026-10-11",
       "tags": [],
       "links": [],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "La P'tite Fumée LIVE at Warehouse Nantes 2026 | RESET Tour Opening Night",
+      "summary": "La P'tite Fumée kicked off their new tour at Warehouse Nantes on October 15, 2026. And I was there to capture it. Eight minutes of live music, hypnotic rhythms, psychedelic energy, and the atmosphere of an unforgettable ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/QUfoeGezQAs",
+      "publishedAt": "2026-10-17T21:44:00.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=QUfoeGezQAs"
+        }
+      ],
       "related": []
     },
     {

@@ -139,9 +139,17 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/WLBxcM5JQ3U
   Summary: Jay and Silent Bob meet coffee-crazed alien worms in Disco Coffee Showdown: a 26-second browser music game built with PlayMCP. Watch real gameplay, learn the tap-versus-hold twist, and see both coffee-soaked endings. PLA
 
+- Reverse Tetris Where You Sabotage the AI | Music Game Gameplay
+  URL: https://abvx.xyz/writing/videos/wPIyeBYJZbQ
+  Summary: The AI builds. You break. SIRTET flips the falling-block puzzle: the machine tries to clear rows, while you move and rotate pieces to bury it. Play SIRTET on desktop: https://playmcp.io/g/g_hxx3yDS0 This gameplay overvie
+
 - Someone Made a Digital Spider That Crawls Across Web Pages
   URL: https://abvx.xyz/writing/videos/x5uo-P2Vf_I
   Summary: I have absolutely no idea why someone made this. But I'm incredibly glad it exists. Someone turned the concept of a web crawler into an actual digital spider. A glowing, eight-legged creature crawling across text, links,
+
+- I Tried to Bury the AI. It Deleted Every Brick. 🤖 #Shorts
+  URL: https://abvx.xyz/writing/videos/Xeta6R8hvPg
+  Summary: I make a mess. The machine tidies up. Honestly, rude. SIRTET is a reverse falling-block music game: you sabotage the pieces while the AI tries to clear the board. This is the AI's all-clear ending, captured from the real
 
 - AsciiTheme — ASCII Themes & Widgets for JavaScript Websites
   URL: https://abvx.xyz/writing/videos/y2OW5f8QEXo

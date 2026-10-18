@@ -7246,7 +7246,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-17T22:58:55.785Z",
+      "updatedAt": "2026-10-18T07:18:43.394Z",
       "tags": [],
       "links": [],
       "related": []
@@ -7670,6 +7670,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "I Tried to Bury the AI. It Deleted Every Brick. 🤖 #Shorts",
+      "summary": "I make a mess. The machine tidies up. Honestly, rude. SIRTET is a reverse falling-block music game: you sabotage the pieces while the AI tries to clear the board. This is the AI's all-clear ending, captured from the real",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/Xeta6R8hvPg",
+      "publishedAt": "2026-10-18T00:43:14.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=Xeta6R8hvPg"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "I Turned an Instagram Reel Into 4 Minutes of Ambient Music Using GPT-6 + Codex",
       "summary": "What if you could turn a random Instagram Reel into an entire ambient music track in just 12 minutes? Here's the experiment. I found a video of a musician creating strange, atmospheric sounds using everyday electrical de",
       "canonicalUrl": "https://abvx.xyz/writing/videos/_kzkJ6FKM28",
@@ -8044,6 +8067,29 @@
         }
       ],
       "updatedAt": "2026-10-04",
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Reverse Tetris Where You Sabotage the AI | Music Game Gameplay",
+      "summary": "The AI builds. You break. SIRTET flips the falling-block puzzle: the machine tries to clear rows, while you move and rotate pieces to bury it. Play SIRTET on desktop: https://playmcp.io/g/g_hxx3yDS0 This gameplay overvie",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/wPIyeBYJZbQ",
+      "publishedAt": "2026-10-18T00:39:43.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=wPIyeBYJZbQ"
+        }
+      ],
       "related": []
     },
     {

@@ -1231,6 +1231,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: Géo Chkouroupiy, Geo Shkurupii, Modernisme ukrainien, Ukrainian literature, French translation, Jeanne la bataillonneuse, Miss Adrienne
 
+- The Salad I've Been Eating Almost Every Day for Two Weeks
+  URL: https://abvx.xyz/writing/ham-radish-jalapeno-salad-french-style
+  Summary: I've been eating almost the same salad every day for two weeks. It combines French cooked ham, radishes, jalapeño, blue cheese and two ready-made supermarket salads.
+  Group: writing
+  Tags: salads, easy-recipes, french-food, no-cook-meals, quick-lunch, kitchen-experiments, jalapeno, food-shortcuts
+
 - The Soviet Garlic Cheese Salad with Too Many Names
   URL: https://abvx.xyz/writing/soviet-garlic-cheese-salad-belochka
   Summary: Belochka, Kremlin Salad, Tenderness, Kiss Salad... This simple garlic cheese salad had dozens of names but always appeared on our family holiday table.

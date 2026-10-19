@@ -7256,7 +7256,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-19T12:55:04.692Z",
+      "updatedAt": "2026-10-19T13:22:51.350Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8239,6 +8239,73 @@
         }
       ],
       "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "The Salad I've Been Eating Almost Every Day for Two Weeks",
+      "summary": "I've been eating almost the same salad every day for two weeks. It combines French cooked ham, radishes, jalapeño, blue cheese and two ready-made supermarket salads.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/ham-radish-jalapeno-salad-french-style",
+      "tags": [
+        "salads",
+        "easy-recipes",
+        "french-food",
+        "no-cook-meals",
+        "quick-lunch",
+        "kitchen-experiments",
+        "jalapeno",
+        "food-shortcuts"
+      ],
+      "links": [],
+      "updatedAt": "2026-10-19",
+      "related": [
+        {
+          "title": "Kitchen Notes",
+          "canonicalUrl": "https://abvx.xyz/writing/kitchen-notes",
+          "relation": "collection"
+        }
+      ],
+      "collection": "kitchen-notes",
+      "contentType": "recipe",
+      "recipe": {
+        "recipeYield": "1 generous portion",
+        "timingText": "Preparation: approximately 5–7 minutes. Cooking: none.",
+        "ingredients": [
+          {
+            "name": "jambon blanc (French cooked ham)",
+            "quantityText": "1–2 slices, finely chopped"
+          },
+          {
+            "name": "fresh jalapeño",
+            "quantityText": "Half, finely chopped"
+          },
+          {
+            "name": "small radishes",
+            "quantityText": "About 10, cut into quarters"
+          },
+          {
+            "name": "French blue cheese",
+            "quantityText": "A small piece, diced"
+          },
+          {
+            "name": "ready-made cucumber and chive salad with fresh cheese",
+            "quantityText": "A generous helping"
+          },
+          {
+            "name": "ready-made tomato tartare with herbs and olive oil",
+            "quantityText": "A generous helping"
+          }
+        ],
+        "instructions": [
+          "I chop the ham, jalapeño, radishes and cheese into small pieces.",
+          "Then I add generous portions of both prepared salads.",
+          "Mix everything thoroughly."
+        ]
+      }
     },
     {
       "type": "working-story",

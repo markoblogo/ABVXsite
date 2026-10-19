@@ -7251,7 +7251,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-18T07:18:43.394Z",
+      "updatedAt": "2026-10-19T11:53:28.752Z",
       "tags": [],
       "links": [],
       "related": []
@@ -7734,6 +7734,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=PmhWa-V00zc"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Jekyll and Hyde in Toki Pona | A Classic in a New Voice",
+      "summary": "One man. Two selves. A familiar nightmare in a different language. Explore Robert Louis Stevenson's The Strange Case of Dr. Jekyll and Mr. Hyde in a layered edition with English, Toki Pona and sitelen pona. This short bo",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/GPfkz36JWbI",
+      "publishedAt": "2026-10-19T11:45:28.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=GPfkz36JWbI"
         }
       ],
       "related": []

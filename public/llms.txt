@@ -1213,6 +1213,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: ginger-beer, ginger-bug, fermentation, homemade-drinks, ginger-ale, recipes, kitchen-experiments
 
+- I Got Lost in Nantes, Found Chicken of the Woods, and Made Dinner with ChatGPT
+  URL: https://abvx.xyz/writing/chicken-of-the-woods-mushroom-chatgpt-nantes
+  Summary: I got lost walking back from a supermarket in Nantes, discovered enormous yellow mushrooms growing on a tree stump, and spent the evening researching and cooking with ChatGPT.
+  Group: writing
+  Tags: chicken-of-the-woods, mushrooms, wild-food, cooking-with-ai, chatgpt, nantes, french-food, kitchen-experiments
+
 - I Made French Shortbread Cookies in a Frying Pan. No Oven Required.
   URL: https://abvx.xyz/writing/no-oven-shortbread-cookies-frying-pan
   Summary: I wanted biscuits with my coffee but had no oven and almost no ingredients. ChatGPT suggested shortbread. I ignored the measurements, added protein powder and somehow made excellent homemade sablés.

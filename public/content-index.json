@@ -7256,7 +7256,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-19T13:46:55.621Z",
+      "updatedAt": "2026-10-19T14:21:02.660Z",
       "tags": [],
       "links": [],
       "related": []
@@ -7648,6 +7648,37 @@
       "links": [],
       "updatedAt": "2026-10-10",
       "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "I Got Lost in Nantes, Found Chicken of the Woods, and Made Dinner with ChatGPT",
+      "summary": "I got lost walking back from a supermarket in Nantes, discovered enormous yellow mushrooms growing on a tree stump, and spent the evening researching and cooking with ChatGPT.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/chicken-of-the-woods-mushroom-chatgpt-nantes",
+      "tags": [
+        "chicken-of-the-woods",
+        "mushrooms",
+        "wild-food",
+        "cooking-with-ai",
+        "chatgpt",
+        "nantes",
+        "french-food",
+        "kitchen-experiments"
+      ],
+      "links": [],
+      "updatedAt": "2026-10-19",
+      "related": [
+        {
+          "title": "Kitchen Notes",
+          "canonicalUrl": "https://abvx.xyz/writing/kitchen-notes",
+          "relation": "collection"
+        }
+      ],
+      "collection": "kitchen-notes"
     },
     {
       "type": "writing",

@@ -6983,6 +6983,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "AI Video Is Now Faster Than Real Time. Welcome to Infinite Slop",
+      "summary": "We have officially reached a new milestone in AI-generated content. AI can now produce videos faster than humans can watch them. And the internet is responding exactly as you'd expect. With infinite AI slop. AI infrastru",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/mt0MOEpoj1c",
+      "publishedAt": "2026-10-19T15:36:28.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=mt0MOEpoj1c"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "AMI — Digital Infrastructure for Physical Commodity Markets",
       "summary": "AMI — Agro Market Infrastructure — brings together projects for commodity brokerage operations, private market indices, and market knowledge. This short introduction highlights three parts of AMI: • MN7R — a private work",
       "canonicalUrl": "https://abvx.xyz/writing/videos/QnpLjwhj6Fs",
@@ -7338,7 +7361,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-19T14:52:01.864Z",
+      "updatedAt": "2026-10-19T15:42:14.327Z",
       "tags": [],
       "links": [],
       "related": []

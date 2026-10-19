@@ -950,6 +950,17 @@
     },
     {
       "source": "youtube",
+      "title": "AI Video Is Now Faster Than Real Time. Welcome to Infinite Slop",
+      "url": "https://www.youtube.com/watch?v=mt0MOEpoj1c",
+      "publishedAt": "2026-10-19T15:36:28.000Z",
+      "excerpt": "We have officially reached a new milestone in AI-generated content. AI can now produce videos faster than humans can watch them. And the internet is responding exactly as you'd expect. With infinite AI slop. AI infrastru",
+      "coverImage": "https://i.ytimg.com/vi/mt0MOEpoj1c/hqdefault.jpg",
+      "videoDescription": "We have officially reached a new milestone in AI-generated content.\nAI can now produce videos faster than humans can watch them.\nAnd the internet is responding exactly as you'd expect.\nWith infinite AI slop.\nAI infrastructure company fal.ai has developed H3 Max and H3 Max Turbo, optimized versions of MiniMax's H3 video generation model.\nAnd the numbers are ridiculous.\n\nAccording to fal's benchmarks:\n- 5 seconds of video in just 0.44 seconds with H3 Max Turbo at 480p.\n- 10 seconds of video in approximately 1 second.\n- 15 seconds of video in just 1.71 seconds.\n- Video generation can now run significantly faster than real-time playback.\n\nThat's not a typo. The AI can generate the next clip before you've finished watching the previous one. Fal.ai\nAnd someone has already figured out what to do with this extraordinary technological achievement.\nInfinite Slop.\n\nDeveloper Pieter Levels created an AI-powered TV experiment where videos are generated continuously, viewers suggest what should appear next, and the stream can keep producing new content.\nNo actors. No cameras. No production crews.\nJust prompts, GPUs, and an endless supply of increasingly questionable entertainment.\nThe project is called Infinite Slop, which might be the most accurate product name in the history of artificial intelligence. skunkworks.levels.io\nAnd here's the funny part.\n\nI've already come across about five similar AI-generated streams today.\nWe spent decades developing technologies that allow us to create moving images almost instantly.\nAnd apparently, the first thing we're doing with them is building television channels that never run out of nonsense.\nThe future of entertainment is here. Unfortunately, it has no OFF button.\nTry H3 Max on fal.ai:\nhttps://fal.ai/models/minimax/h3-max/text-to-video\nH3 Max Turbo:\nhttps://fal.ai/models/minimax/h3-max-turbo/text-to-video\nInfinite Slop experiment:\nhttps://skunkworks.levels.io/infinite-slop/\nOfficial fal.ai announcement:\nhttps://blog.fal.ai/introducing-h3-max-by-fal/\n\n#AIVideo #InfiniteSlop #GenerativeAI #MiniMax #FalAI #AIStreaming #Shorts",
+      "addedAt": "2026-10-19T15:42:14.327Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Scientists Put a Fruit Fly's Brain Inside an AI-Generated World. It Started Exploring.",
       "url": "https://www.youtube.com/watch?v=nBzbwlcAElY",
       "publishedAt": "2026-10-19T12:42:05.000Z",

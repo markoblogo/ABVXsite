@@ -83,6 +83,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/lky20OJaAqo
   Summary: Jay makes things worse. Silent Bob holds the solution. The decaf route wins in this 20-second Disco Coffee Showdown gameplay comedy. Game (copy URL): https://playmcp.io/g/g_4FzN0mD8 Desktop browser · Disco Coffee Showdow
 
+- AI Video Is Now Faster Than Real Time. Welcome to Infinite Slop
+  URL: https://abvx.xyz/writing/videos/mt0MOEpoj1c
+  Summary: We have officially reached a new milestone in AI-generated content. AI can now produce videos faster than humans can watch them. And the internet is responding exactly as you'd expect. With infinite AI slop. AI infrastru
+
 - Scientists Put a Fruit Fly's Brain Inside an AI-Generated World. It Started Exploring.
   URL: https://abvx.xyz/writing/videos/nBzbwlcAElY
   Summary: We may have just witnessed one of the strangest AI experiments of 2026. Researchers connected a simulated fruit fly brain to Odyssey-3, an AI world model capable of generating interactive virtual environments in real tim

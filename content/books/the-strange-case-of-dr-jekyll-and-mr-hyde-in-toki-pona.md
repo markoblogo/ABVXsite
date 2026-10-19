@@ -35,6 +35,11 @@
       "type": "paperback",
       "label": "Paperback",
       "url": "https://www.amazon.com/dp/B0HLZXLDBP"
+    },
+    {
+      "type": "other",
+      "label": "Play the Toki Pona game",
+      "url": "https://playmcp.io/g/g_Zr0bwMnL"
     }
   ],
   "formats": [
@@ -57,7 +62,8 @@
     "role": "mockup",
     "width": 1400,
     "height": 934
-  }
+  },
+  "updatedAt": "2026-10-19"
 }
 ---
 

@@ -7384,7 +7384,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-19T16:22:54.953Z",
+      "updatedAt": "2026-10-19T16:55:27.198Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8078,6 +8078,60 @@
         }
       ],
       "collection": "kitchen-notes"
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Meta's Muse Gadget SDK Already Supports My Cardputer. Now Comes the Interesting Part.",
+      "summary": "Meta released an open-source SDK connecting AI to inexpensive electronics. My Cardputer ADV is officially supported, so I've started investigating what it could add to Pocket OS.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/meta-muse-gadget-sdk-cardputer-adv-pocket-os",
+      "tags": [
+        "meta-muse",
+        "muse-gadgets",
+        "esp32",
+        "m5stack-cardputer",
+        "pocket-os",
+        "embedded-ai",
+        "ai-agents",
+        "iot",
+        "open-source",
+        "android-tv",
+        "saved-find",
+        "saved-find-status-exploring"
+      ],
+      "links": [
+        {
+          "type": "github",
+          "label": "Saved Find — Meta Muse Gadget SDK (exploring)",
+          "url": "https://github.com/facebookincubator/muse-gadget-sdk"
+        },
+        {
+          "type": "site",
+          "label": "Pocket OS for Cardputer on ABVX",
+          "url": "https://abvx.xyz/work/pocket-os-cardputer"
+        },
+        {
+          "type": "site",
+          "label": "Related: Android TV Saved Find",
+          "url": "https://abvx.xyz/writing/android-tv-debloat-codex-claude-code-adb"
+        },
+        {
+          "type": "github",
+          "label": "Official Cardputer ADV device documentation",
+          "url": "https://github.com/facebookincubator/muse-gadget-sdk/blob/main/esp32/devices/README.md"
+        },
+        {
+          "type": "github",
+          "label": "Pocket OS / ABVx repository",
+          "url": "https://github.com/markoblogo/Pocket-OS-Cardputer-ABV"
+        }
+      ],
+      "updatedAt": "2026-10-19",
+      "related": []
     },
     {
       "type": "video",

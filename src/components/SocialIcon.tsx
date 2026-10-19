@@ -80,6 +80,16 @@ export default function SocialIcon({ name }: { name: SocialIconName }) {
           <path fill="currentColor" d="M17.5 14.4c-.3-.2-1.8-.9-2-.9-.3-.1-.5-.2-.7.1l-.9 1.2c-.2.2-.4.2-.7.1-.3-.2-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.2.2-.3.3-.5s.1-.4 0-.5L8 6.8c-.2-.6-.5-.5-.7-.5H6.8c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.3.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4 0-.1-.3-.2-.6-.3ZM12 21.8h0a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.9 9.9 0 0 1-1.6-5.3 9.9 9.9 0 1 1 9.9 9.9ZM12.1 0h-.1A11.9 11.9 0 0 0 1.7 17.9L.1 24l6.3-1.7a12 12 0 0 0 5.7 1.5h0A11.9 11.9 0 0 0 24 12 12 12 0 0 0 12.1 0Z" />
         </svg>
       );
+    case 'playmcp':
+      // Compact PlayMCP mark: https://playmcp.io/icons/favicon-32.png?v=3
+      return (
+        <svg viewBox="0 0 32 32" aria-hidden="true" className="site-footer__social-icon">
+          <g fill="none" stroke="currentColor" strokeLinejoin="round" strokeWidth="1.8">
+            <circle cx="16" cy="16" r="12.5" />
+            <path d="m12 10 10 6-10 6Z" />
+          </g>
+        </svg>
+      );
     case 'amazon-author':
       return (
         <svg viewBox="0 0 24 24" aria-hidden="true" className="site-footer__social-icon">

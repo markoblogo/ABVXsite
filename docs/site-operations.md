@@ -96,6 +96,31 @@ The first full period after the new goals is **2026-10-10–2026-11-06**; the ne
 
 Pair Plausible with Search Console impressions, queries, positions, clicks, indexing, and sitemap processing. A valid public sitemap is not proof that Google processed or indexed it successfully.
 
+### Internal traffic exclusion
+
+All browser QA entrypoints use `scripts/qa-browser.mjs`: a context init script sets the official `localStorage.plausible_ignore` flag before the first navigation, and context routing blocks Plausible scripts and collectors for pages and popups. Service workers are disabled in these QA contexts. `npm run qa:analytics` uses a local synthetic collector to prove that no event reaches it; `qa:seo` runs this regression before the existing route checks. Ordinary visitor tracking is unchanged.
+
+For the owner's browsers, set `localStorage.plausible_ignore=true` on `https://abvx.xyz` using the [official browser exclusion procedure](https://plausible.io/docs/excluding-localstorage), then verify it after reloading. It is per browser profile and origin; clearing storage removes it. Plausible Shields can also block the current owner connection, but an IP rule must be reviewed after a network/VPN change and affects other visitors sharing that public IP. Do not exclude a whole country or delete historical data. Exclusions act prospectively; historical owner traffic cannot be reliably subtracted.
+
+### Post-publication search checkpoints
+
+Use the existing Codex heartbeat scheduler and authenticated Search Console browser (or a separately authorized read-only GSC donor). Do not build a Google client or add OAuth scopes merely to run these checks. One daily run discovers new local source pages from the **deployed** content index and handles due 7/14/28-day checkpoints. External Medium/Substack URLs and automatic YouTube watch pages are excluded. The journal and evidence stay under ignored `exports/publication-followup/`, outside public discovery and Git.
+
+```sh
+# First enrollment: explicitly choose how far back to include recent publications.
+npm run content:follow-up -- sync --live --since 2026-10-10
+# Subsequent discovery preserves the first anchor across edits and redeployments.
+npm run content:follow-up -- sync --live
+npm run content:follow-up -- due --limit 10
+npm run content:follow-up -- record --url https://abvx.xyz/writing/example --day 7 --observation /private/path/observation.json
+```
+
+Initial recent pages use their declared publication date and retain `source-published-date` provenance. Future new URLs use the first date observed in the deployed index, so daily discovery may lag deployment by one day; this is not an exact deployment timestamp. Already-seen old URLs are not newly enrolled when edited. Unknown legacy dates are not invented. Checkpoint results are immutable; failed/pending attempts remain recorded and due. Missed checkpoints retain their original due date and actual observation timestamp, never an invented historical observation.
+
+Each observation JSON requires `status` (`observed`, `access_failed`, or `data_pending`), `discovered` and `indexed` (boolean or null), `lastCrawlAt`, `dataThrough`, `firstImpressionDate` (date/timestamp or null), `impressions` and `clicks` (non-negative integer or null), and nonempty `evidence` strings describing the exact source, page filter and period. Record the URL Inspection discovery state, last crawl and Google-selected canonical; inspect Web performance with an **exact canonical page** filter from the anchor through the checkpoint due date. Retain that requested window and actual data cutoff in evidence. Do not infer the first impression date from a positive total; read daily data or retain null. The checkpoint stays pending until index status and impression data through its due date are available. Unknown/access-failed values remain null, never zero.
+
+Domain-property totals include subdomains and are not the main site's totals. Sitemap monitoring is separate: only Search Console's successful processing status proves receipt/processing, and it still does not prove indexing. A submission confirmation alone is pending. The heartbeat should notify only a meaningful change, checkpoint outcome or actionable access/failure condition; unchanged sitemap processing and runs with no due work remain quiet.
+
 ## Verification and access diagnostics
 
 Use the [release checklist](editorial-seo-checklist.md) for the complete gate. Additional targeted checks include `smoke:shell`, `qa:visual`, `qa:csp`, `qa:perf`, `feeds:check`, and `media:review`; inspect each script's options and requirements before running it. Avoid unrelated broad checks for documentation-only changes.

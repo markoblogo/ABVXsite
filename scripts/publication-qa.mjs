@@ -1,3 +1,4 @@
+import {createQaPage} from './qa-browser.mjs';
 import { readSeoDocument, assertSeoPage } from './seo-page-contract.mjs';
 import assert from 'node:assert/strict';
 import { chromium } from 'playwright';
@@ -73,7 +74,7 @@ export async function publicationQa(scope) {
  await withQaServer(async base=>{
   const browser=await chromium.launch({headless:true});
   try {
-   const page=await browser.newPage();
+   const page=await createQaPage(browser);
    const get=async route=>{const res=await page.request.get(base+route,{timeout:30_000});assert.equal(res.status(),200,route);return res;};
    const [xml,index,llms]=await Promise.all([get('/sitemap.xml').then(r=>r.text()),get('/content-index.json').then(r=>r.json()),get('/llms.txt').then(r=>r.text())]);
    const urls=[...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>m[1]);

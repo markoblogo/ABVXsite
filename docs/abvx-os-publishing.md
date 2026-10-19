@@ -57,6 +57,8 @@ This selects publication-scoped SEO/discovery/mobile checks for a content-only d
 
 ## First-addition chronology
 
+Production closeout is followed by the independent [7/14/28-day search checkpoints](site-operations.md#post-publication-search-checkpoints). The daily heartbeat enrolls new public source URLs from the deployed content index; edits and repeated deployments do not restart the timer. Publication, discovery, crawling, indexing and first search impressions remain separate observations. Never delay or fabricate publication closeout to manufacture a positive search result.
+
 Native Writing and Working Stories register an immutable UTC `addedAt` in `content/writing-discovery.json` during the release prebuild. Include that file in the source PR. Preserve the author's `publishedAt` and YouTube `videoUploadedAt`; editing an existing record must not renew its first-addition time. Writing and the three homepage publication slots use this common registry. RSS discovery is a site-owned approximately 15-minute workflow, independent of the private OS runtime; later deployments and retries retain the registered times.
 
 For new public work, book or series entries, prebuild also runs `npm run catalogue:register`. Include `content/catalogue-discovery.json` in the source PR. Homepage catalogue slots use this immutable first-addition registry; editing an existing product or publishing a new release does not refresh its slot date. See [Site operations](site-operations.md#catalogue-addition-chronology) for migration provenance and unknown legacy dates.

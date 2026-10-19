@@ -1,3 +1,4 @@
+import {createQaPage} from './qa-browser.mjs';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { chromium } from 'playwright';
@@ -69,7 +70,7 @@ function metricFailures(metrics) {
 await withQaServer(async (baseUrl) => {
   mkdirSync(outDir, { recursive: true });
   const browser = await chromium.launch({ headless: true });
-  const page = await browser.newPage({ viewport: { width: 1440, height: 1200 }, deviceScaleFactor: 1 });
+  const page = await createQaPage(browser, { viewport: { width: 1440, height: 1200 }, deviceScaleFactor: 1 });
   const results = [];
   const failures = [];
 

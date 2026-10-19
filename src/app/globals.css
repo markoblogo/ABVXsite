@@ -5577,6 +5577,19 @@ a {
   text-align: center;
   box-shadow: none;
 }
+.catalogue-actions[class] .catalogue-actions__link--secondary {
+  gap: 0.65em;
+  background: var(--paper-2);
+  box-shadow: 2px 2px 0 var(--line);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+.catalogue-actions__arrow {
+  flex: none;
+  font-size: 1.25em;
+  line-height: 1;
+}
 .catalogue-actions[class] .catalogue-actions__link--primary {
   min-height: 3.2rem;
   padding: 0.9rem 1.15rem;

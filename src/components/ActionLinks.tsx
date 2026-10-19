@@ -29,6 +29,7 @@ export default function ActionLinks({ links, limit, compact = false, kind = 'wor
             <a key={`${link.type}-${link.url}`} href={link.url} target="_blank" rel="noopener noreferrer"
               className={`${kind === 'book' ? 'plausible-event-name=Book+Link+Click ' : ''}${prefix}__link${group === 'primary' ? ` ${prefix}__link--primary` : ''} catalogue-actions__link catalogue-actions__link--${group}`}>
               {link.type === 'youtube' ? link.label || 'YouTube' : kind === 'book' && ['site', 'book-site'].includes(link.type) ? 'Book site' : labels[link.type] || link.label}
+              {group === 'secondary' ? <span className="catalogue-actions__arrow" aria-hidden="true">↗</span> : null}
             </a>
           ))}
         </div>

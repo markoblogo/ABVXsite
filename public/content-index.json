@@ -6881,6 +6881,45 @@
       "ecosystem": "Writing",
       "group": null,
       "status": "live",
+      "title": "A Biscuit, a Necklace, and Two Lives: From Ukraine to Nantes",
+      "summary": "While looking for my wife's birthday present, I discovered a Ukrainian pendant shaped like a familiar biscuit. It brought back childhood memories and unexpectedly connected them to my new life in Nantes.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/ukrainian-do-kavy-biscuits-lu-nantes-memories",
+      "tags": [
+        "food-memories",
+        "ukrainian-food",
+        "soviet-childhood",
+        "biscuits",
+        "nantes",
+        "lu",
+        "food-culture",
+        "nostalgia",
+        "found-objects",
+        "saved-find"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Saved Find — Tuman Lanom: Pechyvo do kavy pendant",
+          "url": "https://www.tumanlanom.store/product-page/%D0%BF%D1%96%D0%B4%D0%B2%D1%96%D1%81-%D0%BF%D0%B5%D1%87%D0%B8%D0%B2%D0%BE-%D0%B4%D0%BE-%D0%BA%D0%B0%D0%B2%D0%B8"
+        }
+      ],
+      "updatedAt": "2026-10-19",
+      "related": [
+        {
+          "title": "Kitchen Notes",
+          "canonicalUrl": "https://abvx.xyz/writing/kitchen-notes",
+          "relation": "collection"
+        }
+      ],
+      "collection": "kitchen-notes"
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
       "title": "A Personal Blog, Finally",
       "summary": "A place for the things that do not fit into professional feeds.",
       "canonicalUrl": "https://abvx.xyz/writing/a-personal-blog-finally",
@@ -7256,7 +7295,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-19T14:21:02.660Z",
+      "updatedAt": "2026-10-19T14:34:06.004Z",
       "tags": [],
       "links": [],
       "related": []

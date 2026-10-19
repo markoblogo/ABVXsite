@@ -7256,7 +7256,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-19T13:22:51.350Z",
+      "updatedAt": "2026-10-19T13:46:55.621Z",
       "tags": [],
       "links": [],
       "related": []
@@ -7648,6 +7648,75 @@
       "links": [],
       "updatedAt": "2026-10-10",
       "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "I Made French Shortbread Cookies in a Frying Pan. No Oven Required.",
+      "summary": "I wanted biscuits with my coffee but had no oven and almost no ingredients. ChatGPT suggested shortbread. I ignored the measurements, added protein powder and somehow made excellent homemade sablés.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/no-oven-shortbread-cookies-frying-pan",
+      "tags": [
+        "shortbread",
+        "sable-cookies",
+        "no-oven-baking",
+        "frying-pan-recipes",
+        "french-food",
+        "breton-biscuits",
+        "kitchen-experiments",
+        "ai-in-cooking"
+      ],
+      "links": [],
+      "updatedAt": "2026-10-19",
+      "related": [
+        {
+          "title": "Kitchen Notes",
+          "canonicalUrl": "https://abvx.xyz/writing/kitchen-notes",
+          "relation": "collection"
+        }
+      ],
+      "collection": "kitchen-notes",
+      "contentType": "recipe",
+      "recipe": {
+        "ingredients": [
+          {
+            "name": "plain flour",
+            "quantityText": "100 g"
+          },
+          {
+            "name": "softened butter, preferably salted",
+            "quantityText": "50 g"
+          },
+          {
+            "name": "sugar, white or brown",
+            "quantityText": "30 g"
+          },
+          {
+            "name": "salt, optional if using salted butter",
+            "quantityText": "A small pinch"
+          },
+          {
+            "name": "vanilla protein powder, replacing a small portion of the flour",
+            "quantityText": "Optional: a little"
+          }
+        ],
+        "instructions": [
+          "Let the butter soften at room temperature.",
+          "Mash it together with the sugar using a fork.",
+          "Add the flour and mix until the ingredients resemble coarse crumbs.",
+          "Press the mixture together with your hands until it forms a cohesive dough.",
+          "Shape into small, preferably fairly thin discs.",
+          "Arrange them in a cold, dry non-stick frying pan.",
+          "Cook covered over very low heat, checking the bottoms regularly.",
+          "Turn carefully once they're firm enough to handle, and cook until golden and cooked through.",
+          "Remove from the heat and let them cool completely before eating."
+        ],
+        "timingText": "Preparation: Approximately 10–15 minutes, plus time to soften the butter. Cooking: Variable; approximately 15–30 minutes depending on thickness and heat. The personal experiment took longer. Cooling: At least until completely cool. I allowed approximately 90 minutes.",
+        "recipeYield": "Approximately 6–10 cookies, depending on size"
+      }
     },
     {
       "type": "writing",

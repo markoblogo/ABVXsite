@@ -1213,6 +1213,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: ginger-beer, ginger-bug, fermentation, homemade-drinks, ginger-ale, recipes, kitchen-experiments
 
+- I Made French Shortbread Cookies in a Frying Pan. No Oven Required.
+  URL: https://abvx.xyz/writing/no-oven-shortbread-cookies-frying-pan
+  Summary: I wanted biscuits with my coffee but had no oven and almost no ingredients. ChatGPT suggested shortbread. I ignored the measurements, added protein powder and somehow made excellent homemade sablés.
+  Group: writing
+  Tags: shortbread, sable-cookies, no-oven-baking, frying-pan-recipes, french-food, breton-biscuits, kitchen-experiments, ai-in-cooking
+
 - Marmite Oatmeal
   URL: https://abvx.xyz/writing/marmite-oatmeal
   Summary: A very simple savoury oatmeal that my children and I genuinely love.

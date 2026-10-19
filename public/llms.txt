@@ -1195,6 +1195,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: startups, y-combinator, entrepreneurship, product-market-fit, go-to-market, founder-advice, startup-growth
 
+- A Biscuit, a Necklace, and Two Lives: From Ukraine to Nantes
+  URL: https://abvx.xyz/writing/ukrainian-do-kavy-biscuits-lu-nantes-memories
+  Summary: While looking for my wife's birthday present, I discovered a Ukrainian pendant shaped like a familiar biscuit. It brought back childhood memories and unexpectedly connected them to my new life in Nantes.
+  Group: writing
+  Tags: food-memories, ukrainian-food, soviet-childhood, biscuits, nantes, lu, food-culture, nostalgia
+
 - A Personal Blog, Finally
   URL: https://abvx.xyz/writing/a-personal-blog-finally
   Summary: A place for the things that do not fit into professional feeds.

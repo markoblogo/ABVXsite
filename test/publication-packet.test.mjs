@@ -242,3 +242,15 @@ test('native recipe consumer preserves approved fields and rejects incomplete re
   const valid=nativePacket(data);run(valid);
   assert.equal(readFileSync(path.join(root,'content/writing/test-recipe.md'),'utf8'),valid.payload.source_markdown);
 }));
+
+test('native publication carries every reviewed inline photograph and rejects missing bytes or unmatched headings', async () => {
+ const { planWriting }=await import('../scripts/publish-writing.mjs');
+ fixture(root=>{
+  const data={id:'photo-story',slug:'photo-story',title:'Photo story',summary:'Author photographs.',type:'article',primarySection:'writing',appearsIn:['writing'],visibility:'public',status:'live',language:'en',publishedAt:'2020-01-01',tags:[],links:[],illustrations:[{src:'/media/writing/detail.png',alt:'Original detail',width:1,height:1,caption:'Original photograph.',afterHeading:'A choice'}]};
+  const value=nativePacket(data);assert.throws(()=>planWriting(value,root),/Missing approved media/);
+  const asset=withMedia(root).payload.media_assets[0];value.payload.media_assets=[{...asset,target:data.illustrations[0].src}];
+  assert.equal(planWriting(value,root).media.length,1);
+  const bad=nativePacket({...data,illustrations:[{...data.illustrations[0],afterHeading:'Not in the article'}]});bad.payload.media_assets=value.payload.media_assets;
+  assert.throws(()=>planWriting(bad,root),/rendered heading/);
+ });
+});

@@ -1,3 +1,4 @@
+import { validateWritingIllustrations } from './writing-illustrations.mjs';
 import { validateKitchenNotes } from './kitchen-notes.mjs';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
@@ -14,6 +15,7 @@ import type {
   NativeWriting,
   NativeWritingType,
   RecipeRecord,
+  WritingIllustration,
   RssFeedConfig,
   Series,
   SiteSection,
@@ -329,7 +331,7 @@ export function readNativeWritingFiles(): NativeWriting[] {
     .filter((file) => isVisible(file.data.visibility))
     .map(({ data, body }) => {
       const slug = stringValue(data.slug);
-      const videoErrors = [...validateNativeWritingVideo(data), ...validateKitchenNotes(data)];
+      const videoErrors = [...validateNativeWritingVideo(data), ...validateKitchenNotes(data), ...validateWritingIllustrations(data, body)];
       if (videoErrors.length) throw new Error(`Writing ${slug}: ${videoErrors.join('; ')}`);
       const fallbackTitle = titleFromSlug(slug);
       const summary = stringValue(data.summary, body.split(/\n+/).find(Boolean) || fallbackTitle);
@@ -348,6 +350,7 @@ export function readNativeWritingFiles(): NativeWriting[] {
         source: 'abvx',
         collection: data.collection as 'kitchen-notes' | undefined,
         recipe: data.recipe as RecipeRecord | undefined,
+        illustrations: data.illustrations as WritingIllustration[] | undefined,
         seoDescription: optionalString(data.seoDescription),
         videoUrl: optionalString(data.videoUrl),
         videoUploadedAt: optionalString(data.videoUploadedAt),

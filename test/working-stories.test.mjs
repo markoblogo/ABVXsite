@@ -202,7 +202,7 @@ test('story template reuses article typography, emits SEO and hides internal met
   const component = compile('src/components/WorkingStoryArticle.tsx', {
     '@/content/working-stories': lib, '@/lib/seo': { SITE_URL: 'https://abvx.xyz' },
     './JsonLd': compile('src/components/JsonLd.tsx', { 'next/headers': { headers: async () => new Headers() }, '@/lib/json-ld.mjs': jsonLd }),
-    './MarkdownContent': compile('src/components/MarkdownContent.tsx', { './YouTubeEmbed': compile('src/components/YouTubeEmbed.tsx') }),
+    './MarkdownContent': compile('src/components/MarkdownContent.tsx', { './YouTubeEmbed': compile('src/components/YouTubeEmbed.tsx'), './MediaPanel': compile('src/components/MediaPanel.tsx') }),
     './MediaPanel': compile('src/components/MediaPanel.tsx'),
     './WorkingStoryArticle.module.css': { default: { body: 'story-body', illustration: 'story-illustration', caption: 'story-caption' }, __esModule: true },
     './PageHeader': compile('src/components/PageHeader.tsx'),

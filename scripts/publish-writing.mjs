@@ -1,3 +1,4 @@
+import { validateWritingIllustrations } from '../src/content/writing-illustrations.mjs';
 import { validateKitchenNotes } from '../src/content/kitchen-notes.mjs';
 import { readFileSync, existsSync, realpathSync } from 'node:fs';
 import { pathToFileURL } from 'node:url';
@@ -93,10 +94,10 @@ export function planWriting(packet, root = process.cwd()) {
       || data.publishedAt !== packet.payload.date_published) throw new Error('Packet metadata/body conflicts with approved source');
     if (data.visibility !== 'public' || data.status !== 'live'
       || !Number.isFinite(Date.parse(data.publishedAt)) || Date.parse(data.publishedAt) > Date.now()) throw new Error('Only ready public writing dated on/before today may be published');
-    const videoErrors = [...validateNativeWritingVideo(data), ...validateKitchenNotes(data, body)];
+    const videoErrors = [...validateNativeWritingVideo(data), ...validateKitchenNotes(data, body), ...validateWritingIllustrations(data, body)];
     if (videoErrors.length) throw new Error(`Invalid YouTube video fields: ${videoErrors.join('; ')}`);
-    const referenced = new Set([data.media, data.heroImage].filter(Boolean).map(image => image.src).filter(src => !src.startsWith('https://')));
-    for (const image of [data.media, data.heroImage].filter(Boolean)) {
+    const referenced = new Set([data.media, data.heroImage, ...(data.illustrations || [])].filter(Boolean).map(image => image.src).filter(src => !src.startsWith('https://')));
+    for (const image of [data.media, data.heroImage, ...(data.illustrations || [])].filter(Boolean)) {
       if (!image.alt || !(image.width > 0) || !(image.height > 0)) throw new Error('Image alt text and dimensions required');
       if (image.src.startsWith('https://') && !(data.videoUrl && image.src === `https://i.ytimg.com/vi/${new URL(data.videoUrl).searchParams.get('v')}/hqdefault.jpg`)) throw new Error('Only the matching YouTube thumbnail may be remote');
     }

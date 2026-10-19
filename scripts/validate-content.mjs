@@ -1,3 +1,4 @@
+import { validateWritingIllustrations } from '../src/content/writing-illustrations.mjs';
 import { isAllowedAudioUrl } from '../src/lib/media-policy.mjs';
 import { publicationMetadataErrors } from './publication-metadata.mjs';
 import { staticPublicationRoutes } from './publication-routes.mjs';
@@ -65,7 +66,7 @@ function validateFile(file, folder) {
   all.push({ file, folder, data, body });
   for(const error of publicationMetadataErrors(data)) addError(file,error);
   if (folder === 'writing') {
-    for (const message of [...validateNativeWritingVideo(data), ...validateKitchenNotes(data, body)]) addError(file, message);
+    for (const message of [...validateNativeWritingVideo(data), ...validateKitchenNotes(data, body), ...validateWritingIllustrations(data, body)]) addError(file, message);
   }
 
   const requiredFields = folder === 'writing' ? ['id', 'slug'] : ['id', 'slug', 'title', 'summary'];
@@ -99,6 +100,7 @@ function validateFile(file, folder) {
   }
   checkImage(file, data.media, 'media');
   checkImage(file, data.heroImage, 'heroImage');
+  if(folder === 'writing' && Array.isArray(data.illustrations)) data.illustrations.forEach((image, index) => checkImage(file, image, `illustrations[${index}]`));
 
   if (!Array.isArray(data.links)) {
     addError(file, 'links must be an array');

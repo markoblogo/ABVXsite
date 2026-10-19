@@ -205,8 +205,11 @@ export type RecipeRecord = {
   variations?: string[];
 };
 
+export type WritingIllustration = ContentImage & { caption: string; afterHeading: string };
+
 export type NativeWriting = BaseContentItem<NativeWritingType> & {
   collection?: 'kitchen-notes';
+  illustrations?: WritingIllustration[];
   recipe?: RecipeRecord;
   seoDescription?: string;
   videoUrl?: string;

@@ -1,4 +1,6 @@
-import type { ReactNode } from 'react';
+import { Fragment, type ReactNode } from 'react';
+import type { WritingIllustration } from '@/content/types';
+import MediaPanel from './MediaPanel';
 import { YouTubeFigure, youtubeVideoId } from './YouTubeEmbed';
 
 type Block =
@@ -188,11 +190,13 @@ export default function MarkdownContent({
   className,
   headingOffset = 1,
   embedVideos = false,
+  illustrations = [],
 }: {
   children: string;
   className?: string;
   headingOffset?: 0 | 1;
   embedVideos?: boolean;
+  illustrations?: WritingIllustration[];
 }) {
   const blocks = parseMarkdownBlocks(children, headingOffset);
   if (!blocks.length) return null;
@@ -203,7 +207,15 @@ export default function MarkdownContent({
         if (block.type === 'code') return <pre key={`code-${index}`}><code>{block.text}</code></pre>;
         if (block.type === 'heading') {
           const Heading = `h${block.level}` as 'h2' | 'h3' | 'h4';
-          return <Heading key={`${block.type}-${index}`}>{inlineMarkdownNodes(block.text)}</Heading>;
+          return <Fragment key={`${block.type}-${index}`}>
+            <Heading>{inlineMarkdownNodes(block.text)}</Heading>
+            {illustrations.filter(image => image.afterHeading === block.text).map(image => (
+              <div className="my-6 writing-illustration" key={image.src}>
+                <MediaPanel image={image} title={image.alt} variant="writing" />
+                <p className="text-sm">{image.caption}</p>
+              </div>
+            ))}
+          </Fragment>;
         }
 
         if (block.type === 'list') {

@@ -91,3 +91,10 @@ test('book audio has no source until the reader requests playback', () => {
  assert.match(html, /preload="none"/);
  assert.doesNotMatch(html, /<source|src=|autoPlay|autoplay/);
 });
+
+test('native article photographs follow their heading with captions and lazy loading', () => {
+  const html=render('## Observations\n\nAuthored prose.', {illustrations:[{src:'/media/writing/sample.jpg',alt:'Original photograph',width:964,height:1280,caption:'Author’s photograph.',afterHeading:'Observations'}]});
+  assert.ok(html.includes('alt="Original photograph"'));assert.ok(html.includes('Author’s photograph.'));
+  assert.ok(html.indexOf('<h3>Observations</h3>')<html.indexOf('alt="Original photograph"'));
+  assert.ok(html.includes('loading="lazy"'));assert.ok(!html.includes('fetchPriority="high"'));
+});

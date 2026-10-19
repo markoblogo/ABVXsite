@@ -113,6 +113,18 @@ export async function publicationQa(scope) {
      assert.equal(await page.locator('main iframe[src*="youtube-nocookie.com/embed/"]').count(),1,'video embed');
      assert.ok(objects.some(item=>item['@type']==='VideoObject'&&Number.isFinite(Date.parse(item.uploadDate))),'video metadata');
     }
+    if(source.folder==='writing') {
+     for(const illustration of data.illustrations||[]) {
+      const img=page.getByRole('img',{name:illustration.alt,exact:true});
+      await img.scrollIntoViewIfNeeded();
+      await page.waitForFunction(alt=>[...document.querySelectorAll('main img')].some(img=>img.alt===alt&&img.complete&&img.naturalWidth>0),illustration.alt);
+      const wrapper=page.locator('.writing-illustration').filter({has:img});
+      assert.equal(await wrapper.count(),1,'unique article photograph');
+      assert.ok((await wrapper.textContent()).includes(illustration.caption),'photograph caption');
+      const position=await wrapper.evaluate(node=>({heading:node.previousElementSibling?.textContent,tag:node.previousElementSibling?.tagName}));
+      assert.equal(position.heading,illustration.afterHeading);assert.match(position.tag,/^H[2-4]$/);
+     }
+    }
     if(scope.profile==='catalogue-v1') {
      const type=source.folder==='books'?(data.type==='series'?'CreativeWorkSeries':'Book'):undefined;
      assert.ok(objects.some(item=>item.url===url && (!type||item['@type']===type)),route+' entity metadata');

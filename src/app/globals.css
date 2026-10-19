@@ -5544,3 +5544,78 @@ a {
 }
 .writing-more-button:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
 .writing-more-button:hover { text-decoration: underline; }
+
+/* Shared purchase/use actions first; supporting links get a separate quiet row. */
+.catalogue-actions[class] {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0.8rem;
+  min-width: 0;
+}
+.catalogue-actions__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  min-width: 0;
+}
+.catalogue-actions[class] .catalogue-actions__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  min-height: 2.5rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  font-size: 0.68rem;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+  text-align: center;
+  box-shadow: none;
+}
+.catalogue-actions[class] .catalogue-actions__link--primary {
+  min-height: 3.2rem;
+  padding: 0.9rem 1.15rem;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.86rem;
+  box-shadow: 4px 4px 0 var(--accent);
+}
+.catalogue-actions--compact[class] .catalogue-actions__link {
+  min-height: 2.25rem;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.6rem;
+}
+.catalogue-actions--compact[class] .catalogue-actions__link--primary {
+  min-height: 2.75rem;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.72rem;
+}
+.catalogue-actions[class] .catalogue-actions__link:is(:hover, :focus-visible) {
+  background: var(--accent);
+  color: var(--ink);
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+.catalogue-video-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  min-width: 0;
+}
+.catalogue-video-gallery--single { grid-template-columns: minmax(0, 1fr); }
+.catalogue-video-gallery__item { min-width: 0; }
+.catalogue-video-gallery__item h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
+  font-weight: 850;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 760px) {
+  .catalogue-video-gallery { grid-template-columns: minmax(0, 1fr); }
+}

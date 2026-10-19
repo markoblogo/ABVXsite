@@ -12,7 +12,7 @@ function loadComponent(name) {
     compilerOptions: { jsx: ts.JsxEmit.ReactJSX, module: ts.ModuleKind.CommonJS },
   }).outputText;
   const compiledModule = { exports: {} };
-  const componentRequire = name => name.startsWith('./') ? loadComponent(name.slice(2)) : require(name);
+  const componentRequire = name => name.startsWith('./') ? loadComponent(name.slice(2)) : name.startsWith('../') ? createRequire(new URL('../src/components/YouTubeEmbed.tsx',import.meta.url))(name) : require(name);
   new Function('require', 'module', 'exports', compiled)(componentRequire, compiledModule, compiledModule.exports);
   return compiledModule.exports;
 }

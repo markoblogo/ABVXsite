@@ -1,21 +1,8 @@
-export function youtubeVideoId(href: string): string | null {
-  try {
-    const url = new URL(href);
-    if (url.protocol !== 'https:' || url.username || url.password || url.port) return null;
-    let id: string | null = null;
-    if (url.hostname === 'youtu.be' && /^\/[\w-]{11}$/.test(url.pathname)) id = url.pathname.slice(1);
-    if (['www.youtube.com', 'youtube.com', 'www.youtube-nocookie.com'].includes(url.hostname)) {
-      if (url.pathname === '/watch' && url.hostname !== 'www.youtube-nocookie.com') id = url.searchParams.get('v');
-      else id = url.pathname.match(/^\/(?:embed|shorts)\/([\w-]{11})$/)?.[1] || null;
-    }
-    return id && /^[\w-]{11}$/.test(id) ? id : null;
-  } catch {
-    return null;
-  }
-}
+import { youtubeVideoId, findYouTubeVideos } from '../lib/youtube-url.mjs';
+export { youtubeVideoId, findYouTubeVideos } from '../lib/youtube-url.mjs';
 
 export function findYouTubeVideo(links: readonly { type: string; url: string }[]) {
-  return links.find(link => link.type === 'youtube' && youtubeVideoId(link.url));
+  return findYouTubeVideos(links)[0];
 }
 
 export default function YouTubeEmbed({ href, title }: { href: string; title: string }) {
@@ -43,5 +30,23 @@ export function YouTubeFigure({ href, title }: { href: string; title: string }) 
       <YouTubeEmbed href={href} title={title} />
       <figcaption><a href={href} target="_blank" rel="noopener noreferrer">Watch on YouTube →</a></figcaption>
     </figure>
+  );
+}
+
+export function YouTubeGallery({ links, title }: { links: readonly { type: string; url: string; label?: string }[]; title: string }) {
+  const videos = findYouTubeVideos(links);
+  if (!videos.length) return null;
+  return (
+    <div className={`catalogue-video-gallery${videos.length === 1 ? ' catalogue-video-gallery--single' : ''}`}>
+      {videos.map((video, index) => {
+        const label = video.label?.trim() || `Video ${index + 1}`;
+        return (
+          <div className="catalogue-video-gallery__item" key={video.url}>
+            <h3>{label}</h3>
+            <YouTubeFigure href={video.url} title={`${title} — ${label}`} />
+          </div>
+        );
+      })}
+    </div>
   );
 }

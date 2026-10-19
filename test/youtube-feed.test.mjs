@@ -20,6 +20,7 @@ function load(file) {
   const localRequire = (name) => {
     if (!name.startsWith('.')) return require(name);
     const base = path.resolve(path.dirname(file), name);
+    if (base.endsWith('.mjs')) return require(base);
     return load(['.ts', '.tsx'].map((extension) => `${base}${extension}`).find(existsSync));
   };
   new Function('require', 'module', 'exports', output)(localRequire, compiledModule, compiledModule.exports);

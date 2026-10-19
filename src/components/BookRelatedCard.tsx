@@ -47,7 +47,7 @@ export default function BookRelatedCard({
         </h3>
         <p>{related.item.summary}</p>
         <TagList tags={related.item.tags.slice(0, 4)} />
-        <BookActionLinks links={links.slice(0, 4)} compact />
+        <BookActionLinks links={links} limit={4} compact />
       </div>
     </article>
   );

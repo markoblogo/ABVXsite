@@ -48,7 +48,7 @@ export default function BookCatalogueCard({
           </Link>
         ) : null}
         <TagList tags={book.tags.slice(0, 4)} />
-        <ActionLinks links={book.links} limit={4} compact />
+        <ActionLinks kind="book" links={book.links} limit={4} compact />
       </div>
     </article>
   );

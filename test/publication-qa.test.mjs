@@ -26,9 +26,9 @@ test('catalogue video evidence requires the selected video, not an arbitrary ifr
 });
 
 
-test('catalogue evidence rejects watch-page iframes and follows the book-renderable link',()=>{
+test('catalogue evidence rejects watch-page iframes and verifies every supported book video',()=>{
  const data={links:[{type:'youtube',url:'https://www.youtube-nocookie.com/embed/bbbbbbbbbbb'},{type:'youtube',url:'https://youtu.be/aaaaaaaaaaa'}]};
- assertCatalogueVideo(data,[{src:'https://www.youtube-nocookie.com/embed/aaaaaaaaaaa',title:'Trailer',loading:'lazy',referrerPolicy:'strict-origin-when-cross-origin'}],'books');
+ assertCatalogueVideo(data,['aaaaaaaaaaa','bbbbbbbbbbb'].map(id=>({src:'https://www.youtube-nocookie.com/embed/'+id,title:'Trailer',loading:'lazy',referrerPolicy:'strict-origin-when-cross-origin'})),'books');
  assert.throws(()=>assertCatalogueVideo(data,[{src:'https://www.youtube.com/watch?v=aaaaaaaaaaa',title:'Trailer'}],'books'));
  assert.throws(()=>assertCatalogueVideo(data,[{src:'https://youtu.be/aaaaaaaaaaa',title:'Trailer'}],'books'));
 });
@@ -88,4 +88,12 @@ test('playable audio QA rejects CSP-blocked initial and redirect hosts, while do
  await assertCatalogueDownloads(client,{type:'book',links:[allowed]},'https://abvx.xyz','books');
  const redirected={head:async()=>({status:()=>200,url:()=>blocked.url,dispose:async()=>{}})};
  await assert.rejects(assertCatalogueDownloads(redirected,{type:'book',links:[allowed]},'https://abvx.xyz','books'),/redirect.*CSP/);
+});
+
+test('catalogue QA rejects a release missing any of its ten distinct videos',()=>{
+ const links=Array.from({length:10},(_,i)=>({type:'youtube',label:'Video '+i,url:'https://youtu.be/'+String(i).padStart(11,'0')}));
+ const frames=links.map(link=>({src:'https://www.youtube-nocookie.com/embed/'+link.url.split('/').at(-1),title:link.label,loading:'lazy',referrerPolicy:'strict-origin-when-cross-origin'}));
+ const data={links};assertCatalogueVideo(data,frames,'books');
+ assert.throws(()=>assertCatalogueVideo(data,frames.slice(0,-1),'books'),'last video cannot disappear');
+ assert.throws(()=>assertCatalogueVideo(data,[frames[0]],'work'),'first video alone cannot prove all videos');
 });

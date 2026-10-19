@@ -30,7 +30,7 @@ function compile(relative, imports = {}) {
     compilerOptions: { jsx: ts.JsxEmit.ReactJSX, module: ts.ModuleKind.CommonJS, esModuleInterop: true },
   }).outputText;
   const compiledModule = { exports: {} };
-  new Function('require', 'module', 'exports', compiled)((name) => Object.hasOwn(imports, name) ? imports[name] : require(name), compiledModule, compiledModule.exports);
+  new Function('require', 'module', 'exports', compiled)((name) => Object.hasOwn(imports, name) ? imports[name] : createRequire(path.resolve(repo, relative))(name), compiledModule, compiledModule.exports);
   return compiledModule.exports;
 }
 const normalized = (patch = {}) => ({ ...metadata(), summary: 'Public summary', language: 'en', source: 'ws-001.md', body, book: { include: true, status: 'draft' }, ...patch });

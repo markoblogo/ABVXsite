@@ -61,3 +61,35 @@ test('playable book audio rejects CSP-blocked hosts before source changes and sc
   assert.ok(result.includes(url));
  }
 });
+
+test('video additions retain all previous videos and support ten different videos with idempotency by ID',()=>{
+ const first={...original,links:[...original.links,{type:'youtube',label:'Book trailer',url:'https://youtu.be/aaaaaaaaaaa'}]};
+ let current=source(first);
+ for(let n=1;n<=9;n++){
+  const next=addCatalogueMedia(current,'/books/guide',{type:'youtube',label:n===1?'Game trailer':'More '+n,url:'https://youtu.be/'+String(n).padStart(11,'0')},'2026-10-15');
+  assert.deepEqual(parseMarkdownSource(next).data.links.slice(0,-1),parseMarkdownSource(current).data.links);
+  assert.equal(parseMarkdownSource(next).body,parsed(first).body);assert.equal(isCatalogueMediaAddition(parsed(first),parseMarkdownSource(next),'books'),true);
+  current=next;
+ }
+ assert.equal(parseMarkdownSource(current).data.links.filter(x=>x.type==='youtube').length,10);
+ assert.equal(addCatalogueMedia(current,'/books/guide',{type:'youtube',label:'Repeat',url:'https://www.youtube.com/watch?t=3&v=00000000001'},'2026-10-16'),current);
+ const duplicate={...parseMarkdownSource(current).data,links:[...parseMarkdownSource(current).data.links,{type:'youtube',label:'Repeat',url:'https://www.youtube.com/watch?v=00000000001'}]};
+ assert.equal(isCatalogueMediaAddition(parsed(first),parsed(duplicate),'books'),false);
+});
+
+test('the video CLI appends labelled videos on an existing undated legacy book without inventing a publication date',async()=>{
+ const {mkdtempSync,mkdirSync,writeFileSync,readFileSync,rmSync}=await import('node:fs');
+ const {execFileSync}=await import('node:child_process');const {tmpdir}=await import('node:os');const path=await import('node:path');
+ const root=mkdtempSync(path.join(tmpdir(),'abvx-legacy-book-videos-')),command=path.resolve('scripts/catalogue-video.mjs'),file=path.join(root,'content/books/guide.md');
+ const data={...original};delete data.publishedAt;data.links=[{type:'kindle',label:'Kindle',url:'https://example.com/kindle'}];
+ try{
+  mkdirSync(path.dirname(file),{recursive:true});writeFileSync(file,source(data));
+  const run=(url,label)=>JSON.parse(execFileSync(process.execPath,[command,'--route','/books/guide','--video',url,'--label',label,'--write'],{cwd:root,encoding:'utf8'}));
+  assert.equal(run('https://youtu.be/aaaaaaaaaaa','Book trailer').changed,true);
+  assert.equal(run('https://youtu.be/bbbbbbbbbbb','Game trailer').changed,true);
+  const updated=readFileSync(file,'utf8'),parsedSource=parseMarkdownSource(updated);
+  assert.equal(parsedSource.data.publishedAt,undefined);assert.equal(parsedSource.body,parseMarkdownSource(source(data)).body);
+  assert.deepEqual(parsedSource.data.links.slice(1).map(x=>x.label),['Book trailer','Game trailer']);
+  assert.equal(run('https://www.youtube.com/watch?t=3&v=aaaaaaaaaaa','Repeated').changed,false);assert.equal(readFileSync(file,'utf8'),updated);
+ }finally{rmSync(root,{recursive:true,force:true});}
+});

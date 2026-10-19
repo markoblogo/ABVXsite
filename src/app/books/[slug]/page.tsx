@@ -1,4 +1,4 @@
-import { YouTubeFigure, youtubeVideoId } from '@/components/YouTubeEmbed';
+import { YouTubeGallery, findYouTubeVideos } from '@/components/YouTubeEmbed';
 import BookAudioPlayer from '@/components/BookAudioPlayer';
 import EditorialSectionLink from '@/components/EditorialSectionLink';
 import BookActionLinks from '@/components/BookActionLinks';
@@ -28,11 +28,6 @@ import type { ReactNode } from 'react';
 
 export function generateStaticParams() {
   return getBooks().map((book) => ({ slug: book.slug }));
-}
-
-function youtubeEmbedUrl(url: string): string | undefined {
-  const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([^?&/]+)/);
-  return match?.[1] ? `https://www.youtube.com/embed/${match[1]}` : undefined;
 }
 
 function formatFormats(formats?: string[]): string | undefined {
@@ -174,14 +169,14 @@ export default async function BookDetailPage({
   const image = book.heroImage || book.coverImage;
   const title = book.displayTitle || book.shortTitle || book.title;
   const audioLink = book.links.find((link) => link.type === 'audio');
-  const youtube = book.links.find((link) => link.type === 'youtube' && youtubeEmbedUrl(link.url) && youtubeVideoId(link.url));
-  const videoSection = youtube ? (
+  const videos = findYouTubeVideos(book.links);
+  const videoSection = videos.length ? (
     <section className="book-video-section" aria-labelledby="book-video-title">
       <div className="book-video-section__header">
         <div className="eyebrow">Media</div>
         <h2 id="book-video-title">Watch / Context</h2>
       </div>
-      <YouTubeFigure href={youtube.url} title={title} />
+      <YouTubeGallery links={videos} title={title} />
     </section>
   ) : null;
 

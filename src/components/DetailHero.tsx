@@ -30,7 +30,7 @@ export default function DetailHero({
         {subtitle ? <p className="detail-hero__subtitle">{subtitle}</p> : null}
         <p className="detail-hero__summary">{summary}</p>
         <TagList tags={tags} />
-        <ActionLinks links={links} />
+        <ActionLinks kind={variant === 'book' ? 'book' : 'work'} links={links} />
       </div>
       <MediaPanel image={image} title={title} variant={variant} />
     </header>

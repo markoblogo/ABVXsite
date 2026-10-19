@@ -1,3 +1,4 @@
+import {parseMarkdownSource} from '../src/content/markdown-source.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { mkdtempSync,rmSync,existsSync,mkdirSync,writeFileSync,readFileSync,readdirSync } from 'node:fs';
@@ -71,7 +72,7 @@ test('standard catalogue media can omit dimensions while explicit invalid values
  }finally{rmSync(root,{recursive:true,force:true});}
 });
 
-test('existing book and project video additions preserve prose and links, are idempotent and refuse replacement',async()=>{
+test('existing book and project video additions preserve prose and links, are idempotent and append without replacement',async()=>{
  const {addCatalogueVideo}=await import('../scripts/catalogue-video.mjs');
  for(const folder of ['books','work']) {
   const data={id:'example',slug:'example',type:folder==='books'?'book':'tool',visibility:'public',status:'released',publishedAt:'2020-01-01',links:[{type:'youtube',url:'https://www.youtube.com/@channel'},{type:'pdf',url:'https://example.com/book.pdf'}]};
@@ -82,7 +83,9 @@ test('existing book and project video additions preserve prose and links, are id
   const parsed=JSON.parse(result.slice(3,result.indexOf('\n---',3)));
   assert.deepEqual(parsed.links.slice(0,-1),data.links);assert.equal(parsed.updatedAt,'2026-01-01');
   assert.equal(addCatalogueVideo(result,route,'https://www.youtube.com/watch?v=aaaaaaaaaaa','2026-01-02'),result);
-  assert.throws(()=>addCatalogueVideo(result,route,'https://youtu.be/bbbbbbbbbbb'),/different playable video/);
+  const second=addCatalogueVideo(result,route,'https://youtu.be/bbbbbbbbbbb');
+  assert.deepEqual(parseMarkdownSource(second).data.links.slice(0,-1),parseMarkdownSource(result).data.links);
+  assert.ok(second.endsWith(suffix));
   for(const [target,url] of [[`/${folder}/other`,'https://youtu.be/aaaaaaaaaaa'],['/books/../example','https://youtu.be/aaaaaaaaaaa'],[route,'https://evil.example/aaaaaaaaaaa'],[route,'https://www.youtube.com/@channel'],[route,'https://www.youtube.com/watch?v=aaaaaaaaaaa%26extra']])assert.throws(()=>addCatalogueVideo(source,target,url));
   assert.throws(()=>addCatalogueVideo(source.replace('"public"','"private"'),route,'https://youtu.be/aaaaaaaaaaa'));
   assert.throws(()=>addCatalogueVideo(source,route,'https://youtu.be/aaaaaaaaaaa','2026-02-31'));
@@ -113,18 +116,14 @@ test('existing legacy project and series types can receive a video without chang
   assert.equal(JSON.parse(result.slice(3,result.indexOf('\n---',3))).type,type);
  }
 });
-test('book video additions reject URL forms unsupported by its renderer before changing the source',async()=>{
+test('books and projects accept the same strict video URL forms that their shared gallery renders',async()=>{
  const {addCatalogueVideo,catalogueCardVideoId}=await import('../scripts/catalogue-video.mjs');
  const source=packet('books').payload.source_markdown;
  for(const url of ['https://www.youtube-nocookie.com/embed/aaaaaaaaaaa','https://www.youtube.com/watch?t=1&v=aaaaaaaaaaa']) {
-  assert.equal(catalogueCardVideoId(url,'books'),null);
-  assert.throws(()=>addCatalogueVideo(source,'/books/example',url));
+  assert.equal(catalogueCardVideoId(url,'books'),'aaaaaaaaaaa');
+  assert.ok(addCatalogueVideo(source,'/books/example',url).includes(url));
   assert.equal(catalogueCardVideoId(url,'work'),'aaaaaaaaaaa');
  }
- const old=JSON.parse(source.slice(3,source.indexOf('\n---',3)));
- old.links.push({type:'youtube',url:'https://www.youtube-nocookie.com/embed/bbbbbbbbbbb'});
- const updated=addCatalogueVideo('---\n'+JSON.stringify(old)+'\n---\nText.','/books/example','https://youtu.be/aaaaaaaaaaa');
- assert.ok(updated.includes('https://youtu.be/aaaaaaaaaaa'));
 });
 
 test('real public series use their series source through the complete CLI, including undated and canonical-root records',()=>{
@@ -153,13 +152,13 @@ test('real public series use their series source through the complete CLI, inclu
  }finally{rmSync(root,{recursive:true,force:true});}
 });
 
-test('series-only publication convention permits an absent date without inventing it',async()=>{
+test('existing legacy catalogue cards permit an absent date without inventing it',async()=>{
  const {addCatalogueVideo}=await import('../scripts/catalogue-video.mjs');
  const data={slug:'example',type:'series',status:'released',visibility:'public',links:[]};
  const source=patch=>'---\n'+JSON.stringify({...data,...patch})+'\n---\nReleased legacy series.';
  const result=addCatalogueVideo(source({}),'/books/example','https://youtu.be/aaaaaaaaaaa');
  assert.equal(JSON.parse(result.slice(3,result.indexOf('\n---',3))).publishedAt,undefined);
- for(const patch of [{publishedAt:'2999-01-01'},{visibility:'private'},{type:'book'}])assert.throws(()=>addCatalogueVideo(source(patch),'/books/example','https://youtu.be/aaaaaaaaaaa'));
+ for(const patch of [{publishedAt:'2999-01-01'},{visibility:'private'}])assert.throws(()=>addCatalogueVideo(source(patch),'/books/example','https://youtu.be/aaaaaaaaaaa'));
 });
 
 

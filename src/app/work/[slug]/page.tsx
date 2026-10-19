@@ -1,6 +1,6 @@
 import JsonLd from '@/components/JsonLd';
 import FAQSection from '@/components/FAQSection';
-import { YouTubeFigure, findYouTubeVideo } from '@/components/YouTubeEmbed';
+import { YouTubeGallery, findYouTubeVideos } from '@/components/YouTubeEmbed';
 import SocialLinks from '@/components/SocialLinks';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import WorkBrief from '@/components/WorkBrief';
@@ -216,7 +216,7 @@ export default async function WorkDetailPage({
   const mn7rBlogRelated = relatedItems.find((related) => related.kind === 'artifact' && related.item.slug === 'mn7r-blog');
   const mn7rBlogRelatedImage =
     mn7rBlogRelated?.kind === 'artifact' ? await latestMn7rBlogImage(mn7rBlogRelated.item.rssFeed?.url) : undefined;
-  const videoUrl = findYouTubeVideo(artifact.links)?.url;
+  const videos = findYouTubeVideos(artifact.links);
   const publicArtifact = toPublicArtifact(artifact);
   const channels = socialLinks(publicArtifact.links);
   const breadcrumbSection = breadcrumbSectionFor(artifact);
@@ -255,13 +255,13 @@ export default async function WorkDetailPage({
 
       <WorkBrief artifact={publicArtifact} />
 
-      {videoUrl ? (
+      {videos.length ? (
         <section className="work-video-section" aria-labelledby="work-video-title">
           <div className="work-video-section__header">
             <div className="eyebrow">Media</div>
             <h2 id="work-video-title">Video / Demo</h2>
           </div>
-          <YouTubeFigure href={videoUrl} title={`${artifact.title} — project video`} />
+          <YouTubeGallery links={videos} title={artifact.title} />
         </section>
       ) : null}
 

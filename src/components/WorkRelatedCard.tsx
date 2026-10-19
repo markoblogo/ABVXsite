@@ -47,7 +47,7 @@ export default function WorkRelatedCard({
         </h3>
         <p>{related.item.summary}</p>
         <TagList tags={related.item.tags.slice(0, 4)} />
-        <WorkActionLinks links={links.slice(0, 4)} compact />
+        <WorkActionLinks links={links} limit={4} compact />
       </div>
     </article>
   );

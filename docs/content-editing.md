@@ -64,11 +64,11 @@ Kitchen Notes recipe fields and local cookbook export: [guide](kitchen-notes.md)
 
 Put a labelled HTTPS YouTube link in its own paragraph, e.g. `[AMI — launch video](https://youtu.be/VIDEO_ID)`. Native Writing renders each supported standalone video link as a responsive, lazy, privacy-enhanced player with the original URL as a fallback link. Inline references, lists and fenced code remain ordinary Markdown. Other Markdown surfaces keep link rendering unless they explicitly enable video blocks. Do not use the single `videoUrl` companion field for a multi-project review: it remains an ordinary article in the Writing feed.
 
-Project detail pages reuse the same player below their brief from the first supported `youtube` link in the existing project `links` array. Catalogue cards are unchanged. Keep previous channel/demo links when adding a newly featured project video. Without a verified original upload date, do not invent VideoObject metadata.
+Project detail pages show every distinct supported `youtube` video from the existing `links` array in a labelled gallery below their brief. Source order is retained; repeated URLs for the same video ID produce one player. Compact catalogue previews retain their link limit. Keep previous channel/demo links when adding a newly featured project video. Without a verified original upload date, do not invent VideoObject metadata.
 
 ### Book and series trailers
 
-Add an existing public trailer as a labelled `youtube` entry in the book or series `links` array. Both detail-page variants show the same Watch / Context player from the first supported video link, using `YouTubeFigure` with `youtube-nocookie.com`, lazy loading, an accessible title, strict referrer policy and the original URL fallback. A series trailer may also be linked explicitly from each member book; preserve purchase links, cover images and canonical paths. Record the substantive update in `updatedAt` and regenerate the public indexes. Adding a trailer does not create a new catalogue announcement or supply a verified upload date for VideoObject metadata.
+Add an existing public trailer as a labelled `youtube` entry in the book or series `links` array. Both detail-page variants show every distinct supported video in the Watch / Context gallery, using `YouTubeFigure` with `youtube-nocookie.com`, lazy loading, an accessible title, strict referrer policy and the original URL fallback. Give each video a descriptive label, such as `Book trailer` or `Game trailer`. New videos append without removing existing entries; `content:add-video -- --route <card> --video <URL> --label <title>` and `content:add-media` use this same behavior. A series trailer may also be linked explicitly from each member book; preserve purchase links, cover images and canonical paths. Record the substantive update in `updatedAt` and regenerate the public indexes. Adding a trailer does not create a new catalogue announcement or supply a verified upload date for VideoObject metadata.
 
 Project additions in every existing Systems subgroup now use their `group` metadata; explicit pinned placements continue to win. Work and book detail pages honor `seoTitle` and `seoDescription` without replacing visible titles/summaries. Use the shared full-source `content:publish` path for routine new project/book cards; new groups, series or custom routes require separate engineering work. Writing keeps a bounded recent view, a **More posts** control (30 per click) and a complete server-rendered archive so older local pages stay linked.
 
@@ -77,3 +77,8 @@ Book audio downloads may use the existing public MN7R Releases assets. Keep stab
 
 
 For first media and additive download/audio links on existing project, book or series cards, use `content:add-media` and the [shared additive-media release route](abvx-os-publishing.md#shared-additive-media-route). Existing Focus/Systems/Books listings are verified together. This reuses catalogue-v1 rather than defining a separate release process per section; unknown scope and shared code retain full QA.
+
+
+### Catalogue action hierarchy
+
+Book cards and detail pages place purchase and download actions first in larger, highlighted buttons. Book sites, videos, games and other supporting links form a smaller second row. Projects prioritize their site/demo or other operational actions; GitHub is primary for a repository-only tool. Compact cards apply their existing link limit after prioritization; detail pages retain all links. The shared renderer preserves external-link protections and book-click tracking.

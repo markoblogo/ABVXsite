@@ -29,9 +29,13 @@ export function isCatalogueMediaAddition(previous,current,folder='work') {
  if(!Array.isArray(before.links)||!Array.isArray(after.links)||after.links.length<before.links.length||!isDeepStrictEqual(after.links.slice(0,before.links.length),before.links))return false;
  const additions=after.links.slice(before.links.length);
  if(!additions.every(link=>validCatalogueMedia(link,folder,after.type)))return false;
- for(const type of ['youtube','audio']){
-  const added=additions.filter(link=>link.type===type);
-  if(added.length>1||added.length&&before.links.some(link=>link.type===type&&(type!=='youtube'||catalogueCardVideoId(link.url,folder))))return false;
+ const audio=additions.filter(link=>link.type==='audio');
+ if(audio.length>1||audio.length&&before.links.some(link=>link.type==='audio'))return false;
+ const videos=new Set(before.links.filter(link=>link.type==='youtube').map(link=>catalogueCardVideoId(link.url,folder)).filter(Boolean));
+ for(const link of additions.filter(link=>link.type==='youtube')){
+  const id=catalogueCardVideoId(link.url,folder);
+  if(videos.has(id))return false;
+  videos.add(id);
  }
  if(new Set(after.links.map(link=>link.url)).size!==new Set(before.links.map(link=>link.url)).size+additions.length)return false;
  const changed=imageKeys.filter(key=>!isDeepStrictEqual(before[key],after[key]));
@@ -46,12 +50,7 @@ export function addCatalogueMedia(source,route,descriptor,date=new Date().toISOS
  const {data,target}=catalogueSourceData(source,route);
  if(descriptor.type==='audio'&&target.folder==='books'&&data.type!=='series'&&!isAllowedAudioUrl(descriptor.url))throw Error('Playable book audio must use CSP-permitted site or GitHub media hosts');
  if(!validCatalogueMedia(descriptor,target.folder,data.type))throw Error('Unsupported media descriptor: use a labelled HTTPS or /media/ file URL');
- if(descriptor.type==='youtube'){
-  const result=addCatalogueVideo(source,route,descriptor.url,date);
-  if(result===source)return source;
-  const {data:added}=parseMarkdownSource(result);added.links.at(-1).label=descriptor.label;
-  return '---\n'+JSON.stringify(added,null,2)+result.slice(result.indexOf('\n---',3));
- }
+ if(descriptor.type==='youtube')return addCatalogueVideo(source,route,descriptor.url,date,descriptor.label);
  if(descriptor.type==='image'){
   if(data.media?.src===descriptor.url&&data.media.alt===descriptor.label)return source;
   if(data.media||data.heroImage||data.coverImage)throw Error('Existing image replacement requires separate review');

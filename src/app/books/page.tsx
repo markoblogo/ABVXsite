@@ -112,7 +112,7 @@ function SeriesLine({
           </div>
           <div className="books-series-line__actions">
             <TagList tags={series.tags.slice(0, 5)} />
-            <ActionLinks links={series.links} compact />
+            <ActionLinks kind="book" links={series.links} compact />
           </div>
         </div>
 

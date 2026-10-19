@@ -11,7 +11,7 @@ function run(fail = '', publication = false) {
     copyFileSync('src/content/markdown-source.mjs',path.join(root,'src/content/markdown-source.mjs'));
     mkdirSync(path.join(root, 'scripts')); mkdirSync(path.join(root, 'bin'));
     mkdirSync(path.join(root,'src/lib'),{recursive:true});
-    for(const file of ['youtube-pages.mjs','writing-chronology.mjs','media-policy.mjs'])copyFileSync('src/lib/'+file,path.join(root,'src/lib',file));
+    for(const file of ['youtube-pages.mjs','writing-chronology.mjs','media-policy.mjs','youtube-url.mjs'])copyFileSync('src/lib/'+file,path.join(root,'src/lib',file));
     for (const file of ['editorial-release-check.mjs', 'editorial-checks-tree.mjs', 'publication-scope.mjs', 'publication-metadata.mjs', 'catalogue-video.mjs', 'catalogue-media.mjs']) copyFileSync('scripts/' + file, path.join(root, 'scripts', file));
     writeFileSync(path.join(root, '.gitignore'), 'exports/\nevents\n');
     execFileSync('git', ['init', '-q'], { cwd: root });
@@ -20,7 +20,18 @@ function run(fail = '', publication = false) {
 const fs = require('node:fs');
 const name = process.argv[2] === 'audit' ? 'dependency-audit' : process.argv[3];
 fs.appendFileSync('events', name + ':start\\n');
-setTimeout(() => { fs.appendFileSync('events', name + ':end\\n'); console.log(name); process.exit(name === process.env.FAIL_GATE ? 1 : 0); }, 50);
+// Synchronize fake independent gates instead of assuming process startup takes <50ms.
+const phase = JSON.parse(process.env.PHASE_MEMBERS || '[]');
+const deadline = Date.now() + 10000;
+const timer = setInterval(() => {
+  const events = fs.readFileSync('events', 'utf8');
+  if (phase.includes(name) && !phase.every(member => events.includes(member + ':start'))) {
+    if (Date.now() > deadline) { clearInterval(timer); process.exit(2); }
+    return;
+  }
+  clearInterval(timer); fs.appendFileSync('events', name + ':end\\n'); console.log(name);
+  process.exit(name === process.env.FAIL_GATE ? 1 : 0);
+}, 10);
 `);
     chmodSync(npm, 0o755);
     execFileSync('git',['add','.'],{cwd:root});
@@ -33,7 +44,7 @@ setTimeout(() => { fs.appendFileSync('events', name + ':end\\n'); console.log(na
       mkdirSync(path.join(root,'content/writing'),{recursive:true});
       writeFileSync(path.join(root,'content/writing/post.md'),'---\n'+JSON.stringify({slug:'post',title:'Post',visibility:'public',status:'live',publishedAt:'2026-01-01'})+'\n---\nA post.');
     }
-    const result = spawnSync(process.execPath, ['scripts/editorial-release-check.mjs'], { cwd: root, encoding: 'utf8', env: { ...process.env, PATH: path.join(root, 'bin') + ':' + process.env.PATH, FAIL_GATE: fail } });
+    const result = spawnSync(process.execPath, ['scripts/editorial-release-check.mjs'], { cwd: root, encoding: 'utf8', env: { ...process.env, PATH: path.join(root, 'bin') + ':' + process.env.PATH, FAIL_GATE: fail, PHASE_MEMBERS: JSON.stringify(publication ? ['test:publication','dependency-audit'] : ['lint','test:sync','cortex-abv:vector-export:check','dependency-audit']) } });
     return { result, receipt: JSON.parse(readFileSync(path.join(root, 'exports/editorial-checks/receipt.json'), 'utf8')), events: readFileSync(path.join(root, 'events'), 'utf8') };
   } finally { rmSync(root, { recursive: true, force: true }); }
 }

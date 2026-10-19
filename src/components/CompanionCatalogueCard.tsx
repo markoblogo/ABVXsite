@@ -35,7 +35,7 @@ export default function CompanionCatalogueCard({
         </h3>
         <p>{item.summary}</p>
         <TagList tags={item.tags.slice(0, 4)} />
-        <ActionLinks links={item.links} limit={4} compact />
+        <ActionLinks kind={isBook(item) ? 'book' : 'work'} links={item.links} limit={4} compact />
       </div>
     </article>
   );

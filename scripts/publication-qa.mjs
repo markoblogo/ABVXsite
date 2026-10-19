@@ -2,10 +2,11 @@ import { readSeoDocument, assertSeoPage } from './seo-page-contract.mjs';
 import assert from 'node:assert/strict';
 import { chromium } from 'playwright';
 import { withQaServer } from './qa-server.mjs';
-import { catalogueVideoId, catalogueCardVideoId } from './catalogue-video.mjs';
+import { catalogueCardVideoId } from './catalogue-video.mjs';
 import { contentFiles, parseContentFile } from './content-lib.mjs';
 import { catalogueHubs } from './publication-scope.mjs';
 import { isAllowedAudioUrl } from '../src/lib/media-policy.mjs';
+import {findYouTubeVideos} from '../src/lib/youtube-url.mjs';
 
 export function internalPagePaths(hrefs,base='https://abvx.xyz') {
  const origin=new URL(base).origin;
@@ -35,10 +36,10 @@ export async function boundedMap(values, fn, concurrency=6) {
  }));
 }
 export function assertCatalogueVideo(data,frames,folder='work') {
- const first=(data.links||[]).find(link=>link.type==='youtube'&&catalogueCardVideoId(link.url,folder));
- if(!first)return;
- const id=catalogueVideoId(first.url);
- assert.ok(frames.some(frame=>typeof frame.src==='string'&&frame.src.match(/^https:\/\/www\.youtube-nocookie\.com\/embed\/([\w-]{11})(?:[?#]|$)/)?.[1]===id&&frame.title?.trim()&&frame.loading==='lazy'&&frame.referrerPolicy==='strict-origin-when-cross-origin'),'exact lazy privacy-enhanced catalogue video and accessible title');
+ for(const video of findYouTubeVideos(data.links||[])){
+ const id=catalogueCardVideoId(video.url,folder);
+ assert.ok(frames.some(frame=>typeof frame.src==='string'&&frame.src.match(/^https:\/\/www\.youtube-nocookie\.com\/embed\/([\w-]{11})(?:[?#]|$)/)?.[1]===id&&frame.title?.trim()&&frame.loading==='lazy'&&frame.referrerPolicy==='strict-origin-when-cross-origin'),'exact lazy privacy-enhanced catalogue video and accessible title: '+video.url);
+ }
 }
 export function assertCatalogueImage(data,images) {
  const image=data.heroImage||data.media||data.coverImage;

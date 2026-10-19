@@ -83,6 +83,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/lky20OJaAqo
   Summary: Jay makes things worse. Silent Bob holds the solution. The decaf route wins in this 20-second Disco Coffee Showdown gameplay comedy. Game (copy URL): https://playmcp.io/g/g_4FzN0mD8 Desktop browser · Disco Coffee Showdow
 
+- Scientists Put a Fruit Fly's Brain Inside an AI-Generated World. It Started Exploring.
+  URL: https://abvx.xyz/writing/videos/nBzbwlcAElY
+  Summary: We may have just witnessed one of the strangest AI experiments of 2026. Researchers connected a simulated fruit fly brain to Odyssey-3, an AI world model capable of generating interactive virtual environments in real tim
+
 - GTA 5 Gets Spider-Man 2 Web-Swinging! AI-Assisted Game Mod
   URL: https://abvx.xyz/writing/videos/ogc-oZoebH0
   Summary: Spider-Man 2's web-swinging mechanics are now running inside GTA 5. And AI coding agents helped make it possible. Meet Web of Los Santos, a GTA V mod that brings Spider-Man 2-inspired movement into Los Santos. Web-swingi

@@ -7256,7 +7256,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-19T11:53:28.752Z",
+      "updatedAt": "2026-10-19T12:55:04.692Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8121,6 +8121,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=wPIyeBYJZbQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Scientists Put a Fruit Fly's Brain Inside an AI-Generated World. It Started Exploring.",
+      "summary": "We may have just witnessed one of the strangest AI experiments of 2026. Researchers connected a simulated fruit fly brain to Odyssey-3, an AI world model capable of generating interactive virtual environments in real tim",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/nBzbwlcAElY",
+      "publishedAt": "2026-10-19T12:42:05.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=nBzbwlcAElY"
         }
       ],
       "related": []

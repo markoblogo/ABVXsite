@@ -40,6 +40,11 @@
       "type": "other",
       "label": "Play the Toki Pona game",
       "url": "https://playmcp.io/g/g_Zr0bwMnL"
+    },
+    {
+      "type": "youtube",
+      "label": "Book trailer",
+      "url": "https://youtu.be/GPfkz36JWbI"
     }
   ],
   "formats": [

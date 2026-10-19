@@ -7149,6 +7149,49 @@
       "related": []
     },
     {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Can an AI Agent Fix My Slow Android TV? I Found a Rather Interesting Way to Try.",
+      "summary": "I found an interesting open-source workflow for cleaning up Android TV using Codex or Claude Code. I haven't tested it yet, but I'm saving the tools and a cautious ADB prompt for later.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/android-tv-debloat-codex-claude-code-adb",
+      "tags": [
+        "android-tv",
+        "google-tv",
+        "adb",
+        "claude-code",
+        "codex",
+        "ai-agents",
+        "device-optimization",
+        "open-source",
+        "developer-tools",
+        "saved-find",
+        "saved-find-status-to-try"
+      ],
+      "links": [
+        {
+          "type": "github",
+          "label": "Saved Find — cleanyourtv (to try)",
+          "url": "https://github.com/Gathin23/cleanyourtv"
+        },
+        {
+          "type": "site",
+          "label": "FLauncher on Google Play",
+          "url": "https://play.google.com/store/apps/details?id=me.efesser.flauncher"
+        },
+        {
+          "type": "github",
+          "label": "Monet Launcher",
+          "url": "https://github.com/Klevico/Monet-Launcher"
+        }
+      ],
+      "updatedAt": "2026-10-19",
+      "related": []
+    },
+    {
       "type": "video",
       "section": "writing",
       "ecosystem": "Writing",
@@ -7295,7 +7338,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-19T14:34:06.004Z",
+      "updatedAt": "2026-10-19T14:52:01.864Z",
       "tags": [],
       "links": [],
       "related": []

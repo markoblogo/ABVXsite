@@ -1,3 +1,4 @@
+import {createQaPage} from './qa-browser.mjs';
 import { readSeoDocument, assertSeoPage } from './seo-page-contract.mjs';
 import { writingArchiveItems } from '../src/lib/writing-archive.mjs';
 import { publicationScope, publicationBase } from './publication-scope.mjs';
@@ -25,7 +26,7 @@ const ukrainian = '/writing/vyishov-pershyi-frantsuzkyi-pereklad-jeanne-bataillo
 await withQaServer(async (base) => {
   const browser = await chromium.launch({ headless: true });
   try {
-    const page = await browser.newPage();
+    const page = await createQaPage(browser);
     // SEO assertions inspect server metadata and hydrated navigation, not remote
     // image/analytics completion. Third-party resources must not block this gate.
     const visit = url => page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30_000 });

@@ -1,3 +1,4 @@
+import {createQaPage} from './qa-browser.mjs';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { chromium } from 'playwright';
@@ -148,7 +149,7 @@ await withQaServer(async (baseUrl) => {
 
   try {
     for (const route of headerRoutes) {
-      const page = await browser.newPage({ viewport: { width: 1440, height: 1200 } });
+      const page = await createQaPage(browser, { viewport: { width: 1440, height: 1200 } });
       const consoleViolations = [];
       const pageErrors = [];
 

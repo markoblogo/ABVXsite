@@ -235,6 +235,7 @@ function publicIndexItem(item) {
     canonicalUrl: canonicalUrl(item),
     tags: cleanTags(item.tags),
     links: cleanLinks(item.links),
+    publishedAt: item.publishedAt || null,
     updatedAt: item.updatedAt || item.publishedAt || null,
     related: [...relationObjects(item), ...(item.collection === kitchenNotes.id ? [{title:kitchenNotes.title,canonicalUrl:`${SITE_URL}${kitchenNotes.canonicalPath}`,relation:'collection'}] : [])],
     ...(item.collection ? {collection:item.collection} : {}),

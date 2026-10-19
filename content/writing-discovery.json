@@ -43,6 +43,16 @@
     },
     {
       "source": "abvx",
+      "title": "Can an AI Agent Fix My Slow Android TV? I Found a Rather Interesting Way to Try.",
+      "url": "/writing/android-tv-debloat-codex-claude-code-adb",
+      "publishedAt": "2026-10-19T00:00:00.000Z",
+      "excerpt": "I found an interesting open-source workflow for cleaning up Android TV using Codex or Claude Code. I haven't tested it yet, but I'm saving the tools and a cautious ADB prompt for later.",
+      "coverImage": "/media/writing/android-tv-debloat-codex-claude-code-adb.png",
+      "addedAt": "2026-10-19T14:52:01.864Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "abvx",
       "title": "I Tested /brag: An AI Agent Skill That Turns Projects into Launch Videos",
       "url": "/writing/brag-ai-agent-skill-launch-videos-review",
       "publishedAt": "2026-10-14T00:00:00.000Z",

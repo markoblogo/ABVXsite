@@ -1213,6 +1213,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: cooking, breakfast, oatmeal, oat-pancakes, recipes, sweet-and-savory, kitchen-experiments
 
+- Can an AI Agent Fix My Slow Android TV? I Found a Rather Interesting Way to Try.
+  URL: https://abvx.xyz/writing/android-tv-debloat-codex-claude-code-adb
+  Summary: I found an interesting open-source workflow for cleaning up Android TV using Codex or Claude Code. I haven't tested it yet, but I'm saving the tools and a cautious ADB prompt for later.
+  Group: writing
+  Tags: android-tv, google-tv, adb, claude-code, codex, ai-agents, device-optimization, open-source
+
 - Homemade Ginger Beer: One Week, Lots of Ginger, and a Very Spicy Experiment
   URL: https://abvx.xyz/writing/homemade-ginger-beer-ginger-bug-recipe
   Summary: My son and I made naturally fermented ginger beer using fresh ginger, sugar and water. Five days for the starter, another day for carbonation, and one surprisingly good spicy experiment.

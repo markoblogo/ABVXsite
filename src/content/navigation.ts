@@ -25,7 +25,8 @@ export type SocialIconName =
   | 'instagram'
   | 'telegram'
   | 'whatsapp'
-  | 'amazon-author';
+  | 'amazon-author'
+  | 'playmcp';
 
 export const footerPrimaryLinks: FooterLink[] = [
   { label: 'Focus', href: '/focus' },
@@ -68,4 +69,5 @@ export const socialLinks: SocialLink[] = [
   { label: 'Telegram', href: 'https://t.me/ABVcreative', icon: 'telegram', external: true },
   { label: 'WhatsApp', href: 'https://wa.me/33635189545', icon: 'whatsapp', external: true },
   { label: 'Amazon Author', href: 'https://www.amazon.com/stores/author/B0FTGN5QNK', icon: 'amazon-author', external: true },
+  { label: 'PlayMCP', href: 'https://playmcp.io/u/markoblogo', icon: 'playmcp', external: true },
 ];

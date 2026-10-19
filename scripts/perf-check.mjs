@@ -70,7 +70,7 @@ function metricFailures(metrics) {
 await withQaServer(async (baseUrl) => {
   mkdirSync(outDir, { recursive: true });
   const browser = await chromium.launch({ headless: true });
-  const page = await createQaPage(browser, { viewport: { width: 1440, height: 1200 }, deviceScaleFactor: 1 });
+  const page = await createQaPage(browser, { viewport: { width: 1440, height: 1200 }, deviceScaleFactor: 1 }, {blockAnalyticsRequests:false});
   const results = [];
   const failures = [];
 

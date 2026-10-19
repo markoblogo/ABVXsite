@@ -1255,6 +1255,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: cookbook, breakfast, marmite
 
+- Meta's Muse Gadget SDK Already Supports My Cardputer. Now Comes the Interesting Part.
+  URL: https://abvx.xyz/writing/meta-muse-gadget-sdk-cardputer-adv-pocket-os
+  Summary: Meta released an open-source SDK connecting AI to inexpensive electronics. My Cardputer ADV is officially supported, so I've started investigating what it could add to Pocket OS.
+  Group: writing
+  Tags: meta-muse, muse-gadgets, esp32, m5stack-cardputer, pocket-os, embedded-ai, ai-agents, iot
+
 - My Father's Saturday Morning Sausage Pancakes
   URL: https://abvx.xyz/writing/soviet-sausage-pancakes-childhood-breakfast
   Summary: My father used to make these simple sausage pancakes on Saturday mornings. Thick slices of Doktorskaya sausage, garlic, egg batter and a little butter.

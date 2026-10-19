@@ -132,6 +132,16 @@
     },
     {
       "source": "abvx",
+      "title": "Meta's Muse Gadget SDK Already Supports My Cardputer. Now Comes the Interesting Part.",
+      "url": "/writing/meta-muse-gadget-sdk-cardputer-adv-pocket-os",
+      "publishedAt": "2026-10-19T00:00:00.000Z",
+      "excerpt": "Meta released an open-source SDK connecting AI to inexpensive electronics. My Cardputer ADV is officially supported, so I've started investigating what it could add to Pocket OS.",
+      "coverImage": "/media/writing/meta-muse-gadget-sdk-cardputer-adv-pocket-os.jpeg",
+      "addedAt": "2026-10-19T16:55:27.198Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "abvx",
       "title": "I Made French Shortbread Cookies in a Frying Pan. No Oven Required.",
       "url": "/writing/no-oven-shortbread-cookies-frying-pan",
       "publishedAt": "2026-10-19T00:00:00.000Z",

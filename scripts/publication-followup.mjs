@@ -5,6 +5,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
 const horizons=[7,14,28];
+function parisDate(instant) {return new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Paris'}).format(new Date(instant));}
 function date(value) {
  if(typeof value!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(value)||new Date(value+'T00:00:00Z').toISOString().slice(0,10)!==value)throw Error('Valid YYYY-MM-DD required');
  return value;
@@ -17,8 +18,10 @@ function validateState(state) {
  if(state.schemaVersion!==1||!Array.isArray(state.seenUrls)||!state.items||typeof state.items!=='object')throw Error('Unsupported or damaged follow-up ledger');
  return state;
 }
-export function syncFollowUps(index,previous,today,since=today) {
- date(today);date(since);
+export function syncFollowUps(index,previous,today,since) {
+ date(today);
+ if(!previous&&!since)throw Error('An explicit --since baseline is required for a new follow-up ledger');
+ if(since!==undefined)date(since);
  if(!index||!Array.isArray(index.items))throw Error('Public content index required');
  if(index.items.some(item=>item.type==='writing'&&!Object.hasOwn(item,'publishedAt')))throw Error('Live index lacks publication dates; wait for the current deployment');
  const initial=!previous;
@@ -42,14 +45,18 @@ export function dueFollowUps(state,today,limit=10) {
  if(!Number.isSafeInteger(limit)||limit<1)throw Error('Positive limit required');
  return Object.values(state.items).flatMap(item=>{
   const day=horizons.find(day=>addDays(item.anchorDate,day)<=today&&item.checkpoints[day]?.status!=='observed');
-  return day?[{url:item.url,title:item.title,day,dueDate:addDays(item.anchorDate,day),anchorDate:item.anchorDate,anchorBasis:item.anchorBasis}]:[];
- }).sort((a,b)=>a.dueDate.localeCompare(b.dueDate)||a.url.localeCompare(b.url)).slice(0,limit);
+  const lastAttemptAt=day?item.checkpoints[day]?.attempts.at(-1)?.observedAt??null:null;
+  return day?[{url:item.url,title:item.title,day,dueDate:addDays(item.anchorDate,day),anchorDate:item.anchorDate,anchorBasis:item.anchorBasis,lastAttemptAt}]:[];
+ }).sort((a,b)=>{
+  if(Boolean(a.lastAttemptAt)!==Boolean(b.lastAttemptAt))return a.lastAttemptAt?1:-1;
+  return (a.lastAttemptAt?Date.parse(a.lastAttemptAt)-Date.parse(b.lastAttemptAt):0)||a.dueDate.localeCompare(b.dueDate)||a.url.localeCompare(b.url);
+ }).slice(0,limit);
 }
 export function recordFollowUp(state,url,day,observation,observedAt=new Date().toISOString()) {
  validateState(state);
  if(!state.items[url]||!horizons.includes(day)||!Number.isFinite(Date.parse(observedAt)))throw Error('Known URL, checkpoint and observation timestamp required');
  const item=state.items[url];
- if(observedAt.slice(0,10)<addDays(item.anchorDate,day))throw Error('Checkpoint is not due');
+ if(parisDate(observedAt)<addDays(item.anchorDate,day))throw Error('Checkpoint is not due');
  if(item.checkpoints[day]?.status==='observed')throw Error('Completed checkpoints are immutable');
  if(!['observed','access_failed','data_pending'].includes(observation.status))throw Error('Explicit observation status required');
  for(const key of ['discovered','indexed'])if(![true,false,null].includes(observation[key]))throw Error('Boolean or null required: '+key);
@@ -72,14 +79,15 @@ async function main() {
  for(let i=0;i<args.length;i++){if(args[i]==='--live'){options.live=true;continue;}if(!['--index','--state','--today','--since','--limit','--url','--day','--observation'].includes(args[i])||!args[i+1]||args[i+1].startsWith('--'))throw Error('Unknown or incomplete argument');options[args[i].slice(2)]=args[++i];}
  if(!['sync','due','record'].includes(mode))throw Error('Expected sync, due or record');
  const file=path.resolve(options.state||'exports/publication-followup/state.json');
- const today=options.today||new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Paris'}).format(new Date());
+ const today=options.today||parisDate(new Date());
  let state=existsSync(file)?JSON.parse(readFileSync(file,'utf8')):null;
  if(mode==='sync') {
   if(Boolean(options.live)===Boolean(options.index))throw Error('Choose exactly one: --live or --index <snapshot>');
+  if(!state&&!options.since)throw Error('An explicit --since baseline is required for a new follow-up ledger');
   let index;
   if(options.live){const response=await fetch('https://abvx.xyz/content-index.json',{signal:AbortSignal.timeout(30000)});if(!response.ok)throw Error('Live index unavailable: '+response.status);index=await response.json();}
   else index=JSON.parse(readFileSync(options.index,'utf8'));
-  state=syncFollowUps(index,state,today,options.since||today);save(file,state);
+  state=syncFollowUps(index,state,today,options.since);save(file,state);
  }else if(!state)throw Error('Initialize from a live index first');
  if(mode==='record'){recordFollowUp(state,options.url,Number(options.day),JSON.parse(readFileSync(options.observation,'utf8')));save(file,state);}
  console.log(JSON.stringify({tracked:Object.keys(state.items).length,due:dueFollowUps(state,today,Number(options.limit||10))},null,2));

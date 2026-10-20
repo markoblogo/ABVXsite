@@ -75,6 +75,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/jEIPftaweBM
   Summary: Remember when phones had buttons, batteries lasted forever, and Snake was peak entertainment? Well, someone just brought Claude AI to a Nokia from 2007. Developer Emir Karşıyakalı created an open-source AI chat client fo
 
+- SKY-001: The AI World Model That Builds Real CAD Designs, Part by Part
+  URL: https://abvx.xyz/writing/videos/jWFZUAXVbCA
+  Summary: What if AI could do more than generate a 3D model? What if it could actually figure out how to build one? Meet SKY-001 by Skyfall AI, a new engineering world model designed to turn text prompts and reference images into
+
 - Contract Execution Officer Handbook | From Commodity Deal to Closeout
   URL: https://abvx.xyz/writing/videos/k7DYPrNV7ZY
   Summary: A signed commodity contract is only the beginning. The Contract Execution Officer Handbook explores the work that follows: documents, logistics, inspections, payment control, financial reconciliation and contract closeou

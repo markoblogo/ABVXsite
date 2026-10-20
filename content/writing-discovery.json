@@ -968,6 +968,17 @@
     },
     {
       "source": "youtube",
+      "title": "SKY-001: The AI World Model That Builds Real CAD Designs, Part by Part",
+      "url": "https://www.youtube.com/watch?v=jWFZUAXVbCA",
+      "publishedAt": "2026-10-20T10:34:14.000Z",
+      "excerpt": "What if AI could do more than generate a 3D model? What if it could actually figure out how to build one? Meet SKY-001 by Skyfall AI, a new engineering world model designed to turn text prompts and reference images into ",
+      "coverImage": "https://i.ytimg.com/vi/jWFZUAXVbCA/hqdefault.jpg",
+      "videoDescription": "What if AI could do more than generate a 3D model?\nWhat if it could actually figure out how to build one?\nMeet SKY-001 by Skyfall AI, a new engineering world model designed to turn text prompts and reference images into detailed mechanical assemblies.\nAnd the team behind it has a fascinating history.\nBack in 2017, Microsoft acquired Maluuba, an AI startup founded by Sam Pasupalak and Kaheer Suleman.\n\nThat was a year before OpenAI released GPT-1.\nNow the founders are back with Skyfall AI. And instead of building another large language model, they've created something very different.\nAn AI model that reasons about how physical objects are constructed.\n\nHere's how SKY-001 works:\n- Starts with a text description or reference image\n- Generates an initial 3D design\n- Breaks complex objects into individual components\n- Decomposes assemblies down to tiny screws and fasteners\n- Creates 2D engineering sketches and 3D construction sequences\n- Assembles the components into a complete mechanical structure\n- Supports CAD-oriented workflows, including demonstrations involving Autodesk Fusion\nAnd the results are pretty wild.\nAccording to Skyfall AI's own benchmarks:\n- 51× faster than GPT-6 Astra on CAD construction tasks\n- 150× cheaper per CAD construction case\n- Comparable geometric accuracy: 79.7% versus Astra's 79.1%\n- Even larger speed improvements on certain BIM tasks\n\nThese are company-reported results, not yet independently verified. SKY-001 is currently a research preview with waitlist access.\nBut here's the part that really caught my attention.\nWatch the moment when individual components start coming together, piece by piece, until they form a complete machine.\nThis isn't just AI producing a pretty 3D mesh.\nIt's attempting to understand the structure of an engineered object and generate the steps needed to construct it.\nAnd that's a fundamentally different direction for generative AI.\n\nWe've seen models that write code, generate images, create videos, and simulate virtual worlds.\nNow we're starting to see models designed to engineer objects in the physical world.\nFrom generating pixels to designing machines.\nThat's a pretty significant leap.\nExplore SKY-001:\nhttps://skyfall.ai/sky-001\nTechnical research and benchmarks:\nhttps://skyfall.ai/blog/introducing-sky-001\n\n#SkyfallAI #SKY001 #WorldModels #GenerativeAI #CAD #AIEngineering #Shorts",
+      "addedAt": "2026-10-20T14:28:18.997Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Contract Execution Officer Handbook | From Commodity Deal to Closeout",
       "url": "https://www.youtube.com/watch?v=k7DYPrNV7ZY",
       "publishedAt": "2026-10-15T16:27:00.000Z",

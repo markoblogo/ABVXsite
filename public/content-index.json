@@ -7507,7 +7507,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-20T12:34:24.186Z",
+      "updatedAt": "2026-10-20T14:28:18.997Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8738,6 +8738,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=lky20OJaAqo"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "SKY-001: The AI World Model That Builds Real CAD Designs, Part by Part",
+      "summary": "What if AI could do more than generate a 3D model? What if it could actually figure out how to build one? Meet SKY-001 by Skyfall AI, a new engineering world model designed to turn text prompts and reference images into ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/jWFZUAXVbCA",
+      "publishedAt": "2026-10-20T10:34:14.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=jWFZUAXVbCA"
         }
       ],
       "related": []

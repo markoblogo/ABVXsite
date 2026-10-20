@@ -451,6 +451,16 @@
     },
     {
       "source": "medium",
+      "title": "Synthetic Data for AI Agents: Stop Generating More Examples. Start Building Worlds.",
+      "url": "https://abvcreative.medium.com/synthetic-data-for-ai-agents-stop-generating-more-examples-start-building-worlds-22f74aa7abd8",
+      "publishedAt": "2026-10-20T10:25:07.000Z",
+      "excerpt": "Training an AI agent to do real work takes more than a mountain of synthetic emails. It needs a world where things happen, people make mistakes, and consequences actually matter. Imagine you’ve decided to train an AI age",
+      "coverImage": "https://cdn-images-1.medium.com/max/1024/1*YJBQFlr8JCGpBjc2YCdbAA.png",
+      "addedAt": "2026-10-20T10:42:31.510Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "medium",
       "title": "The AI Assistant Wars Have Started. The Real Breakthrough Is Removing Setup.",
       "url": "https://abvcreative.medium.com/the-ai-assistant-wars-have-started-the-real-breakthrough-is-removing-setup-2dcacf54b51f",
       "publishedAt": "2026-09-29T14:51:34.000Z",
@@ -861,6 +871,17 @@
     },
     {
       "source": "youtube",
+      "title": "She Made a Short Film to Get Hired. It Went Viral With 2.7M Views",
+      "url": "https://www.youtube.com/watch?v=CptYVxnfa0o",
+      "publishedAt": "2026-10-20T10:11:55.000Z",
+      "excerpt": "Quick question: When did applying for a job start requiring an autobiographical short film? Because apparently, sending a résumé and a portfolio isn't enough anymore. Meet Darshita Patankar, a visual designer who decided",
+      "coverImage": "https://i.ytimg.com/vi/CptYVxnfa0o/hqdefault.jpg",
+      "videoDescription": "Quick question: When did applying for a job start requiring an autobiographical short film?\nBecause apparently, sending a résumé and a portfolio isn't enough anymore.\n\nMeet Darshita Patankar, a visual designer who decided to turn her job search into a cinematic experience.\nInstead of another boring LinkedIn post, she created DESIGN IS DEAD, a bold, beautifully produced short film about her creative journey, design, and the growing influence of AI.\nAnd the internet absolutely loved it.\n\nOver 2.7 million views in about a day, according to the numbers circulating when I recorded this. Her portfolio website was reportedly overwhelmed by the traffic.\nAll this just to say: \"Hey, I'm a designer. Anyone hiring?\"\nAnd here's the funniest part.\n\nThe film is genuinely impressive. The storytelling, typography, art direction, and visual identity are exactly the skills she's trying to sell.\nSo, technically, her job application is her portfolio.\nBrilliant work. Seriously.\nBut I do have one concern.\n\nWhat's next? A Netflix documentary and an Oscar nomination just to get a first-round interview?\nOriginal film by Darshita Patankar:\nhttps://x.com/_darshi/status/2112068761176121674\nHer portfolio:\nhttps://darshitapatankar.com/\n\n#DesignIsDead #CreativePortfolio #JobSearch #MotionDesign #GraphicDesign #Shorts",
+      "addedAt": "2026-10-20T10:42:31.510Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Claude Code Built a GTA Mod for SimCity 3000 in Just 2 Hours",
       "url": "https://www.youtube.com/watch?v=cQS3nbBe6JM",
       "publishedAt": "2026-10-11T13:37:46.000Z",
@@ -1147,6 +1168,17 @@
     },
     {
       "source": "youtube",
+      "title": "One Claude Code Skill Turns Your GitHub Project Into a Launch Video",
+      "url": "https://www.youtube.com/watch?v=vD_pNbzvoiM",
+      "publishedAt": "2026-10-20T09:57:45.000Z",
+      "excerpt": "You spent hours building your project. Now you need a video to show it off. What if Claude Code could handle that part too? Meet Brag, an open-source AI agent skill that turns your project into a polished promotional vid",
+      "coverImage": "https://i.ytimg.com/vi/vD_pNbzvoiM/hqdefault.jpg",
+      "videoDescription": "You spent hours building your project. Now you need a video to show it off.\n\nWhat if Claude Code could handle that part too?\n\nMeet Brag, an open-source AI agent skill that turns your project into a polished promotional video with a single command.\n\nHere's what it does:\n\nAnalyzes your project to understand what you've built\n\nIdentifies the most interesting features and selling points\n\nCreates a visual concept and promotional storyline\n\nProduces animated motion graphics and transitions\n\nAdds background music and sound effects\n\nRenders a shareable MP4 video\n\nGenerates promotional copy for your product launch\n\nAll from one command: /brag\n\nThe standard workflow uses Hyperframes for video composition and rendering. There's also a lightweight /brag-slim version optimized for Claude Opus 5.5.\n\nAnd it isn't limited to Claude Code. The skill also supports Codex, Cursor, OpenCode, and other compatible coding agents.\n\nInstall it for Claude Code:\n\n/plugin marketplace add latent-spaces/brag\n/plugin install brag@brag\n\nThen open your project and run:\n\n/brag\n\nThat's it. Your AI agent takes care of the creative workflow, from understanding your product to producing a launch-ready video.\n\nOf course, you can still refine the result. But the fascinating part is how much of the production process can now be handled by the same AI agent that helped build the software.\n\nFirst, AI helped us write the code. Now it wants to handle the marketing too.\n\nAt this rate, the only thing left for developers to do is pretend they're running a company.\n\nBrag on GitHub:\nhttps://github.com/latent-spaces/brag\n\n#ClaudeCode #ClaudeCodeSkills #AIVideo #VibeCoding #AIAgents #MotionGraphics #Shorts",
+      "addedAt": "2026-10-20T10:42:31.510Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Claude Code Tried to Make Me Watch 60 Videos at Once. I'm Scared.",
       "url": "https://www.youtube.com/watch?v=vZW-Z4pYqzU",
       "publishedAt": "2026-10-10T14:30:51.000Z",
@@ -1209,6 +1241,17 @@
       "coverImage": "https://i.ytimg.com/vi/y2OW5f8QEXo/hqdefault.jpg",
       "videoDescription": "Give your website an optional ASCII look with AsciiTheme, an open-source JavaScript library with four themes and interactive widgets.\n\nThis short demo shows the light, dark, sepia, and matrix themes, plus progress bars, status indicators, and ASCII boxes.\n\nUse AsciiTheme with vanilla JavaScript, React, Vue, or Web Components. Zero runtime dependencies.\n\nExplore the code and documentation:\nhttps://github.com/markoblogo/AsciiTheme\n\nInstall:\nnpm i @abvx/ascii-theme\n\n#AsciiTheme #ASCII #WebDevelopment",
       "addedAt": "2026-10-14T12:51:08.610Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
+      "title": "Claude Opus 5.5 Created This Entire Animation with Code. Every Single Frame",
+      "url": "https://www.youtube.com/watch?v=Y66xLzPe3bw",
+      "publishedAt": "2026-10-20T09:48:07.000Z",
+      "excerpt": "This wasn't drawn by a human. And it wasn't generated by a traditional AI video model either. Claude Opus 5.5 wrote code that generated every single frame of this 32-second animation. No hand-drawn frames. No manual keyf",
+      "coverImage": "https://i.ytimg.com/vi/Y66xLzPe3bw/hqdefault.jpg",
+      "videoDescription": "This wasn't drawn by a human.\nAnd it wasn't generated by a traditional AI video model either.\nClaude Opus 5.5 wrote code that generated every single frame of this 32-second animation.\nNo hand-drawn frames. No manual keyframe animation. Just AI-written code turning mathematics, physics, and creative ideas into moving images.\nAnd the result is quite a journey.\n\nIn just 32 seconds, you'll see:\n- A playful little animated cube\n- Planets moving through cosmic orbits\n- White light splitting into colors through a prism\n- A swirling vortex of particles\n- A black hole bending space and light\n- A breathtaking view of Earth from the Moon\nEvery scene was generated programmatically.\n\nThat's what makes this experiment interesting.\nWe're used to AI generating videos by predicting pixels. But AI coding models can take a completely different approach: write the algorithms that create the visuals themselves.\n\nProcedural animation. Mathematics. Particle systems. Simulated physics. All orchestrated through code.\nAnd unlike a conventional AI-generated video, code-based animation can potentially be modified, extended, and reproduced by changing the underlying instructions.\n32 seconds. Six visual worlds. Every frame created by AI-written code.\nThe future of motion design might involve a lot more programming than drawing.\n\n#ClaudeOpus #ClaudeCode #CreativeCoding #AIAnimation #GenerativeArt #MotionGraphics #Shorts",
+      "addedAt": "2026-10-20T10:42:31.510Z",
       "addedAtBasis": "observed"
     }
   ]

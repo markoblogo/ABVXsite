@@ -7507,7 +7507,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-20T10:42:31.510Z",
+      "updatedAt": "2026-10-20T12:26:14.066Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8382,6 +8382,61 @@
           "Mix an egg, a splash of milk, flour, salt and pepper into a smooth batter thick enough to coat the sausage.",
           "Dip the slices in batter and fry in a preheated pan with butter or butter and vegetable oil. Cook both sides until the batter is golden, cooked through and slightly crispy."
         ]
+      }
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "My Favourite Two-Ingredient Breton Dessert",
+      "summary": "Mix rich Breton yogurt with palet breton dessert cream, or try the nougat version. Two ingredients, two minutes, and a surprisingly delicious result.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/two-ingredient-breton-yogurt-dessert",
+      "tags": [
+        "breton-food",
+        "yogurt",
+        "french-desserts",
+        "two-ingredient-recipes",
+        "no-cook-desserts",
+        "palets-bretons",
+        "nougat",
+        "kitchen-experiments"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-20",
+      "updatedAt": "2026-10-20",
+      "related": [
+        {
+          "title": "Kitchen Notes",
+          "canonicalUrl": "https://abvx.xyz/writing/kitchen-notes",
+          "relation": "collection"
+        }
+      ],
+      "collection": "kitchen-notes",
+      "contentType": "recipe",
+      "recipe": {
+        "recipeYield": "Scale to the amount of yogurt used",
+        "ingredients": [
+          {
+            "name": "Thick, full-fat Breton yogurt",
+            "quantityText": "2 parts, or 1 part for equal quantities"
+          },
+          {
+            "name": "Palet breton-flavoured dessert cream",
+            "quantityText": "1 part"
+          }
+        ],
+        "instructions": [
+          "Take some good, thick, full-fat yogurt.",
+          "Add crème dessert saveur palet breton.",
+          "Mix."
+        ],
+        "variations": [
+          "Replace the palet breton cream with nougat-flavoured dessert cream. Use two parts yogurt to one part nougat cream, or equal quantities for a richer, sweeter version."
+        ],
+        "timingText": "Preparation time: 2 minutes Cooking time: None"
       }
     },
     {

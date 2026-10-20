@@ -1279,6 +1279,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: breakfast, soviet-food, childhood-recipes, sausage, comfort-food, family-recipes
 
+- My Favourite Two-Ingredient Breton Dessert
+  URL: https://abvx.xyz/writing/two-ingredient-breton-yogurt-dessert
+  Summary: Mix rich Breton yogurt with palet breton dessert cream, or try the nougat version. Two ingredients, two minutes, and a surprisingly delicious result.
+  Group: writing
+  Tags: breton-food, yogurt, french-desserts, two-ingredient-recipes, no-cook-desserts, palets-bretons, nougat, kitchen-experiments
+
 - Première traduction française de Jeanne la bataillonneuse et Miss Adrienne de Géo Chkouroupiy
   URL: https://abvx.xyz/writing/premiere-traduction-francaise-jeanne-bataillonneuse-miss-adrienne
   Summary: Publication de la première traduction française de Jeanne la bataillonneuse et Miss Adrienne de Géo Chkouroupiy, dans le cadre du projet Modernisme ukrainien consacré aux écrivains ukrainiens des années 1920-1930.

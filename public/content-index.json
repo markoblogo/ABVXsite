@@ -7507,7 +7507,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-20T12:26:14.066Z",
+      "updatedAt": "2026-10-20T12:34:24.186Z",
       "tags": [],
       "links": [],
       "related": []
@@ -7950,6 +7950,37 @@
       "links": [],
       "publishedAt": "2026-10-19",
       "updatedAt": "2026-10-19",
+      "related": [
+        {
+          "title": "Kitchen Notes",
+          "canonicalUrl": "https://abvx.xyz/writing/kitchen-notes",
+          "relation": "collection"
+        }
+      ],
+      "collection": "kitchen-notes"
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "I Love Raclette Cheese. I Just Don't Like Raclette.",
+      "summary": "Autumn brings raclette season to France. I love the cheese, but prefer melting it inside an oatmeal pancake, eating it with berry jam or even adding it to hot coffee.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/raclette-cheese-without-raclette",
+      "tags": [
+        "raclette",
+        "french-cheese",
+        "autumn-food",
+        "oatmeal-pancakes",
+        "cheese-and-coffee",
+        "french-food",
+        "food-experiments"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-20",
+      "updatedAt": "2026-10-20",
       "related": [
         {
           "title": "Kitchen Notes",

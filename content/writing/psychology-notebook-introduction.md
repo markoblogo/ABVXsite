@@ -29,7 +29,17 @@
     "width": 2000,
     "height": 1125,
     "role": "rss-image"
-  }
+  },
+  "illustrations": [
+    {
+      "src": "/media/books/fragments-from-a-therapists-notebook/cover.webp",
+      "alt": "Cover of Fragments from a Therapist’s Notebook",
+      "width": 1536,
+      "height": 1024,
+      "caption": "Fragments from a Therapist’s Notebook — book cover.",
+      "afterHeading": "The book and the notebooks"
+    }
+  ]
 }
 ---
 
@@ -56,8 +66,6 @@ An entry can be a useful way of looking at something without being a universal e
 ## The book and the notebooks
 
 The existing book [Fragments from a Therapist’s Notebook](/books/fragments-from-a-therapists-notebook) is another part of this work. It is not a claim that every fragment in this online series appeared in the book.
-
-![Cover of Fragments from a Therapist’s Notebook](/media/books/fragments-from-a-therapists-notebook/cover.webp)
 
 ## The covers are another notebook practice
 

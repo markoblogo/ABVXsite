@@ -1309,6 +1309,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: Géo Chkouroupiy, Geo Shkurupii, Modernisme ukrainien, Ukrainian literature, French translation, Jeanne la bataillonneuse, Miss Adrienne
 
+- Psychology Notebook — Where These Fragments Come From
+  URL: https://abvx.xyz/writing/psychology-notebook-introduction
+  Summary: Personal notes, lecture fragments, remembered ideas and original sketchbook artwork: an introduction to Psychology Notebook.
+  Group: writing
+  Tags: psychology-notebook
+
 - The Salad I've Been Eating Almost Every Day for Two Weeks
   URL: https://abvx.xyz/writing/ham-radish-jalapeno-salad-french-style
   Summary: I've been eating almost the same salad every day for two weeks. It combines French cooked ham, radishes, jalapeño, blue cheese and two ready-made supermarket salads.

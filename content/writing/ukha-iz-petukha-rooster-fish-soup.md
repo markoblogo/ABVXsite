@@ -531,3 +531,5 @@ And it all starts with a wonderfully ridiculous name.
 _Ukha iz petukha._
 
 Fish soup from a rooster.
+
+For the opposite end of the cooking spectrum, try [The Other Rooster Fish Soup: 20 Minutes, Two Cans, and No Rooster](https://abvx.xyz/writing/easy-canned-salmon-pea-soup) — the quick canned-salmon soup a Belarusian friend taught me to make.

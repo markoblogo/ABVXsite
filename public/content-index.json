@@ -7530,7 +7530,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-21T19:30:35.629Z",
+      "updatedAt": "2026-10-21T21:46:00.296Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9077,6 +9077,90 @@
         }
       ],
       "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "The Other Rooster Fish Soup: 20 Minutes, Two Cans, and No Rooster",
+      "summary": "One fish soup takes a rooster, several kinds of fish and an entire day. The other needs two stock cubes, canned salmon, green peas and twenty minutes. I learned this wonderfully simple recipe from a Belarusian friend.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/easy-canned-salmon-pea-soup",
+      "tags": [
+        "fish-soup",
+        "canned-salmon",
+        "green-peas",
+        "quick-recipes",
+        "eastern-european-food",
+        "food-memories",
+        "simple-cooking"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-21",
+      "updatedAt": "2026-10-21",
+      "related": [
+        {
+          "title": "Kitchen Notes",
+          "canonicalUrl": "https://abvx.xyz/writing/kitchen-notes",
+          "relation": "collection"
+        }
+      ],
+      "collection": "kitchen-notes",
+      "contentType": "recipe",
+      "recipe": {
+        "recipeYield": "One saucepan of soup",
+        "ingredients": [
+          {
+            "name": "Water",
+            "quantityText": "Approximately 2 litres"
+          },
+          {
+            "name": "Small potatoes",
+            "quantityText": "5"
+          },
+          {
+            "name": "Carrot, finely grated",
+            "quantityText": "1 small"
+          },
+          {
+            "name": "Shallot or onion, finely chopped",
+            "quantityText": "1 shallot or half an onion"
+          },
+          {
+            "name": "Chicken stock cubes",
+            "quantityText": "2"
+          },
+          {
+            "name": "Pink salmon or salmon in its own juices, including the liquid",
+            "quantityText": "1 can, approximately 200–250 g, or two cans for more fish"
+          },
+          {
+            "name": "Green peas, including the liquid",
+            "quantityText": "1 standard can"
+          },
+          {
+            "name": "Dill and parsley",
+            "quantityText": "Fresh or dried"
+          },
+          {
+            "name": "Garlic, optional",
+            "quantityText": "Half a clove or a little dried garlic"
+          }
+        ],
+        "instructions": [
+          "Bring the water to a boil in a medium saucepan.",
+          "Add the peeled and chopped potatoes, grated carrot and finely chopped onion.",
+          "Add the chicken stock cubes and simmer until the potatoes are just cooked through.",
+          "Add the canned salmon together with its liquid.",
+          "Add the green peas together with their liquid.",
+          "Bring back to a gentle simmer.",
+          "Add herbs and optional garlic.",
+          "Turn off the heat, let it rest briefly and serve."
+        ],
+        "timingText": "Preparation and cooking: About 20–25 minutes, depending on how quickly the water boils and the potatoes cook."
+      }
     },
     {
       "type": "writing",

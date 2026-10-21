@@ -1361,6 +1361,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook, identity
 
+- The Other Rooster Fish Soup: 20 Minutes, Two Cans, and No Rooster
+  URL: https://abvx.xyz/writing/easy-canned-salmon-pea-soup
+  Summary: One fish soup takes a rooster, several kinds of fish and an entire day. The other needs two stock cubes, canned salmon, green peas and twenty minutes. I learned this wonderfully simple recipe from a Belarusian friend.
+  Group: writing
+  Tags: fish-soup, canned-salmon, green-peas, quick-recipes, eastern-european-food, food-memories, simple-cooking
+
 - The Salad I've Been Eating Almost Every Day for Two Weeks
   URL: https://abvx.xyz/writing/ham-radish-jalapeno-salad-french-style
   Summary: I've been eating almost the same salad every day for two weeks. It combines French cooked ham, radishes, jalapeño, blue cheese and two ready-made supermarket salads.

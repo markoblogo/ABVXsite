@@ -7,6 +7,7 @@ type Block =
   | { type: 'heading'; level: 2 | 3 | 4; text: string }
   | { type: 'paragraph'; text: string }
   | { type: 'code'; text: string }
+  | { type: 'separator' }
   | { type: 'list'; items: string[]; ordered: boolean };
 
 type InlineMatch = {
@@ -164,6 +165,13 @@ function parseMarkdownBlocks(markdown: string, headingOffset: 0 | 1): Block[] {
       continue;
     }
 
+    if (/^(?:(?:-\s*){3,}|(?:\*\s*){3,}|(?:_\s*){3,})$/.test(line)) {
+      flushParagraph();
+      flushList();
+      blocks.push({ type: 'separator' });
+      continue;
+    }
+
     const unordered = line.match(/^[-*]\s+(.+)$/);
     const ordered = line.match(/^\d+[.)]\s+(.+)$/);
     if (unordered || ordered) {
@@ -205,6 +213,7 @@ export default function MarkdownContent({
     <div className={['content-markdown', className].filter(Boolean).join(' ')}>
       {blocks.map((block, index): ReactNode => {
         if (block.type === 'code') return <pre key={`code-${index}`}><code>{block.text}</code></pre>;
+        if (block.type === 'separator') return <hr key={`separator-${index}`} className="border-0 border-t border-[var(--line)]" />;
         if (block.type === 'heading') {
           const Heading = `h${block.level}` as 'h2' | 'h3' | 'h4';
           return <Fragment key={`${block.type}-${index}`}>

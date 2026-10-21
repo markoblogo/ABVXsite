@@ -1,6 +1,16 @@
 /** Reuse the local illustration descriptors already used by Working Stories. */
 export function validateWritingIllustrations(data, body) {
  const errors=[];
+ let code=false;
+ for(const raw of body.replace(/\r\n/g,'\n').split('\n')) {
+  const line=raw.trim();
+  if(/^```[\w-]*$/.test(line)&&(!code||line==='```')){code=!code;continue;}
+  if(code)continue;
+  const prose=line.replace(/`[^`]+`/g,'');
+  if(/(?<!\\)!\[[^\]]*\]/.test(prose)) {
+   errors.push('Markdown images are not rendered; use illustrations metadata with afterHeading instead.');break;
+  }
+ }
  if(data.illustrations===undefined)return errors;
  if(!Array.isArray(data.illustrations))return ['illustrations must be an array'];
  const headings=[];let fenced=false;

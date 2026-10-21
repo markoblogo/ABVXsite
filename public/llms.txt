@@ -1327,6 +1327,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook, suffering
 
+- Psychology Notebook #02 — Being Yourself, Masks & the Inner Jury
+  URL: https://abvx.xyz/writing/psychology-notebook-02-identity-masks
+  Summary: Twenty translated notebook fragments on identity, self-esteem, masks and the exhausting business of being somebody else.
+  Group: writing
+  Tags: psychology-notebook, identity
+
 - The Salad I've Been Eating Almost Every Day for Two Weeks
   URL: https://abvx.xyz/writing/ham-radish-jalapeno-salad-french-style
   Summary: I've been eating almost the same salad every day for two weeks. It combines French cooked ham, radishes, jalapeño, blue cheese and two ready-made supermarket salads.

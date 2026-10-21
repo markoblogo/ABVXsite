@@ -7530,7 +7530,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-21T17:51:08.480Z",
+      "updatedAt": "2026-10-21T18:23:57.722Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8739,6 +8739,25 @@
       "tags": [
         "psychology-notebook",
         "suffering"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-21",
+      "updatedAt": "2026-10-21",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #02 — Being Yourself, Masks & the Inner Jury",
+      "summary": "Twenty translated notebook fragments on identity, self-esteem, masks and the exhausting business of being somebody else.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-02-identity-masks",
+      "tags": [
+        "psychology-notebook",
+        "identity"
       ],
       "links": [],
       "publishedAt": "2026-10-21",

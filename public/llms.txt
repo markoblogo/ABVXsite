@@ -1303,6 +1303,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: breton-food, yogurt, french-desserts, two-ingredient-recipes, no-cook-desserts, palets-bretons, nougat, kitchen-experiments
 
+- PlayMCP in Practice: Three Games, Real Costs, and a New Way to Make Video
+  URL: https://abvx.xyz/writing/playmcp-three-games-video-experiments
+  Summary: Three playable games, recorded platform-credit costs, and experiments turning interactive scenes into videos with PlayMCP, Codex and Framewright.
+  Group: writing
+  Tags: playmcp, ai-game-development, creative-tools, framewright, video-production, music-games, toki-pona
+
 - Première traduction française de Jeanne la bataillonneuse et Miss Adrienne de Géo Chkouroupiy
   URL: https://abvx.xyz/writing/premiere-traduction-francaise-jeanne-bataillonneuse-miss-adrienne
   Summary: Publication de la première traduction française de Jeanne la bataillonneuse et Miss Adrienne de Géo Chkouroupiy, dans le cadre du projet Modernisme ukrainien consacré aux écrivains ukrainiens des années 1920-1930.

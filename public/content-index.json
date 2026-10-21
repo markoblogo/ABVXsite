@@ -7530,7 +7530,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-21T16:15:27.172Z",
+      "updatedAt": "2026-10-21T17:51:08.480Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8630,6 +8630,41 @@
           "url": "https://www.youtube.com/watch?v=vAPgNupIp2s"
         }
       ],
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "PlayMCP in Practice: Three Games, Real Costs, and a New Way to Make Video",
+      "summary": "Three playable games, recorded platform-credit costs, and experiments turning interactive scenes into videos with PlayMCP, Codex and Framewright.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/playmcp-three-games-video-experiments",
+      "tags": [
+        "playmcp",
+        "ai-game-development",
+        "creative-tools",
+        "framewright",
+        "video-production",
+        "music-games",
+        "toki-pona"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Framewright on ABVX",
+          "url": "https://abvx.xyz/work/framewright"
+        },
+        {
+          "type": "github",
+          "label": "Framewright on GitHub",
+          "url": "https://github.com/markoblogo/framewright"
+        }
+      ],
+      "publishedAt": "2026-10-21",
+      "updatedAt": "2026-10-21",
       "related": []
     },
     {

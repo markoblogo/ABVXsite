@@ -1339,6 +1339,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook, desire
 
+- Psychology Notebook #04 — Identity, Responsibility & the Present
+  URL: https://abvx.xyz/writing/psychology-notebook-04-identity-responsibility-present
+  Summary: Twenty translated notebook fragments on ready-made identities, creating rather than consuming, responsibility and making room for the present.
+  Group: writing
+  Tags: psychology-notebook, identity
+
 - The Salad I've Been Eating Almost Every Day for Two Weeks
   URL: https://abvx.xyz/writing/ham-radish-jalapeno-salad-french-style
   Summary: I've been eating almost the same salad every day for two weeks. It combines French cooked ham, radishes, jalapeño, blue cheese and two ready-made supermarket salads.

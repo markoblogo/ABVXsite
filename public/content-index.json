@@ -7530,7 +7530,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-21T18:23:57.722Z",
+      "updatedAt": "2026-10-21T18:29:24.377Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8758,6 +8758,25 @@
       "tags": [
         "psychology-notebook",
         "identity"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-21",
+      "updatedAt": "2026-10-21",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #03 — Desire, Choice & Other People’s Lives",
+      "summary": "Twenty translated notebook fragments on desire, decisions, responsibility and borrowing someone else’s story.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-03-desire-choice",
+      "tags": [
+        "psychology-notebook",
+        "desire"
       ],
       "links": [],
       "publishedAt": "2026-10-21",

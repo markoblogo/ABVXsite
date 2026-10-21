@@ -7530,7 +7530,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-21T18:29:24.377Z",
+      "updatedAt": "2026-10-21T19:14:40.796Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8777,6 +8777,25 @@
       "tags": [
         "psychology-notebook",
         "desire"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-21",
+      "updatedAt": "2026-10-21",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #04 — Identity, Responsibility & the Present",
+      "summary": "Twenty translated notebook fragments on ready-made identities, creating rather than consuming, responsibility and making room for the present.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-04-identity-responsibility-present",
+      "tags": [
+        "psychology-notebook",
+        "identity"
       ],
       "links": [],
       "publishedAt": "2026-10-21",

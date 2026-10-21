@@ -98,3 +98,23 @@ test('native article photographs follow their heading with captions and lazy loa
   assert.ok(html.indexOf('<h3>Observations</h3>')<html.indexOf('alt="Original photograph"'));
   assert.ok(html.includes('loading="lazy"'));assert.ok(!html.includes('fetchPriority="high"'));
 });
+
+test('thematic breaks render semantic separators while code and inline hyphens stay literal',()=>{
+ for(const separator of ['---','***','___','- - -']) {
+  const html=render('Before.\n\n'+separator+'\n\nAfter.');
+  assert.equal((html.match(/<hr\b/g)||[]).length,1);
+  assert.ok(html.includes('<p>Before.</p>'));assert.ok(html.includes('<p>After.</p>'));
+ }
+ const html=render('Keep a---b and `---`.\n\n```\n---\n```');
+ assert.equal((html.match(/<hr\b/g)||[]).length,0);
+ assert.ok(html.includes('<pre><code>---</code></pre>'));
+});
+test('the published Psychology selection preserves all twenty authored fragment dividers',()=>{
+ const source=readFileSync(new URL('../content/writing/psychology-notebook-01-suffering-drama.md',import.meta.url),'utf8');
+ const end=source.indexOf('\n---',3),body=source.slice(end+4).trim();
+ assert.equal(body.split('\n').filter(line=>line==='---').length,20);
+ const html=render(body);
+ assert.equal((html.match(/<hr\b/g)||[]).length,20);
+ assert.ok(!html.includes('<p>---</p>'));
+ assert.ok(html.includes("Getting out of the misery loop"));
+});

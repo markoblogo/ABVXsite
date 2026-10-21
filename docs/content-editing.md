@@ -86,3 +86,5 @@ Book cards and detail pages place purchase and download actions first in larger,
 Native Writing articles may reuse `illustrations` descriptors (`src`, `alt`, `width`, `height`, `caption`, `afterHeading`) for original local photographs. Each illustration follows one uniquely matching Markdown heading, uses the existing MediaPanel with lazy loading, and requires a hashed asset mapping in full-source publication packets. Source validation rejects missing/ambiguous headings and duplicate paths.
 
 Markdown image syntax (`![alt](path)` or image references) is not supported by the Writing renderer and fails early validation. Use the existing `illustrations` metadata with `afterHeading`; code examples remain allowed.
+
+Standalone thematic-break lines (`---`, `***`, `___`, including spaced markers) render as semantic dividers. Markers inside fenced code or inline code remain literal. This supports notebook-fragment separation without modifying authored prose.

@@ -1333,6 +1333,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook, identity
 
+- Psychology Notebook #03 — Desire, Choice & Other People’s Lives
+  URL: https://abvx.xyz/writing/psychology-notebook-03-desire-choice
+  Summary: Twenty translated notebook fragments on desire, decisions, responsibility and borrowing someone else’s story.
+  Group: writing
+  Tags: psychology-notebook, desire
+
 - The Salad I've Been Eating Almost Every Day for Two Weeks
   URL: https://abvx.xyz/writing/ham-radish-jalapeno-salad-french-style
   Summary: I've been eating almost the same salad every day for two weeks. It combines French cooked ham, radishes, jalapeño, blue cheese and two ready-made supermarket salads.

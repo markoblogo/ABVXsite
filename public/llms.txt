@@ -1315,6 +1315,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook
 
+- Psychology Notebook #01 — Suffering, Drama & the Stories We Tell Ourselves
+  URL: https://abvx.xyz/writing/psychology-notebook-01-suffering-drama
+  Summary: Twenty translated notebook fragments on suffering, drama, repeated scripts and the stories we live inside.
+  Group: writing
+  Tags: psychology-notebook, suffering
+
 - The Salad I've Been Eating Almost Every Day for Two Weeks
   URL: https://abvx.xyz/writing/ham-radish-jalapeno-salad-french-style
   Summary: I've been eating almost the same salad every day for two weeks. It combines French cooked ham, radishes, jalapeño, blue cheese and two ready-made supermarket salads.

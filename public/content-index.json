@@ -7530,7 +7530,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-21T15:22:19.562Z",
+      "updatedAt": "2026-10-21T16:15:27.172Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8685,6 +8685,25 @@
       "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-introduction",
       "tags": [
         "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-21",
+      "updatedAt": "2026-10-21",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #01 — Suffering, Drama & the Stories We Tell Ourselves",
+      "summary": "Twenty translated notebook fragments on suffering, drama, repeated scripts and the stories we live inside.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-01-suffering-drama",
+      "tags": [
+        "psychology-notebook",
+        "suffering"
       ],
       "links": [],
       "publishedAt": "2026-10-21",

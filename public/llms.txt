@@ -23,6 +23,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/6OFAvsQ2XTw
   Summary: What if AI could help humans live to 150? Dario Amodei, CEO of Anthropic, believes artificial intelligence could accelerate medical research so dramatically that human lifespans might double within the next decade. His r
 
+- 418 Claude Opus 5.5 Videos With Prompts You Can Copy (Free AI Motion Design Library)
+  URL: https://abvx.xyz/writing/videos/720tTqmoORU
+  Summary: What if you could find hundreds of impressive AI-generated videos and see exactly how their creators made them? Not just watch the results. Get the prompts, study the techniques, and recreate the ideas yourself. Meet Ski
+
 - Spot-Market Handbook | How Physical Commodity Markets Work
   URL: https://abvx.xyz/writing/videos/7hkMaEjINZA
   Summary: A quote is only the beginning. Explore how grain, logistics, delivery terms and liquidity connect in physical commodity markets. Read Spot-Market Handbook — free English edition, available as PDF and EPUB: https://abvx.x
@@ -154,6 +158,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Every Startup Founder Has That ONE Deal That Never Closes
   URL: https://abvx.xyz/writing/videos/U-cVLltmoRM
   Summary: "We love your product!" "The team is really excited!" "Just waiting for final approval." "We should have everything signed next week." Three months later... Still closing. Any day now. Founders, drop a ❤️ if this feels p
+
+- Why Do Streetlights Look Like Stars? This Eye Simulator Shows You.
+  URL: https://abvx.xyz/writing/videos/uvM-jWwibOQ
+  Summary: Ever noticed how streetlights, car headlights, and distant stars turn into glowing halos, spikes, and strange patterns at night? Well, someone built a simulator that lets you explore exactly why that happens. Meet Engisc
 
 - Physical Commodity Markets: A Practical Book Collection | AMI Books
   URL: https://abvx.xyz/writing/videos/vAPgNupIp2s

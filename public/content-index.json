@@ -6948,6 +6948,29 @@
       "related": []
     },
     {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "418 Claude Opus 5.5 Videos With Prompts You Can Copy (Free AI Motion Design Library)",
+      "summary": "What if you could find hundreds of impressive AI-generated videos and see exactly how their creators made them? Not just watch the results. Get the prompts, study the techniques, and recreate the ideas yourself. Meet Ski",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/720tTqmoORU",
+      "publishedAt": "2026-10-21T14:52:15.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=720tTqmoORU"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "writing",
       "section": "writing",
       "ecosystem": "Writing",
@@ -7507,7 +7530,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-21T13:49:12.214Z",
+      "updatedAt": "2026-10-21T15:18:36.079Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9573,6 +9596,29 @@
       "links": [],
       "publishedAt": "2026-10-10",
       "updatedAt": "2026-10-10",
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Why Do Streetlights Look Like Stars? This Eye Simulator Shows You.",
+      "summary": "Ever noticed how streetlights, car headlights, and distant stars turn into glowing halos, spikes, and strange patterns at night? Well, someone built a simulator that lets you explore exactly why that happens. Meet Engisc",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/uvM-jWwibOQ",
+      "publishedAt": "2026-10-21T14:13:01.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=uvM-jWwibOQ"
+        }
+      ],
       "related": []
     },
     {

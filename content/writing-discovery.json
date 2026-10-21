@@ -835,6 +835,17 @@
     },
     {
       "source": "youtube",
+      "title": "418 Claude Opus 5.5 Videos With Prompts You Can Copy (Free AI Motion Design Library)",
+      "url": "https://www.youtube.com/watch?v=720tTqmoORU",
+      "publishedAt": "2026-10-21T14:52:15.000Z",
+      "excerpt": "What if you could find hundreds of impressive AI-generated videos and see exactly how their creators made them? Not just watch the results. Get the prompts, study the techniques, and recreate the ideas yourself. Meet Ski",
+      "coverImage": "https://i.ytimg.com/vi/720tTqmoORU/hqdefault.jpg",
+      "videoDescription": "What if you could find hundreds of impressive AI-generated videos and see exactly how their creators made them?\n\nNot just watch the results. Get the prompts, study the techniques, and recreate the ideas yourself.\n\nMeet Skillry, a growing library of viral videos created with Claude Opus 5.5.\n\nAnd it's basically a goldmine for anyone experimenting with AI-powered motion design.\n\nHere's what you'll find:\n\n418 AI video examples collected in one place\n\nMotion graphics, animated explainers, and visual effects\n\nInteractive 3D scenes and browser-based games\n\nOriginal videos alongside AI-generated recreations\n\nCreator-shared prompts you can copy for free\n\nExamples built with Three.js, Remotion, GSAP, Canvas, and other creative coding tools\n\nHere's how I'd use it:\n\nFind a video with a visual style you like.\n\nCopy the original prompt.\n\nGive Claude your logo, brand colors, and typography.\n\nAsk it to adapt the concept and create a detailed composition plan.\n\nRefine the animation and build something of your own.\n\nInstead of starting from a blank prompt, you start with a visual reference and a working example.\n\nAnd the most interesting part isn't copying someone else's animation.\n\nIt's learning how successful creative ideas are translated into instructions that AI coding agents can actually execute.\n\nWe're getting something like Pinterest for AI-generated motion graphics. Except this time, you can copy the instructions behind the visuals.\n\nDefinitely worth bookmarking.\n\nExplore the collection:\nhttps://skillry.dev/ai-videos/opus-5-5\n\n#ClaudeOpus #ClaudeCode #AIMotionDesign #CreativeCoding #AIAnimation #VibeCoding #Shorts",
+      "addedAt": "2026-10-21T15:18:36.079Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Spot-Market Handbook | How Physical Commodity Markets Work",
       "url": "https://www.youtube.com/watch?v=7hkMaEjINZA",
       "publishedAt": "2026-10-15T13:30:07.000Z",
@@ -1194,6 +1205,17 @@
       "coverImage": "https://i.ytimg.com/vi/U-cVLltmoRM/hqdefault.jpg",
       "videoDescription": "\"We love your product!\"\n\"The team is really excited!\"\n\"Just waiting for final approval.\"\n\"We should have everything signed next week.\"\nThree months later...\nStill closing. Any day now.\n\nFounders, drop a ❤️ if this feels painfully familiar.\nBecause apparently, \"verbal agreement\" is just another word for \"eternal optimism.\"\n\n#StartupLife #FounderLife #StartupMemes #SalesHumor #Entrepreneurship #Shorts",
       "addedAt": "2026-10-13T14:00:31.193Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
+      "title": "Why Do Streetlights Look Like Stars? This Eye Simulator Shows You.",
+      "url": "https://www.youtube.com/watch?v=uvM-jWwibOQ",
+      "publishedAt": "2026-10-21T14:13:01.000Z",
+      "excerpt": "Ever noticed how streetlights, car headlights, and distant stars turn into glowing halos, spikes, and strange patterns at night? Well, someone built a simulator that lets you explore exactly why that happens. Meet Engisc",
+      "coverImage": "https://i.ytimg.com/vi/uvM-jWwibOQ/hqdefault.jpg",
+      "videoDescription": "Ever noticed how streetlights, car headlights, and distant stars turn into glowing halos, spikes, and strange patterns at night?\nWell, someone built a simulator that lets you explore exactly why that happens.\n\nMeet Engiscope, an interactive browser-based tool that simulates how light behaves as it passes through the human eye.\nAnd it's surprisingly mesmerizing.\n\nHere's what you can experiment with:\n- Pupil size: See how changing the opening of your eye affects light patterns\n- Eyeglass prescription: Adjust sphere, cylinder, and astigmatism axis\n- Eyelashes and eyelids: Discover how they create distinctive light streaks\n- Optical aberrations: Experiment with distortions, halos, and starbursts\n- Chromatic aberration: Watch different colors of light separate\n- Night scenes: Explore simulated glare from bright lights in darkness\n\nThe simulator uses optical calculations, including something called the point spread function (PSF), to model how a tiny point of light spreads into patterns.\nIt's not a medical diagnostic tool or a perfect reproduction of your individual vision, but it's a fascinating way to explore the physics behind what we see.\nAnd the best part?\nYou can change the parameters and watch the results evolve.\nTurns out, your eyes have been doing procedural light effects long before computer graphics existed.\n\nTry Engiscope yourself:\nhttps://graycrawford.com/engiscope\n\n#Engiscope #HumanVision #OpticalIllusions #PhysicsSimulation #CreativeCoding #Shorts",
+      "addedAt": "2026-10-21T15:18:36.079Z",
       "addedAtBasis": "observed"
     },
     {

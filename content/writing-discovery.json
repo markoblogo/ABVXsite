@@ -521,6 +521,16 @@
     },
     {
       "source": "medium",
+      "title": "PHP2Shell: AI Found Two Critical PHP Bugs. The Internet Is Having a Very Bad Day.",
+      "url": "https://abvcreative.medium.com/php2shell-ai-found-two-critical-php-bugs-the-internet-is-having-a-very-bad-day-6ab35ef5439a",
+      "publishedAt": "2026-10-21T18:46:48.000Z",
+      "excerpt": "Two decade-old vulnerabilities threaten unpatched WordPress, Drupal and Joomla servers. AI didn’t create the bugs. It made exploiting them dramatically easier. I suspect tomorrow will be a rather unpleasant day for the i",
+      "coverImage": "https://cdn-images-1.medium.com/max/1024/1*GLNCxEKo-wxB3x1nogj7eg.png",
+      "addedAt": "2026-10-21T19:30:35.629Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "medium",
       "title": "Prompt Engineering Is Dead. Long Live Asking Better Questions.",
       "url": "https://abvcreative.medium.com/prompt-engineering-is-dead-long-live-asking-better-questions-ac9ea54c431c",
       "publishedAt": "2026-09-23T12:53:48.000Z",
@@ -939,6 +949,17 @@
     },
     {
       "source": "youtube",
+      "title": "He Used Claude Code to Remove Smart TV Ads and Make His TV 3× Faster",
+      "url": "https://www.youtube.com/watch?v=Ao-_E_l6F98",
+      "publishedAt": "2026-10-21T16:36:44.000Z",
+      "excerpt": "Smart TVs have become ridiculous. You buy a television, turn it on, and somehow end up staring at advertisements, sponsored recommendations, and apps you never asked for. One developer finally decided he'd had enough. So",
+      "coverImage": "https://i.ytimg.com/vi/Ao-_E_l6F98/hqdefault.jpg",
+      "videoDescription": "Smart TVs have become ridiculous.\n\nYou buy a television, turn it on, and somehow end up staring at advertisements, sponsored recommendations, and apps you never asked for.\n\nOne developer finally decided he'd had enough.\n\nSo he used Claude Code to reverse-engineer his TV and rebuild the entire home screen.\n\nMeet Free My TV, an open-source project that gives smart TVs a clean, Apple TV-inspired interface without the usual advertising clutter.\n\nAnd the results are pretty impressive.\n\nHere's what he achieved:\n\nReplaced the stock interface with a minimalist, Apple TV-style home screen\n\nRemoved sponsored content, banners, and autoplaying promotions\n\nDisabled unnecessary preinstalled apps and background services\n\nReported approximately 70% lower RAM usage\n\nClaimed a 3× faster interface\n\nAdded customizable apps, recommendations, weather, and automatic light/dark themes\n\nThe public repository also documents a 60% memory reduction for the home screen on a tested TCL Google TV.\n\nAnd here's the best part.\n\nHe made the whole thing open source.\n\nFree My TV can be installed on compatible smart TVs, customized using Claude Code, and reversed if you want your original interface back.\n\nNo root access required. No permanent deletion of the original system apps.\n\nIt's a fascinating example of AI-assisted reverse engineering and software customization.\n\nInstead of accepting whatever interface the manufacturer decided to ship, you can increasingly build something that actually works for you.\n\nImagine buying a $1,000 TV and needing an AI coding agent to remove the advertisements.\n\nActually, don't imagine it.\n\nThat's pretty much where we are.\n\nFree My TV on GitHub:\nhttps://github.com/simbasjungles/free-my-tv\n\nProject website:\nhttps://freemytv.io/\n\nOriginal demonstration:\nhttps://x.com/SimbasJungles/status/2112231637840765012\n\n#ClaudeCode #FreeMyTV #SmartTV #ReverseEngineering #OpenSource #VibeCoding #Shorts",
+      "addedAt": "2026-10-21T19:30:35.629Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "I Asked a Free AI Model to Create a Motion Graphics Showreel. This Is What It Made",
       "url": "https://www.youtube.com/watch?v=bAfDgoZdGrY",
       "publishedAt": "2026-10-19T15:49:04.000Z",
@@ -990,6 +1011,17 @@
       "coverImage": "https://i.ytimg.com/vi/cQS3nbBe6JM/hqdefault.jpg",
       "videoDescription": "What if you could turn almost any PC game into something completely different using AI?\nAnd what if Claude Code could handle the modding process for you?\n\nMeet Universal Modder, an open-source collection of AI agent skills and tools designed to make game modding dramatically easier.\nInstead of simply asking Claude to figure out how to modify a game, Universal Modder gives it a structured workflow, technical knowledge, and specialized tools.\nAnd the results can get pretty ridiculous. \n\nIn just a couple of hours, it helped create a GTA-style mod for SimCity 3000.\nYes, that SimCity 3000. The classic city-building game from 1999.\nAnd it didn't stop there. The workflow also produced a promotional video featuring actual gameplay footage from the mod.\n\nWhat Universal Modder can do:\n- Analyze games and identify their engines and modding possibilities\n- Research existing modding techniques and reverse-engineer game systems\n- Generate custom sprites, textures, 3D models, and audio\n- Build and test modifications inside actual games\n- Record real gameplay footage\n- Create promotional videos showcasing the results\n- Reuse accumulated modding knowledge across projects\n\nIt supports Claude Code, Codex, Gemini CLI, Cursor, and other AI coding agents.\nThe interesting part isn't just that AI can modify old games.\n\nIt's that giving AI agents specialized skills and proven workflows can produce much better results than simply asking them to figure everything out from scratch.\n\nA GTA-style mod inside SimCity 3000, complete with its own gameplay trailer, is a pretty entertaining demonstration of that idea.\nWe're entering an era where modding games might become less about knowing how to code and more about knowing what you want to create.\n\nUniversal Modder on GitHub:\nhttps://github.com/rehan-remade/universal-modder\nOpen source, MIT licensed.\n\n#ClaudeCode #AIGameModding #SimCity3000 #VibeCoding #AIAgents",
       "addedAt": "2026-10-11T14:48:33.057Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
+      "title": "SpaceX Plans to Catch BOTH Starship Stages in November! | Flight 15",
+      "url": "https://www.youtube.com/watch?v=GJhICBW4eMI",
+      "publishedAt": "2026-10-21T15:11:26.000Z",
+      "excerpt": "SpaceX is preparing to attempt something that has never been done before. Catch an entire orbital rocket system using giant mechanical arms. Both stages. On the same mission. During SpaceX's Q3 2026 earnings presentation",
+      "coverImage": "https://i.ytimg.com/vi/GJhICBW4eMI/hqdefault.jpg",
+      "videoDescription": "SpaceX is preparing to attempt something that has never been done before.\n\nCatch an entire orbital rocket system using giant mechanical arms. Both stages. On the same mission.\n\nDuring SpaceX's Q3 2026 earnings presentation, Elon Musk and Gwynne Shotwell confirmed an ambitious plan for the upcoming Starship Flight 15, currently targeted for November 2026.\n\nAnd this time, catching the Super Heavy booster isn't enough.\n\nThey want to catch Starship itself, too.\n\nHere's the plan:\n\nSuper Heavy booster: Return to Starbase and be caught by the launch tower's giant mechanical arms, nicknamed \"Mechazilla chopsticks.\"\n\nStarship spacecraft: Return from orbit, survive atmospheric reentry, and be caught by the tower instead of splashing down in the ocean.\n\nBoth stages recovered: A potential historic milestone toward a fully reusable orbital launch system.\n\nSpaceX is already working with the FAA on regulatory approval for returning and catching both stages at Starbase.\n\nAnd Elon Musk sounds surprisingly optimistic.\n\nHe described the chances of success as \"more likely than not.\"\n\nOf course, catching a massive spacecraft returning from orbit is a completely different challenge from recovering a booster.\n\nAnd success is far from guaranteed.\n\nBut if SpaceX pulls this off, it could mark a major breakthrough in reusable rocket technology.\n\nWhy does this matter?\n\nBecause the ultimate goal isn't simply landing rockets.\n\nIt's building a transportation system where both stages can be recovered, refurbished, and launched again, eventually operating more like aircraft than disposable spacecraft.\n\nThat could dramatically change the economics of reaching orbit and support future missions to the Moon and Mars.\n\nIn this video, you'll see:\n\nSpaceX's official animation of the planned Starship tower catch\n\nThe proposed Flight 15 recovery sequence\n\nHighlights from Starship Flight 14, which successfully reached orbit and deployed 26 Starlink V3 satellites\n\nFlight 15 is currently expected in November 2026, pending regulatory approval and launch readiness.\n\nOne giant rocket. Two extraordinary catches.\n\nFingers crossed. This is going to be quite a show.\n\nSpaceX Q3 2026 presentation:\nhttps://ir.spacex.com/events/event-details/2026/Q3-2026-Earnings/default.aspx\n\nStarship Flight 14 recap:\nhttps://www.spacex.com/launches/starship-flight-14\n\nSpaceX Starship program:\nhttps://www.spacex.com/vehicles/starship\n\n#SpaceX #Starship #StarshipFlight15 #Mechazilla #ElonMusk #RocketLaunch",
+      "addedAt": "2026-10-21T19:30:35.629Z",
       "addedAtBasis": "observed"
     },
     {
@@ -1115,6 +1147,17 @@
     },
     {
       "source": "youtube",
+      "title": "GPT-6 Astra vs DeepSeek V4.1 Flash: Same Prompt, $7 vs $0.90. Who Did Better?",
+      "url": "https://www.youtube.com/watch?v=n5HYXnUWoNY",
+      "publishedAt": "2026-10-21T15:38:34.000Z",
+      "excerpt": "What happens when you give two powerful AI models exactly the same creative challenge? One developer decided to find out. They tested GPT-6 Astra against DeepSeek V4.1-1017 Flash, using the same prompt and maximum reason",
+      "coverImage": "https://i.ytimg.com/vi/n5HYXnUWoNY/hqdefault.jpg",
+      "videoDescription": "What happens when you give two powerful AI models exactly the same creative challenge?\n\nOne developer decided to find out.\n\nThey tested GPT-6 Astra against DeepSeek V4.1-1017 Flash, using the same prompt and maximum reasoning settings.\n\nAnd the results were genuinely surprising.\n\nThe numbers:\n\nGPT-6 Astra: 20 minutes, $7.00\n\nDeepSeek V4.1 Flash: 1 hour 40 minutes, $0.90\n\nAstra finished 5 times faster, but cost almost 8 times more.\n\nAnd here's where things get interesting.\n\nAstra's result was impressively detailed, carefully composed, and surprisingly original. It showed a level of visual creativity that you don't always see from GPT models.\n\nDeepSeek took a completely different approach.\n\nIts environment was absolutely stunning, with beautiful scenery and atmosphere. But there was one small problem.\n\nThe koi fish.\n\nLet's just say the fish weren't quite as convincing as the rest of the scene.\n\nSo which model wins?\n\nAstra delivered speed, precision, and originality at a premium price.\n\nDeepSeek delivered remarkable environmental design at a fraction of the cost, but needed significantly more time and struggled with some details.\n\nOf course, this is a single creative experiment, not a comprehensive benchmark.\n\nBut it illustrates something important about AI-assisted creative work.\n\nThe most expensive model doesn't necessarily produce the most interesting result. And the cheapest model isn't necessarily the best value if time matters.\n\nSometimes the real question isn't which AI model is smarter.\n\nIt's which one you actually prefer looking at.\n\nWhat would you choose: the $7 result in 20 minutes or the $0.90 result in 100 minutes?\n\n#GPT6 #DeepSeek #Astra #AICoding #VibeCoding #GenerativeAI #AIComparison",
+      "addedAt": "2026-10-21T19:30:35.629Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Scientists Put a Fruit Fly's Brain Inside an AI-Generated World. It Started Exploring.",
       "url": "https://www.youtube.com/watch?v=nBzbwlcAElY",
       "publishedAt": "2026-10-19T12:42:05.000Z",
@@ -1122,6 +1165,17 @@
       "coverImage": "https://i.ytimg.com/vi/nBzbwlcAElY/hqdefault.jpg",
       "videoDescription": "We may have just witnessed one of the strangest AI experiments of 2026.\nResearchers connected a simulated fruit fly brain to Odyssey-3, an AI world model capable of generating interactive virtual environments in real time.\nAnd then they let it explore.\nNo real landscapes. No physical insect. Just a digital simulation of a biological brain navigating a world generated by another artificial intelligence.\nThink about that for a second.\nA brain modeled after a living creature is exploring places that have never existed.\n\nHere's what makes this fascinating:\n- The brain: A software simulation inspired by the neural circuitry of a fruit fly.\n- The environment: Odyssey-3, a generative AI model that creates interactive worlds.\n- The experiment: The simulated fly appears to navigate these artificial environments autonomously.\n- The bigger picture: AI-generated worlds could become experimental environments for studying biological and artificial intelligence.\n\nOdyssey shared the demonstration on October 17, 2026.\nThe technical details haven't been published yet, so we don't know exactly how faithfully the fly's brain is simulated or how its neural activity controls movement.\nBut even as an early experiment, the concept is extraordinary.\nWe're connecting simulations of biological nervous systems to environments imagined by artificial intelligence.\nOne AI creates the universe. A simulated biological brain explores it.\nScience fiction is having a very difficult time keeping up.\n\nLearn more about Odyssey-3:\nhttps://odyssey.systems/introducing-odyssey-3\nTry Odyssey-3 yourself:\nhttps://experience.odyssey.systems/\n\n#Odyssey3 #ArtificialIntelligence #BrainSimulation #AIWorldModels #Neuroscience #Shorts",
       "addedAt": "2026-10-19T12:55:04.692Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
+      "title": "PlayMCP Review: I Made 3 AI Games — Tools, Challenges & Costs",
+      "url": "https://www.youtube.com/watch?v=NVeMJLidncU",
+      "publishedAt": "2026-10-21T15:47:08.000Z",
+      "excerpt": "What is PlayMCP, and how do you turn an idea and a music track into a playable game? This hands-on review covers the agent workflow, creative tools, testing, hosting, community challenges and my three published experimen",
+      "coverImage": "https://i.ytimg.com/vi/NVeMJLidncU/hqdefault.jpg",
+      "videoDescription": "What is PlayMCP, and how do you turn an idea and a music track into a playable game? This hands-on review covers the agent workflow, creative tools, testing, hosting, community challenges and my three published experiments.\n\nI tried three different directions: a comic coffee battle, reverse Tetris with my own music, and a Toki Pona vocabulary game built around a book. You’ll see real website captures, recorded game demonstrations and the platform credits retained in my production records.\n\nCHAPTERS\n00:00 What is PlayMCP?\n00:19 Connect your AI agent\n00:39 Creative tools: music, artwork and animation\n00:49 Test, host and publish\n01:02 Community and First Music Game\n01:23 Three hands-on game experiments\n02:00 Credits and recorded project costs\n02:12 Framewright: games as video material\n\nTRY PLAYMCP\nPlatform: https://playmcp.io/\nConnect your agent: https://playmcp.io/create\nMy games: https://playmcp.io/u/markoblogo\nFirst Music Game challenge: https://playmcp.io/c/your-first-music-game/about\n\nPLAY THE THREE GAMES\nDisco Coffee Showdown: https://playmcp.io/g/g_4FzN0mD8\nSIRTET — Bury the Machine: https://playmcp.io/g/g_hxx3yDS0\nJekyll or Hyde — A Toki Pona Reading Duel: https://playmcp.io/g/g_Zr0bwMnL\n\nWATCH THE INDIVIDUAL VIDEOS\nDisco Coffee Showdown: https://youtu.be/WLBxcM5JQ3U\nSIRTET: https://youtu.be/wPIyeBYJZbQ\nJekyll & Hyde book promo: https://youtu.be/GPfkz36JWbI\n\nFRAMEWRIGHT\nThe video-production methods and saved-project workflow used for these experiments:\nhttps://github.com/markoblogo/framewright\n\nABOUT THE NUMBERS\nCoffee: 21,294 platform credits. Jekyll or Hyde: 22,838. SIRTET: at least 12,000 credits in directly retained phase records; a complete itemised total is not established. These are my project experiments, including revisions and checks, not fixed prices for making a game. AI-agent/model usage is separate. Cost records are through 19 October 2026; website and challenge details were checked on 21 October 2026. Challenge terms and availability can change.\n\nPRODUCTION NOTES\nNarration recorded by Anton Biletskiy-Volokh and edited locally. Gameplay examples use recorded scripted inputs; the SIRTET sequence also uses a fixed seed. A held frame makes the vocabulary choices readable. Character imagery and performances include AI-generated assets. No account signup was staged; the connection view shows my existing account.\n\nTransition SFX: Sound by DJT4NN3R, CC0, via Freesound/Openverse:\nhttps://freesound.org/people/DJT4NN3R/sounds/449992/\nMusic bed: original locally composed instrumental for this review.\n\n#PlayMCP #AIGames #GameDevelopment",
+      "addedAt": "2026-10-21T19:30:35.629Z",
       "addedAtBasis": "observed"
     },
     {

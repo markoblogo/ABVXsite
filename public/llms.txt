@@ -39,6 +39,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/89kTx1LhEP0
   Summary: The world changed. The dogs read the fine print. Meet Mriya, a former shelter dog navigating a city rewritten by the System. Good Dogs of the Apocalypse is a darkly comic, dog-centered LitRPG series about survival, found
 
+- He Used Claude Code to Remove Smart TV Ads and Make His TV 3× Faster
+  URL: https://abvx.xyz/writing/videos/Ao-_E_l6F98
+  Summary: Smart TVs have become ridiculous. You buy a television, turn it on, and somehow end up staring at advertisements, sponsored recommendations, and apps you never asked for. One developer finally decided he'd had enough. So
+
 - I Asked a Free AI Model to Create a Motion Graphics Showreel. This Is What It Made
   URL: https://abvx.xyz/writing/videos/bAfDgoZdGrY
   Summary: What happens when you ask an AI model to prove it's a world-class motion designer? Meet Space Bunny Alpha, a mysterious AI model that appeared on OpenRouter and OpenCode with impressive coding capabilities and a 1-millio
@@ -58,6 +62,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Claude Code Built a GTA Mod for SimCity 3000 in Just 2 Hours
   URL: https://abvx.xyz/writing/videos/cQS3nbBe6JM
   Summary: What if you could turn almost any PC game into something completely different using AI? And what if Claude Code could handle the modding process for you? Meet Universal Modder, an open-source collection of AI agent skill
+
+- SpaceX Plans to Catch BOTH Starship Stages in November! | Flight 15
+  URL: https://abvx.xyz/writing/videos/GJhICBW4eMI
+  Summary: SpaceX is preparing to attempt something that has never been done before. Catch an entire orbital rocket system using giant mechanical arms. Both stages. On the same mission. During SpaceX's Q3 2026 earnings presentation
 
 - Jekyll and Hyde in Toki Pona | A Classic in a New Voice
   URL: https://abvx.xyz/writing/videos/GPfkz36JWbI
@@ -103,9 +111,17 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/mt0MOEpoj1c
   Summary: We have officially reached a new milestone in AI-generated content. AI can now produce videos faster than humans can watch them. And the internet is responding exactly as you'd expect. With infinite AI slop. AI infrastru
 
+- GPT-6 Astra vs DeepSeek V4.1 Flash: Same Prompt, $7 vs $0.90. Who Did Better?
+  URL: https://abvx.xyz/writing/videos/n5HYXnUWoNY
+  Summary: What happens when you give two powerful AI models exactly the same creative challenge? One developer decided to find out. They tested GPT-6 Astra against DeepSeek V4.1-1017 Flash, using the same prompt and maximum reason
+
 - Scientists Put a Fruit Fly's Brain Inside an AI-Generated World. It Started Exploring.
   URL: https://abvx.xyz/writing/videos/nBzbwlcAElY
   Summary: We may have just witnessed one of the strangest AI experiments of 2026. Researchers connected a simulated fruit fly brain to Odyssey-3, an AI world model capable of generating interactive virtual environments in real tim
+
+- PlayMCP Review: I Made 3 AI Games — Tools, Challenges & Costs
+  URL: https://abvx.xyz/writing/videos/NVeMJLidncU
+  Summary: What is PlayMCP, and how do you turn an idea and a music track into a playable game? This hands-on review covers the agent workflow, creative tools, testing, hosting, community challenges and my three published experimen
 
 - GTA 5 Gets Spider-Man 2 Web-Swinging! AI-Assisted Game Mod
   URL: https://abvx.xyz/writing/videos/ogc-oZoebH0

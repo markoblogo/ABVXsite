@@ -7530,7 +7530,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-21T19:14:40.796Z",
+      "updatedAt": "2026-10-21T19:30:35.629Z",
       "tags": [],
       "links": [],
       "related": []
@@ -7752,6 +7752,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "GPT-6 Astra vs DeepSeek V4.1 Flash: Same Prompt, $7 vs $0.90. Who Did Better?",
+      "summary": "What happens when you give two powerful AI models exactly the same creative challenge? One developer decided to find out. They tested GPT-6 Astra against DeepSeek V4.1-1017 Flash, using the same prompt and maximum reason",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/n5HYXnUWoNY",
+      "publishedAt": "2026-10-21T15:38:34.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=n5HYXnUWoNY"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "GTA 5 Gets Spider-Man 2 Web-Swinging! AI-Assisted Game Mod",
       "summary": "Spider-Man 2's web-swinging mechanics are now running inside GTA 5. And AI coding agents helped make it possible. Meet Web of Los Santos, a GTA V mod that brings Spider-Man 2-inspired movement into Los Santos. Web-swingi",
       "canonicalUrl": "https://abvx.xyz/writing/videos/ogc-oZoebH0",
@@ -7811,6 +7834,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=RsUVTrr3Dmc"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "He Used Claude Code to Remove Smart TV Ads and Make His TV 3× Faster",
+      "summary": "Smart TVs have become ridiculous. You buy a television, turn it on, and somehow end up staring at advertisements, sponsored recommendations, and apps you never asked for. One developer finally decided he'd had enough. So",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/Ao-_E_l6F98",
+      "publishedAt": "2026-10-21T16:36:44.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=Ao-_E_l6F98"
         }
       ],
       "related": []
@@ -8668,6 +8714,29 @@
       "related": []
     },
     {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "PlayMCP Review: I Made 3 AI Games — Tools, Challenges & Costs",
+      "summary": "What is PlayMCP, and how do you turn an idea and a music track into a playable game? This hands-on review covers the agent workflow, creative tools, testing, hosting, community challenges and my three published experimen",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/NVeMJLidncU",
+      "publishedAt": "2026-10-21T15:47:08.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=NVeMJLidncU"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "writing",
       "section": "writing",
       "ecosystem": "Writing",
@@ -8959,6 +9028,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=jEIPftaweBM"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "SpaceX Plans to Catch BOTH Starship Stages in November! | Flight 15",
+      "summary": "SpaceX is preparing to attempt something that has never been done before. Catch an entire orbital rocket system using giant mechanical arms. Both stages. On the same mission. During SpaceX's Q3 2026 earnings presentation",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/GJhICBW4eMI",
+      "publishedAt": "2026-10-21T15:11:26.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=GJhICBW4eMI"
         }
       ],
       "related": []

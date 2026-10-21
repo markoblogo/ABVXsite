@@ -23,9 +23,21 @@ export function productionReadiness(pr, deployments, statuses) {
  if(['failure','error','inactive'].includes(status.state))throw Error('Production deployment failed or became inactive');
  return status.environment==='Production'&&status.state==='success';
 }
+// Only the configured bot's current-head receipt counts; ordinary comments,
+// old reviews and a missing receipt are not approvals.
+export function codexReviewState(comments,head) {
+ for(const comment of [...comments].reverse()) {
+  if(comment.user?.login!=='chatgpt-codex-connector[bot]'||comment.user?.type!=='Bot')continue;
+  const match=comment.body?.match(/<!-- codex-review-state:v1 ([\s\S]*?) -->/);
+  if(!match)continue;
+  try {const review=JSON.parse(match[1]).code_review;if(review?.commit_sha===head)return review;}catch { /* Incomplete receipt stays unknown. */ }
+ }
+ return null;
+}
+
 // Read-only waiting logic; a provider backlog is pending, not a failed build.
 export async function waitForReadiness(options, io) {
- const {phase,head,mergeSha,timeoutMs=30*60_000}=options;
+ const {phase,head,mergeSha,reviewRequired=false,timeoutMs=30*60_000}=options;
  const {getPr,api,now,sleep,onProgress=async()=>{}}=io;
  const start=now(),deadline=start+timeoutMs;let acknowledged=false,lastStatus=null,interval=5000,lastPr;
  while(now()<deadline) {
@@ -48,6 +60,11 @@ export async function waitForReadiness(options, io) {
     ready=productionReadiness(pr,deployments,statuses);
     status=deployments[0]?.sha!==mergeSha?'WAITING_FOR_PROVIDER':'WAITING_FOR_PROVIDER_BUILD';
    }
+  }
+  if(ready&&reviewRequired) {
+   const review=await io.getReview(head);
+   ready=review?.commit_sha===head&&review.status==='completed';
+   if(!ready)status='WAITING_FOR_REVIEW';
   }
   if(ready)status='READY';
   if(status!==lastStatus) {
@@ -96,7 +113,7 @@ async function main() {
  const save=patch=>{Object.assign(state,patch,{updatedAt:new Date().toISOString(),elapsedMs:Date.now()-Date.parse(startedAt)});writeFileSync(journal,JSON.stringify(state,null,2)+'\n');};
  let platformChecked=false;
  try {
-  const result=await waitForReadiness({phase,head,mergeSha,timeoutMs},{getPr,api,now:Date.now,sleep:ms=>new Promise(resolve=>setTimeout(resolve,ms)),onProgress:async progress=>{
+  const result=await waitForReadiness({phase,head,mergeSha,timeoutMs,reviewRequired:phase==='preview'},{getPr,api,getReview:head=>codexReviewState(api(`issues/${prNumber}/comments?per_page=100`),head),now:Date.now,sleep:ms=>new Promise(resolve=>setTimeout(resolve,ms)),onProgress:async progress=>{
    save(progress);console.log(`${phase}: ${progress.status} (${Math.round(state.elapsedMs/1000)}s elapsed)`);
    if(progress.status.startsWith('WAITING_FOR_PROVIDER')&&!platformChecked) {
     platformChecked=true;const platforms=await platformIncidents();save({platforms});
@@ -119,7 +136,7 @@ async function main() {
   const completedAt=new Date().toISOString(),status=phase==='preview'?'READY_FOR_REVIEW':'PRODUCTION_QA_PASS';
   save({status,completedAt,retryable:false});
   writeFileSync(`${directory}/${phase}-ready.json`,JSON.stringify(state,null,2)+'\n');
-  console.log(phase==='preview'?'CI and Vercel Preview passed. Review feedback before the authorized merge.':'Production SHA and QA passed. Close the existing OS cycle immediately; Cortex transfer can retry independently.');
+  console.log(phase==='preview'?'CI, Vercel Preview and current-head review completed. Inspect findings before the authorized merge.':'Production SHA and QA passed. Close the existing OS cycle immediately; Cortex transfer can retry independently.');
  } catch(error) {save({status:'FAILED',retryable:false,error:error.message});throw error;}
 }
 if(process.argv[1]&&fileURLToPath(import.meta.url)===process.argv[1])await main();

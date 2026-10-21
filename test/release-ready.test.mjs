@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { previewReadiness, productionReadiness, waitForReadiness, platformIncidents } from '../scripts/release-ready.mjs';
+import { previewReadiness, productionReadiness, waitForReadiness, platformIncidents, codexReviewState } from '../scripts/release-ready.mjs';
 const checks=[{__typename:'CheckRun',name:'verify',workflowName:'CI',status:'COMPLETED',conclusion:'SUCCESS'},{__typename:'StatusContext',context:'Vercel',state:'SUCCESS'}];
 test('preview waits for both CI and provider and rejects failure or changed head',()=>{
  const pr={state:'OPEN',baseRefName:'main',headRefOid:'a',statusCheckRollup:checks};
@@ -64,4 +64,19 @@ test('provider status is advisory and a failed status lookup remains unknown',as
  const incidents=await platformIncidents(async()=>({ok:true,json:async()=>({incidents:[{id:'incident',name:'Webhook delivery delay',status:'investigating'}]})}));
  assert.equal(incidents[0].incidents[0].name,'Webhook delivery delay');
  assert.equal(incidents[0].incidents[0].url,'https://www.githubstatus.com/incidents/incident');
+});
+
+test('configured review must finish on the exact current head before preview readiness',async()=>{
+ const pr={state:'OPEN',baseRefName:'main',headRefOid:'new',statusCheckRollup:checks};
+ const fake=clocked(()=>pr);let reviewCalls=0;
+ fake.io.getReview=async()=>{reviewCalls++;return reviewCalls===1?{commit_sha:'old',status:'completed'}:reviewCalls===2?{commit_sha:'new',status:'running'}:{commit_sha:'new',status:'completed'};};
+ assert.equal((await waitForReadiness({phase:'preview',head:'new',reviewRequired:true},fake.io)).status,'READY');
+ assert.equal(reviewCalls,3);assert.ok(fake.progress.some(p=>p.status==='WAITING_FOR_REVIEW'));
+});
+test('review receipts from a human, old head or malformed metadata do not authorize readiness',()=>{
+ const comment=(login,type,head,status='completed')=>({user:{login,type},body:'<!-- codex-review-state:v1 '+JSON.stringify({code_review:{commit_sha:head,status}})+' -->'});
+ const valid=comment('chatgpt-codex-connector[bot]','Bot','new');
+ assert.equal(codexReviewState([comment('someone','User','new'),comment('chatgpt-codex-connector[bot]','Bot','old')],'new'),null);
+ assert.equal(codexReviewState([valid],'new').status,'completed');
+ assert.equal(codexReviewState([{...valid,body:'<!-- codex-review-state:v1 broken -->'}],'new'),null);
 });

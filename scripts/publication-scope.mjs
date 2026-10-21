@@ -23,10 +23,16 @@ export function publicationScope(base, head='HEAD', cwd=process.cwd(), includeWo
    const fields=git(...args).split('\0').filter(Boolean);
    for(let i=0;i<fields.length;i+=2) changed.set(fields[i+1],fields[i]);
   };
-  collect(['diff','--no-renames','--name-status','-z',base,head,'--']);
+  if(includeWorking && git('rev-parse',head).trim()!==git('rev-parse','HEAD').trim())return full('working-tree-head-mismatch');
+  // Classify the final tree against the release base. An amendment to a newly
+  // committed file is still an addition relative to that base.
+  collect(['diff','--no-renames','--name-status','-z',base,...(includeWorking?[]:[head]),'--']);
   if(includeWorking) {
-   collect(['diff','--no-renames','--name-status','-z','HEAD','--']);
-   for(const file of git('ls-files','--others','--exclude-standard','-z').split('\0').filter(Boolean)) changed.set(file,'A');
+   for(const file of git('ls-files','--others','--exclude-standard','-z').split('\0').filter(Boolean)) {
+    // An untracked replacement of a base file must not disguise an existing
+    // asset edit as a new, allowlisted asset.
+    changed.set(file,changed.get(file)==='D'?'M':'A');
+   }
   }
   const routes=new Set(), hubs=new Set(['/']), families=new Set();
   for(const [file,status] of changed) {

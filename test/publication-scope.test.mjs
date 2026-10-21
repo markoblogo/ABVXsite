@@ -119,3 +119,31 @@ test('unchanged published series media use their canonical route and existing le
   writeFileSync(file,source({...added,title:'Changed'}));assert.equal(publicationScope(base,'HEAD',root,true).profile,'full');
  }finally{rmSync(root,{recursive:true,force:true});}
 });
+
+test('an amended new article and cover remain additions relative to the release base',()=>{
+ const root=mkdtempSync(path.join(tmpdir(),'abvx-scope-amend-'));
+ const git=(...args)=>execFileSync('git',args,{cwd:root,encoding:'utf8'}).trim();
+ const commit=()=>{git('add','.');git('-c','user.name=Test','-c','user.email=test@example.invalid','commit','-qm','fixture');return git('rev-parse','HEAD');};
+ try {
+  git('init','-q');writeFileSync(path.join(root,'README.md'),'base');const base=commit();
+  mkdirSync(path.join(root,'content/writing'),{recursive:true});mkdirSync(path.join(root,'public/media'),{recursive:true});
+  const post=path.join(root,'content/writing/post.md');const cover=path.join(root,'public/media/new.webp');
+  const source=text=>'---\n'+JSON.stringify({slug:'post',title:'Post',status:'live',visibility:'public',publishedAt:'2020-01-01'})+'\n---\n'+text;
+  writeFileSync(post,source('First draft.'));writeFileSync(cover,'first');commit();
+  writeFileSync(post,source('Corrected approved prose.'));writeFileSync(cover,'corrected');
+  assert.equal(publicationScope(base,'HEAD',root,true).profile,'publication-v1');
+  git('add','.');assert.equal(publicationScope(base,'HEAD',root,true).profile,'publication-v1');
+  rmSync(post);assert.equal(publicationScope(base,'HEAD',root,true).reason,'no-native-publication');
+ } finally {rmSync(root,{recursive:true,force:true});}
+});
+
+test('removing an existing media file from the index and readding it untracked cannot disguise replacement as new media',()=>{
+ const root=mkdtempSync(path.join(tmpdir(),'abvx-scope-replace-'));
+ const git=(...args)=>execFileSync('git',args,{cwd:root,encoding:'utf8'}).trim();
+ try {
+  git('init','-q');mkdirSync(path.join(root,'public/media'),{recursive:true});writeFileSync(path.join(root,'public/media/old.webp'),'old');git('add','.');git('-c','user.name=Test','-c','user.email=test@example.invalid','commit','-qm','base');const base=git('rev-parse','HEAD');
+  git('rm','--cached','public/media/old.webp');writeFileSync(path.join(root,'public/media/old.webp'),'replacement');
+  mkdirSync(path.join(root,'content/writing'),{recursive:true});writeFileSync(path.join(root,'content/writing/post.md'),'---\n'+JSON.stringify({slug:'post',title:'Post',status:'live',visibility:'public',publishedAt:'2020-01-01'})+'\n---\nProse.');
+  assert.equal(publicationScope(base,'HEAD',root,true).profile,'full');
+ }finally{rmSync(root,{recursive:true,force:true});}
+});

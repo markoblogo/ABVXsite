@@ -7507,7 +7507,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-20T14:28:18.997Z",
+      "updatedAt": "2026-10-21T13:49:12.214Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9105,6 +9105,39 @@
       "publishedAt": "2026-08-14",
       "updatedAt": "2026-08-14",
       "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Ukha from a Rooster: The Fish Soup That Becomes an Entire Feast",
+      "summary": "A Bulgarian acquaintance in southern Ukraine taught me a remarkable recipe: start with a rooster, add three kinds of fish, and turn one enormous pot of broth into an entire holiday feast.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/ukha-iz-petukha-rooster-fish-soup",
+      "tags": [
+        "ukha",
+        "rooster-broth",
+        "fish-soup",
+        "bessarabian-food",
+        "bulgarian-family-recipes",
+        "southern-ukraine",
+        "lyok-sauce",
+        "food-memories",
+        "festive-cooking"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-21",
+      "updatedAt": "2026-10-21",
+      "related": [
+        {
+          "title": "Kitchen Notes",
+          "canonicalUrl": "https://abvx.xyz/writing/kitchen-notes",
+          "relation": "collection"
+        }
+      ],
+      "collection": "kitchen-notes"
     },
     {
       "type": "working-story",

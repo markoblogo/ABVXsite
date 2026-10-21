@@ -1319,6 +1319,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: books, psychology, economics
 
+- Ukha from a Rooster: The Fish Soup That Becomes an Entire Feast
+  URL: https://abvx.xyz/writing/ukha-iz-petukha-rooster-fish-soup
+  Summary: A Bulgarian acquaintance in southern Ukraine taught me a remarkable recipe: start with a rooster, add three kinds of fish, and turn one enormous pot of broth into an entire holiday feast.
+  Group: writing
+  Tags: ukha, rooster-broth, fish-soup, bessarabian-food, bulgarian-family-recipes, southern-ukraine, lyok-sauce, food-memories
+
 - Вийшов перший французький переклад Jeanne la bataillonneuse та Miss Adrienne Гео Шкурупія
   URL: https://abvx.xyz/writing/vyishov-pershyi-frantsuzkyi-pereklad-jeanne-bataillonneuse
   Summary: На Amazon вийшов перший французький переклад Jeanne la bataillonneuse та Miss Adrienne Гео Шкурупія, частина проєкту Modernisme ukrainien про українську літературу 1920–1930-х років.

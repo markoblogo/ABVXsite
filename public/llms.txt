@@ -1361,6 +1361,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook, identity
 
+- Psychology Notebook #05 — Wanting, Choosing & the Trouble with Guarantees
+  URL: https://abvx.xyz/writing/psychology-notebook-05-wanting-choosing-guarantees
+  Summary: Twenty translated notebook fragments on wanting something of your own, making choices and waiting for guarantees that life cannot offer.
+  Group: writing
+  Tags: psychology-notebook, desire
+
+- Psychology Notebook #06 — Closeness, Expectations & the Need for Two People
+  URL: https://abvx.xyz/writing/psychology-notebook-06-closeness-expectations-exchange
+  Summary: Twenty translated notebook fragments on closeness, one-sided expectations, manipulation and the exchange that makes a relationship alive.
+  Group: writing
+  Tags: psychology-notebook, relationships
+
 - The Other Rooster Fish Soup: 20 Minutes, Two Cans, and No Rooster
   URL: https://abvx.xyz/writing/easy-canned-salmon-pea-soup
   Summary: One fish soup takes a rooster, several kinds of fish and an entire day. The other needs two stock cubes, canned salmon, green peas and twenty minutes. I learned this wonderfully simple recipe from a Belarusian friend.

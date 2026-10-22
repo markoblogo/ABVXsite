@@ -7530,7 +7530,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-21T21:46:00.296Z",
+      "updatedAt": "2026-10-22T09:31:33.932Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8869,6 +8869,44 @@
       "links": [],
       "publishedAt": "2026-10-21",
       "updatedAt": "2026-10-21",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #05 — Wanting, Choosing & the Trouble with Guarantees",
+      "summary": "Twenty translated notebook fragments on wanting something of your own, making choices and waiting for guarantees that life cannot offer.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-05-wanting-choosing-guarantees",
+      "tags": [
+        "psychology-notebook",
+        "desire"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-22",
+      "updatedAt": "2026-10-22",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #06 — Closeness, Expectations & the Need for Two People",
+      "summary": "Twenty translated notebook fragments on closeness, one-sided expectations, manipulation and the exchange that makes a relationship alive.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-06-closeness-expectations-exchange",
+      "tags": [
+        "psychology-notebook",
+        "relationships"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-22",
+      "updatedAt": "2026-10-22",
       "related": []
     },
     {

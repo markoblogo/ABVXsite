@@ -7553,7 +7553,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-23T20:28:27.553Z",
+      "updatedAt": "2026-10-23T21:02:14.175Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8167,6 +8167,38 @@
       "links": [],
       "publishedAt": "2026-10-19",
       "updatedAt": "2026-10-19",
+      "related": [
+        {
+          "title": "Kitchen Notes",
+          "canonicalUrl": "https://abvx.xyz/writing/kitchen-notes",
+          "relation": "collection"
+        }
+      ],
+      "collection": "kitchen-notes"
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "I Love Georgian Chicken Tabaka. So I Got Rid of the Pan.",
+      "summary": "I love Georgian chicken tabaka, but I prefer removing the backbone, roasting the chicken in foil and finishing it under the grill with salted Breton garlic butter.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/oven-baked-chicken-tabaka-without-pan",
+      "tags": [
+        "chicken-tabaka",
+        "georgian-food",
+        "spatchcock-chicken",
+        "oven-roasted-chicken",
+        "garlic-butter",
+        "breton-butter",
+        "family-cooking",
+        "recipe-adaptations"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-23",
+      "updatedAt": "2026-10-23",
       "related": [
         {
           "title": "Kitchen Notes",

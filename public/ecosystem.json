@@ -4,9 +4,9 @@
   "version": "v1",
   "authority": "read",
   "externalSideEffects": false,
-  "generatedAt": "2026-10-13T20:34:18.856Z",
+  "generatedAt": "2026-10-23T18:38:18.690Z",
   "source": "cortex-abv/ecosystem-graph.v1.json",
-  "sourceDigest": "bc623b9a720034198934a203ba277975fa510693016a1bf2878018233de03880",
+  "sourceDigest": "ee690e3c8f11a0bfc465381e0228eca4113bee2fcefd613adb9443c256423595",
   "coverage": {
     "nodes": 24,
     "publicNodes": 20,
@@ -157,9 +157,9 @@
       },
       "observedHomepageUrl": "https://github.com/markoblogo/CoqPi/releases/latest",
       "release": {
-        "tag": "v0.3.2",
-        "url": "https://github.com/markoblogo/CoqPi/releases/tag/v0.3.2",
-        "publishedAt": "2026-09-16T16:33:17Z"
+        "tag": "v0.3.5",
+        "url": "https://github.com/markoblogo/CoqPi/releases/tag/v0.3.5",
+        "publishedAt": "2026-10-23T18:37:49Z"
       }
     },
     {

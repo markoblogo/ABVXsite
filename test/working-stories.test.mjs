@@ -221,6 +221,14 @@ test('story template reuses article typography, emits SEO and hides internal met
   assert.ok(related.includes('href="/writing/working-stories/second"'));
   assert.ok(related.includes('Second public title'));
   const image = { src: '/media/stories/test.webp', alt: 'Concept artwork', width: 1200, height: 674 };
+  const videoStory = await render([], normalized({body: '## Films\n\n[Turkey farm](https://youtu.be/nSRQlrdQVOM)\n\n[Rabbit farm](https://youtu.be/DYGb4KymoP0)\n\nSee [inline reference](https://youtu.be/IOqby85ZWuw) here.\n\n[Unsafe host](https://youtube.com.evil.test/watch?v=nSRQlrdQVOM)'}));
+  assert.equal((videoStory.match(/<iframe/g) || []).length, 2);
+  for (const [id, title] of [['nSRQlrdQVOM', 'Turkey farm'], ['DYGb4KymoP0', 'Rabbit farm']]) {
+    assert.ok(videoStory.includes(`youtube-nocookie.com/embed/${id}?rel=0`));
+    assert.ok(videoStory.includes(`title="${title}"`));
+  }
+  assert.equal((videoStory.match(/loading="lazy"/g) || []).length, 2);
+  assert.ok(!videoStory.includes('autoplay'));
   const illustrated = await render([], normalized({ coverImage: image, illustrations: [{ ...image, caption: 'A concept, not a production photograph.', afterHeading: 'A decision' }], caseStudy: { label: 'See visual case', url: 'https://www.behance.net/gallery/1/case' } }));
   assert.equal((illustrated.match(/<img /g) || []).length, 2);
   assert.ok(illustrated.includes('alt="Concept artwork"'));

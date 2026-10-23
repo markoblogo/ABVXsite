@@ -7553,7 +7553,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-23T21:29:20.107Z",
+      "updatedAt": "2026-10-23T22:28:21.965Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10013,6 +10013,44 @@
           "type": "case-study",
           "label": "See the Sweetheart Bottle visual case study on Behance",
           "url": "https://www.behance.net/gallery/209137621/Sweetheart-Bottle-All-Natural-Baking-Mixes-in-Bottles"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "working-story",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "Working Stories",
+      "status": "published",
+      "title": "We Put Salmon Roe in Sausages. Then Supermarkets Started Listening.",
+      "summary": "Savin Product made excellent sausages, but retailers had heard every quality claim before. We developed sausages with salmon roe, French cheese, seafood and unusual meats. The specialty products opened doors; the everyday products generated volume.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/working-stories/savin-product-sausages-retail-distribution-strategy",
+      "tags": [
+        "product-differentiation",
+        "food-marketing",
+        "retail-distribution",
+        "brand-strategy",
+        "product-development",
+        "premium-positioning",
+        "packaging-design",
+        "ukrainian-business",
+        "savin-product"
+      ],
+      "publishedAt": "2026-10-23",
+      "updatedAt": "2026-10-23",
+      "image": "https://abvx.xyz/media/stories/savin-product/cover.webp",
+      "links": [
+        {
+          "type": "section",
+          "label": "Working Stories",
+          "url": "https://abvx.xyz/writing/working-stories"
+        },
+        {
+          "type": "case-study",
+          "label": "See the Savin Product visual case study on Behance",
+          "url": "https://www.behance.net/gallery/211405181/Savin-Product-Extreme-Natural-Delicacies"
         }
       ],
       "related": []

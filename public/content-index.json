@@ -7553,7 +7553,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-23T18:47:19.692Z",
+      "updatedAt": "2026-10-23T19:57:55.259Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9467,6 +9467,42 @@
           "relation": "same-project"
         }
       ]
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "The Software Engineering Premium Was Never a Lifetime Subscription",
+      "summary": "Software engineering's privileges were never entirely free. Gergely Orosz makes a compelling argument about the profession's hidden requirement: continuous reinvention. AI is making that requirement impossible to ignore.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/software-engineering-premium-ai-adaptation",
+      "tags": [
+        "software-engineering",
+        "ai",
+        "developer-careers",
+        "future-of-work",
+        "machine-learning",
+        "engineering-compensation",
+        "continuous-learning",
+        "technology-adoption"
+      ],
+      "links": [
+        {
+          "type": "site",
+          "label": "Gergely Orosz's original LinkedIn post",
+          "url": "https://lnkd.in/p/ebPPrPcE"
+        },
+        {
+          "type": "site",
+          "label": "Gergely Orosz — The Pragmatic Engineer",
+          "url": "https://blog.pragmaticengineer.com/author/gergely/"
+        }
+      ],
+      "publishedAt": "2026-10-23",
+      "updatedAt": "2026-10-23",
+      "related": []
     },
     {
       "type": "writing",

@@ -1373,6 +1373,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook, relationships
 
+- Psychology Notebook #07 — Boundaries, Saying No & Learning to Say Yes
+  URL: https://abvx.xyz/writing/psychology-notebook-07-boundaries-yes-no
+  Summary: Twenty translated notebook fragments on boundaries, freedom, obligations and the difference between self-care and self-indulgence.
+  Group: writing
+  Tags: psychology-notebook, boundaries
+
+- Psychology Notebook #08 — Life Has No Rough Draft
+  URL: https://abvx.xyz/writing/psychology-notebook-08-life-no-rough-draft
+  Summary: Twenty translated notebook fragments on ordinary life, borrowed futures, mortality and the idea that we will start living later.
+  Group: writing
+  Tags: psychology-notebook, life
+
 - The Other Rooster Fish Soup: 20 Minutes, Two Cans, and No Rooster
   URL: https://abvx.xyz/writing/easy-canned-salmon-pea-soup
   Summary: One fish soup takes a rooster, several kinds of fish and an entire day. The other needs two stock cubes, canned salmon, green peas and twenty minutes. I learned this wonderfully simple recipe from a Belarusian friend.

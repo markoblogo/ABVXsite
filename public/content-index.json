@@ -7530,7 +7530,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-22T09:31:33.932Z",
+      "updatedAt": "2026-10-23T13:46:07.645Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8907,6 +8907,44 @@
       "links": [],
       "publishedAt": "2026-10-22",
       "updatedAt": "2026-10-22",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #07 — Boundaries, Saying No & Learning to Say Yes",
+      "summary": "Twenty translated notebook fragments on boundaries, freedom, obligations and the difference between self-care and self-indulgence.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-07-boundaries-yes-no",
+      "tags": [
+        "psychology-notebook",
+        "boundaries"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-23",
+      "updatedAt": "2026-10-23",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #08 — Life Has No Rough Draft",
+      "summary": "Twenty translated notebook fragments on ordinary life, borrowed futures, mortality and the idea that we will start living later.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-08-life-no-rough-draft",
+      "tags": [
+        "psychology-notebook",
+        "life"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-23",
+      "updatedAt": "2026-10-23",
       "related": []
     },
     {

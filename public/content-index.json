@@ -7530,7 +7530,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-23T13:46:07.645Z",
+      "updatedAt": "2026-10-23T16:22:41.222Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9542,6 +9542,29 @@
         }
       ],
       "collection": "kitchen-notes"
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Unitree H2-X: This Robot Bodyguard Does Kung Fu, Backflips & Lifts Cars",
+      "summary": "Apparently, Unitree decided that the best way to introduce its new humanoid robot was to make an action movie. And honestly, I'm not complaining. Meet Unitree H2-X Kung Fu Legend Guardian, a humanoid robot that looks lik",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/zOfyKb7_c1M",
+      "publishedAt": "2026-10-23T16:07:42.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=zOfyKb7_c1M"
+        }
+      ],
+      "related": []
     },
     {
       "type": "working-story",

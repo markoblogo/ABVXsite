@@ -1417,6 +1417,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: salads, easy-recipes, french-food, no-cook-meals, quick-lunch, kitchen-experiments, jalapeno, food-shortcuts
 
+- The Software Engineering Premium Was Never a Lifetime Subscription
+  URL: https://abvx.xyz/writing/software-engineering-premium-ai-adaptation
+  Summary: Software engineering's privileges were never entirely free. Gergely Orosz makes a compelling argument about the profession's hidden requirement: continuous reinvention. AI is making that requirement impossible to ignore.
+  Group: writing
+  Tags: software-engineering, ai, developer-careers, future-of-work, machine-learning, engineering-compensation, continuous-learning, technology-adoption
+
 - The Soviet Garlic Cheese Salad with Too Many Names
   URL: https://abvx.xyz/writing/soviet-garlic-cheese-salad-belochka
   Summary: Belochka, Kremlin Salad, Tenderness, Kiss Salad... This simple garlic cheese salad had dozens of names but always appeared on our family holiday table.

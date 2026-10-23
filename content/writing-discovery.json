@@ -292,6 +292,16 @@
     },
     {
       "source": "abvx",
+      "title": "The Software Engineering Premium Was Never a Lifetime Subscription",
+      "url": "/writing/software-engineering-premium-ai-adaptation",
+      "publishedAt": "2026-10-23T00:00:00.000Z",
+      "excerpt": "Software engineering's privileges were never entirely free. Gergely Orosz makes a compelling argument about the profession's hidden requirement: continuous reinvention. AI is making that requirement impossible to ignore.",
+      "coverImage": "/media/writing/software-engineering-premium-ai-adaptation/cover.webp",
+      "addedAt": "2026-10-23T19:57:55.259Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "abvx",
       "title": "The Soviet Garlic Cheese Salad with Too Many Names",
       "url": "/writing/soviet-garlic-cheese-salad-belochka",
       "publishedAt": "2026-10-13T00:00:00.000Z",

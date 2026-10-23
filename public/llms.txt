@@ -1529,6 +1529,11 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/working-stories
   Summary: Cases, experiments, mistakes and unusual decisions from my professional life.
 
+- We Put Salmon Roe in Sausages. Then Supermarkets Started Listening.
+  URL: https://abvx.xyz/writing/working-stories/savin-product-sausages-retail-distribution-strategy
+  Summary: Savin Product made excellent sausages, but retailers had heard every quality claim before. We developed sausages with salmon roe, French cheese, seafood and unusual meats. The specialty products opened doors; the everyday products generated volume.
+  Topics: product-differentiation, food-marketing, retail-distribution, brand-strategy, product-development, premium-positioning, packaging-design, ukrainian-business, savin-product
+
 - Our Tire-Fitter School Was Too Good. That Was the Problem.
   URL: https://abvx.xyz/writing/working-stories/employee-training-overtraining-tire-fitter-school
   Summary: We invested two months in training entry-level tire fitters. Some couldn't afford to finish. Others were recruited by competitors as service-station managers. Eventually, we realised that more training wasn't necessarily better.

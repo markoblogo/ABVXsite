@@ -79,7 +79,7 @@ Initially, the emphasis was on good-quality products, including sausages suitabl
 
 The business eventually grew, although it remained relatively small.
 
-I've worked with Igor professionally too. He wasn't just a friend but also a client, and there's a separate business story about that relationship which I'll eventually tell.
+I've worked with Igor professionally too. He wasn't just a friend but also a client, and there's a [separate business story about that relationship](/writing/working-stories/savin-product-sausages-retail-distribution-strategy).
 
 But today we're not discussing business.
 

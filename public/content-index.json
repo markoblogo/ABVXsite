@@ -7553,7 +7553,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-23T17:30:53.359Z",
+      "updatedAt": "2026-10-23T17:42:56.531Z",
       "tags": [],
       "links": [],
       "related": []
@@ -7744,6 +7744,29 @@
       "links": [],
       "publishedAt": "2026-10-14",
       "updatedAt": "2026-10-14",
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Gemini 4 Argon Built an Interactive 3D Human Body. You Can Explore a Beating Heart",
+      "summary": "What if you could explore the human body like a 3D video game? Peel away anatomical layers. Isolate individual muscles. Watch the skeleton move. Or zoom straight inside a beating heart. Google DeepMind just demonstrated ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/SB2b1nB6G2U",
+      "publishedAt": "2026-10-23T17:23:51.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=SB2b1nB6G2U"
+        }
+      ],
       "related": []
     },
     {

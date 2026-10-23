@@ -1392,6 +1392,17 @@
     },
     {
       "source": "youtube",
+      "title": "Gemini 4 Argon Built an Interactive 3D Human Body. You Can Explore a Beating Heart",
+      "url": "https://www.youtube.com/watch?v=SB2b1nB6G2U",
+      "publishedAt": "2026-10-23T17:23:51.000Z",
+      "excerpt": "What if you could explore the human body like a 3D video game? Peel away anatomical layers. Isolate individual muscles. Watch the skeleton move. Or zoom straight inside a beating heart. Google DeepMind just demonstrated ",
+      "coverImage": "https://i.ytimg.com/vi/SB2b1nB6G2U/hqdefault.jpg",
+      "videoDescription": "What if you could explore the human body like a 3D video game?\n\nPeel away anatomical layers. Isolate individual muscles. Watch the skeleton move. Or zoom straight inside a beating heart.\n\nGoogle DeepMind just demonstrated exactly that with Gemini 4 Argon.\n\nAnd here's the interesting part.\n\nInstead of building everything manually, Gemini combined three open-source datasets into a fully interactive 3D anatomy visualization.\n\nHere's what the demonstration shows:\n\nAnatomical layers: Switch between muscles, skeleton, organs, and other structures while the body is moving.\n\nIndividual muscles: Isolate specific muscles and examine how they relate to surrounding anatomy.\n\nBeating heart: Zoom inside an animated heart and explore its internal structures.\n\nInteractive biomechanics: See anatomical structures in motion rather than as static textbook illustrations.\n\nMedical information: Explore anatomical details and associated clinical metadata.\n\nThis isn't simply an AI-generated picture of the human body.\n\nIt's an interactive application assembled from real anatomical data using AI-written code.\n\nAnd that's what makes this experiment so interesting.\n\nThink about how many hours of research, data preparation, 3D modeling, and software development traditionally go into creating educational tools like this.\n\nNow imagine an AI agent helping turn existing scientific datasets into interactive learning experiences.\n\nOf course, this is a Google demonstration, not an independently validated medical education product. Anatomical accuracy still needs to be verified.\n\nBut the possibilities are fascinating.\n\nWe're moving from asking AI to explain how the human body works to asking it to build an entire interactive body we can explore.\n\nAnatomy textbooks are about to get some serious competition.\n\nOfficial Gemini 4 Argon announcement:\nhttps://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/\n\nGoogle DeepMind demonstrations:\nhttps://deepmind.google/models/gemini/\n\n#Gemini4 #Gemini4Argon #GoogleDeepMind #AIAnatomy #3DVisualization #CreativeCoding #Shorts",
+      "addedAt": "2026-10-23T17:42:56.531Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "MN7R Product Guide | Commodity Brokerage Workflow Explained",
       "url": "https://www.youtube.com/watch?v=TISOtCghMVY",
       "publishedAt": "2026-10-15T14:42:18.000Z",

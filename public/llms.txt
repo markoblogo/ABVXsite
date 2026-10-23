@@ -171,6 +171,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/s3BBP698_r8
   Summary: A software launch. A book trailer. A cinematic interface demo. Different briefs need different video workflows. Framewright is an evolving collection of video-production methods, agent skills and lessons from real ABVX p
 
+- Gemini 4 Argon Built an Interactive 3D Human Body. You Can Explore a Beating Heart
+  URL: https://abvx.xyz/writing/videos/SB2b1nB6G2U
+  Summary: What if you could explore the human body like a 3D video game? Peel away anatomical layers. Isolate individual muscles. Watch the skeleton move. Or zoom straight inside a beating heart. Google DeepMind just demonstrated
+
 - MN7R Product Guide | Commodity Brokerage Workflow Explained
   URL: https://abvx.xyz/writing/videos/TISOtCghMVY
   Summary: Brokerage is more than closing a deal. Explore the clients, offers, execution, roles and AI-assisted operating support behind the MN7R workspace. Read the free English MN7R Product Guide — PDF and EPUB: https://abvx.xyz/

@@ -7553,7 +7553,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-23T22:28:21.965Z",
+      "updatedAt": "2026-10-23T22:42:52.625Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8748,6 +8748,40 @@
         ],
         "timingText": "Preparation time: 2 minutes Cooking time: None"
       }
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "My Friend Bought a Pig. My Weekend Was Cancelled.",
+      "summary": "My friend Igor bought an enormous pig on Friday and announced we were having a Hawaiian party on Saturday. By dawn, I was digging a grave-sized hole on a Kyiv beach. Somehow, it became one of my favourite memories.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/hawaiian-pig-roast-kyiv-hydropark",
+      "tags": [
+        "hawaiian-cooking",
+        "kalua-pig",
+        "underground-roasting",
+        "ukrainian-food-stories",
+        "kyiv",
+        "hydropark",
+        "friendship",
+        "food-memories",
+        "outdoor-cooking",
+        "spontaneous-parties"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-23",
+      "updatedAt": "2026-10-23",
+      "related": [
+        {
+          "title": "Kitchen Notes",
+          "canonicalUrl": "https://abvx.xyz/writing/kitchen-notes",
+          "relation": "collection"
+        }
+      ],
+      "collection": "kitchen-notes"
     },
     {
       "type": "video",

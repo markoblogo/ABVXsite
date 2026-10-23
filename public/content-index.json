@@ -7553,7 +7553,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-23T19:57:55.259Z",
+      "updatedAt": "2026-10-23T20:10:35.581Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8042,6 +8042,39 @@
           "Spicy ginger beer: add a 2–3 mm slice of fresh hot pepper to one freshly filled bottle and leave it through the same secondary fermentation period."
         ]
       }
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "How a Sausage and a Bottle of Chacha Turned Into a Roe Deer Roast",
+      "summary": "A Ukrainian sausage, Georgian chacha and an unexpected gift from a French hunter led to a remarkable roe deer roast with peanut butter and cranberries, eaten beside the Loire.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/roe-deer-roast-peanut-butter-cranberries",
+      "tags": [
+        "venison",
+        "roe-deer",
+        "slow-roasting",
+        "peanut-butter",
+        "cranberries",
+        "prunes",
+        "loire-valley",
+        "food-memories",
+        "unusual-recipes"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-23",
+      "updatedAt": "2026-10-23",
+      "related": [
+        {
+          "title": "Kitchen Notes",
+          "canonicalUrl": "https://abvx.xyz/writing/kitchen-notes",
+          "relation": "collection"
+        }
+      ],
+      "collection": "kitchen-notes"
     },
     {
       "type": "writing",

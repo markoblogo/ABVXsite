@@ -1297,6 +1297,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: ginger-beer, ginger-bug, fermentation, homemade-drinks, ginger-ale, recipes, kitchen-experiments
 
+- How a Sausage and a Bottle of Chacha Turned Into a Roe Deer Roast
+  URL: https://abvx.xyz/writing/roe-deer-roast-peanut-butter-cranberries
+  Summary: A Ukrainian sausage, Georgian chacha and an unexpected gift from a French hunter led to a remarkable roe deer roast with peanut butter and cranberries, eaten beside the Loire.
+  Group: writing
+  Tags: venison, roe-deer, slow-roasting, peanut-butter, cranberries, prunes, loire-valley, food-memories
+
 - I Got Lost in Nantes, Found Chicken of the Woods, and Made Dinner with ChatGPT
   URL: https://abvx.xyz/writing/chicken-of-the-woods-mushroom-chatgpt-nantes
   Summary: I got lost walking back from a supermarket in Nantes, discovered enormous yellow mushrooms growing on a tree stump, and spent the evening researching and cooking with ChatGPT.

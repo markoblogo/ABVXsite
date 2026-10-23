@@ -484,8 +484,8 @@
       "title": "AI Just Dropped 719 Math Papers on Academia. Mathematicians Are Not Amused.",
       "url": "https://abvcreative.medium.com/ai-just-dropped-719-math-papers-on-academia-mathematicians-are-not-amused-5010f3942200",
       "publishedAt": "2026-10-11T11:14:24.000Z",
-      "excerpt": "OpenAI released hundreds of AI-generated mathematical results. Anthropic helped overturn decades-old complexity conjectures. The bigger question is what happens when machines produce discoveries faster than humans can un",
-      "coverImage": "https://cdn-images-1.medium.com/max/1024/1*x9bhhUU9XGXycG9anQ1uhA.png",
+      "excerpt": "OpenAI released hundreds of AI-generated mathematical results. Anthropic helped overturn decades-old complexity conjectures. The bigger…",
+      "coverImage": "https://cdn-images-1.medium.com/max/1536/1*x9bhhUU9XGXycG9anQ1uhA.png",
       "addedAt": "2026-10-11T11:47:16.642Z",
       "addedAtBasis": "observed"
     },
@@ -568,6 +568,16 @@
       "coverImage": "https://cdn-images-1.medium.com/max/1024/1*J-HwD-aw5NmZjz605JQnSw.png",
       "addedAt": "2026-09-23T12:53:48.000Z",
       "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "medium",
+      "title": "Rust’s Next Big Idea: Make unsafe Code Provably Safe. Let AI Agents Do the Work.",
+      "url": "https://abvcreative.medium.com/rusts-next-big-idea-make-unsafe-code-provably-safe-let-ai-agents-do-the-work-5cc9902ee65a",
+      "publishedAt": "2026-10-23T14:04:53.000Z",
+      "excerpt": "Rust co-designer Niko Matsakis thinks AI coding agents could transform programming language design. His proposal: stronger types, formal proofs, and a future where unsafe code no longer means unverified code. There’s som",
+      "coverImage": "https://cdn-images-1.medium.com/max/1024/1*ZT_ox4y-CrWenfFA4uFdBw.png",
+      "addedAt": "2026-10-23T14:22:11.318Z",
+      "addedAtBasis": "observed"
     },
     {
       "source": "medium",

@@ -3,6 +3,11 @@ import type { NextConfig } from "next";
 const projectRoot = process.cwd();
 
 const nextConfig: NextConfig = {
+  // Media is served as static assets, not read by the page functions.
+  // Keep it out of server traces while retaining content and the feed-cache seed.
+  outputFileTracingExcludes: {
+    '/*': ['./public/media/**/*'],
+  },
   turbopack: {
     root: projectRoot,
   },

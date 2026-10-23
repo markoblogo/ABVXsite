@@ -27,6 +27,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/720tTqmoORU
   Summary: What if you could find hundreds of impressive AI-generated videos and see exactly how their creators made them? Not just watch the results. Get the prompts, study the techniques, and recreate the ideas yourself. Meet Ski
 
+- Claude Duet: Anthropic's New Proactive AI Agent Runs on Opus 5.5
+  URL: https://abvx.xyz/writing/videos/7bWabPwlwX4
+  Summary: Anthropic just entered the race for the ultimate personal AI assistant. Meet Claude Duet, a new proactive AI agent powered by Claude Opus 5.5. And unlike regular Claude, this one doesn't just sit around waiting for your
+
 - Spot-Market Handbook | How Physical Commodity Markets Work
   URL: https://abvx.xyz/writing/videos/7hkMaEjINZA
   Summary: A quote is only the beginning. Explore how grain, logistics, delivery terms and liquidity connect in physical commodity markets. Read Spot-Market Handbook — free English edition, available as PDF and EPUB: https://abvx.x

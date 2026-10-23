@@ -1307,6 +1307,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: venison, roe-deer, slow-roasting, peanut-butter, cranberries, prunes, loire-valley, food-memories
 
+- I Gave My Wife Tulips. They Were Hard-Boiled Eggs.
+  URL: https://abvx.xyz/writing/edible-egg-tulips-womens-day
+  Summary: For March 8, I made my wife a bouquet of white tulips. The flowers were actually carved boiled eggs, and the stems were green onions. She loved it.
+  Group: writing
+  Tags: edible-art, egg-tulips, international-womens-day, creative-breakfast, food-presentation, family-memories
+
 - I Got Lost in Nantes, Found Chicken of the Woods, and Made Dinner with ChatGPT
   URL: https://abvx.xyz/writing/chicken-of-the-woods-mushroom-chatgpt-nantes
   Summary: I got lost walking back from a supermarket in Nantes, discovered enormous yellow mushrooms growing on a tree stump, and spent the evening researching and cooking with ChatGPT.

@@ -35,7 +35,7 @@ export default function WorkingStoryArticle({ story, related }: { story: Working
           const illustrations = (story.illustrations || []).filter((image) => image.afterHeading === heading);
           return (
             <section key={index}>
-              <MarkdownContent>{section}</MarkdownContent>
+              <MarkdownContent embedVideos>{section}</MarkdownContent>
               {illustrations.map((image) => (
                 <div className={`working-story-illustration ${styles.illustration}`} key={image.src}>
                   <MediaPanel image={image} title={story.title} variant="writing" />

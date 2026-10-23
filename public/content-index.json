@@ -7553,7 +7553,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-23T20:19:35.831Z",
+      "updatedAt": "2026-10-23T20:28:27.553Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9301,6 +9301,39 @@
         }
       ],
       "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "The Berliner: How My Beer Cocktail Ended Up on a French Bar's Menu",
+      "summary": "I discovered Guinness with port wine in Berlin, recreated it with whatever a small French bar had available, and eventually watched it become an official item in the cash register.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/the-berliner-guinness-port-beer-cocktail",
+      "tags": [
+        "beer-cocktails",
+        "guinness",
+        "port-wine",
+        "irish-pubs",
+        "berlin",
+        "thouare-sur-loire",
+        "french-bars",
+        "food-memories",
+        "art-and-food"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-23",
+      "updatedAt": "2026-10-23",
+      "related": [
+        {
+          "title": "Kitchen Notes",
+          "canonicalUrl": "https://abvx.xyz/writing/kitchen-notes",
+          "relation": "collection"
+        }
+      ],
+      "collection": "kitchen-notes"
     },
     {
       "type": "writing",

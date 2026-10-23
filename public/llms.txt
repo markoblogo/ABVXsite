@@ -1415,6 +1415,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook, life
 
+- The Berliner: How My Beer Cocktail Ended Up on a French Bar's Menu
+  URL: https://abvx.xyz/writing/the-berliner-guinness-port-beer-cocktail
+  Summary: I discovered Guinness with port wine in Berlin, recreated it with whatever a small French bar had available, and eventually watched it become an official item in the cash register.
+  Group: writing
+  Tags: beer-cocktails, guinness, port-wine, irish-pubs, berlin, thouare-sur-loire, french-bars, food-memories
+
 - The Other Rooster Fish Soup: 20 Minutes, Two Cans, and No Rooster
   URL: https://abvx.xyz/writing/easy-canned-salmon-pea-soup
   Summary: One fish soup takes a rooster, several kinds of fish and an entire day. The other needs two stock cubes, canned salmon, green peas and twenty minutes. I learned this wonderfully simple recipe from a Belarusian friend.

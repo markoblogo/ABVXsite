@@ -1313,6 +1313,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: chicken-of-the-woods, mushrooms, wild-food, cooking-with-ai, chatgpt, nantes, french-food, kitchen-experiments
 
+- I Love Georgian Chicken Tabaka. So I Got Rid of the Pan.
+  URL: https://abvx.xyz/writing/oven-baked-chicken-tabaka-without-pan
+  Summary: I love Georgian chicken tabaka, but I prefer removing the backbone, roasting the chicken in foil and finishing it under the grill with salted Breton garlic butter.
+  Group: writing
+  Tags: chicken-tabaka, georgian-food, spatchcock-chicken, oven-roasted-chicken, garlic-butter, breton-butter, family-cooking, recipe-adaptations
+
 - I Love Raclette Cheese. I Just Don't Like Raclette.
   URL: https://abvx.xyz/writing/raclette-cheese-without-raclette
   Summary: Autumn brings raclette season to France. I love the cheese, but prefer melting it inside an oatmeal pancake, eating it with berry jam or even adding it to hot coffee.

@@ -7553,7 +7553,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-23T21:02:14.175Z",
+      "updatedAt": "2026-10-23T21:29:20.107Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8143,6 +8143,36 @@
         }
       ],
       "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "I Gave My Wife Tulips. They Were Hard-Boiled Eggs.",
+      "summary": "For March 8, I made my wife a bouquet of white tulips. The flowers were actually carved boiled eggs, and the stems were green onions. She loved it.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/edible-egg-tulips-womens-day",
+      "tags": [
+        "edible-art",
+        "egg-tulips",
+        "international-womens-day",
+        "creative-breakfast",
+        "food-presentation",
+        "family-memories"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-23",
+      "updatedAt": "2026-10-23",
+      "related": [
+        {
+          "title": "Kitchen Notes",
+          "canonicalUrl": "https://abvx.xyz/writing/kitchen-notes",
+          "relation": "collection"
+        }
+      ],
+      "collection": "kitchen-notes"
     },
     {
       "type": "writing",

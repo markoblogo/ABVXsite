@@ -1106,6 +1106,17 @@
     },
     {
       "source": "youtube",
+      "title": "FLUX 3 Max: Near Real-Time AI Video, 22× Faster Than Seedance 2.5",
+      "url": "https://www.youtube.com/watch?v=G_5lLwn6Veo",
+      "publishedAt": "2026-10-23T18:29:41.000Z",
+      "excerpt": "Remember when generating a few seconds of AI video meant waiting several minutes? Well, those days might be numbered. After making MiniMax H3 ridiculously fast, fal.ai teamed up with Black Forest Labs to push FLUX 3 to a",
+      "coverImage": "https://i.ytimg.com/vi/G_5lLwn6Veo/hqdefault.jpg",
+      "videoDescription": "Remember when generating a few seconds of AI video meant waiting several minutes?\n\nWell, those days might be numbered.\n\nAfter making MiniMax H3 ridiculously fast, fal.ai teamed up with Black Forest Labs to push FLUX 3 to almost real-time video generation.\n\nMeet FLUX 3 Max, an optimized AI video model that generates videos with sound from text prompts or images.\n\nAnd the performance numbers are pretty wild.\n\nAccording to fal's benchmarks:\n\nFLUX 3 Max: 10 seconds of 720p video in just 12.45 seconds\n\nSeedance 2.5: The same duration takes 277.8 seconds\n\n22× faster generation in this comparison\n\nOriginal FLUX 3: 126.44 seconds for a 10-second clip\n\nImage-to-video quality: 1,139 Elo in Artificial Analysis's preliminary arena, statistically among the top models\n\nSo we're getting close to a world where AI generates video almost as fast as you can watch it.\n\nAnd there's another interesting detail.\n\nThe price.\n\nUntil November 7, 2026, fal is offering a 75% launch discount:\n\n$0.425 for a 10-second 720p video\n\n$1.70 for the same video after the promotion\n\nNo subscription required. Just pay per generation.\n\nWhat can FLUX 3 Max do?\n\nGenerate video directly from text\n\nAnimate existing images\n\nGenerate synchronized audio\n\nSupport cinematic motion and complex scenes\n\nProduce 720p video with optional 1080p output\n\nThe speed improvements come from additional model training, inference optimization, and infrastructure engineering.\n\nAnd while these are fal's reported benchmark results, not guaranteed generation times for every request, the trend is becoming difficult to ignore.\n\nWe're approaching the point where the bottleneck in AI video production isn't rendering anymore. It's deciding what to generate next.\n\nAnd considering what happened when H3 Max became faster than real time, I suspect the internet is about to get considerably weirder.\n\nExplore FLUX 3 Max:\nhttps://fal.ai/flux-3-max\n\nTry Image-to-Video:\nhttps://fal.ai/models/blackforestlabs/flux-3-max/image-to-video\n\nOfficial announcement:\nhttps://fal.ai/blog/introducing-flux-3-max-by-fal\n\n#FLUX3Max #FalAI #AIVideo #GenerativeAI #BlackForestLabs #Seedance #Shorts",
+      "addedAt": "2026-10-23T18:47:19.692Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "SpaceX Plans to Catch BOTH Starship Stages in November! | Flight 15",
       "url": "https://www.youtube.com/watch?v=GJhICBW4eMI",
       "publishedAt": "2026-10-21T15:11:26.000Z",

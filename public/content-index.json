@@ -7553,7 +7553,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-23T18:24:00.277Z",
+      "updatedAt": "2026-10-23T18:47:19.692Z",
       "tags": [],
       "links": [],
       "related": []
@@ -7670,6 +7670,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=U-cVLltmoRM"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "FLUX 3 Max: Near Real-Time AI Video, 22× Faster Than Seedance 2.5",
+      "summary": "Remember when generating a few seconds of AI video meant waiting several minutes? Well, those days might be numbered. After making MiniMax H3 ridiculously fast, fal.ai teamed up with Black Forest Labs to push FLUX 3 to a",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/G_5lLwn6Veo",
+      "publishedAt": "2026-10-23T18:29:41.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=G_5lLwn6Veo"
         }
       ],
       "related": []

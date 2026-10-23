@@ -67,6 +67,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/cQS3nbBe6JM
   Summary: What if you could turn almost any PC game into something completely different using AI? And what if Claude Code could handle the modding process for you? Meet Universal Modder, an open-source collection of AI agent skill
 
+- FLUX 3 Max: Near Real-Time AI Video, 22× Faster Than Seedance 2.5
+  URL: https://abvx.xyz/writing/videos/G_5lLwn6Veo
+  Summary: Remember when generating a few seconds of AI video meant waiting several minutes? Well, those days might be numbered. After making MiniMax H3 ridiculously fast, fal.ai teamed up with Black Forest Labs to push FLUX 3 to a
+
 - SpaceX Plans to Catch BOTH Starship Stages in November! | Flight 15
   URL: https://abvx.xyz/writing/videos/GJhICBW4eMI
   Summary: SpaceX is preparing to attempt something that has never been done before. Catch an entire orbital rocket system using giant mechanical arms. Both stages. On the same mission. During SpaceX's Q3 2026 earnings presentation

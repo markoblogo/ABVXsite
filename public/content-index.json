@@ -7104,6 +7104,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "AI Agent Memory: Stop Re-Explaining Your Project",
+      "summary": "AI agent memory is easier to manage when your project has a checkpoint. Save the goal, key decisions, actual files and the next action — then verify that state when you resume. A practical context-engineering habit for c",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/H26QHE7NE9I",
+      "publishedAt": "2026-10-23T22:46:33.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=H26QHE7NE9I"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "AI Video Is Now Faster Than Real Time. Welcome to Infinite Slop",
       "summary": "We have officially reached a new milestone in AI-generated content. AI can now produce videos faster than humans can watch them. And the internet is responding exactly as you'd expect. With infinite AI slop. AI infrastru",
       "canonicalUrl": "https://abvx.xyz/writing/videos/mt0MOEpoj1c",
@@ -7553,7 +7576,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-23T22:42:52.625Z",
+      "updatedAt": "2026-10-23T23:16:53.221Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9019,6 +9042,29 @@
       ],
       "publishedAt": "2026-09-27",
       "updatedAt": "2026-10-04",
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Profit vs Cash Flow: $400 Profit, $0 in the Bank",
+      "summary": "Profit vs cash flow, explained with one simple example: $400 in gross profit, but no cash in the bank yet. A quick financial intelligence lesson for entrepreneurs: buy $800 of stock, sell it for $1,200 on credit, and wai",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/-htT4oQiOpI",
+      "publishedAt": "2026-10-23T22:43:52.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=-htT4oQiOpI"
+        }
+      ],
       "related": []
     },
     {

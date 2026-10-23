@@ -15,6 +15,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/_kzkJ6FKM28
   Summary: What if you could turn a random Instagram Reel into an entire ambient music track in just 12 minutes? Here's the experiment. I found a video of a musician creating strange, atmospheric sounds using everyday electrical de
 
+- Profit vs Cash Flow: $400 Profit, $0 in the Bank
+  URL: https://abvx.xyz/writing/videos/-htT4oQiOpI
+  Summary: Profit vs cash flow, explained with one simple example: $400 in gross profit, but no cash in the bank yet. A quick financial intelligence lesson for entrepreneurs: buy $800 of stock, sell it for $1,200 on credit, and wai
+
 - My $0 API Key Trying to Access OpenAI, Claude & Gemini
   URL: https://abvx.xyz/writing/videos/2po93Gv-MuY
   Summary: My API key has exactly $0.00 in credits. But does that stop him from approaching the biggest AI models on the planet? Absolutely not. OpenAI. Anthropic Claude. Google Gemini. Three AI giants. One broke little API key. An
@@ -86,6 +90,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Burgers, Lipstick & Underwear | Strange Economic Indicators
   URL: https://abvx.xyz/writing/videos/GVrbTMZxbpg
   Summary: What can burgers, lipstick and underwear really tell us about the economy? Discover Burgers, Lipstick & Underwear: What Strange Indicators Really Tell Us About the Economy — a book about surprising economic indicators an
+
+- AI Agent Memory: Stop Re-Explaining Your Project
+  URL: https://abvx.xyz/writing/videos/H26QHE7NE9I
+  Summary: AI agent memory is easier to manage when your project has a checkpoint. Save the goal, key decisions, actual files and the next action — then verify that state when you resume. A practical context-engineering habit for c
 
 - Agri-Commodity Brokerage | A Practical Guide to Grains & Oilseeds Markets
   URL: https://abvx.xyz/writing/videos/H6l1leVo34A

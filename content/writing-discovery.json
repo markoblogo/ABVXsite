@@ -1022,6 +1022,17 @@
     },
     {
       "source": "youtube",
+      "title": "Profit vs Cash Flow: $400 Profit, $0 in the Bank",
+      "url": "https://www.youtube.com/watch?v=-htT4oQiOpI",
+      "publishedAt": "2026-10-23T22:43:52.000Z",
+      "excerpt": "Profit vs cash flow, explained with one simple example: $400 in gross profit, but no cash in the bank yet. A quick financial intelligence lesson for entrepreneurs: buy $800 of stock, sell it for $1,200 on credit, and wai",
+      "coverImage": "https://i.ytimg.com/vi/-htT4oQiOpI/hqdefault.jpg",
+      "videoDescription": "Profit vs cash flow, explained with one simple example: $400 in gross profit, but no cash in the bank yet.\n\nA quick financial intelligence lesson for entrepreneurs: buy $800 of stock, sell it for $1,200 on credit, and wait 30 days for payment. The sale creates gross profit before the customer’s cash arrives.\n\nIllustrative accrual-accounting example. Other expenses and taxes are excluded; gross profit is not net profit.\n\nHave you ever had a profitable month and a tight bank balance?\n\nSource: SEC — Beginners’ Guide to Financial Statements\nhttps://www.sec.gov/about/reports-publications/beginners-guide-financial-statements\n\nMade with Framewright, my open-source video-production toolkit:\nhttps://github.com/markoblogo/framewright\n\n#CashFlow #BusinessFinance #Shorts",
+      "addedAt": "2026-10-23T23:16:53.221Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "My $0 API Key Trying to Access OpenAI, Claude & Gemini",
       "url": "https://www.youtube.com/watch?v=2po93Gv-MuY",
       "publishedAt": "2026-10-11T14:17:58.000Z",
@@ -1227,6 +1238,17 @@
       "coverImage": "https://i.ytimg.com/vi/GVrbTMZxbpg/hqdefault.jpg",
       "videoDescription": "What can burgers, lipstick and underwear really tell us about the economy?\n\nDiscover Burgers, Lipstick & Underwear: What Strange Indicators Really Tell Us About the Economy — a book about surprising economic indicators and the stories behind everyday purchases.\n\nExplore the book:\nhttps://abvx.xyz/books/burgers-lipstick-underwear\n\nA 15-second English-language book trailer featuring the book's artwork, synthetic narration and an original instrumental score. Created with the Framewright workflow.\n\n#Economics #EconomicIndicators #BookTrailer",
       "addedAt": "2026-10-15T13:21:01.299Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
+      "title": "AI Agent Memory: Stop Re-Explaining Your Project",
+      "url": "https://www.youtube.com/watch?v=H26QHE7NE9I",
+      "publishedAt": "2026-10-23T22:46:33.000Z",
+      "excerpt": "AI agent memory is easier to manage when your project has a checkpoint. Save the goal, key decisions, actual files and the next action — then verify that state when you resume. A practical context-engineering habit for c",
+      "coverImage": "https://i.ytimg.com/vi/H26QHE7NE9I/hqdefault.jpg",
+      "videoDescription": "AI agent memory is easier to manage when your project has a checkpoint. Save the goal, key decisions, actual files and the next action — then verify that state when you resume.\n\nA practical context-engineering habit for coding with AI agents: keep important project state in a reusable handoff instead of relying only on a long chat history. This does not give a model perfect memory or guarantee correct work.\n\nWhat would you put in your agent’s save file?\n\nBuilt with Framewright, my open-source video-production toolkit:\nhttps://github.com/markoblogo/framewright\n\nProject checkpoints and revision-bound evidence:\nhttps://github.com/markoblogo/framewright/blob/main/skills/video-production-router/references/projects.md\n\nThe retro text reveal tests TerminalTextEffects 0.15.0. The computer, files and save disk are original illustrations, not a recording of a real app interface.\n\n#AIAgents #ContextEngineering #Shorts",
+      "addedAt": "2026-10-23T23:16:53.221Z",
       "addedAtBasis": "observed"
     },
     {

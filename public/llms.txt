@@ -1361,6 +1361,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: breton-food, yogurt, french-desserts, two-ingredient-recipes, no-cook-desserts, palets-bretons, nougat, kitchen-experiments
 
+- My Friend Bought a Pig. My Weekend Was Cancelled.
+  URL: https://abvx.xyz/writing/hawaiian-pig-roast-kyiv-hydropark
+  Summary: My friend Igor bought an enormous pig on Friday and announced we were having a Hawaiian party on Saturday. By dawn, I was digging a grave-sized hole on a Kyiv beach. Somehow, it became one of my favourite memories.
+  Group: writing
+  Tags: hawaiian-cooking, kalua-pig, underground-roasting, ukrainian-food-stories, kyiv, hydropark, friendship, food-memories
+
 - PlayMCP in Practice: Three Games, Real Costs, and a New Way to Make Video
   URL: https://abvx.xyz/writing/playmcp-three-games-video-experiments
   Summary: Three playable games, recorded platform-credit costs, and experiments turning interactive scenes into videos with PlayMCP, Codex and Framewright.

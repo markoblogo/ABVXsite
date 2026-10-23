@@ -7553,7 +7553,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-23T20:10:35.581Z",
+      "updatedAt": "2026-10-23T20:19:35.831Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8096,6 +8096,29 @@
       "links": [],
       "publishedAt": "2026-10-10",
       "updatedAt": "2026-10-10",
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "How to Use Claude Opus 5.5 for AI Motion Graphics Without a Claude Subscription",
+      "summary": "Want to create impressive motion graphics with Claude Opus 5.5 but don't have a Claude subscription? Here's a little trick worth trying. Genspark lets you access AI coding tools and offers 100 free credits per day. And w",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/5BS9m6b0zWk",
+      "publishedAt": "2026-10-23T19:47:15.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=5BS9m6b0zWk"
+        }
+      ],
       "related": []
     },
     {

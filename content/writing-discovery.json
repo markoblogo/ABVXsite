@@ -983,6 +983,17 @@
     },
     {
       "source": "youtube",
+      "title": "How to Use Claude Opus 5.5 for AI Motion Graphics Without a Claude Subscription",
+      "url": "https://www.youtube.com/watch?v=5BS9m6b0zWk",
+      "publishedAt": "2026-10-23T19:47:15.000Z",
+      "excerpt": "Want to create impressive motion graphics with Claude Opus 5.5 but don't have a Claude subscription? Here's a little trick worth trying. Genspark lets you access AI coding tools and offers 100 free credits per day. And w",
+      "coverImage": "https://i.ytimg.com/vi/5BS9m6b0zWk/hqdefault.jpg",
+      "videoDescription": "Want to create impressive motion graphics with Claude Opus 5.5 but don't have a Claude subscription?\n\nHere's a little trick worth trying.\n\nGenspark lets you access AI coding tools and offers 100 free credits per day.\n\nAnd with the right setup, you can use Claude Opus 5.5 to build animated graphics, interactive scenes, and creative web experiences.\n\nHere's how to get started:\n\nOpen Genspark and sign in or create an account.\n\nCheck your free daily credit balance.\n\nNavigate to Code and select Simple Website or Web App.\n\nChoose Claude Opus 5.5 from the available models.\n\nEnter your motion graphics prompt and start generating.\n\nThat's it!\n\nYou can experiment with animated typography, dynamic transitions, particle effects, 3D scenes, and other code-driven visuals.\n\nAnd here's what makes this interesting.\n\nClaude Opus isn't a traditional AI video generator.\n\nInstead of predicting video frames like a diffusion model, it can write HTML, JavaScript, CSS, Canvas, SVG, or Three.js code to create animations programmatically.\n\nThat means you can potentially edit the underlying code, change the timing, adjust the colors, and refine individual elements.\n\nOne important catch: Genspark's free plan offers 100 daily credits up to a lifetime limit, but access to premium models such as Opus 5.5 may depend on your account and current plan. Not every free account is guaranteed access, and more complex generations can consume credits quickly.\n\nStill, it's worth checking before paying for another AI subscription.\n\nTry Genspark:\nhttps://www.genspark.ai/\n\n#ClaudeOpus #ClaudeCode #Genspark #AIMotionGraphics #CreativeCoding #AIAnimation #VibeCoding",
+      "addedAt": "2026-10-23T20:19:35.831Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Anthropic CEO: AI Could Double Human Lifespan in 5–10 Years",
       "url": "https://www.youtube.com/watch?v=6OFAvsQ2XTw",
       "publishedAt": "2026-10-11T14:05:33.000Z",

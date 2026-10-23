@@ -19,6 +19,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/2po93Gv-MuY
   Summary: My API key has exactly $0.00 in credits. But does that stop him from approaching the biggest AI models on the planet? Absolutely not. OpenAI. Anthropic Claude. Google Gemini. Three AI giants. One broke little API key. An
 
+- How to Use Claude Opus 5.5 for AI Motion Graphics Without a Claude Subscription
+  URL: https://abvx.xyz/writing/videos/5BS9m6b0zWk
+  Summary: Want to create impressive motion graphics with Claude Opus 5.5 but don't have a Claude subscription? Here's a little trick worth trying. Genspark lets you access AI coding tools and offers 100 free credits per day. And w
+
 - Anthropic CEO: AI Could Double Human Lifespan in 5–10 Years
   URL: https://abvx.xyz/writing/videos/6OFAvsQ2XTw
   Summary: What if AI could help humans live to 150? Dario Amodei, CEO of Anthropic, believes artificial intelligence could accelerate medical research so dramatically that human lifespans might double within the next decade. His r

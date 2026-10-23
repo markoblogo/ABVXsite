@@ -288,21 +288,13 @@ This is more of a method than a precisely measured recipe. I adjust the seasonin
 **Method**
 
 1. Remove the backbone using kitchen scissors, cutting along both sides. Save it for stock.
-    
 2. Open the chicken flat, skin side up, and press it down.
-    
 3. Gently flatten the thicker parts with a meat mallet.
-    
 4. Brush with vegetable oil, season as needed and wrap securely in foil.
-    
 5. Roast at approximately 180°C until the chicken is properly cooked through.
-    
 6. Remove the foil and finish under the convection grill, turning carefully until both sides develop a crisp, golden crust.
-    
 7. Melt the butter and mix in the crushed garlic, chopped herbs, peppers and optional spices.
-    
 8. Brush the hot chicken generously with the aromatic butter.
-    
 9. Let it rest briefly before serving.
     
 

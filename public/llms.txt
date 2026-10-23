@@ -175,6 +175,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/SB2b1nB6G2U
   Summary: What if you could explore the human body like a 3D video game? Peel away anatomical layers. Isolate individual muscles. Watch the skeleton move. Or zoom straight inside a beating heart. Google DeepMind just demonstrated
 
+- FreeVideo: Run MiniMax H3 Locally with Just 8GB VRAM | ComfyUI
+  URL: https://abvx.xyz/writing/videos/SET6nWjBNNE
+  Summary: What if you could run a powerful AI video generation model on your own computer, without renting expensive cloud GPUs? And what if you only needed 8 GB of VRAM? Meet FreeVideo, an open-source project designed to bring Mi
+
 - MN7R Product Guide | Commodity Brokerage Workflow Explained
   URL: https://abvx.xyz/writing/videos/TISOtCghMVY
   Summary: Brokerage is more than closing a deal. Explore the clients, offers, execution, roles and AI-assisted operating support behind the MN7R workspace. Read the free English MN7R Product Guide — PDF and EPUB: https://abvx.xyz/

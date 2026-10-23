@@ -7553,7 +7553,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-23T17:42:56.531Z",
+      "updatedAt": "2026-10-23T18:24:00.277Z",
       "tags": [],
       "links": [],
       "related": []
@@ -7716,6 +7716,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=RpxHRWhH4Yw"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "FreeVideo: Run MiniMax H3 Locally with Just 8GB VRAM | ComfyUI",
+      "summary": "What if you could run a powerful AI video generation model on your own computer, without renting expensive cloud GPUs? And what if you only needed 8 GB of VRAM? Meet FreeVideo, an open-source project designed to bring Mi",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/SET6nWjBNNE",
+      "publishedAt": "2026-10-23T18:00:18.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=SET6nWjBNNE"
         }
       ],
       "related": []

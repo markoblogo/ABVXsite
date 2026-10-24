@@ -7622,7 +7622,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-24T01:50:49.379Z",
+      "updatedAt": "2026-10-24T09:53:11.142Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9281,6 +9281,44 @@
       "links": [],
       "publishedAt": "2026-10-23",
       "updatedAt": "2026-10-23",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #09 — Reality, Ideals & the Right to Be Wrong",
+      "summary": "Twenty translated notebook fragments on idealisation, mental loops, checking information and allowing yourself to begin imperfectly.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-09-reality-ideals-being-wrong",
+      "tags": [
+        "psychology-notebook",
+        "thinking"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #10 — Work, Rest & the Stubborn Art of Wearing Yourself Out",
+      "summary": "Twenty translated notebook fragments on work, rest, perfectionism and spending all your energy on proving you can keep going.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-10-work-rest-stubbornness",
+      "tags": [
+        "psychology-notebook",
+        "work"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-24",
+      "updatedAt": "2026-10-24",
       "related": []
     },
     {

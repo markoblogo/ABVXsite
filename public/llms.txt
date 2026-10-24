@@ -1449,6 +1449,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook, life
 
+- Psychology Notebook #09 — Reality, Ideals & the Right to Be Wrong
+  URL: https://abvx.xyz/writing/psychology-notebook-09-reality-ideals-being-wrong
+  Summary: Twenty translated notebook fragments on idealisation, mental loops, checking information and allowing yourself to begin imperfectly.
+  Group: writing
+  Tags: psychology-notebook, thinking
+
+- Psychology Notebook #10 — Work, Rest & the Stubborn Art of Wearing Yourself Out
+  URL: https://abvx.xyz/writing/psychology-notebook-10-work-rest-stubbornness
+  Summary: Twenty translated notebook fragments on work, rest, perfectionism and spending all your energy on proving you can keep going.
+  Group: writing
+  Tags: psychology-notebook, work
+
 - The Berliner: How My Beer Cocktail Ended Up on a French Bar's Menu
   URL: https://abvx.xyz/writing/the-berliner-guinness-port-beer-cocktail
   Summary: I discovered Guinness with port wine in Berlin, recreated it with whatever a small French bar had available, and eventually watched it become an official item in the cash register.

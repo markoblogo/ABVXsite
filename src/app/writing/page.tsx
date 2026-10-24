@@ -10,7 +10,8 @@ import WritingMorePosts from '@/components/WritingMorePosts';
 import WritingArchiveRow from '@/components/WritingArchiveRow';
 import WritingSourceLinks, { type WritingSource } from '@/components/WritingSourceLinks';
 import type { FeedItem } from '@/lib/feed-types';
-import { getWritingFeed } from '@/lib/writing-feed';
+import { getWritingFeed, getWritingSearchBodies } from '@/lib/writing-feed';
+import { normalizeWritingQuery, searchWritingPosts, writingSearchExcerpt, writingSearchHref } from '@/lib/writing-search.mjs';
 import { writingWindow } from '@/lib/writing-window.mjs';
 import { getNativeWritingItems } from '@/content';
 import workingStoriesSeries from '../../../content/working-stories.json';
@@ -21,12 +22,21 @@ import Link from 'next/link';
 const writingDescription =
   'Applied AI reviews, build logs and essays on systems, validation, agent workflows, decision-making and how ideas survive contact with reality.';
 
-export const metadata: Metadata = metadataWithImage({
+type WritingParams = { source?: string | string[]; q?: string | string[] };
+
+const writingMetadata = metadataWithImage({
   title: 'Writing',
   description: writingDescription,
   canonicalPath: '/writing',
   image: defaultOgImage,
 });
+
+export async function generateMetadata({ searchParams }: { searchParams?: Promise<WritingParams> }): Promise<Metadata> {
+  const params = searchParams ? await searchParams : {};
+  return normalizeWritingQuery(params.q)
+    ? { ...writingMetadata, robots: { index: false, follow: true } }
+    : writingMetadata;
+}
 
 export const revalidate = 900;
 
@@ -88,14 +98,17 @@ function postImage(post: FeedItem) {
 export default async function WritingPage({
   searchParams,
 }: {
-  searchParams?: Promise<{ source?: string | string[] }>;
+  searchParams?: Promise<WritingParams>;
 }) {
   const params = searchParams ? await searchParams : {};
   const activeSource = normalizeSource(params.source);
+  const query = normalizeWritingQuery(params.q);
   const allPosts = getWritingFeed();
   const posts =
     activeSource === 'all' ? allPosts : allPosts.filter((post) => post.source === activeSource);
   const {featuredPost, recentPosts, archivePosts, remainingPosts} = writingWindow(posts);
+  const searchBodies = query ? getWritingSearchBodies() : new Map<string, string>();
+  const searchResults = query ? searchWritingPosts(allPosts, query, { source: activeSource, bodies: searchBodies }) : [];
 
   return (
     <div className="route-writing writing-page grid gap-8">
@@ -114,7 +127,7 @@ export default async function WritingPage({
         data={itemListJsonLd({
           id: `${SITE_URL}/writing#items`,
           name: 'ABVX writing archive',
-          items: posts.slice(0, 20).map((post) => ({
+          items: (query ? searchResults : posts).slice(0, 20).map((post) => ({
             name: post.title,
             url: post.url,
             type: post.source === 'youtube' ? 'VideoObject' : 'Article',
@@ -129,9 +142,30 @@ export default async function WritingPage({
         summary="Applied AI reviews, build logs and essays on systems, validation, agent workflows, decision-making and how ideas survive contact with reality."
       ><EditorialSectionLink section="writing" /> <Link className="editorial-section-link" href={workingStoriesSeries.canonicalPath}>{workingStoriesSeries.title} <span aria-hidden="true">→</span></Link> <Link className="editorial-section-link" href={kitchenNotes.canonicalPath}>{kitchenNotes.title} <span aria-hidden="true">→</span></Link></PageHeader>
 
-      <WritingSourceLinks active={activeSource} />
+      <WritingSourceLinks active={activeSource} query={query} />
       <Link className="editorial-section-link" href="/writing/archive">Complete archive <span aria-hidden="true">→</span></Link>
 
+      {query ? (
+        <section className="writing-section writing-search-results" aria-labelledby="writing-search-title">
+          <div className="writing-section__header">
+            <div>
+              <h2 id="writing-search-title">Search results</h2>
+              <p role="status">{searchResults.length} {searchResults.length === 1 ? 'post' : 'posts'} matching “{query}”</p>
+            </div>
+            <Link className="editorial-section-link" href={writingSearchHref(activeSource)}>Clear search</Link>
+          </div>
+          <p className="writing-search-results__scope">Full text of ABVX posts; titles and available descriptions of linked publications.</p>
+          {searchResults.length ? (
+            <div className="writing-archive-list">
+              {searchResults.map(post => (
+                <WritingArchiveRow key={post.url} title={post.title}
+                  excerpt={writingSearchExcerpt(post, searchBodies.get(post.url), query)}
+                  href={post.url} source={post.source} date={formatDate(post.addedAt || post.publishedAt)} />
+              ))}
+            </div>
+          ) : <p>No matching posts. Try another keyword or choose All to search every Writing source.</p>}
+        </section>
+      ) : <>
       {activeSource === 'youtube' && !posts.length ? (
         <SectionPanel title="New videos" eyebrow="YouTube">
           <p>New public videos will appear here automatically as they are published.</p>
@@ -223,6 +257,7 @@ export default async function WritingPage({
           </div>
         </SectionPanel>
       )}
+      </>}
     </div>
   );
 }

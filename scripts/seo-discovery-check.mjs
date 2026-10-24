@@ -301,6 +301,12 @@ await withQaServer(async (base) => {
       await page.locator(`main a[href="${seriesRoute}"]`).click();
       await page.waitForURL(base + seriesRoute, { waitUntil: 'domcontentloaded' });
       assert.equal(await page.locator('h1').textContent(), 'Working Stories');
+      // Client navigation can render its heading before streamed metadata settles.
+      // Still require exactly one canonical, with the destination's exact URL.
+      await page.waitForFunction(expected => {
+        const links = document.querySelectorAll('link[rel="canonical"]');
+        return links.length === 1 && links[0].getAttribute('href') === expected;
+      }, 'https://abvx.xyz' + seriesRoute);
       assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'), 'https://abvx.xyz' + seriesRoute);
       if (!publicStories.length) assert.ok((await page.locator('main').innerText()).includes(workingSeries.emptyState));
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), 'Working Stories horizontal overflow');

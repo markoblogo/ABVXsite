@@ -1,5 +1,5 @@
 import { getNativeWritingItems } from '@/content';
-import { workingStoriesFeed } from '@/content/working-stories';
+import { getWorkingStories, workingStoriesFeed, workingStoryPath } from '@/content/working-stories';
 import discovery from '../../content/writing-discovery.json';
 import publicIndex from '../../public/content-index.json';
 import type { FeedItem } from './feed-types';
@@ -23,6 +23,14 @@ export function getWritingFeed(): FeedItem[] {
 
 export function getVideoWritingItems(): FeedItem[] {
   return automaticVideoItems(discovery, getPublishedNativeWritingItems());
+}
+
+// Stay on the server: search never sends the complete article corpus to the browser.
+export function getWritingSearchBodies(): Map<string, string> {
+  return new Map([
+    ...getPublishedNativeWritingItems().map(item => [`/writing/${item.slug}`, item.body] as const),
+    ...getWorkingStories().map(story => [workingStoryPath(story), story.body] as const),
+  ]);
 }
 
 export function getVideoCompanion(id: string) {

@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { searchWritingPosts, normalizeWritingQuery, writingSearchExcerpt, writingSearchHref } from '../src/lib/writing-search.mjs';
 
 test('Writing search finds words deep in a native article rather than only its title or summary', () => {
@@ -61,4 +62,26 @@ test('body results show a short prose excerpt around the matching word', () => {
   assert.ok(!excerpt.includes('**'));
   assert.ok(excerpt.startsWith('…'));
   assert.ok(excerpt.length <= 302);
+});
+
+
+test('literal identifiers and code content remain searchable while Markdown emphasis is removed', () => {
+  const post = { title: 'Command notes', source: 'abvx', url: '/writing/commands' };
+  const body = 'Use PACKAGE_NAME and `INLINE_NAME` with **bold** and _emphasis_.\n```sh\nadb shell pm enable PACKAGE_NAME\nconst ENTRY_NAME = "[value] * _ <literal>";\n```';
+  const bodies = new Map([[post.url, body]]);
+  for (const query of ['PACKAGE_NAME', 'INLINE_NAME', 'ENTRY_NAME', '[value]', '<literal>', 'bold emphasis']) {
+    assert.equal(searchWritingPosts([post], query, { bodies }).length, 1, query);
+  }
+  const excerpt = writingSearchExcerpt(post, body, 'PACKAGE_NAME');
+  assert.match(excerpt, /PACKAGE_NAME/);
+  assert.match(excerpt, /INLINE_NAME/);
+  assert.ok(!excerpt.includes('**'));
+  assert.ok(!excerpt.includes('_emphasis_'));
+});
+
+test('the published Android TV article is found by its rendered PACKAGE_NAME command', () => {
+  const post = { title: 'Android TV notes', source: 'abvx', url: '/writing/android-tv-debloat-codex-claude-code-adb' };
+  const body = readFileSync(new URL('../content/writing/android-tv-debloat-codex-claude-code-adb.md', import.meta.url), 'utf8').split('---').slice(2).join('---');
+  assert.equal(searchWritingPosts([post], 'PACKAGE_NAME', { bodies: new Map([[post.url, body]]) }).length, 1);
+  assert.match(writingSearchExcerpt(post, body, 'PACKAGE_NAME'), /PACKAGE_NAME/);
 });

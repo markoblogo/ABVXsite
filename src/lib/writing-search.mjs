@@ -3,9 +3,17 @@ export function normalizeWritingQuery(value) {
 }
 
 function plainText(value = '') {
-  return value.replace(/!?(\[[^\]]*\])\([^)]+\)/g, '$1')
-    .replace(/<[^>]*>/g, ' ').replace(/^[#>\s*-]+/gm, '')
-    .replace(/[*_`\[\]]/g, '').replace(/\s+/gu, ' ').trim();
+  // Code is visible literal text: do not strip its underscores, brackets or tags.
+  return value.split(/(^```[\w-]*[ \t]*\r?\n[\s\S]*?^```[ \t]*$|`[^`\n]+`)/gm)
+    .map((part, index) => {
+      if (index % 2) return part.startsWith('```')
+        ? part.replace(/^```[^\n]*\n/, '').replace(/\n```[ \t]*$/, '')
+        : part.slice(1, -1);
+      return part.replace(/!?\[([^\]]*)\]\([^)]+\)/g, '$1')
+        .replace(/<[^>]*>/g, ' ').replace(/^[#>\s*-]+/gm, '')
+        .replace(/\*\*(.+?)\*\*|__(.+?)__|\*([^*\n]+)\*/g, (_, bold, strong, italic) => bold || strong || italic)
+        .replace(/(^|[^\p{L}\p{N}_])_([^\s](?:[^\n]*?[^\s])?)_(?=$|[^\p{L}\p{N}_])/gu, '$1$2');
+    }).join('').replace(/\s+/gu, ' ').trim();
 }
 
 const normalized = (value) => value.normalize('NFKC').toLowerCase();

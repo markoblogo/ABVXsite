@@ -7035,6 +7035,29 @@
       "collection": "kitchen-notes"
     },
     {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "A One-Minute Dream Walk | Guided Visualization in a Moonlit Garden",
+      "summary": "Step into a moonlit garden for a one-minute guided visualization: lanterns, moving water, a quiet pavilion and a gentle English voice. A short cinematic escape with ambient piano and night sounds. Created using PlayMCP. ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/oyQXmJI4aK0",
+      "publishedAt": "2026-10-24T00:00:05.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=oyQXmJI4aK0"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "writing",
       "section": "writing",
       "ecosystem": "Writing",
@@ -7163,6 +7186,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=QnpLjwhj6Fs"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "An Endless Walk to Nowhere | 20 Minutes of Ambient Piano & Night Sounds",
+      "summary": "A destination that always stays just ahead. Follow a moonlit Möbius path for 20 minutes, with gentle ambient piano, river sounds, crickets and frogs. No voiceover or on-screen captions — just a continuous background jour",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/rfClK3jPHlw",
+      "publishedAt": "2026-10-24T00:05:28.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=rfClK3jPHlw"
         }
       ],
       "related": []
@@ -7576,7 +7622,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-23T23:16:53.221Z",
+      "updatedAt": "2026-10-24T01:50:49.379Z",
       "tags": [],
       "links": [],
       "related": []

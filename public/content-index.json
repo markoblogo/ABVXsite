@@ -7458,6 +7458,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude Code & Codex: Understand AI-Generated Code Before You Merge | diff-tour",
+      "summary": "Your AI coding agent just modified 15 files, added 800 lines of code, and proudly announced: \"All done. Everything works.\" Great. But do you actually understand what it changed? Meet diff-tour, a free, open-source tool t",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/XOv4GafWnqY",
+      "publishedAt": "2026-10-24T11:10:52.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=XOv4GafWnqY"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude Code Built a GTA Mod for SimCity 3000 in Just 2 Hours",
       "summary": "What if you could turn almost any PC game into something completely different using AI? And what if Claude Code could handle the modding process for you? Meet Universal Modder, an open-source collection of AI agent skill",
       "canonicalUrl": "https://abvx.xyz/writing/videos/cQS3nbBe6JM",
@@ -7471,6 +7494,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=cQS3nbBe6JM"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Claude Code Has Hidden Features. This /stack Mod Reveals Everything",
+      "summary": "Think you know what's running inside your Claude Code sessions? You might be surprised. Meet /stack, a free, open-source Claude Code mod that reveals practically everything installed, configured, and available in your AI",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/sZpOYudsSDY",
+      "publishedAt": "2026-10-24T11:04:14.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=sZpOYudsSDY"
         }
       ],
       "related": []
@@ -7622,7 +7668,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-24T09:53:11.142Z",
+      "updatedAt": "2026-10-24T11:15:21.530Z",
       "tags": [],
       "links": [],
       "related": []

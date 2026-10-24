@@ -203,6 +203,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/SET6nWjBNNE
   Summary: What if you could run a powerful AI video generation model on your own computer, without renting expensive cloud GPUs? And what if you only needed 8 GB of VRAM? Meet FreeVideo, an open-source project designed to bring Mi
 
+- Claude Code Has Hidden Features. This /stack Mod Reveals Everything
+  URL: https://abvx.xyz/writing/videos/sZpOYudsSDY
+  Summary: Think you know what's running inside your Claude Code sessions? You might be surprised. Meet /stack, a free, open-source Claude Code mod that reveals practically everything installed, configured, and available in your AI
+
 - MN7R Product Guide | Commodity Brokerage Workflow Explained
   URL: https://abvx.xyz/writing/videos/TISOtCghMVY
   Summary: Brokerage is more than closing a deal. Explore the clients, offers, execution, roles and AI-assisted operating support behind the MN7R workspace. Read the free English MN7R Product Guide — PDF and EPUB: https://abvx.xyz/
@@ -242,6 +246,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - I Tried to Bury the AI. It Deleted Every Brick. 🤖 #Shorts
   URL: https://abvx.xyz/writing/videos/Xeta6R8hvPg
   Summary: I make a mess. The machine tidies up. Honestly, rude. SIRTET is a reverse falling-block music game: you sabotage the pieces while the AI tries to clear the board. This is the AI's all-clear ending, captured from the real
+
+- Claude Code & Codex: Understand AI-Generated Code Before You Merge | diff-tour
+  URL: https://abvx.xyz/writing/videos/XOv4GafWnqY
+  Summary: Your AI coding agent just modified 15 files, added 800 lines of code, and proudly announced: "All done. Everything works." Great. But do you actually understand what it changed? Meet diff-tour, a free, open-source tool t
 
 - AsciiTheme — ASCII Themes & Widgets for JavaScript Websites
   URL: https://abvx.xyz/writing/videos/y2OW5f8QEXo

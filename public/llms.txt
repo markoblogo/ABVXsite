@@ -143,6 +143,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/nBzbwlcAElY
   Summary: We may have just witnessed one of the strangest AI experiments of 2026. Researchers connected a simulated fruit fly brain to Odyssey-3, an AI world model capable of generating interactive virtual environments in real tim
 
+- He Emailed Salesforce's CEO 53 Times. Here's How He Finally Got a Reply
+  URL: https://abvx.xyz/writing/videos/NOi2yqMGaP0
+  Summary: How many follow-ups would you send before giving up on your dream customer? Three? Five? Maybe ten? Well, Harry Stebbings sent 53 emails to Marc Benioff, the CEO of Salesforce. And for 52 weeks, he got absolutely nothing
+
 - PlayMCP Review: I Made 3 AI Games — Tools, Challenges & Costs
   URL: https://abvx.xyz/writing/videos/NVeMJLidncU
   Summary: What is PlayMCP, and how do you turn an idea and a music track into a playable game? This hands-on review covers the agent workflow, creative tools, testing, hosting, community challenges and my three published experimen

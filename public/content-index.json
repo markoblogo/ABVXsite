@@ -7691,7 +7691,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-24T11:39:19.832Z",
+      "updatedAt": "2026-10-24T11:50:55.294Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8064,6 +8064,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=7JJ47rmMU7w"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "He Emailed Salesforce's CEO 53 Times. Here's How He Finally Got a Reply",
+      "summary": "How many follow-ups would you send before giving up on your dream customer? Three? Five? Maybe ten? Well, Harry Stebbings sent 53 emails to Marc Benioff, the CEO of Salesforce. And for 52 weeks, he got absolutely nothing",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/NOi2yqMGaP0",
+      "publishedAt": "2026-10-24T11:46:26.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=NOi2yqMGaP0"
         }
       ],
       "related": []

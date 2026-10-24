@@ -1690,6 +1690,17 @@
     },
     {
       "source": "youtube",
+      "title": "How Color Changes a Scene | One Forest, Three Feelings",
+      "url": "https://www.youtube.com/watch?v=wHOpypqPyCs",
+      "publishedAt": "2026-10-24T16:40:03.000Z",
+      "excerpt": "One forest. One traveler. Three very different feelings. This 42-second animated experiment explores how color grading, lighting and sound can turn the same setting into loneliness, shelter or unease. Cool blue gives way",
+      "coverImage": "https://i.ytimg.com/vi/wHOpypqPyCs/hqdefault.jpg",
+      "videoDescription": "One forest. One traveler. Three very different feelings.\n\nThis 42-second animated experiment explores how color grading, lighting and sound can turn the same setting into loneliness, shelter or unease. Cool blue gives way to warm amber, then a restrained red warning changes the mood again. Watch the lantern — and listen to how the same piano theme changes with the image.\n\nThe environment comes from my existing Loup Garou world in World Labs Marble. The character and its animation were made separately, then composited over a fixed view of the forest using the Framewright production workflow. This is a small 2.5D visual study, with a deliberately simple character, rather than a full 3D character integration.\n\nTools: World Labs Marble, Framewright, Three.js, Canvas and FFmpeg.\nWorld Labs Marble: https://marble.worldlabs.ai/\nFramewright: https://github.com/markoblogo/framewright\n\nMusic: “Ambient Piano Music #4” by benpm, licensed under CC BY 4.0. Excerpted and adapted with filtering, octave treatment, reverberation and three mood arrangements.\nhttps://freesound.org/people/benpm/sounds/320603\nhttps://creativecommons.org/licenses/by/4.0/\n\nNight ambience: “Night close to a river, crickets and frogs, bird sometimes.” by felix.blume, CC0. Excerpted and mixed as fictional forest ambience.\nhttps://freesound.org/people/felix.blume/sounds/466955\nhttps://creativecommons.org/publicdomain/zero/1.0/\n\nOriginal procedural footsteps, wind/tension textures and lantern handling were added for the scene. AI-generated environment; independently animated character and edited sound.\n\n#ColorGrading #VisualStorytelling #Animation",
+      "addedAt": "2026-10-24T17:15:29.823Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Disco Coffee Showdown: Shoot or Decaf? | Gameplay & Both Endings",
       "url": "https://www.youtube.com/watch?v=WLBxcM5JQ3U",
       "publishedAt": "2026-10-17T20:41:12.000Z",

@@ -7691,7 +7691,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-24T11:50:55.294Z",
+      "updatedAt": "2026-10-24T17:15:29.823Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8259,6 +8259,29 @@
         }
       ],
       "collection": "kitchen-notes"
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "How Color Changes a Scene | One Forest, Three Feelings",
+      "summary": "One forest. One traveler. Three very different feelings. This 42-second animated experiment explores how color grading, lighting and sound can turn the same setting into loneliness, shelter or unease. Cool blue gives way",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/wHOpypqPyCs",
+      "publishedAt": "2026-10-24T16:40:03.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=wHOpypqPyCs"
+        }
+      ],
+      "related": []
     },
     {
       "type": "writing",

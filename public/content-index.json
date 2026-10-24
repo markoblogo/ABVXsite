@@ -6914,6 +6914,29 @@
       ]
     },
     {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "1,342 Free 3D Models for Blender, Games & AI Projects | Download on Hugging Face",
+      "summary": "Working on a 3D game, animation, or creative coding project? Here's a resource worth bookmarking. Scenario just released a collection of 1,342 AI-generated 3D assets on Hugging Face. And you can download them for free. N",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/ht5q8eM93K4",
+      "publishedAt": "2026-10-24T11:31:59.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=ht5q8eM93K4"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "writing",
       "section": "writing",
       "ecosystem": "Writing",
@@ -7668,7 +7691,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-24T11:27:25.554Z",
+      "updatedAt": "2026-10-24T11:39:19.832Z",
       "tags": [],
       "links": [],
       "related": []

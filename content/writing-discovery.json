@@ -1295,6 +1295,17 @@
     },
     {
       "source": "youtube",
+      "title": "1,342 Free 3D Models for Blender, Games & AI Projects | Download on Hugging Face",
+      "url": "https://www.youtube.com/watch?v=ht5q8eM93K4",
+      "publishedAt": "2026-10-24T11:31:59.000Z",
+      "excerpt": "Working on a 3D game, animation, or creative coding project? Here's a resource worth bookmarking. Scenario just released a collection of 1,342 AI-generated 3D assets on Hugging Face. And you can download them for free. N",
+      "coverImage": "https://i.ytimg.com/vi/ht5q8eM93K4/hqdefault.jpg",
+      "videoDescription": "Working on a 3D game, animation, or creative coding project?\n\nHere's a resource worth bookmarking.\n\nScenario just released a collection of 1,342 AI-generated 3D assets on Hugging Face. And you can download them for free.\n\nNo need to generate every object from scratch.\n\nThe collection includes characters, creatures, props, and other 3D assets created using different AI models.\n\nHere's what's inside:\n\n1,342 3D examples with 1,500 output files\n\nGLB, Blender, FBX, PLY, SPZ, and VOX formats\n\nAssets from multiple AI 3D generation models\n\nOriginal reference images and generation prompts\n\nModel settings and metadata\n\nApproximately 39 GB of downloadable content\n\nAnd here's the interesting part.\n\nThe collection is released under Creative Commons Attribution 4.0 (CC BY 4.0).\n\nThat means you can download, modify, and reuse the assets, including in commercial projects, as long as you provide the required attribution to Scenario and follow the license terms.\n\nOf course, these are AI-generated models, so don't expect every mesh, texture, or topology to be production-ready without additional work.\n\nBut for prototyping games, building interactive 3D environments, experimenting with Three.js, or creating animations in Blender, this is a pretty useful starting point.\n\nAnd because the dataset includes generation prompts and settings, you can also study how the models were created.\n\nWe used to spend hours searching for usable 3D assets. Now someone just casually drops more than a thousand of them into a public repository.\n\nNot a bad time to be building things in 3D.\n\nBrowse and download the collection:\nhttps://huggingface.co/datasets/scenario-labs/3d-collection\n\n#Free3DModels #Blender3D #HuggingFace #AIGenerated3D #GameDevelopment #CreativeCoding #Shorts",
+      "addedAt": "2026-10-24T11:39:19.832Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Someone Put Claude AI on a 2007 Nokia. Yes, Really.",
       "url": "https://www.youtube.com/watch?v=jEIPftaweBM",
       "publishedAt": "2026-10-10T14:39:44.000Z",

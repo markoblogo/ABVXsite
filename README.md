@@ -15,7 +15,7 @@ Public website and working portfolio of **Anton Biletskyi-Volokh**: agro-commodi
 | [Writing](https://abvx.xyz/writing) | Native articles, Working Stories, Kitchen Notes, Medium, Substack and YouTube |
 | [About](https://abvx.xyz/about) / [Work with me](https://abvx.xyz/work-with-me) | Background, collaborations, services and contact |
 
-Writing retains discovered publications, provides **More posts** and a [complete archive](https://abvx.xyz/writing/archive). Project, book and series pages support multiple labelled videos; book audio loads on reader request.
+Writing includes keyword search across full native post texts and retained external titles/descriptions, source filters, **More posts** and a [complete archive](https://abvx.xyz/writing/archive). Project, book and series pages support multiple labelled videos; book audio loads on reader request.
 
 ## Run locally
 

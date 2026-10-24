@@ -60,6 +60,15 @@ The public fallback endpoint sends `no-store`; upstream Writing feed fetches for
 
 Writing initially renders one featured item, six recent items and thirty archive rows. **More posts** reveals up to thirty more rows per click. `/writing/archive` is the complete server-rendered archive for older local publications; it remains linked independently of the client interaction. `writing-window.mjs` owns the recent window and `writing-archive.mjs` owns archive selection. Keep retained video route checks distinct from assertions against the bounded recent view.
 
+### Writing keyword search
+
+The compact toolbar search uses `?q=` with the existing `source` filter and searches the complete public feed before windowing. Native articles (including Kitchen Notes and Working Stories) use their full visible body; linked Medium/Substack publications use retained titles/excerpts, and videos use available descriptions. Other site sections, unpublished content, tags and metadata are excluded.
+
+The GET form works without JavaScript. Source links retain the query; Clear search retains the source. Queries are case-insensitive, limited to 200 characters, and require every space-separated term to match. Results retain the feed order and show readable prose context. Query pages keep the Writing canonical and are noindex/follow.
+
+Search runs on the server without publishing a browser-side corpus or introducing a service. `writing-search.mjs` owns matching, excerpts and filter URLs; `getWritingSearchBodies()` reuses the existing public native/story readers. `test/writing-search.test.mjs` covers the data boundary and behavior. Browser QA checks full-body matches, source/clear interactions, empty results and mobile overflow. After client navigation, wait for exactly one destination canonical: [Next.js streams dynamic metadata separately from visible content](https://nextjs.org/docs/app/getting-started/metadata-and-og-images#streaming-metadata).
+
+
 ## Catalogue addition chronology
 
 The homepage Focus, Systems and Books cards use immutable first-addition times from `content/catalogue-discovery.json`, rather than `updatedAt`, GitHub activity or releases of existing products. `npm run catalogue:register` runs before builds; commit its output with each new public work/book/series record. CI rejects uncommitted registration changes. Existing timestamps survive edits, removals, re-additions and repeated builds. Equal-time additions use the existing catalogue rank/title tie-breaker.

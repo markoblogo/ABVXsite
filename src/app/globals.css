@@ -3651,6 +3651,9 @@ a {
 }
 
 .writing-source-links__filters a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   border: 1px solid var(--line);
   background: var(--paper);
   padding: 0.5rem 0.68rem;
@@ -3674,6 +3677,55 @@ a {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
+
+.writing-search {
+  display: flex;
+  align-items: center;
+  flex: 1 1 16rem;
+  max-width: 22rem;
+  min-width: 0;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.writing-search label {
+  padding-left: 0.7rem;
+  font-size: 0.65rem;
+  font-weight: 950;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.writing-search input[type="search"] {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  border: 0;
+  padding: 0.55rem;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+.writing-search button {
+  flex: 0 0 44px;
+  min-height: 44px;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.writing-search:focus-within {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.writing-search button:hover { background: var(--route-accent); }
+.writing-search button:focus-visible { outline: 2px solid var(--ink); outline-offset: -4px; }
+.writing-search-results__scope { color: var(--ink-muted); font-size: 0.85rem; }
 
 .writing-section {
   display: grid;
@@ -4098,6 +4150,18 @@ a {
   box-shadow: 0 0 0 5px var(--route-accent);
 }
 
+.writing-search-results .writing-archive-row {
+  grid-template-columns: minmax(110px, 0.18fr) minmax(0, 0.82fr);
+  gap: 0.5rem 1rem;
+}
+
+.writing-search-results .writing-archive-row p {
+  display: block;
+  grid-column: 1 / -1;
+  overflow: visible;
+  -webkit-line-clamp: unset;
+}
+
 @media (max-width: 980px) {
   .about-intro,
   .about-method,
@@ -4220,10 +4284,11 @@ a {
   }
 
   .writing-source-links,
-  .writing-source-links__filters,
   .writing-source-links__external {
     flex-direction: column;
   }
+
+  .writing-search { flex: auto; max-width: none; width: 100%; }
 
   .writing-source-links__filters a,
   .writing-source-links__external a {
@@ -4280,6 +4345,10 @@ a {
   .writing-archive-row {
     grid-template-columns: minmax(0, 1fr);
     gap: 0.45rem;
+  }
+
+  .writing-search-results .writing-archive-row {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .writing-archive-row p {

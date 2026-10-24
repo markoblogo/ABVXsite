@@ -7668,7 +7668,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-24T11:15:21.530Z",
+      "updatedAt": "2026-10-24T11:27:25.554Z",
       "tags": [],
       "links": [],
       "related": []
@@ -7785,6 +7785,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=U-cVLltmoRM"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "FLUX 3 Image Klein vs Krea 3: Two New AI Image Models That Change the Game",
+      "summary": "Two new AI image models just dropped. And they're approaching the same problem from completely different directions. Black Forest Labs released FLUX 3 Image Klein. Krea launched Krea 3. One focuses on powerful, affordabl",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/vZ2iE97Qncs",
+      "publishedAt": "2026-10-24T11:26:09.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=vZ2iE97Qncs"
         }
       ],
       "related": []

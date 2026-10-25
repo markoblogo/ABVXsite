@@ -7852,7 +7852,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-25T19:09:32.758Z",
+      "updatedAt": "2026-10-25T19:45:39.063Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10384,6 +10384,161 @@
           "Mix with mild mayonnaise until thick and creamy. Add finely grated carrots if desired.",
           "Serve in a small bowl, spread on bread, or use as a condiment alongside steak or Olivier salad."
         ]
+      }
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "The Ukrainian Borscht I Actually Cook at Home in France",
+      "summary": "After exploring regional fish borschts, canned-food experiments and the anatomy of red borscht, here's the version I actually cook for my family in France, with a few surprisingly useful French shortcuts.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/my-ukrainian-borscht-recipe-in-france",
+      "tags": [
+        "ukrainian-borscht",
+        "borscht-recipe",
+        "beef-borscht",
+        "beetroot",
+        "white-beans",
+        "carottes-rapees",
+        "french-ukrainian-cooking",
+        "breton-food",
+        "home-cooking",
+        "borscht-stories"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-25",
+      "updatedAt": "2026-10-25",
+      "related": [
+        {
+          "title": "Kitchen Notes",
+          "canonicalUrl": "https://abvx.xyz/writing/kitchen-notes",
+          "relation": "collection"
+        }
+      ],
+      "collection": "kitchen-notes",
+      "contentType": "recipe",
+      "recipe": {
+        "recipeYield": "Varies with the size of the pot.",
+        "ingredients": [
+          {
+            "name": "Lean boneless beef, preferably a cut my family enjoys",
+            "quantityText": "According to pot size"
+          },
+          {
+            "name": "Water",
+            "quantityText": "According to pot size"
+          },
+          {
+            "name": "Carrot, halved lengthwise",
+            "quantityText": "1"
+          },
+          {
+            "name": "Onion, halved",
+            "quantityText": "1"
+          },
+          {
+            "name": "Fresh ginger, halved lengthwise",
+            "quantityText": "A piece"
+          },
+          {
+            "name": "Onions, finely chopped",
+            "quantityText": "1–2"
+          },
+          {
+            "name": "Prepared carottes râpées, preferably lightly seasoned with lemon",
+            "quantityText": "According to pot size"
+          },
+          {
+            "name": "Red bell pepper, if available",
+            "quantityText": "Optional"
+          },
+          {
+            "name": "Vacuum-packed cooked beetroot, preferably roasted",
+            "quantityText": "According to pot size"
+          },
+          {
+            "name": "Tomato paste, or canned Italian tomatoes as a substitute",
+            "quantityText": "A small tin of paste, or tomatoes as needed"
+          },
+          {
+            "name": "Fresh tomatoes",
+            "quantityText": "Optional"
+          },
+          {
+            "name": "Garlic for the dressing",
+            "quantityText": "To taste"
+          },
+          {
+            "name": "White beans, with their liquid",
+            "quantityText": "1 can"
+          },
+          {
+            "name": "Vegetable oil",
+            "quantityText": "A little"
+          },
+          {
+            "name": "Potatoes, preferably thin-skinned",
+            "quantityText": "According to pot size"
+          },
+          {
+            "name": "Finely shredded cabbage",
+            "quantityText": "According to pot size"
+          },
+          {
+            "name": "Salt",
+            "quantityText": "To taste"
+          },
+          {
+            "name": "Black peppercorns",
+            "quantityText": "To taste"
+          },
+          {
+            "name": "Bay leaves",
+            "quantityText": "A couple"
+          },
+          {
+            "name": "White or green peppercorns",
+            "quantityText": "Optional"
+          },
+          {
+            "name": "Fresh chili or sriracha",
+            "quantityText": "Optional: a tiny piece of chili or a few drops of sriracha"
+          },
+          {
+            "name": "Additional fresh garlic for the final minute",
+            "quantityText": "To taste"
+          },
+          {
+            "name": "Crème fraîche or sour cream",
+            "quantityText": "To serve"
+          },
+          {
+            "name": "Fresh herbs",
+            "quantityText": "To serve"
+          },
+          {
+            "name": "Bread",
+            "quantityText": "To serve"
+          }
+        ],
+        "instructions": [
+          "Start simmering the beef in water. Brown the cut surfaces of the carrot, onion and ginger in a dry pan and add them to the broth.",
+          "While the broth cooks, sauté the chopped onions in vegetable oil, followed by the prepared grated carrots and optional bell pepper.",
+          "Add optional fresh tomatoes, then grated cooked beetroot with its juices. Allow the liquid to reduce.",
+          "Add tomato paste, or finely chopped canned tomatoes as a substitute. Cook until concentrated.",
+          "Stir in chopped garlic, followed by canned white beans and their liquid. Allow the dressing to thicken, then set it aside.",
+          "When the beef is tender, remove the broth vegetables. Portion the meat if necessary and return it to the pot.",
+          "Add the chopped potatoes and cook for approximately fifteen minutes.",
+          "Add shredded cabbage, adjusting the timing for young or mature cabbage.",
+          "When the potatoes and cabbage are nearly ready, add the concentrated dressing. Simmer together for about five minutes.",
+          "Adjust the seasoning with salt, peppercorns, bay leaves and optional chili or sriracha.",
+          "Add freshly chopped garlic in the final minute. Turn off the heat and cover the pot.",
+          "Let the borscht rest for at least an hour, then serve with crème fraîche."
+        ],
+        "timingText": "Simmer the beef gently for a few hours, until tender. Cook the potatoes for approximately fifteen minutes before adding the cabbage, adjusting for its tenderness. Simmer with the dressing for about five minutes; add the final garlic in the last minute. Rest for at least an hour."
       }
     },
     {

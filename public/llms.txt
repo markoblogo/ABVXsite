@@ -1585,6 +1585,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: soviet-food, ukrainian-food, family-recipes, garlic-cheese-salad, processed-cheese, nostalgic-recipes, holiday-food
 
+- The Ukrainian Borscht I Actually Cook at Home in France
+  URL: https://abvx.xyz/writing/my-ukrainian-borscht-recipe-in-france
+  Summary: After exploring regional fish borschts, canned-food experiments and the anatomy of red borscht, here's the version I actually cook for my family in France, with a few surprisingly useful French shortcuts.
+  Group: writing
+  Tags: ukrainian-borscht, borscht-recipe, beef-borscht, beetroot, white-beans, carottes-rapees, french-ukrainian-cooking, breton-food
+
 - Two New Books
   URL: https://abvx.xyz/writing/two-new-books
   Summary: A short note about two very different books published within a few days: one psychological and fragmentary, the other about strange economic indicators and the...

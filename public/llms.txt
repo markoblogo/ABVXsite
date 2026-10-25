@@ -1501,6 +1501,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook, work
 
+- Psychology Notebook #11 — Selfhood, Inner Rooms & Being Seen
+  URL: https://abvx.xyz/writing/psychology-notebook-11-selfhood-inner-rooms-being-seen
+  Summary: Twenty translated notebook fragments on self-definition, being seen, inner conflict and meeting yourself.
+  Group: writing
+  Tags: psychology-notebook, identity
+
+- Psychology Notebook #12 — Guilt, Shame & the Weather Inside
+  URL: https://abvx.xyz/writing/psychology-notebook-12-guilt-shame-inner-weather
+  Summary: Twenty translated notebook fragments on guilt, shame, resentment, sadness and making room for feelings.
+  Group: writing
+  Tags: psychology-notebook, emotions
+
 - The Berliner: How My Beer Cocktail Ended Up on a French Bar's Menu
   URL: https://abvx.xyz/writing/the-berliner-guinness-port-beer-cocktail
   Summary: I discovered Guinness with port wine in Berlin, recreated it with whatever a small French bar had available, and eventually watched it become an official item in the cash register.

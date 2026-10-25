@@ -7737,7 +7737,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-25T12:47:05.983Z",
+      "updatedAt": "2026-10-25T14:05:43.342Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9526,6 +9526,44 @@
       "links": [],
       "publishedAt": "2026-10-24",
       "updatedAt": "2026-10-24",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #11 — Selfhood, Inner Rooms & Being Seen",
+      "summary": "Twenty translated notebook fragments on self-definition, being seen, inner conflict and meeting yourself.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-11-selfhood-inner-rooms-being-seen",
+      "tags": [
+        "psychology-notebook",
+        "identity"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-25",
+      "updatedAt": "2026-10-25",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #12 — Guilt, Shame & the Weather Inside",
+      "summary": "Twenty translated notebook fragments on guilt, shame, resentment, sadness and making room for feelings.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-12-guilt-shame-inner-weather",
+      "tags": [
+        "psychology-notebook",
+        "emotions"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-25",
+      "updatedAt": "2026-10-25",
       "related": []
     },
     {

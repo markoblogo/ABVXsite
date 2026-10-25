@@ -87,6 +87,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/cQS3nbBe6JM
   Summary: What if you could turn almost any PC game into something completely different using AI? And what if Claude Code could handle the modding process for you? Meet Universal Modder, an open-source collection of AI agent skill
 
+- 703 Claude Opus 5.5 Video Prompts You Can Copy for Free | AI Motion Graphics & Animation
+  URL: https://abvx.xyz/writing/videos/dSBsgH4bpNY
+  Summary: What if you could browse hundreds of impressive AI-generated animations and get the prompts behind them? Not just watch the results. Copy the prompts, study how they work, and create your own versions. Someone has put to
+
 - FLUX 3 Max: Near Real-Time AI Video, 22× Faster Than Seedance 2.5
   URL: https://abvx.xyz/writing/videos/G_5lLwn6Veo
   Summary: Remember when generating a few seconds of AI video meant waiting several minutes? Well, those days might be numbered. After making MiniMax H3 ridiculously fast, fal.ai teamed up with Black Forest Labs to push FLUX 3 to a
@@ -178,6 +182,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Jeanne la bataillonneuse — Géo Chkouroupiy | Bande-annonce
   URL: https://abvx.xyz/writing/videos/PmhWa-V00zc
   Summary: Découvrez « Jeanne la bataillonneuse, suivi de Miss Adrienne » de Géo Chkouroupiy, en traduction française dans la collection Modernisme ukrainien. La guerre et la révolution de 1917. Puis l’usine, le chômage et les mira
+
+- CapCut Is Coming to ChatGPT! AI Video Editing Just Got Interesting
+  URL: https://abvx.xyz/writing/videos/ppz1g7gRDds
+  Summary: Apparently, CapCut couldn't just sit back and watch creators automate their video editing workflows with Claude Code and DaVinci Resolve. So now CapCut is coming directly to ChatGPT. Announced at CapCut World LA on Octob
 
 - Брокеридж зернових та олійних: безкоштовний практичний гід MN7R
   URL: https://abvx.xyz/writing/videos/qer7WfdIWLI

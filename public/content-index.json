@@ -7041,6 +7041,29 @@
       "related": []
     },
     {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "703 Claude Opus 5.5 Video Prompts You Can Copy for Free | AI Motion Graphics & Animation",
+      "summary": "What if you could browse hundreds of impressive AI-generated animations and get the prompts behind them? Not just watch the results. Copy the prompts, study how they work, and create your own versions. Someone has put to",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/dSBsgH4bpNY",
+      "publishedAt": "2026-10-25T15:11:45.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=dSBsgH4bpNY"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "writing",
       "section": "writing",
       "ecosystem": "Writing",
@@ -7504,6 +7527,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "CapCut Is Coming to ChatGPT! AI Video Editing Just Got Interesting",
+      "summary": "Apparently, CapCut couldn't just sit back and watch creators automate their video editing workflows with Claude Code and DaVinci Resolve. So now CapCut is coming directly to ChatGPT. Announced at CapCut World LA on Octob",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/ppz1g7gRDds",
+      "publishedAt": "2026-10-25T15:23:52.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=ppz1g7gRDds"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "ChatGPT Can Now Turn AI-Generated Logos Into Editable SVGs",
       "summary": "ChatGPT can already design your logo. Now it can turn that logo into an editable vector file, right inside the chat. Meet Vectorize, a ChatGPT plugin that converts AI-generated logos and images into scalable SVG graphics.",
       "canonicalUrl": "https://abvx.xyz/writing/videos/RsxiDWDj2Rg",
@@ -7783,7 +7829,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-25T14:50:58.259Z",
+      "updatedAt": "2026-10-25T15:29:19.455Z",
       "tags": [],
       "links": [],
       "related": []

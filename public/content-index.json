@@ -6937,6 +6937,29 @@
       "related": []
     },
     {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "150+ AI Image Prompts for Stunning Visuals | Posters, Mockups & Design Inspiration",
+      "summary": "Tired of spending more time writing AI image prompts than actually creating something? Here's a little resource worth bookmarking. Meet OnePromptDesign, a collection of 150+ ready-to-use AI image prompts and visual refer",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/LQjCjugvpco",
+      "publishedAt": "2026-10-25T14:38:11.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=LQjCjugvpco"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "writing",
       "section": "writing",
       "ecosystem": "Writing",
@@ -7760,7 +7783,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-25T14:17:14.928Z",
+      "updatedAt": "2026-10-25T14:50:58.259Z",
       "tags": [],
       "links": [],
       "related": []

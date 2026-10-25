@@ -686,3 +686,6 @@ And they're missing out.
 ### Can you make borscht almost entirely from canned food?
 
 After discovering Donetsk's wonderfully practical borscht with canned sprats, I eventually took the idea considerably further. French sauerkraut with pork, canned beetroot and chili con carne went into the same pot. [Read how my completely unreasonable borscht experiment turned out.](https://abvx.xyz/writing/lazy-ukrainian-borscht-from-canned-food)
+
+
+**Borscht Stories:** [How Much Can You Change Borscht Before It Stops Being Borscht?](https://abvx.xyz/writing/what-makes-ukrainian-red-borscht)

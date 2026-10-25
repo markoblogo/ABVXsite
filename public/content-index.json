@@ -7852,7 +7852,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-25T18:21:40.406Z",
+      "updatedAt": "2026-10-25T19:09:32.758Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8500,6 +8500,39 @@
       "publishedAt": "2026-10-10",
       "updatedAt": "2026-10-10",
       "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "How Much Can You Change Borscht Before It Stops Being Borscht?",
+      "summary": "I turned Ukrainian red borscht into a technical specification. Which ingredients are essential, which can be replaced, and how far can you experiment before you're making another soup?",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/what-makes-ukrainian-red-borscht",
+      "tags": [
+        "ukrainian-borscht",
+        "red-borscht",
+        "borscht-history",
+        "ukrainian-food",
+        "culinary-traditions",
+        "recipe-variations",
+        "ingredient-substitution",
+        "food-experiments",
+        "borscht-stories"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-25",
+      "updatedAt": "2026-10-25",
+      "related": [
+        {
+          "title": "Kitchen Notes",
+          "canonicalUrl": "https://abvx.xyz/writing/kitchen-notes",
+          "relation": "collection"
+        }
+      ],
+      "collection": "kitchen-notes"
     },
     {
       "type": "video",

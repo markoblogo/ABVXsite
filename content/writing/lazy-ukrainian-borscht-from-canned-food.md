@@ -425,3 +425,6 @@ Even if it involves French sauerkraut.
 And even if several generations of Ukrainian grandmothers would be absolutely furious.
 
 **Three cans. One saucepan. And a completely unreasonable borscht that turned out to be delicious.**
+
+
+**Borscht Stories:** [How Much Can You Change Borscht Before It Stops Being Borscht?](https://abvx.xyz/writing/what-makes-ukrainian-red-borscht)

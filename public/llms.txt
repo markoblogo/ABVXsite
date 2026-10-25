@@ -1393,6 +1393,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: venison, roe-deer, slow-roasting, peanut-butter, cranberries, prunes, loire-valley, food-memories
 
+- How Much Can You Change Borscht Before It Stops Being Borscht?
+  URL: https://abvx.xyz/writing/what-makes-ukrainian-red-borscht
+  Summary: I turned Ukrainian red borscht into a technical specification. Which ingredients are essential, which can be replaced, and how far can you experiment before you're making another soup?
+  Group: writing
+  Tags: ukrainian-borscht, red-borscht, borscht-history, ukrainian-food, culinary-traditions, recipe-variations, ingredient-substitution, food-experiments
+
 - I Gave My Wife Tulips. They Were Hard-Boiled Eggs.
   URL: https://abvx.xyz/writing/edible-egg-tulips-womens-day
   Summary: For March 8, I made my wife a bouquet of white tulips. The flowers were actually carved boiled eggs, and the stems were green onions. She loved it.

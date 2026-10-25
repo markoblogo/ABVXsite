@@ -1225,6 +1225,17 @@
     },
     {
       "source": "youtube",
+      "title": "A Dog Follows a Falling Light | 3D Animated Short",
+      "url": "https://www.youtube.com/watch?v=B4zdWfFIkNE",
+      "publishedAt": "2026-10-25T13:57:03.000Z",
+      "excerpt": "A quiet discovery turns into a dash toward the unknown. A small light falls beyond the trees, floods the forest with a warm glow, and draws a curious dog into the brightness. A 30-second, dialogue-free 3D animated short ",
+      "coverImage": "https://i.ytimg.com/vi/B4zdWfFIkNE/hqdefault.jpg",
+      "videoDescription": "A quiet discovery turns into a dash toward the unknown. A small light falls beyond the trees, floods the forest with a warm glow, and draws a curious dog into the brightness.\n\nA 30-second, dialogue-free 3D animated short about curiosity, color and light. The original soundtrack changes from gentle ambient tones to a faster, slightly uneasy pulse at the moment of impact.\n\nCreated with Framewright: https://github.com/markoblogo/framewright\nStaged and rendered locally in Three.js. Dog model and original animation clips: Quaternius, Ultimate Animated Animal Pack, CC0 1.0.\nhttps://quaternius.com/packs/ultimateanimatedanimals.html\n\nEnvironment, camera direction, animation blending, lighting effects and procedural sound were authored for this film with an AI coding agent. This experiment develops reusable virtual sets and character actions for future animated stories.\n\n#3DAnimation #AnimatedShort #DogAnimation",
+      "addedAt": "2026-10-25T14:17:14.928Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "I Asked a Free AI Model to Create a Motion Graphics Showreel. This Is What It Made",
       "url": "https://www.youtube.com/watch?v=bAfDgoZdGrY",
       "publishedAt": "2026-10-19T15:49:04.000Z",

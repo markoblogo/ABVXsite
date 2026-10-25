@@ -7063,6 +7063,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "A Dog Follows a Falling Light | 3D Animated Short",
+      "summary": "A quiet discovery turns into a dash toward the unknown. A small light falls beyond the trees, floods the forest with a warm glow, and draws a curious dog into the brightness. A 30-second, dialogue-free 3D animated short ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/B4zdWfFIkNE",
+      "publishedAt": "2026-10-25T13:57:03.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=B4zdWfFIkNE"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "A One-Minute Dream Walk | Guided Visualization in a Moonlit Garden",
       "summary": "Step into a moonlit garden for a one-minute guided visualization: lanterns, moving water, a quiet pavilion and a gentle English voice. A short cinematic escape with ambient piano and night sounds. Created using PlayMCP. ",
       "canonicalUrl": "https://abvx.xyz/writing/videos/oyQXmJI4aK0",
@@ -7737,7 +7760,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-25T14:05:43.342Z",
+      "updatedAt": "2026-10-25T14:17:14.928Z",
       "tags": [],
       "links": [],
       "related": []

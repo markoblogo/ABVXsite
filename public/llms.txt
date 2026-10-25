@@ -63,6 +63,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/Ao-_E_l6F98
   Summary: Smart TVs have become ridiculous. You buy a television, turn it on, and somehow end up staring at advertisements, sponsored recommendations, and apps you never asked for. One developer finally decided he'd had enough. So
 
+- A Dog Follows a Falling Light | 3D Animated Short
+  URL: https://abvx.xyz/writing/videos/B4zdWfFIkNE
+  Summary: A quiet discovery turns into a dash toward the unknown. A small light falls beyond the trees, floods the forest with a warm glow, and draws a curious dog into the brightness. A 30-second, dialogue-free 3D animated short
+
 - I Asked a Free AI Model to Create a Motion Graphics Showreel. This Is What It Made
   URL: https://abvx.xyz/writing/videos/bAfDgoZdGrY
   Summary: What happens when you ask an AI model to prove it's a world-class motion designer? Meet Space Bunny Alpha, a mysterious AI model that appeared on OpenRouter and OpenCode with impressive coding capabilities and a 1-millio

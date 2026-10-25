@@ -1579,6 +1579,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: ukha, rooster-broth, fish-soup, bessarabian-food, bulgarian-family-recipes, southern-ukraine, lyok-sauce, food-memories
 
+- Your AI Agent Got Smarter at One Task. Congratulations. It Just Broke Three Others.
+  URL: https://abvx.xyz/writing/google-oo-harness-specialized-ai-agents
+  Summary: Improving an AI agent for one task can make it worse at another. Google's OO-Harness uses object-oriented inheritance and selective routing to solve the problem, delivering a 77.41% partial-credit score versus 61.62% for the baseline on AutomationBench.
+  Group: writing
+  Tags: ai-agents, agent-harness, oo-harness, google-research, agentic-ai, object-oriented-programming, automation, ai-engineering
+
 - Вийшов перший французький переклад Jeanne la bataillonneuse та Miss Adrienne Гео Шкурупія
   URL: https://abvx.xyz/writing/vyishov-pershyi-frantsuzkyi-pereklad-jeanne-bataillonneuse
   Summary: На Amazon вийшов перший французький переклад Jeanne la bataillonneuse та Miss Adrienne Гео Шкурупія, частина проєкту Modernisme ukrainien про українську літературу 1920–1930-х років.

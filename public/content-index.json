@@ -7852,7 +7852,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-25T17:15:09.178Z",
+      "updatedAt": "2026-10-25T18:04:54.335Z",
       "tags": [],
       "links": [],
       "related": []
@@ -7972,6 +7972,41 @@
         }
       ],
       "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Fish in Borscht? Three Ukrainian Recipes That Sound Completely Wrong. Until You Taste Them.",
+      "summary": "Three fish borschts, three regions and three chapters of my life. From fried gobies in childhood to canned sprats in Donetsk and crucian carp dried on straw in a Ukrainian village.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/ukrainian-fish-borscht-three-regions",
+      "tags": [
+        "ukrainian-borscht",
+        "fish-borscht",
+        "odesa-cuisine",
+        "donetsk-cuisine",
+        "poltava-cuisine",
+        "black-sea-gobies",
+        "sprats-in-tomato-sauce",
+        "crucian-carp",
+        "ukrainian-food-culture",
+        "food-memories",
+        "borscht-stories"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-25",
+      "updatedAt": "2026-10-25",
+      "related": [
+        {
+          "title": "Kitchen Notes",
+          "canonicalUrl": "https://abvx.xyz/writing/kitchen-notes",
+          "relation": "collection"
+        }
+      ],
+      "collection": "kitchen-notes"
     },
     {
       "type": "video",

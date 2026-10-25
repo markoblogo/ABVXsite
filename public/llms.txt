@@ -1375,6 +1375,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: android-tv, google-tv, adb, claude-code, codex, ai-agents, device-optimization, open-source
 
+- Fish in Borscht? Three Ukrainian Recipes That Sound Completely Wrong. Until You Taste Them.
+  URL: https://abvx.xyz/writing/ukrainian-fish-borscht-three-regions
+  Summary: Three fish borschts, three regions and three chapters of my life. From fried gobies in childhood to canned sprats in Donetsk and crucian carp dried on straw in a Ukrainian village.
+  Group: writing
+  Tags: ukrainian-borscht, fish-borscht, odesa-cuisine, donetsk-cuisine, poltava-cuisine, black-sea-gobies, sprats-in-tomato-sauce, crucian-carp
+
 - Homemade Ginger Beer: One Week, Lots of Ginger, and a Very Spicy Experiment
   URL: https://abvx.xyz/writing/homemade-ginger-beer-ginger-bug-recipe
   Summary: My son and I made naturally fermented ginger beer using fresh ginger, sugar and water. Five days for the starter, another day for carbonation, and one surprisingly good spicy experiment.

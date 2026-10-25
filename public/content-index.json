@@ -7173,6 +7173,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "AI Turned the Original Prince of Persia Into a Photorealistic Movie",
+      "summary": "Remember the original Prince of Persia? The legendary 1989 computer game with its pixelated characters, deadly traps, impossible jumps, and unforgettable atmosphere? Well, someone decided to give it a serious cinematic u",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/R2d5LM8bHEk",
+      "publishedAt": "2026-10-25T12:33:21.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=R2d5LM8bHEk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "AI Video Is Now Faster Than Real Time. Welcome to Infinite Slop",
       "summary": "We have officially reached a new milestone in AI-generated content. AI can now produce videos faster than humans can watch them. And the internet is responding exactly as you'd expect. With infinite AI slop. AI infrastru",
       "canonicalUrl": "https://abvx.xyz/writing/videos/mt0MOEpoj1c",
@@ -7714,7 +7737,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-25T12:25:21.357Z",
+      "updatedAt": "2026-10-25T12:47:05.983Z",
       "tags": [],
       "links": [],
       "related": []

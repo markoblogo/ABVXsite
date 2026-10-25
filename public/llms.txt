@@ -1423,6 +1423,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: shortbread, sable-cookies, no-oven-baking, frying-pan-recipes, french-food, breton-biscuits, kitchen-experiments, ai-in-cooking
 
+- I Made Ukrainian Borscht Entirely from Canned Food. And It Actually Worked.
+  URL: https://abvx.xyz/writing/lazy-ukrainian-borscht-from-canned-food
+  Summary: I combined canned French sauerkraut with pork, beetroot and chili con carne to see whether I could make Ukrainian borscht without the usual cooking. It sounded ridiculous. It worked.
+  Group: writing
+  Tags: ukrainian-borscht, lazy-borscht, canned-food, chili-con-carne, choucroute-garnie, kitchen-experiments, ukrainian-food, french-food
+
 - Marmite Oatmeal
   URL: https://abvx.xyz/writing/marmite-oatmeal
   Summary: A very simple savoury oatmeal that my children and I genuinely love.

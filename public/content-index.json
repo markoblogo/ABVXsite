@@ -7852,7 +7852,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-25T18:04:54.335Z",
+      "updatedAt": "2026-10-25T18:21:40.406Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8741,6 +8741,39 @@
         "timingText": "Preparation: Approximately 10–15 minutes, plus time to soften the butter. Cooking: Variable; approximately 15–30 minutes depending on thickness and heat. The personal experiment took longer. Cooling: At least until completely cool. I allowed approximately 90 minutes.",
         "recipeYield": "Approximately 6–10 cookies, depending on size"
       }
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "I Made Ukrainian Borscht Entirely from Canned Food. And It Actually Worked.",
+      "summary": "I combined canned French sauerkraut with pork, beetroot and chili con carne to see whether I could make Ukrainian borscht without the usual cooking. It sounded ridiculous. It worked.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/lazy-ukrainian-borscht-from-canned-food",
+      "tags": [
+        "ukrainian-borscht",
+        "lazy-borscht",
+        "canned-food",
+        "chili-con-carne",
+        "choucroute-garnie",
+        "kitchen-experiments",
+        "ukrainian-food",
+        "french-food",
+        "borscht-stories"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-25",
+      "updatedAt": "2026-10-25",
+      "related": [
+        {
+          "title": "Kitchen Notes",
+          "canonicalUrl": "https://abvx.xyz/writing/kitchen-notes",
+          "relation": "collection"
+        }
+      ],
+      "collection": "kitchen-notes"
     },
     {
       "type": "writing",

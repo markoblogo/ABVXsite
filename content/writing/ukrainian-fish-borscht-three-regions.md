@@ -680,3 +680,9 @@ But for now, here's the thought I wanted to preserve.
 **If someone tells you that fish has no business being in borscht, there's a reasonable chance they've simply never had good fish borscht.**
 
 And they're missing out.
+
+---
+
+### Can you make borscht almost entirely from canned food?
+
+After discovering Donetsk's wonderfully practical borscht with canned sprats, I eventually took the idea considerably further. French sauerkraut with pork, canned beetroot and chili con carne went into the same pot. [Read how my completely unreasonable borscht experiment turned out.](https://abvx.xyz/writing/lazy-ukrainian-borscht-from-canned-food)

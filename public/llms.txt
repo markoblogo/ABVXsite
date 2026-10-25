@@ -79,6 +79,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/BD4-rrzeqKA
   Summary: What if an AI coding agent helped discover a planet that astronomers had missed for seven years? And what if NASA actually agreed to investigate? That's exactly what's happening. Independent researcher Pavel Rabtsevich u
 
+- I Lived 85 Years in a Browser | 1 in 8 Billion Life Simulator
+  URL: https://abvx.xyz/writing/videos/bNpRyDZsCHg
+  Summary: What if you were born somewhere else? In this 1 in 8 Billion gameplay review, one randomly assigned life unfolds from birth to age 85—in under two minutes. Meet Anita Gautam, a fictional girl born into a poor family in r
+
 - Claude Opus 5.5 Turned a Viral Video Into a Playable 3D Game in 40 Minutes
   URL: https://abvx.xyz/writing/videos/CM0Ig3q7pqk
   Summary: What if you could take a viral video, give it to an AI, and turn it into an actual video game? Not just a visual recreation. A fully explorable 3D world. And what if the entire process took just 40 minutes? About a year

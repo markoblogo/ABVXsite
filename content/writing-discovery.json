@@ -1339,6 +1339,17 @@
     },
     {
       "source": "youtube",
+      "title": "I Lived 85 Years in a Browser | 1 in 8 Billion Life Simulator",
+      "url": "https://www.youtube.com/watch?v=bNpRyDZsCHg",
+      "publishedAt": "2026-10-25T21:19:04.000Z",
+      "excerpt": "What if you were born somewhere else? In this 1 in 8 Billion gameplay review, one randomly assigned life unfolds from birth to age 85—in under two minutes. Meet Anita Gautam, a fictional girl born into a poor family in r",
+      "coverImage": "https://i.ytimg.com/vi/bNpRyDZsCHg/hqdefault.jpg",
+      "videoDescription": "What if you were born somewhere else? In this 1 in 8 Billion gameplay review, one randomly assigned life unfolds from birth to age 85—in under two minutes.\n\nMeet Anita Gautam, a fictional girl born into a poor family in rural Odisha, India. Follow her journey through school, university, work in Mumbai, marriage, parenthood and old age. I kept the first character the game gave me: no rerolls and no rewritten outcomes.\n\n▶ Play 1 in 8 Billion: https://1in8b.life/en/\n▶ About the simulator and its data sources: https://1in8b.life/en/about/\n\nThis free browser life simulator turns choices about education, work, family and health into a personal story. Some decisions open doors. Others come with costs that only become clear years later. How much of a life can you choose—and how much is shaped by where it begins?\n\n🎬 Made with Framewright, my open-source toolkit for video production with an AI agent. This experiment combines real website capture, an edited playthrough, English narration, original background music and illustrative portraits of the character at different ages.\nFramewright: https://github.com/markoblogo/framewright\n\nCHAPTERS\n00:00 One random life\n00:20 Meet Anita Gautam\n00:32 School, marriage and university\n00:44 Work and family\n00:55 The cost of care\n01:07 Health, career and a home\n01:19 Returning home and growing older\n01:33 The end of one life\n01:44 A life behind the numbers\n\nThe gameplay comes from one accelerated, manually played session on the English website. The film uses selected screen recordings and screenshots. Photorealistic portraits are AI-generated illustrations of a fictional character, not real photographs or images supplied by the game. The simulated life is fiction, not a biography or prediction.\n\nGame: 1 in 8 Billion — https://1in8b.life/\nEnglish narration: Supertonic 3.\nMusic: an original instrumental score created for this video.\n\nWhat would you have chosen differently in Anita’s life?\n\n#1in8Billion #LifeSimulator #BrowserGame",
+      "addedAt": "2026-10-25T21:27:47.101Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Claude Opus 5.5 Turned a Viral Video Into a Playable 3D Game in 40 Minutes",
       "url": "https://www.youtube.com/watch?v=CM0Ig3q7pqk",
       "publishedAt": "2026-10-17T20:20:30.000Z",

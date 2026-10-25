@@ -7852,7 +7852,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-25T20:03:43.519Z",
+      "updatedAt": "2026-10-25T21:27:47.101Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8673,6 +8673,29 @@
         }
       ],
       "collection": "kitchen-notes"
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "I Lived 85 Years in a Browser | 1 in 8 Billion Life Simulator",
+      "summary": "What if you were born somewhere else? In this 1 in 8 Billion gameplay review, one randomly assigned life unfolds from birth to age 85—in under two minutes. Meet Anita Gautam, a fictional girl born into a poor family in r",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/bNpRyDZsCHg",
+      "publishedAt": "2026-10-25T21:19:04.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=bNpRyDZsCHg"
+        }
+      ],
+      "related": []
     },
     {
       "type": "writing",

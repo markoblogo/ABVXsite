@@ -7829,7 +7829,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-25T15:29:19.455Z",
+      "updatedAt": "2026-10-25T16:56:35.067Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10976,6 +10976,33 @@
           "url": "https://abvx.xyz/writing"
         }
       ],
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Your AI Agent Got Smarter at One Task. Congratulations. It Just Broke Three Others.",
+      "summary": "Improving an AI agent for one task can make it worse at another. Google's OO-Harness uses object-oriented inheritance and selective routing to solve the problem, delivering a 77.41% partial-credit score versus 61.62% for the baseline on AutomationBench.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/google-oo-harness-specialized-ai-agents",
+      "tags": [
+        "ai-agents",
+        "agent-harness",
+        "oo-harness",
+        "google-research",
+        "agentic-ai",
+        "object-oriented-programming",
+        "automation",
+        "ai-engineering",
+        "llm-orchestration",
+        "software-architecture"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-25",
+      "updatedAt": "2026-10-25",
       "related": []
     },
     {

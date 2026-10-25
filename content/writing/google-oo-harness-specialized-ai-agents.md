@@ -273,11 +273,9 @@ The researchers evaluated the approach on several benchmarks involving business 
 
 On AutomationBench, which tests business-process automation, the results were:
 
-|Harness|Average partial-credit score|
-|---|---|
-|Base harness|61.62%|
-|Meta-Harness, one globally optimised configuration|63.92%|
-|OO-Harness, specialised inherited configurations|**77.41%**|
+- Base harness — average partial-credit score: 61.62%.
+- Meta-Harness, one globally optimised configuration — average partial-credit score: 63.92%.
+- OO-Harness, specialised inherited configurations — average partial-credit score: **77.41%**.
 
 That's an improvement of 15.79 percentage points over the base configuration.
 

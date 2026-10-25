@@ -59,6 +59,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/89kTx1LhEP0
   Summary: The world changed. The dogs read the fine print. Meet Mriya, a former shelter dog navigating a city rewritten by the System. Good Dogs of the Apocalypse is a darkly comic, dog-centered LitRPG series about survival, found
 
+- Claude Code / Codex Turns Real Roads Into Retro Pixel-Art Games | Pixel Path
+  URL: https://abvx.xyz/writing/videos/9aEaGv0Wu4o
+  Summary: Someone built a Claude Code skill that turns real-world roads into retro pixel-art adventures. And I have absolutely no idea why I love this so much. Meet Pixel Path, an open-source Claude Code skill that transforms any
+
 - He Used Claude Code to Remove Smart TV Ads and Make His TV 3× Faster
   URL: https://abvx.xyz/writing/videos/Ao-_E_l6F98
   Summary: Smart TVs have become ridiculous. You buy a television, turn it on, and somehow end up staring at advertisements, sponsored recommendations, and apps you never asked for. One developer finally decided he'd had enough. So
@@ -138,6 +142,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Odyssey-3: AI Generates Interactive Worlds in Real Time (And You Can Play Them)
   URL: https://abvx.xyz/writing/videos/KbObKhxwReA
   Summary: What if AI could generate an entire world while you're exploring it? Not a video. Not a traditional game. An interactive environment that responds to your actions in real time. Meet Odyssey-3, a new AI world model that g
+
+- Nantes in Pixel Art: Airport to the Loire, LU Tower & the Castle | Nantes: de l’aéroport à la Loire
+  URL: https://abvx.xyz/writing/videos/kh-MTl8K5pE
+  Summary: Un petit voyage à Nantes, de l’aéroport Nantes Atlantique au centre-ville, en passant par la Loire et l’île de Nantes. La balade se termine avec deux vues illustrées : la tour LU et le château des ducs de Bretagne. Un tr
 
 - Як працює спотовий ринок зерна? Безкоштовний практичний гайд українською
   URL: https://abvx.xyz/writing/videos/Kx1ftrOWQm8

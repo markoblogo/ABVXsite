@@ -7596,6 +7596,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude Code / Codex Turns Real Roads Into Retro Pixel-Art Games | Pixel Path",
+      "summary": "Someone built a Claude Code skill that turns real-world roads into retro pixel-art adventures. And I have absolutely no idea why I love this so much. Meet Pixel Path, an open-source Claude Code skill that transforms any ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/9aEaGv0Wu4o",
+      "publishedAt": "2026-10-25T16:56:07.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=9aEaGv0Wu4o"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude Code & Codex: Understand AI-Generated Code Before You Merge | diff-tour",
       "summary": "Your AI coding agent just modified 15 files, added 800 lines of code, and proudly announced: \"All done. Everything works.\" Great. But do you actually understand what it changed? Meet diff-tour, a free, open-source tool t",
       "canonicalUrl": "https://abvx.xyz/writing/videos/XOv4GafWnqY",
@@ -7829,7 +7852,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-25T15:29:19.455Z",
+      "updatedAt": "2026-10-25T17:15:09.178Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9127,6 +9150,29 @@
         }
       ],
       "collection": "kitchen-notes"
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Nantes in Pixel Art: Airport to the Loire, LU Tower & the Castle | Nantes: de l’aéroport à la Loire",
+      "summary": "Un petit voyage à Nantes, de l’aéroport Nantes Atlantique au centre-ville, en passant par la Loire et l’île de Nantes. La balade se termine avec deux vues illustrées : la tour LU et le château des ducs de Bretagne. Un tr",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/kh-MTl8K5pE",
+      "publishedAt": "2026-10-25T17:08:18.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=kh-MTl8K5pE"
+        }
+      ],
+      "related": []
     },
     {
       "type": "video",

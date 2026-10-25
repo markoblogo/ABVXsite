@@ -1381,6 +1381,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: ukrainian-borscht, fish-borscht, odesa-cuisine, donetsk-cuisine, poltava-cuisine, black-sea-gobies, sprats-in-tomato-sauce, crucian-carp
 
+- Gemini Promised Fluffy Doughnuts. I Got Pancakes and Matcha Condensed Milk.
+  URL: https://abvx.xyz/writing/yogurt-pancakes-matcha-condensed-milk
+  Summary: I had five litres of Breton yogurt, too much milk and no oven. Gemini suggested fluffy doughnuts. Ninety minutes and 600 grams of flour later, I had something else entirely — and a surprisingly delicious matcha condensed milk.
+  Group: writing
+  Tags: yogurt-pancakes, matcha-condensed-milk, no-oven-cooking, breton-yogurt, ai-cooking, gemini, kitchen-experiments, homemade-desserts
+
 - Homemade Ginger Beer: One Week, Lots of Ginger, and a Very Spicy Experiment
   URL: https://abvx.xyz/writing/homemade-ginger-beer-ginger-bug-recipe
   Summary: My son and I made naturally fermented ginger beer using fresh ginger, sugar and water. Five days for the starter, another day for carbonation, and one surprisingly good spicy experiment.

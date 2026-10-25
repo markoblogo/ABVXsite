@@ -7852,7 +7852,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-25T19:45:39.063Z",
+      "updatedAt": "2026-10-25T20:03:43.519Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8171,6 +8171,38 @@
         }
       ],
       "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Gemini Promised Fluffy Doughnuts. I Got Pancakes and Matcha Condensed Milk.",
+      "summary": "I had five litres of Breton yogurt, too much milk and no oven. Gemini suggested fluffy doughnuts. Ninety minutes and 600 grams of flour later, I had something else entirely — and a surprisingly delicious matcha condensed milk.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/yogurt-pancakes-matcha-condensed-milk",
+      "tags": [
+        "yogurt-pancakes",
+        "matcha-condensed-milk",
+        "no-oven-cooking",
+        "breton-yogurt",
+        "ai-cooking",
+        "gemini",
+        "kitchen-experiments",
+        "homemade-desserts"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-25",
+      "updatedAt": "2026-10-25",
+      "related": [
+        {
+          "title": "Kitchen Notes",
+          "canonicalUrl": "https://abvx.xyz/writing/kitchen-notes",
+          "relation": "collection"
+        }
+      ],
+      "collection": "kitchen-notes"
     },
     {
       "type": "video",

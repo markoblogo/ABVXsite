@@ -1423,6 +1423,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: ukrainian-borscht, red-borscht, borscht-history, ukrainian-food, culinary-traditions, recipe-variations, ingredient-substitution, food-experiments
 
+- I Discovered Pissaladière in a Cheap Pizza Bar in Corsica
+  URL: https://abvx.xyz/writing/pissaladiere-corsica-puff-pastry-recipe
+  Summary: A cheap pizza bar in Corsica introduced me to one of my favourite French dishes. Years later, after searching for it in Menton and the mountains, I finally started making my own pissaladière in Nantes.
+  Group: writing
+  Tags: pissaladiere, french-cuisine, mediterranean-food, puff-pastry, caramelised-onions, anchovies, olives, home-cooking
+
 - I Gave My Wife Tulips. They Were Hard-Boiled Eggs.
   URL: https://abvx.xyz/writing/edible-egg-tulips-womens-day
   Summary: For March 8, I made my wife a bouquet of white tulips. The flowers were actually carved boiled eggs, and the stems were green onions. She loved it.

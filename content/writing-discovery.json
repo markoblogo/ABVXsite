@@ -242,6 +242,16 @@
     },
     {
       "source": "abvx",
+      "title": "I Discovered Pissaladière in a Cheap Pizza Bar in Corsica",
+      "url": "/writing/pissaladiere-corsica-puff-pastry-recipe",
+      "publishedAt": "2026-10-26T00:00:00.000Z",
+      "excerpt": "A cheap pizza bar in Corsica introduced me to one of my favourite French dishes. Years later, after searching for it in Menton and the mountains, I finally started making my own pissaladière in Nantes.",
+      "coverImage": "/media/writing/pissaladiere-corsica-puff-pastry-recipe/cover.webp",
+      "addedAt": "2026-10-26T13:38:00.213Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "abvx",
       "title": "PlayMCP in Practice: Three Games, Real Costs, and a New Way to Make Video",
       "url": "/writing/playmcp-three-games-video-experiments",
       "publishedAt": "2026-10-21T00:00:00.000Z",

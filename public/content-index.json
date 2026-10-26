@@ -7852,7 +7852,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-26T13:22:47.229Z",
+      "updatedAt": "2026-10-26T13:38:00.213Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8668,6 +8668,44 @@
         }
       ],
       "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "I Discovered Pissaladière in a Cheap Pizza Bar in Corsica",
+      "summary": "A cheap pizza bar in Corsica introduced me to one of my favourite French dishes. Years later, after searching for it in Menton and the mountains, I finally started making my own pissaladière in Nantes.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/pissaladiere-corsica-puff-pastry-recipe",
+      "tags": [
+        "pissaladiere",
+        "french-cuisine",
+        "mediterranean-food",
+        "puff-pastry",
+        "caramelised-onions",
+        "anchovies",
+        "olives",
+        "home-cooking",
+        "food-memories",
+        "corsica",
+        "french-regional-cuisine",
+        "mediterranean-cooking",
+        "cooking-shortcuts",
+        "food-travel-stories"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-26",
+      "updatedAt": "2026-10-26",
+      "related": [
+        {
+          "title": "Kitchen Notes",
+          "canonicalUrl": "https://abvx.xyz/writing/kitchen-notes",
+          "relation": "collection"
+        }
+      ],
+      "collection": "kitchen-notes"
     },
     {
       "type": "writing",

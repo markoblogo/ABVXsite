@@ -791,6 +791,16 @@
     },
     {
       "source": "medium",
+      "title": "Mistral’s Timestral: 209 Million Parameters, No GPU, and a Suspiciously Perfect Benchmark Score",
+      "url": "https://abvcreative.medium.com/mistrals-timestral-209-million-parameters-no-gpu-and-a-suspiciously-perfect-benchmark-score-86d256483d16",
+      "publishedAt": "2026-10-26T14:17:18.000Z",
+      "excerpt": "The French AI company has decided that predicting the next word is boring. Now it wants to predict the future. Apparently, building language models wasn’t enough for Mistral. The French have now decided to tackle time-se",
+      "coverImage": "https://cdn-images-1.medium.com/max/1024/1*bXmbknplIfgD-qM47K5SDw.png",
+      "addedAt": "2026-10-26T15:07:03.344Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "medium",
       "title": "No A/B Test? This Method Tries to Measure Ad Incrementality After the Budget Already Changed",
       "url": "https://abvcreative.medium.com/no-a-b-test-this-method-tries-to-measure-ad-incrementality-after-the-budget-already-changed-242ca66071f4",
       "publishedAt": "2026-10-01T14:32:53.000Z",
@@ -1118,6 +1128,16 @@
       "coverImage": "https://substackcdn.com/image/fetch/$s_!JruK!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F97a34582-3e02-4f1c-ba82-6f6b367ea66a_1536x1024.png",
       "addedAt": "2026-09-08T20:45:42.000Z",
       "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "substack",
+      "title": "Snap Built an AI to Judge Its Ads. Then Had to Teach It What “Relevant” Means.",
+      "url": "https://abvx.substack.com/p/snap-built-an-ai-to-judge-its-ads",
+      "publishedAt": "2026-10-26T14:27:16.000Z",
+      "excerpt": "There is something wonderfully absurd about modern advertising. You look at a pair of running shoes. Five minutes later, the internet decides you’re opening a sporting goods empire and starts recommending everything from",
+      "coverImage": "https://substackcdn.com/image/fetch/$s_!6Wsm!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdaa4874b-93a5-4216-b6dc-30ba7657c675_1536x1024.png",
+      "addedAt": "2026-10-26T15:07:03.344Z",
+      "addedAtBasis": "observed"
     },
     {
       "source": "substack",

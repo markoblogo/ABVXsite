@@ -1569,6 +1569,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook, emotions
 
+- Psychology Notebook #13 — The Thinker, the Prover & the Ideal
+  URL: https://abvx.xyz/writing/psychology-notebook-13-thinker-prover-ideal
+  Summary: Twenty translated notebook fragments on thinking, projection, perfectionism and the gap between the ideal and the real.
+  Group: writing
+  Tags: psychology-notebook, thinking
+
+- Psychology Notebook #14 — Adapting Without Breaking Yourself
+  URL: https://abvx.xyz/writing/psychology-notebook-14-adaptation-flexibility-coping
+  Summary: Twenty translated notebook fragments on adaptation, flexibility, uncertainty and the right not to cope all the time.
+  Group: writing
+  Tags: psychology-notebook, adaptation
+
 - The Berliner: How My Beer Cocktail Ended Up on a French Bar's Menu
   URL: https://abvx.xyz/writing/the-berliner-guinness-port-beer-cocktail
   Summary: I discovered Guinness with port wine in Berlin, recreated it with whatever a small French bar had available, and eventually watched it become an official item in the cash register.

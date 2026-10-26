@@ -7852,7 +7852,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-26T07:17:02.106Z",
+      "updatedAt": "2026-10-26T09:14:27.405Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9881,6 +9881,44 @@
       "links": [],
       "publishedAt": "2026-10-25",
       "updatedAt": "2026-10-25",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #13 — The Thinker, the Prover & the Ideal",
+      "summary": "Twenty translated notebook fragments on thinking, projection, perfectionism and the gap between the ideal and the real.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-13-thinker-prover-ideal",
+      "tags": [
+        "psychology-notebook",
+        "thinking"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-26",
+      "updatedAt": "2026-10-26",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #14 — Adapting Without Breaking Yourself",
+      "summary": "Twenty translated notebook fragments on adaptation, flexibility, uncertainty and the right not to cope all the time.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-14-adaptation-flexibility-coping",
+      "tags": [
+        "psychology-notebook",
+        "adaptation"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-26",
+      "updatedAt": "2026-10-26",
       "related": []
     },
     {

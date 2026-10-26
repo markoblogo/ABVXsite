@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync,writeFileSync} from 'node:fs';
 import {pathToFileURL} from 'node:url';
 import {resolve} from 'node:path';
+import {youtubeVideoId} from '../src/lib/youtube-url.mjs';
 import {chromium} from 'playwright';
 import {createQaPage} from './qa-browser.mjs';
 import {parseMarkdownSource} from '../src/content/markdown-source.mjs';
@@ -25,6 +26,9 @@ export async function verifyRuntimeWriting({base,receipt,command,output}){
   const visible=plain(await page.locator('.native-writing-article__body').innerText());let cursor=0;
   for(const raw of body.split('\n')){
    if(!raw.trim()||/^\s*(?:```[\w-]*|---|\*\*\*)\s*$/.test(raw)||/^https:\/\/www.youtube.com\/watch\?v=/.test(raw.trim()))continue;
+   const video=raw.trim().match(/^\[([^\]]+)\]\((https:\/\/[^)]+)\)$/);
+   const videoId=video?youtubeVideoId(video[2]):null;
+   if(videoId){const frame=page.locator('iframe[src*="youtube-nocookie.com/embed/'+videoId+'"]');assert.equal(await frame.count(),1);assert.equal(await frame.getAttribute('title'),video[1]);continue;}
    const line=plain(raw.replace(/^\s*(?:#{1,6}|[-*]|\d+[.)])\s+/,'').replace(/\[([^\]]+)\]\([^)]+\)/g,'$1'));
    if(!line)continue;const index=visible.indexOf(line,cursor);assert.ok(index>=0,'Authored line missing or out of order: '+line.slice(0,60));cursor=index+line.length;
   }

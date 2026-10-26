@@ -20,9 +20,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const {index:publicIndex,native} = await getLiveWritingBundle();
   const artifacts = getArtifacts();
   const books = getBooks();
-  const releasedVideos = new Set((publishedWritingItems(native,Date.now(),publicIndex.videoCompanions) as NativeWriting[]).filter(item => item.videoUrl).map(item => item.slug));
+  const releasedNative = publishedWritingItems(native,Date.now(),publicIndex.videoCompanions) as NativeWriting[];
+  const releasedVideos = new Set(releasedNative.filter(item => item.videoUrl).map(item => item.slug));
   const writing = native.filter(item => !item.videoUrl || releasedVideos.has(item.slug));
-  const videos: FeedItem[] = automaticVideoItems(discovery,native);
+  const videos: FeedItem[] = automaticVideoItems(discovery,releasedNative);
   const videoDates = videos.map(item=>({publishedAt:item.publishedAt}));
   const stories = getWorkingStories();
   const storyDates = stories.map((story) => ({ publishedAt: story.date, updatedAt: story.updatedAt }));

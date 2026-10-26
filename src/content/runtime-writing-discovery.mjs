@@ -23,7 +23,7 @@ export function projectWritingIndex(sources,baseline,discovery,now=Date.now()){
  const archive=all.find(item=>item.canonicalUrl===base+'/writing/archive');
  if(archive)archive.updatedAt=writingArchiveLastModified({items:all},discovery,archive.updatedAt);
  const videoRedirects={};
- for(const item of native.filter(item=>item.videoUrl&&isPublishedWriting(item,now))){const id=videoId(item.videoUrl);const old=baseline.videoRedirects?.[id];videoRedirects[id]=native.some(x=>x.slug===old)?old:(videoRedirects[id]||item.slug);}
+ for(const item of native.filter(item=>item.videoUrl&&isPublishedWriting(item,now))){const id=videoId(item.videoUrl);const old=baseline.videoRedirects?.[id];videoRedirects[id]=native.some(x=>x.slug===old&&videoId(x.videoUrl)===id&&isPublishedWriting(x,now))?old:(videoRedirects[id]||item.slug);}
  return {...baseline,videoCompanions:videoCompanionSnapshot(native,now),videoRedirects,items:all};
 }
 export function projectWritingLlms(baseline,index){

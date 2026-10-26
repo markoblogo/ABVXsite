@@ -26,7 +26,6 @@ export function createMediaPreparer(store){return async(source,assets,snapshot)=
   if(!bytes.length||digest(bytes)!==asset.sha256)throw new ValidationError('Approved image hash mismatch');
   const ext=asset.target.split('.').pop(),key=asset.sha256+'.'+ext,[width,height]=dimensions(bytes,ext);
   if(width<1||height<1||width*height>32_000_000||refs.filter(x=>x.src===asset.target).some(x=>x.width!==width||x.height!==height))throw new ValidationError('Image dimensions differ from approved metadata');
-  if(snapshot.legacyAssets.includes(asset.target)){seen.add(asset.target);continue;}
   const publicPath='/media/writing/runtime/'+key,contentType='image/'+(ext==='jpg'?'jpeg':ext);
   mapping.push({from:asset.target,to:publicPath,sha256:asset.sha256});uploads.push({key,bytes,contentType,publicPath,width,height});seen.add(asset.target);
  }

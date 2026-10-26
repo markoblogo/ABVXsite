@@ -44,3 +44,28 @@ test('authored executable links are rejected before storing content',async()=>{
  await assert.rejects(publish({action:'publish',requestId:'unsafe',source:source('unsafe','[click](javascript:alert)')}),/protocol/);
  assert.equal(Object.keys(store.state().records).length,0);
 });
+
+test('incremental migration allows new legacy posts but a managed withdrawal never falls back to Git',async()=>{
+ const {mergeWritingSources,seedSnapshot}=await import('../src/content/runtime-writing.mjs');
+ const archived=source('old'),scheduled=source('legacy-new');const snapshot=seedSnapshot([archived]);
+ assert.equal(mergeWritingSources(snapshot,[archived,scheduled]).length,2);
+ snapshot.records.old.versions[snapshot.records.old.currentRevision].withdrawn=true;
+ assert.deepEqual(mergeWritingSources(snapshot,[archived,scheduled]),[scheduled]);
+});
+
+test('relationship metadata is validated before it can break shared discovery',async()=>{
+ const publish=createPublisher({store:memoryStore()});
+ for(const patch of [{relatedSlugs:{}},{seriesSlugs:42},{translationOf:[]},{primarySeriesSlug:{}},{series:{}},{group:[]}]){
+  const parsed=JSON.parse(source('invalid').split('\n---')[0].slice(4));
+  await assert.rejects(publish({action:'publish',requestId:'invalid',source:'---\n'+JSON.stringify({...parsed,...patch})+'\n---\n\nAuthor text.'}));
+ }
+});
+test('first addition is the actual runtime write, survives updates/rollback and never changes an existing seed anchor',async()=>{
+ const {seedSnapshot}=await import('../src/content/runtime-writing.mjs');
+ const store=memoryStore();let now='2026-10-26T14:00:00Z';const publish=createPublisher({store,now:()=>new Date(now)});
+ const oldSource=source('older').replaceAll('2026-10-26','2020-01-01');
+ const first=await publish({action:'publish',requestId:'older-first',source:oldSource});
+ now='2026-10-27T14:00:00Z';const update=await publish({action:'update',requestId:'older-update',source:oldSource,expectedRevision:first.revision});
+ assert.equal(store.state().records.older.firstAddedAt,'2026-10-26T14:00:00.000Z');assert.equal(update.firstAddedAt,first.firstAddedAt);
+ const seed=seedSnapshot([oldSource],{items:[{url:'/writing/older',addedAt:'2025-01-01T10:00:00.000Z'}]});assert.equal(seed.records.older.firstAddedAt,'2025-01-01T10:00:00.000Z');
+});

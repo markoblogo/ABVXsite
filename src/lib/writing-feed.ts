@@ -15,7 +15,7 @@ export async function getWritingFeed(): Promise<FeedItem[]> {
   const native: FeedItem[] = (await getPublishedNativeWritingItems()).map(item => ({
     source: item.videoUrl ? 'youtube' : 'abvx', title: item.title, url: `/writing/${item.slug}`,
     publishedAt: item.videoUploadedAt || item.publishedAt || '',
-    author: 'Anton BV', tags: item.tags, excerpt: item.summary,
+    addedAt:item.addedAt, author: 'Anton BV', tags: item.tags, excerpt: item.summary,
     status: item.status, visibility: item.visibility,
     coverImage: item.coverImage?.src, videoUrl: item.videoUrl,
   }));

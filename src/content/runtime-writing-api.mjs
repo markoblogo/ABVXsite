@@ -1,3 +1,4 @@
+import {parseMarkdownSource} from './markdown-source.mjs';
 import {createHash,timingSafeEqual} from 'node:crypto';
 import {createPublisher,digest,ConflictError,ValidationError} from './runtime-writing.mjs';
 import {createMediaPreparer} from './runtime-writing-media.mjs';
@@ -9,9 +10,9 @@ async function boundedJson(request){
  try{for(;;){const {done,value}=await reader.read();if(done)break;size+=value.byteLength;if(size>4_000_000){await reader.cancel();throw new ValidationError('Request exceeds 4 MB');}chunks.push(Buffer.from(value));}}finally{reader.releaseLock();}
  try{return JSON.parse(Buffer.concat(chunks).toString());}catch{throw new ValidationError('Invalid JSON');}
 }
-export function createWritingHandler({store,token,enabled,projectIndex,engineVersion=process.env.VERCEL_GIT_COMMIT_SHA||'development'}){
+export function createWritingHandler({store,token,enabled,projectIndex,legacySources=/** @type {string[]} */([]),engineVersion=process.env.VERCEL_GIT_COMMIT_SHA||'development'}){
  const context={engineVersion,deploymentEnvironment:process.env.VERCEL_ENV||'local',deploymentSha:process.env.VERCEL_GIT_COMMIT_SHA||null};
- const publish=createPublisher({store,context,prepareMedia:createMediaPreparer(store)});
+ const publish=createPublisher({store,context,legacySources,prepareMedia:createMediaPreparer(store)});
  return async request=>{
   if(!enabled||typeof token!=='string'||token.length<32)return response({error:'Runtime publisher is not enabled'},503);
   const supplied=request.headers.get('authorization')||'';
@@ -19,7 +20,7 @@ export function createWritingHandler({store,token,enabled,projectIndex,engineVer
   try{
    if(request.method==='GET'){
     const {snapshot}=await store.load();
-    if(new URL(request.url).searchParams.get('export')==='1')return response({schemaVersion:1,authority:'RUNTIME_WRITING_ENABLED',...context,snapshot,...(projectIndex?{publicIndex:projectIndex(snapshot)}:{})});
+    if(new URL(request.url).searchParams.get('export')==='1')return response({schemaVersion:1,authority:'RUNTIME_WRITING_ENABLED',...context,snapshot,legacySources:legacySources.filter(source=>!Object.hasOwn(snapshot.records,parseMarkdownSource(source).data.slug)),...(projectIndex?{publicIndex:projectIndex(snapshot)}:{})});
     return response({engineVersion,snapshotRevision:snapshot.revision,records:Object.fromEntries(Object.entries(snapshot.records).map(([id,r])=>[id,{revision:r.currentRevision,firstPublishedAt:r.firstPublishedAt,sourceSha256:r.versions[r.currentRevision].sourceSha256,withdrawn:r.versions[r.currentRevision].withdrawn}]))});
    }
    if(request.method!=='POST')return response({error:'Method not allowed'},405);

@@ -20,3 +20,9 @@ test('withdrawn articles disappear from discovery and llms while catalogue and s
  const text=projectWritingLlms(readFileSync('public/llms.txt','utf8'),next);
  assert.ok(!text.includes('URL: '+removed.canonicalUrl+'\n'));
 });
+test('a retained video redirect must still belong to that exact video',()=>{
+ const wrap=data=>'---\n'+JSON.stringify({visibility:'public',status:'live',publishedAt:'2020-01-01',title:data.slug,summary:'Summary',...data})+'\n---\n\nText.';
+ const changed=wrap({slug:'original',videoUrl:'https://www.youtube.com/watch?v=NewVideo002'}),other=wrap({slug:'remaining',videoUrl:'https://www.youtube.com/watch?v=NewVideo001'});
+ const index=projectWritingIndex([changed,other],{...baseline,videoRedirects:{NewVideo001:'original'}},{items:[]});
+ assert.equal(index.videoRedirects.NewVideo001,'remaining');
+});

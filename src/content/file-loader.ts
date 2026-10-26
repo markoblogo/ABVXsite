@@ -367,3 +367,14 @@ function normalizeNativeWriting({data, body}: ParsedFile): NativeWriting {
         heroImage: normalizeImage(data.heroImage) || normalizeImage(data.media),
       };
 }
+
+let legacyWritingSources: string[] | undefined;
+export function readLegacyWritingSources(): string[] {
+  if (!legacyWritingSources) {
+    const dir=path.join(contentDir,'writing');
+    legacyWritingSources=readdirSync(dir).filter(file=>file.endsWith('.md')&&!file.startsWith('_'))
+      .map(file=>readFileSync(path.join(dir,file),'utf8'))
+      .filter(source=>isVisible(parseMarkdownFile(source,'legacy-writing').data.visibility));
+  }
+  return [...legacyWritingSources];
+}

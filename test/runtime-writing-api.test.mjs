@@ -36,3 +36,15 @@ test('a retry retains the original engine context, and local storage cannot be m
  const retried=await (await createWritingHandler({store:backend,token,enabled:true,engineVersion:'second'})(request(cmd))).json();
  assert.deepEqual(retried,first);assert.equal(first.deploymentEnvironment,'local');assert.equal(first.deploymentSha,null);
 });
+test('an unclaimed legacy slug remains exported and cannot be duplicated by publish',async()=>{
+ const sourceText=source();const handler=createWritingHandler({store:store(),token,enabled:true,legacySources:[sourceText]});
+ const res=await handler(request({action:'publish',requestId:'duplicate-legacy',source:sourceText,approval:{intakeId:'one',sourceSha256:digest(sourceText)}}));assert.equal(res.status,409);
+ const exported=await (await handler(new Request('http://localhost/api/writing/manage?export=1',{headers:{authorization:'Bearer '+token}}))).json();assert.deepEqual(exported.legacySources,[sourceText]);
+});
+test('an explicit replacement for a legacy path uploads and maps the approved bytes',async()=>{
+ const bytes=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aN1sAAAAASUVORK5CYII=','base64');
+ let uploads=0;const state=emptySnapshot();state.legacyAssets=['/media/old.png'];
+ const prepare=createMediaPreparer({putAsset:async()=>{uploads++;}});
+ const result=await prepare(source({media:{src:'/media/old.png',alt:'Replacement',width:1,height:1}}),[{target:'/media/old.png',sha256:digest(bytes),bytesBase64:bytes.toString('base64')}],state);
+ assert.equal(uploads,1);assert.equal(result.mapping.length,1);assert.ok(result.source.includes('/media/writing/runtime/'));
+});

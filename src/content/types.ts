@@ -208,6 +208,7 @@ export type RecipeRecord = {
 export type WritingIllustration = ContentImage & { caption: string; afterHeading: string };
 
 export type NativeWriting = BaseContentItem<NativeWritingType> & {
+  addedAt?: string;
   collection?: 'kitchen-notes';
   illustrations?: WritingIllustration[];
   recipe?: RecipeRecord;

@@ -282,13 +282,14 @@ test('sitemap discovers published stories and series while excluding private and
     { slug: 'future-video', videoUrl: 'https://www.youtube.com/watch?v=NewVideo002', publishedAt: '2099-01-01' },
     { slug: 'archive-video', videoUrl: 'https://www.youtube.com/watch?v=NewVideo003', publishedAt: '2020-01-01', status: 'archive' },
   ];
+  let automaticNative;
   const sitemap = compile('src/app/sitemap.ts', {
     '@/lib/live-writing-discovery': {getLiveWritingBundle:async()=>({native:nativeVideos,index:{items:[{canonicalUrl:'https://abvx.xyz/writing/archive',updatedAt:'2026-10-14T19:00:00.000Z'}]}})},
     '@/lib/live-writing': {getLiveNativeWritingItems:async()=>nativeVideos},
     '../../content/pages.json': JSON.parse(readFileSync(path.join(repo, 'content/pages.json'))),
     '../../content/working-stories.json': series,
     '../../content/kitchen-notes.json': JSON.parse(readFileSync(path.join(repo, 'content/kitchen-notes.json'))),
-    '@/lib/youtube-pages.mjs': {automaticVideoItems:()=>[],publishedWritingItems:()=>[nativeVideos[0]]},
+    '@/lib/youtube-pages.mjs': {automaticVideoItems:(_registry,items)=>{automaticNative=items;return [];},publishedWritingItems:()=>[nativeVideos[0]]},
     '../../content/writing-discovery.json': {items:[]},
     '@/content': { getArtifacts: () => [], getBooks: () => [], getNativeWritingItems: () => nativeVideos },
     '@/content/service-pages': { servicePages: [] }, '@/content/editorials': { getEditorialArticles: () => [] },
@@ -298,6 +299,7 @@ test('sitemap discovers published stories and series while excluding private and
   try {
     process.chdir(root);
     const routes = await sitemap();
+    assert.deepEqual(automaticNative,[nativeVideos[0]],'automatic videos must use the released companion boundary');
     assert.ok(routes.some(item => item.url.endsWith('/writing/released-video')));
     assert.ok(!routes.some(item => /\/(future-video|archive-video)$/.test(item.url)));
     const entries = routes.filter((item) => item.url.includes('/writing/working-stories'));

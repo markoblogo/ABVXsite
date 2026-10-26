@@ -146,3 +146,9 @@ test('MN7R render-time feeds preserve ISR caching while Writing articles keep th
     assert.equal(init.next?.revalidate, 900, `${source}/${kind}`);
   }
 });
+test('runtime first-addition ordering is used when no immutable discovery entry exists',()=>{
+ const runtime={...post('/writing/imported-old','2020-01-01'),addedAt:'2026-10-26T14:00:00.000Z'};
+ const recent=post('/writing/recent','2026-10-20');
+ const merged=mergeWritingItems([runtime,recent],{version:1,items:[]},Date.parse('2026-10-27'));
+ assert.equal(merged[0].url,runtime.url);assert.equal(merged[0].addedAt,runtime.addedAt);
+});

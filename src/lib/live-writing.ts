@@ -1,7 +1,7 @@
 import {cache} from 'react';
 import {getNativeWritingItems} from '@/content';
-import {nativeWritingFromSource} from '@/content/file-loader';
-import {currentSources} from '@/content/runtime-writing.mjs';
+import {nativeWritingFromSource,readLegacyWritingSources} from '@/content/file-loader';
+import {mergeWritingSources} from '@/content/runtime-writing.mjs';
 import {configuredWritingStore} from '@/content/runtime-writing-store.mjs';
 
 export const runtimeWritingEnabled = () => process.env.RUNTIME_WRITING_ENABLED === '1';
@@ -11,7 +11,7 @@ export const getLiveWritingState = cache(async () => runtimeWritingEnabled()
   ? (await configuredWritingStore().load()).snapshot : null);
 export const getLiveNativeWritingItems = cache(async () => {
   const state=await getLiveWritingState();
-  return state ? currentSources(state).map(nativeWritingFromSource).sort((a,b)=>
+  return state ? mergeWritingSources(state,readLegacyWritingSources()).map(source=>{const item=nativeWritingFromSource(source);return {...item,addedAt:state.records[item.slug]?.firstAddedAt||undefined};}).sort((a,b)=>
     (b.publishedAt || '').localeCompare(a.publishedAt || '') || a.slug.localeCompare(b.slug)) : getNativeWritingItems();
 });
 export async function getLiveNativeWritingBySlug(slug: string) {

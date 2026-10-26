@@ -25,7 +25,7 @@ async function main(){
  if(operation==='seed'){
   if(!args.initialize)throw Error('seed requires --initialize; never replaces a live archive');
   const sources=readdirSync('content/writing').filter(x=>x.endsWith('.md')&&!x.startsWith('_')).map(x=>readFileSync('content/writing/'+x,'utf8')).filter(source=>!['private','draft'].includes(parseMarkdownSource(source).data.visibility));
-  const snapshot=seedSnapshot(sources);await configuredWritingStore().initialize(snapshot);
+  const snapshot=seedSnapshot(sources,JSON.parse(readFileSync('content/writing-discovery.json','utf8')));await configuredWritingStore().initialize(snapshot);
   console.log(JSON.stringify({status:'INITIALIZED',count:sources.length,sourceDigest:digest(JSON.stringify(sources)),snapshotRevision:snapshot.revision}));return;
  }
  const base=args.base||'https://abvx.xyz',url=new URL(base);

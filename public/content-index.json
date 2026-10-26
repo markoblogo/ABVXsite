@@ -7852,7 +7852,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-26T11:22:07.644Z",
+      "updatedAt": "2026-10-26T13:22:47.229Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8148,6 +8148,40 @@
       "publishedAt": "2026-10-14",
       "updatedAt": "2026-10-14",
       "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "From Old Salo to Italian Prosciutto: The Borscht That Travelled Across Europe",
+      "summary": "I remembered my grandmother's old-salo borscht when I was left with a Spanish jamón bone. Years later, the same idea became a prosciutto borscht on an Italian restaurant menu in Ukraine.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/borscht-old-salo-jamon-prosciutto",
+      "tags": [
+        "ukrainian-borscht",
+        "borscht-stories",
+        "old-salo",
+        "jamon",
+        "prosciutto",
+        "belarusian-food-memories",
+        "italian-cuisine",
+        "restaurant-development",
+        "zero-waste-cooking",
+        "cured-meats"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-26",
+      "updatedAt": "2026-10-26",
+      "related": [
+        {
+          "title": "Kitchen Notes",
+          "canonicalUrl": "https://abvx.xyz/writing/kitchen-notes",
+          "relation": "collection"
+        }
+      ],
+      "collection": "kitchen-notes"
     },
     {
       "type": "video",

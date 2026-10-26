@@ -69,3 +69,9 @@ test('first addition is the actual runtime write, survives updates/rollback and 
  assert.equal(store.state().records.older.firstAddedAt,'2026-10-26T14:00:00.000Z');assert.equal(update.firstAddedAt,first.firstAddedAt);
  const seed=seedSnapshot([oldSource],{items:[{url:'/writing/older',addedAt:'2025-01-01T10:00:00.000Z'}]});assert.equal(seed.records.older.firstAddedAt,'2025-01-01T10:00:00.000Z');
 });
+test('a failed candidate projection leaves the entire published snapshot unchanged',async()=>{
+ const store=memoryStore();const before=store.state();
+ const publish=createPublisher({store,validateSnapshot:()=>{throw Error('Projection rejected');}});
+ await assert.rejects(publish({action:'publish',requestId:'bad-projection',source:source('bad-projection')}),/Projection rejected/);
+ assert.deepEqual(store.state(),before);
+});

@@ -23,6 +23,15 @@ test('withdrawn articles disappear from discovery and llms while catalogue and s
 test('a retained video redirect must still belong to that exact video',()=>{
  const wrap=data=>'---\n'+JSON.stringify({visibility:'public',status:'live',publishedAt:'2020-01-01',title:data.slug,summary:'Summary',...data})+'\n---\n\nText.';
  const changed=wrap({slug:'original',videoUrl:'https://www.youtube.com/watch?v=NewVideo002'}),other=wrap({slug:'remaining',videoUrl:'https://www.youtube.com/watch?v=NewVideo001'});
- const index=projectWritingIndex([changed,other],{...baseline,videoRedirects:{NewVideo001:'original'}},{items:[]});
+ const index=projectWritingIndex([changed,other],{...baseline,videoRedirects:{NewVideo001:'original'}},{items:[]},Date.now(),['original','remaining']);
  assert.equal(index.videoRedirects.NewVideo001,'remaining');
+});
+test('the clock alone cannot release a seeded/legacy companion; an explicit runtime write can',()=>{
+ const source='---\n'+JSON.stringify({slug:'scheduled',title:'Scheduled',summary:'Summary',status:'live',visibility:'public',publishedAt:'2027-01-01',videoUrl:'https://www.youtube.com/watch?v=NewVideo001'})+'\n---\n\nText.';
+ const registry={items:[{source:'youtube',url:'https://www.youtube.com/watch?v=NewVideo001',title:'Automatic page',publishedAt:'2020-01-01'}]};
+ const old={items:[],videoCompanions:{},videoRedirects:{}};
+ const frozen=projectWritingIndex([source],old,registry,Date.parse('2028-01-01'));
+ assert.ok(frozen.items.some(x=>x.type==='video'));assert.ok(!frozen.items.some(x=>x.type==='writing'));
+ const committed=projectWritingIndex([source],old,registry,Date.parse('2028-01-01'),['scheduled']);
+ assert.ok(committed.items.some(x=>x.type==='writing'));assert.ok(!committed.items.some(x=>x.type==='video'));
 });

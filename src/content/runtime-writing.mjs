@@ -37,6 +37,9 @@ export function seedSnapshot(sources,discovery={items:[]}){
  snapshot.legacyAssets=[...new Set(snapshot.legacyAssets)];return snapshot;
 }
 export function currentSources(snapshot){return Object.values(snapshot.records).map(record=>record.versions[record.currentRevision]).filter(v=>!v.withdrawn).map(v=>v.source);}
+export function explicitlyPublishedSlugs(snapshot){
+ return Object.entries(snapshot.records).filter(([,record])=>{const version=record.versions[record.currentRevision];return !version.withdrawn&&Boolean(version.storedAt);}).map(([slug])=>slug);
+}
 export function mergeWritingSources(snapshot,legacySources){
  return [...currentSources(snapshot),...legacySources.filter(source=>!Object.hasOwn(snapshot.records,parseMarkdownSource(source).data.slug))];
 }
@@ -45,7 +48,7 @@ export function assertSnapshot(snapshot){
  for(const [slug,record] of Object.entries(snapshot.records)){if(!slugPattern.test(slug)||!record.versions?.[record.currentRevision])throw new ValidationError('Invalid content record');for(const version of Object.values(record.versions)){if(digest(version.source)!==version.sourceSha256||parseMarkdownSource(version.source).data.slug!==slug)throw new ValidationError('Content source integrity failed');}}
  return snapshot;
 }
-export function createPublisher({store,context={},legacySources=/** @type {string[]} */([]),now=()=>new Date(),prepareMedia=async(source,assets,snapshot)=>{if(assets?.length)throw new ValidationError('Media uploader is not configured');const {data}=parseMarkdownSource(source);for(const image of images(data))if(!snapshot.legacyAssets.includes(image.src)&&!Object.values(snapshot.assets).some(a=>a.publicPath===image.src)&&!(data.videoUrl&&image.src===`https://i.ytimg.com/vi/${new URL(data.videoUrl).searchParams.get('v')}/hqdefault.jpg`))throw new ValidationError('Unknown/unprepared image');return {source,mapping:[]};}}){
+export function createPublisher({store,context={},validateSnapshot=()=>{},legacySources=/** @type {string[]} */([]),now=()=>new Date(),prepareMedia=async(source,assets,snapshot)=>{if(assets?.length)throw new ValidationError('Media uploader is not configured');const {data}=parseMarkdownSource(source);for(const image of images(data))if(!snapshot.legacyAssets.includes(image.src)&&!Object.values(snapshot.assets).some(a=>a.publicPath===image.src)&&!(data.videoUrl&&image.src===`https://i.ytimg.com/vi/${new URL(data.videoUrl).searchParams.get('v')}/hqdefault.jpg`))throw new ValidationError('Unknown/unprepared image');return {source,mapping:[]};}}){
  return async command=>{
   if(!command||!['publish','update','rollback','unpublish'].includes(command.action)||(!/^[a-zA-Z0-9_-]{1,120}$/.test(command.requestId||'')||['__proto__','prototype'].includes(command.requestId)))throw new ValidationError('Action and unique requestId required');
   const requestHash=digest(JSON.stringify(command));const loaded=await store.load();const snapshot=assertSnapshot(loaded.snapshot);
@@ -65,9 +68,10 @@ export function createPublisher({store,context={},legacySources=/** @type {strin
    const prepared=await prepareMedia(source,command.assets||[],snapshot);source=prepared.source;mapping=prepared.mapping;
    if(parseMarkdownSource(source).body!==parsed.body)throw new ValidationError('Media preparation changed authored prose');
   }
-  const {data,body}=parseMarkdownSource(source),sourceSha256=digest(source);const version={source,sourceSha256,revision,withdrawn:command.action==='unpublish',storedAt};
+  const {data,body}=parseMarkdownSource(source),sourceSha256=digest(source);
+  if(command.action==='rollback'&&(Date.parse(data.publishedAt)>time.valueOf()||validateNativeWritingVideo(data,time.valueOf()).length))throw new ValidationError('Rollback requires a non-future eligible source');const version={source,sourceSha256,revision,withdrawn:command.action==='unpublish',storedAt};
   snapshot.records[id]={firstAddedAt:previous?previous.firstAddedAt??null:storedAt,firstPublishedAt:previous?previous.firstPublishedAt:data.publishedAt??null,currentRevision:revision,versions:{...previous?.versions,[revision]:version}};
   snapshot.revision=randomUUID();const receipt={...context,schemaVersion:1,profile:'runtime-writing-v1',status:'STORED',action:command.action,requestId:command.requestId,id,canonicalUrl:'https://abvx.xyz/writing/'+id,revision,snapshotRevision:snapshot.revision,originalSourceSha256:originalHash,sourceSha256,bodySha256:digest(body),storedAt,firstAddedAt:snapshot.records[id].firstAddedAt,firstPublishedAt:snapshot.records[id].firstPublishedAt,mediaMapping:mapping,...(command.approval?{approval:command.approval}:{})};
-  snapshot.requests[command.requestId]={hash:requestHash,receipt};await store.commit(snapshot,loaded.etag);return receipt;
+  snapshot.requests[command.requestId]={hash:requestHash,receipt};await validateSnapshot(snapshot);await store.commit(snapshot,loaded.etag);return receipt;
  };
 }

@@ -3,8 +3,10 @@ import {automaticVideoItems,isPublishedWriting,videoCompanionSnapshot,videoId} f
 import {writingArchiveLastModified} from '../lib/writing-archive.mjs';
 const base='https://abvx.xyz';
 const cleanLinks=links=>(links||[]).filter(x=>x&&typeof x==='object'&&x.url).map(x=>({type:String(x.type||'other'),label:String(x.label||x.type||'Link'),url:String(x.url)}));
-export function projectWritingIndex(sources,baseline,discovery,now=Date.now()){
- const native=sources.map(source=>({status:'archive',...parseMarkdownSource(source).data})).filter(item=>item.visibility!=='private'&&item.visibility!=='draft'&&(!item.videoUrl||isPublishedWriting(item,now)));
+export function projectWritingIndex(sources,baseline,discovery,now=Date.now(),explicitlyPublished=/** @type {string[]} */([])){
+ const released=new Set(explicitlyPublished);
+ const videoEligible=item=>{const value=baseline.videoCompanions?.[videoId(item.videoUrl)];return isPublishedWriting(item,now)&&(released.has(item.slug)||(Array.isArray(value)?value.includes(item.slug):value===item.slug));};
+ const native=sources.map(source=>({status:'archive',...parseMarkdownSource(source).data})).filter(item=>item.visibility!=='private'&&item.visibility!=='draft'&&(!item.videoUrl||videoEligible(item)));
  const other=baseline.items.filter(item=>!['writing','video'].includes(item.type));
  const bySlug=new Map([...other.map(item=>[new URL(item.canonicalUrl).pathname.split('/').pop(),item]),...native.map(item=>[item.slug,{title:item.title,canonicalUrl:base+'/writing/'+item.slug}])]);
  const items=native.map(item=>{

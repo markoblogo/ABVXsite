@@ -12,7 +12,7 @@ async function boundedJson(request){
 }
 export function createWritingHandler({store,token,enabled,projectIndex,legacySources=/** @type {string[]} */([]),engineVersion=process.env.VERCEL_GIT_COMMIT_SHA||'development'}){
  const context={engineVersion,deploymentEnvironment:process.env.VERCEL_ENV||'local',deploymentSha:process.env.VERCEL_GIT_COMMIT_SHA||null};
- const publish=createPublisher({store,context,legacySources,prepareMedia:createMediaPreparer(store)});
+ const publish=createPublisher({store,context,legacySources,validateSnapshot:projectIndex,prepareMedia:createMediaPreparer(store)});
  return async request=>{
   if(!enabled||typeof token!=='string'||token.length<32)return response({error:'Runtime publisher is not enabled'},503);
   const supplied=request.headers.get('authorization')||'';

@@ -30,6 +30,10 @@ try{
  assert.deepEqual(await send(command),result,'exact retry');
  const verified=await verifyRuntimeWriting({base,receipt:result.value,command});
  assert.equal(verified.status,'TEST_VERIFIED');
+ const homepage=await (await fetch(base+'/')).text(),imagePath=result.value.mediaMapping[0].to;
+ const runtimeImages=[...homepage.matchAll(/<img\b[^>]*\bsrc="([^"]+)"/g)].map(match=>match[1]).filter(src=>decodeURIComponent(src).includes('/media/writing/runtime/'));
+ assert.ok(runtimeImages.includes(imagePath),'homepage runtime cover must use its authoritative media path');
+ assert.ok(!runtimeImages.some(src=>src.startsWith('/_next/image')),'homepage runtime images must bypass persistent optimization');
  assert.ok((await (await fetch(base+'/writing/kitchen-notes')).text()).includes('/writing/runtime-acceptance-new-post'));
  const nextSource=source('This revised paragraph replaces the original without a deployment.');
  const update={...command,action:'update',requestId:'acceptance-update',expectedRevision:result.value.revision,source:nextSource,approval:{intakeId:'synthetic-update',sourceSha256:digest(nextSource)}};

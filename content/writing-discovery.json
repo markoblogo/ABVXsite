@@ -1612,6 +1612,17 @@
     },
     {
       "source": "youtube",
+      "title": "How AI Agents Make Videos: A 2-Minute Framewright Workflow",
+      "url": "https://www.youtube.com/watch?v=n1wuySSYQcQ",
+      "publishedAt": "2026-10-26T10:55:32.000Z",
+      "excerpt": "How does an AI agent turn an idea into a finished video? This two-minute Framewright lesson follows the process: brief, scenes, tools, narration, checks, precise revisions, and a publication-ready package. Two fictional ",
+      "coverImage": "https://i.ytimg.com/vi/n1wuySSYQcQ/hqdefault.jpg",
+      "videoDescription": "How does an AI agent turn an idea into a finished video? This two-minute Framewright lesson follows the process: brief, scenes, tools, narration, checks, precise revisions, and a publication-ready package.\n\nTwo fictional AI-generated presenters briefly appear in the opening, giving the synthetic voices visible personalities. The dialogue explains the workflow through real examples: an animated dog story, a PlayMCP game used for a book promo, and a manga-style Nantes scene revised after feedback.\n\nFramewright is an experimental open-source collection of workflows, project memory, and local tools for a video studio run with an AI agent. The agent operates selected tools in your environment. Technical checks, creative approval, and publication remain separate decisions.\n\nTry it: choose one idea and write three scenes. For each, note what you will say, what viewers will see, and where the material comes from.\n\nCHAPTERS\n0:00 From an idea to a finished video\n0:12 Define the brief\n0:23 Real projects: a dog story and a game\n0:49 Connect narration, pictures and sources\n1:02 Checks and precise revisions\n1:29 Remember the decisions\n1:42 Try the three-scene exercise\n\nPROJECT & EXAMPLES\nFramewright: https://github.com/markoblogo/framewright\nA Dog Follows a Falling Light: https://youtu.be/B4zdWfFIkNE\nJekyll & Hyde book promo: https://youtu.be/GPfkz36JWbI\n\nHOW THIS LESSON WAS MADE\nThe two-host micro-lesson structure was inspired by Claudemy: https://github.com/assafkip/claudemy\nFor this experiment, we adapted the format to Framewright's documented projects and existing local production tools. We did not run the native Claude Code plugin. Speech was generated locally with Supertonic-3; the diagrams, timed composition, and musical bed were authored locally. Existing example clips were reused without their source audio.\n\nTOOLS & CREDITS\nSupertonic-3: https://huggingface.co/Supertone/supertonic-3\nPlayMCP: https://playmcp.io/\nRokehan / Location Scout: https://tools.oyasumi-gamedev.com/rokehan/\nDog model and animation: Quaternius, CC0 — https://quaternius.com/packs/ultimateanimatedanimals.html\nNantes map-derived scenery: © OpenStreetMap contributors — https://www.openstreetmap.org/copyright\n© OpenMapTiles — https://openmaptiles.org/\nElevation: Terrain Tiles.\n\nThis is a practical studio experiment, not a claim of one-click autonomous filmmaking. English captions are available.\n\n#AIVideo #AIAgents #Framewright",
+      "addedAt": "2026-10-26T11:22:07.644Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "GPT-6 Astra vs DeepSeek V4.1 Flash: Same Prompt, $7 vs $0.90. Who Did Better?",
       "url": "https://www.youtube.com/watch?v=n5HYXnUWoNY",
       "publishedAt": "2026-10-21T15:38:34.000Z",

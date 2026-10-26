@@ -7852,7 +7852,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-26T09:14:27.405Z",
+      "updatedAt": "2026-10-26T11:22:07.644Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8487,6 +8487,29 @@
         }
       ],
       "collection": "kitchen-notes"
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "How AI Agents Make Videos: A 2-Minute Framewright Workflow",
+      "summary": "How does an AI agent turn an idea into a finished video? This two-minute Framewright lesson follows the process: brief, scenes, tools, narration, checks, precise revisions, and a publication-ready package. Two fictional ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/n1wuySSYQcQ",
+      "publishedAt": "2026-10-26T10:55:32.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=n1wuySSYQcQ"
+        }
+      ],
+      "related": []
     },
     {
       "type": "video",

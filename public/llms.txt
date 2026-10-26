@@ -171,6 +171,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/mt0MOEpoj1c
   Summary: We have officially reached a new milestone in AI-generated content. AI can now produce videos faster than humans can watch them. And the internet is responding exactly as you'd expect. With infinite AI slop. AI infrastru
 
+- How AI Agents Make Videos: A 2-Minute Framewright Workflow
+  URL: https://abvx.xyz/writing/videos/n1wuySSYQcQ
+  Summary: How does an AI agent turn an idea into a finished video? This two-minute Framewright lesson follows the process: brief, scenes, tools, narration, checks, precise revisions, and a publication-ready package. Two fictional
+
 - GPT-6 Astra vs DeepSeek V4.1 Flash: Same Prompt, $7 vs $0.90. Who Did Better?
   URL: https://abvx.xyz/writing/videos/n5HYXnUWoNY
   Summary: What happens when you give two powerful AI models exactly the same creative challenge? One developer decided to find out. They tested GPT-6 Astra against DeepSeek V4.1-1017 Flash, using the same prompt and maximum reason

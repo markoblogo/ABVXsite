@@ -7852,7 +7852,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-26T13:38:00.213Z",
+      "updatedAt": "2026-10-26T13:49:41.118Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10247,6 +10247,43 @@
       "links": [],
       "publishedAt": "2026-10-23",
       "updatedAt": "2026-10-23",
+      "related": [
+        {
+          "title": "Kitchen Notes",
+          "canonicalUrl": "https://abvx.xyz/writing/kitchen-notes",
+          "relation": "collection"
+        }
+      ],
+      "collection": "kitchen-notes"
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "The Fat Was the Point: From Ukrainian Pork Cracklings to French Duck Potatoes",
+      "summary": "In Ukraine, I loved making borscht and fried potatoes with pork cracklings. Then I moved to France, discovered duck fat sold in jars, and found an entirely new way to cook potatoes and steak.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/ukrainian-cracklings-french-duck-fat-cooking",
+      "tags": [
+        "cooking-with-animal-fats",
+        "pork-cracklings",
+        "smalets",
+        "duck-fat",
+        "fried-potatoes",
+        "ukrainian-cuisine",
+        "french-cuisine",
+        "traditional-cooking",
+        "borscht-stories",
+        "cooking-techniques",
+        "food-preservation",
+        "kitchen-shortcuts",
+        "french-ukrainian-cooking"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-26",
+      "updatedAt": "2026-10-26",
       "related": [
         {
           "title": "Kitchen Notes",

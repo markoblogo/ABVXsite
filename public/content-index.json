@@ -7852,7 +7852,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-26T13:49:41.118Z",
+      "updatedAt": "2026-10-26T21:18:23.213Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9192,6 +9192,29 @@
       ],
       "publishedAt": "2026-10-19",
       "updatedAt": "2026-10-19",
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "MN7R (Monitor): Commodity Brokerage Software — From Offers to Execution",
+      "summary": "A closer look at MN7R (Monitor), a private workspace for agro-commodity brokerage teams — from offers and bids to matching, contract execution and market analytics. This overview uses the real MN7R interface, with confid",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/kcFco2HbFCY",
+      "publishedAt": "2026-10-26T20:52:53.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=kcFco2HbFCY"
+        }
+      ],
       "related": []
     },
     {

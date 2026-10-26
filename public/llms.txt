@@ -151,6 +151,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/KbObKhxwReA
   Summary: What if AI could generate an entire world while you're exploring it? Not a video. Not a traditional game. An interactive environment that responds to your actions in real time. Meet Odyssey-3, a new AI world model that g
 
+- MN7R (Monitor): Commodity Brokerage Software — From Offers to Execution
+  URL: https://abvx.xyz/writing/videos/kcFco2HbFCY
+  Summary: A closer look at MN7R (Monitor), a private workspace for agro-commodity brokerage teams — from offers and bids to matching, contract execution and market analytics. This overview uses the real MN7R interface, with confid
+
 - Nantes in Pixel Art: Airport to the Loire, LU Tower & the Castle | Nantes: de l’aéroport à la Loire
   URL: https://abvx.xyz/writing/videos/kh-MTl8K5pE
   Summary: Un petit voyage à Nantes, de l’aéroport Nantes Atlantique au centre-ville, en passant par la Loire et l’île de Nantes. La balade se termine avec deux vues illustrées : la tour LU et le château des ducs de Bretagne. Un tr

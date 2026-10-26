@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "npm run catalogue:register && npm run writing:register && npm run llms:generate && npm run ecosystem:generate",
+    "prebuild": "npm run catalogue:register && npm run writing:register && npm run llms:generate && npm run ecosystem:generate && node scripts/runtime-writing-engine.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
@@ -43,7 +43,7 @@
     "cortex-abv:observe-public-repositories": "node scripts/cortex-abv-observe-public-project-repositories.mjs",
     "cortex-abv:compare-repository-snapshots": "node scripts/cortex-abv-compare-repository-observation-snapshots.mjs",
     "cortex-abv:write-side-artifact": "node scripts/cortex-abv-write-side-review-artifact.mjs",
-    "test:sync": "node --test test/catalogue-actions.test.mjs test/systems-catalogue.test.mjs test/publication-lane.test.mjs test/production-command.test.mjs test/release-ready.test.mjs test/publication-scope.test.mjs test/publication-qa.test.mjs test/editorial-release-check.test.mjs test/youtube-pages.test.mjs test/editorial-checks-tree.test.mjs test/youtube-feed.test.mjs test/markdown-content.test.mjs test/project-description-sync.test.mjs test/cortex-abv-write-side-policy.test.mjs test/cortex-abv-owner-review-decision.test.mjs test/cortex-abv-write-side-executor-design.test.mjs test/cortex-abv-executor-wiring-boundary.test.mjs test/cortex-abv-actual-executor-wiring.test.mjs test/latest-section-entry.test.mjs test/writing-window.test.mjs test/cortex-abv.test.mjs test/cortex-abv-private-runtime-export.test.mjs test/cortex-abv-public-presence.test.mjs test/cortex-abv-project-registry.test.mjs test/cortex-abv-repository-observer.test.mjs test/cortex-abv-repository-change-proposal.test.mjs test/ecosystem-registry.test.mjs test/working-stories.test.mjs test/publication-packet.test.mjs test/writing-chronology.test.mjs test/deployment-scope.test.mjs test/kitchen-notes.test.mjs test/catalogue-publication.test.mjs test/catalogue-media.test.mjs test/seo-page-contract.test.mjs test/writing-archive.test.mjs test/writing-search.test.mjs test/publication-followup.test.mjs test/writing-sync-backup.test.mjs test/writing-illustrations.test.mjs",
+    "test:sync": "node --test test/catalogue-actions.test.mjs test/systems-catalogue.test.mjs test/publication-lane.test.mjs test/production-command.test.mjs test/release-ready.test.mjs test/publication-scope.test.mjs test/publication-qa.test.mjs test/editorial-release-check.test.mjs test/youtube-pages.test.mjs test/editorial-checks-tree.test.mjs test/youtube-feed.test.mjs test/markdown-content.test.mjs test/project-description-sync.test.mjs test/cortex-abv-write-side-policy.test.mjs test/cortex-abv-owner-review-decision.test.mjs test/cortex-abv-write-side-executor-design.test.mjs test/cortex-abv-executor-wiring-boundary.test.mjs test/cortex-abv-actual-executor-wiring.test.mjs test/latest-section-entry.test.mjs test/writing-window.test.mjs test/cortex-abv.test.mjs test/cortex-abv-private-runtime-export.test.mjs test/cortex-abv-public-presence.test.mjs test/cortex-abv-project-registry.test.mjs test/cortex-abv-repository-observer.test.mjs test/cortex-abv-repository-change-proposal.test.mjs test/ecosystem-registry.test.mjs test/working-stories.test.mjs test/publication-packet.test.mjs test/writing-chronology.test.mjs test/deployment-scope.test.mjs test/kitchen-notes.test.mjs test/catalogue-publication.test.mjs test/catalogue-media.test.mjs test/seo-page-contract.test.mjs test/writing-archive.test.mjs test/writing-search.test.mjs test/publication-followup.test.mjs test/writing-sync-backup.test.mjs test/writing-illustrations.test.mjs test/runtime-writing.test.mjs test/runtime-writing-store.test.mjs test/runtime-writing-api.test.mjs test/runtime-writing-discovery.test.mjs test/runtime-writing-blob.test.mjs",
     "media:review": "node scripts/media-optimization-report.mjs",
     "media:derivatives": "node scripts/generate-image-derivatives.mjs",
     "feeds:check": "node scripts/check-feed-covers.mjs",
@@ -67,16 +67,23 @@
     "content:publication-boundary": "node scripts/publication-lane.mjs --check",
     "content:add-media": "node scripts/catalogue-media.mjs",
     "content:follow-up": "node scripts/publication-followup.mjs",
-    "qa:analytics": "node --test test/qa-analytics.test.mjs"
+    "qa:analytics": "node --test test/qa-analytics.test.mjs",
+    "content:runtime": "node scripts/runtime-writing.mjs",
+    "test:runtime-writing": "node --test test/runtime-writing*.test.mjs",
+    "qa:runtime-writing": "node scripts/runtime-writing-smoke.mjs",
+    "content:runtime-verify": "node scripts/runtime-writing-verify.mjs"
   },
   "dependencies": {
+    "@vercel/blob": "2.8.2",
     "next": "16.4.3",
     "next-themes": "^0.4.6",
     "react": "19.3.0",
     "react-dom": "19.3.0"
   },
   "overrides": {
-    "postcss": "^8.5.15"
+    "postcss": "^8.5.15",
+    "zod": "4.6.6",
+    "brace-expansion": "1.1.21"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

@@ -13,7 +13,8 @@ import type { FeedItem } from '@/lib/feed-types';
 import { getWritingFeed, getWritingSearchBodies } from '@/lib/writing-feed';
 import { normalizeWritingQuery, searchWritingPosts, writingSearchExcerpt, writingSearchHref } from '@/lib/writing-search.mjs';
 import { writingWindow } from '@/lib/writing-window.mjs';
-import { getNativeWritingItems } from '@/content';
+import { getLiveNativeWritingItems } from '@/lib/live-writing';
+import type { NativeWriting } from '@/content/types';
 import workingStoriesSeries from '../../../content/working-stories.json';
 import { collectionPageJsonLd, defaultOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
 import type { Metadata } from 'next';
@@ -38,7 +39,7 @@ export async function generateMetadata({ searchParams }: { searchParams?: Promis
     : writingMetadata;
 }
 
-export const revalidate = 900;
+export const dynamic = 'force-dynamic';
 
 function formatDate(iso: string): string {
   const date = new Date(iso);
@@ -77,10 +78,10 @@ function sentenceExcerpt(text: string, sentenceLimit = 3): string {
   return excerpt.length > 420 ? `${excerpt.slice(0, 417).trimEnd()}…` : excerpt;
 }
 
-function nativeBodyExcerpt(post: FeedItem, sentenceLimit = 4): string | undefined {
+function nativeBodyExcerpt(items: NativeWriting[], post: FeedItem, sentenceLimit = 4): string | undefined {
   if (post.source !== 'abvx' || post.coverImage || !post.url.startsWith('/writing/')) return undefined;
   const slug = post.url.replace(/^\/writing\//, '');
-  const item = getNativeWritingItems().find((candidate) => candidate.slug === slug);
+  const item = items.find((candidate) => candidate.slug === slug);
   if (!item) return undefined;
 
   const bodyExcerpt = sentenceExcerpt(item.body, sentenceLimit);
@@ -103,11 +104,12 @@ export default async function WritingPage({
   const params = searchParams ? await searchParams : {};
   const activeSource = normalizeSource(params.source);
   const query = normalizeWritingQuery(params.q);
-  const allPosts = getWritingFeed();
+  const allPosts = await getWritingFeed();
+  const nativeItems = await getLiveNativeWritingItems();
   const posts =
     activeSource === 'all' ? allPosts : allPosts.filter((post) => post.source === activeSource);
   const {featuredPost, recentPosts, archivePosts, remainingPosts} = writingWindow(posts);
-  const searchBodies = query ? getWritingSearchBodies() : new Map<string, string>();
+  const searchBodies = query ? await getWritingSearchBodies() : new Map<string, string>();
   const searchResults = query ? searchWritingPosts(allPosts, query, { source: activeSource, bodies: searchBodies }) : [];
 
   return (
@@ -183,7 +185,7 @@ export default async function WritingPage({
             <FeaturedWritingCard
               title={featuredPost.title}
               excerpt={postExcerpt(featuredPost)}
-              asideExcerpt={nativeBodyExcerpt(featuredPost, 4)}
+              asideExcerpt={nativeBodyExcerpt(nativeItems, featuredPost, 4)}
               href={featuredPost.url}
               source={featuredPost.source}
               videoUrl={featuredPost.videoUrl}
@@ -204,7 +206,7 @@ export default async function WritingPage({
                     key={post.url}
                     title={post.title}
                     excerpt={postExcerpt(post)}
-                    bodyExcerpt={nativeBodyExcerpt(post, 3)}
+                    bodyExcerpt={nativeBodyExcerpt(nativeItems, post, 3)}
                     href={post.url}
                     source={post.source}
                     videoUrl={post.videoUrl}

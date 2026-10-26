@@ -1,17 +1,18 @@
-import { getNativeWritingItems } from '@/content';
+import { getLiveNativeWritingItems } from './live-writing';
 import { getWorkingStories, workingStoriesFeed, workingStoryPath } from '@/content/working-stories';
 import discovery from '../../content/writing-discovery.json';
-import publicIndex from '../../public/content-index.json';
+import {getLiveWritingIndex} from './live-writing-discovery';
+import type { NativeWriting } from '@/content/types';
 import type { FeedItem } from './feed-types';
 import { automaticVideoItems, publishedWritingItems, findVideoCompanion } from './youtube-pages.mjs';
 import { mergeWritingItems } from './writing-chronology.mjs';
 
-export function getPublishedNativeWritingItems(): ReturnType<typeof getNativeWritingItems> {
-  return publishedWritingItems(getNativeWritingItems(), Date.now(), publicIndex.videoCompanions);
+export async function getPublishedNativeWritingItems(): Promise<NativeWriting[]> {
+  return publishedWritingItems(await getLiveNativeWritingItems(), Date.now(), (await getLiveWritingIndex()).videoCompanions);
 }
 
-export function getWritingFeed(): FeedItem[] {
-  const native: FeedItem[] = getPublishedNativeWritingItems().map(item => ({
+export async function getWritingFeed(): Promise<FeedItem[]> {
+  const native: FeedItem[] = (await getPublishedNativeWritingItems()).map(item => ({
     source: item.videoUrl ? 'youtube' : 'abvx', title: item.title, url: `/writing/${item.slug}`,
     publishedAt: item.videoUploadedAt || item.publishedAt || '',
     author: 'Anton BV', tags: item.tags, excerpt: item.summary,
@@ -21,18 +22,18 @@ export function getWritingFeed(): FeedItem[] {
   return mergeWritingItems([...native, ...workingStoriesFeed()], discovery);
 }
 
-export function getVideoWritingItems(): FeedItem[] {
-  return automaticVideoItems(discovery, getPublishedNativeWritingItems());
+export async function getVideoWritingItems(): Promise<FeedItem[]> {
+  return automaticVideoItems(discovery, await getPublishedNativeWritingItems());
 }
 
 // Stay on the server: search never sends the complete article corpus to the browser.
-export function getWritingSearchBodies(): Map<string, string> {
+export async function getWritingSearchBodies(): Promise<Map<string, string>> {
   return new Map([
-    ...getPublishedNativeWritingItems().map(item => [`/writing/${item.slug}`, item.body] as const),
+    ...(await getPublishedNativeWritingItems()).map(item => [`/writing/${item.slug}`, item.body] as const),
     ...getWorkingStories().map(story => [workingStoryPath(story), story.body] as const),
   ]);
 }
 
-export function getVideoCompanion(id: string) {
-  return findVideoCompanion(getPublishedNativeWritingItems(), id, Date.now(), publicIndex.videoRedirects);
+export async function getVideoCompanion(id: string) {
+  return findVideoCompanion(await getPublishedNativeWritingItems(), id, Date.now(), (await getLiveWritingIndex()).videoRedirects);
 }

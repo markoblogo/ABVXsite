@@ -26,3 +26,7 @@ For owner-authorized new native Writing/Working Story publications, follow `docs
 ## Routine native publication boundary
 
 Use `content:publish -- --base <main-SHA> --packet <path> --dry-run|--write` for standard approved Writing/Working Story singles or pools, or a separate pool of full-source project/book cards; repeat `--packet` for a pool. Start from a clean dedicated branch at that base. Native and catalogue pools remain separate. Run prebuild once and `content:publication-boundary` before the one release check. Do not modify code, templates, dependencies, documentation or collection definitions in a routine publication PR. Unsupported features require a separate engineering task/PR. Preserve production/OS closeout evidence; never disable reviews to hide failures.
+
+## Runtime Writing transition
+
+See `docs/runtime-writing.md` for the owner-approved content-only API and activation boundary. Once activated, routine native posts do not need Git/build/PR or automatic public-result checks (owner preference, 2026-10-26). Keep storage confirmation separate from public verification; never import runtime receipts as legacy QA PASS. Until activation, preserve the legacy path and do not claim a runtime publication.

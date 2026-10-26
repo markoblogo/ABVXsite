@@ -5,7 +5,8 @@ import JsonLd from '@/components/JsonLd';
 import MarkdownContent from '@/components/MarkdownContent';
 import MediaPanel from '@/components/MediaPanel';
 import PageHeader from '@/components/PageHeader';
-import { getNativeWritingBySlug, getNativeWritingItems } from '@/content';
+import { getLiveNativeWritingBySlug, getLiveNativeWritingItems, getLiveWritingState } from '@/lib/live-writing';
+export const dynamic = 'force-dynamic';
 import { defaultOgImage, imageMetadata, metadataWithImage, SITE_URL } from '@/lib/seo';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -16,17 +17,13 @@ import YouTubeEmbed, { youtubeVideoId } from '@/components/YouTubeEmbed';
 const languageLabels = { en: 'English', fr: 'Français', uk: 'Українською' };
 const translationNavLabels = { en: 'Other languages', fr: 'Autres langues', uk: 'Інші мови' };
 
-export function generateStaticParams() {
-  return getNativeWritingItems().map((item) => ({ slug: item.slug }));
-}
-
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const item = getNativeWritingBySlug(slug);
+  const item = await getLiveNativeWritingBySlug(slug);
   if (!item) {
     return {
       title: 'Writing',
@@ -34,7 +31,7 @@ export async function generateMetadata({
     };
   }
 
-  const translations = getNativeWritingItems().filter((candidate) =>
+  const translations = (await getLiveNativeWritingItems()).filter((candidate) =>
     item.translationGroup && candidate.translationGroup === item.translationGroup && candidate.language);
   const metadata = metadataWithImage({
     title: item.seoTitle || item.title,
@@ -59,14 +56,14 @@ export default async function NativeWritingPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const item = getNativeWritingBySlug(slug);
+  const item = await getLiveNativeWritingBySlug(slug);
   if (!item) notFound();
 
   const url = `${SITE_URL}/writing/${item.slug}`;
   const videoId = item.videoUrl ? youtubeVideoId(item.videoUrl) : null;
 
   return (
-    <div className="route-native-writing grid gap-8">
+    <div className="route-native-writing grid gap-8" data-content-revision={(await getLiveWritingState())?.records[item.slug]?.currentRevision}>
       <JsonLd
         id="jsonld-native-writing"
         data={{
@@ -116,7 +113,7 @@ export default async function NativeWritingPage({
       </div>
       {item.translationGroup ? (
         <nav aria-label={translationNavLabels[item.language || 'en']} className="link-strip">
-          {getNativeWritingItems().filter((translation) => translation.translationGroup === item.translationGroup && translation.slug !== item.slug && translation.language).map((translation) => (
+          {(await getLiveNativeWritingItems()).filter((translation) => translation.translationGroup === item.translationGroup && translation.slug !== item.slug && translation.language).map((translation) => (
             <a key={translation.slug} href={`/writing/${translation.slug}`} hrefLang={translation.language} lang={translation.language}>
               {languageLabels[translation.language || 'en']}
             </a>

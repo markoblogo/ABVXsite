@@ -7852,7 +7852,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-25T21:27:47.101Z",
+      "updatedAt": "2026-10-26T07:17:02.106Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9306,6 +9306,29 @@
         }
       ],
       "collection": "kitchen-notes"
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Nantes Green Line Walk | From Pixels to City Landmarks - Nantes : suivez la ligne verte",
+      "summary": "Follow Nantes’ green line in a 1-minute-40-second illustrated walk: see the complete route on a map, then visit six selected stops from the railway station to the LU Tower. Pixel landscapes briefly reveal generated inter",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/IQ3CdzPzFHw",
+      "publishedAt": "2026-10-25T23:23:51.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=IQ3CdzPzFHw"
+        }
+      ],
+      "related": []
     },
     {
       "type": "video",

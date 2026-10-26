@@ -131,6 +131,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/ht5q8eM93K4
   Summary: Working on a 3D game, animation, or creative coding project? Here's a resource worth bookmarking. Scenario just released a collection of 1,342 AI-generated 3D assets on Hugging Face. And you can download them for free. N
 
+- Nantes Green Line Walk | From Pixels to City Landmarks - Nantes : suivez la ligne verte
+  URL: https://abvx.xyz/writing/videos/IQ3CdzPzFHw
+  Summary: Follow Nantes’ green line in a 1-minute-40-second illustrated walk: see the complete route on a map, then visit six selected stops from the railway station to the LU Tower. Pixel landscapes briefly reveal generated inter
+
 - Someone Put Claude AI on a 2007 Nokia. Yes, Really.
   URL: https://abvx.xyz/writing/videos/jEIPftaweBM
   Summary: Remember when phones had buttons, batteries lasted forever, and Snake was peak entertainment? Well, someone just brought Claude AI to a Nokia from 2007. Developer Emir Karşıyakalı created an open-source AI chat client fo

@@ -1,3 +1,4 @@
+import DocumentLanguage from '@/components/DocumentLanguage';
 import collection from '../../../../content/kitchen-notes.json';
 import { recipeJsonLd } from '@/content/kitchen-notes.mjs';
 import SectionPanel from '@/components/SectionPanel';
@@ -64,6 +65,7 @@ export default async function NativeWritingPage({
 
   return (
     <div className="route-native-writing grid gap-8" data-content-revision={(await getLiveWritingState())?.records[item.slug]?.currentRevision}>
+      <DocumentLanguage key={item.slug+':'+item.language} languageOverride={item.language||'en'} />
       <JsonLd
         id="jsonld-native-writing"
         data={{

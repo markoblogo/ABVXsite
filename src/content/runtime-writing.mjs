@@ -18,6 +18,7 @@ export function parseAcceptedSource(source,now=new Date(),allowUndated=false){
  const {data,body}=parseMarkdownSource(source);
  if(!slugPattern.test(data.slug||'')||reserved.has(data.slug)||data.id!==data.slug)throw new ValidationError('Safe, non-reserved matching id/slug required');
  if(!body.trim()||!data.title?.trim()||!data.summary?.trim()||data.primarySection!=='writing'||data.visibility!=='public'||data.status!=='live'||!['note','article','review','build_log','other','recipe'].includes(data.type))throw new ValidationError('Ready public Writing source required');
+ if(data.coverImage!==undefined)throw new ValidationError('Native Writing coverImage is not rendered; use media or heroImage');
  if(data.canonicalPath&&data.canonicalPath!=='/writing/'+data.slug)throw new ValidationError('Canonical route cannot change');
  if(!['en','fr','uk'].includes(data.language||'en')||!Array.isArray(data.tags)||!data.tags.every(x=>typeof x==='string')||!Array.isArray(data.links))throw new ValidationError('Invalid metadata');
  for(const key of ['relatedSlugs','seriesSlugs'])if(data[key]!==undefined&&(!Array.isArray(data[key])||!data[key].every(value=>typeof value==='string'&&slugPattern.test(value))))throw new ValidationError(key+' must contain safe slugs');

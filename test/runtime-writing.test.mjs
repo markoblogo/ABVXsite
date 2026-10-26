@@ -75,3 +75,9 @@ test('a failed candidate projection leaves the entire published snapshot unchang
  await assert.rejects(publish({action:'publish',requestId:'bad-projection',source:source('bad-projection')}),/Projection rejected/);
  assert.deepEqual(store.state(),before);
 });
+test('native recipes reject an unrendered coverImage before storing the publication',async()=>{
+ const data=JSON.parse(source('cover-only').split('\n---')[0].slice(4));
+ const input='---\n'+JSON.stringify({...data,type:'recipe',collection:'kitchen-notes',coverImage:{src:'/media/cover.png',alt:'Cover',width:1,height:1},recipe:{recipeYield:'2 servings',ingredients:[{name:'Water',quantityText:'1 cup'}],instructions:['Mix.']}})+'\n---\n\nAuthor recipe.';
+ const store=memoryStore();await assert.rejects(createPublisher({store})({action:'publish',requestId:'cover-only',source:input}),/media|coverImage/);
+ assert.equal(Object.keys(store.state().records).length,0);
+});

@@ -1,23 +1,29 @@
-import { getVideoWritingItems, getPublishedNativeWritingItems } from '@/lib/writing-feed';
+import type {NativeWriting} from '@/content/types';
+import type {FeedItem} from '@/lib/feed-types';
+import discovery from '../../content/writing-discovery.json';
+import {automaticVideoItems,publishedWritingItems} from '@/lib/youtube-pages.mjs';
 import kitchenNotes from '../../content/kitchen-notes.json';
 import pageMetadata from '../../content/pages.json';
-import publicIndex from '../../public/content-index.json';
-import { getArtifacts, getBooks, getNativeWritingItems } from '@/content';
+import {getLiveWritingBundle} from '@/lib/live-writing-discovery';
+import { getArtifacts, getBooks } from '@/content';
 import { servicePages } from '@/content/service-pages';
 import { getEditorialArticles } from '@/content/editorials';
 import { getWorkingStories, workingStoryPath } from '@/content/working-stories';
 import workingStoriesSeries from '../../content/working-stories.json';
 import type { MetadataRoute } from 'next';
 
+export const dynamic = 'force-dynamic';
 const base = 'https://abvx.xyz';
 const trafficLandingUpdatedAt = new Date('2026-09-16T00:00:00.000Z');
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const {index:publicIndex,native} = await getLiveWritingBundle();
   const artifacts = getArtifacts();
   const books = getBooks();
-  const releasedVideos = new Set(getPublishedNativeWritingItems().filter(item => item.videoUrl).map(item => item.slug));
-  const writing = getNativeWritingItems().filter(item => !item.videoUrl || releasedVideos.has(item.slug));
-  const videos = getVideoWritingItems();
+  const releasedNative = publishedWritingItems(native,Date.now(),publicIndex.videoCompanions) as NativeWriting[];
+  const releasedVideos = new Set(releasedNative.filter(item => item.videoUrl).map(item => item.slug));
+  const writing = native.filter(item => !item.videoUrl || releasedVideos.has(item.slug));
+  const videos: FeedItem[] = automaticVideoItems(discovery,releasedNative);
   const videoDates = videos.map(item=>({publishedAt:item.publishedAt}));
   const stories = getWorkingStories();
   const storyDates = stories.map((story) => ({ publishedAt: story.date, updatedAt: story.updatedAt }));
@@ -68,7 +74,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/focus`, lastModified: focusDate, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/systems`, lastModified: systemsDate, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/books`, lastModified: booksDate, changeFrequency: 'weekly', priority: 0.85 },
-    { url: `${base}/writing/archive`, lastModified: contentDate({updatedAt:publicIndex.items.find(item=>item.canonicalUrl===`${base}/writing/archive`)?.updatedAt||pageMetadata['/writing/archive'].updatedAt}),changeFrequency:'weekly',priority:0.55 },
+    { url: `${base}/writing/archive`, lastModified: contentDate({updatedAt:publicIndex.items.find((item: {canonicalUrl:string;updatedAt?:string|null})=>item.canonicalUrl===`${base}/writing/archive`)?.updatedAt||pageMetadata['/writing/archive'].updatedAt}),changeFrequency:'weekly',priority:0.55 },
     { url: `${base}/writing`, lastModified: writingDate, changeFrequency: 'weekly', priority: 0.75 },
     { url: `${base}${workingStoriesSeries.canonicalPath}`, lastModified: latestDate([...storyDates, workingStoriesSeries]), changeFrequency: 'weekly', priority: 0.6 },
     { url: `${base}${kitchenNotes.canonicalPath}`, lastModified: latestDate([...writing.filter(item => item.collection === kitchenNotes.id), kitchenNotes]), changeFrequency: 'monthly', priority: 0.55 },

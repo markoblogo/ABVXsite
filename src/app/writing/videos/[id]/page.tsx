@@ -9,13 +9,11 @@ import { videoId, videoPageJsonLd } from '@/lib/youtube-pages.mjs';
 import { metadataWithImage } from '@/lib/seo';
 import styles from '../../[slug]/article.module.css';
 
-export function generateStaticParams() {
-  return getVideoWritingItems().map(item => ({ id: videoId(item.videoUrl) }));
-}
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
-  const item = getVideoWritingItems().find(video => videoId(video.videoUrl) === id);
+  const item = (await getVideoWritingItems()).find(video => videoId(video.videoUrl) === id);
   if (!item) return { title: 'Video unavailable', robots: { index: false } };
   return metadataWithImage({ title: item.title, description: item.excerpt || item.title,
     canonicalPath: item.url, image: { url: `https://i.ytimg.com/vi/${id}/hqdefault.jpg`, width: 480, height: 360, alt: item.title } });
@@ -23,9 +21,9 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
 export default async function VideoPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const companion = getVideoCompanion(id);
+  const companion = await getVideoCompanion(id);
   if (companion) permanentRedirect(`/writing/${companion.slug}`);
-  const item = getVideoWritingItems().find(video => videoId(video.videoUrl) === id);
+  const item = (await getVideoWritingItems()).find(video => videoId(video.videoUrl) === id);
   if (!item) notFound();
   return <div className="route-native-writing grid gap-8">
     <JsonLd id="jsonld-watch-video" data={videoPageJsonLd(item)} />

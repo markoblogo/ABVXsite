@@ -23,7 +23,7 @@ function fixture(run) {
   const dir = path.join(root, 'content', 'working-stories');
   mkdirSync(dir, { recursive: true });
   const write = (name, data, text = body) => writeFileSync(path.join(dir, name), serializeFrontmatter(data, text));
-  try { return run({ root, dir, write }); } finally { rmSync(root, { recursive: true, force: true }); }
+  try { const result=run({ root, dir, write }); if(result?.then)return result.finally(()=>rmSync(root,{recursive:true,force:true})); rmSync(root,{recursive:true,force:true}); return result; } catch(error) { rmSync(root,{recursive:true,force:true}); throw error; }
 }
 function compile(relative, imports = {}) {
   const compiled = ts.transpileModule(readFileSync(path.join(repo, relative), 'utf8'), {
@@ -271,7 +271,7 @@ test('story route renders dynamically, supplies canonical metadata and 404s unkn
   await assert.rejects(route.default({ params: Promise.resolve({ slug: 'unknown' }) }), /404/);
 });
 
-test('sitemap discovers published stories and series while excluding private and future sources', () => fixture(({ root, write }) => {
+test('sitemap discovers published stories and series while excluding private and future sources', () => fixture(async ({ root, write }) => {
   write('ws-001.md', metadata({ updatedAt: '2021-01-01' }));
   write('private.md', metadata({ story_id: 'ws-002', slug: 'private', visibility: 'private' }));
   write('future.md', metadata({ story_id: 'ws-003', slug: 'future', date: '2099-01-01' }));
@@ -282,12 +282,15 @@ test('sitemap discovers published stories and series while excluding private and
     { slug: 'future-video', videoUrl: 'https://www.youtube.com/watch?v=NewVideo002', publishedAt: '2099-01-01' },
     { slug: 'archive-video', videoUrl: 'https://www.youtube.com/watch?v=NewVideo003', publishedAt: '2020-01-01', status: 'archive' },
   ];
+  let automaticNative;
   const sitemap = compile('src/app/sitemap.ts', {
-    '../../public/content-index.json': {items:[{canonicalUrl:'https://abvx.xyz/writing/archive',updatedAt:'2026-10-14T19:00:00.000Z'}]},
+    '@/lib/live-writing-discovery': {getLiveWritingBundle:async()=>({native:nativeVideos,index:{items:[{canonicalUrl:'https://abvx.xyz/writing/archive',updatedAt:'2026-10-14T19:00:00.000Z'}]}})},
+    '@/lib/live-writing': {getLiveNativeWritingItems:async()=>nativeVideos},
     '../../content/pages.json': JSON.parse(readFileSync(path.join(repo, 'content/pages.json'))),
     '../../content/working-stories.json': series,
     '../../content/kitchen-notes.json': JSON.parse(readFileSync(path.join(repo, 'content/kitchen-notes.json'))),
-    '@/lib/writing-feed': { getVideoWritingItems: () => [], getPublishedNativeWritingItems: () => [nativeVideos[0]] },
+    '@/lib/youtube-pages.mjs': {automaticVideoItems:(_registry,items)=>{automaticNative=items;return [];},publishedWritingItems:()=>[nativeVideos[0]]},
+    '../../content/writing-discovery.json': {items:[]},
     '@/content': { getArtifacts: () => [], getBooks: () => [], getNativeWritingItems: () => nativeVideos },
     '@/content/service-pages': { servicePages: [] }, '@/content/editorials': { getEditorialArticles: () => [] },
     '@/content/working-stories': adapter,
@@ -295,7 +298,8 @@ test('sitemap discovers published stories and series while excluding private and
   const cwd = process.cwd();
   try {
     process.chdir(root);
-    const routes = sitemap();
+    const routes = await sitemap();
+    assert.deepEqual(automaticNative,[nativeVideos[0]],'automatic videos must use the released companion boundary');
     assert.ok(routes.some(item => item.url.endsWith('/writing/released-video')));
     assert.ok(!routes.some(item => /\/(future-video|archive-video)$/.test(item.url)));
     const entries = routes.filter((item) => item.url.includes('/writing/working-stories'));

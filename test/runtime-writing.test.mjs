@@ -1,0 +1,83 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {createPublisher, emptySnapshot, ConflictError} from '../src/content/runtime-writing.mjs';
+const source=(slug,body='Accepted author text.')=>'---\n'+JSON.stringify({id:slug,slug,title:'Accepted title',summary:'Summary',type:'article',primarySection:'writing',appearsIn:['writing'],status:'live',visibility:'public',language:'en',publishedAt:'2026-10-26',updatedAt:'2026-10-26',tags:[],links:[]})+'\n---\n\n'+body+'\n';
+function memoryStore(){let state=emptySnapshot(),etag='0';return {load:async()=>({snapshot:structuredClone(state),etag}),commit:async(next,expected)=>{if(expected!==etag)throw new ConflictError('Concurrent update');state=structuredClone(next);etag=String(Number(etag)+1);},state:()=>structuredClone(state)};}
+test('one accepted publication persists without a Git checkout and a retry is idempotent',async()=>{
+ const store=memoryStore(),publish=createPublisher({store,now:()=>new Date('2026-10-26T14:00:00Z')});
+ const command={action:'publish',requestId:'request-1',source:source('new-post'),assets:[]};
+ const first=await publish(command);assert.equal(first.canonicalUrl,'https://abvx.xyz/writing/new-post');assert.equal(first.status,'STORED');assert.ok(first.sourceSha256);assert.equal(store.state().records['new-post'].currentRevision,first.revision);
+ assert.deepEqual(await publish(command),first);assert.equal(Object.keys(store.state().requests).length,1);
+ await assert.rejects(publish({...command,source:source('new-post','Changed bytes.')}),ConflictError);
+});
+
+test('updates preserve first publication and stale writers cannot overwrite; rollback and withdrawal are versioned',async()=>{
+ const store=memoryStore(),publish=createPublisher({store,now:()=>new Date('2026-10-26T14:00:00Z')});
+ const first=await publish({action:'publish',requestId:'first',source:source('sample')});
+ const second=await publish({action:'update',requestId:'second',expectedRevision:first.revision,source:source('sample','Revised accepted text.')});
+ await assert.rejects(publish({action:'update',requestId:'stale',expectedRevision:first.revision,source:source('sample','Stale copy.')}),ConflictError);
+ const rolled=await publish({action:'rollback',requestId:'rollback',id:'sample',expectedRevision:second.revision,toRevision:first.revision});
+ assert.equal(rolled.sourceSha256,first.sourceSha256);assert.equal(rolled.firstPublishedAt,first.firstPublishedAt);
+ const withdrawn=await publish({action:'unpublish',requestId:'withdraw',id:'sample',expectedRevision:rolled.revision});
+ assert.equal(store.state().records.sample.versions[withdrawn.revision].withdrawn,true);
+});
+
+test('concurrent publications have one CAS winner and failed media preparation cannot alter the archive',async()=>{
+ const store=memoryStore(),publish=createPublisher({store,now:()=>new Date('2026-10-26T14:00:00Z')});
+ const outcomes=await Promise.allSettled(['a','b'].map(id=>publish({action:'publish',requestId:id,source:source(id)})));
+ assert.equal(outcomes.filter(x=>x.status==='fulfilled').length,1);
+ assert.equal(outcomes.filter(x=>x.status==='rejected'&&x.reason instanceof ConflictError).length,1);
+ const before=store.state();const failing=createPublisher({store,prepareMedia:async()=>{throw Error('upload unavailable');}});
+ await assert.rejects(failing({action:'publish',requestId:'failed',source:source('failed')}),/unavailable/);
+ assert.deepEqual(store.state(),before);
+});
+
+test('invalid dates and inherited keys cannot corrupt the registry or skip a write',async()=>{
+ const publish=createPublisher({store:memoryStore(),now:()=>new Date('2026-10-26T14:00:00Z')});
+ await assert.rejects(publish({action:'publish',requestId:'bad-date',source:source('date').replaceAll('2026-10-26','not-a-date')}));
+ const result=await publish({action:'publish',requestId:'constructor',source:source('constructor')});
+ assert.equal(result.id,'constructor');
+});
+
+test('authored executable links are rejected before storing content',async()=>{
+ const store=memoryStore(),publish=createPublisher({store});
+ await assert.rejects(publish({action:'publish',requestId:'unsafe',source:source('unsafe','[click](javascript:alert)')}),/protocol/);
+ assert.equal(Object.keys(store.state().records).length,0);
+});
+
+test('incremental migration allows new legacy posts but a managed withdrawal never falls back to Git',async()=>{
+ const {mergeWritingSources,seedSnapshot}=await import('../src/content/runtime-writing.mjs');
+ const archived=source('old'),scheduled=source('legacy-new');const snapshot=seedSnapshot([archived]);
+ assert.equal(mergeWritingSources(snapshot,[archived,scheduled]).length,2);
+ snapshot.records.old.versions[snapshot.records.old.currentRevision].withdrawn=true;
+ assert.deepEqual(mergeWritingSources(snapshot,[archived,scheduled]),[scheduled]);
+});
+
+test('relationship metadata is validated before it can break shared discovery',async()=>{
+ const publish=createPublisher({store:memoryStore()});
+ for(const patch of [{relatedSlugs:{}},{seriesSlugs:42},{translationOf:[]},{primarySeriesSlug:{}},{series:{}},{group:[]}]){
+  const parsed=JSON.parse(source('invalid').split('\n---')[0].slice(4));
+  await assert.rejects(publish({action:'publish',requestId:'invalid',source:'---\n'+JSON.stringify({...parsed,...patch})+'\n---\n\nAuthor text.'}));
+ }
+});
+test('first addition is the actual runtime write, survives updates/rollback and never changes an existing seed anchor',async()=>{
+ const {seedSnapshot}=await import('../src/content/runtime-writing.mjs');
+ const store=memoryStore();let now='2026-10-26T14:00:00Z';const publish=createPublisher({store,now:()=>new Date(now)});
+ const oldSource=source('older').replaceAll('2026-10-26','2020-01-01');
+ const first=await publish({action:'publish',requestId:'older-first',source:oldSource});
+ now='2026-10-27T14:00:00Z';const update=await publish({action:'update',requestId:'older-update',source:oldSource,expectedRevision:first.revision});
+ assert.equal(store.state().records.older.firstAddedAt,'2026-10-26T14:00:00.000Z');assert.equal(update.firstAddedAt,first.firstAddedAt);
+ const seed=seedSnapshot([oldSource],{items:[{url:'/writing/older',addedAt:'2025-01-01T10:00:00.000Z'}]});assert.equal(seed.records.older.firstAddedAt,'2025-01-01T10:00:00.000Z');
+});
+test('a failed candidate projection leaves the entire published snapshot unchanged',async()=>{
+ const store=memoryStore();const before=store.state();
+ const publish=createPublisher({store,validateSnapshot:()=>{throw Error('Projection rejected');}});
+ await assert.rejects(publish({action:'publish',requestId:'bad-projection',source:source('bad-projection')}),/Projection rejected/);
+ assert.deepEqual(store.state(),before);
+});
+test('native recipes reject an unrendered coverImage before storing the publication',async()=>{
+ const data=JSON.parse(source('cover-only').split('\n---')[0].slice(4));
+ const input='---\n'+JSON.stringify({...data,type:'recipe',collection:'kitchen-notes',coverImage:{src:'/media/cover.png',alt:'Cover',width:1,height:1},recipe:{recipeYield:'2 servings',ingredients:[{name:'Water',quantityText:'1 cup'}],instructions:['Mix.']}})+'\n---\n\nAuthor recipe.';
+ const store=memoryStore();await assert.rejects(createPublisher({store})({action:'publish',requestId:'cover-only',source:input}),/media|coverImage/);
+ assert.equal(Object.keys(store.state().records).length,0);
+});

@@ -1,4 +1,5 @@
-import index from '../../../../public/content-index.json';
+import {getLiveWritingIndex} from '@/lib/live-writing-discovery';
+export const dynamic = 'force-dynamic';
 import { writingArchiveItems } from '@/lib/writing-archive.mjs';
 import PageHeader from '@/components/PageHeader';
 import WritingArchiveRow from '@/components/WritingArchiveRow';
@@ -8,8 +9,8 @@ import Link from 'next/link';
 
 const description='All published ABVX articles, Working Stories and video pages in one complete alphabetical archive, including older material beyond the recent feed.';
 export const metadata=metadataWithImage({title:'Complete Writing Archive',description,canonicalPath:'/writing/archive',image:defaultOgImage});
-export default function WritingArchivePage() {
- const items=writingArchiveItems(index);
+export default async function WritingArchivePage() {
+ const items=writingArchiveItems(await getLiveWritingIndex());
  return <div className="route-writing grid gap-8">
   <JsonLd id="jsonld-writing-archive" data={collectionPageJsonLd({id:`${SITE_URL}/writing/archive#collection`,name:'Complete Writing Archive',description,url:`${SITE_URL}/writing/archive`})}/>
   <JsonLd id="jsonld-writing-archive-list" data={itemListJsonLd({id:`${SITE_URL}/writing/archive#items`,name:'Complete Writing Archive',items:items.map(item=>({name:item.title,url:item.url,type:'WebPage'}))})}/>

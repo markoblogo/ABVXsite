@@ -77,7 +77,7 @@ export function mergeWritingItems(native, registry, now = Date.now()) {
   const external = registry.items.filter(item => !item.url.startsWith('/') && item.source !== 'youtube');
   external.push(...automaticVideoItems(registry, native, now));
   return sortWritingItems([...native.map(item => ({
-    ...item, addedAt: dates.get(writingUrlKey(item.url))?.addedAt || item.publishedAt,
+    ...item, addedAt: dates.get(writingUrlKey(item.url))?.addedAt || item.addedAt || item.publishedAt,
   })), ...external]);
 }
 

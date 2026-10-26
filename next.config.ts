@@ -27,9 +27,11 @@ const nextConfig: NextConfig = {
     ],
   },
   async rewrites() {
-    return [
+    return {beforeFiles: [
+      {source: "/content-index.json", destination: "/api/writing/discovery/index"},
+      {source: "/llms.txt", destination: "/api/writing/discovery/llms"},
       { source: "/good-dogs-of-the-apocalypse", destination: "/books/good-dogs-of-the-apocalypse" },
-    ];
+    ]};
   },
   async headers() {
     const securityHeaders = [

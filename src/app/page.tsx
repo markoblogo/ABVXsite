@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import pageMetadata from '../../content/pages.json';
 import HeroPoster from '@/components/HeroPoster';
 import HomepageLatestCard from '@/components/HomepageLatestCard';
@@ -63,7 +64,7 @@ function formatDate(iso?: string): string | undefined {
 }
 
 export default async function Home() {
-  const latestWriting = getWritingFeed().slice(0, 3);
+  const latestWriting = (await getWritingFeed()).slice(0, 3);
 
   const latestFocus = getLatestSectionEntryWork('focus', 'mn7r-blog');
   const latestSystem = getLatestSectionEntryWork('systems');

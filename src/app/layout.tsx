@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 
-import { getNativeWritingBySlug, getNativeWritingItems } from '@/content';
+import { getLiveNativeWritingItems } from '@/lib/live-writing';
 import { getEditorialArticles } from '@/content/editorials';
 import { getWorkingStories, workingStoryPath } from '@/content/working-stories';
 
@@ -229,11 +229,13 @@ export default async function RootLayout({
   const pathname = requestHeaders.get('x-site-pathname') || '/';
   const writingSlug = pathname.match(/^\/writing\/([^/]+)$/)?.[1];
   const storySlug = pathname.match(/^\/writing\/working-stories\/([^/]+)$/)?.[1];
+  const nativeWriting = writingSlug && !['archive','kitchen-notes','working-stories','videos'].includes(writingSlug) ? await getLiveNativeWritingItems() : [];
+  const writingLanguages = Object.fromEntries(nativeWriting.map(item=>[`/writing/${item.slug}`,item.language||'en']));
   const storyLanguages = Object.fromEntries(getWorkingStories().map((story) => [workingStoryPath(story), story.language]));
   const editorialLanguages = Object.fromEntries(getEditorialArticles().filter((article) => article.language).map((article) => [article.href, article.language!]));
   const language = pathname.startsWith('/fr/') ? 'fr'
     : storySlug ? storyLanguages[pathname] || 'en'
-      : writingSlug ? getNativeWritingBySlug(writingSlug)?.language || 'en' : editorialLanguages[pathname] || 'en';
+      : writingSlug ? writingLanguages[pathname] || 'en' : editorialLanguages[pathname] || 'en';
 
   return (
     <html lang={language}>
@@ -263,7 +265,7 @@ export default async function RootLayout({
         <link rel="alternate" type="application/rss+xml" title="ABVX Substack feed" href="https://abvx.substack.com/feed" />
       </head>
       <body>
-        <DocumentLanguage writingLanguages={{ ...Object.fromEntries(getNativeWritingItems().map((item) => [`/writing/${item.slug}`, item.language || 'en'])), ...editorialLanguages, ...storyLanguages }} />
+        <DocumentLanguage writingLanguages={{ ...writingLanguages, ...editorialLanguages, ...storyLanguages }} />
         <SiteHeader />
         <main className="site-main">{children}</main>
         <SiteFooter />

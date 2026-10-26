@@ -326,10 +326,15 @@ export function readSeriesFiles(): Series[] {
     });
 }
 
+export function nativeWritingFromSource(source: string): NativeWriting {
+  return normalizeNativeWriting(parseMarkdownFile(source, "runtime-writing"));
+}
+
 export function readNativeWritingFiles(): NativeWriting[] {
-  return readMarkdownFiles('writing')
-    .filter((file) => isVisible(file.data.visibility))
-    .map(({ data, body }) => {
+  return readMarkdownFiles("writing").filter(file => isVisible(file.data.visibility)).map(normalizeNativeWriting);
+}
+
+function normalizeNativeWriting({data, body}: ParsedFile): NativeWriting {
       const slug = stringValue(data.slug);
       const videoErrors = [...validateNativeWritingVideo(data), ...validateKitchenNotes(data), ...validateWritingIllustrations(data, body)];
       if (videoErrors.length) throw new Error(`Writing ${slug}: ${videoErrors.join('; ')}`);
@@ -361,5 +366,15 @@ export function readNativeWritingFiles(): NativeWriting[] {
         coverImage: normalizeImage(data.media),
         heroImage: normalizeImage(data.heroImage) || normalizeImage(data.media),
       };
-    });
+}
+
+let legacyWritingSources: string[] | undefined;
+export function readLegacyWritingSources(): string[] {
+  if (!legacyWritingSources) {
+    const dir=path.join(contentDir,'writing');
+    legacyWritingSources=readdirSync(dir).filter(file=>file.endsWith('.md')&&!file.startsWith('_'))
+      .map(file=>readFileSync(path.join(dir,file),'utf8'))
+      .filter(source=>isVisible(parseMarkdownFile(source,'legacy-writing').data.visibility));
+  }
+  return [...legacyWritingSources];
 }

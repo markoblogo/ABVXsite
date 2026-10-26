@@ -84,9 +84,9 @@ test('invalid, future, duplicate and unsafe registry entries are rejected', () =
 test('homepage and Writing share the same feed without adding homepage slots', () => {
   const home = readFileSync('src/app/page.tsx', 'utf8');
   const writing = readFileSync('src/app/writing/page.tsx', 'utf8');
-  assert.ok(home.includes('getWritingFeed().slice(0, 3)'));
+  assert.ok(home.includes('(await getWritingFeed()).slice(0, 3)'));
   assert.ok(home.includes('[0, 1, 2].map'));
-  assert.ok(writing.includes('const allPosts = getWritingFeed()'));
+  assert.ok(writing.includes('const allPosts = await getWritingFeed()'));
   assert.ok(!home.includes('mediumLatest'));
 });
 
@@ -145,4 +145,10 @@ test('MN7R render-time feeds preserve ISR caching while Writing articles keep th
     assert.equal(init.cache, undefined, `${source}/${kind} must not disable ISR`);
     assert.equal(init.next?.revalidate, 900, `${source}/${kind}`);
   }
+});
+test('runtime first-addition ordering is used when no immutable discovery entry exists',()=>{
+ const runtime={...post('/writing/imported-old','2020-01-01'),addedAt:'2026-10-26T14:00:00.000Z'};
+ const recent=post('/writing/recent','2026-10-20');
+ const merged=mergeWritingItems([runtime,recent],{version:1,items:[]},Date.parse('2026-10-27'));
+ assert.equal(merged[0].url,runtime.url);assert.equal(merged[0].addedAt,runtime.addedAt);
 });

@@ -1,5 +1,7 @@
 # ABVX OS publication handoff
 
+Runtime Writing phase 1: see [the content-only API and activation runbook](runtime-writing.md). The procedure below remains the legacy route until cutover; runtime receipts use their own profile and never substitute for these Git/QA receipts.
+
 ABVX OS prepares and records source-specific approval; this repository owns file writes, validation, rendering and deployment. Reuse the existing content packet flow, as for Azur Menton. No runtime ABVX OS dependency is added.
 
 ## Routine publication: data only

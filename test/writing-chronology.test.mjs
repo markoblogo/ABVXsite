@@ -152,3 +152,16 @@ test('runtime first-addition ordering is used when no immutable discovery entry 
  const merged=mergeWritingItems([runtime,recent],{version:1,items:[]},Date.parse('2026-10-27'));
  assert.equal(merged[0].url,runtime.url);assert.equal(merged[0].addedAt,runtime.addedAt);
 });
+
+test('confirmed removed videos stay out of the feed through RSS refresh and return after restoration', () => {
+  const video = post('https://www.youtube.com/watch?v=NewVideo001', '2026-10-10', 'youtube');
+  const first = registerWritingItems(empty, [video], { now });
+  first.items[0].youtubeAvailability = 'removed';
+  const refreshed = registerWritingItems(first, [video], { now });
+  assert.equal(mergeWritingItems([], refreshed).length, 0);
+  const companion = { ...post('/writing/video-notes', video.publishedAt, 'youtube'), videoUrl: video.url };
+  assert.equal(mergeWritingItems([companion], refreshed).length, 0);
+  assert.equal(refreshed.items[0].addedAt, now);
+  refreshed.items[0].youtubeAvailability = 'available';
+  assert.equal(mergeWritingItems([], refreshed).length, 1);
+});

@@ -33,6 +33,7 @@ export function validateWritingDiscovery(data, now = Date.now()) {
     if (!sources.has(item.source) || !bases.has(item.addedAtBasis) || typeof item.title !== 'string' || !item.title.trim()
       || !Number.isFinite(Date.parse(item.publishedAt))) errors.push(`Invalid Writing metadata: ${item.url}`);
     if (item.videoDescription !== undefined && (item.source !== 'youtube' || typeof item.videoDescription !== 'string' || item.videoDescription.length > 10000)) errors.push(`Invalid video description: ${item.url}`);
+    if (item.youtubeAvailability !== undefined && (item.source !== 'youtube' || !['removed', 'available'].includes(item.youtubeAvailability))) errors.push(`Invalid YouTube availability: ${item.url}`);
     const local = key.startsWith('/');
     if (!local && item.source !== 'youtube') {
       const host = key ? new URL(key).hostname : '';
@@ -64,6 +65,7 @@ export function registerWritingItems(registry, items, { now = new Date().toISOSt
       ...(item.coverImage ? { coverImage: item.coverImage } : {}),
       ...(item.videoUrl ? { videoUrl: item.videoUrl } : {}),
       ...((item.videoDescription ?? existing?.videoDescription) !== undefined ? { videoDescription: item.videoDescription ?? existing?.videoDescription } : {}),
+      ...(existing?.youtubeAvailability ? { youtubeAvailability: existing.youtubeAvailability } : {}),
       addedAt: existing?.addedAt || (bootstrap ? published : now),
       addedAtBasis: existing?.addedAtBasis || (bootstrap ? 'legacy-source' : 'observed'),
     });
@@ -73,6 +75,8 @@ export function registerWritingItems(registry, items, { now = new Date().toISOSt
 
 export function mergeWritingItems(native, registry, now = Date.now()) {
   native = native.filter(item => isPublishedWriting(item, now));
+  const removed = new Set(registry.items.filter(item => item.youtubeAvailability === 'removed').map(item => writingUrlKey(item.url)));
+  native = native.filter(item => !item.videoUrl || !removed.has(writingUrlKey(item.videoUrl)));
   const dates = new Map(registry.items.map(item => [writingUrlKey(item.url), item]));
   const external = registry.items.filter(item => !item.url.startsWith('/') && item.source !== 'youtube');
   external.push(...automaticVideoItems(registry, native, now));

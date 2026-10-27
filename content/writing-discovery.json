@@ -1625,6 +1625,17 @@
     },
     {
       "source": "youtube",
+      "title": "How We Turned 6 Photos Into a Cinematic Film",
+      "url": "https://www.youtube.com/watch?v=JDjvazj9zb4",
+      "publishedAt": "2026-10-27T16:30:01.000Z",
+      "excerpt": "Can six still photos become a cinematic short film? In this behind-the-scenes breakdown, we show how photographs of Pokras Lampas’s “Seals of Good Intentions” became a moving scene with layered images, a shallow 3D set, ",
+      "coverImage": "https://i.ytimg.com/vi/JDjvazj9zb4/hqdefault.jpg",
+      "videoDescription": "Can six still photos become a cinematic short film? In this behind-the-scenes breakdown, we show how photographs of Pokras Lampas’s “Seals of Good Intentions” became a moving scene with layered images, a shallow 3D set, camera motion and sound.\n\nWe walk through preserving the photographed calligraphy, building the environment, directing the camera and changing the soundtrack after feedback. The wide environment is a creative reconstruction, including a generated background — not newly filmed documentary footage of the location.\n\nWatch the original film: https://youtu.be/6c3JXdIiosg\nFramewright: https://github.com/markoblogo/framewright\n\nArtwork: Pokras Lampas, “Seals of Good Intentions”. Photographs supplied for this project; photographer and reuse permission not independently verified. Background music: “Lotus music.wav” by nemaavla, CC0 1.0: https://freesound.org/people/nemaavla/sounds/507957/ .\n\nThis film was produced using Framewright. The techniques can also be recreated using other editing and 3D tools.\n\n#PhotoToVideo #Filmmaking #3DAnimation",
+      "addedAt": "2026-10-27T16:39:14.655Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Someone Put Claude AI on a 2007 Nokia. Yes, Really.",
       "url": "https://www.youtube.com/watch?v=jEIPftaweBM",
       "publishedAt": "2026-10-10T14:39:44.000Z",

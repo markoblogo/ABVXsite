@@ -7875,7 +7875,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-27T14:22:31.976Z",
+      "updatedAt": "2026-10-27T16:39:14.655Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8688,6 +8688,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=5BS9m6b0zWk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "How We Turned 6 Photos Into a Cinematic Film",
+      "summary": "Can six still photos become a cinematic short film? In this behind-the-scenes breakdown, we show how photographs of Pokras Lampas’s “Seals of Good Intentions” became a moving scene with layered images, a shallow 3D set, ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/JDjvazj9zb4",
+      "publishedAt": "2026-10-27T16:30:01.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=JDjvazj9zb4"
         }
       ],
       "related": []

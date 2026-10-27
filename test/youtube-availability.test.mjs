@@ -8,6 +8,7 @@ const removed = html({playabilityStatus:{status:'ERROR',errorScreen:{playerInter
 
 test('only explicit YouTube removal or private status suppresses a video; errors stay unknown', async () => {
   assert.equal(await checkVideoAvailability('NewVideo001', fetchResponse(removed)), 'removed');
+  assert.equal(await checkVideoAvailability('NewVideo001', fetchResponse(removed.replace('</script>', 'window.extra = {nested: true};</script>'))), 'removed');
   assert.equal(await checkVideoAvailability('NewVideo001', fetchResponse(html({playabilityStatus:{status:'ERROR',reason:'Video unavailable'}}))), 'unknown');
   assert.equal(await checkVideoAvailability('NewVideo001', async () => ({ok:false,status:404})), 'unknown');
   assert.equal(await checkVideoAvailability('NewVideo001', async () => {throw Error('offline')}), 'unknown');

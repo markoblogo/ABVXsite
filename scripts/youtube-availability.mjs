@@ -1,5 +1,23 @@
 import { videoId } from '../src/lib/youtube-pages.mjs';
 
+function playerResponse(html) {
+  const assignment = /(?:var\s+)?ytInitialPlayerResponse\s*=\s*\{/.exec(html);
+  if (!assignment) return null;
+  const start = assignment.index + assignment[0].length - 1;
+  let depth = 0, string = false, escaped = false;
+  for (let i = start; i < html.length; i++) {
+    const char = html[i];
+    if (string) {
+      if (escaped) escaped = false;
+      else if (char === '\\') escaped = true;
+      else if (char === '"') string = false;
+    } else if (char === '"') string = true;
+    else if (char === '{') depth++;
+    else if (char === '}' && --depth === 0) return JSON.parse(html.slice(start, i + 1));
+  }
+  return null;
+}
+
 // A missing RSS entry or an HTTP error does not establish that a video was removed.
 export async function checkVideoAvailability(id, fetcher = fetch) {
   if (!/^[\w-]{11}$/.test(id)) return 'unknown';
@@ -7,9 +25,8 @@ export async function checkVideoAvailability(id, fetcher = fetch) {
     const response = await fetcher(`https://www.youtube.com/watch?v=${id}&hl=en`, { signal: AbortSignal.timeout(12000), redirect: 'error' });
     if (!response.ok) return 'unknown';
     const html = await response.text();
-    const raw = html.match(/(?:var\s+)?ytInitialPlayerResponse\s*=\s*(\{[^\n]*?\});\s*<\/script>/)?.[1];
-    if (!raw) return 'unknown';
-    const player = JSON.parse(raw);
+    const player = playerResponse(html);
+    if (!player) return 'unknown';
     if (player.playabilityStatus?.status === 'OK' && player.videoDetails?.videoId === id) return 'available';
     if (player.playabilityStatus?.status !== 'ERROR' && player.playabilityStatus?.status !== 'LOGIN_REQUIRED') return 'unknown';
     const detail = player.playabilityStatus?.errorScreen?.playerInterstitialRenderer?.content?.interstitialViewModel?.description?.content;

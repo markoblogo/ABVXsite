@@ -267,6 +267,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/SET6nWjBNNE
   Summary: What if you could run a powerful AI video generation model on your own computer, without renting expensive cloud GPUs? And what if you only needed 8 GB of VRAM? Meet FreeVideo, an open-source project designed to bring Mi
 
+- Turn Any Video Into ASCII Art for Free | This Retro Art Generator Is Amazing
+  URL: https://abvx.xyz/writing/videos/ShcaeYiVVK4
+  Summary: Remember the good old days of ASCII art, pixel graphics, and the demoscene? Well, here's a little nostalgia trip. I found Devault, a free browser-based ASCII art generator that transforms ordinary images and videos into
+
 - Claude Code Has Hidden Features. This /stack Mod Reveals Everything
   URL: https://abvx.xyz/writing/videos/sZpOYudsSDY
   Summary: Think you know what's running inside your Claude Code sessions? You might be surprised. Meet /stack, a free, open-source Claude Code mod that reveals practically everything installed, configured, and available in your AI

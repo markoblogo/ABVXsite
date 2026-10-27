@@ -7852,7 +7852,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-27T13:24:39.316Z",
+      "updatedAt": "2026-10-27T13:47:48.639Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10947,6 +10947,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=5EFdtSn79k4"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Turn Any Video Into ASCII Art for Free | This Retro Art Generator Is Amazing",
+      "summary": "Remember the good old days of ASCII art, pixel graphics, and the demoscene? Well, here's a little nostalgia trip. I found Devault, a free browser-based ASCII art generator that transforms ordinary images and videos into ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/ShcaeYiVVK4",
+      "publishedAt": "2026-10-27T13:39:05.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=ShcaeYiVVK4"
         }
       ],
       "related": []

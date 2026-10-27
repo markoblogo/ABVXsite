@@ -56,7 +56,7 @@ export function findVideoCompanion(native, id, now = Date.now(), redirects) {
 export function automaticVideoItems(registry, native = [], now = Date.now()) {
   return registry.items.flatMap(item => {
     const id = item.source === 'youtube' ? videoId(item.url) : null;
-    if (!id || findVideoCompanion(native, id, now) || Date.parse(item.publishedAt) > now) return [];
+    if (!id || item.youtubeAvailability === 'removed' || findVideoCompanion(native, id, now) || Date.parse(item.publishedAt) > now) return [];
     return [{ ...item, videoUrl: item.url, url: `/writing/videos/${id}` }];
   });
 }

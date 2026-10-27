@@ -7,6 +7,8 @@ import { registerWritingItems, validateWritingDiscovery } from '../src/lib/writi
 import { isPublishedWriting } from '../src/lib/youtube-pages.mjs';
 import { loadFeedModule } from './load-feed-modules.mjs';
 import { fetchWritingSourceFallback } from './writing-source-fallback.mjs';
+import { scanVideoAvailability } from './youtube-availability.mjs';
+import { videoId } from '../src/lib/youtube-pages.mjs';
 
 export function nativeDiscoveryItems(now = Date.now()) {
   const writing = contentFiles('writing').flatMap(file => {
@@ -54,7 +56,12 @@ export async function syncWritingFeed({ external = false, bootstrap = false } = 
       }
     }
   }
-  const updated = registerWritingItems(registry, items, { now, bootstrap });
+  let updated = registerWritingItems(registry, items, { now, bootstrap });
+  if (external) {
+    const known = new Set(registry.items.map(item => item.url));
+    const added = updated.items.filter(item => item.source === 'youtube' && !known.has(item.url)).map(item => videoId(item.url)).filter(Boolean);
+    updated = await scanVideoAvailability(updated, added, Date.parse(now));
+  }
   const errors = validateWritingDiscovery(updated);
   if (errors.length) throw new Error(errors.join('\n'));
   const bytes = JSON.stringify(updated, null, 2) + '\n';

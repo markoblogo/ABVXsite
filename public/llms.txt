@@ -291,10 +291,6 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/uvM-jWwibOQ
   Summary: Ever noticed how streetlights, car headlights, and distant stars turn into glowing halos, spikes, and strange patterns at night? Well, someone built a simulator that lets you explore exactly why that happens. Meet Engisc
 
-- Do You Believe in Life After Death? This Interactive 3D Visualization Explores 130,000 Answers
-  URL: https://abvx.xyz/writing/videos/v7Ob6-LciiY
-  Summary: What happens after we die? It's one of humanity's oldest questions. And someone decided to turn 130,000 people's answers into an interactive 3D experience. Meet Life After Death?, a fascinating data visualization created
-
 - Physical Commodity Markets: A Practical Book Collection | AMI Books
   URL: https://abvx.xyz/writing/videos/vAPgNupIp2s
   Summary: A commodity deal connects a market, a product, and people. Explore a growing collection of practical books about the work behind that deal. Discover the library: https://books.1d3x.com/ The collection brings together gui

@@ -28,7 +28,7 @@ jobs:
       - run: npm run writing:sync
       - run: npm run llms:generate
       - run: npm run content:validate
-      - run: node --test test/writing-chronology.test.mjs test/youtube-pages.test.mjs test/youtube-feed.test.mjs
+      - run: node --test test/writing-chronology.test.mjs test/youtube-pages.test.mjs test/youtube-feed.test.mjs test/youtube-availability.test.mjs
       - name: Publish only discoveries and generated indexes
         run: |
           if git diff --quiet -- content/writing-discovery.json public/content-index.json public/llms.txt; then exit 0; fi

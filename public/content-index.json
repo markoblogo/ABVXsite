@@ -7852,7 +7852,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-26T21:18:23.213Z",
+      "updatedAt": "2026-10-27T10:54:22.357Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10037,6 +10037,44 @@
       "links": [],
       "publishedAt": "2026-10-26",
       "updatedAt": "2026-10-26",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #15 — Closeness, Distance & Seeing Each Other",
+      "summary": "Twenty translated notebook fragments on closeness, distance, self-worth and the ways we relate to one another.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-15-closeness-distance-seeing-each-other",
+      "tags": [
+        "psychology-notebook",
+        "relationships"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #16 — Autonomy, Limits & Being the Author",
+      "summary": "Twenty translated notebook fragments on autonomy, limits, responsibility and taking an author’s position towards life.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-16-autonomy-limits-authorship",
+      "tags": [
+        "psychology-notebook",
+        "boundaries"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-27",
       "related": []
     },
     {

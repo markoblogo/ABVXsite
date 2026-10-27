@@ -1601,6 +1601,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook, adaptation
 
+- Psychology Notebook #15 — Closeness, Distance & Seeing Each Other
+  URL: https://abvx.xyz/writing/psychology-notebook-15-closeness-distance-seeing-each-other
+  Summary: Twenty translated notebook fragments on closeness, distance, self-worth and the ways we relate to one another.
+  Group: writing
+  Tags: psychology-notebook, relationships
+
+- Psychology Notebook #16 — Autonomy, Limits & Being the Author
+  URL: https://abvx.xyz/writing/psychology-notebook-16-autonomy-limits-authorship
+  Summary: Twenty translated notebook fragments on autonomy, limits, responsibility and taking an author’s position towards life.
+  Group: writing
+  Tags: psychology-notebook, boundaries
+
 - The Berliner: How My Beer Cocktail Ended Up on a French Bar's Menu
   URL: https://abvx.xyz/writing/the-berliner-guinness-port-beer-cocktail
   Summary: I discovered Guinness with port wine in Berlin, recreated it with whatever a small French bar had available, and eventually watched it become an official item in the cash register.

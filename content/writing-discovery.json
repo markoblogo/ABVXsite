@@ -771,6 +771,16 @@
     },
     {
       "source": "medium",
+      "title": "Anthropic Thinks You Have Too Many AI Agents. And It Might Be Right.",
+      "url": "https://abvcreative.medium.com/anthropic-thinks-you-have-too-many-ai-agents-and-it-might-be-right-1d3f776fcfaa",
+      "publishedAt": "2026-10-27T12:40:23.000Z",
+      "excerpt": "After years of building increasingly elaborate multi-agent systems, the industry is discovering that sometimes one agent with the right skills is faster, cheaper, and considerably less stupid. There’s something magnifice",
+      "coverImage": "https://cdn-images-1.medium.com/max/1024/1*5ifTJjTHme56LJwOKSkzhA.png",
+      "addedAt": "2026-10-27T12:56:02.442Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "medium",
       "title": "China Is Already Regulating AI. That Changes the “But China” Debate",
       "url": "https://abvcreative.medium.com/china-is-already-regulating-ai-that-changes-the-but-china-debate-6afd88e0ce2b",
       "publishedAt": "2026-09-27T11:15:09.000Z",
@@ -1986,6 +1996,17 @@
       "coverImage": "https://i.ytimg.com/vi/uvM-jWwibOQ/hqdefault.jpg",
       "videoDescription": "Ever noticed how streetlights, car headlights, and distant stars turn into glowing halos, spikes, and strange patterns at night?\nWell, someone built a simulator that lets you explore exactly why that happens.\n\nMeet Engiscope, an interactive browser-based tool that simulates how light behaves as it passes through the human eye.\nAnd it's surprisingly mesmerizing.\n\nHere's what you can experiment with:\n- Pupil size: See how changing the opening of your eye affects light patterns\n- Eyeglass prescription: Adjust sphere, cylinder, and astigmatism axis\n- Eyelashes and eyelids: Discover how they create distinctive light streaks\n- Optical aberrations: Experiment with distortions, halos, and starbursts\n- Chromatic aberration: Watch different colors of light separate\n- Night scenes: Explore simulated glare from bright lights in darkness\n\nThe simulator uses optical calculations, including something called the point spread function (PSF), to model how a tiny point of light spreads into patterns.\nIt's not a medical diagnostic tool or a perfect reproduction of your individual vision, but it's a fascinating way to explore the physics behind what we see.\nAnd the best part?\nYou can change the parameters and watch the results evolve.\nTurns out, your eyes have been doing procedural light effects long before computer graphics existed.\n\nTry Engiscope yourself:\nhttps://graycrawford.com/engiscope\n\n#Engiscope #HumanVision #OpticalIllusions #PhysicsSimulation #CreativeCoding #Shorts",
       "addedAt": "2026-10-21T15:18:36.079Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
+      "title": "Do You Believe in Life After Death? This Interactive 3D Visualization Explores 130,000 Answers",
+      "url": "https://www.youtube.com/watch?v=v7Ob6-LciiY",
+      "publishedAt": "2026-10-27T12:55:22.000Z",
+      "excerpt": "What happens after we die? It's one of humanity's oldest questions. And someone decided to turn 130,000 people's answers into an interactive 3D experience. Meet Life After Death?, a fascinating data visualization created",
+      "coverImage": "https://i.ytimg.com/vi/v7Ob6-LciiY/hqdefault.jpg",
+      "videoDescription": "What happens after we die?\n\nIt's one of humanity's oldest questions. And someone decided to turn 130,000 people's answers into an interactive 3D experience.\n\nMeet Life After Death?, a fascinating data visualization created by Alvin Chang for The Pudding.\n\nThe project draws on survey responses from nearly 130,000 people across 23 countries, exploring how our beliefs about death, religion, and the afterlife differ across cultures and generations.\n\nBut instead of presenting another collection of boring charts, Chang built something much more interesting.\n\nA virtual room filled with 1,500 people.\n\nEach little character represents a real survey respondent, positioned according to their age and beliefs.\n\nAnd the entire room is interactive.\n\nHere's what you can explore:\n\nBelief in the afterlife: See how people differ in what they believe happens after death.\n\nAge and generations: Explore how beliefs vary across age groups.\n\nIndividual responses: Click on a character to learn more about their answers.\n\nInteractive categories: Switch between survey questions and watch the characters change colors or move into new groups.\n\nGlobal perspectives: Discover patterns across different countries and cultures.\n\nThe underlying research comes from the Global Flourishing Study, with additional historical context from international values surveys.\n\nAnd here's what I find particularly beautiful about this project.\n\nIt turns statistics back into people.\n\nInstead of looking at abstract percentages, you're surrounded by hundreds of tiny human figures, each representing someone with their own perspective on one of life's biggest mysteries.\n\nIt's part data journalism, part interactive art, and part philosophical exploration.\n\nAnd a wonderful example of how creative coding and data visualization can make complex research feel surprisingly personal.\n\n130,000 answers. 23 countries. One question nobody can definitively answer.\n\nWhat do you believe?\n\nExplore the interactive visualization:\nhttps://pudding.cool/2026/10/lifeafter/\n\nCreated by Alvin Chang for The Pudding.\n\n#DataVisualization #InteractiveArt #CreativeCoding #LifeAfterDeath #DataJournalism #Shorts",
+      "addedAt": "2026-10-27T12:56:02.442Z",
       "addedAtBasis": "observed"
     },
     {

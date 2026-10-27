@@ -7852,7 +7852,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-27T12:56:02.442Z",
+      "updatedAt": "2026-10-27T13:24:39.316Z",
       "tags": [],
       "links": [],
       "related": []
@@ -7946,6 +7946,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=WLBxcM5JQ3U"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Do You Believe in Life After Death? This Interactive 3D Visualization Explores 130,000 Answers",
+      "summary": "What happens after we die? It's one of humanity's oldest questions. And someone decided to turn 130,000 people's answers into an interactive 3D experience. Meet Life After Death?, a fascinating data visualization created",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/Q73r6GLqXVY",
+      "publishedAt": "2026-10-27T13:14:47.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=Q73r6GLqXVY"
         }
       ],
       "related": []

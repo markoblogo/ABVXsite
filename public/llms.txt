@@ -211,6 +211,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/ppz1g7gRDds
   Summary: Apparently, CapCut couldn't just sit back and watch creators automate their video editing workflows with Claude Code and DaVinci Resolve. So now CapCut is coming directly to ChatGPT. Announced at CapCut World LA on Octob
 
+- Do You Believe in Life After Death? This Interactive 3D Visualization Explores 130,000 Answers
+  URL: https://abvx.xyz/writing/videos/Q73r6GLqXVY
+  Summary: What happens after we die? It's one of humanity's oldest questions. And someone decided to turn 130,000 people's answers into an interactive 3D experience. Meet Life After Death?, a fascinating data visualization created
+
 - Брокеридж зернових та олійних: безкоштовний практичний гід MN7R
   URL: https://abvx.xyz/writing/videos/qer7WfdIWLI
   Summary: Як працює ринок зернових та олійних — від першого офера до контракту та виконання угоди? Безкоштовний практичний гід MN7R українською допомагає побачити зв’язок між товаром, якістю, ціною, логістикою та людьми. 📘 Завант

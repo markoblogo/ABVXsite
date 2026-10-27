@@ -7437,6 +7437,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Anthropic Just Filed for an IPO. Claude Is Going to Wall Street",
+      "summary": "Well, it finally happened. Anthropic, the company behind Claude AI, has officially filed for an IPO. On October 26, 2026, Anthropic submitted its S-1 registration statement to the U.S. Securities and Exchange Commission.",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/dUtmkNClf74",
+      "publishedAt": "2026-10-27T13:52:55.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=dUtmkNClf74"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "AsciiTheme — ASCII Themes & Widgets for JavaScript Websites",
       "summary": "Give your website an optional ASCII look with AsciiTheme, an open-source JavaScript library with four themes and interactive widgets. This short demo shows the light, dark, sepia, and matrix themes, plus progress bars, s",
       "canonicalUrl": "https://abvx.xyz/writing/videos/y2OW5f8QEXo",
@@ -7852,7 +7875,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-27T13:47:48.639Z",
+      "updatedAt": "2026-10-27T14:22:31.976Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10399,6 +10422,29 @@
         }
       ],
       "collection": "kitchen-notes"
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "The Last Delivery | A Short Animated Film About Hope",
+      "summary": "For years, a robot courier believed he was the only one left. Then a parcel arrived with a small lamp and a message: leave a light on. Someone will find their way. The Last Delivery is an original animated short about lo",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/GY5UhZVQG14",
+      "publishedAt": "2026-10-27T13:58:02.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=GY5UhZVQG14"
+        }
+      ],
+      "related": []
     },
     {
       "type": "writing",

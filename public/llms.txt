@@ -99,6 +99,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/dSBsgH4bpNY
   Summary: What if you could browse hundreds of impressive AI-generated animations and get the prompts behind them? Not just watch the results. Copy the prompts, study how they work, and create your own versions. Someone has put to
 
+- Anthropic Just Filed for an IPO. Claude Is Going to Wall Street
+  URL: https://abvx.xyz/writing/videos/dUtmkNClf74
+  Summary: Well, it finally happened. Anthropic, the company behind Claude AI, has officially filed for an IPO. On October 26, 2026, Anthropic submitted its S-1 registration statement to the U.S. Securities and Exchange Commission.
+
 - FLUX 3 Max: Near Real-Time AI Video, 22× Faster Than Seedance 2.5
   URL: https://abvx.xyz/writing/videos/G_5lLwn6Veo
   Summary: Remember when generating a few seconds of AI video meant waiting several minutes? Well, those days might be numbered. After making MiniMax H3 ridiculously fast, fal.ai teamed up with Black Forest Labs to push FLUX 3 to a
@@ -114,6 +118,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Burgers, Lipstick & Underwear | Strange Economic Indicators
   URL: https://abvx.xyz/writing/videos/GVrbTMZxbpg
   Summary: What can burgers, lipstick and underwear really tell us about the economy? Discover Burgers, Lipstick & Underwear: What Strange Indicators Really Tell Us About the Economy — a book about surprising economic indicators an
+
+- The Last Delivery | A Short Animated Film About Hope
+  URL: https://abvx.xyz/writing/videos/GY5UhZVQG14
+  Summary: For years, a robot courier believed he was the only one left. Then a parcel arrived with a small lamp and a message: leave a light on. Someone will find their way. The Last Delivery is an original animated short about lo
 
 - AI Agent Memory: Stop Re-Explaining Your Project
   URL: https://abvx.xyz/writing/videos/H26QHE7NE9I

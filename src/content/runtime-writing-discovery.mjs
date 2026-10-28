@@ -32,6 +32,6 @@ export function projectWritingIndex(sources,baseline,discovery,now=Date.now(),ex
 }
 export function projectWritingLlms(baseline,index){
  const line=item=>`- ${item.title}\n  URL: ${item.canonicalUrl}\n  Summary: ${item.summary}\n  Group: ${item.group||item.section}${item.tags?.length?'\n  Tags: '+item.tags.slice(0,8).join(', '):''}`;
- const replace=(text,title,types)=>text.replace(new RegExp('## '+title+'\\n[\\s\\S]*?(?=\\n## |$)'),()=>`## ${title}\n\n${index.items.filter(item=>types.includes(item.type)).map(line).join('\n\n')}\n`);
+ const replace=(text,title,types)=>text.replace(new RegExp('## '+title+'\\n[\\s\\S]*?(?=\\n## |$)'),()=>`## ${title}\n\n${index.items.filter(item=>types.includes(item.type)||(title==='Working Stories'&&item.canonicalUrl===base+'/writing/working-stories')).map(line).join('\n\n')}\n`);
  return replace(replace(replace(baseline,'Working Stories',['working-story']),'Writing: essays and field notes',['writing']),'YouTube watch pages',['video']);
 }

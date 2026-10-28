@@ -68,87 +68,90 @@ function seriesAsBooks(seriesItems: Series[]): Book[] {
   }));
 }
 
-export const getArtifacts = cache(function getArtifacts(): Artifact[] {
+// Shared selectors for bundled and request-local live catalogues.
+export function createContentAccess(readers = {readBookFiles, readWorkFiles, readSeriesFiles, readNativeWritingFiles}, chronology = catalogueDiscovery) {
+ const {readBookFiles, readWorkFiles, readSeriesFiles, readNativeWritingFiles} = readers;
+const getArtifacts = cache(function getArtifacts(): Artifact[] {
   return readWorkFiles().sort(byPublicOrder);
 });
 
-export function getArtifactsBySection(section: SiteSection): Artifact[] {
+function getArtifactsBySection(section: SiteSection): Artifact[] {
   return getArtifacts().filter((artifact) => appearsInSection(artifact, section));
 }
 
-export function getFeaturedArtifacts(section?: SiteSection): Artifact[] {
+function getFeaturedArtifacts(section?: SiteSection): Artifact[] {
   const source = section ? getArtifactsBySection(section) : getArtifacts();
   return source.filter((artifact) => artifact.featured);
 }
 
-export function getLatestArtifact(section: SiteSection): Artifact | undefined {
+function getLatestArtifact(section: SiteSection): Artifact | undefined {
   return [...getArtifactsBySection(section)].sort(byLatest)[0];
 }
 
-export const getBooks = cache(function getBooks(): Book[] {
+const getBooks = cache(function getBooks(): Book[] {
   return [...readBookFiles(), ...seriesAsBooks(readSeriesFiles())].sort(byPublicOrder);
 });
 
-export function getBooksBySection(section: SiteSection): Book[] {
+function getBooksBySection(section: SiteSection): Book[] {
   return getBooks().filter((book) => appearsInSection(book, section));
 }
 
-export function getLatestBook(): Book | undefined {
+function getLatestBook(): Book | undefined {
   return getBooks().filter((book) => book.type !== 'series').sort(byLatest)[0];
 }
 
-export function getLatestHomepageBook(): Book | undefined {
+function getLatestHomepageBook(): Book | undefined {
   return getBooks()
     .filter((book) => book.type !== 'series')
     .filter(isHomepageEligible)
     .sort(byHomepagePublished)[0];
 }
 
-export function getLatestSectionEntryBook(section: SiteSection): Book | undefined {
+function getLatestSectionEntryBook(section: SiteSection): Book | undefined {
   const items = getBooksBySection(section)
     .filter((book) => book.type !== 'series')
     .filter((book) => book.primarySection === section);
-  return selectLatestSectionEntry(withCatalogueTimes(items, 'books', catalogueDiscovery), section) as Book | undefined;
+  return selectLatestSectionEntry(withCatalogueTimes(items, 'books', chronology), section) as Book | undefined;
 }
 
-export function getBookBySlug(slug: string): Book | undefined {
+function getBookBySlug(slug: string): Book | undefined {
   return getBooks().find((book) => book.slug === slug);
 }
 
-export function getArtifactBySlug(slug: string): Artifact | undefined {
+function getArtifactBySlug(slug: string): Artifact | undefined {
   return getArtifacts().find((artifact) => artifact.slug === slug);
 }
 
-export function getFeaturedBooks(): Book[] {
+function getFeaturedBooks(): Book[] {
   return getBooks().filter((book) => book.featured);
 }
 
-export function getBooksBySeries(series: string): Book[] {
+function getBooksBySeries(series: string): Book[] {
   return getBooks().filter((book) => book.series === series);
 }
 
-export function getBooksByGroup(group: string): Book[] {
+function getBooksByGroup(group: string): Book[] {
   return getBooks().filter((book) => book.group === group || book.category === group);
 }
 
-export function getWorkItems(): Artifact[] {
+function getWorkItems(): Artifact[] {
   return getArtifacts();
 }
 
-export function getWorkBySlug(slug: string): Artifact | undefined {
+function getWorkBySlug(slug: string): Artifact | undefined {
   return getArtifactBySlug(slug);
 }
 
-export function getWorkBySection(section: SiteSection): Artifact[] {
+function getWorkBySection(section: SiteSection): Artifact[] {
   return getArtifactsBySection(section);
 }
 
-export function getLatestWork(section?: SiteSection): Artifact | undefined {
+function getLatestWork(section?: SiteSection): Artifact | undefined {
   const source = section ? getArtifactsBySection(section) : getArtifacts();
   return [...source].sort(byLatest)[0];
 }
 
-export function getLatestHomepageWork(section: SiteSection, excludedSlug?: string): Artifact | undefined {
+function getLatestHomepageWork(section: SiteSection, excludedSlug?: string): Artifact | undefined {
   return getArtifactsBySection(section)
     .filter((artifact) => artifact.slug !== excludedSlug)
     .filter((artifact) => artifact.primarySection === section)
@@ -156,31 +159,31 @@ export function getLatestHomepageWork(section: SiteSection, excludedSlug?: strin
     .sort(byHomepagePublished)[0];
 }
 
-export function getLatestSectionEntryWork(section: SiteSection, excludedSlug?: string): Artifact | undefined {
-  return selectLatestSectionEntry(withCatalogueTimes(getArtifactsBySection(section), 'work', catalogueDiscovery), section, excludedSlug) as Artifact | undefined;
+function getLatestSectionEntryWork(section: SiteSection, excludedSlug?: string): Artifact | undefined {
+  return selectLatestSectionEntry(withCatalogueTimes(getArtifactsBySection(section), 'work', chronology), section, excludedSlug) as Artifact | undefined;
 }
 
-export function getFeaturedWork(section?: SiteSection): Artifact[] {
+function getFeaturedWork(section?: SiteSection): Artifact[] {
   return getFeaturedArtifacts(section);
 }
 
-export function getWorkByGroup(group: string): Artifact[] {
+function getWorkByGroup(group: string): Artifact[] {
   return getArtifacts().filter((artifact) => artifact.group === group);
 }
 
-export const getSeries = cache(function getSeries(): Series[] {
+const getSeries = cache(function getSeries(): Series[] {
   return readSeriesFiles().sort(byPublicOrder);
 });
 
-export function getSeriesBySlug(slug: string): Series | undefined {
+function getSeriesBySlug(slug: string): Series | undefined {
   return getSeries().find((series) => series.slug === slug);
 }
 
-export const getNativeWritingItems = cache(function getNativeWritingItems(): NativeWriting[] {
+const getNativeWritingItems = cache(function getNativeWritingItems(): NativeWriting[] {
   return readNativeWritingFiles().sort(byLatest);
 });
 
-export function getNativeWritingBySlug(slug: string): NativeWriting | undefined {
+function getNativeWritingBySlug(slug: string): NativeWriting | undefined {
   return getNativeWritingItems().find((item) => item.slug === slug);
 }
 
@@ -195,7 +198,7 @@ function relatedScore(source: RelatedSource, candidate: RelatedSource): number {
   return score;
 }
 
-export function getRelatedItems(item: RelatedSource, limit = 6): RelatedSource[] {
+function getRelatedItems(item: RelatedSource, limit = 6): RelatedSource[] {
   return [...getArtifacts(), ...getBooks()]
     .map((candidate) => ({ candidate, score: relatedScore(item, candidate) }))
     .filter((entry) => entry.score > 0)
@@ -207,7 +210,7 @@ export function getRelatedItems(item: RelatedSource, limit = 6): RelatedSource[]
     .map((entry) => entry.candidate);
 }
 
-export function getContentReviewReport() {
+function getContentReviewReport() {
   const items = [...getArtifacts(), ...getBooks(), ...getSeries(), ...getNativeWritingItems()];
   return {
     needsCopyReview: items.filter((item) => item.needsCopyReview || item.needsReview),
@@ -224,6 +227,10 @@ export function getContentReviewReport() {
     }),
   };
 }
+
+ return {getArtifacts, getArtifactsBySection, getFeaturedArtifacts, getLatestArtifact, getBooks, getBooksBySection, getLatestBook, getLatestHomepageBook, getLatestSectionEntryBook, getBookBySlug, getArtifactBySlug, getFeaturedBooks, getBooksBySeries, getBooksByGroup, getWorkItems, getWorkBySlug, getWorkBySection, getLatestWork, getLatestHomepageWork, getLatestSectionEntryWork, getFeaturedWork, getWorkByGroup, getSeries, getSeriesBySlug, getNativeWritingItems, getNativeWritingBySlug, getRelatedItems, getContentReviewReport};
+}
+export const {getArtifacts, getArtifactsBySection, getFeaturedArtifacts, getLatestArtifact, getBooks, getBooksBySection, getLatestBook, getLatestHomepageBook, getLatestSectionEntryBook, getBookBySlug, getArtifactBySlug, getFeaturedBooks, getBooksBySeries, getBooksByGroup, getWorkItems, getWorkBySlug, getWorkBySection, getLatestWork, getLatestHomepageWork, getLatestSectionEntryWork, getFeaturedWork, getWorkByGroup, getSeries, getSeriesBySlug, getNativeWritingItems, getNativeWritingBySlug, getRelatedItems, getContentReviewReport} = createContentAccess();
 
 export type {
   Artifact,

@@ -32,14 +32,15 @@ Stack: Next.js 16 App Router, React 19, TypeScript, Tailwind CSS 4 and Vercel. E
 
 ## Content and development
 
-Editable public sources live in `content/`: projects, books, series, native articles, Working Stories, editorial guides and page metadata. Local assets live in `public/media/`. Regenerate `public/llms.txt` and `public/content-index.json` with `npm run llms:generate` after public content changes; commit outputs with their sources.
+Bundled public sources live in `content/`: projects, books, series, native articles, Working Stories, editorial guides and page metadata. When runtime publishing is enabled, managed records use the private versioned content store as their authority; the bundled files remain the legacy baseline. Routine approved posts, catalogue cards, book series and catalogue groups use the same authenticated publisher without a Git change or rebuild. Local assets live in `public/media/`. Regenerate `public/llms.txt` and `public/content-index.json` with `npm run llms:generate` after public content changes; commit outputs with their sources.
 
 Use the appropriate guide instead of copying a publication process into each task:
 
 | Task | Guide |
 | --- | --- |
 | Edit content, media, placement or localized guides | [Content editing](docs/content-editing.md) · [Fields and format](docs/content-workflow.md) |
-| Publish posts/cards or add catalogue media; record measurements | [Publication handoff](docs/abvx-os-publishing.md) |
+| Fast publication of posts, cards, series and catalogue groups | [Runtime publisher](docs/runtime-writing.md) · [Catalogue packet contract](docs/runtime-catalogue.md) |
+| Legacy publication or engineering changes; record measurements | [Publication handoff](docs/abvx-os-publishing.md) |
 | Validate, review and verify a release | [Editorial SEO checklist](docs/editorial-seo-checklist.md) |
 | Diagnose feeds, discovery, analytics or runtime behavior | [Site operations](docs/site-operations.md) |
 | Export story/recipe collections | [Working Stories](docs/working-stories.md) · [Kitchen Notes](docs/kitchen-notes.md) |

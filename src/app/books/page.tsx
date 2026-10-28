@@ -1,4 +1,6 @@
-import { officialSeriesSlugs, bookStandaloneGroups as standaloneGroups, isStandaloneCatalogueBook } from '@/lib/catalogue-config.mjs';
+import {sectionAnchor} from '@/content/runtime-catalogue.mjs';
+import {getLiveCatalogue} from '@/lib/live-catalogue';
+import { isStandaloneCatalogueBook } from '@/lib/catalogue-config.mjs';
 import BookCatalogueCard from '@/components/BookCatalogueCard';
 import EditorialSectionLink from '@/components/EditorialSectionLink';
 import CompanionCatalogueCard from '@/components/CompanionCatalogueCard';
@@ -8,7 +10,7 @@ import PageHeader from '@/components/PageHeader';
 import SectionPanel from '@/components/SectionPanel';
 import ActionLinks from '@/components/ActionLinks';
 import TagList from '@/components/TagList';
-import { getArtifactsBySection, getBooks, getSeries } from '@/content';
+
 import { getEditorialArticles } from '@/content/editorials';
 import type { EditorialArticle } from '@/content/editorials';
 import type { Artifact, Book, Series } from '@/content';
@@ -146,7 +148,8 @@ function SeriesLine({
   );
 }
 
-export default function BooksPage() {
+export default async function BooksPage() {
+ const {getArtifactsBySection,getBooks,getSeries,seriesSlugs:officialSeriesSlugs,bookGroups:standaloneGroups} = await getLiveCatalogue();
   const editorialArticles = getEditorialArticles();
   const booksEditorial = editorialArticles.find((article) => article.section === 'books');
   const publishingArticle = editorialArticles.find((article) => article.slug === 'publishing-as-infrastructure');
@@ -253,7 +256,7 @@ export default function BooksPage() {
             if (!groupBooks.length) return null;
 
             return (
-              <section key={group.title} className="books-standalone-group">
+              <section key={group.title} id={sectionAnchor(group.title)} className="books-standalone-group">
                 <div className="books-standalone-group__header">
                   <h3>{group.title}</h3>
                   <p>{group.description}</p>
@@ -314,3 +317,5 @@ export default function BooksPage() {
     </div>
   );
 }
+
+export const dynamic = 'force-dynamic';

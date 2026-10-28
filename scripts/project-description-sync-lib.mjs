@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from 'node:fs';
+import { writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { contentFiles, parseContentFile, serializeFrontmatter } from './content-lib.mjs';
 

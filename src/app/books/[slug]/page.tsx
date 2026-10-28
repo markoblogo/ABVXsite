@@ -1,3 +1,5 @@
+import DocumentLanguage from '@/components/DocumentLanguage';
+import {getLiveCatalogue} from '@/lib/live-catalogue';
 import { YouTubeGallery, findYouTubeVideos } from '@/components/YouTubeEmbed';
 import BookAudioPlayer from '@/components/BookAudioPlayer';
 import EditorialSectionLink from '@/components/EditorialSectionLink';
@@ -10,7 +12,7 @@ import JsonLd from '@/components/JsonLd';
 import MarkdownContent from '@/components/MarkdownContent';
 import MediaPanel from '@/components/MediaPanel';
 import TagList from '@/components/TagList';
-import { getArtifacts, getArtifactsBySection, getBookBySlug, getBooks, type Artifact, type Book, type ContentImage } from '@/content';
+import { getBooks, type Artifact, type Book, type ContentImage } from '@/content';
 import { fetchMn7rFeed } from '@/lib/feeds';
 import {
   bookJsonLd,
@@ -137,6 +139,7 @@ export async function generateMetadata({
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
+ const {getBookBySlug} = await getLiveCatalogue();
   const { slug } = await params;
   const book = getBookBySlug(slug);
   if (!book) {
@@ -162,6 +165,7 @@ export default async function BookDetailPage({
 }: {
   params: Promise<{ slug: string }>;
 }) {
+ const {getArtifacts,getArtifactsBySection,getBookBySlug,getBooks} = await getLiveCatalogue();
   const { slug } = await params;
   const book = getBookBySlug(slug);
   if (!book) notFound();
@@ -206,6 +210,7 @@ export default async function BookDetailPage({
 
     return (
       <article className="detail-page detail-page--book detail-page--series">
+      <DocumentLanguage languageOverride={book.language || 'en'} />
         <JsonLd id="jsonld-book-series" data={bookJsonLd(book)} />
         <JsonLd
           id="jsonld-book-breadcrumbs"
@@ -329,6 +334,7 @@ export default async function BookDetailPage({
 
   return (
     <article className="detail-page detail-page--book">
+      <DocumentLanguage languageOverride={book.language || 'en'} />
       <JsonLd id="jsonld-book-item" data={bookJsonLd(book, relatedItems.map((related) => related.item), primarySeries)} />
       {book.faqs?.length ? (
         <JsonLd
@@ -416,3 +422,5 @@ export default async function BookDetailPage({
     </article>
   );
 }
+
+export const dynamic = 'force-dynamic';

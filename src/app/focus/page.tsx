@@ -1,3 +1,5 @@
+import {systemsGroupSlugs} from '@/lib/systems-catalogue.mjs';
+import {getLiveCatalogue} from '@/lib/live-catalogue';
 import FAQSection from '@/components/FAQSection';
 import EditorialSectionLink from '@/components/EditorialSectionLink';
 import BookCatalogueCard from '@/components/BookCatalogueCard';
@@ -5,7 +7,7 @@ import ProjectCatalogueCard from '@/components/ProjectCatalogueCard';
 import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import SectionPanel from '@/components/SectionPanel';
-import { getArtifactsBySection, getBooksBySection } from '@/content';
+
 import { getEditorialArticles } from '@/content/editorials';
 import type { Artifact, Book, ContentFaq } from '@/content';
 import { toPublicArtifact } from '@/content/public-props';
@@ -26,29 +28,7 @@ export const metadata: Metadata = metadataWithImage({
 
 export const revalidate = 900;
 
-const focusGroups = [
-  {
-    title: 'Trading & Brokerage Platforms',
-    description:
-      'Platforms where brokerage teams, market participants or trading workflows can manage real or simulated commodity-market transactions, deal pipelines and execution layers.',
-    slugs: ['mn7r', 'cropto'],
-    variant: 'primary',
-  },
-  {
-    title: 'Market Intelligence, Monitoring & Indexes',
-    description:
-      'Monitoring and index products that turn fragmented market data, news, logistics, weather, crop, signal and commodity-market context into readable intelligence.',
-    slugs: ['cropto-monitor', 'mn7r-blog', 'last30days-cropto', '1d3x', 'spike-spot-commodity-index-ukraine', 'uga-index'],
-    variant: 'standard',
-  },
-  {
-    title: 'Market Fronts & Partner Landings',
-    description:
-      'Market-facing landing pages, decks and commercial fronts for commodity infrastructure projects, partner ventures and trading-service concepts.',
-    slugs: ['ami-books-physical-commodity-markets', 'trade-solution-eu', 'cropto-market-risk-deck', 'liqua'],
-    variant: 'standard',
-  },
-] as const;
+
 
 const focusBookGroup = {
   title: 'AMI books',
@@ -208,12 +188,13 @@ function feedCardProps(artifact: Artifact, latest: FeedItem | null) {
 }
 
 export default async function FocusPage() {
+ const {getArtifactsBySection,getBooksBySection,focusGroups} = await getLiveCatalogue();
   const artifacts = getArtifactsBySection('focus');
   const books = getBooksBySection('focus').filter((book) => book.type !== 'series');
   const ami = artifacts.find((artifact) => artifact.slug === 'ami');
   const amiEditorials = getEditorialArticles().filter((article) => article.translationGroup === 'ami-agro-market-infrastructure')
     .map(({ href, linkLabel, language }) => ({ href, linkLabel, language }));
-  const listedArtifacts = [...(ami ? [ami] : []), ...focusGroups.flatMap((group) => itemsForGroup(artifacts, group.slugs))];
+  const listedArtifacts = [...(ami ? [ami] : []), ...focusGroups.flatMap((group) => itemsForGroup(artifacts, systemsGroupSlugs(group,artifacts,new Set(focusGroups.flatMap(g=>g.slugs)))))];
   const listedBooks = booksForGroup(books, focusBookGroup.slugs);
   const mn7rBlog = artifacts.find((artifact) => artifact.slug === 'mn7r-blog');
   const mn7rLatest = await safeLatestMn7rFeed(mn7rBlog?.rssFeed?.enabled ? mn7rBlog.rssFeed.url : undefined);
@@ -363,7 +344,7 @@ export default async function FocusPage() {
       </section>
 
       {focusGroups.map((group) => {
-        const groupItems = itemsForGroup(artifacts, group.slugs);
+        const groupItems = itemsForGroup(artifacts, systemsGroupSlugs(group,artifacts,new Set(focusGroups.flatMap(g=>g.slugs))));
         if (!groupItems.length) return null;
         const titleId = slugifyFragment(group.title);
 
@@ -429,3 +410,5 @@ export default async function FocusPage() {
     </div>
   );
 }
+
+export const dynamic = 'force-dynamic';

@@ -20,9 +20,10 @@ export function createWritingHandler({store,token,enabled,projectIndex,legacySou
   try{
    if(request.method==='GET'){
     const {snapshot}=await store.load();
-    if(new URL(request.url).searchParams.get('export')==='1')return response({schemaVersion:1,authority:'RUNTIME_WRITING_ENABLED',...context,snapshot,legacySources:legacySources.filter(source=>!Object.hasOwn(snapshot.records,parseMarkdownSource(source).data.slug)),...(projectIndex?{publicIndex:projectIndex(snapshot)}:{})});
+    if(new URL(request.url).searchParams.get('export')==='1')return response({schemaVersion:1,authority:'RUNTIME_WRITING_ENABLED',...context,snapshot,legacySources:legacySources.filter(source=>{const data=parseMarkdownSource(source).data;return !['private','draft'].includes(data.visibility)&&!Object.hasOwn(snapshot.records,data.slug);}),...(projectIndex?{publicIndex:projectIndex(snapshot)}:{})});
     return response({engineVersion,snapshotRevision:snapshot.revision,records:Object.fromEntries(Object.entries(snapshot.records).map(([id,r])=>[id,{revision:r.currentRevision,firstPublishedAt:r.firstPublishedAt,sourceSha256:r.versions[r.currentRevision].sourceSha256,withdrawn:r.versions[r.currentRevision].withdrawn}]))});
    }
+   if(request.method==='POST'&&context.deploymentEnvironment!=='local'&&context.deploymentEnvironment!=='production')return response({error:'Content writes require Production or isolated local acceptance'},403);
    if(request.method!=='POST')return response({error:'Method not allowed'},405);
    if(!request.headers.get('content-type')?.startsWith('application/json'))throw new ValidationError('application/json required');
    const command=await boundedJson(request);

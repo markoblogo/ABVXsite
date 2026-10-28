@@ -1,5 +1,6 @@
+import {getLiveCatalogue} from '@/lib/live-catalogue';
 import Link from 'next/link';
-import { getArtifactBySlug, getBookBySlug } from '@/content';
+
 
 export const metadata = {
   title: 'Toki Pona Books, Tools, and Language Systems',
@@ -8,7 +9,8 @@ export const metadata = {
   alternates: { canonical: 'https://abvx.xyz/toki-pona' },
 };
 
-export default function TokiPonaPillar() {
+export default async function TokiPonaPillar() {
+ const {getArtifactBySlug,getBookBySlug} = await getLiveCatalogue();
   const books = ['the-strange-case-of-dr-jekyll-and-mr-hyde-in-toki-pona', 'stoic-wisdom-toki-pona']
     .flatMap((slug) => { const book = getBookBySlug(slug); return book ? [book] : []; });
   const translator = getArtifactBySlug('toki-pona-ai-translator');
@@ -54,3 +56,5 @@ export default function TokiPonaPillar() {
     </div>
   );
 }
+
+export const dynamic = 'force-dynamic';

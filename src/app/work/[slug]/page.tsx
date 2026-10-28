@@ -1,3 +1,5 @@
+import DocumentLanguage from '@/components/DocumentLanguage';
+import {getLiveCatalogue} from '@/lib/live-catalogue';
 import JsonLd from '@/components/JsonLd';
 import FAQSection from '@/components/FAQSection';
 import { YouTubeGallery, findYouTubeVideos } from '@/components/YouTubeEmbed';
@@ -6,7 +8,7 @@ import BreadcrumbNav from '@/components/BreadcrumbNav';
 import WorkBrief from '@/components/WorkBrief';
 import WorkDetailHero from '@/components/WorkDetailHero';
 import WorkRelatedCard from '@/components/WorkRelatedCard';
-import { getArtifactBySlug, getArtifacts, getBooks, type Artifact, type Book, type ContentImage } from '@/content';
+import { getArtifacts, type Artifact, type Book, type ContentImage } from '@/content';
 import { socialLinks } from '@/content/link-utils';
 import { toPublicArtifact, toPublicBook } from '@/content/public-props';
 import { fetchMn7rFeed } from '@/lib/feeds';
@@ -120,7 +122,8 @@ function relatedArtifactScore(artifact: Artifact, candidate: Artifact): number {
   return score;
 }
 
-function relatedItemsForWork(artifact: Artifact) {
+async function relatedItemsForWork(artifact: Artifact) {
+ const {getArtifacts,getBooks} = await getLiveCatalogue();
   if (isFocusInfrastructure(artifact)) {
     return getArtifacts()
       .filter((item) => item.id !== artifact.id)
@@ -179,6 +182,7 @@ export async function generateMetadata({
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
+ const {getArtifactBySlug} = await getLiveCatalogue();
   const { slug } = await params;
   const artifact = getArtifactBySlug(slug);
   if (!artifact) {
@@ -207,12 +211,13 @@ export default async function WorkDetailPage({
 }: {
   params: Promise<{ slug: string }>;
 }) {
+ const {getArtifactBySlug} = await getLiveCatalogue();
   const { slug } = await params;
   const artifact = getArtifactBySlug(slug);
   if (!artifact) notFound();
   const image = artifact.heroImage || artifact.thumbnail;
   const focusInfrastructure = isFocusInfrastructure(artifact);
-  const relatedItems = relatedItemsForWork(artifact);
+  const relatedItems = await relatedItemsForWork(artifact);
   const mn7rBlogRelated = relatedItems.find((related) => related.kind === 'artifact' && related.item.slug === 'mn7r-blog');
   const mn7rBlogRelatedImage =
     mn7rBlogRelated?.kind === 'artifact' ? await latestMn7rBlogImage(mn7rBlogRelated.item.rssFeed?.url) : undefined;
@@ -224,6 +229,7 @@ export default async function WorkDetailPage({
 
   return (
     <article className="detail-page detail-page--work">
+      <DocumentLanguage languageOverride={artifact.language || 'en'} />
       <JsonLd id="jsonld-work-item" data={artifactJsonLd(artifact, relatedItems.map((related) => related.item))} />
       {artifact.faqs?.length ? (
         <JsonLd
@@ -308,3 +314,5 @@ export default async function WorkDetailPage({
     </article>
   );
 }
+
+export const dynamic = 'force-dynamic';

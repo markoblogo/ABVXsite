@@ -1,3 +1,4 @@
+import {getLiveCatalogue} from '@/lib/live-catalogue';
 export const dynamic = 'force-dynamic';
 import pageMetadata from '../../content/pages.json';
 import HeroPoster from '@/components/HeroPoster';
@@ -6,7 +7,7 @@ import JsonLd from '@/components/JsonLd';
 import MarqueeTicker from '@/components/MarqueeTicker';
 import SectionPanel from '@/components/SectionPanel';
 import TagList from '@/components/TagList';
-import { getLatestSectionEntryBook, getLatestSectionEntryWork } from '@/content';
+
 import { getWritingFeed } from '@/lib/writing-feed';
 import { writingCardSource } from '@/lib/writing-chronology.mjs';
 import { collectionPageJsonLd, defaultOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
@@ -64,6 +65,7 @@ function formatDate(iso?: string): string | undefined {
 }
 
 export default async function Home() {
+ const {getLatestSectionEntryBook,getLatestSectionEntryWork} = await getLiveCatalogue();
   const latestWriting = (await getWritingFeed()).slice(0, 3);
 
   const latestFocus = getLatestSectionEntryWork('focus', 'mn7r-blog');

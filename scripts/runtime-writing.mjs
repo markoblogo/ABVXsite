@@ -3,13 +3,15 @@
 import {readFileSync,readdirSync,writeFileSync,mkdirSync} from 'node:fs';
 import {dirname,resolve,isAbsolute} from 'node:path';
 import {pathToFileURL} from 'node:url';
+import {catalogueFamily} from '../src/content/runtime-catalogue.mjs';
 import {parseMarkdownSource} from '../src/content/markdown-source.mjs';
 import {parseAcceptedSource,seedSnapshot,digest} from '../src/content/runtime-writing.mjs';
 import {configuredWritingStore} from '../src/content/runtime-writing-store.mjs';
 export function commandFromPacket(packet,{action='publish',requestId,expectedRevision}={}){
  const source=packet.payload?.source_markdown;
- if(packet.schema_version!=='v1'||packet.mode!=='REPORT_ONLY_HANDOFF'||packet.project!=='abvxsite'||!['writing','working-stories'].includes(packet.surface)||!['abvx.publish-writing','abvx.publish-working-story'].includes(packet.consumer_operation?.id)||!packet.item_id||typeof source!=='string'||digest(source)!==packet.payload.source_sha256)throw Error('Exact approved native Writing packet required');
+ if(packet.schema_version!=='v1'||packet.mode!=='REPORT_ONLY_HANDOFF'||packet.project!=='abvxsite'||!({writing:'abvx.publish-writing','working-stories':'abvx.publish-working-story',books:'abvx.publish-book',work:'abvx.publish-project',series:'abvx.publish-series',sections:'abvx.publish-section'}[packet.surface]===packet.consumer_operation?.id)||!packet.item_id||typeof source!=='string'||digest(source)!==packet.payload.source_sha256)throw Error('Exact approved native Writing packet required');
  const {data,body}=parseAcceptedSource(source);
+ if((catalogueFamily(data)||(data.type==='working-story'?'working-stories':'writing'))!==packet.surface)throw Error('Packet surface differs from source');
  if((data.type==='working-story'?data.slug:data.id)!==packet.slug||data.title!==packet.title||data.type!==packet.kind||(data.date||data.publishedAt)!==packet.payload.date_published||(data.language||'en')!==(packet.payload.language||'en')||body!==packet.payload.body_lines?.join('\n\n'))throw Error('Packet and accepted source differ');
  const assets=(packet.payload.media_assets||[]).map(asset=>{
   if(!isAbsolute(asset.source))throw Error('Absolute approved image source required');const bytes=readFileSync(asset.source);

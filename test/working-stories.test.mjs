@@ -15,6 +15,8 @@ import * as lib from '../src/content/working-stories-lib.mjs';
 import * as jsonLd from '../src/lib/json-ld.mjs';
 
 const repo = path.resolve(new URL('..', import.meta.url).pathname);
+// Used by the dynamically compiled fixture module below.
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const require = createRequire(import.meta.url);
 const body = 'Original *story* text.\n\n## A decision\n\nStill **original**.';
 function metadata(patch = {}) {
@@ -294,7 +296,7 @@ test('sitemap discovers published stories and series while excluding private and
     '../../content/kitchen-notes.json': JSON.parse(readFileSync(path.join(repo, 'content/kitchen-notes.json'))),
     '@/lib/youtube-pages.mjs': {automaticVideoItems:(_registry,items)=>{automaticNative=items;return [];},publishedWritingItems:()=>[nativeVideos[0]]},
     '../../content/writing-discovery.json': {items:[]},
-    '@/content': { getArtifacts: () => [], getBooks: () => [], getNativeWritingItems: () => nativeVideos },
+    '@/lib/live-catalogue': {getLiveCatalogue:async()=>({getArtifacts:()=>[],getBooks:()=>[]})},
     '@/content/service-pages': { servicePages: [] }, '@/content/editorials': { getEditorialArticles: () => [] },
     '@/content/working-stories': adapter,
   }).default;

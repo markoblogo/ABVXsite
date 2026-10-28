@@ -8,7 +8,7 @@ import MediaPanel from '@/components/MediaPanel';
 import PageHeader from '@/components/PageHeader';
 import { getLiveNativeWritingBySlug, getLiveNativeWritingItems, getLiveWritingState } from '@/lib/live-writing';
 export const dynamic = 'force-dynamic';
-import { defaultOgImage, imageMetadata, metadataWithImage, SITE_URL } from '@/lib/seo';
+import { breadcrumbJsonLd, defaultOgImage, imageMetadata, metadataWithImage, SITE_URL } from '@/lib/seo';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -66,6 +66,11 @@ export default async function NativeWritingPage({
   return (
     <div className="route-native-writing grid gap-8" data-content-revision={(await getLiveWritingState())?.records[item.slug]?.currentRevision}>
       <DocumentLanguage key={item.slug+':'+item.language} languageOverride={item.language||'en'} />
+      <JsonLd id="jsonld-writing-breadcrumb" data={breadcrumbJsonLd([
+        {name:'Home',url:SITE_URL}, {name:'Writing',url:SITE_URL+'/writing'},
+        ...(item.collection===collection.id?[{name:collection.title,url:SITE_URL+collection.canonicalPath}]:[]),
+        {name:item.title,url},
+      ])} />
       <JsonLd
         id="jsonld-native-writing"
         data={{
@@ -87,6 +92,7 @@ export default async function NativeWritingPage({
           },
           publisher: {
             '@type': 'Organization',
+            '@id': `${SITE_URL}/#organization`,
             name: 'ABVX',
           },
         }}

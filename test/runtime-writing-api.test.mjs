@@ -48,3 +48,21 @@ test('an explicit replacement for a legacy path uploads and maps the approved by
  const result=await prepare(source({media:{src:'/media/old.png',alt:'Replacement',width:1,height:1}}),[{target:'/media/old.png',sha256:digest(bytes),bytesBase64:bytes.toString('base64')}],state);
  assert.equal(uploads,1);assert.equal(result.mapping.length,1);assert.ok(result.source.includes('/media/writing/runtime/'));
 });
+
+test('Preview cannot mutate the Production store even with valid credentials',async()=>{
+ const previous=process.env.VERCEL_ENV;
+ try{
+  process.env.VERCEL_ENV='preview';let accesses=0;
+  const handler=createWritingHandler({store:{load:async()=>{accesses++;}},token,enabled:true});
+  const result=await handler(request({action:'publish',requestId:'preview',source:source(),approval:{intakeId:'preview',sourceSha256:digest(source())}}));
+  assert.equal(result.status,403);assert.equal(accesses,0);
+ }finally{if(previous===undefined)delete process.env.VERCEL_ENV;else process.env.VERCEL_ENV=previous;}
+});
+
+test('authenticated legacy export excludes private drafts without freeing their identities',async()=>{
+ const hidden=source().replace('"visibility":"public"','"visibility":"private"');
+ const handler=createWritingHandler({store:store(),token,enabled:true,legacySources:[hidden]});
+ const exported=await (await handler(new Request('http://localhost/api/writing/manage?export=1',{headers:{authorization:'Bearer '+token}}))).json();
+ assert.deepEqual(exported.legacySources,[]);
+ assert.equal((await handler(request({action:'publish',requestId:'private-collision',source:source(),approval:{intakeId:'one',sourceSha256:digest(source())}}))).status,409);
+});

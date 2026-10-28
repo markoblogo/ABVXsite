@@ -1,3 +1,4 @@
+import catalogueRedirects from "./src/content/catalogue-redirects.json";
 import type { NextConfig } from "next";
 
 const projectRoot = process.cwd();
@@ -65,6 +66,7 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      ...catalogueRedirects,
       // Preserve published audio URLs after moving identical files to Releases.
       { source: "/media/books/mn7r-agro-commodity-brokerage-en-free-edition/audiobook.mp3", destination: "https://github.com/markoblogo/mn7r-public-assets/releases/download/book-assets-2026-09-23/mn7r-agro-commodity-brokerage-en-audio.mp3", permanent: true },
       { source: "/media/books/mn7r-agro-commodity-brokerage-en-free-edition/audiobook.m4b", destination: "https://github.com/markoblogo/mn7r-public-assets/releases/download/book-assets-2026-09-23/mn7r-agro-commodity-brokerage-en-audio.m4b", permanent: true },
@@ -75,22 +77,8 @@ const nextConfig: NextConfig = {
       { source: "/ecosystems/:slug/", destination: "/systems", permanent: true },
       { source: "/blog", destination: "/writing", permanent: true },
       { source: "/blog/", destination: "/writing", permanent: true },
-      { source: "/books/good-dogs-of-the-apocalypse", destination: "/good-dogs-of-the-apocalypse", permanent: true },
-      { source: "/books/good-dogs-of-the-apocalypse/", destination: "/good-dogs-of-the-apocalypse", permanent: true },
       { source: "/good-dogs-of-the-apocalypse/", destination: "/good-dogs-of-the-apocalypse", permanent: true },
       // Preserve common slug aliases from media/project naming.
-      { source: "/work/agentsmd-generator", destination: "/work/agents-md-generator", permanent: true },
-      { source: "/work/agentsmd-generator/", destination: "/work/agents-md-generator", permanent: true },
-      { source: "/work/asciitheme", destination: "/work/ascii-theme", permanent: true },
-      { source: "/work/asciitheme/", destination: "/work/ascii-theme", permanent: true },
-      { source: "/books/future-proof-your-productivity", destination: "/books/future-proof-productivity", permanent: true },
-      { source: "/books/future-proof-your-productivity/", destination: "/books/future-proof-productivity", permanent: true },
-      { source: "/books/dao-de-jing", destination: "/books/dao-de-jing-toki-pona", permanent: true },
-      { source: "/books/dao-de-jing/", destination: "/books/dao-de-jing-toki-pona", permanent: true },
-      { source: "/books/ukrainian-modernism-series", destination: "/books/modernisme-ukrainien", permanent: true },
-      { source: "/books/ukrainian-modernism-series/", destination: "/books/modernisme-ukrainien", permanent: true },
-      { source: "/books/toki-pona-classics-series", destination: "/books/toki-pona-free-kits", permanent: true },
-      { source: "/books/toki-pona-classics-series/", destination: "/books/toki-pona-free-kits", permanent: true },
       // Enforce a no-trailing-slash canonical style (except root).
       { source: "/about/", destination: "/about", permanent: true },
       { source: "/books/", destination: "/books", permanent: true },
@@ -106,8 +94,6 @@ const nextConfig: NextConfig = {
       { source: "/llmo/", destination: "/llmo", permanent: true },
       { source: "/work-with-me/", destination: "/work-with-me", permanent: true },
       { source: "/toki-pona/", destination: "/toki-pona", permanent: true },
-      { source: "/books/:slug/", destination: "/books/:slug", permanent: true },
-      { source: "/work/:slug/", destination: "/work/:slug", permanent: true },
     ];
   },
 };

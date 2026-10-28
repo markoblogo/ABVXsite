@@ -1,4 +1,5 @@
 // Catalogue data uses the same versioned store, approval and media pipeline as Writing.
+import redirects from './catalogue-redirects.json' with {type:'json'};
 import {readFileSync,readdirSync} from 'node:fs';
 import {parseMarkdownSource} from './markdown-source.mjs';
 import {catalogueTypes,publicationMetadataErrors} from '../../scripts/publication-metadata.mjs';
@@ -22,6 +23,7 @@ export function parseAcceptedCatalogue(source,now=new Date()){
  if(!['en','fr','uk'].includes(data.language||'en'))errors.push('Unsupported language');
  const sections=family==='work'?['focus','systems','books']:family==='sections'?['focus','systems','books']:['books'];
  if(!sections.includes(data.primarySection)||!Array.isArray(data.appearsIn)||!data.appearsIn.length||!data.appearsIn.every(x=>['focus','systems','books'].includes(x)))errors.push('Invalid catalogue placement');
+ if(redirects.some(r=>r.source===cataloguePath(data)||r.source===cataloguePath(data)+'/'))errors.push('Catalogue path is reserved by a redirect');
  if(data.canonicalPath&&data.canonicalPath!==cataloguePath(data))errors.push('Custom catalogue routes require engineering');
  if(!Array.isArray(data.tags)||!data.tags.every(x=>typeof x==='string')||!Array.isArray(data.links))errors.push('Catalogue tags and links required');
  for(const link of data.links||[])if(!link||!validLinkTypes.has(link.type)||!link.label?.trim()||typeof link.url!=='string'||!/^(?:https?:\/\/|mailto:|\/(?!\/)|#)/i.test(link.url))errors.push('Invalid catalogue link');
@@ -63,7 +65,7 @@ export function validateCatalogueSnapshot(snapshot,legacy){
   if(catalogueFamily(d)==='work'&&d.primarySection==='systems'&&!config.ecosystems.some(e=>e.groups.some(g=>g.title===d.group||g.slugs.includes(d.slug))))throw Error('Project needs a visible systems group');
  }
  // A series/section cannot be withdrawn while its published members still depend on it.
- for(const [id,r] of Object.entries(snapshot.records))if(r.versions[r.currentRevision].withdrawn){const d=parseMarkdownSource(r.versions[r.currentRevision].source).data;if(d.type==='series'&&data.some(x=>x.primarySeriesSlug===id||x.seriesSlugs?.includes(id)))throw Error('Series still has published members');if(d.type==='catalogue-section'&&data.some(x=>x.group===d.group&&x.type!=='catalogue-section'))throw Error('Section still has published members');}
+ for(const [id,r] of Object.entries(snapshot.records))if(r.versions[r.currentRevision].withdrawn){const d=parseMarkdownSource(r.versions[r.currentRevision].source).data;if(d.type==='series'&&data.some(x=>x.primarySeriesSlug===id||x.seriesSlugs?.includes(id)))throw Error('Series still has published members');if(d.type==='catalogue-section'&&data.some(x=>x.group===d.group&&x.type!=='catalogue-section'&&(x.primarySection===d.primarySection||x.appearsIn?.includes(d.primarySection))))throw Error('Section still has published members');}
 }
 export function projectCatalogueIndex(index,sources,snapshot){
  const owned=Object.values(snapshot.records).map(r=>parseMarkdownSource(r.versions[r.currentRevision].source).data).filter(catalogueFamily);

@@ -38,3 +38,11 @@ test('bad placement, protocols, dates and legacy collisions cannot partially wri
  for(const data of [{...base,group:'Unknown'},{...base,publishedAt:'2026-02-31'},{...base,links:[{type:'site',label:'Bad',url:'//evil.test'}]},{...base,media:{src:'/media/x.png',alt:'',width:1,height:1}},{...base,canonicalPath:'/other'}]){const f=fixture();await assert.rejects(f.publish({action:'publish',requestId:'bad',source:source(data)}));assert.equal(f.state().revision,'empty');}
  const f=fixture([source(base)]);await assert.rejects(f.publish({action:'publish',requestId:'duplicate',source:source(base)}),/already exists/);
 });
+
+test('redirect aliases stay reserved and unrelated page groups do not block withdrawal',async()=>{
+ const legacy=readLegacyCatalogueSources(),f=fixture(legacy);
+ await assert.rejects(f.publish({action:'publish',requestId:'alias',source:source({...base,id:'dao-de-jing',slug:'dao-de-jing'})}),/reserved by a redirect/);
+ const section={...base,id:'workflow-and-orchestration',slug:'workflow-and-orchestration',type:'catalogue-section',primarySection:'focus',appearsIn:['focus'],group:'Workflow & Orchestration'};
+ const r=await f.publish({action:'publish',requestId:'empty-focus',source:source(section)});
+ await f.publish({action:'unpublish',requestId:'empty-focus-remove',id:section.slug,expectedRevision:r.revision});
+});

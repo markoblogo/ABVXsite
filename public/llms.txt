@@ -1044,6 +1044,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: Business, AI & Marketing
   Tags: LLMO, AI search, digital visibility, content strategy, SEO, marketing, AI, English
 
+- AzurMenton
+  URL: https://abvx.xyz/work/azurmenton
+  Summary: AzurMenton is a hospitality booking and presentation platform for seaside apartments in Menton, France.
+  Group: Commercial Sites & Interfaces
+  Tags: hospitality, booking, apartments, France, Menton, travel, presentation-site, web-interface
+
 - Toki Pona and the Machine Mind
   URL: https://abvx.xyz/books/toki-pona-machine-mind
   Summary: A field guide to using Toki Pona as a design lens for cleaner prompts, constrained prompt languages, small language models and more inspectable human-AI systems.
@@ -1349,12 +1355,6 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Tags: macos, music, tool, youtube-music
 
 ## Other public systems
-
-- AzurMenton
-  URL: https://abvx.xyz/work/azurmenton
-  Summary: AzurMenton is a hospitality booking and presentation platform for seaside apartments in Menton, France.
-  Group: Commercial Sites & Interfaces
-  Tags: hospitality, booking, apartments, France, Menton, travel, presentation-site, web-interface
 
 - Pocket OS for Cardputer
   URL: https://abvx.xyz/work/pocket-os-cardputer

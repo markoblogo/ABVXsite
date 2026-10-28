@@ -1,3 +1,5 @@
+import DocumentLanguage from '@/components/DocumentLanguage';
+import { getLiveWritingState } from '@/lib/live-writing';
 import { getRelatedWorkingStories, getWorkingStoryBySlug, workingStoryPath } from '@/content/working-stories';
 import WorkingStoryArticle from '@/components/WorkingStoryArticle';
 import { defaultOgImage, imageMetadata, metadataWithImage } from '@/lib/seo';
@@ -20,5 +22,8 @@ export default async function WorkingStoryPage({ params }: { params: Promise<{ s
   const { slug } = await params;
   const story = await getWorkingStoryBySlug(slug);
   if (!story) notFound();
-  return <WorkingStoryArticle story={story} related={await getRelatedWorkingStories(story)} />;
+  return <div data-content-revision={(await getLiveWritingState())?.records[story.slug]?.currentRevision}>
+    <DocumentLanguage key={story.slug+':'+story.language} languageOverride={story.language} />
+    <WorkingStoryArticle story={story} related={await getRelatedWorkingStories(story)} />
+  </div>;
 }

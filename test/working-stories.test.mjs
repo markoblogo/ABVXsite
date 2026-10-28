@@ -28,7 +28,7 @@ function fixture(run) {
   try { const result=run({ root, dir, write }); if(result?.then)return result.finally(()=>rmSync(root,{recursive:true,force:true})); rmSync(root,{recursive:true,force:true}); return result; } catch(error) { rmSync(root,{recursive:true,force:true}); throw error; }
 }
 function compile(relative, imports = {}) {
-  imports={'@/lib/live-writing':{getLiveWritingState:async()=>null},'./runtime-writing.mjs':{currentSources},'./markdown-source.mjs':{parseMarkdownSource},...imports};
+  imports={'@/components/DocumentLanguage':{default:()=>null,__esModule:true},'@/lib/live-writing':{getLiveWritingState:async()=>null},'./runtime-writing.mjs':{currentSources},'./markdown-source.mjs':{parseMarkdownSource},...imports};
   const compiled = ts.transpileModule(readFileSync(path.join(repo, relative), 'utf8'), {
     compilerOptions: { jsx: ts.JsxEmit.ReactJSX, module: ts.ModuleKind.CommonJS, esModuleInterop: true },
   }).outputText;
@@ -317,3 +317,14 @@ test('sitemap discovers published stories and series while excluding private and
     for(const route of ['/ami','/fr/ami','/llmo']) assert.equal(routes.find(item=>item.url==='https://abvx.xyz'+route).lastModified.toISOString(),new Date(pages[route].updatedAt).toISOString(),route+' must ignore unrelated series publication');
   } finally { process.chdir(cwd); }
 }));
+
+ test('runtime stories inherit defaults and sort with bundled stories by newest date', () => fixture(async ({root,write})=>{
+  write('ws-001.md',metadata());
+  const data=metadata({slug:'runtime-case',story_id:'ws-999',date:'2026-10-28'});
+  const adapter=compile('src/content/working-stories.ts',{
+   './working-stories-lib.mjs':lib,'../../public/content-index.json':releaseIndex([normalized()]),
+   '@/lib/live-writing':{getLiveWritingState:async()=>({records:{'runtime-case':{firstAddedAt:'2026-10-28'}}})},
+   './runtime-writing.mjs':{currentSources:()=>[serializeFrontmatter(data,body)]}
+  });
+  const cwd=process.cwd();try{process.chdir(root);const stories=await adapter.getWorkingStories();assert.equal(stories[0].slug,'runtime-case');assert.equal(stories[0].summary,data.title);assert.equal(stories[0].language,'en');assert.equal(stories[0].book.include,true);}finally{process.chdir(cwd);}
+ }));

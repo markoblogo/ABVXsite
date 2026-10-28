@@ -9,7 +9,8 @@
   "visibility": "public",
   "primarySection": "systems",
   "appearsIn": [
-    "systems"
+    "systems",
+    "books"
   ],
   "group": "Commercial Sites & Interfaces",
   "summary": "AzurMenton is a hospitality booking and presentation platform for seaside apartments in Menton, France.",
@@ -55,7 +56,11 @@
     "src": "/media/work/azurmenton/hero.webp",
     "alt": "AzurMenton hospitality booking interface",
     "role": "landing-screenshot"
-  }
+  },
+  "seriesSlugs": [
+    "azurbooks"
+  ],
+  "updatedAt": "2026-10-28"
 }
 ---
 

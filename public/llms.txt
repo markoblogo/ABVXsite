@@ -1633,6 +1633,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook, boundaries
 
+- Psychology Notebook #17 — Wanting, Asking & the Cost of Not Choosing
+  URL: https://abvx.xyz/writing/psychology-notebook-17-wanting-asking-not-choosing
+  Summary: Twenty translated notebook fragments on desires, asking for what you need and the costs of postponing a choice.
+  Group: writing
+  Tags: psychology-notebook, desire
+
+- Psychology Notebook #18 — Effort, Resources & the Economics of Staying
+  URL: https://abvx.xyz/writing/psychology-notebook-18-effort-resources-economics-staying
+  Summary: Twenty translated notebook fragments on effort, rest, resources, loss and the cost of remaining where you are.
+  Group: writing
+  Tags: psychology-notebook, work
+
 - The Berliner: How My Beer Cocktail Ended Up on a French Bar's Menu
   URL: https://abvx.xyz/writing/the-berliner-guinness-port-beer-cocktail
   Summary: I discovered Guinness with port wine in Berlin, recreated it with whatever a small French bar had available, and eventually watched it become an official item in the cash register.

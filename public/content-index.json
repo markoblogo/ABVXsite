@@ -7875,7 +7875,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-28T10:28:36.468Z",
+      "updatedAt": "2026-10-28T12:42:55.103Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10423,6 +10423,38 @@
         }
       ],
       "collection": "kitchen-notes"
+    },
+    {
+      "type": "working-story",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "Working Stories",
+      "status": "published",
+      "title": "The Dutch Coffeehouse That Never Opened",
+      "summary": "How do you turn a specialist cheese retailer into a new hospitality concept? In 2019, I designed Anderson: a Dutch-inspired coffeehouse with its own identity, menu and two operating formats. The client accepted it, but the café never opened.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/working-stories/anderson-dutch-coffeehouse-cheese-retail-concept",
+      "tags": [
+        "hospitality-concept",
+        "business-model-design",
+        "brand-strategy",
+        "food-retail",
+        "restaurant-development",
+        "visual-identity",
+        "menu-engineering",
+        "retail-expansion"
+      ],
+      "publishedAt": "2026-10-28",
+      "updatedAt": "2026-10-28",
+      "image": "https://abvx.xyz/media/stories/anderson/anderson-hero.webp",
+      "links": [
+        {
+          "type": "section",
+          "label": "Working Stories",
+          "url": "https://abvx.xyz/writing/working-stories"
+        }
+      ],
+      "related": []
     },
     {
       "type": "writing",

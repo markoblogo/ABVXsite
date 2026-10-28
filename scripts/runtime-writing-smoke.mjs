@@ -65,6 +65,11 @@ try{
  assert.equal((await fetch(base+'/writing/runtime-acceptance-new-post')).status,404);
  for(const path of ['/content-index.json','/sitemap.xml','/llms.txt','/writing/archive','/writing/kitchen-notes'])assert.ok(!(await (await fetch(base+path)).text()).includes('https://abvx.xyz/writing/runtime-acceptance-new-post'),path+' withdrawn');
  assert.equal((await fetch(base+result.value.mediaMapping[0].to)).status,404,'unreferenced image hidden');
+ const storySource='---\n'+JSON.stringify({title:'Runtime Story Acceptance',slug:'runtime-story-acceptance',date:'2026-10-26',type:'working-story',series:'working-stories',story_id:'ws-99999',cluster:'project-99999',period:null,topics:['acceptance'],book:{include:true,status:'draft'},visibility:'public',summary:'Synthetic story verification',language:'fr'})+'\n---\n\nA synthetic story created after the build.\n';
+ const story=await send({action:'publish',requestId:'story-acceptance',source:storySource,approval:{intakeId:'story-acceptance',sourceSha256:digest(storySource)}});assert.equal(story.code,200);
+ const storyPath='/writing/working-stories/runtime-story-acceptance';assert.equal((await fetch(base+storyPath)).status,200);
+ for(const path of ['/writing/working-stories','/content-index.json','/sitemap.xml','/llms.txt'])assert.ok((await (await fetch(base+path)).text()).includes('runtime-story-acceptance'),path+' live story');
+ const removedStory=await send({action:'unpublish',requestId:'story-acceptance-remove',id:story.value.id,expectedRevision:story.value.revision});assert.equal(removedStory.code,200);assert.equal((await fetch(base+storyPath)).status,404);
  await rm(join(directory,'head.json'));assert.equal((await fetch(base+'/content-index.json')).status,503,'no stale Git fallback');
  assert.equal(readFileSync('.next/BUILD_ID','utf8'),before,'no rebuild');
  const proof={status:'PASS',environment:'ISOLATED_LOCAL',newSlugAfterBuild:true,publishUpdateRollbackWithdrawal:true,idempotencyConflict:true,mediaDiscoverySearchMobile:true,storeFailureClosed:true,directAndClientLanguage:true,buildId:before.trim(),observedAt:new Date().toISOString()};

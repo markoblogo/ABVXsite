@@ -60,7 +60,7 @@ export function createPublisher({store,context={},validateSnapshot=()=>{},legacy
   if(!slugPattern.test(id||'')||reserved.has(id))throw new ValidationError('Invalid id');
   const previous=own(snapshot.records,id);
   if(command.action==='publish'&&(previous||legacySources.some(source=>parseMarkdownSource(source).data.slug===id)))throw new ConflictError('Content already exists; use update');
-  if(['publish','update'].includes(command.action)){const proposed=parseMarkdownSource(command.source).data;if(proposed.type==='working-story'&&[...currentSources(snapshot),...legacySources].some(source=>{const d=parseMarkdownSource(source).data;return d.slug!==id&&d.story_id===proposed.story_id;}))throw new ConflictError('Story ID already exists');}
+  if(['publish','update'].includes(command.action)){const proposed=parseMarkdownSource(command.source).data;if(proposed.type==='working-story'&&[...Object.values(snapshot.records).map(record=>record.versions[record.currentRevision].source),...legacySources].some(source=>{const d=parseMarkdownSource(source).data;return d.slug!==id&&d.story_id===proposed.story_id;}))throw new ConflictError('Story ID already exists');}
   if(command.action!=='publish'&&(!previous||command.expectedRevision!==previous.currentRevision))throw new ConflictError('Expected current content revision required');
   const time=now(),storedAt=time.toISOString(),revision=randomUUID();let source;
   if(command.action==='rollback'){const old=own(previous.versions,command.toRevision);if(!old||old.withdrawn)throw new ValidationError('Known published revision required');source=old.source;}

@@ -911,6 +911,16 @@
     },
     {
       "source": "medium",
+      "title": "Sundar Pichai Says Counting AI-Written Code Is Pointless. And He’s Absolutely Right.",
+      "url": "https://abvcreative.medium.com/sundar-pichai-says-counting-ai-written-code-is-pointless-and-hes-absolutely-right-6dd8a521b869",
+      "publishedAt": "2026-10-28T16:51:09.000Z",
+      "excerpt": "Google is shipping more code with fewer rollbacks. Meanwhile, some developers are still arguing whether using AI counts as real programming. For the past two years, the technology industry has been engaged in a rather pe",
+      "coverImage": "https://cdn-images-1.medium.com/max/1024/1*OOCx-V1xsUGWv6PZUm7wMA.png",
+      "addedAt": "2026-10-28T17:13:51.635Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "medium",
       "title": "Synthetic Data for AI Agents: Stop Generating More Examples. Start Building Worlds.",
       "url": "https://abvcreative.medium.com/synthetic-data-for-ai-agents-stop-generating-more-examples-start-building-worlds-22f74aa7abd8",
       "publishedAt": "2026-10-20T10:25:07.000Z",
@@ -997,6 +1007,16 @@
       "excerpt": "Have you noticed how aggressively Meta is promoting Muse, its new AI personal assistant? The promise is magnificent. Tell your agent to organize a holiday, and it finds the flights, books a hotel, checks restaurant avail",
       "coverImage": "https://substackcdn.com/image/fetch/$s_!xYV6!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5503a586-8442-4f6c-8ad9-dcc2f16f74ca_1536x1024.png",
       "addedAt": "2026-10-23T16:22:41.222Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "substack",
+      "title": "AI Agents Have Replaced Grandma. And Scammers Are Having a Terrible Time.",
+      "url": "https://abvx.substack.com/p/ai-agents-have-replaced-grandma-and",
+      "publishedAt": "2026-10-28T17:04:33.000Z",
+      "excerpt": "For years, we’ve been told that AI agents will transform productivity, automate business processes, and eventually replace half the workforce. Fine. But the Australians have discovered something considerably more enterta",
+      "coverImage": "https://substackcdn.com/image/fetch/$s_!Hncx!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdc2a34c4-f473-4ef7-af32-b5eabb465d29_1672x941.png",
+      "addedAt": "2026-10-28T17:13:51.635Z",
       "addedAtBasis": "observed"
     },
     {

@@ -35,3 +35,5 @@ test('the clock alone cannot release a seeded/legacy companion; an explicit runt
  const committed=projectWritingIndex([source],old,registry,Date.parse('2028-01-01'),['scheduled']);
  assert.ok(committed.items.some(x=>x.type==='writing'));assert.ok(!committed.items.some(x=>x.type==='video'));
 });
+
+test('live llms preserves the Working Stories collection link',()=>{const text=projectWritingLlms(readFileSync('public/llms.txt','utf8'),projectWritingIndex(sources,baseline,discovery));assert.ok(text.includes('URL: https://abvx.xyz/writing/working-stories\n'));});

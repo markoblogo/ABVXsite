@@ -227,6 +227,7 @@ function baseFields(data: RawRecord, body: string) {
     id: stringValue(data.id, stringValue(data.slug)),
     slug: stringValue(data.slug),
     title: stringValue(data.title),
+    language: optionalString(data.language),
     seoTitle: optionalString(data.seoTitle),
     seoDescription: optionalString(data.seoDescription),
     canonicalPath: optionalString(data.canonicalPath),
@@ -256,10 +257,9 @@ function baseFields(data: RawRecord, body: string) {
   };
 }
 
-export function readBookFiles(): Book[] {
-  return readMarkdownFiles('books')
-    .filter((file) => isVisible(file.data.visibility))
-    .map(({ data, body }) => {
+export function bookFromSource(source: string): Book {
+ const {data,body} = parseMarkdownFile(source, 'runtime-catalogue');
+
       const media = normalizeImage(data.media);
       return {
         ...baseFields(data, body),
@@ -284,13 +284,15 @@ export function readBookFiles(): Book[] {
         translator: nullableString(data.translator),
         translationOf: nullableString(data.translationOf),
       };
-    });
+
+}
+export function readBookFiles(): Book[] {
+ return readMarkdownFiles('books').filter(file=>isVisible(file.data.visibility)).map(file=>bookFromSource('---\n'+JSON.stringify(file.data)+'\n---\n'+file.body));
 }
 
-export function readWorkFiles(): Artifact[] {
-  return readMarkdownFiles('work')
-    .filter((file) => isVisible(file.data.visibility))
-    .map(({ data, body }) => {
+export function workFromSource(source: string): Artifact {
+ const {data,body} = parseMarkdownFile(source, 'runtime-catalogue');
+
       const media = normalizeImage(data.media);
       const primarySection = stringValue(data.primarySection, 'systems') as SiteSection;
       return {
@@ -302,13 +304,15 @@ export function readWorkFiles(): Artifact[] {
         heroImage: normalizeImage(data.heroImage) || media,
         group: optionalString(data.group),
       };
-    });
+
+}
+export function readWorkFiles(): Artifact[] {
+ return readMarkdownFiles('work').filter(file=>isVisible(file.data.visibility)).map(file=>workFromSource('---\n'+JSON.stringify(file.data)+'\n---\n'+file.body));
 }
 
-export function readSeriesFiles(): Series[] {
-  return readMarkdownFiles('series')
-    .filter((file) => isVisible(file.data.visibility))
-    .map(({ data, body }) => {
+export function seriesFromSource(source: string): Series {
+ const {data,body} = parseMarkdownFile(source, 'runtime-catalogue');
+
       const media = normalizeImage(data.media);
       return {
         ...baseFields(data, body),
@@ -323,7 +327,10 @@ export function readSeriesFiles(): Series[] {
         formats: stringArray(data.formats),
         relatedSlugs: stringArray(data.relatedSlugs),
       };
-    });
+
+}
+export function readSeriesFiles(): Series[] {
+ return readMarkdownFiles('series').filter(file=>isVisible(file.data.visibility)).map(file=>seriesFromSource('---\n'+JSON.stringify(file.data)+'\n---\n'+file.body));
 }
 
 export function nativeWritingFromSource(source: string): NativeWriting {

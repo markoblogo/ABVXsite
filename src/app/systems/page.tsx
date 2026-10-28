@@ -1,10 +1,11 @@
-import { systemsEcosystems as ecosystems } from '@/lib/catalogue-config.mjs';
+import {getLiveCatalogue} from '@/lib/live-catalogue';
+import type {systemsEcosystems} from '@/lib/catalogue-config.mjs';
 import { systemsGroupSlugs } from '@/lib/systems-catalogue.mjs';
 import ProjectCatalogueCard from '@/components/ProjectCatalogueCard';
 import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import EditorialSectionLink from '@/components/EditorialSectionLink';
-import { getArtifactsBySection } from '@/content';
+
 import { getEditorialArticles } from '@/content/editorials';
 import type { Artifact } from '@/content';
 import { toPublicArtifact } from '@/content/public-props';
@@ -42,7 +43,7 @@ const subgroupEditorialSlugs: Record<string, string> = {
   'Standalone Utilities': 'standalone-utilities',
 };
 
-type SystemsGroup = (typeof ecosystems)[number]['groups'][number];
+type SystemsGroup = (typeof systemsEcosystems)[number]['groups'][number];
 
 function itemsForSlugs(artifacts: Artifact[], slugs: readonly string[], usedSlugs: Set<string>): Artifact[] {
   const bySlug = new Map(artifacts.map((artifact) => [artifact.slug, artifact]));
@@ -64,7 +65,8 @@ function slugifyFragment(value: string): string {
     .replace(/^-|-$/g, '');
 }
 
-export default function SystemsPage() {
+export default async function SystemsPage() {
+ const {getArtifactsBySection,ecosystems} = await getLiveCatalogue();
   const artifacts = getArtifactsBySection('systems');
   const editorialBySlug = new Map(getEditorialArticles().map((article) => [article.slug, article]));
   const amiEditorials = getEditorialArticles().filter((article) => article.translationGroup === 'ami-agro-market-infrastructure')
@@ -146,3 +148,5 @@ export default function SystemsPage() {
     </div>
   );
 }
+
+export const dynamic = 'force-dynamic';

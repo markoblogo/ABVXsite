@@ -5,7 +5,7 @@ import {automaticVideoItems,publishedWritingItems} from '@/lib/youtube-pages.mjs
 import kitchenNotes from '../../content/kitchen-notes.json';
 import pageMetadata from '../../content/pages.json';
 import {getLiveWritingBundle} from '@/lib/live-writing-discovery';
-import { getArtifacts, getBooks } from '@/content';
+import {getLiveCatalogue} from '@/lib/live-catalogue';
 import { servicePages } from '@/content/service-pages';
 import { getEditorialArticles } from '@/content/editorials';
 import { getWorkingStories, workingStoryPath } from '@/content/working-stories';
@@ -18,6 +18,7 @@ const trafficLandingUpdatedAt = new Date('2026-09-16T00:00:00.000Z');
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const {index:publicIndex,native} = await getLiveWritingBundle();
+  const {getArtifacts,getBooks} = await getLiveCatalogue();
   const artifacts = getArtifacts();
   const books = getBooks();
   const releasedNative = publishedWritingItems(native,Date.now(),publicIndex.videoCompanions) as NativeWriting[];

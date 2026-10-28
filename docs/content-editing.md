@@ -18,7 +18,7 @@ For repeatable ABVX OS handoffs, use [the publication fast path](abvx-os-publish
 | Change shared sponsorship/UGC offers | `content/collaborations.json` |
 | Change YouTube channel/cutoff/pinned test video | `content/youtube.json` |
 
-`src/content/types.ts` and the loaders define behavior, not the ordinary editing surface. `src/content/artifacts.ts` and `src/content/books.ts` contain legacy fallbacks; file content overrides them by slug. Do not add new catalogue items there.
+`src/content/types.ts` and the loaders define behavior, not the ordinary editing surface. The file loaders normalize the bundled catalogue. Runtime catalogue readers reuse those normalizers and selectors with the live snapshot. Do not add catalogue items to legacy TypeScript data modules. For approved data-only cards, series and groups use [runtime catalogue publishing](runtime-catalogue.md).
 
 ## Add a project, book, or series
 

@@ -1,0 +1,82 @@
+[
+  {
+    "source": "/books/good-dogs-of-the-apocalypse",
+    "destination": "/good-dogs-of-the-apocalypse",
+    "permanent": true
+  },
+  {
+    "source": "/books/good-dogs-of-the-apocalypse/",
+    "destination": "/good-dogs-of-the-apocalypse",
+    "permanent": true
+  },
+  {
+    "source": "/work/agentsmd-generator",
+    "destination": "/work/agents-md-generator",
+    "permanent": true
+  },
+  {
+    "source": "/work/agentsmd-generator/",
+    "destination": "/work/agents-md-generator",
+    "permanent": true
+  },
+  {
+    "source": "/work/asciitheme",
+    "destination": "/work/ascii-theme",
+    "permanent": true
+  },
+  {
+    "source": "/work/asciitheme/",
+    "destination": "/work/ascii-theme",
+    "permanent": true
+  },
+  {
+    "source": "/books/future-proof-your-productivity",
+    "destination": "/books/future-proof-productivity",
+    "permanent": true
+  },
+  {
+    "source": "/books/future-proof-your-productivity/",
+    "destination": "/books/future-proof-productivity",
+    "permanent": true
+  },
+  {
+    "source": "/books/dao-de-jing",
+    "destination": "/books/dao-de-jing-toki-pona",
+    "permanent": true
+  },
+  {
+    "source": "/books/dao-de-jing/",
+    "destination": "/books/dao-de-jing-toki-pona",
+    "permanent": true
+  },
+  {
+    "source": "/books/ukrainian-modernism-series",
+    "destination": "/books/modernisme-ukrainien",
+    "permanent": true
+  },
+  {
+    "source": "/books/ukrainian-modernism-series/",
+    "destination": "/books/modernisme-ukrainien",
+    "permanent": true
+  },
+  {
+    "source": "/books/toki-pona-classics-series",
+    "destination": "/books/toki-pona-free-kits",
+    "permanent": true
+  },
+  {
+    "source": "/books/toki-pona-classics-series/",
+    "destination": "/books/toki-pona-free-kits",
+    "permanent": true
+  },
+  {
+    "source": "/books/:slug/",
+    "destination": "/books/:slug",
+    "permanent": true
+  },
+  {
+    "source": "/work/:slug/",
+    "destination": "/work/:slug",
+    "permanent": true
+  }
+]

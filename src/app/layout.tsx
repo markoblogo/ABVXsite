@@ -1,3 +1,4 @@
+import {getLiveCatalogue} from '@/lib/live-catalogue';
 import type { Metadata } from 'next';
 import './globals.css';
 
@@ -233,9 +234,11 @@ export default async function RootLayout({
   const writingLanguages = Object.fromEntries(nativeWriting.map(item=>[`/writing/${item.slug}`,item.language||'en']));
   const storyLanguages = Object.fromEntries((storySlug ? await getWorkingStories() : []).map((story) => [workingStoryPath(story), story.language]));
   const editorialLanguages = Object.fromEntries(getEditorialArticles().filter((article) => article.language).map((article) => [article.href, article.language!]));
+  const {getBooks,getArtifacts} = await getLiveCatalogue();
+  const bookLanguages=Object.fromEntries([...getBooks().map(book=>[book.canonicalPath||`/books/${book.slug}`,book.language||'en']),...getArtifacts().map(item=>[`/work/${item.slug}`,item.language||'en'])]);
   const language = pathname.startsWith('/fr/') ? 'fr'
     : storySlug ? storyLanguages[pathname] || 'en'
-      : writingSlug ? writingLanguages[pathname] || 'en' : editorialLanguages[pathname] || 'en';
+      : writingSlug ? writingLanguages[pathname] || 'en' : bookLanguages[pathname] || editorialLanguages[pathname] || 'en';
 
   return (
     <html lang={language}>
@@ -265,7 +268,7 @@ export default async function RootLayout({
         <link rel="alternate" type="application/rss+xml" title="ABVX Substack feed" href="https://abvx.substack.com/feed" />
       </head>
       <body>
-        <DocumentLanguage writingLanguages={{ ...writingLanguages, ...editorialLanguages, ...storyLanguages }} />
+        <DocumentLanguage writingLanguages={{ ...writingLanguages, ...editorialLanguages, ...storyLanguages, ...bookLanguages }} />
         <SiteHeader />
         <main className="site-main">{children}</main>
         <SiteFooter />

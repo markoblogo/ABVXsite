@@ -117,3 +117,28 @@ export const bookStandaloneGroups = [
     editorialSlugs: ['fiction'],
   },
 ];
+
+/** @type {Array<{title:string,description:string,slugs:string[],variant:"primary"|"standard"}>} */
+export const focusGroups = [
+  {
+    title: 'Trading & Brokerage Platforms',
+    description:
+      'Platforms where brokerage teams, market participants or trading workflows can manage real or simulated commodity-market transactions, deal pipelines and execution layers.',
+    slugs: ['mn7r', 'cropto'],
+    variant: 'primary',
+  },
+  {
+    title: 'Market Intelligence, Monitoring & Indexes',
+    description:
+      'Monitoring and index products that turn fragmented market data, news, logistics, weather, crop, signal and commodity-market context into readable intelligence.',
+    slugs: ['cropto-monitor', 'mn7r-blog', 'last30days-cropto', '1d3x', 'spike-spot-commodity-index-ukraine', 'uga-index'],
+    variant: 'standard',
+  },
+  {
+    title: 'Market Fronts & Partner Landings',
+    description:
+      'Market-facing landing pages, decks and commercial fronts for commodity infrastructure projects, partner ventures and trading-service concepts.',
+    slugs: ['ami-books-physical-commodity-markets', 'trade-solution-eu', 'cropto-market-risk-deck', 'liqua'],
+    variant: 'standard',
+  },
+];

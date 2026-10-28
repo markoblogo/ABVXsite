@@ -1,6 +1,6 @@
 // Isolated post-build acceptance. Never sends synthetic content to ABVX Production.
 import assert from 'node:assert/strict';
-import {mkdtemp,rm,readFile,writeFile} from 'node:fs/promises';
+import {mkdtemp,rm,writeFile} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {spawn} from 'node:child_process';
@@ -70,9 +70,26 @@ try{
  const storyPath='/writing/working-stories/runtime-story-acceptance';assert.equal((await fetch(base+storyPath)).status,200);
  for(const path of ['/writing/working-stories','/content-index.json','/sitemap.xml','/llms.txt'])assert.ok((await (await fetch(base+path)).text()).includes('runtime-story-acceptance'),path+' live story');
  const removedStory=await send({action:'unpublish',requestId:'story-acceptance-remove',id:story.value.id,expectedRevision:story.value.revision});assert.equal(removedStory.code,200);assert.equal((await fetch(base+storyPath)).status,404);
+ const catalogueSource=data=>'---\n'+JSON.stringify({id:data.slug,title:'Catalogue '+data.slug,summary:'Synthetic catalogue description',visibility:'public',status:'released',publishedAt:'2026-10-28',language:'fr',tags:[],links:[],...data})+'\n---\n\nApproved catalogue prose.\n';
+ const catalogueRecords=[];
+ for(const data of [
+  {slug:'acceptance-tools',type:'catalogue-section',primarySection:'systems',appearsIn:['systems'],group:'Acceptance Tools',ecosystem:'Acceptance Systems'},
+  {slug:'acceptance-series',type:'series',primarySection:'books',appearsIn:['books']},
+  {slug:'acceptance-book',type:'book',primarySection:'books',appearsIn:['books'],primarySeriesSlug:'acceptance-series'},
+  {slug:'acceptance-project',type:'tool',primarySection:'systems',appearsIn:['systems'],group:'Acceptance Tools'}
+ ]){
+  const source=catalogueSource(data);const command={action:'publish',requestId:data.slug,source,approval:{intakeId:data.slug,sourceSha256:digest(source)}};
+  const result=await send(command);assert.equal(result.code,200,JSON.stringify(result.value));catalogueRecords.push(result.value);
+  if(data.type==='catalogue-section')continue;
+  const path=new URL(result.value.canonicalUrl).pathname,response=await fetch(base+path),html=await response.text();assert.equal(response.status,200,path);assert.ok(html.includes('Approved catalogue prose.'),path+' prose');assert.equal(html.match(/<html[^>]*lang="([^"]+)"/)?.[1],'fr',path+' language');
+  for(const target of ['/content-index.json','/sitemap.xml','/llms.txt',data.primarySection==='books'?'/books':'/systems'])assert.ok((await (await fetch(base+target)).text()).includes(data.slug),target+' catalogue discovery');
+ }
+ for(const receipt of catalogueRecords.reverse())assert.equal((await send({action:'unpublish',requestId:receipt.id+'-remove',id:receipt.id,expectedRevision:receipt.revision})).code,200);
+ assert.equal((await fetch(base+'/books/acceptance-book')).status,404);
+ assert.equal((await fetch(base+'/work/acceptance-project')).status,404);
  await rm(join(directory,'head.json'));assert.equal((await fetch(base+'/content-index.json')).status,503,'no stale Git fallback');
  assert.equal(readFileSync('.next/BUILD_ID','utf8'),before,'no rebuild');
- const proof={status:'PASS',environment:'ISOLATED_LOCAL',newSlugAfterBuild:true,publishUpdateRollbackWithdrawal:true,idempotencyConflict:true,mediaDiscoverySearchMobile:true,storeFailureClosed:true,directAndClientLanguage:true,buildId:before.trim(),observedAt:new Date().toISOString()};
+ const proof={status:'PASS',environment:'ISOLATED_LOCAL',newSlugAfterBuild:true,publishUpdateRollbackWithdrawal:true,idempotencyConflict:true,mediaDiscoverySearchMobile:true,storeFailureClosed:true,catalogueAfterBuild:true,directAndClientLanguage:true,buildId:before.trim(),observedAt:new Date().toISOString()};
  await writeFile('exports/runtime-writing-implementation/post-build-acceptance.json',JSON.stringify(proof,null,2)+'\n');console.log(JSON.stringify(proof));
 }catch(error){await writeFile('exports/runtime-writing-implementation/smoke-server.log',serverLog);throw error;}
 finally{server.kill('SIGTERM');await new Promise(r=>server.once('exit',r));await rm(directory,{recursive:true,force:true});}

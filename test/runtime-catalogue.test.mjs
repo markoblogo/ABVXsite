@@ -46,3 +46,8 @@ test('redirect aliases stay reserved and unrelated page groups do not block with
  const r=await f.publish({action:'publish',requestId:'empty-focus',source:source(section)});
  await f.publish({action:'unpublish',requestId:'empty-focus-remove',id:section.slug,expectedRevision:r.revision});
 });
+
+ test('edition display labels become valid document language tags',async()=>{
+ const {documentLanguage}=await import('../src/lib/document-language.mjs');
+ for(const [label,tag] of [['English','en'],['French','fr'],['Ukrainian','uk'],['Toki Pona','tok'],['fr','fr'],['en-GB','en-GB'],['Unknown edition','en']])assert.equal(documentLanguage(label),tag);
+ });

@@ -1,3 +1,4 @@
+import {documentLanguage} from '@/lib/document-language.mjs';
 import DocumentLanguage from '@/components/DocumentLanguage';
 import {getLiveCatalogue} from '@/lib/live-catalogue';
 import JsonLd from '@/components/JsonLd';
@@ -229,7 +230,7 @@ export default async function WorkDetailPage({
 
   return (
     <article className="detail-page detail-page--work">
-      <DocumentLanguage languageOverride={artifact.language || 'en'} />
+      <DocumentLanguage languageOverride={documentLanguage(artifact.language)} />
       <JsonLd id="jsonld-work-item" data={artifactJsonLd(artifact, relatedItems.map((related) => related.item))} />
       {artifact.faqs?.length ? (
         <JsonLd

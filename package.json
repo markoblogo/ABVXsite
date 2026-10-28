@@ -69,7 +69,7 @@
     "content:follow-up": "node scripts/publication-followup.mjs",
     "qa:analytics": "node --test test/qa-analytics.test.mjs",
     "content:runtime": "node scripts/runtime-writing.mjs",
-    "test:runtime-writing": "node --test test/runtime-writing*.test.mjs",
+    "test:runtime-writing": "node --test test/runtime-writing*.test.mjs test/runtime-working-stories.test.mjs",
     "qa:runtime-writing": "node scripts/runtime-writing-smoke.mjs",
     "content:runtime-verify": "node scripts/runtime-writing-verify.mjs"
   },

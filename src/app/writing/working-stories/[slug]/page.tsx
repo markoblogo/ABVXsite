@@ -1,3 +1,5 @@
+import DocumentLanguage from '@/components/DocumentLanguage';
+import { getLiveWritingState } from '@/lib/live-writing';
 import { getRelatedWorkingStories, getWorkingStoryBySlug, workingStoryPath } from '@/content/working-stories';
 import WorkingStoryArticle from '@/components/WorkingStoryArticle';
 import { defaultOgImage, imageMetadata, metadataWithImage } from '@/lib/seo';
@@ -9,7 +11,7 @@ export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const story = getWorkingStoryBySlug(slug);
+  const story = await getWorkingStoryBySlug(slug);
   if (!story) notFound();
   return metadataWithImage({
     title: story.seoTitle || story.title, description: story.seoDescription || story.summary, canonicalPath: workingStoryPath(story), image: imageMetadata(story.coverImage, defaultOgImage, 'page'), type: 'article',
@@ -18,7 +20,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function WorkingStoryPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const story = getWorkingStoryBySlug(slug);
+  const story = await getWorkingStoryBySlug(slug);
   if (!story) notFound();
-  return <WorkingStoryArticle story={story} related={getRelatedWorkingStories(story)} />;
+  return <div data-content-revision={(await getLiveWritingState())?.records[story.slug]?.currentRevision}>
+    <DocumentLanguage key={story.slug+':'+story.language} languageOverride={story.language} />
+    <WorkingStoryArticle story={story} related={await getRelatedWorkingStories(story)} />
+  </div>;
 }

@@ -9,6 +9,8 @@ import ts from 'typescript';
 import { createElement } from 'react';
 import { renderToReadableStream } from 'react-dom/server';
 import { serializeFrontmatter } from '../scripts/content-lib.mjs';
+import {currentSources} from '../src/content/runtime-writing.mjs';
+import {parseMarkdownSource} from '../src/content/markdown-source.mjs';
 import * as lib from '../src/content/working-stories-lib.mjs';
 import * as jsonLd from '../src/lib/json-ld.mjs';
 
@@ -26,6 +28,7 @@ function fixture(run) {
   try { const result=run({ root, dir, write }); if(result?.then)return result.finally(()=>rmSync(root,{recursive:true,force:true})); rmSync(root,{recursive:true,force:true}); return result; } catch(error) { rmSync(root,{recursive:true,force:true}); throw error; }
 }
 function compile(relative, imports = {}) {
+  imports={'@/components/DocumentLanguage':{default:()=>null,__esModule:true},'@/lib/live-writing':{getLiveWritingState:async()=>null},'./runtime-writing.mjs':{currentSources},'./markdown-source.mjs':{parseMarkdownSource},...imports};
   const compiled = ts.transpileModule(readFileSync(path.join(repo, relative), 'utf8'), {
     compilerOptions: { jsx: ts.JsxEmit.ReactJSX, module: ts.ModuleKind.CommonJS, esModuleInterop: true },
   }).outputText;
@@ -237,19 +240,19 @@ test('story template reuses article typography, emits SEO and hides internal met
   assert.ok(illustrated.includes('target="_blank" rel="noopener noreferrer"'));
 });
 
-test('server adapter retrieves the dedicated collection and contributes normal ABVX feed items', () => fixture(({ root, write }) => {
+test('server adapter retrieves the dedicated collection and contributes normal ABVX feed items', () => fixture(async ({ root, write }) => {
   write('ws-001.md', metadata({ source_session: 'session-001' }));
   const adapter = compile('src/content/working-stories.ts', { './working-stories-lib.mjs': lib, '../../public/content-index.json': releaseIndex([normalized()]) });
   const cwd = process.cwd();
   try {
     process.chdir(root);
-    assert.equal(adapter.getWorkingStories({ topic: 'design' }).length, 1);
-    assert.equal(adapter.getWorkingStories({ cluster: 'project-999' }).length, 0);
-    assert.equal(adapter.getWorkingStoryBySlug('test-only-story').story_id, 'ws-001');
-    assert.equal(adapter.getWorkingStoryBySlug('unknown'), undefined);
-    assert.equal(adapter.workingStoriesFeed()[0].url, '/writing/working-stories/test-only-story');
-    assert.equal(adapter.workingStoriesFeed()[0].source, 'abvx');
-    assert.ok(!JSON.stringify(adapter.workingStoriesFeed()).includes('book'));
+    assert.equal((await adapter.getWorkingStories({ topic: 'design' })).length, 1);
+    assert.equal((await adapter.getWorkingStories({ cluster: 'project-999' })).length, 0);
+    assert.equal((await adapter.getWorkingStoryBySlug('test-only-story')).story_id, 'ws-001');
+    assert.equal(await adapter.getWorkingStoryBySlug('unknown'), undefined);
+    assert.equal((await adapter.workingStoriesFeed())[0].url, '/writing/working-stories/test-only-story');
+    assert.equal((await adapter.workingStoriesFeed())[0].source, 'abvx');
+    assert.ok(!JSON.stringify(await adapter.workingStoriesFeed()).includes('book'));
   } finally { process.chdir(cwd); }
 }));
 
@@ -314,3 +317,14 @@ test('sitemap discovers published stories and series while excluding private and
     for(const route of ['/ami','/fr/ami','/llmo']) assert.equal(routes.find(item=>item.url==='https://abvx.xyz'+route).lastModified.toISOString(),new Date(pages[route].updatedAt).toISOString(),route+' must ignore unrelated series publication');
   } finally { process.chdir(cwd); }
 }));
+
+ test('runtime stories inherit defaults and sort with bundled stories by newest date', () => fixture(async ({root,write})=>{
+  write('ws-001.md',metadata());
+  const data=metadata({slug:'runtime-case',story_id:'ws-999',date:'2026-10-28'});
+  const adapter=compile('src/content/working-stories.ts',{
+   './working-stories-lib.mjs':lib,'../../public/content-index.json':releaseIndex([normalized()]),
+   '@/lib/live-writing':{getLiveWritingState:async()=>({records:{'runtime-case':{firstAddedAt:'2026-10-28'}}})},
+   './runtime-writing.mjs':{currentSources:()=>[serializeFrontmatter(data,body)]}
+  });
+  const cwd=process.cwd();try{process.chdir(root);const stories=await adapter.getWorkingStories();assert.equal(stories[0].slug,'runtime-case');assert.equal(stories[0].summary,data.title);assert.equal(stories[0].language,'en');assert.equal(stories[0].book.include,true);}finally{process.chdir(cwd);}
+ }));

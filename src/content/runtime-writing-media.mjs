@@ -1,6 +1,6 @@
 import {parseMarkdownSource} from './markdown-source.mjs';
 import {digest,currentSources,ValidationError} from './runtime-writing.mjs';
-export const writingImages=data=>[data.media,data.heroImage,...(data.illustrations||[])].filter(Boolean);
+export const writingImages=data=>[data.media,data.heroImage,...(data.type==='working-story'?[data.coverImage]:[]),...(data.illustrations||[])].filter(Boolean);
 const safeKey=/^[a-f0-9]{64}\.(png|jpe?g|webp)$/;
 function dimensions(bytes,ext){
  if(ext==='png'&&bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))&&bytes.toString('ascii',12,16)==='IHDR')return [bytes.readUInt32BE(16),bytes.readUInt32BE(20)];

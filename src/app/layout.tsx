@@ -231,7 +231,7 @@ export default async function RootLayout({
   const storySlug = pathname.match(/^\/writing\/working-stories\/([^/]+)$/)?.[1];
   const nativeWriting = writingSlug && !['archive','kitchen-notes','working-stories','videos'].includes(writingSlug) ? await getLiveNativeWritingItems() : [];
   const writingLanguages = Object.fromEntries(nativeWriting.map(item=>[`/writing/${item.slug}`,item.language||'en']));
-  const storyLanguages = Object.fromEntries(getWorkingStories().map((story) => [workingStoryPath(story), story.language]));
+  const storyLanguages = Object.fromEntries((storySlug ? await getWorkingStories() : []).map((story) => [workingStoryPath(story), story.language]));
   const editorialLanguages = Object.fromEntries(getEditorialArticles().filter((article) => article.language).map((article) => [article.href, article.language!]));
   const language = pathname.startsWith('/fr/') ? 'fr'
     : storySlug ? storyLanguages[pathname] || 'en'

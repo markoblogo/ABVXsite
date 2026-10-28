@@ -25,7 +25,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const writing = native.filter(item => !item.videoUrl || releasedVideos.has(item.slug));
   const videos: FeedItem[] = automaticVideoItems(discovery,releasedNative);
   const videoDates = videos.map(item=>({publishedAt:item.publishedAt}));
-  const stories = getWorkingStories();
+  const stories = await getWorkingStories();
   const storyDates = stories.map((story) => ({ publishedAt: story.date, updatedAt: story.updatedAt }));
   const editorialArticles = getEditorialArticles();
   const editorialRoutes: MetadataRoute.Sitemap = editorialArticles.map((article) => ({

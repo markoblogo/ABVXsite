@@ -3,11 +3,13 @@ import {automaticVideoItems,isPublishedWriting,videoCompanionSnapshot,videoId} f
 import {writingArchiveLastModified} from '../lib/writing-archive.mjs';
 const base='https://abvx.xyz';
 const cleanLinks=links=>(links||[]).filter(x=>x&&typeof x==='object'&&x.url).map(x=>({type:String(x.type||'other'),label:String(x.label||x.type||'Link'),url:String(x.url)}));
-export function projectWritingIndex(sources,baseline,discovery,now=Date.now(),explicitlyPublished=/** @type {string[]} */([])){
+export function projectWritingIndex(sources,baseline,discovery,now=Date.now(),explicitlyPublished=/** @type {string[]} */([]),storySources=[],managed=[]){
  const released=new Set(explicitlyPublished);
  const videoEligible=item=>{const value=baseline.videoCompanions?.[videoId(item.videoUrl)];return isPublishedWriting(item,now)&&(released.has(item.slug)||(Array.isArray(value)?value.includes(item.slug):value===item.slug));};
  const native=sources.map(source=>({status:'archive',...parseMarkdownSource(source).data})).filter(item=>item.visibility!=='private'&&item.visibility!=='draft'&&(!item.videoUrl||videoEligible(item)));
- const other=baseline.items.filter(item=>!['writing','video'].includes(item.type));
+ const stories=storySources.map(source=>parseMarkdownSource(source).data);
+ const storyItems=stories.map(story=>({type:'working-story',section:'writing',ecosystem:'Writing',group:'Working Stories',status:'published',title:story.title,summary:story.summary??story.title,canonicalUrl:base+'/writing/working-stories/'+story.slug,publishedAt:story.date,updatedAt:story.updatedAt||story.date,language:story.language||'en',tags:story.topics,links:[],related:[]}));
+ const other=[...baseline.items.filter(item=>!['writing','video'].includes(item.type)&&!(item.type==='working-story'&&managed.includes(item.canonicalUrl.split('/').pop()))),...storyItems];
  const bySlug=new Map([...other.map(item=>[new URL(item.canonicalUrl).pathname.split('/').pop(),item]),...native.map(item=>[item.slug,{title:item.title,canonicalUrl:base+'/writing/'+item.slug}])]);
  const items=native.map(item=>{
   const related=[];
@@ -31,5 +33,5 @@ export function projectWritingIndex(sources,baseline,discovery,now=Date.now(),ex
 export function projectWritingLlms(baseline,index){
  const line=item=>`- ${item.title}\n  URL: ${item.canonicalUrl}\n  Summary: ${item.summary}\n  Group: ${item.group||item.section}${item.tags?.length?'\n  Tags: '+item.tags.slice(0,8).join(', '):''}`;
  const replace=(text,title,types)=>text.replace(new RegExp('## '+title+'\\n[\\s\\S]*?(?=\\n## |$)'),()=>`## ${title}\n\n${index.items.filter(item=>types.includes(item.type)).map(line).join('\n\n')}\n`);
- return replace(replace(baseline,'Writing: essays and field notes',['writing']),'YouTube watch pages',['video']);
+ return replace(replace(replace(baseline,'Working Stories',['working-story']),'Writing: essays and field notes',['writing']),'YouTube watch pages',['video']);
 }

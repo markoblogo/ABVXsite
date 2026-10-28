@@ -33,3 +33,5 @@ test('approved Working Story packet reaches authenticated API and authoritative 
  const response=await handler(new Request('https://example.test/api/writing/manage',{method:'POST',headers:{authorization:'Bearer '+token,'content-type':'application/json'},body:JSON.stringify(command)}));assert.equal(response.status,200);
  const exported=await (await handler(new Request('https://example.test/api/writing/manage?export=1',{headers:{authorization:'Bearer '+token}}))).json();assert.equal(exported.publicIndex.items[0].type,'working-story');assert.equal(exported.publicIndex.items[0].canonicalUrl,'https://abvx.xyz/writing/working-stories/example');
 });
+
+test('runtime discovery defaults an omitted summary to the title',()=>{const d={...data};delete d.summary;const index=projectWritingIndex([],{items:[]},{items:[]},Date.now(),[],[source(d)]);assert.equal(index.items[0].summary,d.title);});

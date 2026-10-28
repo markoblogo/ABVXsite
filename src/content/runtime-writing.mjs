@@ -4,18 +4,20 @@ import {parseMarkdownSource} from './markdown-source.mjs';
 import {validateKitchenNotes} from './kitchen-notes.mjs';
 import {validateWritingIllustrations} from './writing-illustrations.mjs';
 import {validateNativeWritingVideo} from './native-writing-video.mjs';
+import {parseAcceptedWorkingStory} from './runtime-working-stories.mjs';
 import {publicationMetadataErrors} from '../../scripts/publication-metadata.mjs';
 export const digest = value => createHash('sha256').update(value).digest('hex');
 export class ConflictError extends Error { constructor(message){super(message);this.name='ConflictError';} }
 export class ValidationError extends Error { constructor(message){super(message);this.name='ValidationError';} }
 export const emptySnapshot = () => ({schemaVersion:1,revision:'empty',records:{},requests:{},assets:{},legacyAssets:[]});
 const own = (value, key) => Object.hasOwn(value, key) ? value[key] : undefined;
-const images = data => [data.media,data.heroImage,...(data.illustrations||[])].filter(Boolean);
+const images = data => [data.media,data.heroImage,...(data.type==='working-story'?[data.coverImage]:[]),...(data.illustrations||[])].filter(Boolean);
 const slugPattern=/^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const reserved=new Set(['archive','kitchen-notes','working-stories','videos','feed']);
 export function parseAcceptedSource(source,now=new Date(),allowUndated=false){
  if(typeof source!=='string'||Buffer.byteLength(source)>512_000)throw new ValidationError('Complete source up to 512 KB required');
  const {data,body}=parseMarkdownSource(source);
+ if(data.type==='working-story'){try{return parseAcceptedWorkingStory(source,now);}catch(error){throw new ValidationError(error.message);}}
  if(!slugPattern.test(data.slug||'')||reserved.has(data.slug)||data.id!==data.slug)throw new ValidationError('Safe, non-reserved matching id/slug required');
  if(!body.trim()||!data.title?.trim()||!data.summary?.trim()||data.primarySection!=='writing'||data.visibility!=='public'||data.status!=='live'||!['note','article','review','build_log','other','recipe'].includes(data.type))throw new ValidationError('Ready public Writing source required');
  if(data.coverImage!==undefined)throw new ValidationError('Native Writing coverImage is not rendered; use media or heroImage');
@@ -42,7 +44,7 @@ export function explicitlyPublishedSlugs(snapshot){
  return Object.entries(snapshot.records).filter(([,record])=>{const version=record.versions[record.currentRevision];return !version.withdrawn&&Boolean(version.storedAt);}).map(([slug])=>slug);
 }
 export function mergeWritingSources(snapshot,legacySources){
- return [...currentSources(snapshot),...legacySources.filter(source=>!Object.hasOwn(snapshot.records,parseMarkdownSource(source).data.slug))];
+ return [...currentSources(snapshot).filter(source=>parseMarkdownSource(source).data.type!=='working-story'),...legacySources.filter(source=>parseMarkdownSource(source).data.type!=='working-story').filter(source=>!Object.hasOwn(snapshot.records,parseMarkdownSource(source).data.slug))];
 }
 export function assertSnapshot(snapshot){
  if(snapshot?.schemaVersion!==1||!snapshot.revision||!snapshot.records||!snapshot.requests||!snapshot.assets||!Array.isArray(snapshot.legacyAssets))throw new ValidationError('Invalid content snapshot');
@@ -58,6 +60,7 @@ export function createPublisher({store,context={},validateSnapshot=()=>{},legacy
   if(!slugPattern.test(id||'')||reserved.has(id))throw new ValidationError('Invalid id');
   const previous=own(snapshot.records,id);
   if(command.action==='publish'&&(previous||legacySources.some(source=>parseMarkdownSource(source).data.slug===id)))throw new ConflictError('Content already exists; use update');
+  if(['publish','update'].includes(command.action)){const proposed=parseMarkdownSource(command.source).data;if(proposed.type==='working-story'&&[...currentSources(snapshot),...legacySources].some(source=>{const d=parseMarkdownSource(source).data;return d.slug!==id&&d.story_id===proposed.story_id;}))throw new ConflictError('Story ID already exists');}
   if(command.action!=='publish'&&(!previous||command.expectedRevision!==previous.currentRevision))throw new ConflictError('Expected current content revision required');
   const time=now(),storedAt=time.toISOString(),revision=randomUUID();let source;
   if(command.action==='rollback'){const old=own(previous.versions,command.toRevision);if(!old||old.withdrawn)throw new ValidationError('Known published revision required');source=old.source;}
@@ -65,14 +68,16 @@ export function createPublisher({store,context={},validateSnapshot=()=>{},legacy
   const originalHash=digest(source);let mapping=[];
   if(['publish','update'].includes(command.action)){
    const parsed=parseAcceptedSource(source,time,Boolean(previous&&previous.firstPublishedAt===null));
-   if(previous&&(parsed.data.publishedAt??null)!==previous.firstPublishedAt)throw new ValidationError('First publication date is immutable');
+   if(previous&&parseMarkdownSource(previous.versions[previous.currentRevision].source).data.type!==parsed.data.type)throw new ValidationError('Content type is immutable');
+   if(previous&&parsed.data.type==='working-story'&&parseMarkdownSource(previous.versions[previous.currentRevision].source).data.story_id!==parsed.data.story_id)throw new ValidationError('Story ID is immutable');
+   if(previous&&(parsed.data.date??parsed.data.publishedAt??null)!==previous.firstPublishedAt)throw new ValidationError('First publication date is immutable');
    const prepared=await prepareMedia(source,command.assets||[],snapshot);source=prepared.source;mapping=prepared.mapping;
    if(parseMarkdownSource(source).body!==parsed.body)throw new ValidationError('Media preparation changed authored prose');
   }
   const {data,body}=parseMarkdownSource(source),sourceSha256=digest(source);
-  if(command.action==='rollback'&&(Date.parse(data.publishedAt)>time.valueOf()||validateNativeWritingVideo(data,time.valueOf()).length))throw new ValidationError('Rollback requires a non-future eligible source');const version={source,sourceSha256,revision,withdrawn:command.action==='unpublish',storedAt};
-  snapshot.records[id]={firstAddedAt:previous?previous.firstAddedAt??null:storedAt,firstPublishedAt:previous?previous.firstPublishedAt:data.publishedAt??null,currentRevision:revision,versions:{...previous?.versions,[revision]:version}};
-  snapshot.revision=randomUUID();const receipt={...context,schemaVersion:1,profile:'runtime-writing-v1',status:'STORED',action:command.action,requestId:command.requestId,id,canonicalUrl:'https://abvx.xyz/writing/'+id,revision,snapshotRevision:snapshot.revision,originalSourceSha256:originalHash,sourceSha256,bodySha256:digest(body),storedAt,firstAddedAt:snapshot.records[id].firstAddedAt,firstPublishedAt:snapshot.records[id].firstPublishedAt,mediaMapping:mapping,...(command.approval?{approval:command.approval}:{})};
+  if(command.action==='rollback'&&(Date.parse(data.date||data.publishedAt)>time.valueOf()||validateNativeWritingVideo(data,time.valueOf()).length))throw new ValidationError('Rollback requires a non-future eligible source');const version={source,sourceSha256,revision,withdrawn:command.action==='unpublish',storedAt};
+  snapshot.records[id]={firstAddedAt:previous?previous.firstAddedAt??null:storedAt,firstPublishedAt:previous?previous.firstPublishedAt:data.date??data.publishedAt??null,currentRevision:revision,versions:{...previous?.versions,[revision]:version}};
+  snapshot.revision=randomUUID();const receipt={...context,schemaVersion:1,profile:'runtime-writing-v1',status:'STORED',action:command.action,requestId:command.requestId,id,canonicalUrl:'https://abvx.xyz/writing/'+(data.type==='working-story'?'working-stories/':'')+id,revision,snapshotRevision:snapshot.revision,originalSourceSha256:originalHash,sourceSha256,bodySha256:digest(body),storedAt,firstAddedAt:snapshot.records[id].firstAddedAt,firstPublishedAt:snapshot.records[id].firstPublishedAt,mediaMapping:mapping,...(command.approval?{approval:command.approval}:{})};
   snapshot.requests[command.requestId]={hash:requestHash,receipt};await validateSnapshot(snapshot);await store.commit(snapshot,loaded.etag);return receipt;
  };
 }

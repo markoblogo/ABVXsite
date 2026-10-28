@@ -8,9 +8,9 @@ import {parseAcceptedSource,seedSnapshot,digest} from '../src/content/runtime-wr
 import {configuredWritingStore} from '../src/content/runtime-writing-store.mjs';
 export function commandFromPacket(packet,{action='publish',requestId,expectedRevision}={}){
  const source=packet.payload?.source_markdown;
- if(packet.schema_version!=='v1'||packet.mode!=='REPORT_ONLY_HANDOFF'||packet.project!=='abvxsite'||packet.surface!=='writing'||packet.consumer_operation?.id!=='abvx.publish-writing'||!packet.item_id||typeof source!=='string'||digest(source)!==packet.payload.source_sha256)throw Error('Exact approved native Writing packet required');
+ if(packet.schema_version!=='v1'||packet.mode!=='REPORT_ONLY_HANDOFF'||packet.project!=='abvxsite'||!['writing','working-stories'].includes(packet.surface)||!['abvx.publish-writing','abvx.publish-working-story'].includes(packet.consumer_operation?.id)||!packet.item_id||typeof source!=='string'||digest(source)!==packet.payload.source_sha256)throw Error('Exact approved native Writing packet required');
  const {data,body}=parseAcceptedSource(source);
- if(data.id!==packet.slug||data.title!==packet.title||data.type!==packet.kind||data.publishedAt!==packet.payload.date_published||(data.language||'en')!==(packet.payload.language||'en')||body!==packet.payload.body_lines?.join('\n\n'))throw Error('Packet and accepted source differ');
+ if((data.type==='working-story'?data.slug:data.id)!==packet.slug||data.title!==packet.title||data.type!==packet.kind||(data.date||data.publishedAt)!==packet.payload.date_published||(data.language||'en')!==(packet.payload.language||'en')||body!==packet.payload.body_lines?.join('\n\n'))throw Error('Packet and accepted source differ');
  const assets=(packet.payload.media_assets||[]).map(asset=>{
   if(!isAbsolute(asset.source))throw Error('Absolute approved image source required');const bytes=readFileSync(asset.source);
   if(digest(bytes)!==asset.sha256)throw Error('Approved image bytes changed');

@@ -19,7 +19,7 @@ export async function getWritingFeed(): Promise<FeedItem[]> {
     status: item.status, visibility: item.visibility,
     coverImage: item.coverImage?.src, videoUrl: item.videoUrl,
   }));
-  return mergeWritingItems([...native, ...workingStoriesFeed()], discovery);
+  return mergeWritingItems([...native, ...await workingStoriesFeed()], discovery);
 }
 
 export async function getVideoWritingItems(): Promise<FeedItem[]> {
@@ -30,7 +30,7 @@ export async function getVideoWritingItems(): Promise<FeedItem[]> {
 export async function getWritingSearchBodies(): Promise<Map<string, string>> {
   return new Map([
     ...(await getPublishedNativeWritingItems()).map(item => [`/writing/${item.slug}`, item.body] as const),
-    ...getWorkingStories().map(story => [workingStoryPath(story), story.body] as const),
+    ...(await getWorkingStories()).map(story => [workingStoryPath(story), story.body] as const),
   ]);
 }
 

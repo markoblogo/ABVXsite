@@ -9,7 +9,7 @@ export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const story = getWorkingStoryBySlug(slug);
+  const story = await getWorkingStoryBySlug(slug);
   if (!story) notFound();
   return metadataWithImage({
     title: story.seoTitle || story.title, description: story.seoDescription || story.summary, canonicalPath: workingStoryPath(story), image: imageMetadata(story.coverImage, defaultOgImage, 'page'), type: 'article',
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function WorkingStoryPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const story = getWorkingStoryBySlug(slug);
+  const story = await getWorkingStoryBySlug(slug);
   if (!story) notFound();
-  return <WorkingStoryArticle story={story} related={getRelatedWorkingStories(story)} />;
+  return <WorkingStoryArticle story={story} related={await getRelatedWorkingStories(story)} />;
 }

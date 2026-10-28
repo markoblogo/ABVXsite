@@ -10,8 +10,8 @@ export const metadata = metadataWithImage({
   title: series.title, description: series.summary, canonicalPath: series.canonicalPath, image: defaultOgImage,
 });
 
-export default function WorkingStoriesPage() {
-  const stories = getWorkingStories();
+export default async function WorkingStoriesPage() {
+  const stories = await getWorkingStories();
   return (
     <div className="route-writing grid gap-8">
       <JsonLd id="jsonld-working-stories" data={collectionPageJsonLd({ id: `${SITE_URL}${series.canonicalPath}#collection`, name: series.title, description: series.summary, url: `${SITE_URL}${series.canonicalPath}` })} />

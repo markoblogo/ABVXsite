@@ -1,3 +1,4 @@
+import {documentLanguage} from '@/lib/document-language.mjs';
 import {getLiveCatalogue} from '@/lib/live-catalogue';
 import type { Metadata } from 'next';
 import './globals.css';
@@ -231,11 +232,11 @@ export default async function RootLayout({
   const writingSlug = pathname.match(/^\/writing\/([^/]+)$/)?.[1];
   const storySlug = pathname.match(/^\/writing\/working-stories\/([^/]+)$/)?.[1];
   const nativeWriting = writingSlug && !['archive','kitchen-notes','working-stories','videos'].includes(writingSlug) ? await getLiveNativeWritingItems() : [];
-  const writingLanguages = Object.fromEntries(nativeWriting.map(item=>[`/writing/${item.slug}`,item.language||'en']));
+  const writingLanguages = Object.fromEntries(nativeWriting.map(item=>[`/writing/${item.slug}`,documentLanguage(item.language)]));
   const storyLanguages = Object.fromEntries((storySlug ? await getWorkingStories() : []).map((story) => [workingStoryPath(story), story.language]));
   const editorialLanguages = Object.fromEntries(getEditorialArticles().filter((article) => article.language).map((article) => [article.href, article.language!]));
   const {getBooks,getArtifacts} = await getLiveCatalogue();
-  const bookLanguages=Object.fromEntries([...getBooks().map(book=>[book.canonicalPath||`/books/${book.slug}`,book.language||'en']),...getArtifacts().map(item=>[`/work/${item.slug}`,item.language||'en'])]);
+  const bookLanguages=Object.fromEntries([...getBooks().map(book=>[book.canonicalPath||`/books/${book.slug}`,documentLanguage(book.language)]),...getArtifacts().map(item=>[`/work/${item.slug}`,documentLanguage(item.language)])]);
   const language = pathname.startsWith('/fr/') ? 'fr'
     : storySlug ? storyLanguages[pathname] || 'en'
       : writingSlug ? writingLanguages[pathname] || 'en' : bookLanguages[pathname] || editorialLanguages[pathname] || 'en';

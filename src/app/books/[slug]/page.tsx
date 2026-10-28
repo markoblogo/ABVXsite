@@ -1,3 +1,4 @@
+import {documentLanguage} from '@/lib/document-language.mjs';
 import DocumentLanguage from '@/components/DocumentLanguage';
 import {getLiveCatalogue} from '@/lib/live-catalogue';
 import { YouTubeGallery, findYouTubeVideos } from '@/components/YouTubeEmbed';
@@ -210,7 +211,7 @@ export default async function BookDetailPage({
 
     return (
       <article className="detail-page detail-page--book detail-page--series">
-      <DocumentLanguage languageOverride={book.language || 'en'} />
+      <DocumentLanguage languageOverride={documentLanguage(book.language)} />
         <JsonLd id="jsonld-book-series" data={bookJsonLd(book)} />
         <JsonLd
           id="jsonld-book-breadcrumbs"
@@ -334,7 +335,7 @@ export default async function BookDetailPage({
 
   return (
     <article className="detail-page detail-page--book">
-      <DocumentLanguage languageOverride={book.language || 'en'} />
+      <DocumentLanguage languageOverride={documentLanguage(book.language)} />
       <JsonLd id="jsonld-book-item" data={bookJsonLd(book, relatedItems.map((related) => related.item), primarySeries)} />
       {book.faqs?.length ? (
         <JsonLd

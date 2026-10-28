@@ -1765,6 +1765,11 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/working-stories
   Summary: Cases, experiments, mistakes and unusual decisions from my professional life.
 
+- The Dutch Coffeehouse That Never Opened
+  URL: https://abvx.xyz/writing/working-stories/anderson-dutch-coffeehouse-cheese-retail-concept
+  Summary: How do you turn a specialist cheese retailer into a new hospitality concept? In 2019, I designed Anderson: a Dutch-inspired coffeehouse with its own identity, menu and two operating formats. The client accepted it, but the café never opened.
+  Topics: hospitality-concept, business-model-design, brand-strategy, food-retail, restaurant-development, visual-identity, menu-engineering, retail-expansion
+
 - We Put Salmon Roe in Sausages. Then Supermarkets Started Listening.
   URL: https://abvx.xyz/writing/working-stories/savin-product-sausages-retail-distribution-strategy
   Summary: Savin Product made excellent sausages, but retailers had heard every quality claim before. We developed sausages with salmon roe, French cheese, seafood and unusual meats. The specialty products opened doors; the everyday products generated volume.

@@ -27,6 +27,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/2po93Gv-MuY
   Summary: My API key has exactly $0.00 in credits. But does that stop him from approaching the biggest AI models on the planet? Absolutely not. OpenAI. Anthropic Claude. Google Gemini. Three AI giants. One broke little API key. An
 
+- 12 Claude Code Agents Turned 64 Scientific Papers Into an Interactive Physics Lab
+  URL: https://abvx.xyz/writing/videos/3t0O8-77oxQ
+  Summary: What if you could turn dozens of scientific research papers into an interactive laboratory you can actually experiment with? Not just summaries. Not another chatbot explaining complicated equations. Actual working simula
+
 - This AI Drone Can Chase You Through a Forest Without GPS or Internet
   URL: https://abvx.xyz/writing/videos/4u78DC8S864
   Summary: Remember when drones needed human pilots, GPS, and a reliable connection to navigate? Well, apparently, those days are numbered. Researchers at Purdue University have demonstrated an autonomous drone that can follow a pe

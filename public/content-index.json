@@ -6942,6 +6942,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "12 Claude Code Agents Turned 64 Scientific Papers Into an Interactive Physics Lab",
+      "summary": "What if you could turn dozens of scientific research papers into an interactive laboratory you can actually experiment with? Not just summaries. Not another chatbot explaining complicated equations. Actual working simula",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/3t0O8-77oxQ",
+      "publishedAt": "2026-10-30T22:15:23.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=3t0O8-77oxQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "150+ AI Image Prompts for Stunning Visuals | Posters, Mockups & Design Inspiration",
       "summary": "Tired of spending more time writing AI image prompts than actually creating something? Here's a little resource worth bookmarking. Meet OnePromptDesign, a collection of 150+ ready-to-use AI image prompts and visual refer",
       "canonicalUrl": "https://abvx.xyz/writing/videos/LQjCjugvpco",
@@ -7921,7 +7944,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-30T20:50:44.818Z",
+      "updatedAt": "2026-10-30T22:21:19.438Z",
       "tags": [],
       "links": [],
       "related": []

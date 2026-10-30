@@ -1645,6 +1645,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook, work
 
+- Psychology Notebook #19 — Time, Everyday Life & the Luggage of the Past
+  URL: https://abvx.xyz/writing/psychology-notebook-19-time-everyday-life-past
+  Summary: Twenty translated notebook fragments on time, everyday life, the past and the resources we bring into the present.
+  Group: writing
+  Tags: psychology-notebook, living
+
+- Psychology Notebook #20 — Worry, Control & the Shadows of Tomorrow
+  URL: https://abvx.xyz/writing/psychology-notebook-20-worry-control-tomorrow
+  Summary: Twenty translated notebook fragments on worry, control, fear, freedom and the uncertain shape of tomorrow.
+  Group: writing
+  Tags: psychology-notebook, anxiety
+
 - The Berliner: How My Beer Cocktail Ended Up on a French Bar's Menu
   URL: https://abvx.xyz/writing/the-berliner-guinness-port-beer-cocktail
   Summary: I discovered Guinness with port wine in Berlin, recreated it with whatever a small French bar had available, and eventually watched it become an official item in the cash register.

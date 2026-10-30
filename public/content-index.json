@@ -7875,7 +7875,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-28T12:42:55.103Z",
+      "updatedAt": "2026-10-30T11:19:09.948Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10182,6 +10182,44 @@
       "links": [],
       "publishedAt": "2026-10-28",
       "updatedAt": "2026-10-28",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #19 — Time, Everyday Life & the Luggage of the Past",
+      "summary": "Twenty translated notebook fragments on time, everyday life, the past and the resources we bring into the present.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-19-time-everyday-life-past",
+      "tags": [
+        "psychology-notebook",
+        "living"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-30",
+      "updatedAt": "2026-10-30",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #20 — Worry, Control & the Shadows of Tomorrow",
+      "summary": "Twenty translated notebook fragments on worry, control, fear, freedom and the uncertain shape of tomorrow.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-20-worry-control-tomorrow",
+      "tags": [
+        "psychology-notebook",
+        "anxiety"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-30",
+      "updatedAt": "2026-10-30",
       "related": []
     },
     {

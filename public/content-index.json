@@ -7875,7 +7875,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-30T11:19:09.948Z",
+      "updatedAt": "2026-10-30T11:38:12.923Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8688,6 +8688,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=5BS9m6b0zWk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "How Twitch Gamers Help Detect Wildfires | FireCatchers by Havas Play",
+      "summary": "What if waiting for your favorite Twitch streamer could actually help save a forest? Not by donating money. Not by watching an advertisement. Just by paying attention. Meet FireCatchers, one of the smartest examples of c",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/FP17TQdOaGw",
+      "publishedAt": "2026-10-30T11:27:15.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=FP17TQdOaGw"
         }
       ],
       "related": []

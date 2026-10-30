@@ -103,6 +103,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/dUtmkNClf74
   Summary: Well, it finally happened. Anthropic, the company behind Claude AI, has officially filed for an IPO. On October 26, 2026, Anthropic submitted its S-1 registration statement to the U.S. Securities and Exchange Commission.
 
+- How Twitch Gamers Help Detect Wildfires | FireCatchers by Havas Play
+  URL: https://abvx.xyz/writing/videos/FP17TQdOaGw
+  Summary: What if waiting for your favorite Twitch streamer could actually help save a forest? Not by donating money. Not by watching an advertisement. Just by paying attention. Meet FireCatchers, one of the smartest examples of c
+
 - FLUX 3 Max: Near Real-Time AI Video, 22× Faster Than Seedance 2.5
   URL: https://abvx.xyz/writing/videos/G_5lLwn6Veo
   Summary: Remember when generating a few seconds of AI video meant waiting several minutes? Well, those days might be numbered. After making MiniMax H3 ridiculously fast, fal.ai teamed up with Black Forest Labs to push FLUX 3 to a

@@ -824,8 +824,8 @@
       "title": "DeepSeek Makes $38 per GPU Hour. Is the AI Compute Boom About to Kill Startups?",
       "url": "https://abvcreative.medium.com/deepseek-makes-38-per-gpu-hour-is-the-ai-compute-boom-about-to-kill-startups-e6dce99b318a",
       "publishedAt": "2026-10-25T11:09:47.000Z",
-      "excerpt": "DeepInfer reveals surprisingly lucrative AI inference economics. But if selling tokens pays better than building products, who gets to rent the GPUs? Something rather extraordinary happened in the AI industry this week. ",
-      "coverImage": "https://cdn-images-1.medium.com/max/1024/1*YrC_1knEdL2se8lP4EdaLA.png",
+      "excerpt": "DeepInfer reveals surprisingly lucrative AI inference economics.",
+      "coverImage": "https://cdn-images-1.medium.com/max/1536/1*YrC_1knEdL2se8lP4EdaLA.png",
       "addedAt": "2026-10-25T11:15:47.432Z",
       "addedAtBasis": "observed"
     },
@@ -894,8 +894,8 @@
       "title": "Rust’s Next Big Idea: Make unsafe Code Provably Safe. Let AI Agents Do the Work.",
       "url": "https://abvcreative.medium.com/rusts-next-big-idea-make-unsafe-code-provably-safe-let-ai-agents-do-the-work-5cc9902ee65a",
       "publishedAt": "2026-10-23T14:04:53.000Z",
-      "excerpt": "Rust co-designer Niko Matsakis thinks AI coding agents could transform programming language design. His proposal: stronger types, formal proofs, and a future where unsafe code no longer means unverified code. There’s som",
-      "coverImage": "https://cdn-images-1.medium.com/max/1024/1*ZT_ox4y-CrWenfFA4uFdBw.png",
+      "excerpt": "Rust co-designer Niko Matsakis thinks AI coding agents could transform programming language design. His proposal: stronger types, formal…",
+      "coverImage": "https://cdn-images-1.medium.com/max/1536/1*ZT_ox4y-CrWenfFA4uFdBw.png",
       "addedAt": "2026-10-23T14:22:11.318Z",
       "addedAtBasis": "observed"
     },

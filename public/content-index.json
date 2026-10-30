@@ -7921,7 +7921,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-30T20:21:57.764Z",
+      "updatedAt": "2026-10-30T20:50:44.818Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10471,6 +10471,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=wPIyeBYJZbQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Scientists Built a Washable Touchscreen Sweater. Yes, It Plays Videos",
+      "summary": "Apparently, someone decided that smartphones weren't enough. We now need screens in our sweaters. Researchers at the National University of Singapore have developed a fully functional color touchscreen woven directly int",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/BV58rMMTIBM",
+      "publishedAt": "2026-10-30T20:41:39.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=BV58rMMTIBM"
         }
       ],
       "related": []

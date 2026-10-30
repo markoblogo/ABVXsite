@@ -47,6 +47,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/720tTqmoORU
   Summary: What if you could find hundreds of impressive AI-generated videos and see exactly how their creators made them? Not just watch the results. Get the prompts, study the techniques, and recreate the ideas yourself. Meet Ski
 
+- Michelangelus: A Free Font Inspired by Michelangelo's Handwriting | Renaissance Typography
+  URL: https://abvx.xyz/writing/videos/76yF1siGSlM
+  Summary: What if you could type using a font inspired by Michelangelo's own handwriting? Well, now you can. Meet Michelangelus, a beautiful new serif typeface created by Italian design studio Studiogusto, inspired by the handwrit
+
 - Claude Duet: Anthropic's New Proactive AI Agent Runs on Opus 5.5
   URL: https://abvx.xyz/writing/videos/7bWabPwlwX4
   Summary: Anthropic just entered the race for the ultimate personal AI assistant. Meet Claude Duet, a new proactive AI agent powered by Claude Opus 5.5. And unlike regular Claude, this one doesn't just sit around waiting for your
@@ -190,6 +194,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - 150+ AI Image Prompts for Stunning Visuals | Posters, Mockups & Design Inspiration
   URL: https://abvx.xyz/writing/videos/LQjCjugvpco
   Summary: Tired of spending more time writing AI image prompts than actually creating something? Here's a little resource worth bookmarking. Meet OnePromptDesign, a collection of 150+ ready-to-use AI image prompts and visual refer
+
+- Marathon: You Are Dead | Insane Glitch Art, Motion Design & 3D by Antibody
+  URL: https://abvx.xyz/writing/videos/LzgnvledcWY
+  Summary: What happens when brutal sci-fi meets psychedelic motion design? You get You Are Dead, a stunning cinematic edit created by Antibody for Bungie's video game Marathon. And the visual direction is absolutely insane. The fi
 
 - AI Video Is Now Faster Than Real Time. Welcome to Infinite Slop
   URL: https://abvx.xyz/writing/videos/mt0MOEpoj1c

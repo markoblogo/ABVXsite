@@ -7875,7 +7875,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-30T12:43:05.877Z",
+      "updatedAt": "2026-10-30T13:15:04.271Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9229,6 +9229,29 @@
       "related": []
     },
     {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Marathon: You Are Dead | Insane Glitch Art, Motion Design & 3D by Antibody",
+      "summary": "What happens when brutal sci-fi meets psychedelic motion design? You get You Are Dead, a stunning cinematic edit created by Antibody for Bungie's video game Marathon. And the visual direction is absolutely insane. The fi",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/LzgnvledcWY",
+      "publishedAt": "2026-10-30T13:13:39.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=LzgnvledcWY"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "writing",
       "section": "writing",
       "ecosystem": "Writing",
@@ -9307,6 +9330,29 @@
       ],
       "publishedAt": "2026-10-19",
       "updatedAt": "2026-10-19",
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Michelangelus: A Free Font Inspired by Michelangelo's Handwriting | Renaissance Typography",
+      "summary": "What if you could type using a font inspired by Michelangelo's own handwriting? Well, now you can. Meet Michelangelus, a beautiful new serif typeface created by Italian design studio Studiogusto, inspired by the handwrit",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/76yF1siGSlM",
+      "publishedAt": "2026-10-30T13:01:47.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=76yF1siGSlM"
+        }
+      ],
       "related": []
     },
     {

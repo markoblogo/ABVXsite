@@ -7898,7 +7898,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-30T18:50:56.167Z",
+      "updatedAt": "2026-10-30T19:37:08.631Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9257,6 +9257,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Magnetic Currents: Stunning 3D Motion Art Inspired by Invisible Forces | Media.Work",
+      "summary": "What if you could see the invisible forces that shape our physical world? Not through scientific diagrams, but through mesmerizing digital sculptures, flowing particles, and constantly transforming structures. Meet Magne",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/r0KhDl19nKc",
+      "publishedAt": "2026-10-30T19:23:46.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=r0KhDl19nKc"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Marathon: You Are Dead | Insane Glitch Art, Motion Design & 3D by Antibody",
       "summary": "What happens when brutal sci-fi meets psychedelic motion design? You get You Are Dead, a stunning cinematic edit created by Antibody for Bungie's video game Marathon. And the visual direction is absolutely insane. The fi",
       "canonicalUrl": "https://abvx.xyz/writing/videos/LzgnvledcWY",
@@ -9871,6 +9894,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=6c3JXdIiosg"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Pokras Lampas in Kazan | 177 m² of Rooftop Calligraphy",
+      "summary": "A rooftop becomes a canvas: explore Pokras Lampas’s 177 m² calligraphy work at the Barkli DAN residence in Kazan. This short art film combines aerial footage, moving photographs, English narration and an original electro",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/QqJ2J9RGOfo",
+      "publishedAt": "2026-10-30T19:16:40.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=QqJ2J9RGOfo"
         }
       ],
       "related": []

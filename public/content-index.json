@@ -7196,6 +7196,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Afterimage | Venice Biennale 2019 — Light, Memory & Machines",
+      "summary": "Light becomes a body. A letter dissolves into fog. A robot repeats a task that never stays finished. AFTERIMAGE is an original short art film connecting four encounters with media and installation art from the Venice Bie",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/umOUUPFrG4c",
+      "publishedAt": "2026-10-30T19:53:52.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=umOUUPFrG4c"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Agri-Commodity Brokerage | A Practical Guide to Grains & Oilseeds Markets",
       "summary": "A market needs more than a price. Agri-Commodity Brokerage explores the people, products, logistics and terms that connect supply with demand in physical grains and oilseeds markets. Explore the book and download the fre",
       "canonicalUrl": "https://abvx.xyz/writing/videos/H6l1leVo34A",
@@ -7898,7 +7921,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-30T19:37:08.631Z",
+      "updatedAt": "2026-10-30T20:21:57.764Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8349,6 +8372,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=89kTx1LhEP0"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Google Ran Gemma 4 in Space. Its First Response Was a Poem! | Project Suncatcher",
+      "summary": "Remember when \"cloud computing\" was just a metaphor? Well, Google is taking it rather literally. On October 30, 2026, Google announced that its AI model Gemma 4 had successfully generated a response from orbit and transm",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/DK5cv_jMOsE",
+      "publishedAt": "2026-10-30T19:43:35.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=DK5cv_jMOsE"
         }
       ],
       "related": []

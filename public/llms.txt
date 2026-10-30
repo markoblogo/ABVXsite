@@ -107,6 +107,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/cQS3nbBe6JM
   Summary: What if you could turn almost any PC game into something completely different using AI? And what if Claude Code could handle the modding process for you? Meet Universal Modder, an open-source collection of AI agent skill
 
+- Google Ran Gemma 4 in Space. Its First Response Was a Poem! | Project Suncatcher
+  URL: https://abvx.xyz/writing/videos/DK5cv_jMOsE
+  Summary: Remember when "cloud computing" was just a metaphor? Well, Google is taking it rather literally. On October 30, 2026, Google announced that its AI model Gemma 4 had successfully generated a response from orbit and transm
+
 - 703 Claude Opus 5.5 Video Prompts You Can Copy for Free | AI Motion Graphics & Animation
   URL: https://abvx.xyz/writing/videos/dSBsgH4bpNY
   Summary: What if you could browse hundreds of impressive AI-generated animations and get the prompts behind them? Not just watch the results. Copy the prompts, study how they work, and create your own versions. Someone has put to
@@ -334,6 +338,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Claude Opus 5.5 Created This Animated 3D Shark in 45 Minutes | Blender + Tripo AI
   URL: https://abvx.xyz/writing/videos/u7HuTkQFvo4
   Summary: What if you could create a fully rigged and animated 3D creature in less than an hour? Not just a pretty 3D model. An actual character with a skeleton, swimming animations, and a convincing bite. This entire shark was cr
+
+- Afterimage | Venice Biennale 2019 — Light, Memory & Machines
+  URL: https://abvx.xyz/writing/videos/umOUUPFrG4c
+  Summary: Light becomes a body. A letter dissolves into fog. A robot repeats a task that never stays finished. AFTERIMAGE is an original short art film connecting four encounters with media and installation art from the Venice Bie
 
 - Why Do Streetlights Look Like Stars? This Eye Simulator Shows You.
   URL: https://abvx.xyz/writing/videos/uvM-jWwibOQ

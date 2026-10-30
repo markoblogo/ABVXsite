@@ -311,10 +311,6 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/sZpOYudsSDY
   Summary: Think you know what's running inside your Claude Code sessions? You might be surprised. Meet /stack, a free, open-source Claude Code mod that reveals practically everything installed, configured, and available in your AI
 
-- Claude AI Brain Surgery on a Mouse? What Exin Reported
-  URL: https://abvx.xyz/writing/videos/tgMU4DCjohk
-  Summary: An AI agent choosing a treatment and controlling a surgical robot sounds like science fiction. Exin Therapeutics says it tested that idea in a mouse model of epilepsy — with a human surgeon, a supervising veterinarian an
-
 - MN7R Product Guide | Commodity Brokerage Workflow Explained
   URL: https://abvx.xyz/writing/videos/TISOtCghMVY
   Summary: Brokerage is more than closing a deal. Explore the clients, offers, execution, roles and AI-assisted operating support behind the MN7R workspace. Read the free English MN7R Product Guide — PDF and EPUB: https://abvx.xyz/
@@ -330,6 +326,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Why Do Streetlights Look Like Stars? This Eye Simulator Shows You.
   URL: https://abvx.xyz/writing/videos/uvM-jWwibOQ
   Summary: Ever noticed how streetlights, car headlights, and distant stars turn into glowing halos, spikes, and strange patterns at night? Well, someone built a simulator that lets you explore exactly why that happens. Meet Engisc
+
+- Time Capsule | Pokras Lampas — Calligrafuturism at Lennauchfilm
+  URL: https://abvx.xyz/writing/videos/uyzSYiktQb0
+  Summary: Pokras Lampas turns a brick facade into a message for future generations. TIME _ CAPSULE explores his calligrafuturist mural at Lennauchfilm in St Petersburg through moving photographs, original footage and an instrument
 
 - Physical Commodity Markets: A Practical Book Collection | AMI Books
   URL: https://abvx.xyz/writing/videos/vAPgNupIp2s

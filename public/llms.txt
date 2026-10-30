@@ -367,6 +367,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/zOfyKb7_c1M
   Summary: Apparently, Unitree decided that the best way to introduce its new humanoid robot was to make an action movie. And honestly, I'm not complaining. Meet Unitree H2-X Kung Fu Legend Guardian, a humanoid robot that looks lik
 
+- The Last Seed | A Short Animated Film About Hope
+  URL: https://abvx.xyz/writing/videos/ZQTORLBw9Zs
+  Summary: One seed. One last drop of water. A greenhouse running out of power. The Last Seed is a 48-second animated short about fragile hope and a small chance to begin again. A seed takes root in dry soil, a failing roof mechani
+
 ## Focus systems
 
 - AMI — Infrastructure for Physical Commodity Markets

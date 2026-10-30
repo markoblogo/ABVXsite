@@ -7596,6 +7596,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude AI Brain Surgery on a Mouse? What Exin Reported",
+      "summary": "An AI agent choosing a treatment and controlling a surgical robot sounds like science fiction. Exin Therapeutics says it tested that idea in a mouse model of epilepsy — with a human surgeon, a supervising veterinarian an",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/tgMU4DCjohk",
+      "publishedAt": "2026-10-30T13:25:50.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=tgMU4DCjohk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude Can Now Create Editable Premiere Pro & After Effects Projects with Tesseract",
       "summary": "Claude can already generate animations and videos. But there's always been one annoying problem. What happens when you want to actually edit the result? An AI-generated MP4 isn't an editable Premiere Pro timeline. You ca",
       "canonicalUrl": "https://abvx.xyz/writing/videos/qZFQlbAcW1Y",
@@ -7875,7 +7898,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-30T13:15:04.271Z",
+      "updatedAt": "2026-10-30T13:38:27.938Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9848,6 +9871,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=6c3JXdIiosg"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Pomerado: AI Agents Without Browser Clicking? 1,300× Cheaper Than Codex",
+      "summary": "What if AI agents could use almost any website without spending half their time clicking buttons and waiting for pages to load? And what if that made them dramatically faster and cheaper? Meet Pomerado, a new Y Combinato",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/LxjAYGIaHgw",
+      "publishedAt": "2026-10-30T13:34:37.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=LxjAYGIaHgw"
         }
       ],
       "related": []

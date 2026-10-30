@@ -195,6 +195,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/LQjCjugvpco
   Summary: Tired of spending more time writing AI image prompts than actually creating something? Here's a little resource worth bookmarking. Meet OnePromptDesign, a collection of 150+ ready-to-use AI image prompts and visual refer
 
+- Pomerado: AI Agents Without Browser Clicking? 1,300× Cheaper Than Codex
+  URL: https://abvx.xyz/writing/videos/LxjAYGIaHgw
+  Summary: What if AI agents could use almost any website without spending half their time clicking buttons and waiting for pages to load? And what if that made them dramatically faster and cheaper? Meet Pomerado, a new Y Combinato
+
 - Marathon: You Are Dead | Insane Glitch Art, Motion Design & 3D by Antibody
   URL: https://abvx.xyz/writing/videos/LzgnvledcWY
   Summary: What happens when brutal sci-fi meets psychedelic motion design? You get You Are Dead, a stunning cinematic edit created by Antibody for Bungie's video game Marathon. And the visual direction is absolutely insane. The fi
@@ -306,6 +310,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Claude Code Has Hidden Features. This /stack Mod Reveals Everything
   URL: https://abvx.xyz/writing/videos/sZpOYudsSDY
   Summary: Think you know what's running inside your Claude Code sessions? You might be surprised. Meet /stack, a free, open-source Claude Code mod that reveals practically everything installed, configured, and available in your AI
+
+- Claude AI Brain Surgery on a Mouse? What Exin Reported
+  URL: https://abvx.xyz/writing/videos/tgMU4DCjohk
+  Summary: An AI agent choosing a treatment and controlling a surgical robot sounds like science fiction. Exin Therapeutics says it tested that idea in a mouse model of epilepsy — with a human surgeon, a supervising veterinarian an
 
 - MN7R Product Guide | Commodity Brokerage Workflow Explained
   URL: https://abvx.xyz/writing/videos/TISOtCghMVY

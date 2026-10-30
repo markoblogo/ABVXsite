@@ -19,6 +19,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/-htT4oQiOpI
   Summary: Profit vs cash flow, explained with one simple example: $400 in gross profit, but no cash in the bank yet. A quick financial intelligence lesson for entrepreneurs: buy $800 of stock, sell it for $1,200 on credit, and wai
 
+- Claude AI Brain Surgery on a Mouse? What Exin Reported
+  URL: https://abvx.xyz/writing/videos/0wvAwUAZEFo
+  Summary: An AI agent choosing a treatment and controlling a surgical robot sounds like science fiction. Exin Therapeutics says it tested that idea in a mouse model of epilepsy — with a human surgeon, a supervising veterinarian an
+
 - My $0 API Key Trying to Access OpenAI, Claude & Gemini
   URL: https://abvx.xyz/writing/videos/2po93Gv-MuY
   Summary: My API key has exactly $0.00 in credits. But does that stop him from approaching the biggest AI models on the planet? Absolutely not. OpenAI. Anthropic Claude. Google Gemini. Three AI giants. One broke little API key. An

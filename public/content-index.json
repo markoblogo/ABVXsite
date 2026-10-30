@@ -7596,6 +7596,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude AI Brain Surgery on a Mouse? What Exin Reported",
+      "summary": "An AI agent choosing a treatment and controlling a surgical robot sounds like science fiction. Exin Therapeutics says it tested that idea in a mouse model of epilepsy — with a human surgeon, a supervising veterinarian an",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/0wvAwUAZEFo",
+      "publishedAt": "2026-10-30T18:45:32.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=0wvAwUAZEFo"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude Can Now Create Editable Premiere Pro & After Effects Projects with Tesseract",
       "summary": "Claude can already generate animations and videos. But there's always been one annoying problem. What happens when you want to actually edit the result? An AI-generated MP4 isn't an editable Premiere Pro timeline. You ca",
       "canonicalUrl": "https://abvx.xyz/writing/videos/qZFQlbAcW1Y",
@@ -7875,7 +7898,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-30T18:38:06.440Z",
+      "updatedAt": "2026-10-30T18:50:56.167Z",
       "tags": [],
       "links": [],
       "related": []

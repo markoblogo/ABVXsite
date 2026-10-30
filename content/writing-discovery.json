@@ -1191,6 +1191,16 @@
     },
     {
       "source": "substack",
+      "title": "LinkedIn Is Using AI to Fight AI Slop. The Irony Is Magnificent.",
+      "url": "https://abvx.substack.com/p/linkedin-is-using-ai-to-fight-ai",
+      "publishedAt": "2026-10-30T12:13:16.000Z",
+      "excerpt": "There was a time when LinkedIn was a place where people discussed careers, shared professional insights, and occasionally found a job. Then something terrible happened. Everyone became a thought leader. Every minor incon",
+      "coverImage": "https://substackcdn.com/image/fetch/$s_!Bgg3!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F31d7a95a-9143-4f7b-8f22-089e59c7a933_1672x941.png",
+      "addedAt": "2026-10-30T12:22:23.076Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "substack",
       "title": "Linus Torvalds Just Let Claude Code Write Linux Kernel Patches. And the World Hasn't Ended.",
       "url": "https://abvx.substack.com/p/linus-torvalds-just-let-claude-code",
       "publishedAt": "2026-10-12T15:51:22.000Z",
@@ -1360,6 +1370,17 @@
       "coverImage": "https://i.ytimg.com/vi/2po93Gv-MuY/hqdefault.jpg",
       "videoDescription": "My API key has exactly $0.00 in credits.\nBut does that stop him from approaching the biggest AI models on the planet?\nAbsolutely not.\nOpenAI. Anthropic Claude. Google Gemini.\nThree AI giants. One broke little API key. An impressive amount of confidence.\nUnfortunately, confidence isn't a valid payment method.\n\nBalance: $0.00\nAmbition: Unlimited\nAPI Access: Denied\n\nSometimes the hardest part of AI development isn't the coding. It's convincing your API provider that you have money.\n\n#OpenAI #ClaudeAI #GeminiAI #AIMemes #ProgrammingHumor #Shorts",
       "addedAt": "2026-10-11T15:19:15.947Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
+      "title": "This AI Drone Can Chase You Through a Forest Without GPS or Internet",
+      "url": "https://www.youtube.com/watch?v=4u78DC8S864",
+      "publishedAt": "2026-10-30T11:53:46.000Z",
+      "excerpt": "Remember when drones needed human pilots, GPS, and a reliable connection to navigate? Well, apparently, those days are numbered. Researchers at Purdue University have demonstrated an autonomous drone that can follow a pe",
+      "coverImage": "https://i.ytimg.com/vi/4u78DC8S864/hqdefault.jpg",
+      "videoDescription": "Remember when drones needed human pilots, GPS, and a reliable connection to navigate?\n\nWell, apparently, those days are numbered.\n\nResearchers at Purdue University have demonstrated an autonomous drone that can follow a person through a dense forest without GPS or cloud connectivity.\n\nAnd the footage is genuinely unsettling.\n\nHere's what the drone can reportedly do:\n\nAutonomous tracking: Identify and follow a moving person without continuous manual steering.\n\nNo GPS required: Navigate without relying on satellite positioning.\n\nNo internet connection: Process navigation and tracking information onboard.\n\nReal-time obstacle avoidance: Navigate around trees and other obstacles while maintaining its route.\n\nMovement prediction: Estimate where a person is heading when they temporarily disappear behind obstacles.\n\nEnvironmental mapping: Build a representation of the surrounding environment using onboard sensors.\n\nViral posts have also credited Claude Opus 5.5 with helping develop this kind of autonomous tracking system, although its involvement in the Purdue demonstration hasn't been independently confirmed.\n\nAnd here's the slightly terrifying part.\n\nThe same technology that could help rescue teams locate missing people in forests could also enable increasingly sophisticated autonomous surveillance.\n\nOr something considerably worse.\n\nWe're entering an era where AI-powered machines can perceive their surroundings, make navigation decisions, and physically pursue moving targets.\n\nWithout waiting for instructions from a remote server.\n\nOf course, this is still an experimental research demonstration, not proof that autonomous drones can reliably track anyone under all conditions.\n\nBut watching that little machine weave between trees while following a human is enough to make you wonder where all this is heading.\n\nThe future of robotics is looking impressive.\n\nUnfortunately, it also looks like the opening scene of a science-fiction horror movie.\n\nAnd as software developers love to say:\n\nIt's not a bug. It's a feature.\n\nMore about the autonomous drone demonstration:\nhttps://dronexl.co/2026/10/26/purdue-forest-drone-from-scratch-hong-kong-open-source/\n\nAnthropic's separate autonomous drone research:\nhttps://www.anthropic.com/research/project-pilot\n\n#AIDrones #AutonomousDrones #ClaudeAI #Robotics #PhysicalAI #ArtificialIntelligence #Shorts",
+      "addedAt": "2026-10-30T12:22:23.076Z",
       "addedAtBasis": "observed"
     },
     {
@@ -1921,6 +1942,17 @@
       "coverImage": "https://i.ytimg.com/vi/PmhWa-V00zc/hqdefault.jpg",
       "videoDescription": "Découvrez « Jeanne la bataillonneuse, suivi de Miss Adrienne » de Géo Chkouroupiy, en traduction française dans la collection Modernisme ukrainien.\nLa guerre et la révolution de 1917. Puis l’usine, le chômage et les mirages de la ville industrielle. Deux récits où se rencontrent aventure, satire sociale, vitesse et expérimentation littéraire.\n\nFigure de l’avant-garde ukrainienne et du « Renouveau fusillé », Géo Chkouroupiy est également connu sous le nom de Geo Shkurupii.\nTraduction française : Anton Biletskyi-Volokh.\n\nCette édition comprend une préface, une note sur les textes et la traduction, 40 notes, une bibliographie et trois illustrations.\n\nDécouvrir le livre et les liens Kindle / livre broché :\nhttps://abvx.xyz/books/geo-chkouroupiy-jeanne-la-bataillonneuse\n\nhttps://ukrmodernism.abvx.xyz/fr\n\n#ModernismeUkrainien #LittératureUkrainienne #GeoShkurupii",
       "addedAt": "2026-10-14T15:21:49.012Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
+      "title": "Giga AI: A Stunning Interactive Website for AI Agents | Web Design & Motion Graphics",
+      "url": "https://www.youtube.com/watch?v=PoOxfMsBP9E",
+      "publishedAt": "2026-10-30T12:03:19.000Z",
+      "excerpt": "What if an AI company's website didn't just tell you what its product does, but actually let you experience it? Meet Giga AI, a customer support automation platform with a seriously impressive interactive website. And th",
+      "coverImage": "https://i.ytimg.com/vi/PoOxfMsBP9E/hqdefault.jpg",
+      "videoDescription": "What if an AI company's website didn't just tell you what its product does, but actually let you experience it?\n\nMeet Giga AI, a customer support automation platform with a seriously impressive interactive website.\n\nAnd this is a great example of how motion design, interactivity, and thoughtful UX can turn an ordinary SaaS landing page into something much more engaging.\n\nHere's what makes the design stand out:\n\nInteractive homepage: A live AI agent interface invites visitors to start a conversation immediately.\n\nAnimated dashboards: Dynamic charts and visual elements illustrate how the platform works.\n\nSmooth motion graphics: Transitions and animations make technical concepts easier to understand.\n\nProduct storytelling: Instead of overwhelming visitors with features, the website demonstrates the experience.\n\nModern SaaS design: Clean typography, polished interface components, and a strong visual identity.\n\nAnd here's what I find particularly interesting.\n\nThe website doesn't just explain AI agents. It makes the product itself part of the design.\n\nGiga builds AI agents that handle customer support across voice, chat, and email.\n\nIts platform allows businesses to configure agents, analyze conversations, monitor performance, and improve results.\n\nBut from a design perspective, the real achievement is how naturally the website brings these capabilities to life.\n\nNo endless walls of marketing copy.\n\nJust an interactive experience that encourages visitors to explore.\n\nThis is the kind of website that makes you want to keep scrolling, clicking, and experimenting.\n\nA great reference for anyone working on SaaS websites, interactive storytelling, motion design, or AI product interfaces.\n\nExplore the website:\nhttps://giga.ai/\n\n#GigaAI #WebDesign #InteractiveDesign #MotionGraphics #UIUX #CreativeWebDesign #Shorts",
+      "addedAt": "2026-10-30T12:22:23.076Z",
       "addedAtBasis": "observed"
     },
     {

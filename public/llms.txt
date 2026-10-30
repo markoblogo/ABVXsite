@@ -23,6 +23,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/2po93Gv-MuY
   Summary: My API key has exactly $0.00 in credits. But does that stop him from approaching the biggest AI models on the planet? Absolutely not. OpenAI. Anthropic Claude. Google Gemini. Three AI giants. One broke little API key. An
 
+- This AI Drone Can Chase You Through a Forest Without GPS or Internet
+  URL: https://abvx.xyz/writing/videos/4u78DC8S864
+  Summary: Remember when drones needed human pilots, GPS, and a reliable connection to navigate? Well, apparently, those days are numbered. Researchers at Purdue University have demonstrated an autonomous drone that can follow a pe
+
 - How to Use Claude Opus 5.5 for AI Motion Graphics Without a Claude Subscription
   URL: https://abvx.xyz/writing/videos/5BS9m6b0zWk
   Summary: Want to create impressive motion graphics with Claude Opus 5.5 but don't have a Claude subscription? Here's a little trick worth trying. Genspark lets you access AI coding tools and offers 100 free credits per day. And w
@@ -222,6 +226,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Jeanne la bataillonneuse — Géo Chkouroupiy | Bande-annonce
   URL: https://abvx.xyz/writing/videos/PmhWa-V00zc
   Summary: Découvrez « Jeanne la bataillonneuse, suivi de Miss Adrienne » de Géo Chkouroupiy, en traduction française dans la collection Modernisme ukrainien. La guerre et la révolution de 1917. Puis l’usine, le chômage et les mira
+
+- Giga AI: A Stunning Interactive Website for AI Agents | Web Design & Motion Graphics
+  URL: https://abvx.xyz/writing/videos/PoOxfMsBP9E
+  Summary: What if an AI company's website didn't just tell you what its product does, but actually let you experience it? Meet Giga AI, a customer support automation platform with a seriously impressive interactive website. And th
 
 - CapCut Is Coming to ChatGPT! AI Video Editing Just Got Interesting
   URL: https://abvx.xyz/writing/videos/ppz1g7gRDds

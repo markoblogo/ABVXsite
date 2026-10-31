@@ -7944,7 +7944,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-30T22:21:19.438Z",
+      "updatedAt": "2026-10-31T09:23:22.519Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10473,6 +10473,44 @@
       "links": [],
       "publishedAt": "2026-10-30",
       "updatedAt": "2026-10-30",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #21 — Recognition & Self-Worth",
+      "summary": "Twenty translated notebook fragments on recognition & self-worth.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-21-recognition-self-worth",
+      "tags": [
+        "psychology-notebook",
+        "identity"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-31",
+      "updatedAt": "2026-10-31",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #22 — Feelings & Room to Breathe",
+      "summary": "Twenty translated notebook fragments on feelings & room to breathe.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-22-feelings-room-to-breathe",
+      "tags": [
+        "psychology-notebook",
+        "feelings"
+      ],
+      "links": [],
+      "publishedAt": "2026-10-31",
+      "updatedAt": "2026-10-31",
       "related": []
     },
     {

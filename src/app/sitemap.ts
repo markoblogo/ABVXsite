@@ -1,3 +1,4 @@
+import {staticPaths,staticLocales,localizedPath,staticAlternates,staticUpdatedAt} from '@/lib/static-locales.mjs';
 import type {NativeWriting} from '@/content/types';
 import type {FeedItem} from '@/lib/feed-types';
 import discovery from '../../content/writing-discovery.json';
@@ -69,7 +70,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const tokiPonaDate = latestDate([...books.filter(book => ['the-strange-case-of-dr-jekyll-and-mr-hyde-in-toki-pona','stoic-wisdom-toki-pona'].includes(book.slug)),...artifacts.filter(item=>item.slug==='toki-pona-ai-translator'), pageMetadata['/toki-pona']]);
 
   const staticRoutes: MetadataRoute.Sitemap = [
-    { url: `${base}`, lastModified: allContentDate, changeFrequency: 'weekly', priority: 1 },
+    ...staticPaths.flatMap(path=>staticLocales.map(locale=>({url:base+(path==='/'&&locale==='en'?'':localizedPath(path,locale)),lastModified:path==='/'?allContentDate:path==='/about'?aboutDate:new Date(staticUpdatedAt),alternates:{languages:staticAlternates(path)},changeFrequency:'monthly' as const,priority:path==='/'?1:0.75}))),
     { url: `${base}/ami`, lastModified: contentDate(pageMetadata['/ami']), alternates:{languages:{en:`${base}/ami`,fr:`${base}/fr/ami`}}, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/fr/ami`, lastModified: contentDate(pageMetadata['/fr/ami']), alternates:{languages:{en:`${base}/ami`,fr:`${base}/fr/ami`}}, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${base}/focus`, lastModified: focusDate, changeFrequency: 'weekly', priority: 0.9 },
@@ -79,9 +80,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}/writing`, lastModified: writingDate, changeFrequency: 'weekly', priority: 0.75 },
     { url: `${base}${workingStoriesSeries.canonicalPath}`, lastModified: latestDate([...storyDates, workingStoriesSeries]), changeFrequency: 'weekly', priority: 0.6 },
     { url: `${base}${kitchenNotes.canonicalPath}`, lastModified: latestDate([...writing.filter(item => item.collection === kitchenNotes.id), kitchenNotes]), changeFrequency: 'monthly', priority: 0.55 },
-    { url: `${base}/about`, lastModified: aboutDate, changeFrequency: 'monthly', priority: 0.75 },
     { url: `${base}/llmo`, lastModified: contentDate(pageMetadata['/llmo']), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${base}/work-with-me`, lastModified: contentDate(pageMetadata['/work-with-me']), changeFrequency: 'monthly', priority: 0.72 },
     { url: `${base}/toki-pona`, lastModified: tokiPonaDate, changeFrequency: 'monthly', priority: 0.65 },
   ];
 

@@ -1,3 +1,4 @@
+import {checkStaticLocales} from './static-locales-qa.mjs';
 import {createQaPage} from './qa-browser.mjs';
 import { readSeoDocument, assertSeoPage } from './seo-page-contract.mjs';
 import { writingArchiveItems } from '../src/lib/writing-archive.mjs';
@@ -362,6 +363,7 @@ await withQaServer(async (base) => {
     }
     await visit(base);
     assert.ok((await page.title()).startsWith('Marketing, Creative Direction, Product & AI'));
+    await checkStaticLocales(page,base);
     console.log(`SEO discovery checks passed: ${routes.length} unique page titles and routes, complete public indexes, editorial dates, localized metadata and mobile/desktop Toki Pona navigation.`);
   } finally {
     await browser.close();

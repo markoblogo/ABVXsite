@@ -7826,6 +7826,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude Code Turns Machines Into Interactive 3D Simulators | Teardown Skill",
+      "summary": "What if you could take apart a V8 engine, explore an aircraft's landing gear, or see exactly how a walking robot works? Without touching a real machine. Meet Teardown, a free, open-source Claude Code skill that transform",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/cXIt9LAb5vE",
+      "publishedAt": "2026-10-31T13:22:34.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=cXIt9LAb5vE"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude Code: Sonnet + Opus + Haiku. A Smarter AI Agent Setup",
       "summary": "What if you could make Claude Code more efficient by giving each AI model a different job? Instead of using the most expensive model for everything, try a smarter multi-model setup: Sonnet does the coding. Opus provides ",
       "canonicalUrl": "https://abvx.xyz/writing/videos/hBU0WpTTbes",
@@ -7944,7 +7967,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-31T09:23:22.519Z",
+      "updatedAt": "2026-10-31T13:36:56.849Z",
       "tags": [],
       "links": [],
       "related": []

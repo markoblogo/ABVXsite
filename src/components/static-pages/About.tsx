@@ -241,7 +241,7 @@ export default function AboutPage() {
         </ol>
       </section>
 
-      <section lang="en" className="about-section" aria-labelledby="about-lines-title">
+      <section className="about-section" aria-labelledby="about-lines-title">
         <div className="about-section__header">
           <div className="eyebrow">Current operating lines</div>
           <h2 id="about-lines-title">Where the work lives now.</h2>
@@ -312,9 +312,9 @@ export default function AboutPage() {
             {bestFitWork.map((item) => (
               <li key={item}>{item}</li>
             ))}
-            <li>
-              <h3 lang="en">{brandCollaboration.title}</h3>
-              <ul lang="en">
+            <li className="about-collaborations">
+              <h3>{brandCollaboration.title}</h3>
+              <ul>
                 {brandCollaboration.offers.map((offer) => (
                   <li key={offer.id}>
                     <strong>{offer.title}</strong>

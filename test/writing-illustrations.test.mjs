@@ -14,3 +14,9 @@ test('supported metadata remains valid and checks actual heading placement',()=>
  assert.deepEqual(validateWritingIllustrations({illustrations:[image]},'## Book\n\nText.'),[]);
  assert.match(validateWritingIllustrations({illustrations:[image]},'## Other').join('\n'),/heading/);
 });
+test('paragraph anchors require one exact rendered paragraph and exclude code, lists and headings',()=>{
+ const image={src:'/media/chart.jpg',alt:'Chart',caption:'Conceptual projection.',width:1280,height:1240,afterParagraph:'An _introductory_ paragraph continued here.'};
+ assert.deepEqual(validateWritingIllustrations({illustrations:[image]},'## Section\n\nAn _introductory_ paragraph\ncontinued here.\n\nNext.'),[]);
+ for(const body of ['## An _introductory_ paragraph continued here.','- An _introductory_ paragraph continued here.','```md\nAn _introductory_ paragraph continued here.\n```','An _introductory_ paragraph continued here.\n\nAn _introductory_ paragraph continued here.']) assert.match(validateWritingIllustrations({illustrations:[image]},body).join('\n'),/one rendered paragraph/);
+ assert.match(validateWritingIllustrations({illustrations:[{...image,afterHeading:'Section'}]},'## Section\n\nAn _introductory_ paragraph continued here.').join('\n'),/exactly one/);
+});

@@ -208,6 +208,12 @@ export default function MarkdownContent({
 }) {
   const blocks = parseMarkdownBlocks(children, headingOffset);
   if (!blocks.length) return null;
+  const renderIllustration = (image: WritingIllustration) => (
+    <div className="my-6 writing-illustration" key={image.src}>
+      <MediaPanel image={image} title={image.alt} variant="writing" />
+      <p className="text-sm">{image.caption}</p>
+    </div>
+  );
 
   return (
     <div className={['content-markdown', className].filter(Boolean).join(' ')}>
@@ -218,12 +224,7 @@ export default function MarkdownContent({
           const Heading = `h${block.level}` as 'h2' | 'h3' | 'h4';
           return <Fragment key={`${block.type}-${index}`}>
             <Heading>{inlineMarkdownNodes(block.text)}</Heading>
-            {illustrations.filter(image => image.afterHeading === block.text).map(image => (
-              <div className="my-6 writing-illustration" key={image.src}>
-                <MediaPanel image={image} title={image.alt} variant="writing" />
-                <p className="text-sm">{image.caption}</p>
-              </div>
-            ))}
+            {illustrations.filter(image => image.afterHeading === block.text).map(renderIllustration)}
           </Fragment>;
         }
 
@@ -242,9 +243,15 @@ export default function MarkdownContent({
         // Inline links, lists and code examples keep ordinary Markdown behavior.
         const video = embedVideos ? block.text.match(/^\[([^\]\n]+)\]\((https:\/\/[^\s)]+)\)$/) : null;
         if (video && youtubeVideoId(video[2])) {
-          return <YouTubeFigure key={`video-${index}`} href={video[2]} title={video[1]} />;
+          return <Fragment key={`video-${index}`}>
+            <YouTubeFigure href={video[2]} title={video[1]} />
+            {illustrations.filter(image => image.afterParagraph === block.text).map(renderIllustration)}
+          </Fragment>;
         }
-        return <p key={`${block.type}-${index}`}>{inlineMarkdownNodes(block.text)}</p>;
+        return <Fragment key={`${block.type}-${index}`}>
+          <p data-writing-anchor={illustrations.some(image => image.afterParagraph === block.text) ? block.text : undefined}>{inlineMarkdownNodes(block.text)}</p>
+          {illustrations.filter(image => image.afterParagraph === block.text).map(renderIllustration)}
+        </Fragment>;
       })}
     </div>
   );

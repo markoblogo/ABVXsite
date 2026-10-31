@@ -147,3 +147,7 @@ Core site rendering requires no CMS credentials or YouTube API key. Optional sit
 References: [Plausible custom events](https://plausible.io/docs/custom-event-goals), [outbound tracking](https://plausible.io/docs/outbound-link-click-tracking), [YouTube player parameters](https://developers.google.com/youtube/player_parameters), [Google AI features](https://developers.google.com/search/docs/appearance/ai-features).
 
 Native video companions retain every eligible translation in the release index. Permanent watch redirects use `videoRedirects`, chosen from immutable first-addition chronology; registering a later translation or editing its date does not replace the primary. SEO QA uses deployed companion eligibility. See [the native release rules](abvx-os-publishing.md#stable-native-video-release).
+
+### Catalogue read performance
+
+`groupCatalogueSources` parses each merged source once per request to classify visible books, projects, series and sections. It preserves source bytes, ordering and the existing visibility policy; it introduces no cross-request cache. Live store membership and tombstones remain authoritative. Benchmark grouping separately from provider latency and browser load: CPU improvements are not page-load or Core Web Vitals results. Measure current snapshot size/history before considering storage segmentation; preserve conditional writes, revision history and withdrawal behavior.

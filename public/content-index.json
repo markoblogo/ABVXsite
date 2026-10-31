@@ -7967,7 +7967,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-31T13:36:56.849Z",
+      "updatedAt": "2026-10-31T14:37:25.547Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10762,6 +10762,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=7hkMaEjINZA"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "StableGen: Generate Rigged 3D Characters Locally with AI | Free Blender Add-on",
+      "summary": "What if you could describe a 3D character in a single prompt and get a textured, rigged model directly inside Blender? Without relying on expensive cloud-based 3D generation services? Meet StableGen, a free, open-source ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/VLObu0Pl9D0",
+      "publishedAt": "2026-10-31T14:12:41.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=VLObu0Pl9D0"
         }
       ],
       "related": []

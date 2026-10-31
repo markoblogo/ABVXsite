@@ -2406,6 +2406,17 @@
     },
     {
       "source": "youtube",
+      "title": "StableGen: Generate Rigged 3D Characters Locally with AI | Free Blender Add-on",
+      "url": "https://www.youtube.com/watch?v=VLObu0Pl9D0",
+      "publishedAt": "2026-10-31T14:12:41.000Z",
+      "excerpt": "What if you could describe a 3D character in a single prompt and get a textured, rigged model directly inside Blender? Without relying on expensive cloud-based 3D generation services? Meet StableGen, a free, open-source ",
+      "coverImage": "https://i.ytimg.com/vi/VLObu0Pl9D0/hqdefault.jpg",
+      "videoDescription": "What if you could describe a 3D character in a single prompt and get a textured, rigged model directly inside Blender?\n\nWithout relying on expensive cloud-based 3D generation services?\n\nMeet StableGen, a free, open-source Blender add-on that brings AI-powered 3D generation, texturing, and character rigging into your existing workflow.\n\nAnd the best part? It works with AI models running on your own hardware.\n\nHere's what StableGen can do:\n\nText to 3D: Generate textured 3D models from simple text descriptions.\n\nImage to 3D: Turn reference images into actual 3D geometry.\n\nAutomatic rigging: Create character skeletons and skin weights using SkinTokens.\n\nAI texturing: Generate detailed textures using SDXL, Qwen Image, and other supported models.\n\nPBR materials: Create albedo, roughness, metallic, and normal maps.\n\nTexture editing: Modify specific parts of a model without regenerating everything.\n\nAnimation support: Retarget existing FBX and BVH animations onto generated characters.\n\nGame engine export: Export assets to Unity, Unreal Engine, Godot, or web-based 3D projects.\n\nAnd here's how it works.\n\nStableGen combines several specialized AI models through ComfyUI.\n\nTRELLIS.2 generates the 3D mesh.\n\nSkinTokens builds the character rig.\n\nDiffusion models generate and refine the textures.\n\nAnd Blender brings everything together into an editable 3D asset.\n\nNo need to manually switch between multiple AI generation websites.\n\nBut there's an important catch.\n\nRunning these models locally still requires a capable computer.\n\nThe developers recommend an NVIDIA GPU, with around 8GB of VRAM for SDXL texturing and 16GB or more for some advanced image models.\n\nYou'll also need Blender, ComfyUI, and enough disk space for the model weights.\n\nAnd while automatic rigging is impressive, complex characters may still need manual cleanup before they're ready for production.\n\nStill, this is a fascinating development for indie game creators, 3D artists, and anyone experimenting with AI-powered character creation.\n\nWe're moving from generating static 3D objects to creating assets that can actually be animated, edited, and used in games.\n\nAnd increasingly, we can do it on our own machines.\n\nFrom a text prompt to a rigged 3D character. Right inside Blender.\n\nStableGen on GitHub:\nhttps://github.com/sakalond/StableGen\n\nFree and open source under GPL-3.0.\n\n#StableGen #Blender3D #AI3D #TextTo3D #ComfyUI #AIGameDevelopment",
+      "addedAt": "2026-10-31T14:37:25.547Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "FLUX 3 Image Klein vs Krea 3: Two New AI Image Models That Change the Game",
       "url": "https://www.youtube.com/watch?v=vZ2iE97Qncs",
       "publishedAt": "2026-10-24T11:26:09.000Z",

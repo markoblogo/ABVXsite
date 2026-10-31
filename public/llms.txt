@@ -371,6 +371,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/vD_pNbzvoiM
   Summary: You spent hours building your project. Now you need a video to show it off. What if Claude Code could handle that part too? Meet Brag, an open-source AI agent skill that turns your project into a polished promotional vid
 
+- StableGen: Generate Rigged 3D Characters Locally with AI | Free Blender Add-on
+  URL: https://abvx.xyz/writing/videos/VLObu0Pl9D0
+  Summary: What if you could describe a 3D character in a single prompt and get a textured, rigged model directly inside Blender? Without relying on expensive cloud-based 3D generation services? Meet StableGen, a free, open-source
+
 - FLUX 3 Image Klein vs Krea 3: Two New AI Image Models That Change the Game
   URL: https://abvx.xyz/writing/videos/vZ2iE97Qncs
   Summary: Two new AI image models just dropped. And they're approaching the same problem from completely different directions. Black Forest Labs released FLUX 3 Image Klein. Krea launched Krea 3. One focuses on powerful, affordabl

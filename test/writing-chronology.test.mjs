@@ -81,11 +81,13 @@ test('invalid, future, duplicate and unsafe registry entries are rejected', () =
   assert.ok(validateWritingDiscovery({ version: 1, items: [null] }).length);
 });
 
-test('homepage and Writing share the same feed without adding homepage slots', () => {
+test('professional homepage links to Writing while the complete feed stays on Writing', () => {
   const home = readFileSync('src/app/page.tsx', 'utf8');
   const writing = readFileSync('src/app/writing/page.tsx', 'utf8');
-  assert.ok(home.includes('(await getWritingFeed()).slice(0, 3)'));
-  assert.ok(home.includes('[0, 1, 2].map'));
+  assert.ok(home.includes('href="/writing"'));
+  assert.ok(home.includes('id="selected-projects"'));
+  assert.ok(!home.includes('getWritingFeed'));
+  assert.ok(home.includes('last 12–18 months'));
   assert.ok(writing.includes('const allPosts = await getWritingFeed()'));
   assert.ok(!home.includes('mediumLatest'));
 });

@@ -1,171 +1,18 @@
 import Link from 'next/link';
 import { servicePages } from '@/content/service-pages';
-
-export const metadata = {
-  title: 'Work With Me - AI-native systems and market infrastructure',
-  description:
-    'Consulting, partnerships, grant-backed projects and selected roles for AI-native product development, market infrastructure, LLMO, KDP publishing automation and strategic go-to-market systems.',
-  alternates: { canonical: 'https://abvx.xyz/work-with-me' },
-};
-
-export default function WorkWithMe() {
-  return (
-    <div className="work-with-me-page flex flex-col gap-12">
-      <header className="rounded-2xl border border-black/10 bg-black/[0.03] p-6 dark:border-white/10 dark:bg-white/[0.03] sm:p-7">
-        <div className="mb-3 flex flex-wrap gap-2">
-          <span className="wm-chip">
-            Complex markets
-          </span>
-          <span className="wm-chip wm-chip--accent">
-            AI-native systems
-          </span>
-          <span className="wm-chip">
-            Grant-backed projects
-          </span>
-        </div>
-        <h1 className="text-2xl font-semibold tracking-tight">
-          AI-native systems, market infrastructure and strategic execution
-        </h1>
-        <p className="mt-2 text-zinc-700 dark:text-zinc-300">
-          I work with teams building complex, technical and market-facing systems:
-          AI-native workflows, market infrastructure, publishing systems, LLMO
-          surfaces and go-to-market systems that need structure.
-        </p>
-        <p className="mt-3 text-sm font-medium text-zinc-600 dark:text-zinc-300">
-          Available for consulting, partnerships, grant-backed collaborations and selected full-time or fractional roles.
-        </p>
-        <div className="mt-4 flex flex-wrap gap-3">
-          <a
-            href="#start-conversation"
-            className="wm-btn wm-btn--primary"
-          >
-            Work with me
-          </a>
-          <Link
-            href="/systems"
-            className="wm-btn wm-btn--secondary"
-          >
-            See systems
-          </Link>
-        </div>
-        <p className="mt-3 text-xs text-zinc-500 dark:text-zinc-400">
-          Working in Paris time (CET/CEST).
-        </p>
-      </header>
-
-      <section className="flex flex-col gap-4" id="focused-entry-points">
-        <div>
-          <h2 className="text-lg font-semibold">Focused entry points</h2>
-          <p className="mt-2 max-w-3xl text-sm text-zinc-600 dark:text-zinc-300">
-            If you arrived with a specific problem, start with the closest page. Each page maps the buyer problem,
-            useful outputs, public evidence and common fit questions.
-          </p>
-        </div>
-        <div className="grid gap-4 md:grid-cols-2">
-          {servicePages.map((page) => (
-            <Link className="wm-card rounded-xl p-5 no-underline" href={`/work-with-me/${page.slug}`} key={page.slug}>
-              <span className="wm-chip">{page.eyebrow}</span>
-              <h3 className="mt-3 text-base font-semibold">{page.shortTitle}</h3>
-              <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">{page.summary}</p>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      <section className="flex flex-col gap-4" id="engagements">
-        <h2 className="text-lg font-semibold">How I help teams ship</h2>
-        <div className="grid gap-4 md:grid-cols-3">
-        <div className="wm-card rounded-xl p-5">
-          <div className="wm-chip">Market systems</div>
-          <div className="mt-2 text-sm font-semibold">Agro-market infrastructure sprint</div>
-          <div className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
-            For teams working around physical commodities, brokerage, indexes or market intelligence.
-          </div>
-          <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-700 dark:text-zinc-300">
-            <li>Brokerage workflow and execution-layer mapping</li>
-            <li>Market-intelligence, dashboard or benchmark structure</li>
-            <li>Participant, signal, data and methodology model</li>
-            <li>Commercial narrative for partners, grants or pilots</li>
-            <li>Handoff: operating map + prioritized build plan</li>
-          </ul>
-        </div>
-
-        <div className="wm-card rounded-xl p-5">
-          <div className="wm-chip">Agentic execution</div>
-          <div className="mt-2 text-sm font-semibold">AI-native workflow sprint</div>
-          <div className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
-            For teams that want agent-assisted execution without losing review discipline.
-          </div>
-          <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-700 dark:text-zinc-300">
-            <li>AGENTS/RUNBOOK and project instruction surfaces</li>
-            <li>Reusable skillpacks and validation gates</li>
-            <li>Debugging, audit, research and handoff workflows</li>
-            <li>Repo context, risk notes and operating conventions</li>
-            <li>Implementation loop: ship, verify, document, repeat</li>
-          </ul>
-        </div>
-
-        <div className="wm-card wm-card--accent rounded-xl p-5">
-          <div className="wm-chip wm-chip--accent">Strategy to execution</div>
-          <div className="mt-2 text-sm font-semibold">Product, GTM and grant narrative system</div>
-          <div className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
-            For complex products that need to be legible to clients, partners, evaluators and AI search.
-          </div>
-          <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-700 dark:text-zinc-300">
-            <li>Positioning, offer and stakeholder narrative</li>
-            <li>Landing/site/deck structure for technical products</li>
-            <li>SEO, JSON-LD, LLMO and machine-readable indexes</li>
-            <li>Evidence map: projects, methods, traction and use cases</li>
-            <li>Implementation sprint: publish, measure and iterate</li>
-          </ul>
-        </div>
-        </div>
-      </section>
-
-      <section className="wm-panel rounded-xl p-6">
-        <h2 className="text-lg font-semibold">What you get (every time)</h2>
-        <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-zinc-700 dark:text-zinc-300">
-          <li>A clear story: offer, audience, and why you win — in plain language.</li>
-          <li>A practical plan you can execute with your current team and constraints.</li>
-          <li>Shippable artifacts (docs, pages, checklists) — not just advice.</li>
-          <li>An operating layer that connects strategy, product, market workflows and AI-assisted execution.</li>
-        </ul>
-        <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-300">
-          Not sure which track fits? Send 3 lines about what you’re building and where you’re stuck — I’ll point you to the best next step.
-        </p>
-      </section>
-
-      <section className="flex flex-col gap-3">
-        <h2 className="text-lg font-semibold">Credibility snapshot</h2>
-        <ul className="list-disc space-y-1 pl-4 text-sm text-zinc-700 dark:text-zinc-300">
-          <li>20+ years across strategic marketing, product, growth, brand and international business communication.</li>
-          <li>Hands-on agro-market infrastructure work around MN7R, Cropto, commodity indexes, monitoring and brokerage workflows.</li>
-          <li>AI-native development stack: agent skills, project instruction layers, validation-gated workflows and LLMO infrastructure.</li>
-        </ul>
-      </section>
-
-      <section className="wm-cta flex flex-col gap-3 rounded-xl p-6" id="start-conversation">
-        <h2 className="text-lg font-semibold">Start a conversation</h2>
-        <p className="text-sm">
-          Best via LinkedIn DM for quick context. Email works for longer briefs or partnership ideas.
-        </p>
-        <div className="flex flex-wrap gap-3">
-          <a
-            className="wm-btn wm-btn--primary plausible-event-name=Contact+Click"
-            href="https://www.linkedin.com/in/abvcreative/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn DM
-          </a>
-          <a
-            className="wm-btn wm-btn--secondary plausible-event-name=Contact+Click"
-            href="mailto:a.biletskiy@gmail.com"
-          >
-            Email
-          </a>
-        </div>
-      </section>
-    </div>
-  );
-}
+export const metadata={title:'Work with me - Marketing, creative direction, product & AI',description:'Consulting, marketing and creative leadership, product management and digital transformation with Anton Biletskyi-Volokh. From a brief to implementation and testing.',alternates:{canonical:'https://abvx.xyz/work-with-me'}};
+const roles=[
+ {title:'Consultant',text:'Clarify the opportunity, audience and business problem. Develop a strategy, shape a proposition and identify the smallest useful test.'},
+ {title:'Marketing Director',text:'Connect positioning, brand, go-to-market and campaign execution. Organise the work around a clear audience and measurable response.'},
+ {title:'Creative Director',text:'Develop concepts for brands, products and campaigns. Guide the creative work from the initial idea through production and launch.'},
+ {title:'Product Manager',text:'Turn needs into hypotheses, concepts and prototypes. Coordinate implementation, test with users and use the findings to decide what comes next.'},
+ {title:'Digital Transformation Lead',text:'Find where AI and automation can improve how a business works. Build practical tools and processes, with clear responsibilities and human review.'},
+];
+export default function WorkWithMe(){return <div className="work-with-me-page flex flex-col gap-12">
+ <header className="wm-panel rounded-xl p-6"><div className="eyebrow">For employers & partners</div><h1 className="text-3xl font-semibold">Marketing, creative direction and product thinking. With the ability to build.</h1><p className="mt-4">I combine over 20 years of marketing, creative and business experience with hands-on AI and technology practice. I can help take a brief from the first question to a concrete product, campaign or working process — and test it in practice.</p><p className="mt-3">Open to consulting, full-time or fractional leadership roles, project work and partnerships. Based in France, working in Paris time.</p><div className="hero-actions"><a href="#start-conversation">Discuss an opportunity →</a><Link href="/about">Experience & background</Link></div></header>
+ <section><div className="eyebrow">Roles & responsibilities</div><h2 className="text-2xl font-semibold">Where I can contribute</h2><div className="mt-5 grid gap-4 md:grid-cols-2">{roles.map(role=><article className="wm-card rounded-xl p-5" key={role.title}><h3 className="text-lg font-semibold">{role.title}</h3><p className="mt-2">{role.text}</p></article>)}</div></section>
+ <section className="wm-panel rounded-xl p-6"><h2 className="text-2xl font-semibold">One approach, different kinds of work</h2><p className="mt-3">A physical or digital product, a marketing campaign or a business process starts with the same questions: who is it for, what should change, and how will we know whether it works?</p><ol className="mt-4 list-decimal space-y-2 pl-5"><li>Understand the brief, audience and constraints.</li><li>Find an idea and turn it into a testable proposition.</li><li>Build the prototype, campaign or workflow using the appropriate tools.</li><li>Test, learn and improve before expanding the work.</li></ol></section>
+ <section><h2 className="text-2xl font-semibold">Experience and recent practice</h2><p className="mt-3">My background spans strategic marketing, creative direction, brands, product development and business operations. The projects on this site document approximately the last 12–18 months, when AI has become a central part of how I build and experiment. They are a recent chapter, rather than a complete career portfolio.</p><div className="hero-actions"><Link href="/about">Professional experience →</Link><Link href="/systems">Recent projects →</Link><Link href="/focus">Market infrastructure →</Link></div></section>
+ <section id="focused-entry-points"><h2 className="text-2xl font-semibold">Explore specific areas</h2><div className="mt-4 grid gap-4 md:grid-cols-2">{servicePages.map(page=><Link className="wm-card rounded-xl p-5 no-underline" href={'/work-with-me/'+page.slug} key={page.slug}><h3 className="font-semibold">{page.shortTitle}</h3><p className="mt-2 text-sm">{page.summary}</p></Link>)}</div></section>
+ <section className="wm-cta rounded-xl p-6" id="start-conversation"><h2 className="text-2xl font-semibold">Let’s discuss the work</h2><p className="mt-3">For a role, share the responsibilities and the team’s priorities. For a project or partnership, tell me what you want to achieve, where you are now and what is getting in the way.</p><div className="mt-4 flex flex-wrap gap-3"><a className="wm-btn wm-btn--primary plausible-event-name=Contact+Click" href="https://www.linkedin.com/in/abvcreative/" target="_blank" rel="noopener noreferrer">LinkedIn DM</a><a className="wm-btn wm-btn--secondary plausible-event-name=Contact+Click" href="mailto:a.biletskiy@gmail.com">Email</a></div></section>
+ </div>;}

@@ -3,7 +3,7 @@
 [![Website](https://img.shields.io/badge/Website-abvx.xyz-111827?logo=vercel&logoColor=white)](https://abvx.xyz/)
 [![CI](https://github.com/markoblogo/ABVXsite/actions/workflows/ci.yml/badge.svg)](https://github.com/markoblogo/ABVXsite/actions/workflows/ci.yml)
 
-Public website and working portfolio of **Anton Biletskyi-Volokh**: agro-commodity market infrastructure, software projects, AI-assisted workflows, books and writing.
+Professional portfolio and working catalogue of **Anton Biletskyi-Volokh**: marketing, creative direction, product management and AI-enabled digital transformation. Projects, experience and collaboration lead the public navigation; books and writing remain the author library. The catalogue covers roughly the last 12–18 months; earlier career experience is described on About and in selected Working Stories.
 
 ## Explore
 

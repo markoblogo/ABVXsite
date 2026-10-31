@@ -81,7 +81,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}${kitchenNotes.canonicalPath}`, lastModified: latestDate([...writing.filter(item => item.collection === kitchenNotes.id), kitchenNotes]), changeFrequency: 'monthly', priority: 0.55 },
     { url: `${base}/about`, lastModified: aboutDate, changeFrequency: 'monthly', priority: 0.75 },
     { url: `${base}/llmo`, lastModified: contentDate(pageMetadata['/llmo']), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${base}/work-with-me`, lastModified: trafficLandingUpdatedAt, changeFrequency: 'monthly', priority: 0.72 },
+    { url: `${base}/work-with-me`, lastModified: contentDate(pageMetadata['/work-with-me']), changeFrequency: 'monthly', priority: 0.72 },
     { url: `${base}/toki-pona`, lastModified: tokiPonaDate, changeFrequency: 'monthly', priority: 0.65 },
   ];
 

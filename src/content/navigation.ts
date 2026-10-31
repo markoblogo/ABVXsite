@@ -30,12 +30,12 @@ export type SocialIconName =
   | 'forkfolio';
 
 export const footerPrimaryLinks: FooterLink[] = [
+  { label: 'Projects', href: '/systems' },
+  { label: 'Experience', href: '/about' },
+  { label: 'Work with me', href: '/work-with-me' },
   { label: 'Focus', href: '/focus' },
-  { label: 'Systems', href: '/systems' },
   { label: 'Books', href: '/books' },
   { label: 'Writing', href: '/writing' },
-  { label: 'About', href: '/about' },
-  { label: 'Contact / Work with me', href: '/about' },
 ];
 
 export const footerArchiveLinks: FooterLink[] = [

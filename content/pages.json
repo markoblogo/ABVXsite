@@ -1,10 +1,10 @@
 {
   "/": {
-    "seoTitle": "AI-native Systems & Market Infrastructure",
-    "updatedAt": "2026-10-09"
+    "seoTitle": "Marketing, Creative Direction, Product & AI — Anton Biletskyi-Volokh",
+    "updatedAt": "2026-10-31"
   },
   "/about": {
-    "updatedAt": "2026-10-09"
+    "updatedAt": "2026-10-31"
   },
   "/books": {
     "updatedAt": "2026-10-15"
@@ -29,5 +29,8 @@
   },
   "/writing/archive": {
     "updatedAt": "2026-10-14"
+  },
+  "/work-with-me": {
+    "updatedAt": "2026-10-31"
   }
 }

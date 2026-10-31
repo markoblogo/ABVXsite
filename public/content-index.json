@@ -1243,10 +1243,15 @@
           "type": "youtube",
           "label": "Series trailer",
           "url": "https://youtu.be/89kTx1LhEP0"
+        },
+        {
+          "type": "youtube",
+          "label": "Series video 2",
+          "url": "https://youtu.be/WxEa5q_PPOk"
         }
       ],
       "publishedAt": null,
-      "updatedAt": "2026-10-14",
+      "updatedAt": "2026-10-31",
       "related": [
         {
           "title": "Good Dog, Bad Authority: A Darkly Comic System Apocalypse LitRPG (Good Dogs of the Apocalypse Book 3)",

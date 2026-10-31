@@ -33,6 +33,11 @@
       "type": "youtube",
       "label": "Series trailer",
       "url": "https://youtu.be/89kTx1LhEP0"
+    },
+    {
+      "type": "youtube",
+      "label": "Series video 2",
+      "url": "https://youtu.be/WxEa5q_PPOk"
     }
   ],
   "sortRank": 60,
@@ -55,7 +60,7 @@
     "width": 1400,
     "height": 934
   },
-  "updatedAt": "2026-10-14"
+  "updatedAt": "2026-10-31"
 }
 ---
 

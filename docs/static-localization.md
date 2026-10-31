@@ -4,7 +4,9 @@ English `/`, `/about` and `/work-with-me` retain their URLs. French uses `/fr`, 
 
 The shared templates live in `src/components/static-pages/`. `static-translations.json` supplies explicit French/Ukrainian copy for those templates; the server-only renderer applies it before sending HTML. SEO titles/descriptions live in `content/static-pages.json`. Maintain both translations when editing English copy. The locale route map is deliberately restricted to three paths.
 
-Project, book and writing blocks remain verbatim and retain original URLs, with `lang="en"` boundaries in the templates. Their content is not sent through the translation adapter. The wider catalogues, detail pages and service detail routes do not acquire implied translations. The existing `/fr/ami` page is independent of this profile group. Footer copy remains English and declares its language.
+Actual project cards and project-name strips remain verbatim behind `lang="en"` boundaries. Section headings, introductions, catalogue navigation cards, collaboration offers, library overview and navigation buttons are localized; their destination URLs and brand names remain unchanged. The wider catalogues, detail pages and service detail routes do not acquire implied translations. The existing `/fr/ami` page is independent of this profile group. Footer copy remains English and declares its language.
+
+The localized header translates all six navigation labels and accessibility labels. Ukrainian displays “Антон Білецький-Волох”; French and English retain the Latin name. Catalogue links retain their original destinations.
 
 The header selector sits at the end of the logo/name block, before Projects. It switches the same page between EN/FR/UK; the profile links retain the chosen locale. Opening a catalogue leaves this scope. Desktop/tablet/mobile retain the existing scrollable menu.
 

@@ -566,5 +566,105 @@
   "Narrative, positioning, offer design and proof architecture for products that cross technical, operational and commercial boundaries.": {
     "fr": "Récit, positionnement, conception de l’offre et organisation des preuves pour les produits à la croisée des enjeux techniques, opérationnels et commerciaux.",
     "uk": "Комунікація, позиціювання, формування пропозиції та система доказів для продуктів на перетині технічних, операційних і комерційних завдань."
+  },
+  "Current operating lines": {
+    "fr": "Domaines d’activité actuels",
+    "uk": "Поточні напрями роботи"
+  },
+  "Where the work lives now.": {
+    "fr": "Mes activités aujourd’hui.",
+    "uk": "Де представлена моя робота сьогодні."
+  },
+  "Current Focus": {
+    "fr": "Priorités actuelles",
+    "uk": "Поточні пріоритети"
+  },
+  "Systems Catalogue": {
+    "fr": "Catalogue des systèmes",
+    "uk": "Каталог систем"
+  },
+  "Agro-commodity brokerage, market intelligence, commodity indexes and AI-assisted market workflows.": {
+    "fr": "Courtage agricole, analyse de marché, indices de matières premières et processus de marché assistés par l’IA.",
+    "uk": "Брокерська діяльність на аграрних ринках, ринкова аналітика, товарні індекси та робочі процеси зі ШІ."
+  },
+  "Agentic development tools, reusable skillpacks, project instruction layers and orchestration systems.": {
+    "fr": "Outils de développement avec agents, ensembles de compétences réutilisables, consignes de projet et systèmes d’orchestration.",
+    "uk": "Інструменти розробки з агентами, повторно використовувані набори навичок, проєктні інструкції та системи оркестрації."
+  },
+  "Books, field manuals, translations, free editions and publishing lines.": {
+    "fr": "Livres, guides pratiques, traductions, éditions gratuites et collections éditoriales.",
+    "uk": "Книги, практичні посібники, переклади, безкоштовні видання та видавничі серії."
+  },
+  "Writing": {
+    "fr": "Articles",
+    "uk": "Публікації"
+  },
+  "Applied AI notes, market-infrastructure thinking, validation essays and field observations.": {
+    "fr": "Notes sur l’IA appliquée, réflexions sur les infrastructures de marché, essais sur la validation et observations de terrain.",
+    "uk": "Нотатки про прикладний ШІ, роздуми про ринкову інфраструктуру, есе про перевірку гіпотез і практичні спостереження."
+  },
+  "Content & Brand Collaborations": {
+    "fr": "Collaborations de contenu et de marque",
+    "uk": "Співпраця з контентом і брендами"
+  },
+  "Technology & B2B Partnerships": {
+    "fr": "Partenariats technologiques et B2B",
+    "uk": "Технологічні та B2B-партнерства"
+  },
+  "Sponsored technical content, AI product demonstrations, developer tools, SaaS reviews, and newsletter collaborations across YouTube, Substack, and LinkedIn.": {
+    "fr": "Contenus techniques sponsorisés, démonstrations de produits d’IA, outils de développement, présentations de services SaaS et collaborations éditoriales sur YouTube, Substack et LinkedIn.",
+    "uk": "Спонсорований технічний контент, демонстрації ШІ-продуктів, інструменти розробки, огляди SaaS і співпраця в розсилках на YouTube, Substack та LinkedIn."
+  },
+  "Explore technology partnerships ↗": {
+    "fr": "Découvrir les partenariats technologiques ↗",
+    "uk": "Переглянути технологічні партнерства ↗"
+  },
+  "Creative Content & UGC": {
+    "fr": "Contenus créatifs et UGC",
+    "uk": "Креативний контент і UGC"
+  },
+  "Creative product videos, short-form content, visual storytelling, and UGC production for brands across Instagram, X, and YouTube.": {
+    "fr": "Vidéos créatives de produits, formats courts, récits visuels et production de contenu UGC pour les marques sur Instagram, X et YouTube.",
+    "uk": "Креативні відео про продукти, короткі формати, візуальні історії та створення UGC-контенту для брендів в Instagram, X і YouTube."
+  },
+  "Explore creative collaborations ↗": {
+    "fr": "Découvrir les collaborations créatives ↗",
+    "uk": "Переглянути креативну співпрацю ↗"
+  },
+  "Recent projects / last 12–18 months": {
+    "fr": "Projets récents / 12 à 18 derniers mois",
+    "uk": "Нещодавні проєкти / останні 12–18 місяців"
+  },
+  "A recent chapter of a longer career.": {
+    "fr": "Un chapitre récent d’un long parcours.",
+    "uk": "Нещодавній розділ тривалого професійного шляху."
+  },
+  "The projects, books and tools catalogued here were made over roughly the last year to year and a half. Earlier work is represented through the experience overview and selected stories, rather than a complete project archive.": {
+    "fr": "Les projets, livres et outils de ce catalogue ont été réalisés au cours des douze à dix-huit derniers mois environ. Le travail antérieur est présenté dans le parcours professionnel et une sélection de récits, plutôt que dans une archive exhaustive de projets.",
+    "uk": "Проєкти, книги та інструменти цього каталогу створені приблизно за останні рік-півтора. Попередні роботи представлені в огляді досвіду та вибраних історіях, а не в повному архіві проєктів."
+  },
+  "All projects & tools →": {
+    "fr": "Tous les projets et outils →",
+    "uk": "Усі проєкти та інструменти →"
+  },
+  "Personal library": {
+    "fr": "Bibliothèque personnelle",
+    "uk": "Особиста бібліотека"
+  },
+  "Books & writing": {
+    "fr": "Livres et articles",
+    "uk": "Книги та публікації"
+  },
+  "My books, notes and ongoing interests — an archive for readers and people following my work.": {
+    "fr": "Mes livres, notes et centres d’intérêt : une bibliothèque pour les lecteurs et les personnes qui suivent mon travail.",
+    "uk": "Мої книги, нотатки та поточні інтереси — архів для читачів і тих, хто стежить за моєю роботою."
+  },
+  "Books →": {
+    "fr": "Livres →",
+    "uk": "Книги →"
+  },
+  "Writing →": {
+    "fr": "Articles →",
+    "uk": "Публікації →"
   }
 }

@@ -6983,6 +6983,29 @@
       "related": []
     },
     {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "244 Pixel Art Animations Made with Claude Code | Free VFX Library + AI Skill",
+      "summary": "What if you could create hundreds of beautiful pixel art animations without drawing a single sprite? No Photoshop. No Aseprite. No pre-made image assets. Just Claude Code, JavaScript, and a surprisingly effective creativ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/e7OuakMC4cA",
+      "publishedAt": "2026-10-31T16:47:51.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=e7OuakMC4cA"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "writing",
       "section": "writing",
       "ecosystem": "Writing",
@@ -7990,7 +8013,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-31T14:51:06.710Z",
+      "updatedAt": "2026-10-31T16:50:42.758Z",
       "tags": [],
       "links": [],
       "related": []

@@ -36,11 +36,11 @@ export async function checkStaticLocales(page,base){
  }
  assert.equal(titles.size,9);
  await page.goto(base+'/fr/about',{waitUntil:'domcontentloaded'});
- await page.locator('.site-languages a[hreflang="uk"]').click();await page.waitForURL(base+'/uk/about');
+ await page.locator('.site-languages a[hreflang="uk"]').click();await page.waitForURL(base+'/uk/about');await page.waitForFunction(()=>document.documentElement.lang==='uk');
  assert.equal(await page.locator('html').getAttribute('lang'),'uk');
- await page.locator('.site-nav a[href="/uk/work-with-me"]').click();await page.waitForURL(base+'/uk/work-with-me');
+ await page.locator('.site-nav a[href="/uk/work-with-me"]').click();await page.waitForURL(base+'/uk/work-with-me');await page.waitForFunction(()=>document.documentElement.lang==='uk');
  assert.equal(await page.locator('html').getAttribute('lang'),'uk');
- await page.locator('.site-nav a[href="/systems"]').click();await page.waitForURL(base+'/systems');
+ await page.locator('.site-nav a[href="/systems"]').click();await page.waitForURL(base+'/systems');await page.waitForFunction(()=>document.documentElement.lang==='en');
  assert.equal(await page.locator('.site-languages').count(),0);
  assert.equal(await page.locator('html').getAttribute('lang'),'en');
  console.log('Static locales PASS: nine SSR pages, reciprocal alternates, preserved blocks, client navigation and 27 responsive layouts.');

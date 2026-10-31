@@ -9,6 +9,44 @@ YouTube videos in Writing: https://abvx.xyz/writing?source=youtube. Applied AI r
 Machine-readable index: https://abvx.xyz/content-index.json
 Primary layers: Focus = market infrastructure; Systems = operational systems architecture; Books = publishing and intellectual layer; Writing = essays and field notes.
 
+## Profile pages: English, French and Ukrainian
+
+- Marketing, Creative Direction, Product & AI — Anton Biletskyi-Volokh (en)
+  URL: https://abvx.xyz/
+  Summary: Anton Biletskyi-Volokh combines marketing, creative direction and product development with hands-on AI expertise to take ideas from brief to implementation and testing.
+
+- Marketing, création, produit et IA — Anton Biletskyi-Volokh (fr)
+  URL: https://abvx.xyz/fr
+  Summary: Marketing, direction de création, développement de produits et IA avec Anton Biletskyi-Volokh. Du brief à la réalisation et aux tests.
+
+- Маркетинг, креатив, продукти та ШІ — Антон Білецький-Волох (uk)
+  URL: https://abvx.xyz/uk
+  Summary: Маркетинг, креативне керівництво, розвиток продуктів і ШІ з Антоном Білецьким-Волохом. Від завдання до реалізації та перевірки.
+
+- Experience - Marketing, creative direction, product and AI (en)
+  URL: https://abvx.xyz/about
+  Summary: About Anton Biletskyi-Volokh: product, growth and AI-native systems leader with 20+ years across technology, international GTM, brand, market infrastructure and publishing.
+
+- Expérience en marketing, création, produit et IA — Anton Biletskyi-Volokh (fr)
+  URL: https://abvx.xyz/fr/about
+  Summary: Le parcours d’Anton Biletskyi-Volokh : plus de 20 ans en marketing, création, marques et produits, associés à une pratique concrète de l’IA.
+
+- Досвід у маркетингу, креативі, продуктах і ШІ — Антон Білецький-Волох (uk)
+  URL: https://abvx.xyz/uk/about
+  Summary: Професійний шлях Антона Білецького-Волоха: понад 20 років у маркетингу, креативі, брендах і продуктах у поєднанні з практикою ШІ.
+
+- Work with me - Marketing, creative direction, product & AI (en)
+  URL: https://abvx.xyz/work-with-me
+  Summary: Consulting, marketing and creative leadership, product management and digital transformation with Anton Biletskyi-Volokh. From a brief to implementation and testing.
+
+- Conseil, direction marketing, création et IA — Anton Biletskyi-Volokh (fr)
+  URL: https://abvx.xyz/fr/work-with-me
+  Summary: Conseil, direction marketing et créative, gestion de produit et transformation numérique. Collaborer avec Anton Biletskyi-Volokh, du brief aux tests.
+
+- Співпраця: маркетинг, креатив, продукти та ШІ — Антон Білецький-Волох (uk)
+  URL: https://abvx.xyz/uk/work-with-me
+  Summary: Консалтинг, маркетингове й креативне керівництво, продуктовий менеджмент і цифрова трансформація з Антоном Білецьким-Волохом. Від завдання до тесту.
+
 ## YouTube watch pages
 
 - I Turned an Instagram Reel Into 4 Minutes of Ambient Music Using GPT-6 + Codex

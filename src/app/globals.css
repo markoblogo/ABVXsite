@@ -5745,3 +5745,8 @@ a {
 .professional-home[data-static-locale]:not([data-static-locale="en"]) .professional-grid .section-panel h2 { font-size:clamp(1.5rem,2.6vw,2.1rem); line-height:1.05; overflow-wrap:normal; hyphens:auto; }
 .professional-home[data-static-locale]:not([data-static-locale="en"]) .home-section:not([lang="en"]) .home-section__header h2,
 .professional-home[data-static-locale]:not([data-static-locale="en"]) .about-snapshot h2 { font-size:clamp(2rem,5vw,4.3rem); line-height:1; }
+.about-page[data-static-locale]:not([data-static-locale="en"]) .page-header h1 { max-width:calc(100% - 11rem); font-size:clamp(2rem,6vw,5rem); line-height:1; letter-spacing:-0.04em; overflow-wrap:normal; hyphens:auto; }
+@media(max-width:760px) {
+ .about-page[data-static-locale]:not([data-static-locale="en"]) .page-header h1 { max-width:100%; }
+ .about-page[data-static-locale]:not([data-static-locale="en"]) .page-header > .eyebrow { margin-bottom:4rem; }
+}

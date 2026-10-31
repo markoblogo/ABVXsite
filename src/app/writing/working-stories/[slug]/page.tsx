@@ -1,3 +1,4 @@
+import {WritingSubscription} from '@/components/ReadingContinuation';
 import DocumentLanguage from '@/components/DocumentLanguage';
 import { getLiveWritingState } from '@/lib/live-writing';
 import { getRelatedWorkingStories, getWorkingStoryBySlug, workingStoryPath } from '@/content/working-stories';
@@ -25,5 +26,6 @@ export default async function WorkingStoryPage({ params }: { params: Promise<{ s
   return <div data-content-revision={(await getLiveWritingState())?.records[story.slug]?.currentRevision}>
     <DocumentLanguage key={story.slug+':'+story.language} languageOverride={story.language} />
     <WorkingStoryArticle story={story} related={await getRelatedWorkingStories(story)} />
+    <WritingSubscription />
   </div>;
 }

@@ -30,7 +30,7 @@ function fixture(run) {
   try { const result=run({ root, dir, write }); if(result?.then)return result.finally(()=>rmSync(root,{recursive:true,force:true})); rmSync(root,{recursive:true,force:true}); return result; } catch(error) { rmSync(root,{recursive:true,force:true}); throw error; }
 }
 function compile(relative, imports = {}) {
-  imports={'@/components/DocumentLanguage':{default:()=>null,__esModule:true},'@/lib/live-writing':{getLiveWritingState:async()=>null},'./runtime-writing.mjs':{currentSources},'./markdown-source.mjs':{parseMarkdownSource},...imports};
+  imports={'@/components/ReadingContinuation':{WritingSubscription:()=>null},'@/components/DocumentLanguage':{default:()=>null,__esModule:true},'@/lib/live-writing':{getLiveWritingState:async()=>null},'./runtime-writing.mjs':{currentSources},'./markdown-source.mjs':{parseMarkdownSource},...imports};
   const compiled = ts.transpileModule(readFileSync(path.join(repo, relative), 'utf8'), {
     compilerOptions: { jsx: ts.JsxEmit.ReactJSX, module: ts.ModuleKind.CommonJS, esModuleInterop: true },
   }).outputText;

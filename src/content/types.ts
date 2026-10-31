@@ -206,7 +206,10 @@ export type RecipeRecord = {
   variations?: string[];
 };
 
-export type WritingIllustration = ContentImage & { caption: string; afterHeading: string };
+export type WritingIllustration = ContentImage & { caption: string } & (
+  | { afterHeading: string; afterParagraph?: never }
+  | { afterParagraph: string; afterHeading?: never }
+);
 
 export type NativeWriting = BaseContentItem<NativeWritingType> & {
   addedAt?: string;

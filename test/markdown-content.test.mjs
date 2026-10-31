@@ -118,3 +118,14 @@ test('the published Psychology selection preserves all twenty authored fragment 
  assert.ok(!html.includes('<p>---</p>'));
  assert.ok(html.includes("Getting out of the misery loop"));
 });
+test('illustrations follow their exact introductory paragraph, preserving heading placements',()=>{
+ const image={src:'/media/chart.jpg',alt:'Adoption gap chart',caption:'Conceptual projection, not observed data.',width:1280,height:1240};
+ const html=render('## Section\n\nI found _the diagram_.\n\nFollowing explanation.',{illustrations:[{...image,afterParagraph:'I found _the diagram_.'}]});
+ const intro=html.indexOf('<p>I found <em>the diagram</em>.</p>'),figure=html.indexOf('<figure'),next=html.indexOf('<p>Following explanation.</p>');
+ assert.ok(intro>=0&&figure>intro&&next>figure);
+ assert.equal((html.match(/<figure/g)||[]).length,1);
+ assert.ok(html.includes(image.caption));
+ const heading=render('## Section\n\nIntroduction.',{illustrations:[{...image,afterHeading:'Section'}]});
+ assert.ok(heading.indexOf('<figure')>heading.indexOf('</h3>'));
+ assert.ok(heading.indexOf('<figure')<heading.indexOf('<p>Introduction.</p>'));
+});

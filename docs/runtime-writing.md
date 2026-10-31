@@ -40,3 +40,5 @@ Recovery: use content revisions/conditional rollback. Do not simply disable runt
 ## Verification limits
 
 Local acceptance is not proof of Blob account access or public activation. Storage receipts are not Search Console processing/indexing evidence. No automatic book production, KDP action, market research or new scheduler is triggered. Latency and cost savings remain unmeasured until real completed operations exist; the engineering build/test time is separate from post-publication latency.
+
+Illustrations use exactly one placement anchor: `afterHeading` for an exact unique heading, or `afterParagraph` for the exact unique Markdown paragraph text (wrapped lines joined with spaces). Both retain the existing image/caption renderer. Ambiguous, missing, list-only or code-only paragraph anchors fail validation. Existing heading-based placements are unchanged.

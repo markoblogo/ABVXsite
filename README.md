@@ -9,13 +9,14 @@ Professional portfolio and working catalogue of **Anton Biletskyi-Volokh**: mark
 
 | Page | Content |
 | --- | --- |
+| [Projects](https://abvx.xyz/systems) | Recent products, platforms, tools and AI workflows |
+| [Experience](https://abvx.xyz/about) | Professional background and earlier work |
+| [Work with me](https://abvx.xyz/work-with-me) | Consulting, marketing/creative leadership, product management and digital transformation |
 | [Focus](https://abvx.xyz/focus) | Agro-commodity projects, brokerage, market intelligence and AMI |
-| [Systems](https://abvx.xyz/systems) | Market infrastructure, publishing/language tools, AI workflows and standalone utilities |
 | [Books](https://abvx.xyz/books) | Books, translations, series, free editions and companions |
 | [Writing](https://abvx.xyz/writing) | Native articles, Working Stories, Kitchen Notes, Medium, Substack and YouTube |
-| [About](https://abvx.xyz/about) / [Work with me](https://abvx.xyz/work-with-me) | Background, collaborations, services and contact |
 
-Writing includes keyword search across full native post texts and retained external titles/descriptions, source filters, **More posts** and a [complete archive](https://abvx.xyz/writing/archive). Project, book and series pages support multiple labelled videos; book audio loads on reader request.
+The homepage leads with selected projects and collaboration. Writing offers full-text native search, external title/description search, source filters and a [complete archive](https://abvx.xyz/writing/archive). Articles offer related reading, numbered-series navigation where available, collection links and an optional Substack subscription link. Project, book and series pages support labelled videos; book audio loads on request.
 
 ## Run locally
 
@@ -32,7 +33,7 @@ Stack: Next.js 16 App Router, React 19, TypeScript, Tailwind CSS 4 and Vercel. E
 
 ## Content and development
 
-Bundled public sources live in `content/`: projects, books, series, native articles, Working Stories, editorial guides and page metadata. When runtime publishing is enabled, managed records use the private versioned content store as their authority; the bundled files remain the legacy baseline. Routine approved posts, catalogue cards, book series and catalogue groups use the same authenticated publisher without a Git change or rebuild. Local assets live in `public/media/`. Regenerate `public/llms.txt` and `public/content-index.json` with `npm run llms:generate` after public content changes; commit outputs with their sources.
+Bundled public sources live in `content/`: projects, books, series, native articles, Working Stories, editorial guides and page metadata. Managed runtime records use the private versioned content store as their authority; the bundled files remain the legacy baseline. Routine approved posts, catalogue cards, book series and catalogue groups use the same authenticated publisher without a Git change or rebuild. Bundled assets live in `public/media/`; runtime uploads use the authenticated store and authoritative media routes. For **bundled edits**, regenerate `public/llms.txt` and `public/content-index.json` with `npm run llms:generate` after public content changes; commit outputs with their sources. Runtime publications update live discovery without regenerating committed files.
 
 Use the appropriate guide instead of copying a publication process into each task:
 
@@ -42,6 +43,7 @@ Use the appropriate guide instead of copying a publication process into each tas
 | Fast publication of posts, cards, series and catalogue groups | [Runtime publisher](docs/runtime-writing.md) · [Catalogue packet contract](docs/runtime-catalogue.md) |
 | Legacy publication or engineering changes; record measurements | [Publication handoff](docs/abvx-os-publishing.md) |
 | Validate, review and verify a release | [Editorial SEO checklist](docs/editorial-seo-checklist.md) |
+| Back up runtime content, verify recovery or diagnose availability | [Recovery and monitoring](docs/runtime-recovery.md) |
 | Diagnose feeds, discovery, analytics or runtime behavior | [Site operations](docs/site-operations.md) |
 | Export story/recipe collections | [Working Stories](docs/working-stories.md) · [Kitchen Notes](docs/kitchen-notes.md) |
 | Work on integrations | [CortexABV adapter](cortex-abv/README.md) · [Copy sync](docs/project-description-sync.md) · [Ecosystem sync](docs/ecosystem-sync.md) |

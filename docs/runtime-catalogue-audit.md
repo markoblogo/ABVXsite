@@ -1,5 +1,7 @@
 # Runtime catalogue audit — 28 October 2026
 
+> Dated audit record. Counts and local acceptance results below belong to October 28, not the latest release. Use the [catalogue contract](runtime-catalogue.md) for current operation and the [release checklist](editorial-seo-checklist.md) for rollout evidence.
+
 ## Scope and findings
 
 The audit followed the content intake, validation, storage, rendering, discovery and recovery boundaries. The existing runtime publisher was reused; no new service or paid dependency was introduced.

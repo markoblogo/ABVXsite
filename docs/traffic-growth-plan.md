@@ -1,43 +1,25 @@
-# ABVX traffic and presentation plan
+# Audience and site priorities
 
-Reviewed: 2026-10-09. This is a plan and measurement reference, not automatic publication authority. Further presentation/features are **deferred at the owner's request** until a later session with refreshed site evidence.
+Updated: 2026-10-31. This replaces the October 9 proposal backlog; it is not publication or outreach authority.
 
-## Goal
+## Public hierarchy
 
-Help potential clients, employers, readers, and technology/creative partners understand Anton's work, inspect evidence, and choose a useful next step. Search traffic is one channel; qualified contacts, collaborations, and book-link intent are separate outcomes.
+The site serves three purposes: the owner’s working catalogue, a portfolio for employers/partners, and discovery of projects/books. Employers and partners are the primary external audience. Projects, experience and collaboration lead; books and writing serve readers and the owner without dominating the homepage.
 
-## Implemented baseline
+The professional offer combines marketing, creative direction, product management and practical AI/digital transformation: move from a request or idea to implementation and testing. Relevant engagement formats include consulting, marketing/creative leadership, product management and transformation work. Describe demonstrated work; do not invent commercial outcomes or claim every experiment is a client deployment.
 
-- Focus, Systems, and Books have linked editorial guides; Focus includes English/Ukrainian pairs. Localized records, canonical paths, language alternates, and dates live in the content sources.
-- `/work-with-me` links six existing service pages: AI GTM, AI workflow systems, LLMO, KDP publishing automation, agro-market infrastructure, and complex-product marketing. Improve their evidence before creating more pages for the same intent.
-- About/footer share technology/B2B and creative/UGC offers from `content/collaborations.json`.
-- Public identity/schema, page titles, canonical routes, sitemap, and machine indexes are maintained in source and checked during releases. `/toki-pona` is an indexable gateway rather than a disconnected private experiment.
-- Writing combines native articles, Medium/Substack, and new embedded YouTube videos. The initial demonstration has pinned local metadata; subsequent videos remain limited to the latest channel-feed entries. See [Site operations](site-operations.md).
-- Three existing editorial pages were strengthened with worked examples. Direct thematic links were published through relevant Medium/Substack articles, YouTube descriptions, and project READMEs, including Index. External placements must be reread live before assuming they remain unchanged.
-- Plausible has separate Book Link Click, Contact Click, and Collaboration Click goals. Tracking definitions and complete 28-day comparison rules are in [Site operations](site-operations.md#analytics).
+The visible project/book catalogue covers roughly the last 12–18 months. About and selected Working Stories carry earlier experience; the catalogue is not a complete career history.
 
-Local verification establishes structure and behavior, not search demand, successful Google sitemap processing, indexing, rankings, or AI citations. Reopen Search Console evidence before calling an old indexing/sitemap issue resolved.
+## Implemented reader paths
 
-## Proposed next package — deferred, not implemented
+- Homepage: selected projects, capabilities, experience and collaboration; secondary Books/Writing access.
+- Native articles: up to three visible related same-language materials, collection links and optional Substack continuation. Numbered Psychology Notebook posts have eligible adjacent-series navigation; standalone articles are excluded.
+- Working Stories retain their existing related-material selection and add subscription access. Substack is an external destination; this does not promise that every native post is emailed. Native RSS is not implemented.
 
-1. **Three evidence-led project cases.** Start with MN7R, an AI-workflow project, and TDM. Add task, Anton's specific role, delivered work, and a public screenshot/demo/repository. Use before/after assets where available. Do not invent business gains or represent a prototype as a production customer result.
-2. **Selected work on the homepage.** Make those cases easy to find without relying solely on the latest updated item. Keep the existing visual language and avoid adding another broad catalogue.
-3. **Service-to-evidence links.** Connect the existing service pages to their strongest cases and make detailed engagement formats reachable from About. Avoid duplicate service pages and generic proof statements.
-4. **Demand-led SEO edits.** Use Search Console to choose 5–10 pages with actual impressions, then inspect queries, position, clicks, title/intro fit, and relevant internal links. Determine whether the bottleneck is indexing, ranking, click-through, or demand before producing more guides.
-5. **One durable video page as a pilot.** A selected video could gain a permanent page with a player, original explanation/example, and project links. This is not currently provided by automatic Writing-feed ingestion; do not start an archive or mass transcript import implicitly.
+Do not revive the old proposal to produce three additional case studies or more service pages without a new owner decision. Existing cases remain useful evidence.
 
-Before resuming: fetch current `main`, inspect new public updates, check live analytics/search evidence, and reconfirm the requested slice. These proposals do not authorize client outreach or publication to other platforms.
+## Search and measurement
 
-## Measurement
+Use the [operations guide](site-operations.md) for exact-page Search Console checks, 7/14/28-day follow-up and analytics definitions. A valid sitemap, HTTP 200, metadata and internal links establish technical readiness, not successful Google processing, indexing, rankings or demand. Keep dated search observations in the private journal rather than this plan.
 
-Use two complete 28-day periods with identical filters and goal definitions; exclude the current partial day. Do not infer historical separated goals from outbound-link totals or attribute earlier traffic increases to later publications. Small samples and owner visits limit conclusions.
-
-Track discovery (Search Console impressions, queries, clicks, indexed pages), site entry/referrers (Plausible), and separate book/contact/collaboration intent. A link click is not a sale, delivered inquiry, or booking. Report unavailable data explicitly rather than filling it with zero.
-
-## Evidence and permission boundaries
-
-Repository work can use reviewed public content and existing assets. New client names/logos, testimonials, private metrics, case permissions, commercially available offers, or pricing require source evidence and owner decisions. Platform publications/messages require the user's authorization; authenticated access alone is not permission to publish.
-
-Keep canonical routes and paired localization intact. Do not publish generic SEO filler, duplicate pages, invented credentials, unsupported traction, or promises of ranking/AI citation. The existing machine indexes aid consumers but are not a substitute for original useful content and human distribution.
-
-Procedure: [Content editing](content-editing.md) → [release checklist](editorial-seo-checklist.md) → [operations/measurement](site-operations.md).
+Prioritize a measured bottleneck: discovery/processing, indexing, ranking, then click-through. Use comparable complete periods and distinguish main-site data from subdomains. Missing access remains unknown, not zero. Book-link clicks are intent, not sales; contact clicks are not delivered inquiries. External placement, outreach and account actions require their own authorization.

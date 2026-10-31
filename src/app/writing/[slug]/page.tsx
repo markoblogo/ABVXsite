@@ -1,3 +1,4 @@
+import ReadingContinuation from '@/components/ReadingContinuation';
 import DocumentLanguage from '@/components/DocumentLanguage';
 import collection from '../../../../content/kitchen-notes.json';
 import { recipeJsonLd } from '@/content/kitchen-notes.mjs';
@@ -141,6 +142,7 @@ export default async function NativeWritingPage({
           {item.recipe.variations?.length ? <><h3>Variations</h3><ul>{item.recipe.variations.map(variation => <li key={variation}>{variation}</li>)}</ul></> : null}
         </SectionPanel> : null}
       </div>
+      <ReadingContinuation item={item} />
     </div>
   );
 }

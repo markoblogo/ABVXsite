@@ -189,10 +189,10 @@ await withQaServer(async (base) => {
       await visit(base+route);
       const recipe=JSON.parse(await page.locator('#jsonld-recipe').textContent());
       assert.equal(recipe['@type'],'Recipe');
-      const visible=await page.locator('.section-panel').last().innerText();
+      const visible=await page.locator('.native-writing-article__body .section-panel').innerText();
       for(const ingredient of recipe.recipeIngredient) assert.ok(visible.includes(ingredient));
       for(const step of recipe.recipeInstructions) assert.ok(visible.includes(step.text));
-      assert.equal(await page.locator('main a[href="/writing/kitchen-notes"]').count(),1);
+      assert.equal(await page.locator('main a[href="/writing/kitchen-notes"]').count(),2);
       await page.setViewportSize({width:390,height:844});
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), route+' mobile overflow');
       await page.setViewportSize({width:1280,height:900});

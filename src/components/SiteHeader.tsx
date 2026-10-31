@@ -2,11 +2,12 @@ import Link from 'next/link';
 import BrandMark from './BrandMark';
 
 const navItems = [
-  { label: 'Focus', href: '/focus' },
-  { label: 'Systems', href: '/systems' },
-  { label: 'Books', href: '/books' },
-  { label: 'Writing', href: '/writing' },
-  { label: 'About', href: '/about' },
+  { label: 'Projects', href: '/systems', primary: true },
+  { label: 'Experience', href: '/about', primary: true },
+  { label: 'Work with me', href: '/work-with-me', primary: true },
+  { label: 'Focus', href: '/focus', primary: false },
+  { label: 'Books', href: '/books', primary: false },
+  { label: 'Writing', href: '/writing', primary: false },
 ];
 
 export default function SiteHeader() {
@@ -19,7 +20,7 @@ export default function SiteHeader() {
         </Link>
         <nav className="site-nav" aria-label="Primary navigation">
           {navItems.map((item) => (
-            <Link key={item.href} href={item.href}>
+            <Link key={item.href} href={item.href} className={item.primary ? "site-nav__primary" : "site-nav__secondary"}>
               {item.label}
             </Link>
           ))}

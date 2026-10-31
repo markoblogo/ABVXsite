@@ -361,7 +361,7 @@ await withQaServer(async (base) => {
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), 'Toki Pona horizontal overflow');
     }
     await visit(base);
-    assert.ok((await page.title()).startsWith('AI-native Systems & Market Infrastructure'));
+    assert.ok((await page.title()).startsWith('Marketing, Creative Direction, Product & AI'));
     console.log(`SEO discovery checks passed: ${routes.length} unique page titles and routes, complete public indexes, editorial dates, localized metadata and mobile/desktop Toki Pona navigation.`);
   } finally {
     await browser.close();

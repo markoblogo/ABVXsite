@@ -13,7 +13,7 @@ const aboutDescription =
   'About Anton Biletskyi-Volokh: product, growth and AI-native systems leader with 20+ years across technology, international GTM, brand, market infrastructure and publishing.';
 
 export const metadata: Metadata = metadataWithImage({
-  title: 'About Anton - Product, growth and AI-native systems',
+  title: 'Experience - Marketing, creative direction, product and AI',
   description: aboutDescription,
   canonicalPath: '/about',
   image: defaultOgImage,
@@ -47,7 +47,7 @@ const aboutFaqs: ContentFaq[] = [
   {
     question: 'How should a potential employer or client read this site?',
     answer:
-      'Start with About for the professional frame, Focus for agro-commodity and market-infrastructure work, Systems for AI-native operating tools, Books for publishing and knowledge-product experiments, and Writing for applied AI and validation thinking.',
+      'Start with Experience for the professional background, Projects for recent work, and Work with me for consulting, leadership roles and partnerships. The project and book catalogues cover roughly the last 12–18 months; earlier work is described in the experience overview and selected Working Stories.',
   },
 ];
 
@@ -115,6 +115,10 @@ const machineIndexes = [
 ];
 
 const bestFitWork = [
+  'Consultant — marketing, creative strategy, product and AI',
+  'Creative Director',
+  'Product Manager',
+  'Digital Transformation Lead',
   'Head of Product Marketing / GTM',
   'CMO / Head of Growth for early-stage or international products',
   'AI-native product and workflow development',
@@ -152,10 +156,12 @@ export default function AboutPage() {
       <JsonLd id="jsonld-about-page" data={aboutPageJsonLd()} />
       <JsonLd id="jsonld-about-faq" data={faqPageJsonLd({ id: `${SITE_URL}/about#faq`, faqs: aboutFaqs })} />
       <PageHeader
-        eyebrow="About"
-        title="Product and growth systems for complex markets."
-        summary="I help turn complex products, markets and bodies of knowledge into clear propositions, useful systems and executable growth paths."
+        eyebrow="Experience"
+        title="Marketing, creative direction and product experience."
+        summary="Over 20 years across marketing, brands, products and business operations — now combined with hands-on AI and technology practice."
       ><EditorialSectionLink section="about" /></PageHeader>
+
+      <p>The projects and books catalogued on this site cover roughly the last 12–18 months. My earlier career is represented through this experience overview and selected Working Stories; this is not a complete archive of that work.</p>
 
       <section className="about-intro" aria-labelledby="about-positioning-title">
         <div>

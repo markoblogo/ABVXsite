@@ -1,239 +1,44 @@
 import {getLiveCatalogue} from '@/lib/live-catalogue';
-export const dynamic = 'force-dynamic';
-import pageMetadata from '../../content/pages.json';
 import HeroPoster from '@/components/HeroPoster';
 import HomepageLatestCard from '@/components/HomepageLatestCard';
 import JsonLd from '@/components/JsonLd';
-import MarqueeTicker from '@/components/MarqueeTicker';
 import SectionPanel from '@/components/SectionPanel';
-import TagList from '@/components/TagList';
-
-import { getWritingFeed } from '@/lib/writing-feed';
-import { writingCardSource } from '@/lib/writing-chronology.mjs';
-import { collectionPageJsonLd, defaultOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
-import type { Metadata } from 'next';
+import {defaultOgImage,metadataWithImage,SITE_URL,collectionPageJsonLd} from '@/lib/seo';
+import pageMetadata from '../../content/pages.json';
 import Link from 'next/link';
-
-const homeDescription =
-  'Anton Biletskyi-Volokh builds AI-native operating systems for complex markets: market infrastructure, publishing systems, strategic GTM, LLMO and agentic development workflows.';
-
-export const metadata: Metadata = metadataWithImage({
-  title: pageMetadata['/'].seoTitle,
-  description: homeDescription,
-  canonicalPath: '/',
-  image: defaultOgImage,
-});
-
-export const revalidate = 900;
-
-const heroLabels = [
-  'MARKET INFRASTRUCTURE',
-  'AGRO BROKERAGE',
-  'AI-NATIVE SYSTEMS',
-  'WORKFLOW ORCHESTRATION',
-  'MARKET INTELLIGENCE',
-  'STRATEGIC GTM',
+export const dynamic='force-dynamic';
+const description='Anton Biletskyi-Volokh combines marketing, creative direction and product development with hands-on AI expertise to take ideas from brief to implementation and testing.';
+export const metadata=metadataWithImage({title:pageMetadata['/'].seoTitle,description,canonicalPath:'/',image:defaultOgImage});
+const capabilities=[
+ {title:'Products & new opportunities',text:'Find the opportunity, shape the concept and build a prototype to test. Physical or digital products, grounded in a real audience and a clear proposition.'},
+ {title:'Marketing & creative direction',text:'Positioning, brand ideas, campaigns and launches. Connect strategic thinking with creative execution, then test how people respond.'},
+ {title:'AI & digital transformation',text:'Turn new technology into practical workflows. Build tools, automate repetitive work and organise processes that teams can use and improve.'},
 ];
-
-const fallbackLatest = {
-  focus: {
-    title: 'Current Focus',
-    summary:
-      'Agro-commodity trading infrastructure, brokerage workflows, market interfaces, indexes, standards and AI-assisted tools.',
-  },
-  systems: {
-    title: 'Systems Catalogue',
-    summary:
-      'Web services, agentic development experiments, protocols, AI/dev utilities, language systems and technical companions.',
-  },
-  books: {
-    title: 'ABVX Press',
-    summary:
-      'Books, translations, series and publishing projects across AI, strategy, language, culture, markets and systems thinking.',
-  },
-};
-
-function formatDate(iso?: string): string | undefined {
-  if (!iso) return undefined;
-  const time = new Date(iso);
-  if (Number.isNaN(time.valueOf())) return undefined;
-  return time.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'short',
-    day: '2-digit',
-  });
-}
-
-export default async function Home() {
- const {getLatestSectionEntryBook,getLatestSectionEntryWork} = await getLiveCatalogue();
-  const latestWriting = (await getWritingFeed()).slice(0, 3);
-
-  const latestFocus = getLatestSectionEntryWork('focus', 'mn7r-blog');
-  const latestSystem = getLatestSectionEntryWork('systems');
-  const latestBook = getLatestSectionEntryBook('books');
-
-  return (
-    <div className="home-redesign">
-      <JsonLd
-        id="jsonld-home-page"
-        data={collectionPageJsonLd({
-          id: `${SITE_URL}/#home`,
-          name: 'ABVX',
-          description: homeDescription,
-          url: SITE_URL,
-          image: defaultOgImage,
-        })}
-      />
-      <JsonLd
-        id="jsonld-home-list"
-        data={itemListJsonLd({
-          id: `${SITE_URL}/#home-items`,
-          name: 'ABVX primary public sections',
-          items: [
-            { name: 'Current Focus', url: `${SITE_URL}/focus`, type: 'CollectionPage' },
-            { name: 'Systems Catalogue', url: `${SITE_URL}/systems`, type: 'CollectionPage' },
-            { name: 'ABVX Press', url: `${SITE_URL}/books`, type: 'CollectionPage' },
-            { name: 'Writing', url: `${SITE_URL}/writing`, type: 'CollectionPage' },
-            { name: 'About / Method', url: `${SITE_URL}/about`, type: 'AboutPage' },
-          ],
-        })}
-      />
-      <HeroPoster
-        eyebrow="ABVX / AI-NATIVE SYSTEMS"
-        title="AI-native systems for complex markets."
-        summary="I build agentic development tools, market infrastructure, publishing systems, LLMO surfaces and validation-gated AI workflows for work that is hard to explain and harder to operationalize."
-      >
-        <TagList tags={heroLabels} />
-        <div className="hero-actions">
-          <Link href="#explore-the-work">Explore the work</Link>
-          <Link href="/work-with-me">Work with me</Link>
-        </div>
-      </HeroPoster>
-
-      <MarqueeTicker
-        items={[
-          'International agro-commodity brokerage',
-          'Agent-assisted market workflows',
-          'Commodity indexes and monitoring',
-          'AI-native development',
-          'Strategic product and go-to-market',
-        ]}
-      />
-
-      <section className="about-snapshot" aria-labelledby="about-snapshot-title">
-        <div className="eyebrow">About snapshot</div>
-        <h2 id="about-snapshot-title">Markets, data, operations and AI agents in one operating layer.</h2>
-        <div className="about-snapshot__copy">
-          <p>
-            I build infrastructure where markets, data, operational processes,
-            AI agents and strategic marketing intersect. The current work spans
-            market infrastructure, AI-native workflow systems, publishing
-            automation, LLMO and strategic GTM.
-          </p>
-          <p>
-            In agro-commodity markets, that becomes brokerage workspaces,
-            market-intelligence surfaces, local commodity indexes, execution
-            workflows and AI-assisted tools for grain and oilseed markets.
-          </p>
-          <p>
-            Before moving deeper into AI-native development, I spent more than
-            20 years across strategic marketing, creative direction, product
-            development, brand systems, go-to-market strategy and international
-            business communication. That background shapes how I build now.
-          </p>
-        </div>
-      </section>
-
-      <section className="home-section" aria-labelledby="latest-title">
-        <div className="home-section__header">
-          <div className="eyebrow">Latest from ABVX</div>
-          <h2 id="latest-title">Six entry points into the current work.</h2>
-        </div>
-        <div className="home-latest-grid">
-          <HomepageLatestCard
-            title={latestFocus?.title || fallbackLatest.focus.title}
-            summary={latestFocus?.summary || fallbackLatest.focus.summary}
-            href={latestFocus ? `/work/${latestFocus.slug}` : '/focus'}
-            label="Current Focus"
-            detail={formatDate(latestFocus?.catalogueAddedAt || undefined)}
-            image={latestFocus?.thumbnail}
-            cta="Open focus item"
-          />
-          <HomepageLatestCard
-            title={latestSystem?.title || fallbackLatest.systems.title}
-            summary={latestSystem?.summary || fallbackLatest.systems.summary}
-            href={latestSystem ? `/work/${latestSystem.slug}` : '/systems'}
-            label="Systems Catalogue"
-            detail={formatDate(latestSystem?.catalogueAddedAt || undefined)}
-            image={latestSystem?.thumbnail}
-            cta="Open system"
-          />
-          <HomepageLatestCard
-            title={latestBook?.title || fallbackLatest.books.title}
-            summary={latestBook?.summary || fallbackLatest.books.summary}
-            href={latestBook ? latestBook.canonicalPath || `/books/${latestBook.slug}` : '/books'}
-            label="ABVX Press"
-            detail={formatDate(latestBook?.catalogueAddedAt || undefined)}
-            image={latestBook?.coverImage}
-            cta="Open book"
-          />
-          {[0, 1, 2].map((slot) => {
-            const post = latestWriting[slot];
-            const source = post ? writingCardSource(post) : { label: 'Writing', cta: 'Read on ABVX' };
-            return (
-              <HomepageLatestCard
-                key={post?.url || `writing-${slot}`}
-                title={post?.title || 'Writing'}
-                summary={post?.excerpt || 'Essays, working stories and practical video notes from ABVX.'}
-                href={post?.url || '/writing'}
-                label={source.label}
-                detail={formatDate(post?.addedAt || post?.publishedAt)}
-                image={post?.coverImage ? { src: post.coverImage, alt: post.title } : undefined}
-                cta={source.cta}
-              />
-            );
-          })}
-        </div>
-      </section>
-
-      <section className="home-section" id="explore-the-work" aria-labelledby="explore-title">
-        <div className="home-section__header">
-          <div className="eyebrow">Explore the work</div>
-          <h2 id="explore-title">One index, four public doors.</h2>
-        </div>
-        <div className="explore-grid">
-          <SectionPanel title="Current Focus" eyebrow="01" accent>
-            <p>
-              Agro-commodity brokerage and trading infrastructure: MN7R, Cropto,
-              market intelligence, commodity indexes, benchmark layers and
-              AI-assisted workflow tools for physical markets.
-            </p>
-            <Link className="panel-link" href="/focus">Open Focus</Link>
-          </SectionPanel>
-          <SectionPanel title="Systems Catalogue" eyebrow="02">
-            <p>
-              Agentic development systems, reusable skillpacks, orchestration
-              layers, project instruction surfaces, validation workflows and
-              operational web tools.
-            </p>
-            <Link className="panel-link" href="/systems">Open Systems</Link>
-          </SectionPanel>
-          <SectionPanel title="ABVX Press" eyebrow="03">
-            <p>
-              Books, field manuals, translations and publishing systems that
-              turn operational knowledge into durable public assets.
-            </p>
-            <Link className="panel-link" href="/books">Open Books</Link>
-          </SectionPanel>
-          <SectionPanel title="Writing" eyebrow="04">
-            <p>
-              Field notes on AI-native work, market infrastructure, validation,
-              decision-making, automation and strategic product systems.
-            </p>
-            <Link className="panel-link" href="/writing">Open Writing</Link>
-          </SectionPanel>
-        </div>
-      </section>
-    </div>
-  );
+export default async function Home(){
+ const {getArtifacts}=await getLiveCatalogue();
+ const projects=['framewright','mn7r','cropto'].flatMap(slug=>{const item=getArtifacts().find(x=>x.slug===slug);return item?[item]:[];});
+ return <div className="home-redesign professional-home">
+  <JsonLd id="jsonld-home-page" data={collectionPageJsonLd({id:SITE_URL+'/#home',name:'Anton Biletskyi-Volokh',description,url:SITE_URL,image:defaultOgImage})}/>
+  <HeroPoster eyebrow="ANTON BILETSKYI-VOLOKH / MARKETING · CREATIVE · PRODUCT" title="From an idea to something that works." summary="I combine marketing and creative experience with hands-on AI and technology expertise to turn briefs into products, campaigns and working processes — then test and improve them.">
+   <div className="hero-actions"><Link href="/work-with-me">Work with me →</Link><Link href="#selected-projects">Explore projects</Link></div>
+  </HeroPoster>
+  <section className="home-section" aria-labelledby="capabilities-title">
+   <div className="home-section__header"><div className="eyebrow">What I can contribute</div><h2 id="capabilities-title">Strategy, creativity and the ability to build.</h2></div>
+   <div className="professional-grid">{capabilities.map(item=><SectionPanel key={item.title} title={item.title}><p>{item.text}</p></SectionPanel>)}</div>
+   <p className="professional-roles">Consultant · Marketing Director · Creative Director · Product Manager · Digital Transformation</p>
+  </section>
+  <section className="home-section" id="selected-projects" aria-labelledby="projects-title">
+   <div className="home-section__header"><div className="eyebrow">Recent projects / last 12–18 months</div><h2 id="projects-title">A recent chapter of a longer career.</h2></div>
+   <p>The projects, books and tools catalogued here were made over roughly the last year to year and a half. Earlier work is represented through the experience overview and selected stories, rather than a complete project archive.</p>
+   <div className="professional-grid">{projects.map(item=><HomepageLatestCard key={item.slug} title={item.title} summary={item.summary} href={'/work/'+item.slug} image={item.thumbnail} label="Project" cta="Explore project"/>)}</div>
+   <div className="hero-actions"><Link href="/systems">All projects & tools →</Link><Link href="/focus">Market infrastructure →</Link></div>
+  </section>
+  <section className="about-snapshot" aria-labelledby="experience-title">
+   <div className="eyebrow">Experience</div><h2 id="experience-title">A marketing and creative foundation. A hands-on technology practice.</h2>
+   <div className="about-snapshot__copy"><p>Over 20 years across strategic marketing, creative direction, brand, product development and international business communication shape how I approach a brief.</p><p>Today I use AI and modern development tools to shorten the path between a question and a testable solution: from concepts and prototypes to launches and operational workflows.</p><p>I work across digital products, consumer and hospitality concepts, and market infrastructure. The recent projects show how I apply that experience today.</p></div>
+   <Link className="panel-link" href="/about">Experience & background →</Link>
+  </section>
+  <SectionPanel title="Have a role, a brief or an idea to discuss?" eyebrow="Employers & partners" accent><p>I am open to consulting, leadership roles and partnerships across marketing, creative direction, product management and digital transformation.</p><Link className="panel-link" href="/work-with-me">Explore ways to work together →</Link></SectionPanel>
+  <section className="professional-library" aria-labelledby="library-title"><div><div className="eyebrow">Personal library</div><h2 id="library-title">Books & writing</h2><p>My books, notes and ongoing interests — an archive for readers and people following my work.</p></div><div className="hero-actions"><Link href="/books">Books →</Link><Link href="/writing">Writing →</Link></div></section>
+ </div>;
 }

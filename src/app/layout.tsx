@@ -30,9 +30,9 @@ const personJsonLd = {
     'ABVX',
   ],
   url: 'https://abvx.xyz',
-  jobTitle: 'Product, Growth, GTM, and AI-native Systems',
+  jobTitle: 'Marketing, Creative Direction, Product Management and Digital Transformation',
   description:
-    'Senior product, marketing and growth operator building AI-native systems, market infrastructure, strategic GTM workflows, brands, books and public knowledge products.',
+    'Marketing and creative professional combining product and business experience with hands-on AI expertise, from strategy and concepts to implementation and testing.',
   identifier: [
     {
       '@type': 'PropertyValue',
@@ -137,7 +137,7 @@ const websiteJsonLd = {
   ],
   url: 'https://abvx.xyz',
   description:
-    'A working index for AI-native operating systems, agro-commodity market infrastructure, agentic development tools, strategic product systems, books and essays.',
+    'Professional portfolio and working catalogue of Anton Biletskyi-Volokh: marketing, creative direction, product management and AI-enabled digital transformation.',
   inLanguage: 'en',
   author: { '@id': 'https://abvx.xyz/#person' },
   publisher: { '@id': 'https://abvx.xyz/#organization' },
@@ -194,7 +194,7 @@ export const metadata: Metadata = {
     template: '%s · Anton Biletskyi-Volokh',
   },
   description:
-    'Anton Biletskyi-Volokh builds AI-native operating systems for complex markets: agro-commodity brokerage, trading workflows, market intelligence and agentic development infrastructure.',
+    'Anton Biletskyi-Volokh combines marketing, creative direction and product experience with hands-on AI expertise to turn ideas into products, campaigns and working processes.',
   metadataBase: new URL('https://abvx.xyz'),
   verification: {
     ...(googleVerification ? { google: googleVerification } : {}),
@@ -205,7 +205,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Anton Biletskyi-Volokh',
     description:
-      'AI-native operating systems for complex markets: agro-commodity brokerage, trading workflows, market intelligence and agentic development infrastructure.',
+      'Marketing, creative direction, product management and digital transformation with practical AI expertise.',
     url: 'https://abvx.xyz',
     siteName: 'Anton Biletskyi-Volokh',
     type: 'website',
@@ -215,7 +215,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Anton Biletskyi-Volokh',
     description:
-      'AI-native operating systems for complex markets: agro-commodity brokerage, trading workflows, market intelligence and agentic development infrastructure.',
+      'Marketing, creative direction, product management and digital transformation with practical AI expertise.',
     images: [defaultOgImage.url],
   },
 };

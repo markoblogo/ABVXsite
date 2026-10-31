@@ -186,7 +186,7 @@ export function aboutPageJsonLd() {
     '@context': 'https://schema.org',
     '@type': 'AboutPage',
     '@id': `${SITE_URL}/about#page`,
-    name: 'About Anton - Product, growth and AI-native systems',
+    name: 'Experience - Marketing, creative direction, product and AI',
     description:
       'About Anton Biletskyi-Volokh: product, growth and AI-native systems leader with 20+ years across technology, international GTM, brand, market infrastructure and publishing.',
     url: `${SITE_URL}/about`,

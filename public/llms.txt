@@ -155,6 +155,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/GPfkz36JWbI
   Summary: One man. Two selves. A familiar nightmare in a different language. Explore Robert Louis Stevenson's The Strange Case of Dr. Jekyll and Mr. Hyde in a layered edition with English, Toki Pona and sitelen pona. This short bo
 
+- ElevenLabs SFX v3 Is Here! Generate Cinematic Sound Effects From One Prompt
+  URL: https://abvx.xyz/writing/videos/GvL9AJNWPi0
+  Summary: ElevenLabs is back with another impressive update. And this time, it's not just about making AI voices sound more human. Meet ElevenLabs SFX v3, a new AI model that generates complex sound effects, atmospheric soundscape
+
 - Burgers, Lipstick & Underwear | Strange Economic Indicators
   URL: https://abvx.xyz/writing/videos/GVrbTMZxbpg
   Summary: What can burgers, lipstick and underwear really tell us about the economy? Discover Burgers, Lipstick & Underwear: What Strange Indicators Really Tell Us About the Economy — a book about surprising economic indicators an

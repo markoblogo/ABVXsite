@@ -8013,7 +8013,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-31T16:50:42.758Z",
+      "updatedAt": "2026-10-31T17:21:37.810Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8130,6 +8130,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=Q73r6GLqXVY"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "ElevenLabs SFX v3 Is Here! Generate Cinematic Sound Effects From One Prompt",
+      "summary": "ElevenLabs is back with another impressive update. And this time, it's not just about making AI voices sound more human. Meet ElevenLabs SFX v3, a new AI model that generates complex sound effects, atmospheric soundscape",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/GvL9AJNWPi0",
+      "publishedAt": "2026-10-31T17:12:52.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=GvL9AJNWPi0"
         }
       ],
       "related": []

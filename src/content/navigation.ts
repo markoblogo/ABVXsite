@@ -26,7 +26,8 @@ export type SocialIconName =
   | 'telegram'
   | 'whatsapp'
   | 'amazon-author'
-  | 'playmcp';
+  | 'playmcp'
+  | 'forkfolio';
 
 export const footerPrimaryLinks: FooterLink[] = [
   { label: 'Focus', href: '/focus' },
@@ -58,6 +59,7 @@ export const socialLinks: SocialLink[] = [
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/abvcreative/', icon: 'linkedin', external: true },
   { label: 'Email', href: 'mailto:a.biletskiy@gmail.com', icon: 'email' },
   { label: 'GitHub', href: 'https://github.com/markoblogo', icon: 'github', external: true },
+  { label: 'Forkfolio', href: 'https://abvx.forkfolio.dev/', icon: 'forkfolio', external: true },
   { label: 'Substack', href: 'https://abvx.substack.com/', icon: 'substack', external: true },
   { label: 'Medium', href: 'https://abvcreative.medium.com/', icon: 'medium', external: true },
   { label: 'YouTube', href: 'https://www.youtube.com/@ABV_Creative', icon: 'youtube', external: true },

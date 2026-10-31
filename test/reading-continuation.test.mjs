@@ -20,3 +20,11 @@ test('numbered notebooks only link consecutive visible members and exclude stand
 test('unrelated posts do not fill empty recommendations',()=>{
  assert.deepEqual(readingContinuation(post('one'),[post('two',{tags:['cooking']})],new Set(['/writing/two'])).related,[]);
 });
+
+test('missing language is English for both current and candidate records',()=>{
+ const legacy=post('legacy',{language:undefined});
+ const visible=new Set(['/writing/legacy']);
+ assert.equal(readingContinuation(post('french',{language:'fr'}),[legacy],visible).related.length,0);
+ assert.equal(readingContinuation(post('ukrainian',{language:'uk'}),[legacy],visible).related.length,0);
+ assert.equal(readingContinuation(post('english',{language:undefined}),[legacy],visible).related[0].slug,'legacy');
+});

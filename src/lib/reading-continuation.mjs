@@ -1,6 +1,6 @@
 // Only the deployed discovery projection may admit a recommendation.
 export function readingContinuation(current, candidates, visibleUrls, now=Date.now()) {
- const admitted=candidates.filter(item=>item.slug!==current.slug&&visibleUrls.has('/writing/'+item.slug)&&(!item.publishedAt||Date.parse(item.publishedAt)<=now)&&(!item.language||item.language===(current.language||'en')));
+ const admitted=candidates.filter(item=>item.slug!==current.slug&&visibleUrls.has('/writing/'+item.slug)&&(!item.publishedAt||Date.parse(item.publishedAt)<=now)&&((item.language||'en')===(current.language||'en')));
  const explicit=current.relatedSlugs||[];
  const tags=new Set(current.tags||[]);
  const score=item=>explicit.includes(item.slug)?1000-explicit.indexOf(item.slug):((current.collection&&item.collection===current.collection)?100:0)+(item.tags||[]).filter(tag=>tags.has(tag)).length;

@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "kind": "ABVXEcosystemChangeSet",
-  "observedAt": "2026-10-23T18:38:18.690Z",
+  "observedAt": "2026-10-31T20:25:38.865Z",
   "changes": [
     {
-      "nodeId": "coqpi",
+      "nodeId": "azurmenton",
       "changedFields": [
         "release"
       ]

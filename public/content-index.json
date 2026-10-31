@@ -8148,7 +8148,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-31T17:21:37.810Z",
+      "updatedAt": "2026-10-31T19:09:40.810Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8622,6 +8622,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=89kTx1LhEP0"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Google Genie 4 Is INSANE! AI Generates Interactive Worlds With Sound | 10+ Demos",
+      "summary": "What if AI could generate an entire world while you're exploring it? Not a video. Not a traditional game. An interactive reality that reacts to everything you do. And now it has sound. And people who actually talk back. ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/cTK_yuxDcKE",
+      "publishedAt": "2026-10-31T19:00:57.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=cTK_yuxDcKE"
         }
       ],
       "related": []

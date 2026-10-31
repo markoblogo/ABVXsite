@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "ABVXEcosystemGraph",
-  "updatedAt": "2026-10-23T18:38:18.690Z",
+  "updatedAt": "2026-10-31T20:25:38.865Z",
   "nodes": [
     {
       "id": "trade-solutions",
@@ -140,9 +140,9 @@
       },
       "observedHomepageUrl": "https://abvx.xyz/",
       "release": {
-        "tag": "v0.3.0",
-        "url": "https://github.com/markoblogo/ABVXsite/releases/tag/v0.3.0",
-        "publishedAt": "2026-09-14T12:24:10Z"
+        "tag": "v0.4.0",
+        "url": "https://github.com/markoblogo/ABVXsite/releases/tag/v0.4.0",
+        "publishedAt": "2026-10-31T17:55:08Z"
       }
     },
     {
@@ -266,9 +266,9 @@
       },
       "observedHomepageUrl": "https://azurmenton.com",
       "release": {
-        "tag": "v0.2.1",
-        "url": "https://github.com/markoblogo/azurmenton/releases/tag/v0.2.1",
-        "publishedAt": "2026-09-13T13:58:01Z"
+        "tag": "v0.3.0",
+        "url": "https://github.com/markoblogo/azurmenton/releases/tag/v0.3.0",
+        "publishedAt": "2026-10-31T20:07:29Z"
       }
     },
     {

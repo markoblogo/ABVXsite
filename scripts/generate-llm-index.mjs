@@ -1,3 +1,4 @@
+import {staticLocales,staticPaths,localizedPath,staticUpdatedAt} from '../src/lib/static-locales.mjs';
 import { isStandaloneUtilityGroup } from '../src/lib/systems-catalogue.mjs';
 import { writingArchiveLastModified } from '../src/lib/writing-archive.mjs';
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -297,7 +298,9 @@ const videoIndexItems = videoPages.map(item => ({
 }));
 
 archiveIndexItem.updatedAt=writingArchiveLastModified({items:[...videoIndexItems,...rawItems.map(publicIndexItem),...workingIndexItems]},discovery,archiveIndexItem.updatedAt);
-const indexItems = [archiveIndexItem, ...videoIndexItems, ...rawItems.map(publicIndexItem), ...serviceIndexItems, ...editorialIndexItems, collaborationIndexItem, youtubeIndexItem, kitchenIndexItem, workingSeriesIndexItem, ...workingIndexItems]
+const staticSeo=JSON.parse(readFileSync('content/static-pages.json','utf8'));
+const staticIndexItems=staticPaths.flatMap(path=>staticLocales.map(locale=>({type:'page',section:'about',ecosystem:'ABVX',group:'Professional profile',status:'live',title:staticSeo[path][locale][0],summary:staticSeo[path][locale][1],canonicalUrl:SITE_URL+localizedPath(path,locale),language:locale,updatedAt:staticUpdatedAt,tags:[],links:[],related:[]})));
+const indexItems = [...staticIndexItems, archiveIndexItem, ...videoIndexItems, ...rawItems.map(publicIndexItem), ...serviceIndexItems, ...editorialIndexItems, collaborationIndexItem, youtubeIndexItem, kitchenIndexItem, workingSeriesIndexItem, ...workingIndexItems]
   .sort((a, b) => a.section.localeCompare(b.section) || a.title.localeCompare(b.title));
 
 function isFocus(item) {
@@ -372,6 +375,8 @@ const llms = [
   `YouTube videos in Writing: ${SITE_URL}/writing?source=youtube. ${youtube.summary}`,
   'Machine-readable index: https://abvx.xyz/content-index.json',
   'Primary layers: Focus = market infrastructure; Systems = operational systems architecture; Books = publishing and intellectual layer; Writing = essays and field notes.',
+  '',
+  `## Profile pages: English, French and Ukrainian\n\n${staticIndexItems.map(item=>`- ${item.title} (${item.language})\n  URL: ${item.canonicalUrl}\n  Summary: ${item.summary}`).join('\n\n')}`,
   '',
   `## YouTube watch pages\n\n${videoPages.map(item => `- ${item.title}\n  URL: ${SITE_URL}${item.url}\n  Summary: ${(item.excerpt || item.title).trim()}`).join('\n\n')}`,
   '',

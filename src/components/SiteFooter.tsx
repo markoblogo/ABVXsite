@@ -43,7 +43,7 @@ function SocialLinkButton({ item }: { item: SocialLink }) {
 
 export default function SiteFooter() {
   return (
-    <footer className="site-footer">
+    <footer lang="en" className="site-footer">
       <div className="site-footer__inner">
         <section className="site-footer__brand" aria-label="ABVX">
           <div className="site-footer__brand-row">

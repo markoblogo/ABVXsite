@@ -43,6 +43,7 @@ Use the appropriate guide instead of copying a publication process into each tas
 | Fast publication of posts, cards, series and catalogue groups | [Runtime publisher](docs/runtime-writing.md) · [Catalogue packet contract](docs/runtime-catalogue.md) |
 | Legacy publication or engineering changes; record measurements | [Publication handoff](docs/abvx-os-publishing.md) |
 | Validate, review and verify a release | [Editorial SEO checklist](docs/editorial-seo-checklist.md) |
+| Maintain the three EN/FR/UK profile pages | [Static localization](docs/static-localization.md) |
 | Back up runtime content, verify recovery or diagnose availability | [Recovery and monitoring](docs/runtime-recovery.md) |
 | Diagnose feeds, discovery, analytics or runtime behavior | [Site operations](docs/site-operations.md) |
 | Export story/recipe collections | [Working Stories](docs/working-stories.md) · [Kitchen Notes](docs/kitchen-notes.md) |

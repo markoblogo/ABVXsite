@@ -1,3 +1,4 @@
+import * as staticLocales from '../src/lib/static-locales.mjs';
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { mkdtempSync, mkdirSync, writeFileSync, readFileSync, rmSync, cpSync } from 'node:fs';
@@ -182,7 +183,7 @@ test('empty collection exports a manuscript header and an empty manifest', () =>
 }));
 
 test('real public-index generator includes only published stories and the empty-capable series', () => fixture(({ root, write }) => {
-  for (const relative of ['content/pages.json', 'content/kitchen-notes.json', 'content/collaborations.json', 'content/youtube.json', 'content/working-stories.json', 'content/editorial/index.json']) {
+  for (const relative of ['content/static-pages.json', 'content/pages.json', 'content/kitchen-notes.json', 'content/collaborations.json', 'content/youtube.json', 'content/working-stories.json', 'content/editorial/index.json']) {
     mkdirSync(path.dirname(path.join(root, relative)), { recursive: true });
     cpSync(path.join(repo, relative), path.join(root, relative));
   }
@@ -289,6 +290,7 @@ test('sitemap discovers published stories and series while excluding private and
   ];
   let automaticNative;
   const sitemap = compile('src/app/sitemap.ts', {
+    '@/lib/static-locales.mjs': staticLocales,
     '@/lib/live-writing-discovery': {getLiveWritingBundle:async()=>({native:nativeVideos,index:{items:[{canonicalUrl:'https://abvx.xyz/writing/archive',updatedAt:'2026-10-14T19:00:00.000Z'}]}})},
     '@/lib/live-writing': {getLiveNativeWritingItems:async()=>nativeVideos},
     '../../content/pages.json': JSON.parse(readFileSync(path.join(repo, 'content/pages.json'))),

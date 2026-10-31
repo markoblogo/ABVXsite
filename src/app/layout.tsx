@@ -237,7 +237,7 @@ export default async function RootLayout({
   const editorialLanguages = Object.fromEntries(getEditorialArticles().filter((article) => article.language).map((article) => [article.href, article.language!]));
   const {getBooks,getArtifacts} = await getLiveCatalogue();
   const bookLanguages=Object.fromEntries([...getBooks().map(book=>[book.canonicalPath||`/books/${book.slug}`,documentLanguage(book.language)]),...getArtifacts().map(item=>[`/work/${item.slug}`,documentLanguage(item.language)])]);
-  const language = pathname.startsWith('/fr/') ? 'fr'
+  const language = pathname === '/uk' || pathname.startsWith('/uk/') ? 'uk' : pathname === '/fr' || pathname.startsWith('/fr/') ? 'fr'
     : storySlug ? storyLanguages[pathname] || 'en'
       : writingSlug ? writingLanguages[pathname] || 'en' : bookLanguages[pathname] || editorialLanguages[pathname] || 'en';
 

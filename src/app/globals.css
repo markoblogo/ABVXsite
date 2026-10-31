@@ -5723,3 +5723,30 @@ a {
 .professional-home .hero-poster p { width: auto; }
 .professional-grid > * { min-width: 0; overflow-wrap: anywhere; }
 @media (max-width: 1000px) { .professional-grid { grid-template-columns: 1fr; } }
+
+/* Static-page locales: selector ends the identity block before the main menu. */
+.site-header__identity { display:flex; align-items:stretch; min-width:0; border-right:1px solid var(--line); }
+.site-header__identity .site-brand { flex:1; min-width:0; border-right:0; }
+.site-languages { display:flex; gap:0.15rem; align-items:center; padding:0 0.65rem; flex-shrink:0; }
+.site-languages a { font-size:0.72rem; font-weight:600; padding:0.45rem 0.3rem; text-decoration:none; border-bottom:2px solid transparent; }
+.site-languages a[aria-current="page"] { border-color:var(--ink); font-weight:900; }
+.site-languages a:focus-visible { outline:2px solid currentColor; outline-offset:2px; }
+@media(max-width:760px) {
+ .site-header__identity { border-right:0; min-height:68px; }
+ .site-header__identity .site-brand { padding-right:0; }
+ .site-header__identity .site-brand__text { font-size:0.85rem; }
+ .site-languages { padding-right:0; }
+}
+.site-header__inner:has(.site-languages) { grid-template-columns:minmax(300px,1fr) minmax(0,auto); }
+.site-header__inner:has(.site-languages) .site-nav { justify-content:flex-start; min-width:0; }
+.site-header__identity .site-brand__text { overflow-wrap:anywhere; }
+@media(max-width:760px) { .site-header__inner:has(.site-languages) { grid-template-columns:minmax(0,1fr); } }
+/* Longer profile translations retain readable words within the shared grid. */
+.professional-home[data-static-locale]:not([data-static-locale="en"]) .professional-grid .section-panel h2 { font-size:clamp(1.5rem,2.6vw,2.1rem); line-height:1.05; overflow-wrap:normal; hyphens:auto; }
+.professional-home[data-static-locale]:not([data-static-locale="en"]) .home-section:not([lang="en"]) .home-section__header h2,
+.professional-home[data-static-locale]:not([data-static-locale="en"]) .about-snapshot h2 { font-size:clamp(2rem,5vw,4.3rem); line-height:1; }
+.about-page[data-static-locale]:not([data-static-locale="en"]) .page-header h1 { max-width:calc(100% - 11rem); font-size:clamp(2rem,6vw,5rem); line-height:1; letter-spacing:-0.04em; overflow-wrap:normal; hyphens:auto; }
+@media(max-width:760px) {
+ .about-page[data-static-locale]:not([data-static-locale="en"]) .page-header h1 { max-width:100%; }
+ .about-page[data-static-locale]:not([data-static-locale="en"]) .page-header > .eyebrow { margin-bottom:4rem; }
+}

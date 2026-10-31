@@ -82,7 +82,7 @@ test('invalid, future, duplicate and unsafe registry entries are rejected', () =
 });
 
 test('professional homepage links to Writing while the complete feed stays on Writing', () => {
-  const home = readFileSync('src/app/page.tsx', 'utf8');
+  const home = readFileSync('src/components/static-pages/Home.tsx', 'utf8');
   const writing = readFileSync('src/app/writing/page.tsx', 'utf8');
   assert.ok(home.includes('href="/writing"'));
   assert.ok(home.includes('id="selected-projects"'));

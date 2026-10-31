@@ -249,7 +249,7 @@ export default function MarkdownContent({
           </Fragment>;
         }
         return <Fragment key={`${block.type}-${index}`}>
-          <p>{inlineMarkdownNodes(block.text)}</p>
+          <p data-writing-anchor={illustrations.some(image => image.afterParagraph === block.text) ? block.text : undefined}>{inlineMarkdownNodes(block.text)}</p>
           {illustrations.filter(image => image.afterParagraph === block.text).map(renderIllustration)}
         </Fragment>;
       })}

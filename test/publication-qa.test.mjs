@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { boundedMap, internalPagePaths, assertCatalogueVideo } from '../scripts/publication-qa.mjs';
+import { assertIllustrationPlacement, boundedMap, internalPagePaths, assertCatalogueVideo } from '../scripts/publication-qa.mjs';
 import {staticPublicationRoutes} from '../scripts/publication-routes.mjs';
 test('scoped internal links include absolute same-origin URLs and exclude external/media links',()=>{
  assert.deepEqual(internalPagePaths(['/books/a','https://abvx.xyz/books/missing?x=1#title','//abvx.xyz/books/a','https://example.com/books/a','mailto:test@example.com','/media/cover.avif']),['/books/a','/books/missing']);
@@ -96,4 +96,19 @@ test('catalogue QA rejects a release missing any of its ten distinct videos',()=
  const data={links};assertCatalogueVideo(data,frames,'books');
  assert.throws(()=>assertCatalogueVideo(data,frames.slice(0,-1),'books'),'last video cannot disappear');
  assert.throws(()=>assertCatalogueVideo(data,[frames[0]],'work'),'first video alone cannot prove all videos');
+});
+
+test('illustration QA checks exact paragraph placement as well as legacy headings',()=>{
+ const image={afterParagraph:'An _introductory_ paragraph.'};
+ const position={tag:'P',text:'An introductory paragraph.',anchor:image.afterParagraph};
+ assertIllustrationPlacement(image,position);
+ for(const invalid of [{...position,tag:'H3'},{...position,anchor:'Other.'},{...position,text:''}]) assert.throws(()=>assertIllustrationPlacement(image,invalid));
+ assertIllustrationPlacement({afterHeading:'Section'},{tag:'H3',text:'Section'});
+ assert.throws(()=>assertIllustrationPlacement({afterHeading:'Section'},position));
+});
+
+test('paragraph illustration QA recognizes the selected standalone video, rejecting others',()=>{
+ const image={afterParagraph:'[Clip](https://www.youtube.com/watch?v=aaaaaaaaaaa)'};
+ assertIllustrationPlacement(image,{tag:'FIGURE',videoSrc:'https://www.youtube-nocookie.com/embed/aaaaaaaaaaa'});
+ assert.throws(()=>assertIllustrationPlacement(image,{tag:'FIGURE',videoSrc:'https://www.youtube-nocookie.com/embed/bbbbbbbbbbb'}));
 });

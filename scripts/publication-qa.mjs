@@ -7,7 +7,25 @@ import { catalogueCardVideoId } from './catalogue-video.mjs';
 import { contentFiles, parseContentFile } from './content-lib.mjs';
 import { catalogueHubs } from './publication-scope.mjs';
 import { isAllowedAudioUrl } from '../src/lib/media-policy.mjs';
-import {findYouTubeVideos} from '../src/lib/youtube-url.mjs';
+import {findYouTubeVideos,youtubeVideoId} from '../src/lib/youtube-url.mjs';
+
+export function assertIllustrationPlacement(image, position) {
+ if(image.afterParagraph!==undefined) {
+  if(position.tag==='FIGURE') {
+   const link=image.afterParagraph.match(/^\[([^\]\n]+)\]\((https:\/\/[^\s)]+)\)$/);
+   const id=link&&youtubeVideoId(link[2]);
+   assert.ok(id,'paragraph video anchor');
+   assert.ok(position.videoSrc?.includes('/embed/'+id),'paragraph video position');
+  } else {
+   assert.equal(position.tag,'P','paragraph illustration position');
+   assert.equal(position.anchor,image.afterParagraph,'exact source paragraph anchor');
+   assert.ok(position.text?.trim(),'visible introductory paragraph');
+  }
+ } else {
+  assert.equal(position.text,image.afterHeading);
+  assert.match(position.tag,/^H[2-4]$/);
+ }
+}
 
 export function internalPagePaths(hrefs,base='https://abvx.xyz') {
  const origin=new URL(base).origin;
@@ -122,8 +140,8 @@ export async function publicationQa(scope) {
       const wrapper=page.locator('.writing-illustration').filter({has:img});
       assert.equal(await wrapper.count(),1,'unique article photograph');
       assert.ok((await wrapper.textContent()).includes(illustration.caption),'photograph caption');
-      const position=await wrapper.evaluate(node=>({heading:node.previousElementSibling?.textContent,tag:node.previousElementSibling?.tagName}));
-      assert.equal(position.heading,illustration.afterHeading);assert.match(position.tag,/^H[2-4]$/);
+      const position=await wrapper.evaluate(node=>{const previous=node.previousElementSibling;return {text:previous?.textContent,tag:previous?.tagName,anchor:previous?.getAttribute('data-writing-anchor'),videoSrc:previous?.querySelector('iframe')?.getAttribute('src')};});
+      assertIllustrationPlacement(illustration,position);
      }
     }
     if(scope.profile==='catalogue-v1') {

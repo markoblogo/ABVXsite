@@ -7757,6 +7757,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude Code Can Recreate Any Website Animation Frame by Frame | /reanimate",
+      "summary": "Ever found an amazing animation on a website and wished you could recreate it in your own project? Not just something similar. The actual movement, timing, transitions, and visual effects. Meet /reanimate, a new open-sou",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/-8oBX51Y-cY",
+      "publishedAt": "2026-10-31T14:33:10.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=-8oBX51Y-cY"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude Code Has Hidden Features. This /stack Mod Reveals Everything",
       "summary": "Think you know what's running inside your Claude Code sessions? You might be surprised. Meet /stack, a free, open-source Claude Code mod that reveals practically everything installed, configured, and available in your AI",
       "canonicalUrl": "https://abvx.xyz/writing/videos/sZpOYudsSDY",
@@ -7967,7 +7990,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-31T14:37:25.547Z",
+      "updatedAt": "2026-10-31T14:51:06.710Z",
       "tags": [],
       "links": [],
       "related": []

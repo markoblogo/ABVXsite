@@ -134,6 +134,10 @@ Each observation JSON requires `status` (`observed`, `access_failed`, or `data_p
 
 Domain-property totals include subdomains and are not the main site's totals. Sitemap monitoring is separate: only Search Console's successful processing status proves receipt/processing, and it still does not prove indexing. A submission confirmation alone is pending. The heartbeat should notify only a meaningful change, checkpoint outcome or actionable access/failure condition; unchanged sitemap processing and runs with no due work remain quiet.
 
+## Recovery and availability
+
+Use the [runtime recovery contract](runtime-recovery.md) for independent cloud copies, restore verification, freshness, incident notifications and credential boundaries. Private operator schedules and receipts are not repository-installed services.
+
 ## Verification and access diagnostics
 
 Use the [release checklist](editorial-seo-checklist.md) for the complete gate. Additional targeted checks include `smoke:shell`, `qa:visual`, `qa:csp`, `qa:perf`, `feeds:check`, and `media:review`; inspect each script's options and requirements before running it. Avoid unrelated broad checks for documentation-only changes.

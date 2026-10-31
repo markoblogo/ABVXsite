@@ -17,3 +17,9 @@ For native content-only releases, use the [publication profile and readiness hel
 
 
 For documentation-only releases, verify local references and the documented commands, then use a separate docs PR and the normal remaining CI checks. A proven docs-only diff can skip the application build and Vercel deployment; verify the merged documentation on GitHub instead of claiming a new site deployment. See [documentation publication](abvx-os-publishing.md#documentation-only-publication).
+
+## Versioned GitHub releases
+
+For an owner-authorized versioned release, update `package.json`, both root version fields in `package-lock.json`, and `CHANGELOG.md` together. A manifest change is outside the documentation-only allowlist: use the full release gate, even when dependencies are unchanged.
+
+Release the reviewed merge commit on `main`, not an unmerged branch head. Require passing checks and a completed clean review of the exact PR head; keep Production verification separate. Create the GitHub tag/release at the exact merged SHA and confirm its target after publication. Release notes can summarize already-shipped changes since the previous tag, but must distinguish features from operational evidence and Google indexing outcomes. Keep generated receipts, private backups and credentials out of the release assets.

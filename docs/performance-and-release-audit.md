@@ -1,5 +1,7 @@
 # Publication and performance audit — 2026-10-10
 
+> Historical engineering evidence: measurements below describe their dated runs, not current route/test counts or a current performance guarantee. Current procedures live in the [release checklist](editorial-seo-checklist.md), [operations guide](site-operations.md) and [runtime recovery contract](runtime-recovery.md). The October 31 request-local catalogue grouping avoids repeated parsing; isolated CPU timings do not establish a page-load improvement.
+
 Scope: the publication path, GitHub CI/Vercel deployment decisions, request-time content loading, SEO/discovery, CSP and representative desktop/mobile rendering. Baseline: production source `698731c61d39f3373ca7f92ea966bdc61687d299`. This is an operational audit, not an exhaustive security review or a real-user Core Web Vitals assessment.
 
 ## Findings and implemented changes

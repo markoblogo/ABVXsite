@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.4.0 — 2026-10-31
+
+- Added authenticated, versioned runtime publication for native articles, Working Stories, book/project cards, book series and catalogue groups, including conditional updates, rollback and withdrawal. Bundled content remains the baseline; scheduled editorial pools retain their approved Git route.
+- Connected live content to pages, language metadata, search, sitemap and discovery indexes; strengthened validation and authoritative media handling.
+- Added full-text Writing search, a complete archive, related reading, numbered-series navigation and collection/subscription links.
+- Added paragraph-anchored article illustrations and richer catalogue media.
+- Reworked homepage, navigation, About and collaboration copy around projects, experience, marketing/creative leadership, product management and AI-enabled transformation. Books and Writing remain accessible secondary destinations.
+- Reduced repeated catalogue parsing within a request while preserving source order and visibility; no persistent catalogue cache or storage migration was introduced.
+- Updated publication, recovery and maintenance documentation; removed the superseded redesign audit and replaced the obsolete growth backlog.
+
+This release groups changes shipped since v0.3.0. Search Console processing, indexing and traffic gains are not established by these features or by passing technical checks. Private backup archives, credentials and operator receipts are excluded.
+
 ## 0.3.0 — 2026-09-14
 
 - Added the canonical 24-repository ABVX ecosystem graph and public `/ecosystem.json` registry.
@@ -34,7 +46,7 @@
 - Tightened the repository quick start, verification, release flow, and contributor context.
 - Clarified the public entry points and retained the ABVXsite / ABVX-OS / CortexABV authority boundary.
 
-## 2026-02-16 — Current Snapshot
+## 2026-02-16 — Historical snapshot
 
 ### UX and layout
 - Added world-time dock and fixed full-panel toggle behavior.

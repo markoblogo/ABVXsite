@@ -449,6 +449,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/wPIyeBYJZbQ
   Summary: The AI builds. You break. SIRTET flips the falling-block puzzle: the machine tries to clear rows, while you move and rotate pieces to bury it. Play SIRTET on desktop: https://playmcp.io/g/g_hxx3yDS0 This gameplay overvie
 
+- GOOD DOG: Who Trained Whom? | AI Animated Short Film
+  URL: https://abvx.xyz/writing/videos/WxEa5q_PPOk
+  Summary: A dog finds a hidden packet. A man offers a reward. Soon, the dog chooses the route — and the man still calls himself the owner. GOOD DOG is a darkly satirical animated short about dependence, control and the quiet rever
+
 - Someone Made a Digital Spider That Crawls Across Web Pages
   URL: https://abvx.xyz/writing/videos/x5uo-P2Vf_I
   Summary: I have absolutely no idea why someone made this. But I'm incredibly glad it exists. Someone turned the concept of a web crawler into an actual digital spider. A glowing, eight-legged creature crawling across text, links,

@@ -8153,7 +8153,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-10-31T19:09:40.810Z",
+      "updatedAt": "2026-11-01T05:13:04.166Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8604,6 +8604,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=PoOxfMsBP9E"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "GOOD DOG: Who Trained Whom? | AI Animated Short Film",
+      "summary": "A dog finds a hidden packet. A man offers a reward. Soon, the dog chooses the route — and the man still calls himself the owner. GOOD DOG is a darkly satirical animated short about dependence, control and the quiet rever",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/WxEa5q_PPOk",
+      "publishedAt": "2026-10-31T23:46:37.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=WxEa5q_PPOk"
         }
       ],
       "related": []

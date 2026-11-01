@@ -1795,6 +1795,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook, feelings
 
+- Psychology Notebook #23 — Thoughts, Stories & Reality
+  URL: https://abvx.xyz/writing/psychology-notebook-23-thoughts-stories-reality
+  Summary: Twenty translated notebook fragments on thoughts, stories & reality.
+  Group: writing
+  Tags: psychology-notebook, thinking
+
+- Psychology Notebook #24 — Closeness, Exchange & Expectations
+  URL: https://abvx.xyz/writing/psychology-notebook-24-closeness-exchange-expectations
+  Summary: Twenty translated notebook fragments on closeness, exchange & expectations.
+  Group: writing
+  Tags: psychology-notebook, relationships
+
 - The Berliner: How My Beer Cocktail Ended Up on a French Bar's Menu
   URL: https://abvx.xyz/writing/the-berliner-guinness-port-beer-cocktail
   Summary: I discovered Guinness with port wine in Berlin, recreated it with whatever a small French bar had available, and eventually watched it become an official item in the cash register.

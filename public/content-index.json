@@ -8153,7 +8153,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-01T20:50:23.249Z",
+      "updatedAt": "2026-11-01T21:10:38.145Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11915,6 +11915,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=uyzSYiktQb0"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Tripo AI Can Now Rig & Animate 3D Characters From Text | Blender, Unreal & Unity",
+      "summary": "What if you could generate a 3D character, give it a skeleton, and make it walk, run, or jump using nothing but text prompts? Tripo just upgraded its Rigging & Animation tools in Tripo Studio. And it's another step towar",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/yHcec4hrNQQ",
+      "publishedAt": "2026-11-01T20:55:45.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=yHcec4hrNQQ"
         }
       ],
       "related": []

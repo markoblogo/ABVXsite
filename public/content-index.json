@@ -8153,7 +8153,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-01T21:10:38.145Z",
+      "updatedAt": "2026-11-01T21:36:49.070Z",
       "tags": [],
       "links": [],
       "related": []
@@ -12016,6 +12016,29 @@
         }
       ],
       "collection": "kitchen-notes"
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Ultra Water: Insane Real-Time Ocean Simulation in Three.js | Free Open Source",
+      "summary": "Someone just built an incredibly realistic ocean simulation using Three.js and WebGL2. And then decided to give away the entire source code. For free. Meet Ultra Water, an open-source, high-performance ocean renderer tha",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/phvfrx8rbcE",
+      "publishedAt": "2026-11-01T21:26:01.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=phvfrx8rbcE"
+        }
+      ],
+      "related": []
     },
     {
       "type": "video",

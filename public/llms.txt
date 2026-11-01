@@ -321,6 +321,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/oyQXmJI4aK0
   Summary: Step into a moonlit garden for a one-minute guided visualization: lanterns, moving water, a quiet pavilion and a gentle English voice. A short cinematic escape with ambient piano and night sounds. Created using PlayMCP.
 
+- Ultra Water: Insane Real-Time Ocean Simulation in Three.js | Free Open Source
+  URL: https://abvx.xyz/writing/videos/phvfrx8rbcE
+  Summary: Someone just built an incredibly realistic ocean simulation using Three.js and WebGL2. And then decided to give away the entire source code. For free. Meet Ultra Water, an open-source, high-performance ocean renderer tha
+
 - Jeanne la bataillonneuse — Géo Chkouroupiy | Bande-annonce
   URL: https://abvx.xyz/writing/videos/PmhWa-V00zc
   Summary: Découvrez « Jeanne la bataillonneuse, suivi de Miss Adrienne » de Géo Chkouroupiy, en traduction française dans la collection Modernisme ukrainien. La guerre et la révolution de 1917. Puis l’usine, le chômage et les mira

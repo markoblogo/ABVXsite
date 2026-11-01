@@ -8153,7 +8153,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-01T20:12:33.311Z",
+      "updatedAt": "2026-11-01T20:36:54.925Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8719,6 +8719,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=n5HYXnUWoNY"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Grok City: 6 AI Agents Run an Entire Content Factory in a Virtual City",
+      "summary": "What if your entire AI-powered content business operated from a tiny virtual city? With a newsroom, a video studio, a post office, a café, and even a bank? Meet Grok City, a fascinating experiment in multi-agent automati",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/D1feZmJ9kh0",
+      "publishedAt": "2026-11-01T20:08:56.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=D1feZmJ9kh0"
         }
       ],
       "related": []

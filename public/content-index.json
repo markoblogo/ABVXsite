@@ -8153,7 +8153,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-01T05:13:04.166Z",
+      "updatedAt": "2026-11-01T07:47:50.119Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10789,6 +10789,44 @@
       "links": [],
       "publishedAt": "2026-10-31",
       "updatedAt": "2026-10-31",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #23 — Thoughts, Stories & Reality",
+      "summary": "Twenty translated notebook fragments on thoughts, stories & reality.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-23-thoughts-stories-reality",
+      "tags": [
+        "psychology-notebook",
+        "thinking"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-01",
+      "updatedAt": "2026-11-01",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #24 — Closeness, Exchange & Expectations",
+      "summary": "Twenty translated notebook fragments on closeness, exchange & expectations.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-24-closeness-exchange-expectations",
+      "tags": [
+        "psychology-notebook",
+        "relationships"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-01",
+      "updatedAt": "2026-11-01",
       "related": []
     },
     {

@@ -489,6 +489,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/XOv4GafWnqY
   Summary: Your AI coding agent just modified 15 files, added 800 lines of code, and proudly announced: "All done. Everything works." Great. But do you actually understand what it changed? Meet diff-tour, a free, open-source tool t
 
+- Microsoft TokenEconomizer: Cut Claude Code & Codex Costs by Up to 30.9%
+  URL: https://abvx.xyz/writing/videos/XvpETa8sODw
+  Summary: What if your AI coding agents could do the same work while spending significantly less money? Without switching to a cheaper model. Without rewriting your prompts. And without sacrificing much, if any, performance? Micro
+
 - AsciiTheme — ASCII Themes & Widgets for JavaScript Websites
   URL: https://abvx.xyz/writing/videos/y2OW5f8QEXo
   Summary: Give your website an optional ASCII look with AsciiTheme, an open-source JavaScript library with four themes and interactive widgets. This short demo shows the light, dark, sepia, and matrix themes, plus progress bars, s

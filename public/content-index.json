@@ -8153,7 +8153,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-01T21:36:49.070Z",
+      "updatedAt": "2026-11-01T22:11:17.622Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9790,6 +9790,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=76yF1siGSlM"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Microsoft TokenEconomizer: Cut Claude Code & Codex Costs by Up to 30.9%",
+      "summary": "What if your AI coding agents could do the same work while spending significantly less money? Without switching to a cheaper model. Without rewriting your prompts. And without sacrificing much, if any, performance? Micro",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/XvpETa8sODw",
+      "publishedAt": "2026-11-01T21:49:02.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=XvpETa8sODw"
         }
       ],
       "related": []

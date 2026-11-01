@@ -961,6 +961,16 @@
     },
     {
       "source": "medium",
+      "title": "Researchers Found a Way to Train LLMs With 15% Less Compute. Without Making Them Stupider.",
+      "url": "https://abvcreative.medium.com/researchers-found-a-way-to-train-llms-with-15-less-compute-without-making-them-stupider-da4c04ca6e16",
+      "publishedAt": "2026-11-01T18:19:07.000Z",
+      "excerpt": "Meet LIMe, a surprisingly simple Transformer upgrade that could make language models cheaper to train, better at reasoning, and considerably less forgetful. There are two traditional ways to improve a large language mode",
+      "coverImage": "https://cdn-images-1.medium.com/max/1024/1*85DFxVS3gJjYfxjG9kT-8g.png",
+      "addedAt": "2026-11-01T18:37:06.986Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "medium",
       "title": "Rust’s Next Big Idea: Make unsafe Code Provably Safe. Let AI Agents Do the Work.",
       "url": "https://abvcreative.medium.com/rusts-next-big-idea-make-unsafe-code-provably-safe-let-ai-agents-do-the-work-5cc9902ee65a",
       "publishedAt": "2026-10-23T14:04:53.000Z",

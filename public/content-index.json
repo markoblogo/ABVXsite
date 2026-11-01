@@ -8153,7 +8153,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-01T20:36:54.925Z",
+      "updatedAt": "2026-11-01T20:50:23.249Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11147,6 +11147,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=NEbmecyitIs"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Tencent Hy-Nomas: Open-Source AI World Model Runs on a Single RTX 4090!",
+      "summary": "What if you could generate entire interactive worlds using AI, control them with text prompts, and explore them by moving the camera? And what if you could run the whole thing on a single consumer GPU? Meet Hy-Nomas, a n",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/3n9RCoXGbuQ",
+      "publishedAt": "2026-11-01T20:42:46.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=3n9RCoXGbuQ"
         }
       ],
       "related": []

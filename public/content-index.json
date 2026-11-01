@@ -8153,7 +8153,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-01T19:36:31.380Z",
+      "updatedAt": "2026-11-01T20:12:33.311Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11967,6 +11967,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=zOfyKb7_c1M"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Vercel Agent Desktop: AI Agents Can Control Your Mac Without Screenshots | Claude & Codex",
+      "summary": "What if your AI agents could use your entire computer without constantly taking screenshots, analyzing pixels, and moving your mouse around? And what if multiple agents could work while you continued using your computer?",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/UcyFLnvIzeE",
+      "publishedAt": "2026-11-01T19:52:00.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=UcyFLnvIzeE"
         }
       ],
       "related": []

@@ -409,6 +409,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/u7HuTkQFvo4
   Summary: What if you could create a fully rigged and animated 3D creature in less than an hour? Not just a pretty 3D model. An actual character with a skeleton, swimming animations, and a convincing bite. This entire shark was cr
 
+- Vercel Agent Desktop: AI Agents Can Control Your Mac Without Screenshots | Claude & Codex
+  URL: https://abvx.xyz/writing/videos/UcyFLnvIzeE
+  Summary: What if your AI agents could use your entire computer without constantly taking screenshots, analyzing pixels, and moving your mouse around? And what if multiple agents could work while you continued using your computer?
+
 - Afterimage | Venice Biennale 2019 — Light, Memory & Machines
   URL: https://abvx.xyz/writing/videos/umOUUPFrG4c
   Summary: Light becomes a body. A letter dissolves into fog. A robot repeats a task that never stays finished. AFTERIMAGE is an original short art film connecting four encounters with media and installation art from the Venice Bie

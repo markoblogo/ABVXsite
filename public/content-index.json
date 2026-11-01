@@ -8153,7 +8153,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-01T17:21:28.161Z",
+      "updatedAt": "2026-11-01T19:36:31.380Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11101,6 +11101,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=VLObu0Pl9D0"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Subvocal: AI Glasses That Turn Silent Speech Into Text at 200+ Words Per Minute",
+      "summary": "What if you could talk to ChatGPT, Claude, or your AI coding agents without making a single sound? No keyboard. No microphone. Not even whispering. Just silently move your mouth, and your thoughts become text. Well, almo",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/NEbmecyitIs",
+      "publishedAt": "2026-11-01T19:20:32.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=NEbmecyitIs"
         }
       ],
       "related": []

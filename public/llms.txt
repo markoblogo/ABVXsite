@@ -293,6 +293,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/nBzbwlcAElY
   Summary: We may have just witnessed one of the strangest AI experiments of 2026. Researchers connected a simulated fruit fly brain to Odyssey-3, an AI world model capable of generating interactive virtual environments in real tim
 
+- Subvocal: AI Glasses That Turn Silent Speech Into Text at 200+ Words Per Minute
+  URL: https://abvx.xyz/writing/videos/NEbmecyitIs
+  Summary: What if you could talk to ChatGPT, Claude, or your AI coding agents without making a single sound? No keyboard. No microphone. Not even whispering. Just silently move your mouth, and your thoughts become text. Well, almo
+
 - He Emailed Salesforce's CEO 53 Times. Here's How He Finally Got a Reply
   URL: https://abvx.xyz/writing/videos/NOi2yqMGaP0
   Summary: How many follow-ups would you send before giving up on your dream customer? Three? Five? Maybe ten? Well, Harry Stebbings sent 53 emails to Marc Benioff, the CEO of Salesforce. And for 52 weeks, he got absolutely nothing

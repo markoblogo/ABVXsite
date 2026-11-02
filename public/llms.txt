@@ -1839,6 +1839,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook, relationships
 
+- Psychology Notebook #25 — Choice, Intention & Action
+  URL: https://abvx.xyz/writing/psychology-notebook-25-choice-intention-action
+  Summary: Twenty translated notebook fragments on choice, intention & action.
+  Group: writing
+  Tags: psychology-notebook, desire
+
+- Psychology Notebook #26 — Time, Change & Everyday Life
+  URL: https://abvx.xyz/writing/psychology-notebook-26-time-change-everyday-life
+  Summary: Twenty translated notebook fragments on time, change & everyday life.
+  Group: writing
+  Tags: psychology-notebook, living
+
 - The Berliner: How My Beer Cocktail Ended Up on a French Bar's Menu
   URL: https://abvx.xyz/writing/the-berliner-guinness-port-beer-cocktail
   Summary: I discovered Guinness with port wine in Berlin, recreated it with whatever a small French bar had available, and eventually watched it become an official item in the cash register.

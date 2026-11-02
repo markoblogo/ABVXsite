@@ -941,6 +941,16 @@
     },
     {
       "source": "medium",
+      "title": "Mirendil’s Fern 0.1 Can Read 10 Million Tokens. Unfortunately, Reading Isn’t the Same as Thinking.",
+      "url": "https://abvcreative.medium.com/mirendils-fern-0-1-can-read-10-million-tokens-unfortunately-reading-isn-t-the-same-as-thinking-941722551495",
+      "publishedAt": "2026-11-02T12:15:23.000Z",
+      "excerpt": "Former Anthropic researchers have built an AI model that can swallow half a million lines of code at once. The memory is extraordinary. The benchmarks? Rather less so. There’s a peculiar competition happening in artifici",
+      "coverImage": "https://cdn-images-1.medium.com/max/1024/1*l0cguNJelUBi2oND_zVRBw.png",
+      "addedAt": "2026-11-02T12:20:31.354Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "medium",
       "title": "Mistral’s Timestral: 209 Million Parameters, No GPU, and a Suspiciously Perfect Benchmark Score",
       "url": "https://abvcreative.medium.com/mistrals-timestral-209-million-parameters-no-gpu-and-a-suspiciously-perfect-benchmark-score-86d256483d16",
       "publishedAt": "2026-10-26T14:17:18.000Z",
@@ -1098,6 +1108,16 @@
       "coverImage": "https://substackcdn.com/image/fetch/$s_!R865!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fda3bd7af-6613-413c-936c-3d58f1c5f2f0_1536x1024.png",
       "addedAt": "2026-09-26T15:58:09.000Z",
       "addedAtBasis": "legacy-source"
+    },
+    {
+      "source": "substack",
+      "title": "A Man Just Won the Right Not to Use AI at Work. And He Has a Point.",
+      "url": "https://abvx.substack.com/p/a-man-just-won-the-right-not-to-use",
+      "publishedAt": "2026-11-02T11:59:59.000Z",
+      "excerpt": "We’ve officially reached a fascinating stage of the AI revolution. People are now requesting religious exemptions from artificial intelligence. Not because they believe ChatGPT is possessed by Satan. Not because Claude i",
+      "coverImage": "https://substackcdn.com/image/fetch/$s_!ANXt!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff890a089-2a56-4c68-a8c7-0f6031aaf743_1672x941.png",
+      "addedAt": "2026-11-02T12:20:31.354Z",
+      "addedAtBasis": "observed"
     },
     {
       "source": "substack",

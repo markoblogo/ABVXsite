@@ -7082,6 +7082,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "109M vs 72B: Why Better Training Pairs Matter",
+      "summary": "What if better AI starts with better training pairs, rather than just a bigger model? This short visual explainer looks at a 2026 preprint by Randall Balestriero and Yann LeCun. Their 109M-parameter text JEPA achieved st",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/QNgjNNEpsAM",
+      "publishedAt": "2026-11-02T14:57:02.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=QNgjNNEpsAM"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "12 Claude Code Agents Turned 64 Scientific Papers Into an Interactive Physics Lab",
       "summary": "What if you could turn dozens of scientific research papers into an interactive laboratory you can actually experiment with? Not just summaries. Not another chatbot explaining complicated equations. Actual working simula",
       "canonicalUrl": "https://abvx.xyz/writing/videos/3t0O8-77oxQ",
@@ -8153,7 +8176,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-02T09:17:10.328Z",
+      "updatedAt": "2026-11-02T15:15:32.851Z",
       "tags": [],
       "links": [],
       "related": []

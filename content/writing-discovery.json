@@ -2286,6 +2286,17 @@
     },
     {
       "source": "youtube",
+      "title": "109M vs 72B: Why Better Training Pairs Matter",
+      "url": "https://www.youtube.com/watch?v=QNgjNNEpsAM",
+      "publishedAt": "2026-11-02T14:57:02.000Z",
+      "excerpt": "What if better AI starts with better training pairs, rather than just a bigger model? This short visual explainer looks at a 2026 preprint by Randall Balestriero and Yann LeCun. Their 109M-parameter text JEPA achieved st",
+      "coverImage": "https://i.ytimg.com/vi/QNgjNNEpsAM/hqdefault.jpg",
+      "videoDescription": "What if better AI starts with better training pairs, rather than just a bigger model?\n\nThis short visual explainer looks at a 2026 preprint by Randall Balestriero and Yann LeCun. Their 109M-parameter text JEPA achieved stronger alignment with image representations than the language models evaluated, including Qwen2.5-72B, on the reported WIT-1024 test.\n\nThat is a specific representation-alignment result—not proof that the smaller model is generally smarter or can replace a conversational assistant.\n\nA dog, a bicycle and three descriptions help explain good views, representation space and why the relationships between examples matter. Real paper excerpts and a redrawn chart show where the reported numbers come from.\n\nREAD THE FULL ARTICLE\nhttps://abvx.xyz/writing/lecun-jepa-109m-vs-72b-platonic-representations\n\nCHAPTERS\n00:00 109M vs 72B: the question\n00:21 The paper and JEPA\n00:49 How training pairs work\n01:01 The alignment results\n01:16 What this does not prove\n01:26 The takeaway\n\nRESEARCH\nRandall Balestriero & Yann LeCun — Proving and Improving the Platonic Representation Hypothesis with JEPAs, arXiv:2610.39302v1, 29 October 2026:\nhttps://arxiv.org/abs/2610.39302\n\nMinyoung Huh, Brian Cheung, Tongzhou Wang & Phillip Isola — The Platonic Representation Hypothesis, ICML 2024:\nhttps://proceedings.mlr.press/v235/huh24a.html\n\nVISUALS & PRODUCTION\nPDF excerpts: Balestriero & LeCun, CC BY4.0. Cropping/highlights added; chart redrawn from Table 3. The point-space geometry is explanatory, not measured embeddings. The realistic dog-and-bicycle scene and thumbnail are AI-generated illustrations. English narration is synthetic; it does not impersonate either researcher. Original instrumental music is reused from our studio library.\n\nProduced with Framewright:\nhttps://github.com/markoblogo/framewright\n\n#JEPA #MachineLearning #AIResearch",
+      "addedAt": "2026-11-02T15:15:32.851Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "AMI — Digital Infrastructure for Physical Commodity Markets",
       "url": "https://www.youtube.com/watch?v=QnpLjwhj6Fs",
       "publishedAt": "2026-10-14T12:36:47.000Z",

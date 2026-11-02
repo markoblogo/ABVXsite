@@ -8153,7 +8153,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-01T22:11:17.622Z",
+      "updatedAt": "2026-11-02T09:17:10.328Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10896,6 +10896,44 @@
       "links": [],
       "publishedAt": "2026-11-01",
       "updatedAt": "2026-11-01",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #25 — Choice, Intention & Action",
+      "summary": "Twenty translated notebook fragments on choice, intention & action.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-25-choice-intention-action",
+      "tags": [
+        "psychology-notebook",
+        "desire"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-02",
+      "updatedAt": "2026-11-02",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #26 — Time, Change & Everyday Life",
+      "summary": "Twenty translated notebook fragments on time, change & everyday life.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-26-time-change-everyday-life",
+      "tags": [
+        "psychology-notebook",
+        "living"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-02",
+      "updatedAt": "2026-11-02",
       "related": []
     },
     {

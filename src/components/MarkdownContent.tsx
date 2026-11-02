@@ -8,6 +8,7 @@ type Block =
   | { type: 'paragraph'; text: string }
   | { type: 'code'; text: string }
   | { type: 'separator' }
+  | { type: 'table'; headers: string[]; rows: string[][]; align: ('left' | 'center' | 'right' | undefined)[] }
   | { type: 'list'; items: string[]; ordered: boolean };
 
 type InlineMatch = {
@@ -110,6 +111,34 @@ function inlineMarkdownNodes(text: string): ReactNode[] {
   return nodes.length ? nodes : [text];
 }
 
+function tableCells(line: string): string[] | null {
+  const cells: string[] = [];
+  let cell = '';
+  let separators = 0;
+  for (let i = 0; i < line.length; i += 1) {
+    if (line[i] === '\\' && i + 1 < line.length) {
+      cell += line[i + 1] === '|' ? '|' : line.slice(i, i + 2);
+      i += 1;
+    } else if (line[i] === '`') {
+      const ticks = line.slice(i).match(/^`+/)![0];
+      const end = line.indexOf(ticks, i + ticks.length);
+      if (end >= 0) {
+        cell += line.slice(i, end + ticks.length);
+        i = end + ticks.length - 1;
+      } else cell += line[i];
+    } else if (line[i] === '|') {
+      cells.push(cell.trim());
+      cell = '';
+      separators += 1;
+    } else cell += line[i];
+  }
+  if (!separators) return null;
+  cells.push(cell.trim());
+  if (line.startsWith('|')) cells.shift();
+  if (line.endsWith('|') && cells.at(-1) === '') cells.pop();
+  return cells;
+}
+
 function parseMarkdownBlocks(markdown: string, headingOffset: 0 | 1): Block[] {
   const blocks: Block[] = [];
   const lines = markdown.replace(/\r\n/g, '\n').split('\n');
@@ -131,7 +160,8 @@ function parseMarkdownBlocks(markdown: string, headingOffset: 0 | 1): Block[] {
     orderedList = false;
   }
 
-  for (const rawLine of lines) {
+  for (let lineIndex = 0; lineIndex < lines.length; lineIndex += 1) {
+    const rawLine = lines[lineIndex];
     const line = rawLine.trim();
     if (/^```[\w-]*$/.test(line) && (code === null || line === '```')) {
       flushParagraph();
@@ -144,6 +174,26 @@ function parseMarkdownBlocks(markdown: string, headingOffset: 0 | 1): Block[] {
     }
     if (code !== null) {
       code.push(rawLine);
+      continue;
+    }
+
+    const headers = tableCells(line);
+    const delimiter = tableCells((lines[lineIndex + 1] || '').trim());
+    if (headers?.length && delimiter?.length === headers.length && delimiter.every(cell => /^:?-{3,}:?$/.test(cell))) {
+      flushParagraph();
+      flushList();
+      const align = delimiter.map(cell => cell.endsWith(':') ? (cell.startsWith(':') ? 'center' : 'right') : cell.startsWith(':') ? 'left' : undefined);
+      const rows: string[][] = [];
+      lineIndex += 1;
+      while (lineIndex + 1 < lines.length) {
+        const nextLine = lines[lineIndex + 1].trim();
+        if (/^(?:#{1,6}\s|```|>\s?|[-*+]\s|\d+[.)]\s)/.test(nextLine)) break;
+        const row = tableCells(nextLine);
+        if (!row) break;
+        rows.push(headers.map((_, index) => row[index] || ''));
+        lineIndex += 1;
+      }
+      blocks.push({ type: 'table', headers, rows, align });
       continue;
     }
 
@@ -220,6 +270,14 @@ export default function MarkdownContent({
       {blocks.map((block, index): ReactNode => {
         if (block.type === 'code') return <pre key={`code-${index}`}><code>{block.text}</code></pre>;
         if (block.type === 'separator') return <hr key={`separator-${index}`} className="border-0 border-t border-[var(--line)]" />;
+        if (block.type === 'table') return (
+          <div key={`table-${index}`} className="markdown-table-scroll" role="region" aria-label={block.headers.join(', ')} tabIndex={0}>
+            <table>
+              <thead><tr>{block.headers.map((cell, column) => <th key={column} scope="col" style={{ textAlign: block.align[column] }}>{inlineMarkdownNodes(cell)}</th>)}</tr></thead>
+              <tbody>{block.rows.map((row, rowIndex) => <tr key={rowIndex}>{row.map((cell, column) => <td key={column} style={{ textAlign: block.align[column] }}>{inlineMarkdownNodes(cell)}</td>)}</tr>)}</tbody>
+            </table>
+          </div>
+        );
         if (block.type === 'heading') {
           const Heading = `h${block.level}` as 'h2' | 'h3' | 'h4';
           return <Fragment key={`${block.type}-${index}`}>

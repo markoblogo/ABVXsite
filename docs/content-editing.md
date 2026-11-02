@@ -60,6 +60,10 @@ Bulk edits must keep the same source ownership and stable identifiers. A passed 
 
 Kitchen Notes recipe fields and local cookbook export: [guide](kitchen-notes.md).
 
+## Tables in Markdown
+
+Markdown tables use a header row, a delimiter row (`|---|---|`) and data rows. Optional outer pipes and colon alignment are supported. Cells retain inline emphasis, links and code; use `\|` for a literal pipe. The renderer creates semantic column headers and a keyboard-focusable horizontal scroll region on narrow screens. Tables inside fenced code remain literal examples.
+
 ## Videos inside Writing articles
 
 Put a labelled HTTPS YouTube link in its own paragraph, e.g. `[AMI — launch video](https://youtu.be/VIDEO_ID)`. Native Writing renders each supported standalone video link as a responsive, lazy, privacy-enhanced player with the original URL as a fallback link. Inline references, lists and fenced code remain ordinary Markdown. Other Markdown surfaces keep link rendering unless they explicitly enable video blocks. Do not use the single `videoUrl` companion field for a multi-project review: it remains an ordinary article in the Writing feed.

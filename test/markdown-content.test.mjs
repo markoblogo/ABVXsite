@@ -20,6 +20,29 @@ const MarkdownContent = loadComponent('MarkdownContent').default;
 const { youtubeVideoId, findYouTubeVideo } = loadComponent('YouTubeEmbed');
 const render = (children, props = {}) => renderToStaticMarkup(createElement(MarkdownContent, props, children));
 
+test('renders the JEPA comparison as a semantic table with all values', () => {
+  const html = render('Before.\n\n|Model|Parameters|Representation alignment|\n|---|---|---|\n|Text JEPA, good views|109M|**0.184**|\n|Qwen2.5-72B|72B|0.154|\n|Llama-3-70B|70B|0.151|\n|CLIP text encoder|Smaller model|0.124|\n|Next-token baseline, same text architecture|109M|0.111|\n\nAfter.');
+  assert.match(html, /<table>/);
+  assert.equal((html.match(/scope="col"/g) || []).length, 3);
+  assert.equal((html.match(/<td/g) || []).length, 15);
+  assert.match(html, /<strong>0\.184<\/strong>/);
+  assert.match(html, /<p>After\.<\/p>/);
+  assert.match(html, /tabindex="0"/);
+});
+
+test('table cells retain alignment, escaped pipes, code and safe inline markup', () => {
+  const html = render('Name | Value\n:--- | ---:\nA \\| B | `a|b`\n<script>bad</script> | **2**\n\n## Next');
+  assert.match(html, /A \| B/);
+  assert.match(html, /<code>a\|b<\/code>/);
+  assert.match(html, /text-align:right/);
+  assert.match(html, /&lt;script&gt;bad&lt;\/script&gt;/);
+  assert.match(html, /<h3>Next<\/h3>/);
+  assert.match(render('|A|B|\n|---|---|\n|1|2|\n## Heading | outside'), /<h3>Heading \| outside<\/h3>/);
+  for (const body of ['text | text\n--- | invalid\nrow | row', '```\n|A|B|\n|---|---|\n|1|2|\n```']) {
+    assert.doesNotMatch(render(body), /<table>/);
+  }
+});
+
 test('renders the publication title with italic inside bold', () => {
   assert.ok(render('**Géo Chkouroupiy, *Jeanne la bataillonneuse : suivi de Miss Adrienne***')
     .includes('<strong>Géo Chkouroupiy, <em>Jeanne la bataillonneuse : suivi de Miss Adrienne</em></strong>'));

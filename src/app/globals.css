@@ -4685,6 +4685,40 @@ a {
 .content-markdown {
   display: grid;
   gap: 0.75rem;
+  min-width: 0;
+}
+
+.markdown-table-scroll {
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.markdown-table-scroll:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.markdown-table-scroll table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--ink-muted);
+  font-size: clamp(1rem, 1.35vw, 1.12rem);
+  line-height: 1.46;
+}
+
+.markdown-table-scroll th,
+.markdown-table-scroll td {
+  min-width: 7rem;
+  border: 1px solid var(--line);
+  padding: 0.7rem 0.85rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.markdown-table-scroll th {
+  color: var(--ink);
+  font-weight: 700;
 }
 
 .content-markdown h3,

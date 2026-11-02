@@ -8176,7 +8176,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-02T16:38:38.891Z",
+      "updatedAt": "2026-11-02T22:13:51.079Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10379,6 +10379,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=LxjAYGIaHgw"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Posters Come Alive | Alexey Lysogorov — Posters, Unbound",
+      "summary": "What happens when a poster refuses to stay still? Posters, Unbound is a 48-second surreal motion collage built from nine posters by Alexey Lysogorov. Typography becomes steam, geometric faces reshuffle, and a cat and dog",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/nqcI4COtP8c",
+      "publishedAt": "2026-11-02T22:02:41.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=nqcI4COtP8c"
         }
       ],
       "related": []

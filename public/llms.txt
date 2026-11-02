@@ -313,6 +313,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/NOi2yqMGaP0
   Summary: How many follow-ups would you send before giving up on your dream customer? Three? Five? Maybe ten? Well, Harry Stebbings sent 53 emails to Marc Benioff, the CEO of Salesforce. And for 52 weeks, he got absolutely nothing
 
+- Posters Come Alive | Alexey Lysogorov — Posters, Unbound
+  URL: https://abvx.xyz/writing/videos/nqcI4COtP8c
+  Summary: What happens when a poster refuses to stay still? Posters, Unbound is a 48-second surreal motion collage built from nine posters by Alexey Lysogorov. Typography becomes steam, geometric faces reshuffle, and a cat and dog
+
 - PlayMCP Review: I Made 3 AI Games — Tools, Challenges & Costs
   URL: https://abvx.xyz/writing/videos/NVeMJLidncU
   Summary: What is PlayMCP, and how do you turn an idea and a music track into a playable game? This hands-on review covers the agent workflow, creative tools, testing, hosting, community challenges and my three published experimen

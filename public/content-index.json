@@ -8176,7 +8176,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-02T22:13:51.079Z",
+      "updatedAt": "2026-11-03T02:18:50.383Z",
       "tags": [],
       "links": [],
       "related": []
@@ -12630,6 +12630,29 @@
           "relation": "same-project"
         }
       ]
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "When a Photo Exhibition Starts Melting | Illusions in Suspension",
+      "summary": "A visit to a friend’s photography gallery turns into a small psychedelic detour: pictures melt, colours drift, and fragments of one image linger inside the next. Illusions in Suspension is a 54-second experimental film m",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/PHMx3I0VYqY",
+      "publishedAt": "2026-11-03T00:02:31.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=PHMx3I0VYqY"
+        }
+      ],
+      "related": []
     },
     {
       "type": "working-story",

@@ -329,6 +329,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/oyQXmJI4aK0
   Summary: Step into a moonlit garden for a one-minute guided visualization: lanterns, moving water, a quiet pavilion and a gentle English voice. A short cinematic escape with ambient piano and night sounds. Created using PlayMCP.
 
+- When a Photo Exhibition Starts Melting | Illusions in Suspension
+  URL: https://abvx.xyz/writing/videos/PHMx3I0VYqY
+  Summary: A visit to a friend’s photography gallery turns into a small psychedelic detour: pictures melt, colours drift, and fragments of one image linger inside the next. Illusions in Suspension is a 54-second experimental film m
+
 - Ultra Water: Insane Real-Time Ocean Simulation in Three.js | Free Open Source
   URL: https://abvx.xyz/writing/videos/phvfrx8rbcE
   Summary: Someone just built an incredibly realistic ocean simulation using Three.js and WebGL2. And then decided to give away the entire source code. For free. Meet Ultra Water, an open-source, high-performance ocean renderer tha

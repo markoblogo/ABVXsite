@@ -1867,6 +1867,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook, living
 
+- Psychology Notebook #27 — Difficulty, Loss & Letting Go
+  URL: https://abvx.xyz/writing/psychology-notebook-27-difficulty-loss-letting-go
+  Summary: Twenty translated notebook fragments on difficulty, loss & letting go.
+  Group: writing
+  Tags: psychology-notebook, suffering
+
+- Psychology Notebook #28 — Effort, Rest & Resources
+  URL: https://abvx.xyz/writing/psychology-notebook-28-effort-rest-resources
+  Summary: Twenty translated notebook fragments on effort, rest & resources.
+  Group: writing
+  Tags: psychology-notebook, living
+
 - The Berliner: How My Beer Cocktail Ended Up on a French Bar's Menu
   URL: https://abvx.xyz/writing/the-berliner-guinness-port-beer-cocktail
   Summary: I discovered Guinness with port wine in Berlin, recreated it with whatever a small French bar had available, and eventually watched it become an official item in the cash register.

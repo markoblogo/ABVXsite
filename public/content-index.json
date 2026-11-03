@@ -8176,7 +8176,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-03T02:18:50.383Z",
+      "updatedAt": "2026-11-03T09:10:17.543Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10980,6 +10980,44 @@
       "links": [],
       "publishedAt": "2026-11-02",
       "updatedAt": "2026-11-02",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #27 — Difficulty, Loss & Letting Go",
+      "summary": "Twenty translated notebook fragments on difficulty, loss & letting go.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-27-difficulty-loss-letting-go",
+      "tags": [
+        "psychology-notebook",
+        "suffering"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-03",
+      "updatedAt": "2026-11-03",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #28 — Effort, Rest & Resources",
+      "summary": "Twenty translated notebook fragments on effort, rest & resources.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-28-effort-rest-resources",
+      "tags": [
+        "psychology-notebook",
+        "living"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-03",
+      "updatedAt": "2026-11-03",
       "related": []
     },
     {

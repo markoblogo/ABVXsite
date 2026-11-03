@@ -8176,7 +8176,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-03T09:10:17.543Z",
+      "updatedAt": "2026-11-03T14:23:04.878Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10113,6 +10113,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=kh-MTl8K5pE"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Nice Airport to Menton: Bus or Train? | French Riviera Guide",
+      "summary": "Landing at Nice Côte d’Azur Airport and heading to Menton? This 90-second guide compares the direct Line 80 coach with the train via Nice Saint-Augustin—and shows how to reach central Menton. Follow a stylised pixel-art ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/ih43aF1zeaM",
+      "publishedAt": "2026-11-03T14:06:51.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=ih43aF1zeaM"
         }
       ],
       "related": []

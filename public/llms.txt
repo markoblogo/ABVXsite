@@ -233,6 +233,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/ht5q8eM93K4
   Summary: Working on a 3D game, animation, or creative coding project? Here's a resource worth bookmarking. Scenario just released a collection of 1,342 AI-generated 3D assets on Hugging Face. And you can download them for free. N
 
+- Nice Airport to Menton: Bus or Train? | French Riviera Guide
+  URL: https://abvx.xyz/writing/videos/ih43aF1zeaM
+  Summary: Landing at Nice Côte d’Azur Airport and heading to Menton? This 90-second guide compares the direct Line 80 coach with the train via Nice Saint-Augustin—and shows how to reach central Menton. Follow a stylised pixel-art
+
 - Nantes Green Line Walk | From Pixels to City Landmarks - Nantes : suivez la ligne verte
   URL: https://abvx.xyz/writing/videos/IQ3CdzPzFHw
   Summary: Follow Nantes’ green line in a 1-minute-40-second illustrated walk: see the complete route on a map, then visit six selected stops from the railway station to the LU Tower. Pixel landscapes briefly reveal generated inter

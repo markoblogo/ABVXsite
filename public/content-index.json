@@ -8178,6 +8178,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude Opus 5.5 Turned a Physics Textbook Into an Interactive 3D World | Three.js",
+      "summary": "What if physics textbooks weren't just pages of formulas and static diagrams? What if you could actually step inside the illustrations, experiment with physical forces, and discover how the world works? Meet Every Joule,",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/u1SKVK2L2bc",
+      "publishedAt": "2026-11-04T20:19:48.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=u1SKVK2L2bc"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude Opus 5.5 Turned a Viral Video Into a Playable 3D Game in 40 Minutes",
       "summary": "What if you could take a viral video, give it to an AI, and turn it into an actual video game? Not just a visual recreation. A fully explorable 3D world. And what if the entire process took just 40 minutes? About a year ",
       "canonicalUrl": "https://abvx.xyz/writing/videos/CM0Ig3q7pqk",
@@ -8227,7 +8250,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-04T19:51:04.025Z",
+      "updatedAt": "2026-11-04T20:38:01.168Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11690,6 +11713,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Spline + ChatGPT: Create Interactive 3D Scenes Just by Prompting | Codex Plugin",
+      "summary": "What if you could create an entire interactive 3D scene without opening Blender, writing Three.js code, or manually building every object? And what if you could edit the result directly inside ChatGPT? Meet the new Splin",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/puzSHTiHyW8",
+      "publishedAt": "2026-11-04T20:11:22.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=puzSHTiHyW8"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Spot-Market Handbook | How Physical Commodity Markets Work",
       "summary": "A quote is only the beginning. Explore how grain, logistics, delivery terms and liquidity connect in physical commodity markets. Read Spot-Market Handbook — free English edition, available as PDF and EPUB: https://abvx.x",
       "canonicalUrl": "https://abvx.xyz/writing/videos/7hkMaEjINZA",
@@ -12540,6 +12586,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=4u78DC8S864"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "This Free Claude Code Skill Makes Better Landing Pages | AI Design Skills for Codex",
+      "summary": "Hero first. Then benefits. Then the product explanation, social proof, FAQs, and final CTA. Want to try it? The easiest installation method is the Skills CLI: npx skills add elayadesign/ai-design-skills --skill landing-p",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/hoUnFjAysfQ",
+      "publishedAt": "2026-11-04T20:32:51.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=hoUnFjAysfQ"
         }
       ],
       "related": []

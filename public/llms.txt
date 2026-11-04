@@ -245,6 +245,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/hBU0WpTTbes
   Summary: What if you could make Claude Code more efficient by giving each AI model a different job? Instead of using the most expensive model for everything, try a smarter multi-model setup: Sonnet does the coding. Opus provides
 
+- This Free Claude Code Skill Makes Better Landing Pages | AI Design Skills for Codex
+  URL: https://abvx.xyz/writing/videos/hoUnFjAysfQ
+  Summary: Hero first. Then benefits. Then the product explanation, social proof, FAQs, and final CTA. Want to try it? The easiest installation method is the Skills CLI: npx skills add elayadesign/ai-design-skills --skill landing-p
+
 - 1,342 Free 3D Models for Blender, Games & AI Projects | Download on Hugging Face
   URL: https://abvx.xyz/writing/videos/ht5q8eM93K4
   Summary: Working on a 3D game, animation, or creative coding project? Here's a resource worth bookmarking. Scenario just released a collection of 1,342 AI-generated 3D assets on Hugging Face. And you can download them for free. N
@@ -401,6 +405,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/ppz1g7gRDds
   Summary: Apparently, CapCut couldn't just sit back and watch creators automate their video editing workflows with Claude Code and DaVinci Resolve. So now CapCut is coming directly to ChatGPT. Announced at CapCut World LA on Octob
 
+- Spline + ChatGPT: Create Interactive 3D Scenes Just by Prompting | Codex Plugin
+  URL: https://abvx.xyz/writing/videos/puzSHTiHyW8
+  Summary: What if you could create an entire interactive 3D scene without opening Blender, writing Three.js code, or manually building every object? And what if you could edit the result directly inside ChatGPT? Meet the new Splin
+
 - Do You Believe in Life After Death? This Interactive 3D Visualization Explores 130,000 Answers
   URL: https://abvx.xyz/writing/videos/Q73r6GLqXVY
   Summary: What happens after we die? It's one of humanity's oldest questions. And someone decided to turn 130,000 people's answers into an interactive 3D experience. Meet Life After Death?, a fascinating data visualization created
@@ -492,6 +500,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Every Startup Founder Has That ONE Deal That Never Closes
   URL: https://abvx.xyz/writing/videos/U-cVLltmoRM
   Summary: "We love your product!" "The team is really excited!" "Just waiting for final approval." "We should have everything signed next week." Three months later... Still closing. Any day now. Founders, drop a ❤️ if this feels p
+
+- Claude Opus 5.5 Turned a Physics Textbook Into an Interactive 3D World | Three.js
+  URL: https://abvx.xyz/writing/videos/u1SKVK2L2bc
+  Summary: What if physics textbooks weren't just pages of formulas and static diagrams? What if you could actually step inside the illustrations, experiment with physical forces, and discover how the world works? Meet Every Joule,
 
 - Claude Opus 5.5 Created This Animated 3D Shark in 45 Minutes | Blender + Tripo AI
   URL: https://abvx.xyz/writing/videos/u7HuTkQFvo4

@@ -1,14 +1,14 @@
 // A bounded video addition over the existing catalogue and versioned content store.
 import {createHash} from 'node:crypto';
 import {parseMarkdownSource} from './markdown-source.mjs';
-import {catalogueFamily,cataloguePath,catalogueConfiguration,sectionAnchor} from './runtime-catalogue.mjs';
+import {catalogueFamily,cataloguePath,catalogueConfiguration,introducedCatalogueIds,sectionAnchor} from './runtime-catalogue.mjs';
 import {youtubeVideoId} from '../lib/youtube-url.mjs';
 const hash=s=>createHash('sha256').update(s).digest('hex');
 export function catalogueVideoTargets(snapshot,legacySources){
  const managed=Object.values(snapshot.records).map(r=>r.versions[r.currentRevision]).filter(v=>!v.withdrawn).map(v=>v.source).filter(s=>catalogueFamily(parseMarkdownSource(s).data));
  const sources=[...managed,...legacySources.filter(s=>catalogueFamily(parseMarkdownSource(s).data)&&!Object.hasOwn(snapshot.records,parseMarkdownSource(s).data.slug))];
  const targets=sources.filter(s=>{const d=parseMarkdownSource(s).data;return d.visibility==='public'&&!['draft','private'].includes(d.status);}).map(source=>{const {data}=parseMarkdownSource(source);return {route:data.canonicalPath||cataloguePath(data),source,id:data.slug,aliases:[cataloguePath(data)]};});
- const config=catalogueConfiguration(sources,Object.keys(snapshot.records));
+ const config=catalogueConfiguration(sources,introducedCatalogueIds(snapshot));
  const groups=[...config.bookGroups.map(g=>({g,section:'books'})),...config.focusGroups.map(g=>({g,section:'focus'})),...config.ecosystems.flatMap(e=>e.groups.map(g=>({g,section:'systems',ecosystem:e.title})))];
  for(const {g,section,ecosystem} of groups){const slug=sectionAnchor(g.title),route=`/${section}#${slug}`;if(targets.some(t=>t.route===route))continue;const id=`catalogue-${section}-${slug}`,data={id,slug:id,type:'catalogue-section',title:g.title,group:g.title,summary:g.description||g.title,primarySection:section,appearsIn:[section],visibility:'public',status:'live',language:'en',tags:[],links:[],...(ecosystem?{ecosystem}:{}),baselineGroup:true};const source='---\n'+JSON.stringify(data,null,2)+'\n---\n\n'+(g.description||g.title)+'\n';targets.push({route,source,id,group:true});}
  return targets;

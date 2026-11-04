@@ -41,6 +41,7 @@ export function parseAcceptedCatalogue(source,now=new Date()){
 }
 export function readLegacyCatalogueSources(){return ['books','work','series'].flatMap(folder=>readdirSync('content/'+folder).filter(f=>f.endsWith('.md')&&!f.startsWith('_')).map(f=>readFileSync(`content/${folder}/${f}`,'utf8')));}
 export function mergeCatalogueSources(snapshot,legacy){return [...Object.values(snapshot.records).map(r=>r.versions[r.currentRevision]).filter(v=>!v.withdrawn&&catalogueFamily(parseMarkdownSource(v.source).data)).map(v=>v.source),...legacy.filter(source=>!Object.hasOwn(snapshot.records,parseMarkdownSource(source).data.slug))];}
+export const introducedCatalogueIds=snapshot=>Object.keys(snapshot.records).filter(id=>snapshot.records[id].firstAddedAt!=null);
 export function catalogueConfiguration(sources,managed=[]){
  const data=sources.map(s=>parseMarkdownSource(s).data).filter(d=>!['private','draft'].includes(d.visibility));
  const ecosystems=structuredClone(systemsEcosystems),bookGroups=structuredClone(bookStandaloneGroups),seriesSlugs=[...officialSeriesSlugs],focusGroups=structuredClone(baselineFocusGroups);
@@ -54,7 +55,7 @@ export function catalogueConfiguration(sources,managed=[]){
  return {ecosystems,bookGroups,seriesSlugs,focusGroups};
 }
 export function validateCatalogueSnapshot(snapshot,legacy){
- const sources=mergeCatalogueSources(snapshot,legacy),config=catalogueConfiguration(sources,Object.keys(snapshot.records)),data=sources.map(s=>parseMarkdownSource(s).data).filter(d=>!['private','draft'].includes(d.visibility));
+ const sources=mergeCatalogueSources(snapshot,legacy),config=catalogueConfiguration(sources,introducedCatalogueIds(snapshot)),data=sources.map(s=>parseMarkdownSource(s).data).filter(d=>!['private','draft'].includes(d.visibility));
  const series=new Set(data.filter(d=>d.type==='series').map(d=>d.slug));
  // Validate new records and relationships on every write, including withdrawals.
  for(const d of data){

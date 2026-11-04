@@ -361,6 +361,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/NVeMJLidncU
   Summary: What is PlayMCP, and how do you turn an idea and a music track into a playable game? This hands-on review covers the agent workflow, creative tools, testing, hosting, community challenges and my three published experimen
 
+- Echo-3: Turn iPhone Videos Into Photorealistic 3D Worlds | AI Gaussian Splatting
+  URL: https://abvx.xyz/writing/videos/o-bbORoN3FM
+  Summary: What if you could turn your apartment, office, or entire building into an explorable 3D world using nothing but your phone? No expensive 3D scanner. No specialized camera. Not even LiDAR. Just walk around, record your su
+
 - GTA 5 Gets Spider-Man 2 Web-Swinging! AI-Assisted Game Mod
   URL: https://abvx.xyz/writing/videos/ogc-oZoebH0
   Summary: Spider-Man 2's web-swinging mechanics are now running inside GTA 5. And AI coding agents helped make it possible. Meet Web of Los Santos, a GTA V mod that brings Spider-Man 2-inspired movement into Los Santos. Web-swingi
@@ -556,6 +560,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Someone Made a Digital Spider That Crawls Across Web Pages
   URL: https://abvx.xyz/writing/videos/x5uo-P2Vf_I
   Summary: I have absolutely no idea why someone made this. But I'm incredibly glad it exists. Someone turned the concept of a web crawler into an actual digital spider. A glowing, eight-legged creature crawling across text, links,
+
+- Super Mario 64 in Mixed Reality at 90 FPS! Built with Claude Opus 5.5 + PICO
+  URL: https://abvx.xyz/writing/videos/x8DT9-2Zcas
+  Summary: Remember playing Super Mario 64 on the Nintendo 64? Now imagine pulling Mario out of the game and watching him run around on your actual desk. Well, someone just made that happen. Developer and XR specialist Lucas Martin
 
 - I Tried to Bury the AI. It Deleted Every Brick. 🤖 #Shorts
   URL: https://abvx.xyz/writing/videos/Xeta6R8hvPg

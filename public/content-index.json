@@ -8227,7 +8227,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-04T18:37:51.312Z",
+      "updatedAt": "2026-11-04T18:50:54.968Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8367,6 +8367,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=Q73r6GLqXVY"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Echo-3: Turn iPhone Videos Into Photorealistic 3D Worlds | AI Gaussian Splatting",
+      "summary": "What if you could turn your apartment, office, or entire building into an explorable 3D world using nothing but your phone? No expensive 3D scanner. No specialized camera. Not even LiDAR. Just walk around, record your su",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/o-bbORoN3FM",
+      "publishedAt": "2026-11-04T18:41:34.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=o-bbORoN3FM"
         }
       ],
       "related": []
@@ -11703,6 +11726,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=NEbmecyitIs"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Super Mario 64 in Mixed Reality at 90 FPS! Built with Claude Opus 5.5 + PICO",
+      "summary": "Remember playing Super Mario 64 on the Nintendo 64? Now imagine pulling Mario out of the game and watching him run around on your actual desk. Well, someone just made that happen. Developer and XR specialist Lucas Martin",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/x8DT9-2Zcas",
+      "publishedAt": "2026-11-04T18:50:48.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=x8DT9-2Zcas"
         }
       ],
       "related": []

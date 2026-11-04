@@ -8199,7 +8199,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-04T11:37:47.620Z",
+      "updatedAt": "2026-11-04T12:19:23.121Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11330,6 +11330,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=jEIPftaweBM"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Someone Vibe-Coded a Pico VR App. Now I Want to Build in Mixed Reality Again",
+      "summary": "Here's something most people watching this channel probably don't know about me. I spent 12 years of my life working in augmented and virtual reality. Not as a developer. Pretty much everything else you can imagine doing",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/h7kOnAtn188",
+      "publishedAt": "2026-11-04T12:10:33.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=h7kOnAtn188"
         }
       ],
       "related": []

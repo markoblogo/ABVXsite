@@ -229,6 +229,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/H6l1leVo34A
   Summary: A market needs more than a price. Agri-Commodity Brokerage explores the people, products, logistics and terms that connect supply with demand in physical grains and oilseeds markets. Explore the book and download the fre
 
+- Someone Vibe-Coded a Pico VR App. Now I Want to Build in Mixed Reality Again
+  URL: https://abvx.xyz/writing/videos/h7kOnAtn188
+  Summary: Here's something most people watching this channel probably don't know about me. I spent 12 years of my life working in augmented and virtual reality. Not as a developer. Pretty much everything else you can imagine doing
+
 - Claude Code: Sonnet + Opus + Haiku. A Smarter AI Agent Setup
   URL: https://abvx.xyz/writing/videos/hBU0WpTTbes
   Summary: What if you could make Claude Code more efficient by giving each AI model a different job? Instead of using the most expensive model for everything, try a smarter multi-model setup: Sonnet does the coding. Opus provides

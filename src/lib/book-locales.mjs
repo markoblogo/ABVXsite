@@ -11,7 +11,10 @@ export function bookLocaleErrors(data) {
  for(const [locale,entry] of Object.entries(value)) {
   if(!entry||typeof entry!=='object'||Array.isArray(entry)) {errors.push(`Invalid ${locale} book description`);continue;}
   for(const key of ['summary','body','seoTitle','seoDescription'])if(typeof entry[key]!=='string'||!entry[key].trim())errors.push(`Missing ${locale} ${key}`);
-  if(Object.keys(entry).some(k=>!['summary','body','seoTitle','seoDescription'].includes(k)))errors.push('Unsupported book description field');
+  for(const key of ['coverAlt','promoAlt'])if(entry[key]!==undefined&&(typeof entry[key]!=='string'||!entry[key].trim()))errors.push(`Invalid ${locale} ${key}`);
+  if(entry.tags!==undefined&&(!Array.isArray(entry.tags)||!entry.tags.every(t=>typeof t==='string'&&t.trim())))errors.push(`Invalid ${locale} tags`);
+  for(const match of (typeof entry.body==='string'?entry.body:'').matchAll(/\[[^\]]*\]\(([^)\s]+)\)/g))if(!/^(?:https?:\/\/|mailto:|\/(?!\/)|#)/i.test(match[1]))errors.push('Unsupported book description link protocol');
+  if(Object.keys(entry).some(k=>!['summary','body','seoTitle','seoDescription','tags','coverAlt','promoAlt'].includes(k)))errors.push('Unsupported book description field');
  }
  return errors;
 }
@@ -20,5 +23,5 @@ export function bookLocaleAlternates(book) {
 }
 export function localizedBookDescription(book,locale='en') {
  const copy=book.descriptionLocales?.[locale];
- return copy?{...book,summary:copy.summary,description:copy.body,seoTitle:copy.seoTitle,seoDescription:copy.seoDescription}:null;
+ return copy?{...book,summary:copy.summary,description:copy.body,seoTitle:copy.seoTitle,seoDescription:copy.seoDescription,tags:copy.tags||book.tags,heroImage:book.heroImage&&copy.coverAlt?{...book.heroImage,alt:copy.coverAlt}:book.heroImage,coverImage:book.coverImage&&copy.promoAlt?{...book.coverImage,alt:copy.promoAlt}:book.coverImage}:null;
 }

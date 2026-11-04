@@ -313,6 +313,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/n5HYXnUWoNY
   Summary: What happens when you give two powerful AI models exactly the same creative challenge? One developer decided to find out. They tested GPT-6 Astra against DeepSeek V4.1-1017 Flash, using the same prompt and maximum reason
 
+- Mago Studio Is Now Open Source! A Complete Local AI Filmmaking Studio with MiniMax H3
+  URL: https://abvx.xyz/writing/videos/nBXKHFRsCCY
+  Summary: What if you could run an entire AI filmmaking studio on your own computer? Not just another text-to-video generator. A complete production environment with scripts, storyboards, characters, video editing, version history
+
 - Scientists Put a Fruit Fly's Brain Inside an AI-Generated World. It Started Exploring.
   URL: https://abvx.xyz/writing/videos/nBzbwlcAElY
   Summary: We may have just witnessed one of the strangest AI experiments of 2026. Researchers connected a simulated fruit fly brain to Odyssey-3, an AI world model capable of generating interactive virtual environments in real tim

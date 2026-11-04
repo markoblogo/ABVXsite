@@ -8199,7 +8199,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-04T12:19:23.121Z",
+      "updatedAt": "2026-11-04T12:38:37.410Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9686,6 +9686,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=r0KhDl19nKc"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Mago Studio Is Now Open Source! A Complete Local AI Filmmaking Studio with MiniMax H3",
+      "summary": "What if you could run an entire AI filmmaking studio on your own computer? Not just another text-to-video generator. A complete production environment with scripts, storyboards, characters, video editing, version history",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/nBXKHFRsCCY",
+      "publishedAt": "2026-11-04T12:32:12.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=nBXKHFRsCCY"
         }
       ],
       "related": []

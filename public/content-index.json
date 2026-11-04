@@ -8227,7 +8227,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-04T17:51:54.281Z",
+      "updatedAt": "2026-11-04T18:37:51.312Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10394,6 +10394,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=vD_pNbzvoiM"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Openjutsu: Free Open-Source Higgsfield Genjutsu Alternative | MiniMax H3 + ComfyUI",
+      "summary": "Remember when ComfyUI challenged the AI community to rebuild Higgsfield's popular creative tools? Well, the joke is turning into actual software. Meet Openjutsu, a free, open-source alternative to Higgsfield Genjutsu tha",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/zHiaMUJCwh8",
+      "publishedAt": "2026-11-04T18:15:28.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=zHiaMUJCwh8"
         }
       ],
       "related": []

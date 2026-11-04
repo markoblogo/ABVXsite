@@ -581,6 +581,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/yHcec4hrNQQ
   Summary: What if you could generate a 3D character, give it a skeleton, and make it walk, run, or jump using nothing but text prompts? Tripo just upgraded its Rigging & Animation tools in Tripo Studio. And it's another step towar
 
+- Openjutsu: Free Open-Source Higgsfield Genjutsu Alternative | MiniMax H3 + ComfyUI
+  URL: https://abvx.xyz/writing/videos/zHiaMUJCwh8
+  Summary: Remember when ComfyUI challenged the AI community to rebuild Higgsfield's popular creative tools? Well, the joke is turning into actual software. Meet Openjutsu, a free, open-source alternative to Higgsfield Genjutsu tha
+
 - Unitree H2-X: This Robot Bodyguard Does Kung Fu, Backflips & Lifts Cars
   URL: https://abvx.xyz/writing/videos/zOfyKb7_c1M
   Summary: Apparently, Unitree decided that the best way to introduce its new humanoid robot was to make an action movie. And honestly, I'm not complaining. Meet Unitree H2-X Kung Fu Legend Guardian, a humanoid robot that looks lik

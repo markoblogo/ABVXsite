@@ -8227,7 +8227,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-04T18:50:54.968Z",
+      "updatedAt": "2026-11-04T19:11:13.221Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9881,6 +9881,29 @@
         }
       ],
       "collection": "kitchen-notes"
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Meet Realbotix Echo: A $85,000 Humanoid Robot Powered by ChatGPT, Claude & Gemini",
+      "summary": "Remember when AI assistants were just little text boxes on our screens? Well, apparently, that wasn't human enough. Meet Echo by Realbotix, a humanoid robot with realistic silicone skin, facial expressions, and AI-powere",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/sgsjE9AqBEI",
+      "publishedAt": "2026-11-04T19:01:08.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=sgsjE9AqBEI"
+        }
+      ],
+      "related": []
     },
     {
       "type": "video",

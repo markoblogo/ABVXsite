@@ -469,6 +469,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/SET6nWjBNNE
   Summary: What if you could run a powerful AI video generation model on your own computer, without renting expensive cloud GPUs? And what if you only needed 8 GB of VRAM? Meet FreeVideo, an open-source project designed to bring Mi
 
+- Meet Realbotix Echo: A $85,000 Humanoid Robot Powered by ChatGPT, Claude & Gemini
+  URL: https://abvx.xyz/writing/videos/sgsjE9AqBEI
+  Summary: Remember when AI assistants were just little text boxes on our screens? Well, apparently, that wasn't human enough. Meet Echo by Realbotix, a humanoid robot with realistic silicone skin, facial expressions, and AI-powere
+
 - Turn Any Video Into ASCII Art for Free | This Retro Art Generator Is Amazing
   URL: https://abvx.xyz/writing/videos/ShcaeYiVVK4
   Summary: Remember the good old days of ASCII art, pixel graphics, and the demoscene? Well, here's a little nostalgia trip. I found Devault, a free browser-based ASCII art generator that transforms ordinary images and videos into

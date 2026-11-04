@@ -8,7 +8,9 @@
   "publishedAt": "2026-09-23",
   "homepageEligible": true,
   "primarySection": "books",
-  "appearsIn": ["books"],
+  "appearsIn": [
+    "books"
+  ],
   "title": "No Further Claims",
   "shortTitle": "No Further Claims",
   "subtitle": "A Bracken Ford Novel",
@@ -16,20 +18,55 @@
   "language": "English",
   "group": "Fiction",
   "summary": "A deadpan small-town novel about civic paperwork, private memories, public myths, and what happens when an absurd local story becomes useful enough that nobody wants to correct it.",
-  "tags": ["fiction", "small-town satire", "deadpan fiction", "comic novel", "civic absurdity", "American small-town fiction"],
-  "formats": ["kindle", "paperback"],
-  "availableFormats": ["kindle", "paperback"],
-  "links": [
-    {"type": "kindle", "label": "Kindle", "url": "https://www.amazon.com/dp/B0HKTBFFJM"},
-    {"type": "paperback", "label": "Paperback", "url": "https://www.amazon.com/dp/B0HKTFR8ND"},
-      {"type": "site", "label": "Pictiq", "url": "https://pictiq.abvx.xyz/"}
+  "tags": [
+    "fiction",
+    "small-town satire",
+    "deadpan fiction",
+    "comic novel",
+    "civic absurdity",
+    "American small-town fiction"
   ],
-  "media": {"src": "/media/books/no-further-claims/promo.png", "alt": "No Further Claims promotional image", "role": "mockup"},
+  "formats": [
+    "kindle",
+    "paperback"
+  ],
+  "availableFormats": [
+    "kindle",
+    "paperback"
+  ],
+  "links": [
+    {
+      "type": "kindle",
+      "label": "Kindle",
+      "url": "https://www.amazon.com/dp/B0HKTBFFJM"
+    },
+    {
+      "type": "paperback",
+      "label": "Paperback",
+      "url": "https://www.amazon.com/dp/B0HKTFR8ND"
+    },
+    {
+      "type": "site",
+      "label": "Pictiq",
+      "url": "https://pictiq.abvx.xyz/"
+    },
+    {
+      "type": "youtube",
+      "label": "No Further Claims — book video",
+      "url": "https://youtu.be/qq1dv0H-jvk"
+    }
+  ],
+  "media": {
+    "src": "/media/books/no-further-claims/promo.png",
+    "alt": "No Further Claims promotional image",
+    "role": "mockup"
+  },
   "featured": true,
   "sortRank": 8,
   "needsCopyReview": false,
   "needsMediaReview": false,
-  "needsLinkReview": false
+  "needsLinkReview": false,
+  "updatedAt": "2026-11-04"
 }
 ---
 

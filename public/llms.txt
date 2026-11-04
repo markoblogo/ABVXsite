@@ -373,6 +373,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/PoOxfMsBP9E
   Summary: What if an AI company's website didn't just tell you what its product does, but actually let you experience it? Meet Giga AI, a customer support automation platform with a seriously impressive interactive website. And th
 
+- Three.js r187 Is INSANE! 2 Billion Triangles at 60 FPS in a Browser | Claude Opus 5.5
+  URL: https://abvx.xyz/writing/videos/pp8lubdLfNM
+  Summary: Remember when rendering millions of polygons required expensive workstations, specialized software, and a considerable amount of patience? RenderMan veterans, this one's for you. Someone just built a browser-based 3D sce
+
 - CapCut Is Coming to ChatGPT! AI Video Editing Just Got Interesting
   URL: https://abvx.xyz/writing/videos/ppz1g7gRDds
   Summary: Apparently, CapCut couldn't just sit back and watch creators automate their video editing workflows with Claude Code and DaVinci Resolve. So now CapCut is coming directly to ChatGPT. Announced at CapCut World LA on Octob

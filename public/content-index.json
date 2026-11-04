@@ -8222,7 +8222,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-04T16:14:05.161Z",
+      "updatedAt": "2026-11-04T16:38:25.016Z",
       "tags": [],
       "links": [],
       "related": []
@@ -12351,6 +12351,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=5EFdtSn79k4"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Three.js r187 Is INSANE! 2 Billion Triangles at 60 FPS in a Browser | Claude Opus 5.5",
+      "summary": "Remember when rendering millions of polygons required expensive workstations, specialized software, and a considerable amount of patience? RenderMan veterans, this one's for you. Someone just built a browser-based 3D sce",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/pp8lubdLfNM",
+      "publishedAt": "2026-11-04T16:37:08.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=pp8lubdLfNM"
         }
       ],
       "related": []

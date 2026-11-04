@@ -8227,7 +8227,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-04T17:37:45.781Z",
+      "updatedAt": "2026-11-04T17:51:54.281Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8862,6 +8862,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=ogc-oZoebH0"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "H3 Motion: Control AI Video With Motion Paths | MiniMax H3 + ComfyUI",
+      "summary": "What if you could animate any object in a photo simply by drawing where you want it to move? No complicated keyframes. No manual masking across hundreds of frames. Just select an object, draw its trajectory, and let AI h",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/jBbTc6RvAJE",
+      "publishedAt": "2026-11-04T17:43:11.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=jBbTc6RvAJE"
         }
       ],
       "related": []

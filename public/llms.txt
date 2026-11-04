@@ -253,6 +253,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/IQ3CdzPzFHw
   Summary: Follow Nantes’ green line in a 1-minute-40-second illustrated walk: see the complete route on a map, then visit six selected stops from the railway station to the LU Tower. Pixel landscapes briefly reveal generated inter
 
+- H3 Motion: Control AI Video With Motion Paths | MiniMax H3 + ComfyUI
+  URL: https://abvx.xyz/writing/videos/jBbTc6RvAJE
+  Summary: What if you could animate any object in a photo simply by drawing where you want it to move? No complicated keyframes. No manual masking across hundreds of frames. Just select an object, draw its trajectory, and let AI h
+
 - How We Turned 6 Photos Into a Cinematic Film
   URL: https://abvx.xyz/writing/videos/JDjvazj9zb4
   Summary: Can six still photos become a cinematic short film? In this behind-the-scenes breakdown, we show how photographs of Pokras Lampas’s “Seals of Good Intentions” became a moving scene with layered images, a shallow 3D set,

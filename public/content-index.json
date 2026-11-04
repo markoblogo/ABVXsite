@@ -8250,7 +8250,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-04T20:38:01.168Z",
+      "updatedAt": "2026-11-04T21:37:41.982Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11887,6 +11887,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=3n9RCoXGbuQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "TenPix Cloth: New GPU Cloth Simulator for 3ds Max | Tearing, Soft Bodies & Realistic Fabric",
+      "summary": "What if you could simulate complex clothing, realistic fabric collisions, tearing, and even soft-body muscles directly inside 3ds Max? Without constantly switching between different simulation applications? Meet TenPix C",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/JkmkICJoNwY",
+      "publishedAt": "2026-11-04T21:36:07.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=JkmkICJoNwY"
         }
       ],
       "related": []

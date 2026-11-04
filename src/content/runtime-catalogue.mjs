@@ -15,7 +15,8 @@ export function catalogueFamily(data){
  return null;
 }
 export const sectionAnchor = value=>value.toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-export function cataloguePath(data){const family=catalogueFamily(data);return family==='sections'?`/${data.primarySection}#${data.slug}`:`/${family==='work'?'work':'books'}/${data.slug}`;}
+export function cataloguePath(data){const family=catalogueFamily(data);return family==='sections'?`/${data.primarySection}#${sectionAnchor(data.group||data.slug)}`:`/${family==='work'?'work':'books'}/${data.slug}`;}
+export const catalogueCanonicalPath=data=>data.canonicalPath||cataloguePath(data);
 export function parseAcceptedCatalogue(source,now=new Date()){
  const {data,body}=parseMarkdownSource(source),family=catalogueFamily(data),errors=[...publicationMetadataErrors(data),...bookLocaleErrors(data)];
  if(!family||!slug.test(data.slug||'')||data.id!==data.slug)errors.push('Safe matching catalogue id/slug required');
@@ -35,30 +36,33 @@ export function parseAcceptedCatalogue(source,now=new Date()){
  for(const image of [data.media,data.heroImage].filter(Boolean))if(!image.alt?.trim()||!Number.isSafeInteger(image.width)||image.width<1||!Number.isSafeInteger(image.height)||image.height<1)errors.push('Image alt and dimensions required');
  if(data.group!==undefined&&(typeof data.group!=='string'||!data.group.trim()))errors.push('Invalid group');
  if(data.sortRank!==undefined&&!Number.isFinite(data.sortRank))errors.push('Invalid rank');
- if(family==='sections'&&data.slug!==sectionAnchor(data.group||''))errors.push('Section slug must match its rendered group anchor');
+ if(family==='sections'&&data.slug!==sectionAnchor(data.group||'')&&!(data.baselineGroup&&data.slug===`catalogue-${data.primarySection}-${sectionAnchor(data.group||'')}`))errors.push('Section slug must match its rendered group anchor');
  if(family==='sections'&&(!data.group?.trim()||data.primarySection==='systems'&&!data.ecosystem?.trim()))errors.push('Section group and systems ecosystem required');
  if(errors.length)throw Error(errors.join('; '));return {data,body};
 }
 export function readLegacyCatalogueSources(){return ['books','work','series'].flatMap(folder=>readdirSync('content/'+folder).filter(f=>f.endsWith('.md')&&!f.startsWith('_')).map(f=>readFileSync(`content/${folder}/${f}`,'utf8')));}
 export function mergeCatalogueSources(snapshot,legacy){return [...Object.values(snapshot.records).map(r=>r.versions[r.currentRevision]).filter(v=>!v.withdrawn&&catalogueFamily(parseMarkdownSource(v.source).data)).map(v=>v.source),...legacy.filter(source=>!Object.hasOwn(snapshot.records,parseMarkdownSource(source).data.slug))];}
+export const introducedCatalogueIds=snapshot=>Object.keys(snapshot.records).filter(id=>snapshot.records[id].firstAddedAt!=null);
 export function catalogueConfiguration(sources,managed=[]){
  const data=sources.map(s=>parseMarkdownSource(s).data).filter(d=>!['private','draft'].includes(d.visibility));
  const ecosystems=structuredClone(systemsEcosystems),bookGroups=structuredClone(bookStandaloneGroups),seriesSlugs=[...officialSeriesSlugs],focusGroups=structuredClone(baselineFocusGroups);
  for(const d of data){
   if(d.type==='series'&&managed.includes(d.slug)&&!seriesSlugs.includes(d.slug))seriesSlugs.push(d.slug);
   if(d.type!=='catalogue-section')continue;
-  if(d.primarySection==='books'){if(bookGroups.some(g=>g.title===d.group))throw Error('Section already exists');bookGroups.push({title:d.group,description:d.summary,editorialSlugs:[]});}
-  else if(d.primarySection==='focus'){if(focusGroups.some(g=>g.title===d.group))throw Error('Section already exists');focusGroups.push({title:d.group,description:d.summary,slugs:[],variant:'standard'});}
-  else {let eco=ecosystems.find(e=>e.title===d.ecosystem);if(!eco){eco={title:d.ecosystem,description:d.summary,groups:[]};ecosystems.push(eco);}if(ecosystems.some(e=>e.groups.some(g=>g.title===d.group)))throw Error('Section already exists');eco.groups.push({title:d.group,description:d.summary,slugs:[]});}
+  if(d.primarySection==='books'){const existing=bookGroups.find(g=>g.title===d.group);if(existing){if(!d.baselineGroup)throw Error('Section already exists');existing.links=d.links;continue;}bookGroups.push({title:d.group,description:d.summary,links:d.links,editorialSlugs:[]});}
+  else if(d.primarySection==='focus'){const existing=focusGroups.find(g=>g.title===d.group);if(existing){if(!d.baselineGroup)throw Error('Section already exists');existing.links=d.links;continue;}focusGroups.push({title:d.group,description:d.summary,links:d.links,slugs:[],variant:'standard'});}
+  else {let eco=ecosystems.find(e=>e.title===d.ecosystem);if(!eco){eco={title:d.ecosystem,description:d.summary,groups:[]};ecosystems.push(eco);}const existing=ecosystems.flatMap(e=>e.groups).find(g=>g.title===d.group);if(existing){if(!d.baselineGroup)throw Error('Section already exists');existing.links=d.links;continue;}eco.groups.push({title:d.group,description:d.summary,links:d.links,slugs:[]});}
  }
  return {ecosystems,bookGroups,seriesSlugs,focusGroups};
 }
 export function validateCatalogueSnapshot(snapshot,legacy){
- const sources=mergeCatalogueSources(snapshot,legacy),config=catalogueConfiguration(sources,Object.keys(snapshot.records)),data=sources.map(s=>parseMarkdownSource(s).data).filter(d=>!['private','draft'].includes(d.visibility));
+ const sources=mergeCatalogueSources(snapshot,legacy),config=catalogueConfiguration(sources,introducedCatalogueIds(snapshot)),data=sources.map(s=>parseMarkdownSource(s).data).filter(d=>!['private','draft'].includes(d.visibility));
  const series=new Set(data.filter(d=>d.type==='series').map(d=>d.slug));
  // Validate new records and relationships on every write, including withdrawals.
  for(const d of data){
   const r=snapshot.records[d.slug];if(!r)continue;
+  const baseline=Object.values(r.versions).find(v=>v.storedAt===null&&!v.withdrawn&&catalogueFamily(parseMarkdownSource(v.source).data));
+  if(baseline){const original=parseMarkdownSource(baseline.source).data;const fields=['type','primarySection','appearsIn','group','primarySeriesSlug','seriesSlugs','tags'];if(fields.every(key=>JSON.stringify(original[key])===JSON.stringify(d[key])))continue;}
   if([d.primarySeriesSlug,...d.seriesSlugs||[]].filter(Boolean).some(id=>!series.has(id)))throw Error('Referenced series is not public');
   if(catalogueFamily(d)==='books'&&!d.primarySeriesSlug&&!d.seriesSlugs?.some(s=>series.has(s))&&!config.bookGroups.some(g=>g.title===d.group))throw Error('Book needs a visible series or group');
   if(catalogueFamily(d)==='work'&&d.primarySection==='books'&&!d.primarySeriesSlug&&!d.seriesSlugs?.length&&!['Publishing systems & protocols','Business, AI & Marketing'].includes(d.group)&&!d.tags?.some(t=>['book-companion','publishing','translation'].includes(t)))throw Error('Project needs a visible Books placement');
@@ -70,16 +74,16 @@ export function validateCatalogueSnapshot(snapshot,legacy){
 }
 export function projectCatalogueIndex(index,sources,snapshot){
  const owned=Object.values(snapshot.records).map(r=>parseMarkdownSource(r.versions[r.currentRevision].source).data).filter(catalogueFamily);
- const urls=new Set(owned.map(d=>'https://abvx.xyz'+cataloguePath(d)));
+ const urls=new Set(owned.map(d=>'https://abvx.xyz'+catalogueCanonicalPath(d)));
  const data=sources.map(s=>parseMarkdownSource(s).data).filter(d=>Object.hasOwn(snapshot.records,d.slug)&&!['private','draft'].includes(d.visibility));
- const items=data.filter(d=>d.type!=='catalogue-section').map(d=>({type:catalogueFamily(d)==='work'?'work':d.type,section:d.primarySection,ecosystem:d.primarySection==='books'?'Books':d.primarySection==='focus'?'Focus':'Systems',group:d.group||d.series||null,status:d.status,title:d.title,summary:d.summary,canonicalUrl:'https://abvx.xyz'+cataloguePath(d),publishedAt:d.publishedAt||null,updatedAt:d.updatedAt||d.publishedAt||null,language:d.language||'en',tags:d.tags||[],links:d.links||[],related:[d.primarySeriesSlug,...d.seriesSlugs||[]].filter(Boolean).map(slug=>({title:sources.map(s=>parseMarkdownSource(s).data).find(x=>x.slug===slug)?.title||slug,canonicalUrl:'https://abvx.xyz/books/'+slug,relation:'series'}))}));
+ const items=data.filter(d=>d.type!=='catalogue-section').map(d=>({type:catalogueFamily(d)==='work'?'work':d.type,section:d.primarySection,ecosystem:d.primarySection==='books'?'Books':d.primarySection==='focus'?'Focus':'Systems',group:d.group||d.series||null,status:d.status,title:d.title,summary:d.summary,canonicalUrl:'https://abvx.xyz'+catalogueCanonicalPath(d),publishedAt:d.publishedAt||null,updatedAt:d.updatedAt||d.publishedAt||null,language:d.language||'en',tags:d.tags||[],links:d.links||[],related:[d.primarySeriesSlug,...d.seriesSlugs||[]].filter(Boolean).map(slug=>({title:sources.map(s=>parseMarkdownSource(s).data).find(x=>x.slug===slug)?.title||slug,canonicalUrl:'https://abvx.xyz'+(sources.map(s=>parseMarkdownSource(s).data).find(x=>x.slug===slug)?catalogueCanonicalPath(sources.map(s=>parseMarkdownSource(s).data).find(x=>x.slug===slug)):'/books/'+slug),relation:'series'}))}));
  return {...index,items:[...index.items.filter(x=>!urls.has(x.canonicalUrl)),...items]};
 }
 
 export function projectCatalogueLlms(text,index,snapshot){
  const owned=Object.values(snapshot.records).map(r=>parseMarkdownSource(r.versions[r.currentRevision].source).data).filter(catalogueFamily);
  if(!owned.length)return text;
- const urls=new Set(owned.map(d=>'https://abvx.xyz'+cataloguePath(d)));
+ const urls=new Set(owned.map(d=>'https://abvx.xyz'+catalogueCanonicalPath(d)));
  const clean=text.split('\n\n').filter(block=>![...urls].some(url=>block.split('\n').some(line=>line.trim()==='URL: '+url))).join('\n\n');
  const items=index.items.filter(item=>urls.has(item.canonicalUrl));
  return clean+'\n\n## Live catalogue additions\n\n'+items.map(item=>`- ${item.title}\n  URL: ${item.canonicalUrl}\n  Summary: ${item.summary}\n  Group: ${item.group||item.section}`).join('\n\n')+'\n';

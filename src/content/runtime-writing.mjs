@@ -1,3 +1,4 @@
+import {prepareCatalogueVideo} from './runtime-catalogue-video.mjs';
 import {catalogueFamily,cataloguePath,parseAcceptedCatalogue,validateCatalogueSnapshot} from './runtime-catalogue.mjs';
 // Data publication engine. No Git, build, code execution, network fetch or account settings.
 import {createHash, randomUUID} from 'node:crypto';
@@ -55,9 +56,16 @@ export function assertSnapshot(snapshot){
 }
 export function createPublisher({store,context={},validateSnapshot=()=>{},legacySources=/** @type {string[]} */([]),now=()=>new Date(),prepareMedia=async(source,assets,snapshot)=>{if(assets?.length)throw new ValidationError('Media uploader is not configured');const {data}=parseMarkdownSource(source);for(const image of images(data))if(!snapshot.legacyAssets.includes(image.src)&&!Object.values(snapshot.assets).some(a=>a.publicPath===image.src)&&!(data.videoUrl&&image.src===`https://i.ytimg.com/vi/${new URL(data.videoUrl).searchParams.get('v')}/hqdefault.jpg`))throw new ValidationError('Unknown/unprepared image');return {source,mapping:[]};}}){
  return async command=>{
-  if(!command||!['publish','update','rollback','unpublish'].includes(command.action)||(!/^[a-zA-Z0-9_-]{1,120}$/.test(command.requestId||'')||['__proto__','prototype'].includes(command.requestId)))throw new ValidationError('Action and unique requestId required');
+  if(!command||!['publish','update','rollback','unpublish','add-catalogue-video'].includes(command.action)||(!/^[a-zA-Z0-9_-]{1,120}$/.test(command.requestId||'')||['__proto__','prototype'].includes(command.requestId)))throw new ValidationError('Action and unique requestId required');
   const requestHash=digest(JSON.stringify(command));const loaded=await store.load();const snapshot=assertSnapshot(loaded.snapshot);
   if(own(snapshot.requests,command.requestId)){const saved=own(snapshot.requests,command.requestId);if(saved.hash!==requestHash)throw new ConflictError('Request ID reused with different content');return saved.receipt;}
+  let videoPlan;
+  if(command.action==='add-catalogue-video'){
+   try{videoPlan=prepareCatalogueVideo(command,snapshot,legacySources,now());}catch(error){if(/revision/.test(error.message))throw new ConflictError(error.message);throw new ValidationError(error.message);}
+   if(videoPlan.noop)return {...context,status:'NOOP',action:command.action,requestId:command.requestId,canonicalUrl:'https://abvx.xyz'+videoPlan.route,revision:videoPlan.previous?.currentRevision||digest(videoPlan.source)};
+   if(!videoPlan.previous&&!videoPlan.group){const source=videoPlan.baselineSource,revision=digest(source),d=parseMarkdownSource(source).data;snapshot.records[videoPlan.id]={firstAddedAt:null,firstPublishedAt:d.publishedAt??null,currentRevision:revision,versions:{[revision]:{source,sourceSha256:revision,revision,withdrawn:false,storedAt:null}}};}
+   command={action:videoPlan.group&&!videoPlan.previous?'publish':'update',requestId:command.requestId,source:videoPlan.source,expectedRevision:videoPlan.previous?.currentRevision||digest(videoPlan.baselineSource)};
+  }
   const id=command.action==='publish'||command.action==='update'?parseMarkdownSource(command.source).data.slug:command.id;
   if(!slugPattern.test(id||'')||reserved.has(id))throw new ValidationError('Invalid id');
   const previous=own(snapshot.records,id);
@@ -69,18 +77,19 @@ export function createPublisher({store,context={},validateSnapshot=()=>{},legacy
   else source=command.action==='unpublish'?previous.versions[previous.currentRevision].source:command.source;
   const originalHash=digest(source);let mapping=[];
   if(['publish','update'].includes(command.action)){
-   const parsed=parseAcceptedSource(source,time,Boolean(previous&&previous.firstPublishedAt===null));
+   const parsed=videoPlan?parseMarkdownSource(source):parseAcceptedSource(source,time,Boolean(previous&&previous.firstPublishedAt===null));
    if(previous&&catalogueFamily(parsed.data)&&parseMarkdownSource(previous.versions[previous.currentRevision].source).data.primarySection!==parsed.data.primarySection)throw new ValidationError('Primary section is immutable');
    if(previous&&parseMarkdownSource(previous.versions[previous.currentRevision].source).data.type!==parsed.data.type)throw new ValidationError('Content type is immutable');
    if(previous&&parsed.data.type==='working-story'&&parseMarkdownSource(previous.versions[previous.currentRevision].source).data.story_id!==parsed.data.story_id)throw new ValidationError('Story ID is immutable');
    if(previous&&(parsed.data.date??parsed.data.publishedAt??null)!==previous.firstPublishedAt)throw new ValidationError('First publication date is immutable');
+   if(videoPlan)for(const image of images(parseMarkdownSource(videoPlan.baselineSource).data))if((image.src?.startsWith('/media/')||image.src?.startsWith('https://'))&&!snapshot.legacyAssets.includes(image.src))snapshot.legacyAssets.push(image.src);
    const prepared=await prepareMedia(source,command.assets||[],snapshot);source=prepared.source;mapping=prepared.mapping;
    if(parseMarkdownSource(source).body!==parsed.body)throw new ValidationError('Media preparation changed authored prose');
   }
   const {data,body}=parseMarkdownSource(source),sourceSha256=digest(source);
   if(command.action==='rollback'&&(Date.parse(data.date||data.publishedAt)>time.valueOf()||validateNativeWritingVideo(data,time.valueOf()).length))throw new ValidationError('Rollback requires a non-future eligible source');const version={source,sourceSha256,revision,withdrawn:command.action==='unpublish',storedAt};
   snapshot.records[id]={firstAddedAt:previous?previous.firstAddedAt??null:storedAt,firstPublishedAt:previous?previous.firstPublishedAt:data.date??data.publishedAt??null,currentRevision:revision,versions:{...previous?.versions,[revision]:version}};
-  snapshot.revision=randomUUID();const receipt={...context,schemaVersion:1,profile:'runtime-writing-v1',status:'STORED',action:command.action,requestId:command.requestId,id,canonicalUrl:'https://abvx.xyz'+(catalogueFamily(data)?cataloguePath(data):'/writing/'+(data.type==='working-story'?'working-stories/':'')+id),revision,snapshotRevision:snapshot.revision,originalSourceSha256:originalHash,sourceSha256,bodySha256:digest(body),storedAt,firstAddedAt:snapshot.records[id].firstAddedAt,firstPublishedAt:snapshot.records[id].firstPublishedAt,mediaMapping:mapping,...(command.approval?{approval:command.approval}:{})};
+  snapshot.revision=randomUUID();const receipt={...context,schemaVersion:1,profile:'runtime-writing-v1',status:'STORED',action:command.action,requestId:command.requestId,id,canonicalUrl:'https://abvx.xyz'+(catalogueFamily(data)?videoPlan?.route||cataloguePath(data):'/writing/'+(data.type==='working-story'?'working-stories/':'')+id),revision,snapshotRevision:snapshot.revision,originalSourceSha256:originalHash,sourceSha256,bodySha256:digest(body),storedAt,firstAddedAt:snapshot.records[id].firstAddedAt,firstPublishedAt:snapshot.records[id].firstPublishedAt,mediaMapping:mapping,...(command.approval?{approval:command.approval}:{})};
   snapshot.requests[command.requestId]={hash:requestHash,receipt};try{validateCatalogueSnapshot(snapshot,legacySources.filter(s=>catalogueFamily(parseMarkdownSource(s).data)));}catch(error){throw new ValidationError(error.message);}
   await validateSnapshot(snapshot);await store.commit(snapshot,loaded.etag);return receipt;
  };

@@ -43,3 +43,17 @@ Book Readiness manuscript counting continues to include Writing/Working Stories 
 ## Book description languages
 
 A book can opt into `descriptionLocales` with exactly `en` and `fr`, each containing nonempty `summary`, `body`, `seoTitle` and `seoDescription`. Optional `tags`, `coverAlt` and `promoAlt` localize visible labels and image descriptions without changing the media. Localized Markdown uses the same link-protocol restrictions as the main body. Keep the record’s `language` as the language of the actual book. The English page remains `/books/<slug>`; its French description lives at `/fr/books/<slug>`. Both use the same record, formats, assets and purchase links, with reciprocal language navigation and sitemap/hreflang entries. No translated book edition is inferred. Base title/summary remain the English catalogue presentation; the original French book title can remain unchanged. Books without this field retain the existing renderer.
+
+## Add a video to a book, project, series or catalogue group
+
+Use the existing authenticated operator once:
+
+```sh
+npm run content:runtime -- add-video --route /books/no-further-claims --video https://youtu.be/qq1dv0H-jvk --request-id unique-stable-id --output /private/video-receipt.json --write --verify
+```
+
+Omit `--write` to inspect the prepared request. Optional `--label` sets the accessible player label. Group routes use their actual anchor, such as `/books#fiction`; Focus and Systems groups use the same shape. The command resolves the current exact revision itself. It preserves prose, all existing links/media, original publication dates and existing discovery anchors. A bundled card is adopted into this same versioned store with its original source retained as the first version; an unknown original discovery time remains null. Adding a first group video creates only the existing group's runtime metadata, preserving its configured description and membership.
+
+The server accepts only a route, YouTube URL, optional label and expected revision for this operation. It cannot accept replacement prose or arbitrary assets. Private, withdrawn, future and unknown targets are rejected. Existing videos remain; the same YouTube ID is a no-op. Version conflicts fail rather than overwrite another edit. Before transmission, the exact retry command is saved beside the receipt. Retry with the same request ID and output path; it reuses that saved command even after an ambiguous response. Never create a new request ID merely because delivery timed out.
+
+Routine additions require no Git, build, PR, deployment or catalogue source regeneration after this engine is verified in Production. The receipt confirms storage. For a requested player, use the scoped runtime video verifier to check the exact lazy youtube-nocookie iframe, accessible label and original link. Engine changes retain the full code release gates. Generic source updates and new catalogue records keep their original approval contract.

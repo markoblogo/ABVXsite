@@ -1,3 +1,4 @@
+import CatalogueGroupVideos, {hasCatalogueGroupVideos} from '@/components/CatalogueGroupVideos';
 import {getLiveCatalogue} from '@/lib/live-catalogue';
 import type {systemsEcosystems} from '@/lib/catalogue-config.mjs';
 import { systemsGroupSlugs } from '@/lib/systems-catalogue.mjs';
@@ -106,7 +107,7 @@ export default async function SystemsPage() {
         const titleId = slugifyFragment(ecosystem.title);
         const renderedGroups = ecosystem.groups
           .map((group: SystemsGroup) => ({ ...group, items: itemsForSlugs(artifacts, systemsGroupSlugs(group, artifacts, pinnedSlugs), usedSlugs) }))
-          .filter((group) => group.items.length);
+          .filter((group) => group.items.length || hasCatalogueGroupVideos(group));
 
         if (!renderedGroups.length) return null;
 
@@ -128,6 +129,7 @@ export default async function SystemsPage() {
                       {'description' in group && group.description ? <p>{group.description}</p> : null}
                     <EditorialSectionLink article={editorialBySlug.get(subgroupEditorialSlugs[group.title])} />
                     </div>
+                <CatalogueGroupVideos group={group} />
                     <div className="systems-grid">
                       {group.items.map((artifact) => (
                         <ProjectCatalogueCard

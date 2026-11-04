@@ -1381,6 +1381,16 @@
     },
     {
       "source": "substack",
+      "title": "Laid-Off Developers Are Using AI to Rebuild the SaaS Companies That Fired Them",
+      "url": "https://abvx.substack.com/p/laid-off-developers-are-using-ai",
+      "publishedAt": "2026-11-04T14:21:23.000Z",
+      "excerpt": "There’s something beautifully ironic happening in the software industry. For years, technology companies have been explaining that artificial intelligence will make developers dramatically more productive. Then they star",
+      "coverImage": "https://substackcdn.com/image/fetch/$s_!wxza!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6f1a0821-ae0d-4195-b528-422b43498a68_1671x941.png",
+      "addedAt": "2026-11-04T14:24:12.835Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "substack",
       "title": "LinkedIn Is Using AI to Fight AI Slop. The Irony Is Magnificent.",
       "url": "https://abvx.substack.com/p/linkedin-is-using-ai-to-fight-ai",
       "publishedAt": "2026-10-30T12:13:16.000Z",
@@ -2132,6 +2142,17 @@
       "coverImage": "https://i.ytimg.com/vi/jWFZUAXVbCA/hqdefault.jpg",
       "videoDescription": "What if AI could do more than generate a 3D model?\nWhat if it could actually figure out how to build one?\nMeet SKY-001 by Skyfall AI, a new engineering world model designed to turn text prompts and reference images into detailed mechanical assemblies.\nAnd the team behind it has a fascinating history.\nBack in 2017, Microsoft acquired Maluuba, an AI startup founded by Sam Pasupalak and Kaheer Suleman.\n\nThat was a year before OpenAI released GPT-1.\nNow the founders are back with Skyfall AI. And instead of building another large language model, they've created something very different.\nAn AI model that reasons about how physical objects are constructed.\n\nHere's how SKY-001 works:\n- Starts with a text description or reference image\n- Generates an initial 3D design\n- Breaks complex objects into individual components\n- Decomposes assemblies down to tiny screws and fasteners\n- Creates 2D engineering sketches and 3D construction sequences\n- Assembles the components into a complete mechanical structure\n- Supports CAD-oriented workflows, including demonstrations involving Autodesk Fusion\nAnd the results are pretty wild.\nAccording to Skyfall AI's own benchmarks:\n- 51× faster than GPT-6 Astra on CAD construction tasks\n- 150× cheaper per CAD construction case\n- Comparable geometric accuracy: 79.7% versus Astra's 79.1%\n- Even larger speed improvements on certain BIM tasks\n\nThese are company-reported results, not yet independently verified. SKY-001 is currently a research preview with waitlist access.\nBut here's the part that really caught my attention.\nWatch the moment when individual components start coming together, piece by piece, until they form a complete machine.\nThis isn't just AI producing a pretty 3D mesh.\nIt's attempting to understand the structure of an engineered object and generate the steps needed to construct it.\nAnd that's a fundamentally different direction for generative AI.\n\nWe've seen models that write code, generate images, create videos, and simulate virtual worlds.\nNow we're starting to see models designed to engineer objects in the physical world.\nFrom generating pixels to designing machines.\nThat's a pretty significant leap.\nExplore SKY-001:\nhttps://skyfall.ai/sky-001\nTechnical research and benchmarks:\nhttps://skyfall.ai/blog/introducing-sky-001\n\n#SkyfallAI #SKY001 #WorldModels #GenerativeAI #CAD #AIEngineering #Shorts",
       "addedAt": "2026-10-20T14:28:18.997Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
+      "title": "I Asked Claude Opus to Recreate Hackers (1995) as Looping Pixel Art | AI Animation",
+      "url": "https://www.youtube.com/watch?v=k4dStFV8d1c",
+      "publishedAt": "2026-11-04T14:10:12.000Z",
+      "excerpt": "Apparently, the internet has rediscovered pixel art. Over the weekend, X (Twitter) was flooded with 8-bit animations, isometric dioramas, and tiny top-down RPG worlds. And naturally, I couldn't resist. So I gave Claude O",
+      "coverImage": "https://i.ytimg.com/vi/k4dStFV8d1c/hqdefault.jpg",
+      "videoDescription": "Apparently, the internet has rediscovered pixel art.\n\nOver the weekend, X (Twitter) was flooded with 8-bit animations, isometric dioramas, and tiny top-down RPG worlds.\n\nAnd naturally, I couldn't resist.\n\nSo I gave Claude Opus a little creative challenge.\n\nTake some iconic scenes from the 1995 cult classic Hackers and turn them into endlessly looping pixel art animations.\n\nIf you've been following me for a while, you probably know I have a particular weakness for this movie.\n\nThe computers. The ridiculous hacking interfaces. The cyberpunk fashion. The soundtrack. Angelina Jolie and Jonny Lee Miller looking impossibly cool while doing things that had absolutely nothing to do with real hacking.\n\nPeak 1990s cyberculture.\n\nAnd now, thirty-one years later, I'm revisiting that world through AI-generated pixel art.\n\nHere's the idea:\n\nReimagine scenes from Hackers (1995) in a retro pixel art aesthetic.\n\nCapture the atmosphere of 1990s cyberpunk and early internet culture.\n\nCreate small, animated environments inspired by classic video games.\n\nMake the animations loop seamlessly, so they can run forever.\n\nLet Claude handle the creative coding and animation.\n\nNo traditional frame-by-frame drawing. Just a favorite old movie, an AI coding agent, and a sudden attack of pixel nostalgia.\n\nAnd I have to admit, there's something strangely satisfying about turning a movie that once represented the future of computers into something that looks like it belongs on a 1990s game console.\n\nThe future of 1995, recreated by the AI of 2026, in the graphics of 1985.\n\nWe've officially come full circle.\n\nNow I'm wondering which other cult movies deserve the pixel art treatment.\n\nWhich 90s movie would you turn into a looping pixel art world?\n\nAn unofficial AI-assisted creative experiment inspired by Hackers (1995). Not affiliated with the film's creators or rights holders.\n\n#Hackers1995 #ClaudeOpus #PixelArt #AIAnimation #CreativeCoding #Cyberpunk #RetroGaming #Shorts",
+      "addedAt": "2026-11-04T14:24:12.835Z",
       "addedAtBasis": "observed"
     },
     {

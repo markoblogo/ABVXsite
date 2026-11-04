@@ -265,6 +265,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/jWFZUAXVbCA
   Summary: What if AI could do more than generate a 3D model? What if it could actually figure out how to build one? Meet SKY-001 by Skyfall AI, a new engineering world model designed to turn text prompts and reference images into
 
+- I Asked Claude Opus to Recreate Hackers (1995) as Looping Pixel Art | AI Animation
+  URL: https://abvx.xyz/writing/videos/k4dStFV8d1c
+  Summary: Apparently, the internet has rediscovered pixel art. Over the weekend, X (Twitter) was flooded with 8-bit animations, isometric dioramas, and tiny top-down RPG worlds. And naturally, I couldn't resist. So I gave Claude O
+
 - Contract Execution Officer Handbook | From Commodity Deal to Closeout
   URL: https://abvx.xyz/writing/videos/k7DYPrNV7ZY
   Summary: A signed commodity contract is only the beginning. The Contract Execution Officer Handbook explores the work that follows: documents, logistics, inspections, payment control, financial reconciliation and contract closeou

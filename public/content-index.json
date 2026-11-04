@@ -8227,7 +8227,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-04T16:38:25.016Z",
+      "updatedAt": "2026-11-04T16:52:37.406Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11450,6 +11450,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=jWFZUAXVbCA"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Skylight: Turn Your Ceiling Into a Live Night Sky with Raspberry Pi | Open Source DIY",
+      "summary": "Ever looked at your ceiling and thought, \"You know what this room needs? The entire night sky.\" Well, someone actually built it. Meet Skylight, a beautiful open-source DIY project that transforms an ordinary ceiling into",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/kDvLWLN_ZUk",
+      "publishedAt": "2026-11-04T16:46:23.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=kDvLWLN_ZUk"
         }
       ],
       "related": []

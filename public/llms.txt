@@ -281,6 +281,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/kcFco2HbFCY
   Summary: A closer look at MN7R (Monitor), a private workspace for agro-commodity brokerage teams — from offers and bids to matching, contract execution and market analytics. This overview uses the real MN7R interface, with confid
 
+- Skylight: Turn Your Ceiling Into a Live Night Sky with Raspberry Pi | Open Source DIY
+  URL: https://abvx.xyz/writing/videos/kDvLWLN_ZUk
+  Summary: Ever looked at your ceiling and thought, "You know what this room needs? The entire night sky." Well, someone actually built it. Meet Skylight, a beautiful open-source DIY project that transforms an ordinary ceiling into
+
 - Nantes in Pixel Art: Airport to the Loire, LU Tower & the Castle | Nantes: de l’aéroport à la Loire
   URL: https://abvx.xyz/writing/videos/kh-MTl8K5pE
   Summary: Un petit voyage à Nantes, de l’aéroport Nantes Atlantique au centre-ville, en passant par la Loire et l’île de Nantes. La balade se termine avec deux vues illustrées : la tour LU et le château des ducs de Bretagne. Un tr

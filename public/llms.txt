@@ -629,6 +629,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/ZQTORLBw9Zs
   Summary: One seed. One last drop of water. A greenhouse running out of power. The Last Seed is a 48-second animated short about fragile hope and a small chance to begin again. A seed takes root in dry soil, a failing roof mechani
 
+- ComfyUI Zip Ties: Finally Fix Your Spaghetti Node Graphs! | Free Extension
+  URL: https://abvx.xyz/writing/videos/zTrBkcj3_Jk
+  Summary: If you've ever opened a complicated ComfyUI workflow and wondered whether you're looking at an AI pipeline or a bowl of spaghetti, this one's for you. Meet ComfyUI Zip Ties, a free, open-source extension that brings actu
+
 ## Focus systems
 
 - AMI — Infrastructure for Physical Commodity Markets

@@ -8242,6 +8242,29 @@
       "related": []
     },
     {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "ComfyUI Zip Ties: Finally Fix Your Spaghetti Node Graphs! | Free Extension",
+      "summary": "If you've ever opened a complicated ComfyUI workflow and wondered whether you're looking at an AI pipeline or a bowl of spaghetti, this one's for you. Meet ComfyUI Zip Ties, a free, open-source extension that brings actu",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/zTrBkcj3_Jk",
+      "publishedAt": "2026-11-04T21:44:32.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=zTrBkcj3_Jk"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "editorial-series",
       "section": "writing",
       "ecosystem": "Writing",
@@ -8250,7 +8273,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-04T21:37:41.982Z",
+      "updatedAt": "2026-11-04T21:50:56.900Z",
       "tags": [],
       "links": [],
       "related": []

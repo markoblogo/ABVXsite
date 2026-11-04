@@ -197,6 +197,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/FP17TQdOaGw
   Summary: What if waiting for your favorite Twitch streamer could actually help save a forest? Not by donating money. Not by watching an advertisement. Just by paying attention. Meet FireCatchers, one of the smartest examples of c
 
+- Codex Brought My Childhood PS1 Game Back to Life on Mac in 90 Minutes | Sheep, Dog 'n' Wolf
+  URL: https://abvx.xyz/writing/videos/FywKwcaiEUE
+  Summary: Sometimes AI feels less like technology and more like a magician that can take you straight back to childhood. Let me tell you a story. I was eight years old when I got my first PlayStation. It was New Year's Eve. I open
+
 - FLUX 3 Max: Near Real-Time AI Video, 22× Faster Than Seedance 2.5
   URL: https://abvx.xyz/writing/videos/G_5lLwn6Veo
   Summary: Remember when generating a few seconds of AI video meant waiting several minutes? Well, those days might be numbered. After making MiniMax H3 ridiculously fast, fal.ai teamed up with Black Forest Labs to push FLUX 3 to a

@@ -1,3 +1,4 @@
+import CatalogueGroupVideos, {hasCatalogueGroupVideos} from '@/components/CatalogueGroupVideos';
 import {systemsGroupSlugs} from '@/lib/systems-catalogue.mjs';
 import {getLiveCatalogue} from '@/lib/live-catalogue';
 import FAQSection from '@/components/FAQSection';
@@ -345,7 +346,7 @@ export default async function FocusPage() {
 
       {focusGroups.map((group) => {
         const groupItems = itemsForGroup(artifacts, systemsGroupSlugs(group,artifacts,new Set(focusGroups.flatMap(g=>g.slugs))));
-        if (!groupItems.length) return null;
+        if (!groupItems.length && !hasCatalogueGroupVideos(group)) return null;
         const titleId = slugifyFragment(group.title);
 
         return (
@@ -358,6 +359,7 @@ export default async function FocusPage() {
               {group.title === "Market Intelligence, Monitoring & Indexes" ? <FocusEditorialLinks en="market-intelligence-monitoring-indexes-focus-en" uk="market-intelligence-monitoring-indexes-focus-uk" /> : null}
               {group.title === "Market Fronts & Partner Landings" ? <FocusEditorialLinks en="market-fronts-partner-landings-focus-en" uk="market-fronts-partner-landings-focus-uk" /> : null}
             </div>
+            <CatalogueGroupVideos group={group} />
             <div className={group.variant === 'primary' ? 'focus-platform-grid' : 'focus-product-grid'}>
               {groupItems.map((artifact) => (
                 <ProjectCatalogueCard

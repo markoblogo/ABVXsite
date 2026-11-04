@@ -15,7 +15,7 @@ export function catalogueFamily(data){
  return null;
 }
 export const sectionAnchor = value=>value.toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-export function cataloguePath(data){const family=catalogueFamily(data);return family==='sections'?`/${data.primarySection}#${data.slug}`:`/${family==='work'?'work':'books'}/${data.slug}`;}
+export function cataloguePath(data){const family=catalogueFamily(data);return family==='sections'?`/${data.primarySection}#${sectionAnchor(data.group||data.slug)}`:`/${family==='work'?'work':'books'}/${data.slug}`;}
 export function parseAcceptedCatalogue(source,now=new Date()){
  const {data,body}=parseMarkdownSource(source),family=catalogueFamily(data),errors=[...publicationMetadataErrors(data),...bookLocaleErrors(data)];
  if(!family||!slug.test(data.slug||'')||data.id!==data.slug)errors.push('Safe matching catalogue id/slug required');
@@ -35,7 +35,7 @@ export function parseAcceptedCatalogue(source,now=new Date()){
  for(const image of [data.media,data.heroImage].filter(Boolean))if(!image.alt?.trim()||!Number.isSafeInteger(image.width)||image.width<1||!Number.isSafeInteger(image.height)||image.height<1)errors.push('Image alt and dimensions required');
  if(data.group!==undefined&&(typeof data.group!=='string'||!data.group.trim()))errors.push('Invalid group');
  if(data.sortRank!==undefined&&!Number.isFinite(data.sortRank))errors.push('Invalid rank');
- if(family==='sections'&&data.slug!==sectionAnchor(data.group||''))errors.push('Section slug must match its rendered group anchor');
+ if(family==='sections'&&data.slug!==sectionAnchor(data.group||'')&&!(data.baselineGroup&&data.slug===`catalogue-${data.primarySection}-${sectionAnchor(data.group||'')}`))errors.push('Section slug must match its rendered group anchor');
  if(family==='sections'&&(!data.group?.trim()||data.primarySection==='systems'&&!data.ecosystem?.trim()))errors.push('Section group and systems ecosystem required');
  if(errors.length)throw Error(errors.join('; '));return {data,body};
 }
@@ -47,9 +47,9 @@ export function catalogueConfiguration(sources,managed=[]){
  for(const d of data){
   if(d.type==='series'&&managed.includes(d.slug)&&!seriesSlugs.includes(d.slug))seriesSlugs.push(d.slug);
   if(d.type!=='catalogue-section')continue;
-  if(d.primarySection==='books'){if(bookGroups.some(g=>g.title===d.group))throw Error('Section already exists');bookGroups.push({title:d.group,description:d.summary,editorialSlugs:[]});}
-  else if(d.primarySection==='focus'){if(focusGroups.some(g=>g.title===d.group))throw Error('Section already exists');focusGroups.push({title:d.group,description:d.summary,slugs:[],variant:'standard'});}
-  else {let eco=ecosystems.find(e=>e.title===d.ecosystem);if(!eco){eco={title:d.ecosystem,description:d.summary,groups:[]};ecosystems.push(eco);}if(ecosystems.some(e=>e.groups.some(g=>g.title===d.group)))throw Error('Section already exists');eco.groups.push({title:d.group,description:d.summary,slugs:[]});}
+  if(d.primarySection==='books'){const existing=bookGroups.find(g=>g.title===d.group);if(existing){if(!d.baselineGroup)throw Error('Section already exists');existing.links=d.links;continue;}bookGroups.push({title:d.group,description:d.summary,links:d.links,editorialSlugs:[]});}
+  else if(d.primarySection==='focus'){const existing=focusGroups.find(g=>g.title===d.group);if(existing){if(!d.baselineGroup)throw Error('Section already exists');existing.links=d.links;continue;}focusGroups.push({title:d.group,description:d.summary,links:d.links,slugs:[],variant:'standard'});}
+  else {let eco=ecosystems.find(e=>e.title===d.ecosystem);if(!eco){eco={title:d.ecosystem,description:d.summary,groups:[]};ecosystems.push(eco);}const existing=ecosystems.flatMap(e=>e.groups).find(g=>g.title===d.group);if(existing){if(!d.baselineGroup)throw Error('Section already exists');existing.links=d.links;continue;}eco.groups.push({title:d.group,description:d.summary,links:d.links,slugs:[]});}
  }
  return {ecosystems,bookGroups,seriesSlugs,focusGroups};
 }

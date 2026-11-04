@@ -106,6 +106,8 @@ After one prebuild and boundary check, `catalogue-v1` runs the same six real con
 
 ## Add video to an existing project or book
 
+After the runtime video engine is verified in Production, the default path is `content:runtime add-video` documented in [runtime catalogue publishing](runtime-catalogue.md#add-a-video-to-a-book-project-series-or-catalogue-group). It covers books, projects, series and catalogue groups with one revision-bound content operation. No per-video Git/build/PR is needed. The procedure below is the retained Git compatibility path, not the routine default.
+
 Use one shared data-only path for existing `/books/<slug>` and `/work/<slug>` cards. Book and series sources resolve by their metadata, not a guessed filename. Book series live in `content/series/`; their declared root canonical path (for example `/good-dogs-of-the-apocalypse`) is also accepted. The canonical segment may differ from the source slug (for example `/bar` declared by `foo.md`); `/books/foo` remains an alias for the same source. Duplicate route/slug matches fail before writes:
 
 1. Record private operation start, exact owner-approved card/video and workload `catalogue-video-addition-v1`; retain corrections and UNKNOWN owner effort. Keep engineering/optimization time separate from subsequent publication latency. Never restart a timer to hide a failed attempt.

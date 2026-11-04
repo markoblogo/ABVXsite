@@ -5784,3 +5784,10 @@ a {
  .about-page[data-static-locale]:not([data-static-locale="en"]) .page-header h1 { max-width:100%; }
  .about-page[data-static-locale]:not([data-static-locale="en"]) .page-header > .eyebrow { margin-bottom:4rem; }
 }
+
+/* Group players share the existing catalogue layout without widening grid tracks. */
+.catalogue-group-videos { width: 100%; min-width: 0; max-width: 48rem; margin-block: 1.5rem; }
+.route-books--structured { grid-template-columns: minmax(0, 1fr); }
+.books-standalone-group { grid-template-columns: minmax(0, 1fr); min-width: 0; }
+.route-focus, .route-systems { grid-template-columns: minmax(0, 1fr); }
+.focus-product-group, .systems-ecosystem, .systems-ecosystem__groups, .systems-subgroup { grid-template-columns: minmax(0, 1fr); min-width: 0; }

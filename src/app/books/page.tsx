@@ -1,3 +1,4 @@
+import CatalogueGroupVideos, {hasCatalogueGroupVideos} from '@/components/CatalogueGroupVideos';
 import {sectionAnchor} from '@/content/runtime-catalogue.mjs';
 import {getLiveCatalogue} from '@/lib/live-catalogue';
 import { isStandaloneCatalogueBook } from '@/lib/catalogue-config.mjs';
@@ -253,7 +254,7 @@ export default async function BooksPage() {
         <div className="grid gap-6">
           {standaloneGroups.map((group) => {
             const groupBooks = standaloneBooks.filter((book) => book.group === group.title);
-            if (!groupBooks.length) return null;
+            if (!groupBooks.length && !hasCatalogueGroupVideos(group)) return null;
 
             return (
               <section key={group.title} id={sectionAnchor(group.title)} className="books-standalone-group">
@@ -274,6 +275,7 @@ export default async function BooksPage() {
                     </div>
                   ) : null}
                 </div>
+                <CatalogueGroupVideos group={group} />
                 <div className="books-mixed-grid">
                   {groupBooks.map((book) => (
                     <BookCatalogueCard

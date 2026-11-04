@@ -457,6 +457,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/UcyFLnvIzeE
   Summary: What if your AI agents could use your entire computer without constantly taking screenshots, analyzing pixels, and moving your mouse around? And what if multiple agents could work while you continued using your computer?
 
+- DeepSeek Creator Mode: Build Your Own AI Agent Interface Just by Prompting
+  URL: https://abvx.xyz/writing/videos/uDYjI2-QvpQ
+  Summary: What if your AI assistant could redesign its own interface whenever you wanted? Not just change the colors. Actually build new tools, install them as plugins, and integrate them directly into the application. Meet Creato
+
 - Afterimage | Venice Biennale 2019 — Light, Memory & Machines
   URL: https://abvx.xyz/writing/videos/umOUUPFrG4c
   Summary: Light becomes a body. A letter dissolves into fog. A robot repeats a task that never stays finished. AFTERIMAGE is an original short art film connecting four encounters with media and installation art from the Venice Bie

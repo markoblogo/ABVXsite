@@ -8199,7 +8199,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-04T12:51:33.578Z",
+      "updatedAt": "2026-11-04T13:13:14.963Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8246,6 +8246,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=rqKXx_Z5AR0"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "DeepSeek Creator Mode: Build Your Own AI Agent Interface Just by Prompting",
+      "summary": "What if your AI assistant could redesign its own interface whenever you wanted? Not just change the colors. Actually build new tools, install them as plugins, and integrate them directly into the application. Meet Creato",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/uDYjI2-QvpQ",
+      "publishedAt": "2026-11-04T13:08:04.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=uDYjI2-QvpQ"
         }
       ],
       "related": []

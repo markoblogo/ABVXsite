@@ -1,3 +1,5 @@
+import LocalizedBookPage from '@/components/LocalizedBookPage';
+import {bookLocaleAlternates,localizedBookDescription} from '@/lib/book-locales.mjs';
 import {documentLanguage} from '@/lib/document-language.mjs';
 import DocumentLanguage from '@/components/DocumentLanguage';
 import {getLiveCatalogue} from '@/lib/live-catalogue';
@@ -150,15 +152,18 @@ export async function generateMetadata({
     };
   }
 
+  const description = localizedBookDescription(book,'en') || book;
   const image = imageMetadata(book.heroImage || book.coverImage, booksOgImage, book.type === 'series' ? 'project' : 'book');
 
-  return metadataWithImage({
-    title: book.seoTitle || book.title,
-    description: book.seoDescription || book.summary,
+  const metadata = metadataWithImage({
+    title: description.seoTitle || book.title,
+    description: description.seoDescription || description.summary,
     canonicalPath: book.canonicalPath || `/books/${book.slug}`,
     image,
     type: book.type === 'series' ? 'website' : 'book',
   });
+  if(book.descriptionLocales) metadata.alternates={...metadata.alternates,languages:bookLocaleAlternates(book)};
+  return metadata;
 }
 
 export default async function BookDetailPage({
@@ -170,6 +175,7 @@ export default async function BookDetailPage({
   const { slug } = await params;
   const book = getBookBySlug(slug);
   if (!book) notFound();
+  if(book.descriptionLocales?.en) return <LocalizedBookPage book={book}/>;
 
   const image = book.heroImage || book.coverImage;
   const title = book.displayTitle || book.shortTitle || book.title;

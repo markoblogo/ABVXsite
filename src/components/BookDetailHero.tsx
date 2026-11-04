@@ -26,9 +26,11 @@ function formatFormats(formats?: string[]): string | undefined {
 export default function BookDetailHero({
   book,
   image,
+  locale = 'en',
 }: {
   book: Book;
   image?: ContentImage;
+  locale?: 'en' | 'fr';
 }) {
   const title = book.displayTitle || book.shortTitle || book.title;
   const formats = formatFormats(book.formats);
@@ -39,13 +41,13 @@ export default function BookDetailHero({
         <MediaPanel image={image} title={title} variant="book" priority />
       </div>
       <div className="book-detail-hero__copy">
-        <div className="eyebrow">{formatLabel(book)}</div>
+        <div className="eyebrow">{locale === 'fr' ? [book.series || book.category || 'Livre', book.status === 'released' ? 'Publié' : book.status].filter(Boolean).join(' / ') : formatLabel(book)}</div>
         <h1>{title}</h1>
         {book.subtitle ? <p className="book-detail-hero__subtitle">{book.subtitle}</p> : null}
         <p className="book-detail-hero__summary">{book.summary}</p>
         <TagList tags={book.tags} />
-        <BookActionLinks links={book.links} />
-        {formats ? <p className="book-detail-hero__formats">Available formats: {formats}.</p> : null}
+        <BookActionLinks links={book.links} locale={locale} />
+        {formats ? <p className="book-detail-hero__formats">{locale === 'fr' ? 'Formats disponibles' : 'Available formats'}: {locale === 'fr' ? formats.replace(/paperback/gi,'broché') : formats}.</p> : null}
       </div>
     </header>
   );

@@ -152,6 +152,7 @@ export type Book = BaseContentItem<BookType> & {
   formats?: string[];
   availableFormats?: string[];
   language?: string;
+  descriptionLocales?: Partial<Record<'en' | 'fr', {summary: string; body: string; seoTitle: string; seoDescription: string}>>;
   originalLanguage?: string;
   editionRole?: 'original' | 'translation' | 'adaptation' | 'companion' | string;
   author?: string;

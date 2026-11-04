@@ -1,3 +1,4 @@
+import {bookLocalePath,bookLocaleAlternates} from '@/lib/book-locales.mjs';
 import {staticPaths,staticLocales,localizedPath,staticAlternates,staticUpdatedAt} from '@/lib/static-locales.mjs';
 import type {NativeWriting} from '@/content/types';
 import type {FeedItem} from '@/lib/feed-types';
@@ -98,12 +99,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: artifact.featured ? 0.75 : 0.6,
   }));
 
-  const bookRoutes: MetadataRoute.Sitemap = books.map((book) => ({
+  const bookRoutes: MetadataRoute.Sitemap = books.flatMap((book) => [
+   ...(book.descriptionLocales?.fr ? [{url:base+bookLocalePath(book.slug,'fr'),lastModified:contentDate(book),alternates:{languages:bookLocaleAlternates(book)},changeFrequency:'monthly' as const,priority:0.6}] : []),
+   {
+    ...(book.descriptionLocales ? {alternates:{languages:bookLocaleAlternates(book)}} : {}),
     url: `${base}${book.canonicalPath || `/books/${book.slug}`}`,
     lastModified: contentDate(book),
     changeFrequency: 'monthly',
     priority: book.featured ? 0.75 : 0.6,
-  }));
+  }] );
 
   const writingRoutes: MetadataRoute.Sitemap = writing.map((item) => ({
     url: `${base}/writing/${item.slug}`,

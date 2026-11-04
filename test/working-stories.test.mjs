@@ -1,3 +1,4 @@
+import * as bookLocales from '../src/lib/book-locales.mjs';
 import * as staticLocales from '../src/lib/static-locales.mjs';
 import assert from 'node:assert/strict';
 import test from 'node:test';
@@ -291,6 +292,7 @@ test('sitemap discovers published stories and series while excluding private and
   let automaticNative;
   const sitemap = compile('src/app/sitemap.ts', {
     '@/lib/static-locales.mjs': staticLocales,
+    '@/lib/book-locales.mjs': bookLocales,
     '@/lib/live-writing-discovery': {getLiveWritingBundle:async()=>({native:nativeVideos,index:{items:[{canonicalUrl:'https://abvx.xyz/writing/archive',updatedAt:'2026-10-14T19:00:00.000Z'}]}})},
     '@/lib/live-writing': {getLiveNativeWritingItems:async()=>nativeVideos},
     '../../content/pages.json': JSON.parse(readFileSync(path.join(repo, 'content/pages.json'))),
@@ -298,7 +300,7 @@ test('sitemap discovers published stories and series while excluding private and
     '../../content/kitchen-notes.json': JSON.parse(readFileSync(path.join(repo, 'content/kitchen-notes.json'))),
     '@/lib/youtube-pages.mjs': {automaticVideoItems:(_registry,items)=>{automaticNative=items;return [];},publishedWritingItems:()=>[nativeVideos[0]]},
     '../../content/writing-discovery.json': {items:[]},
-    '@/lib/live-catalogue': {getLiveCatalogue:async()=>({getArtifacts:()=>[],getBooks:()=>[]})},
+    '@/lib/live-catalogue': {getLiveCatalogue:async()=>({getArtifacts:()=>[],getBooks:()=>[{slug:'localized-book',language:'fr',tags:[],links:[],descriptionLocales:{en:{},fr:{}}}]})},
     '@/content/service-pages': { servicePages: [] }, '@/content/editorials': { getEditorialArticles: () => [] },
     '@/content/working-stories': adapter,
   }).default;
@@ -306,6 +308,7 @@ test('sitemap discovers published stories and series while excluding private and
   try {
     process.chdir(root);
     const routes = await sitemap();
+    assert.ok(routes.some(r=>r.url==='https://abvx.xyz/fr/books/localized-book' && r.alternates.languages.en==='https://abvx.xyz/books/localized-book'));
     assert.deepEqual(automaticNative,[nativeVideos[0]],'automatic videos must use the released companion boundary');
     assert.ok(routes.some(item => item.url.endsWith('/writing/released-video')));
     assert.ok(!routes.some(item => /\/(future-video|archive-video)$/.test(item.url)));

@@ -7966,6 +7966,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude Code Gets Its Own Mac! Meet terminal-mac | AI Computer Use in Your Terminal",
+      "summary": "What if you could give Claude Code an entire Mac of its own? Not just terminal access. Not a browser sandbox. An actual macOS desktop, running inside your terminal. Meet terminal-mac, a free, open-source project that let",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/aPUm9hNAkmQ",
+      "publishedAt": "2026-11-04T11:12:10.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=aPUm9hNAkmQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude Code Has Hidden Features. This /stack Mod Reveals Everything",
       "summary": "Think you know what's running inside your Claude Code sessions? You might be surprised. Meet /stack, a free, open-source Claude Code mod that reveals practically everything installed, configured, and available in your AI",
       "canonicalUrl": "https://abvx.xyz/writing/videos/sZpOYudsSDY",
@@ -8176,7 +8199,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-04T09:13:35.962Z",
+      "updatedAt": "2026-11-04T11:37:47.620Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10255,6 +10278,29 @@
           "relation": "same-project"
         }
       ]
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "P-H3-Image: Pruna Turned MiniMax H3 Into a 5× Faster AI Image Generator | ComfyUI",
+      "summary": "What if one of the most powerful AI video models could become an incredibly fast image generator? Not by simply asking it to generate a single frame. By rebuilding its architecture specifically for image generation. Meet",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/V-nCEmr9kZw",
+      "publishedAt": "2026-11-04T11:22:06.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=V-nCEmr9kZw"
+        }
+      ],
+      "related": []
     },
     {
       "type": "video",

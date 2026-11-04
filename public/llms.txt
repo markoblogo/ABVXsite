@@ -129,6 +129,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/Ao-_E_l6F98
   Summary: Smart TVs have become ridiculous. You buy a television, turn it on, and somehow end up staring at advertisements, sponsored recommendations, and apps you never asked for. One developer finally decided he'd had enough. So
 
+- Claude Code Gets Its Own Mac! Meet terminal-mac | AI Computer Use in Your Terminal
+  URL: https://abvx.xyz/writing/videos/aPUm9hNAkmQ
+  Summary: What if you could give Claude Code an entire Mac of its own? Not just terminal access. Not a browser sandbox. An actual macOS desktop, running inside your terminal. Meet terminal-mac, a free, open-source project that let
+
 - A Dog Follows a Falling Light | 3D Animated Short
   URL: https://abvx.xyz/writing/videos/B4zdWfFIkNE
   Summary: A quiet discovery turns into a dash toward the unknown. A small light falls beyond the trees, floods the forest with a warm glow, and draws a curious dog into the brightness. A 30-second, dialogue-free 3D animated short
@@ -456,6 +460,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Time Capsule | Pokras Lampas — Calligrafuturism at Lennauchfilm
   URL: https://abvx.xyz/writing/videos/uyzSYiktQb0
   Summary: Pokras Lampas turns a brick facade into a message for future generations. TIME _ CAPSULE explores his calligrafuturist mural at Lennauchfilm in St Petersburg through moving photographs, original footage and an instrument
+
+- P-H3-Image: Pruna Turned MiniMax H3 Into a 5× Faster AI Image Generator | ComfyUI
+  URL: https://abvx.xyz/writing/videos/V-nCEmr9kZw
+  Summary: What if one of the most powerful AI video models could become an incredibly fast image generator? Not by simply asking it to generate a single frame. By rebuilding its architecture specifically for image generation. Meet
 
 - Physical Commodity Markets: A Practical Book Collection | AMI Books
   URL: https://abvx.xyz/writing/videos/vAPgNupIp2s

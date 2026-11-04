@@ -8199,7 +8199,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-04T13:13:14.963Z",
+      "updatedAt": "2026-11-04T13:38:49.213Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9974,6 +9974,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=TISOtCghMVY"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "MOSS-Live Is Here! Full-Duplex AI Voice Assistant + New Open-Source AI Models Coming",
+      "summary": "Remember MOSS-Image, the impressive open-source 5-billion-parameter image generator released by OpenMOSS in October? Well, apparently, generating images was just the beginning. The Chinese AI team is back with MOSS-Live,",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/kuz2n0DrXYE",
+      "publishedAt": "2026-11-04T13:24:20.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=kuz2n0DrXYE"
         }
       ],
       "related": []

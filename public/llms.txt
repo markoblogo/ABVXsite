@@ -461,6 +461,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/umOUUPFrG4c
   Summary: Light becomes a body. A letter dissolves into fog. A robot repeats a task that never stays finished. AFTERIMAGE is an original short art film connecting four encounters with media and installation art from the Venice Bie
 
+- MiniMax H3 + 360 Orbit LoRA Turns AI Video Into 3D Gaussian Splats | Houdini 22
+  URL: https://abvx.xyz/writing/videos/uuvpa2r_fLQ
+  Summary: What if you could turn a single image into a 3D scene without manually modeling anything? Not by directly generating a mesh. By making an AI video model invent the missing camera angles, then reconstructing the scene in
+
 - Why Do Streetlights Look Like Stars? This Eye Simulator Shows You.
   URL: https://abvx.xyz/writing/videos/uvM-jWwibOQ
   Summary: Ever noticed how streetlights, car headlights, and distant stars turn into glowing halos, spikes, and strange patterns at night? Well, someone built a simulator that lets you explore exactly why that happens. Meet Engisc

@@ -8199,7 +8199,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-04T12:38:37.410Z",
+      "updatedAt": "2026-11-04T12:51:33.578Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9882,6 +9882,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=XvpETa8sODw"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "MiniMax H3 + 360 Orbit LoRA Turns AI Video Into 3D Gaussian Splats | Houdini 22",
+      "summary": "What if you could turn a single image into a 3D scene without manually modeling anything? Not by directly generating a mesh. By making an AI video model invent the missing camera angles, then reconstructing the scene in ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/uuvpa2r_fLQ",
+      "publishedAt": "2026-11-04T12:44:45.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=uuvpa2r_fLQ"
         }
       ],
       "related": []

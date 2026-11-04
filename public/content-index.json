@@ -8227,7 +8227,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-04T19:11:13.221Z",
+      "updatedAt": "2026-11-04T19:37:54.908Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11749,6 +11749,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=NEbmecyitIs"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Suno MCP Is Here! Generate AI Music Inside ChatGPT, Claude & Gemini | No API Key",
+      "summary": "What if you could create an entire song without ever leaving your conversation with ChatGPT or Claude? No switching tabs. No copying prompts between applications. No complicated API setup. Meet Suno MCP Beta, the new off",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/7bZuoAPZrhw",
+      "publishedAt": "2026-11-04T19:23:08.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=7bZuoAPZrhw"
         }
       ],
       "related": []

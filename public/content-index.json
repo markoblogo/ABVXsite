@@ -8222,7 +8222,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-04T14:24:12.835Z",
+      "updatedAt": "2026-11-04T16:14:05.161Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10297,6 +10297,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=ih43aF1zeaM"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "No Further Claims | A Manga Short Film",
+      "summary": "A quiet morning. A loose ostrich. A dog on the chase. In Bracken Ford, the stories outrun the facts. An AI-assisted manga-style short film adapted from No Further Claims: A Bracken Ford Novel by Calder Brackle. High-cont",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/qq1dv0H-jvk",
+      "publishedAt": "2026-11-04T16:06:28.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=qq1dv0H-jvk"
         }
       ],
       "related": []

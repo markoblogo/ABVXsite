@@ -275,6 +275,7 @@ export function bookFromSource(source: string): Book {
         category: optionalString(data.group) || optionalString(data.category),
         formats: stringArray(data.formats),
         availableFormats: stringArray(data.availableFormats),
+        descriptionLocales: data.descriptionLocales as Book['descriptionLocales'],
         language: optionalString(data.language),
         originalLanguage: optionalString(data.originalLanguage),
         editionRole: optionalString(data.editionRole),

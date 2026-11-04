@@ -1,4 +1,5 @@
 // Catalogue data uses the same versioned store, approval and media pipeline as Writing.
+import {bookLocaleErrors} from '../lib/book-locales.mjs';
 import redirects from './catalogue-redirects.json' with {type:'json'};
 import {readFileSync,readdirSync} from 'node:fs';
 import {parseMarkdownSource} from './markdown-source.mjs';
@@ -16,7 +17,7 @@ export function catalogueFamily(data){
 export const sectionAnchor = value=>value.toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 export function cataloguePath(data){const family=catalogueFamily(data);return family==='sections'?`/${data.primarySection}#${data.slug}`:`/${family==='work'?'work':'books'}/${data.slug}`;}
 export function parseAcceptedCatalogue(source,now=new Date()){
- const {data,body}=parseMarkdownSource(source),family=catalogueFamily(data),errors=publicationMetadataErrors(data);
+ const {data,body}=parseMarkdownSource(source),family=catalogueFamily(data),errors=[...publicationMetadataErrors(data),...bookLocaleErrors(data)];
  if(!family||!slug.test(data.slug||'')||data.id!==data.slug)errors.push('Safe matching catalogue id/slug required');
  if(data.visibility!=='public'||!validStatus.has(data.status)||!body.trim()||!data.title?.trim()||!data.summary?.trim())errors.push('Complete public catalogue source required');
  if(!data.publishedAt||!Number.isFinite(Date.parse(data.publishedAt))||Date.parse(data.publishedAt)>now.valueOf())errors.push('Non-future publication date required');

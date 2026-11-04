@@ -1883,6 +1883,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook, living
 
+- Psychology Notebook #29 — Uncertainty, Courage & Freedom
+  URL: https://abvx.xyz/writing/psychology-notebook-29-uncertainty-courage-freedom
+  Summary: Twenty translated notebook fragments on uncertainty, courage & freedom.
+  Group: writing
+  Tags: psychology-notebook, anxiety
+
+- Psychology Notebook #30 — Living Without an Audience
+  URL: https://abvx.xyz/writing/psychology-notebook-30-living-without-an-audience
+  Summary: Twenty translated notebook fragments on living without an audience.
+  Group: writing
+  Tags: psychology-notebook, living
+
 - The Berliner: How My Beer Cocktail Ended Up on a French Bar's Menu
   URL: https://abvx.xyz/writing/the-berliner-guinness-port-beer-cocktail
   Summary: I discovered Guinness with port wine in Berlin, recreated it with whatever a small French bar had available, and eventually watched it become an official item in the cash register.

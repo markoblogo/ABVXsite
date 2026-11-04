@@ -8176,7 +8176,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-03T14:23:04.878Z",
+      "updatedAt": "2026-11-04T09:13:35.962Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11041,6 +11041,44 @@
       "links": [],
       "publishedAt": "2026-11-03",
       "updatedAt": "2026-11-03",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #29 — Uncertainty, Courage & Freedom",
+      "summary": "Twenty translated notebook fragments on uncertainty, courage & freedom.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-29-uncertainty-courage-freedom",
+      "tags": [
+        "psychology-notebook",
+        "anxiety"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-04",
+      "updatedAt": "2026-11-04",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #30 — Living Without an Audience",
+      "summary": "Twenty translated notebook fragments on living without an audience.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-30-living-without-an-audience",
+      "tags": [
+        "psychology-notebook",
+        "living"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-04",
+      "updatedAt": "2026-11-04",
       "related": []
     },
     {

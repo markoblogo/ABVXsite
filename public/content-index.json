@@ -8227,7 +8227,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-04T16:52:37.406Z",
+      "updatedAt": "2026-11-04T17:37:45.781Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11611,6 +11611,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=VLObu0Pl9D0"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Stageshow: Make Claude Code & Codex Create Beautiful UI Animations | Free AI Design Skill",
+      "summary": "AI coding agents can build entire applications. But why do their UI animations still look like they were designed by a programmer who discovered gradients yesterday? Well, someone decided to fix that. Meet Stageshow, a n",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/Jrhm5lH7224",
+      "publishedAt": "2026-11-04T17:20:13.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=Jrhm5lH7224"
         }
       ],
       "related": []

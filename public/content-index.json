@@ -2021,10 +2021,15 @@
           "type": "site",
           "label": "Pictiq",
           "url": "https://pictiq.abvx.xyz/"
+        },
+        {
+          "type": "youtube",
+          "label": "No Further Claims — book video",
+          "url": "https://youtu.be/qq1dv0H-jvk"
         }
       ],
       "publishedAt": "2026-09-23",
-      "updatedAt": "2026-09-23",
+      "updatedAt": "2026-11-04",
       "related": []
     },
     {

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import {catalogueVideoTargets} from '../src/content/runtime-catalogue-video.mjs';
+import {catalogueVideoTargets,prepareCatalogueVideo} from '../src/content/runtime-catalogue-video.mjs';
 // Content-only operator: no Git, shell, deploy or account-setting capability.
 import {readFileSync,readdirSync,writeFileSync,mkdirSync,existsSync} from 'node:fs';
 import {dirname,resolve,isAbsolute} from 'node:path';
@@ -46,7 +46,8 @@ async function main(){
   else {
   const response=await fetch(new URL('/api/writing/manage?export=1',base),{headers,signal:AbortSignal.timeout(30_000)});if(!response.ok)throw Error('Catalogue export unavailable: '+response.status);const current=await response.json();
   const matches=catalogueVideoTargets(current.snapshot,current.legacySources).filter(t=>t.route===args.route||t.aliases?.includes(args.route));if(matches.length!==1)throw Error('One public catalogue route required');const target=matches[0];
-  command={action:'add-catalogue-video',requestId:args['request-id'],route:args.route,videoUrl:args.video,expectedRevision:current.snapshot.records[target.id]?.currentRevision||digest(target.source),...(args.label?{label:args.label}:{})};
+  command={action:'add-catalogue-video',requestId:args['request-id'],route:args.route,videoUrl:args.video,expectedRevision:current.snapshot.records[target.id]?.currentRevision||digest(target.source),...(args.label!==undefined?{label:args.label}:{})};
+  prepareCatalogueVideo(command,current.snapshot,current.legacySources,new Date());
   save(args.output+'.before.json',current);
   }
  }

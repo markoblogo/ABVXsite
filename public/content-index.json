@@ -8227,7 +8227,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-04T19:37:54.908Z",
+      "updatedAt": "2026-11-04T19:51:04.025Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10394,6 +10394,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=qq1dv0H-jvk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "NVIDIA Nemotron 3.5 Transcribe: The New King of Open-Weight Speech Recognition?",
+      "summary": "What if AI could transcribe an entire meeting, distinguish every speaker, translate conversations, and tell you exactly when each word was spoken? Even when several people are talking over each other? Meet NVIDIA Nemotro",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/Z6k0B_8FqKA",
+      "publishedAt": "2026-11-04T19:36:34.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=Z6k0B_8FqKA"
         }
       ],
       "related": []

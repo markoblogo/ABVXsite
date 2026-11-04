@@ -1,5 +1,5 @@
-import LocalizedBookPage from '@/components/LocalizedBookPage';
-import {bookLocaleAlternates,localizedBookDescription} from '@/lib/book-locales.mjs';
+import BookDescriptionLanguageLinks from '@/components/BookDescriptionLanguageLinks';
+import {bookLocaleAlternates,bookLocalePath,localizedBookDescription} from '@/lib/book-locales.mjs';
 import {documentLanguage} from '@/lib/document-language.mjs';
 import DocumentLanguage from '@/components/DocumentLanguage';
 import {getLiveCatalogue} from '@/lib/live-catalogue';
@@ -140,11 +140,13 @@ function seriesItemSortValue(item: Book | Artifact) {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; descriptionLocale?: 'en' | 'fr' }>;
 }): Promise<Metadata> {
  const {getBookBySlug} = await getLiveCatalogue();
-  const { slug } = await params;
-  const book = getBookBySlug(slug);
+  const { slug, descriptionLocale = 'en' } = await params;
+  const originalBook = getBookBySlug(slug);
+  const book = originalBook ? (localizedBookDescription(originalBook,descriptionLocale) || originalBook) as Book : undefined;
+  if(descriptionLocale==='fr' && !originalBook?.descriptionLocales?.fr) notFound();
   if (!book) {
     return {
       title: 'Book',
@@ -152,13 +154,13 @@ export async function generateMetadata({
     };
   }
 
-  const description = localizedBookDescription(book,'en') || book;
+  const description = book;
   const image = imageMetadata(book.heroImage || book.coverImage, booksOgImage, book.type === 'series' ? 'project' : 'book');
 
   const metadata = metadataWithImage({
     title: description.seoTitle || book.title,
     description: description.seoDescription || description.summary,
-    canonicalPath: book.canonicalPath || `/books/${book.slug}`,
+    canonicalPath: book.descriptionLocales ? bookLocalePath(book.slug,descriptionLocale) : book.canonicalPath || `/books/${book.slug}`,
     image,
     type: book.type === 'series' ? 'website' : 'book',
   });
@@ -169,13 +171,18 @@ export async function generateMetadata({
 export default async function BookDetailPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; descriptionLocale?: 'en' | 'fr' }>;
 }) {
  const {getArtifacts,getArtifactsBySection,getBookBySlug,getBooks} = await getLiveCatalogue();
-  const { slug } = await params;
-  const book = getBookBySlug(slug);
+  const { slug, descriptionLocale = 'en' } = await params;
+  const originalBook = getBookBySlug(slug);
+  const book = originalBook ? (localizedBookDescription(originalBook,descriptionLocale) || originalBook) as Book : undefined;
+  if(descriptionLocale==='fr' && !originalBook?.descriptionLocales?.fr) notFound();
   if (!book) notFound();
-  if(book.descriptionLocales?.en) return <LocalizedBookPage book={book}/>;
+  const relationBook = originalBook || book;
+  const fr=descriptionLocale==='fr';
+  const labels:Record<string,string>={Language:'Langue',Author:'Auteur',Translator:'Traducteur','Part of':'Collection',Series:'Collection','Related editions':'Éditions et livres associés',Line:'Collection',Type:'Type',Formats:'Formats','Purchase links':'Acheter le livre'};
+
 
   const image = book.heroImage || book.coverImage;
   const title = book.displayTitle || book.shortTitle || book.title;
@@ -185,7 +192,7 @@ export default async function BookDetailPage({
     <section className="book-video-section" aria-labelledby="book-video-title">
       <div className="book-video-section__header">
         <div className="eyebrow">Media</div>
-        <h2 id="book-video-title">Watch / Context</h2>
+        <h2 id="book-video-title">{fr?'Vidéo / Contexte':'Watch / Context'}</h2>
       </div>
       <YouTubeGallery links={videos} title={title} />
     </section>
@@ -217,7 +224,7 @@ export default async function BookDetailPage({
 
     return (
       <article className="detail-page detail-page--book detail-page--series">
-      <DocumentLanguage languageOverride={documentLanguage(book.language)} />
+      <DocumentLanguage languageOverride={book.descriptionLocales ? descriptionLocale : documentLanguage(book.language)} />
         <JsonLd id="jsonld-book-series" data={bookJsonLd(book)} />
         <JsonLd
           id="jsonld-book-breadcrumbs"
@@ -230,7 +237,7 @@ export default async function BookDetailPage({
         <BreadcrumbNav
           items={[
             { label: 'ABVX', href: '/' },
-            { label: 'Books', href: '/books' },
+            { label: fr ? 'Livres' : 'Books', href: '/books' },
             { label: title },
           ]}
         />
@@ -263,7 +270,7 @@ export default async function BookDetailPage({
               <dl>
                 {contextRows.map(([label, value]) => (
                   <div key={label}>
-                    <dt>{label}</dt>
+                    <dt>{fr ? (labels[label] || label) : label}</dt>
                     <dd>{value}</dd>
                   </div>
                 ))}
@@ -277,7 +284,7 @@ export default async function BookDetailPage({
         {relatedItems.length ? (
           <section className="home-section" aria-labelledby="series-related-title">
             <div className="home-section__header">
-              <div className="eyebrow">Related items</div>
+              <div className="eyebrow">{fr?'À découvrir aussi':'Related items'}</div>
               <h2 id="series-related-title">Books, resources and companion systems.</h2>
             </div>
             <div className="book-related-grid">
@@ -298,15 +305,15 @@ export default async function BookDetailPage({
         book.relatedSlugs?.includes(item.slug) ||
         item.series === book.series ||
         item.category === book.category ||
-        item.tags.some((tag) => book.tags.includes(tag)),
+        item.tags.some((tag) => relationBook.tags.includes(tag)),
     );
   const artifactSource = book.appearsIn.includes('focus') ? getArtifacts() : getArtifactsBySection('books');
   const relatedArtifacts = artifactSource
-    .filter((item) => book.relatedSlugs?.includes(item.slug) || item.tags.some((tag) => book.tags.includes(tag)))
-    .filter((item) => relatedScore(book, item) > 0);
+    .filter((item) => book.relatedSlugs?.includes(item.slug) || item.tags.some((tag) => relationBook.tags.includes(tag)))
+    .filter((item) => relatedScore(relationBook, item) > 0);
   const relatedItems = [
-    ...relatedBooks.map((item) => ({ kind: 'book' as const, item, score: relatedScore(book, item) })),
-    ...relatedArtifacts.map((item) => ({ kind: 'artifact' as const, item, score: relatedScore(book, item) })),
+    ...relatedBooks.map((item) => ({ kind: 'book' as const, item, score: relatedScore(relationBook, item) })),
+    ...relatedArtifacts.map((item) => ({ kind: 'artifact' as const, item, score: relatedScore(relationBook, item) })),
   ]
     .sort((a, b) => {
       if (b.score !== a.score) return b.score - a.score;
@@ -341,7 +348,7 @@ export default async function BookDetailPage({
 
   return (
     <article className="detail-page detail-page--book">
-      <DocumentLanguage languageOverride={documentLanguage(book.language)} />
+      <DocumentLanguage languageOverride={book.descriptionLocales ? descriptionLocale : documentLanguage(book.language)} />
       <JsonLd id="jsonld-book-item" data={bookJsonLd(book, relatedItems.map((related) => related.item), primarySeries)} />
       {book.faqs?.length ? (
         <JsonLd
@@ -363,18 +370,20 @@ export default async function BookDetailPage({
       <BreadcrumbNav
         items={[
           { label: 'ABVX', href: '/' },
-          { label: 'Books', href: '/books' },
+          { label: fr ? 'Livres' : 'Books', href: '/books' },
           ...(primarySeries ? [{ label: primarySeries.shortTitle || primarySeries.title, href: primarySeries.canonicalPath || `/books/${primarySeries.slug}` }] : []),
           { label: title },
         ]}
       />
-      <BookDetailHero book={book} image={image} />
+      {book.descriptionLocales?<BookDescriptionLanguageLinks slug={book.slug} locale={descriptionLocale}/>:null}
+      <BookDetailHero book={book} image={image} locale={descriptionLocale}/>
+      {book.descriptionLocales?<p>{fr?'Langue du livre : ':'Book language: '}{documentLanguage(book.language)==='fr'?(fr?'français':'French'):book.language}. {fr?'Les liens d’achat concernent cette édition.':'Purchase links are for this edition.'}</p>:null}
 
       {audioLink ? (
         <section className="book-video-section" aria-labelledby="book-audio-title">
           <div className="book-video-section__header">
-            <div className="eyebrow">Audio edition</div>
-            <h2 id="book-audio-title">Listen / Preview</h2>
+            <div className="eyebrow">{fr?'Édition audio':'Audio edition'}</div>
+            <h2 id="book-audio-title">{fr?'Écouter / Extrait':'Listen / Preview'}</h2>
           </div>
           <div className="book-detail-copy-panel">
             <BookAudioPlayer src={audioLink.url} title={title} />
@@ -385,18 +394,18 @@ export default async function BookDetailPage({
       <section className="book-detail-main" aria-labelledby="book-about-title">
         <div className="book-detail-copy-panel">
           <div className="eyebrow">ABVX Press</div>
-          <h2 id="book-about-title">About this book</h2>
+          <h2 id="book-about-title">{fr?'À propos du livre':'About this book'}</h2>
           <MarkdownContent>{book.description || book.summary}</MarkdownContent>
           {book.editorialSlug ? <EditorialSectionLink section="books" slug={book.editorialSlug} /> : null}
         </div>
 
         {contextRows.length ? (
-          <aside className="book-detail-context" aria-label="Publishing context">
-            <div className="eyebrow">Publishing context</div>
+          <aside className="book-detail-context" aria-label={fr?'Informations sur le livre':'Publishing context'}>
+            <div className="eyebrow">{fr?'Informations sur le livre':'Publishing context'}</div>
             <dl>
               {contextRows.map(([label, value]) => (
                 <div key={label}>
-                  <dt>{label}</dt>
+                  <dt>{fr ? (labels[label] || label) : label}</dt>
                   <dd>{value}</dd>
                 </div>
               ))}
@@ -405,15 +414,16 @@ export default async function BookDetailPage({
         ) : null}
       </section>
 
-      <FAQSection id="book-faq-title" title="Reader questions." faqs={book.faqs || []} />
+      <FAQSection id="book-faq-title" title={fr?'Questions fréquentes':'Reader questions.'} faqs={book.faqs || []} />
 
       {videoSection}
+      {book.descriptionLocales&&book.coverImage&&book.heroImage?<MediaPanel image={book.coverImage} title={book.title} variant="project"/>:null}
 
       {relatedItems.length ? (
         <section className="home-section" aria-labelledby="related-books-title">
           <div className="home-section__header">
-            <div className="eyebrow">Related items</div>
-            <h2 id="related-books-title">Same shelf, nearby systems.</h2>
+            <div className="eyebrow">{fr?'À découvrir aussi':'Related items'}</div>
+            <h2 id="related-books-title">{fr?'Livres et projets associés':'Same shelf, nearby systems.'}</h2>
           </div>
           <div className="book-related-grid">
             {relatedItems.map((related) => (

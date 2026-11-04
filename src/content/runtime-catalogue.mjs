@@ -16,6 +16,7 @@ export function catalogueFamily(data){
 }
 export const sectionAnchor = value=>value.toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 export function cataloguePath(data){const family=catalogueFamily(data);return family==='sections'?`/${data.primarySection}#${sectionAnchor(data.group||data.slug)}`:`/${family==='work'?'work':'books'}/${data.slug}`;}
+export const catalogueCanonicalPath=data=>data.canonicalPath||cataloguePath(data);
 export function parseAcceptedCatalogue(source,now=new Date()){
  const {data,body}=parseMarkdownSource(source),family=catalogueFamily(data),errors=[...publicationMetadataErrors(data),...bookLocaleErrors(data)];
  if(!family||!slug.test(data.slug||'')||data.id!==data.slug)errors.push('Safe matching catalogue id/slug required');
@@ -60,6 +61,8 @@ export function validateCatalogueSnapshot(snapshot,legacy){
  // Validate new records and relationships on every write, including withdrawals.
  for(const d of data){
   const r=snapshot.records[d.slug];if(!r)continue;
+  const baseline=Object.values(r.versions).find(v=>v.storedAt===null&&!v.withdrawn&&catalogueFamily(parseMarkdownSource(v.source).data));
+  if(baseline){const original=parseMarkdownSource(baseline.source).data;const fields=['type','primarySection','appearsIn','group','primarySeriesSlug','seriesSlugs','tags'];if(fields.every(key=>JSON.stringify(original[key])===JSON.stringify(d[key])))continue;}
   if([d.primarySeriesSlug,...d.seriesSlugs||[]].filter(Boolean).some(id=>!series.has(id)))throw Error('Referenced series is not public');
   if(catalogueFamily(d)==='books'&&!d.primarySeriesSlug&&!d.seriesSlugs?.some(s=>series.has(s))&&!config.bookGroups.some(g=>g.title===d.group))throw Error('Book needs a visible series or group');
   if(catalogueFamily(d)==='work'&&d.primarySection==='books'&&!d.primarySeriesSlug&&!d.seriesSlugs?.length&&!['Publishing systems & protocols','Business, AI & Marketing'].includes(d.group)&&!d.tags?.some(t=>['book-companion','publishing','translation'].includes(t)))throw Error('Project needs a visible Books placement');
@@ -71,16 +74,16 @@ export function validateCatalogueSnapshot(snapshot,legacy){
 }
 export function projectCatalogueIndex(index,sources,snapshot){
  const owned=Object.values(snapshot.records).map(r=>parseMarkdownSource(r.versions[r.currentRevision].source).data).filter(catalogueFamily);
- const urls=new Set(owned.map(d=>'https://abvx.xyz'+cataloguePath(d)));
+ const urls=new Set(owned.map(d=>'https://abvx.xyz'+catalogueCanonicalPath(d)));
  const data=sources.map(s=>parseMarkdownSource(s).data).filter(d=>Object.hasOwn(snapshot.records,d.slug)&&!['private','draft'].includes(d.visibility));
- const items=data.filter(d=>d.type!=='catalogue-section').map(d=>({type:catalogueFamily(d)==='work'?'work':d.type,section:d.primarySection,ecosystem:d.primarySection==='books'?'Books':d.primarySection==='focus'?'Focus':'Systems',group:d.group||d.series||null,status:d.status,title:d.title,summary:d.summary,canonicalUrl:'https://abvx.xyz'+cataloguePath(d),publishedAt:d.publishedAt||null,updatedAt:d.updatedAt||d.publishedAt||null,language:d.language||'en',tags:d.tags||[],links:d.links||[],related:[d.primarySeriesSlug,...d.seriesSlugs||[]].filter(Boolean).map(slug=>({title:sources.map(s=>parseMarkdownSource(s).data).find(x=>x.slug===slug)?.title||slug,canonicalUrl:'https://abvx.xyz/books/'+slug,relation:'series'}))}));
+ const items=data.filter(d=>d.type!=='catalogue-section').map(d=>({type:catalogueFamily(d)==='work'?'work':d.type,section:d.primarySection,ecosystem:d.primarySection==='books'?'Books':d.primarySection==='focus'?'Focus':'Systems',group:d.group||d.series||null,status:d.status,title:d.title,summary:d.summary,canonicalUrl:'https://abvx.xyz'+catalogueCanonicalPath(d),publishedAt:d.publishedAt||null,updatedAt:d.updatedAt||d.publishedAt||null,language:d.language||'en',tags:d.tags||[],links:d.links||[],related:[d.primarySeriesSlug,...d.seriesSlugs||[]].filter(Boolean).map(slug=>({title:sources.map(s=>parseMarkdownSource(s).data).find(x=>x.slug===slug)?.title||slug,canonicalUrl:'https://abvx.xyz'+(sources.map(s=>parseMarkdownSource(s).data).find(x=>x.slug===slug)?catalogueCanonicalPath(sources.map(s=>parseMarkdownSource(s).data).find(x=>x.slug===slug)):'/books/'+slug),relation:'series'}))}));
  return {...index,items:[...index.items.filter(x=>!urls.has(x.canonicalUrl)),...items]};
 }
 
 export function projectCatalogueLlms(text,index,snapshot){
  const owned=Object.values(snapshot.records).map(r=>parseMarkdownSource(r.versions[r.currentRevision].source).data).filter(catalogueFamily);
  if(!owned.length)return text;
- const urls=new Set(owned.map(d=>'https://abvx.xyz'+cataloguePath(d)));
+ const urls=new Set(owned.map(d=>'https://abvx.xyz'+catalogueCanonicalPath(d)));
  const clean=text.split('\n\n').filter(block=>![...urls].some(url=>block.split('\n').some(line=>line.trim()==='URL: '+url))).join('\n\n');
  const items=index.items.filter(item=>urls.has(item.canonicalUrl));
  return clean+'\n\n## Live catalogue additions\n\n'+items.map(item=>`- ${item.title}\n  URL: ${item.canonicalUrl}\n  Summary: ${item.summary}\n  Group: ${item.group||item.section}`).join('\n\n')+'\n';

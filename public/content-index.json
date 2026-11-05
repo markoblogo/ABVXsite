@@ -7789,6 +7789,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Autopilot: An AI Game Tester That Plays, Finds Bugs & Learns | Unreal, Unity & Godot",
+      "summary": "What if you could give an AI agent your unfinished game and tell it: \"Play this. Find everything that's broken. And don't stop until you've tested it properly.\" Well, someone built exactly that. Meet Aura Autopilot, a ne",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/6oJufkVQG-g",
+      "publishedAt": "2026-11-05T22:00:29.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=6oJufkVQG-g"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Blender Running on iPhone Duo?! Eevee, Cycles & AI-Generated 3D Worlds | Hyper3D",
       "summary": "Remember when running Blender required a proper desktop workstation? Well, apparently, we're now putting it on foldable phones. Hyper3D by Deemos just demonstrated Blender running on Apple's iPhone Duo, complete with Eev",
       "canonicalUrl": "https://abvx.xyz/writing/videos/x5iQCArVPs4",
@@ -8365,7 +8388,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-05T21:51:11.019Z",
+      "updatedAt": "2026-11-05T22:12:53.977Z",
       "tags": [],
       "links": [],
       "related": []

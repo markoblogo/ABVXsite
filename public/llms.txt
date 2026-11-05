@@ -109,6 +109,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/6OFAvsQ2XTw
   Summary: What if AI could help humans live to 150? Dario Amodei, CEO of Anthropic, believes artificial intelligence could accelerate medical research so dramatically that human lifespans might double within the next decade. His r
 
+- Autopilot: An AI Game Tester That Plays, Finds Bugs & Learns | Unreal, Unity & Godot
+  URL: https://abvx.xyz/writing/videos/6oJufkVQG-g
+  Summary: What if you could give an AI agent your unfinished game and tell it: "Play this. Find everything that's broken. And don't stop until you've tested it properly." Well, someone built exactly that. Meet Aura Autopilot, a ne
+
 - 418 Claude Opus 5.5 Videos With Prompts You Can Copy (Free AI Motion Design Library)
   URL: https://abvx.xyz/writing/videos/720tTqmoORU
   Summary: What if you could find hundreds of impressive AI-generated videos and see exactly how their creators made them? Not just watch the results. Get the prompts, study the techniques, and recreate the ideas yourself. Meet Ski

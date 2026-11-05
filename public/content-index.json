@@ -8273,7 +8273,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-05T08:19:15.829Z",
+      "updatedAt": "2026-11-05T10:21:19.754Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11452,6 +11452,44 @@
       "links": [],
       "publishedAt": "2026-11-04",
       "updatedAt": "2026-11-04",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #31 — Self-Worth & the Inner Observer",
+      "summary": "Twenty translated notebook fragments on self-worth, self-respect and the inner observer.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-31-self-worth-inner-observer",
+      "tags": [
+        "psychology-notebook",
+        "identity"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-05",
+      "updatedAt": "2026-11-05",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #32 — Guilt, Feelings & Acceptance",
+      "summary": "Twenty translated notebook fragments on guilt, emotional regulation and acceptance.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-32-guilt-feelings-acceptance",
+      "tags": [
+        "psychology-notebook",
+        "feelings"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-05",
+      "updatedAt": "2026-11-05",
       "related": []
     },
     {

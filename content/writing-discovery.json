@@ -2078,6 +2078,17 @@
     },
     {
       "source": "youtube",
+      "title": "All Tests Passed. Why AI Code Can Still Be Wrong",
+      "url": "https://www.youtube.com/watch?v=h3xC5FRlW30",
+      "publishedAt": "2026-11-05T13:30:11.000Z",
+      "excerpt": "The tests are green. The patch can still miss the requirement that matters. InfraDev studies coding-agent changes to AI infrastructure. This short explainer shows why checking the expected output is different from checki",
+      "coverImage": "https://i.ytimg.com/vi/h3xC5FRlW30/hqdefault.jpg",
+      "videoDescription": "The tests are green. The patch can still miss the requirement that matters.\n\nInfraDev studies coding-agent changes to AI infrastructure. This short explainer shows why checking the expected output is different from checking memory, state, or communication—and how additional probes can expose a missing promise.\n\nIn the paper’s evaluation, 102 submissions passed every official test; 33 of them did not pass the added probes. That is approximately 32% of that subset, not a universal failure rate for AI-generated code.\n\nCHAPTERS\n00:00 Why passing tests can miss the promise\n00:19 What InfraDev evaluates\n00:31 Three different promises\n00:42 Hidden checks, clear requirements\n00:57 The 102 / 33 result\n01:11 Same output, different transfer\n01:25 What to measure\n\nPRIMARY SOURCE\nDeng et al., “InfraDev: Can Coding Agents Develop AI Infrastructure, and How Can We Tell?” arXiv:2610.36589v1, 27 October 2026.\nhttps://arxiv.org/abs/2610.36589\n\nThe transfer animations are original simplified illustrations. Their toy block counts are not experimental measurements. This video does not reproduce the multi-GPU benchmark or show a real agent run.\n\nCreated with AI-assisted narration and original explanatory graphics. Original minimal sound design.\n\nWhat would your tests miss if the output stayed correct?\n\n#AICoding #SoftwareTesting #InfraDev",
+      "addedAt": "2026-11-05T13:38:21.641Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Agri-Commodity Brokerage | A Practical Guide to Grains & Oilseeds Markets",
       "url": "https://www.youtube.com/watch?v=H6l1leVo34A",
       "publishedAt": "2026-10-15T20:27:42.000Z",

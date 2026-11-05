@@ -7525,6 +7525,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "All Tests Passed. Why AI Code Can Still Be Wrong",
+      "summary": "The tests are green. The patch can still miss the requirement that matters. InfraDev studies coding-agent changes to AI infrastructure. This short explainer shows why checking the expected output is different from checki",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/h3xC5FRlW30",
+      "publishedAt": "2026-11-05T13:30:11.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=h3xC5FRlW30"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "AMI — Digital Infrastructure for Physical Commodity Markets",
       "summary": "AMI — Agro Market Infrastructure — brings together projects for commodity brokerage operations, private market indices, and market knowledge. This short introduction highlights three parts of AMI: • MN7R — a private work",
       "canonicalUrl": "https://abvx.xyz/writing/videos/QnpLjwhj6Fs",
@@ -8273,7 +8296,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-05T10:21:19.754Z",
+      "updatedAt": "2026-11-05T13:38:21.641Z",
       "tags": [],
       "links": [],
       "related": []

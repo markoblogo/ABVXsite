@@ -233,6 +233,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/H26QHE7NE9I
   Summary: AI agent memory is easier to manage when your project has a checkpoint. Save the goal, key decisions, actual files and the next action — then verify that state when you resume. A practical context-engineering habit for c
 
+- All Tests Passed. Why AI Code Can Still Be Wrong
+  URL: https://abvx.xyz/writing/videos/h3xC5FRlW30
+  Summary: The tests are green. The patch can still miss the requirement that matters. InfraDev studies coding-agent changes to AI infrastructure. This short explainer shows why checking the expected output is different from checki
+
 - Agri-Commodity Brokerage | A Practical Guide to Grains & Oilseeds Markets
   URL: https://abvx.xyz/writing/videos/H6l1leVo34A
   Summary: A market needs more than a price. Agri-Commodity Brokerage explores the people, products, logistics and terms that connect supply with demand in physical grains and oilseeds markets. Explore the book and download the fre

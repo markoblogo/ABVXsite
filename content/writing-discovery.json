@@ -3112,6 +3112,17 @@
     },
     {
       "source": "youtube",
+      "title": "AI Can Now Take Apart Almost Anything From a Photo | Liquid Photos by AXL",
+      "url": "https://www.youtube.com/watch?v=VUY6y3JeXak",
+      "publishedAt": "2026-11-05T21:26:38.000Z",
+      "excerpt": "What if you could take a picture of an everyday object and instantly see what's inside? Not with an X-ray. Not by physically taking it apart. Just one photo and generative AI. Meet Liquid Photos, an experimental AI-power",
+      "coverImage": "https://i.ytimg.com/vi/VUY6y3JeXak/hqdefault.jpg",
+      "videoDescription": "What if you could take a picture of an everyday object and instantly see what's inside?\n\nNot with an X-ray. Not by physically taking it apart.\n\nJust one photo and generative AI.\n\nMeet Liquid Photos, an experimental AI-powered visual interface originally developed at AXL Venture Studio by Sasha Ivanov and his team.\n\nAnd the demonstration looks absolutely fascinating.\n\nHere's the idea.\n\nTake a photo of a camera, watch, game controller, or another everyday object.\n\nThe AI analyzes the image and generates an interactive exploded view, visually separating the object into its individual components.\n\nImagine being able to:\n\nExplore the apparent internal structure of everyday objects.\n\nPull components apart through an interactive interface.\n\nExamine how different parts fit together.\n\nTransform ordinary photographs into visual explanations.\n\nExplore products without manually creating detailed 3D models.\n\nAnd here's what makes it particularly interesting.\n\nThe system doesn't simply display a static AI-generated image.\n\nIt's part of a broader approach to interactive generative media, where photographs become experiences you can manipulate and explore.\n\nOf course, there's an important limitation.\n\nAI-generated exploded views aren't necessarily accurate engineering reconstructions.\n\nThe model can infer what might be inside an object, but the actual components and their arrangement may differ from reality.\n\nStill, imagine the possibilities for education, product design, technical illustrations, e-commerce, and interactive storytelling.\n\nInstead of reading a complicated explanation of how something works, you could explore a visual representation yourself.\n\nWe're moving from AI that generates pictures to AI that makes pictures interactive.\n\nAnd I find that a considerably more interesting direction.\n\nThe project has since evolved into Liquid Interactive, with Liquid Photos available for early access.\n\nExplore Liquid Photos and beta access:\nhttps://liquidinteractive.ai/\n\nOriginal demonstration by Sasha Ivanov:\nhttps://x.com/mr_sudo_/status/2058928661747700079\n\n#LiquidPhotos #GenerativeAI #ExplodedView #InteractiveDesign #CreativeTechnology #AIVisualization",
+      "addedAt": "2026-11-05T21:37:37.384Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "FLUX 3 Image Klein vs Krea 3: Two New AI Image Models That Change the Game",
       "url": "https://www.youtube.com/watch?v=vZ2iE97Qncs",
       "publishedAt": "2026-10-24T11:26:09.000Z",

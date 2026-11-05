@@ -7479,6 +7479,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "AI Can Now Take Apart Almost Anything From a Photo | Liquid Photos by AXL",
+      "summary": "What if you could take a picture of an everyday object and instantly see what's inside? Not with an X-ray. Not by physically taking it apart. Just one photo and generative AI. Meet Liquid Photos, an experimental AI-power",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/VUY6y3JeXak",
+      "publishedAt": "2026-11-05T21:26:38.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=VUY6y3JeXak"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "AI Turned the Original Prince of Persia Into a Photorealistic Movie",
       "summary": "Remember the original Prince of Persia? The legendary 1989 computer game with its pixelated characters, deadly traps, impossible jumps, and unforgettable atmosphere? Well, someone decided to give it a serious cinematic u",
       "canonicalUrl": "https://abvx.xyz/writing/videos/R2d5LM8bHEk",
@@ -8319,7 +8342,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-05T21:22:18.021Z",
+      "updatedAt": "2026-11-05T21:37:37.384Z",
       "tags": [],
       "links": [],
       "related": []

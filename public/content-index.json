@@ -7743,6 +7743,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Blender Running on iPhone Duo?! Eevee, Cycles & AI-Generated 3D Worlds | Hyper3D",
+      "summary": "Remember when running Blender required a proper desktop workstation? Well, apparently, we're now putting it on foldable phones. Hyper3D by Deemos just demonstrated Blender running on Apple's iPhone Duo, complete with Eev",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/x5iQCArVPs4",
+      "publishedAt": "2026-11-05T21:02:48.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=x5iQCArVPs4"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Burgers, Lipstick & Underwear | Strange Economic Indicators",
       "summary": "What can burgers, lipstick and underwear really tell us about the economy? Discover Burgers, Lipstick & Underwear: What Strange Indicators Really Tell Us About the Economy — a book about surprising economic indicators an",
       "canonicalUrl": "https://abvx.xyz/writing/videos/GVrbTMZxbpg",
@@ -8296,7 +8319,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-05T20:50:39.607Z",
+      "updatedAt": "2026-11-05T21:11:20.799Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8873,7 +8896,7 @@
       "group": "YouTube",
       "status": "live",
       "title": "Google Antigravity Gets Native Jupyter Notebook Support! | AI Coding & Data Science",
-      "summary": "Google Antigravity Gets Native Jupyter Notebook Support! | AI Coding & Data Science",
+      "summary": "Google just made Antigravity a little more useful for developers, researchers, and anyone working with AI-generated code and data. Google Antigravity now supports Jupyter Notebooks natively. And yes, that means you can f",
       "canonicalUrl": "https://abvx.xyz/writing/videos/5lTjnUg3i_Q",
       "publishedAt": "2026-11-05T20:50:08.000Z",
       "tags": [

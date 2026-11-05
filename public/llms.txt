@@ -99,7 +99,7 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 - Google Antigravity Gets Native Jupyter Notebook Support! | AI Coding & Data Science
   URL: https://abvx.xyz/writing/videos/5lTjnUg3i_Q
-  Summary: Google Antigravity Gets Native Jupyter Notebook Support! | AI Coding & Data Science
+  Summary: Google just made Antigravity a little more useful for developers, researchers, and anyone working with AI-generated code and data. Google Antigravity now supports Jupyter Notebooks natively. And yes, that means you can f
 
 - Pokras Lampas — Seals of Good Intentions | Bangkok Night Art Film
   URL: https://abvx.xyz/writing/videos/6c3JXdIiosg
@@ -616,6 +616,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - GOOD DOG: Who Trained Whom? | AI Animated Short Film
   URL: https://abvx.xyz/writing/videos/WxEa5q_PPOk
   Summary: A dog finds a hidden packet. A man offers a reward. Soon, the dog chooses the route — and the man still calls himself the owner. GOOD DOG is a darkly satirical animated short about dependence, control and the quiet rever
+
+- Blender Running on iPhone Duo?! Eevee, Cycles & AI-Generated 3D Worlds | Hyper3D
+  URL: https://abvx.xyz/writing/videos/x5iQCArVPs4
+  Summary: Remember when running Blender required a proper desktop workstation? Well, apparently, we're now putting it on foldable phones. Hyper3D by Deemos just demonstrated Blender running on Apple's iPhone Duo, complete with Eev
 
 - Someone Made a Digital Spider That Crawls Across Web Pages
   URL: https://abvx.xyz/writing/videos/x5uo-P2Vf_I

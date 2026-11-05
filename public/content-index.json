@@ -8296,7 +8296,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-05T18:51:10.835Z",
+      "updatedAt": "2026-11-05T19:10:54.156Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9831,6 +9831,29 @@
       "updatedAt": "2026-10-11",
       "tags": [],
       "links": [],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Krea AI Reveals Its Agentic Video Workflow | Claude, Figma & After Effects Automation",
+      "summary": "What if AI agents could handle an entire motion design project, from the first storyboard to the final After Effects render? Not just generate a few video clips. Actually work with professional creative software, build c",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/dgLDRwH2g5E",
+      "publishedAt": "2026-11-05T18:54:38.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=dgLDRwH2g5E"
+        }
+      ],
       "related": []
     },
     {
@@ -12854,6 +12877,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=yHcec4hrNQQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Trois paquets, quatre indices : saurez-vous résoudre l’énigme ?",
+      "summary": "Trois paquets. Quatre indices. Une seule solution. Saurez-vous retrouver qui a pris quoi ? Mettez sur pause pour chercher : la réponse arrive seulement à la fin. Ce court film illustré vous propose une énigme tirée de Le",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/OHU26SiXCoU",
+      "publishedAt": "2026-11-05T19:05:28.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=OHU26SiXCoU"
         }
       ],
       "related": []

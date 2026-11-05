@@ -8296,7 +8296,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-05T19:10:54.156Z",
+      "updatedAt": "2026-11-05T19:37:08.868Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9362,6 +9362,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=JDjvazj9zb4"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Hyper3D Rigging: AI Creates & Edits 3D Skeletons With Text Prompts | 250+ Animations",
+      "summary": "Remember when rigging a 3D character meant manually placing bones, painting skin weights, and spending hours fixing broken deformations? Well, apparently, now you can just tell AI: \"Add tail bones.\" And it actually build",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/fcVLl0CcoXo",
+      "publishedAt": "2026-11-05T19:29:33.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=fcVLl0CcoXo"
         }
       ],
       "related": []

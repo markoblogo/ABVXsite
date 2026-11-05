@@ -205,6 +205,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/e7OuakMC4cA
   Summary: What if you could create hundreds of beautiful pixel art animations without drawing a single sprite? No Photoshop. No Aseprite. No pre-made image assets. Just Claude Code, JavaScript, and a surprisingly effective creativ
 
+- Hyper3D Rigging: AI Creates & Edits 3D Skeletons With Text Prompts | 250+ Animations
+  URL: https://abvx.xyz/writing/videos/fcVLl0CcoXo
+  Summary: Remember when rigging a 3D character meant manually placing bones, painting skin weights, and spending hours fixing broken deformations? Well, apparently, now you can just tell AI: "Add tail bones." And it actually build
+
 - How Twitch Gamers Help Detect Wildfires | FireCatchers by Havas Play
   URL: https://abvx.xyz/writing/videos/FP17TQdOaGw
   Summary: What if waiting for your favorite Twitch streamer could actually help save a forest? Not by donating money. Not by watching an advertisement. Just by paying attention. Meet FireCatchers, one of the smartest examples of c

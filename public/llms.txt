@@ -337,6 +337,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/kh-MTl8K5pE
   Summary: Un petit voyage à Nantes, de l’aéroport Nantes Atlantique au centre-ville, en passant par la Loire et l’île de Nantes. La balade se termine avec deux vues illustrées : la tour LU et le château des ducs de Bretagne. Un tr
 
+- Luma AI Photo Reframe: Expand Any Image to 2K with Generative AI | AI Outpainting
+  URL: https://abvx.xyz/writing/videos/Kt7Qf4dy_fg
+  Summary: Ever taken the perfect photograph, only to realize it doesn't fit the format you actually need? A beautiful portrait that should have been landscape. A product shot that needs more breathing room. Or a cinematic composit
+
 - MOSS-Live Is Here! Full-Duplex AI Voice Assistant + New Open-Source AI Models Coming
   URL: https://abvx.xyz/writing/videos/kuz2n0DrXYE
   Summary: Remember MOSS-Image, the impressive open-source 5-billion-parameter image generator released by OpenMOSS in October? Well, apparently, generating images was just the beginning. The Chinese AI team is back with MOSS-Live,

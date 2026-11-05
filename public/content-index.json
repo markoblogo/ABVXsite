@@ -8388,7 +8388,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-05T22:12:53.977Z",
+      "updatedAt": "2026-11-05T23:37:10.136Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10036,6 +10036,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=QUfoeGezQAs"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Luma AI Photo Reframe: Expand Any Image to 2K with Generative AI | AI Outpainting",
+      "summary": "Ever taken the perfect photograph, only to realize it doesn't fit the format you actually need? A beautiful portrait that should have been landscape. A product shot that needs more breathing room. Or a cinematic composit",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/Kt7Qf4dy_fg",
+      "publishedAt": "2026-11-05T22:24:46.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=Kt7Qf4dy_fg"
         }
       ],
       "related": []

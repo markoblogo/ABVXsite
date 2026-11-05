@@ -533,6 +533,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/ShcaeYiVVK4
   Summary: Remember the good old days of ASCII art, pixel graphics, and the demoscene? Well, here's a little nostalgia trip. I found Devault, a free browser-based ASCII art generator that transforms ordinary images and videos into
 
+- Alef Model A: The $300,000 Flying Car That Turns 90° in Midair | FAA Approved for Testing
+  URL: https://abvx.xyz/writing/videos/sHj9J1fM_4Q
+  Summary: We've been promised flying cars for decades. And somehow, we've finally reached the point where someone is actually building one. Meet the Alef Model A, a $300,000 electric flying car designed to drive on ordinary roads,
+
 - Claude Code Has Hidden Features. This /stack Mod Reveals Everything
   URL: https://abvx.xyz/writing/videos/sZpOYudsSDY
   Summary: Think you know what's running inside your Claude Code sessions? You might be surprised. Meet /stack, a free, open-source Claude Code mod that reveals practically everything installed, configured, and available in your AI

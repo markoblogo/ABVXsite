@@ -7548,6 +7548,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Alef Model A: The $300,000 Flying Car That Turns 90° in Midair | FAA Approved for Testing",
+      "summary": "We've been promised flying cars for decades. And somehow, we've finally reached the point where someone is actually building one. Meet the Alef Model A, a $300,000 electric flying car designed to drive on ordinary roads,",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/sHj9J1fM_4Q",
+      "publishedAt": "2026-11-05T21:46:37.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=sHj9J1fM_4Q"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "All Tests Passed. Why AI Code Can Still Be Wrong",
       "summary": "The tests are green. The patch can still miss the requirement that matters. InfraDev studies coding-agent changes to AI infrastructure. This short explainer shows why checking the expected output is different from checki",
       "canonicalUrl": "https://abvx.xyz/writing/videos/h3xC5FRlW30",
@@ -8342,7 +8365,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-05T21:37:37.384Z",
+      "updatedAt": "2026-11-05T21:51:11.019Z",
       "tags": [],
       "links": [],
       "related": []

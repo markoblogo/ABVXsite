@@ -8296,7 +8296,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-05T19:37:08.868Z",
+      "updatedAt": "2026-11-05T20:50:39.607Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8743,6 +8743,29 @@
       "related": []
     },
     {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Gemini Omni 1.2 Flash Is Here! 15-Second AI Videos, 30% Cheaper & Editable by Chat",
+      "summary": "Google just made AI video generation longer, cheaper, and considerably more interesting. Meet Gemini Omni 1.2 Flash, the latest update to Google's AI video generation model. And honestly, the most exciting feature isn't ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/S1chA15xTg0",
+      "publishedAt": "2026-11-05T20:39:27.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=S1chA15xTg0"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "writing",
       "section": "writing",
       "ecosystem": "Writing",
@@ -8839,6 +8862,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=89kTx1LhEP0"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Google Antigravity Gets Native Jupyter Notebook Support! | AI Coding & Data Science",
+      "summary": "Google Antigravity Gets Native Jupyter Notebook Support! | AI Coding & Data Science",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/5lTjnUg3i_Q",
+      "publishedAt": "2026-11-05T20:50:08.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=5lTjnUg3i_Q"
         }
       ],
       "related": []
@@ -10555,6 +10601,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=Z6k0B_8FqKA"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "NVIDIA VFlash: 5× Faster AI Robot Planning with Better Accuracy | Physical AI",
+      "summary": "What if robots could think and react five times faster without upgrading their hardware? And what if they became more accurate at the same time? Meet NVIDIA VFlash, a new visual planning framework designed to make AI-pow",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/1Y0feA5hb1k",
+      "publishedAt": "2026-11-05T20:28:54.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=1Y0feA5hb1k"
         }
       ],
       "related": []

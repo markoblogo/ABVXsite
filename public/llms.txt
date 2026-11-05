@@ -69,6 +69,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/0wvAwUAZEFo
   Summary: An AI agent choosing a treatment and controlling a surgical robot sounds like science fiction. Exin Therapeutics says it tested that idea in a mouse model of epilepsy — with a human surgeon, a supervising veterinarian an
 
+- NVIDIA VFlash: 5× Faster AI Robot Planning with Better Accuracy | Physical AI
+  URL: https://abvx.xyz/writing/videos/1Y0feA5hb1k
+  Summary: What if robots could think and react five times faster without upgrading their hardware? And what if they became more accurate at the same time? Meet NVIDIA VFlash, a new visual planning framework designed to make AI-pow
+
 - My $0 API Key Trying to Access OpenAI, Claude & Gemini
   URL: https://abvx.xyz/writing/videos/2po93Gv-MuY
   Summary: My API key has exactly $0.00 in credits. But does that stop him from approaching the biggest AI models on the planet? Absolutely not. OpenAI. Anthropic Claude. Google Gemini. Three AI giants. One broke little API key. An
@@ -92,6 +96,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - This LED Sculpture Reacts to Wind in Real Time | Daniel Canogar's Gust
   URL: https://abvx.xyz/writing/videos/5EFdtSn79k4
   Summary: What if a screen could actually feel the weather? Not just display a forecast. Physically respond to the wind outside. Meet Gust, a mesmerizing kinetic-looking digital sculpture by Spanish-American artist Daniel Canogar.
+
+- Google Antigravity Gets Native Jupyter Notebook Support! | AI Coding & Data Science
+  URL: https://abvx.xyz/writing/videos/5lTjnUg3i_Q
+  Summary: Google Antigravity Gets Native Jupyter Notebook Support! | AI Coding & Data Science
 
 - Pokras Lampas — Seals of Good Intentions | Bangkok Night Art Film
   URL: https://abvx.xyz/writing/videos/6c3JXdIiosg
@@ -496,6 +504,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - ChatGPT Can Now Turn AI-Generated Logos Into Editable SVGs
   URL: https://abvx.xyz/writing/videos/RsxiDWDj2Rg
   Summary: ChatGPT can already design your logo. Now it can turn that logo into an editable vector file, right inside the chat. Meet Vectorize, a ChatGPT plugin that converts AI-generated logos and images into scalable SVG graphics.
+
+- Gemini Omni 1.2 Flash Is Here! 15-Second AI Videos, 30% Cheaper & Editable by Chat
+  URL: https://abvx.xyz/writing/videos/S1chA15xTg0
+  Summary: Google just made AI video generation longer, cheaper, and considerably more interesting. Meet Gemini Omni 1.2 Flash, the latest update to Google's AI video generation model. And honestly, the most exciting feature isn't
 
 - Framewright: Choose the Right Tools for Your Next Promo Video
   URL: https://abvx.xyz/writing/videos/s3BBP698_r8

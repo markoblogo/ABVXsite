@@ -477,6 +477,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/qZFQlbAcW1Y
   Summary: Claude can already generate animations and videos. But there's always been one annoying problem. What happens when you want to actually edit the result? An AI-generated MP4 isn't an editable Premiere Pro timeline. You ca
 
+- XREAL AURA: Gemini AI Glasses That Can See Your Laptop Screen | Google Android XR
+  URL: https://abvx.xyz/writing/videos/R-7XiZzJXHc
+  Summary: Google is taking another shot at augmented reality. And this time, I think they might actually be onto something. Well, technically, XREAL built the glasses, while Google brought Android XR and Gemini AI to the party. Me
+
 - Magnetic Currents: Stunning 3D Motion Art Inspired by Invisible Forces | Media.Work
   URL: https://abvx.xyz/writing/videos/r0KhDl19nKc
   Summary: What if you could see the invisible forces that shape our physical world? Not through scientific diagrams, but through mesmerizing digital sculptures, flowing particles, and constantly transforming structures. Meet Magne

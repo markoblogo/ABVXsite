@@ -8319,7 +8319,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-05T21:11:20.799Z",
+      "updatedAt": "2026-11-05T21:22:18.021Z",
       "tags": [],
       "links": [],
       "related": []
@@ -13791,6 +13791,29 @@
           "type": "section",
           "label": "Writing",
           "url": "https://abvx.xyz/writing"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "XREAL AURA: Gemini AI Glasses That Can See Your Laptop Screen | Google Android XR",
+      "summary": "Google is taking another shot at augmented reality. And this time, I think they might actually be onto something. Well, technically, XREAL built the glasses, while Google brought Android XR and Gemini AI to the party. Me",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/R-7XiZzJXHc",
+      "publishedAt": "2026-11-05T21:14:47.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=R-7XiZzJXHc"
         }
       ],
       "related": []

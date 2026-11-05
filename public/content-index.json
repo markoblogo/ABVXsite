@@ -8273,7 +8273,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-04T21:50:56.900Z",
+      "updatedAt": "2026-11-05T08:19:15.829Z",
       "tags": [],
       "links": [],
       "related": []
@@ -12609,6 +12609,29 @@
           "type": "section",
           "label": "Working Stories",
           "url": "https://abvx.xyz/writing/working-stories"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "These Robots Use Living Muscle. Here’s How They Move",
+      "summary": "Tiny robots can jump, swim, walk and grip using engineered living muscle. But the key idea in this ETH Zurich research is how the muscle and its soft scaffold are designed together. This short explainer combines real res",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/LIbkbgDCgKM",
+      "publishedAt": "2026-11-05T01:19:37.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=LIbkbgDCgKM"
         }
       ],
       "related": []

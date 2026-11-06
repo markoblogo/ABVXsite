@@ -8,6 +8,7 @@ function run(fail = '', publication = false) {
   const root = mkdtempSync(path.join(tmpdir(), 'abvx-release-'));
   try {
     mkdirSync(path.join(root, 'src/content'), {recursive:true});
+    copyFileSync('src/content/writing-topics.mjs',path.join(root,'src/content/writing-topics.mjs'));
     copyFileSync('src/content/markdown-source.mjs',path.join(root,'src/content/markdown-source.mjs'));
     mkdirSync(path.join(root, 'scripts')); mkdirSync(path.join(root, 'bin'));
     mkdirSync(path.join(root,'src/lib'),{recursive:true});

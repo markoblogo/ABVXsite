@@ -5791,3 +5791,7 @@ a {
 .books-standalone-group { grid-template-columns: minmax(0, 1fr); min-width: 0; }
 .route-focus, .route-systems { grid-template-columns: minmax(0, 1fr); }
 .focus-product-group, .systems-ecosystem, .systems-ecosystem__groups, .systems-subgroup { grid-template-columns: minmax(0, 1fr); min-width: 0; }
+
+/* Secondary Writing navigation reuses the existing source chips. */
+.writing-topic-links { flex: 0 0 auto; width: 100%; min-width: 0; padding-top: .3rem; }
+.writing-source-links__filters a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }

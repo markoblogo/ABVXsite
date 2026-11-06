@@ -8,6 +8,7 @@ export type FeedItem = {
   addedAt?: string;
   author?: string;
   tags?: string[];
+  navigationTopics?: string[];
   excerpt?: string;
   coverImage?: string;
   videoUrl?: string;

@@ -1,3 +1,4 @@
+import { filterWritingPosts, normalizeWritingTopic } from '@/content/writing-topics.mjs';
 import kitchenNotes from '../../../content/kitchen-notes.json';
 import youtubeSettings from '../../../content/youtube.json';
 import JsonLd from '@/components/JsonLd';
@@ -23,7 +24,7 @@ import Link from 'next/link';
 const writingDescription =
   'Applied AI reviews, build logs and essays on systems, validation, agent workflows, decision-making and how ideas survive contact with reality.';
 
-type WritingParams = { source?: string | string[]; q?: string | string[] };
+type WritingParams = { source?: string | string[]; q?: string | string[]; topic?: string | string[] };
 
 const writingMetadata = metadataWithImage({
   title: 'Writing',
@@ -104,13 +105,13 @@ export default async function WritingPage({
   const params = searchParams ? await searchParams : {};
   const activeSource = normalizeSource(params.source);
   const query = normalizeWritingQuery(params.q);
+  const activeTopic = normalizeWritingTopic(params.topic, activeSource);
   const allPosts = await getWritingFeed();
   const nativeItems = await getLiveNativeWritingItems();
-  const posts =
-    activeSource === 'all' ? allPosts : allPosts.filter((post) => post.source === activeSource);
+  const posts = filterWritingPosts(allPosts, activeSource, activeTopic);
   const {featuredPost, recentPosts, archivePosts, remainingPosts} = writingWindow(posts);
   const searchBodies = query ? await getWritingSearchBodies() : new Map<string, string>();
-  const searchResults = query ? searchWritingPosts(allPosts, query, { source: activeSource, bodies: searchBodies }) : [];
+  const searchResults = query ? searchWritingPosts(posts, query, { bodies: searchBodies }) : [];
 
   return (
     <div className="route-writing writing-page grid gap-8">
@@ -144,7 +145,7 @@ export default async function WritingPage({
         summary="Applied AI reviews, build logs and essays on systems, validation, agent workflows, decision-making and how ideas survive contact with reality."
       ><EditorialSectionLink section="writing" /> <Link className="editorial-section-link" href={workingStoriesSeries.canonicalPath}>{workingStoriesSeries.title} <span aria-hidden="true">→</span></Link> <Link className="editorial-section-link" href={kitchenNotes.canonicalPath}>{kitchenNotes.title} <span aria-hidden="true">→</span></Link></PageHeader>
 
-      <WritingSourceLinks active={activeSource} query={query} />
+      <WritingSourceLinks active={activeSource} query={query} topic={activeTopic} />
       <Link className="editorial-section-link" href="/writing/archive">Complete archive <span aria-hidden="true">→</span></Link>
 
       {query ? (
@@ -154,7 +155,7 @@ export default async function WritingPage({
               <h2 id="writing-search-title">Search results</h2>
               <p role="status">{searchResults.length} {searchResults.length === 1 ? 'post' : 'posts'} matching “{query}”</p>
             </div>
-            <Link className="editorial-section-link" href={writingSearchHref(activeSource)}>Clear search</Link>
+            <Link className="editorial-section-link" href={writingSearchHref(activeSource, '', activeTopic)}>Clear search</Link>
           </div>
           <p className="writing-search-results__scope">Full text of ABVX posts; titles and available descriptions of linked publications.</p>
           {searchResults.length ? (
@@ -236,11 +237,15 @@ export default async function WritingPage({
                   />
                 ))}
               </div>
-              <WritingMorePosts key={activeSource} posts={remainingPosts.map(post=>({title:post.title,excerpt:post.excerpt,href:post.url,source:post.source,date:formatDate(post.addedAt||post.publishedAt)}))}/>
+              <WritingMorePosts key={`${activeSource}:${activeTopic}`}  posts={remainingPosts.map(post=>({title:post.title,excerpt:post.excerpt,href:post.url,source:post.source,date:formatDate(post.addedAt||post.publishedAt)}))}/>
             </section>
           ) : null}
         </>
-      ) : activeSource === 'youtube' ? null : (
+      ) : activeSource === 'youtube' ? null : activeTopic ? (
+        <SectionPanel title="No posts in this topic yet" eyebrow="ABVX">
+          <Link href={writingSearchHref('abvx')}>Browse all topics</Link>
+        </SectionPanel>
+      ) : (
         <SectionPanel title="Writing feed temporarily unavailable" eyebrow="RSS">
           <p>
             Medium and Substack feeds could not be loaded right now, or this source has

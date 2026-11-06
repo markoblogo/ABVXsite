@@ -1,5 +1,6 @@
 import { getLiveNativeWritingItems } from './live-writing';
 import { getWorkingStories, workingStoriesFeed, workingStoryPath } from '@/content/working-stories';
+import { writingTopicsFor } from '@/content/writing-topics.mjs';
 import discovery from '../../content/writing-discovery.json';
 import {getLiveWritingIndex} from './live-writing-discovery';
 import type { NativeWriting } from '@/content/types';
@@ -17,6 +18,7 @@ export async function getWritingFeed(): Promise<FeedItem[]> {
     publishedAt: item.videoUploadedAt || item.publishedAt || '',
     addedAt:item.addedAt, author: 'Anton BV', tags: item.tags, excerpt: item.summary,
     status: item.status, visibility: item.visibility,
+    navigationTopics: writingTopicsFor(item),
     coverImage: item.coverImage?.src, videoUrl: item.videoUrl,
   }));
   return mergeWritingItems([...native, ...await workingStoriesFeed()], discovery);

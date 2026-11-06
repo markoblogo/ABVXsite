@@ -92,3 +92,5 @@ Native Writing articles may reuse `illustrations` descriptors (`src`, `alt`, `wi
 Markdown image syntax (`![alt](path)` or image references) is not supported by the Writing renderer and fails early validation. Use the existing `illustrations` metadata with `afterHeading`; code examples remain allowed.
 
 Standalone thematic-break lines (`---`, `***`, `___`, including spaced markers) render as semantic dividers. Markers inside fenced code or inline code remain literal. This supports notebook-fragment separation without modifying authored prose.
+
+For Writing archive navigation topics (including multi-topic articles and Other), see [Writing topics](writing-topics.md). These assignments are independent of Book Readiness.

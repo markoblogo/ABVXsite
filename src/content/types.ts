@@ -215,6 +215,7 @@ export type WritingIllustration = ContentImage & { caption: string } & (
 export type NativeWriting = BaseContentItem<NativeWritingType> & {
   addedAt?: string;
   collection?: 'kitchen-notes';
+  navigationTopics?: string[];
   illustrations?: WritingIllustration[];
   recipe?: RecipeRecord;
   seoDescription?: string;

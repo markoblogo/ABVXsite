@@ -8434,7 +8434,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-06T13:13:25.222Z",
+      "updatedAt": "2026-11-06T16:37:24.930Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8643,6 +8643,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=U-cVLltmoRM"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Find Video Clips Without Filenames — EmbeddingGemma 2",
+      "summary": "Remember the shot, but not the filename? EmbeddingGemma 2 points toward a different way to search a video archive: describe the moment you want to find. This short explainer follows a simple example—an ostrich kicking a ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/xiUkE1jhTw8",
+      "publishedAt": "2026-11-06T16:22:52.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=xiUkE1jhTw8"
         }
       ],
       "related": []

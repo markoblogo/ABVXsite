@@ -701,6 +701,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/xghzzaHgVwc
   Summary: What if you could turn an ordinary photograph into a physical 3D sculpture? Not just generate a 3D image. Actually create a raised relief that you can print, engrave, or turn into a decorative object. Meet Meshy's new 3D
 
+- Find Video Clips Without Filenames — EmbeddingGemma 2
+  URL: https://abvx.xyz/writing/videos/xiUkE1jhTw8
+  Summary: Remember the shot, but not the filename? EmbeddingGemma 2 points toward a different way to search a video archive: describe the moment you want to find. This short explainer follows a simple example—an ostrich kicking a
+
 - Claude Code & Codex: Understand AI-Generated Code Before You Merge | diff-tour
   URL: https://abvx.xyz/writing/videos/XOv4GafWnqY
   Summary: Your AI coding agent just modified 15 files, added 800 lines of code, and proudly announced: "All done. Everything works." Great. But do you actually understand what it changed? Meet diff-tour, a free, open-source tool t

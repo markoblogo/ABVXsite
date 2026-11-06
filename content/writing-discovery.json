@@ -3429,6 +3429,17 @@
     },
     {
       "source": "youtube",
+      "title": "Find Video Clips Without Filenames — EmbeddingGemma 2",
+      "url": "https://www.youtube.com/watch?v=xiUkE1jhTw8",
+      "publishedAt": "2026-11-06T16:22:52.000Z",
+      "excerpt": "Remember the shot, but not the filename? EmbeddingGemma 2 points toward a different way to search a video archive: describe the moment you want to find. This short explainer follows a simple example—an ostrich kicking a ",
+      "coverImage": "https://i.ytimg.com/vi/xiUkE1jhTw8/hqdefault.jpg",
+      "videoDescription": "Remember the shot, but not the filename? EmbeddingGemma 2 points toward a different way to search a video archive: describe the moment you want to find.\n\nThis short explainer follows a simple example—an ostrich kicking a gate—to show how multimodal representations, indexing and source time ranges fit together. It also explains why a similar-looking clip can still be the wrong answer.\n\nThe search results and interface in this film are illustrative. This is an explanation, not a live EmbeddingGemma 2 demonstration or a measured benchmark. Local processing depends on the application, hardware and indexing workflow.\n\nCHAPTERS\n00:00 Remember the shot, forget the filename\n00:15 What is EmbeddingGemma 2?\n00:34 Index the library\n00:49 Return to the original footage\n01:05 Same subject, wrong action\n01:23 Local search: practical limits\n01:41 Describe the shot, then check it\n\nOFFICIAL SOURCES\nGoogle announcement:\nhttps://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/\nModel card:\nhttps://ai.google.dev/gemma/docs/embeddinggemma/model_card_2\n\nPRODUCTION\nCreated by Anton Biletskiy-Volokh with Framewright.\nThe labelled archive examples come from our previous productions: No Further Claims, Real2Sim and GitHub Agentic Workflows. These include fictional and AI-assisted visuals; they are used to explain retrieval, not as evidence of model performance.\nEnglish synthetic narration, original procedural music and interface sound design.\n\nWhat shot do you remember vividly but struggle to find in your own archive?\n\n#EmbeddingGemma #SemanticSearch #AI",
+      "addedAt": "2026-11-06T16:37:24.930Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Claude Code & Codex: Understand AI-Generated Code Before You Merge | diff-tour",
       "url": "https://www.youtube.com/watch?v=XOv4GafWnqY",
       "publishedAt": "2026-10-24T11:10:52.000Z",

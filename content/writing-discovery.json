@@ -1051,6 +1051,16 @@
     },
     {
       "source": "medium",
+      "title": "Kling Reveals What Really Happens Between Your AI Video Prompt and the Final Result",
+      "url": "https://abvcreative.medium.com/kling-reveals-what-really-happens-between-your-ai-video-prompt-and-the-final-result-de2c5045e96c",
+      "publishedAt": "2026-11-06T19:29:31.000Z",
+      "excerpt": "Why smarter AI models don’t necessarily make better videos, how Kling teaches AI to think like a film director, and why fixing six-fingered humans is apparently easier than teaching a machine creativity. There’s somethin",
+      "coverImage": "https://cdn-images-1.medium.com/max/1024/1*P0acIp-jBEmgRI2cg3yc8g.png",
+      "addedAt": "2026-11-06T19:37:13.513Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "medium",
       "title": "Mirendil’s Fern 0.1 Can Read 10 Million Tokens. Unfortunately, Reading Isn’t the Same as Thinking.",
       "url": "https://abvcreative.medium.com/mirendils-fern-0-1-can-read-10-million-tokens-unfortunately-reading-isn-t-the-same-as-thinking-941722551495",
       "publishedAt": "2026-11-02T12:15:23.000Z",
@@ -1685,6 +1695,17 @@
       "coverImage": "https://i.ytimg.com/vi/2po93Gv-MuY/hqdefault.jpg",
       "videoDescription": "My API key has exactly $0.00 in credits.\nBut does that stop him from approaching the biggest AI models on the planet?\nAbsolutely not.\nOpenAI. Anthropic Claude. Google Gemini.\nThree AI giants. One broke little API key. An impressive amount of confidence.\nUnfortunately, confidence isn't a valid payment method.\n\nBalance: $0.00\nAmbition: Unlimited\nAPI Access: Denied\n\nSometimes the hardest part of AI development isn't the coding. It's convincing your API provider that you have money.\n\n#OpenAI #ClaudeAI #GeminiAI #AIMemes #ProgrammingHumor #Shorts",
       "addedAt": "2026-10-11T15:19:15.947Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
+      "title": "Inkling 2 Small Is INSANE! 594B AI Model Builds Websites & Trains Other AI Models",
+      "url": "https://www.youtube.com/watch?v=3d7q1QZ616w",
+      "publishedAt": "2026-11-06T19:16:24.000Z",
+      "excerpt": "DeepSeek V4.1 Flash on some tasks but remains behind it on several others. But here's the experiment that really caught my attention. Inkling 2 Small autonomously trained another AI model. Thinking Machines gave it a cha",
+      "coverImage": "https://i.ytimg.com/vi/3d7q1QZ616w/hqdefault.jpg",
+      "videoDescription": "DeepSeek V4.1 Flash on some tasks but remains behind it on several others.\n\nBut here's the experiment that really caught my attention.\n\nInkling 2 Small autonomously trained another AI model.\n\nThinking Machines gave it a challenge:\n\nTake Qwen3.5-4B and improve its ability to forecast time series.\n\nThings like weather patterns, electricity demand, and Wikipedia page views.\n\nAnd then they let the agent work.\n\nHere's what happened:\n\nInkling analyzed the forecasting problem.\n\nIt wrote its own evaluation code.\n\nIt discovered and corrected a bug in that evaluator.\n\nIt prepared training datasets.\n\nIt experimented with supervised fine-tuning (SFT).\n\nIt tried reinforcement learning (RL).\n\nIt compared checkpoints and selected the best-performing model.\n\nThe final result?\n\n4 hours and 17 minutes of autonomous work\n\n$426 spent through Tinker\n\nQwen3.5-4B successfully fine-tuned\n\nMore than 2× improvement in the internal forecasting score\n\nApproximately 15% lower prediction error on previously unseen data\n\nAnd that's a much more interesting result than simply winning another chatbot benchmark.\n\nAn AI agent researched, trained, evaluated, debugged, and improved another AI model.\n\nNot perfectly. Not without limitations.\n\nBut with relatively little human intervention during the experiment.\n\nAnd there's more.\n\nThinking Machines also tested Inkling 2 Small on GPU kernel optimization.\n\nOn PMPP-Hard, a benchmark involving 69 GPU programming challenges, the model solved an average of 54.25 tasks across four independent attempts.\n\nThat's close to DeepSeek V4.1 Flash at 55.25.\n\nThe model was also trained to handle extended coding tasks across different agent frameworks, with more emphasis on verifying its work rather than simply producing code that passes tests.\n\nNow for availability.\n\nInkling 2 Small is currently available through Tinker Playground, including model sampling and fine-tuning.\n\nThe weights are still closed.\n\nHowever, Thinking Machines plans to release the full weights under Apache 2.0, following external safety testing.\n\nThe company has indicated that this could happen within a week of the November 5 announcement, although the exact timing depends on those reviews.\n\nAnd here's why I find this release particularly interesting.\n\nFor years, most AI benchmarks measured whether a model could answer difficult questions.\n\nNow we're increasingly evaluating whether models can complete complex work.\n\nBuild a website.\n\nDevelop an application.\n\nOptimize GPU code.\n\nRun scientific experiments.\n\nOr fine-tune another neural network.\n\nThe next major step for AI agents might not be generating better answers.\n\nIt might be independently improving the systems and tools we already use.\n\nAnd watching a supposedly \"small\" model train another model in four hours is a pretty compelling demonstration of where things are heading.\n\n594 billion parameters. Seventeen billion active. And apparently, Small is the new Large.\n\nOfficial Inkling 2 Small announcement:\nhttps://thinkingmachines.ai/news/inkling-2-small/\n\nTry Inkling 2 Small on Tinker:\nhttps://tinker.thinkingmachines.ai/\n\nThinking Machines Lab:\nhttps://thinkingmachines.ai/\n\n#Inkling2Small #ThinkingMachines #MiraMurati #OpenWeightAI #AIAgents #AutonomousResearch #LLM #GenerativeAI",
+      "addedAt": "2026-11-06T19:37:13.513Z",
       "addedAtBasis": "observed"
     },
     {

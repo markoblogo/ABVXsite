@@ -8434,7 +8434,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-06T16:37:24.930Z",
+      "updatedAt": "2026-11-06T19:37:13.513Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10091,6 +10091,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=_kzkJ6FKM28"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Inkling 2 Small Is INSANE! 594B AI Model Builds Websites & Trains Other AI Models",
+      "summary": "DeepSeek V4.1 Flash on some tasks but remains behind it on several others. But here's the experiment that really caught my attention. Inkling 2 Small autonomously trained another AI model. Thinking Machines gave it a cha",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/3d7q1QZ616w",
+      "publishedAt": "2026-11-06T19:16:24.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=3d7q1QZ616w"
         }
       ],
       "related": []

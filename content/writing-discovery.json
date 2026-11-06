@@ -2052,6 +2052,17 @@
     },
     {
       "source": "youtube",
+      "title": "This Soft Robot Swims 3 Ways With Just 2 Air Inputs",
+      "url": "https://www.youtube.com/watch?v=dQAm7kw49co",
+      "publishedAt": "2026-11-06T10:50:39.000Z",
+      "excerpt": "One soft robot. Two air inputs. Three ways to swim. Meet a feather-star-inspired swimmer that can rise, glide and turn by changing how its flexible arms flap. This 90-second explainer combines real NC State research foot",
+      "coverImage": "https://i.ytimg.com/vi/dQAm7kw49co/hqdefault.jpg",
+      "videoDescription": "One soft robot. Two air inputs. Three ways to swim. Meet a feather-star-inspired swimmer that can rise, glide and turn by changing how its flexible arms flap.\n\nThis 90-second explainer combines real NC State research footage with an original animated mechanism diagram. See jellyfish mode, fish mode and rotor mode—and why elastic structures can simplify a robot’s control.\n\nThis is mechanical intelligence, not AI learning. The prototype is tethered to external air lines; fully wireless operation remains future work.\n\nCHAPTERS\n0:00 Three ways to swim\n0:18 Jellyfish mode: rise and hover\n0:32 Fish mode: forward and backward\n0:44 Rotor mode: change direction\n0:57 Mechanical intelligence explained\n1:10 External air lines and current limitations\n\nRESEARCH & FOOTAGE\nQing et al., Science Advances 12, eaeg9211 (2026).\nPaper: https://pmc.ncbi.nlm.nih.gov/articles/PMC13644798/\nDOI: https://doi.org/10.1126/sciadv.aeg9211\nNC State research news: https://news.ncsu.edu/2026/10/feather-star-robot/\n\nResearch excerpts: supplementary Movies S4, S5, S8 and S10, used under Creative Commons Attribution 4.0: https://creativecommons.org/licenses/by/4.0/\nChanges: edited excerpts and explanatory overlays; original audio replaced. Original source framing and supplied Real time / 2× labels are preserved. The animated mechanism is illustrative, not a physics simulation. Thumbnail: cropped and contrast-adjusted research frame from Movie S8.\n\nProduced with Framewright. English narration uses a synthetic voice; explanatory graphics and the quiet background score were created for this film.\n\n#SoftRobotics #Robotics #Biomimicry",
+      "addedAt": "2026-11-06T10:51:19.789Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "703 Claude Opus 5.5 Video Prompts You Can Copy for Free | AI Motion Graphics & Animation",
       "url": "https://www.youtube.com/watch?v=dSBsgH4bpNY",
       "publishedAt": "2026-10-25T15:11:45.000Z",

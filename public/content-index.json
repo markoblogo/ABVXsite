@@ -8434,7 +8434,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-06T09:13:34.102Z",
+      "updatedAt": "2026-11-06T10:51:19.789Z",
       "tags": [],
       "links": [],
       "related": []
@@ -13168,6 +13168,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=5EFdtSn79k4"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "This Soft Robot Swims 3 Ways With Just 2 Air Inputs",
+      "summary": "One soft robot. Two air inputs. Three ways to swim. Meet a feather-star-inspired swimmer that can rise, glide and turn by changing how its flexible arms flap. This 90-second explainer combines real NC State research foot",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/dQAm7kw49co",
+      "publishedAt": "2026-11-06T10:50:39.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=dQAm7kw49co"
         }
       ],
       "related": []

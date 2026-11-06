@@ -209,6 +209,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/DK5cv_jMOsE
   Summary: Remember when "cloud computing" was just a metaphor? Well, Google is taking it rather literally. On October 30, 2026, Google announced that its AI model Gemma 4 had successfully generated a response from orbit and transm
 
+- This Soft Robot Swims 3 Ways With Just 2 Air Inputs
+  URL: https://abvx.xyz/writing/videos/dQAm7kw49co
+  Summary: One soft robot. Two air inputs. Three ways to swim. Meet a feather-star-inspired swimmer that can rise, glide and turn by changing how its flexible arms flap. This 90-second explainer combines real NC State research foot
+
 - 703 Claude Opus 5.5 Video Prompts You Can Copy for Free | AI Motion Graphics & Animation
   URL: https://abvx.xyz/writing/videos/dSBsgH4bpNY
   Summary: What if you could browse hundreds of impressive AI-generated animations and get the prompts behind them? Not just watch the results. Copy the prompts, study how they work, and create your own versions. Someone has put to

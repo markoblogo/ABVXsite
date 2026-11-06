@@ -8434,7 +8434,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-06T12:19:25.930Z",
+      "updatedAt": "2026-11-06T13:13:25.222Z",
       "tags": [],
       "links": [],
       "related": []
@@ -14041,6 +14041,29 @@
       "links": [],
       "publishedAt": "2026-10-10",
       "updatedAt": "2026-10-10",
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Why a Realistic Robot Simulation Can Still Be Wrong",
+      "summary": "Two identical blocks. The same starting speed. Different stopping distances. A robot simulation can look convincing and still get the physics wrong. This short explainer examines the Real2Sim challenge through Google's A",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/qB9P3oFm6fg",
+      "publishedAt": "2026-11-06T12:57:44.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=qB9P3oFm6fg"
+        }
+      ],
       "related": []
     },
     {

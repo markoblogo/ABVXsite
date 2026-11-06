@@ -493,6 +493,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/Q9lzhnQEGjQ
   Summary: GitHub Agentic Workflows turns Markdown instructions into AI-powered GitHub Actions workflows. But who checks the agent’s changes—and who watches the bill when it keeps running? This short 3D explainer follows an instruc
 
+- Why a Realistic Robot Simulation Can Still Be Wrong
+  URL: https://abvx.xyz/writing/videos/qB9P3oFm6fg
+  Summary: Two identical blocks. The same starting speed. Different stopping distances. A robot simulation can look convincing and still get the physics wrong. This short explainer examines the Real2Sim challenge through Google's A
+
 - Брокеридж зернових та олійних: безкоштовний практичний гід MN7R
   URL: https://abvx.xyz/writing/videos/qer7WfdIWLI
   Summary: Як працює ринок зернових та олійних — від першого офера до контракту та виконання угоди? Безкоштовний практичний гід MN7R українською допомагає побачити зв’язок між товаром, якістю, ціною, логістикою та людьми. 📘 Завант

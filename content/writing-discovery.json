@@ -2833,6 +2833,17 @@
     },
     {
       "source": "youtube",
+      "title": "Why a Realistic Robot Simulation Can Still Be Wrong",
+      "url": "https://www.youtube.com/watch?v=qB9P3oFm6fg",
+      "publishedAt": "2026-11-06T12:57:44.000Z",
+      "excerpt": "Two identical blocks. The same starting speed. Different stopping distances. A robot simulation can look convincing and still get the physics wrong. This short explainer examines the Real2Sim challenge through Google's A",
+      "coverImage": "https://i.ytimg.com/vi/qB9P3oFm6fg/hqdefault.jpg",
+      "videoDescription": "Two identical blocks. The same starting speed. Different stopping distances. A robot simulation can look convincing and still get the physics wrong.\n\nThis short explainer examines the Real2Sim challenge through Google's Argon robotics demonstration and our own MuJoCo friction experiment: what must a digital twin match beyond its appearance?\n\nWe look at geometry, cameras, mass, inertia, friction, collision shapes and joints—and why contact timing and forces matter when comparing a simulation with recorded behaviour.\n\nCHAPTERS\n0:00 Same start, different outcome\n0:13 Google's Real2Sim demonstration\n0:30 The visible layer\n0:41 Hidden physical properties\n0:52 Our MuJoCo friction experiment\n1:09 Compare with measurements\n1:24 What the demonstration does—and doesn't—prove\n1:38 The question a useful twin must answer\n\nSOURCES\nGoogle Developers — Gemini 4 Argon for Robotics, 13 October 2026:\nhttps://developers.googleblog.com/gemini-4-argon-for-robotics/\n\nMuJoCo — official project and Python documentation:\nhttps://mujoco.org/\nhttps://mujoco.readthedocs.io/en/stable/python.html\n\nABOUT THIS VIDEO\nThe block comparison is an independent toy experiment calculated in MuJoCo, not a reproduction of Google's robot or a real-object calibration. The robot-arm graphics are explanatory diagrams. Google's results are attributed to its developer demonstration; we do not claim that any video can automatically become a validated simulator.\n\nCreated with AI-assisted writing and synthetic English narration, original animated graphics, and an original quiet sound bed. No third-party demonstration footage is used.\n\nWhich would you test first: appearance, friction, or contact timing?\n\n#Robotics #DigitalTwins #Real2Sim",
+      "addedAt": "2026-11-06T13:13:25.222Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Брокеридж зернових та олійних: безкоштовний практичний гід MN7R",
       "url": "https://www.youtube.com/watch?v=qer7WfdIWLI",
       "publishedAt": "2026-10-15T15:05:07.000Z",

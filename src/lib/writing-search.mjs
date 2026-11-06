@@ -1,3 +1,5 @@
+import { normalizeWritingTopic } from '../content/writing-topics.mjs';
+
 export function normalizeWritingQuery(value) {
   return (Array.isArray(value) ? value[0] : value)?.normalize('NFKC').replace(/\s+/gu, ' ').trim().slice(0, 200) || '';
 }
@@ -44,9 +46,11 @@ export function writingSearchExcerpt(post, body, query) {
   return `${start ? '…' : ''}${text.slice(start, start + 300).trim()}${text.length > start + 300 ? '…' : ''}`;
 }
 
-export function writingSearchHref(source = 'all', query = '') {
+export function writingSearchHref(source = 'all', query = '', topic = '') {
   const params = new URLSearchParams();
   if (source !== 'all') params.set('source', source);
+  const selectedTopic = normalizeWritingTopic(topic, source);
+  if (selectedTopic) params.set('topic', selectedTopic);
   if (query) params.set('q', normalizeWritingQuery(query));
   return `/writing${params.size ? `?${params}` : ''}`;
 }

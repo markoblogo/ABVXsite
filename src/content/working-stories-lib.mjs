@@ -1,12 +1,13 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
+import { navigationTopicErrors } from './writing-topics.mjs';
 import { parseMarkdownSource } from './markdown-source.mjs';
 
 /** @typedef {{src: string, alt: string, width: number, height: number}} StoryImage */
 /** @typedef {StoryImage & {caption: string, afterHeading: string}} StoryIllustration */
-/** @typedef {{title: string, slug: string, date: string, type: 'working-story', series: 'working-stories', story_id: string, cluster: string, period: string | null, topics: string[], book: {include: boolean, status: string}, visibility: string, summary: string, language: 'en' | 'fr' | 'uk', seoTitle?: string, seoDescription?: string, updatedAt?: string, source_session?: string, coverImage?: StoryImage, illustrations?: StoryIllustration[], caseStudy?: {label: string, url: string}, source: string, body: string}} WorkingStory */
+/** @typedef {{title: string, slug: string, date: string, type: 'working-story', series: 'working-stories', story_id: string, cluster: string, period: string | null, topics: string[], navigationTopics?: string[], book: {include: boolean, status: string}, visibility: string, summary: string, language: 'en' | 'fr' | 'uk', seoTitle?: string, seoDescription?: string, updatedAt?: string, source_session?: string, coverImage?: StoryImage, illustrations?: StoryIllustration[], caseStudy?: {label: string, url: string}, source: string, body: string}} WorkingStory */
 
-const fields = new Set(['title', 'slug', 'date', 'type', 'series', 'story_id', 'cluster', 'period', 'topics', 'book', 'visibility', 'summary', 'language', 'seoTitle', 'seoDescription', 'updatedAt', 'source_session', 'coverImage', 'illustrations', 'caseStudy']);
+const fields = new Set(['title', 'slug', 'date', 'type', 'series', 'story_id', 'cluster', 'period', 'topics', 'navigationTopics', 'book', 'visibility', 'summary', 'language', 'seoTitle', 'seoDescription', 'updatedAt', 'source_session', 'coverImage', 'illustrations', 'caseStudy']);
 const bookStatuses = new Set(['draft', 'selected', 'edited', 'final', 'excluded']);
 const text = (value) => typeof value === 'string' && value.trim().length > 0;
 const validDate = (value) => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value)
@@ -15,7 +16,7 @@ const validDate = (value) => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.
 /** Validate the source record before it enters a public page or a manuscript. */
 export function validateWorkingStory(data, body) {
   if (!data || typeof data !== 'object' || Array.isArray(data)) return ['frontmatter must be a JSON object'];
-  const errors = [];
+  const errors = navigationTopicErrors(data);
   for (const field of Object.keys(data)) if (!fields.has(field)) errors.push(`unsupported metadata field: ${field}`);
   if (!text(data.title)) errors.push('title must be a non-empty string');
   if (typeof data.slug !== 'string' || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(data.slug)) errors.push('slug must be a lowercase URL slug');
@@ -87,6 +88,7 @@ export function readWorkingStories(directory = path.join(process.cwd(), 'content
     return {
       title: data.title, slug: data.slug, date: data.date, type: 'working-story', series: 'working-stories',
       story_id: data.story_id, cluster: data.cluster, period: data.period, topics: data.topics,
+      ...(data.navigationTopics !== undefined ? { navigationTopics: data.navigationTopics } : {}),
       book: { include: data.book.include ?? true, status: data.book.status },
       visibility: data.visibility ?? 'draft', summary: data.summary ?? data.title,
       language: data.language ?? 'en', ...(data.updatedAt ? { updatedAt: data.updatedAt } : {}),

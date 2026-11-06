@@ -1,5 +1,6 @@
 import youtubeSettings from '../../content/youtube.json';
 import Link from 'next/link';
+import { writingTopics } from '@/content/writing-topics.mjs';
 import { writingSearchHref } from '@/lib/writing-search.mjs';
 
 export type WritingSource = 'all' | 'medium' | 'substack' | 'abvx' | 'youtube';
@@ -12,7 +13,7 @@ const sourceLinks: { label: string; value: WritingSource; href: string }[] = [
   { label: 'ABVX', value: 'abvx', href: '/writing?source=abvx' },
 ];
 
-export default function WritingSourceLinks({ active, query = '' }: { active: WritingSource; query?: string }) {
+export default function WritingSourceLinks({ active, query = '', topic = '' }: { active: WritingSource; query?: string; topic?: string }) {
   return (
     <nav className="writing-source-links" aria-label="Writing source filter">
       <div className="writing-source-links__filters">
@@ -28,6 +29,7 @@ export default function WritingSourceLinks({ active, query = '' }: { active: Wri
       </div>
       <form action="/writing" method="get" role="search" aria-label="Search Writing" className="writing-search">
         {active !== 'all' ? <input type="hidden" name="source" value={active} /> : null}
+        {active === 'abvx' && topic ? <input type="hidden" name="topic" value={topic} /> : null}
         <label htmlFor="writing-query">Search</label>
         <input id="writing-query" name="q" type="search" defaultValue={query} key={query}
           placeholder="Writing keywords…" maxLength={200} enterKeyHint="search"
@@ -45,6 +47,14 @@ export default function WritingSourceLinks({ active, query = '' }: { active: Wri
           Substack archive -&gt;
         </a>
       </div>
+      {active === 'abvx' ? (
+        <div className="writing-source-links__filters writing-topic-links" role="group" aria-label="ABVX topic filter">
+          {[{ slug: '', label: 'All topics' }, ...writingTopics].map(item => (
+            <Link key={item.slug} href={writingSearchHref('abvx', query, item.slug)} scroll={false}
+              aria-current={topic === item.slug ? 'page' : undefined}>{item.label}</Link>
+          ))}
+        </div>
+      ) : null}
     </nav>
   );
 }

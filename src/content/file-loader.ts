@@ -362,6 +362,7 @@ function normalizeNativeWriting({data, body}: ParsedFile): NativeWriting {
         appearsIn: ['writing'],
         source: 'abvx',
         collection: data.collection as 'kitchen-notes' | undefined,
+        navigationTopics: data.navigationTopics as string[] | undefined,
         recipe: data.recipe as RecipeRecord | undefined,
         illustrations: data.illustrations as WritingIllustration[] | undefined,
         seoDescription: optionalString(data.seoDescription),

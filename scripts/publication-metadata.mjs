@@ -1,7 +1,8 @@
+import { navigationTopicErrors } from '../src/content/writing-topics.mjs';
 export const catalogueTypes={work:new Set(['brokerage-platform','trading-platform','market-intelligence','market-infrastructure','market-index','media-resource','hospitality-interface','web-service','tool','plugin','protocol','ai-workflow','language-experiment','book-companion','research','build-log']),books:new Set(['book','translation','free-book','free-edition','companion'])};
 // Shared source checks run before expensive build/QA for every content family.
 export function publicationMetadataErrors(data) {
- const errors=[];
+ const errors=navigationTopicErrors(data);
  for(const key of ['seoTitle','seoDescription']) if(data[key]!==undefined&&(typeof data[key]!=='string'||!data[key].trim())) errors.push(`${key} must be nonempty text`);
  for(const key of ['publishedAt','updatedAt']) {
   const value=data[key];if(value===undefined) continue;

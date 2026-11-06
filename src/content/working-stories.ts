@@ -4,6 +4,7 @@ import {parseMarkdownSource} from './markdown-source.mjs';
 import { cache } from 'react';
 import { compareWorkingStories, indexedWorkingStories, queryWorkingStories, readWorkingStories, relatedWorkingStories, workingStoryPath } from './working-stories-lib.mjs';
 import publicIndex from '../../public/content-index.json';
+import { writingTopicsFor } from './writing-topics.mjs';
 import type { FeedItem } from '@/lib/feed-types';
 
 export type WorkingStory = ReturnType<typeof readWorkingStories>[number] & {addedAt?: string};
@@ -31,6 +32,7 @@ export async function workingStoriesFeed(): Promise<FeedItem[]> {
     source: 'abvx', title: story.title, url: workingStoryPath(story),
     publishedAt: story.date, addedAt: story.addedAt, excerpt: story.summary, tags: story.topics,
     author: 'Anton Biletskyi-Volokh',
+    navigationTopics: writingTopicsFor(story),
     ...(story.coverImage ? { coverImage: story.coverImage.src } : {}),
   }));
 }

@@ -8434,7 +8434,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-06T11:51:28.618Z",
+      "updatedAt": "2026-11-06T12:19:25.930Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9184,6 +9184,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=ogc-oZoebH0"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "GTA SAN ANDREAS. BUT CJ IS A VIBE CODER NOW.",
+      "summary": "Remember when GTA San Andreas missions were about stealing cars, escaping the police, and surviving Los Santos? Well, it's 2026. Now CJ has to build an AI startup using Claude Code. Someone created a custom GTA San Andre",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/f4FOeK8bSvk",
+      "publishedAt": "2026-11-06T11:56:30.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=f4FOeK8bSvk"
         }
       ],
       "related": []

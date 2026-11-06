@@ -181,6 +181,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/BV58rMMTIBM
   Summary: Apparently, someone decided that smartphones weren't enough. We now need screens in our sweaters. Researchers at the National University of Singapore have developed a fully functional color touchscreen woven directly int
 
+- OpenDirector: Free Local AI Filmmaking Studio with MiniMax H3, vLLM-Omni & Video Editing
+  URL: https://abvx.xyz/writing/videos/bYoOWkMpCmc
+  Summary: Apparently, everyone wants to be a film director now. And AI startups are making absolutely sure we have enough software for that. Meet OpenDirector v0.1.0, a new open-source AI filmmaking platform from ThinkFlowLab, pow
+
 - Claude Opus 5.5 Turned a Viral Video Into a Playable 3D Game in 40 Minutes
   URL: https://abvx.xyz/writing/videos/CM0Ig3q7pqk
   Summary: What if you could take a viral video, give it to an AI, and turn it into an actual video game? Not just a visual recreation. A fully explorable 3D world. And what if the entire process took just 40 minutes? About a year
@@ -260,6 +264,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - SpaceX Plans to Catch BOTH Starship Stages in November! | Flight 15
   URL: https://abvx.xyz/writing/videos/GJhICBW4eMI
   Summary: SpaceX is preparing to attempt something that has never been done before. Catch an entire orbital rocket system using giant mechanical arms. Both stages. On the same mission. During SpaceX's Q3 2026 earnings presentation
+
+- 78 Amazing UI Libraries in One Place! | AI Search for Web Design & Creative Coding
+  URL: https://abvx.xyz/writing/videos/GNHKjKv1BY0
+  Summary: Ever seen a beautiful website animation and wondered how on earth the developer built it? Well, here's a little resource that might save you hours of work. Meet F*cking Good Libraries, a curated collection of frontend li
 
 - Jekyll and Hyde in Toki Pona | A Classic in a New Voice
   URL: https://abvx.xyz/writing/videos/GPfkz36JWbI

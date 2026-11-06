@@ -7301,6 +7301,29 @@
       "related": []
     },
     {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "78 Amazing UI Libraries in One Place! | AI Search for Web Design & Creative Coding",
+      "summary": "Ever seen a beautiful website animation and wondered how on earth the developer built it? Well, here's a little resource that might save you hours of work. Meet F*cking Good Libraries, a curated collection of frontend li",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/GNHKjKv1BY0",
+      "publishedAt": "2026-11-06T19:56:36.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=GNHKjKv1BY0"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "writing",
       "section": "writing",
       "ecosystem": "Writing",
@@ -8434,7 +8457,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-06T19:37:13.513Z",
+      "updatedAt": "2026-11-06T20:13:30.776Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11015,6 +11038,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=vD_pNbzvoiM"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "OpenDirector: Free Local AI Filmmaking Studio with MiniMax H3, vLLM-Omni & Video Editing",
+      "summary": "Apparently, everyone wants to be a film director now. And AI startups are making absolutely sure we have enough software for that. Meet OpenDirector v0.1.0, a new open-source AI filmmaking platform from ThinkFlowLab, pow",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/bYoOWkMpCmc",
+      "publishedAt": "2026-11-06T19:41:52.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=bYoOWkMpCmc"
         }
       ],
       "related": []

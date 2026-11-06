@@ -8434,7 +8434,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-06T08:18:27.620Z",
+      "updatedAt": "2026-11-06T09:13:34.102Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11881,6 +11881,44 @@
       "links": [],
       "publishedAt": "2026-11-05",
       "updatedAt": "2026-11-05",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #33 — Thinking, Ideals & Reality",
+      "summary": "Twenty translated notebook fragments on thinking, ideal images and meeting reality.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-33-thinking-ideals-reality",
+      "tags": [
+        "psychology-notebook",
+        "thinking"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-06",
+      "updatedAt": "2026-11-06",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #34 — Closeness, Autonomy & Rescue",
+      "summary": "Twenty translated notebook fragments on closeness, autonomy and the urge to rescue.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-34-closeness-autonomy-rescue",
+      "tags": [
+        "psychology-notebook",
+        "relationships"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-06",
+      "updatedAt": "2026-11-06",
       "related": []
     },
     {

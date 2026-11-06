@@ -445,6 +445,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/OHU26SiXCoU
   Summary: Trois paquets. Quatre indices. Une seule solution. Saurez-vous retrouver qui a pris quoi ? Mettez sur pause pour chercher : la réponse arrive seulement à la fin. Ce court film illustré vous propose une énigme tirée de Le
 
+- Hermes Agent v0.23.0: Browser UI, /Rewind, Smarter AI Agents & Lower Token Costs
+  URL: https://abvx.xyz/writing/videos/oWLzRqqCs58
+  Summary: What if your AI agent could work across your terminal, desktop, browser, and messaging apps without constantly losing context or duplicating tasks? And what if multiple agents could collaborate in the same conversation w
+
 - A One-Minute Dream Walk | Guided Visualization in a Moonlit Garden
   URL: https://abvx.xyz/writing/videos/oyQXmJI4aK0
   Summary: Step into a moonlit garden for a one-minute guided visualization: lanterns, moving water, a quiet pavilion and a gentle English voice. A short cinematic escape with ambient piano and night sounds. Created using PlayMCP.

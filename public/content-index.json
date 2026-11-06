@@ -8434,7 +8434,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-06T11:37:10.230Z",
+      "updatedAt": "2026-11-06T11:51:28.618Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9299,6 +9299,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=Ao-_E_l6F98"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Hermes Agent v0.23.0: Browser UI, /Rewind, Smarter AI Agents & Lower Token Costs",
+      "summary": "What if your AI agent could work across your terminal, desktop, browser, and messaging apps without constantly losing context or duplicating tasks? And what if multiple agents could collaborate in the same conversation w",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/oWLzRqqCs58",
+      "publishedAt": "2026-11-06T11:46:16.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=oWLzRqqCs58"
         }
       ],
       "related": []

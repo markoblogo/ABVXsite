@@ -7064,6 +7064,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "1,286 Website Design Systems You Can Copy for Free | Claude Code, Codex & Cursor",
+      "summary": "Ever asked Claude Code or Codex to build a beautiful website? And somehow ended up with the same generic SaaS landing page? Purple gradients. Rounded cards. Predictable layouts. We've all been there. Well, someone just m",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/g4YEousQIag",
+      "publishedAt": "2026-11-05T23:54:01.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=g4YEousQIag"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "1,342 Free 3D Models for Blender, Games & AI Projects | Download on Hugging Face",
       "summary": "Working on a 3D game, animation, or creative coding project? Here's a resource worth bookmarking. Scenario just released a collection of 1,342 AI-generated 3D assets on Hugging Face. And you can download them for free. N",
       "canonicalUrl": "https://abvx.xyz/writing/videos/ht5q8eM93K4",
@@ -7812,6 +7835,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Bambu Lab H3C Is INSANE! 9 Print Heads, 6-Second Swaps & AI-Designed Hardware",
+      "summary": "What if you could design an entire electronic device with AI and then manufacture its physical components at home? Well, November 2026 is making that future look considerably closer. Bambu Lab just introduced the H3C, it",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/jylE3yG54ho",
+      "publishedAt": "2026-11-06T01:13:55.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=jylE3yG54ho"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Blender Running on iPhone Duo?! Eevee, Cycles & AI-Generated 3D Worlds | Hyper3D",
       "summary": "Remember when running Blender required a proper desktop workstation? Well, apparently, we're now putting it on foldable phones. Hyper3D by Deemos just demonstrated Blender running on Apple's iPhone Duo, complete with Eev",
       "canonicalUrl": "https://abvx.xyz/writing/videos/x5iQCArVPs4",
@@ -8388,7 +8434,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-05T23:37:10.136Z",
+      "updatedAt": "2026-11-06T08:18:27.620Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8734,6 +8780,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Free Figma MCP Without the 20-Call Limit! | Claude Code, Codex & Cursor",
+      "summary": "I wanted to give my AI coding agent access to Figma. Meet Figma Console MCP, a free tool developed by Southleft that lets Claude Code, OpenAI Codex, Cursor, and other AI agents work directly with Figma. It uses Figma's P",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/QKzhj3Fl9bE",
+      "publishedAt": "2026-11-06T00:35:03.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=QKzhj3Fl9bE"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "FreeVideo: Run MiniMax H3 Locally with Just 8GB VRAM | ComfyUI",
       "summary": "What if you could run a powerful AI video generation model on your own computer, without renting expensive cloud GPUs? And what if you only needed 8 GB of VRAM? Meet FreeVideo, an open-source project designed to bring Mi",
       "canonicalUrl": "https://abvx.xyz/writing/videos/SET6nWjBNNE",
@@ -8908,6 +8977,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=PoOxfMsBP9E"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "GitHub Agentic Workflows: Who Checks the Agent—and the Bill?",
+      "summary": "GitHub Agentic Workflows turns Markdown instructions into AI-powered GitHub Actions workflows. But who checks the agent’s changes—and who watches the bill when it keeps running? This short 3D explainer follows an instruc",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/Q9lzhnQEGjQ",
+      "publishedAt": "2026-11-06T01:48:43.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=Q9lzhnQEGjQ"
         }
       ],
       "related": []
@@ -10200,6 +10292,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=WEEGy8Ks3ig"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Meshy AI Turns Any Photo Into a 3D-Printable Relief | Image to 3D in Seconds",
+      "summary": "What if you could turn an ordinary photograph into a physical 3D sculpture? Not just generate a 3D image. Actually create a raised relief that you can print, engrave, or turn into a decorative object. Meet Meshy's new 3D",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/xghzzaHgVwc",
+      "publishedAt": "2026-11-06T01:03:14.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=xghzzaHgVwc"
         }
       ],
       "related": []
@@ -13071,6 +13186,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Tripo Agentic Canvas: AI Automates 3D Workflows for Unreal Engine & 3D Printing",
+      "summary": "What if an AI agent could handle an entire 3D production pipeline? Meet Tripo Agentic Canvas, a new AI-powered workspace inside Tripo Studio. And this is a pretty interesting step toward autonomous 3D production. Here's ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/1gTkltk6MPQ",
+      "publishedAt": "2026-11-06T00:25:06.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=1gTkltk6MPQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Tripo AI Can Now Rig & Animate 3D Characters From Text | Blender, Unreal & Unity",
       "summary": "What if you could generate a 3D character, give it a skeleton, and make it walk, run, or jump using nothing but text prompts? Tripo just upgraded its Rigging & Animation tools in Tripo Studio. And it's another step towar",
       "canonicalUrl": "https://abvx.xyz/writing/videos/yHcec4hrNQQ",
@@ -13251,6 +13389,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=UcyFLnvIzeE"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Viggle Remake Is Open! AI Character Replacement with MiniMax H3 + ComfyUI",
+      "summary": "What if you could take an existing video, replace the actors, change the environment, or completely redesign the scene while keeping the original performance? And what if you could run the entire process on your own GPU?",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/NPQV4DgppsQ",
+      "publishedAt": "2026-11-06T00:06:32.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=NPQV4DgppsQ"
         }
       ],
       "related": []

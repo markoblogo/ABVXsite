@@ -69,6 +69,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/0wvAwUAZEFo
   Summary: An AI agent choosing a treatment and controlling a surgical robot sounds like science fiction. Exin Therapeutics says it tested that idea in a mouse model of epilepsy — with a human surgeon, a supervising veterinarian an
 
+- Tripo Agentic Canvas: AI Automates 3D Workflows for Unreal Engine & 3D Printing
+  URL: https://abvx.xyz/writing/videos/1gTkltk6MPQ
+  Summary: What if an AI agent could handle an entire 3D production pipeline? Meet Tripo Agentic Canvas, a new AI-powered workspace inside Tripo Studio. And this is a pretty interesting step toward autonomous 3D production. Here's
+
 - NVIDIA VFlash: 5× Faster AI Robot Planning with Better Accuracy | Physical AI
   URL: https://abvx.xyz/writing/videos/1Y0feA5hb1k
   Summary: What if robots could think and react five times faster without upgrading their hardware? And what if they became more accurate at the same time? Meet NVIDIA VFlash, a new visual planning framework designed to make AI-pow
@@ -233,6 +237,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/G_5lLwn6Veo
   Summary: Remember when generating a few seconds of AI video meant waiting several minutes? Well, those days might be numbered. After making MiniMax H3 ridiculously fast, fal.ai teamed up with Black Forest Labs to push FLUX 3 to a
 
+- 1,286 Website Design Systems You Can Copy for Free | Claude Code, Codex & Cursor
+  URL: https://abvx.xyz/writing/videos/g4YEousQIag
+  Summary: Ever asked Claude Code or Codex to build a beautiful website? And somehow ended up with the same generic SaaS landing page? Purple gradients. Rounded cards. Predictable layouts. We've all been there. Well, someone just m
+
 - SpaceX Plans to Catch BOTH Starship Stages in November! | Flight 15
   URL: https://abvx.xyz/writing/videos/GJhICBW4eMI
   Summary: SpaceX is preparing to attempt something that has never been done before. Catch an entire orbital rocket system using giant mechanical arms. Both stages. On the same mission. During SpaceX's Q3 2026 earnings presentation
@@ -312,6 +320,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - SKY-001: The AI World Model That Builds Real CAD Designs, Part by Part
   URL: https://abvx.xyz/writing/videos/jWFZUAXVbCA
   Summary: What if AI could do more than generate a 3D model? What if it could actually figure out how to build one? Meet SKY-001 by Skyfall AI, a new engineering world model designed to turn text prompts and reference images into
+
+- Bambu Lab H3C Is INSANE! 9 Print Heads, 6-Second Swaps & AI-Designed Hardware
+  URL: https://abvx.xyz/writing/videos/jylE3yG54ho
+  Summary: What if you could design an entire electronic device with AI and then manufacture its physical components at home? Well, November 2026 is making that future look considerably closer. Bambu Lab just introduced the H3C, it
 
 - I Asked Claude Opus to Recreate Hackers (1995) as Looping Pixel Art | AI Animation
   URL: https://abvx.xyz/writing/videos/k4dStFV8d1c
@@ -401,6 +413,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/NOi2yqMGaP0
   Summary: How many follow-ups would you send before giving up on your dream customer? Three? Five? Maybe ten? Well, Harry Stebbings sent 53 emails to Marc Benioff, the CEO of Salesforce. And for 52 weeks, he got absolutely nothing
 
+- Viggle Remake Is Open! AI Character Replacement with MiniMax H3 + ComfyUI
+  URL: https://abvx.xyz/writing/videos/NPQV4DgppsQ
+  Summary: What if you could take an existing video, replace the actors, change the environment, or completely redesign the scene while keeping the original performance? And what if you could run the entire process on your own GPU?
+
 - Posters Come Alive | Alexey Lysogorov — Posters, Unbound
   URL: https://abvx.xyz/writing/videos/nqcI4COtP8c
   Summary: What happens when a poster refuses to stay still? Posters, Unbound is a 48-second surreal motion collage built from nine posters by Alexey Lysogorov. Typography becomes steam, geometric faces reshuffle, and a cat and dog
@@ -457,9 +473,17 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/Q73r6GLqXVY
   Summary: What happens after we die? It's one of humanity's oldest questions. And someone decided to turn 130,000 people's answers into an interactive 3D experience. Meet Life After Death?, a fascinating data visualization created
 
+- GitHub Agentic Workflows: Who Checks the Agent—and the Bill?
+  URL: https://abvx.xyz/writing/videos/Q9lzhnQEGjQ
+  Summary: GitHub Agentic Workflows turns Markdown instructions into AI-powered GitHub Actions workflows. But who checks the agent’s changes—and who watches the bill when it keeps running? This short 3D explainer follows an instruc
+
 - Брокеридж зернових та олійних: безкоштовний практичний гід MN7R
   URL: https://abvx.xyz/writing/videos/qer7WfdIWLI
   Summary: Як працює ринок зернових та олійних — від першого офера до контракту та виконання угоди? Безкоштовний практичний гід MN7R українською допомагає побачити зв’язок між товаром, якістю, ціною, логістикою та людьми. 📘 Завант
+
+- Free Figma MCP Without the 20-Call Limit! | Claude Code, Codex & Cursor
+  URL: https://abvx.xyz/writing/videos/QKzhj3Fl9bE
+  Summary: I wanted to give my AI coding agent access to Figma. Meet Figma Console MCP, a free tool developed by Southleft that lets Claude Code, OpenAI Codex, Cursor, and other AI agents work directly with Figma. It uses Figma's P
 
 - 109M vs 72B: Why Better Training Pairs Matter
   URL: https://abvx.xyz/writing/videos/QNgjNNEpsAM
@@ -652,6 +676,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - I Tried to Bury the AI. It Deleted Every Brick. 🤖 #Shorts
   URL: https://abvx.xyz/writing/videos/Xeta6R8hvPg
   Summary: I make a mess. The machine tidies up. Honestly, rude. SIRTET is a reverse falling-block music game: you sabotage the pieces while the AI tries to clear the board. This is the AI's all-clear ending, captured from the real
+
+- Meshy AI Turns Any Photo Into a 3D-Printable Relief | Image to 3D in Seconds
+  URL: https://abvx.xyz/writing/videos/xghzzaHgVwc
+  Summary: What if you could turn an ordinary photograph into a physical 3D sculpture? Not just generate a 3D image. Actually create a raised relief that you can print, engrave, or turn into a decorative object. Meet Meshy's new 3D
 
 - Claude Code & Codex: Understand AI-Generated Code Before You Merge | diff-tour
   URL: https://abvx.xyz/writing/videos/XOv4GafWnqY

@@ -8434,7 +8434,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-06T10:51:19.789Z",
+      "updatedAt": "2026-11-06T11:37:10.230Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10068,6 +10068,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=GPfkz36JWbI"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Kimi K3.1 Pro Generates Interactive 3D Worlds From Text | Three.js + AI",
+      "summary": "What if you could create an entire interactive 3D world just by describing it? No manual modeling. No complicated scene setup. No hours spent writing Three.js code. Just type a prompt and let AI build a world you can act",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/eqqcp_RuzB0",
+      "publishedAt": "2026-11-06T11:13:16.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=eqqcp_RuzB0"
         }
       ],
       "related": []

@@ -225,6 +225,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/e7OuakMC4cA
   Summary: What if you could create hundreds of beautiful pixel art animations without drawing a single sprite? No Photoshop. No Aseprite. No pre-made image assets. Just Claude Code, JavaScript, and a surprisingly effective creativ
 
+- Kimi K3.1 Pro Generates Interactive 3D Worlds From Text | Three.js + AI
+  URL: https://abvx.xyz/writing/videos/eqqcp_RuzB0
+  Summary: What if you could create an entire interactive 3D world just by describing it? No manual modeling. No complicated scene setup. No hours spent writing Three.js code. Just type a prompt and let AI build a world you can act
+
 - Hyper3D Rigging: AI Creates & Edits 3D Skeletons With Text Prompts | 250+ Animations
   URL: https://abvx.xyz/writing/videos/fcVLl0CcoXo
   Summary: Remember when rigging a 3D character meant manually placing bones, painting skin weights, and spending hours fixing broken deformations? Well, apparently, now you can just tell AI: "Add tail bones." And it actually build

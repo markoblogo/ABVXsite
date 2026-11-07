@@ -8457,7 +8457,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-06T20:13:30.776Z",
+      "updatedAt": "2026-11-07T09:53:58.583Z",
       "tags": [],
       "links": [],
       "related": []
@@ -12080,6 +12080,44 @@
       "links": [],
       "publishedAt": "2026-11-06",
       "updatedAt": "2026-11-06",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #35 — Desire, Control & Choosing",
+      "summary": "Twenty translated notebook fragments on desire, control and responsibility for choices.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-35-desire-control-choosing",
+      "tags": [
+        "psychology-notebook",
+        "desire"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-07",
+      "updatedAt": "2026-11-07",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #36 — Fear, Freedom & Limits",
+      "summary": "Twenty translated notebook fragments on fear, freedom and the limits of control.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-36-fear-freedom-limits",
+      "tags": [
+        "psychology-notebook",
+        "anxiety"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-07",
+      "updatedAt": "2026-11-07",
       "related": []
     },
     {

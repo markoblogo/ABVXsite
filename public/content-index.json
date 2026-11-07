@@ -8595,7 +8595,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-07T14:50:57.999Z",
+      "updatedAt": "2026-11-07T15:37:11.767Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8714,6 +8714,29 @@
       "links": [],
       "publishedAt": "2026-10-13",
       "updatedAt": "2026-10-13",
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Dimension 9: The Backrooms Multiplayer Game in Your Browser",
+      "summary": "Backrooms fans: here’s a strange place to spend the weekend. Dimension 9 is a browser game for exploring uncanny spaces with other players—and it works on a phone too. Play: https://dimension9.space A short look at the y",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/s9PPoiZ2Yrk",
+      "publishedAt": "2026-11-07T15:23:56.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=s9PPoiZ2Yrk"
+        }
+      ],
       "related": []
     },
     {

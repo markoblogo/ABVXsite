@@ -637,6 +637,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/s3BBP698_r8
   Summary: A software launch. A book trailer. A cinematic interface demo. Different briefs need different video workflows. Framewright is an evolving collection of video-production methods, agent skills and lessons from real ABVX p
 
+- Dimension 9: The Backrooms Multiplayer Game in Your Browser
+  URL: https://abvx.xyz/writing/videos/s9PPoiZ2Yrk
+  Summary: Backrooms fans: here’s a strange place to spend the weekend. Dimension 9 is a browser game for exploring uncanny spaces with other players—and it works on a phone too. Play: https://dimension9.space A short look at the y
+
 - Gemini 4 Argon Built an Interactive 3D Human Body. You Can Explore a Beating Heart
   URL: https://abvx.xyz/writing/videos/SB2b1nB6G2U
   Summary: What if you could explore the human body like a 3D video game? Peel away anatomical layers. Isolate individual muscles. Watch the skeleton move. Or zoom straight inside a beating heart. Google DeepMind just demonstrated

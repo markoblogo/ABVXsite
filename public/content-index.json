@@ -7110,6 +7110,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "1,504 Vintage Logos from 1973! Free SVG Design Archive | Trademarks & Symbols",
+      "summary": "What if you could explore more than 1,500 beautifully designed logos from the golden age of graphic design? No generic AI-generated symbols. No random logo templates. Real trademarks created by professional designers mor",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/6L9J72vUntY",
+      "publishedAt": "2026-11-07T11:33:22.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=6L9J72vUntY"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "109M vs 72B: Why Better Training Pairs Matter",
       "summary": "What if better AI starts with better training pairs, rather than just a bigger model? This short visual explainer looks at a 2026 preprint by Randall Balestriero and Yann LeCun. Their 109M-parameter text JEPA achieved st",
       "canonicalUrl": "https://abvx.xyz/writing/videos/QNgjNNEpsAM",
@@ -8457,7 +8480,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-07T11:10:56.629Z",
+      "updatedAt": "2026-11-07T11:37:01.203Z",
       "tags": [],
       "links": [],
       "related": []

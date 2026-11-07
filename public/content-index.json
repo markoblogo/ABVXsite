@@ -8572,7 +8572,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-07T13:36:37.943Z",
+      "updatedAt": "2026-11-07T13:51:08.601Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9802,6 +9802,29 @@
         }
       ],
       "collection": "kitchen-notes"
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "How to Make AI Videos That Don't Look Like AI | Malevich, Photoshop & Seedance 2.0",
+      "summary": "What if the secret to making beautiful AI videos was to stop letting AI do all the creative work? No glossy anime aesthetics. No plastic-looking characters. No generic cinematic lighting. Just old-school avant-garde art,",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/cb8VIvOuVOU",
+      "publishedAt": "2026-11-07T13:46:23.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=cb8VIvOuVOU"
+        }
+      ],
+      "related": []
     },
     {
       "type": "video",

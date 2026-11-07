@@ -8618,7 +8618,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-07T16:50:38.838Z",
+      "updatedAt": "2026-11-07T17:36:41.795Z",
       "tags": [],
       "links": [],
       "related": []
@@ -14652,6 +14652,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=uvM-jWwibOQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Why GLB Is Perfect for AI Agents | 3D Animation with Three.js, No Blender Required",
+      "summary": "If you're creating 3D animations with AI agents, there's one file format you should seriously consider: GLB. And the interesting part is that your agent might not need Blender at all. Just a 3D model, some JavaScript, an",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/oPvkNkSqqwk",
+      "publishedAt": "2026-11-07T17:16:53.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=oPvkNkSqqwk"
         }
       ],
       "related": []

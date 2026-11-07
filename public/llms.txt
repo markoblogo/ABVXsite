@@ -521,6 +521,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/OHU26SiXCoU
   Summary: Trois paquets. Quatre indices. Une seule solution. Saurez-vous retrouver qui a pris quoi ? Mettez sur pause pour chercher : la réponse arrive seulement à la fin. Ce court film illustré vous propose une énigme tirée de Le
 
+- Why GLB Is Perfect for AI Agents | 3D Animation with Three.js, No Blender Required
+  URL: https://abvx.xyz/writing/videos/oPvkNkSqqwk
+  Summary: If you're creating 3D animations with AI agents, there's one file format you should seriously consider: GLB. And the interesting part is that your agent might not need Blender at all. Just a 3D model, some JavaScript, an
+
 - Hermes Agent v0.23.0: Browser UI, /Rewind, Smarter AI Agents & Lower Token Costs
   URL: https://abvx.xyz/writing/videos/oWLzRqqCs58
   Summary: What if your AI agent could work across your terminal, desktop, browser, and messaging apps without constantly losing context or duplicating tasks? And what if multiple agents could collaborate in the same conversation w

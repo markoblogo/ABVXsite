@@ -273,6 +273,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/g4YEousQIag
   Summary: Ever asked Claude Code or Codex to build a beautiful website? And somehow ended up with the same generic SaaS landing page? Purple gradients. Rounded cards. Predictable layouts. We've all been there. Well, someone just m
 
+- Claudemy: Turn Any Topic Into a Personal AI Course with Claude Code | Free AI Skill
+  URL: https://abvx.xyz/writing/videos/G6ZR20RmSRs
+  Summary: Ever wanted to learn something new, only to discover that the recommended course is 40 hours long? You bookmark it. Watch the introduction. Promise yourself you'll finish it someday. And never open it again. Well, someon
+
 - SpaceX Plans to Catch BOTH Starship Stages in November! | Flight 15
   URL: https://abvx.xyz/writing/videos/GJhICBW4eMI
   Summary: SpaceX is preparing to attempt something that has never been done before. Catch an entire orbital rocket system using giant mechanical arms. Both stages. On the same mission. During SpaceX's Q3 2026 earnings presentation
@@ -396,6 +400,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Як працює спотовий ринок зерна? Безкоштовний практичний гайд українською
   URL: https://abvx.xyz/writing/videos/Kx1ftrOWQm8
   Summary: Чому ціна на зерно може відрізнятися навіть в один день? Базис поставки, якість, місце й логістика допомагають зрозуміти ціну фізичного аграрного ринку. 📘 «Практичний гайд по спотовому ринку» — безкоштовна українська кн
+
+- RelayVSR: Near Real-Time AI Video Upscaling in ComfyUI | 1080p, 4K & 29 FPS
+  URL: https://abvx.xyz/writing/videos/LEuUaNL1R4A
+  Summary: Remember when upscaling a short AI video meant waiting several minutes, or sometimes even longer? Well, things are getting considerably faster. ComfyUI just added support for RelayVSR, an open-source AI video upscaler ca
 
 - These Robots Use Living Muscle. Here’s How They Move
   URL: https://abvx.xyz/writing/videos/LIbkbgDCgKM

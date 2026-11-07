@@ -8618,7 +8618,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-07T17:36:41.795Z",
+      "updatedAt": "2026-11-07T19:21:26.436Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11568,6 +11568,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=vAPgNupIp2s"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Plasticity 2026.2 Is Here! Asset Libraries, Curvature Analysis & New NURBS Modeling Tools",
+      "summary": "Plastic Software just released Plasticity 2026.2, bringing some very welcome improvements to one of the most interesting hard-surface modeling tools around. New asset libraries, better surface analysis, improved snapping",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/ywZeKg8rwe0",
+      "publishedAt": "2026-11-07T19:16:36.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=ywZeKg8rwe0"
         }
       ],
       "related": []

@@ -183,7 +183,7 @@ Examples:
 - `Workflow & Orchestration`
 - `Standalone Utilities`
 
-Use the existing rendered groups and official series in `src/lib/catalogue-config.mjs`; a free-form group label can leave a new card absent from its hub. Pinned placements take priority over metadata.
+Use the existing rendered groups and official series. Bundled configuration in `src/lib/catalogue-config.mjs` is combined with approved live catalogue sections/series; publish a supported new section or series through the [runtime catalogue contract](runtime-catalogue.md) before adding members. A free-form group label alone can leave a card absent from its hub. Pinned placements take priority over metadata.
 
 `primarySeriesSlug` and `seriesSlugs` associate books with official series records; `series` is the publishing-line display label.
 
@@ -247,7 +247,7 @@ Validation fails on structural errors. Review flags only warn.
 
 Use the [editorial release checklist](editorial-seo-checklist.md) as the single detailed verification/release procedure. It includes generated indexes, CI checks, build-dependent SEO checks, responsive review, and merge-SHA production verification.
 
-Preview is for visual review. Publication requires the production deployment and canonical-route checks; Google indexing is a separate observation. Prefer one complete PR over separate content, link, and index patches.
+For Git releases, Preview is for visual review; verify the exact Production merge SHA and canonical routes after the authorized merge. Prefer one complete PR over separate content, link and index patches. Runtime content instead uses the [authenticated publisher](runtime-writing.md), without a per-item Git/build/deployment; distinguish the stored receipt from requested/optional public-result verification. Google indexing remains a separate observation.
 
 ## Book publisher and editorial reading
 

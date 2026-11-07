@@ -20,15 +20,16 @@ Global identity metadata is in `src/app/layout.tsx`; shared schema and metadata 
 
 ## Writing sources
 
-`src/app/writing/page.tsx` uses the committed native/discovery registry with immutable first-addition chronology:
+`src/app/writing/page.tsx` combines current native runtime sources with retained external discovery metadata, using immutable first-addition chronology. Managed records and tombstones override the bundled baseline:
 
 | Source | Feed/configuration | Display |
 | --- | --- | --- |
+| ABVX | Current runtime Writing/Working Stories plus unclaimed bundled sources | Local full articles, topic filters, keyword search and public RSS |
 | Medium | `https://abvcreative.medium.com/feed` | Article cards linking to the source |
 | Substack | `https://abvx.substack.com/feed` | Article cards linking to the source |
 | YouTube | `content/youtube.json` | Featured player, compact recent preview, and text-only archive links |
 
-Writing and the three existing homepage publication slots use the same mixed-source list, sorted by immutable `addedAt` (UTC) from `content/writing-discovery.json`. Each slot can contain any source; labels and links describe their actual destinations. A native video companion opens ABVX, while imported YouTube cards open their automatic ABVX watch page. MN7R is not part of this publication list.
+Writing and the three existing homepage publication slots use the same mixed-source list, sorted by immutable `addedAt` (UTC) from the runtime first-addition record or bundled `content/writing-discovery.json`. Each slot can contain any source; labels and links describe their actual destinations. A native video companion opens ABVX, while imported YouTube cards open their automatic ABVX watch page. MN7R is not part of this publication list.
 
 Feed HTTP access retains the existing host allowlists and parsers. The approximately 15-minute `writing-feed-sync.yml` workflow records first additions and refreshes public metadata with `npm run writing:sync`; a manual workflow dispatch is available. It reuses the existing `ECOSYSTEM_SYNC_TOKEN`, commits only the discovery registry and its two generated machine indexes, and triggers the normal deployment. GitHub schedule delays and deployment time mean this is not an exact delivery deadline. No change means no commit/deployment. Source failures preserve stored items, including videos that leave YouTube's 15-entry feed.
 
@@ -36,7 +37,7 @@ The same sync checks new YouTube records and a rotating batch of eight saved vid
 
 An independent [Cloudflare backup clock](writing-sync-backup.md) can dispatch this same workflow when scheduled runs are missing. Its source is inert until separately deployed and explicitly enabled with an approved limited secret; a merged PR alone is not an active backup. It does not introduce another importer or depend on the owner's Mac.
 
-Native Writing and Working Stories are registered by `npm run writing:register` during prebuild. Commit the changed registry with the approved source. Rebuilds, edits, `updatedAt`, and feed retries never reset `addedAt`. Original publication/upload dates remain separate and continue to supply article/video metadata. Writing cards display the addition date; the article itself retains its original publication date. Same-time additions use original publication time, then URL as a deterministic tie-breaker.
+Bundled Native Writing and Working Stories are registered by `npm run writing:register` during prebuild; commit the changed registry with a bundled source edit. Runtime publications update live membership and first-addition state directly, without a Git commit or rebuild. Rebuilds, edits, `updatedAt`, and feed retries never reset `addedAt`. Original publication/upload dates remain separate and continue to supply article/video metadata. Writing cards display the addition date; the article itself retains its original publication date. Same-time additions use original publication time, then URL as a deterministic tie-breaker.
 
 If a feed is unavailable from the GitHub runner, sync retries through the public `/api/writing/feed/<source>` endpoint on ABVX. That endpoint accepts only Medium, Substack and YouTube, exposes public metadata rather than article bodies, and reuses the same fixed URLs, parsers and host allowlists. If both paths fail, keep the saved source. The endpoint is marked `noindex`; it is not a new editorial page or a general URL proxy.
 
@@ -73,17 +74,21 @@ Search runs on the server without publishing a browser-side corpus or introducin
 
 ## Catalogue addition chronology
 
-The homepage Focus, Systems and Books cards use immutable first-addition times from `content/catalogue-discovery.json`, rather than `updatedAt`, GitHub activity or releases of existing products. `npm run catalogue:register` runs before builds; commit its output with each new public work/book/series record. CI rejects uncommitted registration changes. Existing timestamps survive edits, removals, re-additions and repeated builds. Equal-time additions use the existing catalogue rank/title tie-breaker.
+The homepage Focus, Systems and Books cards use immutable first-addition times from `content/catalogue-discovery.json`, rather than `updatedAt`, GitHub activity or releases of existing products. For bundled records, `npm run catalogue:register` runs before builds; commit its output with each new public work/book/series record. Runtime records supply their first-addition times from the live snapshot instead. CI rejects uncommitted registration changes. Existing timestamps survive edits, removals, re-additions and repeated builds. Equal-time additions use the existing catalogue rank/title tie-breaker.
 
 The initial migration uses known source publication dates (`legacy-source`); undated legacy entries remain `null` (`legacy-unknown`) and do not compete for latest cards. The four Good Dogs/Jekyll book records use the verified production deployment time of PR26 (`production`, 2026-10-06T14:16:40.000Z). `--bootstrap` is migration-only; ordinary registration always records current UTC once (`observed`). Original content publication/update dates remain unchanged.
 
 ## Catalogue media operations
 
-Use [the additive-media handoff](abvx-os-publishing.md#shared-additive-media-route) for existing project, book and series cards. `catalogue-video.mjs` resolves sources from metadata across `content/work/`, `content/books/` and `content/series/`, including declared root series canonicals. Use the dry-run's `sourceFile` rather than assuming a route maps directly to a filename.
+For video-only additions to books, projects, series and existing groups, use [runtime add-video](runtime-catalogue.md#add-a-video-to-a-book-project-series-or-catalogue-group). It resolves the current revision and safely adopts eligible bundled targets. Other managed media edits require accepted full-source updates. [The additive-media handoff](abvx-os-publishing.md#shared-additive-media-route) remains the bundled Git compatibility path. `catalogue-video.mjs` resolves sources from metadata across `content/work/`, `content/books/` and `content/series/`, including declared root series canonicals. Use the dry-run's `sourceFile` rather than assuming a route maps directly to a filename.
 
 `src/lib/media-policy.mjs` supplies the same audio origins to CSP, preflight and QA. Individual book audio attaches its source only after a reader requests playback; its final redirect host must remain allowed. Download availability uses HEAD, including binary links in scoped QA. Project/book/series trailers share the lazy privacy-enhanced player. Routine media additions preserve placement and original publication/addition dates.
 
 Catalogue timing is recorded privately with its own workload/version, exact base/head/merge, selected QA profile, corrections and continuous elapsed time. It is not automatically a native OS publication cycle or Cortex-qualified trial. Retain failed attempts; do not reset timers or infer causal savings from different cards or profiles.
+
+## Footer and shared social links
+
+`src/content/navigation.ts` owns footer navigation and social destinations, including TikTok. `SiteFooter.tsx` renders the shared list and `SocialIcon.tsx` supplies the matching accessible icon. Update the shared destination once instead of adding a second footer-only URL; preserve external-link protections. Profile links are not automatically contact or sales conversions.
 
 ## Analytics
 
@@ -158,8 +163,21 @@ Native video companions retain every eligible translation in the release index. 
 
 ## Public RSS subscriptions
 
-`/rss/writing.xml` includes native public ABVX articles and Working Stories, with full bodies and illustrations. Topic feeds use the existing navigation taxonomy: `/rss/writing/{psychology,kitchen-notes,ai-technology,business-work,other}.xml`. Articles assigned multiple navigation topics appear in each matching feed, once in the combined feed. External Medium/Substack archives retain their own feeds.
+| Feed | Public URL |
+| --- | --- |
+| All native Writing and Working Stories | [/rss/writing.xml](https://abvx.xyz/rss/writing.xml) |
+| Psychology | [/rss/writing/psychology.xml](https://abvx.xyz/rss/writing/psychology.xml) |
+| Kitchen Notes | [/rss/writing/kitchen-notes.xml](https://abvx.xyz/rss/writing/kitchen-notes.xml) |
+| AI & Technology | [/rss/writing/ai-technology.xml](https://abvx.xyz/rss/writing/ai-technology.xml) |
+| Business & Work | [/rss/writing/business-work.xml](https://abvx.xyz/rss/writing/business-work.xml) |
+| Other | [/rss/writing/other.xml](https://abvx.xyz/rss/writing/other.xml) |
+| Books | [/rss/books.xml](https://abvx.xyz/rss/books.xml) |
+| Projects (Systems catalogue) | [/rss/projects.xml](https://abvx.xyz/rss/projects.xml) |
+
+Subscribe using these URLs in an RSS reader. The public output is RSS 2.0 XML with `content:encoded` full HTML and Media RSS image metadata. This is distinct from the fixed-source JSON fallback at `/api/writing/feed/<source>`.
+
+`/rss/writing.xml` includes native public ABVX articles and Working Stories, with full bodies and illustrations, plus Kitchen Notes recipe yield, timing, ingredient quantities, method and variations when present. Topic feeds use the existing navigation taxonomy: `/rss/writing/{psychology,kitchen-notes,ai-technology,business-work,other}.xml`. Articles assigned multiple navigation topics appear in each matching feed, once in the combined feed. External Medium/Substack archives retain their own feeds.
 
 `/rss/books.xml` and `/rss/projects.xml` expose the public Books and Systems/Projects catalogues, including full card descriptions and covers. Existing canonical URLs are stable GUIDs. Undated entries omit pubDate; edits never reset publication dates. All feeds read the current public index and runtime sources on request with no-store responses, so withdrawals and runtime publications need no rebuild. Private, draft and future entries are excluded. Runtime storage failures propagate instead of falling back to a stale archive.
 
-RSS links are visible on Writing, its selected ABVX topic, Kitchen Notes, Working Stories, Books and Projects. HTML alternate links advertise all eight feeds. Feed HTML uses the same Markdown block/inline grammar and illustration anchors as article pages, absolute links and ordinary image URLs. No tracking, external scraping or new dependency is needed. Verify feed XML, full text, image loading and topic membership alongside the normal release gates.
+RSS links are visible on Writing, its selected ABVX topic, Kitchen Notes, Working Stories, Books and Projects. HTML alternate links advertise all eight feeds. Feed HTML uses the same Markdown block/inline grammar and illustration anchors as article pages, absolute links and ordinary image URLs. `src/lib/rss.mjs` owns the feed directory and XML; `public-rss.ts` selects current public records, and `feed-markdown.mjs` shares `markdown-blocks.mjs` with article rendering. `RssLink.tsx` supplies the visible subscription links. No tracking, external scraping or new dependency is needed. Run `node --test test/public-rss.test.mjs test/markdown-content.test.mjs`; verify XML, full text including recipe fields, image loading and topic membership alongside normal release gates.

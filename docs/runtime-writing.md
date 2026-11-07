@@ -1,6 +1,6 @@
 # Runtime Writing publisher
 
-The existing engine supports native Writing, Working Stories and the catalogue extension documented in [Runtime catalogue](runtime-catalogue.md). Activation requires a configured private store and a deployed compatible engine; a source branch is not production evidence. The feature flag defaults off. There is no public admin UI or separate login.
+The existing engine supports native Writing, Working Stories and the catalogue extension documented in [Runtime catalogue](runtime-catalogue.md). Activation requires a configured private store and a deployed compatible engine; a source branch is not production evidence. The canonical Production site uses this runtime lane; the feature flag still defaults off in an unconfigured environment. There is no public admin UI or separate login.
 
 ## Normal operation after activation
 

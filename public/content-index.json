@@ -8572,7 +8572,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-07T14:11:42.003Z",
+      "updatedAt": "2026-11-07T14:36:55.057Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9598,6 +9598,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=oWLzRqqCs58"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Hermes Marketplace Is Here! 1,000+ AI Plugins, Claude Pro/Max, Blender & MCP Tools",
+      "summary": "While the AI industry keeps reinventing plugins, connectors, apps, and marketplaces, Nous Research has decided to put everything in one place. Meet Hermes Marketplace, the official plugin and skill directory for Hermes A",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/CSt1BDtCgwM",
+      "publishedAt": "2026-11-07T14:12:51.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=CSt1BDtCgwM"
         }
       ],
       "related": []

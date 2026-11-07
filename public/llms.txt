@@ -221,6 +221,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/cQS3nbBe6JM
   Summary: What if you could turn almost any PC game into something completely different using AI? And what if Claude Code could handle the modding process for you? Meet Universal Modder, an open-source collection of AI agent skill
 
+- Hermes Marketplace Is Here! 1,000+ AI Plugins, Claude Pro/Max, Blender & MCP Tools
+  URL: https://abvx.xyz/writing/videos/CSt1BDtCgwM
+  Summary: While the AI industry keeps reinventing plugins, connectors, apps, and marketplaces, Nous Research has decided to put everything in one place. Meet Hermes Marketplace, the official plugin and skill directory for Hermes A
+
 - Google Genie 4 Is INSANE! AI Generates Interactive Worlds With Sound | 10+ Demos
   URL: https://abvx.xyz/writing/videos/cTK_yuxDcKE
   Summary: What if AI could generate an entire world while you're exploring it? Not a video. Not a traditional game. An interactive reality that reacts to everything you do. And now it has sound. And people who actually talk back.

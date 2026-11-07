@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.5.0
+
+- Added eight full-text RSS feeds: native Writing, five blog topics, Books and Projects. Feeds include covers, anchored illustrations and structured recipe details, read current runtime records and preserve canonical identities.
+- Added URL-backed Writing topic filters with overlapping assignments and Other; visitor navigation remains independent of manuscript and Book Readiness metadata.
+- Added one-command, revision-bound video additions to existing books, projects, series and catalogue groups, without a per-video build or PR. Existing videos, prose and first-addition dates are preserved.
+- Added French and Ukrainian versions of the three profile pages, plus optional English/French descriptions for one book edition without implying a translated edition.
+- Added semantic Markdown tables and expanded article/catalogue media presentation; included TikTok in shared footer social links.
+- Refreshed the README and operating guides, added a documentation index and separated dated audit observations from current instructions.
+
+This release groups changes shipped since v0.4.0. Runtime publications remain versioned content operations, separate from this application tag. Source archives exclude private operational exports, credentials and backup files. Technical release checks do not establish Google processing/indexing, audience growth or sales.
+
 ## 0.4.0 — 2026-10-31
 
 - Added authenticated, versioned runtime publication for native articles, Working Stories, book/project cards, book series and catalogue groups, including conditional updates, rollback and withdrawal. Bundled content remains the baseline; scheduled editorial pools retain their approved Git route.

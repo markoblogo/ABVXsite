@@ -2532,6 +2532,17 @@
     },
     {
       "source": "youtube",
+      "title": "Copilot Memory vs Dreaming: What Changes Automatically?",
+      "url": "https://www.youtube.com/watch?v=JMIzP3zy90k",
+      "publishedAt": "2026-11-07T13:51:15.000Z",
+      "excerpt": "What can GitHub Copilot remember—and what can Dreaming change without a pull request? In 96 seconds: saved context, source checks, background maintenance and the controls worth checking before you opt in. The key distinc",
+      "coverImage": "https://i.ytimg.com/vi/JMIzP3zy90k/hqdefault.jpg",
+      "videoDescription": "What can GitHub Copilot remember—and what can Dreaming change without a pull request? In 96 seconds: saved context, source checks, background maintenance and the controls worth checking before you opt in.\n\nThe key distinction: Dreaming can update memories automatically. Changes to checked-in instructions and skills are proposed through a PR. Maintaining context is not training the underlying model.\n\n00:00 Can an old memory mislead an agent?\n00:15 What Copilot Memory carries forward\n00:29 Check the source, not just the saved fact\n00:40 What Dreaming maintains\n00:54 Automatic memory changes vs reviewed files\n01:09 Availability and AI credits\n01:22 Read. Change. Cost.\n\nSources — checked 7 November 2026:\nhttps://docs.github.com/en/copilot/concepts/prompting-and-context/copilot-memory\nhttps://docs.github.com/en/copilot/concepts/prompting-and-context/copilot-dreaming\nhttps://github.blog/changelog/2026-10-28-github-intelligence-puts-your-code-context-and-history-to-work/\n\nDreaming is optional and in preview; availability depends on your plan. A dream run consumes AI credits even when it makes no changes. Features and terms may change after the source-check date.\n\nOriginal animated diagrams and sound design, with synthetic English narration. The test-command example is illustrative, not a recording of a real Copilot failure. This is an independent explainer, not a GitHub product demo or sponsorship.\n\n#GitHubCopilot #AIContext #AgenticAI",
+      "addedAt": "2026-11-07T14:11:42.003Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Stageshow: Make Claude Code & Codex Create Beautiful UI Animations | Free AI Design Skill",
       "url": "https://www.youtube.com/watch?v=Jrhm5lH7224",
       "publishedAt": "2026-11-04T17:20:13.000Z",

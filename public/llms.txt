@@ -369,6 +369,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/JkmkICJoNwY
   Summary: What if you could simulate complex clothing, realistic fabric collisions, tearing, and even soft-body muscles directly inside 3ds Max? Without constantly switching between different simulation applications? Meet TenPix C
 
+- Copilot Memory vs Dreaming: What Changes Automatically?
+  URL: https://abvx.xyz/writing/videos/JMIzP3zy90k
+  Summary: What can GitHub Copilot remember—and what can Dreaming change without a pull request? In 96 seconds: saved context, source checks, background maintenance and the controls worth checking before you opt in. The key distinc
+
 - Stageshow: Make Claude Code & Codex Create Beautiful UI Animations | Free AI Design Skill
   URL: https://abvx.xyz/writing/videos/Jrhm5lH7224
   Summary: AI coding agents can build entire applications. But why do their UI animations still look like they were designed by a programmer who discovered gradients yesterday? Well, someone decided to fix that. Meet Stageshow, a n

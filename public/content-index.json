@@ -8572,7 +8572,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-07T13:51:08.601Z",
+      "updatedAt": "2026-11-07T14:11:42.003Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8596,6 +8596,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=k7DYPrNV7ZY"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Copilot Memory vs Dreaming: What Changes Automatically?",
+      "summary": "What can GitHub Copilot remember—and what can Dreaming change without a pull request? In 96 seconds: saved context, source checks, background maintenance and the controls worth checking before you opt in. The key distinc",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/JMIzP3zy90k",
+      "publishedAt": "2026-11-07T13:51:15.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=JMIzP3zy90k"
         }
       ],
       "related": []

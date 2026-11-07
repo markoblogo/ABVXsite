@@ -8040,6 +8040,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Cinecode: Claude Code Can Now Make Entire Movies with JavaScript | Free AI Filmmaking Skill",
+      "summary": "What if you could create an entire animated film without using a traditional AI video generator? Meet Cinecode, a new free, open-source filmmaking skill that lets Claude Code and Cursor turn simple prompts into complete ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/9bYUOdPirnk",
+      "publishedAt": "2026-11-07T11:42:47.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=9bYUOdPirnk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude AI Brain Surgery on a Mouse? What Exin Reported",
       "summary": "An AI agent choosing a treatment and controlling a surgical robot sounds like science fiction. Exin Therapeutics says it tested that idea in a mouse model of epilepsy — with a human surgeon, a supervising veterinarian an",
       "canonicalUrl": "https://abvx.xyz/writing/videos/0wvAwUAZEFo",
@@ -8480,7 +8503,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-07T11:37:01.203Z",
+      "updatedAt": "2026-11-07T11:50:46.598Z",
       "tags": [],
       "links": [],
       "related": []

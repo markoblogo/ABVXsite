@@ -161,6 +161,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/9aEaGv0Wu4o
   Summary: Someone built a Claude Code skill that turns real-world roads into retro pixel-art adventures. And I have absolutely no idea why I love this so much. Meet Pixel Path, an open-source Claude Code skill that transforms any
 
+- Cinecode: Claude Code Can Now Make Entire Movies with JavaScript | Free AI Filmmaking Skill
+  URL: https://abvx.xyz/writing/videos/9bYUOdPirnk
+  Summary: What if you could create an entire animated film without using a traditional AI video generator? Meet Cinecode, a new free, open-source filmmaking skill that lets Claude Code and Cursor turn simple prompts into complete
+
 - He Used Claude Code to Remove Smart TV Ads and Make His TV 3× Faster
   URL: https://abvx.xyz/writing/videos/Ao-_E_l6F98
   Summary: Smart TVs have become ridiculous. You buy a television, turn it on, and somehow end up staring at advertisements, sponsored recommendations, and apps you never asked for. One developer finally decided he'd had enough. So

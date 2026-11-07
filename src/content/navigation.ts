@@ -18,6 +18,7 @@ export type SocialIconName =
   | 'substack'
   | 'medium'
   | 'youtube'
+  | 'tiktok'
   | 'x'
   | 'bluesky'
   | 'behance'
@@ -63,6 +64,7 @@ export const socialLinks: SocialLink[] = [
   { label: 'Substack', href: 'https://abvx.substack.com/', icon: 'substack', external: true },
   { label: 'Medium', href: 'https://abvcreative.medium.com/', icon: 'medium', external: true },
   { label: 'YouTube', href: 'https://www.youtube.com/@ABV_Creative', icon: 'youtube', external: true },
+  { label: 'TikTok', href: 'https://www.tiktok.com/@lumierenoire.films?_r=1&_t=ZS-9BCmzbTtiuy', icon: 'tiktok', external: true },
   { label: 'X', href: 'https://x.com/abv_creative', icon: 'x', external: true },
   { label: 'Bluesky', href: 'https://bsky.app/profile/abvx.xyz', icon: 'bluesky', external: true },
   { label: 'Behance', href: 'https://www.behance.net/ABV_Creative', icon: 'behance', external: true },

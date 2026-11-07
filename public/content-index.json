@@ -8618,7 +8618,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-07T16:36:51.947Z",
+      "updatedAt": "2026-11-07T16:50:38.838Z",
       "tags": [],
       "links": [],
       "related": []
@@ -12486,6 +12486,29 @@
       "links": [],
       "publishedAt": "2026-11-07",
       "updatedAt": "2026-11-07",
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Redshift 2027.0 Is Here! Procedural Fur, ACES 2, Faster GPU Rendering & Archicad",
+      "summary": "Maxon just released Redshift 2027.0, and this update brings some genuinely useful improvements for 3D artists. New procedural fur, better GPU memory management, faster rendering, improved real-time previews, and expanded",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/SkrZW5do2VE",
+      "publishedAt": "2026-11-07T16:45:04.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=SkrZW5do2VE"
+        }
+      ],
       "related": []
     },
     {

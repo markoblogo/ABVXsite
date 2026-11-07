@@ -665,6 +665,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/sHj9J1fM_4Q
   Summary: We've been promised flying cars for decades. And somehow, we've finally reached the point where someone is actually building one. Meet the Alef Model A, a $300,000 electric flying car designed to drive on ordinary roads,
 
+- Redshift 2027.0 Is Here! Procedural Fur, ACES 2, Faster GPU Rendering & Archicad
+  URL: https://abvx.xyz/writing/videos/SkrZW5do2VE
+  Summary: Maxon just released Redshift 2027.0, and this update brings some genuinely useful improvements for 3D artists. New procedural fur, better GPU memory management, faster rendering, improved real-time previews, and expanded
+
 - Claude Code Has Hidden Features. This /stack Mod Reveals Everything
   URL: https://abvx.xyz/writing/videos/sZpOYudsSDY
   Summary: Think you know what's running inside your Claude Code sessions? You might be surprised. Meet /stack, a free, open-source Claude Code mod that reveals practically everything installed, configured, and available in your AI

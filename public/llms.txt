@@ -129,6 +129,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/6oJufkVQG-g
   Summary: What if you could give an AI agent your unfinished game and tell it: "Play this. Find everything that's broken. And don't stop until you've tested it properly." Well, someone built exactly that. Meet Aura Autopilot, a ne
 
+- Sand3D: 106,000+ Parametric 3D Models for AI | 3.8× Fewer Tokens Than Blender Python
+  URL: https://abvx.xyz/writing/videos/6tnch1OcG4M
+  Summary: What if AI could generate an entire 3D model by writing a few hundred tokens of Python? Not just a beautiful image. Not an uneditable collection of polygons. An actual parametric 3D object with named components, adjustab
+
 - 418 Claude Opus 5.5 Videos With Prompts You Can Copy (Free AI Motion Design Library)
   URL: https://abvx.xyz/writing/videos/720tTqmoORU
   Summary: What if you could find hundreds of impressive AI-generated videos and see exactly how their creators made them? Not just watch the results. Get the prompts, study the techniques, and recreate the ideas yourself. Meet Ski
@@ -244,6 +248,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - 244 Pixel Art Animations Made with Claude Code | Free VFX Library + AI Skill
   URL: https://abvx.xyz/writing/videos/e7OuakMC4cA
   Summary: What if you could create hundreds of beautiful pixel art animations without drawing a single sprite? No Photoshop. No Aseprite. No pre-made image assets. Just Claude Code, JavaScript, and a surprisingly effective creativ
+
+- Adobe Premiere Pro Gets Generative Remove! Erase Objects From Video With AI
+  URL: https://abvx.xyz/writing/videos/EL_UutTuAOo
+  Summary: Remember when removing an unwanted object from a video meant opening After Effects, tracking masks, rebuilding backgrounds, and spending hours cleaning up individual frames? Well, Adobe just made that considerably easier
 
 - Kimi K3.1 Pro Generates Interactive 3D Worlds From Text | Three.js + AI
   URL: https://abvx.xyz/writing/videos/eqqcp_RuzB0
@@ -656,6 +664,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - MiniMax H3 + 360 Orbit LoRA Turns AI Video Into 3D Gaussian Splats | Houdini 22
   URL: https://abvx.xyz/writing/videos/uuvpa2r_fLQ
   Summary: What if you could turn a single image into a 3D scene without manually modeling anything? Not by directly generating a mesh. By making an AI video model invent the missing camera angles, then reconstructing the scene in
+
+- Claude Can Now See Your Bank Account! | Anthropic Personal Finance + Plaid
+  URL: https://abvx.xyz/writing/videos/UvLGhcF4OkI
+  Summary: Remember when AI assistants were just answering questions, writing emails, and generating code? Well, apparently, now they want to know where all your money went. Meet Claude Personal Finance, a new feature from Anthropi
 
 - Why Do Streetlights Look Like Stars? This Eye Simulator Shows You.
   URL: https://abvx.xyz/writing/videos/uvM-jWwibOQ

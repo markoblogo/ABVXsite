@@ -7479,6 +7479,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Adobe Premiere Pro Gets Generative Remove! Erase Objects From Video With AI",
+      "summary": "Remember when removing an unwanted object from a video meant opening After Effects, tracking masks, rebuilding backgrounds, and spending hours cleaning up individual frames? Well, Adobe just made that considerably easier",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/EL_UutTuAOo",
+      "publishedAt": "2026-11-07T12:57:27.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=EL_UutTuAOo"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Afterimage | Venice Biennale 2019 — Light, Memory & Machines",
       "summary": "Light becomes a body. A letter dissolves into fog. A robot repeats a task that never stays finished. AFTERIMAGE is an original short art film connecting four encounters with media and installation art from the Venice Bie",
       "canonicalUrl": "https://abvx.xyz/writing/videos/umOUUPFrG4c",
@@ -8109,6 +8132,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude Can Now See Your Bank Account! | Anthropic Personal Finance + Plaid",
+      "summary": "Remember when AI assistants were just answering questions, writing emails, and generating code? Well, apparently, now they want to know where all your money went. Meet Claude Personal Finance, a new feature from Anthropi",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/UvLGhcF4OkI",
+      "publishedAt": "2026-11-07T12:43:19.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=UvLGhcF4OkI"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude Code / Codex Turns Real Roads Into Retro Pixel-Art Games | Pixel Path",
       "summary": "Someone built a Claude Code skill that turns real-world roads into retro pixel-art adventures. And I have absolutely no idea why I love this so much. Meet Pixel Path, an open-source Claude Code skill that transforms any ",
       "canonicalUrl": "https://abvx.xyz/writing/videos/9aEaGv0Wu4o",
@@ -8526,7 +8572,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-07T12:17:24.219Z",
+      "updatedAt": "2026-11-07T13:10:48.382Z",
       "tags": [],
       "links": [],
       "related": []
@@ -12254,6 +12300,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=wPIyeBYJZbQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Sand3D: 106,000+ Parametric 3D Models for AI | 3.8× Fewer Tokens Than Blender Python",
+      "summary": "What if AI could generate an entire 3D model by writing a few hundred tokens of Python? Not just a beautiful image. Not an uneditable collection of polygons. An actual parametric 3D object with named components, adjustab",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/6tnch1OcG4M",
+      "publishedAt": "2026-11-07T13:06:40.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=6tnch1OcG4M"
         }
       ],
       "related": []

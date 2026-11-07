@@ -8618,7 +8618,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-07T19:21:26.436Z",
+      "updatedAt": "2026-11-07T20:12:16.573Z",
       "tags": [],
       "links": [],
       "related": []
@@ -12760,6 +12760,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=kDvLWLN_ZUk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Snapchat Now Supports PlayCanvas Games! Build with AI Agents, Publish & Earn with Lens+",
+      "summary": "Snapchat just opened its platform to games built with PlayCanvas. And this could be a surprisingly interesting opportunity for indie developers, creative coders, and people building games with AI agents. Because apparent",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/hhtgIwh_QY4",
+      "publishedAt": "2026-11-07T20:03:34.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=hhtgIwh_QY4"
         }
       ],
       "related": []

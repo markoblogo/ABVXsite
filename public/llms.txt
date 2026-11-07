@@ -345,6 +345,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/hBU0WpTTbes
   Summary: What if you could make Claude Code more efficient by giving each AI model a different job? Instead of using the most expensive model for everything, try a smarter multi-model setup: Sonnet does the coding. Opus provides
 
+- Snapchat Now Supports PlayCanvas Games! Build with AI Agents, Publish & Earn with Lens+
+  URL: https://abvx.xyz/writing/videos/hhtgIwh_QY4
+  Summary: Snapchat just opened its platform to games built with PlayCanvas. And this could be a surprisingly interesting opportunity for indie developers, creative coders, and people building games with AI agents. Because apparent
+
 - This Free Claude Code Skill Makes Better Landing Pages | AI Design Skills for Codex
   URL: https://abvx.xyz/writing/videos/hoUnFjAysfQ
   Summary: Hero first. Then benefits. Then the product explanation, social proof, FAQs, and final CTA. Want to try it? The easiest installation method is the Skills CLI: npx skills add elayadesign/ai-design-skills --skill landing-p

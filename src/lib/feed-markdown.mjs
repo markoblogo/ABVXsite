@@ -12,6 +12,14 @@ export function feedImage(image, baseUrl, caption) {
   if (!['https:', 'http:'].includes(url.protocol)) return '';
   return `<figure><img src="${escape(url.href)}" alt="${escape(image.alt)}"${image.width ? ` width="${Number(image.width)}"` : ''}${image.height ? ` height="${Number(image.height)}"` : ''}/>${caption ? `<figcaption>${escape(caption)}</figcaption>` : ''}</figure>`;
 }
+/** Kitchen Notes render this structured section after the authored Markdown. */
+export function renderFeedRecipe(recipe) {
+  if (!recipe) return '';
+  return `<section><h2>Recipe at a glance</h2><p>${escape(recipe.recipeYield)}${recipe.timingText ? '. ' + escape(recipe.timingText) : ''}</p>
+<h3>Ingredients</h3><ul>${recipe.ingredients.map(item => `<li>${escape(item.quantityText)} ${escape(item.name)}</li>`).join('')}</ul>
+<h3>Method</h3><ol>${recipe.instructions.map(step => `<li>${escape(step)}</li>`).join('')}</ol>
+${recipe.variations?.length ? `<h3>Variations</h3><ul>${recipe.variations.map(item => `<li>${escape(item)}</li>`).join('')}</ul>` : ''}</section>`;
+}
 /** Same blocks, inline tokens and illustration anchors as the article renderer. */
 export function renderFeedMarkdown(body, baseUrl, illustrations = []) {
   return parseMarkdownBlocks(body, 0).map(block => {

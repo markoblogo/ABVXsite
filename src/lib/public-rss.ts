@@ -1,5 +1,5 @@
-import {renderFeedMarkdown, feedImage} from './feed-markdown.mjs';
-import type {ContentImage, WritingIllustration} from '@/content/types';
+import {renderFeedMarkdown, feedImage, renderFeedRecipe} from './feed-markdown.mjs';
+import type {ContentImage, WritingIllustration, RecipeRecord} from '@/content/types';
 import {getLiveWritingIndex} from './live-writing-discovery';
 import {getPublishedNativeWritingItems} from './writing-feed';
 import {getWorkingStories, workingStoryPath} from '@/content/working-stories';
@@ -8,7 +8,7 @@ import {writingTopicsFor} from '@/content/writing-topics.mjs';
 import {renderRss, rssFeeds} from './rss.mjs';
 import {SITE_URL} from './seo';
 
-type Entry = {title: string; path: string; summary: string; body: string; publishedAt?: string; updatedAt?: string; image?: ContentImage; illustrations?: WritingIllustration[]; categories: string[]; visibility?: string};
+type Entry = {title: string; path: string; summary: string; body: string; publishedAt?: string; updatedAt?: string; image?: ContentImage; illustrations?: WritingIllustration[]; recipe?: RecipeRecord; categories: string[]; visibility?: string};
 
 export async function publicRss(path: string) {
   const feed = rssFeeds.find(item => item.path === path);
@@ -38,7 +38,7 @@ export async function publicRss(path: string) {
   const items = [...unique.values()].sort((a,b) => (Date.parse(b.publishedAt || '') || 0) - (Date.parse(a.publishedAt || '') || 0) || a.path.localeCompare(b.path)).map(item => {
     const url = new URL(item.path, SITE_URL).href;
     const image = item.image ? new URL(item.image.src, SITE_URL).href : undefined;
-    return {...item, url, image, html: feedImage(item.image, url) + renderFeedMarkdown(item.body, url, item.illustrations)};
+    return {...item, url, image, html: feedImage(item.image, url) + renderFeedMarkdown(item.body, url, item.illustrations) + renderFeedRecipe(item.recipe)};
   });
   return renderRss(feed, items, SITE_URL);
 }

@@ -8086,6 +8086,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "ChatGPT Images 2.6: I Tested AI GIFs Up to 256 Frames! Plus a Big Update on Real Faces",
+      "summary": "OpenAI just released Images 2.6, and ChatGPT can finally generate animated GIFs. Naturally, I immediately tried to break it. But first, the official news. ChatGPT Images 2.6 introduces: Animated GIF generation: Create lo",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/msQXaBAvh1g",
+      "publishedAt": "2026-11-07T16:15:59.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=msQXaBAvh1g"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Cinecode: Claude Code Can Now Make Entire Movies with JavaScript | Free AI Filmmaking Skill",
       "summary": "What if you could create an entire animated film without using a traditional AI video generator? Meet Cinecode, a new free, open-source filmmaking skill that lets Claude Code and Cursor turn simple prompts into complete ",
       "canonicalUrl": "https://abvx.xyz/writing/videos/9bYUOdPirnk",
@@ -8595,7 +8618,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-07T15:37:11.767Z",
+      "updatedAt": "2026-11-07T16:36:51.947Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9960,6 +9983,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=FP17TQdOaGw"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "How UBTree Speeds Up LLMs with a Tree of Draft Tokens",
+      "summary": "What if a language model could check several possible continuations at once? UBTree combines a parallel unigram proposer, a parallel bigram selector and a verification tree to speed up speculative decoding. This short vi",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/zoG97J_Xal8",
+      "publishedAt": "2026-11-07T16:28:57.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=zoG97J_Xal8"
         }
       ],
       "related": []

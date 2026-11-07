@@ -461,6 +461,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/LzgnvledcWY
   Summary: What happens when brutal sci-fi meets psychedelic motion design? You get You Are Dead, a stunning cinematic edit created by Antibody for Bungie's video game Marathon. And the visual direction is absolutely insane. The fi
 
+- ChatGPT Images 2.6: I Tested AI GIFs Up to 256 Frames! Plus a Big Update on Real Faces
+  URL: https://abvx.xyz/writing/videos/msQXaBAvh1g
+  Summary: OpenAI just released Images 2.6, and ChatGPT can finally generate animated GIFs. Naturally, I immediately tried to break it. But first, the official news. ChatGPT Images 2.6 introduces: Animated GIF generation: Create lo
+
 - AI Video Is Now Faster Than Real Time. Welcome to Infinite Slop
   URL: https://abvx.xyz/writing/videos/mt0MOEpoj1c
   Summary: We have officially reached a new milestone in AI-generated content. AI can now produce videos faster than humans can watch them. And the internet is responding exactly as you'd expect. With infinite AI slop. AI infrastru
@@ -812,6 +816,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Unitree H2-X: This Robot Bodyguard Does Kung Fu, Backflips & Lifts Cars
   URL: https://abvx.xyz/writing/videos/zOfyKb7_c1M
   Summary: Apparently, Unitree decided that the best way to introduce its new humanoid robot was to make an action movie. And honestly, I'm not complaining. Meet Unitree H2-X Kung Fu Legend Guardian, a humanoid robot that looks lik
+
+- How UBTree Speeds Up LLMs with a Tree of Draft Tokens
+  URL: https://abvx.xyz/writing/videos/zoG97J_Xal8
+  Summary: What if a language model could check several possible continuations at once? UBTree combines a parallel unigram proposer, a parallel bigram selector and a verification tree to speed up speculative decoding. This short vi
 
 - The Last Seed | A Short Animated Film About Hope
   URL: https://abvx.xyz/writing/videos/ZQTORLBw9Zs

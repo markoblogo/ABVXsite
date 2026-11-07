@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.1 — 2026-11-08
+
+- Fixed GHSA-g3hv-75wg-m249 in the TypeScript ESLint development chain with a scoped minimatch 11.0.1 override and compatible brace-expansion 5.0.12. ESLint 9.39.2, eslint-config-next 16.4.3 and TypeScript ESLint 8.72.0 remain unchanged.
+- Preserved the legacy matcher and brace-expansion API used by ESLint itself. Added installed-dependency, typed-parser, brace/hidden-file and bounded adversarial-pattern regression checks.
+
 ## 0.5.0
 
 - Added eight full-text RSS feeds: native Writing, five blog topics, Books and Projects. Feeds include covers, anchored illustrations and structured recipe details, read current runtime records and preserve canonical identities.

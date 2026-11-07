@@ -8457,7 +8457,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-07T09:53:58.583Z",
+      "updatedAt": "2026-11-07T11:10:56.629Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10358,6 +10358,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=LzgnvledcWY"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Marcus Aurelius vs Zombies: 5 Rules for Staying Human",
+      "summary": "The city has lost its mind. Marcus Aurelius has five rules for keeping yours — and one very practical reminder about the dishes. A short pop-art film mixing Roman legionaries, office zombies, modern city chaos and darkly",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/6cD8xI8nXG8",
+      "publishedAt": "2026-11-07T11:04:28.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=6cD8xI8nXG8"
         }
       ],
       "related": []

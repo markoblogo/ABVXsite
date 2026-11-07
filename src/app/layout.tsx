@@ -1,3 +1,4 @@
+import {rssFeeds} from '@/lib/rss.mjs';
 import {documentLanguage} from '@/lib/document-language.mjs';
 import {getLiveCatalogue} from '@/lib/live-catalogue';
 import type { Metadata } from 'next';
@@ -265,6 +266,7 @@ export default async function RootLayout({
         />
         <link rel="alternate" type="text/plain" title="ABVX public LLM index" href="/llms.txt" />
         <link rel="alternate" type="application/json" title="ABVX structured content index" href="/content-index.json" />
+        {rssFeeds.map(feed => <link key={feed.path} rel="alternate" type="application/rss+xml" title={feed.title} href={`/rss/${feed.path}`} />)}
         <link rel="alternate" type="application/rss+xml" title="ABVX Medium feed" href="https://abvcreative.medium.com/feed" />
         <link rel="alternate" type="application/rss+xml" title="ABVX Substack feed" href="https://abvx.substack.com/feed" />
       </head>

@@ -155,3 +155,11 @@ Native video companions retain every eligible translation in the release index. 
 ### Catalogue read performance
 
 `groupCatalogueSources` parses each merged source once per request to classify visible books, projects, series and sections. It preserves source bytes, ordering and the existing visibility policy; it introduces no cross-request cache. Live store membership and tombstones remain authoritative. Benchmark grouping separately from provider latency and browser load: CPU improvements are not page-load or Core Web Vitals results. Measure current snapshot size/history before considering storage segmentation; preserve conditional writes, revision history and withdrawal behavior.
+
+## Public RSS subscriptions
+
+`/rss/writing.xml` includes native public ABVX articles and Working Stories, with full bodies and illustrations. Topic feeds use the existing navigation taxonomy: `/rss/writing/{psychology,kitchen-notes,ai-technology,business-work,other}.xml`. Articles assigned multiple navigation topics appear in each matching feed, once in the combined feed. External Medium/Substack archives retain their own feeds.
+
+`/rss/books.xml` and `/rss/projects.xml` expose the public Books and Systems/Projects catalogues, including full card descriptions and covers. Existing canonical URLs are stable GUIDs. Undated entries omit pubDate; edits never reset publication dates. All feeds read the current public index and runtime sources on request with no-store responses, so withdrawals and runtime publications need no rebuild. Private, draft and future entries are excluded. Runtime storage failures propagate instead of falling back to a stale archive.
+
+RSS links are visible on Writing, its selected ABVX topic, Kitchen Notes, Working Stories, Books and Projects. HTML alternate links advertise all eight feeds. Feed HTML uses the same Markdown block/inline grammar and illustration anchors as article pages, absolute links and ordinary image URLs. No tracking, external scraping or new dependency is needed. Verify feed XML, full text, image loading and topic membership alongside the normal release gates.

@@ -1,3 +1,4 @@
+import RssLink from './RssLink';
 import youtubeSettings from '../../content/youtube.json';
 import Link from 'next/link';
 import { writingTopics } from '@/content/writing-topics.mjs';
@@ -47,6 +48,7 @@ export default function WritingSourceLinks({ active, query = '', topic = '' }: {
           Substack archive -&gt;
         </a>
       </div>
+      <RssLink href={topic ? `/rss/writing/${topic}.xml` : '/rss/writing.xml'} label={writingTopics.find(item => item.slug === topic)?.label || 'ABVX Writing'} />
       {active === 'abvx' ? (
         <div className="writing-source-links__filters writing-topic-links" role="group" aria-label="ABVX topic filter">
           {[{ slug: '', label: 'All topics' }, ...writingTopics].map(item => (

@@ -1,3 +1,4 @@
+import RssLink from '@/components/RssLink';
 import CatalogueGroupVideos, {hasCatalogueGroupVideos} from '@/components/CatalogueGroupVideos';
 import {getLiveCatalogue} from '@/lib/live-catalogue';
 import type {systemsEcosystems} from '@/lib/catalogue-config.mjs';
@@ -101,7 +102,7 @@ export default async function SystemsPage() {
         eyebrow="Systems Catalogue"
         title="Systems Catalogue"
         summary="AI-native development systems, agentic workflows, reusable skillpacks, orchestration layers, protocols, tools and technical companion systems."
-      ><EditorialSectionLink section="systems" /></PageHeader>
+      ><EditorialSectionLink section="systems" /><RssLink href="/rss/projects.xml" label="Projects" /></PageHeader>
 
       {ecosystems.map((ecosystem) => {
         const titleId = slugifyFragment(ecosystem.title);

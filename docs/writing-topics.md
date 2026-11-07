@@ -46,26 +46,11 @@ feed order, featured selection and complete Load More results. The Load More
 instance is keyed by source/topic; query results use the existing full results
 view. All Writing variants retain `/writing` as canonical; search remains noindex.
 
-## Inventory baseline (6 November 2026)
+## Subscriptions and verification
 
-The private audit joined the current runtime export with unclaimed bundled
-Writing and Working Stories, deduplicated by source slug. It excluded the
-YouTube companion. 129 public ABVX articles were analyzed, with existing tags,
-collection and source body context reviewed for classification:
+Each selected topic exposes its own RSS link, and the combined feed includes every public native article once. Multiple topic assignments place the same canonical article in each matching topic feed. Full text, structured recipes, covers and inline illustrations are included; see the [feed directory](site-operations.md#public-rss-subscriptions).
 
-| Topic | Articles |
-| --- | ---: |
-| Psychology | 44 |
-| Kitchen Notes | 41 |
-| AI & Technology | 34 |
-| Business & Work | 25 |
-| Other | 6 |
-
-19 articles have multiple topics, so totals overlap. No articles are inaccessible
-or unclassified: unmatched metadata resolves to Other. Six general/literary
-notes use Other; there are no blocking editorial decisions. These counts are an
-audit baseline, not fixed application totals. Detailed per-record hashes,
-assignments and source evidence remain in ignored private exports.
+Topic counts change with publications and withdrawals. Use current live sources and the public index for an inventory; do not treat a dated audit count as a fixed application total. Keep detailed per-record classification evidence in private exports.
 
 Run `node --test test/writing-topics.test.mjs` for URL, source isolation,
 multi-topic/Other, validation, order, full-collection windowing and search checks.

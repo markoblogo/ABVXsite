@@ -1,10 +1,10 @@
 # ABVX OS publication handoff
 
-Runtime Writing phase 1: see [the content-only API and activation runbook](runtime-writing.md). The procedure below remains the legacy route until cutover; runtime receipts use their own profile and never substitute for these Git/QA receipts.
+For normal accepted Writing, Working Stories and supported catalogue operations, use [the runtime publisher](runtime-writing.md) and [runtime catalogue contract](runtime-catalogue.md). The Git procedures below remain for unclaimed legacy content, separately authorized scheduled pools and engineering. Runtime receipts use their own profile and never substitute for Git/QA receipts; engine changes retain code release gates.
 
 ABVX OS prepares and records source-specific approval; this repository owns file writes, validation, rendering and deployment. Reuse the existing content packet flow, as for Azur Menton. No runtime ABVX OS dependency is added.
 
-## Routine publication: data only
+## Legacy Git publication: data only
 
 Use a clean dedicated branch at the current main SHA. Keep OS packets outside the site checkout. The standard command supports one or several already-approved Writing/Working Story packets:
 
@@ -21,7 +21,7 @@ The command plans the entire pool before writes, preserves complete approved sou
 
 The release boundary allows only native source files, new image assets and three generated discovery files. Documentation, application code, templates, dependencies, workflows, new collections/types/routes and unrelated catalogue edits belong to a separate engineering PR. Unsupported requirements are reported for that separate release; do not patch renderer code while publishing a post. CI enforces the same boundary and fails if regenerating Writing discovery changes committed outputs. Do not hand-edit generated indexes.
 
-This is process and write separation within the current repository, not independent hosting: Vercel still builds and deploys the site. No CMS, extra repository, runtime OS dependency or automatic merge authority is introduced. The existing scoped release receipt and production evidence remain required. A dedicated content service can be considered later only if measurements show site builds dominate latency.
+This is process and write separation within the current repository, not independent hosting: Vercel still builds and deploys the site. No CMS, extra repository, runtime OS dependency or automatic merge authority is introduced. The existing scoped release receipt and production evidence remain required. The existing runtime publisher already removes per-post Git/build work for supported accepted operations; do not create another content service from this legacy procedure.
 
 Lower-level compatibility consumers remain available:
 
@@ -156,7 +156,7 @@ The readiness helper reports changes between waiting for CI, waiting for the pro
 
 Progress is retained at `exports/editorial-checks/release-<PR>-<phase>.json`, bound to PR, head and merge SHA. Resuming that same identity keeps its first start time. At the waiting deadline, exit code **2** and `WAITING_FOR_*` mean **pending**, not a failed build or permission to publish. Resume the same PR/cycle; do not repeat preparation, commit, merge, build, or abort the publication cycle solely because the provider is delayed. Exit **1** remains an actual error; exit **0** is the successful phase result. Existing success receipts are written only after all original checks pass. Wrappers must not continue to closeout on exit 2, and should retain it as a pending attempt.
 
-For a post amended before merge, the publication classifier compares the final working tree directly with the original release base. Correcting a newly added article or cover keeps it an addition; existing media edits, deletions, route changes and engineering still require full QA. Native Writing rejects Markdown image syntax during content validation: use supported `illustrations` metadata with `afterHeading`, so this mistake is caught before builds and PR review.
+For a post amended before merge, the publication classifier compares the final working tree directly with the original release base. Correcting a newly added article or cover keeps it an addition; existing media edits, deletions, route changes and engineering still require full QA. Native Writing rejects Markdown image syntax during content validation: use supported `illustrations` metadata with exactly one `afterHeading` or `afterParagraph` anchor, so this mistake is caught before builds and PR review.
 
 If a provider incident is active, report its concrete effect once and keep subsequent unchanged waits quiet. Do not weaken checks, bypass TLS, install a scheduler, or trigger duplicate deployments to work around delayed events. Readiness is a separate phase from local validation and from search indexing.
 

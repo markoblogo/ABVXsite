@@ -16,7 +16,13 @@ Professional portfolio and working catalogue of **Anton Biletskyi-Volokh**: mark
 | [Books](https://abvx.xyz/books) | Books, translations, series, free editions and companions |
 | [Writing](https://abvx.xyz/writing) | Native articles, Working Stories, Kitchen Notes, Medium, Substack and YouTube |
 
-The homepage leads with selected projects and collaboration. Writing offers full-text native search, external title/description search, source filters and a [complete archive](https://abvx.xyz/writing/archive). Articles offer related reading, numbered-series navigation where available, collection links and an optional Substack subscription link. Project, book and series pages support labelled videos; book audio loads on request.
+The homepage leads with selected projects and collaboration. Writing offers full-text native search, external title/description search, source filters and a [complete archive](https://abvx.xyz/writing/archive). Native articles also have five navigation topics: Psychology, Kitchen Notes, AI & Technology, Business & Work, and Other. An article can appear in several topics without becoming several posts; these topics do not change Book Readiness or manuscript membership.
+
+Articles offer related reading, numbered-series navigation where available, collection links and an optional Substack subscription link. Project, book and series pages support labelled video galleries; existing catalogue groups also support videos through the same publisher. Book audio loads on request. Native articles support original inline photographs with captions after an exact heading or paragraph, plus Markdown tables and fragment dividers. Book descriptions can have separate English and French presentation without implying a translated edition.
+
+## Subscribe
+
+Visible RSS links are available on Writing, each selected topic, Kitchen Notes, Working Stories, Books and Projects. The [Writing feed](https://abvx.xyz/rss/writing.xml) and its five topic feeds include full native text, structured recipe details, covers and inline illustrations. [Books RSS](https://abvx.xyz/rss/books.xml) and [Projects RSS](https://abvx.xyz/rss/projects.xml) include complete card descriptions and covers. The feeds read current public runtime sources and preserve canonical URLs as stable identities; external Medium/Substack archives keep their own feeds. See the [feed directory and behavior](docs/site-operations.md#public-rss-subscriptions).
 
 ## Run locally
 
@@ -35,21 +41,17 @@ Stack: Next.js 16 App Router, React 19, TypeScript, Tailwind CSS 4 and Vercel. E
 
 Bundled public sources live in `content/`: projects, books, series, native articles, Working Stories, editorial guides and page metadata. Managed runtime records use the private versioned content store as their authority; the bundled files remain the legacy baseline. Routine approved posts, catalogue cards, book series and catalogue groups use the same authenticated publisher without a Git change or rebuild. Bundled assets live in `public/media/`; runtime uploads use the authenticated store and authoritative media routes. For **bundled edits**, regenerate `public/llms.txt` and `public/content-index.json` with `npm run llms:generate` after public content changes; commit outputs with their sources. Runtime publications update live discovery without regenerating committed files.
 
-Use the appropriate guide instead of copying a publication process into each task:
+Start with the [documentation index](docs/README.md), then use the owning guide instead of copying a publication process into each task:
 
 | Task | Guide |
 | --- | --- |
-| Edit content, media, placement or localized guides | [Content editing](docs/content-editing.md) · [Fields and format](docs/content-workflow.md) |
-| Fast publication of posts, cards, series and catalogue groups | [Runtime publisher](docs/runtime-writing.md) · [Catalogue packet contract](docs/runtime-catalogue.md) |
-| Legacy publication or engineering changes; record measurements | [Publication handoff](docs/abvx-os-publishing.md) |
-| Validate, review and verify a release | [Editorial SEO checklist](docs/editorial-seo-checklist.md) |
-| Maintain the three EN/FR/UK profile pages | [Static localization](docs/static-localization.md) |
-| Back up runtime content, verify recovery or diagnose availability | [Recovery and monitoring](docs/runtime-recovery.md) |
-| Diagnose feeds, discovery, analytics or runtime behavior | [Site operations](docs/site-operations.md) |
-| Export story/recipe collections | [Working Stories](docs/working-stories.md) · [Kitchen Notes](docs/kitchen-notes.md) |
-| Work on integrations | [CortexABV adapter](cortex-abv/README.md) · [Copy sync](docs/project-description-sync.md) · [Ecosystem sync](docs/ecosystem-sync.md) |
+| Prepare prose, media, fields or placement | [Content editing](docs/content-editing.md) · [Content format](docs/content-workflow.md) |
+| Publish accepted posts/cards/series/groups or add a video | [Runtime publisher](docs/runtime-writing.md) · [Runtime catalogue](docs/runtime-catalogue.md) |
+| Review engineering, documentation or legacy Git publications | [Release checklist](docs/editorial-seo-checklist.md) · [OS handoff](docs/abvx-os-publishing.md) |
+| RSS, imported feeds, discovery, analytics and backups | [Site operations](docs/site-operations.md) · [Recovery](docs/runtime-recovery.md) |
+| Localized pages, exports, integrations and historical audits | [Documentation index](docs/README.md) |
 
-Agents read `AGENTS.md`, this README, then only the relevant guide. Preserve public slugs, canonical URLs, redirects and existing media paths. Use reviewed PRs and the documented release checks; a successful Preview is not proof of production publication or search indexing.
+Agents read `AGENTS.md`, this README, then only the relevant guide. Preserve public slugs, canonical URLs, redirects and existing media paths. Use reviewed PRs and the documented release checks for engineering. Documentation-only changes use the existing build-skip policy and are verified on GitHub; runtime content uses its own receipt contract. A successful Preview, stored content receipt, verified live page and Google indexing are distinct outcomes.
 
 This repository owns public presentation. `ABVX-OS` and `CortexABV-private` own separate private operational/knowledge state; no private runtime is deployed by the site. Keep secrets and private measurement records out of public content.
 

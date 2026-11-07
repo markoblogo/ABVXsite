@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Read `README.md` for the current site/content map, then the task-specific guide. Use `docs/content-editing.md` for content, `docs/editorial-seo-checklist.md` for releases, and `docs/site-operations.md` for feeds/analytics. Do not load all CortexABV docs for ordinary editorial tasks.
+Read `README.md` for the current site/content map, then use `docs/README.md` to select the task-specific guide. Use `docs/content-editing.md` for content, `docs/editorial-seo-checklist.md` for releases, and `docs/site-operations.md` for feeds/analytics. Do not load all CortexABV docs for ordinary editorial tasks.
 
 ## Repository contract
 
@@ -22,6 +22,10 @@ Use this local contract for UI animation-related changes:
 - For each animation change, add a short motion-review note with selector scope + verification path.
 
 For owner-authorized new native Writing/Working Story publications, follow `docs/abvx-os-publishing.md` including private OS closeout after production. Reuse the existing release receipt; do not rerun successful checks just to create telemetry. Keep deployed-SHA verification separate and do not send authored content to Cortex.
+
+## Documentation maintenance
+
+Update owning guides against the current code; keep historical measurements in `docs/audits/` and link them as dated evidence. README and the documentation index route readers to current contracts. Keep private cover reserves, Drive sources, approval receipts, credentials, runtime backups and monitoring state outside Git. For docs-only changes, verify links and commands, use the existing docs build classifier, complete CI and exact-head review, and verify the merged files on GitHub. Do not force a site deployment for a documentation-only merge.
 
 ## Legacy Git publication boundary
 

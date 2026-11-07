@@ -2143,6 +2143,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook, relationships
 
+- Psychology Notebook #35 — Desire, Control & Choosing
+  URL: https://abvx.xyz/writing/psychology-notebook-35-desire-control-choosing
+  Summary: Twenty translated notebook fragments on desire, control and responsibility for choices.
+  Group: writing
+  Tags: psychology-notebook, desire
+
+- Psychology Notebook #36 — Fear, Freedom & Limits
+  URL: https://abvx.xyz/writing/psychology-notebook-36-fear-freedom-limits
+  Summary: Twenty translated notebook fragments on fear, freedom and the limits of control.
+  Group: writing
+  Tags: psychology-notebook, anxiety
+
 - The Berliner: How My Beer Cocktail Ended Up on a French Bar's Menu
   URL: https://abvx.xyz/writing/the-berliner-guinness-port-beer-cocktail
   Summary: I discovered Guinness with port wine in Berlin, recreated it with whatever a small French bar had available, and eventually watched it become an official item in the cash register.

@@ -1211,6 +1211,16 @@
     },
     {
       "source": "medium",
+      "title": "UBTree Makes Large Language Models Nearly 7× Faster. Without Making Them Any Smarter.",
+      "url": "https://abvcreative.medium.com/ubtree-makes-large-language-models-nearly-7-faster-without-making-them-any-smarter-a6cef1aae9c6",
+      "publishedAt": "2026-11-07T16:42:32.000Z",
+      "excerpt": "Inclusion AI has found a clever way to accelerate LLM inference using parallel speculative decoding. The secret? Stop betting everything on one prediction and start thinking in trees. There’s something fundamentally ridi",
+      "coverImage": "https://cdn-images-1.medium.com/max/1024/1*dKxQaYbTxhmVmLLqju0BVg.png",
+      "addedAt": "2026-11-07T17:10:28.207Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "medium",
       "title": "We’re Starting to Compile Biology",
       "url": "https://abvcreative.medium.com/were-starting-to-compile-biology-d7b4854da513",
       "publishedAt": "2026-09-26T13:28:43.000Z",

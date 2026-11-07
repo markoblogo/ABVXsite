@@ -7640,6 +7640,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Aina Ring: A $399 AI Smart Ring That Lets You Control AI Agents With Your Thumb",
+      "summary": "Apparently, pulling your phone out of your pocket to approve an AI agent's actions is now considered too much work. So someone built a ring that lets you do it with your thumb. Meet Aina Ring, a new AI-powered smart ring",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/6sUZW9DNMX4",
+      "publishedAt": "2026-11-07T14:45:44.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=6sUZW9DNMX4"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Alef Model A: The $300,000 Flying Car That Turns 90° in Midair | FAA Approved for Testing",
       "summary": "We've been promised flying cars for decades. And somehow, we've finally reached the point where someone is actually building one. Meet the Alef Model A, a $300,000 electric flying car designed to drive on ordinary roads,",
       "canonicalUrl": "https://abvx.xyz/writing/videos/sHj9J1fM_4Q",
@@ -8572,7 +8595,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-07T14:36:55.057Z",
+      "updatedAt": "2026-11-07T14:50:57.999Z",
       "tags": [],
       "links": [],
       "related": []

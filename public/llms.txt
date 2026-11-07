@@ -133,6 +133,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/6oJufkVQG-g
   Summary: What if you could give an AI agent your unfinished game and tell it: "Play this. Find everything that's broken. And don't stop until you've tested it properly." Well, someone built exactly that. Meet Aura Autopilot, a ne
 
+- Aina Ring: A $399 AI Smart Ring That Lets You Control AI Agents With Your Thumb
+  URL: https://abvx.xyz/writing/videos/6sUZW9DNMX4
+  Summary: Apparently, pulling your phone out of your pocket to approve an AI agent's actions is now considered too much work. So someone built a ring that lets you do it with your thumb. Meet Aina Ring, a new AI-powered smart ring
+
 - Sand3D: 106,000+ Parametric 3D Models for AI | 3.8× Fewer Tokens Than Blender Python
   URL: https://abvx.xyz/writing/videos/6tnch1OcG4M
   Summary: What if AI could generate an entire 3D model by writing a few hundred tokens of Python? Not just a beautiful image. Not an uneditable collection of polygons. An actual parametric 3D object with named components, adjustab

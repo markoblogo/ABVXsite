@@ -8572,7 +8572,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-07T13:10:48.382Z",
+      "updatedAt": "2026-11-07T13:21:49.054Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8781,6 +8781,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=U-cVLltmoRM"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Explore Tokyo in Manga Style! Free Interactive 3D City & Background Generator",
+      "summary": "What if you could turn real streets into beautiful manga backgrounds? Not by drawing them manually. Not by generating random AI images. By exploring an actual city through an interactive, stylized 3D world. Meet Dokodemo",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/KnnKjd2Me04",
+      "publishedAt": "2026-11-07T13:20:12.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=KnnKjd2Me04"
         }
       ],
       "related": []
@@ -9483,6 +9506,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=Ao-_E_l6F98"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Hermes Agent v0.23: Images Now Render Directly in Your Terminal!",
+      "summary": "Well, I guess it's time to uninstall Hermes Desktop and move back into the terminal. Hermes Agent v0.23.0 just added native inline image rendering. And honestly, this is exactly the kind of small improvement that makes t",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/-VfmvCVWkSs",
+      "publishedAt": "2026-11-07T13:12:35.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=-VfmvCVWkSs"
         }
       ],
       "related": []

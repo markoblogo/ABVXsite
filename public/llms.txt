@@ -65,6 +65,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/-MHxEB4KJrM
   Summary: AI can generate impressive 3D characters in seconds. But there's always been one annoying problem. Beautiful geometry doesn't automatically mean a production-ready character. Messy topology. Unpredictable edge loops. Dif
 
+- Hermes Agent v0.23: Images Now Render Directly in Your Terminal!
+  URL: https://abvx.xyz/writing/videos/-VfmvCVWkSs
+  Summary: Well, I guess it's time to uninstall Hermes Desktop and move back into the terminal. Hermes Agent v0.23.0 just added native inline image rendering. And honestly, this is exactly the kind of small improvement that makes t
+
 - Claude AI Brain Surgery on a Mouse? What Exin Reported
   URL: https://abvx.xyz/writing/videos/0wvAwUAZEFo
   Summary: An AI agent choosing a treatment and controlling a surgical robot sounds like science fiction. Exin Therapeutics says it tested that idea in a mouse model of epilepsy — with a human surgeon, a supervising veterinarian an
@@ -396,6 +400,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Nantes in Pixel Art: Airport to the Loire, LU Tower & the Castle | Nantes: de l’aéroport à la Loire
   URL: https://abvx.xyz/writing/videos/kh-MTl8K5pE
   Summary: Un petit voyage à Nantes, de l’aéroport Nantes Atlantique au centre-ville, en passant par la Loire et l’île de Nantes. La balade se termine avec deux vues illustrées : la tour LU et le château des ducs de Bretagne. Un tr
+
+- Explore Tokyo in Manga Style! Free Interactive 3D City & Background Generator
+  URL: https://abvx.xyz/writing/videos/KnnKjd2Me04
+  Summary: What if you could turn real streets into beautiful manga backgrounds? Not by drawing them manually. Not by generating random AI images. By exploring an actual city through an interactive, stylized 3D world. Meet Dokodemo
 
 - Luma AI Photo Reframe: Expand Any Image to 2K with Generative AI | AI Outpainting
   URL: https://abvx.xyz/writing/videos/Kt7Qf4dy_fg

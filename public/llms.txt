@@ -429,6 +429,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/lky20OJaAqo
   Summary: Jay makes things worse. Silent Bob holds the solution. The decaf route wins in this 20-second Disco Coffee Showdown gameplay comedy. Game (copy URL): https://playmcp.io/g/g_4FzN0mD8 Desktop browser · Disco Coffee Showdow
 
+- Google Playground: Build Playable AI Games With Just a Prompt | No Coding Required
+  URL: https://abvx.xyz/writing/videos/LMsSJ4kJEUU
+  Summary: Apparently, Google has decided that Claude Opus and GPT-6 shouldn't have all the fun building video games. Meet Google Playground, an experimental AI-powered game creation platform that turns simple text prompts into act
+
 - 150+ AI Image Prompts for Stunning Visuals | Posters, Mockups & Design Inspiration
   URL: https://abvx.xyz/writing/videos/LQjCjugvpco
   Summary: Tired of spending more time writing AI image prompts than actually creating something? Here's a little resource worth bookmarking. Meet OnePromptDesign, a collection of 150+ ready-to-use AI image prompts and visual refer

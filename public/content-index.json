@@ -8572,7 +8572,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-07T13:21:49.054Z",
+      "updatedAt": "2026-11-07T13:36:37.943Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9276,6 +9276,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=cTK_yuxDcKE"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Google Playground: Build Playable AI Games With Just a Prompt | No Coding Required",
+      "summary": "Apparently, Google has decided that Claude Opus and GPT-6 shouldn't have all the fun building video games. Meet Google Playground, an experimental AI-powered game creation platform that turns simple text prompts into act",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/LMsSJ4kJEUU",
+      "publishedAt": "2026-11-07T13:30:17.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=LMsSJ4kJEUU"
         }
       ],
       "related": []

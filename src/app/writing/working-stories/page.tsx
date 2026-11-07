@@ -1,3 +1,4 @@
+import RssLink from '@/components/RssLink';
 import series from '../../../../content/working-stories.json';
 import { getWorkingStories, workingStoryPath } from '@/content/working-stories';
 import JsonLd from '@/components/JsonLd';
@@ -21,7 +22,7 @@ export default async function WorkingStoriesPage() {
       })} />
       <PageHeader eyebrow="Writing" title={series.title} summary={series.summary}>
         <Link className="editorial-section-link" href="/writing">All Writing <span aria-hidden="true">→</span></Link>
-      </PageHeader>
+      <RssLink href="/rss/writing/business-work.xml" label="Business & Work" /></PageHeader>
       {stories.length ? (
         <div className="writing-archive-list">
           {stories.map((story) => <WritingArchiveRow key={story.story_id} title={story.title} excerpt={story.summary} href={workingStoryPath(story)} source="abvx" date={story.date} />)}

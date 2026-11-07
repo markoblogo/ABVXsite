@@ -1,3 +1,4 @@
+import RssLink from '@/components/RssLink';
 import CatalogueGroupVideos, {hasCatalogueGroupVideos} from '@/components/CatalogueGroupVideos';
 import {sectionAnchor} from '@/content/runtime-catalogue.mjs';
 import {getLiveCatalogue} from '@/lib/live-catalogue';
@@ -203,7 +204,7 @@ export default async function BooksPage() {
         eyebrow="ABVX Press"
         title="ABVX Press"
         summary="Books, translations, series and publishing projects across AI, strategy, language, culture, markets and systems thinking."
-      ><EditorialSectionLink article={booksEditorial} /></PageHeader>
+      ><EditorialSectionLink article={booksEditorial} /><RssLink href="/rss/books.xml" label="Books" /></PageHeader>
 
       <SectionPanel title="Publishing as infrastructure" eyebrow="Press">
         <p>

@@ -1,3 +1,4 @@
+import RssLink from '@/components/RssLink';
 import collection from '../../../../content/kitchen-notes.json';
 import { getLiveNativeWritingItems } from '@/lib/live-writing';
 export const dynamic = 'force-dynamic';
@@ -15,7 +16,7 @@ export default async function KitchenNotesPage() {
     <JsonLd id="jsonld-kitchen-notes-list" data={itemListJsonLd({id: `${SITE_URL}${collection.canonicalPath}#notes`,name:collection.title,items:notes.map(item => ({name:item.title,url:`${SITE_URL}/writing/${item.slug}`,type:item.type === 'recipe' ? 'Recipe' : 'Article'}))})} />
     <PageHeader eyebrow="Writing" title={collection.title} summary={collection.summary}>
       <Link className="editorial-section-link" href="/writing">All Writing <span aria-hidden="true">→</span></Link>
-    </PageHeader>
+    <RssLink href="/rss/writing/kitchen-notes.xml" label="Kitchen Notes" /></PageHeader>
     <div className="writing-archive-list">{notes.map(item => <WritingArchiveRow key={item.id} title={item.title} excerpt={item.summary} href={`/writing/${item.slug}`} source="abvx" date={item.publishedAt} />)}</div>
   </div>;
 }

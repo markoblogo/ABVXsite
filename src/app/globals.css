@@ -5795,3 +5795,6 @@ a {
 /* Secondary Writing navigation reuses the existing source chips. */
 .writing-topic-links { flex: 0 0 auto; width: 100%; min-width: 0; padding-top: .3rem; }
 .writing-source-links__filters a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+
+.rss-link { display: inline-flex; align-items: center; gap: .45rem; min-height: 44px; }
+.rss-link svg { flex-shrink: 0; }

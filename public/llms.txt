@@ -845,6 +845,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/Z6k0B_8FqKA
   Summary: What if AI could transcribe an entire meeting, distinguish every speaker, translate conversations, and tell you exactly when each word was spoken? Even when several people are talking over each other? Meet NVIDIA Nemotro
 
+- Your AI Avatar Can Lip-Sync. Can It Act? | Kandinsky S2V
+  URL: https://abvx.xyz/writing/videos/zCNWJxI6XqU
+  Summary: An AI avatar can match every syllable and still feel wrong. This 94-second explainer looks beyond the mouth: expression, head movement and gestures. Using labelled official Kandinsky S2V examples and original animated di
+
 - Openjutsu: Free Open-Source Higgsfield Genjutsu Alternative | MiniMax H3 + ComfyUI
   URL: https://abvx.xyz/writing/videos/zHiaMUJCwh8
   Summary: Remember when ComfyUI challenged the AI community to rebuild Higgsfield's popular creative tools? Well, the joke is turning into actual software. Meet Openjutsu, a free, open-source alternative to Higgsfield Genjutsu tha

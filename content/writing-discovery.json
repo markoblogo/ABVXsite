@@ -3915,6 +3915,17 @@
     },
     {
       "source": "youtube",
+      "title": "Your AI Avatar Can Lip-Sync. Can It Act? | Kandinsky S2V",
+      "url": "https://www.youtube.com/watch?v=zCNWJxI6XqU",
+      "publishedAt": "2026-11-08T19:53:06.000Z",
+      "excerpt": "An AI avatar can match every syllable and still feel wrong. This 94-second explainer looks beyond the mouth: expression, head movement and gestures. Using labelled official Kandinsky S2V examples and original animated di",
+      "coverImage": "https://i.ytimg.com/vi/zCNWJxI6XqU/hqdefault.jpg",
+      "videoDescription": "An AI avatar can match every syllable and still feel wrong. This 94-second explainer looks beyond the mouth: expression, head movement and gestures.\n\nUsing labelled official Kandinsky S2V examples and original animated diagrams, I explain the photo + speech + prompt workflow, five-second chunks and visual memory—then show a simple two-pass viewing test.\n\n00:00 Lip sync is only the beginning\n00:15 Photo + speech + prompt\n00:26 Four things to watch\n00:39 Five-second chunks and visual memory\n00:54 What selected demos can—and cannot—show\n01:09 The two-pass test and takeaway\n\nAt 01:21, three seconds of silence are intentional. The same excerpt then repeats with its original audio at 01:24. Elsewhere, the English narration is commentary, not a dub of the example characters.\n\nSources and credits:\n• Official demonstration excerpts: Kandinsky Lab\nhttps://kandinskyavatar.github.io/\n• Paper: Kandinsky S2V 1.0: Audio-Driven Avatar Video Generation\nhttps://arxiv.org/abs/2610.19290\n• Code and implementation details:\nhttps://github.com/kandinskylab/kandinsky-s2v\n\nThis is an explanatory film, not an independent model benchmark. The examples were selected by the researchers; I did not run Kandinsky S2V for this video. Realistic example footage is AI-generated. Narration is synthetic. The diagrams, editing and quiet background score were created for this production. The conceptual cover artwork is AI-generated, not a Kandinsky result.\n\nProduced with Framewright:\nhttps://github.com/markoblogo/framewright\n\nWhich detail breaks the illusion first for you: lips, expression, head movement, or hands?\n\n#AIAvatars #Kandinsky #GenerativeAI",
+      "addedAt": "2026-11-08T20:11:32.232Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Openjutsu: Free Open-Source Higgsfield Genjutsu Alternative | MiniMax H3 + ComfyUI",
       "url": "https://www.youtube.com/watch?v=zHiaMUJCwh8",
       "publishedAt": "2026-11-04T18:15:28.000Z",

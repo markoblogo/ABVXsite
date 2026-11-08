@@ -8664,7 +8664,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-08T09:27:27.314Z",
+      "updatedAt": "2026-11-08T20:11:32.232Z",
       "tags": [],
       "links": [],
       "related": []
@@ -15015,6 +15015,29 @@
       "links": [],
       "publishedAt": "2026-10-25",
       "updatedAt": "2026-10-25",
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Your AI Avatar Can Lip-Sync. Can It Act? | Kandinsky S2V",
+      "summary": "An AI avatar can match every syllable and still feel wrong. This 94-second explainer looks beyond the mouth: expression, head movement and gestures. Using labelled official Kandinsky S2V examples and original animated di",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/zCNWJxI6XqU",
+      "publishedAt": "2026-11-08T19:53:06.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=zCNWJxI6XqU"
+        }
+      ],
       "related": []
     },
     {

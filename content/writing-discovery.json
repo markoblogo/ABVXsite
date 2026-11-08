@@ -3099,6 +3099,17 @@
     },
     {
       "source": "youtube",
+      "title": "Junie Local: Can Your Computer Run It?",
+      "url": "https://www.youtube.com/watch?v=pAClkR9eIZ8",
+      "publishedAt": "2026-11-08T21:01:28.000Z",
+      "excerpt": "Junie Local runs coding-model inference on your own machine—but local doesn't mean lightweight. Here are the Mac and Windows hardware requirements to check before you download. This 93-second explainer separates the inte",
+      "coverImage": "https://i.ytimg.com/vi/pAClkR9eIZ8/hqdefault.jpg",
+      "videoDescription": "Junie Local runs coding-model inference on your own machine—but local doesn't mean lightweight. Here are the Mac and Windows hardware requirements to check before you download.\n\nThis 93-second explainer separates the interface, inference engine and model, then shows why disk space, RAM and VRAM are different resources.\n\nRequirements checked on 8 November 2026:\n• Mac: macOS 26+, Apple Silicon M4 or newer, 48GB RAM or more.\n• Windows: Windows 11, a discrete NVIDIA RTX GPU (Ampere or newer), 24GB VRAM or more.\n• Both routes: approximately 21GB of free disk space.\n\nThis is a hardware overview, not a complete installation guide. Check the current official documentation for drivers, runtime dependencies and any updated requirements. The 16GB-versus-48GB example concerns this documented Mac route; it is not a claim that every local AI model needs 48GB.\n\n00:00 Local does not mean lightweight\n00:16 Mac requirements\n00:28 Windows, VRAM and disk space\n00:43 Storage versus working memory\n00:58 Installation is not a benchmark\n01:11 What to check before downloading\n\nSources:\n• JetBrains Junie Local documentation:\nhttps://junie.jetbrains.com/docs/junie-local.html\n• Junie Local README:\nhttps://github.com/JetBrains/junie/blob/main/local/README.md\n\nI did not install or benchmark Junie Local for this video. The hardware scenes are original conceptual illustrations, not product footage or measured inference. Local inference alone does not guarantee that every agent tool stays offline.\n\nProduction: original 3D animation, explanatory graphics, synthetic English narration and a quiet original electronic background. Conceptual artwork and cover use AI-generated imagery.\nProduced with Framewright:\nhttps://github.com/markoblogo/framewright\n\nWhich limit matters most on your setup: RAM, VRAM or the processor?\n\n#Junie #LocalAI #CodingAgents",
+      "addedAt": "2026-11-08T21:10:15.341Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "When a Photo Exhibition Starts Melting | Illusions in Suspension",
       "url": "https://www.youtube.com/watch?v=PHMx3I0VYqY",
       "publishedAt": "2026-11-03T00:02:31.000Z",

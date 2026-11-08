@@ -8664,7 +8664,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-08T20:11:32.232Z",
+      "updatedAt": "2026-11-08T21:10:15.341Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10574,6 +10574,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=GPfkz36JWbI"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Junie Local: Can Your Computer Run It?",
+      "summary": "Junie Local runs coding-model inference on your own machine—but local doesn't mean lightweight. Here are the Mac and Windows hardware requirements to check before you download. This 93-second explainer separates the inte",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/pAClkR9eIZ8",
+      "publishedAt": "2026-11-08T21:01:28.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=pAClkR9eIZ8"
         }
       ],
       "related": []

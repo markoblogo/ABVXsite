@@ -2263,6 +2263,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook, anxiety
 
+- Psychology Notebook #37 — Suffering, Compassion & Drama
+  URL: https://abvx.xyz/writing/psychology-notebook-37-suffering-compassion-drama
+  Summary: Twenty translated notebook fragments on suffering, compassion and familiar drama.
+  Group: writing
+  Tags: psychology-notebook, suffering
+
+- Psychology Notebook #38 — Family, Separation & Growing Up
+  URL: https://abvx.xyz/writing/psychology-notebook-38-family-separation-growing-up
+  Summary: Twenty translated notebook fragments on family roles, separation and growing up.
+  Group: writing
+  Tags: psychology-notebook, family
+
 - The Berliner: How My Beer Cocktail Ended Up on a French Bar's Menu
   URL: https://abvx.xyz/writing/the-berliner-guinness-port-beer-cocktail
   Summary: I discovered Guinness with port wine in Berlin, recreated it with whatever a small French bar had available, and eventually watched it become an official item in the cash register.

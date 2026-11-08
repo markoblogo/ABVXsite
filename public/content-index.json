@@ -8664,7 +8664,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-08T01:50:23.393Z",
+      "updatedAt": "2026-11-08T09:27:27.314Z",
       "tags": [],
       "links": [],
       "related": []
@@ -12555,6 +12555,44 @@
       "links": [],
       "publishedAt": "2026-11-07",
       "updatedAt": "2026-11-07",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #37 — Suffering, Compassion & Drama",
+      "summary": "Twenty translated notebook fragments on suffering, compassion and familiar drama.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-37-suffering-compassion-drama",
+      "tags": [
+        "psychology-notebook",
+        "suffering"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-08",
+      "updatedAt": "2026-11-08",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #38 — Family, Separation & Growing Up",
+      "summary": "Twenty translated notebook fragments on family roles, separation and growing up.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-38-family-separation-growing-up",
+      "tags": [
+        "psychology-notebook",
+        "family"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-08",
+      "updatedAt": "2026-11-08",
       "related": []
     },
     {

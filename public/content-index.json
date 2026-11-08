@@ -7640,6 +7640,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "AI-Commander: A Retro 90s Terminal UI for OpenCode, Hermes & AI Coding Agents | Built in Rust",
+      "summary": "Someone just brought the golden age of DOS file managers back to life. Except this time, they're running AI agents. Meet AI-Commander, a new open-source terminal interface built by developer Mikhail Malyshev. And I have ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/AFl-mk5EZIA",
+      "publishedAt": "2026-11-07T22:45:59.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=AFl-mk5EZIA"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Aina Ring: A $399 AI Smart Ring That Lets You Control AI Agents With Your Thumb",
       "summary": "Apparently, pulling your phone out of your pocket to approve an AI agent's actions is now considered too much work. So someone built a ring that lets you do it with your thumb. Meet Aina Ring, a new AI-powered smart ring",
       "canonicalUrl": "https://abvx.xyz/writing/videos/6sUZW9DNMX4",
@@ -8500,6 +8523,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude Opus 5.5 Destroyed GPT-6 & Gemini in an AI Sailing Race | The Autopilot Experiment",
+      "summary": "Someone built a sailing simulator, put the world's leading AI models behind the wheel, and discovered something fascinating about how these models actually solve problems. Or, more accurately, behind the rudder. Develope",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/MfaQeGwm0Lg",
+      "publishedAt": "2026-11-08T00:55:36.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=MfaQeGwm0Lg"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude Opus 5.5 Turned a Physics Textbook Into an Interactive 3D World | Three.js",
       "summary": "What if physics textbooks weren't just pages of formulas and static diagrams? What if you could actually step inside the illustrations, experiment with physical forces, and discover how the world works? Meet Every Joule,",
       "canonicalUrl": "https://abvx.xyz/writing/videos/u1SKVK2L2bc",
@@ -8618,7 +8664,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-07T20:12:16.573Z",
+      "updatedAt": "2026-11-08T01:50:23.393Z",
       "tags": [],
       "links": [],
       "related": []
@@ -12977,6 +13023,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Starship Flight 15: SpaceX Will Attempt TWO Mechazilla Catches! November 13 Launch",
+      "summary": "SpaceX has officially announced the target date for Starship Flight 15: no earlier than November 13, 2026. And this could be one of the most important rocket launches in history. Because for the first time, SpaceX plans ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/n92y2-xy8EE",
+      "publishedAt": "2026-11-07T23:15:42.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=n92y2-xy8EE"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Subvocal: AI Glasses That Turn Silent Speech Into Text at 200+ Words Per Minute",
       "summary": "What if you could talk to ChatGPT, Claude, or your AI coding agents without making a single sound? No keyboard. No microphone. Not even whispering. Just silently move your mouth, and your thoughts become text. Well, almo",
       "canonicalUrl": "https://abvx.xyz/writing/videos/NEbmecyitIs",
@@ -14843,6 +14912,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "xCavity Brings Blender-Style Viewport Shading to 3ds Max! Cavity, MatCaps & SSGI for $15",
+      "summary": "Someone just gave the 3ds Max viewport a serious visual upgrade. And it costs just $15. Meet xCavity, a new plugin that brings Blender-style cavity shading, MatCaps, and screen-space lighting effects directly into the na",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/1KnBw2HaSyc",
+      "publishedAt": "2026-11-07T22:53:21.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=1KnBw2HaSyc"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "XREAL AURA: Gemini AI Glasses That Can See Your Laptop Screen | Google Android XR",
       "summary": "Google is taking another shot at augmented reality. And this time, I think they might actually be onto something. Well, technically, XREAL built the glasses, while Google brought Android XR and Gemini AI to the party. Me",
       "canonicalUrl": "https://abvx.xyz/writing/videos/R-7XiZzJXHc",
@@ -14937,6 +15029,29 @@
       "links": [],
       "publishedAt": "2026-10-14",
       "updatedAt": "2026-10-14",
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "ZBrush 2027 Is Here! New UV Editor, Selection Sets & 3D Layers on iPad",
+      "summary": "Maxon just released ZBrush 2027.0 for desktop and iPad, and this update brings some genuinely useful improvements to digital sculpting. Here's what's new. 1. A Proper UV Editor in ZBrush Desktop This is probably the bigg",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/ARzcWP-T6RQ",
+      "publishedAt": "2026-11-07T23:54:18.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=ARzcWP-T6RQ"
+        }
+      ],
       "related": []
     },
     {

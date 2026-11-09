@@ -1,7 +1,8 @@
+import {gifPoster} from './gif-poster.mjs';
 import {parseMarkdownSource} from './markdown-source.mjs';
 import {digest,currentSources,ValidationError} from './runtime-writing.mjs';
 export const writingImages=data=>[data.media,data.heroImage,...(data.type==='working-story'?[data.coverImage]:[]),...(data.illustrations||[])].filter(Boolean);
-const safeKey=/^[a-f0-9]{64}\.(png|jpe?g|webp|gif)$/;
+const safeKey=/^[a-f0-9]{64}\.(png|jpe?g|webp|gif(?:\.poster\.webp)?)$/;
 function dimensions(bytes,ext){
  if(ext==='gif'&&bytes.length>=14&&['GIF87a','GIF89a'].includes(bytes.toString('ascii',0,6))&&bytes[bytes.length-1]===0x3b)return [bytes.readUInt16LE(6),bytes.readUInt16LE(8)];
  if(ext==='png'&&bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))&&bytes.toString('ascii',12,16)==='IHDR')return [bytes.readUInt32BE(16),bytes.readUInt32BE(20)];
@@ -28,6 +29,7 @@ export function createMediaPreparer(store){return async(source,assets,snapshot)=
   const ext=asset.target.split('.').pop(),key=asset.sha256+'.'+ext,[width,height]=dimensions(bytes,ext);
   if(width<1||height<1||width*height>32_000_000||refs.filter(x=>x.src===asset.target).some(x=>x.width!==width||x.height!==height))throw new ValidationError('Image dimensions differ from approved metadata');
   const publicPath='/media/writing/runtime/'+key,contentType='image/'+(ext==='jpg'?'jpeg':ext);
+  if(ext==='gif'){let poster;try{poster=await gifPoster(bytes);}catch{throw new ValidationError('Unsupported, malformed or oversized GIF');}uploads.push({key:key+'.poster.webp',bytes:poster,contentType:'image/webp',publicPath:publicPath+'.poster.webp',width,height});}
   mapping.push({from:asset.target,to:publicPath,sha256:asset.sha256});uploads.push({key,bytes,contentType,publicPath,width,height});seen.add(asset.target);
  }
  // Validate every reference before any upload; drafts and arbitrary private keys never become public.
@@ -43,6 +45,6 @@ export function createMediaPreparer(store){return async(source,assets,snapshot)=
 export async function publishedImage(store,key){
  if(!safeKey.test(key))return null;
  const {snapshot}=await store.load(),asset=Object.hasOwn(snapshot.assets,key)?snapshot.assets[key]:null;
- if(!asset||!currentSources(snapshot).some(source=>writingImages(parseMarkdownSource(source).data).some(image=>image.src===asset.publicPath)))return null;
+ if(!asset||!currentSources(snapshot).some(source=>writingImages(parseMarkdownSource(source).data).some(image=>image.src===(key.endsWith('.gif.poster.webp')?asset.publicPath.slice(0,-12):asset.publicPath))))return null;
  const bytes=await store.getAsset(key);if(digest(bytes)!==asset.sha256)throw Error('Image integrity failed');return {bytes,contentType:asset.contentType};
 }

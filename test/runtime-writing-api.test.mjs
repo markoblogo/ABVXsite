@@ -78,7 +78,8 @@ test('animated GIF cover and illustration keep exact bytes and MIME through priv
  Object.assign(state,{records:seedSnapshot([prepared.source]).records});
  const served=await publishedImage(memory,digest(bytes)+'.gif');
  assert.equal(served.contentType,'image/gif');assert.deepEqual(served.bytes,bytes);
- assert.equal(assets.size,1);assert.equal((prepared.source.match(/runtime\/[^" ]+\.gif/g)||[]).length,2);
+ const poster=await publishedImage(memory,digest(bytes)+'.gif.poster.webp');assert.equal(poster.contentType,'image/webp');assert.equal(poster.bytes.toString('ascii',8,12),'WEBP');
+ assert.equal(assets.size,2);assert.equal((prepared.source.match(/runtime\/[^" ]+\.gif/g)||[]).length,2);
  for(const invalid of [bytes.subarray(0,10),Buffer.from('GIF89a-this-is-not-an-image')]){
   await assert.rejects(createMediaPreparer(memory)(input,[{...asset,sha256:digest(invalid),bytesBase64:invalid.toString('base64')}],emptySnapshot()));
  }

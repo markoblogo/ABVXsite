@@ -5823,3 +5823,5 @@ a {
 .geometry-paused .hero-poster::before,.geometry-paused .hero-poster::after,.geometry-paused .hero-poster__motif span { animation-play-state: paused; }
 
 .geometry-root { display: contents; }
+
+.gif-picture { display: contents; }

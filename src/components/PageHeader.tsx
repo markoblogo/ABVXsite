@@ -1,3 +1,4 @@
+import FloatingGeometry from '@/components/FloatingGeometry';
 import type { ReactNode } from 'react';
 
 export default function PageHeader({
@@ -12,11 +13,11 @@ export default function PageHeader({
   children?: ReactNode;
 }) {
   return (
-    <header className="page-header">
+    <FloatingGeometry><header className="page-header">
       {eyebrow ? <div className="eyebrow">{eyebrow}</div> : null}
       <h1>{title}</h1>
       {summary ? <p>{summary}</p> : null}
       {children}
-    </header>
+    </header></FloatingGeometry>
   );
 }

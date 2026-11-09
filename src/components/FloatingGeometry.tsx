@@ -1,17 +1,17 @@
 'use client';
 
-import {useEffect, useRef, useState} from 'react';
+import {useEffect, useRef, useState, type ReactNode} from 'react';
 import {usePathname} from 'next/navigation';
 
 // Decorative copies stay outside hero clipping. Source artwork remains the
 // no-JS/reduced-motion fallback; route changes and resize rebuild the copies.
-export default function FloatingGeometry() {
+export default function FloatingGeometry({children}: {children: ReactNode}) {
+  const root = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
   const layer = useRef<HTMLDivElement>(null);
   const [paused, setPaused] = useState(false);
   const [available, setAvailable] = useState(false);
   useEffect(() => {
-    document.documentElement.classList.toggle('geometry-paused', paused);
     const host = layer.current;
     if (!host) return;
     const reduced = matchMedia('(prefers-reduced-motion: reduce)');
@@ -22,13 +22,13 @@ export default function FloatingGeometry() {
       host.replaceChildren();
       if (!['/', '/about', '/focus', '/systems', '/books', '/writing', '/work-with-me'].includes(pathname.replace(/^\/(fr|uk)(?=\/|$)/, '') || '/')) {setAvailable(false);return;}
       if (reduced.matches || paused) {setAvailable(!reduced.matches && paused); return;}
-      const hero = document.querySelector<HTMLElement>('.hero-poster, .route-focus .page-header, .route-systems .page-header, .route-books .page-header, .route-writing .page-header, .route-about .page-header, .work-with-me-page .page-header');
+      const hero = root.current?.querySelector<HTMLElement>(':scope > .hero-poster, :scope > .page-header');
       if (!hero) {setAvailable(false); return;}
       hero.classList.remove('geometry-in-motion');
       const sources: Array<[HTMLElement, string | null]> = hero.matches('.hero-poster')
         ? [[hero, '::before'], [hero, '::after'], ...Array.from(hero.querySelectorAll<HTMLElement>('.hero-poster__motif span')).map(el => [el, null] as [HTMLElement, null])]
         : [[hero, '::after']];
-      const properties = ['width','height','background','border','borderRadius','boxShadow','opacity'];
+      const properties = ['width','height','background','borderTop','borderRight','borderBottom','borderLeft','borderRadius','boxShadow','opacity'];
       const origin = hero.getBoundingClientRect();
       const pieces = sources.map(([el, pseudo], index) => {
         const style = getComputedStyle(el, pseudo);
@@ -66,7 +66,7 @@ export default function FloatingGeometry() {
       dispose = () => {cancelAnimationFrame(frame);document.removeEventListener('visibilitychange',visibility);hero.classList.remove('geometry-in-motion');};
     };
     setup(); window.addEventListener('resize',setup); reduced.addEventListener('change',setup);
-    return () => {document.documentElement.classList.remove('geometry-paused');dispose();host.replaceChildren();window.removeEventListener('resize',setup);reduced.removeEventListener('change',setup);};
+    return () => {dispose();host.replaceChildren();window.removeEventListener('resize',setup);reduced.removeEventListener('change',setup);};
   }, [pathname, paused]);
-  return <><div ref={layer} className="floating-geometry" aria-hidden="true" />{available && <button className="geometry-toggle" type="button" aria-pressed={paused} onClick={()=>setPaused(!paused)}>{paused ? 'Resume motion' : 'Pause motion'}</button>}</>;
+  return <div ref={root} className={paused ? 'geometry-root geometry-paused' : 'geometry-root'}>{children}<div ref={layer} className="floating-geometry" aria-hidden="true" />{available && <button className="geometry-toggle" type="button" aria-pressed={paused} onClick={()=>setPaused(!paused)}>{paused ? 'Resume motion' : 'Pause motion'}</button>}</div>;
 }

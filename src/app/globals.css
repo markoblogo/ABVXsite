@@ -5821,3 +5821,5 @@ a {
 .dark .work-with-me-page .wm-btn--primary { background: var(--ink); color: var(--paper); border-color: var(--line); }
 
 .geometry-paused .hero-poster::before,.geometry-paused .hero-poster::after,.geometry-paused .hero-poster__motif span { animation-play-state: paused; }
+
+.geometry-root { display: contents; }

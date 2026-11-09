@@ -1,3 +1,4 @@
+import FloatingGeometry from '@/components/FloatingGeometry';
 import type { ReactNode } from 'react';
 
 export default function HeroPoster({
@@ -12,7 +13,7 @@ export default function HeroPoster({
   children?: ReactNode;
 }) {
   return (
-    <section className="hero-poster">
+    <FloatingGeometry><section className="hero-poster">
       <div className="hero-poster__motif" aria-hidden="true">
         <span />
         <span />
@@ -24,6 +25,6 @@ export default function HeroPoster({
         <p>{summary}</p>
         {children}
       </div>
-    </section>
+    </section></FloatingGeometry>
   );
 }

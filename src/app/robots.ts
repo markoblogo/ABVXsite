@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://abvx.xyz/sitemap.xml',
+    sitemap: 'https://abvx.xyz/sitemap.xml?v=2',
   };
 }

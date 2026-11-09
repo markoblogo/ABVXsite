@@ -1,8 +1,9 @@
 import {parseMarkdownSource} from './markdown-source.mjs';
 import {digest,currentSources,ValidationError} from './runtime-writing.mjs';
 export const writingImages=data=>[data.media,data.heroImage,...(data.type==='working-story'?[data.coverImage]:[]),...(data.illustrations||[])].filter(Boolean);
-const safeKey=/^[a-f0-9]{64}\.(png|jpe?g|webp)$/;
+const safeKey=/^[a-f0-9]{64}\.(png|jpe?g|webp|gif)$/;
 function dimensions(bytes,ext){
+ if(ext==='gif'&&bytes.length>=14&&['GIF87a','GIF89a'].includes(bytes.toString('ascii',0,6))&&bytes[bytes.length-1]===0x3b)return [bytes.readUInt16LE(6),bytes.readUInt16LE(8)];
  if(ext==='png'&&bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))&&bytes.toString('ascii',12,16)==='IHDR')return [bytes.readUInt32BE(16),bytes.readUInt32BE(20)];
  if(ext==='webp'&&bytes.toString('ascii',0,4)==='RIFF'&&bytes.toString('ascii',8,12)==='WEBP'){
   const type=bytes.toString('ascii',12,16);
@@ -20,7 +21,7 @@ export function createMediaPreparer(store){return async(source,assets,snapshot)=
  if(!Array.isArray(assets))throw new ValidationError('Image descriptors required');
  const seen=new Set();
  for(const asset of assets){
-  if(typeof asset.target!=='string'||seen.has(asset.target)||!refs.some(x=>x.src===asset.target)||!/^\/media\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(png|jpe?g|webp)$/.test(asset.target))throw new ValidationError('Unreferenced, duplicate or unsafe image');
+  if(typeof asset.target!=='string'||seen.has(asset.target)||!refs.some(x=>x.src===asset.target)||!/^\/media\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(png|jpe?g|webp|gif)$/.test(asset.target))throw new ValidationError('Unreferenced, duplicate or unsafe image');
   if(typeof asset.bytesBase64!=='string'||asset.bytesBase64.length>3_000_000||!/^[A-Za-z0-9+/]*={0,2}$/.test(asset.bytesBase64))throw new ValidationError('Invalid or oversized image');
   const bytes=Buffer.from(asset.bytesBase64,'base64');
   if(!bytes.length||digest(bytes)!==asset.sha256)throw new ValidationError('Approved image hash mismatch');

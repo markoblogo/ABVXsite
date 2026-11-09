@@ -6305,6 +6305,11 @@
       "links": [
         {
           "type": "site",
+          "label": "Project landing",
+          "url": "https://markoblogo.github.io/framewright/"
+        },
+        {
+          "type": "site",
           "label": "ABVX Lab",
           "url": "https://lab.abvx.xyz/tools/framewright/"
         },
@@ -6320,7 +6325,7 @@
         }
       ],
       "publishedAt": "2026-10-14",
-      "updatedAt": "2026-10-14",
+      "updatedAt": "2026-11-09",
       "related": [
         {
           "title": "ABVX Agent Skills",

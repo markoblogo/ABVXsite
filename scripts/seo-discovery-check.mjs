@@ -157,7 +157,7 @@ await withQaServer(async (base) => {
       }
       for(const href of record.links) {
         const target=new URL(href,url);
-        if(target.origin==='https://abvx.xyz'&&!/\.(?:png|jpe?g|webp|pdf|json|txt|xml|zip|epub)$/i.test(target.pathname)&&!target.pathname.startsWith('/api/')) internal.add(target.pathname);
+        if(target.origin==='https://abvx.xyz'&&!/\.(?:png|jpe?g|webp|gif|pdf|json|txt|xml|zip|epub)$/i.test(target.pathname)&&!target.pathname.startsWith('/api/')) internal.add(target.pathname);
       }
     }
     const known=new Set(routes.map(url=>new URL(url).pathname));

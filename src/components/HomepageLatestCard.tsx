@@ -39,7 +39,7 @@ export default function HomepageLatestCard({
           />
         ) : image ? (
           <Image
-            unoptimized={image.src.startsWith('/media/writing/runtime/')}
+            unoptimized={image.src.startsWith('/media/writing/runtime/') || /\.gif(?:[?#]|$)/i.test(image.src)}
             src={image.src}
             alt={image.alt || title}
             width={width}

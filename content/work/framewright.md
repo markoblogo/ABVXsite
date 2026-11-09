@@ -13,7 +13,7 @@
   "group": "Workflow & Orchestration",
   "summary": "Video-production workflows and agent skills for choosing tools, combining methods and retaining evidence from real exports.",
   "publishedAt": "2026-10-14",
-  "updatedAt": "2026-10-14",
+  "updatedAt": "2026-11-09",
   "homepageEligible": true,
   "tags": [
     "video-production",
@@ -22,6 +22,11 @@
     "evidence"
   ],
   "links": [
+    {
+      "type": "site",
+      "label": "Project landing",
+      "url": "https://markoblogo.github.io/framewright/"
+    },
     {
       "type": "site",
       "label": "ABVX Lab",
@@ -49,13 +54,17 @@
   "needsMediaReview": false,
   "needsLinkReview": false,
   "media": {
-    "src": "/media/work/framewright/hero.webp",
-    "alt": "Framewright identity artwork with three film strips and the line Craft the cut. Keep the evidence.",
+    "src": "/media/work/framewright/FW-unfold-README.gif",
+    "alt": "A thin silver ribbon emerges from black and unfolds into the letters FW, then rests against the black background.",
+    "width": 960,
+    "height": 540,
     "role": "project-screenshot"
   },
   "heroImage": {
-    "src": "/media/work/framewright/hero.webp",
-    "alt": "Framewright identity artwork with three film strips and the line Craft the cut. Keep the evidence.",
+    "src": "/media/work/framewright/FW-unfold-README.gif",
+    "alt": "A thin silver ribbon emerges from black and unfolds into the letters FW, then rests against the black background.",
+    "width": 960,
+    "height": 540,
     "role": "project-screenshot"
   }
 }

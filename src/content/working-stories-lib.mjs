@@ -45,7 +45,7 @@ export function validateWorkingStory(data, body) {
     if (!image || typeof image !== 'object' || Array.isArray(image)) { errors.push(`${field} must be an image object`); return; }
     const allowed = illustration ? ['src', 'alt', 'width', 'height', 'caption', 'afterHeading'] : ['src', 'alt', 'width', 'height'];
     for (const key of Object.keys(image)) if (!allowed.includes(key)) errors.push(`unsupported ${field} field: ${key}`);
-    if (typeof image.src !== 'string' || !/^\/media\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(?:webp|png|jpe?g)$/.test(image.src)) errors.push(`${field}.src must be a local media image path`);
+    if (typeof image.src !== 'string' || !/^\/media\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(?:webp|png|jpe?g|gif)$/.test(image.src)) errors.push(`${field}.src must be a local media image path`);
     if (!text(image.alt)) errors.push(`${field}.alt is required`);
     for (const dimension of ['width', 'height']) if (!Number.isInteger(image[dimension]) || image[dimension] <= 0) errors.push(`${field}.${dimension} must be a positive integer`);
     if (illustration) {

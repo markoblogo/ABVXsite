@@ -1,8 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createWritingHandler} from '../src/content/runtime-writing-api.mjs';
-import {createMediaPreparer} from '../src/content/runtime-writing-media.mjs';
-import {emptySnapshot,digest} from '../src/content/runtime-writing.mjs';
+import {createMediaPreparer,publishedImage} from '../src/content/runtime-writing-media.mjs';
+import {emptySnapshot,digest,seedSnapshot} from '../src/content/runtime-writing.mjs';
 const token='x'.repeat(40);
 const source=(image={})=>'---\n'+JSON.stringify({id:'new',slug:'new',title:'Approved title',summary:'Summary',primarySection:'writing',type:'article',status:'live',visibility:'public',publishedAt:'2026-10-26',tags:[],links:[],...image})+'\n---\n\nAuthor text.\n';
 function store(){let snapshot=emptySnapshot(),etag='0';return {load:async()=>({snapshot:structuredClone(snapshot),etag}),commit:async next=>{snapshot=structuredClone(next);etag+='1';},putAsset:async()=>{}};}
@@ -65,4 +65,23 @@ test('authenticated legacy export excludes private drafts without freeing their 
  const exported=await (await handler(new Request('http://localhost/api/writing/manage?export=1',{headers:{authorization:'Bearer '+token}}))).json();
  assert.deepEqual(exported.legacySources,[]);
  assert.equal((await handler(request({action:'publish',requestId:'private-collision',source:source(),approval:{intakeId:'one',sourceSha256:digest(source())}}))).status,409);
+});
+
+
+test('animated GIF cover and illustration keep exact bytes and MIME through private storage',async()=>{
+ const bytes=Buffer.from('R0lGODlhAgACAIEAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQACgAAACwAAAAAAgACAAAIBgABCAQQEAAh+QQBCgABACwAAAAAAgACAIH///8AAAAAAAAAAAAIBgABCAQQEAA7','base64'),state=emptySnapshot(),assets=new Map();
+ const memory={putAsset:async(key,data)=>assets.set(key,data),getAsset:async key=>assets.get(key),load:async()=>({snapshot:state})};
+ const image={src:'/media/animated.gif',alt:'Two-frame test animation',width:2,height:2};
+ const input=source({media:image,illustrations:[{...image,afterHeading:'Test'}]});
+ const asset={target:image.src,sha256:digest(bytes),bytesBase64:bytes.toString('base64')};
+ const prepared=await createMediaPreparer(memory)(input,[asset],state);
+ Object.assign(state,{records:seedSnapshot([prepared.source]).records});
+ const served=await publishedImage(memory,digest(bytes)+'.gif');
+ assert.equal(served.contentType,'image/gif');assert.deepEqual(served.bytes,bytes);
+ assert.equal(assets.size,1);assert.equal((prepared.source.match(/runtime\/[^" ]+\.gif/g)||[]).length,2);
+ for(const invalid of [bytes.subarray(0,10),Buffer.from('GIF89a-this-is-not-an-image')]){
+  await assert.rejects(createMediaPreparer(memory)(input,[{...asset,sha256:digest(invalid),bytesBase64:invalid.toString('base64')}],emptySnapshot()));
+ }
+ await assert.rejects(createMediaPreparer(memory)(source({media:{...image,width:3}}),[asset],emptySnapshot()));
+ await assert.rejects(createMediaPreparer(memory)(source({media:{...image,src:'/media/animated.png'}}),[{...asset,target:'/media/animated.png'}],emptySnapshot()));
 });

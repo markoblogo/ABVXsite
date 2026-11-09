@@ -24,3 +24,11 @@ This review does not authorize dependency changes, asset replacement, copy inven
 **Evidence:** production `/books` captured at 1440×1000 and 390×844. The mobile document width remained 390px with no horizontal overflow. Reduced-motion emulation matched successfully. Repeated grids remain justified by record comparison and are differentiated by publishing-line headers, cover art, and section scale.
 
 **Decision:** no taste-driven code change. Breaking the long catalog into decorative layout variants would weaken scanning and violate the preservation boundary. Existing report-only CSP notices belong to the security/performance review path, not this visual contract.
+
+## Shared geometry and Work with Me
+
+Work with Me retains its approved text, roles, contact anchors and localized routes while using PageHeader, square paper panels, ink borders and the existing acid accent. No new palette or illustration is introduced.
+
+`FloatingGeometry` copies only the existing top-level hero decorations (including the About portrait), with `pointer-events:none` and `aria-hidden`. Its fixed layer carries them beyond hero clipping; transform-only drift, slight rotation and smoothed scroll displacement keep them visible as the reader moves down. Opacity falls after the hero to protect reading. No layout dimensions are animated. Pause/Resume restores the original static source, reduced-motion leaves source art static, hidden tabs suspend the animation frame, and route/resize/media changes clean up frames, listeners and copies. Scope: `.hero-poster`, the five route-scoped `.page-header` decorations, and the Work with Me header. Detail article/book/project covers are excluded.
+
+Verify at 1440px and 390px: seven top-level pages plus FR/UK Work with Me; observe drift and scroll, non-interactive art, pause/resume, reduced-motion fallback, text readability and no horizontal overflow. The owning component is `src/components/FloatingGeometry.tsx`; PageHeader and HeroPoster mount it around their own source root. Dynamic DOM bindings are scoped to that root; individual border sides preserve open-line decorations.

@@ -545,6 +545,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/OHU26SiXCoU
   Summary: Trois paquets. Quatre indices. Une seule solution. Saurez-vous retrouver qui a pris quoi ? Mettez sur pause pour chercher : la réponse arrive seulement à la fin. Ce court film illustré vous propose une énigme tirée de Le
 
+- Can AI Build Your Database? Prisma Plugin Tested
+  URL: https://abvx.xyz/writing/videos/OknfCwdyXIc
+  Summary: Can an AI assistant create a database—and can you verify what it saved? I tested the official Prisma Codex plugin on a separate Free Plan database in Paris. The test created a table, saved a fictional 20-minute run, chan
+
 - Why GLB Is Perfect for AI Agents | 3D Animation with Three.js, No Blender Required
   URL: https://abvx.xyz/writing/videos/oPvkNkSqqwk
   Summary: If you're creating 3D animations with AI agents, there's one file format you should seriously consider: GLB. And the interesting part is that your agent might not need Blender at all. Just a 3D model, some JavaScript, an

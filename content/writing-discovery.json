@@ -3086,6 +3086,17 @@
     },
     {
       "source": "youtube",
+      "title": "Can AI Build Your Database? Prisma Plugin Tested",
+      "url": "https://www.youtube.com/watch?v=OknfCwdyXIc",
+      "publishedAt": "2026-11-09T14:45:17.000Z",
+      "excerpt": "Can an AI assistant create a database—and can you verify what it saved? I tested the official Prisma Codex plugin on a separate Free Plan database in Paris. The test created a table, saved a fictional 20-minute run, chan",
+      "coverImage": "https://i.ytimg.com/vi/OknfCwdyXIc/hqdefault.jpg",
+      "videoDescription": "Can an AI assistant create a database—and can you verify what it saved?\n\nI tested the official Prisma Codex plugin on a separate Free Plan database in Paris. The test created a table, saved a fictional 20-minute run, changed its note, and read the updated record back in a separate request.\n\nPrisma's announcement connects three layers: Prisma ORM, Prisma Postgres and Prisma Compute. This video separates that broader product promise from the database operations we actually tested.\n\nWHAT WORKED\n• A new isolated Prisma Postgres database was created.\n• One synthetic record was inserted and edited.\n• A separate read returned the edited value.\n• The owner approved database creation, the schema change and the write separately.\n\nWHAT THIS DOES NOT PROVE\nWe did not test the ChatGPT interface, a deployed application, sign-in, separation between real users, ORM execution or Compute hosting. This is a bounded Codex-plugin database test, not an application-security audit or performance benchmark. The Free Plan was observed on 9 November 2026; no purchase or public deployment was made.\n\nCHAPTERS\n00:00 One prompt, three layers\n00:21 What we actually tested\n00:39 Save, edit, read it back\n01:02 Three owner approvals\n01:18 What the test does not prove\n\nSOURCES\nPrisma announcement:\nhttps://www.prisma.io/blog/one-chatgpt-plugin-to-deploy-it-all\nOfficial Codex integration:\nhttps://www.prisma.io/docs/ai/tools/codex\nPrisma MCP documentation:\nhttps://www.prisma.io/docs/ai/tools/mcp-server\nAgent enrollment and approval controls:\nhttps://www.prisma.io/docs/prisma-compute/agent-enrollment\nPrisma Compute:\nhttps://www.prisma.io/docs/compute\n\nPRODUCTION\nOriginal local Blender animation and graphics, AI-assisted cover artwork, original synthesized music and sound effects. Synthetic English narration: Supertonic-3 M1. The miniature workshop illustrates the process; it is not a recording of Prisma's interface. No affiliation with Prisma. This test uses synthetic data only.\n\n#Prisma #AICoding #Postgres",
+      "addedAt": "2026-11-09T14:50:21.363Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Why GLB Is Perfect for AI Agents | 3D Animation with Three.js, No Blender Required",
       "url": "https://www.youtube.com/watch?v=oPvkNkSqqwk",
       "publishedAt": "2026-11-07T17:16:53.000Z",

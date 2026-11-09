@@ -8014,6 +8014,29 @@
       "related": []
     },
     {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Can AI Build Your Database? Prisma Plugin Tested",
+      "summary": "Can an AI assistant create a database—and can you verify what it saved? I tested the official Prisma Codex plugin on a separate Free Plan database in Paris. The test created a table, saved a fictional 20-minute run, chan",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/OknfCwdyXIc",
+      "publishedAt": "2026-11-09T14:45:17.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=OknfCwdyXIc"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "writing",
       "section": "writing",
       "ecosystem": "Writing",
@@ -8664,7 +8687,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-09T12:19:14.411Z",
+      "updatedAt": "2026-11-09T14:50:21.363Z",
       "tags": [],
       "links": [],
       "related": []

@@ -225,6 +225,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/cb8VIvOuVOU
   Summary: What if the secret to making beautiful AI videos was to stop letting AI do all the creative work? No glossy anime aesthetics. No plastic-looking characters. No generic cinematic lighting. Just old-school avant-garde art,
 
+- OpenAI x ModRetro Chromatic Is Here: A $200 Game Boy You Can Build Games for with Codex
+  URL: https://abvx.xyz/writing/videos/cM0Ga17fK_Y
+  Summary: OpenAI just put a $200 retro handheld in its merch store. And this one actually does something. Meet the ModRetro Chromatic: Codex Edition, a collaboration between OpenAI and ModRetro, the hardware company founded by Ocu
+
 - Claude Opus 5.5 Turned a Viral Video Into a Playable 3D Game in 40 Minutes
   URL: https://abvx.xyz/writing/videos/CM0Ig3q7pqk
   Summary: What if you could take a viral video, give it to an AI, and turn it into an actual video game? Not just a visual recreation. A fully explorable 3D world. And what if the entire process took just 40 minutes? About a year

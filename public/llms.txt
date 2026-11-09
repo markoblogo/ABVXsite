@@ -449,6 +449,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/Kx1ftrOWQm8
   Summary: Чому ціна на зерно може відрізнятися навіть в один день? Базис поставки, якість, місце й логістика допомагають зрозуміти ціну фізичного аграрного ринку. 📘 «Практичний гайд по спотовому ринку» — безкоштовна українська кн
 
+- Viggle Image Swap: Replace Entire People in Photos with Qwen-Image-2.1 LoRA
+  URL: https://abvx.xyz/writing/videos/l_4VzQRwurA
+  Summary: Face swap? Cute. Viggle wants to replace the ENTIRE person. Meet Viggle Image Swap, a new LoRA for Qwen-Image-2.1 that takes a character sheet and replaces someone in an existing photo. Not just the face. Hair, body, and
+
 - RelayVSR: Near Real-Time AI Video Upscaling in ComfyUI | 1080p, 4K & 29 FPS
   URL: https://abvx.xyz/writing/videos/LEuUaNL1R4A
   Summary: Remember when upscaling a short AI video meant waiting several minutes, or sometimes even longer? Well, things are getting considerably faster. ComfyUI just added support for RelayVSR, an open-source AI video upscaler ca

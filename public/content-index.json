@@ -8664,7 +8664,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-09T09:50:06.604Z",
+      "updatedAt": "2026-11-09T12:19:14.411Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9244,6 +9244,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=SB2b1nB6G2U"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Gemini Omni 1.2 Flash Explained: Edit or Regenerate?",
+      "summary": "A great shot. One wrong detail. Should you edit it or regenerate everything? Google says Gemini Omni 1.2 Flash can create 15-second clips and refine them through follow-up requests. This short illustrated guide looks at ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/qfEnMIjJzys",
+      "publishedAt": "2026-11-09T11:54:50.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=qfEnMIjJzys"
         }
       ],
       "related": []

@@ -609,6 +609,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/qer7WfdIWLI
   Summary: Як працює ринок зернових та олійних — від першого офера до контракту та виконання угоди? Безкоштовний практичний гід MN7R українською допомагає побачити зв’язок між товаром, якістю, ціною, логістикою та людьми. 📘 Завант
 
+- Gemini Omni 1.2 Flash Explained: Edit or Regenerate?
+  URL: https://abvx.xyz/writing/videos/qfEnMIjJzys
+  Summary: A great shot. One wrong detail. Should you edit it or regenerate everything? Google says Gemini Omni 1.2 Flash can create 15-second clips and refine them through follow-up requests. This short illustrated guide looks at
+
 - Free Figma MCP Without the 20-Call Limit! | Claude Code, Codex & Cursor
   URL: https://abvx.xyz/writing/videos/QKzhj3Fl9bE
   Summary: I wanted to give my AI coding agent access to Figma. Meet Figma Console MCP, a free tool developed by Southleft that lets Claude Code, OpenAI Codex, Cursor, and other AI agents work directly with Figma. It uses Figma's P

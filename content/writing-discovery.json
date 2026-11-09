@@ -3262,6 +3262,17 @@
     },
     {
       "source": "youtube",
+      "title": "Gemini Omni 1.2 Flash Explained: Edit or Regenerate?",
+      "url": "https://www.youtube.com/watch?v=qfEnMIjJzys",
+      "publishedAt": "2026-11-09T11:54:50.000Z",
+      "excerpt": "A great shot. One wrong detail. Should you edit it or regenerate everything? Google says Gemini Omni 1.2 Flash can create 15-second clips and refine them through follow-up requests. This short illustrated guide looks at ",
+      "coverImage": "https://i.ytimg.com/vi/qfEnMIjJzys/hqdefault.jpg",
+      "videoDescription": "A great shot. One wrong detail. Should you edit it or regenerate everything?\n\nGoogle says Gemini Omni 1.2 Flash can create 15-second clips and refine them through follow-up requests. This short illustrated guide looks at a practical question: after an edit, what happens to the subject, camera and action?\n\nI use an original robot-and-umbrella miniature to explain a single-change workflow: keep the original, request one change, compare the result, then count every output needed to reach an accepted shot.\n\nThe pricing example uses Google's published 720p video-output table: 5,792 tokens per second at $12 per million video tokens. That is approximately $1.04 for 15 seconds, or $3.13 for three such outputs. Input and other charges are extra. Prices were checked on 9 November 2026 and may change.\n\nThese visuals are our own AI-assisted illustrations and local animation. They are not Gemini Omni-generated video, a model-quality benchmark, or a bill from our own API test. We have not tested how many attempts a particular Omni shot needs, or whether a follow-up request reduces its total cost.\n\nCHAPTERS\n00:00 Edit or restart?\n00:13 A single-change workflow\n00:28 Compare what survived\n00:41 Resolution and output pricing\n00:58 Count the outputs\n01:13 Attempts still count\n01:25 Judge the accepted shot\n\nSOURCES\nGoogle announcement:\nhttps://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/\nGemini API pricing:\nhttps://ai.google.dev/gemini-api/docs/pricing#gemini-omni-1.2-flash\n\nPRODUCTION\nOriginal AI-assisted robot illustrations, local 2.5D animation, graphics, music and sound design. Synthetic English narration: Supertonic-3 M1 (BigScience Open RAIL-M). Source illustrations are 1672×941; local compositions were rendered at 720p and enlarged for the 1080p exports. No affiliation with Google.\n\n#GeminiOmni #AIVideo #VideoEditing",
+      "addedAt": "2026-11-09T12:19:14.411Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Free Figma MCP Without the 20-Call Limit! | Claude Code, Codex & Cursor",
       "url": "https://www.youtube.com/watch?v=QKzhj3Fl9bE",
       "publishedAt": "2026-11-06T00:35:03.000Z",

@@ -2287,6 +2287,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook, family
 
+- Psychology Notebook #39 — Therapy, Familiarity & Change
+  URL: https://abvx.xyz/writing/psychology-notebook-39-therapy-familiarity-change
+  Summary: Twenty translated notebook fragments on therapy, familiar defences and change.
+  Group: writing
+  Tags: psychology-notebook, therapy
+
+- Psychology Notebook #40 — Everyday Self-Regulation
+  URL: https://abvx.xyz/writing/psychology-notebook-40-everyday-self-regulation
+  Summary: Twenty translated notebook fragments on everyday self-regulation, agreements and enough.
+  Group: writing
+  Tags: psychology-notebook, living
+
 - The Berliner: How My Beer Cocktail Ended Up on a French Bar's Menu
   URL: https://abvx.xyz/writing/the-berliner-guinness-port-beer-cocktail
   Summary: I discovered Guinness with port wine in Berlin, recreated it with whatever a small French bar had available, and eventually watched it become an official item in the cash register.

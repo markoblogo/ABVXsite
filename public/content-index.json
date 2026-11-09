@@ -8664,7 +8664,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-09T06:29:43.607Z",
+      "updatedAt": "2026-11-09T09:12:07.951Z",
       "tags": [],
       "links": [],
       "related": []
@@ -12639,6 +12639,44 @@
       "links": [],
       "publishedAt": "2026-11-08",
       "updatedAt": "2026-11-08",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #39 — Therapy, Familiarity & Change",
+      "summary": "Twenty translated notebook fragments on therapy, familiar defences and change.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-39-therapy-familiarity-change",
+      "tags": [
+        "psychology-notebook",
+        "therapy"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-09",
+      "updatedAt": "2026-11-09",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #40 — Everyday Self-Regulation",
+      "summary": "Twenty translated notebook fragments on everyday self-regulation, agreements and enough.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-40-everyday-self-regulation",
+      "tags": [
+        "psychology-notebook",
+        "living"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-09",
+      "updatedAt": "2026-11-09",
       "related": []
     },
     {

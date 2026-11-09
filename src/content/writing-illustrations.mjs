@@ -30,7 +30,7 @@ export function validateWritingIllustrations(data, body) {
   const field=`illustrations[${index}]`;
   if(!image||typeof image!=='object'||Array.isArray(image)){errors.push(field+' must be an image object');continue;}
   for(const key of Object.keys(image))if(!['src','alt','width','height','caption','afterHeading','afterParagraph'].includes(key))errors.push(field+' unsupported field: '+key);
-  if(typeof image.src!=='string'||!/^\/media\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(?:png|webp|jpe?g)$/.test(image.src))errors.push(field+' requires a local media path');
+  if(typeof image.src!=='string'||!/^\/media\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(?:png|webp|jpe?g|gif)$/.test(image.src))errors.push(field+' requires a local media path');
   if(seen.has(image.src))errors.push(field+' duplicate illustration');seen.add(image.src);
   for(const key of ['alt','caption'])if(typeof image[key]!=='string'||!image[key].trim())errors.push(field+'.'+key+' is required');
   const anchors=['afterHeading','afterParagraph'].filter(key=>image[key]!==undefined);

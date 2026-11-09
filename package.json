@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "npm run catalogue:register && npm run writing:register && npm run llms:generate && npm run ecosystem:generate && node scripts/runtime-writing-engine.mjs",
+    "prebuild": "npm run catalogue:register && npm run writing:register && npm run llms:generate && npm run ecosystem:generate && node scripts/gif-posters.mjs && node scripts/runtime-writing-engine.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
@@ -78,7 +78,8 @@
     "next": "16.4.3",
     "next-themes": "^0.4.6",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "sharp": "0.35.5"
   },
   "overrides": {
     "postcss": "^8.5.15",

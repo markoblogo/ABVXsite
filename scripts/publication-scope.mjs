@@ -38,7 +38,7 @@ export function publicationScope(base, head='HEAD', cwd=process.cwd(), includeWo
   for(const [file,status] of changed) {
    if(!['A','M'].includes(status)) return full('deletion-or-special-change');
    if(generated.has(file)) continue;
-   if(/^public\/media\/.+\.(?:png|jpe?g|webp)$/i.test(file)&&status==='A') continue;
+   if(/^public\/media\/.+\.(?:png|jpe?g|webp|gif)$/i.test(file)&&status==='A') continue;
    const match=file.match(native);
    if(!match) return full('shared-code-or-other-content');
    const current=parseMarkdownSource(readFileSync(path.join(cwd,file),'utf8'));

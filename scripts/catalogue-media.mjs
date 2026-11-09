@@ -9,7 +9,7 @@ import {isAllowedAudioUrl} from '../src/lib/media-policy.mjs';
 import {publicationMetadataErrors} from './publication-metadata.mjs';
 import {addCatalogueVideo,catalogueSourceData,catalogueCardVideoId,resolveCatalogueVideoSource} from './catalogue-video.mjs';
 const imageKeys=['media','heroImage'];
-const extensions={pdf:/\.pdf$/i,epub:/\.epub$/i,audio:/\.(?:mp3|m4a|ogg|wav|flac|aac|opus)$/i,audiobook:/\.(?:m4b|mp3|m4a)$/i,image:/\.(?:png|jpe?g|webp)$/i};
+const extensions={pdf:/\.pdf$/i,epub:/\.epub$/i,audio:/\.(?:mp3|m4a|ogg|wav|flac|aac|opus)$/i,audiobook:/\.(?:m4b|mp3|m4a)$/i,image:/\.(?:png|jpe?g|webp|gif)$/i};
 export function validCatalogueMedia(link,folder='work',kind=undefined) {
  if(!link||typeof link.label!=='string'||!link.label.trim()||typeof link.url!=='string')return false;
  if(link.type==='youtube')return Boolean(catalogueCardVideoId(link.url,folder));

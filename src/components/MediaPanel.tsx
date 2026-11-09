@@ -1,3 +1,4 @@
+import GifPicture from './GifPicture';
 import type { ContentImage } from '@/content';
 import Image from 'next/image';
 
@@ -61,8 +62,8 @@ export default function MediaPanel({
 
   return (
     <figure className={`media-panel media-panel--${variant}`} data-media-role={role}>
-      <Image
-        unoptimized={image.src.startsWith('/media/writing/runtime/')}
+      <GifPicture src={image.src}><Image
+        unoptimized={image.src.startsWith('/media/writing/runtime/') || /\.gif(?:[?#]|$)/i.test(image.src)}
         src={image.src}
         alt={image.alt || title}
         width={width}
@@ -71,7 +72,7 @@ export default function MediaPanel({
         fetchPriority={priority ? 'high' : 'auto'}
         decoding="async"
         sizes={isBook ? '(max-width: 768px) 100vw, 42vw' : '(max-width: 768px) 100vw, 55vw'}
-      />
+      /></GifPicture>
     </figure>
   );
 }

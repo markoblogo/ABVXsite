@@ -17,13 +17,14 @@ export function planApprovedMedia(referenced, descriptors, root) {
   const targets = new Set();
   for (const asset of descriptors || []) {
     if (!referenced.has(asset.target) || targets.has(asset.target)) throw new Error('Unreferenced or duplicate media destination');
-    if (!/^\/media\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(?:png|jpe?g|webp)$/.test(asset.target)) throw new Error('Unsafe image path');
+    if (!/^\/media\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(?:png|jpe?g|webp|gif)$/.test(asset.target)) throw new Error('Unsafe image path');
     if (!path.isAbsolute(asset.source)) throw new Error('Media source must be an absolute local path');
     const bytes = readFileSync(asset.source);
     if (createHash('sha256').update(bytes).digest('hex') !== asset.sha256) throw new Error('Approved media hash mismatch');
     const image = bytes.subarray(0, 12);
     const recognized = asset.target.endsWith('.png') ? image.subarray(0, 8).equals(Buffer.from([137,80,78,71,13,10,26,10]))
       : /\.jpe?g$/.test(asset.target) ? image[0] === 255 && image[1] === 216 && image[2] === 255
+      : asset.target.endsWith('.gif') ? bytes.length >= 14 && ['GIF87a','GIF89a'].includes(bytes.toString('ascii',0,6)) && bytes[bytes.length-1] === 0x3b
       : image.subarray(0, 4).toString() === 'RIFF' && image.subarray(8, 12).toString() === 'WEBP';
     if (!recognized) throw new Error('Media bytes do not match the declared image type');
     const target = safePublicationTarget(root, `public${asset.target}`);

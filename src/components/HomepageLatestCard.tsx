@@ -1,3 +1,4 @@
+import GifPicture from './GifPicture';
 import Link from 'next/link';
 import type { ContentImage } from '@/content';
 import Image from 'next/image';
@@ -38,8 +39,8 @@ export default function HomepageLatestCard({
             referrerPolicy="no-referrer"
           />
         ) : image ? (
-          <Image
-            unoptimized={image.src.startsWith('/media/writing/runtime/')}
+          <GifPicture src={image.src}><Image
+            unoptimized={image.src.startsWith('/media/writing/runtime/') || /\.gif(?:[?#]|$)/i.test(image.src)}
             src={image.src}
             alt={image.alt || title}
             width={width}
@@ -47,7 +48,7 @@ export default function HomepageLatestCard({
             loading="lazy"
             fetchPriority="auto"
             sizes="(max-width: 768px) 100vw, 33vw"
-          />
+          /></GifPicture>
         ) : (
           <span className="homepage-latest-card__placeholder" aria-hidden="true" />
         )}

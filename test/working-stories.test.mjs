@@ -290,7 +290,7 @@ test('sitemap discovers published stories and series while excluding private and
     { slug: 'archive-video', videoUrl: 'https://www.youtube.com/watch?v=NewVideo003', publishedAt: '2020-01-01', status: 'archive' },
   ];
   let automaticNative;
-  const sitemap = compile('src/app/sitemap.ts', {
+  const sitemap = compile('src/lib/sitemap.ts', {
     '@/lib/static-locales.mjs': staticLocales,
     '@/lib/book-locales.mjs': bookLocales,
     '@/lib/live-writing-discovery': {getLiveWritingBundle:async()=>({native:nativeVideos,index:{items:[{canonicalUrl:'https://abvx.xyz/writing/archive',updatedAt:'2026-10-14T19:00:00.000Z'}]}})},

@@ -8664,7 +8664,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-08T21:10:15.341Z",
+      "updatedAt": "2026-11-09T06:29:43.607Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11475,6 +11475,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=vD_pNbzvoiM"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "One GLB File, a Whole Car to Animate",
+      "summary": "This car is one GLB file. We use code to separate its parts, rebuild it and change just one door. A short 3D animation test about named geometry, scene hierarchy and getting the hinge right. The source asset contains 101",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/SrWeTSaQ4DQ",
+      "publishedAt": "2026-11-08T23:22:49.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=SrWeTSaQ4DQ"
         }
       ],
       "related": []

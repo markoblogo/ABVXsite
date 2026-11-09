@@ -3495,6 +3495,17 @@
     },
     {
       "source": "youtube",
+      "title": "One GLB File, a Whole Car to Animate",
+      "url": "https://www.youtube.com/watch?v=SrWeTSaQ4DQ",
+      "publishedAt": "2026-11-08T23:22:49.000Z",
+      "excerpt": "This car is one GLB file. We use code to separate its parts, rebuild it and change just one door. A short 3D animation test about named geometry, scene hierarchy and getting the hinge right. The source asset contains 101",
+      "coverImage": "https://i.ytimg.com/vi/SrWeTSaQ4DQ/hqdefault.jpg",
+      "videoDescription": "This car is one GLB file. We use code to separate its parts, rebuild it and change just one door.\nA short 3D animation test about named geometry, scene hierarchy and getting the hinge right.\n\nThe source asset contains 101 scene nodes and 97 meshes, with useful named groups for the doors, hood, wheels and steering column. Those names make selective control possible—but the pivot and rotation axis still matter.\n\nWatch the deliberately wrong-axis example, then the corrected door. This is scripted computer graphics, not a physics simulation or real vehicle disassembly. The car is an existing licensed model; it was not generated for this video.\n\nCHAPTERS\n00:00 One file, a whole car\n00:18 Addressing the parts\n00:28 Why the hinge matters\n00:43 Separate, reassemble, revise\n00:57 Prepare once, direct the parts\n\nBuilt as a Framewright studio experiment in Three.js. AI-assisted scene code and script; synthetic English narration with Supertonic-3 M1. Music, engine accent and mechanical effects were synthesized locally for this film. The engine sound is stylized, not a recording of this car.\n\n3D asset: Car Concept by Eric Chadwick / Darmstadt Graphics Group GmbH (2024), based on Unity Fan’s original model. Licensed under CC BY 4.0: https://creativecommons.org/licenses/by/4.0/\nSource: https://github.com/KhronosGroup/glTF-Sample-Assets/tree/8f492390ddc7a2ae221a1369ef560589cf8c70fb/Models/CarConcept\nAdaptations: scene staging, lighting, cameras, scripted part transforms, typography and cover compositions. Khronos and 3D Commerce marks belong to their respective owners; no affiliation or endorsement is implied.\n\nWhich object should we try next?\n\n#3DAnimation #ThreeJS #CreativeCoding",
+      "addedAt": "2026-11-09T06:29:43.607Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Claude Code Has Hidden Features. This /stack Mod Reveals Everything",
       "url": "https://www.youtube.com/watch?v=sZpOYudsSDY",
       "publishedAt": "2026-10-24T11:04:14.000Z",

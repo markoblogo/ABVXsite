@@ -8692,7 +8692,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-09T17:37:29.582Z",
+      "updatedAt": "2026-11-09T17:50:33.770Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10172,6 +10172,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=fcVLl0CcoXo"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "HyperFlow H3 Flash: 14B AI Video Model Generates Video + Audio in Just 6 Steps!",
+      "summary": "What if you could shrink a 31-billion-parameter AI video model to just 14B, cut generation to six steps, and keep synchronized stereo audio? Well, VIDEO REBIRTH just did exactly that. Meet HyperFlow H3 Flash, a compresse",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/sL87UJN54t8",
+      "publishedAt": "2026-11-09T17:39:19.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=sL87UJN54t8"
         }
       ],
       "related": []

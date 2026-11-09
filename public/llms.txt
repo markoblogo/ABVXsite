@@ -717,6 +717,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/SkrZW5do2VE
   Summary: Maxon just released Redshift 2027.0, and this update brings some genuinely useful improvements for 3D artists. New procedural fur, better GPU memory management, faster rendering, improved real-time previews, and expanded
 
+- HyperFlow H3 Flash: 14B AI Video Model Generates Video + Audio in Just 6 Steps!
+  URL: https://abvx.xyz/writing/videos/sL87UJN54t8
+  Summary: What if you could shrink a 31-billion-parameter AI video model to just 14B, cut generation to six steps, and keep synchronized stereo audio? Well, VIDEO REBIRTH just did exactly that. Meet HyperFlow H3 Flash, a compresse
+
 - One GLB File, a Whole Car to Animate
   URL: https://abvx.xyz/writing/videos/SrWeTSaQ4DQ
   Summary: This car is one GLB file. We use code to separate its parts, rebuild it and change just one door. A short 3D animation test about named geometry, scene hierarchy and getting the hinge right. The source asset contains 101

@@ -14,7 +14,6 @@ import { getWorkingStories, workingStoryPath } from '@/content/working-stories';
 import workingStoriesSeries from '../../content/working-stories.json';
 import type { MetadataRoute } from 'next';
 
-export const dynamic = 'force-dynamic';
 const base = 'https://abvx.xyz';
 const trafficLandingUpdatedAt = new Date('2026-09-16T00:00:00.000Z');
 

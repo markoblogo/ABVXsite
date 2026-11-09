@@ -16,7 +16,7 @@ This guide owns runtime/feed behavior, diagnostics, measurement, and code naviga
 | `.github/workflows/` | CI, proposal review, read-only observation, and bounded ecosystem sync |
 | `cortex-abv/` | Public adapter contracts and an auditable static runtime snapshot |
 
-Global identity metadata is in `src/app/layout.tsx`; shared schema and metadata builders are in `src/lib/seo.ts`. Sitemap and robots are `src/app/sitemap.ts` and `src/app/robots.ts`. `next.config.ts` owns redirects and the security policy. Do not change slugs or redirect targets to solve a copy-only task.
+Global identity metadata is in `src/app/layout.tsx`; shared schema and metadata builders are in `src/lib/seo.ts`. Sitemap entries are built in `src/lib/sitemap.ts` and served by `src/app/sitemap.xml/route.ts`; robots remains `src/app/robots.ts`. The sitemap serializer emits protocol fields before hreflang extensions and escapes XML values. `next.config.ts` owns redirects and the security policy. Do not change slugs or redirect targets to solve a copy-only task.
 
 ## Writing sources
 

@@ -8687,7 +8687,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-09T14:50:21.363Z",
+      "updatedAt": "2026-11-09T17:12:28.189Z",
       "tags": [],
       "links": [],
       "related": []
@@ -13342,6 +13342,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=JkmkICJoNwY"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Tesseract by Mirage: Claude Can Now Create Photorealistic 3D Videos Without Diffusion!",
+      "summary": "What if the future of AI video generation isn't actually video generation? What if, instead of asking a diffusion model to hallucinate thousands of pixels across hundreds of frames, we simply let an AI agent build a real",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/T9jUlNohSCY",
+      "publishedAt": "2026-11-09T16:47:46.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=T9jUlNohSCY"
         }
       ],
       "related": []

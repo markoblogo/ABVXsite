@@ -721,6 +721,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/sZpOYudsSDY
   Summary: Think you know what's running inside your Claude Code sessions? You might be surprised. Meet /stack, a free, open-source Claude Code mod that reveals practically everything installed, configured, and available in your AI
 
+- Tesseract by Mirage: Claude Can Now Create Photorealistic 3D Videos Without Diffusion!
+  URL: https://abvx.xyz/writing/videos/T9jUlNohSCY
+  Summary: What if the future of AI video generation isn't actually video generation? What if, instead of asking a diffusion model to hallucinate thousands of pixels across hundreds of frames, we simply let an AI agent build a real
+
 - MN7R Product Guide | Commodity Brokerage Workflow Explained
   URL: https://abvx.xyz/writing/videos/TISOtCghMVY
   Summary: Brokerage is more than closing a deal. Explore the clients, offers, execution, roles and AI-assisted operating support behind the MN7R workspace. Read the free English MN7R Product Guide — PDF and EPUB: https://abvx.xyz/

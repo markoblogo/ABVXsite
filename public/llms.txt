@@ -897,6 +897,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/zTrBkcj3_Jk
   Summary: If you've ever opened a complicated ComfyUI workflow and wondered whether you're looking at an AI pipeline or a bowl of spaghetti, this one's for you. Meet ComfyUI Zip Ties, a free, open-source extension that brings actu
 
+- Matrix-Game 4.0: Real-Time AI Game Rendering at 67 FPS on RTX 5080!
+  URL: https://abvx.xyz/writing/videos/ztviGVU6hAU
+  Summary: What if your GPU could turn a simple low-poly game into a photorealistic world in real time? Not by replacing the game engine with a hallucinating AI model. By letting the game engine handle the actual game while AI hand
+
 ## Focus systems
 
 - AMI — Infrastructure for Physical Commodity Markets

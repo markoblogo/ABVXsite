@@ -9,6 +9,7 @@ import { getEditorialArticles } from '@/content/editorials';
 import { getWorkingStories, workingStoryPath } from '@/content/working-stories';
 
 import DocumentLanguage from '@/components/DocumentLanguage';
+import FloatingGeometry from '@/components/FloatingGeometry';
 import SiteFooter from '@/components/SiteFooter';
 import SiteHeader from '@/components/SiteHeader';
 import { defaultOgImage } from '@/lib/seo';
@@ -275,6 +276,7 @@ export default async function RootLayout({
         <SiteHeader />
         <main className="site-main">{children}</main>
         <SiteFooter />
+        <FloatingGeometry />
       </body>
     </html>
   );

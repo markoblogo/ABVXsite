@@ -862,8 +862,8 @@ header nav a:focus-visible,
   .work-with-me-page .wm-panel:hover,
   .work-with-me-page .wm-cta:hover {
     transform: translateY(-2px);
-    border-color: rgba(34, 197, 94, 0.28);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1), 0 0 18px var(--glow-accent);
+    border-color: var(--line);
+    box-shadow: 4px 4px 0 var(--ink);
   }
 
   .work-with-me-page .wm-chip:hover {
@@ -874,8 +874,8 @@ header nav a:focus-visible,
 
   .work-with-me-page .wm-btn:hover {
     transform: translateY(-2px);
-    border-color: rgba(34, 197, 94, 0.35);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1), 0 0 14px var(--glow-accent);
+    border-color: var(--line);
+    box-shadow: 3px 3px 0 var(--ink);
   }
 }
 
@@ -5798,3 +5798,26 @@ a {
 
 .rss-link { display: inline-flex; align-items: center; gap: .45rem; min-height: 44px; }
 .rss-link svg { flex-shrink: 0; }
+
+/* Shared poster language; Work with Me uses the same paper, ink and acid accent. */
+.work-with-me-page { --wm-surface: var(--paper); --wm-surface-strong: var(--paper); --wm-border: var(--line); --wm-text: var(--ink); }
+.work-with-me-page :is(.wm-card,.wm-panel,.wm-cta) { border: 1px solid var(--line); border-radius: 0; background: var(--paper); color: var(--ink); box-shadow: none; }
+.work-with-me-page .page-header { position: relative; overflow: hidden; background: linear-gradient(135deg, color-mix(in srgb,var(--accent) 10%,var(--paper)),var(--paper)); }
+.work-with-me-page .page-header h1 { max-width: 18ch; font-size: clamp(2.8rem,6vw,6rem); }
+.work-with-me-page .page-header::after { content: ""; position: absolute; right: 2rem; top: 2rem; width: clamp(4rem,12vw,9rem); height: clamp(4rem,12vw,9rem); border: 1px solid var(--line); background: var(--accent); box-shadow: 10px 10px 0 var(--ink); transform: rotate(12deg); pointer-events: none; }
+.work-with-me-page .page-header > :not(.eyebrow) { position: relative; z-index: 1; }
+.work-with-me-page .wm-btn { border-radius: 0; border-color: var(--line); }
+.work-with-me-page .wm-btn--primary { background: var(--ink); color: var(--paper); }
+.work-with-me-page .wm-btn--secondary { background: transparent; color: var(--ink); }
+.floating-geometry { position: fixed; inset: 0; z-index: 2; pointer-events: none; overflow: hidden; }
+.floating-geometry span { position: absolute; display: block; pointer-events: none; will-change: transform; }
+.geometry-in-motion::before,.geometry-in-motion::after,.geometry-in-motion .hero-poster__motif { visibility: hidden; }
+.geometry-toggle { position: fixed; right: 1rem; bottom: 1rem; z-index: 5; padding: .4rem .65rem; border: 1px solid var(--line); background: var(--paper); color: var(--ink); font: inherit; font-size: .75rem; }
+.geometry-toggle:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+@media(max-width:760px) { .work-with-me-page .page-header::after { width: 5rem; height: 5rem; right: -1rem; top: .75rem; opacity: .42; } }
+@media(prefers-reduced-motion:reduce) { .floating-geometry,.geometry-toggle { display: none; } }
+
+.dark .work-with-me-page { --wm-surface: var(--paper); --wm-surface-strong: var(--paper); --wm-border: var(--line); --wm-text: var(--ink); }
+.dark .work-with-me-page .wm-btn--primary { background: var(--ink); color: var(--paper); border-color: var(--line); }
+
+.geometry-paused .hero-poster::before,.geometry-paused .hero-poster::after,.geometry-paused .hero-poster__motif span { animation-play-state: paused; }

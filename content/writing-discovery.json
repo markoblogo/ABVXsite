@@ -2459,6 +2459,17 @@
     },
     {
       "source": "youtube",
+      "title": "MotionSites: Copy Beautiful Website Designs & Build Them with Claude Code or Codex",
+      "url": "https://www.youtube.com/watch?v=gknj7mp3kOo",
+      "publishedAt": "2026-11-09T19:11:15.000Z",
+      "excerpt": "Another useful addition to my growing collection of design resources for AI coding agents. Because apparently, having an AI that can build an entire website isn't enough. You also need to stop it from generating the same",
+      "coverImage": "https://i.ytimg.com/vi/gknj7mp3kOo/hqdefault.jpg",
+      "videoDescription": "Another useful addition to my growing collection of design resources for AI coding agents.\n\nBecause apparently, having an AI that can build an entire website isn't enough.\n\nYou also need to stop it from generating the same purple-gradient SaaS landing page for the thousandth time.\n\nMeet MotionSites, a library of ready-made website design references and detailed prompts you can use with Claude Code, Codex, Cursor, Lovable, and other AI development tools.\n\nThe idea is wonderfully simple.\n\n1. Browse the gallery.\n\nExplore animated landing pages, hero sections, portfolios, product websites, creative layouts, and interactive design concepts.\n\n2. Find something you like.\n\nInstead of struggling to explain a complex animation or visual style from scratch, start with an existing reference.\n\n3. Copy the design prompt.\n\nGive it to your favorite AI coding agent and let it recreate the layout, animations, and visual elements in your project.\n\n4. Make it yours.\n\nChange the typography, colors, transitions, content, and interactions.\n\nCombine elements from different references.\n\nAsk your agent to refine the design until it actually fits your project.\n\nAnd that's what I like about this approach.\n\nAI coding agents are already pretty good at implementing interfaces.\n\nBut they aren't always particularly imaginative when you ask them to design something from nothing.\n\nGive them a strong visual direction, however, and the results can improve dramatically.\n\nGood references + capable AI agents = a much more interesting design workflow.\n\nMotionSites is primarily a library of design prompts and previews, not a collection of downloadable React components. Some prompts require paid access.\n\nStill, it's a useful place to find inspiration and discover styles you might never have thought to describe.\n\nI'm continuing to collect resources like this because they're becoming an essential part of my AI-assisted development workflow.\n\nSave this one for your next project.\n\nAnd please, for the love of good typography, let's give those generic AI landing pages a rest.\n\nExplore MotionSites:\nhttps://motionsites.ai/\n\n#MotionSites #ClaudeCode #Codex #WebDesign #VibeCoding #AIAgents #UIDesign",
+      "addedAt": "2026-11-09T19:21:24.515Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "78 Amazing UI Libraries in One Place! | AI Search for Web Design & Creative Coding",
       "url": "https://www.youtube.com/watch?v=GNHKjKv1BY0",
       "publishedAt": "2026-11-06T19:56:36.000Z",

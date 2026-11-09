@@ -317,6 +317,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/GJhICBW4eMI
   Summary: SpaceX is preparing to attempt something that has never been done before. Catch an entire orbital rocket system using giant mechanical arms. Both stages. On the same mission. During SpaceX's Q3 2026 earnings presentation
 
+- MotionSites: Copy Beautiful Website Designs & Build Them with Claude Code or Codex
+  URL: https://abvx.xyz/writing/videos/gknj7mp3kOo
+  Summary: Another useful addition to my growing collection of design resources for AI coding agents. Because apparently, having an AI that can build an entire website isn't enough. You also need to stop it from generating the same
+
 - 78 Amazing UI Libraries in One Place! | AI Search for Web Design & Creative Coding
   URL: https://abvx.xyz/writing/videos/GNHKjKv1BY0
   Summary: Ever seen a beautiful website animation and wondered how on earth the developer built it? Well, here's a little resource that might save you hours of work. Meet F*cking Good Libraries, a curated collection of frontend li

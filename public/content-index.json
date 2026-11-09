@@ -8664,7 +8664,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-09T09:12:07.951Z",
+      "updatedAt": "2026-11-09T09:50:06.604Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8850,6 +8850,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=Q73r6GLqXVY"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Does Video Speed Break Audio Sync? Premation Tested",
+      "summary": "A preview can look right while an export still needs checking. I tested whether picture and sound stay together when Premation changes video speed. The test: one original moving-ball clip, six white flashes and six click",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/PhwCWcEe0LE",
+      "publishedAt": "2026-11-09T09:39:46.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=PhwCWcEe0LE"
         }
       ],
       "related": []

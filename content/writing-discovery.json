@@ -3152,6 +3152,17 @@
     },
     {
       "source": "youtube",
+      "title": "Does Video Speed Break Audio Sync? Premation Tested",
+      "url": "https://www.youtube.com/watch?v=PhwCWcEe0LE",
+      "publishedAt": "2026-11-09T09:39:46.000Z",
+      "excerpt": "A preview can look right while an export still needs checking. I tested whether picture and sound stay together when Premation changes video speed. The test: one original moving-ball clip, six white flashes and six click",
+      "coverImage": "https://i.ytimg.com/vi/PhwCWcEe0LE/hqdefault.jpg",
+      "videoDescription": "A preview can look right while an export still needs checking. I tested whether picture and sound stay together when Premation changes video speed.\n\nThe test: one original moving-ball clip, six white flashes and six clicks embedded in the same source. I exported a normal-speed control and a variable-speed version, including 0.5x and 2x sections, through Premation 1.1.1's native command-line engine. Then I decoded the actual exported picture and audio and compared the event times.\n\nResult: all six events in each export stayed within one frame at 30fps—a 33.3ms test window. This is a narrow result for one synthetic clip, build and export route, not a guarantee for every codec, speed curve, lip-sync shot or editing workflow.\n\nCHAPTERS\n00:00 Can you trust the preview?\n00:16 Building the original test clip\n00:43 Changing the speed\n00:57 Measuring the exported files\n01:09 Six out of six events\n01:21 What this test does not prove\n\nSOURCES\nPremation 1.1.1 release:\nhttps://github.com/isroil01/premation/releases/tag/v1.1.1\nOfficial CLI documentation:\nhttps://www.premation.com/docs/api/cli\n\nPRODUCTION\nOriginal local 3D clapperboard, test footage, graphics, music and sound effects. English narration: Supertonic-3 M1 (BigScience Open RAIL-M). The explanatory film mixes narration and music with test clicks; measurements were made on the separate native test exports. 3D inserts were made at 720p and test exports at 640x360, then enlarged inside 1080p layouts.\n\n#Premation #VideoEditing #AudioSync",
+      "addedAt": "2026-11-09T09:50:06.604Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Jeanne la bataillonneuse — Géo Chkouroupiy | Bande-annonce",
       "url": "https://www.youtube.com/watch?v=PmhWa-V00zc",
       "publishedAt": "2026-10-14T14:55:39.000Z",

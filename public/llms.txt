@@ -569,6 +569,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/phvfrx8rbcE
   Summary: Someone just built an incredibly realistic ocean simulation using Three.js and WebGL2. And then decided to give away the entire source code. For free. Meet Ultra Water, an open-source, high-performance ocean renderer tha
 
+- Does Video Speed Break Audio Sync? Premation Tested
+  URL: https://abvx.xyz/writing/videos/PhwCWcEe0LE
+  Summary: A preview can look right while an export still needs checking. I tested whether picture and sound stay together when Premation changes video speed. The test: one original moving-ball clip, six white flashes and six click
+
 - Jeanne la bataillonneuse — Géo Chkouroupiy | Bande-annonce
   URL: https://abvx.xyz/writing/videos/PmhWa-V00zc
   Summary: Découvrez « Jeanne la bataillonneuse, suivi de Miss Adrienne » de Géo Chkouroupiy, en traduction française dans la collection Modernisme ukrainien. La guerre et la révolution de 1917. Puis l’usine, le chômage et les mira

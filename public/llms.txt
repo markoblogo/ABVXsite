@@ -119,7 +119,7 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 - ComfyUI-PhotoDeblur: Fix Camera Shake & Motion Blur with HI-Diff and MISCFilter
   URL: https://abvx.xyz/writing/videos/6-VMwHGiQxw
-  Summary: ComfyUI-PhotoDeblur: Fix Camera Shake & Motion Blur with HI-Diff and MISCFilter
+  Summary: That night photo was almost perfect. Except your hands decided to shake at exactly the wrong moment. Meet ComfyUI-PhotoDeblur, a free, open-source node pack by porfeng that helps restore photos affected by camera shake a
 
 - Pokras Lampas — Seals of Good Intentions | Bangkok Night Art Film
   URL: https://abvx.xyz/writing/videos/6c3JXdIiosg

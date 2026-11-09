@@ -1301,6 +1301,16 @@
     },
     {
       "source": "substack",
+      "title": "19 Waymo Incidents Caused a Safety Scandal. Human Drivers Got 375,000 Tickets. Guess Who We're Afraid Of?",
+      "url": "https://abvx.substack.com/p/19-waymo-incidents-caused-a-safety",
+      "publishedAt": "2026-11-09T20:13:49.000Z",
+      "excerpt": "There’s something magnificent about our relationship with self-driving cars. When a robotaxi makes a mistake, civilization is apparently on the brink of collapse. When a human driver makes precisely the same mistake, it’",
+      "coverImage": "https://substackcdn.com/image/fetch/$s_!F5b6!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F60223b66-03e2-4699-b251-453f689405e3_1671x941.png",
+      "addedAt": "2026-11-09T20:21:57.104Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "substack",
       "title": "A 23-Year-Old College Dropout Built a $10 Billion AI Assistant. The Story Is Better Than the Headline.",
       "url": "https://abvx.substack.com/p/a-23-year-old-college-dropout-built",
       "publishedAt": "2026-10-01T14:08:42.000Z",
@@ -1901,8 +1911,9 @@
       "title": "ComfyUI-PhotoDeblur: Fix Camera Shake & Motion Blur with HI-Diff and MISCFilter",
       "url": "https://www.youtube.com/watch?v=6-VMwHGiQxw",
       "publishedAt": "2026-11-09T20:10:29.000Z",
+      "excerpt": "That night photo was almost perfect. Except your hands decided to shake at exactly the wrong moment. Meet ComfyUI-PhotoDeblur, a free, open-source node pack by porfeng that helps restore photos affected by camera shake a",
       "coverImage": "https://i.ytimg.com/vi/6-VMwHGiQxw/hqdefault.jpg",
-      "videoDescription": "",
+      "videoDescription": "That night photo was almost perfect. Except your hands decided to shake at exactly the wrong moment.\n\nMeet ComfyUI-PhotoDeblur, a free, open-source node pack by porfeng that helps restore photos affected by camera shake and motion blur.\n\nAnd here's the interesting part: it works at your photo's original resolution. No mandatory downscaling just to fit the image into VRAM.\n\nInstead of reaching for another generative upscaler, you get two specialized image-restoration models inside ComfyUI:\n\nHI-Diff: A diffusion-based deblurring model that gradually reconstructs sharper details.\n\nMISCFilter: A direct, single-pass restoration model. No diffusion sampling steps required.\n\nThink handheld night photos, smeared neon signs, soft storefront edges, blurry architectural details, and motion trails around lights.\n\nWhat makes the nodes useful?\n\nTiled processing: Split large photos into manageable regions and blend them back together. The suggested starting point is 768-pixel tiles with 96 pixels of overlap.\n\nFlexible blending: Linear, cosine, Gaussian, and average options help reduce visible seams.\n\n8-way TTA: Average rotated and mirrored predictions to improve stability, at roughly eight times the model computation.\n\nMatch Input Tone: Reduce broad color shifts so the restored photo stays closer to the original.\n\nOfficial checkpoints: Download and verify RealBlur_J, RealBlur_R, or GoPro weights directly through a ComfyUI node.\n\nWant to try it?\n\nInstall comfyui-photodeblur through ComfyUI Manager or clone the repository into custom_nodes. Load one of the included example workflows.\n\nStart with RealBlur_J, tile 768, overlap 96, TTA off. Run the same photo through both models and compare the results at 100% zoom.\n\nThe developer even reports using an 8 GB GPU for the tiled examples. MISCFilter does require NVIDIA CUDA and CuPy, so check the installation notes.\n\nOne important reality check: deblurring isn't time travel.\n\nNo model can guarantee recovery of details that were never captured. Severe defocus, blown highlights, and tiny heavily blurred faces remain difficult. And because HI-Diff is a learned restoration model, you should still inspect fine details for artifacts.\n\nBut if you've ever lost an otherwise beautiful photo to shaky hands, this is exactly the kind of practical ComfyUI tool worth bookmarking.\n\nGitHub, installation and sample workflows:\nhttps://github.com/porfeng/ComfyUI-PhotoDeblur\n\n#ComfyUI #PhotoDeblur #HIDiff #MISCFilter #PhotoRestoration #MotionBlur #OpenSourceAI",
       "addedAt": "2026-11-09T20:12:49.193Z",
       "addedAtBasis": "observed"
     },

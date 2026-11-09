@@ -481,6 +481,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/LzgnvledcWY
   Summary: What happens when brutal sci-fi meets psychedelic motion design? You get You Are Dead, a stunning cinematic edit created by Antibody for Bungie's video game Marathon. And the visual direction is absolutely insane. The fi
 
+- ReelMimic: AI Agents Recreate Video Styles in 2D | Claude Code & Codex
+  URL: https://abvx.xyz/writing/videos/mdrl-bQF3Zk
+  Summary: Someone just brought the golden age of DOS file managers back to life. Except this time, they're running AI agents. Meet AI-Commander, a new open-source terminal interface built by developer Mikhail Malyshev. And I have
+
 - Claude Opus 5.5 Destroyed GPT-6 & Gemini in an AI Sailing Race | The Autopilot Experiment
   URL: https://abvx.xyz/writing/videos/MfaQeGwm0Lg
   Summary: Someone built a sailing simulator, put the world's leading AI models behind the wheel, and discovered something fascinating about how these models actually solve problems. Or, more accurately, behind the rudder. Develope
@@ -724,6 +728,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - One GLB File, a Whole Car to Animate
   URL: https://abvx.xyz/writing/videos/SrWeTSaQ4DQ
   Summary: This car is one GLB file. We use code to separate its parts, rebuild it and change just one door. A short 3D animation test about named geometry, scene hierarchy and getting the hinge right. The source asset contains 101
+
+- What If Claude Existed in 1998? Windows 95 Meets Volkov Commander
+  URL: https://abvx.xyz/writing/videos/SSURtXFwSec
+  Summary: What if Claude had been released in 1998? Before cloud computing. Before AI agents. Before everyone decided that every application needed a browser-based interface. Meet Claude '98, an imaginary version of Anthropic's AI
 
 - Claude Code Has Hidden Features. This /stack Mod Reveals Everything
   URL: https://abvx.xyz/writing/videos/sZpOYudsSDY

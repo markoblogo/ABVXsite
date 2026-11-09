@@ -8692,7 +8692,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-09T17:50:33.770Z",
+      "updatedAt": "2026-11-09T19:10:16.266Z",
       "tags": [],
       "links": [],
       "related": []
@@ -12828,6 +12828,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "ReelMimic: AI Agents Recreate Video Styles in 2D | Claude Code & Codex",
+      "summary": "Someone just brought the golden age of DOS file managers back to life. Except this time, they're running AI agents. Meet AI-Commander, a new open-source terminal interface built by developer Mikhail Malyshev. And I have ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/mdrl-bQF3Zk",
+      "publishedAt": "2026-11-09T18:57:21.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=mdrl-bQF3Zk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "RelayVSR: Near Real-Time AI Video Upscaling in ComfyUI | 1080p, 4K & 29 FPS",
       "summary": "Remember when upscaling a short AI video meant waiting several minutes, or sometimes even longer? Well, things are getting considerably faster. ComfyUI just added support for RelayVSR, an open-source AI video upscaler ca",
       "canonicalUrl": "https://abvx.xyz/writing/videos/LEuUaNL1R4A",
@@ -14930,6 +14953,29 @@
           "relation": "same-project"
         }
       ]
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "What If Claude Existed in 1998? Windows 95 Meets Volkov Commander",
+      "summary": "What if Claude had been released in 1998? Before cloud computing. Before AI agents. Before everyone decided that every application needed a browser-based interface. Meet Claude '98, an imaginary version of Anthropic's AI",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/SSURtXFwSec",
+      "publishedAt": "2026-11-09T19:04:30.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=SSURtXFwSec"
+        }
+      ],
+      "related": []
     },
     {
       "type": "video",

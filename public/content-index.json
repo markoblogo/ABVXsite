@@ -8684,6 +8684,29 @@
       "related": []
     },
     {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "ComfyUI-PhotoDeblur: Fix Camera Shake & Motion Blur with HI-Diff and MISCFilter",
+      "summary": "ComfyUI-PhotoDeblur: Fix Camera Shake & Motion Blur with HI-Diff and MISCFilter",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/6-VMwHGiQxw",
+      "publishedAt": "2026-11-09T20:10:29.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=6-VMwHGiQxw"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "editorial-series",
       "section": "writing",
       "ecosystem": "Writing",
@@ -8692,7 +8715,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-09T19:37:02.036Z",
+      "updatedAt": "2026-11-09T20:12:49.193Z",
       "tags": [],
       "links": [],
       "related": []

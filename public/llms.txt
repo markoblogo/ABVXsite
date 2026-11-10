@@ -2351,6 +2351,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook, living
 
+- Psychology Notebook #41 — Routine Is Also Life
+  URL: https://abvx.xyz/writing/psychology-notebook-41-routine-is-also-life
+  Summary: Six translated notebook fragments on routine is also life.
+  Group: writing
+  Tags: psychology-notebook, living
+
+- Psychology Notebook #42 — The Resources That Make Change Possible
+  URL: https://abvx.xyz/writing/psychology-notebook-42-resources-that-make-change-possible
+  Summary: Six translated notebook fragments on the resources that make change possible.
+  Group: writing
+  Tags: psychology-notebook, responsibility
+
 - The Berliner: How My Beer Cocktail Ended Up on a French Bar's Menu
   URL: https://abvx.xyz/writing/the-berliner-guinness-port-beer-cocktail
   Summary: I discovered Guinness with port wine in Berlin, recreated it with whatever a small French bar had available, and eventually watched it become an official item in the cash register.

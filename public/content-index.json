@@ -8715,7 +8715,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-09T20:37:05.987Z",
+      "updatedAt": "2026-11-10T09:11:29.599Z",
       "tags": [],
       "links": [],
       "related": []
@@ -12889,6 +12889,44 @@
       "links": [],
       "publishedAt": "2026-11-09",
       "updatedAt": "2026-11-09",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #41 — Routine Is Also Life",
+      "summary": "Six translated notebook fragments on routine is also life.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-41-routine-is-also-life",
+      "tags": [
+        "psychology-notebook",
+        "living"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-10",
+      "updatedAt": "2026-11-10",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #42 — The Resources That Make Change Possible",
+      "summary": "Six translated notebook fragments on the resources that make change possible.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-42-resources-that-make-change-possible",
+      "tags": [
+        "psychology-notebook",
+        "responsibility"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-10",
+      "updatedAt": "2026-11-10",
       "related": []
     },
     {

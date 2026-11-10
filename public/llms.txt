@@ -589,6 +589,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/oWLzRqqCs58
   Summary: What if your AI agent could work across your terminal, desktop, browser, and messaging apps without constantly losing context or duplicating tasks? And what if multiple agents could collaborate in the same conversation w
 
+- Your AI Agent Changed. The Model Didn't. | Dependabot + APM
+  URL: https://abvx.xyz/writing/videos/owWs6W4dR4w
+  Summary: Your AI model stayed the same. Its instructions may not have. Here is how Dependabot version updates for Agent Package Manager (APM) turn supported skill and prompt dependencies into changes you can review. This short vi
+
 - A One-Minute Dream Walk | Guided Visualization in a Moonlit Garden
   URL: https://abvx.xyz/writing/videos/oyQXmJI4aK0
   Summary: Step into a moonlit garden for a one-minute guided visualization: lanterns, moving water, a quiet pavilion and a gentle English voice. A short cinematic escape with ambient piano and night sounds. Created using PlayMCP.

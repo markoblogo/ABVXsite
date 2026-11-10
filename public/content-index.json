@@ -8757,7 +8757,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-10T18:50:39.136Z",
+      "updatedAt": "2026-11-10T22:12:25.002Z",
       "tags": [],
       "links": [],
       "related": []
@@ -15584,6 +15584,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=R-7XiZzJXHc"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Your AI Agent Changed. The Model Didn't. | Dependabot + APM",
+      "summary": "Your AI model stayed the same. Its instructions may not have. Here is how Dependabot version updates for Agent Package Manager (APM) turn supported skill and prompt dependencies into changes you can review. This short vi",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/owWs6W4dR4w",
+      "publishedAt": "2026-11-10T21:47:15.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=owWs6W4dR4w"
         }
       ],
       "related": []

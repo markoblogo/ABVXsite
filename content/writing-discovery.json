@@ -3287,6 +3287,17 @@
     },
     {
       "source": "youtube",
+      "title": "Your AI Agent Changed. The Model Didn't. | Dependabot + APM",
+      "url": "https://www.youtube.com/watch?v=owWs6W4dR4w",
+      "publishedAt": "2026-11-10T21:47:15.000Z",
+      "excerpt": "Your AI model stayed the same. Its instructions may not have. Here is how Dependabot version updates for Agent Package Manager (APM) turn supported skill and prompt dependencies into changes you can review. This short vi",
+      "coverImage": "https://i.ytimg.com/vi/owWs6W4dR4w/hqdefault.jpg",
+      "videoDescription": "Your AI model stayed the same. Its instructions may not have. Here is how Dependabot version updates for Agent Package Manager (APM) turn supported skill and prompt dependencies into changes you can review.\n\nThis short visual explainer covers apm.yml, the Dependabot APM ecosystem, update pull requests, existing lockfiles, and why a tag behaves differently from a branch.\n\nThe important limit: these are VERSION updates, not security updates or proof that new instructions are better. Local path dependencies and MCP entries are outside this support. Read the diff, run a familiar task, and compare behaviour before merging.\n\nCHAPTERS\n00:00 Same model, new rules\n00:16 Configure APM and Dependabot\n00:31 Pull request and lockfile\n00:41 Tags, branches and limits\n00:54 Version updates are not security updates\n01:05 Review, test, and keep known rules\n\nSOURCES (checked 10 November 2026)\nGitHub launch: https://github.blog/changelog/2026-11-03-dependabot-version-updates-support-agent-package-manager/\nSupported ecosystems and APM limitations: https://docs.github.com/en/code-security/reference/supply-chain-security/supported-ecosystems-and-repositories\nMicrosoft Agent Package Manager: https://microsoft.github.io/apm/\nDependabot configuration: https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/configure-version-updates\n\nVISUALS AND AUDIO\nOriginal 3D illustrations and fictional configuration examples. This is an explanation based on the documentation, not a live Dependabot or APM service test. AI-generated English narration; original procedural music and sound design. No result, security or savings guarantee is implied.\n\nMade with Framewright: https://markoblogo.github.io/framewright/\n\n#Dependabot #APM #AIAgents",
+      "addedAt": "2026-11-10T22:12:25.002Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "A One-Minute Dream Walk | Guided Visualization in a Moonlit Garden",
       "url": "https://www.youtube.com/watch?v=oyQXmJI4aK0",
       "publishedAt": "2026-10-24T00:00:05.000Z",

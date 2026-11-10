@@ -8757,7 +8757,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-10T15:12:01.979Z",
+      "updatedAt": "2026-11-10T18:50:39.136Z",
       "tags": [],
       "links": [],
       "related": []
@@ -15688,6 +15688,29 @@
       "links": [],
       "publishedAt": "2026-10-14",
       "updatedAt": "2026-10-14",
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "YouTube to TikTok: One Master or Two Layouts? We Tested Both",
+      "summary": "Can a YouTube video become a TikTok simply by cropping its centre—or does it need a separate layout? We tested both workflows on two different 90-second animated films. A used independent landscape and portrait compositi",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/Ndl2VnGJb6o",
+      "publishedAt": "2026-11-10T18:38:12.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=Ndl2VnGJb6o"
+        }
+      ],
       "related": []
     },
     {

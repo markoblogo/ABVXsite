@@ -3134,6 +3134,17 @@
     },
     {
       "source": "youtube",
+      "title": "YouTube to TikTok: One Master or Two Layouts? We Tested Both",
+      "url": "https://www.youtube.com/watch?v=Ndl2VnGJb6o",
+      "publishedAt": "2026-11-10T18:38:12.000Z",
+      "excerpt": "Can a YouTube video become a TikTok simply by cropping its centre—or does it need a separate layout? We tested both workflows on two different 90-second animated films. A used independent landscape and portrait compositi",
+      "coverImage": "https://i.ytimg.com/vi/Ndl2VnGJb6o/hqdefault.jpg",
+      "videoDescription": "Can a YouTube video become a TikTok simply by cropping its centre—or does it need a separate layout? We tested both workflows on two different 90-second animated films.\n\nA used independent landscape and portrait compositions. B was built as a 4K landscape master with its essential story inside a self-contained vertical centre, then cropped from that encoded master.\n\nWhat we measured:\n• Portrait composition/export: A 142.75s; B 40.47s.\n• Landscape + portrait exports combined: A 390.61s; B 331.40s.\n• B needed more full-stage source rendering and corrections in this pair.\n\nThese are tool elapsed times for specific phases, not total labour or monetary savings. The two stories and their correction loads were different. Both visual approaches were accepted for reuse; this is a practical production comparison, not proof that cropping always wins. Audience results remain separate.\n\nWatch the two original films:\nA — Copilot Says “Addressed”. Was the Bug Fixed?\nhttps://youtu.be/YH-_vrmMquQ\nB — Final Cut + Pixelmator: Fix the Image, Keep the Edit\nhttps://youtu.be/NvAYxy-n4JI\n\n00:00 One master or two layouts?\n00:20 The centre-crop route\n00:33 Portrait export: 143s vs 40s\n00:48 Looking beyond the export\n01:03 Both approaches, different trade-offs\n01:18 Frame for the story\n\nFramewright — the production methods and retained evidence:\nhttps://markoblogo.github.io/framewright/\nhttps://github.com/markoblogo/framewright/blob/main/docs/methods/centre-safe-dual-format.md\n\nOriginal AI-assisted illustrations and locally authored Blender/Pillow/FFmpeg animation. Synthetic narration: Google AI Studio, Knox. Music: our retained original local score. This film documents our production process; it is not a live Copilot, Final Cut or Pixelmator application demo.\n\n#VideoEditing #ContentRepurposing #CreatorWorkflow",
+      "addedAt": "2026-11-10T18:50:39.136Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Subvocal: AI Glasses That Turn Silent Speech Into Text at 200+ Words Per Minute",
       "url": "https://www.youtube.com/watch?v=NEbmecyitIs",
       "publishedAt": "2026-11-01T19:20:32.000Z",

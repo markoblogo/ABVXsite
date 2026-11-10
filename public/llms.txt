@@ -537,6 +537,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/nBzbwlcAElY
   Summary: We may have just witnessed one of the strangest AI experiments of 2026. Researchers connected a simulated fruit fly brain to Odyssey-3, an AI world model capable of generating interactive virtual environments in real tim
 
+- YouTube to TikTok: One Master or Two Layouts? We Tested Both
+  URL: https://abvx.xyz/writing/videos/Ndl2VnGJb6o
+  Summary: Can a YouTube video become a TikTok simply by cropping its centre—or does it need a separate layout? We tested both workflows on two different 90-second animated films. A used independent landscape and portrait compositi
+
 - Subvocal: AI Glasses That Turn Silent Speech Into Text at 200+ Words Per Minute
   URL: https://abvx.xyz/writing/videos/NEbmecyitIs
   Summary: What if you could talk to ChatGPT, Claude, or your AI coding agents without making a single sound? No keyboard. No microphone. Not even whispering. Just silently move your mouth, and your thoughts become text. Well, almo

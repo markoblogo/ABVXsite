@@ -2435,6 +2435,12 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: AI agents, agentic coding, multi-agent development, SKYFLY, Three.js, token budgets
 
+- CARE: Why Caring Is More Than Love
+  URL: https://abvx.xyz/writing/care-emotional-system-affective-neuroscience
+  Summary: Why do we care for others, sometimes at the expense of ourselves? The CARE system reveals the biology of nurturing and completes our journey through the seven emotional systems.
+  Group: writing
+  Tags: psychology-notebook, the-emotional-brain, CARE system, Jaak Panksepp, affective neuroscience, oxytocin, prolactin, caregiving
+
 - Did Target Know a Teenager Was Pregnant Before She Did? I Finally Asked.
   URL: https://abvx.xyz/writing/target-pregnancy-prediction-algorithm-story
   Summary: Target's pregnancy prediction algorithm became legendary after a teenager received baby-product coupons before her father knew she was pregnant. I later met someone who said she'd worked on the model and asked one question.
@@ -2458,6 +2464,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Summary: I tested /brag, an open-source agent skill that turns software projects into 20-second launch videos. Two projects, two results, and a much simpler promotional workflow.
   Group: writing
   Tags: ai-agents, agent-skills, codex, claude-code, ai-video, product-launch, developer-tools, hyperframes
+
+- PANIC/GRIEF and PLAY: Why We Need Each Other
+  URL: https://abvx.xyz/writing/panic-grief-play-emotional-systems
+  Summary: Why does losing someone hurt so much? And why do we need play, laughter, and connection? Two ancient emotional systems help explain both experiences.
+  Group: writing
+  Tags: psychology-notebook, the-emotional-brain, PANIC/GRIEF, PLAY system, Jaak Panksepp, separation distress, attachment, social play
+
+- RAGE and FEAR: Two Ways the Brain Tries to Keep Us Safe
+  URL: https://abvx.xyz/writing/rage-fear-emotional-systems
+  Summary: Anger helps us defend our boundaries. Fear helps us recognise danger. But what happens when we become trapped in constant confrontation or avoidance?
+  Group: writing
+  Tags: psychology-notebook, the-emotional-brain, RAGE system, FEAR system, Jaak Panksepp, affective neuroscience, anger, fear
 
 - Where Is AI Startup Funding Actually Going? I Analyzed 7,740 Companies
   URL: https://abvx.xyz/writing/ai-startup-funding-trends-7740-companies

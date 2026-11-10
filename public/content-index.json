@@ -8109,6 +8109,48 @@
       "related": []
     },
     {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "CARE: Why Caring Is More Than Love",
+      "summary": "Why do we care for others, sometimes at the expense of ourselves? The CARE system reveals the biology of nurturing and completes our journey through the seven emotional systems.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/care-emotional-system-affective-neuroscience",
+      "tags": [
+        "psychology-notebook",
+        "the-emotional-brain",
+        "CARE system",
+        "Jaak Panksepp",
+        "affective neuroscience",
+        "oxytocin",
+        "prolactin",
+        "caregiving",
+        "empathy",
+        "attachment",
+        "boundaries",
+        "emotional systems",
+        "affective-neuroscience",
+        "emotional-regulation"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-10",
+      "updatedAt": "2026-11-10",
+      "related": [
+        {
+          "title": "RAGE and FEAR: Two Ways the Brain Tries to Keep Us Safe",
+          "canonicalUrl": "https://abvx.xyz/writing/rage-fear-emotional-systems",
+          "relation": "related"
+        },
+        {
+          "title": "PANIC/GRIEF and PLAY: Why We Need Each Other",
+          "canonicalUrl": "https://abvx.xyz/writing/panic-grief-play-emotional-systems",
+          "relation": "related"
+        }
+      ]
+    },
+    {
       "type": "video",
       "section": "writing",
       "ecosystem": "Writing",
@@ -8715,7 +8757,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-10T09:11:29.599Z",
+      "updatedAt": "2026-11-10T14:09:41.964Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11854,6 +11896,48 @@
       "related": []
     },
     {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "PANIC/GRIEF and PLAY: Why We Need Each Other",
+      "summary": "Why does losing someone hurt so much? And why do we need play, laughter, and connection? Two ancient emotional systems help explain both experiences.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/panic-grief-play-emotional-systems",
+      "tags": [
+        "psychology-notebook",
+        "the-emotional-brain",
+        "PANIC/GRIEF",
+        "PLAY system",
+        "Jaak Panksepp",
+        "separation distress",
+        "attachment",
+        "social play",
+        "endogenous opioids",
+        "oxytocin",
+        "grief",
+        "emotional regulation",
+        "affective-neuroscience",
+        "emotional-regulation"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-10",
+      "updatedAt": "2026-11-10",
+      "related": [
+        {
+          "title": "RAGE and FEAR: Two Ways the Brain Tries to Keep Us Safe",
+          "canonicalUrl": "https://abvx.xyz/writing/rage-fear-emotional-systems",
+          "relation": "related"
+        },
+        {
+          "title": "CARE: Why Caring Is More Than Love",
+          "canonicalUrl": "https://abvx.xyz/writing/care-emotional-system-affective-neuroscience",
+          "relation": "related"
+        }
+      ]
+    },
+    {
       "type": "video",
       "section": "writing",
       "ecosystem": "Writing",
@@ -12928,6 +13012,48 @@
       "publishedAt": "2026-11-10",
       "updatedAt": "2026-11-10",
       "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "RAGE and FEAR: Two Ways the Brain Tries to Keep Us Safe",
+      "summary": "Anger helps us defend our boundaries. Fear helps us recognise danger. But what happens when we become trapped in constant confrontation or avoidance?",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/rage-fear-emotional-systems",
+      "tags": [
+        "psychology-notebook",
+        "the-emotional-brain",
+        "RAGE system",
+        "FEAR system",
+        "Jaak Panksepp",
+        "affective neuroscience",
+        "anger",
+        "fear",
+        "aggression",
+        "anxiety",
+        "emotional regulation",
+        "boundaries",
+        "affective-neuroscience",
+        "emotional-regulation"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-10",
+      "updatedAt": "2026-11-10",
+      "related": [
+        {
+          "title": "PANIC/GRIEF and PLAY: Why We Need Each Other",
+          "canonicalUrl": "https://abvx.xyz/writing/panic-grief-play-emotional-systems",
+          "relation": "related"
+        },
+        {
+          "title": "CARE: Why Caring Is More Than Love",
+          "canonicalUrl": "https://abvx.xyz/writing/care-emotional-system-affective-neuroscience",
+          "relation": "related"
+        }
+      ]
     },
     {
       "type": "video",

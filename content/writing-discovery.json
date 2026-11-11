@@ -1866,6 +1866,17 @@
     },
     {
       "source": "youtube",
+      "title": "Gemini 4 Carbon Built a 3D Renderer From Scratch (No Blender)",
+      "url": "https://www.youtube.com/watch?v=0QESmDPIdLc",
+      "publishedAt": "2026-11-11T09:32:10.000Z",
+      "excerpt": "Gemini 4 Carbon just built its own 3D rendering pipeline using C++ and NVIDIA CUDA, then created a 60-second physics-based animation without Blender or traditional keyframe animation. This isn't AI-generated video. It's ",
+      "coverImage": "https://i.ytimg.com/vi/0QESmDPIdLc/hqdefault.jpg",
+      "videoDescription": "Gemini 4 Carbon just built its own 3D rendering pipeline using C++ and NVIDIA CUDA, then created a 60-second physics-based animation without Blender or traditional keyframe animation.\n\nThis isn't AI-generated video. It's AI-generated software creating a physically simulated 3D scene.\n\nIn this experiment by @fofrAI, Google's Gemini 4 Carbon took on an entire technical 3D production workflow.\n\nHere's what Carbon reportedly built:\n\n• Custom CUDA/C++ renderer: a GPU-accelerated path tracer written from scratch to calculate realistic lighting, reflections, and shadows.\n\n• MuJoCo physics integration: rigid-body simulation handling gravity, collisions, friction, and physical interactions.\n\n• Rube Goldberg machine: a complex chain-reaction mechanism with balls, levers, and interconnected moving objects.\n\n• 120,000 physics steps: 60 seconds of simulated motion at 2,000 steps per second, without manually animated keyframes.\n\n• Procedural 3D environment: a complete studio scene with a continuous cinematic camera movement.\n\n• AI-generated soundtrack: original music created with Google's Lyria 3.5, synchronized with the camera animation.\n\nThe important distinction: Gemini didn't simply generate frames from a text prompt. It wrote rendering software, integrated an existing physics engine, constructed a scene, and produced the resulting animation.\n\nTools like Blender, Houdini, and NVIDIA Omniverse aren't disappearing. But AI agents that can build specialized 3D pipelines on demand could change how digital content is produced.\n\nIs this the future of procedural 3D animation, or just an impressive technical experiment?\n\nOriginal creator: @fofrAI\n\nSources:\nhttps://x.com/fofrAI/status/2120199468460933170\nhttps://x.com/fofrAI/status/2120255543180702110\n\n#Gemini4Carbon #3DRendering #AIAnimation",
+      "addedAt": "2026-11-11T09:37:17.576Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Claude AI Brain Surgery on a Mouse? What Exin Reported",
       "url": "https://www.youtube.com/watch?v=0wvAwUAZEFo",
       "publishedAt": "2026-10-30T18:45:32.000Z",
@@ -2764,6 +2775,17 @@
       "coverImage": "https://i.ytimg.com/vi/I1vIAh3K9yo/hqdefault.jpg",
       "videoDescription": "Claude Opus 5.5 helped direct an entire VFX scene through Blender MCP and Nuke, with Houdini in the pipeline. Not a single frame was AI-generated.\n\nThis isn't text-to-video. It's an experiment in using an AI agent as a VFX supervisor.\n\nClaude was connected to Blender and Nuke through MCP, while Houdini handled part of the workflow. For the wind, lanterns and falling leaves, Claude wrote a custom physics engine in Python and NumPy.\n\nIt then handled creative and technical decisions: composition, silhouettes, architecture, object movement, lighting and fine animation details.\n\nAccording to the creator, the workflow involved more than 580 notes and corrections, with no manual edits to the scene. The changes were directed through conversations with Claude.\n\nThe interesting question isn't whether AI can generate a beautiful image. It's whether AI can control a professional, editable 3D and compositing pipeline.\n\nOriginal project and source:\nhttps://x.com/AlexPi194641/status/2120248196584648758\n\nWould you trust an AI agent to supervise a VFX shot?\n\n#ClaudeAI #Blender3D #VFX",
       "addedAt": "2026-11-11T09:23:51.851Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
+      "title": "DAWN AI: Hair-Level Keying & Relighting Without Regenerating Actors",
+      "url": "https://www.youtube.com/watch?v=iaJy1CPLfXw",
+      "publishedAt": "2026-11-11T09:24:00.000Z",
+      "excerpt": "Meet DAWN, a new AI VFX foundation model from British startup PXLD that composites real actors into entirely different environments while preserving their original performances. No AI-generated faces. No rewritten expres",
+      "coverImage": "https://i.ytimg.com/vi/iaJy1CPLfXw/hqdefault.jpg",
+      "videoDescription": "Meet DAWN, a new AI VFX foundation model from British startup PXLD that composites real actors into entirely different environments while preserving their original performances.\n\nNo AI-generated faces. No rewritten expressions. No replacing the actor with a synthetic version.\n\nDAWN introduces a different approach to AI compositing: world harmonisation.\n\nInstead of regenerating an entire video, the model is designed to preserve the original footage while adapting lighting, shadows, reflections, and the surrounding environment.\n\nKey capabilities demonstrated and announced by PXLD:\n\n• Hair-level detail: preserving individual hair strands, fine edges, and subtle facial expressions.\n\n• Performance preservation: keeping the actor's original identity, movement, and facial performance intact.\n\n• Dynamic AI relighting: adapting illumination, shadows, and reflections to match a new environment.\n\n• Flexible environments: placing real footage into photographs, videos, 360° panoramas, and 3D scenes.\n\n• Spatial lighting control: positioning light sources around the scene without relying on text prompts.\n\n• Film-scale ambitions: PXLD claims support for unlimited clip lengths and workflows ranging from smartphone footage to high-end cinema production.\n\nFor compositors working in Nuke, After Effects, or professional VFX pipelines, the implications could be significant.\n\nLess manual masking. More control over lighting. And most importantly, the original performance stays the original performance.\n\nDAWN is currently being introduced through early access. Its production capabilities and limitations still need independent validation.\n\nExplore DAWN and join the waitlist:\nhttps://pxld.ai\n\nCould this change the future of VFX compositing?\n\n#DAWNai #VFX #AICompositing",
+      "addedAt": "2026-11-11T09:37:17.576Z",
       "addedAtBasis": "observed"
     },
     {

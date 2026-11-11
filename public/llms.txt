@@ -69,6 +69,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/-VfmvCVWkSs
   Summary: Well, I guess it's time to uninstall Hermes Desktop and move back into the terminal. Hermes Agent v0.23.0 just added native inline image rendering. And honestly, this is exactly the kind of small improvement that makes t
 
+- Gemini 4 Carbon Built a 3D Renderer From Scratch (No Blender)
+  URL: https://abvx.xyz/writing/videos/0QESmDPIdLc
+  Summary: Gemini 4 Carbon just built its own 3D rendering pipeline using C++ and NVIDIA CUDA, then created a 60-second physics-based animation without Blender or traditional keyframe animation. This isn't AI-generated video. It's
+
 - Claude AI Brain Surgery on a Mouse? What Exin Reported
   URL: https://abvx.xyz/writing/videos/0wvAwUAZEFo
   Summary: An AI agent choosing a treatment and controlling a surgical robot sounds like science fiction. Exin Therapeutics says it tested that idea in a mouse model of epilepsy — with a human surgeon, a supervising veterinarian an
@@ -392,6 +396,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Claude Opus 5.5 + Blender MCP: VFX Without a Single AI-Generated Frame
   URL: https://abvx.xyz/writing/videos/I1vIAh3K9yo
   Summary: Claude Opus 5.5 helped direct an entire VFX scene through Blender MCP and Nuke, with Houdini in the pipeline. Not a single frame was AI-generated. This isn't text-to-video. It's an experiment in using an AI agent as a VF
+
+- DAWN AI: Hair-Level Keying & Relighting Without Regenerating Actors
+  URL: https://abvx.xyz/writing/videos/iaJy1CPLfXw
+  Summary: Meet DAWN, a new AI VFX foundation model from British startup PXLD that composites real actors into entirely different environments while preserving their original performances. No AI-generated faces. No rewritten expres
 
 - Nice Airport to Menton: Bus or Train? | French Riviera Guide
   URL: https://abvx.xyz/writing/videos/ih43aF1zeaM

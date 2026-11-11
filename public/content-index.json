@@ -8803,7 +8803,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-11T09:23:51.851Z",
+      "updatedAt": "2026-11-11T09:37:17.576Z",
       "tags": [],
       "links": [],
       "related": []
@@ -8896,6 +8896,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=rqKXx_Z5AR0"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "DAWN AI: Hair-Level Keying & Relighting Without Regenerating Actors",
+      "summary": "Meet DAWN, a new AI VFX foundation model from British startup PXLD that composites real actors into entirely different environments while preserving their original performances. No AI-generated faces. No rewritten expres",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/iaJy1CPLfXw",
+      "publishedAt": "2026-11-11T09:24:00.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=iaJy1CPLfXw"
         }
       ],
       "related": []
@@ -9429,6 +9452,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=SB2b1nB6G2U"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Gemini 4 Carbon Built a 3D Renderer From Scratch (No Blender)",
+      "summary": "Gemini 4 Carbon just built its own 3D rendering pipeline using C++ and NVIDIA CUDA, then created a 60-second physics-based animation without Blender or traditional keyframe animation. This isn't AI-generated video. It's ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/0QESmDPIdLc",
+      "publishedAt": "2026-11-11T09:32:10.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=0QESmDPIdLc"
         }
       ],
       "related": []

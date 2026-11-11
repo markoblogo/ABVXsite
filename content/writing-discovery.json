@@ -1261,6 +1261,16 @@
     },
     {
       "source": "medium",
+      "title": "Running a 284-Billion-Parameter AI Model Without a GPU? Apparently, Yes.",
+      "url": "https://abvcreative.medium.com/running-a-284-billion-parameter-ai-model-without-a-gpu-apparently-yes-4b985bb9eb2f",
+      "publishedAt": "2026-11-11T15:56:30.000Z",
+      "excerpt": "One developer squeezed DeepSeek V4 Flash into 64 GB of RAM and made it run on a laptop. It’s not particularly fast, but it might be surprisingly useful. There’s something wonderfully absurd about the economics of artific",
+      "coverImage": "https://cdn-images-1.medium.com/max/1024/1*cZ6Qd6XbyazsTjg5nDIbjQ.png",
+      "addedAt": "2026-11-11T16:14:23.836Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "medium",
       "title": "Rust’s Next Big Idea: Make unsafe Code Provably Safe. Let AI Agents Do the Work.",
       "url": "https://abvcreative.medium.com/rusts-next-big-idea-make-unsafe-code-provably-safe-let-ai-agents-do-the-work-5cc9902ee65a",
       "publishedAt": "2026-10-23T14:04:53.000Z",

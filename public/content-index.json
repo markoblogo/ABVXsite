@@ -8616,6 +8616,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude Fable 5.2 Built a Game in 8 Hours. Here's the Real Breakthrough",
+      "summary": "Claude Fable 5.2 and Mythos 5.2 are here. AI can now build playable games from a single prompt, work on complex projects for hours, and coordinate increasingly sophisticated software systems. But does that mean game deve",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/pmD9KZeVvAQ",
+      "publishedAt": "2026-11-11T13:51:31.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=pmD9KZeVvAQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude Fable 5.2 Creates CGI Animation From Scratch Using Blender & Python",
       "summary": "Claude Fable 5.2 is creating CGI animations from scratch by writing Python code to control Blender. No traditional text-to-video generation. Real 3D scenes, procedural geometry, animation, lighting, and rendering driven ",
       "canonicalUrl": "https://abvx.xyz/writing/videos/ZYWFtV13uW8",
@@ -8895,7 +8918,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-11T13:50:25.039Z",
+      "updatedAt": "2026-11-11T14:13:04.063Z",
       "tags": [],
       "links": [],
       "related": []

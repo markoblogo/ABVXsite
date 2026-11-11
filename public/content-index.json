@@ -8895,7 +8895,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-11T13:37:58.984Z",
+      "updatedAt": "2026-11-11T13:50:25.039Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9714,6 +9714,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=Q9lzhnQEGjQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "GLM-5.3-Flash vs Claude Fable 5.2: Same 3D Animation Test",
+      "summary": "GLM-5.3-Flash vs Claude Fable 5.2. How much AI model power do you actually need to create a decent 3D animation? Yesterday, I shared a cinema room animation concept. Today, I recreated it using two very different AI mode",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/JOTHM9PkYC8",
+      "publishedAt": "2026-11-11T13:40:28.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=JOTHM9PkYC8"
         }
       ],
       "related": []

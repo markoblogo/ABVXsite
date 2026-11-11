@@ -2955,6 +2955,17 @@
     },
     {
       "source": "youtube",
+      "title": "GLM-5.3-Flash vs Claude Fable 5.2: Same 3D Animation Test",
+      "url": "https://www.youtube.com/watch?v=JOTHM9PkYC8",
+      "publishedAt": "2026-11-11T13:40:28.000Z",
+      "excerpt": "GLM-5.3-Flash vs Claude Fable 5.2. How much AI model power do you actually need to create a decent 3D animation? Yesterday, I shared a cinema room animation concept. Today, I recreated it using two very different AI mode",
+      "coverImage": "https://i.ytimg.com/vi/JOTHM9PkYC8/hqdefault.jpg",
+      "videoDescription": "GLM-5.3-Flash vs Claude Fable 5.2. How much AI model power do you actually need to create a decent 3D animation?\n\nYesterday, I shared a cinema room animation concept. Today, I recreated it using two very different AI models.\n\nOne is Claude Fable 5.2, Anthropic's frontier model designed for complex reasoning, coding, and long-running engineering tasks.\n\nThe other is GLM-5.3-Flash, Z.ai's more affordable model optimized for efficient coding and agentic workflows.\n\nSame creative concept. Two AI models. Two results.\n\nThe goal wasn't to create a scientific benchmark. I wanted to see whether a significantly cheaper model could deliver a usable animation without requiring a top-tier AI system.\n\nAnd the result was interesting.\n\nFor this particular task, GLM-5.3-Flash turned out to be surprisingly capable.\n\nIs Fable 5.2 more powerful overall? That's not what this experiment measures.\n\nThe practical question is whether you actually need that extra power for every creative coding and animation task.\n\nSometimes, a good-enough result at a much lower cost is exactly what you need.\n\nAs AI agents become increasingly capable of creating 3D environments, animations, and visual content, choosing the right model for the job may matter more than simply choosing the most powerful one.\n\nThis is a personal creative experiment, not a controlled comparison of model quality, speed, or API costs.\n\nWhich result do you prefer?\n\nGLM-5.3-Flash or Claude Fable 5.2?\n\n#GLM53Flash #ClaudeFable52 #AIAnimation",
+      "addedAt": "2026-11-11T13:50:25.039Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Stageshow: Make Claude Code & Codex Create Beautiful UI Animations | Free AI Design Skill",
       "url": "https://www.youtube.com/watch?v=Jrhm5lH7224",
       "publishedAt": "2026-11-04T17:20:13.000Z",

@@ -445,6 +445,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/JDjvazj9zb4
   Summary: Can six still photos become a cinematic short film? In this behind-the-scenes breakdown, we show how photographs of Pokras Lampas’s “Seals of Good Intentions” became a moving scene with layered images, a shallow 3D set,
 
+- Instagram Edits for Mac: Claude & Codex Can Edit Videos via MCP
+  URL: https://abvx.xyz/writing/videos/JDPXIbGzLsk
+  Summary: Instagram just launched Edits for macOS, a free CapCut alternative with built-in MCP support that lets Claude Code, OpenAI Codex, and Meta's Muse edit videos directly inside the app. I connected Claude, asked it to edit
+
 - Someone Put Claude AI on a 2007 Nokia. Yes, Really.
   URL: https://abvx.xyz/writing/videos/jEIPftaweBM
   Summary: Remember when phones had buttons, batteries lasted forever, and Snake was peak entertainment? Well, someone just brought Claude AI to a Nokia from 2007. Developer Emir Karşıyakalı created an open-source AI chat client fo
@@ -544,6 +548,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Marathon: You Are Dead | Insane Glitch Art, Motion Design & 3D by Antibody
   URL: https://abvx.xyz/writing/videos/LzgnvledcWY
   Summary: What happens when brutal sci-fi meets psychedelic motion design? You get You Are Dead, a stunning cinematic edit created by Antibody for Bungie's video game Marathon. And the visual direction is absolutely insane. The fi
+
+- Patch: Build, Mod & Publish Games With Claude Code, Codex and MCP
+  URL: https://abvx.xyz/writing/videos/m0iXZ3eHSiQ
+  Summary: Meet Patch, a new AI-powered game development platform that lets coding agents build, modify, remix, and publish playable games using a single CLI and MCP integration. And it comes with more than 50,000 open-source game
 
 - ReelMimic: AI Agents Recreate Video Styles in 2D | Claude Code & Codex
   URL: https://abvx.xyz/writing/videos/mdrl-bQF3Zk
@@ -984,6 +992,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - NVIDIA Nemotron 3.5 Transcribe: The New King of Open-Weight Speech Recognition?
   URL: https://abvx.xyz/writing/videos/Z6k0B_8FqKA
   Summary: What if AI could transcribe an entire meeting, distinguish every speaker, translate conversations, and tell you exactly when each word was spoken? Even when several people are talking over each other? Meet NVIDIA Nemotro
+
+- H3 Dials: Control MiniMax H3 AI Videos With 14 KB Files (No Training)
+  URL: https://abvx.xyz/writing/videos/z6mQFhxYcVI
+  Summary: What if you could control AI-generated video with sliders instead of training LoRAs or endlessly rewriting prompts? Meet H3 Dials by MatlowAI, a new training-free steering system for MiniMax H3 that turns simple text pro
 
 - Your AI Avatar Can Lip-Sync. Can It Act? | Kandinsky S2V
   URL: https://abvx.xyz/writing/videos/zCNWJxI6XqU

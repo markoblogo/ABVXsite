@@ -2379,6 +2379,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook, responsibility
 
+- Psychology Notebook #43 — Creating for an Imaginary Audience
+  URL: https://abvx.xyz/writing/psychology-notebook-43-creating-for-an-imaginary-audience
+  Summary: Five translated notebook fragments on creating for an imaginary audience.
+  Group: writing
+  Tags: psychology-notebook, identity
+
+- Psychology Notebook #44 — A Balance That Keeps Moving
+  URL: https://abvx.xyz/writing/psychology-notebook-44-balance-that-keeps-moving
+  Summary: Six translated notebook fragments on a balance that keeps moving.
+  Group: writing
+  Tags: psychology-notebook, change
+
 - The Berliner: How My Beer Cocktail Ended Up on a French Bar's Menu
   URL: https://abvx.xyz/writing/the-berliner-guinness-port-beer-cocktail
   Summary: I discovered Guinness with port wine in Berlin, recreated it with whatever a small French bar had available, and eventually watched it become an official item in the cash register.

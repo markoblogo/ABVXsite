@@ -8616,6 +8616,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude Fable 5.2 Creates CGI Animation From Scratch Using Blender & Python",
+      "summary": "Claude Fable 5.2 is creating CGI animations from scratch by writing Python code to control Blender. No traditional text-to-video generation. Real 3D scenes, procedural geometry, animation, lighting, and rendering driven ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/ZYWFtV13uW8",
+      "publishedAt": "2026-11-11T12:49:02.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=ZYWFtV13uW8"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude Opus 5.5 + Blender MCP: VFX Without a Single AI-Generated Frame",
       "summary": "Claude Opus 5.5 helped direct an entire VFX scene through Blender MCP and Nuke, with Houdini in the pipeline. Not a single frame was AI-generated. This isn't text-to-video. It's an experiment in using an AI agent as a VF",
       "canonicalUrl": "https://abvx.xyz/writing/videos/I1vIAh3K9yo",
@@ -8849,7 +8872,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-11T12:38:09.249Z",
+      "updatedAt": "2026-11-11T12:50:32.025Z",
       "tags": [],
       "links": [],
       "related": []

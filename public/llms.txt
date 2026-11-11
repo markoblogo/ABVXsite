@@ -1025,6 +1025,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/ztviGVU6hAU
   Summary: What if your GPU could turn a simple low-poly game into a photorealistic world in real time? Not by replacing the game engine with a hallucinating AI model. By letting the game engine handle the actual game while AI hand
 
+- Claude Fable 5.2 Creates CGI Animation From Scratch Using Blender & Python
+  URL: https://abvx.xyz/writing/videos/ZYWFtV13uW8
+  Summary: Claude Fable 5.2 is creating CGI animations from scratch by writing Python code to control Blender. No traditional text-to-video generation. Real 3D scenes, procedural geometry, animation, lighting, and rendering driven
+
 ## Focus systems
 
 - AMI — Infrastructure for Physical Commodity Markets

@@ -8872,7 +8872,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-11T13:12:50.771Z",
+      "updatedAt": "2026-11-11T13:21:41.451Z",
       "tags": [],
       "links": [],
       "related": []
@@ -12051,6 +12051,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=Z6k0B_8FqKA"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "NVIDIA Open-H3 IC: AI Video Upscaling to 4K Without Face Drift",
+      "summary": "NVIDIA just released Open-H3-Regenerate-2K-IC, an open-weight AI video refinement model that upgrades low-resolution MiniMax H3 videos to 2K and 4K while preserving faces, lip sync, text, and scene composition. And it ca",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/VujPvRoggXw",
+      "publishedAt": "2026-11-11T13:19:51.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=VujPvRoggXw"
         }
       ],
       "related": []
@@ -15289,6 +15312,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=r_Un8eTLLUc"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Unrender: AI Turns Any Video Into a Fake 3D Playblast (No Blender)",
+      "summary": "What if AI could reverse the rendering process? Meet Unrender, a wonderfully strange AI tool that takes a finished video and turns it into something resembling an untextured 3D playblast. No materials. No realistic light",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/t9_E9crjcw4",
+      "publishedAt": "2026-11-11T13:13:38.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=t9_E9crjcw4"
         }
       ],
       "related": []

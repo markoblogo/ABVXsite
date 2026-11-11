@@ -8757,7 +8757,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-10T22:12:25.002Z",
+      "updatedAt": "2026-11-11T09:15:55.958Z",
       "tags": [],
       "links": [],
       "related": []
@@ -13057,6 +13057,44 @@
       "links": [],
       "publishedAt": "2026-11-10",
       "updatedAt": "2026-11-10",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #43 — Creating for an Imaginary Audience",
+      "summary": "Five translated notebook fragments on creating for an imaginary audience.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-43-creating-for-an-imaginary-audience",
+      "tags": [
+        "psychology-notebook",
+        "identity"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-11",
+      "updatedAt": "2026-11-11",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #44 — A Balance That Keeps Moving",
+      "summary": "Six translated notebook fragments on a balance that keeps moving.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-44-balance-that-keeps-moving",
+      "tags": [
+        "psychology-notebook",
+        "change"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-11",
+      "updatedAt": "2026-11-11",
       "related": []
     },
     {

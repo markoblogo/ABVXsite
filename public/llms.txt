@@ -509,6 +509,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/kh-MTl8K5pE
   Summary: Un petit voyage à Nantes, de l’aéroport Nantes Atlantique au centre-ville, en passant par la Loire et l’île de Nantes. La balade se termine avec deux vues illustrées : la tour LU et le château des ducs de Bretagne. Un tr
 
+- Flying Carpet Through a Post-Soviet Fever Dream | Vaybolet
+  URL: https://abvx.xyz/writing/videos/KilojLKFvK4
+  Summary: Vaybolet gives you a flying carpet, a snowy housing estate and no grand quest. Take a short flight past warm windows, frozen cars and a very questionable robot-dog billboard. Play in your browser: https://aimolodca.com/V
+
 - Explore Tokyo in Manga Style! Free Interactive 3D City & Background Generator
   URL: https://abvx.xyz/writing/videos/KnnKjd2Me04
   Summary: What if you could turn real streets into beautiful manga backgrounds? Not by drawing them manually. Not by generating random AI images. By exploring an actual city through an interactive, stylized 3D world. Meet Dokodemo

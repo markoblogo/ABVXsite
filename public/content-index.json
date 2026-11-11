@@ -8918,7 +8918,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-11T15:36:55.907Z",
+      "updatedAt": "2026-11-11T21:50:19.347Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9392,6 +9392,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=G_5lLwn6Veo"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Flying Carpet Through a Post-Soviet Fever Dream | Vaybolet",
+      "summary": "Vaybolet gives you a flying carpet, a snowy housing estate and no grand quest. Take a short flight past warm windows, frozen cars and a very questionable robot-dog billboard. Play in your browser: https://aimolodca.com/V",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/KilojLKFvK4",
+      "publishedAt": "2026-11-11T21:47:19.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=KilojLKFvK4"
         }
       ],
       "related": []

@@ -181,6 +181,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/7JJ47rmMU7w
   Summary: What if one developer could turn a classic novel into a playable 3D game in just 16 days? Apparently, that's exactly what happened. Developer Sac (@Saccc_c) used Claude Opus 5.5, Tripo AI, and Blender to create The Littl
 
+- Nuplex 1.0: The AI Avatar That Listens and Talks at the Same Time
+  URL: https://abvx.xyz/writing/videos/7Tr0AM3Wwgs
+  Summary: Meet Emma, a real-time AI video avatar powered by Nuplex 1.0, the new full-duplex audiovisual foundation model from Nuance Labs. Unlike traditional AI avatars that wait for you to finish speaking, Emma can listen, react,
+
 - Blender 5.3 Is Here: Native Gaussian Splatting + DLSS 4.5
   URL: https://abvx.xyz/writing/videos/8-xTki6iCG0
   Summary: Blender 5.3 is officially here, bringing native 3D Gaussian Splatting, NVIDIA DLSS 4.5 Ray Reconstruction, and major upgrades to Cycles, EEVEE, and Geometry Nodes. This is more than a routine Blender update. It's a signi
@@ -784,6 +788,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Claude Code Has Hidden Features. This /stack Mod Reveals Everything
   URL: https://abvx.xyz/writing/videos/sZpOYudsSDY
   Summary: Think you know what's running inside your Claude Code sessions? You might be surprised. Meet /stack, a free, open-source Claude Code mod that reveals practically everything installed, configured, and available in your AI
+
+- Gemini 4 Carbon Rebuilt the Eiffel Tower in 3D With One Prompt
+  URL: https://abvx.xyz/writing/videos/T3zm0bp8d6o
+  Summary: Gemini 4 Carbon just turned historical photographs and engineering blueprints into an interactive 3D reconstruction of the Eiffel Tower's construction from 1887 to 1889. All starting from a single prompt. And it wasn't w
 
 - Tesseract by Mirage: Claude Can Now Create Photorealistic 3D Videos Without Diffusion!
   URL: https://abvx.xyz/writing/videos/T9jUlNohSCY

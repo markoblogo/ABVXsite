@@ -8803,7 +8803,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-11T09:50:26.807Z",
+      "updatedAt": "2026-11-11T10:12:32.508Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9475,6 +9475,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=0QESmDPIdLc"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Gemini 4 Carbon Rebuilt the Eiffel Tower in 3D With One Prompt",
+      "summary": "Gemini 4 Carbon just turned historical photographs and engineering blueprints into an interactive 3D reconstruction of the Eiffel Tower's construction from 1887 to 1889. All starting from a single prompt. And it wasn't w",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/T3zm0bp8d6o",
+      "publishedAt": "2026-11-11T09:54:33.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=T3zm0bp8d6o"
         }
       ],
       "related": []
@@ -11775,6 +11798,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=qq1dv0H-jvk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Nuplex 1.0: The AI Avatar That Listens and Talks at the Same Time",
+      "summary": "Meet Emma, a real-time AI video avatar powered by Nuplex 1.0, the new full-duplex audiovisual foundation model from Nuance Labs. Unlike traditional AI avatars that wait for you to finish speaking, Emma can listen, react,",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/7Tr0AM3Wwgs",
+      "publishedAt": "2026-11-11T10:11:15.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=7Tr0AM3Wwgs"
         }
       ],
       "related": []

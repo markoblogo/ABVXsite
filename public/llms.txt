@@ -425,6 +425,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/I1vIAh3K9yo
   Summary: Claude Opus 5.5 helped direct an entire VFX scene through Blender MCP and Nuke, with Houdini in the pipeline. Not a single frame was AI-generated. This isn't text-to-video. It's an experiment in using an AI agent as a VF
 
+- Vercel CEO Built a Vinyl Player That Generates Sound From Physics
+  URL: https://abvx.xyz/writing/videos/IAjh5g_XnLA
+  Summary: Vercel CEO Guillermo Rauch just built an incredibly detailed vinyl record player simulation using WebGL2, Web Audio, and real-time physics. But here's the fascinating part: it doesn't simply play an audio file with a vin
+
 - DAWN AI: Hair-Level Keying & Relighting Without Regenerating Actors
   URL: https://abvx.xyz/writing/videos/iaJy1CPLfXw
   Summary: Meet DAWN, a new AI VFX foundation model from British startup PXLD that composites real actors into entirely different environments while preserving their original performances. No AI-generated faces. No rewritten expres

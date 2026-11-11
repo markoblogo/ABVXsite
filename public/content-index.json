@@ -8918,7 +8918,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-11T14:13:04.063Z",
+      "updatedAt": "2026-11-11T14:37:38.888Z",
       "tags": [],
       "links": [],
       "related": []
@@ -15450,6 +15450,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=UcyFLnvIzeE"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Vercel CEO Built a Vinyl Player That Generates Sound From Physics",
+      "summary": "Vercel CEO Guillermo Rauch just built an incredibly detailed vinyl record player simulation using WebGL2, Web Audio, and real-time physics. But here's the fascinating part: it doesn't simply play an audio file with a vin",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/IAjh5g_XnLA",
+      "publishedAt": "2026-11-11T14:26:18.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=IAjh5g_XnLA"
         }
       ],
       "related": []

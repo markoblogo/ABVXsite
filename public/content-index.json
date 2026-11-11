@@ -8501,6 +8501,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude Code Skill Turns Excel Data Into 54 Interactive Hand-Drawn Charts",
+      "summary": "This free Claude Code skill transforms Excel and CSV data into beautiful, interactive, hand-drawn charts, with 54 different visualization types. Meet MiniCharts by April Zhu. Instead of boring bar charts and generic dash",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/32UkYwQbtKk",
+      "publishedAt": "2026-11-11T10:41:11.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=32UkYwQbtKk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude Code Tried to Make Me Watch 60 Videos at Once. I'm Scared.",
       "summary": "I was watching Claude Code coordinate its army of AI agents. And suddenly, things got a little terrifying. The task? Working with 60 videos simultaneously. Claude decided that the most efficient way for me to review the ",
       "canonicalUrl": "https://abvx.xyz/writing/videos/vZW-Z4pYqzU",
@@ -8826,7 +8849,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-11T10:37:29.738Z",
+      "updatedAt": "2026-11-11T11:12:03.432Z",
       "tags": [],
       "links": [],
       "related": []
@@ -12038,6 +12061,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "OpenAI's $200 Game Boy for Vibe Coding: Codex x ModRetro",
+      "summary": "OpenAI just teamed up with ModRetro to release a $200 retro handheld console that lets you create real Game Boy games using Codex and AI-powered vibe coding. Meet the ModRetro Chromatic: Codex Edition. Instead of spendin",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/Bva17o5pCJQ",
+      "publishedAt": "2026-11-11T10:49:23.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=Bva17o5pCJQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "OpenDirector: Free Local AI Filmmaking Studio with MiniMax H3, vLLM-Omni & Video Editing",
       "summary": "Apparently, everyone wants to be a film director now. And AI startups are making absolutely sure we have enough software for that. Meet OpenDirector v0.1.0, a new open-source AI filmmaking platform from ThinkFlowLab, pow",
       "canonicalUrl": "https://abvx.xyz/writing/videos/bYoOWkMpCmc",
@@ -13940,6 +13986,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=x8DT9-2Zcas"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Telegram Bots Can Now Run Interactive HTML Widgets Inside Messages",
+      "summary": "Telegram just introduced interactive HTML widgets for bots, turning ordinary chat messages into live dashboards, control panels, and mini-apps. And the entire widget fits into just 4 KB of compressed code. This is part o",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/H8eYfYb-k3s",
+      "publishedAt": "2026-11-11T10:56:17.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=H8eYfYb-k3s"
         }
       ],
       "related": []

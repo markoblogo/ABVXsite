@@ -93,6 +93,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/2po93Gv-MuY
   Summary: My API key has exactly $0.00 in credits. But does that stop him from approaching the biggest AI models on the planet? Absolutely not. OpenAI. Anthropic Claude. Google Gemini. Three AI giants. One broke little API key. An
 
+- Claude Code Skill Turns Excel Data Into 54 Interactive Hand-Drawn Charts
+  URL: https://abvx.xyz/writing/videos/32UkYwQbtKk
+  Summary: This free Claude Code skill transforms Excel and CSV data into beautiful, interactive, hand-drawn charts, with 54 different visualization types. Meet MiniCharts by April Zhu. Instead of boring bar charts and generic dash
+
 - Inkling 2 Small Is INSANE! 594B AI Model Builds Websites & Trains Other AI Models
   URL: https://abvx.xyz/writing/videos/3d7q1QZ616w
   Summary: DeepSeek V4.1 Flash on some tasks but remains behind it on several others. But here's the experiment that really caught my attention. Inkling 2 Small autonomously trained another AI model. Thinking Machines gave it a cha
@@ -236,6 +240,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Scientists Built a Washable Touchscreen Sweater. Yes, It Plays Videos
   URL: https://abvx.xyz/writing/videos/BV58rMMTIBM
   Summary: Apparently, someone decided that smartphones weren't enough. We now need screens in our sweaters. Researchers at the National University of Singapore have developed a fully functional color touchscreen woven directly int
+
+- OpenAI's $200 Game Boy for Vibe Coding: Codex x ModRetro
+  URL: https://abvx.xyz/writing/videos/Bva17o5pCJQ
+  Summary: OpenAI just teamed up with ModRetro to release a $200 retro handheld console that lets you create real Game Boy games using Codex and AI-powered vibe coding. Meet the ModRetro Chromatic: Codex Edition. Instead of spendin
 
 - OpenDirector: Free Local AI Filmmaking Studio with MiniMax H3, vLLM-Omni & Video Editing
   URL: https://abvx.xyz/writing/videos/bYoOWkMpCmc
@@ -384,6 +392,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Someone Vibe-Coded a Pico VR App. Now I Want to Build in Mixed Reality Again
   URL: https://abvx.xyz/writing/videos/h7kOnAtn188
   Summary: Here's something most people watching this channel probably don't know about me. I spent 12 years of my life working in augmented and virtual reality. Not as a developer. Pretty much everything else you can imagine doing
+
+- Telegram Bots Can Now Run Interactive HTML Widgets Inside Messages
+  URL: https://abvx.xyz/writing/videos/H8eYfYb-k3s
+  Summary: Telegram just introduced interactive HTML widgets for bots, turning ordinary chat messages into live dashboards, control panels, and mini-apps. And the entire widget fits into just 4 KB of compressed code. This is part o
 
 - Claude Code: Sonnet + Opus + Haiku. A Smarter AI Agent Setup
   URL: https://abvx.xyz/writing/videos/hBU0WpTTbes

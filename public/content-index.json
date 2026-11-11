@@ -8639,6 +8639,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude Fable 5.2 Made a 4K CGI Film With Blender & Python for $5.75",
+      "summary": "Claude Fable 5.2 just created an entire 4K CGI short using Python, Blender, RunPod, and ElevenLabs, starting from a single prompt. The reported GPU rendering cost? Just $5.75. In an experiment by Riley Brown, Claude was ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/NZBLlMLytSs",
+      "publishedAt": "2026-11-11T13:33:12.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=NZBLlMLytSs"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude Opus 5.5 + Blender MCP: VFX Without a Single AI-Generated Frame",
       "summary": "Claude Opus 5.5 helped direct an entire VFX scene through Blender MCP and Nuke, with Houdini in the pipeline. Not a single frame was AI-generated. This isn't text-to-video. It's an experiment in using an AI agent as a VF",
       "canonicalUrl": "https://abvx.xyz/writing/videos/I1vIAh3K9yo",
@@ -8872,7 +8895,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-11T13:21:41.451Z",
+      "updatedAt": "2026-11-11T13:37:58.984Z",
       "tags": [],
       "links": [],
       "related": []
@@ -13664,6 +13687,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=wPIyeBYJZbQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Runway Sightline: Create 360° AI Worlds With Virtual Camera Control",
+      "summary": "Runway just launched Sightline, a new AI-powered tool that generates complete 360-degree environments from text prompts and lets you frame cinematic shots using a virtual camera. Instead of generating a completely new ba",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/lZP_0q7V810",
+      "publishedAt": "2026-11-11T13:25:53.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=lZP_0q7V810"
         }
       ],
       "related": []

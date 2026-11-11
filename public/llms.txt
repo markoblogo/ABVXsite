@@ -549,6 +549,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/LzgnvledcWY
   Summary: What happens when brutal sci-fi meets psychedelic motion design? You get You Are Dead, a stunning cinematic edit created by Antibody for Bungie's video game Marathon. And the visual direction is absolutely insane. The fi
 
+- Runway Sightline: Create 360° AI Worlds With Virtual Camera Control
+  URL: https://abvx.xyz/writing/videos/lZP_0q7V810
+  Summary: Runway just launched Sightline, a new AI-powered tool that generates complete 360-degree environments from text prompts and lets you frame cinematic shots using a virtual camera. Instead of generating a completely new ba
+
 - Patch: Build, Mod & Publish Games With Claude Code, Codex and MCP
   URL: https://abvx.xyz/writing/videos/m0iXZ3eHSiQ
   Summary: Meet Patch, a new AI-powered game development platform that lets coding agents build, modify, remix, and publish playable games using a single CLI and MCP integration. And it comes with more than 50,000 open-source game
@@ -624,6 +628,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - PlayMCP Review: I Made 3 AI Games — Tools, Challenges & Costs
   URL: https://abvx.xyz/writing/videos/NVeMJLidncU
   Summary: What is PlayMCP, and how do you turn an idea and a music track into a playable game? This hands-on review covers the agent workflow, creative tools, testing, hosting, community challenges and my three published experimen
+
+- Claude Fable 5.2 Made a 4K CGI Film With Blender & Python for $5.75
+  URL: https://abvx.xyz/writing/videos/NZBLlMLytSs
+  Summary: Claude Fable 5.2 just created an entire 4K CGI short using Python, Blender, RunPod, and ElevenLabs, starting from a single prompt. The reported GPU rendering cost? Just $5.75. In an experiment by Riley Brown, Claude was
 
 - Echo-3: Turn iPhone Videos Into Photorealistic 3D Worlds | AI Gaussian Splatting
   URL: https://abvx.xyz/writing/videos/o-bbORoN3FM

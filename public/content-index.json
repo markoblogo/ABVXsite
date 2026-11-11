@@ -8872,7 +8872,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-11T12:50:32.025Z",
+      "updatedAt": "2026-11-11T13:12:50.771Z",
       "tags": [],
       "links": [],
       "related": []
@@ -15266,6 +15266,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=zOfyKb7_c1M"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Unreal Engine 5.9: AI Agents, Unreal MCP, Canvas & WebGPU",
+      "summary": "Epic Games just released Unreal Engine 5.9 Preview, bringing AI coding agents directly into Unreal Editor, a new generative workspace called Unreal Canvas, and experimental browser exports using WebAssembly and WebGPU. B",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/r_Un8eTLLUc",
+      "publishedAt": "2026-11-11T13:07:17.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=r_Un8eTLLUc"
         }
       ],
       "related": []

@@ -741,6 +741,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/qZFQlbAcW1Y
   Summary: Claude can already generate animations and videos. But there's always been one annoying problem. What happens when you want to actually edit the result? An AI-generated MP4 isn't an editable Premiere Pro timeline. You ca
 
+- Unreal Engine 5.9: AI Agents, Unreal MCP, Canvas & WebGPU
+  URL: https://abvx.xyz/writing/videos/r_Un8eTLLUc
+  Summary: Epic Games just released Unreal Engine 5.9 Preview, bringing AI coding agents directly into Unreal Editor, a new generative workspace called Unreal Canvas, and experimental browser exports using WebAssembly and WebGPU. B
+
 - XREAL AURA: Gemini AI Glasses That Can See Your Laptop Screen | Google Android XR
   URL: https://abvx.xyz/writing/videos/R-7XiZzJXHc
   Summary: Google is taking another shot at augmented reality. And this time, I think they might actually be onto something. Well, technically, XREAL built the glasses, while Google brought Android XR and Gemini AI to the party. Me

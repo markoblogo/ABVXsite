@@ -205,6 +205,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/9bYUOdPirnk
   Summary: What if you could create an entire animated film without using a traditional AI video generator? Meet Cinecode, a new free, open-source filmmaking skill that lets Claude Code and Cursor turn simple prompts into complete
 
+- Spaghetti Splatting: 3D Gaussian Splatting Meets Physics Simulation
+  URL: https://abvx.xyz/writing/videos/aaW8vE4AGDM
+  Summary: Meet Spaghetti Splatting, a new 3D reconstruction and differentiable rendering technique that extends 3D Gaussian Splatting from individual points to continuous curves. And it could be particularly useful for rendering a
+
 - AI-Commander: A Retro 90s Terminal UI for OpenCode, Hermes & AI Coding Agents | Built in Rust
   URL: https://abvx.xyz/writing/videos/AFl-mk5EZIA
   Summary: Someone just brought the golden age of DOS file managers back to life. Except this time, they're running AI agents. Meet AI-Commander, a new open-source terminal interface built by developer Mikhail Malyshev. And I have
@@ -557,6 +561,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/mt0MOEpoj1c
   Summary: We have officially reached a new milestone in AI-generated content. AI can now produce videos faster than humans can watch them. And the internet is responding exactly as you'd expect. With infinite AI slop. AI infrastru
 
+- Viggle Remake: Open-Weight AI Video Editing vs Higgsfield Miracle
+  URL: https://abvx.xyz/writing/videos/Mw9YxTombVY
+  Summary: Viggle AI just released Viggle-Remake, an open-weight video-to-video editing system built on MiniMax-H3 that brings cinematic AI video transformations to local GPUs. Think Higgsfield Miracle-style video editing, but with
+
 - How AI Agents Make Videos: A 2-Minute Framewright Workflow
   URL: https://abvx.xyz/writing/videos/n1wuySSYQcQ
   Summary: How does an AI agent turn an idea into a finished video? This two-minute Framewright lesson follows the process: brief, scenes, tools, narration, checks, precise revisions, and a publication-ready package. Two fictional
@@ -757,6 +765,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/RsxiDWDj2Rg
   Summary: ChatGPT can already design your logo. Now it can turn that logo into an editable vector file, right inside the chat. Meet Vectorize, a ChatGPT plugin that converts AI-generated logos and images into scalable SVG graphics.
 
+- Google Meet Now Translates Speech in Real Time Across 63 Languages
+  URL: https://abvx.xyz/writing/videos/rZNwwWLLY8Q
+  Summary: Google Meet can now translate conversations across 63 languages in near real time, letting people speak their native languages while everyone else hears AI-translated speech. And the translated voice can even sound like
+
 - Gemini Omni 1.2 Flash Is Here! 15-Second AI Videos, 30% Cheaper & Editable by Chat
   URL: https://abvx.xyz/writing/videos/S1chA15xTg0
   Summary: Google just made AI video generation longer, cheaper, and considerably more interesting. Meet Gemini Omni 1.2 Flash, the latest update to Google's AI video generation model. And honestly, the most exciting feature isn't
@@ -896,6 +908,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - How Color Changes a Scene | One Forest, Three Feelings
   URL: https://abvx.xyz/writing/videos/wHOpypqPyCs
   Summary: One forest. One traveler. Three very different feelings. This 42-second animated experiment explores how color grading, lighting and sound can turn the same setting into loneliness, shelter or unease. Cool blue gives way
+
+- Google's Elephant-Goldfish Model: Smarter AI Coding With Fresh Agents
+  URL: https://abvx.xyz/writing/videos/Wi2Pj_x-SCU
+  Summary: Google just open-sourced the Elephant-Goldfish Model (EGM), a new plugin that changes how AI coding agents design, review, and plan software. The philosophy is simple: "Design with an elephant. Review with a goldfish." A
 
 - Disco Coffee Showdown: Shoot or Decaf? | Gameplay & Both Endings
   URL: https://abvx.xyz/writing/videos/WLBxcM5JQ3U

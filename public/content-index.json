@@ -8849,7 +8849,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-11T11:12:03.432Z",
+      "updatedAt": "2026-11-11T12:19:11.729Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9770,6 +9770,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Google Meet Now Translates Speech in Real Time Across 63 Languages",
+      "summary": "Google Meet can now translate conversations across 63 languages in near real time, letting people speak their native languages while everyone else hears AI-translated speech. And the translated voice can even sound like ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/rZNwwWLLY8Q",
+      "publishedAt": "2026-11-11T12:07:51.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=rZNwwWLLY8Q"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Google Playground: Build Playable AI Games With Just a Prompt | No Coding Required",
       "summary": "Apparently, Google has decided that Claude Opus and GPT-6 shouldn't have all the fun building video games. Meet Google Playground, an experimental AI-powered game creation platform that turns simple text prompts into act",
       "canonicalUrl": "https://abvx.xyz/writing/videos/LMsSJ4kJEUU",
@@ -9806,6 +9829,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=DK5cv_jMOsE"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Google's Elephant-Goldfish Model: Smarter AI Coding With Fresh Agents",
+      "summary": "Google just open-sourced the Elephant-Goldfish Model (EGM), a new plugin that changes how AI coding agents design, review, and plan software. The philosophy is simple: \"Design with an elephant. Review with a goldfish.\" A",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/Wi2Pj_x-SCU",
+      "publishedAt": "2026-11-11T12:13:38.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=Wi2Pj_x-SCU"
         }
       ],
       "related": []
@@ -13812,6 +13858,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Spaghetti Splatting: 3D Gaussian Splatting Meets Physics Simulation",
+      "summary": "Meet Spaghetti Splatting, a new 3D reconstruction and differentiable rendering technique that extends 3D Gaussian Splatting from individual points to continuous curves. And it could be particularly useful for rendering a",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/aaW8vE4AGDM",
+      "publishedAt": "2026-11-11T11:53:19.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=aaW8vE4AGDM"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Spline + ChatGPT: Create Interactive 3D Scenes Just by Prompting | Codex Plugin",
       "summary": "What if you could create an entire interactive 3D scene without opening Blender, writing Three.js code, or manually building every object? And what if you could edit the result directly inside ChatGPT? Meet the new Splin",
       "canonicalUrl": "https://abvx.xyz/writing/videos/puzSHTiHyW8",
@@ -15174,6 +15243,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=NPQV4DgppsQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Viggle Remake: Open-Weight AI Video Editing vs Higgsfield Miracle",
+      "summary": "Viggle AI just released Viggle-Remake, an open-weight video-to-video editing system built on MiniMax-H3 that brings cinematic AI video transformations to local GPUs. Think Higgsfield Miracle-style video editing, but with",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/Mw9YxTombVY",
+      "publishedAt": "2026-11-11T12:01:09.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=Mw9YxTombVY"
         }
       ],
       "related": []

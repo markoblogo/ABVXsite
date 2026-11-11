@@ -2635,6 +2635,17 @@
     },
     {
       "source": "youtube",
+      "title": "Why Your AI Clips Don’t Feel Like a Film",
+      "url": "https://www.youtube.com/watch?v=G4-8YyrV1lk",
+      "publishedAt": "2026-11-11T15:31:27.000Z",
+      "excerpt": "Three beautiful AI-style clips can still tell a confusing story. A tiny robot courier shows how shot order, pacing and sound turn separate shots into a connected film. We discuss Reverie’s Play All announcement, then run",
+      "coverImage": "https://i.ytimg.com/vi/G4-8YyrV1lk/hqdefault.jpg",
+      "videoDescription": "Three beautiful AI-style clips can still tell a confusing story. A tiny robot courier shows how shot order, pacing and sound turn separate shots into a connected film.\n\nWe discuss Reverie’s Play All announcement, then run a separate local OpenDirector test with three original 3D clips: reorder the sequence, trim the final hold, move a sound cue, save, restart, reopen and check both exported formats.\n\nThe lesson: preview the whole cut in context, then watch the actual exported file. Check the story, pauses, crop and sound together.\n\nCHAPTERS\n00:00 Three clips, a backwards story\n00:11 Fix the shot order\n00:24 Reverie Play All\n00:38 What to check in the cut\n00:51 Our local OpenDirector test\n01:10 Check the actual export\n\nPRIMARY SOURCES\nReverie Play All announcement (5 November 2026):\nhttps://reveriemovies.com/updates/play-all-preview-feature\nOpenDirector:\nhttps://github.com/ThinkFlowLab/OpenDirector\n\nABOUT THE TEST\nReverie describes full-timeline audio/video preview without render-credit consumption. That is the vendor’s stated preview policy; we did not measure a saving or test Reverie’s service here. Our OpenDirector result covers one short local timeline on a Mac, with no model connected.\n\nVISUALS AND AUDIO\nOriginal Blender 3D animation and local editing/finishing. AI-generated English narration: Google AI Studio, stock Knox voice. Music: “Офисный скрипт” (Office Script), supplied by ABV, created with Suno. Original additional sound effects. The labelled OpenDirector insert is our actual local test export.\n\nMade with Framewright:\nhttps://markoblogo.github.io/framewright/\n\n#AIVideo #VideoEditing #OpenDirector",
+      "addedAt": "2026-11-11T15:36:55.907Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "1,286 Website Design Systems You Can Copy for Free | Claude Code, Codex & Cursor",
       "url": "https://www.youtube.com/watch?v=g4YEousQIag",
       "publishedAt": "2026-11-05T23:54:01.000Z",

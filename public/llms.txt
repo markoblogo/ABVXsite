@@ -341,6 +341,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/G_5lLwn6Veo
   Summary: Remember when generating a few seconds of AI video meant waiting several minutes? Well, those days might be numbered. After making MiniMax H3 ridiculously fast, fal.ai teamed up with Black Forest Labs to push FLUX 3 to a
 
+- Why Your AI Clips Don’t Feel Like a Film
+  URL: https://abvx.xyz/writing/videos/G4-8YyrV1lk
+  Summary: Three beautiful AI-style clips can still tell a confusing story. A tiny robot courier shows how shot order, pacing and sound turn separate shots into a connected film. We discuss Reverie’s Play All announcement, then run
+
 - 1,286 Website Design Systems You Can Copy for Free | Claude Code, Codex & Cursor
   URL: https://abvx.xyz/writing/videos/g4YEousQIag
   Summary: Ever asked Claude Code or Codex to build a beautiful website? And somehow ended up with the same generic SaaS landing page? Purple gradients. Rounded cards. Predictable layouts. We've all been there. Well, someone just m

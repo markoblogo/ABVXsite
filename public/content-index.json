@@ -8918,7 +8918,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-11T14:37:38.888Z",
+      "updatedAt": "2026-11-11T15:36:55.907Z",
       "tags": [],
       "links": [],
       "related": []
@@ -16226,6 +16226,29 @@
           "relation": "same-project"
         }
       ]
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Why Your AI Clips Don’t Feel Like a Film",
+      "summary": "Three beautiful AI-style clips can still tell a confusing story. A tiny robot courier shows how shot order, pacing and sound turn separate shots into a connected film. We discuss Reverie’s Play All announcement, then run",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/G4-8YyrV1lk",
+      "publishedAt": "2026-11-11T15:31:27.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=G4-8YyrV1lk"
+        }
+      ],
+      "related": []
     },
     {
       "type": "editorial-series",

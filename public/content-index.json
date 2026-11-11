@@ -8803,7 +8803,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-11T09:37:17.576Z",
+      "updatedAt": "2026-11-11T09:50:26.807Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11236,6 +11236,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=xghzzaHgVwc"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Meta Open-Sourced Astryx: 13,000+ Apps, 180+ UI Components & AI Agents",
+      "summary": "Meta just open-sourced Astryx, its internal design system developed over eight years and used across more than 13,000 applications. And it's not just another React component library. Astryx is designed for both developer",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/3HsIMeHjtyc",
+      "publishedAt": "2026-11-11T09:47:48.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=3HsIMeHjtyc"
         }
       ],
       "related": []

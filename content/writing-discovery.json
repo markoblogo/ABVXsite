@@ -1943,6 +1943,17 @@
     },
     {
       "source": "youtube",
+      "title": "Meta Open-Sourced Astryx: 13,000+ Apps, 180+ UI Components & AI Agents",
+      "url": "https://www.youtube.com/watch?v=3HsIMeHjtyc",
+      "publishedAt": "2026-11-11T09:47:48.000Z",
+      "excerpt": "Meta just open-sourced Astryx, its internal design system developed over eight years and used across more than 13,000 applications. And it's not just another React component library. Astryx is designed for both developer",
+      "coverImage": "https://i.ytimg.com/vi/3HsIMeHjtyc/hqdefault.jpg",
+      "videoDescription": "Meta just open-sourced Astryx, its internal design system developed over eight years and used across more than 13,000 applications.\n\nAnd it's not just another React component library. Astryx is designed for both developers and AI coding agents.\n\nBuilt with React 19+ and StyleX, Astryx provides a production-oriented foundation for building modern web applications without designing every interface component from scratch.\n\nWhat you get:\n\n• 180+ UI components: accessible, customizable building blocks for modern interfaces.\n\n• Ready-to-use templates: prebuilt layouts to accelerate frontend development.\n\n• Custom themes and dark mode: adapt the design system to your own product and brand.\n\n• AI agent integration: agent-ready documentation, CLI tools, and MCP support for AI-assisted development.\n\n• Full customization: override styles or bring component source code directly into your project.\n\n• Real-world scale: a design system refined over eight years inside Meta, powering more than 13,000 internal applications.\n\n• Open source: available on GitHub under the MIT license.\n\nAstryx is currently in Beta, but its foundations come from years of large-scale production use.\n\nThe interesting part isn't just the component library. It's that Meta is making its design infrastructure accessible to AI agents, potentially allowing developers to generate consistent interfaces with far less repetitive frontend work.\n\nWould you use Astryx instead of building your own design system?\n\nGitHub:\nhttps://github.com/meta/astryx\n\nOfficial website:\nhttps://astryx.atmeta.com/\n\n#MetaAstryx #ReactJS #AICoding",
+      "addedAt": "2026-11-11T09:50:26.807Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Tencent Hy-Nomas: Open-Source AI World Model Runs on a Single RTX 4090!",
       "url": "https://www.youtube.com/watch?v=3n9RCoXGbuQ",
       "publishedAt": "2026-11-01T20:42:46.000Z",

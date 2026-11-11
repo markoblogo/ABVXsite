@@ -7978,6 +7978,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Blender 5.3 Is Here: Native Gaussian Splatting + DLSS 4.5",
+      "summary": "Blender 5.3 is officially here, bringing native 3D Gaussian Splatting, NVIDIA DLSS 4.5 Ray Reconstruction, and major upgrades to Cycles, EEVEE, and Geometry Nodes. This is more than a routine Blender update. It's a signi",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/8-xTki6iCG0",
+      "publishedAt": "2026-11-11T09:16:47.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=8-xTki6iCG0"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Blender Running on iPhone Duo?! Eevee, Cycles & AI-Generated 3D Worlds | Hyper3D",
       "summary": "Remember when running Blender required a proper desktop workstation? Well, apparently, we're now putting it on foldable phones. Hyper3D by Deemos just demonstrated Blender running on Apple's iPhone Duo, complete with Eev",
       "canonicalUrl": "https://abvx.xyz/writing/videos/x5iQCArVPs4",
@@ -8547,6 +8570,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude Opus 5.5 + Blender MCP: VFX Without a Single AI-Generated Frame",
+      "summary": "Claude Opus 5.5 helped direct an entire VFX scene through Blender MCP and Nuke, with Houdini in the pipeline. Not a single frame was AI-generated. This isn't text-to-video. It's an experiment in using an AI agent as a VF",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/I1vIAh3K9yo",
+      "publishedAt": "2026-11-11T09:11:01.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=I1vIAh3K9yo"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude Opus 5.5 Created This Animated 3D Shark in 45 Minutes | Blender + Tripo AI",
       "summary": "What if you could create a fully rigged and animated 3D creature in less than an hour? Not just a pretty 3D model. An actual character with a skeleton, swimming animations, and a convincing bite. This entire shark was cr",
       "canonicalUrl": "https://abvx.xyz/writing/videos/u7HuTkQFvo4",
@@ -8757,7 +8803,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-11T09:15:55.958Z",
+      "updatedAt": "2026-11-11T09:23:51.851Z",
       "tags": [],
       "links": [],
       "related": []

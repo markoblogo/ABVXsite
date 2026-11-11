@@ -173,6 +173,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/7JJ47rmMU7w
   Summary: What if one developer could turn a classic novel into a playable 3D game in just 16 days? Apparently, that's exactly what happened. Developer Sac (@Saccc_c) used Claude Opus 5.5, Tripo AI, and Blender to create The Littl
 
+- Blender 5.3 Is Here: Native Gaussian Splatting + DLSS 4.5
+  URL: https://abvx.xyz/writing/videos/8-xTki6iCG0
+  Summary: Blender 5.3 is officially here, bringing native 3D Gaussian Splatting, NVIDIA DLSS 4.5 Ray Reconstruction, and major upgrades to Cycles, EEVEE, and Geometry Nodes. This is more than a routine Blender update. It's a signi
+
 - Good Dogs of the Apocalypse | A Darkly Comic LitRPG Series
   URL: https://abvx.xyz/writing/videos/89kTx1LhEP0
   Summary: The world changed. The dogs read the fine print. Meet Mriya, a former shelter dog navigating a city rewritten by the System. Good Dogs of the Apocalypse is a darkly comic, dog-centered LitRPG series about survival, found
@@ -384,6 +388,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - HyperFlow H3 Flash: 14B AI Video + Stereo Audio in 6 Steps | ComfyUI & GGUF
   URL: https://abvx.xyz/writing/videos/Hx3SofxSuCc
   Summary: VIDEO REBIRTH just compressed MiniMax-H3 from roughly 31 billion parameters to under 14 billion, and made it generate video AND sound in just six sampling steps. Meet HyperFlow H3 Flash, the latest release in the HyperFl
+
+- Claude Opus 5.5 + Blender MCP: VFX Without a Single AI-Generated Frame
+  URL: https://abvx.xyz/writing/videos/I1vIAh3K9yo
+  Summary: Claude Opus 5.5 helped direct an entire VFX scene through Blender MCP and Nuke, with Houdini in the pipeline. Not a single frame was AI-generated. This isn't text-to-video. It's an experiment in using an AI agent as a VF
 
 - Nice Airport to Menton: Bus or Train? | French Riviera Guide
   URL: https://abvx.xyz/writing/videos/ih43aF1zeaM

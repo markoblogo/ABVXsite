@@ -8225,6 +8225,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "ChatGPT Now Lets Businesses Create Profiles and Their Own AI Agents",
+      "summary": "OpenAI just launched Businesses in ChatGPT, allowing companies to claim their business profiles, manage product information, and even create their own AI agents directly inside ChatGPT. This could fundamentally change ho",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/lb-8Pn9K_bs",
+      "publishedAt": "2026-11-11T10:34:28.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=lb-8Pn9K_bs"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Cinecode: Claude Code Can Now Make Entire Movies with JavaScript | Free AI Filmmaking Skill",
       "summary": "What if you could create an entire animated film without using a traditional AI video generator? Meet Cinecode, a new free, open-source filmmaking skill that lets Claude Code and Cursor turn simple prompts into complete ",
       "canonicalUrl": "https://abvx.xyz/writing/videos/9bYUOdPirnk",
@@ -8803,7 +8826,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-11T10:12:32.508Z",
+      "updatedAt": "2026-11-11T10:37:29.738Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11716,6 +11739,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "n8n Launches Nod: Open-Source AI Desktop Agent With MCP",
+      "summary": "n8n just launched Nod, a free, open-source desktop AI agent that can browse websites, use your apps, and complete real-world tasks on your computer. Think Claude Cowork, OpenAI Codex, or other autonomous AI assistants, b",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/YCjVZhjXxWY",
+      "publishedAt": "2026-11-11T10:20:20.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=YCjVZhjXxWY"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Nantes Green Line Walk | From Pixels to City Landmarks - Nantes : suivez la ligne verte",
       "summary": "Follow Nantes’ green line in a 1-minute-40-second illustrated walk: see the complete route on a map, then visit six selected stops from the railway station to the LU Tower. Pixel landscapes briefly reveal generated inter",
       "canonicalUrl": "https://abvx.xyz/writing/videos/IQ3CdzPzFHw",
@@ -11821,6 +11867,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=7Tr0AM3Wwgs"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "NVIDIA GR00T 2: Robots Learn New Tasks From Just 5 Demos",
+      "summary": "NVIDIA just introduced GR00T 2, a new world-action AI model that helps robots learn physical skills from human videos and adapt to unfamiliar tasks with just five demonstrations. In NVIDIA's experiments, GR00T 2 achieved",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/GegJauCwDRs",
+      "publishedAt": "2026-11-11T10:27:53.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=GegJauCwDRs"
         }
       ],
       "related": []

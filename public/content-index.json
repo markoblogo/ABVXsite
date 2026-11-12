@@ -8918,7 +8918,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-12T14:51:05.797Z",
+      "updatedAt": "2026-11-12T15:12:58.643Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11012,6 +11012,29 @@
         }
       ],
       "collection": "kitchen-notes"
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "I Replaced Meta AI on My Ray-Bans With Claude, ChatGPT & MCP",
+      "summary": "What if you could replace Meta AI on your Ray-Ban smart glasses with Claude, ChatGPT, Gemini, Grok, or your own AI agent connected to personal tools through MCP? That's exactly what the open-source project Visor makes po",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/7KjDxXOmLBM",
+      "publishedAt": "2026-11-12T14:57:59.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=7KjDxXOmLBM"
+        }
+      ],
+      "related": []
     },
     {
       "type": "writing",

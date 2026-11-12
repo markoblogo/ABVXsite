@@ -8918,7 +8918,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-11T21:50:19.347Z",
+      "updatedAt": "2026-11-12T09:17:30.687Z",
       "tags": [],
       "links": [],
       "related": []
@@ -13624,6 +13624,44 @@
       "links": [],
       "publishedAt": "2026-11-11",
       "updatedAt": "2026-11-11",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #45 — The Inner Compass and the World Outside",
+      "summary": "Five translated notebook fragments on the inner compass and the world outside.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-45-inner-compass-and-the-world-outside",
+      "tags": [
+        "psychology-notebook",
+        "identity"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-12",
+      "updatedAt": "2026-11-12",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #46 — Making Room After Disillusionment",
+      "summary": "Five translated notebook fragments on making room after disillusionment.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-46-making-room-after-disillusionment",
+      "tags": [
+        "psychology-notebook",
+        "loss"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-12",
+      "updatedAt": "2026-11-12",
       "related": []
     },
     {

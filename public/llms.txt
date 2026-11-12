@@ -2515,6 +2515,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook, change
 
+- Psychology Notebook #45 — The Inner Compass and the World Outside
+  URL: https://abvx.xyz/writing/psychology-notebook-45-inner-compass-and-the-world-outside
+  Summary: Five translated notebook fragments on the inner compass and the world outside.
+  Group: writing
+  Tags: psychology-notebook, identity
+
+- Psychology Notebook #46 — Making Room After Disillusionment
+  URL: https://abvx.xyz/writing/psychology-notebook-46-making-room-after-disillusionment
+  Summary: Five translated notebook fragments on making room after disillusionment.
+  Group: writing
+  Tags: psychology-notebook, loss
+
 - The Berliner: How My Beer Cocktail Ended Up on a French Bar's Menu
   URL: https://abvx.xyz/writing/the-berliner-guinness-port-beer-cocktail
   Summary: I discovered Guinness with port wine in Berlin, recreated it with whatever a small French bar had available, and eventually watched it become an official item in the cash register.

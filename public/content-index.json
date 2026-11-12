@@ -8987,7 +8987,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-12T16:15:14.071Z",
+      "updatedAt": "2026-11-12T16:50:54.550Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10036,6 +10036,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=DK5cv_jMOsE"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Google Tabletop Turns Group Chats Into AI-Powered Mini Apps",
+      "summary": "Google just introduced Tabletop, a new Google Labs experiment that lets you create custom interactive mini-apps for your friends, family, and group activities using AI. No coding required. Just describe what your group n",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/rLh2N5wgV4I",
+      "publishedAt": "2026-11-12T16:39:39.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=rLh2N5wgV4I"
         }
       ],
       "related": []
@@ -12235,6 +12258,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=7Tr0AM3Wwgs"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "NVIDIA Déjà View: 3D Reconstruction From Photos With Just 117M Parameters",
+      "summary": "NVIDIA Research has released Déjà View (DVLT), an open 3D reconstruction model that turns unordered photographs or video into 3D geometry, depth maps, and estimated camera positions. And it uses just 117 million paramete",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/sy-s4Rvn0hI",
+      "publishedAt": "2026-11-12T16:49:17.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=sy-s4Rvn0hI"
         }
       ],
       "related": []

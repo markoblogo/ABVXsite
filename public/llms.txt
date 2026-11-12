@@ -809,6 +809,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/rfClK3jPHlw
   Summary: A destination that always stays just ahead. Follow a moonlit Möbius path for 20 minutes, with gentle ambient piano, river sounds, crickets and frogs. No voiceover or on-screen captions — just a continuous background jour
 
+- Google Tabletop Turns Group Chats Into AI-Powered Mini Apps
+  URL: https://abvx.xyz/writing/videos/rLh2N5wgV4I
+  Summary: Google just introduced Tabletop, a new Google Labs experiment that lets you create custom interactive mini-apps for your friends, family, and group activities using AI. No coding required. Just describe what your group n
+
 - Free Commodity Market Guides | Explore the AMI Books Library
   URL: https://abvx.xyz/writing/videos/RpxHRWhH4Yw
   Summary: Explore the work behind a physical commodity deal: brokerage, spot-market pricing, logistics, contract execution, and modern team workflows. Visit the AMI Books library: https://books.1d3x.com/ Project overview: https://
@@ -876,6 +880,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - What If Claude Existed in 1998? Windows 95 Meets Volkov Commander
   URL: https://abvx.xyz/writing/videos/SSURtXFwSec
   Summary: What if Claude had been released in 1998? Before cloud computing. Before AI agents. Before everyone decided that every application needed a browser-based interface. Meet Claude '98, an imaginary version of Anthropic's AI
+
+- NVIDIA Déjà View: 3D Reconstruction From Photos With Just 117M Parameters
+  URL: https://abvx.xyz/writing/videos/sy-s4Rvn0hI
+  Summary: NVIDIA Research has released Déjà View (DVLT), an open 3D reconstruction model that turns unordered photographs or video into 3D geometry, depth maps, and estimated camera positions. And it uses just 117 million paramete
 
 - Claude Code Has Hidden Features. This /stack Mod Reveals Everything
   URL: https://abvx.xyz/writing/videos/sZpOYudsSDY

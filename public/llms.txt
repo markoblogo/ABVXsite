@@ -585,6 +585,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/MfaQeGwm0Lg
   Summary: Someone built a sailing simulator, put the world's leading AI models behind the wheel, and discovered something fascinating about how these models actually solve problems. Or, more accurately, behind the rudder. Develope
 
+- Claude Fable 5.2 Rebuilt Ancient Babylon in 8 Hours | Interactive 3D
+  URL: https://abvx.xyz/writing/videos/mkLiCHl5DL0
+  Summary: Claude Fable 5.2 spent eight hours recreating ancient Babylon as it might have looked around 600 BC, turning historical research into an interactive 3D world you can explore yourself. And the most interesting part? The A
+
 - ChatGPT Images 2.6: I Tested AI GIFs Up to 256 Frames! Plus a Big Update on Real Faces
   URL: https://abvx.xyz/writing/videos/msQXaBAvh1g
   Summary: OpenAI just released Images 2.6, and ChatGPT can finally generate animated GIFs. Naturally, I immediately tried to break it. But first, the official news. ChatGPT Images 2.6 introduces: Animated GIF generation: Create lo
@@ -648,6 +652,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - PlayMCP Review: I Made 3 AI Games — Tools, Challenges & Costs
   URL: https://abvx.xyz/writing/videos/NVeMJLidncU
   Summary: What is PlayMCP, and how do you turn an idea and a music track into a playable game? This hands-on review covers the agent workflow, creative tools, testing, hosting, community challenges and my three published experimen
+
+- Climbing the Corporate Ladder in the AI Era #robot #robots
+  URL: https://abvx.xyz/writing/videos/nyPvg1_TzGI
+  Summary: They said AI would help us climb the corporate ladder. Nobody mentioned we'd have to carry it upstairs. The future of work is looking promising. #AI #Robotics #CorporateLife #Shorts
 
 - Claude Fable 5.2 Made a 4K CGI Film With Blender & Python for $5.75
   URL: https://abvx.xyz/writing/videos/NZBLlMLytSs
@@ -940,6 +948,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - StableGen: Generate Rigged 3D Characters Locally with AI | Free Blender Add-on
   URL: https://abvx.xyz/writing/videos/VLObu0Pl9D0
   Summary: What if you could describe a 3D character in a single prompt and get a textured, rigged model directly inside Blender? Without relying on expensive cloud-based 3D generation services? Meet StableGen, a free, open-source
+
+- Meta e-means: Up to 45x Faster Than k-means for AI Clustering
+  URL: https://abvx.xyz/writing/videos/vMS6kFXSUU4
+  Summary: Meta FAIR just introduced e-means, a new clustering algorithm that matches or beats traditional k-means quality in a fraction of the time. In the researchers' benchmarks, e-means delivers up to 45.5x faster GPU clusterin
 
 - NVIDIA Open-H3 IC: AI Video Upscaling to 4K Without Face Drift
   URL: https://abvx.xyz/writing/videos/VujPvRoggXw

@@ -8685,6 +8685,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude Fable 5.2 Rebuilt Ancient Babylon in 8 Hours | Interactive 3D",
+      "summary": "Claude Fable 5.2 spent eight hours recreating ancient Babylon as it might have looked around 600 BC, turning historical research into an interactive 3D world you can explore yourself. And the most interesting part? The A",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/mkLiCHl5DL0",
+      "publishedAt": "2026-11-12T15:14:10.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=mkLiCHl5DL0"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude Opus 5.5 + Blender MCP: VFX Without a Single AI-Generated Frame",
       "summary": "Claude Opus 5.5 helped direct an entire VFX scene through Blender MCP and Nuke, with Houdini in the pipeline. Not a single frame was AI-generated. This isn't text-to-video. It's an experiment in using an AI agent as a VF",
       "canonicalUrl": "https://abvx.xyz/writing/videos/I1vIAh3K9yo",
@@ -8846,6 +8869,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Climbing the Corporate Ladder in the AI Era #robot #robots",
+      "summary": "They said AI would help us climb the corporate ladder. Nobody mentioned we'd have to carry it upstairs. The future of work is looking promising. #AI #Robotics #CorporateLife #Shorts",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/nyPvg1_TzGI",
+      "publishedAt": "2026-11-12T15:34:09.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=nyPvg1_TzGI"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Codex Brought My Childhood PS1 Game Back to Life on Mac in 90 Minutes | Sheep, Dog 'n' Wolf",
       "summary": "Sometimes AI feels less like technology and more like a magician that can take you straight back to childhood. Let me tell you a story. I was eight years old when I got my first PlayStation. It was New Year's Eve. I open",
       "canonicalUrl": "https://abvx.xyz/writing/videos/FywKwcaiEUE",
@@ -8918,7 +8964,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-12T15:12:58.643Z",
+      "updatedAt": "2026-11-12T15:37:40.739Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11535,6 +11581,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=xghzzaHgVwc"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Meta e-means: Up to 45x Faster Than k-means for AI Clustering",
+      "summary": "Meta FAIR just introduced e-means, a new clustering algorithm that matches or beats traditional k-means quality in a fraction of the time. In the researchers' benchmarks, e-means delivers up to 45.5x faster GPU clusterin",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/vMS6kFXSUU4",
+      "publishedAt": "2026-11-12T15:24:28.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=vMS6kFXSUU4"
         }
       ],
       "related": []

@@ -8731,6 +8731,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude Meetings: AI Joins Google Meet and Builds Documents Live",
+      "summary": "Anthropic just launched Claude Meetings, a new AI meeting assistant that joins Google Meet calls as an actual participant and starts doing the work while everyone is still talking. And it's much more than another AI meet",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/q7ihe1jmKiQ",
+      "publishedAt": "2026-11-12T22:56:18.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=q7ihe1jmKiQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude Opus 5.5 + Blender MCP: VFX Without a Single AI-Generated Frame",
       "summary": "Claude Opus 5.5 helped direct an entire VFX scene through Blender MCP and Nuke, with Houdini in the pipeline. Not a single frame was AI-generated. This isn't text-to-video. It's an experiment in using an AI agent as a VF",
       "canonicalUrl": "https://abvx.xyz/writing/videos/I1vIAh3K9yo",
@@ -8987,7 +9010,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-12T18:15:39.876Z",
+      "updatedAt": "2026-11-12T23:10:35.295Z",
       "tags": [],
       "links": [],
       "related": []

@@ -757,6 +757,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/Q73r6GLqXVY
   Summary: What happens after we die? It's one of humanity's oldest questions. And someone decided to turn 130,000 people's answers into an interactive 3D experience. Meet Life After Death?, a fascinating data visualization created
 
+- Claude Meetings: AI Joins Google Meet and Builds Documents Live
+  URL: https://abvx.xyz/writing/videos/q7ihe1jmKiQ
+  Summary: Anthropic just launched Claude Meetings, a new AI meeting assistant that joins Google Meet calls as an actual participant and starts doing the work while everyone is still talking. And it's much more than another AI meet
+
 - GitHub Agentic Workflows: Who Checks the Agent—and the Bill?
   URL: https://abvx.xyz/writing/videos/Q9lzhnQEGjQ
   Summary: GitHub Agentic Workflows turns Markdown instructions into AI-powered GitHub Actions workflows. But who checks the agent’s changes—and who watches the bill when it keeps running? This short 3D explainer follows an instruc

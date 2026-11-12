@@ -8918,7 +8918,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-12T09:17:30.687Z",
+      "updatedAt": "2026-11-12T14:51:05.797Z",
       "tags": [],
       "links": [],
       "related": []
@@ -13886,6 +13886,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=nBzbwlcAElY"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Seedream 5.5 vs GPT Image 2.5: Which AI Image Generator Wins?",
+      "summary": "Seedream 5.5 vs GPT Image 2.5. Two powerful AI image generation models from ByteDance and OpenAI. But which one produces better images? Let's compare the results and see how these models handle visual quality, realism, d",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/pAtg6lk5fcM",
+      "publishedAt": "2026-11-12T14:47:57.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=pAtg6lk5fcM"
         }
       ],
       "related": []

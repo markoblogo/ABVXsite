@@ -685,6 +685,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/pAClkR9eIZ8
   Summary: Junie Local runs coding-model inference on your own machine—but local doesn't mean lightweight. Here are the Mac and Windows hardware requirements to check before you download. This 93-second explainer separates the inte
 
+- Seedream 5.5 vs GPT Image 2.5: Which AI Image Generator Wins?
+  URL: https://abvx.xyz/writing/videos/pAtg6lk5fcM
+  Summary: Seedream 5.5 vs GPT Image 2.5. Two powerful AI image generation models from ByteDance and OpenAI. But which one produces better images? Let's compare the results and see how these models handle visual quality, realism, d
+
 - When a Photo Exhibition Starts Melting | Illusions in Suspension
   URL: https://abvx.xyz/writing/videos/PHMx3I0VYqY
   Summary: A visit to a friend’s photography gallery turns into a small psychedelic detour: pictures melt, colours drift, and fragments of one image linger inside the next. Illusions in Suspension is a 54-second experimental film m

@@ -573,6 +573,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/LQjCjugvpco
   Summary: Tired of spending more time writing AI image prompts than actually creating something? Here's a little resource worth bookmarking. Meet OnePromptDesign, a collection of 150+ ready-to-use AI image prompts and visual refer
 
+- She Used Claude Code to Build a Fake Checkout for Her Dad With Dementia
+  URL: https://abvx.xyz/writing/videos/lqZj_A4WL-I
+  Summary: A daughter used Claude Code to build a fake online checkout system for her father with dementia. It reportedly saved her family thousands of dollars a month. And it might be one of the most meaningful examples of vibe co
+
 - Pomerado: AI Agents Without Browser Clicking? 1,300× Cheaper Than Codex
   URL: https://abvx.xyz/writing/videos/LxjAYGIaHgw
   Summary: What if AI agents could use almost any website without spending half their time clicking buttons and waiting for pages to load? And what if that made them dramatically faster and cheaper? Meet Pomerado, a new Y Combinato

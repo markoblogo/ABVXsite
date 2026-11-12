@@ -8987,7 +8987,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-12T17:50:26.494Z",
+      "updatedAt": "2026-11-12T18:15:39.876Z",
       "tags": [],
       "links": [],
       "related": []
@@ -14162,6 +14162,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=CptYVxnfa0o"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "She Used Claude Code to Build a Fake Checkout for Her Dad With Dementia",
+      "summary": "A daughter used Claude Code to build a fake online checkout system for her father with dementia. It reportedly saved her family thousands of dollars a month. And it might be one of the most meaningful examples of vibe co",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/lqZj_A4WL-I",
+      "publishedAt": "2026-11-12T17:50:40.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=lqZj_A4WL-I"
         }
       ],
       "related": []

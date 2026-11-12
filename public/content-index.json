@@ -8024,6 +8024,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "BREAKING: Jensen Huang Resigns as NVIDIA CEO After 33 Years",
+      "summary": "BREAKING: Jensen Huang has resigned as NVIDIA CEO, president, and board member, effective immediately. After 33 years leading the company he co-founded in 1993, one of the most influential figures in the AI and semicondu",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/kCvR-ECqgrc",
+      "publishedAt": "2026-11-12T15:46:45.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=kCvR-ECqgrc"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Burgers, Lipstick & Underwear | Strange Economic Indicators",
       "summary": "What can burgers, lipstick and underwear really tell us about the economy? Discover Burgers, Lipstick & Underwear: What Strange Indicators Really Tell Us About the Economy — a book about surprising economic indicators an",
       "canonicalUrl": "https://abvx.xyz/writing/videos/GVrbTMZxbpg",
@@ -8964,7 +8987,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-12T15:37:40.739Z",
+      "updatedAt": "2026-11-12T15:50:53.884Z",
       "tags": [],
       "links": [],
       "related": []

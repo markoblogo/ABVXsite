@@ -505,6 +505,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/kcFco2HbFCY
   Summary: A closer look at MN7R (Monitor), a private workspace for agro-commodity brokerage teams — from offers and bids to matching, contract execution and market analytics. This overview uses the real MN7R interface, with confid
 
+- BREAKING: Jensen Huang Resigns as NVIDIA CEO After 33 Years
+  URL: https://abvx.xyz/writing/videos/kCvR-ECqgrc
+  Summary: BREAKING: Jensen Huang has resigned as NVIDIA CEO, president, and board member, effective immediately. After 33 years leading the company he co-founded in 1993, one of the most influential figures in the AI and semicondu
+
 - Skylight: Turn Your Ceiling Into a Live Night Sky with Raspberry Pi | Open Source DIY
   URL: https://abvx.xyz/writing/videos/kDvLWLN_ZUk
   Summary: Ever looked at your ceiling and thought, "You know what this room needs? The entire night sky." Well, someone actually built it. Meet Skylight, a beautiful open-source DIY project that transforms an ordinary ceiling into

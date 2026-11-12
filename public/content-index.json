@@ -8987,7 +8987,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-12T17:36:49.926Z",
+      "updatedAt": "2026-11-12T17:50:26.494Z",
       "tags": [],
       "links": [],
       "related": []
@@ -15344,6 +15344,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=LIbkbgDCgKM"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "They Put DOOM Inside a Human Throat Simulator. WHY?",
+      "summary": "We've officially run out of things to run DOOM on. Someone created a DOOM experience inside a digital simulation of the human vocal tract. Yes. The throat. Vocal cords. Teeth. The whole nightmare. The experiment is conne",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/qNnJQyRPQtY",
+      "publishedAt": "2026-11-12T17:37:29.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=qNnJQyRPQtY"
         }
       ],
       "related": []

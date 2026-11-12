@@ -777,6 +777,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/QNgjNNEpsAM
   Summary: What if better AI starts with better training pairs, rather than just a bigger model? This short visual explainer looks at a 2026 preprint by Randall Balestriero and Yann LeCun. Their 109M-parameter text JEPA achieved st
 
+- They Put DOOM Inside a Human Throat Simulator. WHY?
+  URL: https://abvx.xyz/writing/videos/qNnJQyRPQtY
+  Summary: We've officially run out of things to run DOOM on. Someone created a DOOM experience inside a digital simulation of the human vocal tract. Yes. The throat. Vocal cords. Teeth. The whole nightmare. The experiment is conne
+
 - AMI — Digital Infrastructure for Physical Commodity Markets
   URL: https://abvx.xyz/writing/videos/QnpLjwhj6Fs
   Summary: AMI — Agro Market Infrastructure — brings together projects for commodity brokerage operations, private market indices, and market knowledge. This short introduction highlights three parts of AMI: • MN7R — a private work

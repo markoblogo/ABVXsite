@@ -8987,7 +8987,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-12T15:50:53.884Z",
+      "updatedAt": "2026-11-12T16:15:14.071Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9126,6 +9126,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=uDYjI2-QvpQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "DesignBookmark Motion: Animated UI Components for Claude & Codex",
+      "summary": "Just found a useful website for vibe coding, AI-assisted UI design, and frontend development. Meet DesignBookmark Motion, a growing collection of interactive animated UI components you can preview and recreate using Clau",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/uiH_-woOeZk",
+      "publishedAt": "2026-11-12T16:08:08.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=uiH_-woOeZk"
         }
       ],
       "related": []

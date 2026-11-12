@@ -8987,7 +8987,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-12T16:50:54.550Z",
+      "updatedAt": "2026-11-12T17:36:49.926Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9921,6 +9921,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=89kTx1LhEP0"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Google A2UI 1.0: AI Agents Can Now Build Native Interfaces Across Apps",
+      "summary": "Google just released A2UI 1.0, the first stable version of its open protocol that lets AI agents generate interactive user interfaces instead of responding with walls of text. And the same AI-generated interface can work",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/f_nfzKh-lRI",
+      "publishedAt": "2026-11-12T17:25:22.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=f_nfzKh-lRI"
         }
       ],
       "related": []
@@ -15649,6 +15672,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=zOfyKb7_c1M"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Unity 6 Game With AI: 500 Human Hours, $990, 200K Lines of Code",
+      "summary": "Can you build a complex Unity 6 game with Claude Code, ChatGPT, and Gemini? Yes. But making it actually feel good to play is a completely different challenge. Meet The Roveheart, an ambitious mobile sailing combat game d",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/J4gJWt2FH4w",
+      "publishedAt": "2026-11-12T17:12:25.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=J4gJWt2FH4w"
         }
       ],
       "related": []

@@ -325,6 +325,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/eqqcp_RuzB0
   Summary: What if you could create an entire interactive 3D world just by describing it? No manual modeling. No complicated scene setup. No hours spent writing Three.js code. Just type a prompt and let AI build a world you can act
 
+- Google A2UI 1.0: AI Agents Can Now Build Native Interfaces Across Apps
+  URL: https://abvx.xyz/writing/videos/f_nfzKh-lRI
+  Summary: Google just released A2UI 1.0, the first stable version of its open protocol that lets AI agents generate interactive user interfaces instead of responding with walls of text. And the same AI-generated interface can work
+
 - GTA SAN ANDREAS. BUT CJ IS A VIBE CODER NOW.
   URL: https://abvx.xyz/writing/videos/f4FOeK8bSvk
   Summary: Remember when GTA San Andreas missions were about stealing cars, escaping the police, and surviving Los Santos? Well, it's 2026. Now CJ has to build an AI startup using Claude Code. Someone created a custom GTA San Andre
@@ -448,6 +452,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Nantes Green Line Walk | From Pixels to City Landmarks - Nantes : suivez la ligne verte
   URL: https://abvx.xyz/writing/videos/IQ3CdzPzFHw
   Summary: Follow Nantes’ green line in a 1-minute-40-second illustrated walk: see the complete route on a map, then visit six selected stops from the railway station to the LU Tower. Pixel landscapes briefly reveal generated inter
+
+- Unity 6 Game With AI: 500 Human Hours, $990, 200K Lines of Code
+  URL: https://abvx.xyz/writing/videos/J4gJWt2FH4w
+  Summary: Can you build a complex Unity 6 game with Claude Code, ChatGPT, and Gemini? Yes. But making it actually feel good to play is a completely different challenge. Meet The Roveheart, an ambitious mobile sailing combat game d
 
 - H3 Motion: Control AI Video With Motion Paths | MiniMax H3 + ComfyUI
   URL: https://abvx.xyz/writing/videos/jBbTc6RvAJE

@@ -9010,7 +9010,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-13T14:13:04.278Z",
+      "updatedAt": "2026-11-13T22:11:02.807Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9357,6 +9357,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=U-cVLltmoRM"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Explore Ancient Babylon in Your Browser",
+      "summary": "Take a 44-second virtual tour of a digital Babylon: a blue gateway, city views, the riverside, a temple tower, rooftops and a night panorama. Explore the original interactive world: https://claude.ai/artifact/CTjrZXVdUgK",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/J7Ve8RvOTYY",
+      "publishedAt": "2026-11-13T21:48:16.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=J7Ve8RvOTYY"
         }
       ],
       "related": []

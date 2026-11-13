@@ -461,6 +461,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/J4gJWt2FH4w
   Summary: Can you build a complex Unity 6 game with Claude Code, ChatGPT, and Gemini? Yes. But making it actually feel good to play is a completely different challenge. Meet The Roveheart, an ambitious mobile sailing combat game d
 
+- Explore Ancient Babylon in Your Browser
+  URL: https://abvx.xyz/writing/videos/J7Ve8RvOTYY
+  Summary: Take a 44-second virtual tour of a digital Babylon: a blue gateway, city views, the riverside, a temple tower, rooftops and a night panorama. Explore the original interactive world: https://claude.ai/artifact/CTjrZXVdUgK
+
 - H3 Motion: Control AI Video With Motion Paths | MiniMax H3 + ComfyUI
   URL: https://abvx.xyz/writing/videos/jBbTc6RvAJE
   Summary: What if you could animate any object in a photo simply by drawing where you want it to move? No complicated keyframes. No manual masking across hundreds of frames. Just select an object, draw its trajectory, and let AI h

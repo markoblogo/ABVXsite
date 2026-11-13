@@ -749,6 +749,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/ppz1g7gRDds
   Summary: Apparently, CapCut couldn't just sit back and watch creators automate their video editing workflows with Claude Code and DaVinci Resolve. So now CapCut is coming directly to ChatGPT. Announced at CapCut World LA on Octob
 
+- What Informed Copilot’s Code Review?
+  URL: https://abvx.xyz/writing/videos/pT83dCFVxLU
+  Summary: GitHub Copilot code review can report the skills, MCP servers and custom instructions associated with a review comment. But seeing the source is only the start: the finding still needs to be checked and tested. This vide
+
 - Spline + ChatGPT: Create Interactive 3D Scenes Just by Prompting | Codex Plugin
   URL: https://abvx.xyz/writing/videos/puzSHTiHyW8
   Summary: What if you could create an entire interactive 3D scene without opening Blender, writing Three.js code, or manually building every object? And what if you could edit the result directly inside ChatGPT? Meet the new Splin

@@ -9010,7 +9010,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-12T23:10:35.295Z",
+      "updatedAt": "2026-11-13T08:16:18.485Z",
       "tags": [],
       "links": [],
       "related": []
@@ -16363,6 +16363,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=SSURtXFwSec"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "What Informed Copilot’s Code Review?",
+      "summary": "GitHub Copilot code review can report the skills, MCP servers and custom instructions associated with a review comment. But seeing the source is only the start: the finding still needs to be checked and tested. This vide",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/pT83dCFVxLU",
+      "publishedAt": "2026-11-13T02:35:47.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=pT83dCFVxLU"
         }
       ],
       "related": []

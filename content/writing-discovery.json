@@ -3817,6 +3817,17 @@
     },
     {
       "source": "youtube",
+      "title": "What Informed Copilot’s Code Review?",
+      "url": "https://www.youtube.com/watch?v=pT83dCFVxLU",
+      "publishedAt": "2026-11-13T02:35:47.000Z",
+      "excerpt": "GitHub Copilot code review can report the skills, MCP servers and custom instructions associated with a review comment. But seeing the source is only the start: the finding still needs to be checked and tested. This vide",
+      "coverImage": "https://i.ytimg.com/vi/pT83dCFVxLU/hqdefault.jpg",
+      "videoDescription": "GitHub Copilot code review can report the skills, MCP servers and custom instructions associated with a review comment. But seeing the source is only the start: the finding still needs to be checked and tested.\n\nThis video uses an illustrative example, not a live review or a claim that every comment has complete source metadata.\n\nGitHub’s update: https://github.blog/changelog/2026-11-06-copilot-code-review-api-management-and-review-overview-updates/\n\n#GitHubCopilot #CodeReview #AIcoding",
+      "addedAt": "2026-11-13T08:16:18.485Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Spline + ChatGPT: Create Interactive 3D Scenes Just by Prompting | Codex Plugin",
       "url": "https://www.youtube.com/watch?v=puzSHTiHyW8",
       "publishedAt": "2026-11-04T20:11:22.000Z",

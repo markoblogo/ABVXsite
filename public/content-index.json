@@ -9010,7 +9010,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-13T12:37:54.474Z",
+      "updatedAt": "2026-11-13T14:13:04.278Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10945,6 +10945,29 @@
         }
       ],
       "collection": "kitchen-notes"
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "I Explored Floor 796 — A Space Station Full of Familiar Faces",
+      "summary": "Step inside Floor796: a vast animated space station filled with familiar faces, unexpected encounters and tiny stories in every corner. In this tour, we explore a transporter, a laboratory, a dance floor, shops, a forest",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/q9f_fESuNpc",
+      "publishedAt": "2026-11-13T13:56:11.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=q9f_fESuNpc"
+        }
+      ],
+      "related": []
     },
     {
       "type": "writing",

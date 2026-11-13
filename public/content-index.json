@@ -9010,7 +9010,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-13T08:16:18.485Z",
+      "updatedAt": "2026-11-13T09:16:23.841Z",
       "tags": [],
       "links": [],
       "related": []
@@ -13892,6 +13892,44 @@
       "links": [],
       "publishedAt": "2026-11-12",
       "updatedAt": "2026-11-12",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #47 — Uncertainty and Everyday Choices",
+      "summary": "Six translated notebook fragments on uncertainty and everyday choices.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-47-uncertainty-and-everyday-choices",
+      "tags": [
+        "psychology-notebook",
+        "choice"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-13",
+      "updatedAt": "2026-11-13",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #48 — Control, Rescue and Agreements",
+      "summary": "Five translated notebook fragments on control, rescue and agreements.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-48-control-rescue-and-agreements",
+      "tags": [
+        "psychology-notebook",
+        "control"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-13",
+      "updatedAt": "2026-11-13",
       "related": []
     },
     {

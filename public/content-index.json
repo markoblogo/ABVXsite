@@ -9010,7 +9010,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-13T11:37:02.246Z",
+      "updatedAt": "2026-11-13T12:18:16.577Z",
       "tags": [],
       "links": [],
       "related": []
@@ -16756,6 +16756,52 @@
           "type": "section",
           "label": "Writing",
           "url": "https://abvx.xyz/writing"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "World Labs Atlas API: Turn Photos Into 3D Gaussian Splats",
+      "summary": "World Labs just opened access to Atlas and its developer API, allowing creators to generate and reconstruct explorable 3D environments, render cinematic camera movements, and export scenes as 3D Gaussian Splats. This is ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/NeEnBM49c2A",
+      "publishedAt": "2026-11-13T12:13:47.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=NeEnBM49c2A"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "World Labs Atlas Turns Images Into Explorable 3D Worlds (Blender Too)",
+      "summary": "World Labs just opened Atlas, its next-generation AI world model that transforms photographs and stylized images into explorable 3D environments. And the results are seriously impressive. The first demonstration shows a ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/vIiy-bfiGns",
+      "publishedAt": "2026-11-13T11:50:53.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=vIiy-bfiGns"
         }
       ],
       "related": []

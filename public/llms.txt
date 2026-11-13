@@ -657,6 +657,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/NEbmecyitIs
   Summary: What if you could talk to ChatGPT, Claude, or your AI coding agents without making a single sound? No keyboard. No microphone. Not even whispering. Just silently move your mouth, and your thoughts become text. Well, almo
 
+- World Labs Atlas API: Turn Photos Into 3D Gaussian Splats
+  URL: https://abvx.xyz/writing/videos/NeEnBM49c2A
+  Summary: World Labs just opened access to Atlas and its developer API, allowing creators to generate and reconstruct explorable 3D environments, render cinematic camera movements, and export scenes as 3D Gaussian Splats. This is
+
 - He Emailed Salesforce's CEO 53 Times. Here's How He Finally Got a Reply
   URL: https://abvx.xyz/writing/videos/NOi2yqMGaP0
   Summary: How many follow-ups would you send before giving up on your dream customer? Three? Five? Maybe ten? Well, Harry Stebbings sent 53 emails to Marc Benioff, the CEO of Salesforce. And for 52 weeks, he got absolutely nothing
@@ -992,6 +996,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - One Claude Code Skill Turns Your GitHub Project Into a Launch Video
   URL: https://abvx.xyz/writing/videos/vD_pNbzvoiM
   Summary: You spent hours building your project. Now you need a video to show it off. What if Claude Code could handle that part too? Meet Brag, an open-source AI agent skill that turns your project into a polished promotional vid
+
+- World Labs Atlas Turns Images Into Explorable 3D Worlds (Blender Too)
+  URL: https://abvx.xyz/writing/videos/vIiy-bfiGns
+  Summary: World Labs just opened Atlas, its next-generation AI world model that transforms photographs and stylized images into explorable 3D environments. And the results are seriously impressive. The first demonstration shows a
 
 - StableGen: Generate Rigged 3D Characters Locally with AI | Free Blender Add-on
   URL: https://abvx.xyz/writing/videos/VLObu0Pl9D0

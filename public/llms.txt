@@ -2587,6 +2587,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook, loss
 
+- Psychology Notebook #47 — Uncertainty and Everyday Choices
+  URL: https://abvx.xyz/writing/psychology-notebook-47-uncertainty-and-everyday-choices
+  Summary: Six translated notebook fragments on uncertainty and everyday choices.
+  Group: writing
+  Tags: psychology-notebook, choice
+
+- Psychology Notebook #48 — Control, Rescue and Agreements
+  URL: https://abvx.xyz/writing/psychology-notebook-48-control-rescue-and-agreements
+  Summary: Five translated notebook fragments on control, rescue and agreements.
+  Group: writing
+  Tags: psychology-notebook, control
+
 - The Berliner: How My Beer Cocktail Ended Up on a French Bar's Menu
   URL: https://abvx.xyz/writing/the-berliner-guinness-port-beer-cocktail
   Summary: I discovered Guinness with port wine in Berlin, recreated it with whatever a small French bar had available, and eventually watched it become an official item in the cash register.

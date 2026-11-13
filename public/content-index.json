@@ -9010,7 +9010,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-13T12:18:16.577Z",
+      "updatedAt": "2026-11-13T12:37:54.474Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10766,6 +10766,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=JDjvazj9zb4"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Humans Found a New Way to Argue With Self-Driving Cars #robotaxi #selfdriving",
+      "summary": "When a robotaxi parks in the wrong place, there's no driver to yell at. So these guys found another solution: show the AI a STOP sign directly in front of its cameras. And the car appears to back away like it's seen a gh",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/UDa-NTgEB7M",
+      "publishedAt": "2026-11-13T12:31:54.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=UDa-NTgEB7M"
         }
       ],
       "related": []

@@ -957,6 +957,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/UcyFLnvIzeE
   Summary: What if your AI agents could use your entire computer without constantly taking screenshots, analyzing pixels, and moving your mouse around? And what if multiple agents could work while you continued using your computer?
 
+- Humans Found a New Way to Argue With Self-Driving Cars #robotaxi #selfdriving
+  URL: https://abvx.xyz/writing/videos/UDa-NTgEB7M
+  Summary: When a robotaxi parks in the wrong place, there's no driver to yell at. So these guys found another solution: show the AI a STOP sign directly in front of its cameras. And the car appears to back away like it's seen a gh
+
 - DeepSeek Creator Mode: Build Your Own AI Agent Interface Just by Prompting
   URL: https://abvx.xyz/writing/videos/uDYjI2-QvpQ
   Summary: What if your AI assistant could redesign its own interface whenever you wanted? Not just change the colors. Actually build new tools, install them as plugins, and integrate them directly into the application. Meet Creato

@@ -9010,7 +9010,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-13T09:16:23.841Z",
+      "updatedAt": "2026-11-13T11:37:02.246Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11180,6 +11180,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "I Made Windows and Mac Work Like One Computer (Deskflow + Syncthing)",
+      "summary": "I have two computers: a powerful Windows PC for work and a MacBook for everything else. And I was tired of constantly switching keyboards, moving my mouse between devices, and sending screenshots and text to myself throu",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/EEWvJ3Ypl4w",
+      "publishedAt": "2026-11-13T11:15:24.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=EEWvJ3Ypl4w"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "I Replaced Meta AI on My Ray-Bans With Claude, ChatGPT & MCP",
       "summary": "What if you could replace Meta AI on your Ray-Ban smart glasses with Claude, ChatGPT, Gemini, Grok, or your own AI agent connected to personal tools through MCP? That's exactly what the open-source project Visor makes po",
       "canonicalUrl": "https://abvx.xyz/writing/videos/7KjDxXOmLBM",
@@ -11440,6 +11463,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=dgLDRwH2g5E"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Krea Bots: 9 AI Agents Build Videos, 3D & Sound Together",
+      "summary": "Krea just introduced Krea Bots, a multi-agent creative production platform where specialized AI agents collaborate to create videos, 3D assets, animations, sound effects, and complete advertising campaigns. Instead of ge",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/kJMs805wE5U",
+      "publishedAt": "2026-11-13T11:25:04.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=kJMs805wE5U"
         }
       ],
       "related": []

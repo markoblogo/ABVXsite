@@ -317,6 +317,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/e7OuakMC4cA
   Summary: What if you could create hundreds of beautiful pixel art animations without drawing a single sprite? No Photoshop. No Aseprite. No pre-made image assets. Just Claude Code, JavaScript, and a surprisingly effective creativ
 
+- I Made Windows and Mac Work Like One Computer (Deskflow + Syncthing)
+  URL: https://abvx.xyz/writing/videos/EEWvJ3Ypl4w
+  Summary: I have two computers: a powerful Windows PC for work and a MacBook for everything else. And I was tired of constantly switching keyboards, moving my mouse between devices, and sending screenshots and text to myself throu
+
 - Adobe Premiere Pro Gets Generative Remove! Erase Objects From Video With AI
   URL: https://abvx.xyz/writing/videos/EL_UutTuAOo
   Summary: Remember when removing an unwanted object from a video meant opening After Effects, tracking masks, rebuilding backgrounds, and spending hours cleaning up individual frames? Well, Adobe just made that considerably easier
@@ -528,6 +532,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Flying Carpet Through a Post-Soviet Fever Dream | Vaybolet
   URL: https://abvx.xyz/writing/videos/KilojLKFvK4
   Summary: Vaybolet gives you a flying carpet, a snowy housing estate and no grand quest. Take a short flight past warm windows, frozen cars and a very questionable robot-dog billboard. Play in your browser: https://aimolodca.com/V
+
+- Krea Bots: 9 AI Agents Build Videos, 3D & Sound Together
+  URL: https://abvx.xyz/writing/videos/kJMs805wE5U
+  Summary: Krea just introduced Krea Bots, a multi-agent creative production platform where specialized AI agents collaborate to create videos, 3D assets, animations, sound effects, and complete advertising campaigns. Instead of ge
 
 - Explore Tokyo in Manga Style! Free Interactive 3D City & Background Generator
   URL: https://abvx.xyz/writing/videos/KnnKjd2Me04

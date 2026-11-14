@@ -9033,7 +9033,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-14T17:36:29.836Z",
+      "updatedAt": "2026-11-14T17:50:29.815Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9731,6 +9731,29 @@
         }
       ],
       "collection": "kitchen-notes"
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "From the Pantheon to ChatGPT — A Window to the Sky",
+      "summary": "A circle of sky inside Rome’s Pantheon. A few geometric lines. Then a change of perspective. A 37-second visual rhyme between stone, sky and the blue orb of ChatGPT Voice — made from photographs, animated construction dr",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/3qA7K-G0VXk",
+      "publishedAt": "2026-11-14T17:38:56.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=3qA7K-G0VXk"
+        }
+      ],
+      "related": []
     },
     {
       "type": "video",

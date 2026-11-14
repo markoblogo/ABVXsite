@@ -2096,6 +2096,17 @@
     },
     {
       "source": "youtube",
+      "title": "From the Pantheon to ChatGPT — A Window to the Sky",
+      "url": "https://www.youtube.com/watch?v=3qA7K-G0VXk",
+      "publishedAt": "2026-11-14T17:38:56.000Z",
+      "excerpt": "A circle of sky inside Rome’s Pantheon. A few geometric lines. Then a change of perspective. A 37-second visual rhyme between stone, sky and the blue orb of ChatGPT Voice — made from photographs, animated construction dr",
+      "coverImage": "https://i.ytimg.com/vi/3qA7K-G0VXk/hqdefault.jpg",
+      "videoDescription": "A circle of sky inside Rome’s Pantheon. A few geometric lines. Then a change of perspective.\n\nA 37-second visual rhyme between stone, sky and the blue orb of ChatGPT Voice — made from photographs, animated construction drawings and a locally authored computer scene.\n\nCreated with Framewright:\nhttps://markoblogo.github.io/framewright/\nhttps://github.com/markoblogo/framewright\n\nPHOTOGRAPHY\nPantheon facade: Demetrios Karatassos, CC0 1.0.\nhttps://commons.wikimedia.org/wiki/File:Pantheon_front.jpg\n\nWider dome interior: Wilfredor, CC0 1.0.\nhttps://commons.wikimedia.org/wiki/File:Pantheon_(Rome),_Dome_interior.jpg\n\nAdditional sky photograph and voice-mode reference supplied for this project.\nAI-generated English narration: Knox, Google AI Studio.\nMusic and sound design: original local composition.\n\n#Pantheon #ChatGPT #MotionDesign",
+      "addedAt": "2026-11-14T17:50:29.815Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "12 Claude Code Agents Turned 64 Scientific Papers Into an Interactive Physics Lab",
       "url": "https://www.youtube.com/watch?v=3t0O8-77oxQ",
       "publishedAt": "2026-10-30T22:15:23.000Z",

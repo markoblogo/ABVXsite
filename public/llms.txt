@@ -109,6 +109,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/3n9RCoXGbuQ
   Summary: What if you could generate entire interactive worlds using AI, control them with text prompts, and explore them by moving the camera? And what if you could run the whole thing on a single consumer GPU? Meet Hy-Nomas, a n
 
+- From the Pantheon to ChatGPT — A Window to the Sky
+  URL: https://abvx.xyz/writing/videos/3qA7K-G0VXk
+  Summary: A circle of sky inside Rome’s Pantheon. A few geometric lines. Then a change of perspective. A 37-second visual rhyme between stone, sky and the blue orb of ChatGPT Voice — made from photographs, animated construction dr
+
 - 12 Claude Code Agents Turned 64 Scientific Papers Into an Interactive Physics Lab
   URL: https://abvx.xyz/writing/videos/3t0O8-77oxQ
   Summary: What if you could turn dozens of scientific research papers into an interactive laboratory you can actually experiment with? Not just summaries. Not another chatbot explaining complicated equations. Actual working simula

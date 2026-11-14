@@ -9033,7 +9033,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-14T16:36:46.977Z",
+      "updatedAt": "2026-11-14T17:36:29.836Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9797,6 +9797,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=T3zm0bp8d6o"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Gemini 4 Hydrogen Built a DOOM-Style 3D Game in Just 6 Minutes",
+      "summary": "I'm genuinely shocked by what Gemini 4 Hydrogen can build in Google Antigravity in just 6 minutes. I gave it two prompts. That's it. PROMPT 1 — 6 MINUTES: \"Build a website with a DOOM-style game simulation using Three.js",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/axXe3WNq6nQ",
+      "publishedAt": "2026-11-14T17:24:38.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=axXe3WNq6nQ"
         }
       ],
       "related": []
@@ -15811,6 +15834,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=1gTkltk6MPQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Tripo Agentic Canvas: AI Builds Entire 3D Workflows From a Prompt",
+      "summary": "Tripo AI just launched Agentic Canvas, a visual AI agent that builds and executes entire 3D production workflows from a text prompt. Instead of manually switching between 3D generation, retopology, UV mapping, texturing,",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/6w6J5mSIuoo",
+      "publishedAt": "2026-11-14T17:34:43.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=6w6J5mSIuoo"
         }
       ],
       "related": []

@@ -161,6 +161,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/6tnch1OcG4M
   Summary: What if AI could generate an entire 3D model by writing a few hundred tokens of Python? Not just a beautiful image. Not an uneditable collection of polygons. An actual parametric 3D object with named components, adjustab
 
+- Tripo Agentic Canvas: AI Builds Entire 3D Workflows From a Prompt
+  URL: https://abvx.xyz/writing/videos/6w6J5mSIuoo
+  Summary: Tripo AI just launched Agentic Canvas, a visual AI agent that builds and executes entire 3D production workflows from a text prompt. Instead of manually switching between 3D generation, retopology, UV mapping, texturing,
+
 - 418 Claude Opus 5.5 Videos With Prompts You Can Copy (Free AI Motion Design Library)
   URL: https://abvx.xyz/writing/videos/720tTqmoORU
   Summary: What if you could find hundreds of impressive AI-generated videos and see exactly how their creators made them? Not just watch the results. Get the prompts, study the techniques, and recreate the ideas yourself. Meet Ski
@@ -228,6 +232,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - ZBrush 2027 Is Here! New UV Editor, Selection Sets & 3D Layers on iPad
   URL: https://abvx.xyz/writing/videos/ARzcWP-T6RQ
   Summary: Maxon just released ZBrush 2027.0 for desktop and iPad, and this update brings some genuinely useful improvements to digital sculpting. Here's what's new. 1. A Proper UV Editor in ZBrush Desktop This is probably the bigg
+
+- Gemini 4 Hydrogen Built a DOOM-Style 3D Game in Just 6 Minutes
+  URL: https://abvx.xyz/writing/videos/axXe3WNq6nQ
+  Summary: I'm genuinely shocked by what Gemini 4 Hydrogen can build in Google Antigravity in just 6 minutes. I gave it two prompts. That's it. PROMPT 1 — 6 MINUTES: "Build a website with a DOOM-style game simulation using Three.js
 
 - A Dog Follows a Falling Light | 3D Animated Short
   URL: https://abvx.xyz/writing/videos/B4zdWfFIkNE

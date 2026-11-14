@@ -2627,6 +2627,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook, control
 
+- Psychology Notebook #49 — Responsibility Without Self-Accusation
+  URL: https://abvx.xyz/writing/psychology-notebook-49-responsibility-without-self-accusation
+  Summary: Five translated notebook fragments on responsibility without self-accusation.
+  Group: writing
+  Tags: psychology-notebook, responsibility
+
+- Psychology Notebook #50 — Love, Fuel and Separate Lives
+  URL: https://abvx.xyz/writing/psychology-notebook-50-love-fuel-and-separate-lives
+  Summary: Seven translated notebook fragments on love, fuel and separate lives.
+  Group: writing
+  Tags: psychology-notebook, relationships
+
 - The Berliner: How My Beer Cocktail Ended Up on a French Bar's Menu
   URL: https://abvx.xyz/writing/the-berliner-guinness-port-beer-cocktail
   Summary: I discovered Guinness with port wine in Berlin, recreated it with whatever a small French bar had available, and eventually watched it become an official item in the cash register.

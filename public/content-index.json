@@ -7599,6 +7599,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "AI Commander 0.1.0: One Terminal for AI Agents, Kanban & Git Worktrees",
+      "summary": "AI Commander 0.1.0 is here, bringing multiple AI coding agent backends, a Kanban task board, Git worktree isolation, and permission controls into one retro-style terminal interface. Think Norton Commander aesthetics meet",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/kL2OU0fTR6U",
+      "publishedAt": "2026-11-14T16:20:58.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=kL2OU0fTR6U"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "AI Turned the Original Prince of Persia Into a Photorealistic Movie",
       "summary": "Remember the original Prince of Persia? The legendary 1989 computer game with its pixelated characters, deadly traps, impossible jumps, and unforgettable atmosphere? Well, someone decided to give it a serious cinematic u",
       "canonicalUrl": "https://abvx.xyz/writing/videos/R2d5LM8bHEk",
@@ -9010,7 +9033,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-14T16:12:02.559Z",
+      "updatedAt": "2026-11-14T16:36:46.977Z",
       "tags": [],
       "links": [],
       "related": []

@@ -541,6 +541,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/kJMs805wE5U
   Summary: Krea just introduced Krea Bots, a multi-agent creative production platform where specialized AI agents collaborate to create videos, 3D assets, animations, sound effects, and complete advertising campaigns. Instead of ge
 
+- AI Commander 0.1.0: One Terminal for AI Agents, Kanban & Git Worktrees
+  URL: https://abvx.xyz/writing/videos/kL2OU0fTR6U
+  Summary: AI Commander 0.1.0 is here, bringing multiple AI coding agent backends, a Kanban task board, Git worktree isolation, and permission controls into one retro-style terminal interface. Think Norton Commander aesthetics meet
+
 - Explore Tokyo in Manga Style! Free Interactive 3D City & Background Generator
   URL: https://abvx.xyz/writing/videos/KnnKjd2Me04
   Summary: What if you could turn real streets into beautiful manga backgrounds? Not by drawing them manually. Not by generating random AI images. By exploring an actual city through an interactive, stylized 3D world. Meet Dokodemo

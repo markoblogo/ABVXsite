@@ -4740,6 +4740,13 @@ a {
   overflow-wrap: anywhere;
 }
 
+.native-writing-article__body .content-markdown :is(p, li),
+.editorial-article-body :is(p, li) {
+  color: color-mix(in srgb, var(--ink) 82%, var(--paper) 18%);
+  font-size: clamp(1.075rem, 1.45vw, 1.2rem);
+  line-height: 1.65;
+}
+
 .content-markdown ul {
   display: grid;
   gap: 0.42rem;

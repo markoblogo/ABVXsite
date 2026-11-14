@@ -605,6 +605,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/m0iXZ3eHSiQ
   Summary: Meet Patch, a new AI-powered game development platform that lets coding agents build, modify, remix, and publish playable games using a single CLI and MCP integration. And it comes with more than 50,000 open-source game
 
+- OpenAI ChatGPT Wallet: Dots Can Now Pay for Your Purchases
+  URL: https://abvx.xyz/writing/videos/mCIEj22D2y4
+  Summary: OpenAI just launched ChatGPT Wallet, allowing its dots AI agents to complete purchases on your behalf without accessing your actual credit card details. Your AI agent can now find a product, navigate checkout, and pay fo
+
 - ReelMimic: AI Agents Recreate Video Styles in 2D | Claude Code & Codex
   URL: https://abvx.xyz/writing/videos/mdrl-bQF3Zk
   Summary: Someone just brought the golden age of DOS file managers back to life. Except this time, they're running AI agents. Meet AI-Commander, a new open-source terminal interface built by developer Mikhail Malyshev. And I have

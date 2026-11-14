@@ -9010,7 +9010,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-14T10:06:54.263Z",
+      "updatedAt": "2026-11-14T16:12:02.559Z",
       "tags": [],
       "links": [],
       "related": []
@@ -12603,6 +12603,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=SrWeTSaQ4DQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "OpenAI ChatGPT Wallet: Dots Can Now Pay for Your Purchases",
+      "summary": "OpenAI just launched ChatGPT Wallet, allowing its dots AI agents to complete purchases on your behalf without accessing your actual credit card details. Your AI agent can now find a product, navigate checkout, and pay fo",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/mCIEj22D2y4",
+      "publishedAt": "2026-11-14T15:46:53.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=mCIEj22D2y4"
         }
       ],
       "related": []

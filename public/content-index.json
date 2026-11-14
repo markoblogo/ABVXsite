@@ -9010,7 +9010,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-13T22:11:02.807Z",
+      "updatedAt": "2026-11-14T10:06:54.263Z",
       "tags": [],
       "links": [],
       "related": []
@@ -14045,6 +14045,44 @@
       "links": [],
       "publishedAt": "2026-11-13",
       "updatedAt": "2026-11-13",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #49 — Responsibility Without Self-Accusation",
+      "summary": "Five translated notebook fragments on responsibility without self-accusation.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-49-responsibility-without-self-accusation",
+      "tags": [
+        "psychology-notebook",
+        "responsibility"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-14",
+      "updatedAt": "2026-11-14",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #50 — Love, Fuel and Separate Lives",
+      "summary": "Seven translated notebook fragments on love, fuel and separate lives.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-50-love-fuel-and-separate-lives",
+      "tags": [
+        "psychology-notebook",
+        "relationships"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-14",
+      "updatedAt": "2026-11-14",
       "related": []
     },
     {

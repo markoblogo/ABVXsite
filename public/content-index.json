@@ -8478,6 +8478,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude Code Desktop: Build Custom Animated Themes With AI Mods",
+      "summary": "Anthropic just added custom themes to Claude Code Desktop, letting you redesign your coding interface using AI-powered mods. And you don't even need to write the theme yourself. Just describe how you want Claude Code to ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/oj9jj1KGnUs",
+      "publishedAt": "2026-11-14T18:34:34.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=oj9jj1KGnUs"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude Code Gets Its Own Mac! Meet terminal-mac | AI Computer Use in Your Terminal",
       "summary": "What if you could give Claude Code an entire Mac of its own? Not just terminal access. Not a browser sandbox. An actual macOS desktop, running inside your terminal. Meet terminal-mac, a free, open-source project that let",
       "canonicalUrl": "https://abvx.xyz/writing/videos/aPUm9hNAkmQ",
@@ -9056,7 +9079,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-14T18:37:03.241Z",
+      "updatedAt": "2026-11-14T18:50:51.986Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9866,6 +9889,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=axXe3WNq6nQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Gemini 4 Hydrogen Built a Robocode Champion in Just 15 Minutes",
+      "summary": "The Gemini 4 Hydrogen experiments continue. This time, I gave Google's AI coding agent a classic programming game from 2001: Robocode. 15 minutes later, I had a champion tank bot. If you remember Robocode, you know the c",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/8uzK5wmKdYQ",
+      "publishedAt": "2026-11-14T18:43:42.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=8uzK5wmKdYQ"
         }
       ],
       "related": []

@@ -209,6 +209,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/89kTx1LhEP0
   Summary: The world changed. The dogs read the fine print. Meet Mriya, a former shelter dog navigating a city rewritten by the System. Good Dogs of the Apocalypse is a darkly comic, dog-centered LitRPG series about survival, found
 
+- Gemini 4 Hydrogen Built a Robocode Champion in Just 15 Minutes
+  URL: https://abvx.xyz/writing/videos/8uzK5wmKdYQ
+  Summary: The Gemini 4 Hydrogen experiments continue. This time, I gave Google's AI coding agent a classic programming game from 2001: Robocode. 15 minutes later, I had a champion tank bot. If you remember Robocode, you know the c
+
 - Claude Code / Codex Turns Real Roads Into Retro Pixel-Art Games | Pixel Path
   URL: https://abvx.xyz/writing/videos/9aEaGv0Wu4o
   Summary: Someone built a Claude Code skill that turns real-world roads into retro pixel-art adventures. And I have absolutely no idea why I love this so much. Meet Pixel Path, an open-source Claude Code skill that transforms any
@@ -732,6 +736,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Trois paquets, quatre indices : saurez-vous résoudre l’énigme ?
   URL: https://abvx.xyz/writing/videos/OHU26SiXCoU
   Summary: Trois paquets. Quatre indices. Une seule solution. Saurez-vous retrouver qui a pris quoi ? Mettez sur pause pour chercher : la réponse arrive seulement à la fin. Ce court film illustré vous propose une énigme tirée de Le
+
+- Claude Code Desktop: Build Custom Animated Themes With AI Mods
+  URL: https://abvx.xyz/writing/videos/oj9jj1KGnUs
+  Summary: Anthropic just added custom themes to Claude Code Desktop, letting you redesign your coding interface using AI-powered mods. And you don't even need to write the theme yourself. Just describe how you want Claude Code to
 
 - Can AI Build Your Database? Prisma Plugin Tested
   URL: https://abvx.xyz/writing/videos/OknfCwdyXIc

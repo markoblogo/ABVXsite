@@ -497,6 +497,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/JkmkICJoNwY
   Summary: What if you could simulate complex clothing, realistic fabric collisions, tearing, and even soft-body muscles directly inside 3ds Max? Without constantly switching between different simulation applications? Meet TenPix C
 
+- Claude Fable 5.2 Leads BVB: AI Agents Reconstruct Videos in Blender
+  URL: https://abvx.xyz/writing/videos/jKPTEICoFWw
+  Summary: AI coding agents can now watch a real video and attempt to reconstruct the entire scene in Blender using Python. But which model actually understands the 3D world behind the pixels? Meet BVB, the Blender-VideoBench, a ne
+
 - Copilot Memory vs Dreaming: What Changes Automatically?
   URL: https://abvx.xyz/writing/videos/JMIzP3zy90k
   Summary: What can GitHub Copilot remember—and what can Dreaming change without a pull request? In 96 seconds: saved context, source checks, background maintenance and the controls worth checking before you opt in. The key distinc
@@ -556,6 +560,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - AI Commander 0.1.0: One Terminal for AI Agents, Kanban & Git Worktrees
   URL: https://abvx.xyz/writing/videos/kL2OU0fTR6U
   Summary: AI Commander 0.1.0 is here, bringing multiple AI coding agent backends, a Kanban task board, Git worktree isolation, and permission controls into one retro-style terminal interface. Think Norton Commander aesthetics meet
+
+- Suno Bridge: AI Music Generation Comes to Ableton Live 12
+  URL: https://abvx.xyz/writing/videos/KnK7-2u1Prg
+  Summary: Suno just launched Suno Bridge, a new app that connects AI music generation directly to Ableton Live 12 on Mac. And this might be one of Suno's smartest moves yet. Instead of generating complete songs in a separate inter
 
 - Explore Tokyo in Manga Style! Free Interactive 3D City & Background Generator
   URL: https://abvx.xyz/writing/videos/KnnKjd2Me04

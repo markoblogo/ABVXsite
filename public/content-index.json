@@ -8708,6 +8708,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude Fable 5.2 Leads BVB: AI Agents Reconstruct Videos in Blender",
+      "summary": "AI coding agents can now watch a real video and attempt to reconstruct the entire scene in Blender using Python. But which model actually understands the 3D world behind the pixels? Meet BVB, the Blender-VideoBench, a ne",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/jKPTEICoFWw",
+      "publishedAt": "2026-11-14T18:16:22.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=jKPTEICoFWw"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude Fable 5.2 Made a 4K CGI Film With Blender & Python for $5.75",
       "summary": "Claude Fable 5.2 just created an entire 4K CGI short using Python, Blender, RunPod, and ElevenLabs, starting from a single prompt. The reported GPU rendering cost? Just $5.75. In an experiment by Riley Brown, Claude was ",
       "canonicalUrl": "https://abvx.xyz/writing/videos/NZBLlMLytSs",
@@ -9033,7 +9056,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-14T17:50:29.815Z",
+      "updatedAt": "2026-11-14T18:37:03.241Z",
       "tags": [],
       "links": [],
       "related": []
@@ -14836,6 +14859,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=NEbmecyitIs"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Suno Bridge: AI Music Generation Comes to Ableton Live 12",
+      "summary": "Suno just launched Suno Bridge, a new app that connects AI music generation directly to Ableton Live 12 on Mac. And this might be one of Suno's smartest moves yet. Instead of generating complete songs in a separate inter",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/KnK7-2u1Prg",
+      "publishedAt": "2026-11-14T18:24:23.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=KnK7-2u1Prg"
         }
       ],
       "related": []

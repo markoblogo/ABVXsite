@@ -213,6 +213,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/8uzK5wmKdYQ
   Summary: The Gemini 4 Hydrogen experiments continue. This time, I gave Google's AI coding agent a classic programming game from 2001: Robocode. 15 minutes later, I had a champion tank bot. If you remember Robocode, you know the c
 
+- This AI Skill Makes Your UI Gestures Feel Like Native Apps
+  URL: https://abvx.xyz/writing/videos/8yIr6zNuJPA
+  Summary: Most AI coding agents can build a mobile interface. But making it feel smooth, natural, and responsive is a completely different challenge. Meet /gestures, a free agent skill created by design engineer Emil Kowalski that
+
 - Claude Code / Codex Turns Real Roads Into Retro Pixel-Art Games | Pixel Path
   URL: https://abvx.xyz/writing/videos/9aEaGv0Wu4o
   Summary: Someone built a Claude Code skill that turns real-world roads into retro pixel-art adventures. And I have absolutely no idea why I love this so much. Meet Pixel Path, an open-source Claude Code skill that transforms any

@@ -389,6 +389,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/GegJauCwDRs
   Summary: NVIDIA just introduced GR00T 2, a new world-action AI model that helps robots learn physical skills from human videos and adapt to unfamiliar tasks with just five demonstrations. In NVIDIA's experiments, GR00T 2 achieved
 
+- One Light, One Way Home | A Cinematic Short
+  URL: https://abvx.xyz/writing/videos/GiOETg_EoL4
+  Summary: One small boat. A dark stretch of water. And somewhere beyond it, home. A lighthouse beam guides a weathered fishing boat from the open sea into a quiet harbor. An original short story told through cold blue water, warm
+
 - SpaceX Plans to Catch BOTH Starship Stages in November! | Flight 15
   URL: https://abvx.xyz/writing/videos/GJhICBW4eMI
   Summary: SpaceX is preparing to attempt something that has never been done before. Catch an entire orbital rocket system using giant mechanical arms. Both stages. On the same mission. During SpaceX's Q3 2026 earnings presentation

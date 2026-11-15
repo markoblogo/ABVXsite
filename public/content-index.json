@@ -9079,7 +9079,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-15T15:26:30.041Z",
+      "updatedAt": "2026-11-15T17:50:07.581Z",
       "tags": [],
       "links": [],
       "related": []
@@ -12741,6 +12741,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=SrWeTSaQ4DQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "One Light, One Way Home | A Cinematic Short",
+      "summary": "One small boat. A dark stretch of water. And somewhere beyond it, home. A lighthouse beam guides a weathered fishing boat from the open sea into a quiet harbor. An original short story told through cold blue water, warm ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/GiOETg_EoL4",
+      "publishedAt": "2026-11-15T17:44:24.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=GiOETg_EoL4"
         }
       ],
       "related": []

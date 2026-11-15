@@ -289,6 +289,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/cb8VIvOuVOU
   Summary: What if the secret to making beautiful AI videos was to stop letting AI do all the creative work? No glossy anime aesthetics. No plastic-looking characters. No generic cinematic lighting. Just old-school avant-garde art,
 
+- Claude Fable 5.2 Built an Entire 3D Park. Every Flower Is Real Geometry.
+  URL: https://abvx.xyz/writing/videos/CHu4gSUBoy0
+  Summary: Claude Fable 5.2 is pushing AI-generated 3D worlds to another level. Just look at this park. Trees, a beautiful meadow full of flowers, a peaceful lake, and an entire environment filled with detailed geometry. But here's
+
 - OpenAI x ModRetro Chromatic Is Here: A $200 Game Boy You Can Build Games for with Codex
   URL: https://abvx.xyz/writing/videos/cM0Ga17fK_Y
   Summary: OpenAI just put a $200 retro handheld in its merch store. And this one actually does something. Meet the ModRetro Chromatic: Codex Edition, a collaboration between OpenAI and ModRetro, the hardware company founded by Ocu
@@ -1044,6 +1048,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Why Do Streetlights Look Like Stars? This Eye Simulator Shows You.
   URL: https://abvx.xyz/writing/videos/uvM-jWwibOQ
   Summary: Ever noticed how streetlights, car headlights, and distant stars turn into glowing halos, spikes, and strange patterns at night? Well, someone built a simulator that lets you explore exactly why that happens. Meet Engisc
+
+- AI Battlegrounds: The Unity Port Is Here. Try It Yourself!
+  URL: https://abvx.xyz/writing/videos/uYTY8g7XLm4
+  Summary: AI Battlegrounds is getting a Unity treatment. Here's a look at the Unity port, including an optimized version you can explore yourself. The interesting part of AI-assisted game development isn't just generating impressi
 
 - Time Capsule | Pokras Lampas — Calligrafuturism at Lennauchfilm
   URL: https://abvx.xyz/writing/videos/uyzSYiktQb0

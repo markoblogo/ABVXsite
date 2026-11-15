@@ -9148,7 +9148,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-15T23:13:16.482Z",
+      "updatedAt": "2026-11-15T23:50:53.216Z",
       "tags": [],
       "links": [],
       "related": []
@@ -16353,6 +16353,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=ShcaeYiVVK4"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Turn Any Website Into an AI Brand Kit for Claude, Codex & Cursor (Free)",
+      "summary": "Just found a free tool that turns almost any website into an AI-ready brand kit for Claude Code, ChatGPT, Codex, Cursor, and other AI coding agents. And all you need is a URL. Meet AI Brand Kit by Baked Design Studio. Pa",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/FQy5IYL7LDY",
+      "publishedAt": "2026-11-15T23:30:21.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=FQy5IYL7LDY"
         }
       ],
       "related": []

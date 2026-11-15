@@ -9079,7 +9079,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-15T18:13:34.362Z",
+      "updatedAt": "2026-11-15T19:50:19.957Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10450,6 +10450,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=7JJ47rmMU7w"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "He Built an AI Personal Finance Manager With Claude Code | Open Net Worth",
+      "summary": "One developer spent five months building an entire AI-powered personal finance platform with Claude Code. The result? Open Net Worth, a free, open-source alternative to traditional budgeting and wealth-tracking apps, wit",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/7Ety5a_noP4",
+      "publishedAt": "2026-11-15T19:44:53.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=7Ety5a_noP4"
         }
       ],
       "related": []
@@ -16100,6 +16123,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=yHcec4hrNQQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Tripo Orbit: Free 3D Model Viewer That's Faster Than Opening Blender",
+      "summary": "Tripo AI just released Tripo Orbit, a free, high-performance 3D model viewer for Windows and macOS that lets you inspect complex 3D assets without opening Blender, Maya, or another heavyweight 3D application. And it's fa",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/5J-4pE1HbOQ",
+      "publishedAt": "2026-11-15T19:29:17.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=5J-4pE1HbOQ"
         }
       ],
       "related": []

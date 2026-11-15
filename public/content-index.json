@@ -9079,7 +9079,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-15T17:50:07.581Z",
+      "updatedAt": "2026-11-15T18:13:34.362Z",
       "tags": [],
       "links": [],
       "related": []
@@ -14458,6 +14458,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=lZP_0q7V810"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Same Street, Three Moods | Light Changes the Story",
+      "summary": "The buildings stay. The feeling changes. An original animated street moves from clear daylight to golden hour and then into the blue of night. Watch how light, color and camera guide our attention — from an open neighbor",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/wBaKQ_i7dsA",
+      "publishedAt": "2026-11-15T17:58:10.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=wBaKQ_i7dsA"
         }
       ],
       "related": []

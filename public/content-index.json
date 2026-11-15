@@ -9007,6 +9007,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude's Weirdest Plugin? A Home Distillery",
+      "summary": "One maker calls a home distillery an AI вЂњpluginвЂќвЂ”and the final reveal makes the joke even better. We adapted the Russian narration and on-screen captions into English. Source clip: https://www.yaplakal.com/forum3/t",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/928ZiGl0m8w",
+      "publishedAt": "2026-11-15T20:27:35.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=928ZiGl0m8w"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claudemy: Turn Any Topic Into a Personal AI Course with Claude Code | Free AI Skill",
       "summary": "Ever wanted to learn something new, only to discover that the recommended course is 40 hours long? You bookmark it. Watch the introduction. Promise yourself you'll finish it someday. And never open it again. Well, someon",
       "canonicalUrl": "https://abvx.xyz/writing/videos/G6ZR20RmSRs",
@@ -9125,7 +9148,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-15T20:11:54.309Z",
+      "updatedAt": "2026-11-15T20:36:28.131Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11520,6 +11543,29 @@
       "links": [],
       "publishedAt": "2026-10-14",
       "updatedAt": "2026-10-14",
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "I Tried Porting a WebGL Game to Unity With AI. It Got Complicated.",
+      "summary": "My little AI-powered weekend game project is turning into something much bigger. What started as a WebGL experiment has now evolved into a Unity project with AI-generated 3D assets, multiple coding agents, and a growing ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/9wirkrpkSoQ",
+      "publishedAt": "2026-11-15T20:18:23.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=9wirkrpkSoQ"
+        }
+      ],
       "related": []
     },
     {

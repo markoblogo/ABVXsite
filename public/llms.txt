@@ -117,6 +117,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/3t0O8-77oxQ
   Summary: What if you could turn dozens of scientific research papers into an interactive laboratory you can actually experiment with? Not just summaries. Not another chatbot explaining complicated equations. Actual working simula
 
+- Stop Folding the Same Paper Plane: 109 Designs to Try
+  URL: https://abvx.xyz/writing/videos/3zh2QfO5iXM
+  Summary: Still folding the same paper dart? Foldable Flight has 109 paper airplane designs to explore—and a useful way to choose your next one by paper size, difficulty and flight style. In this short website tour, we browse the
+
 - This AI Drone Can Chase You Through a Forest Without GPS or Internet
   URL: https://abvx.xyz/writing/videos/4u78DC8S864
   Summary: Remember when drones needed human pilots, GPS, and a reliable connection to navigate? Well, apparently, those days are numbered. Researchers at Purdue University have demonstrated an autonomous drone that can follow a pe

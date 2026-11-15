@@ -9148,7 +9148,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-15T20:36:28.131Z",
+      "updatedAt": "2026-11-15T22:11:34.023Z",
       "tags": [],
       "links": [],
       "related": []
@@ -15079,6 +15079,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=n92y2-xy8EE"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Stop Folding the Same Paper Plane: 109 Designs to Try",
+      "summary": "Still folding the same paper dart? Foldable Flight has 109 paper airplane designs to explore—and a useful way to choose your next one by paper size, difficulty and flight style. In this short website tour, we browse the ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/3zh2QfO5iXM",
+      "publishedAt": "2026-11-15T21:55:30.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=3zh2QfO5iXM"
         }
       ],
       "related": []

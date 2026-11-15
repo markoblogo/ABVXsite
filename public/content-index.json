@@ -9148,7 +9148,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-15T22:11:34.023Z",
+      "updatedAt": "2026-11-15T22:50:35.215Z",
       "tags": [],
       "links": [],
       "related": []
@@ -15521,6 +15521,29 @@
         ],
         "timingText": "Preparation and cooking: About 20–25 minutes, depending on how quickly the water boils and the potatoes cook."
       }
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "The Pope vs Anthropic: Should AI Help Humanity Defeat Death?",
+      "summary": "Could AI help humanity defeat disease, aging, and eventually death? Anthropic CEO Dario Amodei thinks artificial intelligence could bring extraordinary medical breakthroughs within the next decade. Pope Leo XIV has a ver",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/OW1weOBWRVA",
+      "publishedAt": "2026-11-15T22:40:45.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=OW1weOBWRVA"
+        }
+      ],
+      "related": []
     },
     {
       "type": "writing",

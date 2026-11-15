@@ -9079,7 +9079,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-14T19:09:32.695Z",
+      "updatedAt": "2026-11-15T15:26:30.041Z",
       "tags": [],
       "links": [],
       "related": []
@@ -14244,6 +14244,42 @@
       "links": [],
       "publishedAt": "2026-11-14",
       "updatedAt": "2026-11-14",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #51 — Uncertainty and the Stories We Tell",
+      "summary": "Ten translated notebook fragments on uncertainty and the stories we tell.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-51-uncertainty-and-the-stories-we-tell",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-15",
+      "updatedAt": "2026-11-15",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #52 — Loss, Grief and Letting Go",
+      "summary": "Ten translated notebook fragments on loss, grief and letting go.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-52-loss-grief-and-letting-go",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-15",
+      "updatedAt": "2026-11-15",
       "related": []
     },
     {

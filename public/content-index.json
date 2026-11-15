@@ -9148,7 +9148,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-15T22:50:35.215Z",
+      "updatedAt": "2026-11-15T23:13:16.482Z",
       "tags": [],
       "links": [],
       "related": []
@@ -16146,6 +16146,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=dQAm7kw49co"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "This Supercar Footage Looks Real. Apparently, It's a Video Game  #supercar  #gameplay",
+      "summary": "We're getting dangerously close to the point where video games look indistinguishable from real-life footage. Just look at this supercar racing through city streets. The lighting, reflections, camera movement, motion blu",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/XgbZRN9fK1M",
+      "publishedAt": "2026-11-15T22:54:45.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=XgbZRN9fK1M"
         }
       ],
       "related": []

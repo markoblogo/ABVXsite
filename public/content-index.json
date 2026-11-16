@@ -9171,7 +9171,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-16T09:18:54.459Z",
+      "updatedAt": "2026-11-16T17:00:01.008Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9310,6 +9310,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=uDYjI2-QvpQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Describe Your Day in 100 Words? I Drew This Instead",
+      "summary": "Describe your entire day in at least 100 words. What if the answer is a beetle, a boulder, a snake eating its own tailвЂ”and someone who cannot stop thinking? This surreal animated short turns an ordinary daily routine i",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/LxEgWIMLyiI",
+      "publishedAt": "2026-11-16T16:13:50.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=LxEgWIMLyiI"
         }
       ],
       "related": []

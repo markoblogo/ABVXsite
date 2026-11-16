@@ -9171,7 +9171,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-16T08:01:21.724Z",
+      "updatedAt": "2026-11-16T09:18:54.459Z",
       "tags": [],
       "links": [],
       "related": []
@@ -14441,6 +14441,42 @@
       "links": [],
       "publishedAt": "2026-11-15",
       "updatedAt": "2026-11-15",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #53 — Closeness and Separate Lives",
+      "summary": "Ten translated notebook fragments on closeness and separate lives.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-53-closeness-and-separate-lives",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-16",
+      "updatedAt": "2026-11-16",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #54 — Resources, Limits and Control",
+      "summary": "Ten translated notebook fragments on resources, limits and control.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-54-resources-limits-and-control",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-16",
+      "updatedAt": "2026-11-16",
       "related": []
     },
     {

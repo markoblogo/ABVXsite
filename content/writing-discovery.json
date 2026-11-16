@@ -2827,6 +2827,17 @@
     },
     {
       "source": "youtube",
+      "title": "Who Sets the Limits When an AI Starts Trading? Coinbase Agent Controls",
+      "url": "https://www.youtube.com/watch?v=DmsXZ73w-Eg",
+      "publishedAt": "2026-11-16T20:14:08.000Z",
+      "excerpt": "An AI agent can submit a trade. But who sets the limits - and can the agent change them? This one-minute visual explainer looks at Coinbase Agent Controls and why the location of a rule matters as much as the rule itself",
+      "coverImage": "https://i.ytimg.com/vi/DmsXZ73w-Eg/hqdefault.jpg",
+      "videoDescription": "An AI agent can submit a trade. But who sets the limits - and can the agent change them? This one-minute visual explainer looks at Coinbase Agent Controls and why the location of a rule matters as much as the rule itself.\n\nUsing a miniature mechanical workshop, the film explains a maximum amount per trade, a total trading-volume cap over 24 hours, and an auto-stop based on a portfolio loss threshold. The key idea in Coinbase's announcement: enforcement runs on Coinbase's servers, outside the agent's control.\n\nThere is an important boundary. Stopping new trading does not, by itself, promise to cancel every existing order or close every open position. Product-category permissions were marked \"coming soon\" in the November 11, 2026 announcement.\n\nThis is an explanation of the published design, not a live product test. We did not connect a trading account or execute trades. The dollar amounts shown are illustrative examples, not recommended limits or reported results.\n\nOfficial source:\nhttps://www.coinbase.com/blog/agent-controls\n\nCreated with AI-assisted visuals, synthetic English narration, original music and sound design.\n\nWhich control would you set first: a per-trade cap, a daily volume cap, or a loss-triggered stop?\n\nMore visual stories:\nhttps://www.youtube.com/@ABV_Creative\nhttps://www.tiktok.com/@lumierenoire.films\n\n#AIAgents #Coinbase #AgentControls",
+      "addedAt": "2026-11-16T20:36:49.580Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "This Soft Robot Swims 3 Ways With Just 2 Air Inputs",
       "url": "https://www.youtube.com/watch?v=dQAm7kw49co",
       "publishedAt": "2026-11-06T10:50:39.000Z",

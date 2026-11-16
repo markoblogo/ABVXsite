@@ -9171,7 +9171,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-16T17:00:01.008Z",
+      "updatedAt": "2026-11-16T20:36:49.580Z",
       "tags": [],
       "links": [],
       "related": []
@@ -17308,6 +17308,29 @@
       "links": [],
       "publishedAt": "2026-10-10",
       "updatedAt": "2026-10-10",
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Who Sets the Limits When an AI Starts Trading? Coinbase Agent Controls",
+      "summary": "An AI agent can submit a trade. But who sets the limits - and can the agent change them? This one-minute visual explainer looks at Coinbase Agent Controls and why the location of a rule matters as much as the rule itself",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/DmsXZ73w-Eg",
+      "publishedAt": "2026-11-16T20:14:08.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=DmsXZ73w-Eg"
+        }
+      ],
       "related": []
     },
     {

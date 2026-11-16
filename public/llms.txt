@@ -349,6 +349,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/DK5cv_jMOsE
   Summary: Remember when "cloud computing" was just a metaphor? Well, Google is taking it rather literally. On October 30, 2026, Google announced that its AI model Gemma 4 had successfully generated a response from orbit and transm
 
+- Who Sets the Limits When an AI Starts Trading? Coinbase Agent Controls
+  URL: https://abvx.xyz/writing/videos/DmsXZ73w-Eg
+  Summary: An AI agent can submit a trade. But who sets the limits - and can the agent change them? This one-minute visual explainer looks at Coinbase Agent Controls and why the location of a rule matters as much as the rule itself
+
 - This Soft Robot Swims 3 Ways With Just 2 Air Inputs
   URL: https://abvx.xyz/writing/videos/dQAm7kw49co
   Summary: One soft robot. Two air inputs. Three ways to swim. Meet a feather-star-inspired swimmer that can rise, glide and turn by changing how its flexible arms flap. This 90-second explainer combines real NC State research foot

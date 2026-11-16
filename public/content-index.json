@@ -9171,7 +9171,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-16T00:39:16.766Z",
+      "updatedAt": "2026-11-16T08:01:21.724Z",
       "tags": [],
       "links": [],
       "related": []
@@ -16064,6 +16064,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "This “AI Interview” Went Off Script Fast",
+      "summary": "An entry-level interview. A demand for the biggest office. Then a plan to become CEO. Somewhere along the way, the interviewer loses control of his own conversation. This clip, circulating as an AI job interview, turns a",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/-ZjoRw8TY_Q",
+      "publishedAt": "2026-11-16T01:16:07.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=-ZjoRw8TY_Q"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "This AI Drone Can Chase You Through a Forest Without GPS or Internet",
       "summary": "Remember when drones needed human pilots, GPS, and a reliable connection to navigate? Well, apparently, those days are numbered. Researchers at Purdue University have demonstrated an autonomous drone that can follow a pe",
       "canonicalUrl": "https://abvx.xyz/writing/videos/4u78DC8S864",
@@ -17226,6 +17249,29 @@
       "links": [],
       "publishedAt": "2026-10-10",
       "updatedAt": "2026-10-10",
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Why \"DON'T PANIC\" Is Written on a SpaceX Starship",
+      "summary": "A painted вЂњDON'T PANICвЂќ. A spacecraft numbered S42. Why do real machines carry stories from imaginary worlds? Before We Built It, We Imagined It is a three-minute visual essay about science fiction, spaceflight and t",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/QPFxE_G9yHY",
+      "publishedAt": "2026-11-16T03:58:41.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=QPFxE_G9yHY"
+        }
+      ],
       "related": []
     },
     {

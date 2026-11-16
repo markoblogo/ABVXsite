@@ -69,6 +69,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/-VfmvCVWkSs
   Summary: Well, I guess it's time to uninstall Hermes Desktop and move back into the terminal. Hermes Agent v0.23.0 just added native inline image rendering. And honestly, this is exactly the kind of small improvement that makes t
 
+- This “AI Interview” Went Off Script Fast
+  URL: https://abvx.xyz/writing/videos/-ZjoRw8TY_Q
+  Summary: An entry-level interview. A demand for the biggest office. Then a plan to become CEO. Somewhere along the way, the interviewer loses control of his own conversation. This clip, circulating as an AI job interview, turns a
+
 - Gemini 4 Carbon Built a 3D Renderer From Scratch (No Blender)
   URL: https://abvx.xyz/writing/videos/0QESmDPIdLc
   Summary: Gemini 4 Carbon just built its own 3D rendering pipeline using C++ and NVIDIA CUDA, then created a 60-second physics-based animation without Blender or traditional keyframe animation. This isn't AI-generated video. It's
@@ -892,6 +896,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - AMI — Digital Infrastructure for Physical Commodity Markets
   URL: https://abvx.xyz/writing/videos/QnpLjwhj6Fs
   Summary: AMI — Agro Market Infrastructure — brings together projects for commodity brokerage operations, private market indices, and market knowledge. This short introduction highlights three parts of AMI: • MN7R — a private work
+
+- Why "DON'T PANIC" Is Written on a SpaceX Starship
+  URL: https://abvx.xyz/writing/videos/QPFxE_G9yHY
+  Summary: A painted вЂњDON'T PANICвЂќ. A spacecraft numbered S42. Why do real machines carry stories from imaginary worlds? Before We Built It, We Imagined It is a three-minute visual essay about science fiction, spaceflight and t
 
 - No Further Claims | A Manga Short Film
   URL: https://abvx.xyz/writing/videos/qq1dv0H-jvk

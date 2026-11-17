@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "ABVXEcosystemGraph",
-  "updatedAt": "2026-11-08T00:44:52.414Z",
+  "updatedAt": "2026-11-17T15:25:06.077Z",
   "nodes": [
     {
       "id": "trade-solutions",
@@ -376,7 +376,7 @@
       "repository": "markoblogo/YTMamp",
       "visibility": "public",
       "lifecycle": "active",
-      "summary": "Retro desktop remote for YouTube Music with a Chromium companion, waveform, media controls, and local integration API.",
+      "summary": "Compact retro music player for local collections, online radio and YouTube Music. Local FM tuning, saved stations and WAV recording.",
       "canonicalUrl": "https://github.com/markoblogo/YTMamp/releases/latest",
       "propagation": {
         "website": true,

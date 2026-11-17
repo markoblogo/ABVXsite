@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "kind": "ABVXEcosystemChangeSet",
-  "observedAt": "2026-11-08T00:44:52.414Z",
+  "observedAt": "2026-11-17T15:25:06.077Z",
   "changes": [
     {
-      "nodeId": "abvxsite",
+      "nodeId": "ytmamp",
       "changedFields": [
-        "release"
+        "summary"
       ]
     }
   ]

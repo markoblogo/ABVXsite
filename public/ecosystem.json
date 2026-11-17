@@ -4,9 +4,9 @@
   "version": "v1",
   "authority": "read",
   "externalSideEffects": false,
-  "generatedAt": "2026-11-08T00:44:52.414Z",
+  "generatedAt": "2026-11-17T15:25:06.077Z",
   "source": "cortex-abv/ecosystem-graph.v1.json",
-  "sourceDigest": "867c3f34d10fd3ffc61afc329c083ad72b73d184efa8f8206d3c268149fc30bd",
+  "sourceDigest": "b18b4d15a092a484204c8bbce068e7ae949cec4608db2a85d193461fbf92a0b5",
   "coverage": {
     "nodes": 24,
     "publicNodes": 20,
@@ -493,7 +493,7 @@
       "repository": "markoblogo/YTMamp",
       "visibility": "public",
       "lifecycle": "active",
-      "summary": "Retro desktop remote for YouTube Music with a Chromium companion, waveform, media controls, and local integration API.",
+      "summary": "Compact retro music player for local collections, online radio and YouTube Music. Local FM tuning, saved stations and WAV recording.",
       "canonicalUrl": "https://github.com/markoblogo/YTMamp/releases/latest",
       "propagation": {
         "website": true,

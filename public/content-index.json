@@ -9145,6 +9145,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Clear the Table. The Robot Took It Literally.",
+      "summary": "One simple instruction: \"Clear the table.\" One extremely literal assistant. What could possibly go wrong? This original animated comedy follows a helpful little robot that carefully rolls the entire desk out of the offic",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/WChWhGCV5u0",
+      "publishedAt": "2026-11-17T13:53:17.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=WChWhGCV5u0"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Climbing the Corporate Ladder in the AI Era #robot #robots",
       "summary": "They said AI would help us climb the corporate ladder. Nobody mentioned we'd have to carry it upstairs. The future of work is looking promising. #AI #Robotics #CorporateLife #Shorts",
       "canonicalUrl": "https://abvx.xyz/writing/videos/nyPvg1_TzGI",
@@ -9240,7 +9263,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-17T13:37:50.531Z",
+      "updatedAt": "2026-11-17T14:13:12.936Z",
       "tags": [],
       "links": [],
       "related": []

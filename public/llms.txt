@@ -309,6 +309,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/cb8VIvOuVOU
   Summary: What if the secret to making beautiful AI videos was to stop letting AI do all the creative work? No glossy anime aesthetics. No plastic-looking characters. No generic cinematic lighting. Just old-school avant-garde art,
 
+- Claude Code + Three.js + MiniMax H3: A Smarter AI Filmmaking Workflow
+  URL: https://abvx.xyz/writing/videos/cE791UcEQTw
+  Summary: What if you could direct AI-generated video like a real film scene instead of endlessly rewriting prompts and hoping for the best? Here's an interesting workflow combining Claude Code, Three.js, and MiniMax H3. The idea
+
 - Claude Fable 5.2 Built an Entire 3D Park. Every Flower Is Real Geometry.
   URL: https://abvx.xyz/writing/videos/CHu4gSUBoy0
   Summary: Claude Fable 5.2 is pushing AI-generated 3D worlds to another level. Just look at this park. Trees, a beautiful meadow full of flowers, a peaceful lake, and an entire environment filled with detailed geometry. But here's

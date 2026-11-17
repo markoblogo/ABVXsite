@@ -8524,6 +8524,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude Code + Three.js + MiniMax H3: A Smarter AI Filmmaking Workflow",
+      "summary": "What if you could direct AI-generated video like a real film scene instead of endlessly rewriting prompts and hoping for the best? Here's an interesting workflow combining Claude Code, Three.js, and MiniMax H3. The idea ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/cE791UcEQTw",
+      "publishedAt": "2026-11-17T20:46:46.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=cE791UcEQTw"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude Code Built a GTA Mod for SimCity 3000 in Just 2 Hours",
       "summary": "What if you could turn almost any PC game into something completely different using AI? And what if Claude Code could handle the modding process for you? Meet Universal Modder, an open-source collection of AI agent skill",
       "canonicalUrl": "https://abvx.xyz/writing/videos/cQS3nbBe6JM",
@@ -9286,7 +9309,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-17T20:38:52.775Z",
+      "updatedAt": "2026-11-17T21:12:49.895Z",
       "tags": [],
       "links": [],
       "related": []

@@ -505,6 +505,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/Hx3SofxSuCc
   Summary: VIDEO REBIRTH just compressed MiniMax-H3 from roughly 31 billion parameters to under 14 billion, and made it generate video AND sound in just six sampling steps. Meet HyperFlow H3 Flash, the latest release in the HyperFl
 
+- Claude Code Stick-Scene: Turn Any Idea Into an Animated Explanation
+  URL: https://abvx.xyz/writing/videos/HZ9pbsMA77w
+  Summary: What if Claude Code could turn complex ideas into simple, animated explanations using nothing but stick figures? Meet stick-scene, a free, open-source AI agent skill created by Kamran Ahmed, the developer behind roadmap.
+
 - Claude Opus 5.5 + Blender MCP: VFX Without a Single AI-Generated Frame
   URL: https://abvx.xyz/writing/videos/I1vIAh3K9yo
   Summary: Claude Opus 5.5 helped direct an entire VFX scene through Blender MCP and Nuke, with Houdini in the pipeline. Not a single frame was AI-generated. This isn't text-to-video. It's an experiment in using an AI agent as a VF
@@ -992,6 +996,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Gemini 4 Argon Built an Interactive 3D Human Body. You Can Explore a Beating Heart
   URL: https://abvx.xyz/writing/videos/SB2b1nB6G2U
   Summary: What if you could explore the human body like a 3D video game? Peel away anatomical layers. Isolate individual muscles. Watch the skeleton move. Or zoom straight inside a beating heart. Google DeepMind just demonstrated
+
+- Three AI Calls. One Wallet. Who Gets Paid?
+  URL: https://abvx.xyz/writing/videos/SET1GhIdhdc
+  Summary: Three AI requests arrive at the same time. Each costs $1. The wallet holds $2. Which jobs should be allowed to start? This short animated explainer turns a shared-budget problem into a tabletop machine: three request tok
 
 - FreeVideo: Run MiniMax H3 Locally with Just 8GB VRAM | ComfyUI
   URL: https://abvx.xyz/writing/videos/SET6nWjBNNE

@@ -8662,6 +8662,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude Code Stick-Scene: Turn Any Idea Into an Animated Explanation",
+      "summary": "What if Claude Code could turn complex ideas into simple, animated explanations using nothing but stick figures? Meet stick-scene, a free, open-source AI agent skill created by Kamran Ahmed, the developer behind roadmap.",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/HZ9pbsMA77w",
+      "publishedAt": "2026-11-17T13:10:13.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=HZ9pbsMA77w"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude Code Tried to Make Me Watch 60 Videos at Once. I'm Scared.",
       "summary": "I was watching Claude Code coordinate its army of AI agents. And suddenly, things got a little terrifying. The task? Working with 60 videos simultaneously. Claude decided that the most efficient way for me to review the ",
       "canonicalUrl": "https://abvx.xyz/writing/videos/vZW-Z4pYqzU",
@@ -9194,7 +9217,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-17T12:39:01.499Z",
+      "updatedAt": "2026-11-17T13:13:07.284Z",
       "tags": [],
       "links": [],
       "related": []
@@ -16379,6 +16402,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=XgbZRN9fK1M"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Three AI Calls. One Wallet. Who Gets Paid?",
+      "summary": "Three AI requests arrive at the same time. Each costs $1. The wallet holds $2. Which jobs should be allowed to start? This short animated explainer turns a shared-budget problem into a tabletop machine: three request tok",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/SET1GhIdhdc",
+      "publishedAt": "2026-11-17T12:53:04.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=SET1GhIdhdc"
         }
       ],
       "related": []

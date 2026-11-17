@@ -8116,6 +8116,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "BrickFlow: AI Rebuilds LEGO From One Photo. Is Reverse Engineering Next?",
+      "summary": "AI can now look at a LEGO model, figure out where the bricks belong, and attempt to reconstruct the hidden structure from just one image. Meet BrickFlow, a new AI research project exploring something much bigger than ass",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/ffBjGBXVqbE",
+      "publishedAt": "2026-11-17T13:18:18.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=ffBjGBXVqbE"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Burgers, Lipstick & Underwear | Strange Economic Indicators",
       "summary": "What can burgers, lipstick and underwear really tell us about the economy? Discover Burgers, Lipstick & Underwear: What Strange Indicators Really Tell Us About the Economy — a book about surprising economic indicators an",
       "canonicalUrl": "https://abvx.xyz/writing/videos/GVrbTMZxbpg",
@@ -9217,7 +9240,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-17T13:13:07.284Z",
+      "updatedAt": "2026-11-17T13:22:09.843Z",
       "tags": [],
       "links": [],
       "related": []

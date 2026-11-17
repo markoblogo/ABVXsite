@@ -397,6 +397,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/fcVLl0CcoXo
   Summary: Remember when rigging a 3D character meant manually placing bones, painting skin weights, and spending hours fixing broken deformations? Well, apparently, now you can just tell AI: "Add tail bones." And it actually build
 
+- BrickFlow: AI Rebuilds LEGO From One Photo. Is Reverse Engineering Next?
+  URL: https://abvx.xyz/writing/videos/ffBjGBXVqbE
+  Summary: AI can now look at a LEGO model, figure out where the bricks belong, and attempt to reconstruct the hidden structure from just one image. Meet BrickFlow, a new AI research project exploring something much bigger than ass
+
 - How Twitch Gamers Help Detect Wildfires | FireCatchers by Havas Play
   URL: https://abvx.xyz/writing/videos/FP17TQdOaGw
   Summary: What if waiting for your favorite Twitch streamer could actually help save a forest? Not by donating money. Not by watching an advertisement. Just by paying attention. Meet FireCatchers, one of the smartest examples of c

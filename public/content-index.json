@@ -8593,6 +8593,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude Code Can Now Test Foldable iPhone Duo Apps Automatically",
+      "summary": "Claude Code Desktop can now run, test, and debug iOS apps on Apple's new foldable iPhone Duo simulator. And here's the interesting part: Claude can actually fold and unfold the simulated phone to check how your app behav",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/JckA-lotJc8",
+      "publishedAt": "2026-11-17T23:47:49.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=JckA-lotJc8"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude Code Can Recreate Any Website Animation Frame by Frame | /reanimate",
       "summary": "Ever found an amazing animation on a website and wished you could recreate it in your own project? Not just something similar. The actual movement, timing, transitions, and visual effects. Meet /reanimate, a new open-sou",
       "canonicalUrl": "https://abvx.xyz/writing/videos/-8oBX51Y-cY",
@@ -9332,7 +9355,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-17T23:38:05.632Z",
+      "updatedAt": "2026-11-17T23:51:55.915Z",
       "tags": [],
       "links": [],
       "related": []

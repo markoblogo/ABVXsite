@@ -565,6 +565,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/jBbTc6RvAJE
   Summary: What if you could animate any object in a photo simply by drawing where you want it to move? No complicated keyframes. No manual masking across hundreds of frames. Just select an object, draw its trajectory, and let AI h
 
+- Claude Code Can Now Test Foldable iPhone Duo Apps Automatically
+  URL: https://abvx.xyz/writing/videos/JckA-lotJc8
+  Summary: Claude Code Desktop can now run, test, and debug iOS apps on Apple's new foldable iPhone Duo simulator. And here's the interesting part: Claude can actually fold and unfold the simulated phone to check how your app behav
+
 - How We Turned 6 Photos Into a Cinematic Film
   URL: https://abvx.xyz/writing/videos/JDjvazj9zb4
   Summary: Can six still photos become a cinematic short film? In this behind-the-scenes breakdown, we show how photographs of Pokras Lampas’s “Seals of Good Intentions” became a moving scene with layered images, a shallow 3D set,

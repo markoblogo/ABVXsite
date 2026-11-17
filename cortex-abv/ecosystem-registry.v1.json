@@ -4,9 +4,9 @@
   "version": "v1",
   "authority": "read",
   "externalSideEffects": false,
-  "generatedAt": "2026-11-17T15:25:06.077Z",
+  "generatedAt": "2026-11-17T16:26:52.045Z",
   "source": "cortex-abv/ecosystem-graph.v1.json",
-  "sourceDigest": "b18b4d15a092a484204c8bbce068e7ae949cec4608db2a85d193461fbf92a0b5",
+  "sourceDigest": "a04d8ee402b580c3fd3ae724dbb8cd4ac25c275470a8dd1c2ecf20680831f01d",
   "coverage": {
     "nodes": 24,
     "publicNodes": 20,
@@ -503,9 +503,9 @@
       },
       "observedHomepageUrl": "https://github.com/markoblogo/YTMamp/releases/latest",
       "release": {
-        "tag": "v0.4.1",
-        "url": "https://github.com/markoblogo/YTMamp/releases/tag/v0.4.1",
-        "publishedAt": "2026-09-14T13:01:50Z"
+        "tag": "v0.9.0",
+        "url": "https://github.com/markoblogo/TONFELD/releases/tag/v0.9.0",
+        "publishedAt": "2026-11-17T15:49:24Z"
       }
     }
   ],

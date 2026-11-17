@@ -457,6 +457,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/GY5UhZVQG14
   Summary: For years, a robot courier believed he was the only one left. Then a parcel arrived with a small lamp and a message: leave a light on. Someone will find their way. The Last Delivery is an original animated short about lo
 
+- You Can Fly Over Mars in Your Browser | NASA Eyes
+  URL: https://abvx.xyz/writing/videos/h0ZTfFPKbcs
+  Summary: You can explore the surface of Mars without leaving your browser. NASA's Eyes on the Solar System turns mission data and imagery into an interactive 3D simulation - and its August 2026 update added full Martian terrain f
+
 - AI Agent Memory: Stop Re-Explaining Your Project
   URL: https://abvx.xyz/writing/videos/H26QHE7NE9I
   Summary: AI agent memory is easier to manage when your project has a checkpoint. Save the goal, key decisions, actual files and the next action — then verify that state when you resume. A practical context-engineering habit for c

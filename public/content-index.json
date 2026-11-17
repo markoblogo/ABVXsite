@@ -9194,7 +9194,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-17T01:24:09.699Z",
+      "updatedAt": "2026-11-17T03:15:32.777Z",
       "tags": [],
       "links": [],
       "related": []
@@ -17694,6 +17694,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=R-7XiZzJXHc"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "You Can Fly Over Mars in Your Browser | NASA Eyes",
+      "summary": "You can explore the surface of Mars without leaving your browser. NASA's Eyes on the Solar System turns mission data and imagery into an interactive 3D simulation - and its August 2026 update added full Martian terrain f",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/h0ZTfFPKbcs",
+      "publishedAt": "2026-11-17T02:47:14.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=h0ZTfFPKbcs"
         }
       ],
       "related": []

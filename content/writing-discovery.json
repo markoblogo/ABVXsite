@@ -4664,6 +4664,17 @@
     },
     {
       "source": "youtube",
+      "title": "Can AI Predict a Falling Egg? PAN 2 Explained in ASCII",
+      "url": "https://www.youtube.com/watch?v=sVa-etX-YxQ",
+      "publishedAt": "2026-11-17T01:11:10.000Z",
+      "excerpt": "Drop an egg. Change the surface. Should an AI's prediction change too? This short ASCII comic explains the idea behind PAN 2, a world model announced by the Institute of Foundation Models on November 10, 2026. A starting",
+      "coverImage": "https://i.ytimg.com/vi/sVa-etX-YxQ/hqdefault.jpg",
+      "videoDescription": "Drop an egg. Change the surface. Should an AI's prediction change too?\n\nThis short ASCII comic explains the idea behind PAN 2, a world model announced by the Institute of Foundation Models on November 10, 2026. A starting scene and a written action become a simulated continuation. The interesting question is whether that continuation responds to a changed condition for the right reason.\n\nWe separate the model's two described jobs - planning events and generating moving images - from the evidence needed to trust a prediction. A convincing clip is a starting point. Comparable initial conditions, a controlled change and a real observation are what make a useful test.\n\nIMPORTANT CONTEXT\nThe ASCII scenes are original illustrations made for this film. They are not PAN 2 outputs, an independent benchmark, or footage of a real egg experiment. IFM's announcement describes egg-and-surface examples and identifies long-term consistency as an open challenge; we have not independently reproduced its results.\n\nPRIMARY SOURCE\nInstitute of Foundation Models, PAN 2 announcement, November 10, 2026:\nhttps://ifm.ai/pan2/press-release/\n\nPRODUCTION\nOriginal monochrome ASCII/comic animation with a lime accent, animated in Manim Community. Synthetic English Fola narration, original music and sound design. Independent editorial explainer; no model-provider sponsorship.\n\nWhat single change would you test first: the surface, the drop height, or the object?\n\nMore visual stories: https://www.youtube.com/@ABV_Creative\nTikTok: https://www.tiktok.com/@lumierenoire.films\n\n#WorldModels #ArtificialIntelligence #PAN2",
+      "addedAt": "2026-11-17T01:24:09.699Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "NVIDIA Déjà View: 3D Reconstruction From Photos With Just 117M Parameters",
       "url": "https://www.youtube.com/watch?v=sy-s4Rvn0hI",
       "publishedAt": "2026-11-12T16:49:17.000Z",

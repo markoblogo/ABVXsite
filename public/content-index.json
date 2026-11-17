@@ -8157,6 +8157,29 @@
       "related": []
     },
     {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Can AI Predict a Falling Egg? PAN 2 Explained in ASCII",
+      "summary": "Drop an egg. Change the surface. Should an AI's prediction change too? This short ASCII comic explains the idea behind PAN 2, a world model announced by the Institute of Foundation Models on November 10, 2026. A starting",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/sVa-etX-YxQ",
+      "publishedAt": "2026-11-17T01:11:10.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=sVa-etX-YxQ"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "writing",
       "section": "writing",
       "ecosystem": "Writing",
@@ -9171,7 +9194,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-17T00:33:19.157Z",
+      "updatedAt": "2026-11-17T01:24:09.699Z",
       "tags": [],
       "links": [],
       "related": []

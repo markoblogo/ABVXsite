@@ -1017,6 +1017,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/SSURtXFwSec
   Summary: What if Claude had been released in 1998? Before cloud computing. Before AI agents. Before everyone decided that every application needed a browser-based interface. Meet Claude '98, an imaginary version of Anthropic's AI
 
+- Can AI Predict a Falling Egg? PAN 2 Explained in ASCII
+  URL: https://abvx.xyz/writing/videos/sVa-etX-YxQ
+  Summary: Drop an egg. Change the surface. Should an AI's prediction change too? This short ASCII comic explains the idea behind PAN 2, a world model announced by the Institute of Foundation Models on November 10, 2026. A starting
+
 - NVIDIA Déjà View: 3D Reconstruction From Photos With Just 117M Parameters
   URL: https://abvx.xyz/writing/videos/sy-s4Rvn0hI
   Summary: NVIDIA Research has released Déjà View (DVLT), an open 3D reconstruction model that turns unordered photographs or video into 3D geometry, depth maps, and estimated camera positions. And it uses just 117 million paramete

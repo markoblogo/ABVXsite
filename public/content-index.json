@@ -9194,7 +9194,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-17T09:18:34.620Z",
+      "updatedAt": "2026-11-17T12:39:01.499Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11088,6 +11088,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=JDjvazj9zb4"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Hugging Face PyBot: 1,000 AI Agents Built a Chatbot Without an LLM",
+      "summary": "Hugging Face just released PyBot, a chatbot built entirely from Python rules by a swarm of more than 1,000 AI agents. No neural networks. No model weights. No transformers. No training. Just 640,000 lines of Python. And ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/EW7VBWM4EPA",
+      "publishedAt": "2026-11-17T12:27:43.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=EW7VBWM4EPA"
         }
       ],
       "related": []

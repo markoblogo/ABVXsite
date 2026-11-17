@@ -381,6 +381,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/eqqcp_RuzB0
   Summary: What if you could create an entire interactive 3D world just by describing it? No manual modeling. No complicated scene setup. No hours spent writing Three.js code. Just type a prompt and let AI build a world you can act
 
+- Hugging Face PyBot: 1,000 AI Agents Built a Chatbot Without an LLM
+  URL: https://abvx.xyz/writing/videos/EW7VBWM4EPA
+  Summary: Hugging Face just released PyBot, a chatbot built entirely from Python rules by a swarm of more than 1,000 AI agents. No neural networks. No model weights. No transformers. No training. Just 640,000 lines of Python. And
+
 - Google A2UI 1.0: AI Agents Can Now Build Native Interfaces Across Apps
   URL: https://abvx.xyz/writing/videos/f_nfzKh-lRI
   Summary: Google just released A2UI 1.0, the first stable version of its open protocol that lets AI agents generate interactive user interfaces instead of responding with walls of text. And the same AI-generated interface can work

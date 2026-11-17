@@ -501,6 +501,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/H8eYfYb-k3s
   Summary: Telegram just introduced interactive HTML widgets for bots, turning ordinary chat messages into live dashboards, control panels, and mini-apps. And the entire widget fits into just 4 KB of compressed code. This is part o
 
+- When a Body Becomes a Brushstroke | I See You as Art
+  URL: https://abvx.xyz/writing/videos/hb9oYAK37w4
+  Summary: A pose becomes a direction. A direction becomes a brushstroke. And a brushstroke becomes something that can no longer be read as a word. This 68-second audiovisual study responds to Pokras Lampas’s series I SEE YOU AS AR
+
 - Claude Code: Sonnet + Opus + Haiku. A Smarter AI Agent Setup
   URL: https://abvx.xyz/writing/videos/hBU0WpTTbes
   Summary: What if you could make Claude Code more efficient by giving each AI model a different job? Instead of using the most expensive model for everything, try a smarter multi-model setup: Sonnet does the coding. Opus provides
@@ -860,6 +864,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Does Video Speed Break Audio Sync? Premation Tested
   URL: https://abvx.xyz/writing/videos/PhwCWcEe0LE
   Summary: A preview can look right while an export still needs checking. I tested whether picture and sound stay together when Premation changes video speed. The test: one original moving-ball clip, six white flashes and six click
+
+- Google Gemini Notebook Turns Your Documents Into Interactive Websites
+  URL: https://abvx.xyz/writing/videos/Pk_omlAY0KY
+  Summary: Google just gave Gemini Notebook, formerly NotebookLM, a surprisingly powerful new feature: it can turn your notes, documents, and research into interactive websites with a single prompt. Just type: "make me a site" And
 
 - Claude Fable 5.2 Built a Game in 8 Hours. Here's the Real Breakthrough
   URL: https://abvx.xyz/writing/videos/pmD9KZeVvAQ

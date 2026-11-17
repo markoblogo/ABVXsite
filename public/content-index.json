@@ -9309,7 +9309,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-17T21:12:49.895Z",
+      "updatedAt": "2026-11-17T21:38:17.268Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10427,6 +10427,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=5lTjnUg3i_Q"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Google Gemini Notebook Turns Your Documents Into Interactive Websites",
+      "summary": "Google just gave Gemini Notebook, formerly NotebookLM, a surprisingly powerful new feature: it can turn your notes, documents, and research into interactive websites with a single prompt. Just type: \"make me a site\" And ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/Pk_omlAY0KY",
+      "publishedAt": "2026-11-17T21:23:35.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=Pk_omlAY0KY"
         }
       ],
       "related": []
@@ -17536,6 +17559,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=pT83dCFVxLU"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "When a Body Becomes a Brushstroke | I See You as Art",
+      "summary": "A pose becomes a direction. A direction becomes a brushstroke. And a brushstroke becomes something that can no longer be read as a word. This 68-second audiovisual study responds to Pokras Lampas’s series I SEE YOU AS AR",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/hb9oYAK37w4",
+      "publishedAt": "2026-11-17T21:29:47.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=hb9oYAK37w4"
         }
       ],
       "related": []

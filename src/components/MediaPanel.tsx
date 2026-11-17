@@ -1,6 +1,7 @@
 import GifPicture from './GifPicture';
 import type { ContentImage } from '@/content';
 import Image from 'next/image';
+import RuntimeWritingImage from './RuntimeWritingImage';
 
 function roleFor(image: ContentImage | undefined, variant: string) {
   if (image?.mediaRole) return image.mediaRole;
@@ -15,12 +16,14 @@ export default function MediaPanel({
   title,
   variant = 'project',
   priority = false,
+  preview = false,
 }: {
   image?: ContentImage;
   videoUrl?: string;
   title: string;
   variant?: 'project' | 'book' | 'writing' | 'video';
   priority?: boolean;
+  preview?: boolean;
 }) {
   if (videoUrl) {
     return (
@@ -41,6 +44,16 @@ export default function MediaPanel({
   const isRemote = image.src.startsWith('http://') || image.src.startsWith('https://');
   const width = image.width || (isBook ? 1200 : 1200);
   const height = image.height || (isBook ? 1600 : 630);
+
+  if (preview && image.src.startsWith('/media/writing/runtime/')) {
+    return (
+      <figure className={`media-panel media-panel--${variant}`} data-media-role={role}>
+        <RuntimeWritingImage src={image.src} alt={image.alt || title} width={width} height={height}
+          loading={priority ? 'eager' : 'lazy'} fetchPriority={priority ? 'high' : 'auto'} decoding="async"
+          sizes={isBook ? '(max-width: 768px) 100vw, 42vw' : '(max-width: 768px) 100vw, 55vw'} />
+      </figure>
+    );
+  }
 
   if (isRemote) {
     return (

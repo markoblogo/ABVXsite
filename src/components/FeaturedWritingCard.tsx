@@ -41,7 +41,7 @@ export default function FeaturedWritingCard({
           rel={rel}
           aria-label={`Read featured essay: ${title}`}
         >
-          <MediaPanel image={image} title={title} variant="writing" />
+          <MediaPanel image={image} title={title} variant="writing" preview />
         </Link>
       ) : null}
       <div className="featured-writing-card__body">

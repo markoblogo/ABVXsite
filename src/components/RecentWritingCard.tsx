@@ -41,7 +41,7 @@ export default function RecentWritingCard({
           rel={rel}
           aria-label={`Read ${title}`}
         >
-          <MediaPanel image={image} title={title} variant="writing" />
+          <MediaPanel image={image} title={title} variant="writing" preview />
         </Link>
       ) : null}
       <div className="recent-writing-card__body">

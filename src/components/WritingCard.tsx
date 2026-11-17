@@ -20,7 +20,7 @@ export default function WritingCard({
     <article className="writing-card">
       {image ? (
         <a href={href} target="_blank" rel="noopener noreferrer" aria-label={title}>
-          <MediaPanel image={image} title={title} variant="writing" />
+          <MediaPanel image={image} title={title} variant="writing" preview />
         </a>
       ) : null}
       <div className="writing-card__body">

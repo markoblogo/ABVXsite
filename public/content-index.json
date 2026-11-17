@@ -9286,7 +9286,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-17T15:13:24.873Z",
+      "updatedAt": "2026-11-17T15:51:10.749Z",
       "tags": [],
       "links": [],
       "related": []
@@ -14829,6 +14829,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=wPIyeBYJZbQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Runway Praxis-1: Predicting the Video Is Only Half the Job",
+      "summary": "A mug on a table. A tray beside it. Predicting the picture of a successful move is one problem. Producing the robot actions that get there is another. This short visual explainer introduces Runway Praxis-1, a world actio",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/DX86Vqs-ghg",
+      "publishedAt": "2026-11-17T15:48:07.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=DX86Vqs-ghg"
         }
       ],
       "related": []

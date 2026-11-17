@@ -369,6 +369,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/dUtmkNClf74
   Summary: Well, it finally happened. Anthropic, the company behind Claude AI, has officially filed for an IPO. On October 26, 2026, Anthropic submitted its S-1 registration statement to the U.S. Securities and Exchange Commission.
 
+- Runway Praxis-1: Predicting the Video Is Only Half the Job
+  URL: https://abvx.xyz/writing/videos/DX86Vqs-ghg
+  Summary: A mug on a table. A tray beside it. Predicting the picture of a successful move is one problem. Producing the robot actions that get there is another. This short visual explainer introduces Runway Praxis-1, a world actio
+
 - 244 Pixel Art Animations Made with Claude Code | Free VFX Library + AI Skill
   URL: https://abvx.xyz/writing/videos/e7OuakMC4cA
   Summary: What if you could create hundreds of beautiful pixel art animations without drawing a single sprite? No Photoshop. No Aseprite. No pre-made image assets. Just Claude Code, JavaScript, and a surprisingly effective creativ

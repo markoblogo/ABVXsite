@@ -9309,7 +9309,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-17T21:38:17.268Z",
+      "updatedAt": "2026-11-17T22:22:39.216Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9448,6 +9448,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=uDYjI2-QvpQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Demis Hassabis Raises $5 Billion to Develop New Drugs With AI",
+      "summary": "Demis Hassabis just raised $5 BILLION to accelerate AI-powered drug discovery. His company, Isomorphic Labs, has an extraordinarily ambitious mission: Solve All Disease. And some of the world's biggest investors are bett",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/JmCBX8PC8Ys",
+      "publishedAt": "2026-11-17T22:15:19.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=JmCBX8PC8Ys"
         }
       ],
       "related": []

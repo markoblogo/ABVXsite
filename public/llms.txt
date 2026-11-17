@@ -581,6 +581,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/jKPTEICoFWw
   Summary: AI coding agents can now watch a real video and attempt to reconstruct the entire scene in Blender using Python. But which model actually understands the 3D world behind the pixels? Meet BVB, the Blender-VideoBench, a ne
 
+- Demis Hassabis Raises $5 Billion to Develop New Drugs With AI
+  URL: https://abvx.xyz/writing/videos/JmCBX8PC8Ys
+  Summary: Demis Hassabis just raised $5 BILLION to accelerate AI-powered drug discovery. His company, Isomorphic Labs, has an extraordinarily ambitious mission: Solve All Disease. And some of the world's biggest investors are bett
+
 - Copilot Memory vs Dreaming: What Changes Automatically?
   URL: https://abvx.xyz/writing/videos/JMIzP3zy90k
   Summary: What can GitHub Copilot remember—and what can Dreaming change without a pull request? In 96 seconds: saved context, source checks, background maintenance and the controls worth checking before you opt in. The key distinc

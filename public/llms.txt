@@ -937,6 +937,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/QqJ2J9RGOfo
   Summary: A rooftop becomes a canvas: explore Pokras Lampas’s 177 m² calligraphy work at the Barkli DAN residence in Kazan. This short art film combines aerial footage, moving photographs, English narration and an original electro
 
+- Claude Fable 5.2: How to Make Animated Films Without After Effects
+  URL: https://abvx.xyz/writing/videos/qTiVZyMlau0
+  Summary: Claude Fable 5.2 can create entire animated films using HTML, JavaScript, Three.js, and code-generated audio. No After Effects. No traditional animation timeline. Just code, a browser, and carefully designed prompts. But
+
 - La P'tite Fumée LIVE at Warehouse Nantes 2026 | RESET Tour Opening Night
   URL: https://abvx.xyz/writing/videos/QUfoeGezQAs
   Summary: La P'tite Fumée kicked off their new tour at Warehouse Nantes on October 15, 2026. And I was there to capture it. Eight minutes of live music, hypnotic rhythms, psychedelic energy, and the atmosphere of an unforgettable

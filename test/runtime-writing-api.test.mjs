@@ -1,7 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createWritingHandler} from '../src/content/runtime-writing-api.mjs';
-import {createMediaPreparer,publishedImage} from '../src/content/runtime-writing-media.mjs';
+import {createMediaPreparer,publishedImage,createPublishedImageReader} from '../src/content/runtime-writing-media.mjs';
+import sharp from 'sharp';
 import {emptySnapshot,digest,seedSnapshot} from '../src/content/runtime-writing.mjs';
 const token='x'.repeat(40);
 const source=(image={})=>'---\n'+JSON.stringify({id:'new',slug:'new',title:'Approved title',summary:'Summary',primarySection:'writing',type:'article',status:'live',visibility:'public',publishedAt:'2026-10-26',tags:[],links:[],...image})+'\n---\n\nAuthor text.\n';
@@ -79,6 +80,9 @@ test('animated GIF cover and illustration keep exact bytes and MIME through priv
  const served=await publishedImage(memory,digest(bytes)+'.gif');
  assert.equal(served.contentType,'image/gif');assert.deepEqual(served.bytes,bytes);
  const poster=await publishedImage(memory,digest(bytes)+'.gif.poster.webp');assert.equal(poster.contentType,'image/webp');assert.equal(poster.bytes.toString('ascii',8,12),'WEBP');
+ const preview=await createPublishedImageReader()(memory,digest(bytes)+'.gif',320);
+ const expected=await sharp(poster.bytes).rotate().resize({width:320,withoutEnlargement:true}).webp({quality:78}).toBuffer();
+ assert.deepEqual(preview.bytes,expected,'GIF preview must use the settled poster, not its first frame');
  assert.equal(assets.size,2);assert.equal((prepared.source.match(/runtime\/[^" ]+\.gif/g)||[]).length,2);
  for(const invalid of [bytes.subarray(0,10),Buffer.from('GIF89a-this-is-not-an-image')]){
   await assert.rejects(createMediaPreparer(memory)(input,[{...asset,sha256:digest(invalid),bytesBase64:invalid.toString('base64')}],emptySnapshot()));

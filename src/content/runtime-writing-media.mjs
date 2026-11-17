@@ -65,10 +65,11 @@ export function createPublishedImageReader({maxBytes=32*1024*1024}={}){
  }
  return async(store,key,width)=>{
   if(width!==undefined&&![320,640,960,1280].includes(width))return null;
-  const image=await publishedImage(store,key,async(assetKey,hash)=>(await cached(assetKey,async()=>{
+  const imageKey=width!==undefined&&key.endsWith('.gif')?key+'.poster.webp':key;
+  const image=await publishedImage(store,imageKey,async(assetKey,hash)=>(await cached(assetKey,async()=>{
    const bytes=await store.getAsset(assetKey);if(digest(bytes)!==hash)throw Error('Image integrity failed');return {bytes};
   })).bytes);
   if(!image||width===undefined)return image;
-  return cached(key+':'+width,async()=>({bytes:await sharp(image.bytes,{limitInputPixels:32_000_000}).rotate().resize({width,withoutEnlargement:true}).webp({quality:78}).toBuffer(),contentType:'image/webp'}));
+  return cached(imageKey+':'+width,async()=>({bytes:await sharp(image.bytes,{limitInputPixels:32_000_000}).rotate().resize({width,withoutEnlargement:true}).webp({quality:78}).toBuffer(),contentType:'image/webp'}));
  };
 }

@@ -8547,6 +8547,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude Code Budget Fence: Stop AI Agents From Burning Your Weekly Limits",
+      "summary": "Ever left Claude Code running overnight, only to discover that one task consumed a huge chunk of your weekly usage limit? Meet Budget Fence, a free, open-source Claude Code mod that lets you control how long your AI codi",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/YgFcIXeORKw",
+      "publishedAt": "2026-11-17T23:21:09.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=YgFcIXeORKw"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude Code Built a GTA Mod for SimCity 3000 in Just 2 Hours",
       "summary": "What if you could turn almost any PC game into something completely different using AI? And what if Claude Code could handle the modding process for you? Meet Universal Modder, an open-source collection of AI agent skill",
       "canonicalUrl": "https://abvx.xyz/writing/videos/cQS3nbBe6JM",
@@ -9309,7 +9332,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-17T22:38:25.082Z",
+      "updatedAt": "2026-11-17T23:38:05.632Z",
       "tags": [],
       "links": [],
       "related": []
@@ -13713,6 +13736,29 @@
       ],
       "publishedAt": "2026-09-27",
       "updatedAt": "2026-10-04",
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Princeton's Archive of 5,000 Soviet Posters Is a Design Goldmine",
+      "summary": "Princeton University has an incredible digital archive of nearly 5,000 Soviet and Eastern European posters, and you can explore it online. From revolutionary propaganda and wartime graphics to vintage movie posters, adve",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/jvkKRFkEDDk",
+      "publishedAt": "2026-11-17T23:35:25.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=jvkKRFkEDDk"
+        }
+      ],
       "related": []
     },
     {

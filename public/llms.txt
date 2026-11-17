@@ -601,6 +601,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/Jrhm5lH7224
   Summary: AI coding agents can build entire applications. But why do their UI animations still look like they were designed by a programmer who discovered gradients yesterday? Well, someone decided to fix that. Meet Stageshow, a n
 
+- Princeton's Archive of 5,000 Soviet Posters Is a Design Goldmine
+  URL: https://abvx.xyz/writing/videos/jvkKRFkEDDk
+  Summary: Princeton University has an incredible digital archive of nearly 5,000 Soviet and Eastern European posters, and you can explore it online. From revolutionary propaganda and wartime graphics to vintage movie posters, adve
+
 - SKY-001: The AI World Model That Builds Real CAD Designs, Part by Part
   URL: https://abvx.xyz/writing/videos/jWFZUAXVbCA
   Summary: What if AI could do more than generate a 3D model? What if it could actually figure out how to build one? Meet SKY-001 by Skyfall AI, a new engineering world model designed to turn text prompts and reference images into
@@ -1284,6 +1288,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - n8n Launches Nod: Open-Source AI Desktop Agent With MCP
   URL: https://abvx.xyz/writing/videos/YCjVZhjXxWY
   Summary: n8n just launched Nod, a free, open-source desktop AI agent that can browse websites, use your apps, and complete real-world tasks on your computer. Think Claude Cowork, OpenAI Codex, or other autonomous AI assistants, b
+
+- Claude Code Budget Fence: Stop AI Agents From Burning Your Weekly Limits
+  URL: https://abvx.xyz/writing/videos/YgFcIXeORKw
+  Summary: Ever left Claude Code running overnight, only to discover that one task consumed a huge chunk of your weekly usage limit? Meet Budget Fence, a free, open-source Claude Code mod that lets you control how long your AI codi
 
 - Copilot Says “Addressed”. Was the Bug Fixed?
   URL: https://abvx.xyz/writing/videos/YH-_vrmMquQ

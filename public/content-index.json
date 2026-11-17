@@ -9194,7 +9194,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-17T03:15:32.777Z",
+      "updatedAt": "2026-11-17T09:18:34.620Z",
       "tags": [],
       "links": [],
       "related": []
@@ -14523,6 +14523,42 @@
       "links": [],
       "publishedAt": "2026-11-16",
       "updatedAt": "2026-11-16",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #55 — The Stories We Tell Ourselves",
+      "summary": "Ten translated notebook fragments on the stories we tell ourselves.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-55-the-stories-we-tell-ourselves",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-17",
+      "updatedAt": "2026-11-17",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #56 — Choice, Work and the Risk of Trying",
+      "summary": "Ten translated notebook fragments on choice, work and the risk of trying.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-56-choice-work-and-the-risk-of-trying",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-17",
+      "updatedAt": "2026-11-17",
       "related": []
     },
     {

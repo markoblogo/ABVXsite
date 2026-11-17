@@ -226,6 +226,12 @@ await withQaServer(async (base) => {
     const more=page.getByRole('button',{name:'More posts',exact:false});
     // Interaction checks use the rendered row count, avoiding a second feed implementation.
     if(await more.count()) {
+      // DOMContentLoaded can precede React hydration on the full runtime feed.
+      // Wait for the real click handler before testing the resulting row count.
+      await page.waitForFunction(() => {
+        const button=document.querySelector('button[aria-controls="more-writing-posts"]');
+        return button&&Object.keys(button).some(key=>key.startsWith('__reactProps$')&&typeof button[key]?.onClick==='function');
+      });
       const before=await page.locator('.writing-archive-row').count();
       await more.click();
       await page.waitForFunction(count=>document.querySelectorAll('.writing-archive-row').length>count,before);

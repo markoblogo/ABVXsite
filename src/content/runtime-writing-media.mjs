@@ -1,4 +1,5 @@
 import {gifPoster} from './gif-poster.mjs';
+import sharp from 'sharp';
 import {parseMarkdownSource} from './markdown-source.mjs';
 import {digest,currentSources,ValidationError} from './runtime-writing.mjs';
 export const writingImages=data=>[data.media,data.heroImage,...(data.type==='working-story'?[data.coverImage]:[]),...(data.illustrations||[])].filter(Boolean);
@@ -42,9 +43,33 @@ export function createMediaPreparer(store){return async(source,assets,snapshot)=
  if(mapping.length){for(const image of refs){const mapped=mapping.find(x=>x.from===image.src);if(mapped)image.src=mapped.to;}const end=source.indexOf('\n---',3);source='---\n'+JSON.stringify(data,null,2)+source.slice(end);}
  return {source,mapping};
 };}
-export async function publishedImage(store,key){
+export async function publishedImage(store,key,readBytes=assetKey=>store.getAsset(assetKey)){
  if(!safeKey.test(key))return null;
  const {snapshot}=await store.load(),asset=Object.hasOwn(snapshot.assets,key)?snapshot.assets[key]:null;
  if(!asset||!currentSources(snapshot).some(source=>writingImages(parseMarkdownSource(source).data).some(image=>image.src===(key.endsWith('.gif.poster.webp')?asset.publicPath.slice(0,-12):asset.publicPath))))return null;
- const bytes=await store.getAsset(key);if(digest(bytes)!==asset.sha256)throw Error('Image integrity failed');return {bytes,contentType:asset.contentType};
+ const bytes=await readBytes(key,asset.sha256);if(digest(bytes)!==asset.sha256)throw Error('Image integrity failed');return {bytes,contentType:asset.contentType};
+}
+
+// Cache only verified immutable bytes. Every request still checks the current
+// snapshot, so withdrawn media and unavailable stores continue to fail closed.
+export function createPublishedImageReader({maxBytes=32*1024*1024}={}){
+ const cache=new Map(),pending=new Map();let size=0;
+ async function cached(id,work){
+  if(cache.has(id)){const value=cache.get(id);cache.delete(id);cache.set(id,value);return value;}
+  if(pending.has(id))return pending.get(id);
+  const job=Promise.resolve().then(work).then(value=>{
+   if(value.bytes.length<=maxBytes){cache.set(id,value);size+=value.bytes.length;
+    while(size>maxBytes||cache.size>128){const oldest=cache.keys().next().value;size-=cache.get(oldest).bytes.length;cache.delete(oldest);}}
+   return value;
+  }).finally(()=>pending.delete(id));pending.set(id,job);return job;
+ }
+ return async(store,key,width)=>{
+  if(width!==undefined&&![320,640,960,1280].includes(width))return null;
+  const imageKey=width!==undefined&&key.endsWith('.gif')?key+'.poster.webp':key;
+  const image=await publishedImage(store,imageKey,async(assetKey,hash)=>(await cached(assetKey,async()=>{
+   const bytes=await store.getAsset(assetKey);if(digest(bytes)!==hash)throw Error('Image integrity failed');return {bytes};
+  })).bytes);
+  if(!image||width===undefined)return image;
+  return cached(imageKey+':'+width,async()=>({bytes:await sharp(image.bytes,{limitInputPixels:32_000_000}).rotate().resize({width,withoutEnlargement:true}).webp({quality:78}).toBuffer(),contentType:'image/webp'}));
+ };
 }

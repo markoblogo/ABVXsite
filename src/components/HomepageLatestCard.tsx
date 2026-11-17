@@ -2,6 +2,7 @@ import GifPicture from './GifPicture';
 import Link from 'next/link';
 import type { ContentImage } from '@/content';
 import Image from 'next/image';
+import RuntimeWritingImage from './RuntimeWritingImage';
 
 export default function HomepageLatestCard({
   label,
@@ -27,7 +28,10 @@ export default function HomepageLatestCard({
   const content = (
     <>
       <div className="homepage-latest-card__media" data-media-role={mediaRole}>
-        {image && isRemote ? (
+        {image?.src.startsWith('/media/writing/runtime/') ? (
+          <RuntimeWritingImage src={image.src} alt={image.alt || title} width={width} height={height}
+            loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 33vw" />
+        ) : image && isRemote ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={image.src}

@@ -5128,6 +5128,17 @@
     },
     {
       "source": "youtube",
+      "title": "The AI Paid. Where's the Answer? An x402 Reality Check",
+      "url": "https://www.youtube.com/watch?v=xaGggJR8RrM",
+      "publishedAt": "2026-11-16T23:48:02.000Z",
+      "excerpt": "An AI agent pays an API. The receipt turns green. But did the task actually get a useful answer? This short visual investigation separates two things that automated systems can easily confuse: a settled payment and a ver",
+      "coverImage": "https://i.ytimg.com/vi/xaGggJR8RrM/hqdefault.jpg",
+      "videoDescription": "An AI agent pays an API. The receipt turns green. But did the task actually get a useful answer?\n\nThis short visual investigation separates two things that automated systems can easily confuse: a settled payment and a verified result. Using a November 2026 vet402 report as a concrete example, we look at why the agent needs both checks before it marks the job complete.\n\nThe report describes vet402's own paid-call sample across x402 and MPP, captured on November 9, 2026. Its categories distinguish calls without usable content from settled calls that returned client errors. Those client errors were held apart because an incorrect request may explain the outcome. This is not a market-wide failure rate or a claim that every missing response means fraud or permanently lost money.\n\nThe practical rule: check that payment settled, then check that the response contains the data your task needed.\n\nPRIMARY SOURCE\nvet402, November 2026 report (published November 10):\nhttps://vet402.com/x402/report/2026-11\nReport data credited to vet402 under CC BY 4.0. This film uses original illustrations rather than real wallet logs or a live paid-endpoint test.\n\nPRODUCTION NOTE\nOriginal paper-and-ink motion graphics built and exported with GiveMotion; synthetic English narration and original music/sound design. This is an independent editorial explainer, with no provider sponsorship.\n\nWhat should your agent verify before it says \"done\"? Share the failure check you would add.\n\nMore visual stories: https://www.youtube.com/@ABV_Creative\nTikTok: https://www.tiktok.com/@lumierenoire.films\n\n#AIAgents #x402 #APIs",
+      "addedAt": "2026-11-17T00:33:19.157Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "I Tried to Bury the AI. It Deleted Every Brick. 🤖 #Shorts",
       "url": "https://www.youtube.com/watch?v=Xeta6R8hvPg",
       "publishedAt": "2026-10-18T00:43:14.000Z",

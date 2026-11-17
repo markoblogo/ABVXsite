@@ -9171,7 +9171,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-16T20:36:49.580Z",
+      "updatedAt": "2026-11-17T00:33:19.157Z",
       "tags": [],
       "links": [],
       "related": []
@@ -15368,6 +15368,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=T9jUlNohSCY"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "The AI Paid. Where's the Answer? An x402 Reality Check",
+      "summary": "An AI agent pays an API. The receipt turns green. But did the task actually get a useful answer? This short visual investigation separates two things that automated systems can easily confuse: a settled payment and a ver",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/xaGggJR8RrM",
+      "publishedAt": "2026-11-16T23:48:02.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=xaGggJR8RrM"
         }
       ],
       "related": []

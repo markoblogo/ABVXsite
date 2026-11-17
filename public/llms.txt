@@ -1177,6 +1177,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/x8DT9-2Zcas
   Summary: Remember playing Super Mario 64 on the Nintendo 64? Now imagine pulling Mario out of the game and watching him run around on your actual desk. Well, someone just made that happen. Developer and XR specialist Lucas Martin
 
+- The AI Paid. Where's the Answer? An x402 Reality Check
+  URL: https://abvx.xyz/writing/videos/xaGggJR8RrM
+  Summary: An AI agent pays an API. The receipt turns green. But did the task actually get a useful answer? This short visual investigation separates two things that automated systems can easily confuse: a settled payment and a ver
+
 - I Tried to Bury the AI. It Deleted Every Brick. 🤖 #Shorts
   URL: https://abvx.xyz/writing/videos/Xeta6R8hvPg
   Summary: I make a mess. The machine tidies up. Honestly, rude. SIRTET is a reverse falling-block music game: you sabotage the pieces while the AI tries to clear the board. This is the AI's all-clear ending, captured from the real

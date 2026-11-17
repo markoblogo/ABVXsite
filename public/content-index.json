@@ -9240,7 +9240,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-17T13:22:09.843Z",
+      "updatedAt": "2026-11-17T13:37:50.531Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10473,6 +10473,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=Wi2Pj_x-SCU"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "GPT-6 Astra Built a Playable NES 3D Game in Just 20 Minutes",
+      "summary": "GPT-6 Astra created a playable 3D space trading and combat game for the original Nintendo Entertainment System in just 20 minutes, according to the developer. Not a modern browser game pretending to look retro. An actual",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/axbnWjL2FTo",
+      "publishedAt": "2026-11-17T13:36:43.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=axbnWjL2FTo"
         }
       ],
       "related": []

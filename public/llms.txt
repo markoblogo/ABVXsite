@@ -269,6 +269,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/ARzcWP-T6RQ
   Summary: Maxon just released ZBrush 2027.0 for desktop and iPad, and this update brings some genuinely useful improvements to digital sculpting. Here's what's new. 1. A Proper UV Editor in ZBrush Desktop This is probably the bigg
 
+- GPT-6 Astra Built a Playable NES 3D Game in Just 20 Minutes
+  URL: https://abvx.xyz/writing/videos/axbnWjL2FTo
+  Summary: GPT-6 Astra created a playable 3D space trading and combat game for the original Nintendo Entertainment System in just 20 minutes, according to the developer. Not a modern browser game pretending to look retro. An actual
+
 - Gemini 4 Hydrogen Built a DOOM-Style 3D Game in Just 6 Minutes
   URL: https://abvx.xyz/writing/videos/axXe3WNq6nQ
   Summary: I'm genuinely shocked by what Gemini 4 Hydrogen can build in Google Antigravity in just 6 minutes. I gave it two prompts. That's it. PROMPT 1 — 6 MINUTES: "Build a website with a DOOM-style game simulation using Three.js

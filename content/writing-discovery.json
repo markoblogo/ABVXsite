@@ -1421,6 +1421,16 @@
     },
     {
       "source": "medium",
+      "title": "Someone Got Tired of Paying for DocuSign. So They Built a Free Alternative.",
+      "url": "https://abvcreative.medium.com/someone-got-tired-of-paying-for-docusign-so-they-built-a-free-alternative-fc5e91e6d605",
+      "publishedAt": "2026-11-17T17:05:10.000Z",
+      "excerpt": "Meet SignuDoc, an open-source electronic signature platform that does most of what small businesses actually need. And costs roughly $240 a year to run commercially instead of thousands. There’s something truly magnifice",
+      "coverImage": "https://cdn-images-1.medium.com/max/1024/1*5eRDnDoFXWuyNAV2nWzl1w.png",
+      "addedAt": "2026-11-17T17:12:52.693Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "medium",
       "title": "Stop Using LLMs as Classifiers. Use Them as Feature Extractors Instead.",
       "url": "https://abvcreative.medium.com/stop-using-llms-as-classifiers-use-them-as-feature-extractors-instead-53a92e53081c",
       "publishedAt": "2026-09-28T12:52:39.000Z",

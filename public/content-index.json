@@ -9286,7 +9286,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-17T15:51:10.749Z",
+      "updatedAt": "2026-11-17T20:38:52.775Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10096,6 +10096,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=T3zm0bp8d6o"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Gemini 4 Carbon: 12 AI Agents Rebuilt San Francisco's Ferry Building",
+      "summary": "What happens when you give 12 AI coding agents the task of reconstructing one of San Francisco's most iconic buildings in 3D? Gemini 4 Carbon just demonstrated something remarkable. Justine Moore (@venturetwins) asked Go",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/x1unZj3N2p4",
+      "publishedAt": "2026-11-17T20:22:54.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=x1unZj3N2p4"
         }
       ],
       "related": []

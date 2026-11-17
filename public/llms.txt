@@ -1205,6 +1205,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/WxEa5q_PPOk
   Summary: A dog finds a hidden packet. A man offers a reward. Soon, the dog chooses the route — and the man still calls himself the owner. GOOD DOG is a darkly satirical animated short about dependence, control and the quiet rever
 
+- Gemini 4 Carbon: 12 AI Agents Rebuilt San Francisco's Ferry Building
+  URL: https://abvx.xyz/writing/videos/x1unZj3N2p4
+  Summary: What happens when you give 12 AI coding agents the task of reconstructing one of San Francisco's most iconic buildings in 3D? Gemini 4 Carbon just demonstrated something remarkable. Justine Moore (@venturetwins) asked Go
+
 - Blender Running on iPhone Duo?! Eevee, Cycles & AI-Generated 3D Worlds | Hyper3D
   URL: https://abvx.xyz/writing/videos/x5iQCArVPs4
   Summary: Remember when running Blender required a proper desktop workstation? Well, apparently, we're now putting it on foldable phones. Hyper3D by Deemos just demonstrated Blender running on Apple's iPhone Duo, complete with Eev

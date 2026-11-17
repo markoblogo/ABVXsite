@@ -269,6 +269,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/ARzcWP-T6RQ
   Summary: Maxon just released ZBrush 2027.0 for desktop and iPad, and this update brings some genuinely useful improvements to digital sculpting. Here's what's new. 1. A Proper UV Editor in ZBrush Desktop This is probably the bigg
 
+- Someone Put Windows 11 on the iPhone Duo. Now It's Finally Useful.
+  URL: https://abvx.xyz/writing/videos/auIkJty3hrM
+  Summary: Apple finally made a foldable iPhone. Naturally, someone immediately installed Windows 11 on it. And honestly? Now we're talking. Fold the iPhone Duo like a tiny laptop: • Windows 11 on the upper screen. • Virtual keyboa
+
 - GPT-6 Astra Built a Playable NES 3D Game in Just 20 Minutes
   URL: https://abvx.xyz/writing/videos/axbnWjL2FTo
   Summary: GPT-6 Astra created a playable 3D space trading and combat game for the original Nintendo Entertainment System in just 20 minutes, according to the developer. Not a modern browser game pretending to look retro. An actual
@@ -668,6 +672,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Viggle Image Swap: Replace Entire People in Photos with Qwen-Image-2.1 LoRA
   URL: https://abvx.xyz/writing/videos/l_4VzQRwurA
   Summary: Face swap? Cute. Viggle wants to replace the ENTIRE person. Meet Viggle Image Swap, a new LoRA for Qwen-Image-2.1 that takes a character sheet and replaces someone in an existing photo. Not just the face. Hair, body, and
+
+- GPT-6.2 Astra Built a Realistic 3D Light Bulb With WebGL Physics
+  URL: https://abvx.xyz/writing/videos/laqCGxM9_es
+  Summary: OpenAI just launched GPT-6.2 Astra and Sol, and I decided to test the new Astra with a deceptively simple 3D challenge. Build a realistic glass light bulb hanging from a twisted cable, entirely in WebGL, with realistic m
 
 - ChatGPT Now Lets Businesses Create Profiles and Their Own AI Agents
   URL: https://abvx.xyz/writing/videos/lb-8Pn9K_bs

@@ -9309,7 +9309,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-17T22:22:39.216Z",
+      "updatedAt": "2026-11-17T22:38:25.082Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10657,6 +10657,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=n5HYXnUWoNY"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "GPT-6.2 Astra Built a Realistic 3D Light Bulb With WebGL Physics",
+      "summary": "OpenAI just launched GPT-6.2 Astra and Sol, and I decided to test the new Astra with a deceptively simple 3D challenge. Build a realistic glass light bulb hanging from a twisted cable, entirely in WebGL, with realistic m",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/laqCGxM9_es",
+      "publishedAt": "2026-11-17T22:24:48.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=laqCGxM9_es"
         }
       ],
       "related": []
@@ -15289,6 +15312,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=jEIPftaweBM"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Someone Put Windows 11 on the iPhone Duo. Now It's Finally Useful.",
+      "summary": "Apple finally made a foldable iPhone. Naturally, someone immediately installed Windows 11 on it. And honestly? Now we're talking. Fold the iPhone Duo like a tiny laptop: • Windows 11 on the upper screen. • Virtual keyboa",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/auIkJty3hrM",
+      "publishedAt": "2026-11-17T22:33:06.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=auIkJty3hrM"
         }
       ],
       "related": []

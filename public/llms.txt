@@ -2849,6 +2849,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook
 
+- Psychology Notebook #55 — The Stories We Tell Ourselves
+  URL: https://abvx.xyz/writing/psychology-notebook-55-the-stories-we-tell-ourselves
+  Summary: Ten translated notebook fragments on the stories we tell ourselves.
+  Group: writing
+  Tags: psychology-notebook
+
+- Psychology Notebook #56 — Choice, Work and the Risk of Trying
+  URL: https://abvx.xyz/writing/psychology-notebook-56-choice-work-and-the-risk-of-trying
+  Summary: Ten translated notebook fragments on choice, work and the risk of trying.
+  Group: writing
+  Tags: psychology-notebook
+
 - 40 AI Agents Built a Superman Flight Simulator in 7 Hours (45M Tokens)
   URL: https://abvx.xyz/writing/40-ai-agents-superman-flight-simulator
   Summary: Watch my SKYFLY video and read practical notes on the reported 40-agent workflow, 45 million tokens, browser architecture and checks that matter beyond a demo.

@@ -1021,6 +1021,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/r_Un8eTLLUc
   Summary: Epic Games just released Unreal Engine 5.9 Preview, bringing AI coding agents directly into Unreal Editor, a new generative workspace called Unreal Canvas, and experimental browser exports using WebAssembly and WebGPU. B
 
+- Adobe Deep Brush: AI Turns Flat Photos Into Depth-Aware Painting
+  URL: https://abvx.xyz/writing/videos/R-1V9oZIASA
+  Summary: Adobe just introduced Project Deep Brush, an experimental AI-powered painting tool that understands the geometry, depth, and lighting of an ordinary 2D photograph. And the results are surprisingly impressive. Imagine pai
+
 - XREAL AURA: Gemini AI Glasses That Can See Your Laptop Screen | Google Android XR
   URL: https://abvx.xyz/writing/videos/R-7XiZzJXHc
   Summary: Google is taking another shot at augmented reality. And this time, I think they might actually be onto something. Well, technically, XREAL built the glasses, while Google brought Android XR and Gemini AI to the party. Me

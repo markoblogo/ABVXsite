@@ -7484,6 +7484,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Adobe Deep Brush: AI Turns Flat Photos Into Depth-Aware Painting",
+      "summary": "Adobe just introduced Project Deep Brush, an experimental AI-powered painting tool that understands the geometry, depth, and lighting of an ordinary 2D photograph. And the results are surprisingly impressive. Imagine pai",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/R-1V9oZIASA",
+      "publishedAt": "2026-11-18T16:33:04.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=R-1V9oZIASA"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Adobe Premiere Pro Gets Generative Remove! Erase Objects From Video With AI",
       "summary": "Remember when removing an unwanted object from a video meant opening After Effects, tracking masks, rebuilding backgrounds, and spending hours cleaning up individual frames? Well, Adobe just made that considerably easier",
       "canonicalUrl": "https://abvx.xyz/writing/videos/EL_UutTuAOo",
@@ -9424,7 +9447,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-18T16:22:37.183Z",
+      "updatedAt": "2026-11-18T16:39:45.883Z",
       "tags": [],
       "links": [],
       "related": []

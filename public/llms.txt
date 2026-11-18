@@ -513,6 +513,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/H8eYfYb-k3s
   Summary: Telegram just introduced interactive HTML widgets for bots, turning ordinary chat messages into live dashboards, control panels, and mini-apps. And the entire widget fits into just 4 KB of compressed code. This is part o
 
+- Ant Group Duo: An AI Avatar That Sees, Listens & Interrupts in Real Time
+  URL: https://abvx.xyz/writing/videos/H9tjpxLVZYo
+  Summary: What if your next AI assistant wasn't just a voice, but an actual face on a video call? Meet Duo v1, a new open-weight audiovisual world model from Ant Group's AI research team. Unlike traditional AI avatars that wait fo
+
 - When a Body Becomes a Brushstroke | I See You as Art
   URL: https://abvx.xyz/writing/videos/hb9oYAK37w4
   Summary: A pose becomes a direction. A direction becomes a brushstroke. And a brushstroke becomes something that can no longer be read as a word. This 68-second audiovisual study responds to Pokras Lampas’s series I SEE YOU AS AR
@@ -1308,6 +1312,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - AsciiTheme — ASCII Themes & Widgets for JavaScript Websites
   URL: https://abvx.xyz/writing/videos/y2OW5f8QEXo
   Summary: Give your website an optional ASCII look with AsciiTheme, an open-source JavaScript library with four themes and interactive widgets. This short demo shows the light, dark, sepia, and matrix themes, plus progress bars, s
+
+- BRIA RMBG-3.0: AI Background Removal Beats Photoroom & remove.bg?
+  URL: https://abvx.xyz/writing/videos/y3RQhebByO0
+  Summary: BRIA AI just released RMBG-3.0, a new generative AI background removal model built on Fibo 2.0. And according to BRIA's own benchmark, it outperforms Photoroom, remove.bg, Ideogram, BiRefNet, and the previous RMBG-2.0 on
 
 - Claude Opus 5.5 Created This Entire Animation with Code. Every Single Frame
   URL: https://abvx.xyz/writing/videos/Y66xLzPe3bw

@@ -7932,6 +7932,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Ant Group Duo: An AI Avatar That Sees, Listens & Interrupts in Real Time",
+      "summary": "What if your next AI assistant wasn't just a voice, but an actual face on a video call? Meet Duo v1, a new open-weight audiovisual world model from Ant Group's AI research team. Unlike traditional AI avatars that wait fo",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/H9tjpxLVZYo",
+      "publishedAt": "2026-11-18T13:54:34.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=H9tjpxLVZYo"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Anthropic CEO: AI Could Double Human Lifespan in 5–10 Years",
       "summary": "What if AI could help humans live to 150? Dario Amodei, CEO of Anthropic, believes artificial intelligence could accelerate medical research so dramatically that human lifespans might double within the next decade. His r",
       "canonicalUrl": "https://abvx.xyz/writing/videos/6OFAvsQ2XTw",
@@ -8106,6 +8129,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=kCvR-ECqgrc"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "BRIA RMBG-3.0: AI Background Removal Beats Photoroom & remove.bg?",
+      "summary": "BRIA AI just released RMBG-3.0, a new generative AI background removal model built on Fibo 2.0. And according to BRIA's own benchmark, it outperforms Photoroom, remove.bg, Ideogram, BiRefNet, and the previous RMBG-2.0 on",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/y3RQhebByO0",
+      "publishedAt": "2026-11-18T14:07:15.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=y3RQhebByO0"
         }
       ],
       "related": []
@@ -9378,7 +9424,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-18T13:52:09.203Z",
+      "updatedAt": "2026-11-18T14:14:33.468Z",
       "tags": [],
       "links": [],
       "related": []

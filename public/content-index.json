@@ -9493,7 +9493,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-18T21:11:46.104Z",
+      "updatedAt": "2026-11-18T21:37:12.200Z",
       "tags": [],
       "links": [],
       "related": []
@@ -17013,6 +17013,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=qNnJQyRPQtY"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "They Taught AI to Balance a 5-Ton Loader on Two Wheels",
+      "summary": "Forget those tiny self-balancing Arduino robots. Researchers just taught a neural network to balance a FIVE-TON construction loader on two wheels. And that's only the beginning. Meet Heavy Metal Acrobatics, a robotics re",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/9Pd1Wd-AS9w",
+      "publishedAt": "2026-11-18T21:21:28.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=9Pd1Wd-AS9w"
         }
       ],
       "related": []

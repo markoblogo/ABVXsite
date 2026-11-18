@@ -253,6 +253,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/9bYUOdPirnk
   Summary: What if you could create an entire animated film without using a traditional AI video generator? Meet Cinecode, a new free, open-source filmmaking skill that lets Claude Code and Cursor turn simple prompts into complete
 
+- They Taught AI to Balance a 5-Ton Loader on Two Wheels
+  URL: https://abvx.xyz/writing/videos/9Pd1Wd-AS9w
+  Summary: Forget those tiny self-balancing Arduino robots. Researchers just taught a neural network to balance a FIVE-TON construction loader on two wheels. And that's only the beginning. Meet Heavy Metal Acrobatics, a robotics re
+
 - I Tried Porting a WebGL Game to Unity With AI. It Got Complicated.
   URL: https://abvx.xyz/writing/videos/9wirkrpkSoQ
   Summary: My little AI-powered weekend game project is turning into something much bigger. What started as a WebGL experiment has now evolved into a Unity project with AI-generated 3D assets, multiple coding agents, and a growing

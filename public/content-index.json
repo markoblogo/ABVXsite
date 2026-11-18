@@ -9378,7 +9378,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-18T00:56:41.088Z",
+      "updatedAt": "2026-11-18T07:41:57.882Z",
       "tags": [],
       "links": [],
       "related": []
@@ -14927,6 +14927,42 @@
       "links": [],
       "publishedAt": "2026-11-17",
       "updatedAt": "2026-11-17",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #57 — Being Seen and Wanting More",
+      "summary": "Ten translated notebook fragments on being seen and wanting more.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-57-being-seen-and-wanting-more",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-18",
+      "updatedAt": "2026-11-18",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #58 — Dependence and Familiar Paths",
+      "summary": "Ten translated notebook fragments on dependence and familiar paths.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-58-dependence-and-familiar-paths",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-18",
+      "updatedAt": "2026-11-18",
       "related": []
     },
     {

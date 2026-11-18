@@ -665,6 +665,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/KnnKjd2Me04
   Summary: What if you could turn real streets into beautiful manga backgrounds? Not by drawing them manually. Not by generating random AI images. By exploring an actual city through an interactive, stylized 3D world. Meet Dokodemo
 
+- Qwen4-Max: Alibaba's New AI Model Cuts Task Costs by 62%
+  URL: https://abvx.xyz/writing/videos/Kp9Jpc8d3gw
+  Summary: Alibaba just released Qwen4-Max, a massive 2.4-trillion-parameter AI model that can handle complex coding, research, and professional workflows while using significantly fewer tokens than its predecessor. And here's the
+
 - Luma AI Photo Reframe: Expand Any Image to 2K with Generative AI | AI Outpainting
   URL: https://abvx.xyz/writing/videos/Kt7Qf4dy_fg
   Summary: Ever taken the perfect photograph, only to realize it doesn't fit the format you actually need? A beautiful portrait that should have been landscape. A product shot that needs more breathing room. Or a cinematic composit
@@ -828,6 +832,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Echo-3: Turn iPhone Videos Into Photorealistic 3D Worlds | AI Gaussian Splatting
   URL: https://abvx.xyz/writing/videos/o-bbORoN3FM
   Summary: What if you could turn your apartment, office, or entire building into an explorable 3D world using nothing but your phone? No expensive 3D scanner. No specialized camera. Not even LiDAR. Just walk around, record your su
+
+- Llama for Windows: Run Local AI Models in One Click (No Setup)
+  URL: https://abvx.xyz/writing/videos/o2IQwGsWcNQ
+  Summary: Hugging Face and the llama.cpp team have introduced Llama for Windows, a tiny, free, open-source application that makes running local AI models on Windows 11 almost ridiculously simple. No terminal. No complicated CUDA s
 
 - GTA 5 Gets Spider-Man 2 Web-Swinging! AI-Assisted Game Mod
   URL: https://abvx.xyz/writing/videos/ogc-oZoebH0

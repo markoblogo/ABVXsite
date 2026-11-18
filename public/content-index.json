@@ -9493,7 +9493,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-18T23:11:38.416Z",
+      "updatedAt": "2026-11-18T23:36:57.393Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10772,6 +10772,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=rZNwwWLLY8Q"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Google Neon Built This GTA-Style 3D World From Miami to Las Vegas",
+      "summary": "While everyone's talking about GTA 6, here's another little experiment I made with Google Neon. A cinematic flight from Miami Beach to Las Vegas, through the Everglades and a massive red-rock canyon. All created as a rea",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/GmJzHfmfha0",
+      "publishedAt": "2026-11-18T23:36:20.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=GmJzHfmfha0"
         }
       ],
       "related": []

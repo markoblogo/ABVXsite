@@ -481,6 +481,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/gknj7mp3kOo
   Summary: Another useful addition to my growing collection of design resources for AI coding agents. Because apparently, having an AI that can build an entire website isn't enough. You also need to stop it from generating the same
 
+- Google Neon Built This GTA-Style 3D World From Miami to Las Vegas
+  URL: https://abvx.xyz/writing/videos/GmJzHfmfha0
+  Summary: While everyone's talking about GTA 6, here's another little experiment I made with Google Neon. A cinematic flight from Miami Beach to Las Vegas, through the Everglades and a massive red-rock canyon. All created as a rea
+
 - 78 Amazing UI Libraries in One Place! | AI Search for Web Design & Creative Coding
   URL: https://abvx.xyz/writing/videos/GNHKjKv1BY0
   Summary: Ever seen a beautiful website animation and wondered how on earth the developer built it? Well, here's a little resource that might save you hours of work. Meet F*cking Good Libraries, a curated collection of frontend li

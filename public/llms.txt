@@ -1357,6 +1357,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/ywZeKg8rwe0
   Summary: Plastic Software just released Plasticity 2026.2, bringing some very welcome improvements to one of the most interesting hard-surface modeling tools around. New asset libraries, better surface analysis, improved snapping
 
+- Dreamina Motion Studio: AI Motion Graphics Without After Effects + Alternatives
+  URL: https://abvx.xyz/writing/videos/YZ9RZd7RihE
+  Summary: Dreamina AI just launched Motion Studio, a new AI-powered workspace that turns text prompts into code-rendered motion graphics. Describe an animation, provide your text and visual assets, choose a style, and let AI gener
+
 - NVIDIA Nemotron 3.5 Transcribe: The New King of Open-Weight Speech Recognition?
   URL: https://abvx.xyz/writing/videos/Z6k0B_8FqKA
   Summary: What if AI could transcribe an entire meeting, distinguish every speaker, translate conversations, and tell you exactly when each word was spoken? Even when several people are talking over each other? Meet NVIDIA Nemotro

@@ -9447,7 +9447,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-18T16:39:45.883Z",
+      "updatedAt": "2026-11-18T16:51:46.376Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9771,6 +9771,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=PhwCWcEe0LE"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Dreamina Motion Studio: AI Motion Graphics Without After Effects + Alternatives",
+      "summary": "Dreamina AI just launched Motion Studio, a new AI-powered workspace that turns text prompts into code-rendered motion graphics. Describe an animation, provide your text and visual assets, choose a style, and let AI gener",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/YZ9RZd7RihE",
+      "publishedAt": "2026-11-18T16:43:36.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=YZ9RZd7RihE"
         }
       ],
       "related": []

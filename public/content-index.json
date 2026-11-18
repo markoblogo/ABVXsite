@@ -9306,6 +9306,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Codync: Control Claude Code, Codex & 40+ AI Agents From Your Phone",
+      "summary": "What if you could turn Claude Code, OpenAI Codex, Gemini CLI, Cursor, and more than 40 other AI coding agents into personal chatbots you can control from your phone? Meet Codync, a free, open-source alternative to Grok B",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/uxDl4yGr-Ik",
+      "publishedAt": "2026-11-18T00:37:38.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=uxDl4yGr-Ik"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "ComfyUI Zip Ties: Finally Fix Your Spaghetti Node Graphs! | Free Extension",
       "summary": "If you've ever opened a complicated ComfyUI workflow and wondered whether you're looking at an AI pipeline or a bowl of spaghetti, this one's for you. Meet ComfyUI Zip Ties, a free, open-source extension that brings actu",
       "canonicalUrl": "https://abvx.xyz/writing/videos/zTrBkcj3_Jk",
@@ -9355,7 +9378,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-18T00:34:52.762Z",
+      "updatedAt": "2026-11-18T00:56:41.088Z",
       "tags": [],
       "links": [],
       "related": []

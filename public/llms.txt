@@ -1165,6 +1165,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/uvM-jWwibOQ
   Summary: Ever noticed how streetlights, car headlights, and distant stars turn into glowing halos, spikes, and strange patterns at night? Well, someone built a simulator that lets you explore exactly why that happens. Meet Engisc
 
+- Codync: Control Claude Code, Codex & 40+ AI Agents From Your Phone
+  URL: https://abvx.xyz/writing/videos/uxDl4yGr-Ik
+  Summary: What if you could turn Claude Code, OpenAI Codex, Gemini CLI, Cursor, and more than 40 other AI coding agents into personal chatbots you can control from your phone? Meet Codync, a free, open-source alternative to Grok B
+
 - AI Battlegrounds: The Unity Port Is Here. Try It Yourself!
   URL: https://abvx.xyz/writing/videos/uYTY8g7XLm4
   Summary: AI Battlegrounds is getting a Unity treatment. Here's a look at the Unity port, including an optimized version you can explore yourself. The interesting part of AI-assisted game development isn't just generating impressi

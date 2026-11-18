@@ -101,6 +101,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/32UkYwQbtKk
   Summary: This free Claude Code skill transforms Excel and CSV data into beautiful, interactive, hand-drawn charts, with 54 different visualization types. Meet MiniCharts by April Zhu. Instead of boring bar charts and generic dash
 
+- Kling Image 4.0: Native 8K, HEX Colors & Consistent AI Image Sets
+  URL: https://abvx.xyz/writing/videos/3CnLFvSe29M
+  Summary: Kling AI just released Kling Image 4.0, featuring native 8K image generation, advanced color grading, HEX/RGB palette control, and consistent image sets. And surprisingly, this update deserves more attention. The biggest
+
 - Inkling 2 Small Is INSANE! 594B AI Model Builds Websites & Trains Other AI Models
   URL: https://abvx.xyz/writing/videos/3d7q1QZ616w
   Summary: DeepSeek V4.1 Flash on some tasks but remains behind it on several others. But here's the experiment that really caught my attention. Inkling 2 Small autonomously trained another AI model. Thinking Machines gave it a cha
@@ -292,6 +296,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Claude Code May Have Discovered a New Planet. NASA Is Checking.
   URL: https://abvx.xyz/writing/videos/BD4-rrzeqKA
   Summary: What if an AI coding agent helped discover a planet that astronomers had missed for seven years? And what if NASA actually agreed to investigate? That's exactly what's happening. Independent researcher Pavel Rabtsevich u
+
+- Google AI Studio Now Buys Domains & Installs AI-Built Android Apps
+  URL: https://abvx.xyz/writing/videos/bEHg3noIvFg
+  Summary: Google AI Studio just got two major upgrades: you can now buy custom domains directly from Build mode and install AI-generated Android apps on your phone through Google Play. And this is exactly the direction I want to s
 
 - I Lived 85 Years in a Browser | 1 in 8 Billion Life Simulator
   URL: https://abvx.xyz/writing/videos/bNpRyDZsCHg

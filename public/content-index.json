@@ -9378,7 +9378,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-18T07:41:57.882Z",
+      "updatedAt": "2026-11-18T13:39:00.632Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10496,6 +10496,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=f_nfzKh-lRI"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Google AI Studio Now Buys Domains & Installs AI-Built Android Apps",
+      "summary": "Google AI Studio just got two major upgrades: you can now buy custom domains directly from Build mode and install AI-generated Android apps on your phone through Google Play. And this is exactly the direction I want to s",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/bEHg3noIvFg",
+      "publishedAt": "2026-11-18T13:20:58.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=bEHg3noIvFg"
         }
       ],
       "related": []
@@ -12155,6 +12178,29 @@
       "updatedAt": "2026-10-11",
       "tags": [],
       "links": [],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Kling Image 4.0: Native 8K, HEX Colors & Consistent AI Image Sets",
+      "summary": "Kling AI just released Kling Image 4.0, featuring native 8K image generation, advanced color grading, HEX/RGB palette control, and consistent image sets. And surprisingly, this update deserves more attention. The biggest",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/3CnLFvSe29M",
+      "publishedAt": "2026-11-18T13:34:28.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=3CnLFvSe29M"
+        }
+      ],
       "related": []
     },
     {

@@ -4954,6 +4954,17 @@
     },
     {
       "source": "youtube",
+      "title": "Neon Built This Floating 3D Moscow With Just 2 Prompts",
+      "url": "https://www.youtube.com/watch?v=Sdeo924zVf0",
+      "publishedAt": "2026-11-18T23:04:51.000Z",
+      "excerpt": "I gave Neon two prompts. The first: create a detailed 3D diorama of Moscow floating in the sky. The second: design a cinematic drone flight around it. And this is what it built. Not an AI-generated video. An actual inter",
+      "coverImage": "https://i.ytimg.com/vi/Sdeo924zVf0/hqdefault.jpg",
+      "videoDescription": "I gave Neon two prompts.\n\nThe first: create a detailed 3D diorama of Moscow floating in the sky.\n\nThe second: design a cinematic drone flight around it.\n\nAnd this is what it built.\n\nNot an AI-generated video.\n\nAn actual interactive 3D scene, rendered in real time using Three.js and WebGL.\n\nWHAT'S INSIDE?\n\n• A massive floating island with layered rock formations and waterfalls.\n\n• Moscow's most recognizable landmarks, including the Kremlin, Red Square, Saint Basil's Cathedral, and Moscow City.\n\n• A flowing Moskva River that spills over the island's edges.\n\n• Animated traffic, pedestrians, boats, birds, clouds, and hot-air balloons.\n\n• Smaller floating islands surrounding the main city.\n\n• Procedural textures, realistic materials, dynamic lighting, and cinematic post-processing.\n\n• An 84-second FPV drone tour that flies around the major landmarks.\n\n• A separate 12-second overview animation and manual camera controls.\n\nAll implemented as a browser-based 3D experience.\n\nTWO PROMPTS. TWO DIFFERENT TASKS.\n\nFirst, Neon generated the environment, its geometry, materials, and animated elements.\n\nThen I asked it to choreograph the camera movement.\n\nThe resulting FPV tour moves between landmarks, circles buildings, changes altitude, and uses smooth camera inertia to create a more cinematic flight.\n\nWHY I FIND THIS INTERESTING\n\nBuilding an interactive 3D scene used to mean spending considerable time modeling objects, configuring materials, writing rendering code, and animating cameras.\n\nNow AI coding agents can generate a substantial part of that pipeline directly from natural-language instructions.\n\nOf course, this doesn't mean two prompts can replace a professional 3D production workflow.\n\nThe scene is a stylized procedural interpretation of Moscow, not an accurate digital twin of the city.\n\nAnd production-quality 3D still requires art direction, optimization, technical validation, and iteration.\n\nBut as a rapid creative prototype?\n\nThis is getting ridiculous.\n\nThe really interesting part isn't just what AI can render.\n\nIt's how much creative direction we can now express in ordinary language.\n\nOne prompt for the world.\n\nOne prompt for the camera.\n\nAnd suddenly we're flying over a floating city.\n\nWould you use AI coding agents to create your own interactive 3D environments?\n\n#ThreeJS #AICoding #VibeCoding #3DAnimation #Neon",
+      "addedAt": "2026-11-18T23:11:38.416Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Three AI Calls. One Wallet. Who Gets Paid?",
       "url": "https://www.youtube.com/watch?v=SET1GhIdhdc",
       "publishedAt": "2026-11-17T12:53:04.000Z",

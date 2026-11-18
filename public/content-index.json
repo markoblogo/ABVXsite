@@ -9493,7 +9493,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-18T21:37:12.200Z",
+      "updatedAt": "2026-11-18T23:11:38.416Z",
       "tags": [],
       "links": [],
       "related": []
@@ -13293,6 +13293,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=kh-MTl8K5pE"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Neon Built This Floating 3D Moscow With Just 2 Prompts",
+      "summary": "I gave Neon two prompts. The first: create a detailed 3D diorama of Moscow floating in the sky. The second: design a cinematic drone flight around it. And this is what it built. Not an AI-generated video. An actual inter",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/Sdeo924zVf0",
+      "publishedAt": "2026-11-18T23:04:51.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=Sdeo924zVf0"
         }
       ],
       "related": []

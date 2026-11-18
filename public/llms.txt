@@ -829,6 +829,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/nqcI4COtP8c
   Summary: What happens when a poster refuses to stay still? Posters, Unbound is a 48-second surreal motion collage built from nine posters by Alexey Lysogorov. Typography becomes steam, geometric faces reshuffle, and a cat and dog
 
+- KriptoK Explained: Is an NVDA Token the Same as a Share?
+  URL: https://abvx.xyz/writing/videos/NQX0F57Iy7g
+  Summary: Is a token carrying NVIDIA's NVDA ticker the same thing as owning NVIDIA stock? This KriptoK explainer follows one specific example: NVIDIA / Robinhood Token on Robinhood Chain. The ticker is familiar. The product struct
+
 - Final Cut + Pixelmator: Fix the Image, Keep the Edit
   URL: https://abvx.xyz/writing/videos/NvAYxy-n4JI
   Summary: One distracting detail does not always call for rebuilding an edit. Apple announced a way to move a timeline image into Pixelmator Pro and save it back to Final Cut without reimporting. An original animated harbour expla
@@ -1116,6 +1120,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Claude Code Has Hidden Features. This /stack Mod Reveals Everything
   URL: https://abvx.xyz/writing/videos/sZpOYudsSDY
   Summary: Think you know what's running inside your Claude Code sessions? You might be surprised. Meet /stack, a free, open-source Claude Code mod that reveals practically everything installed, configured, and available in your AI
+
+- Meshy ThreeRT: Real-Time Path Tracing at 60 FPS With Three.js-Style Code
+  URL: https://abvx.xyz/writing/videos/T2tYmFGZhKA
+  Summary: MeshyAI just open-sourced ThreeRT, a real-time path tracing engine built with Rust, wgpu, and a familiar Three.js-style API. And according to the developers, it can render complex scenes at 60 FPS on an Apple M3 Max lapt
 
 - Gemini 4 Carbon Rebuilt the Eiffel Tower in 3D With One Prompt
   URL: https://abvx.xyz/writing/videos/T3zm0bp8d6o

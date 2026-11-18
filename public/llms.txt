@@ -73,6 +73,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/-ZjoRw8TY_Q
   Summary: An entry-level interview. A demand for the biggest office. Then a plan to become CEO. Somewhere along the way, the interviewer loses control of his own conversation. This clip, circulating as an AI job interview, turns a
 
+- Gemini 4 Hydrogen Turned Google Sheets Into an Animated Pixel Art Canvas
+  URL: https://abvx.xyz/writing/videos/0Hng8Jw5R2Q
+  Summary: Google DeepMind just turned Google Sheets into an animated pixel art canvas using Gemini 4 Hydrogen and Google Antigravity. Yes. Google Sheets. The spreadsheet application. With thousands of tiny cells acting as pixels.
+
 - Gemini 4 Carbon Built a 3D Renderer From Scratch (No Blender)
   URL: https://abvx.xyz/writing/videos/0QESmDPIdLc
   Summary: Gemini 4 Carbon just built its own 3D rendering pipeline using C++ and NVIDIA CUDA, then created a 60-second physics-based animation without Blender or traditional keyframe animation. This isn't AI-generated video. It's

@@ -9424,7 +9424,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-18T16:14:30.158Z",
+      "updatedAt": "2026-11-18T16:22:37.183Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10326,6 +10326,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=8uzK5wmKdYQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Gemini 4 Hydrogen Turned Google Sheets Into an Animated Pixel Art Canvas",
+      "summary": "Google DeepMind just turned Google Sheets into an animated pixel art canvas using Gemini 4 Hydrogen and Google Antigravity. Yes. Google Sheets. The spreadsheet application. With thousands of tiny cells acting as pixels. ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/0Hng8Jw5R2Q",
+      "publishedAt": "2026-11-18T16:13:17.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=0Hng8Jw5R2Q"
         }
       ],
       "related": []

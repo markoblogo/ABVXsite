@@ -2107,6 +2107,17 @@
     },
     {
       "source": "youtube",
+      "title": "Gemini 4 Hydrogen Turned Google Sheets Into an Animated Pixel Art Canvas",
+      "url": "https://www.youtube.com/watch?v=0Hng8Jw5R2Q",
+      "publishedAt": "2026-11-18T16:13:17.000Z",
+      "excerpt": "Google DeepMind just turned Google Sheets into an animated pixel art canvas using Gemini 4 Hydrogen and Google Antigravity. Yes. Google Sheets. The spreadsheet application. With thousands of tiny cells acting as pixels. ",
+      "coverImage": "https://i.ytimg.com/vi/0Hng8Jw5R2Q/hqdefault.jpg",
+      "videoDescription": "Google DeepMind just turned Google Sheets into an animated pixel art canvas using Gemini 4 Hydrogen and Google Antigravity.\n\nYes. Google Sheets.\n\nThe spreadsheet application.\n\nWith thousands of tiny cells acting as pixels.\n\nAnd the animations actually run inside the spreadsheet.\n\nWHAT DID GEMINI 4 HYDROGEN DO?\n\nInstead of using Google Sheets for budgets, charts, or financial reports, Hydrogen transformed the spreadsheet grid into a programmable animation canvas.\n\nThe AI agent:\n\n• Resized thousands of spreadsheet cells into tiny squares.\n\n• Used individual cell colors to create pixel art.\n\n• Combined Python, Google Sheets formulas, and conditional formatting.\n\n• Programmed animated scenes directly inside the spreadsheet.\n\n• Created moving landscapes, trains, drifting clouds, and falling leaves.\n\n• Used spreadsheet calculations to update the visual scene over time.\n\nThe result looks like retro pixel art running inside a completely ordinary Google Sheets document.\n\nWHY IS THIS INTERESTING?\n\nBecause it demonstrates something rather entertaining about modern AI coding agents.\n\nGive them an environment that was never designed for animation, and they can sometimes find a way to turn it into a creative tool.\n\nGoogle Sheets wasn't built to be a game engine.\n\nBut it has a grid, programmable formulas, colors, and automation.\n\nAnd apparently that's enough for Gemini to start making animated pixel art.\n\nIs this a practical alternative to real animation software?\n\nAbsolutely not.\n\nLarge spreadsheets with thousands of constantly updating cells can become slow and difficult to maintain.\n\nBut that's not really the point.\n\nThe interesting part is the agent's ability to understand an unfamiliar creative constraint and combine existing tools into something unexpected.\n\nAnd I suspect we'll see many more experiments like this.\n\nToday it's animated landscapes in Google Sheets.\n\nTomorrow someone will probably try to run DOOM in an Excel spreadsheet.\n\nActually, let's not give them ideas.\n\nORIGINAL DEMONSTRATION\n\nGoogle DeepMind:\nhttps://x.com/GoogleDeepMind/status/2122807824531275826\n\nGemini 4 Hydrogen:\nhttps://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-Hydrogen/\n\nGoogle Antigravity:\nhttps://antigravity.google/\n\nGoogle Sheets:\nhttps://sheets.google.com/\n\nWhat's the weirdest piece of software you've seen turned into something it was never designed to do?\n\n#Gemini4Hydrogen #GoogleSheets #PixelArt #VibeCoding #Shorts",
+      "addedAt": "2026-11-18T16:22:37.183Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Gemini 4 Carbon Built a 3D Renderer From Scratch (No Blender)",
       "url": "https://www.youtube.com/watch?v=0QESmDPIdLc",
       "publishedAt": "2026-11-11T09:32:10.000Z",

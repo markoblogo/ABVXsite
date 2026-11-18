@@ -689,6 +689,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/Kx1ftrOWQm8
   Summary: Чому ціна на зерно може відрізнятися навіть в один день? Базис поставки, якість, місце й логістика допомагають зрозуміти ціну фізичного аграрного ринку. 📘 «Практичний гайд по спотовому ринку» — безкоштовна українська кн
 
+- Telegram Dictator: A New AI Desktop Agent for Mac With Its Own Linux VM
+  URL: https://abvx.xyz/writing/videos/kYh_e3cIx3o
+  Summary: Telegram is building its own AI desktop agent for macOS. And they decided to call it Dictator. Yes, seriously. A new preview has appeared on Telegram's macOS beta website, showing a separate AI agent application with its
+
 - Viggle Image Swap: Replace Entire People in Photos with Qwen-Image-2.1 LoRA
   URL: https://abvx.xyz/writing/videos/l_4VzQRwurA
   Summary: Face swap? Cute. Viggle wants to replace the ENTIRE person. Meet Viggle Image Swap, a new LoRA for Qwen-Image-2.1 that takes a character sheet and replaces someone in an existing photo. Not just the face. Hair, body, and

@@ -9378,7 +9378,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-18T13:39:00.632Z",
+      "updatedAt": "2026-11-18T13:52:09.203Z",
       "tags": [],
       "links": [],
       "related": []
@@ -15877,6 +15877,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=H8eYfYb-k3s"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Telegram Dictator: A New AI Desktop Agent for Mac With Its Own Linux VM",
+      "summary": "Telegram is building its own AI desktop agent for macOS. And they decided to call it Dictator. Yes, seriously. A new preview has appeared on Telegram's macOS beta website, showing a separate AI agent application with its",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/kYh_e3cIx3o",
+      "publishedAt": "2026-11-18T13:43:43.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=kYh_e3cIx3o"
         }
       ],
       "related": []

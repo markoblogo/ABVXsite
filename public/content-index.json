@@ -7184,6 +7184,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "12 Tools to Fix AI Design Slop: UI Components, Motion & DESIGN.md",
+      "summary": "Tired of AI-generated websites that all look the same? The same gradients. The same rounded cards. The same generic SaaS landing pages. Here's a collection of 12 design resources that can help Claude Code, Codex, Cursor,",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/ivSAJBjeOuA",
+      "publishedAt": "2026-11-18T17:14:19.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=ivSAJBjeOuA"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "150+ AI Image Prompts for Stunning Visuals | Posters, Mockups & Design Inspiration",
       "summary": "Tired of spending more time writing AI image prompts than actually creating something? Here's a little resource worth bookmarking. Meet OnePromptDesign, a collection of 150+ ready-to-use AI image prompts and visual refer",
       "canonicalUrl": "https://abvx.xyz/writing/videos/LQjCjugvpco",
@@ -9447,7 +9470,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-18T17:12:34.477Z",
+      "updatedAt": "2026-11-18T17:37:33.329Z",
       "tags": [],
       "links": [],
       "related": []

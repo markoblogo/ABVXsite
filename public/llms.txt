@@ -569,6 +569,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/IQ3CdzPzFHw
   Summary: Follow Nantes’ green line in a 1-minute-40-second illustrated walk: see the complete route on a map, then visit six selected stops from the railway station to the LU Tower. Pixel landscapes briefly reveal generated inter
 
+- 12 Tools to Fix AI Design Slop: UI Components, Motion & DESIGN.md
+  URL: https://abvx.xyz/writing/videos/ivSAJBjeOuA
+  Summary: Tired of AI-generated websites that all look the same? The same gradients. The same rounded cards. The same generic SaaS landing pages. Here's a collection of 12 design resources that can help Claude Code, Codex, Cursor,
+
 - Unity 6 Game With AI: 500 Human Hours, $990, 200K Lines of Code
   URL: https://abvx.xyz/writing/videos/J4gJWt2FH4w
   Summary: Can you build a complex Unity 6 game with Claude Code, ChatGPT, and Gemini? Yes. But making it actually feel good to play is a completely different challenge. Meet The Roveheart, an ambitious mobile sailing combat game d

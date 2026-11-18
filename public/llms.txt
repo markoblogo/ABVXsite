@@ -413,6 +413,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/EW7VBWM4EPA
   Summary: Hugging Face just released PyBot, a chatbot built entirely from Python rules by a swarm of more than 1,000 AI agents. No neural networks. No model weights. No transformers. No training. Just 640,000 lines of Python. And
 
+- Papertrails: An Endless Paper World That Unfolds as You Walk
+  URL: https://abvx.xyz/writing/videos/eWheRM41ZaU
+  Summary: An endless pop-up book you can walk through. Welcome to Papertrails. Join a tiny yellow-hatted traveller on a quiet journey through paper forests, little cottages, rivers and snowy villages. Trees and scenery rise from t
+
 - Google A2UI 1.0: AI Agents Can Now Build Native Interfaces Across Apps
   URL: https://abvx.xyz/writing/videos/f_nfzKh-lRI
   Summary: Google just released A2UI 1.0, the first stable version of its open protocol that lets AI agents generate interactive user interfaces instead of responding with walls of text. And the same AI-generated interface can work

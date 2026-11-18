@@ -9493,7 +9493,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-18T19:50:41.616Z",
+      "updatedAt": "2026-11-18T21:11:46.104Z",
       "tags": [],
       "links": [],
       "related": []
@@ -13822,6 +13822,29 @@
           "relation": "related"
         }
       ]
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Papertrails: An Endless Paper World That Unfolds as You Walk",
+      "summary": "An endless pop-up book you can walk through. Welcome to Papertrails. Join a tiny yellow-hatted traveller on a quiet journey through paper forests, little cottages, rivers and snowy villages. Trees and scenery rise from t",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/eWheRM41ZaU",
+      "publishedAt": "2026-11-18T20:51:34.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=eWheRM41ZaU"
+        }
+      ],
+      "related": []
     },
     {
       "type": "video",

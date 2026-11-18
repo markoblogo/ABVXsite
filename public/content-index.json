@@ -7852,6 +7852,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "AllWeb3 Explained: What Counts as Proof for Creator Rewards?",
+      "summary": "The campaign looked successful. The report was polished. But what did the creator actually deliver? AllWeb3 wants to connect Web3 projects and creators through performance-based campaigns and verified results. This docum",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/v4q1PecYvTE",
+      "publishedAt": "2026-11-18T19:39:06.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=v4q1PecYvTE"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "AMI — Digital Infrastructure for Physical Commodity Markets",
       "summary": "AMI — Agro Market Infrastructure — brings together projects for commodity brokerage operations, private market indices, and market knowledge. This short introduction highlights three parts of AMI: • MN7R — a private work",
       "canonicalUrl": "https://abvx.xyz/writing/videos/QnpLjwhj6Fs",
@@ -9470,7 +9493,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-18T17:37:33.329Z",
+      "updatedAt": "2026-11-18T19:50:41.616Z",
       "tags": [],
       "links": [],
       "related": []

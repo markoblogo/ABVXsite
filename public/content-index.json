@@ -9447,7 +9447,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-18T16:51:46.376Z",
+      "updatedAt": "2026-11-18T17:12:34.477Z",
       "tags": [],
       "links": [],
       "related": []
@@ -12626,6 +12626,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Meituan LongCat Avatar 1.6: 10-Minute AI Talking & Singing Videos",
+      "summary": "A Chinese food delivery giant just released an open-source AI model that generates talking and singing avatars from photos and audio. And apparently, delivering food wasn't enough. Meet LongCat-Video-Avatar 1.6 from Meit",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/Y45MXRfjOdM",
+      "publishedAt": "2026-11-18T16:52:12.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=Y45MXRfjOdM"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Menton, France: From the Market to the Sea | A 40-Second Escape",
       "summary": "Taste a different side of Menton, France: a morning at Halles du Marché, local bites, a café pause, old-town lanes and a moment by the sea. A 40-second French Riviera escape from AzurMenton. Plan your own morning with th",
       "canonicalUrl": "https://abvx.xyz/writing/videos/WEEGy8Ks3ig",
@@ -15191,6 +15214,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=Kp9Jpc8d3gw"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Raenest Explained: Your Client Paid in Stablecoins. Now What?",
+      "summary": "Your client says \"paid\". But paid in what - and when does that become money you can actually use? This Raenest explainer follows an illustrative freelancer payment through the questions that matter: the asset, the receiv",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/MjyiSHqRZRE",
+      "publishedAt": "2026-11-18T16:57:54.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=MjyiSHqRZRE"
         }
       ],
       "related": []

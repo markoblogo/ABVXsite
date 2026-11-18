@@ -769,6 +769,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/MfaQeGwm0Lg
   Summary: Someone built a sailing simulator, put the world's leading AI models behind the wheel, and discovered something fascinating about how these models actually solve problems. Or, more accurately, behind the rudder. Develope
 
+- Raenest Explained: Your Client Paid in Stablecoins. Now What?
+  URL: https://abvx.xyz/writing/videos/MjyiSHqRZRE
+  Summary: Your client says "paid". But paid in what - and when does that become money you can actually use? This Raenest explainer follows an illustrative freelancer payment through the questions that matter: the asset, the receiv
+
 - Claude Fable 5.2 Rebuilt Ancient Babylon in 8 Hours | Interactive 3D
   URL: https://abvx.xyz/writing/videos/mkLiCHl5DL0
   Summary: Claude Fable 5.2 spent eight hours recreating ancient Babylon as it might have looked around 600 BC, turning historical research into an interactive 3D world you can explore yourself. And the most interesting part? The A
@@ -1332,6 +1336,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - BRIA RMBG-3.0: AI Background Removal Beats Photoroom & remove.bg?
   URL: https://abvx.xyz/writing/videos/y3RQhebByO0
   Summary: BRIA AI just released RMBG-3.0, a new generative AI background removal model built on Fibo 2.0. And according to BRIA's own benchmark, it outperforms Photoroom, remove.bg, Ideogram, BiRefNet, and the previous RMBG-2.0 on
+
+- Meituan LongCat Avatar 1.6: 10-Minute AI Talking & Singing Videos
+  URL: https://abvx.xyz/writing/videos/Y45MXRfjOdM
+  Summary: A Chinese food delivery giant just released an open-source AI model that generates talking and singing avatars from photos and audio. And apparently, delivering food wasn't enough. Meet LongCat-Video-Avatar 1.6 from Meit
 
 - Claude Opus 5.5 Created This Entire Animation with Code. Every Single Frame
   URL: https://abvx.xyz/writing/videos/Y66xLzPe3bw

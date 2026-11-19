@@ -2332,6 +2332,17 @@
     },
     {
       "source": "youtube",
+      "title": "MIT's Tiny Flying Robot Has a Brain - But Still Needs a Wire",
+      "url": "https://www.youtube.com/watch?v=4almCynPti8",
+      "publishedAt": "2026-11-19T15:53:21.000Z",
+      "excerpt": "A tiny flying robot can carry its own sensors and controller. So why does it still need a wire? MIT researchers have demonstrated insect-scale flapping-wing flight with integrated sensing and onboard computation. This sh",
+      "coverImage": "https://i.ytimg.com/vi/4almCynPti8/hqdefault.jpg",
+      "videoDescription": "A tiny flying robot can carry its own sensors and controller. So why does it still need a wire?\n\nMIT researchers have demonstrated insect-scale flapping-wing flight with integrated sensing and onboard computation. This short research explainer follows the important distinction between controlling a flight and powering it: onboard sensing and control do not mean an onboard battery.\n\nAn inertial sensor tracks attitude, optical flow helps estimate lateral movement, and a distance sensor measures height. The robot weighs 1.29 grams in the authors' open preprint. Four wings lift its small electronics payload, while an external connection supplies power and drive electronics.\n\nOne crucial detail: the flower landing is a separate, human-guided experiment. In the February 2026 preprint, that trial used onboard sensing with offboard computation; separate trials demonstrate onboard estimation and control. We do not present the flower scene as a fully autonomous, battery-powered pollination mission. The landing is shown as a credited research photograph, not as reconstructed landing footage.\n\nSources and further reading:\nMIT News, Adam Zewe, 18 November 2026:\nhttps://news.mit.edu/2026/featherweight-flying-robot-carries-its-own-sensors-and-computers-1118\nHsiao et al., Controlled Flight of an Insect-Scale Flapping-Wing Robot via Integrated Onboard Sensing and Computation, open author preprint, 9 February 2026:\nhttps://arxiv.org/abs/2602.08328\nPublished paper, Science Robotics, 18 November 2026:\nhttps://www.science.org/doi/10.1126/scirobotics.aeg6618\nOfficial MIT research video, A Flying Microrobot With a Built-In Brain:\nhttps://www.youtube.com/watch?v=ZjshZHcJp30\n\nFigures and research photographs: Hsiao et al., author preprint, CC BY 4.0; cropped and reframed, with editorial labels. Video excerpts: Massachusetts Institute of Technology, credited official research video. Animated sensor and power diagrams are original explanatory illustrations, not measured flight data. English narration is synthetic; soundtrack is an original local composition. We did not operate the robot or reproduce the experiments.\n\nWhich challenge seems harder: miniaturizing the brain, or carrying the power?\n\nMore visual technology stories: https://www.youtube.com/@ABV_Creative\nTikTok: https://www.tiktok.com/@lumierenoire.films\n\n#MIT #Robotics #FlyingRobot",
+      "addedAt": "2026-11-19T16:14:28.389Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "This AI Drone Can Chase You Through a Forest Without GPS or Internet",
       "url": "https://www.youtube.com/watch?v=4u78DC8S864",
       "publishedAt": "2026-10-30T11:53:46.000Z",

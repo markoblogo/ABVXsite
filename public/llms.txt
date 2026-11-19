@@ -133,6 +133,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/3zh2QfO5iXM
   Summary: Still folding the same paper dart? Foldable Flight has 109 paper airplane designs to explore—and a useful way to choose your next one by paper size, difficulty and flight style. In this short website tour, we browse the
 
+- MIT's Tiny Flying Robot Has a Brain - But Still Needs a Wire
+  URL: https://abvx.xyz/writing/videos/4almCynPti8
+  Summary: A tiny flying robot can carry its own sensors and controller. So why does it still need a wire? MIT researchers have demonstrated insect-scale flapping-wing flight with integrated sensing and onboard computation. This sh
+
 - This AI Drone Can Chase You Through a Forest Without GPS or Internet
   URL: https://abvx.xyz/writing/videos/4u78DC8S864
   Summary: Remember when drones needed human pilots, GPS, and a reliable connection to navigate? Well, apparently, those days are numbered. Researchers at Purdue University have demonstrated an autonomous drone that can follow a pe

@@ -1211,6 +1211,16 @@
     },
     {
       "source": "medium",
+      "title": "40 Mini PCs, Zero GPUs, and a 320-Billion-Parameter AI Model. What Could Possibly Go Wrong?",
+      "url": "https://abvcreative.medium.com/40-mini-pcs-zero-gpus-and-a-320-billion-parameter-ai-model-what-could-possibly-go-wrong-0124a6b84b76",
+      "publishedAt": "2026-11-19T13:40:59.000Z",
+      "excerpt": "One Reddit engineer connected 40 cheap Intel computers with USB cables and got a giant language model running at 14 tokens per second. It’s gloriously ridiculous. And surprisingly interesting. There’s something deeply sa",
+      "coverImage": "https://cdn-images-1.medium.com/max/1024/1*tlmyaXEOg4GBzPiomdWMVA.png",
+      "addedAt": "2026-11-19T13:50:43.826Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "medium",
       "title": "AI Agents Now Read 80% of Developer Documentation. Humans Have Apparently Outsourced Reading.",
       "url": "https://abvcreative.medium.com/ai-agents-now-read-80-of-developer-documentation-humans-have-apparently-outsourced-reading-4584f3b2a930",
       "publishedAt": "2026-11-12T18:16:11.000Z",

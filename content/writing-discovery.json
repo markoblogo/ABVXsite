@@ -4455,6 +4455,17 @@
     },
     {
       "source": "youtube",
+      "title": "AI Rewrote curl. Who Maintains It Now?",
+      "url": "https://www.youtube.com/watch?v=oObZ_K32IDI",
+      "publishedAt": "2026-11-19T17:26:46.000Z",
+      "excerpt": "AI can rewrite a codebase. But who reviews the next fix, keeps up with upstream, and supports the people who depend on it? This short animated explainer looks at Rust rewrites of curl through the argument made by curl fo",
+      "coverImage": "https://i.ytimg.com/vi/oObZ_K32IDI/hqdefault.jpg",
+      "videoDescription": "AI can rewrite a codebase. But who reviews the next fix, keeps up with upstream, and supports the people who depend on it?\n\nThis short animated explainer looks at Rust rewrites of curl through the argument made by curl founder Daniel Stenberg. His point is about the ongoing work behind reliable software: bug fixes, compatibility, security, and the community maintaining a project after the first version works.\n\nStenberg reports that while one rewrite was being produced, the original curl project gained more than 300 commits and over 200 bug fixes. Those are his reported figures for that period, not a benchmark we reproduced or a count measured from today's commit page. A genuine public curl commit excerpt captured on 19 November 2026 illustrates continued development.\n\nMemory-safe languages can prevent important classes of mistakes. They do not automatically provide a long-term maintenance process. The practical questions are: who reviews changes, who follows upstream, and who helps users when something breaks?\n\nSources:\nDaniel Stenberg, Actual curl rewrites in rust, 17 November 2026:\nhttps://daniel.haxx.se/blog/2026/11/17/actual-curl-rewrites-in-rust/\nOfficial curl repository and public commit history:\nhttps://github.com/curl/curl\nhttps://github.com/curl/curl/commits/master/\n\nThe workshop is an original animated 3D illustration, not an actual rewrite system, product interface or performance benchmark. Article/repository excerpts are credited source material. English narration is synthetic; the light soundtrack is an original local composition. We did not run or comparatively test the cited rewrites.\n\nIf AI builds the first version, what would you require before trusting version two?\n\nMore visual technology stories: https://www.youtube.com/@ABV_Creative\nTikTok: https://www.tiktok.com/@lumierenoire.films\n\n#AICoding #curl #SoftwareEngineering\n\nVisual revision credits: original 3D scenes combined with genuine browser captures of curl.se, the public curl commit history, the libcurl programming tutorial and the Rust Book. Workplace footage: Person working at the office, Mixkit item 204, Stock Video Free License (https://mixkit.co/free-stock-video/person-working-at-the-office-204/). Coding photo: Ilya Pavlov on Unsplash (https://unsplash.com/photos/monitor-showing-java-programming-OqtafYT5kTw), Unsplash License. These workplace visuals are illustrative and do not depict the curl team. No source audio is used.",
+      "addedAt": "2026-11-19T17:37:12.547Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Why GLB Is Perfect for AI Agents | 3D Animation with Three.js, No Blender Required",
       "url": "https://www.youtube.com/watch?v=oPvkNkSqqwk",
       "publishedAt": "2026-11-07T17:16:53.000Z",

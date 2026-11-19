@@ -7737,6 +7737,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "AI Rewrote curl. Who Maintains It Now?",
+      "summary": "AI can rewrite a codebase. But who reviews the next fix, keeps up with upstream, and supports the people who depend on it? This short animated explainer looks at Rust rewrites of curl through the argument made by curl fo",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/oObZ_K32IDI",
+      "publishedAt": "2026-11-19T17:26:46.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=oObZ_K32IDI"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "AI Turned the Original Prince of Persia Into a Photorealistic Movie",
       "summary": "Remember the original Prince of Persia? The legendary 1989 computer game with its pixelated characters, deadly traps, impossible jumps, and unforgettable atmosphere? Well, someone decided to give it a serious cinematic u",
       "canonicalUrl": "https://abvx.xyz/writing/videos/R2d5LM8bHEk",
@@ -9516,7 +9539,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-19T16:14:28.389Z",
+      "updatedAt": "2026-11-19T17:37:12.547Z",
       "tags": [],
       "links": [],
       "related": []

@@ -901,6 +901,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/OknfCwdyXIc
   Summary: Can an AI assistant create a database—and can you verify what it saved? I tested the official Prisma Codex plugin on a separate Free Plan database in Paris. The test created a table, saved a fictional 20-minute run, chan
 
+- AI Rewrote curl. Who Maintains It Now?
+  URL: https://abvx.xyz/writing/videos/oObZ_K32IDI
+  Summary: AI can rewrite a codebase. But who reviews the next fix, keeps up with upstream, and supports the people who depend on it? This short animated explainer looks at Rust rewrites of curl through the argument made by curl fo
+
 - Why GLB Is Perfect for AI Agents | 3D Animation with Three.js, No Blender Required
   URL: https://abvx.xyz/writing/videos/oPvkNkSqqwk
   Summary: If you're creating 3D animations with AI agents, there's one file format you should seriously consider: GLB. And the interesting part is that your agent might not need Blender at all. Just a 3D model, some JavaScript, an

@@ -9493,7 +9493,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-18T23:36:57.393Z",
+      "updatedAt": "2026-11-19T09:16:44.299Z",
       "tags": [],
       "links": [],
       "related": []
@@ -15308,6 +15308,42 @@
       "links": [],
       "publishedAt": "2026-11-18",
       "updatedAt": "2026-11-18",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #59 — Imagination and Everyday Life",
+      "summary": "Ten translated notebook fragments on imagination and everyday life.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-59-imagination-and-everyday-life",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-19",
+      "updatedAt": "2026-11-19",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #60 — Expectations and the Right to Be Yourself",
+      "summary": "Ten translated notebook fragments on expectations and the right to be yourself.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-60-expectations-and-the-right-to-be-yourself",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-19",
+      "updatedAt": "2026-11-19",
       "related": []
     },
     {

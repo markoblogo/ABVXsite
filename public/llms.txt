@@ -1033,6 +1033,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/QUfoeGezQAs
   Summary: La P'tite Fumée kicked off their new tour at Warehouse Nantes on October 15, 2026. And I was there to capture it. Eight minutes of live music, hypnotic rhythms, psychedelic energy, and the atmosphere of an unforgettable
 
+- AI Can Smell Now? Inside Osmo's Scent Technology
+  URL: https://abvx.xyz/writing/videos/qwEvrajpM-o
+  Summary: Can AI learn to smell - and turn a text prompt into a real fragrance? Osmo is connecting chemical measurements with the way people describe odors. This short explainer follows the process from human scent descriptions to
+
 - Claude Can Now Create Editable Premiere Pro & After Effects Projects with Tesseract
   URL: https://abvx.xyz/writing/videos/qZFQlbAcW1Y
   Summary: Claude can already generate animations and videos. But there's always been one annoying problem. What happens when you want to actually edit the result? An AI-generated MP4 isn't an editable Premiere Pro timeline. You ca

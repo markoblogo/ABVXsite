@@ -7668,6 +7668,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "AI Can Smell Now? Inside Osmo's Scent Technology",
+      "summary": "Can AI learn to smell - and turn a text prompt into a real fragrance? Osmo is connecting chemical measurements with the way people describe odors. This short explainer follows the process from human scent descriptions to",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/qwEvrajpM-o",
+      "publishedAt": "2026-11-19T14:39:28.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=qwEvrajpM-o"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "AI Commander 0.1.0: One Terminal for AI Agents, Kanban & Git Worktrees",
       "summary": "AI Commander 0.1.0 is here, bringing multiple AI coding agent backends, a Kanban task board, Git worktree isolation, and permission controls into one retro-style terminal interface. Think Norton Commander aesthetics meet",
       "canonicalUrl": "https://abvx.xyz/writing/videos/kL2OU0fTR6U",
@@ -9493,7 +9516,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-19T09:16:44.299Z",
+      "updatedAt": "2026-11-19T14:50:21.892Z",
       "tags": [],
       "links": [],
       "related": []

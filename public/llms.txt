@@ -161,6 +161,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/6-VMwHGiQxw
   Summary: That night photo was almost perfect. Except your hands decided to shake at exactly the wrong moment. Meet ComfyUI-PhotoDeblur, a free, open-source node pack by porfeng that helps restore photos affected by camera shake a
 
+- He Turned an iPhone Photo Into a 3D World You Can Walk Into
+  URL: https://abvx.xyz/writing/videos/68uEXgMOokQ
+  Summary: This might be the coolest AirDrop you've ever seen. An XR developer just created an interaction that lets you grab a photograph from an iPhone with your fingers, open your hand, and step inside the scene using Apple Visi
+
 - Pokras Lampas — Seals of Good Intentions | Bangkok Night Art Film
   URL: https://abvx.xyz/writing/videos/6c3JXdIiosg
   Summary: Red paper. Black ink. A quiet gesture in the Bangkok night. A 30-second cinematic art study of Pokras Lampas’s “Seals of Good Intentions”: three calligraphic scrolls against a closed street gate, brought into motion from
@@ -441,6 +445,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/ffBjGBXVqbE
   Summary: AI can now look at a LEGO model, figure out where the bricks belong, and attempt to reconstruct the hidden structure from just one image. Meet BrickFlow, a new AI research project exploring something much bigger than ass
 
+- This Landing Page Turns Into the App When You Scroll to the End
+  URL: https://abvx.xyz/writing/videos/FNEre5wzJz8
+  Summary: Here's a landing page that understands how to sell an interactive product. Meet Premotio, a motion design library with its own browser-based animation editor. The website is full of movement, interactive sections, visual
+
 - How Twitch Gamers Help Detect Wildfires | FireCatchers by Havas Play
   URL: https://abvx.xyz/writing/videos/FP17TQdOaGw
   Summary: What if waiting for your favorite Twitch streamer could actually help save a forest? Not by donating money. Not by watching an advertisement. Just by paying attention. Meet FireCatchers, one of the smartest examples of c
@@ -541,6 +549,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/hb9oYAK37w4
   Summary: A pose becomes a direction. A direction becomes a brushstroke. And a brushstroke becomes something that can no longer be read as a word. This 68-second audiovisual study responds to Pokras Lampas’s series I SEE YOU AS AR
 
+- unslop-ui: Remove AI Design Slop From Websites With Claude Code & Codex
+  URL: https://abvx.xyz/writing/videos/hbti2kXL4xA
+  Summary: Finally, someone built an AI coding skill specifically designed to remove AI-generated design slop. Meet unslop-ui, a free, open-source agent skill by Felipe Basurto. It works with Claude Code, Cursor, Codex, and other c
+
 - Claude Code: Sonnet + Opus + Haiku. A Smarter AI Agent Setup
   URL: https://abvx.xyz/writing/videos/hBU0WpTTbes
   Summary: What if you could make Claude Code more efficient by giving each AI model a different job? Instead of using the most expensive model for everything, try a smarter multi-model setup: Sonnet does the coding. Opus provides
@@ -561,6 +573,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/Hx3SofxSuCc
   Summary: VIDEO REBIRTH just compressed MiniMax-H3 from roughly 31 billion parameters to under 14 billion, and made it generate video AND sound in just six sampling steps. Meet HyperFlow H3 Flash, the latest release in the HyperFl
 
+- This FREE ASCII Art Generator Turns Photos & Videos Into 4K Retro Visuals
+  URL: https://abvx.xyz/writing/videos/hyWZOIu0NjY
+  Summary: Here's a beautiful little free tool for turning ordinary images and videos into ASCII art, Braille patterns, halftone graphics, dithering, and even toy-brick mosaics. Meet the ASCII Art Generator from Devault. No Photosh
+
 - Claude Code Stick-Scene: Turn Any Idea Into an Animated Explanation
   URL: https://abvx.xyz/writing/videos/HZ9pbsMA77w
   Summary: What if Claude Code could turn complex ideas into simple, animated explanations using nothing but stick figures? Meet stick-scene, a free, open-source AI agent skill created by Kamran Ahmed, the developer behind roadmap.
@@ -580,6 +596,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Nice Airport to Menton: Bus or Train? | French Riviera Guide
   URL: https://abvx.xyz/writing/videos/ih43aF1zeaM
   Summary: Landing at Nice Côte d’Azur Airport and heading to Menton? This 90-second guide compares the direct Line 80 coach with the train via Nice Saint-Augustin—and shows how to reach central Menton. Follow a stylised pixel-art
+
+- Meshy UltraTex: AI Generates 4K PBR Textures That React to Light
+  URL: https://abvx.xyz/writing/videos/ilAv4VVCR50
+  Summary: Meshy AI is back with UltraTex, a new AI system for generating high-quality 4K PBR textures from a single reference image and an existing 3D mesh. And this one is particularly interesting. Because making a 3D object look
 
 - Nantes Green Line Walk | From Pixels to City Landmarks - Nantes : suivez la ligne verte
   URL: https://abvx.xyz/writing/videos/IQ3CdzPzFHw

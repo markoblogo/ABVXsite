@@ -9539,7 +9539,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-19T17:37:12.547Z",
+      "updatedAt": "2026-11-19T21:11:58.841Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11219,6 +11219,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "He Turned an iPhone Photo Into a 3D World You Can Walk Into",
+      "summary": "This might be the coolest AirDrop you've ever seen. An XR developer just created an interaction that lets you grab a photograph from an iPhone with your fingers, open your hand, and step inside the scene using Apple Visi",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/68uEXgMOokQ",
+      "publishedAt": "2026-11-19T20:37:56.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=68uEXgMOokQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "He Used Claude Code to Remove Smart TV Ads and Make His TV 3× Faster",
       "summary": "Smart TVs have become ridiculous. You buy a television, turn it on, and somehow end up staring at advertisements, sponsored recommendations, and apps you never asked for. One developer finally decided he'd had enough. So",
       "canonicalUrl": "https://abvx.xyz/writing/videos/Ao-_E_l6F98",
@@ -12823,6 +12846,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=T2tYmFGZhKA"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Meshy UltraTex: AI Generates 4K PBR Textures That React to Light",
+      "summary": "Meshy AI is back with UltraTex, a new AI system for generating high-quality 4K PBR textures from a single reference image and an existing 3D mesh. And this one is particularly interesting. Because making a 3D object look",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/ilAv4VVCR50",
+      "publishedAt": "2026-11-19T20:53:23.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=ilAv4VVCR50"
         }
       ],
       "related": []
@@ -17266,6 +17312,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "This FREE ASCII Art Generator Turns Photos & Videos Into 4K Retro Visuals",
+      "summary": "Here's a beautiful little free tool for turning ordinary images and videos into ASCII art, Braille patterns, halftone graphics, dithering, and even toy-brick mosaics. Meet the ASCII Art Generator from Devault. No Photosh",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/hyWZOIu0NjY",
+      "publishedAt": "2026-11-19T21:00:52.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=hyWZOIu0NjY"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "This Free Claude Code Skill Makes Better Landing Pages | AI Design Skills for Codex",
       "summary": "Hero first. Then benefits. Then the product explanation, social proof, FAQs, and final CTA. Want to try it? The easiest installation method is the Skills CLI: npx skills add elayadesign/ai-design-skills --skill landing-p",
       "canonicalUrl": "https://abvx.xyz/writing/videos/hoUnFjAysfQ",
@@ -17279,6 +17348,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=hoUnFjAysfQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "This Landing Page Turns Into the App When You Scroll to the End",
+      "summary": "Here's a landing page that understands how to sell an interactive product. Meet Premotio, a motion design library with its own browser-based animation editor. The website is full of movement, interactive sections, visual",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/FNEre5wzJz8",
+      "publishedAt": "2026-11-19T20:46:56.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=FNEre5wzJz8"
         }
       ],
       "related": []
@@ -17745,6 +17837,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=t9_E9crjcw4"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "unslop-ui: Remove AI Design Slop From Websites With Claude Code & Codex",
+      "summary": "Finally, someone built an AI coding skill specifically designed to remove AI-generated design slop. Meet unslop-ui, a free, open-source agent skill by Felipe Basurto. It works with Claude Code, Cursor, Codex, and other c",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/hbti2kXL4xA",
+      "publishedAt": "2026-11-19T21:08:49.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=hbti2kXL4xA"
         }
       ],
       "related": []

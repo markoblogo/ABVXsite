@@ -821,6 +821,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/m0iXZ3eHSiQ
   Summary: Meet Patch, a new AI-powered game development platform that lets coding agents build, modify, remix, and publish playable games using a single CLI and MCP integration. And it comes with more than 50,000 open-source game
 
+- SEOmator SEO Audit: 398 Checks, Free CLI, Desktop App & AI Agent Support
+  URL: https://abvx.xyz/writing/videos/mcBkT7eA27g
+  Summary: SEOmator SEO Audit: 398 Checks, Free CLI, Desktop App & AI Agent Support
+
 - OpenAI ChatGPT Wallet: Dots Can Now Pay for Your Purchases
   URL: https://abvx.xyz/writing/videos/mCIEj22D2y4
   Summary: OpenAI just launched ChatGPT Wallet, allowing its dots AI agents to complete purchases on your behalf without accessing your actual credit card details. Your AI agent can now find a product, navigate checkout, and pay fo

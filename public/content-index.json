@@ -9631,7 +9631,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-20T21:21:03.083Z",
+      "updatedAt": "2026-11-20T21:35:59.071Z",
       "tags": [],
       "links": [],
       "related": []
@@ -16064,6 +16064,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=pAtg6lk5fcM"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "SEOmator SEO Audit: 398 Checks, Free CLI, Desktop App & AI Agent Support",
+      "summary": "SEOmator SEO Audit: 398 Checks, Free CLI, Desktop App & AI Agent Support",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/mcBkT7eA27g",
+      "publishedAt": "2026-11-20T21:33:29.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=mcBkT7eA27g"
         }
       ],
       "related": []

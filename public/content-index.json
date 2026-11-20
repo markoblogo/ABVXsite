@@ -7898,6 +7898,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Alljoined ENIGMA: This AI Reconstructs Images From Your Brainwaves",
+      "summary": "Everyone is training AI models to generate images. Alljoined is exploring the reverse problem: can AI figure out what a person is SEEING from electrical signals recorded on their scalp? No brain implants. No surgery. Jus",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/B8qB8E37SiQ",
+      "publishedAt": "2026-11-20T21:14:36.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=B8qB8E37SiQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "AllWeb3 Explained: What Counts as Proof for Creator Rewards?",
       "summary": "The campaign looked successful. The report was polished. But what did the creator actually deliver? AllWeb3 wants to connect Web3 projects and creators through performance-based campaigns and verified results. This docum",
       "canonicalUrl": "https://abvx.xyz/writing/videos/v4q1PecYvTE",
@@ -9608,7 +9631,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-20T21:11:24.558Z",
+      "updatedAt": "2026-11-20T21:21:03.083Z",
       "tags": [],
       "links": [],
       "related": []

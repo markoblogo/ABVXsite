@@ -9539,7 +9539,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-20T00:49:12.115Z",
+      "updatedAt": "2026-11-20T08:07:56.030Z",
       "tags": [],
       "links": [],
       "related": []
@@ -15482,6 +15482,42 @@
       "links": [],
       "publishedAt": "2026-11-19",
       "updatedAt": "2026-11-19",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #61 — Thinking Beyond the First Explanation",
+      "summary": "Ten translated notebook fragments on thinking Beyond the First Explanation.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-61-thinking-beyond-the-first-explanation",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-20",
+      "updatedAt": "2026-11-20",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #62 — From Intention to Action",
+      "summary": "Ten translated notebook fragments on from Intention to Action.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-62-from-intention-to-action",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-20",
+      "updatedAt": "2026-11-20",
       "related": []
     },
     {

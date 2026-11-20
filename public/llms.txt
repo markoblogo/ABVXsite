@@ -281,6 +281,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/AFl-mk5EZIA
   Summary: Someone just brought the golden age of DOS file managers back to life. Except this time, they're running AI agents. Meet AI-Commander, a new open-source terminal interface built by developer Mikhail Malyshev. And I have
 
+- This Store Sells Problems. I Bought One. | BuyMore
+  URL: https://abvx.xyz/writing/videos/AInINeF12I4
+  Summary: What if online shopping solved problems you never had - by delivering brand-new ones? Welcome to BuyMore, a fictional marketplace where useless gadgets get the full premium treatment. In this 58-second comedy short, an o
+
 - He Used Claude Code to Remove Smart TV Ads and Make His TV 3× Faster
   URL: https://abvx.xyz/writing/videos/Ao-_E_l6F98
   Summary: Smart TVs have become ridiculous. You buy a television, turn it on, and somehow end up staring at advertisements, sponsored recommendations, and apps you never asked for. One developer finally decided he'd had enough. So
@@ -520,6 +524,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - The Last Delivery | A Short Animated Film About Hope
   URL: https://abvx.xyz/writing/videos/GY5UhZVQG14
   Summary: For years, a robot courier believed he was the only one left. Then a parcel arrived with a small lamp and a message: leave a light on. Someone will find their way. The Last Delivery is an original animated short about lo
+
+- OpenAI GPT-Live-1.1: Better Voice AI and 60% Cheaper Standby Mode
+  URL: https://abvx.xyz/writing/videos/gYt51ZVaNeE
+  Summary: OpenAI just released GPT-Live-1.1 in the API, along with a new standby mode that makes long-running voice AI conversations significantly cheaper. And honestly, the standby feature might be the more important update. Unti
 
 - You Can Fly Over Mars in Your Browser | NASA Eyes
   URL: https://abvx.xyz/writing/videos/h0ZTfFPKbcs

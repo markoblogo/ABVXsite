@@ -9585,7 +9585,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-20T18:15:00.994Z",
+      "updatedAt": "2026-11-20T18:27:20.837Z",
       "tags": [],
       "links": [],
       "related": []
@@ -13855,6 +13855,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "OpenAI GPT-Live-1.1: Better Voice AI and 60% Cheaper Standby Mode",
+      "summary": "OpenAI just released GPT-Live-1.1 in the API, along with a new standby mode that makes long-running voice AI conversations significantly cheaper. And honestly, the standby feature might be the more important update. Unti",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/gYt51ZVaNeE",
+      "publishedAt": "2026-11-20T18:16:06.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=gYt51ZVaNeE"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "OpenAI x ModRetro Chromatic Is Here: A $200 Game Boy You Can Build Games for with Codex",
       "summary": "OpenAI just put a $200 retro handheld in its merch store. And this one actually does something. Meet the ModRetro Chromatic: Codex Edition, a collaboration between OpenAI and ModRetro, the hardware company founded by Ocu",
       "canonicalUrl": "https://abvx.xyz/writing/videos/cM0Ga17fK_Y",
@@ -17545,6 +17568,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=dQAm7kw49co"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "This Store Sells Problems. I Bought One. | BuyMore",
+      "summary": "What if online shopping solved problems you never had - by delivering brand-new ones? Welcome to BuyMore, a fictional marketplace where useless gadgets get the full premium treatment. In this 58-second comedy short, an o",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/AInINeF12I4",
+      "publishedAt": "2026-11-20T18:23:02.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=AInINeF12I4"
         }
       ],
       "related": []

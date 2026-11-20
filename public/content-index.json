@@ -9608,7 +9608,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-20T20:12:25.195Z",
+      "updatedAt": "2026-11-20T21:11:24.558Z",
       "tags": [],
       "links": [],
       "related": []
@@ -14029,6 +14029,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=zHiaMUJCwh8"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "OpenMotion Is Open Source: Recreate Videos With Claude Code, Codex & MOTION.md",
+      "summary": "OpenMotion is officially open source, and it wants to become a serious alternative to Claude Motion and CapCut for AI-assisted video production. Its pitch is simple: give an AI coding agent a reference video, your brand ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/YTBUoLPNTlY",
+      "publishedAt": "2026-11-20T21:05:56.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=YTBUoLPNTlY"
         }
       ],
       "related": []

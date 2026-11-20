@@ -1449,6 +1449,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/yHcec4hrNQQ
   Summary: What if you could generate a 3D character, give it a skeleton, and make it walk, run, or jump using nothing but text prompts? Tripo just upgraded its Rigging & Animation tools in Tripo Studio. And it's another step towar
 
+- OpenMotion Is Open Source: Recreate Videos With Claude Code, Codex & MOTION.md
+  URL: https://abvx.xyz/writing/videos/YTBUoLPNTlY
+  Summary: OpenMotion is officially open source, and it wants to become a serious alternative to Claude Motion and CapCut for AI-assisted video production. Its pitch is simple: give an AI coding agent a reference video, your brand
+
 - Plasticity 2026.2 Is Here! Asset Libraries, Curvature Analysis & New NURBS Modeling Tools
   URL: https://abvx.xyz/writing/videos/ywZeKg8rwe0
   Summary: Plastic Software just released Plasticity 2026.2, bringing some very welcome improvements to one of the most interesting hard-surface modeling tools around. New asset libraries, better surface analysis, improved snapping

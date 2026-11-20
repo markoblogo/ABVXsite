@@ -9585,7 +9585,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-20T14:37:43.911Z",
+      "updatedAt": "2026-11-20T18:15:00.994Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10818,6 +10818,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=Pk_omlAY0KY"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Google Genie 4 API Is Here: Playable AI Worlds for $0.10 Per Second",
+      "summary": "Google just opened Genie 4 to developers through the Gemini API and Google AI Studio. And this is a significant step for generative world models. Instead of generating a video that you simply watch, Genie 4 creates an in",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/SQJGzQOYP70",
+      "publishedAt": "2026-11-20T18:05:00.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=SQJGzQOYP70"
         }
       ],
       "related": []

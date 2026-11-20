@@ -1173,6 +1173,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/sL87UJN54t8
   Summary: What if you could shrink a 31-billion-parameter AI video model to just 14B, cut generation to six steps, and keep synchronized stereo audio? Well, VIDEO REBIRTH just did exactly that. Meet HyperFlow H3 Flash, a compresse
 
+- Google Genie 4 API Is Here: Playable AI Worlds for $0.10 Per Second
+  URL: https://abvx.xyz/writing/videos/SQJGzQOYP70
+  Summary: Google just opened Genie 4 to developers through the Gemini API and Google AI Studio. And this is a significant step for generative world models. Instead of generating a video that you simply watch, Genie 4 creates an in
+
 - One GLB File, a Whole Car to Animate
   URL: https://abvx.xyz/writing/videos/SrWeTSaQ4DQ
   Summary: This car is one GLB file. We use code to separate its parts, rebuild it and change just one door. A short 3D animation test about named geometry, scene hierarchy and getting the hinge right. The source asset contains 101

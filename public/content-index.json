@@ -8915,6 +8915,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude Code Is Playing GTA 6 While Humans Work? The Viral AI Gaming Craze",
+      "summary": "GTA 6 is finally here, and apparently, some gamers have already decided that playing it themselves is too much work. So they gave the job to Claude. Several viral posts on X claim that Claude Code can autonomously play G",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/dyle7hH3LOw",
+      "publishedAt": "2026-11-20T19:24:03.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=dyle7hH3LOw"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude Code May Have Discovered a New Planet. NASA Is Checking.",
       "summary": "What if an AI coding agent helped discover a planet that astronomers had missed for seven years? And what if NASA actually agreed to investigate? That's exactly what's happening. Independent researcher Pavel Rabtsevich u",
       "canonicalUrl": "https://abvx.xyz/writing/videos/BD4-rrzeqKA",
@@ -9585,7 +9608,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-20T18:27:20.837Z",
+      "updatedAt": "2026-11-20T19:36:37.274Z",
       "tags": [],
       "links": [],
       "related": []

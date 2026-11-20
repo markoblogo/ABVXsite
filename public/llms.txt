@@ -413,6 +413,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/DX86Vqs-ghg
   Summary: A mug on a table. A tray beside it. Predicting the picture of a successful move is one problem. Producing the robot actions that get there is another. This short visual explainer introduces Runway Praxis-1, a world actio
 
+- Claude Code Is Playing GTA 6 While Humans Work? The Viral AI Gaming Craze
+  URL: https://abvx.xyz/writing/videos/dyle7hH3LOw
+  Summary: GTA 6 is finally here, and apparently, some gamers have already decided that playing it themselves is too much work. So they gave the job to Claude. Several viral posts on X claim that Claude Code can autonomously play G
+
 - 244 Pixel Art Animations Made with Claude Code | Free VFX Library + AI Skill
   URL: https://abvx.xyz/writing/videos/e7OuakMC4cA
   Summary: What if you could create hundreds of beautiful pixel art animations without drawing a single sprite? No Photoshop. No Aseprite. No pre-made image assets. Just Claude Code, JavaScript, and a surprisingly effective creativ

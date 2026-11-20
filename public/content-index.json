@@ -9631,7 +9631,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-20T21:50:08.197Z",
+      "updatedAt": "2026-11-20T22:21:12.287Z",
       "tags": [],
       "links": [],
       "related": []
@@ -12615,6 +12615,29 @@
       "updatedAt": "2026-10-11",
       "tags": [],
       "links": [],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Klap Review: From Long Video to Short Clip",
+      "summary": "Can Klap find a moment that works as a short on its own? I tested the AI clipping tool on two Framewright productions: an AllWeb3 explainer and the fictional BuyMore shopping film. See how Klap suggested a standalone ide",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/f_qFpZGfFq8",
+      "publishedAt": "2026-11-20T22:13:32.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=f_qFpZGfFq8"
+        }
+      ],
       "related": []
     },
     {

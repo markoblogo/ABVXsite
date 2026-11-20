@@ -457,6 +457,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/f_nfzKh-lRI
   Summary: Google just released A2UI 1.0, the first stable version of its open protocol that lets AI agents generate interactive user interfaces instead of responding with walls of text. And the same AI-generated interface can work
 
+- Klap Review: From Long Video to Short Clip
+  URL: https://abvx.xyz/writing/videos/f_qFpZGfFq8
+  Summary: Can Klap find a moment that works as a short on its own? I tested the AI clipping tool on two Framewright productions: an AllWeb3 explainer and the fictional BuyMore shopping film. See how Klap suggested a standalone ide
+
 - GTA SAN ANDREAS. BUT CJ IS A VIBE CODER NOW.
   URL: https://abvx.xyz/writing/videos/f4FOeK8bSvk
   Summary: Remember when GTA San Andreas missions were about stealing cars, escaping the police, and surviving Los Santos? Well, it's 2026. Now CJ has to build an AI startup using Claude Code. Someone created a custom GTA San Andre

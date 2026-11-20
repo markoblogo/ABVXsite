@@ -949,6 +949,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/oPvkNkSqqwk
   Summary: If you're creating 3D animations with AI agents, there's one file format you should seriously consider: GLB. And the interesting part is that your agent might not need Blender at all. Just a 3D model, some JavaScript, an
 
+- I Asked Google Genie 4 to Build GTA 6. Then I Played It and Talked to NPCs.
+  URL: https://abvx.xyz/writing/videos/oR0J11NgEOo
+  Summary: Remember Google Genie 4? Google's AI world model that generates interactive environments in real time? Well, it's now available through the Gemini API and Google AI Studio. So naturally, I decided to test it by asking fo
+
 - The Pope vs Anthropic: Should AI Help Humanity Defeat Death?
   URL: https://abvx.xyz/writing/videos/OW1weOBWRVA
   Summary: Could AI help humanity defeat disease, aging, and eventually death? Anthropic CEO Dario Amodei thinks artificial intelligence could bring extraordinary medical breakthroughs within the next decade. Pope Leo XIV has a ver

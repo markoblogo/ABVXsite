@@ -9608,7 +9608,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-20T19:50:47.067Z",
+      "updatedAt": "2026-11-20T20:12:25.195Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11939,6 +11939,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=k4dStFV8d1c"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "I Asked Google Genie 4 to Build GTA 6. Then I Played It and Talked to NPCs.",
+      "summary": "Remember Google Genie 4? Google's AI world model that generates interactive environments in real time? Well, it's now available through the Gemini API and Google AI Studio. So naturally, I decided to test it by asking fo",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/oR0J11NgEOo",
+      "publishedAt": "2026-11-20T19:58:02.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=oR0J11NgEOo"
         }
       ],
       "related": []

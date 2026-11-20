@@ -49,6 +49,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 ## YouTube watch pages
 
+- One Robot. Many Bodies. Meet TeCoBot
+  URL: https://abvx.xyz/writing/videos/_fkugk-1FbA
+  Summary: What if a robot’s most useful upgrade was a different body? TeCoBot explores that idea with flexible modules that can bend, grip objects and connect to one another. This short laboratory documentary follows real research
+
 - I Turned an Instagram Reel Into 4 Minutes of Ambient Music Using GPT-6 + Codex
   URL: https://abvx.xyz/writing/videos/_kzkJ6FKM28
   Summary: What if you could turn a random Instagram Reel into an entire ambient music track in just 12 minutes? Here's the experiment. I found a video of a musician creating strange, atmospheric sounds using everyday electrical de

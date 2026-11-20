@@ -9539,7 +9539,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-19T21:11:58.841Z",
+      "updatedAt": "2026-11-20T00:49:12.115Z",
       "tags": [],
       "links": [],
       "related": []
@@ -13730,6 +13730,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=GiOETg_EoL4"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "One Robot. Many Bodies. Meet TeCoBot",
+      "summary": "What if a robot’s most useful upgrade was a different body? TeCoBot explores that idea with flexible modules that can bend, grip objects and connect to one another. This short laboratory documentary follows real research",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/_fkugk-1FbA",
+      "publishedAt": "2026-11-20T00:46:25.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=_fkugk-1FbA"
         }
       ],
       "related": []

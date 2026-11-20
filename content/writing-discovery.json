@@ -2101,6 +2101,17 @@
     },
     {
       "source": "youtube",
+      "title": "One Robot. Many Bodies. Meet TeCoBot",
+      "url": "https://www.youtube.com/watch?v=_fkugk-1FbA",
+      "publishedAt": "2026-11-20T00:46:25.000Z",
+      "excerpt": "What if a robot’s most useful upgrade was a different body? TeCoBot explores that idea with flexible modules that can bend, grip objects and connect to one another. This short laboratory documentary follows real research",
+      "coverImage": "https://i.ytimg.com/vi/_fkugk-1FbA/hqdefault.jpg",
+      "videoDescription": "What if a robot’s most useful upgrade was a different body? TeCoBot explores that idea with flexible modules that can bend, grip objects and connect to one another.\n\nThis short laboratory documentary follows real research demonstrations from Colorado State University: a single module picking grapes, connected modules forming chains and loops, and robots working together to handle objects or navigate obstacles. The compliant body uses a tensegrity structure with rods, a flexible lattice and cables that change its shape.\n\nThe important distinction: reconfiguration in the paper’s experiments is remotely controlled. Separate camera-guided proof-of-concept trials demonstrate autonomous docking. These results do not establish a fully autonomous team that plans and completes arbitrary jobs. The demonstrations are sped up; this edit is not a real-time speed or reliability benchmark.\n\nResearch and footage:\nSaikot, Spiegel, Kariyawasam, Stefka, Chrisler & Zhao, “Tensegrity continuum robots enable task-adaptive morphologies for cooperative behaviours,” Nature Machine Intelligence, 11 November 2026:\nhttps://www.nature.com/articles/s42256-026-01335-4\nAuthor project site and demonstrations:\nhttps://tecobot.github.io/\nControl-code repository:\nhttps://github.com/mahmud-hasans/TeCoBot\nPreprint:\nhttps://arxiv.org/abs/2608.27221\n\nResearch footage belongs to its respective rightsholders. This is an independent explanatory edit, not an affiliation, endorsement or our own robot test. MIT licensing of the control code does not imply blanket permission for video reuse. English narration is synthetic; the quiet soundtrack is an original local composition. No artificial robot footage is presented as an experiment.\n\nWhat would you build first: a chain that reaches farther, a loop that travels, or a team that handles objects?\n\nMore visual technology stories: https://www.youtube.com/@ABV_Creative\nTikTok: https://www.tiktok.com/@lumierenoire.films\n\n#Robotics #TeCoBot #Engineering",
+      "addedAt": "2026-11-20T00:49:12.115Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "I Turned an Instagram Reel Into 4 Minutes of Ambient Music Using GPT-6 + Codex",
       "url": "https://www.youtube.com/watch?v=_kzkJ6FKM28",
       "publishedAt": "2026-10-17T18:33:45.000Z",

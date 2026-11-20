@@ -9631,7 +9631,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-20T21:35:59.071Z",
+      "updatedAt": "2026-11-20T21:50:08.197Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11870,6 +11870,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=fcVLl0CcoXo"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Hyper3D Rodin Gets AI Retopology: Clean Low-Poly Meshes in 20 Seconds?",
+      "summary": "Deemos Tech just upgraded Hyper3D Rodin with a new Low-Poly mode designed to produce cleaner, more usable 3D meshes. And this is the part of AI-generated 3D that I've been waiting for. Beautiful geometry is one thing. A ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/_V7WTXgW8gQ",
+      "publishedAt": "2026-11-20T21:43:58.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=_V7WTXgW8gQ"
         }
       ],
       "related": []
@@ -16075,7 +16098,7 @@
       "group": "YouTube",
       "status": "live",
       "title": "SEOmator SEO Audit: 398 Checks, Free CLI, Desktop App & AI Agent Support",
-      "summary": "SEOmator SEO Audit: 398 Checks, Free CLI, Desktop App & AI Agent Support",
+      "summary": "An open-source SEO audit tool that runs on your desktop, in the terminal, or inside an AI coding workflow? Meet SEOmator SEO Audit, introduced by SEO specialist Emre Elbeyoglu. The video shows an early demonstration of i",
       "canonicalUrl": "https://abvx.xyz/writing/videos/mcBkT7eA27g",
       "publishedAt": "2026-11-20T21:33:29.000Z",
       "tags": [

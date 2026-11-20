@@ -57,6 +57,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/_kzkJ6FKM28
   Summary: What if you could turn a random Instagram Reel into an entire ambient music track in just 12 minutes? Here's the experiment. I found a video of a musician creating strange, atmospheric sounds using everyday electrical de
 
+- Hyper3D Rodin Gets AI Retopology: Clean Low-Poly Meshes in 20 Seconds?
+  URL: https://abvx.xyz/writing/videos/_V7WTXgW8gQ
+  Summary: Deemos Tech just upgraded Hyper3D Rodin with a new Low-Poly mode designed to produce cleaner, more usable 3D meshes. And this is the part of AI-generated 3D that I've been waiting for. Beautiful geometry is one thing. A
+
 - Claude Code Can Recreate Any Website Animation Frame by Frame | /reanimate
   URL: https://abvx.xyz/writing/videos/-8oBX51Y-cY
   Summary: Ever found an amazing animation on a website and wished you could recreate it in your own project? Not just something similar. The actual movement, timing, transitions, and visual effects. Meet /reanimate, a new open-sou
@@ -823,7 +827,7 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 - SEOmator SEO Audit: 398 Checks, Free CLI, Desktop App & AI Agent Support
   URL: https://abvx.xyz/writing/videos/mcBkT7eA27g
-  Summary: SEOmator SEO Audit: 398 Checks, Free CLI, Desktop App & AI Agent Support
+  Summary: An open-source SEO audit tool that runs on your desktop, in the terminal, or inside an AI coding workflow? Meet SEOmator SEO Audit, introduced by SEO specialist Emre Elbeyoglu. The video shows an early demonstration of i
 
 - OpenAI ChatGPT Wallet: Dots Can Now Pay for Your Purchases
   URL: https://abvx.xyz/writing/videos/mCIEj22D2y4

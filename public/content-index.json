@@ -9677,7 +9677,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-20T23:11:44.479Z",
+      "updatedAt": "2026-11-20T23:36:30.541Z",
       "tags": [],
       "links": [],
       "related": []
@@ -12691,6 +12691,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=pAClkR9eIZ8"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Kardo Is Finally on iPhone! AI Flashcard App Just Launched",
+      "summary": "Kardo is finally available on iPhone! DOWNLOAD KARDO FOR iOS: https://apps.apple.com/app/kardo-ai-flashcards/id6822808182 Website: https://kardo.cards/ Apple's review took more than three weeks. Fortunately, I didn't spe",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/kdAIwzniuIM",
+      "publishedAt": "2026-11-20T23:30:28.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=kdAIwzniuIM"
         }
       ],
       "related": []

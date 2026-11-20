@@ -1241,6 +1241,16 @@
     },
     {
       "source": "medium",
+      "title": "AI Agents Keep Getting Lost Between Repositories.",
+      "url": "https://abvcreative.medium.com/ai-agents-keep-getting-lost-between-repositories-1284fcf6e8f1",
+      "publishedAt": "2026-11-20T15:22:07.000Z",
+      "excerpt": "AI Agents Keep Getting Lost Between Repositories. Matt Pocock’s Fix Is Almost Embarrassingly Simple. One Home Repo, one AGENTS.md, and a simple way to manage AI coding agents across multiple projects without building ano",
+      "coverImage": "https://cdn-images-1.medium.com/max/1024/1*zdr3Cg94RkYOdzYqSyNFbQ.png",
+      "addedAt": "2026-11-20T15:37:08.713Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "medium",
       "title": "AI Agents Now Read 80% of Developer Documentation. Humans Have Apparently Outsourced Reading.",
       "url": "https://abvcreative.medium.com/ai-agents-now-read-80-of-developer-documentation-humans-have-apparently-outsourced-reading-4584f3b2a930",
       "publishedAt": "2026-11-12T18:16:11.000Z",

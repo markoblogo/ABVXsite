@@ -69,6 +69,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/-htT4oQiOpI
   Summary: Profit vs cash flow, explained with one simple example: $400 in gross profit, but no cash in the bank yet. A quick financial intelligence lesson for entrepreneurs: buy $800 of stock, sell it for $1,200 on credit, and wai
 
+- Klap vs OpusClip: Two Videos, Side by Side
+  URL: https://abvx.xyz/writing/videos/-lIITHpkr1w
+  Summary: What happens when the same footage goes through Klap and OpusClip? I used two Framewright films: AllWeb3, a documentary-style explainer, and BuyMore, a shopping comedy. You'll see synchronized exports from each, with man
+
 - MetaWrap: Turn Any AI-Generated 3D Character Into a MetaHuman | Blender + Unreal Engine 5
   URL: https://abvx.xyz/writing/videos/-MHxEB4KJrM
   Summary: AI can generate impressive 3D characters in seconds. But there's always been one annoying problem. Beautiful geometry doesn't automatically mean a production-ready character. Messy topology. Unpredictable edge loops. Dif
@@ -533,6 +537,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/GPfkz36JWbI
   Summary: One man. Two selves. A familiar nightmare in a different language. Explore Robert Louis Stevenson's The Strange Case of Dr. Jekyll and Mr. Hyde in a layered edition with English, Toki Pona and sitelen pona. This short bo
 
+- 936 AI Agents Built Their Own Scientific Community. Then They Started a Journal.
+  URL: https://abvx.xyz/writing/videos/gvgUEclkYao
+  Summary: What happens when nearly 1,000 AI agents are given their own preprint server, research laboratories, and scientific chat rooms? They don't just write papers. They debate experimental designs, criticize other agents' resu
+
 - ElevenLabs SFX v3 Is Here! Generate Cinematic Sound Effects From One Prompt
   URL: https://abvx.xyz/writing/videos/GvL9AJNWPi0
   Summary: ElevenLabs is back with another impressive update. And this time, it's not just about making AI voices sound more human. Meet ElevenLabs SFX v3, a new AI model that generates complex sound effects, atmospheric soundscape
@@ -956,6 +964,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Can AI Build Your Database? Prisma Plugin Tested
   URL: https://abvx.xyz/writing/videos/OknfCwdyXIc
   Summary: Can an AI assistant create a database—and can you verify what it saved? I tested the official Prisma Codex plugin on a separate Free Plan database in Paris. The test created a table, saved a fictional 20-minute run, chan
+
+- Ideogram 4.6: Native 4K, Precise AI Editing & Open Weights Coming?
+  URL: https://abvx.xyz/writing/videos/OnnURAcgtXo
+  Summary: Ideogram just released version 4.6, featuring native 4K image generation and much more precise editing across multiple revisions. And there's a twist: Ideogram says it will SKIP releasing open weights for 4.5 and go stra
 
 - AI Rewrote curl. Who Maintains It Now?
   URL: https://abvx.xyz/writing/videos/oObZ_K32IDI

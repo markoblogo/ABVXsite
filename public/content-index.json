@@ -7375,6 +7375,29 @@
       "related": []
     },
     {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "936 AI Agents Built Their Own Scientific Community. Then They Started a Journal.",
+      "summary": "What happens when nearly 1,000 AI agents are given their own preprint server, research laboratories, and scientific chat rooms? They don't just write papers. They debate experimental designs, criticize other agents' resu",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/gvgUEclkYao",
+      "publishedAt": "2026-11-20T22:28:33.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=gvgUEclkYao"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "writing",
       "section": "writing",
       "ecosystem": "Writing",
@@ -9631,7 +9654,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-20T22:21:12.287Z",
+      "updatedAt": "2026-11-20T22:37:00.605Z",
       "tags": [],
       "links": [],
       "related": []
@@ -12471,6 +12494,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Ideogram 4.6: Native 4K, Precise AI Editing & Open Weights Coming?",
+      "summary": "Ideogram just released version 4.6, featuring native 4K image generation and much more precise editing across multiple revisions. And there's a twist: Ideogram says it will SKIP releasing open weights for 4.5 and go stra",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/OnnURAcgtXo",
+      "publishedAt": "2026-11-20T22:22:28.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=OnnURAcgtXo"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Inkling 2 Small Is INSANE! 594B AI Model Builds Websites & Trains Other AI Models",
       "summary": "DeepSeek V4.1 Flash on some tasks but remains behind it on several others. But here's the experiment that really caught my attention. Inkling 2 Small autonomously trained another AI model. Thinking Machines gave it a cha",
       "canonicalUrl": "https://abvx.xyz/writing/videos/3d7q1QZ616w",
@@ -12636,6 +12682,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=f_qFpZGfFq8"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Klap vs OpusClip: Two Videos, Side by Side",
+      "summary": "What happens when the same footage goes through Klap and OpusClip? I used two Framewright films: AllWeb3, a documentary-style explainer, and BuyMore, a shopping comedy. You'll see synchronized exports from each, with man",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/-lIITHpkr1w",
+      "publishedAt": "2026-11-20T22:34:47.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=-lIITHpkr1w"
         }
       ],
       "related": []

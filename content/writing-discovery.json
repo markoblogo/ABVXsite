@@ -5014,6 +5014,17 @@
     },
     {
       "source": "youtube",
+      "title": "Can This AI-Built World Leave the Browser?",
+      "url": "https://www.youtube.com/watch?v=RGHZ8AY3Z2k",
+      "publishedAt": "2026-11-20T11:21:43.000Z",
+      "excerpt": "A tram arrives at a tiny night stop. Its doors open. The scene looks alive in the browser—but can we turn it into a reusable 3D file? For this hands-on Three-Live test, we built an original miniature called Night Line 07",
+      "coverImage": "https://i.ytimg.com/vi/RGHZ8AY3Z2k/hqdefault.jpg",
+      "videoDescription": "A tram arrives at a tiny night stop. Its doors open. The scene looks alive in the browser—but can we turn it into a reusable 3D file?\n\nFor this hands-on Three-Live test, we built an original miniature called Night Line 07 from code, exported it as GLB, downloaded the file through a local preview page and opened that exact file in a separate viewer using the standard three.js GLTFLoader. The downloaded file’s hash matched the export.\n\nWhat survived in our test: the geometry, material colours, transparent glass and baked animation of the tram, its two doors and four rolling wheels. The full asset contains 224 meshes and a 24-second animation. Those figures describe this example, not a benchmark or a claimed limit of Three-Live.\n\nWhat needs to be set up again: the viewer’s lighting, environment, camera and finishing effects. A portable asset does not guarantee an identical final image in every renderer. This test does not establish AR, USDZ, mobile-device compatibility or support for arbitrary scenes and effects.\n\nThree-Live 1.4.0’s JavaScript authoring/export API was used for the asset. The close-up film shots use our independently lit three.js viewer. The screen recordings show our local test harness, not a commercial product interface. Loading waits are cut for pacing. English narration is synthetic; the light soundtrack is an original local composition. No third-party city model, stock footage or paid generation was used.\n\nOfficial sources:\nThree-Live project and Apache-2.0 source:\nhttps://github.com/google/three-live\nProject demos:\nhttps://google.github.io/three-live/\nIndependent three.js / glTF loader:\nhttps://threejs.org/docs/#GLTFLoader\n\nThree-Live is not an officially supported Google product. This is an independent production test, not a sponsored review or a guarantee of cross-platform support.\n\nWhere would you take this little world next: a game, a presentation or another film?\n\nMore visual technology stories: https://www.youtube.com/@ABV_Creative\nTikTok: https://www.tiktok.com/@lumierenoire.films\n\n#ThreeLive #ThreeJS #3DAnimation\n\nExploded views, wireframes, the day/night comparison and the 3D desk are illustrative viewer presentations using the same imported asset; they are not AR or tests of another application.",
+      "addedAt": "2026-11-20T11:38:00.329Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Google Tabletop Turns Group Chats Into AI-Powered Mini Apps",
       "url": "https://www.youtube.com/watch?v=rLh2N5wgV4I",
       "publishedAt": "2026-11-12T16:39:39.000Z",

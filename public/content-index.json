@@ -8413,6 +8413,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Can This AI-Built World Leave the Browser?",
+      "summary": "A tram arrives at a tiny night stop. Its doors open. The scene looks alive in the browser—but can we turn it into a reusable 3D file? For this hands-on Three-Live test, we built an original miniature called Night Line 07",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/RGHZ8AY3Z2k",
+      "publishedAt": "2026-11-20T11:21:43.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=RGHZ8AY3Z2k"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "CapCut Is Coming to ChatGPT! AI Video Editing Just Got Interesting",
       "summary": "Apparently, CapCut couldn't just sit back and watch creators automate their video editing workflows with Claude Code and DaVinci Resolve. So now CapCut is coming directly to ChatGPT. Announced at CapCut World LA on Octob",
       "canonicalUrl": "https://abvx.xyz/writing/videos/ppz1g7gRDds",
@@ -9539,7 +9562,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-20T08:07:56.030Z",
+      "updatedAt": "2026-11-20T11:38:00.329Z",
       "tags": [],
       "links": [],
       "related": []

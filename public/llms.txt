@@ -1473,6 +1473,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/ZYWFtV13uW8
   Summary: Claude Fable 5.2 is creating CGI animations from scratch by writing Python code to control Blender. No traditional text-to-video generation. Real 3D scenes, procedural geometry, animation, lighting, and rendering driven
 
+- Can I Speak to a Human? | A Robot Meets CAPTCHA
+  URL: https://abvx.xyz/writing/videos/zZx5ZM5p59g
+  Summary: A robot reaches a checkpoint. One checkbox makes the whole situation complicated: “I'm not a robot.” Can I Speak to a Human? is a short animated comedy about CAPTCHA, automated support and the awkward business of proving
+
 ## Focus systems
 
 - AMI — Infrastructure for Physical Commodity Markets

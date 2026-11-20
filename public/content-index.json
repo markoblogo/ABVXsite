@@ -8413,6 +8413,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Can I Speak to a Human? | A Robot Meets CAPTCHA",
+      "summary": "A robot reaches a checkpoint. One checkbox makes the whole situation complicated: “I'm not a robot.” Can I Speak to a Human? is a short animated comedy about CAPTCHA, automated support and the awkward business of proving",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/zZx5ZM5p59g",
+      "publishedAt": "2026-11-20T14:28:40.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=zZx5ZM5p59g"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Can This AI-Built World Leave the Browser?",
       "summary": "A tram arrives at a tiny night stop. Its doors open. The scene looks alive in the browser—but can we turn it into a reusable 3D file? For this hands-on Three-Live test, we built an original miniature called Night Line 07",
       "canonicalUrl": "https://abvx.xyz/writing/videos/RGHZ8AY3Z2k",
@@ -9562,7 +9585,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-20T11:38:00.329Z",
+      "updatedAt": "2026-11-20T14:37:43.911Z",
       "tags": [],
       "links": [],
       "related": []

@@ -9605,6 +9605,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "ComfyUI Cloud Now Supports Custom Builds: Your Nodes, LoRAs & GPUs via API",
+      "summary": "ComfyUI just made one of its biggest cloud workflow upgrades. You can now package your own custom ComfyUI environment, including custom nodes, models, LoRAs, and Python dependencies, and deploy it to Comfy Cloud. The res",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/SK3B0WyrE8Y",
+      "publishedAt": "2026-11-20T22:44:06.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=SK3B0WyrE8Y"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "ComfyUI Zip Ties: Finally Fix Your Spaghetti Node Graphs! | Free Extension",
       "summary": "If you've ever opened a complicated ComfyUI workflow and wondered whether you're looking at an AI pipeline or a bowl of spaghetti, this one's for you. Meet ComfyUI Zip Ties, a free, open-source extension that brings actu",
       "canonicalUrl": "https://abvx.xyz/writing/videos/zTrBkcj3_Jk",
@@ -9654,7 +9677,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-20T22:37:00.605Z",
+      "updatedAt": "2026-11-20T22:50:29.268Z",
       "tags": [],
       "links": [],
       "related": []

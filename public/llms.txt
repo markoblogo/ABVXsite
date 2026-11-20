@@ -889,6 +889,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/n92y2-xy8EE
   Summary: SpaceX has officially announced the target date for Starship Flight 15: no earlier than November 13, 2026. And this could be one of the most important rocket launches in history. Because for the first time, SpaceX plans
 
+- Does Anthropic Need $600 Billion a Year? The $1 Trillion AI Compute Bet
+  URL: https://abvx.xyz/writing/videos/N9PI0gL_rWI
+  Summary: Financial Times has a provocative question about Anthropic: how much revenue would the company need to justify its enormous AI computing commitments? The headline number is roughly $600 BILLION a year. Not because Anthro
+
 - Mago Studio Is Now Open Source! A Complete Local AI Filmmaking Studio with MiniMax H3
   URL: https://abvx.xyz/writing/videos/nBXKHFRsCCY
   Summary: What if you could run an entire AI filmmaking studio on your own computer? Not just another text-to-video generator. A complete production environment with scripts, storyboards, characters, video editing, version history
@@ -1500,6 +1504,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - H3 Dials: Control MiniMax H3 AI Videos With 14 KB Files (No Training)
   URL: https://abvx.xyz/writing/videos/z6mQFhxYcVI
   Summary: What if you could control AI-generated video with sliders instead of training LoRAs or endlessly rewriting prompts? Meet H3 Dials by MatlowAI, a new training-free steering system for MiniMax H3 that turns simple text pro
+
+- Gemini 4 Helium Next? Google Just Teased Another AI Model
+  URL: https://abvx.xyz/writing/videos/z6xS3RLfsho
+  Summary: Google DeepMind just dropped another Gemini 4 teaser, and apparently the release schedule has become a chemistry experiment. On November 19, Google DeepMind engineer Omar Sanseviero posted a short video with the caption:
 
 - Your AI Avatar Can Lip-Sync. Can It Act? | Kandinsky S2V
   URL: https://abvx.xyz/writing/videos/zCNWJxI6XqU

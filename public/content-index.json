@@ -9677,7 +9677,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-20T22:50:29.268Z",
+      "updatedAt": "2026-11-20T23:11:44.479Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9978,6 +9978,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=Q73r6GLqXVY"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Does Anthropic Need $600 Billion a Year? The $1 Trillion AI Compute Bet",
+      "summary": "Financial Times has a provocative question about Anthropic: how much revenue would the company need to justify its enormous AI computing commitments? The headline number is roughly $600 BILLION a year. Not because Anthro",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/N9PI0gL_rWI",
+      "publishedAt": "2026-11-20T22:56:22.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=N9PI0gL_rWI"
         }
       ],
       "related": []
@@ -10556,6 +10579,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=x1unZj3N2p4"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Gemini 4 Helium Next? Google Just Teased Another AI Model",
+      "summary": "Google DeepMind just dropped another Gemini 4 teaser, and apparently the release schedule has become a chemistry experiment. On November 19, Google DeepMind engineer Omar Sanseviero posted a short video with the caption:",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/z6xS3RLfsho",
+      "publishedAt": "2026-11-20T23:05:17.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=z6xS3RLfsho"
         }
       ],
       "related": []

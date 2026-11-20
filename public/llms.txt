@@ -401,6 +401,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/dQAm7kw49co
   Summary: One soft robot. Two air inputs. Three ways to swim. Meet a feather-star-inspired swimmer that can rise, glide and turn by changing how its flexible arms flap. This 90-second explainer combines real NC State research foot
 
+- GTA 6 With DLSS 5 at 60 FPS Looks Almost Real. Here's the Catch.
+  URL: https://abvx.xyz/writing/videos/DrViwWkwvVw
+  Summary: GTA 6 already looks incredible. But someone just ran its video output through NVIDIA DLSS 5 and Frame Generation, turning Vice City into something that looks remarkably close to real life. And now I'm wondering why we ev
+
 - 703 Claude Opus 5.5 Video Prompts You Can Copy for Free | AI Motion Graphics & Animation
   URL: https://abvx.xyz/writing/videos/dSBsgH4bpNY
   Summary: What if you could browse hundreds of impressive AI-generated animations and get the prompts behind them? Not just watch the results. Copy the prompts, study how they work, and create your own versions. Someone has put to

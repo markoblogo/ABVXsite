@@ -9608,7 +9608,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-20T19:36:37.274Z",
+      "updatedAt": "2026-11-20T19:50:47.067Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11140,6 +11140,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=ogc-oZoebH0"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "GTA 6 With DLSS 5 at 60 FPS Looks Almost Real. Here's the Catch.",
+      "summary": "GTA 6 already looks incredible. But someone just ran its video output through NVIDIA DLSS 5 and Frame Generation, turning Vice City into something that looks remarkably close to real life. And now I'm wondering why we ev",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/DrViwWkwvVw",
+      "publishedAt": "2026-11-20T19:41:05.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=DrViwWkwvVw"
         }
       ],
       "related": []

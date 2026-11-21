@@ -8528,6 +8528,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Can You Buy a French Vineyard With No Money?",
+      "summary": "Could you buy a French vineyard without putting your own money down? We take the idea from an Instagram reel about business acquisitions and put it next to a real Safer listing near Duras. The asking price was €2.6 milli",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/Woi6ZaNdiMs",
+      "publishedAt": "2026-11-21T20:22:47.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=Woi6ZaNdiMs"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "CapCut Is Coming to ChatGPT! AI Video Editing Just Got Interesting",
       "summary": "Apparently, CapCut couldn't just sit back and watch creators automate their video editing workflows with Claude Code and DaVinci Resolve. So now CapCut is coming directly to ChatGPT. Announced at CapCut World LA on Octob",
       "canonicalUrl": "https://abvx.xyz/writing/videos/ppz1g7gRDds",
@@ -9700,7 +9723,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-21T18:13:31.384Z",
+      "updatedAt": "2026-11-21T20:36:39.647Z",
       "tags": [],
       "links": [],
       "related": []
@@ -17089,6 +17112,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=JkmkICJoNwY"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Terence Tao Said AI Might Need Until 2050. Then Claude Helped Prove the Riemann Hypothesis.",
+      "summary": "In October 2026, Fields Medalist Terence Tao told Numberphile that solving the Riemann Hypothesis would require something beyond the AI systems available at the time. He suggested that humans and AI might get there aroun",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/QbM4RIa9TJc",
+      "publishedAt": "2026-11-21T20:36:07.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=QbM4RIa9TJc"
         }
       ],
       "related": []

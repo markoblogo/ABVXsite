@@ -1093,6 +1093,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/qB9P3oFm6fg
   Summary: Two identical blocks. The same starting speed. Different stopping distances. A robot simulation can look convincing and still get the physics wrong. This short explainer examines the Real2Sim challenge through Google's A
 
+- Terence Tao Said AI Might Need Until 2050. Then Claude Helped Prove the Riemann Hypothesis.
+  URL: https://abvx.xyz/writing/videos/QbM4RIa9TJc
+  Summary: In October 2026, Fields Medalist Terence Tao told Numberphile that solving the Riemann Hypothesis would require something beyond the AI systems available at the time. He suggested that humans and AI might get there aroun
+
 - Брокеридж зернових та олійних: безкоштовний практичний гід MN7R
   URL: https://abvx.xyz/writing/videos/qer7WfdIWLI
   Summary: Як працює ринок зернових та олійних — від першого офера до контракту та виконання угоди? Безкоштовний практичний гід MN7R українською допомагає побачити зв’язок між товаром, якістю, ціною, логістикою та людьми. 📘 Завант
@@ -1436,6 +1440,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Disco Coffee Showdown: Shoot or Decaf? | Gameplay & Both Endings
   URL: https://abvx.xyz/writing/videos/WLBxcM5JQ3U
   Summary: Jay and Silent Bob meet coffee-crazed alien worms in Disco Coffee Showdown: a 26-second browser music game built with PlayMCP. Watch real gameplay, learn the tap-versus-hold twist, and see both coffee-soaked endings. PLA
+
+- Can You Buy a French Vineyard With No Money?
+  URL: https://abvx.xyz/writing/videos/Woi6ZaNdiMs
+  Summary: Could you buy a French vineyard without putting your own money down? We take the idea from an Instagram reel about business acquisitions and put it next to a real Safer listing near Duras. The asking price was €2.6 milli
 
 - Reverse Tetris Where You Sabotage the AI | Music Game Gameplay
   URL: https://abvx.xyz/writing/videos/wPIyeBYJZbQ

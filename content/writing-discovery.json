@@ -3781,6 +3781,17 @@
     },
     {
       "source": "youtube",
+      "title": "How an Elevator Sent a Word Through a Brick Wall",
+      "url": "https://www.youtube.com/watch?v=IQeH4VAVyZo",
+      "publishedAt": "2026-11-21T00:47:48.000Z",
+      "excerpt": "An elevator sent the word “Gravity” through a brick wall. One bit took a minute. At the University of Queensland, researchers moved a roughly 1.8-tonne elevator counterweight between two positions to encode zeros and one",
+      "coverImage": "https://i.ytimg.com/vi/IQeH4VAVyZo/hqdefault.jpg",
+      "videoDescription": "An elevator sent the word “Gravity” through a brick wall. One bit took a minute.\n\nAt the University of Queensland, researchers moved a roughly 1.8-tonne elevator counterweight between two positions to encode zeros and ones. A gravimeter in the next room measured tiny changes in the downward gravitational pull. The closest distance from the weight to the instrument was about 0.7 metres. The seven-letter message took 49 minutes of payload time, plus control sequences.\n\nOrdinary brick does not screen gravity, but distance and vibrations make a weak signal harder to detect. A separate Q-CTRL trial used a gravity map and a quantum gravimeter to help a vessel navigate without GPS.\n\nResearch\nScience Advances — https://doi.org/10.1126/sciadv.aee0802\nAuthors’ preprint — https://arxiv.org/abs/2511.16710\nQ-CTRL maritime trial — https://arxiv.org/abs/2608.25563\n\nVisual credits\nBrick photography: Francesco Paggiaro and Frank Cone (Pexels)\nElevator footage: Mixkit, “Moving between floors”\nOcean footage: Mikhail Nilov and The Element (Pexels)\nArchive photo: NOAA, LaCoste & Romberg Model G\n\nThe cutaway, signal trace and route are illustrations. The elevator and sea footage show illustrative settings.\n\n#Physics #Gravity #ScienceExplained",
+      "addedAt": "2026-11-21T00:49:28.200Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "12 Tools to Fix AI Design Slop: UI Components, Motion & DESIGN.md",
       "url": "https://www.youtube.com/watch?v=ivSAJBjeOuA",
       "publishedAt": "2026-11-18T17:14:19.000Z",

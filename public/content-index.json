@@ -9677,7 +9677,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-21T00:32:13.190Z",
+      "updatedAt": "2026-11-21T00:49:28.200Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11723,6 +11723,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=n1wuySSYQcQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "How an Elevator Sent a Word Through a Brick Wall",
+      "summary": "An elevator sent the word “Gravity” through a brick wall. One bit took a minute. At the University of Queensland, researchers moved a roughly 1.8-tonne elevator counterweight between two positions to encode zeros and one",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/IQeH4VAVyZo",
+      "publishedAt": "2026-11-21T00:47:48.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=IQeH4VAVyZo"
         }
       ],
       "related": []

@@ -645,6 +645,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/IQ3CdzPzFHw
   Summary: Follow Nantes’ green line in a 1-minute-40-second illustrated walk: see the complete route on a map, then visit six selected stops from the railway station to the LU Tower. Pixel landscapes briefly reveal generated inter
 
+- How an Elevator Sent a Word Through a Brick Wall
+  URL: https://abvx.xyz/writing/videos/IQeH4VAVyZo
+  Summary: An elevator sent the word “Gravity” through a brick wall. One bit took a minute. At the University of Queensland, researchers moved a roughly 1.8-tonne elevator counterweight between two positions to encode zeros and one
+
 - 12 Tools to Fix AI Design Slop: UI Components, Motion & DESIGN.md
   URL: https://abvx.xyz/writing/videos/ivSAJBjeOuA
   Summary: Tired of AI-generated websites that all look the same? The same gradients. The same rounded cards. The same generic SaaS landing pages. Here's a collection of 12 design resources that can help Claude Code, Codex, Cursor,

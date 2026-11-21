@@ -7230,6 +7230,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "20-Minute Easy Run | Return to Running | RUN//SIGNAL M01: The First Relay",
+      "summary": "Your first mission starts inside the protected perimeter of Haven Nine. You have 20 minutes, five shelters, and one dispatcher on the radio. RUN//SIGNAL is an audio-first sci-fi running series. Each workout is a mission ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/XYRVeefj6aM",
+      "publishedAt": "2026-11-21T17:44:04.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=XYRVeefj6aM"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "244 Pixel Art Animations Made with Claude Code | Free VFX Library + AI Skill",
       "summary": "What if you could create hundreds of beautiful pixel art animations without drawing a single sprite? No Photoshop. No Aseprite. No pre-made image assets. Just Claude Code, JavaScript, and a surprisingly effective creativ",
       "canonicalUrl": "https://abvx.xyz/writing/videos/e7OuakMC4cA",
@@ -9677,7 +9700,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-21T17:10:03.985Z",
+      "updatedAt": "2026-11-21T18:13:31.384Z",
       "tags": [],
       "links": [],
       "related": []

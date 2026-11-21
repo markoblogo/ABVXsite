@@ -1489,6 +1489,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/XvpETa8sODw
   Summary: What if your AI coding agents could do the same work while spending significantly less money? Without switching to a cheaper model. Without rewriting your prompts. And without sacrificing much, if any, performance? Micro
 
+- 20-Minute Easy Run | Return to Running | RUN//SIGNAL M01: The First Relay
+  URL: https://abvx.xyz/writing/videos/XYRVeefj6aM
+  Summary: Your first mission starts inside the protected perimeter of Haven Nine. You have 20 minutes, five shelters, and one dispatcher on the radio. RUN//SIGNAL is an audio-first sci-fi running series. Each workout is a mission
+
 - AsciiTheme — ASCII Themes & Widgets for JavaScript Websites
   URL: https://abvx.xyz/writing/videos/y2OW5f8QEXo
   Summary: Give your website an optional ASCII look with AsciiTheme, an open-source JavaScript library with four themes and interactive widgets. This short demo shows the light, dark, sepia, and matrix themes, plus progress bars, s

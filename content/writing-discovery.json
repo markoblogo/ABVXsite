@@ -5774,6 +5774,17 @@
     },
     {
       "source": "youtube",
+      "title": "Half Your Life by 18? Here’s the Math",
+      "url": "https://www.youtube.com/watch?v=vLU1dIXCjWY",
+      "publishedAt": "2026-11-21T00:02:28.000Z",
+      "excerpt": "Could half your life already feel behind you at 18? One simple model makes that number appear. Picture a timeline from age 4 to age 80. If each year is weighted by 1 divided by your age, the total weight grows like ln(ag",
+      "coverImage": "https://i.ytimg.com/vi/vLU1dIXCjWY/hqdefault.jpg",
+      "videoDescription": "Could half your life already feel behind you at 18? One simple model makes that number appear.\n\nPicture a timeline from age 4 to age 80. If each year is weighted by 1 divided by your age, the total weight grows like ln(age / 4). The two sides balance at √(4 × 80) ≈ 17.9. That divides the timeline into about 14 and 62 calendar years with equal weight in the model.\n\nThe starting age, endpoint and weighting rule are assumptions. The result is a mathematical illustration of subjective time. Change those assumptions and the halfway point moves.\n\n#SubjectiveTime #MathExplained #TimePerception\n\nFootage credits (Pexels)\nChristina Avgerinou — https://www.pexels.com/video/child-running-at-the-beach-9617320/\nKampus Production — https://www.pexels.com/video/children-running-on-the-beach-8925441/\nTaryn Elliott — https://www.pexels.com/video/young-woman-running-at-the-beach-5937512/\nPNW Production — https://www.pexels.com/video/dads-having-fun-carrying-their-children-at-the-beach-8577129/\nAnastasia Shuraeva — https://www.pexels.com/video/an-elderly-couple-walking-by-the-beach-8794897/\nKampus Production — https://www.pexels.com/video/elderly-couple-hugging-8161701/",
+      "addedAt": "2026-11-21T00:32:13.190Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Meta e-means: Up to 45x Faster Than k-means for AI Clustering",
       "url": "https://www.youtube.com/watch?v=vMS6kFXSUU4",
       "publishedAt": "2026-11-12T15:24:28.000Z",

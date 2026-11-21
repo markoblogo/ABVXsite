@@ -321,6 +321,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/B4zdWfFIkNE
   Summary: A quiet discovery turns into a dash toward the unknown. A small light falls beyond the trees, floods the forest with a warm glow, and draws a curious dog into the brightness. A 30-second, dialogue-free 3D animated short
 
+- Can Ultrasound Work Without Gel?
+  URL: https://abvx.xyz/writing/videos/B7WQ0FScopw
+  Summary: Why does an ultrasound probe need that cold gel? A thin air gap reflects the sound. Gel fills that gap, and an MIT-led team tested a soft, dry polymer pad that can do the same job. In the lab, the team imaged a tissue-mi
+
 - Alljoined ENIGMA: This AI Reconstructs Images From Your Brainwaves
   URL: https://abvx.xyz/writing/videos/B8qB8E37SiQ
   Summary: Everyone is training AI models to generate images. Alljoined is exploring the reverse problem: can AI figure out what a person is SEEING from electrical signals recorded on their scalp? No brain implants. No surgery. Jus

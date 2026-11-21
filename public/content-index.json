@@ -8528,6 +8528,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Can Ultrasound Work Without Gel?",
+      "summary": "Why does an ultrasound probe need that cold gel? A thin air gap reflects the sound. Gel fills that gap, and an MIT-led team tested a soft, dry polymer pad that can do the same job. In the lab, the team imaged a tissue-mi",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/B7WQ0FScopw",
+      "publishedAt": "2026-11-21T23:19:00.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=B7WQ0FScopw"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Can You Buy a French Vineyard With No Money?",
       "summary": "Could you buy a French vineyard without putting your own money down? We take the idea from an Instagram reel about business acquisitions and put it next to a real Safer listing near Duras. The asking price was €2.6 milli",
       "canonicalUrl": "https://abvx.xyz/writing/videos/Woi6ZaNdiMs",
@@ -9723,7 +9746,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-21T22:20:56.527Z",
+      "updatedAt": "2026-11-21T23:21:14.288Z",
       "tags": [],
       "links": [],
       "related": []

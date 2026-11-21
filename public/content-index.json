@@ -9677,7 +9677,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-21T13:36:35.696Z",
+      "updatedAt": "2026-11-21T14:11:56.490Z",
       "tags": [],
       "links": [],
       "related": []
@@ -14213,6 +14213,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=_fkugk-1FbA"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "One Video Prompt, Six Outputs: The AO Motion Test",
+      "summary": "One brief called for a 15-second AO character reveal: thirteen cuts, readable kinetic type and a consistent blue-haired streetwear character. Watch six supplied clips on the same clock, then revisit three moments in slow",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/VPqHDX-Jtn8",
+      "publishedAt": "2026-11-21T14:04:52.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=VPqHDX-Jtn8"
         }
       ],
       "related": []

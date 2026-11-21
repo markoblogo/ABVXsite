@@ -1381,6 +1381,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/vMS6kFXSUU4
   Summary: Meta FAIR just introduced e-means, a new clustering algorithm that matches or beats traditional k-means quality in a fraction of the time. In the researchers' benchmarks, e-means delivers up to 45.5x faster GPU clusterin
 
+- One Video Prompt, Six Outputs: The AO Motion Test
+  URL: https://abvx.xyz/writing/videos/VPqHDX-Jtn8
+  Summary: One brief called for a 15-second AO character reveal: thirteen cuts, readable kinetic type and a consistent blue-haired streetwear character. Watch six supplied clips on the same clock, then revisit three moments in slow
+
 - NVIDIA Open-H3 IC: AI Video Upscaling to 4K Without Face Drift
   URL: https://abvx.xyz/writing/videos/VujPvRoggXw
   Summary: NVIDIA just released Open-H3-Regenerate-2K-IC, an open-weight AI video refinement model that upgrades low-resolution MiniMax H3 videos to 2K and 4K while preserving faces, lip sync, text, and scene composition. And it ca

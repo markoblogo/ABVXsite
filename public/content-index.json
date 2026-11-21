@@ -9677,7 +9677,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-21T11:54:15.416Z",
+      "updatedAt": "2026-11-21T13:36:35.696Z",
       "tags": [],
       "links": [],
       "related": []
@@ -13891,6 +13891,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=Sdeo924zVf0"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Neubad / Paper City — A Poster Art Film",
+      "summary": "In Lucerne, Switzerland, a former public swimming pool became the Neubad cultural centre. Its online archive collects 725 posters from 2012 to 2026, designed by many different hands. Paper City takes a selection out of t",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/QlJF7yLcV_g",
+      "publishedAt": "2026-11-21T13:22:26.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=QlJF7yLcV_g"
         }
       ],
       "related": []

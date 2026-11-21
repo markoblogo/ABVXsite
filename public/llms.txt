@@ -1097,6 +1097,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/QKzhj3Fl9bE
   Summary: I wanted to give my AI coding agent access to Figma. Meet Figma Console MCP, a free tool developed by Southleft that lets Claude Code, OpenAI Codex, Cursor, and other AI agents work directly with Figma. It uses Figma's P
 
+- Neubad / Paper City — A Poster Art Film
+  URL: https://abvx.xyz/writing/videos/QlJF7yLcV_g
+  Summary: In Lucerne, Switzerland, a former public swimming pool became the Neubad cultural centre. Its online archive collects 725 posters from 2012 to 2026, designed by many different hands. Paper City takes a selection out of t
+
 - 109M vs 72B: Why Better Training Pairs Matter
   URL: https://abvx.xyz/writing/videos/QNgjNNEpsAM
   Summary: What if better AI starts with better training pairs, rather than just a bigger model? This short visual explainer looks at a 2026 preprint by Randall Balestriero and Yann LeCun. Their 109M-parameter text JEPA achieved st

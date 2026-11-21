@@ -437,6 +437,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/e7OuakMC4cA
   Summary: What if you could create hundreds of beautiful pixel art animations without drawing a single sprite? No Photoshop. No Aseprite. No pre-made image assets. Just Claude Code, JavaScript, and a surprisingly effective creativ
 
+- This Liquid Robot Squeezes Through Bars
+  URL: https://abvx.xyz/writing/videos/eB6HnfiTN8c
+  Summary: A millimetre-scale liquid robot squeezes through an array of posts. Its secret is a flexible coat of tiny water-repelling PTFE particles. In this lab demonstration, ultrasound pushes the droplet forward. Contact with the
+
 - I Made Windows and Mac Work Like One Computer (Deskflow + Syncthing)
   URL: https://abvx.xyz/writing/videos/EEWvJ3Ypl4w
   Summary: I have two computers: a powerful Windows PC for work and a MacBook for everything else. And I was tired of constantly switching keyboards, moving my mouse between devices, and sending screenshots and text to myself throu

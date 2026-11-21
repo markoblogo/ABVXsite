@@ -637,6 +637,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/I1vIAh3K9yo
   Summary: Claude Opus 5.5 helped direct an entire VFX scene through Blender MCP and Nuke, with Houdini in the pipeline. Not a single frame was AI-generated. This isn't text-to-video. It's an experiment in using an AI agent as a VF
 
+- Tesla FSD v15 Just Got a Third-Person AI Camera. Meet Reality View
+  URL: https://abvx.xyz/writing/videos/iaGp4wWf0W4
+  Summary: Tesla just unveiled something that looks like a third-person camera from a video game. Except it's happening on a real road. Meet TESLA REALITY VIEW, a new real-time generative driving visualization introduced with Full
+
 - Vercel CEO Built a Vinyl Player That Generates Sound From Physics
   URL: https://abvx.xyz/writing/videos/IAjh5g_XnLA
   Summary: Vercel CEO Guillermo Rauch just built an incredibly detailed vinyl record player simulation using WebGL2, Web Audio, and real-time physics. But here's the fascinating part: it doesn't simply play an audio file with a vin
@@ -1400,6 +1404,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - One Video Prompt, Six Outputs: The AO Motion Test
   URL: https://abvx.xyz/writing/videos/VPqHDX-Jtn8
   Summary: One brief called for a 15-second AO character reveal: thirteen cuts, readable kinetic type and a consistent blue-haired streetwear character. Watch six supplied clips on the same clock, then revisit three moments in slow
+
+- Neuralink Just Played GTA 6 With a Brain Implant. No Controller Needed.
+  URL: https://abvx.xyz/writing/videos/VPUFxmVbRMo
+  Summary: Neuralink just showed a clinical trial participant playing Grand Theft Auto VI without holding a controller or using a keyboard. And this isn't a pre-rendered concept video. Neuralink presents it as a real gameplay demon
 
 - NVIDIA Open-H3 IC: AI Video Upscaling to 4K Without Face Drift
   URL: https://abvx.xyz/writing/videos/VujPvRoggXw

@@ -9723,7 +9723,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-21T20:36:39.647Z",
+      "updatedAt": "2026-11-21T21:10:21.505Z",
       "tags": [],
       "links": [],
       "related": []
@@ -13970,6 +13970,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Neuralink Just Played GTA 6 With a Brain Implant. No Controller Needed.",
+      "summary": "Neuralink just showed a clinical trial participant playing Grand Theft Auto VI without holding a controller or using a keyboard. And this isn't a pre-rendered concept video. Neuralink presents it as a real gameplay demon",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/VPUFxmVbRMo",
+      "publishedAt": "2026-11-21T21:01:30.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=VPUFxmVbRMo"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Nice Airport to Menton: Bus or Train? | French Riviera Guide",
       "summary": "Landing at Nice Côte d’Azur Airport and heading to Menton? This 90-second guide compares the direct Line 80 coach with the train via Nice Saint-Augustin—and shows how to reach central Menton. Follow a stylised pixel-art ",
       "canonicalUrl": "https://abvx.xyz/writing/videos/ih43aF1zeaM",
@@ -17135,6 +17158,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=QbM4RIa9TJc"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Tesla FSD v15 Just Got a Third-Person AI Camera. Meet Reality View",
+      "summary": "Tesla just unveiled something that looks like a third-person camera from a video game. Except it's happening on a real road. Meet TESLA REALITY VIEW, a new real-time generative driving visualization introduced with Full ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/iaGp4wWf0W4",
+      "publishedAt": "2026-11-21T21:07:55.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=iaGp4wWf0W4"
         }
       ],
       "related": []

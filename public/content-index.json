@@ -9677,7 +9677,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-21T01:13:54.088Z",
+      "updatedAt": "2026-11-21T11:54:15.416Z",
       "tags": [],
       "links": [],
       "related": []
@@ -16001,6 +16001,42 @@
       "links": [],
       "publishedAt": "2026-11-20",
       "updatedAt": "2026-11-20",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #63 — Seeing Yourself Without Shrinking the World",
+      "summary": "Ten translated notebook fragments on seeing Yourself Without Shrinking the World.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-63-seeing-yourself-without-shrinking-the-world",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-21",
+      "updatedAt": "2026-11-21",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #64 — Trust Without Total Control",
+      "summary": "Ten translated notebook fragments on trust Without Total Control.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-64-trust-without-total-control",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-21",
+      "updatedAt": "2026-11-21",
       "related": []
     },
     {

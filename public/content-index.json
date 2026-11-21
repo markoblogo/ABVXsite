@@ -9677,7 +9677,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-21T00:49:28.200Z",
+      "updatedAt": "2026-11-21T01:13:54.088Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10093,6 +10093,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=GvL9AJNWPi0"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Elon Musk's 50 AI Agents Idea: Why Chatting With AI Is Apparently Outdated",
+      "summary": "What if the best way to use AI wasn't asking it questions, but hiring it 50 AI employees? A viral Elon Musk-themed skit imagines a very different kind of AI workflow: one agent plans the day, another manages projects, an",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/hHAxCL6PWjI",
+      "publishedAt": "2026-11-21T01:04:05.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=hHAxCL6PWjI"
         }
       ],
       "related": []

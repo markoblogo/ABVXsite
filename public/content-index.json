@@ -9723,7 +9723,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-21T21:10:21.505Z",
+      "updatedAt": "2026-11-21T22:20:56.527Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10116,6 +10116,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=o-bbORoN3FM"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "ego lite: A Browser Where Claude Code, Codex & You Work at the Same Time",
+      "summary": "Another AI browser? Apparently we needed one more. Meet ego lite, a free browser from Citro Labs designed so you and your AI coding agents can work in the same browser at the same time. Most AI browser setups follow one ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/yjS8_hed-IA",
+      "publishedAt": "2026-11-21T22:03:50.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=yjS8_hed-IA"
         }
       ],
       "related": []

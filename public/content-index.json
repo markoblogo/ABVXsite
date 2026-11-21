@@ -9677,7 +9677,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-21T15:50:09.941Z",
+      "updatedAt": "2026-11-21T17:10:03.985Z",
       "tags": [],
       "links": [],
       "related": []
@@ -19372,6 +19372,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=oPvkNkSqqwk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Why Hotels Are Putting AI Under Your Mattress",
+      "summary": "There might be AI under your hotel mattress. Its job is to catch bed bugs. Spotta’s Bed Pod sits between the mattress and the bed frame. A pheromone lure draws an insect inside, a camera photographs it, and Spotta’s syst",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/h0T9PxMdvmg",
+      "publishedAt": "2026-11-21T16:58:49.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=h0T9PxMdvmg"
         }
       ],
       "related": []

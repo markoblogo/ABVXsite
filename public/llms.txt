@@ -561,6 +561,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/gYt51ZVaNeE
   Summary: OpenAI just released GPT-Live-1.1 in the API, along with a new standby mode that makes long-running voice AI conversations significantly cheaper. And honestly, the standby feature might be the more important update. Unti
 
+- Why Hotels Are Putting AI Under Your Mattress
+  URL: https://abvx.xyz/writing/videos/h0T9PxMdvmg
+  Summary: There might be AI under your hotel mattress. Its job is to catch bed bugs. Spotta’s Bed Pod sits between the mattress and the bed frame. A pheromone lure draws an insect inside, a camera photographs it, and Spotta’s syst
+
 - You Can Fly Over Mars in Your Browser | NASA Eyes
   URL: https://abvx.xyz/writing/videos/h0ZTfFPKbcs
   Summary: You can explore the surface of Mars without leaving your browser. NASA's Eyes on the Solar System turns mission data and imagery into an interactive 3D simulation - and its August 2026 update added full Martian terrain f

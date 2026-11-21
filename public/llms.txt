@@ -1173,6 +1173,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/RGHZ8AY3Z2k
   Summary: A tram arrives at a tiny night stop. Its doors open. The scene looks alive in the browser—but can we turn it into a reusable 3D file? For this hands-on Three-Live test, we built an original miniature called Night Line 07
 
+- This Smart Ring Tells You When to Pray
+  URL: https://abvx.xyz/writing/videos/rGz5ialbeXI
+  Summary: Your watch says take a walk. This ring says pray. The Elah Ring S1 can vibrate or light up a cross when it detects certain stress-related signals. Its app also has FaithMate, an AI faith companion. Glorify takes a differ
+
 - Google Tabletop Turns Group Chats Into AI-Powered Mini Apps
   URL: https://abvx.xyz/writing/videos/rLh2N5wgV4I
   Summary: Google just introduced Tabletop, a new Google Labs experiment that lets you create custom interactive mini-apps for your friends, family, and group activities using AI. No coding required. Just describe what your group n

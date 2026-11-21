@@ -9677,7 +9677,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-21T15:11:05.461Z",
+      "updatedAt": "2026-11-21T15:50:09.941Z",
       "tags": [],
       "links": [],
       "related": []
@@ -18064,6 +18064,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=eB6HnfiTN8c"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "This Smart Ring Tells You When to Pray",
+      "summary": "Your watch says take a walk. This ring says pray. The Elah Ring S1 can vibrate or light up a cross when it detects certain stress-related signals. Its app also has FaithMate, an AI faith companion. Glorify takes a differ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/rGz5ialbeXI",
+      "publishedAt": "2026-11-21T15:44:46.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=rGz5ialbeXI"
         }
       ],
       "related": []

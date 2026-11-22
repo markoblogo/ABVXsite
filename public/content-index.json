@@ -9746,7 +9746,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-22T09:16:33.460Z",
+      "updatedAt": "2026-11-22T11:50:21.441Z",
       "tags": [],
       "links": [],
       "related": []
@@ -16412,6 +16412,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=wPIyeBYJZbQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "RUN//SIGNAL M02: Waterline | 15-Minute Beginner Walk + Run",
+      "summary": "North Relay reports a pressure fault. Your job is to carry a replacement seal through the canal service corridor to Waterline. Dispatch will guide your effort and tell you when to switch pace, so you can follow the missi",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/3b8ESlIpQkE",
+      "publishedAt": "2026-11-22T11:48:17.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=3b8ESlIpQkE"
         }
       ],
       "related": []

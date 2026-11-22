@@ -9746,7 +9746,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-22T11:50:21.441Z",
+      "updatedAt": "2026-11-22T23:50:13.721Z",
       "tags": [],
       "links": [],
       "related": []
@@ -12261,6 +12261,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=oR0J11NgEOo"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "I Bought a Bus Stop So I Could Miss Work | BuyMore",
+      "summary": "An indoor bus stop that cancels your commute? Finally, a gadget that solves Mondays. This BuyMore comedy sketch puts a $1,499 bus stop in the living room and waits to see how long it takes one shopper to hit Buy Now. Buy",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/XBpboKIoozo",
+      "publishedAt": "2026-11-22T23:38:44.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=XBpboKIoozo"
         }
       ],
       "related": []

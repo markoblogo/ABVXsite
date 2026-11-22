@@ -1493,6 +1493,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/xaGggJR8RrM
   Summary: An AI agent pays an API. The receipt turns green. But did the task actually get a useful answer? This short visual investigation separates two things that automated systems can easily confuse: a settled payment and a ver
 
+- I Bought a Bus Stop So I Could Miss Work | BuyMore
+  URL: https://abvx.xyz/writing/videos/XBpboKIoozo
+  Summary: An indoor bus stop that cancels your commute? Finally, a gadget that solves Mondays. This BuyMore comedy sketch puts a $1,499 bus stop in the living room and waits to see how long it takes one shopper to hit Buy Now. Buy
+
 - I Tried to Bury the AI. It Deleted Every Brick. 🤖 #Shorts
   URL: https://abvx.xyz/writing/videos/Xeta6R8hvPg
   Summary: I make a mess. The machine tidies up. Honestly, rude. SIRTET is a reverse falling-block music game: you sabotage the pieces while the AI tries to clear the board. This is the AI's all-clear ending, captured from the real

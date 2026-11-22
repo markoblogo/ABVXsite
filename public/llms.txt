@@ -913,6 +913,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/n5HYXnUWoNY
   Summary: What happens when you give two powerful AI models exactly the same creative challenge? One developer decided to find out. They tested GPT-6 Astra against DeepSeek V4.1-1017 Flash, using the same prompt and maximum reason
 
+- This Tiny Chip Lets a Test Tube Report Live
+  URL: https://abvx.xyz/writing/videos/N6BoSZ4Fykk
+  Summary: Two test tubes finish at the same temperature. What happened before that reading? In this explainer, an illustrative chart shows why the entire temperature curve matters. A team working with Stanford, Cornell and other r
+
 - Starship Flight 15: SpaceX Will Attempt TWO Mechazilla Catches! November 13 Launch
   URL: https://abvx.xyz/writing/videos/n92y2-xy8EE
   Summary: SpaceX has officially announced the target date for Starship Flight 15: no earlier than November 13, 2026. And this could be one of the most important rocket launches in history. Because for the first time, SpaceX plans

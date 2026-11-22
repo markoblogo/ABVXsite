@@ -9746,7 +9746,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-22T00:35:26.970Z",
+      "updatedAt": "2026-11-22T01:40:11.589Z",
       "tags": [],
       "links": [],
       "related": []
@@ -18317,6 +18317,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=XgbZRN9fK1M"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "This Tiny Chip Lets a Test Tube Report Live",
+      "summary": "Two test tubes finish at the same temperature. What happened before that reading? In this explainer, an illustrative chart shows why the entire temperature curve matters. A team working with Stanford, Cornell and other r",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/N6BoSZ4Fykk",
+      "publishedAt": "2026-11-22T01:11:42.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=N6BoSZ4Fykk"
         }
       ],
       "related": []

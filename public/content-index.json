@@ -9746,7 +9746,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-21T23:21:14.288Z",
+      "updatedAt": "2026-11-22T00:35:26.970Z",
       "tags": [],
       "links": [],
       "related": []
@@ -19580,6 +19580,29 @@
           "type": "section",
           "label": "Back to Writing",
           "url": "https://abvx.xyz/writing"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Why NASA Flew Back to Earth to Reach Mars",
+      "summary": "Why fly back toward Earth when your destination is Mars? NASA’s twin ESCAPADE spacecraft, Blue and Gold, launched in November 2025 and spent nearly a year near the Sun–Earth L2 point while waiting for a better alignment.",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/xuO__yvDhHo",
+      "publishedAt": "2026-11-22T00:00:18.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=xuO__yvDhHo"
         }
       ],
       "related": []

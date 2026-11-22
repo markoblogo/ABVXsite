@@ -3123,6 +3123,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook
 
+- Psychology Notebook #65 — Care, Limits and Real Contact
+  URL: https://abvx.xyz/writing/psychology-notebook-65-care-limits-and-real-contact
+  Summary: Ten translated notebook fragments on care, Limits and Real Contact.
+  Group: writing
+  Tags: psychology-notebook
+
+- Psychology Notebook #66 — Closeness and the Stories We Tell
+  URL: https://abvx.xyz/writing/psychology-notebook-66-closeness-and-the-stories-we-tell
+  Summary: Ten translated notebook fragments on closeness and the Stories We Tell.
+  Group: writing
+  Tags: psychology-notebook
+
 - The Berliner: How My Beer Cocktail Ended Up on a French Bar's Menu
   URL: https://abvx.xyz/writing/the-berliner-guinness-port-beer-cocktail
   Summary: I discovered Guinness with port wine in Berlin, recreated it with whatever a small French bar had available, and eventually watched it become an official item in the cash register.

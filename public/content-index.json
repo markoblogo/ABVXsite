@@ -9746,7 +9746,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-22T01:40:11.589Z",
+      "updatedAt": "2026-11-22T09:16:33.460Z",
       "tags": [],
       "links": [],
       "related": []
@@ -16198,6 +16198,42 @@
       "links": [],
       "publishedAt": "2026-11-21",
       "updatedAt": "2026-11-21",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #65 — Care, Limits and Real Contact",
+      "summary": "Ten translated notebook fragments on care, Limits and Real Contact.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-65-care-limits-and-real-contact",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-22",
+      "updatedAt": "2026-11-22",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #66 — Closeness and the Stories We Tell",
+      "summary": "Ten translated notebook fragments on closeness and the Stories We Tell.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-66-closeness-and-the-stories-we-tell",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-22",
+      "updatedAt": "2026-11-22",
       "related": []
     },
     {

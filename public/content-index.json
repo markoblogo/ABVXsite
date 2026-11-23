@@ -9792,7 +9792,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-23T19:50:57.892Z",
+      "updatedAt": "2026-11-23T21:11:37.462Z",
       "tags": [],
       "links": [],
       "related": []
@@ -19707,6 +19707,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=pT83dCFVxLU"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "What Is Tulvo? A Tour of Its AI Workspace",
+      "summary": "What is Tulvo, and how do its AI assistant, boards, documents and reports fit together? I walk through the workspace using two hands-on examples: a creative studio project and a freight operations workflow. Tulvo signup ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/YPYXpOpbCl4",
+      "publishedAt": "2026-11-23T20:56:51.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=YPYXpOpbCl4"
         }
       ],
       "related": []

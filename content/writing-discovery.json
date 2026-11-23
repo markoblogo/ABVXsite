@@ -6544,6 +6544,17 @@
     },
     {
       "source": "youtube",
+      "title": "What Is Tulvo? A Tour of Its AI Workspace",
+      "url": "https://www.youtube.com/watch?v=YPYXpOpbCl4",
+      "publishedAt": "2026-11-23T20:56:51.000Z",
+      "excerpt": "What is Tulvo, and how do its AI assistant, boards, documents and reports fit together? I walk through the workspace using two hands-on examples: a creative studio project and a freight operations workflow. Tulvo signup ",
+      "coverImage": "https://i.ytimg.com/vi/YPYXpOpbCl4/hqdefault.jpg",
+      "videoDescription": "What is Tulvo, and how do its AI assistant, boards, documents and reports fit together? I walk through the workspace using two hands-on examples: a creative studio project and a freight operations workflow.\n\nTulvo signup with a referral discount: https://app.tulvo.io/signup?aff=Krm8DM9vDohP\nAffiliate disclosure: Tulvo provided Enterprise access for this evaluation. I may earn a commission if you subscribe through this link.\n\nI show how a more specific prompt helped draft a proposal, how a Kanban board tracked a studio task, and how a freight record linked to a company and a separate authorization. I also check a saved report against the source record after a status change. The board changed, while that report still showed the earlier status after reload.\n\nThe video labels Tulvo’s own product examples separately. Public document sharing, readership analytics and website hosting are covered as features Tulvo describes. We did not test those features in these two workflows.\n\n00:00 What is Tulvo?\n00:11 AI workspace setup and proposal drafting\n00:25 Kanban and linked shipment records\n00:36 Private documents and sharing features\n00:51 Saved report vs. the shipment board\n01:07 Tulvo’s website hosting demo\n\nWatch the two practical tests:\nFreelancers and creative studios: https://youtu.be/m9lKpzSPnws\nFreight and business operations: https://youtu.be/87jxMAuyOCQ\nTulvo product overview: https://tulvo.io/platform\n\nStock credits (Pexels)\nRDNE Stock project: https://www.pexels.com/video/a-man-writing-on-the-clipboard-7463957/\nCemrecan Yurtman: https://www.pexels.com/photo/professional-film-crew-behind-the-scenes-in-studio-38058993/\nRon Lach: https://www.pexels.com/video/a-person-typing-on-laptop-while-writing-notes-9908107/ and https://www.pexels.com/video/a-cameraman-preparing-for-the-shooting-production-8089126/\n\nMade in Framewright — https://markoblogo.github.io/framewright/\nBy ABVX — https://abvx.xyz/\n\n#Tulvo #AIWorkspace #BusinessWorkflows #ProjectManagement #Framewright",
+      "addedAt": "2026-11-23T21:11:37.462Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "OpenMotion Is Open Source: Recreate Videos With Claude Code, Codex & MOTION.md",
       "url": "https://www.youtube.com/watch?v=YTBUoLPNTlY",
       "publishedAt": "2026-11-20T21:05:56.000Z",

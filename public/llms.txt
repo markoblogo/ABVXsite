@@ -1601,6 +1601,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/yjS8_hed-IA
   Summary: Another AI browser? Apparently we needed one more. Meet ego lite, a free browser from Citro Labs designed so you and your AI coding agents can work in the same browser at the same time. Most AI browser setups follow one
 
+- What Is Tulvo? A Tour of Its AI Workspace
+  URL: https://abvx.xyz/writing/videos/YPYXpOpbCl4
+  Summary: What is Tulvo, and how do its AI assistant, boards, documents and reports fit together? I walk through the workspace using two hands-on examples: a creative studio project and a freight operations workflow. Tulvo signup
+
 - OpenMotion Is Open Source: Recreate Videos With Claude Code, Codex & MOTION.md
   URL: https://abvx.xyz/writing/videos/YTBUoLPNTlY
   Summary: OpenMotion is officially open source, and it wants to become a serious alternative to Claude Motion and CapCut for AI-assisted video production. Its pitch is simple: give an AI coding agent a reference video, your brand

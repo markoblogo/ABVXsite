@@ -15,7 +15,8 @@
   "homepageEligible": true,
   "primarySection": "books",
   "appearsIn": [
-    "books"
+    "books",
+    "focus"
   ],
   "group": "Business, AI & Marketing",
   "category": "Business, AI & Marketing",

@@ -5002,6 +5002,17 @@
     },
     {
       "source": "youtube",
+      "title": "How to Reframe Horizontal Video for 9:16 in FFmpeg",
+      "url": "https://www.youtube.com/watch?v=OQm-MV2m0_8",
+      "publishedAt": "2026-11-23T22:48:06.000Z",
+      "excerpt": "What disappears when you crop a horizontal video down the middle? In this 9:16 reframing test, the center crop shows trees at the moment a helicopter bucket releases water. The manually moving crop keeps the bucket and t",
+      "coverImage": "https://i.ytimg.com/vi/OQm-MV2m0_8/hqdefault.jpg",
+      "videoDescription": "What disappears when you crop a horizontal video down the middle? In this 9:16 reframing test, the center crop shows trees at the moment a helicopter bucket releases water. The manually moving crop keeps the bucket and the start of the release visible.\n\nBoth views use the same source frames, color grade and crop dimensions. The difference is where the crop sits as the subject moves. About 22 seconds in, we freeze both versions on the same frame so you can see what each one kept.\n\nTry it on your own footage: find the instant the action starts, then scrub the frames just before and after it. Set the crop position to follow the subject and leave room for the action. For this 1280×720 shot, the FFmpeg filter was crop=396:704:'max(0,386-6.90*n)':8,scale=720:1280. Adjust the position and speed for your clip.\n\nFootage: MSgt Brandy Burke, Washington Air National Guard via DVIDS — https://www.dvidshub.net/video/1015999/wa-national-guard-provides-aviation-support-modrite-wildfire-response\n\nMade in Framewright — https://markoblogo.github.io/framewright/\nBy ABVX — https://abvx.xyz/\n\n#FFmpeg #VideoEditing #VerticalVideo #VideoReframing #VideoCropping",
+      "addedAt": "2026-11-23T22:50:51.862Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "I Asked Google Genie 4 to Build GTA 6. Then I Played It and Talked to NPCs.",
       "url": "https://www.youtube.com/watch?v=oR0J11NgEOo",
       "publishedAt": "2026-11-20T19:58:02.000Z",

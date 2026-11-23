@@ -9792,7 +9792,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-23T22:22:09.465Z",
+      "updatedAt": "2026-11-23T22:50:51.862Z",
       "tags": [],
       "links": [],
       "related": []
@@ -12100,6 +12100,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=cb8VIvOuVOU"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "How to Reframe Horizontal Video for 9:16 in FFmpeg",
+      "summary": "What disappears when you crop a horizontal video down the middle? In this 9:16 reframing test, the center crop shows trees at the moment a helicopter bucket releases water. The manually moving crop keeps the bucket and t",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/OQm-MV2m0_8",
+      "publishedAt": "2026-11-23T22:48:06.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=OQm-MV2m0_8"
         }
       ],
       "related": []

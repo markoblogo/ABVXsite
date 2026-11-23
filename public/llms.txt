@@ -301,6 +301,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/AInINeF12I4
   Summary: What if online shopping solved problems you never had - by delivering brand-new ones? Welcome to BuyMore, a fictional marketplace where useless gadgets get the full premium treatment. In this 58-second comedy short, an o
 
+- Xiaomi's Auto Parking System Is Having a Very Bad Day
+  URL: https://abvx.xyz/writing/videos/ANLG1Yv-0cI
+  Summary: Xiaomi's automated parking system is trying to park a car in an underground garage. Trying is the important word here. What should be a simple parking maneuver turns into a rather strange sequence of movements, correctio
+
 - He Used Claude Code to Remove Smart TV Ads and Make His TV 3× Faster
   URL: https://abvx.xyz/writing/videos/Ao-_E_l6F98
   Summary: Smart TVs have become ridiculous. You buy a television, turn it on, and somehow end up staring at advertisements, sponsored recommendations, and apps you never asked for. One developer finally decided he'd had enough. So
@@ -1376,6 +1380,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Claude Opus 5.5 Created This Animated 3D Shark in 45 Minutes | Blender + Tripo AI
   URL: https://abvx.xyz/writing/videos/u7HuTkQFvo4
   Summary: What if you could create a fully rigged and animated 3D creature in less than an hour? Not just a pretty 3D model. An actual character with a skeleton, swimming animations, and a convincing bite. This entire shark was cr
+
+- Gemini 4 AI Agents Made Quantum Algorithms Up to 290x Cheaper. Lean Verified the Results.
+  URL: https://abvx.xyz/writing/videos/uCWXkLF9nkU
+  Summary: Google DeepMind just used swarms of Gemini 4 AI agents to discover cheaper quantum algorithms. The biggest reported improvement? 290 TIMES lower resource cost for a quantum arithmetic routine. And here's the interesting
 
 - Vercel Agent Desktop: AI Agents Can Control Your Mac Without Screenshots | Claude & Codex
   URL: https://abvx.xyz/writing/videos/UcyFLnvIzeE

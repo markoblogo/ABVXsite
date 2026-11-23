@@ -9792,7 +9792,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-23T22:50:51.862Z",
+      "updatedAt": "2026-11-23T23:12:22.090Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10648,6 +10648,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=3qA7K-G0VXk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Gemini 4 AI Agents Made Quantum Algorithms Up to 290x Cheaper. Lean Verified the Results.",
+      "summary": "Google DeepMind just used swarms of Gemini 4 AI agents to discover cheaper quantum algorithms. The biggest reported improvement? 290 TIMES lower resource cost for a quantum arithmetic routine. And here's the interesting ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/uCWXkLF9nkU",
+      "publishedAt": "2026-11-23T23:04:12.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=uCWXkLF9nkU"
         }
       ],
       "related": []
@@ -20246,6 +20269,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=1KnBw2HaSyc"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Xiaomi's Auto Parking System Is Having a Very Bad Day",
+      "summary": "Xiaomi's automated parking system is trying to park a car in an underground garage. Trying is the important word here. What should be a simple parking maneuver turns into a rather strange sequence of movements, correctio",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/ANLG1Yv-0cI",
+      "publishedAt": "2026-11-23T22:56:26.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=ANLG1Yv-0cI"
         }
       ],
       "related": []

@@ -4672,6 +4672,17 @@
     },
     {
       "source": "youtube",
+      "title": "GitHub Copilot Evals: Can Your AI Catch the Wrong File?",
+      "url": "https://www.youtube.com/watch?v=n-wtccrWF-0",
+      "publishedAt": "2026-11-23T22:03:10.000Z",
+      "excerpt": "Two video exports have the same filenames. One still tells the client to show up on Thursday. The approved subtitles say Friday. What would your AI assistant need to check before sending the files? GitHub Copilot Evals, ",
+      "coverImage": "https://i.ytimg.com/vi/n-wtccrWF-0/hqdefault.jpg",
+      "videoDescription": "Two video exports have the same filenames. One still tells the client to show up on Thursday. The approved subtitles say Friday. What would your AI assistant need to check before sending the files?\n\nGitHub Copilot Evals, announced in public preview, gives teams a way to run repeatable tests of agents, skills and MCP tools. We use a small, separate Framewright example to make the idea practical. Both packages contain the same video and the same filenames. A local file check compares the video and subtitle file with approved copies. Run twice on each package, it cleared the correct pair and flagged the stale SRT both times.\n\nTry the same pattern in your own workflow: keep one approved package, create a second with a deliberately outdated subtitle, and write down exactly what must match. Then rerun the same check after changing a prompt, model or tool.\n\nGitHub announcement: https://github.blog/changelog/2026-11-17-github-copilot-evals-is-now-in-public-preview/\nClapperboard footage: cottonbro studio via Pexels — https://www.pexels.com/video/a-clapper-board-used-when-shooting-a-scene-on-film-making-3945485/\n\nMade in Framewright — https://markoblogo.github.io/framewright/\nBy ABVX — https://abvx.xyz/\n\n#GitHubCopilot #CopilotEvals #AIAgentTesting #VideoEditing #Subtitles",
+      "addedAt": "2026-11-23T22:22:09.465Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "How AI Agents Make Videos: A 2-Minute Framewright Workflow",
       "url": "https://www.youtube.com/watch?v=n1wuySSYQcQ",
       "publishedAt": "2026-10-26T10:55:32.000Z",

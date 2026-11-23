@@ -9792,7 +9792,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-23T21:11:37.462Z",
+      "updatedAt": "2026-11-23T22:22:09.465Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10979,6 +10979,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=Q9lzhnQEGjQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "GitHub Copilot Evals: Can Your AI Catch the Wrong File?",
+      "summary": "Two video exports have the same filenames. One still tells the client to show up on Thursday. The approved subtitles say Friday. What would your AI assistant need to check before sending the files? GitHub Copilot Evals, ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/n-wtccrWF-0",
+      "publishedAt": "2026-11-23T22:03:10.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=n-wtccrWF-0"
         }
       ],
       "related": []

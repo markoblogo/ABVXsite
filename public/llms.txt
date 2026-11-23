@@ -929,6 +929,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/Mw9YxTombVY
   Summary: Viggle AI just released Viggle-Remake, an open-weight video-to-video editing system built on MiniMax-H3 that brings cinematic AI video transformations to local GPUs. Think Higgsfield Miracle-style video editing, but with
 
+- GitHub Copilot Evals: Can Your AI Catch the Wrong File?
+  URL: https://abvx.xyz/writing/videos/n-wtccrWF-0
+  Summary: Two video exports have the same filenames. One still tells the client to show up on Thursday. The approved subtitles say Friday. What would your AI assistant need to check before sending the files? GitHub Copilot Evals,
+
 - How AI Agents Make Videos: A 2-Minute Framewright Workflow
   URL: https://abvx.xyz/writing/videos/n1wuySSYQcQ
   Summary: How does an AI agent turn an idea into a finished video? This two-minute Framewright lesson follows the process: brief, scenes, tools, narration, checks, precise revisions, and a publication-ready package. Two fictional

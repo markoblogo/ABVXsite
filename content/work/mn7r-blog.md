@@ -43,6 +43,13 @@
     "enabled": true,
     "url": "https://mn7r.com/rss.xml"
   },
+  "media": {
+    "src": "/media/work/mn7r-blog/editorial.webp",
+    "alt": "Illustration from an MN7R Blog article showing agricultural data and AI recommendations",
+    "role": "project-screenshot",
+    "width": 1468,
+    "height": 825
+  },
   "relatedSlugs": [
     "mn7r",
     "cropto-monitor",
@@ -67,4 +74,4 @@ Rather than functioning as a generic writing archive, the resource supports the 
 - connecting market operations to structured software surfaces,
 - and giving the broader Focus ecosystem a live editorial signal around brokerage infrastructure.
 
-The current Focus card and homepage entry are driven by the live MN7R RSS feed. When a new article is published, the visible title, excerpt, image and destination link update automatically from the latest feed item.
+The Focus card provides a stable entry to MN7R Blog. The homepage entry may reflect the latest article from its RSS feed.

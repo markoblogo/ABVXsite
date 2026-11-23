@@ -12,7 +12,6 @@ import SectionPanel from '@/components/SectionPanel';
 import { getEditorialArticles } from '@/content/editorials';
 import type { Artifact, Book, ContentFaq } from '@/content';
 import { toPublicArtifact } from '@/content/public-props';
-import { fetchMn7rFeed, type FeedItem } from '@/lib/feeds';
 import { artifactListItem, bookListItem, collectionPageJsonLd, faqPageJsonLd, focusOgImage, itemListJsonLd, metadataWithImage, SITE_URL } from '@/lib/seo';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -145,48 +144,8 @@ function slugifyFragment(value: string): string {
     .replace(/^-|-$/g, '');
 }
 
-async function safeLatestMn7rFeed(feedUrl?: string): Promise<FeedItem | null> {
-  if (!feedUrl) return null;
-  try {
-    const items = await fetchMn7rFeed(feedUrl);
-    return items[0] || null;
-  } catch {
-    return null;
-  }
-}
-
-function formatDate(iso?: string): string | undefined {
-  if (!iso) return undefined;
-  const time = new Date(iso);
-  if (Number.isNaN(time.valueOf())) return undefined;
-  return time.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'short',
-    day: '2-digit',
-  });
-}
-
 function siteLink(artifact: Artifact): string | undefined {
   return artifact.links.find((link) => link.type === 'site')?.url;
-}
-
-function feedCardProps(artifact: Artifact, latest: FeedItem | null) {
-  if (artifact.slug !== 'mn7r-blog' || (latest?.url || '').split(/[?#]/, 1)[0].replace(/\/$/, '') === 'https://mn7r.com/blog/why-strange-indicators-matter-to-market-operators') return {};
-
-  return {
-    href: latest?.url || siteLink(artifact) || `/work/${artifact.slug}`,
-    title: latest?.title || artifact.title,
-    summary: latest?.excerpt || artifact.summary,
-    image: latest?.coverImage
-      ? {
-          src: latest.coverImage,
-          alt: latest.title,
-          role: 'rss-image' as const,
-          mediaRole: 'rss-image' as const,
-        }
-      : undefined,
-    meta: latest?.publishedAt ? `MN7R Blog / ${formatDate(latest.publishedAt)}` : 'MN7R Blog / live RSS',
-  };
 }
 
 export default async function FocusPage() {
@@ -198,8 +157,6 @@ export default async function FocusPage() {
     .map(({ href, linkLabel, language }) => ({ href, linkLabel, language }));
   const listedArtifacts = [...(ami ? [ami] : []), ...focusGroups.flatMap((group) => itemsForGroup(artifacts, systemsGroupSlugs(group,artifacts,new Set(focusGroups.flatMap(g=>g.slugs)))))];
   const listedBooks = booksForGroup(books, focusBookGroup.slugs);
-  const mn7rBlog = artifacts.find((artifact) => artifact.slug === 'mn7r-blog');
-  const mn7rLatest = await safeLatestMn7rFeed(mn7rBlog?.rssFeed?.enabled ? mn7rBlog.rssFeed.url : undefined);
 
   return (
     <div className="route-focus grid gap-8">
@@ -367,7 +324,7 @@ export default async function FocusPage() {
                   key={artifact.id}
                   artifact={toPublicArtifact(artifact)}
                   tone="focus"
-                  {...feedCardProps(artifact, mn7rLatest)}
+                  href={artifact.slug === "mn7r-blog" ? siteLink(artifact) : undefined}
                 />
               ))}
             </div>

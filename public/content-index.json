@@ -9769,7 +9769,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-23T01:40:28.203Z",
+      "updatedAt": "2026-11-23T02:19:50.760Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11940,6 +11940,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "How Cargo Kept Moving After Baltimore’s Key Bridge Collapse",
+      "summary": "When the Francis Scott Key Bridge collapsed in March 2024, Baltimore’s main shipping channel was blocked. The Port of Virginia handled some of the diverted cargo, and carriers could still serve the Baltimore area by road",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/lZm5E5-xhLQ",
+      "publishedAt": "2026-11-23T02:00:22.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=lZm5E5-xhLQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "How Color Changes a Scene | One Forest, Three Feelings",
       "summary": "One forest. One traveler. Three very different feelings. This 42-second animated experiment explores how color grading, lighting and sound can turn the same setting into loneliness, shelter or unease. Cool blue gives way",
       "canonicalUrl": "https://abvx.xyz/writing/videos/wHOpypqPyCs",
@@ -12875,6 +12898,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=JDPXIbGzLsk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Inworld Voice Isolator: Open-Source AI Removes Noise Without Destroying Your Voice",
+      "summary": "What if you could remove background conversations, music, traffic, and room noise from a recording WITHOUT making the speaker sound like a synthetic robot? Inworld just open-sourced Voice Isolator, an AI audio-cleanup mo",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/YZx5Z5La5KY",
+      "publishedAt": "2026-11-23T01:52:45.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=YZx5Z5La5KY"
         }
       ],
       "related": []

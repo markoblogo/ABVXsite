@@ -869,6 +869,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/LzgnvledcWY
   Summary: What happens when brutal sci-fi meets psychedelic motion design? You get You Are Dead, a stunning cinematic edit created by Antibody for Bungie's video game Marathon. And the visual direction is absolutely insane. The fi
 
+- How Cargo Kept Moving After Baltimore’s Key Bridge Collapse
+  URL: https://abvx.xyz/writing/videos/lZm5E5-xhLQ
+  Summary: When the Francis Scott Key Bridge collapsed in March 2024, Baltimore’s main shipping channel was blocked. The Port of Virginia handled some of the diverted cargo, and carriers could still serve the Baltimore area by road
+
 - Runway Sightline: Create 360° AI Worlds With Virtual Camera Control
   URL: https://abvx.xyz/writing/videos/lZP_0q7V810
   Summary: Runway just launched Sightline, a new AI-powered tool that generates complete 360-degree environments from text prompts and lets you frame cinematic shots using a virtual camera. Instead of generating a completely new ba
@@ -1596,6 +1600,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Dreamina Motion Studio: AI Motion Graphics Without After Effects + Alternatives
   URL: https://abvx.xyz/writing/videos/YZ9RZd7RihE
   Summary: Dreamina AI just launched Motion Studio, a new AI-powered workspace that turns text prompts into code-rendered motion graphics. Describe an animation, provide your text and visual assets, choose a style, and let AI gener
+
+- Inworld Voice Isolator: Open-Source AI Removes Noise Without Destroying Your Voice
+  URL: https://abvx.xyz/writing/videos/YZx5Z5La5KY
+  Summary: What if you could remove background conversations, music, traffic, and room noise from a recording WITHOUT making the speaker sound like a synthetic robot? Inworld just open-sourced Voice Isolator, an AI audio-cleanup mo
 
 - NVIDIA Nemotron 3.5 Transcribe: The New King of Open-Weight Speech Recognition?
   URL: https://abvx.xyz/writing/videos/Z6k0B_8FqKA

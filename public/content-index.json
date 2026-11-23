@@ -9769,7 +9769,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-23T11:18:44.764Z",
+      "updatedAt": "2026-11-23T16:50:35.129Z",
       "tags": [],
       "links": [],
       "related": []
@@ -12123,6 +12123,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=zoG97J_Xal8"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "How Watch Duty Turns Fire Radio Into Wildfire Alerts",
+      "summary": "How does Watch Duty turn a scratchy fire radio call into a wildfire alert? Follow the Railroad Fire case in Washington from the first dispatch to the human verification that came before the public alert. Google says the ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/IkZg6DYe-iQ",
+      "publishedAt": "2026-11-23T16:30:14.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=IkZg6DYe-iQ"
         }
       ],
       "related": []

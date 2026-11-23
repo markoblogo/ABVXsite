@@ -3925,6 +3925,17 @@
     },
     {
       "source": "youtube",
+      "title": "How Watch Duty Turns Fire Radio Into Wildfire Alerts",
+      "url": "https://www.youtube.com/watch?v=IkZg6DYe-iQ",
+      "publishedAt": "2026-11-23T16:30:14.000Z",
+      "excerpt": "How does Watch Duty turn a scratchy fire radio call into a wildfire alert? Follow the Railroad Fire case in Washington from the first dispatch to the human verification that came before the public alert. Google says the ",
+      "coverImage": "https://i.ytimg.com/vi/IkZg6DYe-iQ/hqdefault.jpg",
+      "videoDescription": "How does Watch Duty turn a scratchy fire radio call into a wildfire alert? Follow the Railroad Fire case in Washington from the first dispatch to the human verification that came before the public alert.\n\nGoogle says the Gemini tool flagged the dispatch in under 30 seconds. That figure measures how quickly the tool surfaced the call for review. Watch Duty reporters verified the incident before the alert went out.\n\nSources and archive credits\nGoogle’s Watch Duty case study: https://blog.google/company-news/outreach-and-initiatives/google-org/watch-duty-gemini-tool/\nWashington State Patrol’s Railroad Fire notice: https://wsp.wa.gov/state-fire-mobilization-authorized-for-the-railroad-fire/\nModrite Fire aviation footage — MSgt Brandy Burke, Washington National Guard: https://www.dvidshub.net/video/1015999/wa-national-guard-provides-aviation-support-modrite-wildfire-response\nTimber Fire photograph (film and thumbnail) — Andrew Avitt, U.S. Forest Service: https://www.dvidshub.net/image/9874532/timber-fire\n\nThe radio line is a reconstruction. The archival footage and photograph show separate fires, identified on screen.",
+      "addedAt": "2026-11-23T16:50:35.129Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Meshy UltraTex: AI Generates 4K PBR Textures That React to Light",
       "url": "https://www.youtube.com/watch?v=ilAv4VVCR50",
       "publishedAt": "2026-11-19T20:53:23.000Z",

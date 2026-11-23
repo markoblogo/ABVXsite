@@ -673,6 +673,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/IQeH4VAVyZo
   Summary: An elevator sent the word “Gravity” through a brick wall. One bit took a minute. At the University of Queensland, researchers moved a roughly 1.8-tonne elevator counterweight between two positions to encode zeros and one
 
+- Gemini 4 Neon Built a V12 Engine With a Swarm of AI Agents in 2.5 Hours
+  URL: https://abvx.xyz/writing/videos/IS5NYE8TUxc
+  Summary: WARNING: The engine audio in this demo is loud. A swarm of AI coding agents just built a detailed 3D V12 engine simulator in approximately 2.5 hours. No Blender. No imported 3D models. Just Three.js, Gemini 4 Neon as the
+
 - 12 Tools to Fix AI Design Slop: UI Components, Motion & DESIGN.md
   URL: https://abvx.xyz/writing/videos/ivSAJBjeOuA
   Summary: Tired of AI-generated websites that all look the same? The same gradients. The same rounded cards. The same generic SaaS landing pages. Here's a collection of 12 design resources that can help Claude Code, Codex, Cursor,
@@ -1325,6 +1329,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/TISOtCghMVY
   Summary: Brokerage is more than closing a deal. Explore the clients, offers, execution, roles and AI-assisted operating support behind the MN7R workspace. Read the free English MN7R Product Guide — PDF and EPUB: https://abvx.xyz/
 
+- Rail Terminal Operations Walkthrough | Transit Speed Mándok Demo
+  URL: https://abvx.xyz/writing/videos/tyhMWxCJrEg
+  Summary: Follow a wagon through the Transit Speed Mándok terminal demo. Import its waybill, confirm arrivals, record mobile weighing, allocate cargo to a truck or stock, and close an empty return. The walkthrough also covers onwa
+
 - Every Startup Founder Has That ONE Deal That Never Closes
   URL: https://abvx.xyz/writing/videos/U-cVLltmoRM
   Summary: "We love your product!" "The team is really excited!" "Just waiting for final approval." "We should have everything signed next week." Three months later... Still closing. Any day now. Founders, drop a ❤️ if this feels p
@@ -1496,6 +1504,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - I Bought a Bus Stop So I Could Miss Work | BuyMore
   URL: https://abvx.xyz/writing/videos/XBpboKIoozo
   Summary: An indoor bus stop that cancels your commute? Finally, a gadget that solves Mondays. This BuyMore comedy sketch puts a $1,499 bus stop in the living room and waits to see how long it takes one shopper to hit Buy Now. Buy
+
+- How a Rail Terminal Could Track Every Wagon | Transit Speed Mándok
+  URL: https://abvx.xyz/writing/videos/xC-3gGs4bTs
+  Summary: This concept film follows a rail wagon through a proposed terminal operations workflow at Mándok. See how document checks, mobile weighing, cargo moves and empty returns could stay connected from the waybill to the share
 
 - I Tried to Bury the AI. It Deleted Every Brick. 🤖 #Shorts
   URL: https://abvx.xyz/writing/videos/Xeta6R8hvPg

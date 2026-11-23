@@ -9746,7 +9746,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-23T00:36:04.636Z",
+      "updatedAt": "2026-11-23T01:14:44.547Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10796,6 +10796,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Gemini 4 Neon Built a V12 Engine With a Swarm of AI Agents in 2.5 Hours",
+      "summary": "WARNING: The engine audio in this demo is loud. A swarm of AI coding agents just built a detailed 3D V12 engine simulator in approximately 2.5 hours. No Blender. No imported 3D models. Just Three.js, Gemini 4 Neon as the",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/IS5NYE8TUxc",
+      "publishedAt": "2026-11-23T00:59:23.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=IS5NYE8TUxc"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Gemini Omni 1.2 Flash Explained: Edit or Regenerate?",
       "summary": "A great shot. One wrong detail. Should you edit it or regenerate everything? Google says Gemini Omni 1.2 Flash can create 15-second clips and refine them through follow-up requests. This short illustrated guide looks at ",
       "canonicalUrl": "https://abvx.xyz/writing/videos/qfEnMIjJzys",
@@ -11785,6 +11808,29 @@
           "Spicy ginger beer: add a 2–3 mm slice of fresh hot pepper to one freshly filled bottle and leave it through the same secondary fermentation period."
         ]
       }
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "How a Rail Terminal Could Track Every Wagon | Transit Speed Mándok",
+      "summary": "This concept film follows a rail wagon through a proposed terminal operations workflow at Mándok. See how document checks, mobile weighing, cargo moves and empty returns could stay connected from the waybill to the share",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/xC-3gGs4bTs",
+      "publishedAt": "2026-11-23T00:48:57.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=xC-3gGs4bTs"
+        }
+      ],
+      "related": []
     },
     {
       "type": "writing",
@@ -16346,6 +16392,29 @@
           "relation": "related"
         }
       ]
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Rail Terminal Operations Walkthrough | Transit Speed Mándok Demo",
+      "summary": "Follow a wagon through the Transit Speed Mándok terminal demo. Import its waybill, confirm arrivals, record mobile weighing, allocate cargo to a truck or stock, and close an empty return. The walkthrough also covers onwa",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/tyhMWxCJrEg",
+      "publishedAt": "2026-11-23T00:51:55.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=tyhMWxCJrEg"
+        }
+      ],
+      "related": []
     },
     {
       "type": "video",

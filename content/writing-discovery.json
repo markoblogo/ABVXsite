@@ -3938,6 +3938,17 @@
     },
     {
       "source": "youtube",
+      "title": "Gemini 4 Neon Built a V12 Engine With a Swarm of AI Agents in 2.5 Hours",
+      "url": "https://www.youtube.com/watch?v=IS5NYE8TUxc",
+      "publishedAt": "2026-11-23T00:59:23.000Z",
+      "excerpt": "WARNING: The engine audio in this demo is loud. A swarm of AI coding agents just built a detailed 3D V12 engine simulator in approximately 2.5 hours. No Blender. No imported 3D models. Just Three.js, Gemini 4 Neon as the",
+      "coverImage": "https://i.ytimg.com/vi/IS5NYE8TUxc/hqdefault.jpg",
+      "videoDescription": "WARNING: The engine audio in this demo is loud.\n\nA swarm of AI coding agents just built a detailed 3D V12 engine simulator in approximately 2.5 hours.\n\nNo Blender. No imported 3D models. Just Three.js, Gemini 4 Neon as the orchestrator, and a team of Gemini 4 Hydrogen subagents.\n\nThe creator, Bee (@thtbee_), shared the result on November 20, 2026. And the most interesting part isn't just how it looks. It's how the entire project was coordinated.\n\nHOW THE AI SWARM WORKED\n\nAccording to the creator, the project was built in Google Antigravity using its /Swarm workflow.\n\n• Gemini 4 Neon acted as the orchestrator.\n• A swarm of Gemini 4 Hydrogen agents handled delegated work.\n• The agents generated the 3D visualization in code using Three.js.\n• Neon reviewed the rendered result and coordinated further revisions.\n• Once the creator was satisfied, the agents recorded the demo.\n\nRather than asking one model to build everything in a single response, this workflow involved ongoing coordination, inspection, and iteration.\n\nWHAT DID THEY BUILD?\n\nThe demo features an animated V12 engine with moving pistons, an exploded view, an X-ray mode, metallic materials, and an interface resembling a premium automotive visualization.\n\nIt looks like the kind of interactive engineering showcase you'd expect to require dedicated 3D modeling software.\n\nBut the author says the project was built entirely with code.\n\nThat doesn't automatically make it an engineering-grade simulation. A convincing animated engine can still contain incorrect mechanics, timing, or physical behavior. The visual result is impressive; its mechanical accuracy would need separate validation.\n\nTHE MOST RIDICULOUS PART: THE PROMPT\n\nThe creator asked Gemini 4 Neon to write the brief for the Hydrogen swarm.\n\nNeon produced this line:\n\n\"It has to look like a premium automotive configurator and engineering visualiser HAD A BABY.\"\n\nApparently, we're now letting AI agents write creative briefs for other AI agents.\n\nAnd honestly, that's a fairly memorable art direction.\n\nHOW MUCH DID IT COST IN USAGE?\n\nThe creator reported:\n\n• About 2.5 hours of elapsed work.\n• Approximately 71% of a five-hour usage window.\n• About 12% of a weekly usage allowance.\n\nThose percentages describe reported quota consumption, not dollars spent and not elapsed time. They also aren't a universal estimate of what another account would use for the same task.\n\nPREVIOUS PROJECT: AUDI 4.2 V8\n\nThe same creator previously shared an interactive Audi 4.2 V8 engine test-cell project.\n\nYou can explore that earlier demonstration here:\nhttps://audi-v8-test-cell.vercel.app/\n\nWHY THIS MATTERS\n\nAI coding is becoming less about a single model producing a file and more about supervising a team of specialized agents.\n\nA planning model sets the direction. Worker agents implement parts of the task. The orchestrator reviews results and sends them back for another iteration.\n\nThe outcome is not just an image of an engine. It's a code-driven, interactive 3D scene that can potentially be modified, extended, and embedded in a website.\n\nAnd that has implications well beyond automotive visualizations: product configurators, educational simulations, industrial explainers, and interactive web experiences.\n\nOf course, a polished demo isn't proof that the code is maintainable, the physics are correct, or the workflow is cost-effective at scale.\n\nBut it's a striking example of what agent orchestration can already produce.\n\nORIGINAL SOURCES\n\nV12 demo by Bee:\nhttps://x.com/thtbee_/status/2123843882937155607\n\nReddit breakdown:\nhttps://www.reddit.com/r/TopologyAI/comments/1y1qg00/a_v12_engine_built_by_an_ai_swarm_in_25_hours/\n\nEarlier Audi V8 test cell:\nhttps://audi-v8-test-cell.vercel.app/\n\nWould you use an AI swarm to build an interactive 3D experience, or would you rather work with a single coding agent?\n\n#Gemini4 #AIAgents #ThreeJS",
+      "addedAt": "2026-11-23T01:14:44.547Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "12 Tools to Fix AI Design Slop: UI Components, Motion & DESIGN.md",
       "url": "https://www.youtube.com/watch?v=ivSAJBjeOuA",
       "publishedAt": "2026-11-18T17:14:19.000Z",
@@ -5743,6 +5754,17 @@
     },
     {
       "source": "youtube",
+      "title": "Rail Terminal Operations Walkthrough | Transit Speed Mándok Demo",
+      "url": "https://www.youtube.com/watch?v=tyhMWxCJrEg",
+      "publishedAt": "2026-11-23T00:51:55.000Z",
+      "excerpt": "Follow a wagon through the Transit Speed Mándok terminal demo. Import its waybill, confirm arrivals, record mobile weighing, allocate cargo to a truck or stock, and close an empty return. The walkthrough also covers onwa",
+      "coverImage": "https://i.ytimg.com/vi/tyhMWxCJrEg/hqdefault.jpg",
+      "videoDescription": "Follow a wagon through the Transit Speed Mándok terminal demo. Import its waybill, confirm arrivals, record mobile weighing, allocate cargo to a truck or stock, and close an empty return. The walkthrough also covers onward rail and truck shipments, Excel exports and partner tracking.\n\nFollow along with fictional training data: https://terminal.mn7r.com/\n\n00:00 Terminal demo and sample data\n00:19 Wagon register\n00:42 Import a waybill\n01:05 Confirm arrivals\n01:25 Mobile weighing\n02:09 Allocate cargo and update stock\n02:47 Empty wagon return\n03:26 Ship from stock\n03:50 Truck dispatch and CMR\n04:10 Outbound train\n04:33 Logistics swap\n04:58 Registers, Excel and archive\n05:16 Directory and activity log\n05:36 Partner tracking and next steps\n\nMade in Framewright.",
+      "addedAt": "2026-11-23T01:14:44.547Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Every Startup Founder Has That ONE Deal That Never Closes",
       "url": "https://www.youtube.com/watch?v=U-cVLltmoRM",
       "publishedAt": "2026-10-13T13:50:29.000Z",
@@ -6224,6 +6246,17 @@
       "coverImage": "https://i.ytimg.com/vi/XBpboKIoozo/hqdefault.jpg",
       "videoDescription": "An indoor bus stop that cancels your commute? Finally, a gadget that solves Mondays. This BuyMore comedy sketch puts a $1,499 bus stop in the living room and waits to see how long it takes one shopper to hit Buy Now.\n\nBuyMore is a fictional marketplace. The product, reviews, prices and checkout were made for this Framewright sketch.\n\nWatch the first BuyMore sketch: https://youtu.be/AInINeF12I4\n\n#ComedySketch #OnlineShopping #BuyMore",
       "addedAt": "2026-11-22T23:50:13.721Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
+      "title": "How a Rail Terminal Could Track Every Wagon | Transit Speed Mándok",
+      "url": "https://www.youtube.com/watch?v=xC-3gGs4bTs",
+      "publishedAt": "2026-11-23T00:48:57.000Z",
+      "excerpt": "This concept film follows a rail wagon through a proposed terminal operations workflow at Mándok. See how document checks, mobile weighing, cargo moves and empty returns could stay connected from the waybill to the share",
+      "coverImage": "https://i.ytimg.com/vi/xC-3gGs4bTs/hqdefault.jpg",
+      "videoDescription": "This concept film follows a rail wagon through a proposed terminal operations workflow at Mándok. See how document checks, mobile weighing, cargo moves and empty returns could stay connected from the waybill to the shared operations register.\n\nThe screens and records illustrate a proposed workflow. Product examples appear for context.\n\n00:00 The problem with disconnected records\n00:19 Linking cargo, wagons and operations\n00:39 Document review and mobile weighing\n01:11 The operations register\n01:30 Transport and partner visibility\n02:10 A phased rollout\n\nTry the separate Transit Speed training demo: https://terminal.mn7r.com/\n\nEnglish narration and subtitles by Framewright.",
+      "addedAt": "2026-11-23T01:14:44.547Z",
       "addedAtBasis": "observed"
     },
     {

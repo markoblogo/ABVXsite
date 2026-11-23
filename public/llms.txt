@@ -253,6 +253,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/8-xTki6iCG0
   Summary: Blender 5.3 is officially here, bringing native 3D Gaussian Splatting, NVIDIA DLSS 4.5 Ray Reconstruction, and major upgrades to Cycles, EEVEE, and Geometry Nodes. This is more than a routine Blender update. It's a signi
 
+- Tulvo Review for Business Operations: Testing a Shipment Release Workflow
+  URL: https://abvx.xyz/writing/videos/87jxMAuyOCQ
+  Summary: Can Tulvo handle a freight release workflow? I tested two fictional shipments in a private workspace, linked them to the same counterparty, and checked what happened when one shipment had a release PDF and the other didn
+
 - Good Dogs of the Apocalypse | A Darkly Comic LitRPG Series
   URL: https://abvx.xyz/writing/videos/89kTx1LhEP0
   Summary: The world changed. The dogs read the fine print. Meet Mriya, a former shelter dog navigating a city rewritten by the System. Good Dogs of the Apocalypse is a darkly comic, dog-centered LitRPG series about survival, found

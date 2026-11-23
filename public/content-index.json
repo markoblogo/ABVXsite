@@ -9792,7 +9792,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-23T19:10:12.826Z",
+      "updatedAt": "2026-11-23T19:50:57.892Z",
       "tags": [],
       "links": [],
       "related": []
@@ -18849,6 +18849,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=OHU26SiXCoU"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Tulvo Review for Business Operations: Testing a Shipment Release Workflow",
+      "summary": "Can Tulvo handle a freight release workflow? I tested two fictional shipments in a private workspace, linked them to the same counterparty, and checked what happened when one shipment had a release PDF and the other didn",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/87jxMAuyOCQ",
+      "publishedAt": "2026-11-23T19:50:51.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=87jxMAuyOCQ"
         }
       ],
       "related": []

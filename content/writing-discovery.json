@@ -2813,6 +2813,17 @@
     },
     {
       "source": "youtube",
+      "title": "Tulvo Review for Business Operations: Testing a Shipment Release Workflow",
+      "url": "https://www.youtube.com/watch?v=87jxMAuyOCQ",
+      "publishedAt": "2026-11-23T19:50:51.000Z",
+      "excerpt": "Can Tulvo handle a freight release workflow? I tested two fictional shipments in a private workspace, linked them to the same counterparty, and checked what happened when one shipment had a release PDF and the other didn",
+      "coverImage": "https://i.ytimg.com/vi/87jxMAuyOCQ/hqdefault.jpg",
+      "videoDescription": "Can Tulvo handle a freight release workflow? I tested two fictional shipments in a private workspace, linked them to the same counterparty, and checked what happened when one shipment had a release PDF and the other didn’t.\n\nTulvo signup with a referral discount: https://app.tulvo.io/signup?aff=Krm8DM9vDohP\nAffiliate disclosure: Tulvo provided Enterprise access for this evaluation. I may earn a commission if you subscribe through this link.\n\nUsing Transit Speed’s Terminal as a logistics reference, I set up a shipment list in Tulvo with company records, a linked release authorization record, and a PDF attached directly to one shipment. In the manual status edit I tested, both shipments could be marked Released and both changes survived a reload.\n\nI also checked a saved status report against the source rows. The report marked the empty attachment field as unverified. After I changed one shipment back to Held and reloaded the report, it still showed the earlier status. If you use a generated report to make a release decision, check the shipment record first.\n\n00:00 The freight release question\n00:18 Linked shipments, companies and documents\n00:34 The PDF and status test\n00:54 Saved report vs. shipment board\n\nFirst Tulvo test, for freelancers and small studios: https://youtu.be/m9lKpzSPnws\nTransit Speed Terminal: https://terminal.mn7r.com/\n\nMade in Framewright — https://markoblogo.github.io/framewright/\nBy ABVX — https://abvx.xyz/\n\n#Tulvo #BusinessOperations #LogisticsWorkflow #ShipmentTracking #Framewright",
+      "addedAt": "2026-11-23T19:50:57.892Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Good Dogs of the Apocalypse | A Darkly Comic LitRPG Series",
       "url": "https://www.youtube.com/watch?v=89kTx1LhEP0",
       "publishedAt": "2026-10-14T15:28:46.000Z",

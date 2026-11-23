@@ -42,6 +42,7 @@ const focusBookGroup = {
     'mn7r-agro-commodity-brokerage-ua-free-edition',
     'spot-market-handbook-ua-free-edition',
     'contract-execution-officer-handbook',
+    'burgers-lipstick-underwear',
   ],
 } as const;
 
@@ -170,7 +171,7 @@ function siteLink(artifact: Artifact): string | undefined {
 }
 
 function feedCardProps(artifact: Artifact, latest: FeedItem | null) {
-  if (artifact.slug !== 'mn7r-blog') return {};
+  if (artifact.slug !== 'mn7r-blog' || (latest?.url || '').split(/[?#]/, 1)[0].replace(/\/$/, '') === 'https://mn7r.com/blog/why-strange-indicators-matter-to-market-operators') return {};
 
   return {
     href: latest?.url || siteLink(artifact) || `/work/${artifact.slug}`,

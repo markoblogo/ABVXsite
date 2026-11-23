@@ -8231,6 +8231,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Audio Out of Sync After Joining Clips? Check the Cut",
+      "summary": "Audio out of sync after joining clips? Check where the first clip’s audio ends. In this 37-second video editing test, you can hear a 320 ms delay after the cut, then compare the same two clips before and after the fix. W",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/nhOBQe4YgBU",
+      "publishedAt": "2026-11-23T17:18:55.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=nhOBQe4YgBU"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Autopilot: An AI Game Tester That Plays, Finds Bugs & Learns | Unreal, Unity & Godot",
       "summary": "What if you could give an AI agent your unfinished game and tell it: \"Play this. Find everything that's broken. And don't stop until you've tested it properly.\" Well, someone built exactly that. Meet Aura Autopilot, a ne",
       "canonicalUrl": "https://abvx.xyz/writing/videos/6oJufkVQG-g",
@@ -9769,7 +9792,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-23T16:50:35.129Z",
+      "updatedAt": "2026-11-23T17:36:33.563Z",
       "tags": [],
       "links": [],
       "related": []

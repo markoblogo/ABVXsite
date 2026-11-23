@@ -965,6 +965,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/NeEnBM49c2A
   Summary: World Labs just opened access to Atlas and its developer API, allowing creators to generate and reconstruct explorable 3D environments, render cinematic camera movements, and export scenes as 3D Gaussian Splats. This is
 
+- Audio Out of Sync After Joining Clips? Check the Cut
+  URL: https://abvx.xyz/writing/videos/nhOBQe4YgBU
+  Summary: Audio out of sync after joining clips? Check where the first clip’s audio ends. In this 37-second video editing test, you can hear a 320 ms delay after the cut, then compare the same two clips before and after the fix. W
+
 - He Emailed Salesforce's CEO 53 Times. Here's How He Finally Got a Reply
   URL: https://abvx.xyz/writing/videos/NOi2yqMGaP0
   Summary: How many follow-ups would you send before giving up on your dream customer? Three? Five? Maybe ten? Well, Harry Stebbings sent 53 emails to Marc Benioff, the CEO of Salesforce. And for 52 weeks, he got absolutely nothing

@@ -4761,6 +4761,17 @@
     },
     {
       "source": "youtube",
+      "title": "Audio Out of Sync After Joining Clips? Check the Cut",
+      "url": "https://www.youtube.com/watch?v=nhOBQe4YgBU",
+      "publishedAt": "2026-11-23T17:18:55.000Z",
+      "excerpt": "Audio out of sync after joining clips? Check where the first clip’s audio ends. In this 37-second video editing test, you can hear a 320 ms delay after the cut, then compare the same two clips before and after the fix. W",
+      "coverImage": "https://i.ytimg.com/vi/nhOBQe4YgBU/hqdefault.jpg",
+      "videoDescription": "Audio out of sync after joining clips? Check where the first clip’s audio ends. In this 37-second video editing test, you can hear a 320 ms delay after the cut, then compare the same two clips before and after the fix.\n\nWhat happened: Clip A has 2.00 seconds of picture and 2.32 seconds of audio. When the picture and audio tracks are joined separately, the extra audio shifts Clip B’s beep even though the flash lands on the right frame.\n\nWhat fixed it: Trim the first clip’s audio at the picture cut before joining the tracks. We used FFmpeg to put both inputs on the same output frame rate and audio format in both passes. Trimming the extra 320 ms brought the beep back within one frame of the flash at 30 fps.\n\nTry it on your own edit: play across the seam and look for a clear cue just after it, such as a clap or a visible impact. Compare where the sound lands before and after trimming.\n\nFFmpeg audio trim reference: https://ffmpeg.org/ffmpeg-filters.html#atrim\nClapperboard footage: cottonbro studio via Pexels — https://www.pexels.com/video/a-clapper-board-used-when-shooting-a-scene-on-film-making-3945485/\nStudio illustrations are AI-generated.",
+      "addedAt": "2026-11-23T17:36:33.563Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "He Emailed Salesforce's CEO 53 Times. Here's How He Finally Got a Reply",
       "url": "https://www.youtube.com/watch?v=NOi2yqMGaP0",
       "publishedAt": "2026-10-24T11:46:26.000Z",

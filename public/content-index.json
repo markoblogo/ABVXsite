@@ -9769,7 +9769,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-23T02:19:50.760Z",
+      "updatedAt": "2026-11-23T11:18:44.764Z",
       "tags": [],
       "links": [],
       "related": []
@@ -16372,6 +16372,42 @@
       "links": [],
       "publishedAt": "2026-11-22",
       "updatedAt": "2026-11-22",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #67 — Loss and the Space to Feel",
+      "summary": "Ten translated notebook fragments on loss and the Space to Feel.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-67-loss-and-the-space-to-feel",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-23",
+      "updatedAt": "2026-11-23",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #68 — When the Old Ways Stop Working",
+      "summary": "Ten translated notebook fragments on when the Old Ways Stop Working.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-68-when-the-old-ways-stop-working",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-23",
+      "updatedAt": "2026-11-23",
       "related": []
     },
     {

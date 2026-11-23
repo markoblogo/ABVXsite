@@ -3171,6 +3171,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook
 
+- Psychology Notebook #67 — Loss and the Space to Feel
+  URL: https://abvx.xyz/writing/psychology-notebook-67-loss-and-the-space-to-feel
+  Summary: Ten translated notebook fragments on loss and the Space to Feel.
+  Group: writing
+  Tags: psychology-notebook
+
+- Psychology Notebook #68 — When the Old Ways Stop Working
+  URL: https://abvx.xyz/writing/psychology-notebook-68-when-the-old-ways-stop-working
+  Summary: Ten translated notebook fragments on when the Old Ways Stop Working.
+  Group: writing
+  Tags: psychology-notebook
+
 - The Berliner: How My Beer Cocktail Ended Up on a French Bar's Menu
   URL: https://abvx.xyz/writing/the-berliner-guinness-port-beer-cocktail
   Summary: I discovered Guinness with port wine in Berlin, recreated it with whatever a small French bar had available, and eventually watched it become an official item in the cash register.

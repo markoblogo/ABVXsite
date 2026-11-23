@@ -3960,6 +3960,17 @@
     },
     {
       "source": "youtube",
+      "title": "A Retro Radio for Your Desktop | TONFELD",
+      "url": "https://www.youtube.com/watch?v=IZKKa9ThG7g",
+      "publishedAt": "2026-11-23T01:38:45.000Z",
+      "excerpt": "TONFELD is an open-source retro desktop music player for your local library, online radio and YouTube Music. Watch a 1960s radiogram give way to the compact player, then see the local station dial tune an online stream a",
+      "coverImage": "https://i.ytimg.com/vi/IZKKa9ThG7g/hqdefault.jpg",
+      "videoDescription": "TONFELD is an open-source retro desktop music player for your local library, online radio and YouTube Music. Watch a 1960s radiogram give way to the compact player, then see the local station dial tune an online stream and the player disappear while playback continues.\n\nYouTube Music control requires the paired browser companion. TONFELD can save local microphone, online radio or approved connected-tab audio to WAV. The tuning hiss and music were mixed separately for this demonstration.\n\nTONFELD repository and releases: https://github.com/markoblogo/TONFELD\n\n00:00 From radiogram to desktop\n00:13 Local station tuning\n00:26 Local library and compact playback\n00:53 Online radio catalogue\n01:05 YouTube Music companion and recording\n\nMade in Framewright.",
+      "addedAt": "2026-11-23T01:40:28.203Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Unity 6 Game With AI: 500 Human Hours, $990, 200K Lines of Code",
       "url": "https://www.youtube.com/watch?v=J4gJWt2FH4w",
       "publishedAt": "2026-11-12T17:12:25.000Z",

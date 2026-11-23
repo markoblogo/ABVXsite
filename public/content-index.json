@@ -7526,6 +7526,29 @@
       "related": []
     },
     {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "A Retro Radio for Your Desktop | TONFELD",
+      "summary": "TONFELD is an open-source retro desktop music player for your local library, online radio and YouTube Music. Watch a 1960s radiogram give way to the compact player, then see the local station dial tune an online stream a",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/IZKKa9ThG7g",
+      "publishedAt": "2026-11-23T01:38:45.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=IZKKa9ThG7g"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "video-feed",
       "section": "writing",
       "ecosystem": "Writing",
@@ -9746,7 +9769,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-23T01:14:44.547Z",
+      "updatedAt": "2026-11-23T01:40:28.203Z",
       "tags": [],
       "links": [],
       "related": []

@@ -681,6 +681,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/ivSAJBjeOuA
   Summary: Tired of AI-generated websites that all look the same? The same gradients. The same rounded cards. The same generic SaaS landing pages. Here's a collection of 12 design resources that can help Claude Code, Codex, Cursor,
 
+- A Retro Radio for Your Desktop | TONFELD
+  URL: https://abvx.xyz/writing/videos/IZKKa9ThG7g
+  Summary: TONFELD is an open-source retro desktop music player for your local library, online radio and YouTube Music. Watch a 1960s radiogram give way to the compact player, then see the local station dial tune an online stream a
+
 - Unity 6 Game With AI: 500 Human Hours, $990, 200K Lines of Code
   URL: https://abvx.xyz/writing/videos/J4gJWt2FH4w
   Summary: Can you build a complex Unity 6 game with Claude Code, ChatGPT, and Gemini? Yes. But making it actually feel good to play is a completely different challenge. Meet The Roveheart, an ambitious mobile sailing combat game d

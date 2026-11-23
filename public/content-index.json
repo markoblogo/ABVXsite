@@ -9792,7 +9792,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-23T17:36:33.563Z",
+      "updatedAt": "2026-11-23T19:10:12.826Z",
       "tags": [],
       "links": [],
       "related": []
@@ -18849,6 +18849,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=OHU26SiXCoU"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Tulvo Review for Freelancers: From Client Inquiry to Project",
+      "summary": "Can Tulvo take a freelance or creative studio project from client inquiry to delivery planning? I used Framewright as the example and ran a fictional product-video brief through a private Tulvo workspace, from intake and",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/m9lKpzSPnws",
+      "publishedAt": "2026-11-23T18:44:37.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=m9lKpzSPnws"
         }
       ],
       "related": []

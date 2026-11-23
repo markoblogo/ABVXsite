@@ -885,6 +885,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/m0iXZ3eHSiQ
   Summary: Meet Patch, a new AI-powered game development platform that lets coding agents build, modify, remix, and publish playable games using a single CLI and MCP integration. And it comes with more than 50,000 open-source game
 
+- Tulvo Review for Freelancers: From Client Inquiry to Project
+  URL: https://abvx.xyz/writing/videos/m9lKpzSPnws
+  Summary: Can Tulvo take a freelance or creative studio project from client inquiry to delivery planning? I used Framewright as the example and ran a fictional product-video brief through a private Tulvo workspace, from intake and
+
 - SEOmator SEO Audit: 398 Checks, Free CLI, Desktop App & AI Agent Support
   URL: https://abvx.xyz/writing/videos/mcBkT7eA27g
   Summary: An open-source SEO audit tool that runs on your desktop, in the terminal, or inside an AI coding workflow? Meet SEOmator SEO Audit, introduced by SEO specialist Emre Elbeyoglu. The video shows an early demonstration of i

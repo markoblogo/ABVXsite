@@ -1700,6 +1700,16 @@
       "addedAtBasis": "observed"
     },
     {
+      "source": "medium",
+      "title": "Your Old Laptop Isn’t Too Stupid for AI. Your Inference Engine Might Just Be Too Fat.",
+      "url": "https://abvcreative.medium.com/your-old-laptop-isnt-too-stupid-for-ai-your-inference-engine-might-just-be-too-fat-3a0b120f9b90",
+      "publishedAt": "2026-11-23T18:33:07.000Z",
+      "excerpt": "Meet Cheetah, an open-source local LLM engine that claims to run on a 2013 laptop while keeping idle memory consumption astonishingly low. There’s a catch, naturally. But it’s an interesting one. The technology industry ",
+      "coverImage": "https://cdn-images-1.medium.com/max/1024/1*uLBlxKnC2K16qBWH1BEPJw.png",
+      "addedAt": "2026-11-23T18:50:20.472Z",
+      "addedAtBasis": "observed"
+    },
+    {
       "source": "substack",
       "title": "1.2 Million Startup Ideas. Free. Apparently, Ideas Really Are Worth Nothing.",
       "url": "https://abvx.substack.com/p/12-million-startup-ideas-free-apparently",

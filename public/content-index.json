@@ -9746,7 +9746,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-22T23:50:13.721Z",
+      "updatedAt": "2026-11-23T00:36:04.636Z",
       "tags": [],
       "links": [],
       "related": []
@@ -18192,6 +18192,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=8yIr6zNuJPA"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "This Developer Made a MacBook Talk Without Speakers. Just the Trackpad.",
+      "summary": "This developer made a MacBook TALK without using its speakers. Not with Bluetooth. Not with headphones. And definitely not with some hidden audio device. The sound comes straight from the TRACKPAD. Meet NO SPEAKER, an op",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/YvheuEyHFPo",
+      "publishedAt": "2026-11-23T00:26:16.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=YvheuEyHFPo"
         }
       ],
       "related": []

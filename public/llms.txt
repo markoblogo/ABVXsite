@@ -1569,6 +1569,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/YTBUoLPNTlY
   Summary: OpenMotion is officially open source, and it wants to become a serious alternative to Claude Motion and CapCut for AI-assisted video production. Its pitch is simple: give an AI coding agent a reference video, your brand
 
+- This Developer Made a MacBook Talk Without Speakers. Just the Trackpad.
+  URL: https://abvx.xyz/writing/videos/YvheuEyHFPo
+  Summary: This developer made a MacBook TALK without using its speakers. Not with Bluetooth. Not with headphones. And definitely not with some hidden audio device. The sound comes straight from the TRACKPAD. Meet NO SPEAKER, an op
+
 - Plasticity 2026.2 Is Here! Asset Libraries, Curvature Analysis & New NURBS Modeling Tools
   URL: https://abvx.xyz/writing/videos/ywZeKg8rwe0
   Summary: Plastic Software just released Plasticity 2026.2, bringing some very welcome improvements to one of the most interesting hard-surface modeling tools around. New asset libraries, better surface analysis, improved snapping

@@ -229,6 +229,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/76yF1siGSlM
   Summary: What if you could type using a font inspired by Michelangelo's own handwriting? Well, now you can. Meet Michelangelus, a beautiful new serif typeface created by Italian design studio Studiogusto, inspired by the handwrit
 
+- Google Gemini Hidden Easter Egg: How to Unlock the Secret Periodic Table
+  URL: https://abvx.xyz/writing/videos/77pSgAMICoo
+  Summary: Google Gemini has a hidden Easter egg, and unlocking it takes just five clicks! If you open Google Gemini on your desktop and click the model selector five times, a secret interactive interface resembling the periodic ta
+
 - Claude Duet: Anthropic's New Proactive AI Agent Runs on Opus 5.5
   URL: https://abvx.xyz/writing/videos/7bWabPwlwX4
   Summary: Anthropic just entered the race for the ultimate personal AI assistant. Meet Claude Duet, a new proactive AI agent powered by Claude Opus 5.5. And unlike regular Claude, this one doesn't just sit around waiting for your
@@ -371,7 +375,7 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 - ComfyUI Desktop 1.2: Multiple Versions, Shared Models, Automatic Backups & Linux Support
   URL: https://abvx.xyz/writing/videos/BUHnlvzir6E
-  Summary: ComfyUI Desktop 1.2: Multiple Versions, Shared Models, Automatic Backups & Linux Support
+  Summary: Comfy Desktop 1.2 is here, introducing a simpler installation process, side-by-side ComfyUI versions, shared model libraries, automatic snapshots, smarter model downloads, and native Linux support via AppImage. Managing
 
 - Scientists Built a Washable Touchscreen Sweater. Yes, It Plays Videos
   URL: https://abvx.xyz/writing/videos/BV58rMMTIBM

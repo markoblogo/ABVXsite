@@ -9790,7 +9790,7 @@
       "group": "YouTube",
       "status": "live",
       "title": "ComfyUI Desktop 1.2: Multiple Versions, Shared Models, Automatic Backups & Linux Support",
-      "summary": "ComfyUI Desktop 1.2: Multiple Versions, Shared Models, Automatic Backups & Linux Support",
+      "summary": "Comfy Desktop 1.2 is here, introducing a simpler installation process, side-by-side ComfyUI versions, shared model libraries, automatic snapshots, smarter model downloads, and native Linux support via AppImage. Managing ",
       "canonicalUrl": "https://abvx.xyz/writing/videos/BUHnlvzir6E",
       "publishedAt": "2026-11-24T12:39:48.000Z",
       "tags": [
@@ -9861,7 +9861,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-24T12:40:07.169Z",
+      "updatedAt": "2026-11-24T12:50:48.596Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11255,6 +11255,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=5lTjnUg3i_Q"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Google Gemini Hidden Easter Egg: How to Unlock the Secret Periodic Table",
+      "summary": "Google Gemini has a hidden Easter egg, and unlocking it takes just five clicks! If you open Google Gemini on your desktop and click the model selector five times, a secret interactive interface resembling the periodic ta",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/77pSgAMICoo",
+      "publishedAt": "2026-11-24T12:48:32.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=77pSgAMICoo"
         }
       ],
       "related": []

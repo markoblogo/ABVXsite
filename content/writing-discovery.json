@@ -2953,6 +2953,17 @@
     },
     {
       "source": "youtube",
+      "title": "Gemini API Tool Retrieval: Does Your AI Agent Need Every Tool?",
+      "url": "https://www.youtube.com/watch?v=95UQQ92HPcU",
+      "publishedAt": "2026-11-24T14:38:02.000Z",
+      "excerpt": "How can an AI agent find the right tool without loading every full tool schema? Gemini API Tool Retrieval can load full tool parameters on demand. We illustrate the idea with a video-editing task: remove background noise",
+      "coverImage": "https://i.ytimg.com/vi/95UQQ92HPcU/hqdefault.jpg",
+      "videoDescription": "How can an AI agent find the right tool without loading every full tool schema? Gemini API Tool Retrieval can load full tool parameters on demand. We illustrate the idea with a video-editing task: remove background noise from spoken dialogue.\n\nIn our local EmbeddingGemma 2 test, we ranked 12 tool cards using two phrasings of the same request. Inworld Voice Isolator ranked first both times. MLX Whisper also made both shortlists. It can transcribe a recording, but this task needs cleaned audio. Check the required output before choosing a tool.\n\nIn the same fixture, all tool cards with parameters occupied 3,213 bytes of JSON. The short descriptions plus one selected parameter set occupied 1,823 bytes. These are local byte counts for our example.\n\nGoogle’s Tool Retrieval announcement: https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/\nEmbeddingGemma 2 model card: https://huggingface.co/google/embeddinggemma-2\n\nMade in Framewright — https://markoblogo.github.io/framewright/\nBy ABVX — https://abvx.xyz/\n\n#GeminiAPI #ToolRetrieval #AIAgents #EmbeddingGemma #SemanticSearch",
+      "addedAt": "2026-11-24T15:12:43.042Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Claude Code / Codex Turns Real Roads Into Retro Pixel-Art Games | Pixel Path",
       "url": "https://www.youtube.com/watch?v=9aEaGv0Wu4o",
       "publishedAt": "2026-10-25T16:56:07.000Z",

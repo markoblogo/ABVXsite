@@ -293,6 +293,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/928ZiGl0m8w
   Summary: One maker calls a home distillery an AI вЂњpluginвЂќвЂ”and the final reveal makes the joke even better. We adapted the Russian narration and on-screen captions into English. Source clip: https://www.yaplakal.com/forum3/t
 
+- Gemini API Tool Retrieval: Does Your AI Agent Need Every Tool?
+  URL: https://abvx.xyz/writing/videos/95UQQ92HPcU
+  Summary: How can an AI agent find the right tool without loading every full tool schema? Gemini API Tool Retrieval can load full tool parameters on demand. We illustrate the idea with a video-editing task: remove background noise
+
 - Claude Code / Codex Turns Real Roads Into Retro Pixel-Art Games | Pixel Path
   URL: https://abvx.xyz/writing/videos/9aEaGv0Wu4o
   Summary: Someone built a Claude Code skill that turns real-world roads into retro pixel-art adventures. And I have absolutely no idea why I love this so much. Meet Pixel Path, an open-source Claude Code skill that transforms any

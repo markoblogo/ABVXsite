@@ -9884,7 +9884,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-24T14:24:32.258Z",
+      "updatedAt": "2026-11-24T15:12:43.042Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11016,6 +11016,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=IS5NYE8TUxc"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Gemini API Tool Retrieval: Does Your AI Agent Need Every Tool?",
+      "summary": "How can an AI agent find the right tool without loading every full tool schema? Gemini API Tool Retrieval can load full tool parameters on demand. We illustrate the idea with a video-editing task: remove background noise",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/95UQQ92HPcU",
+      "publishedAt": "2026-11-24T14:38:02.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=95UQQ92HPcU"
         }
       ],
       "related": []

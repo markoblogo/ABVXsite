@@ -9907,7 +9907,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-24T15:50:23.800Z",
+      "updatedAt": "2026-11-24T16:14:53.574Z",
       "tags": [],
       "links": [],
       "related": []
@@ -17082,6 +17082,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=3b8ESlIpQkE"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "RUN//SIGNAL: Become a Runner | A Sci-Fi Guided Running Series",
+      "summary": "Start running with an audio-guided sci-fi story. RUN//SIGNAL gives you timed cues for how long to run, when to ease up and when to finish. You play a courier taking missions from Haven Nine, with dispatch in your headpho",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/MSWGGwMv9eo",
+      "publishedAt": "2026-11-24T15:50:54.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=MSWGGwMv9eo"
         }
       ],
       "related": []

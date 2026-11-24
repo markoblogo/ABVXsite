@@ -3261,6 +3261,17 @@
     },
     {
       "source": "youtube",
+      "title": "Copilot in the Browser: What Should an AI Agent Be Allowed to Click?",
+      "url": "https://www.youtube.com/watch?v=CeycVKY7GVM",
+      "publishedAt": "2026-11-24T20:38:07.000Z",
+      "excerpt": "What should a browser AI agent be allowed to click? This 39-second explainer uses Copilot as a starting point for a practical approval rule: let the assistant prepare an action, ask a person to confirm the change, and ch",
+      "coverImage": "https://i.ytimg.com/vi/CeycVKY7GVM/hqdefault.jpg",
+      "videoDescription": "What should a browser AI agent be allowed to click? This 39-second explainer uses Copilot as a starting point for a practical approval rule: let the assistant prepare an action, ask a person to confirm the change, and check the outcome in the interface.\n\nIn our example, an assistant finds a rough cut and prepares to mark it ready for review. Once the change is confirmed, the status on the left shows the result. Sending the file or publishing it calls for a separate confirmation. The click is shown in a local reconstruction with fictional data.\n\nStock photo and footage by cottonbro studio.\n\nMade in Framewright — https://markoblogo.github.io/framewright/\nBy ABVX — https://abvx.xyz/\n\n#MicrosoftCopilot #BrowserAgents #AIAgents #HumanInTheLoop #VideoEditingWorkflow",
+      "addedAt": "2026-11-24T20:50:46.831Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Claude Fable 5.2 Built an Entire 3D Park. Every Flower Is Real Geometry.",
       "url": "https://www.youtube.com/watch?v=CHu4gSUBoy0",
       "publishedAt": "2026-11-15T20:07:48.000Z",

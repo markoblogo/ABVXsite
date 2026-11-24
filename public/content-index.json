@@ -9907,7 +9907,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-24T16:14:53.574Z",
+      "updatedAt": "2026-11-24T20:50:46.831Z",
       "tags": [],
       "links": [],
       "related": []
@@ -9931,6 +9931,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=k7DYPrNV7ZY"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Copilot in the Browser: What Should an AI Agent Be Allowed to Click?",
+      "summary": "What should a browser AI agent be allowed to click? This 39-second explainer uses Copilot as a starting point for a practical approval rule: let the assistant prepare an action, ask a person to confirm the change, and ch",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/CeycVKY7GVM",
+      "publishedAt": "2026-11-24T20:38:07.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=CeycVKY7GVM"
         }
       ],
       "related": []

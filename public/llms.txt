@@ -501,6 +501,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/eWheRM41ZaU
   Summary: An endless pop-up book you can walk through. Welcome to Papertrails. Join a tiny yellow-hatted traveller on a quiet journey through paper forests, little cottages, rivers and snowy villages. Trees and scenery rise from t
 
+- Gemini Skills Sharing: Why Your Teammate Can’t Open a Drive File
+  URL: https://abvx.xyz/writing/videos/Ezrab-CrWqM
+  Summary: Shared a Gemini Skill but your teammate still can’t open an attached Google Drive file? The skill and the file have separate permissions. Here’s how to spot the missing one before handing off a project. We follow a ficti
+
 - Google A2UI 1.0: AI Agents Can Now Build Native Interfaces Across Apps
   URL: https://abvx.xyz/writing/videos/f_nfzKh-lRI
   Summary: Google just released A2UI 1.0, the first stable version of its open protocol that lets AI agents generate interactive user interfaces instead of responding with walls of text. And the same AI-generated interface can work

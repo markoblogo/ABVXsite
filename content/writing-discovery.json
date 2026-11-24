@@ -3525,6 +3525,17 @@
     },
     {
       "source": "youtube",
+      "title": "Gemini Skills Sharing: Why Your Teammate Can’t Open a Drive File",
+      "url": "https://www.youtube.com/watch?v=Ezrab-CrWqM",
+      "publishedAt": "2026-11-24T13:16:46.000Z",
+      "excerpt": "Shared a Gemini Skill but your teammate still can’t open an attached Google Drive file? The skill and the file have separate permissions. Here’s how to spot the missing one before handing off a project. We follow a ficti",
+      "coverImage": "https://i.ytimg.com/vi/Ezrab-CrWqM/hqdefault.jpg",
+      "videoDescription": "Shared a Gemini Skill but your teammate still can’t open an attached Google Drive file? The skill and the file have separate permissions. Here’s how to spot the missing one before handing off a project.\n\nWe follow a fictional video editing handoff from the producer’s screen to the editor’s. Both can open the editing instructions and project brief. The timecode sheet is the only thing the editor can’t open, and it’s the one thing she needs to know where to cut.\n\nFor your own handoff, share the Gemini Skill with the intended recipient, check access to each linked Drive file, then ask the recipient to open the files they need. If one file is missing, grant access to that file and check again. The screen sequence here is an illustrated example with fictional files.\n\nGoogle Workspace announcement: https://workspaceupdates.googleblog.com/2026/11/share-skills-add-files-from-Drive-Notebook-Photos-to-skills-Gemini-app.html\n\nMade in Framewright — https://markoblogo.github.io/framewright/\nBy ABVX — https://abvx.xyz/\n\n#GoogleGemini #GeminiSkills #GoogleDrive #FileSharing #VideoEditingWorkflow",
+      "addedAt": "2026-11-24T13:22:07.108Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Google A2UI 1.0: AI Agents Can Now Build Native Interfaces Across Apps",
       "url": "https://www.youtube.com/watch?v=f_nfzKh-lRI",
       "publishedAt": "2026-11-12T17:25:22.000Z",

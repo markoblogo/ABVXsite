@@ -9884,7 +9884,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-24T13:13:26.127Z",
+      "updatedAt": "2026-11-24T13:22:07.108Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11120,6 +11120,29 @@
         }
       ],
       "collection": "kitchen-notes"
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Gemini Skills Sharing: Why Your Teammate Can’t Open a Drive File",
+      "summary": "Shared a Gemini Skill but your teammate still can’t open an attached Google Drive file? The skill and the file have separate permissions. Here’s how to spot the missing one before handing off a project. We follow a ficti",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/Ezrab-CrWqM",
+      "publishedAt": "2026-11-24T13:16:46.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=Ezrab-CrWqM"
+        }
+      ],
+      "related": []
     },
     {
       "type": "video",

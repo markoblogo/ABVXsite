@@ -9792,7 +9792,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-23T23:12:22.090Z",
+      "updatedAt": "2026-11-24T08:06:55.087Z",
       "tags": [],
       "links": [],
       "related": []
@@ -16523,6 +16523,42 @@
       "links": [],
       "publishedAt": "2026-11-23",
       "updatedAt": "2026-11-23",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #69 — The Appeal of Familiar Drama",
+      "summary": "Ten translated notebook fragments on the Appeal of Familiar Drama.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-69-the-appeal-of-familiar-drama",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-24",
+      "updatedAt": "2026-11-24",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #70 — Attention, Support and Everyday Choices",
+      "summary": "Ten translated notebook fragments on attention, Support and Everyday Choices.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-70-attention-support-and-everyday-choices",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-24",
+      "updatedAt": "2026-11-24",
       "related": []
     },
     {

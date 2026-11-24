@@ -3219,6 +3219,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook
 
+- Psychology Notebook #69 — The Appeal of Familiar Drama
+  URL: https://abvx.xyz/writing/psychology-notebook-69-the-appeal-of-familiar-drama
+  Summary: Ten translated notebook fragments on the Appeal of Familiar Drama.
+  Group: writing
+  Tags: psychology-notebook
+
+- Psychology Notebook #70 — Attention, Support and Everyday Choices
+  URL: https://abvx.xyz/writing/psychology-notebook-70-attention-support-and-everyday-choices
+  Summary: Ten translated notebook fragments on attention, Support and Everyday Choices.
+  Group: writing
+  Tags: psychology-notebook
+
 - The Berliner: How My Beer Cocktail Ended Up on a French Bar's Menu
   URL: https://abvx.xyz/writing/the-berliner-guinness-port-beer-cocktail
   Summary: I discovered Guinness with port wine in Berlin, recreated it with whatever a small French bar had available, and eventually watched it become an official item in the cash register.

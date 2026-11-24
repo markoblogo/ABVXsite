@@ -913,6 +913,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/LMsSJ4kJEUU
   Summary: Apparently, Google has decided that Claude Opus and GPT-6 shouldn't have all the fun building video games. Meet Google Playground, an experimental AI-powered game creation platform that turns simple text prompts into act
 
+- Video Export QA: How to Check a Batch Before Handoff
+  URL: https://abvx.xyz/writing/videos/lQ89C2f-bno
+  Summary: Five video exports have been checked. Is the batch ready for handoff? In this short export QA example, four files meet the duration requirement and 04 Credits falls one second short. The screen recording uses synthetic M
+
 - 150+ AI Image Prompts for Stunning Visuals | Posters, Mockups & Design Inspiration
   URL: https://abvx.xyz/writing/videos/LQjCjugvpco
   Summary: Tired of spending more time writing AI image prompts than actually creating something? Here's a little resource worth bookmarking. Meet OnePromptDesign, a collection of 150+ ready-to-use AI image prompts and visual refer

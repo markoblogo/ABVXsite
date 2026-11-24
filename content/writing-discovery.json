@@ -4658,6 +4658,17 @@
     },
     {
       "source": "youtube",
+      "title": "Video Export QA: How to Check a Batch Before Handoff",
+      "url": "https://www.youtube.com/watch?v=lQ89C2f-bno",
+      "publishedAt": "2026-11-24T21:42:20.000Z",
+      "excerpt": "Five video exports have been checked. Is the batch ready for handoff? In this short export QA example, four files meet the duration requirement and 04 Credits falls one second short. The screen recording uses synthetic M",
+      "coverImage": "https://i.ytimg.com/vi/lQ89C2f-bno/hqdefault.jpg",
+      "videoDescription": "Five video exports have been checked. Is the batch ready for handoff? In this short export QA example, four files meet the duration requirement and 04 Credits falls one second short.\n\nThe screen recording uses synthetic MP4 files measured with FFprobe. The credits export runs for 1.00 second against a 2.00-second target. After replacing it, we check that file again and confirm that all five exports meet the example’s duration requirement.\n\nFor your own delivery, track how many checks ran and how many passed. Keep the failure visible until the replacement clears the check.\n\nMade in Framewright — https://markoblogo.github.io/framewright/\nBy ABVX — https://abvx.xyz/\n\n#VideoEditing #PostProduction #FFprobe #VideoExport #QualityControl",
+      "addedAt": "2026-11-24T21:50:31.198Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "150+ AI Image Prompts for Stunning Visuals | Posters, Mockups & Design Inspiration",
       "url": "https://www.youtube.com/watch?v=LQjCjugvpco",
       "publishedAt": "2026-10-25T14:38:11.000Z",

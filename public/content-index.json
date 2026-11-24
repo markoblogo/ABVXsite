@@ -9907,7 +9907,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-24T21:37:38.881Z",
+      "updatedAt": "2026-11-24T21:50:31.198Z",
       "tags": [],
       "links": [],
       "related": []
@@ -19650,6 +19650,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=IAjh5g_XnLA"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Video Export QA: How to Check a Batch Before Handoff",
+      "summary": "Five video exports have been checked. Is the batch ready for handoff? In this short export QA example, four files meet the duration requirement and 04 Credits falls one second short. The screen recording uses synthetic M",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/lQ89C2f-bno",
+      "publishedAt": "2026-11-24T21:42:20.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=lQ89C2f-bno"
         }
       ],
       "related": []

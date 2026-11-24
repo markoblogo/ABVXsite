@@ -8415,6 +8415,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Blue Lagoon IPO: Iceland’s Geothermal Spa Lists on Nasdaq Iceland",
+      "summary": "A day after Anthropic’s Nasdaq debut in the United States, Iceland’s Blue Lagoon began trading on Nasdaq Iceland under BLUE. CNBC put the geothermal spa operator’s IPO valuation at about $787 million. The last frame is m",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/7dVALyWwIyY",
+      "publishedAt": "2026-11-24T23:27:32.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=7dVALyWwIyY"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "BREAKING: Jensen Huang Resigns as NVIDIA CEO After 33 Years",
       "summary": "BREAKING: Jensen Huang has resigned as NVIDIA CEO, president, and board member, effective immediately. After 33 years leading the company he co-founded in 1993, one of the most influential figures in the AI and semicondu",
       "canonicalUrl": "https://abvx.xyz/writing/videos/kCvR-ECqgrc",
@@ -9907,7 +9930,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-24T23:21:26.172Z",
+      "updatedAt": "2026-11-24T23:36:29.486Z",
       "tags": [],
       "links": [],
       "related": []

@@ -245,6 +245,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/7bZuoAPZrhw
   Summary: What if you could create an entire song without ever leaving your conversation with ChatGPT or Claude? No switching tabs. No copying prompts between applications. No complicated API setup. Meet Suno MCP Beta, the new off
 
+- Blue Lagoon IPO: Iceland’s Geothermal Spa Lists on Nasdaq Iceland
+  URL: https://abvx.xyz/writing/videos/7dVALyWwIyY
+  Summary: A day after Anthropic’s Nasdaq debut in the United States, Iceland’s Blue Lagoon began trading on Nasdaq Iceland under BLUE. CNBC put the geothermal spa operator’s IPO valuation at about $787 million. The last frame is m
+
 - He Built an AI Personal Finance Manager With Claude Code | Open Net Worth
   URL: https://abvx.xyz/writing/videos/7Ety5a_noP4
   Summary: One developer spent five months building an entire AI-powered personal finance platform with Claude Code. The result? Open Net Worth, a free, open-source alternative to traditional budgeting and wealth-tracking apps, wit

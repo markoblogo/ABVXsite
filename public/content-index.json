@@ -8300,6 +8300,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Blend Online: Real-Time Multiplayer Collaboration in Blender",
+      "summary": "What if Blender worked like Google Docs, allowing multiple 3D artists to edit the same scene at the same time? Blend Online is a new Blender add-on developed by Pamir Bal that introduces real-time multiplayer collaborati",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/46Uv1zGXIUg",
+      "publishedAt": "2026-11-24T11:59:15.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=46Uv1zGXIUg"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Blender 5.3 Is Here: Native Gaussian Splatting + DLSS 4.5",
       "summary": "Blender 5.3 is officially here, bringing native 3D Gaussian Splatting, NVIDIA DLSS 4.5 Ray Reconstruction, and major upgrades to Cycles, EEVEE, and Geometry Nodes. This is more than a routine Blender update. It's a signi",
       "canonicalUrl": "https://abvx.xyz/writing/videos/8-xTki6iCG0",
@@ -9792,7 +9815,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-24T08:06:55.087Z",
+      "updatedAt": "2026-11-24T12:19:40.562Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10878,6 +10901,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=IS5NYE8TUxc"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Gemini Computer Use on Mac: Where Should the Agent Stop?",
+      "summary": "Gemini computer use on Mac raises a practical question: if an AI agent finds the right file, should it be allowed to send it? In this 47-second example, we show what a video handoff can look like when a human makes the f",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/8L2dUiwqyhM",
+      "publishedAt": "2026-11-24T12:03:19.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=8L2dUiwqyhM"
         }
       ],
       "related": []

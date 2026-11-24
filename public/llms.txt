@@ -149,6 +149,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/3zh2QfO5iXM
   Summary: Still folding the same paper dart? Foldable Flight has 109 paper airplane designs to explore—and a useful way to choose your next one by paper size, difficulty and flight style. In this short website tour, we browse the
 
+- Blend Online: Real-Time Multiplayer Collaboration in Blender
+  URL: https://abvx.xyz/writing/videos/46Uv1zGXIUg
+  Summary: What if Blender worked like Google Docs, allowing multiple 3D artists to edit the same scene at the same time? Blend Online is a new Blender add-on developed by Pamir Bal that introduces real-time multiplayer collaborati
+
 - MIT's Tiny Flying Robot Has a Brain - But Still Needs a Wire
   URL: https://abvx.xyz/writing/videos/4almCynPti8
   Summary: A tiny flying robot can carry its own sensors and controller. So why does it still need a wire? MIT researchers have demonstrated insect-scale flapping-wing flight with integrated sensing and onboard computation. This sh
@@ -260,6 +264,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Good Dogs of the Apocalypse | A Darkly Comic LitRPG Series
   URL: https://abvx.xyz/writing/videos/89kTx1LhEP0
   Summary: The world changed. The dogs read the fine print. Meet Mriya, a former shelter dog navigating a city rewritten by the System. Good Dogs of the Apocalypse is a darkly comic, dog-centered LitRPG series about survival, found
+
+- Gemini Computer Use on Mac: Where Should the Agent Stop?
+  URL: https://abvx.xyz/writing/videos/8L2dUiwqyhM
+  Summary: Gemini computer use on Mac raises a practical question: if an AI agent finds the right file, should it be allowed to send it? In this 47-second example, we show what a video handoff can look like when a human makes the f
 
 - Gemini 4 Hydrogen Built a Robocode Champion in Just 15 Minutes
   URL: https://abvx.xyz/writing/videos/8uzK5wmKdYQ

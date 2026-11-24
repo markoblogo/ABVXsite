@@ -2536,6 +2536,17 @@
     },
     {
       "source": "youtube",
+      "title": "Blend Online: Real-Time Multiplayer Collaboration in Blender",
+      "url": "https://www.youtube.com/watch?v=46Uv1zGXIUg",
+      "publishedAt": "2026-11-24T11:59:15.000Z",
+      "excerpt": "What if Blender worked like Google Docs, allowing multiple 3D artists to edit the same scene at the same time? Blend Online is a new Blender add-on developed by Pamir Bal that introduces real-time multiplayer collaborati",
+      "coverImage": "https://i.ytimg.com/vi/46Uv1zGXIUg/hqdefault.jpg",
+      "videoDescription": "What if Blender worked like Google Docs, allowing multiple 3D artists to edit the same scene at the same time?\n\nBlend Online is a new Blender add-on developed by Pamir Bal that introduces real-time multiplayer collaboration to Blender. Artists, designers, game developers, and 3D production teams can connect over the internet and work together on a shared Blender scene.\n\nInstead of constantly exchanging .blend files, managing different project versions, or waiting for teammates to finish their work, multiple users can collaborate within the same online session.\n\nIn this video, we explore Blend Online, its core features, current limitations, and potential applications for collaborative 3D production.\n\nKey features of Blend Online:\n- Real-time multiplayer collaboration in Blender\n- Simultaneous editing of shared 3D scenes\n- Online sessions with up to 8 participants, depending on the license\n- Easy session access via invitation codes\n- Integrated text chat\n- Built-in voice chat on Windows and Linux\n- Support for Blender 4.2 and newer\n\nPotential use cases:\n- Collaborative 3D modeling\n- Game development and environment design\n- Architectural visualization\n- Remote 3D production teams\n- Blender education and interactive workshops\n- Collaborative scene building and creative brainstorming\n\nCurrent limitations:\nBlend Online does not yet support synchronization of armatures and poses, Grease Pencil, shape keys, NLA tracks, drivers, material and node tree animation, video files, image sequences, or UDIM tiles.\n\nEvery participant must have the add-on installed.\n\nPricing:\n- 2-user license: $12.60\n- 8-user license: $34.30\n\nGet Blend Online:\nhttps://superhivemarket.com/products/blend-online\n\nReal-time collaboration has already transformed software development, graphic design, and video production. Could multiplayer editing become the next major evolution in 3D creation?\n\nWould you use real-time collaboration in your Blender workflow? Share your thoughts in the comments.\n\nSubscribe for more videos about Blender, 3D modeling, creative software, emerging technologies, digital art, and innovative tools for creators.\n\n#Blender #BlendOnline #BlenderAddon #3DModeling #RealTimeCollaboration #ComputerGraphics #GameDevelopment",
+      "addedAt": "2026-11-24T12:19:40.562Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "MIT's Tiny Flying Robot Has a Brain - But Still Needs a Wire",
       "url": "https://www.youtube.com/watch?v=4almCynPti8",
       "publishedAt": "2026-11-19T15:53:21.000Z",
@@ -2851,6 +2862,17 @@
       "coverImage": "https://i.ytimg.com/vi/89kTx1LhEP0/hqdefault.jpg",
       "videoDescription": "The world changed. The dogs read the fine print.\n\nMeet Mriya, a former shelter dog navigating a city rewritten by the System. Good Dogs of the Apocalypse is a darkly comic, dog-centered LitRPG series about survival, found family, and the freedom to choose.\n\nNew abilities can help. They cannot make trust automatic. From one fragile home to a growing district, Mriya and her community face difficult bargains, competing institutions, and the work of building a future together.\n\nRead the books in order:\n1. Good Dog, Bad System\n2. Good Dog, Bad District\n3. Good Dog, Bad Authority\n\nStart with Good Dog, Bad System.\nExplore the series and find Kindle and paperback links:\nhttps://abvx.xyz/good-dogs-of-the-apocalypse\n\n#LitRPG #SystemApocalypse #ProgressionFantasy",
       "addedAt": "2026-10-14T15:46:12.871Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
+      "title": "Gemini Computer Use on Mac: Where Should the Agent Stop?",
+      "url": "https://www.youtube.com/watch?v=8L2dUiwqyhM",
+      "publishedAt": "2026-11-24T12:03:19.000Z",
+      "excerpt": "Gemini computer use on Mac raises a practical question: if an AI agent finds the right file, should it be allowed to send it? In this 47-second example, we show what a video handoff can look like when a human makes the f",
+      "coverImage": "https://i.ytimg.com/vi/8L2dUiwqyhM/hqdefault.jpg",
+      "videoDescription": "Gemini computer use on Mac raises a practical question: if an AI agent finds the right file, should it be allowed to send it? In this 47-second example, we show what a video handoff can look like when a human makes the final decision.\n\nGoogle announced that the Gemini app for Mac can work across apps, local files and websites, with controls for access and approval of key actions. Our screen recording shows a local demo with fictional files. The draft and approval screen are a Framewright reconstruction of the workflow.\n\nTry the same rule in your workflow. Ask the agent to find the approved export and prepare a draft. Then check the exact filename and recipient together, and confirm the draft is still unsent. That gives you a concrete test for the handoff before you trust it with a real delivery.\n\nGoogle announcement: https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/\n\nMade in Framewright — https://markoblogo.github.io/framewright/\nBy ABVX — https://abvx.xyz/\n\n#GoogleGemini #ComputerUse #AIAgents #MacAutomation #HumanApproval",
+      "addedAt": "2026-11-24T12:19:40.562Z",
       "addedAtBasis": "observed"
     },
     {

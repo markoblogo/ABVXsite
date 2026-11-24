@@ -4383,6 +4383,17 @@
     },
     {
       "source": "youtube",
+      "title": "Gemini 4 Hydrogen: Can It Spot the Wrong Subtitles?",
+      "url": "https://www.youtube.com/watch?v=k9s_jHPZ5pI",
+      "publishedAt": "2026-11-24T21:16:24.000Z",
+      "excerpt": "Can Gemini 4 Hydrogen spot outdated subtitles in a video handoff? In this 43-second test, I gave Hydrogen the accepted cut’s filename, the attached SRT filename and the two conflicting lines in Google AI Studio. It ident",
+      "coverImage": "https://i.ytimg.com/vi/k9s_jHPZ5pI/hqdefault.jpg",
+      "videoDescription": "Can Gemini 4 Hydrogen spot outdated subtitles in a video handoff? In this 43-second test, I gave Hydrogen the accepted cut’s filename, the attached SRT filename and the two conflicting lines in Google AI Studio. It identified the old subtitle file and named the replacement.\n\nThe accepted cut says “Platform four.” The attached SRT still says “Platform two.” A local screencast shows the fictional handoff before and after the replacement. The model worked from the text I supplied.\n\nBefore handing off an edit, open the master and subtitles as the recipient and check that the cue matches the accepted cut.\n\nFootage by Ludovic Delot and ArtHouse Studio via Pexels.\n\nMade in Framewright — https://markoblogo.github.io/framewright/\nBy ABVX — https://abvx.xyz/\n\n#Gemini4Hydrogen #GoogleAIStudio #VideoEditing #Subtitles #PostProduction",
+      "addedAt": "2026-11-24T21:37:38.881Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Odyssey-3: AI Generates Interactive Worlds in Real Time (And You Can Play Them)",
       "url": "https://www.youtube.com/watch?v=KbObKhxwReA",
       "publishedAt": "2026-10-11T13:53:07.000Z",

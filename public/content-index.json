@@ -9907,7 +9907,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-24T20:50:46.831Z",
+      "updatedAt": "2026-11-24T21:37:38.881Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11039,6 +11039,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=0Hng8Jw5R2Q"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Gemini 4 Hydrogen: Can It Spot the Wrong Subtitles?",
+      "summary": "Can Gemini 4 Hydrogen spot outdated subtitles in a video handoff? In this 43-second test, I gave Hydrogen the accepted cut’s filename, the attached SRT filename and the two conflicting lines in Google AI Studio. It ident",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/k9s_jHPZ5pI",
+      "publishedAt": "2026-11-24T21:16:24.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=k9s_jHPZ5pI"
         }
       ],
       "related": []

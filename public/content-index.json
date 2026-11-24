@@ -8208,6 +8208,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "ArcBrush 1.7: 3D PBR Material Preview, Pixel Art Editor & PSD Support",
+      "summary": "ArcBrush 1.7 is here, bringing real-time 3D material previews, PBR texture creation, a built-in pixel art editor, Photoshop PSD support, and new tools for digital artists and game developers. ArcBrush is a node-based ima",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/3WcaSS67C54",
+      "publishedAt": "2026-11-24T12:25:17.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=3WcaSS67C54"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "AsciiTheme — ASCII Themes & Widgets for JavaScript Websites",
       "summary": "Give your website an optional ASCII look with AsciiTheme, an open-source JavaScript library with four themes and interactive widgets. This short demo shows the light, dark, sepia, and matrix themes, plus progress bars, s",
       "canonicalUrl": "https://abvx.xyz/writing/videos/y2OW5f8QEXo",
@@ -9766,6 +9789,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "ComfyUI Desktop 1.2: Multiple Versions, Shared Models, Automatic Backups & Linux Support",
+      "summary": "ComfyUI Desktop 1.2: Multiple Versions, Shared Models, Automatic Backups & Linux Support",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/BUHnlvzir6E",
+      "publishedAt": "2026-11-24T12:39:48.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=BUHnlvzir6E"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "ComfyUI Zip Ties: Finally Fix Your Spaghetti Node Graphs! | Free Extension",
       "summary": "If you've ever opened a complicated ComfyUI workflow and wondered whether you're looking at an AI pipeline or a bowl of spaghetti, this one's for you. Meet ComfyUI Zip Ties, a free, open-source extension that brings actu",
       "canonicalUrl": "https://abvx.xyz/writing/videos/zTrBkcj3_Jk",
@@ -9815,7 +9861,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-24T12:19:40.562Z",
+      "updatedAt": "2026-11-24T12:40:07.169Z",
       "tags": [],
       "links": [],
       "related": []

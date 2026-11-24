@@ -3305,6 +3305,17 @@
     },
     {
       "source": "youtube",
+      "title": "Event Horizon: An Interactive 3D Black Hole Simulator",
+      "url": "https://www.youtube.com/watch?v=cMcVebqs5zs",
+      "publishedAt": "2026-11-24T23:01:26.000Z",
+      "excerpt": "Explore Event Horizon, an interactive black hole sandbox you can control in your browser. This 32-second walkthrough switches visual presets, shows the polar jets, and uses the Disk Tilt slider to change the angle of the",
+      "coverImage": "https://i.ytimg.com/vi/cMcVebqs5zs/hqdefault.jpg",
+      "videoDescription": "Explore Event Horizon, an interactive black hole sandbox you can control in your browser. This 32-second walkthrough switches visual presets, shows the polar jets, and uses the Disk Tilt slider to change the angle of the glowing particle disk.\n\nTry the demo: https://sites.google.com/view/event-horizon-interactiv/full-page-embed\n\nStart by dragging Disk Tilt and watching the stream of particles change angle. Switch on Cinema mode for a view with the controls hidden. The footage shows how the browser visualization responds.\n\nMusic: Ghost in the Machine.\n\nMade in Framewright — https://markoblogo.github.io/framewright/\nBy ABVX — https://abvx.xyz/\n\n#EventHorizon #BlackHole #Interactive3D #SpaceSimulation #CreativeCoding",
+      "addedAt": "2026-11-24T23:21:26.172Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "She Made a Short Film to Get Hired. It Went Viral With 2.7M Views",
       "url": "https://www.youtube.com/watch?v=CptYVxnfa0o",
       "publishedAt": "2026-10-20T10:11:55.000Z",

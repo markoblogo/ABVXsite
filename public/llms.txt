@@ -421,6 +421,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/CM0Ig3q7pqk
   Summary: What if you could take a viral video, give it to an AI, and turn it into an actual video game? Not just a visual recreation. A fully explorable 3D world. And what if the entire process took just 40 minutes? About a year
 
+- Event Horizon: An Interactive 3D Black Hole Simulator
+  URL: https://abvx.xyz/writing/videos/cMcVebqs5zs
+  Summary: Explore Event Horizon, an interactive black hole sandbox you can control in your browser. This 32-second walkthrough switches visual presets, shows the polar jets, and uses the Disk Tilt slider to change the angle of the
+
 - She Made a Short Film to Get Hired. It Went Viral With 2.7M Views
   URL: https://abvx.xyz/writing/videos/CptYVxnfa0o
   Summary: Quick question: When did applying for a job start requiring an autobiographical short film? Because apparently, sending a résumé and a portfolio isn't enough anymore. Meet Darshita Patankar, a visual designer who decided

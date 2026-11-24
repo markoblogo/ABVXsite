@@ -9907,7 +9907,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-24T22:21:16.763Z",
+      "updatedAt": "2026-11-24T23:21:26.172Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10392,6 +10392,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=hHAxCL6PWjI"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Event Horizon: An Interactive 3D Black Hole Simulator",
+      "summary": "Explore Event Horizon, an interactive black hole sandbox you can control in your browser. This 32-second walkthrough switches visual presets, shows the polar jets, and uses the Disk Tilt slider to change the angle of the",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/cMcVebqs5zs",
+      "publishedAt": "2026-11-24T23:01:26.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=cMcVebqs5zs"
         }
       ],
       "related": []

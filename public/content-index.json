@@ -7271,6 +7271,29 @@
       "related": []
     },
     {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "25-Minute Guided Easy Run | RUN//SIGNAL M03: Window Three",
+      "summary": "A 25-minute guided easy run inside a sci-fi radio drama. Leave Haven Nine, check three scanners along the Eastern Service Line and bring the damaged logger to Glasshouse Watch. Dispatch calls the changes in effort, elaps",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/wfFjqxWzwNs",
+      "publishedAt": "2026-11-24T15:42:21.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=wfFjqxWzwNs"
+        }
+      ],
+      "related": []
+    },
+    {
       "type": "writing",
       "section": "writing",
       "ecosystem": "Writing",
@@ -9884,7 +9907,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-24T15:12:43.042Z",
+      "updatedAt": "2026-11-24T15:50:23.800Z",
       "tags": [],
       "links": [],
       "related": []

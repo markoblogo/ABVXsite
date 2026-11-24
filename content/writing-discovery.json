@@ -3679,6 +3679,17 @@
     },
     {
       "source": "youtube",
+      "title": "Helios Mechanica: Explore a 3D Clockwork Solar System",
+      "url": "https://www.youtube.com/watch?v=g0BaVm892Vs",
+      "publishedAt": "2026-11-24T22:18:48.000Z",
+      "excerpt": "Helios Mechanica turns a solar system into an interactive 3D clockwork orrery. In this 34-second browser walkthrough, I go from the full model to Earth and Neptune, try a different lighting mood and finish underneath the",
+      "coverImage": "https://i.ytimg.com/vi/g0BaVm892Vs/hqdefault.jpg",
+      "videoDescription": "Helios Mechanica turns a solar system into an interactive 3D clockwork orrery. In this 34-second browser walkthrough, I go from the full model to Earth and Neptune, try a different lighting mood and finish underneath the planets, where the brass gears turn.\n\nTry the demo: https://grand-mooncake-6eebef.netlify.app/\n\nStart with Overview, choose a planet to move in close, then look down at the mechanism that drives the display.\n\nMusic: Ghost in the Machine.\n\nMade in Framewright — https://markoblogo.github.io/framewright/\nBy ABVX — https://abvx.xyz/\n\n#HeliosMechanica #Orrery #SolarSystem #Interactive3D #CreativeCoding",
+      "addedAt": "2026-11-24T22:21:16.763Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Why Your AI Clips Don’t Feel Like a Film",
       "url": "https://www.youtube.com/watch?v=G4-8YyrV1lk",
       "publishedAt": "2026-11-11T15:31:27.000Z",

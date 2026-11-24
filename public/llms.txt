@@ -429,6 +429,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/cTK_yuxDcKE
   Summary: What if AI could generate an entire world while you're exploring it? Not a video. Not a traditional game. An interactive reality that reacts to everything you do. And now it has sound. And people who actually talk back.
 
+- REA-Marketing: AI Skill for Competitor Research, Ad Analysis & Marketing Strategy
+  URL: https://abvx.xyz/writing/videos/CTu1UebyfY4
+  Summary: What if you could reverse-engineer the marketing strategy of any successful brand and use its insights to build your own advertising campaigns? REA-Marketing is a new AI marketing skill designed to analyze brand strategi
+
 - Claude Code Turns Machines Into Interactive 3D Simulators | Teardown Skill
   URL: https://abvx.xyz/writing/videos/cXIt9LAb5vE
   Summary: What if you could take apart a V8 engine, explore an aircraft's landing gear, or see exactly how a walking robot works? Without touching a real machine. Meet Teardown, a free, open-source Claude Code skill that transform
@@ -652,6 +656,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Elon Musk's 50 AI Agents Idea: Why Chatting With AI Is Apparently Outdated
   URL: https://abvx.xyz/writing/videos/hHAxCL6PWjI
   Summary: What if the best way to use AI wasn't asking it questions, but hiring it 50 AI employees? A viral Elon Musk-themed skit imagines a very different kind of AI workflow: one agent plans the day, another manages projects, an
+
+- GitHub CLI Event Streams: Stop Polling, Start Listening
+  URL: https://abvx.xyz/writing/videos/hhtE8DiGCA0
+  Summary: What changes when you wait for an event instead of polling? GitHub CLI Event Streams can wait for pull request updates. A local video-render example shows the same idea and what happens when a completion signal arrives t
 
 - Snapchat Now Supports PlayCanvas Games! Build with AI Agents, Publish & Earn with Lens+
   URL: https://abvx.xyz/writing/videos/hhtgIwh_QY4
@@ -884,6 +892,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Silent Bob Won by Doing Less ☕ #Shorts
   URL: https://abvx.xyz/writing/videos/lky20OJaAqo
   Summary: Jay makes things worse. Silent Bob holds the solution. The decaf route wins in this 20-second Disco Coffee Showdown gameplay comedy. Game (copy URL): https://playmcp.io/g/g_4FzN0mD8 Desktop browser · Disco Coffee Showdow
+
+- Z.ai GLM-5.4: 750B Looped Transformer, Multimodal AI & Generalized Coding
+  URL: https://abvx.xyz/writing/videos/Ll-oNq9g3uc
+  Summary: Z.ai has introduced GLM-5.4, a new multimodal AI model featuring a looped transformer architecture, more efficient reasoning, visual understanding, and an ambitious approach to AI-powered content creation called Generali
 
 - Google Playground: Build Playable AI Games With Just a Prompt | No Coding Required
   URL: https://abvx.xyz/writing/videos/LMsSJ4kJEUU

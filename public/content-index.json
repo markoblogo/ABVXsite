@@ -9884,7 +9884,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-24T13:22:07.108Z",
+      "updatedAt": "2026-11-24T14:24:32.258Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11186,6 +11186,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=Q9lzhnQEGjQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "GitHub CLI Event Streams: Stop Polling, Start Listening",
+      "summary": "What changes when you wait for an event instead of polling? GitHub CLI Event Streams can wait for pull request updates. A local video-render example shows the same idea and what happens when a completion signal arrives t",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/hhtE8DiGCA0",
+      "publishedAt": "2026-11-24T14:02:26.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=hhtE8DiGCA0"
         }
       ],
       "related": []
@@ -16885,6 +16908,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "REA-Marketing: AI Skill for Competitor Research, Ad Analysis & Marketing Strategy",
+      "summary": "What if you could reverse-engineer the marketing strategy of any successful brand and use its insights to build your own advertising campaigns? REA-Marketing is a new AI marketing skill designed to analyze brand strategi",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/CTu1UebyfY4",
+      "publishedAt": "2026-11-24T14:23:27.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=CTu1UebyfY4"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Redshift 2027.0 Is Here! Procedural Fur, ACES 2, Faster GPU Rendering & Archicad",
       "summary": "Maxon just released Redshift 2027.0, and this update brings some genuinely useful improvements for 3D artists. New procedural fur, better GPU memory management, faster rendering, improved real-time previews, and expanded",
       "canonicalUrl": "https://abvx.xyz/writing/videos/SkrZW5do2VE",
@@ -20729,6 +20775,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=Ndl2VnGJb6o"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Z.ai GLM-5.4: 750B Looped Transformer, Multimodal AI & Generalized Coding",
+      "summary": "Z.ai has introduced GLM-5.4, a new multimodal AI model featuring a looped transformer architecture, more efficient reasoning, visual understanding, and an ambitious approach to AI-powered content creation called Generali",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/Ll-oNq9g3uc",
+      "publishedAt": "2026-11-24T14:14:57.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=Ll-oNq9g3uc"
         }
       ],
       "related": []

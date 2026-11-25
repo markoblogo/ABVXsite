@@ -1353,6 +1353,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/s3BBP698_r8
   Summary: A software launch. A book trailer. A cinematic interface demo. Different briefs need different video workflows. Framewright is an evolving collection of video-production methods, agent skills and lessons from real ABVX p
 
+- Google Antigravity vs AI Studio vs Gemini App: Same AI Model, Different Results
+  URL: https://abvx.xyz/writing/videos/S9ELL-BBQQA
+  Summary: Same AI model. Same prompt. Three different environments. Surprisingly different results. Before diving into video reverse engineering, let's start with a simple experiment demonstrating why the environment in which an A
+
 - Dimension 9: The Backrooms Multiplayer Game in Your Browser
   URL: https://abvx.xyz/writing/videos/s9PPoiZ2Yrk
   Summary: Backrooms fans: here’s a strange place to spend the weekend. Dimension 9 is a browser game for exploring uncanny spaces with other players—and it works on a phone too. Play: https://dimension9.space A short look at the y

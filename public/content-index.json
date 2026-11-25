@@ -9953,7 +9953,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-25T13:50:30.853Z",
+      "updatedAt": "2026-11-25T14:37:32.599Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11531,6 +11531,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=5lTjnUg3i_Q"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Google Antigravity vs AI Studio vs Gemini App: Same AI Model, Different Results",
+      "summary": "Same AI model. Same prompt. Three different environments. Surprisingly different results. Before diving into video reverse engineering, let's start with a simple experiment demonstrating why the environment in which an A",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/S9ELL-BBQQA",
+      "publishedAt": "2026-11-25T14:36:09.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=S9ELL-BBQQA"
         }
       ],
       "related": []

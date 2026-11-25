@@ -5908,6 +5908,17 @@
     },
     {
       "source": "youtube",
+      "title": "Google Antigravity vs AI Studio vs Gemini App: Same AI Model, Different Results",
+      "url": "https://www.youtube.com/watch?v=S9ELL-BBQQA",
+      "publishedAt": "2026-11-25T14:36:09.000Z",
+      "excerpt": "Same AI model. Same prompt. Three different environments. Surprisingly different results. Before diving into video reverse engineering, let's start with a simple experiment demonstrating why the environment in which an A",
+      "coverImage": "https://i.ytimg.com/vi/S9ELL-BBQQA/hqdefault.jpg",
+      "videoDescription": "Same AI model. Same prompt. Three different environments. Surprisingly different results.\n\nBefore diving into video reverse engineering, let's start with a simple experiment demonstrating why the environment in which an AI model operates can be just as important as the model itself.\n\nIn this video, we compare Neon across three Google AI environments:\n\n- Google Antigravity\n- Google AI Studio\n- Google Gemini App\n\nThe task is identical: a horse galloping across the prairie.\n\nThe interesting part is not simply comparing the visual results. It is understanding how the AI harness influences the model's performance, behavior, and creative output.\n\nWhat is an AI harness?\n\nAn AI harness is the surrounding infrastructure that determines how a model operates. It can include system instructions, context management, available tools, execution mechanisms, feedback loops, and orchestration.\n\nEven when the underlying AI model remains the same, different harnesses can produce noticeably different results.\n\nIn this experiment, Antigravity delivers a more convincing result than the Gemini App, highlighting how much the execution environment can influence the practical capabilities of an AI model.\n\nAnd since we are testing a galloping horse, the word \"harness\" feels particularly appropriate. Apparently, even an AI-generated horse performs better with the right harness.\n\nIn this video:\n\n- Google Antigravity vs Google AI Studio vs Gemini App\n- Comparing the same AI model across different environments\n- Understanding the role of AI harness engineering\n- Evaluating visual generation and creative output\n- Exploring the relationship between AI models and their execution environments\n- Preparing for video reverse engineering experiments\n\nAs AI models become increasingly capable, choosing the right model may no longer be enough. Choosing the right environment, tools, and harness could be equally important.\n\nThis comparison is based on a specific creative experiment rather than a comprehensive benchmark of the three platforms.\n\nExplore Google's AI tools:\n\nGoogle Antigravity:\nhttps://antigravity.google/\n\nGoogle AI Studio:\nhttps://aistudio.google.com/\n\nGoogle Gemini:\nhttps://gemini.google.com/\n\nWhich environment produces the best results in your experience?\n\nSubscribe for more AI experiments, video reverse engineering, generative AI, creative coding, AI filmmaking, model comparisons, and advanced creative workflows.\n\n#GoogleAntigravity #Gemini #GoogleAIStudio #AIHarness #GenerativeAI #AIVideo #AIEngineering #CreativeCoding",
+      "addedAt": "2026-11-25T14:37:32.599Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Dimension 9: The Backrooms Multiplayer Game in Your Browser",
       "url": "https://www.youtube.com/watch?v=s9PPoiZ2Yrk",
       "publishedAt": "2026-11-07T15:23:56.000Z",

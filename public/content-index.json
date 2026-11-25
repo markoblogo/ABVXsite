@@ -7380,6 +7380,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "6 Free Graphic Design Tools in Your Browser | KRIMNUZ FX Lab",
+      "summary": "Looking for free browser-based graphic design tools for posters, textures, pixel art and experimental typography? KRIMNUZ FX Lab is a collection of six creative generators on an independent designer’s website. In this ha",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/jLUDjXmABnM",
+      "publishedAt": "2026-11-25T20:23:58.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=jLUDjXmABnM"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "703 Claude Opus 5.5 Video Prompts You Can Copy for Free | AI Motion Graphics & Animation",
       "summary": "What if you could browse hundreds of impressive AI-generated animations and get the prompts behind them? Not just watch the results. Copy the prompts, study how they work, and create your own versions. Someone has put to",
       "canonicalUrl": "https://abvx.xyz/writing/videos/dSBsgH4bpNY",
@@ -7911,6 +7934,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=mt0MOEpoj1c"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "AI Video Reverse Engineering: HyperFrames vs REA-Video vs ComfyUI Video Breakdown",
+      "summary": "What if you could take an existing video, break it down shot by shot, understand exactly how it was made, and generate a detailed plan for recreating it using AI video models, motion graphics, or traditional production t",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/orQYqXbm5DM",
+      "publishedAt": "2026-11-25T20:19:22.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=orQYqXbm5DM"
         }
       ],
       "related": []
@@ -10068,7 +10114,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-25T19:36:43.741Z",
+      "updatedAt": "2026-11-25T20:37:24.640Z",
       "tags": [],
       "links": [],
       "related": []

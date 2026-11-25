@@ -829,6 +829,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/jKPTEICoFWw
   Summary: AI coding agents can now watch a real video and attempt to reconstruct the entire scene in Blender using Python. But which model actually understands the 3D world behind the pixels? Meet BVB, the Blender-VideoBench, a ne
 
+- 6 Free Graphic Design Tools in Your Browser | KRIMNUZ FX Lab
+  URL: https://abvx.xyz/writing/videos/jLUDjXmABnM
+  Summary: Looking for free browser-based graphic design tools for posters, textures, pixel art and experimental typography? KRIMNUZ FX Lab is a collection of six creative generators on an independent designer’s website. In this ha
+
 - Demis Hassabis Raises $5 Billion to Develop New Drugs With AI
   URL: https://abvx.xyz/writing/videos/JmCBX8PC8Ys
   Summary: Demis Hassabis just raised $5 BILLION to accelerate AI-powered drug discovery. His company, Isomorphic Labs, has an extraordinarily ambitious mission: Solve All Disease. And some of the world's biggest investors are bett
@@ -1192,6 +1196,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - I Asked Google Genie 4 to Build GTA 6. Then I Played It and Talked to NPCs.
   URL: https://abvx.xyz/writing/videos/oR0J11NgEOo
   Summary: Remember Google Genie 4? Google's AI world model that generates interactive environments in real time? Well, it's now available through the Gemini API and Google AI Studio. So naturally, I decided to test it by asking fo
+
+- AI Video Reverse Engineering: HyperFrames vs REA-Video vs ComfyUI Video Breakdown
+  URL: https://abvx.xyz/writing/videos/orQYqXbm5DM
+  Summary: What if you could take an existing video, break it down shot by shot, understand exactly how it was made, and generate a detailed plan for recreating it using AI video models, motion graphics, or traditional production t
 
 - The Pope vs Anthropic: Should AI Help Humanity Defeat Death?
   URL: https://abvx.xyz/writing/videos/OW1weOBWRVA

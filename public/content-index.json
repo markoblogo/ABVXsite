@@ -9976,7 +9976,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-25T15:13:16.885Z",
+      "updatedAt": "2026-11-25T15:22:53.267Z",
       "tags": [],
       "links": [],
       "related": []
@@ -17440,6 +17440,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=wBaKQ_i7dsA"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Sand AI MAGI-2: 480B AI Video Model with 1080p, 30-Second Videos & Native Audio",
+      "summary": "Sand.ai has unveiled MAGI-2, a massive next-generation AI video generation model featuring 480 billion parameters, native synchronized audio, 1080p video generation, clips up to 30 seconds long, and advanced multimodal r",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/lMMydwlUaAA",
+      "publishedAt": "2026-11-25T15:17:49.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=lMMydwlUaAA"
         }
       ],
       "related": []

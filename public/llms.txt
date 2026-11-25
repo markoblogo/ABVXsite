@@ -925,6 +925,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/Ll-oNq9g3uc
   Summary: Z.ai has introduced GLM-5.4, a new multimodal AI model featuring a looped transformer architecture, more efficient reasoning, visual understanding, and an ambitious approach to AI-powered content creation called Generali
 
+- Sand AI MAGI-2: 480B AI Video Model with 1080p, 30-Second Videos & Native Audio
+  URL: https://abvx.xyz/writing/videos/lMMydwlUaAA
+  Summary: Sand.ai has unveiled MAGI-2, a massive next-generation AI video generation model featuring 480 billion parameters, native synchronized audio, 1080p video generation, clips up to 30 seconds long, and advanced multimodal r
+
 - Google Playground: Build Playable AI Games With Just a Prompt | No Coding Required
   URL: https://abvx.xyz/writing/videos/LMsSJ4kJEUU
   Summary: Apparently, Google has decided that Claude Opus and GPT-6 shouldn't have all the fun building video games. Meet Google Playground, an experimental AI-powered game creation platform that turns simple text prompts into act

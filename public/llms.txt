@@ -205,6 +205,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/6-VMwHGiQxw
   Summary: That night photo was almost perfect. Except your hands decided to shake at exactly the wrong moment. Meet ComfyUI-PhotoDeblur, a free, open-source node pack by porfeng that helps restore photos affected by camera shake a
 
+- Florida vs Man Gameplay — Pixel-Art Browser Roguelite Review
+  URL: https://abvx.xyz/writing/videos/67nzMseumzc
+  Summary: Can you survive five minutes in a Florida backyard? Florida vs Man is a pixel-art browser roguelite with a wonderfully absurd sense of humor, inspired by Florida's famous strange headlines. In this quick gameplay review,
+
 - He Turned an iPhone Photo Into a 3D World You Can Walk Into
   URL: https://abvx.xyz/writing/videos/68uEXgMOokQ
   Summary: This might be the coolest AirDrop you've ever seen. An XR developer just created an interaction that lets you grab a photograph from an iPhone with your fingers, open your hand, and step inside the scene using Apple Visi

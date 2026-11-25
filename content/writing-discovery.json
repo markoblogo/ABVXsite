@@ -1611,6 +1611,16 @@
     },
     {
       "source": "medium",
+      "title": "Silicon Valley Was Right: AI Can Compress Data. Unfortunately, It Takes a Week.",
+      "url": "https://abvcreative.medium.com/silicon-valley-was-right-ai-can-compress-data-unfortunately-it-takes-a-week-1f16ca3ec260",
+      "publishedAt": "2026-11-25T21:00:43.000Z",
+      "excerpt": "Meet TufaZip, a lossless compressor that squeezes 1 GB of Wikipedia into 105 MB using a single Transformer. It learns as it compresses, then learns everything again to decompress. Richard Hendricks would be proud. Rememb",
+      "coverImage": "https://cdn-images-1.medium.com/max/1024/1*0n2rVPqnTUk8ffbF3qxG0g.png",
+      "addedAt": "2026-11-25T21:12:44.837Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "medium",
       "title": "SkillCache Cuts AI Agent Token Usage by 81%.",
       "url": "https://abvcreative.medium.com/skillcache-cuts-ai-agent-token-usage-by-81-81a24f6568a9",
       "publishedAt": "2026-11-22T12:42:10.000Z",
@@ -2736,6 +2746,17 @@
       "coverImage": "https://i.ytimg.com/vi/6-VMwHGiQxw/hqdefault.jpg",
       "videoDescription": "That night photo was almost perfect. Except your hands decided to shake at exactly the wrong moment.\n\nMeet ComfyUI-PhotoDeblur, a free, open-source node pack by porfeng that helps restore photos affected by camera shake and motion blur.\n\nAnd here's the interesting part: it works at your photo's original resolution. No mandatory downscaling just to fit the image into VRAM.\n\nInstead of reaching for another generative upscaler, you get two specialized image-restoration models inside ComfyUI:\n\nHI-Diff: A diffusion-based deblurring model that gradually reconstructs sharper details.\n\nMISCFilter: A direct, single-pass restoration model. No diffusion sampling steps required.\n\nThink handheld night photos, smeared neon signs, soft storefront edges, blurry architectural details, and motion trails around lights.\n\nWhat makes the nodes useful?\n\nTiled processing: Split large photos into manageable regions and blend them back together. The suggested starting point is 768-pixel tiles with 96 pixels of overlap.\n\nFlexible blending: Linear, cosine, Gaussian, and average options help reduce visible seams.\n\n8-way TTA: Average rotated and mirrored predictions to improve stability, at roughly eight times the model computation.\n\nMatch Input Tone: Reduce broad color shifts so the restored photo stays closer to the original.\n\nOfficial checkpoints: Download and verify RealBlur_J, RealBlur_R, or GoPro weights directly through a ComfyUI node.\n\nWant to try it?\n\nInstall comfyui-photodeblur through ComfyUI Manager or clone the repository into custom_nodes. Load one of the included example workflows.\n\nStart with RealBlur_J, tile 768, overlap 96, TTA off. Run the same photo through both models and compare the results at 100% zoom.\n\nThe developer even reports using an 8 GB GPU for the tiled examples. MISCFilter does require NVIDIA CUDA and CuPy, so check the installation notes.\n\nOne important reality check: deblurring isn't time travel.\n\nNo model can guarantee recovery of details that were never captured. Severe defocus, blown highlights, and tiny heavily blurred faces remain difficult. And because HI-Diff is a learned restoration model, you should still inspect fine details for artifacts.\n\nBut if you've ever lost an otherwise beautiful photo to shaky hands, this is exactly the kind of practical ComfyUI tool worth bookmarking.\n\nGitHub, installation and sample workflows:\nhttps://github.com/porfeng/ComfyUI-PhotoDeblur\n\n#ComfyUI #PhotoDeblur #HIDiff #MISCFilter #PhotoRestoration #MotionBlur #OpenSourceAI",
       "addedAt": "2026-11-09T20:12:49.193Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
+      "title": "Florida vs Man Gameplay — Pixel-Art Browser Roguelite Review",
+      "url": "https://www.youtube.com/watch?v=67nzMseumzc",
+      "publishedAt": "2026-11-25T21:08:28.000Z",
+      "excerpt": "Can you survive five minutes in a Florida backyard? Florida vs Man is a pixel-art browser roguelite with a wonderfully absurd sense of humor, inspired by Florida's famous strange headlines. In this quick gameplay review,",
+      "coverImage": "https://i.ytimg.com/vi/67nzMseumzc/hqdefault.jpg",
+      "videoDescription": "Can you survive five minutes in a Florida backyard? Florida vs Man is a pixel-art browser roguelite with a wonderfully absurd sense of humor, inspired by Florida's famous strange headlines.\n\nIn this quick gameplay review, we look at the real opening level: a moving backyard, a countdown, little creatures, collectible items and upgrade choices. The delivery notification about frogs and sudden rain are part of the unpredictable setting. Our recorded run made it to the end with 6,520 points and the Tourist rank.\n\nThe video uses actual screen recordings of the game and its official website. The arcade-inspired edit and original chiptune are our own production treatment, not the game's native soundtrack. This is a short look at the recorded run, not a complete walkthrough of every level.\n\nPlay the game in your browser: https://floridavsman.app/\n\nCreator's development story (Russian): https://vc.ru/id5062196/3266476-sozdanie-igry-florida-vs-man\n\nMade in Framewright — https://markoblogo.github.io/framewright/\nBy ABVX — https://abvx.xyz/\n\n#FloridaVsMan #BrowserGames #PixelArt #Roguelite #IndieGames",
+      "addedAt": "2026-11-25T21:12:44.837Z",
       "addedAtBasis": "observed"
     },
     {

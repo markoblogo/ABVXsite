@@ -10114,7 +10114,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-25T20:37:24.640Z",
+      "updatedAt": "2026-11-25T21:12:44.837Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10798,6 +10798,29 @@
         }
       ],
       "collection": "kitchen-notes"
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Florida vs Man Gameplay — Pixel-Art Browser Roguelite Review",
+      "summary": "Can you survive five minutes in a Florida backyard? Florida vs Man is a pixel-art browser roguelite with a wonderfully absurd sense of humor, inspired by Florida's famous strange headlines. In this quick gameplay review,",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/67nzMseumzc",
+      "publishedAt": "2026-11-25T21:08:28.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=67nzMseumzc"
+        }
+      ],
+      "related": []
     },
     {
       "type": "video",

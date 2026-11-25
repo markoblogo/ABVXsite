@@ -193,6 +193,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/5lTjnUg3i_Q
   Summary: Google just made Antigravity a little more useful for developers, researchers, and anyone working with AI-generated code and data. Google Antigravity now supports Jupyter Notebooks natively. And yes, that means you can f
 
+- OpenAI Claims Matrix Multiplication Exponent Is Exactly 2.25 | AI Mathematical Research
+  URL: https://abvx.xyz/writing/videos/5LVHNeGF554
+  Summary: Has artificial intelligence just solved one of the most important open problems in mathematics and theoretical computer science? On November 24, 2026, OpenAI released a preprint titled "The Matrix Multiplication Exponent
+
 - vLLM-GR: Open-Source Generative Recommendation Engine with Shared KV Cache
   URL: https://abvx.xyz/writing/videos/5qqTq-xj1Ic
   Summary: The vLLM project has introduced vLLM-GR, an open-source inference extension designed specifically for generative recommendation models. Instead of generating conversational responses like traditional large language model
@@ -1096,6 +1100,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - He Emailed Salesforce's CEO 53 Times. Here's How He Finally Got a Reply
   URL: https://abvx.xyz/writing/videos/NOi2yqMGaP0
   Summary: How many follow-ups would you send before giving up on your dream customer? Three? Five? Maybe ten? Well, Harry Stebbings sent 53 emails to Marc Benioff, the CEO of Salesforce. And for 52 weeks, he got absolutely nothing
+
+- Diagram Design: AI Agent Skill for Architecture Diagrams, Flowcharts & HTML Visualizations
+  URL: https://abvx.xyz/writing/videos/nOjlvPV-imI
+  Summary: Need to visualize a software architecture, business process, system workflow, or complex idea without spending time manually designing diagrams? Diagram-design is a reusable AI agent skill that transforms natural languag
 
 - Viggle Remake Is Open! AI Character Replacement with MiniMax H3 + ComfyUI
   URL: https://abvx.xyz/writing/videos/NPQV4DgppsQ

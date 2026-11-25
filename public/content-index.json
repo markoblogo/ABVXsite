@@ -10068,7 +10068,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-25T17:36:44.507Z",
+      "updatedAt": "2026-11-25T17:50:17.124Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10299,6 +10299,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=uiH_-woOeZk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Diagram Design: AI Agent Skill for Architecture Diagrams, Flowcharts & HTML Visualizations",
+      "summary": "Need to visualize a software architecture, business process, system workflow, or complex idea without spending time manually designing diagrams? Diagram-design is a reusable AI agent skill that transforms natural languag",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/nOjlvPV-imI",
+      "publishedAt": "2026-11-25T17:45:04.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=nOjlvPV-imI"
         }
       ],
       "related": []
@@ -15271,6 +15294,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=mCIEj22D2y4"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "OpenAI Claims Matrix Multiplication Exponent Is Exactly 2.25 | AI Mathematical Research",
+      "summary": "Has artificial intelligence just solved one of the most important open problems in mathematics and theoretical computer science? On November 24, 2026, OpenAI released a preprint titled \"The Matrix Multiplication Exponent",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/5LVHNeGF554",
+      "publishedAt": "2026-11-25T17:37:57.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=5LVHNeGF554"
         }
       ],
       "related": []

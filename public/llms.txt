@@ -629,6 +629,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/gknj7mp3kOo
   Summary: Another useful addition to my growing collection of design resources for AI coding agents. Because apparently, having an AI that can build an entire website isn't enough. You also need to stop it from generating the same
 
+- GitHub Desktop 3.7: Multiple Accounts on One Computer
+  URL: https://abvx.xyz/writing/videos/gm4LecfmGYk
+  Summary: Using GitHub Desktop for both personal projects and work? GitHub Desktop 3.7.0 introduces support for multiple signed-in accounts on the same host, with an account association for each repository. In this short explainer
+
 - Google Neon Built This GTA-Style 3D World From Miami to Las Vegas
   URL: https://abvx.xyz/writing/videos/GmJzHfmfha0
   Summary: While everyone's talking about GTA 6, here's another little experiment I made with Google Neon. A cinematic flight from Miami Beach to Las Vegas, through the Everglades and a massive red-rock canyon. All created as a rea
@@ -752,6 +756,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - DAWN AI: Hair-Level Keying & Relighting Without Regenerating Actors
   URL: https://abvx.xyz/writing/videos/iaJy1CPLfXw
   Summary: Meet DAWN, a new AI VFX foundation model from British startup PXLD that composites real actors into entirely different environments while preserving their original performances. No AI-generated faces. No rewritten expres
+
+- Google Search Console SEO Trick: Find Long-Tail Keywords with Regex and Improve Rankings
+  URL: https://abvx.xyz/writing/videos/IAVe_P2QDVY
+  Summary: Want to improve your website's SEO without paying for expensive keyword research tools? Google Search Console already contains valuable information about the questions your potential visitors are asking Google. With a si
 
 - Nice Airport to Menton: Bus or Train? | French Riviera Guide
   URL: https://abvx.xyz/writing/videos/ih43aF1zeaM
@@ -1165,6 +1173,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/OnnURAcgtXo
   Summary: Ideogram just released version 4.6, featuring native 4K image generation and much more precise editing across multiple revisions. And there's a twist: Ideogram says it will SKIP releasing open weights for 4.5 and go stra
 
+- Google Launches Gemma.ai: Run, Fine-Tune and Learn About Local AI Models
+  URL: https://abvx.xyz/writing/videos/Oo1h-Jg_bJg
+  Summary: Google has launched Gemma.ai, a dedicated website for Gemma, its family of open-weight AI models that can be downloaded, customized, and run locally on your own hardware. The new website brings together installation guid
+
 - AI Rewrote curl. Who Maintains It Now?
   URL: https://abvx.xyz/writing/videos/oObZ_K32IDI
   Summary: AI can rewrite a codebase. But who reviews the next fix, keeps up with upstream, and supports the people who depend on it? This short animated explainer looks at Rust rewrites of curl through the argument made by curl fo
@@ -1204,6 +1216,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Seedream 5.5 vs GPT Image 2.5: Which AI Image Generator Wins?
   URL: https://abvx.xyz/writing/videos/pAtg6lk5fcM
   Summary: Seedream 5.5 vs GPT Image 2.5. Two powerful AI image generation models from ByteDance and OpenAI. But which one produces better images? Let's compare the results and see how these models handle visual quality, realism, d
+
+- GLM-5.4 Turns arXiv Research Papers Into Animated Explainer Videos | alphaXiv
+  URL: https://abvx.xyz/writing/videos/pBFKtfp10U8
+  Summary: What if you could understand the key ideas of a complex scientific paper in two minutes instead of spending hours reading academic jargon, mathematical formulas, and technical explanations? GLM-5.4 is being used to trans
 
 - Free Interactive Algorithms & Data Structures Course: 86 Lessons with 3D Visualizations
   URL: https://abvx.xyz/writing/videos/pByrCDOJ0EM

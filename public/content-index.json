@@ -10068,7 +10068,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-25T17:50:17.124Z",
+      "updatedAt": "2026-11-25T18:15:00.649Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11564,6 +11564,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "GitHub Desktop 3.7: Multiple Accounts on One Computer",
+      "summary": "Using GitHub Desktop for both personal projects and work? GitHub Desktop 3.7.0 introduces support for multiple signed-in accounts on the same host, with an account association for each repository. In this short explainer",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/gm4LecfmGYk",
+      "publishedAt": "2026-11-25T18:09:24.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=gm4LecfmGYk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "GLM-5.3-Flash vs Claude Fable 5.2: Same 3D Animation Test",
       "summary": "GLM-5.3-Flash vs Claude Fable 5.2. How much AI model power do you actually need to create a decent 3D animation? Yesterday, I shared a cinema room animation concept. Today, I recreated it using two very different AI mode",
       "canonicalUrl": "https://abvx.xyz/writing/videos/JOTHM9PkYC8",
@@ -11577,6 +11600,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=JOTHM9PkYC8"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "GLM-5.4 Turns arXiv Research Papers Into Animated Explainer Videos | alphaXiv",
+      "summary": "What if you could understand the key ideas of a complex scientific paper in two minutes instead of spending hours reading academic jargon, mathematical formulas, and technical explanations? GLM-5.4 is being used to trans",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/pBFKtfp10U8",
+      "publishedAt": "2026-11-25T17:53:07.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=pBFKtfp10U8"
         }
       ],
       "related": []
@@ -11817,6 +11863,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Google Launches Gemma.ai: Run, Fine-Tune and Learn About Local AI Models",
+      "summary": "Google has launched Gemma.ai, a dedicated website for Gemma, its family of open-weight AI models that can be downloaded, customized, and run locally on your own hardware. The new website brings together installation guid",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/Oo1h-Jg_bJg",
+      "publishedAt": "2026-11-25T17:58:37.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=Oo1h-Jg_bJg"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Google Meet Now Translates Speech in Real Time Across 63 Languages",
       "summary": "Google Meet can now translate conversations across 63 languages in near real time, letting people speak their native languages while everyone else hears AI-translated speech. And the translated voice can even sound like ",
       "canonicalUrl": "https://abvx.xyz/writing/videos/rZNwwWLLY8Q",
@@ -11899,6 +11968,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=DK5cv_jMOsE"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Google Search Console SEO Trick: Find Long-Tail Keywords with Regex and Improve Rankings",
+      "summary": "Want to improve your website's SEO without paying for expensive keyword research tools? Google Search Console already contains valuable information about the questions your potential visitors are asking Google. With a si",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/IAVe_P2QDVY",
+      "publishedAt": "2026-11-25T18:11:33.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=IAVe_P2QDVY"
         }
       ],
       "related": []

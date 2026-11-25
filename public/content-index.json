@@ -8484,6 +8484,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Boris FX Silhouette 2027: AI Rotoscoping, Matte ML & Video Object Removal",
+      "summary": "Boris FX has released Silhouette 2027, introducing new AI-powered rotoscoping, intelligent masking, video inpainting, object removal, and improved compositing workflows for professional VFX artists. One of the establishe",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/ykfmqaB6rco",
+      "publishedAt": "2026-11-25T16:52:26.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=ykfmqaB6rco"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "BREAKING: Jensen Huang Resigns as NVIDIA CEO After 33 Years",
       "summary": "BREAKING: Jensen Huang has resigned as NVIDIA CEO, president, and board member, effective immediately. After 33 years leading the company he co-founded in 1993, one of the most influential figures in the AI and semicondu",
       "canonicalUrl": "https://abvx.xyz/writing/videos/kCvR-ECqgrc",
@@ -9999,7 +10022,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-25T16:51:00.168Z",
+      "updatedAt": "2026-11-25T17:10:39.628Z",
       "tags": [],
       "links": [],
       "related": []
@@ -20100,6 +20123,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=Mw9YxTombVY"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "vLLM-GR: Open-Source Generative Recommendation Engine with Shared KV Cache",
+      "summary": "The vLLM project has introduced vLLM-GR, an open-source inference extension designed specifically for generative recommendation models. Instead of generating conversational responses like traditional large language model",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/5qqTq-xj1Ic",
+      "publishedAt": "2026-11-25T17:02:56.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=5qqTq-xj1Ic"
         }
       ],
       "related": []

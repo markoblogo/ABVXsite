@@ -189,6 +189,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/5lTjnUg3i_Q
   Summary: Google just made Antigravity a little more useful for developers, researchers, and anyone working with AI-generated code and data. Google Antigravity now supports Jupyter Notebooks natively. And yes, that means you can f
 
+- vLLM-GR: Open-Source Generative Recommendation Engine with Shared KV Cache
+  URL: https://abvx.xyz/writing/videos/5qqTq-xj1Ic
+  Summary: The vLLM project has introduced vLLM-GR, an open-source inference extension designed specifically for generative recommendation models. Instead of generating conversational responses like traditional large language model
+
 - ComfyUI-PhotoDeblur: Fix Camera Shake & Motion Blur with HI-Diff and MISCFilter
   URL: https://abvx.xyz/writing/videos/6-VMwHGiQxw
   Summary: That night photo was almost perfect. Except your hands decided to shake at exactly the wrong moment. Meet ComfyUI-PhotoDeblur, a free, open-source node pack by porfeng that helps restore photos affected by camera shake a
@@ -1744,6 +1748,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - ego lite: A Browser Where Claude Code, Codex & You Work at the Same Time
   URL: https://abvx.xyz/writing/videos/yjS8_hed-IA
   Summary: Another AI browser? Apparently we needed one more. Meet ego lite, a free browser from Citro Labs designed so you and your AI coding agents can work in the same browser at the same time. Most AI browser setups follow one
+
+- Boris FX Silhouette 2027: AI Rotoscoping, Matte ML & Video Object Removal
+  URL: https://abvx.xyz/writing/videos/ykfmqaB6rco
+  Summary: Boris FX has released Silhouette 2027, introducing new AI-powered rotoscoping, intelligent masking, video inpainting, object removal, and improved compositing workflows for professional VFX artists. One of the establishe
 
 - What Is Tulvo? A Tour of Its AI Workspace
   URL: https://abvx.xyz/writing/videos/YPYXpOpbCl4

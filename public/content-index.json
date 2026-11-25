@@ -9976,7 +9976,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-25T15:22:53.267Z",
+      "updatedAt": "2026-11-25T16:17:15.735Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11393,6 +11393,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=hhtE8DiGCA0"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "GitHub Copilot Adaptive Effort: Lite, Balanced or Max Code Review",
+      "summary": "Should an AI code review spend the same effort on a typo and a change that could ship the wrong file? GitHub Copilot’s Adaptive Effort preview selects a review level based on the complexity and risk of a pull request, wi",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/btgYpgsP7kQ",
+      "publishedAt": "2026-11-25T15:47:51.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=btgYpgsP7kQ"
         }
       ],
       "related": []

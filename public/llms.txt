@@ -389,6 +389,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/bNpRyDZsCHg
   Summary: What if you were born somewhere else? In this 1 in 8 Billion gameplay review, one randomly assigned life unfolds from birth to age 85—in under two minutes. Meet Anita Gautam, a fictional girl born into a poor family in r
 
+- GitHub Copilot Adaptive Effort: Lite, Balanced or Max Code Review
+  URL: https://abvx.xyz/writing/videos/btgYpgsP7kQ
+  Summary: Should an AI code review spend the same effort on a typo and a change that could ship the wrong file? GitHub Copilot’s Adaptive Effort preview selects a review level based on the complexity and risk of a pull request, wi
+
 - ComfyUI Desktop 1.2: Multiple Versions, Shared Models, Automatic Backups & Linux Support
   URL: https://abvx.xyz/writing/videos/BUHnlvzir6E
   Summary: Comfy Desktop 1.2 is here, introducing a simpler installation process, side-by-side ComfyUI versions, shared model libraries, automatic snapshots, smarter model downloads, and native Linux support via AppImage. Managing

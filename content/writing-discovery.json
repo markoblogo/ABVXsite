@@ -3257,6 +3257,17 @@
     },
     {
       "source": "youtube",
+      "title": "GitHub Copilot Adaptive Effort: Lite, Balanced or Max Code Review",
+      "url": "https://www.youtube.com/watch?v=btgYpgsP7kQ",
+      "publishedAt": "2026-11-25T15:47:51.000Z",
+      "excerpt": "Should an AI code review spend the same effort on a typo and a change that could ship the wrong file? GitHub Copilot’s Adaptive Effort preview selects a review level based on the complexity and risk of a pull request, wi",
+      "coverImage": "https://i.ytimg.com/vi/btgYpgsP7kQ/hqdefault.jpg",
+      "videoDescription": "Should an AI code review spend the same effort on a typo and a change that could ship the wrong file? GitHub Copilot’s Adaptive Effort preview selects a review level based on the complexity and risk of a pull request, within the configured limits. Here’s what that principle looks like in a practical video-production workflow.\n\nWe created two controlled four-second video exports with identical basic specifications: H.264, 1280×720 and 24 fps. One version freezes the picture; the intended version pans across the same illustration. Both passed the basic metadata checks, but they were not the same video.\n\nIn our local test, the open-source FrameLens AI analysis classified the frozen export as static and the moving export as pan-right. A separate SHA-256 comparison identified which file matched the pinned intended master. On an earlier three-shot fixture, FrameLens recovered both edit boundaries but missed a known digital push-in. Motion analysis is useful evidence, not proof that the right version was approved.\n\nThe takeaway for code review, video production and AI agents: match review depth to the consequences. A wording-only change may need a quick check; a change to what gets shipped warrants content verification and exact-version checks. Adaptive is a GitHub Copilot public-preview feature. We show the official announcement and a separate local experiment, not a live Copilot benchmark or a claim about its measured accuracy.\n\nSources and tools:\nGitHub announcement — https://github.blog/changelog/2026-11-17-copilot-code-review-adaptive-effort-secret-detection-and-more/\nFrameLens AI — https://github.com/suqivision/framelens-ai\nPrevious reverse-engineering video test — https://youtu.be/pdWiWzb4t28\n\nIllustrative photo/video credits (Pexels): Sulaiman Khan and Jakub Zerdzicki.\nhttps://www.pexels.com/photo/man-using-editing-tools-on-dual-monitors-29475620/\nhttps://www.pexels.com/video/modern-photo-editing-workspace-setup-36512046/\nhttps://www.pexels.com/photo/video-production-setup-in-modern-studio-40813002/\n\nMade in Framewright — https://markoblogo.github.io/framewright/\nBy ABVX — https://abvx.xyz/\n\n#GitHubCopilot #CodeReview #AITools #VideoEditing #FrameLens",
+      "addedAt": "2026-11-25T16:17:15.735Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "ComfyUI Desktop 1.2: Multiple Versions, Shared Models, Automatic Backups & Linux Support",
       "url": "https://www.youtube.com/watch?v=BUHnlvzir6E",
       "publishedAt": "2026-11-24T12:39:48.000Z",

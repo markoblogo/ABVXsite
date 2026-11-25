@@ -8369,6 +8369,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Best AI Models for Research: Opus 5.5 vs GPT-6.1 vs DeepSeek | OpenResearch Index",
+      "summary": "Which AI model should you use for scientific research, literature reviews, machine learning experiments, and autonomous research workflows? The new OpenResearch Intelligence Index from alphaXiv evaluates whether AI model",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/XQ-F_3Nc74c",
+      "publishedAt": "2026-11-25T14:43:35.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=XQ-F_3Nc74c"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Blend Online: Real-Time Multiplayer Collaboration in Blender",
       "summary": "What if Blender worked like Google Docs, allowing multiple 3D artists to edit the same scene at the same time? Blend Online is a new Blender add-on developed by Pamir Bal that introduces real-time multiplayer collaborati",
       "canonicalUrl": "https://abvx.xyz/writing/videos/46Uv1zGXIUg",
@@ -9953,7 +9976,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-25T14:37:32.599Z",
+      "updatedAt": "2026-11-25T14:50:19.714Z",
       "tags": [],
       "links": [],
       "related": []

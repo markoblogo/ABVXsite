@@ -8323,6 +8323,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Baked AI Brand Kit: Turn a Website into DESIGN.md, BRAND.md and SKILL.md",
+      "summary": "Can AI turn a website into a usable brand kit? I tried Baked Design Studio’s free AI Brand Kit on Apple and our own Framewright landing page, then checked what the service actually returned against the source. How it wor",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/vBg5K1uFo9o",
+      "publishedAt": "2026-11-25T13:46:03.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=vBg5K1uFo9o"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Bambu Lab H3C Is INSANE! 9 Print Heads, 6-Second Swaps & AI-Designed Hardware",
       "summary": "What if you could design an entire electronic device with AI and then manufacture its physical components at home? Well, November 2026 is making that future look considerably closer. Bambu Lab just introduced the H3C, it",
       "canonicalUrl": "https://abvx.xyz/writing/videos/jylE3yG54ho",
@@ -9930,7 +9953,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-25T13:14:13.732Z",
+      "updatedAt": "2026-11-25T13:50:30.853Z",
       "tags": [],
       "links": [],
       "related": []

@@ -6374,6 +6374,17 @@
     },
     {
       "source": "youtube",
+      "title": "Baked AI Brand Kit: Turn a Website into DESIGN.md, BRAND.md and SKILL.md",
+      "url": "https://www.youtube.com/watch?v=vBg5K1uFo9o",
+      "publishedAt": "2026-11-25T13:46:03.000Z",
+      "excerpt": "Can AI turn a website into a usable brand kit? I tried Baked Design Studio’s free AI Brand Kit on Apple and our own Framewright landing page, then checked what the service actually returned against the source. How it wor",
+      "coverImage": "https://i.ytimg.com/vi/vBg5K1uFo9o/hqdefault.jpg",
+      "videoDescription": "Can AI turn a website into a usable brand kit? I tried Baked Design Studio’s free AI Brand Kit on Apple and our own Framewright landing page, then checked what the service actually returned against the source.\n\nHow it works: paste a public website URL, click Make my kit, inspect the visual palette, fonts, brand voice and example lines, then download the ZIP. DESIGN.md describes design rules, BRAND.md describes voice and SKILL.md packages guidance for AI tools such as Claude Code, Cursor and Codex. Both downloads worked without signing up. The Apple kit also contained logo files and Slack emoji, and both ZIPs contained social image assets.\n\nThe useful part is the verification: all seven colours extracted from Framewright were found in the published CSS, and the font families matched. But the suggested headline weight differed from the real main headings, and our silver FW logo and Slack emoji were omitted. A good first reference for branded videos, not a replacement for an approved brand book. Review the generated instructions and use original, authorized brand assets.\n\nTry Baked AI Brand Kit: https://baked.design/ai-brand-kit/\nFramewright landing tested: https://markoblogo.github.io/framewright/\nApple website: https://www.apple.com/\nInterface sound effects: Button Sounds by Josh Comeau (MIT) — https://github.com/joshwcomeau/button-sounds\n\nMade in Framewright — https://markoblogo.github.io/framewright/\nBy ABVX — https://abvx.xyz/\n\n#AIBrandKit #DesignMD #BrandDesign #AITools #CreativeWorkflow",
+      "addedAt": "2026-11-25T13:50:30.853Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "One Claude Code Skill Turns Your GitHub Project Into a Launch Video",
       "url": "https://www.youtube.com/watch?v=vD_pNbzvoiM",
       "publishedAt": "2026-10-20T09:57:45.000Z",

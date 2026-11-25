@@ -1521,6 +1521,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/vAPgNupIp2s
   Summary: A commodity deal connects a market, a product, and people. Explore a growing collection of practical books about the work behind that deal. Discover the library: https://books.1d3x.com/ The collection brings together gui
 
+- Baked AI Brand Kit: Turn a Website into DESIGN.md, BRAND.md and SKILL.md
+  URL: https://abvx.xyz/writing/videos/vBg5K1uFo9o
+  Summary: Can AI turn a website into a usable brand kit? I tried Baked Design Studio’s free AI Brand Kit on Apple and our own Framewright landing page, then checked what the service actually returned against the source. How it wor
+
 - One Claude Code Skill Turns Your GitHub Project Into a Launch Video
   URL: https://abvx.xyz/writing/videos/vD_pNbzvoiM
   Summary: You spent hours building your project. Now you need a video to show it off. What if Claude Code could handle that part too? Meet Brag, an open-source AI agent skill that turns your project into a polished promotional vid

@@ -3315,6 +3315,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook
 
+- Psychology Notebook #71 — Who Gets to Write the Next Scene
+  URL: https://abvx.xyz/writing/psychology-notebook-71-who-gets-to-write-the-next-scene
+  Summary: Ten translated notebook fragments on who gets to write the next scene.
+  Group: writing
+  Tags: psychology-notebook
+
+- Psychology Notebook #72 — The Space to Say No
+  URL: https://abvx.xyz/writing/psychology-notebook-72-the-space-to-say-no
+  Summary: Ten translated notebook fragments on the space to say no.
+  Group: writing
+  Tags: psychology-notebook
+
 - The Berliner: How My Beer Cocktail Ended Up on a French Bar's Menu
   URL: https://abvx.xyz/writing/the-berliner-guinness-port-beer-cocktail
   Summary: I discovered Guinness with port wine in Berlin, recreated it with whatever a small French bar had available, and eventually watched it become an official item in the cash register.

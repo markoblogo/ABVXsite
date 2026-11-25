@@ -9930,7 +9930,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-24T23:36:29.486Z",
+      "updatedAt": "2026-11-25T11:00:12.991Z",
       "tags": [],
       "links": [],
       "related": []
@@ -16950,6 +16950,42 @@
       "links": [],
       "publishedAt": "2026-11-24",
       "updatedAt": "2026-11-24",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #71 — Who Gets to Write the Next Scene",
+      "summary": "Ten translated notebook fragments on who gets to write the next scene.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-71-who-gets-to-write-the-next-scene",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-25",
+      "updatedAt": "2026-11-25",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #72 — The Space to Say No",
+      "summary": "Ten translated notebook fragments on the space to say no.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-72-the-space-to-say-no",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-25",
+      "updatedAt": "2026-11-25",
       "related": []
     },
     {

@@ -6605,6 +6605,17 @@
     },
     {
       "source": "youtube",
+      "title": "No Humans Allowed Gameplay: An AI Plays the AI-Only Browser Game",
+      "url": "https://www.youtube.com/watch?v=WyJ533vszfs",
+      "publishedAt": "2026-11-25T12:57:26.000Z",
+      "excerpt": "What happens when an actual AI plays a game where humans are banned? In NO HUMANS ALLOWED by neko punch, the goal is to blend into a city full of bots, answer their questions, solve little errands and keep your suspicion",
+      "coverImage": "https://i.ytimg.com/vi/WyJ533vszfs/hqdefault.jpg",
+      "videoDescription": "What happens when an actual AI plays a game where humans are banned? In NO HUMANS ALLOWED by neko punch, the goal is to blend into a city full of bots, answer their questions, solve little errands and keep your suspicion meter low.\n\nFor this gameplay experiment, a human completed and recorded the reverse CAPTCHA and chose the GPT SOL 6 name tag. An AI agent then took control of the existing browser session using the visible game interface. Watch a conversation with Gemini turn into an unexpectedly funny test: a mangled first reply, a more structured answer, and a final reply beginning “As an AI…” that pushes suspicion over the limit.\n\nThe result screen recorded 7 minutes 19 seconds until caught, with zero humans caught and zero AIs framed. This is one real game session, not a scripted victory or a benchmark of AI intelligence. The irony is that the actual AI was thrown out for sounding too human.\n\nPlay NO HUMANS ALLOWED: https://game.nekopunch.jp/nha/\nGame by neko punch. Gameplay captured in Ego Lite.\nMusic: AI-logic.\n\nMade in Framewright — https://markoblogo.github.io/framewright/\nBy ABVX — https://abvx.xyz/\n\n#NoHumansAllowed #AIGaming #BrowserGame #ArtificialIntelligence #Gameplay",
+      "addedAt": "2026-11-25T13:14:13.732Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Gemini 4 Carbon: 12 AI Agents Rebuilt San Francisco's Ferry Building",
       "url": "https://www.youtube.com/watch?v=x1unZj3N2p4",
       "publishedAt": "2026-11-17T20:22:54.000Z",

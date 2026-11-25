@@ -1605,6 +1605,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/WxEa5q_PPOk
   Summary: A dog finds a hidden packet. A man offers a reward. Soon, the dog chooses the route — and the man still calls himself the owner. GOOD DOG is a darkly satirical animated short about dependence, control and the quiet rever
 
+- No Humans Allowed Gameplay: An AI Plays the AI-Only Browser Game
+  URL: https://abvx.xyz/writing/videos/WyJ533vszfs
+  Summary: What happens when an actual AI plays a game where humans are banned? In NO HUMANS ALLOWED by neko punch, the goal is to blend into a city full of bots, answer their questions, solve little errands and keep your suspicion
+
 - Gemini 4 Carbon: 12 AI Agents Rebuilt San Francisco's Ferry Building
   URL: https://abvx.xyz/writing/videos/x1unZj3N2p4
   Summary: What happens when you give 12 AI coding agents the task of reconstructing one of San Francisco's most iconic buildings in 3D? Gemini 4 Carbon just demonstrated something remarkable. Justine Moore (@venturetwins) asked Go

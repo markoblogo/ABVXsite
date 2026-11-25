@@ -9930,7 +9930,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-25T11:00:12.991Z",
+      "updatedAt": "2026-11-25T13:14:13.732Z",
       "tags": [],
       "links": [],
       "related": []
@@ -14719,6 +14719,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=qq1dv0H-jvk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "No Humans Allowed Gameplay: An AI Plays the AI-Only Browser Game",
+      "summary": "What happens when an actual AI plays a game where humans are banned? In NO HUMANS ALLOWED by neko punch, the goal is to blend into a city full of bots, answer their questions, solve little errands and keep your suspicion",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/WyJ533vszfs",
+      "publishedAt": "2026-11-25T12:57:26.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=WyJ533vszfs"
         }
       ],
       "related": []

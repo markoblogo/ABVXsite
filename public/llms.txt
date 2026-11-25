@@ -109,6 +109,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/1Y0feA5hb1k
   Summary: What if robots could think and react five times faster without upgrading their hardware? And what if they became more accurate at the same time? Meet NVIDIA VFlash, a new visual planning framework designed to make AI-pow
 
+- Brushveil Gameplay: Explore Van Gogh’s World in a Relaxing Browser Game
+  URL: https://abvx.xyz/writing/videos/2Eo7TqHaF50
+  Summary: What would it feel like to step inside Vincent van Gogh’s painted world? Brushveil is a free, relaxing browser game that turns artwork into a place to explore. Our short gameplay review takes you through Starry Town, a g
+
 - My $0 API Key Trying to Access OpenAI, Claude & Gemini
   URL: https://abvx.xyz/writing/videos/2po93Gv-MuY
   Summary: My API key has exactly $0.00 in credits. But does that stop him from approaching the biggest AI models on the planet? Absolutely not. OpenAI. Anthropic Claude. Google Gemini. Three AI giants. One broke little API key. An
@@ -476,6 +480,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Who Sets the Limits When an AI Starts Trading? Coinbase Agent Controls
   URL: https://abvx.xyz/writing/videos/DmsXZ73w-Eg
   Summary: An AI agent can submit a trade. But who sets the limits - and can the agent change them? This one-minute visual explainer looks at Coinbase Agent Controls and why the location of a rule matters as much as the rule itself
+
+- Kyutai AURA: Open-Weight Streaming AI Avatars with 4-Step Video Generation
+  URL: https://abvx.xyz/writing/videos/dPkqiwMxdXg
+  Summary: Kyutai has introduced AURA, a new family of open-weight AI models designed to animate portraits from incoming speech using just four generation steps. Unlike conventional talking-head video generators that process an ent
 
 - This Soft Robot Swims 3 Ways With Just 2 Air Inputs
   URL: https://abvx.xyz/writing/videos/dQAm7kw49co
@@ -920,6 +928,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - These Robots Use Living Muscle. Here’s How They Move
   URL: https://abvx.xyz/writing/videos/LIbkbgDCgKM
   Summary: Tiny robots can jump, swim, walk and grip using engineered living muscle. But the key idea in this ETH Zurich research is how the muscle and its soft scaffold are designed together. This short explainer combines real res
+
+- MAGI-2 vs Seedance 2.5 vs Wan 3.0 | AI Video Generation Side-by-Side Comparison
+  URL: https://abvx.xyz/writing/videos/LITjarecJ1M
+  Summary: MAGI-2 vs Seedance 2.5 vs Wan 3.0. How does Sand.ai's massive 480-billion-parameter AI video model compare with two of its major competitors? In this video, we put these next-generation AI video generators head-to-head u
 
 - Silent Bob Won by Doing Less ☕ #Shorts
   URL: https://abvx.xyz/writing/videos/lky20OJaAqo

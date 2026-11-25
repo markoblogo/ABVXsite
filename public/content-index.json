@@ -8553,6 +8553,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Brushveil Gameplay: Explore Van Gogh’s World in a Relaxing Browser Game",
+      "summary": "What would it feel like to step inside Vincent van Gogh’s painted world? Brushveil is a free, relaxing browser game that turns artwork into a place to explore. Our short gameplay review takes you through Starry Town, a g",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/2Eo7TqHaF50",
+      "publishedAt": "2026-11-25T16:36:23.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=2Eo7TqHaF50"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Burgers, Lipstick & Underwear | Strange Economic Indicators",
       "summary": "What can burgers, lipstick and underwear really tell us about the economy? Discover Burgers, Lipstick & Underwear: What Strange Indicators Really Tell Us About the Economy — a book about surprising economic indicators an",
       "canonicalUrl": "https://abvx.xyz/writing/videos/GVrbTMZxbpg",
@@ -9976,7 +9999,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-25T16:17:15.735Z",
+      "updatedAt": "2026-11-25T16:51:00.168Z",
       "tags": [],
       "links": [],
       "related": []
@@ -13796,6 +13819,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Kyutai AURA: Open-Weight Streaming AI Avatars with 4-Step Video Generation",
+      "summary": "Kyutai has introduced AURA, a new family of open-weight AI models designed to animate portraits from incoming speech using just four generation steps. Unlike conventional talking-head video generators that process an ent",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/dPkqiwMxdXg",
+      "publishedAt": "2026-11-25T16:31:51.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=dPkqiwMxdXg"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "La P'tite Fumée LIVE at Warehouse Nantes 2026 | RESET Tour Opening Night",
       "summary": "La P'tite Fumée kicked off their new tour at Warehouse Nantes on October 15, 2026. And I was there to capture it. Eight minutes of live music, hypnotic rhythms, psychedelic energy, and the atmosphere of an unforgettable ",
       "canonicalUrl": "https://abvx.xyz/writing/videos/QUfoeGezQAs",
@@ -13855,6 +13901,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=Kt7Qf4dy_fg"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "MAGI-2 vs Seedance 2.5 vs Wan 3.0 | AI Video Generation Side-by-Side Comparison",
+      "summary": "MAGI-2 vs Seedance 2.5 vs Wan 3.0. How does Sand.ai's massive 480-billion-parameter AI video model compare with two of its major competitors? In this video, we put these next-generation AI video generators head-to-head u",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/LITjarecJ1M",
+      "publishedAt": "2026-11-25T16:21:57.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=LITjarecJ1M"
         }
       ],
       "related": []

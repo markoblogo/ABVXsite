@@ -1513,6 +1513,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/Tbpv22FFvXI
   Summary: AI filmmaking is getting better at an astonishing pace. And looking at projects like this, I wouldn't be surprised if 2027 becomes the year we see genuinely compelling feature-length AI films. This is Nexus: Prison Break
 
+- Riemann Hypothesis: Claude, Lean and the 17-Million-Line Proof
+  URL: https://abvx.xyz/writing/videos/TBY5TcF4Vac
+  Summary: What happens when AI generates mathematics — or business software — that is too large to review line by line? Explore an interactive map of the Riemann Hypothesis formal proof developed by mathematician Levent Alpöge wit
+
 - MN7R Product Guide | Commodity Brokerage Workflow Explained
   URL: https://abvx.xyz/writing/videos/TISOtCghMVY
   Summary: Brokerage is more than closing a deal. Explore the clients, offers, execution, roles and AI-assisted operating support behind the MN7R workspace. Read the free English MN7R Product Guide — PDF and EPUB: https://abvx.xyz/

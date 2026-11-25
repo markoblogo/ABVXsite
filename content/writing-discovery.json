@@ -6348,6 +6348,17 @@
     },
     {
       "source": "youtube",
+      "title": "Riemann Hypothesis: Claude, Lean and the 17-Million-Line Proof",
+      "url": "https://www.youtube.com/watch?v=TBY5TcF4Vac",
+      "publishedAt": "2026-11-25T19:17:36.000Z",
+      "excerpt": "What happens when AI generates mathematics — or business software — that is too large to review line by line? Explore an interactive map of the Riemann Hypothesis formal proof developed by mathematician Levent Alpöge wit",
+      "coverImage": "https://i.ytimg.com/vi/TBY5TcF4Vac/hqdefault.jpg",
+      "videoDescription": "What happens when AI generates mathematics — or business software — that is too large to review line by line? Explore an interactive map of the Riemann Hypothesis formal proof developed by mathematician Levent Alpöge with Claude.\n\nThe Lean library released on November 20, 2026 contains roughly 17 million lines across 175,187 files. The following day, the Lean FRO and Mathlib Initiative issued a joint statement confirming that independent checks had validated the formal statement and proof. Michael Rubinstein's independent verification and ongoing human-readable exposition add important context.\n\nThis video walks through the interactive visualization: interconnected regions, mathematical dependencies and striking three-dimensional structures. The map helps make the scale of the material visible; it is not itself a proof checker or a substitute for understanding the argument.\n\nThe implications extend beyond mathematics. Manual code review becomes increasingly difficult as AI-generated systems grow. Formal verification can establish specified properties, but business requirements still need precise definitions, suitable assumptions and human judgment. The question is not just how much code we can generate, but how we can establish that it does what we intend.\n\nSource visuals: recorded interaction with the explorer. Illustrative stock footage and photo: ArtHouse Studio, Vitaly Gariev, Jakub Zerdzicki via Pexels.\n\nInteractive project: https://bosnadev.com/lab/riemann/app\nAuthor’s announcement (20 November 2026): https://alpo.ge/remark.pdf\nLean FRO and Mathlib verification statement (21 November 2026): https://leanprover-community.github.io/blog/posts/riemann-hypothesis/\nIndependent verification and explanatory draft — Michael Rubinstein, University of Waterloo: https://math.uwaterloo.ca/~mrubinst/alpoge_claude_grh/\n\nMade in Framewright — https://markoblogo.github.io/framewright/\nBy ABVX — https://abvx.xyz/\n\n#RiemannHypothesis #ClaudeAI #Lean4 #FormalVerification #SoftwareEngineering",
+      "addedAt": "2026-11-25T19:36:43.741Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Claude AI Brain Surgery on a Mouse? What Exin Reported",
       "url": "https://www.youtube.com/watch?v=tgMU4DCjohk",
       "publishedAt": "2026-10-30T13:25:50.000Z",

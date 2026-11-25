@@ -10068,7 +10068,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-25T18:15:00.649Z",
+      "updatedAt": "2026-11-25T19:36:43.741Z",
       "tags": [],
       "links": [],
       "related": []
@@ -17624,6 +17624,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=wPIyeBYJZbQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Riemann Hypothesis: Claude, Lean and the 17-Million-Line Proof",
+      "summary": "What happens when AI generates mathematics — or business software — that is too large to review line by line? Explore an interactive map of the Riemann Hypothesis formal proof developed by mathematician Levent Alpöge wit",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/TBY5TcF4Vac",
+      "publishedAt": "2026-11-25T19:17:36.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=TBY5TcF4Vac"
         }
       ],
       "related": []

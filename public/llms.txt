@@ -317,6 +317,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/9wirkrpkSoQ
   Summary: My little AI-powered weekend game project is turning into something much bigger. What started as a WebGL experiment has now evolved into a Unity project with AI-generated 3D assets, multiple coding agents, and a growing
 
+- T3 Code 0.1.12: Multi-Agent AI Coding, Remote Agents & Multi-Repository Projects
+  URL: https://abvx.xyz/writing/videos/A6qioe2fJTA
+  Summary: T3 Code has received a major update, bringing multi-repository projects, interactive remote infrastructure visualization, and hundreds of improvements to one of the most popular open-source AI coding harnesses. With appr
+
 - Spaghetti Splatting: 3D Gaussian Splatting Meets Physics Simulation
   URL: https://abvx.xyz/writing/videos/aaW8vE4AGDM
   Summary: Meet Spaghetti Splatting, a new 3D reconstruction and differentiable rendering technique that extends 3D Gaussian Splatting from individual points to continuous curves. And it could be particularly useful for rendering a
@@ -1160,6 +1164,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Free Interactive Algorithms & Data Structures Course: 86 Lessons with 3D Visualizations
   URL: https://abvx.xyz/writing/videos/pByrCDOJ0EM
   Summary: Learning algorithms, data structures, and computer science fundamentals doesn't have to mean reading hundreds of pages of theory. Byte-Sized Algorithms is a free interactive computer science course featuring 86 visual le
+
+- Reverse Engineering Video with REA Video: Shot Analysis & VIDEO.md
+  URL: https://abvx.xyz/writing/videos/pdWiWzb4t28
+  Summary: Can you reverse engineer a finished video to understand its editing, camera motion and production techniques? I tested REA Video on a controlled 12-second MP4 with a known original edit, then checked what its analysis ac
 
 - When a Photo Exhibition Starts Melting | Illusions in Suspension
   URL: https://abvx.xyz/writing/videos/PHMx3I0VYqY

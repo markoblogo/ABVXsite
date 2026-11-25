@@ -1,3 +1,4 @@
+import seriesLayout from './series-layout.module.css';
 import RssLink from '@/components/RssLink';
 import CatalogueGroupVideos, {hasCatalogueGroupVideos} from '@/components/CatalogueGroupVideos';
 import {sectionAnchor} from '@/content/runtime-catalogue.mjs';
@@ -114,14 +115,14 @@ function SeriesLine({
             {freeCount ? <span>{freeCount} free resources</span> : null}
             {companionCount ? <span>{companionCount} companion systems</span> : null}
           </div>
-          <div className="books-series-line__actions">
+          <div className={`books-series-line__actions ${seriesLayout.catalogueActions} ${seriesLayout.actionScope}`}>
             <TagList tags={series.tags.slice(0, 5)} />
             <ActionLinks kind="book" links={series.links} compact />
           </div>
         </div>
 
         {image ? (
-          <div className="books-series-line__media">
+          <div className={`books-series-line__media ${seriesLayout.cover}`}>
             <MediaPanel image={image} title={series.title} variant="project" />
           </div>
         ) : null}

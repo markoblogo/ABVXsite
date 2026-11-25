@@ -1,3 +1,4 @@
+import seriesLayout from '../series-layout.module.css';
 import BookDescriptionLanguageLinks from '@/components/BookDescriptionLanguageLinks';
 import {bookLocaleAlternates,bookLocalePath,localizedBookDescription} from '@/lib/book-locales.mjs';
 import {documentLanguage} from '@/lib/document-language.mjs';
@@ -242,7 +243,7 @@ export default async function BookDetailPage({
           ]}
         />
         <header className={`series-detail-hero${image ? ' series-detail-hero--with-media' : ''}`}>
-          <div className="series-detail-hero__copy">
+          <div className={`series-detail-hero__copy ${seriesLayout.actionScope}`}>
             <div className="eyebrow">Official publishing line / {book.status}</div>
             <h1>{title}</h1>
             <p>{book.summary}</p>
@@ -251,7 +252,7 @@ export default async function BookDetailPage({
           </div>
 
           {image ? (
-            <div className="series-detail-hero__media">
+            <div className={`series-detail-hero__media ${seriesLayout.cover}`}>
               <MediaPanel image={image} title={title} variant="project" priority />
             </div>
           ) : null}

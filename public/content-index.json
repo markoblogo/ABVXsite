@@ -7426,6 +7426,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "8 New GitHub Copilot MCP Connectors: Read vs Write Permissions",
+      "summary": "GitHub Copilot just added eight more verified MCP connectors in public preview. Connecting your apps can give an AI agent useful context — but access to information is not the same thing as permission to change it. The n",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/BT__AcsRm3c",
+      "publishedAt": "2026-11-25T17:28:00.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=BT__AcsRm3c"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "936 AI Agents Built Their Own Scientific Community. Then They Started a Journal.",
       "summary": "What happens when nearly 1,000 AI agents are given their own preprint server, research laboratories, and scientific chat rooms? They don't just write papers. They debate experimental designs, criticize other agents' resu",
       "canonicalUrl": "https://abvx.xyz/writing/videos/gvgUEclkYao",
@@ -9950,6 +9973,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "ComfyUI Cupid3D: Image-to-3D Reconstruction with Camera Matching for VFX",
+      "summary": "ComfyUI-Cupid3D introduces a powerful approach to single-image 3D reconstruction by generating not only a 3D mesh from a photograph but also a reconstructed camera matching the original image perspective. Unlike conventi",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/4aAWLMJzOxI",
+      "publishedAt": "2026-11-25T17:18:39.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=4aAWLMJzOxI"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "ComfyUI Desktop 1.2: Multiple Versions, Shared Models, Automatic Backups & Linux Support",
       "summary": "Comfy Desktop 1.2 is here, introducing a simpler installation process, side-by-side ComfyUI versions, shared model libraries, automatic snapshots, smarter model downloads, and native Linux support via AppImage. Managing ",
       "canonicalUrl": "https://abvx.xyz/writing/videos/BUHnlvzir6E",
@@ -10022,7 +10068,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-25T17:10:39.628Z",
+      "updatedAt": "2026-11-25T17:36:44.507Z",
       "tags": [],
       "links": [],
       "related": []
@@ -18245,6 +18291,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=A6qioe2fJTA"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Taan AI vs Suno, Lyria & ElevenLabs: AI Music Generation with Precise Timing Control",
+      "summary": "Another AI music generator? Yes, but this one focuses on something many existing music generation models struggle with: precise creative control. Taan AI, a Y Combinator F26 startup, has introduced its controllable AI mu",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/OGuKygT51PM",
+      "publishedAt": "2026-11-25T17:29:41.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=OGuKygT51PM"
         }
       ],
       "related": []

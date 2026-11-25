@@ -161,6 +161,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/46Uv1zGXIUg
   Summary: What if Blender worked like Google Docs, allowing multiple 3D artists to edit the same scene at the same time? Blend Online is a new Blender add-on developed by Pamir Bal that introduces real-time multiplayer collaborati
 
+- ComfyUI Cupid3D: Image-to-3D Reconstruction with Camera Matching for VFX
+  URL: https://abvx.xyz/writing/videos/4aAWLMJzOxI
+  Summary: ComfyUI-Cupid3D introduces a powerful approach to single-image 3D reconstruction by generating not only a 3D mesh from a photograph but also a reconstructed camera matching the original image perspective. Unlike conventi
+
 - MIT's Tiny Flying Robot Has a Brain - But Still Needs a Wire
   URL: https://abvx.xyz/writing/videos/4almCynPti8
   Summary: A tiny flying robot can carry its own sensors and controller. So why does it still need a wire? MIT researchers have demonstrated insect-scale flapping-wing flight with integrated sensing and onboard computation. This sh
@@ -396,6 +400,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - I Lived 85 Years in a Browser | 1 in 8 Billion Life Simulator
   URL: https://abvx.xyz/writing/videos/bNpRyDZsCHg
   Summary: What if you were born somewhere else? In this 1 in 8 Billion gameplay review, one randomly assigned life unfolds from birth to age 85—in under two minutes. Meet Anita Gautam, a fictional girl born into a poor family in r
+
+- 8 New GitHub Copilot MCP Connectors: Read vs Write Permissions
+  URL: https://abvx.xyz/writing/videos/BT__AcsRm3c
+  Summary: GitHub Copilot just added eight more verified MCP connectors in public preview. Connecting your apps can give an AI agent useful context — but access to information is not the same thing as permission to change it. The n
 
 - GitHub Copilot Adaptive Effort: Lite, Balanced or Max Code Review
   URL: https://abvx.xyz/writing/videos/btgYpgsP7kQ
@@ -1128,6 +1136,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - GTA 5 Gets Spider-Man 2 Web-Swinging! AI-Assisted Game Mod
   URL: https://abvx.xyz/writing/videos/ogc-oZoebH0
   Summary: Spider-Man 2's web-swinging mechanics are now running inside GTA 5. And AI coding agents helped make it possible. Meet Web of Los Santos, a GTA V mod that brings Spider-Man 2-inspired movement into Los Santos. Web-swingi
+
+- Taan AI vs Suno, Lyria & ElevenLabs: AI Music Generation with Precise Timing Control
+  URL: https://abvx.xyz/writing/videos/OGuKygT51PM
+  Summary: Another AI music generator? Yes, but this one focuses on something many existing music generation models struggle with: precise creative control. Taan AI, a Y Combinator F26 startup, has introduced its controllable AI mu
 
 - Trois paquets, quatre indices : saurez-vous résoudre l’énigme ?
   URL: https://abvx.xyz/writing/videos/OHU26SiXCoU

@@ -185,6 +185,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/4u78DC8S864
   Summary: Remember when drones needed human pilots, GPS, and a reliable connection to navigate? Well, apparently, those days are numbered. Researchers at Purdue University have demonstrated an autonomous drone that can follow a pe
 
+- Robot Vacuum in a Pink Wig Steals the Concert  #robot  #dancingrobot  #vacuumcleaner  #dance
+  URL: https://abvx.xyz/writing/videos/4Xd3RLy5tQs
+  Summary: A robot vacuum in a pink wig parties harder than I have all year. The real headliner is on the floor. The full scene first, then a close-up replay of this tiny party machine. Soundtrack: Alpha x, from our music collectio
+
 - How to Use Claude Opus 5.5 for AI Motion Graphics Without a Claude Subscription
   URL: https://abvx.xyz/writing/videos/5BS9m6b0zWk
   Summary: Want to create impressive motion graphics with Claude Opus 5.5 but don't have a Claude subscription? Here's a little trick worth trying. Genspark lets you access AI coding tools and offers 100 free credits per day. And w

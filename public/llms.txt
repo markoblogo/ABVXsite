@@ -3443,6 +3443,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook
 
+- Psychology Notebook #73 — What Counts as Enough
+  URL: https://abvx.xyz/writing/psychology-notebook-73-what-counts-as-enough
+  Summary: Ten translated notebook fragments on what counts as enough.
+  Group: writing
+  Tags: psychology-notebook
+
+- Psychology Notebook #74 — When Other People Stay Real
+  URL: https://abvx.xyz/writing/psychology-notebook-74-when-other-people-stay-real
+  Summary: Ten translated notebook fragments on when other people stay real.
+  Group: writing
+  Tags: psychology-notebook
+
 - The Berliner: How My Beer Cocktail Ended Up on a French Bar's Menu
   URL: https://abvx.xyz/writing/the-berliner-guinness-port-beer-cocktail
   Summary: I discovered Guinness with port wine in Berlin, recreated it with whatever a small French bar had available, and eventually watched it become an official item in the cash register.

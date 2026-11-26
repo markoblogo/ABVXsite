@@ -10137,7 +10137,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-26T04:15:36.618Z",
+      "updatedAt": "2026-11-26T08:02:51.431Z",
       "tags": [],
       "links": [],
       "related": []
@@ -17515,6 +17515,42 @@
       "links": [],
       "publishedAt": "2026-11-25",
       "updatedAt": "2026-11-25",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #73 — What Counts as Enough",
+      "summary": "Ten translated notebook fragments on what counts as enough.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-73-what-counts-as-enough",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-26",
+      "updatedAt": "2026-11-26",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #74 — When Other People Stay Real",
+      "summary": "Ten translated notebook fragments on when other people stay real.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-74-when-other-people-stay-real",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-26",
+      "updatedAt": "2026-11-26",
       "related": []
     },
     {

@@ -10183,7 +10183,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-26T13:24:11.769Z",
+      "updatedAt": "2026-11-26T14:14:24.947Z",
       "tags": [],
       "links": [],
       "related": []
@@ -14413,6 +14413,29 @@
         }
       ],
       "collection": "kitchen-notes"
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Matrix-Game 4.0 Explained: AI Neural Rendering for Playable Games",
+      "summary": "What happens when a game engine runs the rules and a video model draws the world? Matrix-Game 4.0 from Skywork AI pairs low-poly game frames with streaming neural rendering. This overview uses the team's demo to show the",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/EMaumbo21Nw",
+      "publishedAt": "2026-11-26T13:47:25.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=EMaumbo21Nw"
+        }
+      ],
+      "related": []
     },
     {
       "type": "video",

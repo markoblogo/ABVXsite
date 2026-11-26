@@ -10160,7 +10160,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-26T11:21:02.643Z",
+      "updatedAt": "2026-11-26T11:37:53.513Z",
       "tags": [],
       "links": [],
       "related": []
@@ -14718,6 +14718,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=uuvpa2r_fLQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "MiniMax H3 Lip Sync Test in ComfyUI | 1080p Video with Character, Motion & Audio References",
+      "summary": "How good is MiniMax H3 at AI lip synchronization? In this video, I share my own practical tests of MiniMax H3 using ComfyUI, combining character references, reference footage, and original dialogue audio to generate anim",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/3B-mYw9RQls",
+      "publishedAt": "2026-11-26T11:26:57.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=3B-mYw9RQls"
         }
       ],
       "related": []

@@ -121,6 +121,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/32UkYwQbtKk
   Summary: This free Claude Code skill transforms Excel and CSV data into beautiful, interactive, hand-drawn charts, with 54 different visualization types. Meet MiniCharts by April Zhu. Instead of boring bar charts and generic dash
 
+- MiniMax H3 Lip Sync Test in ComfyUI | 1080p Video with Character, Motion & Audio References
+  URL: https://abvx.xyz/writing/videos/3B-mYw9RQls
+  Summary: How good is MiniMax H3 at AI lip synchronization? In this video, I share my own practical tests of MiniMax H3 using ComfyUI, combining character references, reference footage, and original dialogue audio to generate anim
+
 - RUN//SIGNAL M02: Waterline | 15-Minute Beginner Walk + Run
   URL: https://abvx.xyz/writing/videos/3b8ESlIpQkE
   Summary: North Relay reports a pressure fault. Your job is to carry a replacement seal through the canal service corridor to Waterline. Dispatch will guide your effort and tell you when to switch pace, so you can follow the missi

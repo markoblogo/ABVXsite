@@ -10160,7 +10160,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-26T11:37:53.513Z",
+      "updatedAt": "2026-11-26T11:50:12.980Z",
       "tags": [],
       "links": [],
       "related": []
@@ -21014,6 +21014,29 @@
           "relation": "same-project"
         }
       ]
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "WGSN Trend Forecasting Methodology | Animated Data Visualization & Process Design",
+      "summary": "How do trend forecasting companies transform vast amounts of data into actionable insights about the future of consumer behavior? This project explores the visualization of WGSN's consumer trend forecasting methodology t",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/2KowhiQXREo",
+      "publishedAt": "2026-11-26T11:46:38.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=2KowhiQXREo"
+        }
+      ],
+      "related": []
     },
     {
       "type": "video",

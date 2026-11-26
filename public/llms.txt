@@ -113,6 +113,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/2Eo7TqHaF50
   Summary: What would it feel like to step inside Vincent van Gogh’s painted world? Brushveil is a free, relaxing browser game that turns artwork into a place to explore. Our short gameplay review takes you through Starry Town, a g
 
+- WGSN Trend Forecasting Methodology | Animated Data Visualization & Process Design
+  URL: https://abvx.xyz/writing/videos/2KowhiQXREo
+  Summary: How do trend forecasting companies transform vast amounts of data into actionable insights about the future of consumer behavior? This project explores the visualization of WGSN's consumer trend forecasting methodology t
+
 - My $0 API Key Trying to Access OpenAI, Claude & Gemini
   URL: https://abvx.xyz/writing/videos/2po93Gv-MuY
   Summary: My API key has exactly $0.00 in credits. But does that stop him from approaching the biggest AI models on the planet? Absolutely not. OpenAI. Anthropic Claude. Google Gemini. Three AI giants. One broke little API key. An

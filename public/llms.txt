@@ -559,7 +559,7 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 
 - PixelMatte: Single-Step AI Image Matting with Pixel-Space Diffusion Transformers
   URL: https://abvx.xyz/writing/videos/ekM6EQx6goM
-  Summary: PixelMatte: Single-Step AI Image Matting with Pixel-Space Diffusion Transformers
+  Summary: PixelMatte introduces a new approach to high-precision AI image matting using pretrained pixel-space Diffusion Transformers (DiT), eliminating the need for latent diffusion and VAE encoding or decoding. The result is a s
 
 - Adobe Premiere Pro Gets Generative Remove! Erase Objects From Video With AI
   URL: https://abvx.xyz/writing/videos/EL_UutTuAOo

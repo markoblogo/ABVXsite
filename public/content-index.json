@@ -16061,7 +16061,7 @@
       "group": "YouTube",
       "status": "live",
       "title": "PixelMatte: Single-Step AI Image Matting with Pixel-Space Diffusion Transformers",
-      "summary": "PixelMatte: Single-Step AI Image Matting with Pixel-Space Diffusion Transformers",
+      "summary": "PixelMatte introduces a new approach to high-precision AI image matting using pretrained pixel-space Diffusion Transformers (DiT), eliminating the need for latent diffusion and VAE encoding or decoding. The result is a s",
       "canonicalUrl": "https://abvx.xyz/writing/videos/ekM6EQx6goM",
       "publishedAt": "2026-11-26T14:49:34.000Z",
       "tags": [

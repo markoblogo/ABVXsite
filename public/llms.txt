@@ -1429,6 +1429,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/S1chA15xTg0
   Summary: Google just made AI video generation longer, cheaper, and considerably more interesting. Meet Gemini Omni 1.2 Flash, the latest update to Google's AI video generation model. And honestly, the most exciting feature isn't
 
+- Bencho: 182 UI Sound Effects with WAV Downloads, React Components & MCP Integration
+  URL: https://abvx.xyz/writing/videos/s2hpHF2Wr4k
+  Summary: Most AI-generated applications focus on visual design, functionality, and animations. But what about sound? Bencho introduces a library of 182 UI sound effects designed to make digital interfaces feel more responsive, in
+
 - Framewright: Choose the Right Tools for Your Next Promo Video
   URL: https://abvx.xyz/writing/videos/s3BBP698_r8
   Summary: A software launch. A book trailer. A cinematic interface demo. Different briefs need different video workflows. Framewright is an evolving collection of video-production methods, agent skills and lessons from real ABVX p

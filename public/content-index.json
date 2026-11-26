@@ -8438,6 +8438,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Bencho: 182 UI Sound Effects with WAV Downloads, React Components & MCP Integration",
+      "summary": "Most AI-generated applications focus on visual design, functionality, and animations. But what about sound? Bencho introduces a library of 182 UI sound effects designed to make digital interfaces feel more responsive, in",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/s2hpHF2Wr4k",
+      "publishedAt": "2026-11-26T02:51:29.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=s2hpHF2Wr4k"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Best AI Models for Research: Opus 5.5 vs GPT-6.1 vs DeepSeek | OpenResearch Index",
       "summary": "Which AI model should you use for scientific research, literature reviews, machine learning experiments, and autonomous research workflows? The new OpenResearch Intelligence Index from alphaXiv evaluates whether AI model",
       "canonicalUrl": "https://abvx.xyz/writing/videos/XQ-F_3Nc74c",
@@ -10114,7 +10137,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-25T21:12:44.837Z",
+      "updatedAt": "2026-11-26T03:15:46.723Z",
       "tags": [],
       "links": [],
       "related": []

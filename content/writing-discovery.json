@@ -1361,6 +1361,16 @@
     },
     {
       "source": "medium",
+      "title": "AI Agents Are Burning Tokens on Things They Shouldn’t Even Be Thinking About",
+      "url": "https://abvcreative.medium.com/ai-agents-are-burning-tokens-on-things-they-shouldnt-even-be-thinking-about-a78cf4778751",
+      "publishedAt": "2026-11-26T18:21:31.000Z",
+      "excerpt": "Cloudflare cut MCP tool overhead by 99.9%. MemTensor made AI memory 66 times smaller. Two very different solutions to the same expensive problem. There’s something wonderfully ridiculous about modern artificial intellige",
+      "coverImage": "https://cdn-images-1.medium.com/max/1024/1*m0xHLLhx2avyXK6N7HsgMQ.png",
+      "addedAt": "2026-11-26T18:36:55.243Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "medium",
       "title": "AI Agents Keep Getting Lost Between Repositories.",
       "url": "https://abvcreative.medium.com/ai-agents-keep-getting-lost-between-repositories-1284fcf6e8f1",
       "publishedAt": "2026-11-20T15:22:07.000Z",

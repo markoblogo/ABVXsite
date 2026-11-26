@@ -673,6 +673,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/GPfkz36JWbI
   Summary: One man. Two selves. A familiar nightmare in a different language. Explore Robert Louis Stevenson's The Strange Case of Dr. Jekyll and Mr. Hyde in a layered edition with English, Toki Pona and sitelen pona. This short bo
 
+- Quantum Gravity with GPT Astra: A New AI-Assisted Approach to the Theory of Everything
+  URL: https://abvx.xyz/writing/videos/GsqVweBH94Y
+  Summary: Just another Thursday in 2026. A Stanford physicist, working with OpenAI's GPT-6 Astra, has proposed a new approach to quantum gravity, one of the most fundamental unsolved problems in modern physics. For approximately a
+
 - 936 AI Agents Built Their Own Scientific Community. Then They Started a Journal.
   URL: https://abvx.xyz/writing/videos/gvgUEclkYao
   Summary: What happens when nearly 1,000 AI agents are given their own preprint server, research laboratories, and scientific chat rooms? They don't just write papers. They debate experimental designs, criticize other agents' resu

@@ -10183,7 +10183,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-26T16:14:21.795Z",
+      "updatedAt": "2026-11-26T17:37:16.270Z",
       "tags": [],
       "links": [],
       "related": []
@@ -17758,6 +17758,29 @@
       "links": [],
       "publishedAt": "2026-11-26",
       "updatedAt": "2026-11-26",
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Quantum Gravity with GPT Astra: A New AI-Assisted Approach to the Theory of Everything",
+      "summary": "Just another Thursday in 2026. A Stanford physicist, working with OpenAI's GPT-6 Astra, has proposed a new approach to quantum gravity, one of the most fundamental unsolved problems in modern physics. For approximately a",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/GsqVweBH94Y",
+      "publishedAt": "2026-11-26T17:13:01.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=GsqVweBH94Y"
+        }
+      ],
       "related": []
     },
     {

@@ -10137,7 +10137,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-26T03:37:17.540Z",
+      "updatedAt": "2026-11-26T04:15:36.618Z",
       "tags": [],
       "links": [],
       "related": []
@@ -13818,6 +13818,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=YZx5Z5La5KY"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "J3lly B3ing: A Relaxing Jellyfish Game in a Pixel Ocean",
+      "summary": "Play j3lly b3ing by ma水マ母: https://mamamamajelly.itch.io/j3lly-b3ing A quiet swim through a shimmering pixel ocean: kelp, coral, shoals of fish, and a tiny moon jellyfish carried by the current. You can steer with the ar",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/OUbxnkNFBkA",
+      "publishedAt": "2026-11-26T03:55:40.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=OUbxnkNFBkA"
         }
       ],
       "related": []

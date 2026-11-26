@@ -1209,6 +1209,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/orQYqXbm5DM
   Summary: What if you could take an existing video, break it down shot by shot, understand exactly how it was made, and generate a detailed plan for recreating it using AI video models, motion graphics, or traditional production t
 
+- J3lly B3ing: A Relaxing Jellyfish Game in a Pixel Ocean
+  URL: https://abvx.xyz/writing/videos/OUbxnkNFBkA
+  Summary: Play j3lly b3ing by ma水マ母: https://mamamamajelly.itch.io/j3lly-b3ing A quiet swim through a shimmering pixel ocean: kelp, coral, shoals of fish, and a tiny moon jellyfish carried by the current. You can steer with the ar
+
 - The Pope vs Anthropic: Should AI Help Humanity Defeat Death?
   URL: https://abvx.xyz/writing/videos/OW1weOBWRVA
   Summary: Could AI help humanity defeat disease, aging, and eventually death? Anthropic CEO Dario Amodei thinks artificial intelligence could bring extraordinary medical breakthroughs within the next decade. Pope Leo XIV has a ver

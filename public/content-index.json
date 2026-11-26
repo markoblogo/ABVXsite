@@ -10183,7 +10183,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-26T12:18:48.639Z",
+      "updatedAt": "2026-11-26T13:13:36.280Z",
       "tags": [],
       "links": [],
       "related": []
@@ -19900,6 +19900,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=eB6HnfiTN8c"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "This Robot Makes Salami Sandwiches | Robots We Actually Need  #robot #cooking #sandwich",
+      "summary": "Finally, a robot with the right priorities. More salami… easy on the salad. A short humorous edit of the supplied sandwich-robot clip, with original English commentary. Music: AI-logic, from our soundtrack collection.",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/LUwetDkvCEE",
+      "publishedAt": "2026-11-26T12:48:31.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=LUwetDkvCEE"
         }
       ],
       "related": []

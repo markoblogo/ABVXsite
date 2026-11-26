@@ -541,6 +541,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/dyle7hH3LOw
   Summary: GTA 6 is finally here, and apparently, some gamers have already decided that playing it themselves is too much work. So they gave the job to Claude. Several viral posts on X claim that Claude Code can autonomously play G
 
+- EA PERF-GS: Open-Source 3D Gaussian Splatting in 10 Seconds Without CUDA
+  URL: https://abvx.xyz/writing/videos/DYthnFER_l4
+  Summary: Electronic Arts has released PERF-GS, an open-source, cross-platform differentiable training engine for 3D Gaussian Splatting capable of reconstructing scenes in approximately 10 seconds on an NVIDIA RTX 4090 without req
+
 - 244 Pixel Art Animations Made with Claude Code | Free VFX Library + AI Skill
   URL: https://abvx.xyz/writing/videos/e7OuakMC4cA
   Summary: What if you could create hundreds of beautiful pixel art animations without drawing a single sprite? No Photoshop. No Aseprite. No pre-made image assets. Just Claude Code, JavaScript, and a surprisingly effective creativ
@@ -1332,6 +1336,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Spline + ChatGPT: Create Interactive 3D Scenes Just by Prompting | Codex Plugin
   URL: https://abvx.xyz/writing/videos/puzSHTiHyW8
   Summary: What if you could create an entire interactive 3D scene without opening Blender, writing Three.js code, or manually building every object? And what if you could edit the result directly inside ChatGPT? Meet the new Splin
+
+- Moss Walker Review: A Relaxing Browser Game That Grows With Every Step
+  URL: https://abvx.xyz/writing/videos/q1eNTO8TWQE
+  Summary: Every step leaves a little more green behind. Moss Walker turns a quiet walk into a trail of grass, flowers and colour. This review follows our own recorded wander through its misty landscape: flower-covered hills, glowi
 
 - Do You Believe in Life After Death? This Interactive 3D Visualization Explores 130,000 Answers
   URL: https://abvx.xyz/writing/videos/Q73r6GLqXVY

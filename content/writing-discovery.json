@@ -7005,6 +7005,17 @@
     },
     {
       "source": "youtube",
+      "title": "LongCat Video Avatar 1.6: Photo-to-Video Test and Face Close-Up",
+      "url": "https://www.youtube.com/watch?v=wCksJ0hExfs",
+      "publishedAt": "2026-11-26T15:46:45.000Z",
+      "excerpt": "One photo, a voice, and a face that starts moving. This LongCat Video Avatar 1.6 test begins with a large source/output comparison, then follows an animated photo → service → video workflow and pushes toward the lips. A ",
+      "coverImage": "https://i.ytimg.com/vi/wCksJ0hExfs/hqdefault.jpg",
+      "videoDescription": "One photo, a voice, and a face that starts moving. This LongCat Video Avatar 1.6 test begins with a large source/output comparison, then follows an animated photo → service → video workflow and pushes toward the lips. A brief comic portrait is a separate AI image edit, not LongCat video output.\n\nOur actual ZeroGPU result contains 93 frames: 3.72 seconds at 768×512 and 25 fps. Longer shots in this edit replay that same result at native speed. The close-ups enlarge its existing pixels. We have not tested ten-minute identity consistency.\n\nThe run used the public demo's supplied example image and speech. The original conditioning audio is preserved in the demonstration passes; commentary and a minimal original rhythm bed guide the inspection. This was cloud inference, not a local Mac generation. The server reported 163.2 seconds for generation and 165.6 seconds total GPU time for this one run; free access is quota-limited.\n\nModel: https://huggingface.co/meituan-longcat/LongCat-Video-Avatar-1.6\nDemo used: https://huggingface.co/spaces/Mikebbbbbbbbbbb/longcat-avatar-demo\nReference and audio: the MIT-labelled example supplied by the demo, from the LongCat project.\nComic image: generated from the source close-up with the built-in image tool.\nCommentary, rhythm bed and edit: ABVX / Framewright.\n\nMade in Framewright — https://markoblogo.github.io/framewright/\nBy ABVX — https://abvx.xyz/\n\n#LongCat #AIAvatar #PhotoToVideo #LipSync #VideoGeneration",
+      "addedAt": "2026-11-26T16:14:21.795Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "Menton, France: From the Market to the Sea | A 40-Second Escape",
       "url": "https://www.youtube.com/watch?v=WEEGy8Ks3ig",
       "publishedAt": "2026-11-01T17:18:14.000Z",

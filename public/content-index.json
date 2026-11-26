@@ -10183,7 +10183,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-26T14:50:10.362Z",
+      "updatedAt": "2026-11-26T16:14:21.795Z",
       "tags": [],
       "links": [],
       "related": []
@@ -14269,6 +14269,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=o2IQwGsWcNQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "LongCat Video Avatar 1.6: Photo-to-Video Test and Face Close-Up",
+      "summary": "One photo, a voice, and a face that starts moving. This LongCat Video Avatar 1.6 test begins with a large source/output comparison, then follows an animated photo → service → video workflow and pushes toward the lips. A ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/wCksJ0hExfs",
+      "publishedAt": "2026-11-26T15:46:45.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=wCksJ0hExfs"
         }
       ],
       "related": []

@@ -9904,6 +9904,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude Opus 5.6 Creates a Stunning Recursive 3D Animation in Three.js in 50 Minutes",
+      "summary": "A watchmaker sits at his workbench, surrounded by tools, books, a coffee mug, and a magnifying glass. In front of him lies an open mechanical wristwatch. The camera slowly approaches the exposed mechanism, entering a mic",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/hGnHlSnzJ1Q",
+      "publishedAt": "2026-11-26T21:32:16.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=hGnHlSnzJ1Q"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude's Weirdest Plugin? A Home Distillery",
       "summary": "One maker calls a home distillery an AI вЂњpluginвЂќвЂ”and the final reveal makes the joke even better. We adapted the Russian narration and on-screen captions into English. Source clip: https://www.yaplakal.com/forum3/t",
       "canonicalUrl": "https://abvx.xyz/writing/videos/928ZiGl0m8w",
@@ -10183,7 +10206,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-26T20:12:24.306Z",
+      "updatedAt": "2026-11-26T21:36:50.760Z",
       "tags": [],
       "links": [],
       "related": []

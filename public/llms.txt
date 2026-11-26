@@ -749,6 +749,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/hBU0WpTTbes
   Summary: What if you could make Claude Code more efficient by giving each AI model a different job? Instead of using the most expensive model for everything, try a smarter multi-model setup: Sonnet does the coding. Opus provides
 
+- Claude Opus 5.6 Creates a Stunning Recursive 3D Animation in Three.js in 50 Minutes
+  URL: https://abvx.xyz/writing/videos/hGnHlSnzJ1Q
+  Summary: A watchmaker sits at his workbench, surrounded by tools, books, a coffee mug, and a magnifying glass. In front of him lies an open mechanical wristwatch. The camera slowly approaches the exposed mechanism, entering a mic
+
 - Elon Musk's 50 AI Agents Idea: Why Chatting With AI Is Apparently Outdated
   URL: https://abvx.xyz/writing/videos/hHAxCL6PWjI
   Summary: What if the best way to use AI wasn't asking it questions, but hiring it 50 AI employees? A viral Elon Musk-themed skit imagines a very different kind of AI workflow: one agent plans the day, another manages projects, an

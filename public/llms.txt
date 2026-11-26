@@ -1633,6 +1633,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/uiH_-woOeZk
   Summary: Just found a useful website for vibe coding, AI-assisted UI design, and frontend development. Meet DesignBookmark Motion, a growing collection of interactive animated UI components you can preview and recreate using Clau
 
+- Video Explainer: Open-Source AI Skill for Creating Animated Educational Videos
+  URL: https://abvx.xyz/writing/videos/uIwNWK4BL_Y
+  Summary: What if, instead of asking AI to explain a complex topic through several pages of text, you could ask it to create a short educational video with animations, illustrations, narration, and subtitles? Peter Yang has open-s
+
 - Afterimage | Venice Biennale 2019 — Light, Memory & Machines
   URL: https://abvx.xyz/writing/videos/umOUUPFrG4c
   Summary: Light becomes a body. A letter dissolves into fog. A robot repeats a task that never stays finished. AFTERIMAGE is an original short art film connecting four encounters with media and installation art from the Venice Bie

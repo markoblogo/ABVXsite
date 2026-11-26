@@ -10183,7 +10183,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-26T17:37:16.270Z",
+      "updatedAt": "2026-11-26T18:50:40.582Z",
       "tags": [],
       "links": [],
       "related": []
@@ -20711,6 +20711,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=IAjh5g_XnLA"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Video Explainer: Open-Source AI Skill for Creating Animated Educational Videos",
+      "summary": "What if, instead of asking AI to explain a complex topic through several pages of text, you could ask it to create a short educational video with animations, illustrations, narration, and subtitles? Peter Yang has open-s",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/uIwNWK4BL_Y",
+      "publishedAt": "2026-11-26T18:47:36.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=uIwNWK4BL_Y"
         }
       ],
       "related": []

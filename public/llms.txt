@@ -877,6 +877,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/k7DYPrNV7ZY
   Summary: A signed commodity contract is only the beginning. The Contract Execution Officer Handbook explores the work that follows: documents, logistics, inspections, payment control, financial reconciliation and contract closeou
 
+- Andrej Karpathy's USA Civ: Building a Real-World Civilization with Claude Opus 5.5
+  URL: https://abvx.xyz/writing/videos/K87mzoksOrc
+  Summary: Is the metaverse dead? Andrej Karpathy may have just demonstrated a far more interesting version of it. Instead of building another virtual world filled with artificial economies, fictional cities, and virtual real estat
+
 - Gemini 4 Hydrogen: Can It Spot the Wrong Subtitles?
   URL: https://abvx.xyz/writing/videos/k9s_jHPZ5pI
   Summary: Can Gemini 4 Hydrogen spot outdated subtitles in a video handoff? In this 43-second test, I gave Hydrogen the accepted cut’s filename, the attached SRT filename and the two conflicting lines in Google AI Studio. It ident
@@ -1048,6 +1052,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Claude Fable 5.2 Rebuilt Ancient Babylon in 8 Hours | Interactive 3D
   URL: https://abvx.xyz/writing/videos/mkLiCHl5DL0
   Summary: Claude Fable 5.2 spent eight hours recreating ancient Babylon as it might have looked around 600 BC, turning historical research into an interactive 3D world you can explore yourself. And the most interesting part? The A
+
+- Yumina: Open-Source AI Game Engine with 2D Character Animation, Comfy Cloud & MCP
+  URL: https://abvx.xyz/writing/videos/MrsHezVTFhI
+  Summary: What if you could turn a single image into an interactive animated character that breathes, blinks, follows your cursor, changes facial expressions, and responds to events in real time? Yumina is an open-source AI game e
 
 - ChatGPT Images 2.6: I Tested AI GIFs Up to 256 Frames! Plus a Big Update on Real Faces
   URL: https://abvx.xyz/writing/videos/msQXaBAvh1g

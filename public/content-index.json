@@ -8231,6 +8231,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Andrej Karpathy's USA Civ: Building a Real-World Civilization with Claude Opus 5.5",
+      "summary": "Is the metaverse dead? Andrej Karpathy may have just demonstrated a far more interesting version of it. Instead of building another virtual world filled with artificial economies, fictional cities, and virtual real estat",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/K87mzoksOrc",
+      "publishedAt": "2026-11-26T11:18:57.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=K87mzoksOrc"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Ant Group Duo: An AI Avatar That Sees, Listens & Interrupts in Real Time",
       "summary": "What if your next AI assistant wasn't just a voice, but an actual face on a video call? Meet Duo v1, a new open-weight audiovisual world model from Ant Group's AI research team. Unlike traditional AI avatars that wait fo",
       "canonicalUrl": "https://abvx.xyz/writing/videos/H9tjpxLVZYo",
@@ -10137,7 +10160,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-26T08:02:51.431Z",
+      "updatedAt": "2026-11-26T11:21:02.643Z",
       "tags": [],
       "links": [],
       "related": []
@@ -21721,6 +21744,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=Ndl2VnGJb6o"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Yumina: Open-Source AI Game Engine with 2D Character Animation, Comfy Cloud & MCP",
+      "summary": "What if you could turn a single image into an interactive animated character that breathes, blinks, follows your cursor, changes facial expressions, and responds to events in real time? Yumina is an open-source AI game e",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/MrsHezVTFhI",
+      "publishedAt": "2026-11-26T11:09:05.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=MrsHezVTFhI"
         }
       ],
       "related": []

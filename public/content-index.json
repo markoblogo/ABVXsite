@@ -10183,7 +10183,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-26T14:37:20.583Z",
+      "updatedAt": "2026-11-26T14:50:10.362Z",
       "tags": [],
       "links": [],
       "related": []
@@ -16050,6 +16050,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=vAPgNupIp2s"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "PixelMatte: Single-Step AI Image Matting with Pixel-Space Diffusion Transformers",
+      "summary": "PixelMatte: Single-Step AI Image Matting with Pixel-Space Diffusion Transformers",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/ekM6EQx6goM",
+      "publishedAt": "2026-11-26T14:49:34.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=ekM6EQx6goM"
         }
       ],
       "related": []

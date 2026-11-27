@@ -517,6 +517,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/D1feZmJ9kh0
   Summary: What if your entire AI-powered content business operated from a tiny virtual city? With a newsroom, a video studio, a post office, a café, and even a bank? Meet Grok City, a fascinating experiment in multi-agent automati
 
+- Slow Roads Review: A Relaxing Browser Drive With No Destination
+  URL: https://abvx.xyz/writing/videos/Da5dqHIFS6o
+  Summary: A quiet browser drive with no finish line — until a detour turns into a backwards ride down a ridge. Slow Roads lets you choose a ride, road style, season and time of day, then wander through a procedural landscape. This
+
 - Krea AI Reveals Its Agentic Video Workflow | Claude, Figma & After Effects Automation
   URL: https://abvx.xyz/writing/videos/dgLDRwH2g5E
   Summary: What if AI agents could handle an entire motion design project, from the first storyboard to the final After Effects render? Not just generate a few video clips. Actually work with professional creative software, build c

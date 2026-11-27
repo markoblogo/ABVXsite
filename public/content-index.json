@@ -10206,7 +10206,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-27T18:50:58.047Z",
+      "updatedAt": "2026-11-27T20:12:47.556Z",
       "tags": [],
       "links": [],
       "related": []
@@ -18731,6 +18731,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=kDvLWLN_ZUk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Slow Roads Review: A Relaxing Browser Drive With No Destination",
+      "summary": "A quiet browser drive with no finish line — until a detour turns into a backwards ride down a ridge. Slow Roads lets you choose a ride, road style, season and time of day, then wander through a procedural landscape. This",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/Da5dqHIFS6o",
+      "publishedAt": "2026-11-27T20:01:37.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=Da5dqHIFS6o"
         }
       ],
       "related": []

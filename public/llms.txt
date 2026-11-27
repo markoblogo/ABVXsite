@@ -109,6 +109,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/1Y0feA5hb1k
   Summary: What if robots could think and react five times faster without upgrading their hardware? And what if they became more accurate at the same time? Meet NVIDIA VFlash, a new visual planning framework designed to make AI-pow
 
+- Rooms.xyz Review: Explore Tiny Worlds and Edit Your Own
+  URL: https://abvx.xyz/writing/videos/2Dir5coXoco
+  Summary: Rooms is a collection of tiny interactive worlds — and an editor for adapting or building them. We explore several very different scenes,then test the practical route from a blank room to a small set and from a creator r
+
 - Brushveil Gameplay: Explore Van Gogh’s World in a Relaxing Browser Game
   URL: https://abvx.xyz/writing/videos/2Eo7TqHaF50
   Summary: What would it feel like to step inside Vincent van Gogh’s painted world? Brushveil is a free, relaxing browser game that turns artwork into a place to explore. Our short gameplay review takes you through Starry Town, a g

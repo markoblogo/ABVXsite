@@ -781,6 +781,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/ht5q8eM93K4
   Summary: Working on a 3D game, animation, or creative coding project? Here's a resource worth bookmarking. Scenario just released a collection of 1,342 AI-generated 3D assets on Hugging Face. And you can download them for free. N
 
+- Krea Motion: New AI Motion Graphics Editor for Animation and Visual Design
+  URL: https://abvx.xyz/writing/videos/hTUPukNw61U
+  Summary: Krea has introduced Motion, a new AI-powered environment for creating motion graphics, animated visual content, and experimental digital animations. After spending several weeks developing and refining generative animati
+
 - HyperFlow H3 Flash: 14B AI Video + Stereo Audio in 6 Steps | ComfyUI & GGUF
   URL: https://abvx.xyz/writing/videos/Hx3SofxSuCc
   Summary: VIDEO REBIRTH just compressed MiniMax-H3 from roughly 31 billion parameters to under 14 billion, and made it generate video AND sound in just six sampling steps. Meet HyperFlow H3 Flash, the latest release in the HyperFl
@@ -1576,6 +1580,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Can AI Predict a Falling Egg? PAN 2 Explained in ASCII
   URL: https://abvx.xyz/writing/videos/sVa-etX-YxQ
   Summary: Drop an egg. Change the surface. Should an AI's prediction change too? This short ASCII comic explains the idea behind PAN 2, a world model announced by the Institute of Foundation Models on November 10, 2026. A starting
+
+- Running Qwen3 on a 24KB Bare-Metal OS: x86 Assembly vs llama.cpp on Linux
+  URL: https://abvx.xyz/writing/videos/sxNOIkx2UH4
+  Summary: How much operating system do you actually need to run a large language model? One developer decided to eliminate Linux entirely and run Qwen3-0.6B directly on a custom operating system written from scratch in pure x86-64
 
 - NVIDIA Déjà View: 3D Reconstruction From Photos With Just 117M Parameters
   URL: https://abvx.xyz/writing/videos/sy-s4Rvn0hI

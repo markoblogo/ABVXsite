@@ -10206,7 +10206,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-27T08:05:11.715Z",
+      "updatedAt": "2026-11-27T11:12:04.934Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11223,6 +11223,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=3qA7K-G0VXk"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Funeral Tech in China: An Animated Send-Off and a Live Band #FuneralTech #UnexpectedTech",
+      "summary": "An animated send-off on a giant screen, with a live band right beside it. Funeral tech in China has entered the chat. The developed world is still buffering. First the screen, then the orchestra reveal — with the origina",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/cpyETjvPhR8",
+      "publishedAt": "2026-11-27T10:54:30.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=cpyETjvPhR8"
         }
       ],
       "related": []

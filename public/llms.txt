@@ -485,6 +485,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/CptYVxnfa0o
   Summary: Quick question: When did applying for a job start requiring an autobiographical short film? Because apparently, sending a résumé and a portfolio isn't enough anymore. Meet Darshita Patankar, a visual designer who decided
 
+- Funeral Tech in China: An Animated Send-Off and a Live Band #FuneralTech #UnexpectedTech
+  URL: https://abvx.xyz/writing/videos/cpyETjvPhR8
+  Summary: An animated send-off on a giant screen, with a live band right beside it. Funeral tech in China has entered the chat. The developed world is still buffering. First the screen, then the orchestra reveal — with the origina
+
 - Claude Code Built a GTA Mod for SimCity 3000 in Just 2 Hours
   URL: https://abvx.xyz/writing/videos/cQS3nbBe6JM
   Summary: What if you could turn almost any PC game into something completely different using AI? And what if Claude Code could handle the modding process for you? Meet Universal Modder, an open-source collection of AI agent skill

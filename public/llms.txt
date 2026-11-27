@@ -3527,6 +3527,18 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   Group: writing
   Tags: psychology-notebook
 
+- Psychology Notebook #75 — The Price of an Imagined World
+  URL: https://abvx.xyz/writing/psychology-notebook-75-the-price-of-an-imagined-world
+  Summary: Ten translated notebook fragments on the price of an imagined world.
+  Group: writing
+  Tags: psychology-notebook
+
+- Psychology Notebook #76 — The Cost of Staying Functional
+  URL: https://abvx.xyz/writing/psychology-notebook-76-the-cost-of-staying-functional
+  Summary: Ten translated notebook fragments on the cost of staying functional.
+  Group: writing
+  Tags: psychology-notebook
+
 - The Berliner: How My Beer Cocktail Ended Up on a French Bar's Menu
   URL: https://abvx.xyz/writing/the-berliner-guinness-port-beer-cocktail
   Summary: I discovered Guinness with port wine in Berlin, recreated it with whatever a small French bar had available, and eventually watched it become an official item in the cash register.

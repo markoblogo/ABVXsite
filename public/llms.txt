@@ -653,6 +653,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/G6ZR20RmSRs
   Summary: Ever wanted to learn something new, only to discover that the recommended course is 40 hours long? You bookmark it. Watch the introduction. Promise yourself you'll finish it someday. And never open it again. Well, someon
 
+- Meshy 7.5: AI 3D Model Generation with 50x Polygon Reduction and Automatic Retopology
+  URL: https://abvx.xyz/writing/videos/GCOojJ_K_4k
+  Summary: Meshy AI has introduced Meshy 7.5, a major update focused on one of the most persistent challenges in 3D production: balancing high visual detail with real-time rendering performance. According to Meshy, the new version
+
 - NVIDIA GR00T 2: Robots Learn New Tasks From Just 5 Demos
   URL: https://abvx.xyz/writing/videos/GegJauCwDRs
   Summary: NVIDIA just introduced GR00T 2, a new world-action AI model that helps robots learn physical skills from human videos and adapt to unfamiliar tasks with just five demonstrations. In NVIDIA's experiments, GR00T 2 achieved
@@ -1280,6 +1284,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - J3lly B3ing: A Relaxing Jellyfish Game in a Pixel Ocean
   URL: https://abvx.xyz/writing/videos/OUbxnkNFBkA
   Summary: Play j3lly b3ing by ma水マ母: https://mamamamajelly.itch.io/j3lly-b3ing A quiet swim through a shimmering pixel ocean: kelp, coral, shoals of fish, and a tiny moon jellyfish carried by the current. You can steer with the ar
+
+- Gemini 4 Neon Builds a 3D Shader in Google Sheets Using Antigravity /swarm
+  URL: https://abvx.xyz/writing/videos/ouJDqEFmrBA
+  Summary: Google Sheets is apparently a 3D rendering engine now. Google has demonstrated the capabilities of Gemini 4 Neon and the /swarm multi-agent mode in Google Antigravity by transforming a photograph of a neon sign into an i
 
 - The Pope vs Anthropic: Should AI Help Humanity Defeat Death?
   URL: https://abvx.xyz/writing/videos/OW1weOBWRVA

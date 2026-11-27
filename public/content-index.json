@@ -10206,7 +10206,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-27T13:12:48.405Z",
+      "updatedAt": "2026-11-27T13:22:11.398Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11476,6 +11476,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=k9s_jHPZ5pI"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Gemini 4 Neon Builds a 3D Shader in Google Sheets Using Antigravity /swarm",
+      "summary": "Google Sheets is apparently a 3D rendering engine now. Google has demonstrated the capabilities of Gemini 4 Neon and the /swarm multi-agent mode in Google Antigravity by transforming a photograph of a neon sign into an i",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/ouJDqEFmrBA",
+      "publishedAt": "2026-11-27T13:14:28.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=ouJDqEFmrBA"
         }
       ],
       "related": []
@@ -14640,6 +14663,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=WEEGy8Ks3ig"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Meshy 7.5: AI 3D Model Generation with 50x Polygon Reduction and Automatic Retopology",
+      "summary": "Meshy AI has introduced Meshy 7.5, a major update focused on one of the most persistent challenges in 3D production: balancing high visual detail with real-time rendering performance. According to Meshy, the new version ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/GCOojJ_K_4k",
+      "publishedAt": "2026-11-27T13:20:30.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=GCOojJ_K_4k"
         }
       ],
       "related": []

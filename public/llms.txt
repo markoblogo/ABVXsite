@@ -1717,6 +1717,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/vD_pNbzvoiM
   Summary: You spent hours building your project. Now you need a video to show it off. What if Claude Code could handle that part too? Meet Brag, an open-source AI agent skill that turns your project into a polished promotional vid
 
+- Toy Town: A Tiny City to Get Lost In | Relaxing Walk
+  URL: https://abvx.xyz/writing/videos/VfdXpggan5A
+  Summary: A tiny city, with nowhere you have to be. Toy Town by watabou is a browser-based 3D town visualizer you can explore on foot. This short review follows a quiet walk through daytime streets and a manually selected night pa
+
 - World Labs Atlas Turns Images Into Explorable 3D Worlds (Blender Too)
   URL: https://abvx.xyz/writing/videos/vIiy-bfiGns
   Summary: World Labs just opened Atlas, its next-generation AI world model that transforms photographs and stylized images into explorable 3D environments. And the results are seriously impressive. The first demonstration shows a
@@ -1972,6 +1976,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Matrix-Game 4.0: Real-Time AI Game Rendering at 67 FPS on RTX 5080!
   URL: https://abvx.xyz/writing/videos/ztviGVU6hAU
   Summary: What if your GPU could turn a simple low-poly game into a photorealistic world in real time? Not by replacing the game engine with a hallucinating AI model. By letting the game engine handle the actual game while AI hand
+
+- Gemini Task: Google's AI Agent with Cloud Computer and Google Workspace Integration
+  URL: https://abvx.xyz/writing/videos/ZxnsW2CoFgQ
+  Summary: Gemini Task might be one of Google's most underrated AI products. While most people still use artificial intelligence as a conversational assistant, Gemini Task takes a different approach: an AI agent designed to perform
 
 - Claude Fable 5.2 Creates CGI Animation From Scratch Using Blender & Python
   URL: https://abvx.xyz/writing/videos/ZYWFtV13uW8

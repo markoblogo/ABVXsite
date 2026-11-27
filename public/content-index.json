@@ -10206,7 +10206,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-27T13:22:11.398Z",
+      "updatedAt": "2026-11-27T13:37:22.869Z",
       "tags": [],
       "links": [],
       "related": []
@@ -11669,6 +11669,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=Ezrab-CrWqM"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Gemini Task: Google's AI Agent with Cloud Computer and Google Workspace Integration",
+      "summary": "Gemini Task might be one of Google's most underrated AI products. While most people still use artificial intelligence as a conversational assistant, Gemini Task takes a different approach: an AI agent designed to perform",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/ZxnsW2CoFgQ",
+      "publishedAt": "2026-11-27T13:28:45.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=ZxnsW2CoFgQ"
         }
       ],
       "related": []
@@ -20488,6 +20511,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=uyzSYiktQb0"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Toy Town: A Tiny City to Get Lost In | Relaxing Walk",
+      "summary": "A tiny city, with nowhere you have to be. Toy Town by watabou is a browser-based 3D town visualizer you can explore on foot. This short review follows a quiet walk through daytime streets and a manually selected night pa",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/VfdXpggan5A",
+      "publishedAt": "2026-11-27T13:32:43.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=VfdXpggan5A"
         }
       ],
       "related": []

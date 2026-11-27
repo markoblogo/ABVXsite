@@ -8369,6 +8369,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "AssBench: AI’s Strangest 3D Coding Benchmark",
+      "summary": "One prompt, very different results. AssBench asks AI models to code an interactive 3D human figure in swimwear—and some attempts look more like furniture than anatomy. This review starts with the recorded leaders: Claude",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/9JRQmK6UOgQ",
+      "publishedAt": "2026-11-27T22:15:42.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=9JRQmK6UOgQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Audio Out of Sync After Joining Clips? Check the Cut",
       "summary": "Audio out of sync after joining clips? Check where the first clip’s audio ends. In this 37-second video editing test, you can hear a 320 ms delay after the cut, then compare the same two clips before and after the fix. W",
       "canonicalUrl": "https://abvx.xyz/writing/videos/nhOBQe4YgBU",
@@ -10206,7 +10229,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-27T20:12:47.556Z",
+      "updatedAt": "2026-11-27T22:37:01.740Z",
       "tags": [],
       "links": [],
       "related": []

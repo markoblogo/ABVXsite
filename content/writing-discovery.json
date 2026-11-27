@@ -3237,6 +3237,17 @@
     },
     {
       "source": "youtube",
+      "title": "AssBench: AI’s Strangest 3D Coding Benchmark",
+      "url": "https://www.youtube.com/watch?v=9JRQmK6UOgQ",
+      "publishedAt": "2026-11-27T22:15:42.000Z",
+      "excerpt": "One prompt, very different results. AssBench asks AI models to code an interactive 3D human figure in swimwear—and some attempts look more like furniture than anatomy. This review starts with the recorded leaders: Claude",
+      "coverImage": "https://i.ytimg.com/vi/9JRQmK6UOgQ/hqdefault.jpg",
+      "videoDescription": "One prompt, very different results. AssBench asks AI models to code an interactive 3D human figure in swimwear—and some attempts look more like furniture than anatomy.\n\nThis review starts with the recorded leaders: Claude Fable 5.2, Claude Mythos 5.2 and GPT Astra 6.2. Then we rotate the models, look at earlier Opus and Sonnet attempts, and visit the lower end of the table: Muse Spark 1.3, Mistral Large 4 and Grok 4.7. Watch what happens to the shape, skin and leg separation when the viewing angle changes.\n\nThe brief calls for a single HTML file, procedural geometry, orbit controls and spring-like deformation. This is a funny, task-specific coding comparison—not a universal AI intelligence ranking. Historical outputs are labelled;versions, effort settings, dates and submissions vary. Table shown in the owner’s 27 November 2026 recording.\n\nExplore the project and its comparisons:\nhttps://assbench.com/\n\nFootage: owner-recorded browsing of AssBench. Model names and ranks follow the recorded table. Commentary and visual analogies are ours.\nMusic: AI Logic, from the owner’s existing music library.\n\nMade in Framewright — https://markoblogo.github.io/framewright/\nBy ABVX — https://abvx.xyz/\n\n#AssBench #AIModels #AICoding #ThreeJS #GenerativeAI",
+      "addedAt": "2026-11-27T22:37:01.740Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "They Taught AI to Balance a 5-Ton Loader on Two Wheels",
       "url": "https://www.youtube.com/watch?v=9Pd1Wd-AS9w",
       "publishedAt": "2026-11-18T21:21:28.000Z",

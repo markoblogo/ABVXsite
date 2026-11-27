@@ -349,6 +349,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/9bYUOdPirnk
   Summary: What if you could create an entire animated film without using a traditional AI video generator? Meet Cinecode, a new free, open-source filmmaking skill that lets Claude Code and Cursor turn simple prompts into complete
 
+- AssBench: AI’s Strangest 3D Coding Benchmark
+  URL: https://abvx.xyz/writing/videos/9JRQmK6UOgQ
+  Summary: One prompt, very different results. AssBench asks AI models to code an interactive 3D human figure in swimwear—and some attempts look more like furniture than anatomy. This review starts with the recorded leaders: Claude
+
 - They Taught AI to Balance a 5-Ton Loader on Two Wheels
   URL: https://abvx.xyz/writing/videos/9Pd1Wd-AS9w
   Summary: Forget those tiny self-balancing Arduino robots. Researchers just taught a neural network to balance a FIVE-TON construction loader on two wheels. And that's only the beginning. Meet Heavy Metal Acrobatics, a robotics re

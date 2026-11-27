@@ -10206,7 +10206,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-27T01:13:54.293Z",
+      "updatedAt": "2026-11-27T08:05:11.715Z",
       "tags": [],
       "links": [],
       "related": []
@@ -17781,6 +17781,42 @@
       "links": [],
       "publishedAt": "2026-11-26",
       "updatedAt": "2026-11-26",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #75 — The Price of an Imagined World",
+      "summary": "Ten translated notebook fragments on the price of an imagined world.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-75-the-price-of-an-imagined-world",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-27",
+      "updatedAt": "2026-11-27",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #76 — The Cost of Staying Functional",
+      "summary": "Ten translated notebook fragments on the cost of staying functional.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-76-the-cost-of-staying-functional",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-27",
+      "updatedAt": "2026-11-27",
       "related": []
     },
     {

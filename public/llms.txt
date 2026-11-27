@@ -85,6 +85,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/-ZjoRw8TY_Q
   Summary: An entry-level interview. A demand for the biggest office. Then a plan to become CEO. Somewhere along the way, the interviewer loses control of his own conversation. This clip, circulating as an AI job interview, turns a
 
+- Unitree Robot vs a Bear Mascot — Then Those Creepy Fingers  #robot  #fightingrobot
+  URL: https://abvx.xyz/writing/videos/061L0VamfC8
+  Summary: Unitree’s robot takes on a bear mascot—then does the finger routine of a cartoon villain. Excellent opponent selection. Slightly alarming victory celebration. This short edit follows the funny part of Unitree’s Embodied
+
 - Gemini 4 Hydrogen Turned Google Sheets Into an Animated Pixel Art Canvas
   URL: https://abvx.xyz/writing/videos/0Hng8Jw5R2Q
   Summary: Google DeepMind just turned Google Sheets into an animated pixel art canvas using Gemini 4 Hydrogen and Google Antigravity. Yes. Google Sheets. The spreadsheet application. With thousands of tiny cells acting as pixels.
@@ -1129,6 +1133,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/mkLiCHl5DL0
   Summary: Claude Fable 5.2 spent eight hours recreating ancient Babylon as it might have looked around 600 BC, turning historical research into an interactive 3D world you can explore yourself. And the most interesting part? The A
 
+- Claude AI Turns P&ID Engineering Drawings Into Interactive 3D Models in Blender
+  URL: https://abvx.xyz/writing/videos/mqmKmLvP7EU
+  Summary: What if a complex industrial engineering diagram could be transformed into an interactive 3D environment that explains how an entire facility operates? A new open-source, two-stage AI workflow combines Claude, knowledge
+
 - Yumina: Open-Source AI Game Engine with 2D Character Animation, Comfy Cloud & MCP
   URL: https://abvx.xyz/writing/videos/MrsHezVTFhI
   Summary: What if you could turn a single image into an interactive animated character that breathes, blinks, follows your cursor, changes facial expressions, and responds to events in real time? Yumina is an open-source AI game e
@@ -1560,6 +1568,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - FreeVideo: Run MiniMax H3 Locally with Just 8GB VRAM | ComfyUI
   URL: https://abvx.xyz/writing/videos/SET6nWjBNNE
   Summary: What if you could run a powerful AI video generation model on your own computer, without renting expensive cloud GPUs? And what if you only needed 8 GB of VRAM? Meet FreeVideo, an open-source project designed to bring Mi
+
+- AI Vibe Coding: Building a Dreadlock Studio Simulator in Just 15 Minutes
+  URL: https://abvx.xyz/writing/videos/SgKgrN5kjSQ
+  Summary: One of the most enjoyable things about vibe coding is showing people who have never experienced it what artificial intelligence can actually create. While visiting Damian, a professional dreadlock artist, the creator of
 
 - Meet Realbotix Echo: A $85,000 Humanoid Robot Powered by ChatGPT, Claude & Gemini
   URL: https://abvx.xyz/writing/videos/sgsjE9AqBEI

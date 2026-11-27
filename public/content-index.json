@@ -7921,6 +7921,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "AI Vibe Coding: Building a Dreadlock Studio Simulator in Just 15 Minutes",
+      "summary": "One of the most enjoyable things about vibe coding is showing people who have never experienced it what artificial intelligence can actually create. While visiting Damian, a professional dreadlock artist, the creator of ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/SgKgrN5kjSQ",
+      "publishedAt": "2026-11-27T23:12:05.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=SgKgrN5kjSQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "AI Video Is Now Faster Than Real Time. Welcome to Infinite Slop",
       "summary": "We have officially reached a new milestone in AI-generated content. AI can now produce videos faster than humans can watch them. And the internet is responding exactly as you'd expect. With infinite AI slop. AI infrastru",
       "canonicalUrl": "https://abvx.xyz/writing/videos/mt0MOEpoj1c",
@@ -9122,6 +9145,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude AI Turns P&ID Engineering Drawings Into Interactive 3D Models in Blender",
+      "summary": "What if a complex industrial engineering diagram could be transformed into an interactive 3D environment that explains how an entire facility operates? A new open-source, two-stage AI workflow combines Claude, knowledge ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/mqmKmLvP7EU",
+      "publishedAt": "2026-11-27T23:18:50.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=mqmKmLvP7EU"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude Can Now Create Editable Premiere Pro & After Effects Projects with Tesseract",
       "summary": "Claude can already generate animations and videos. But there's always been one annoying problem. What happens when you want to actually edit the result? An AI-generated MP4 isn't an editable Premiere Pro timeline. You ca",
       "canonicalUrl": "https://abvx.xyz/writing/videos/qZFQlbAcW1Y",
@@ -10229,7 +10275,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-27T22:37:01.740Z",
+      "updatedAt": "2026-11-27T23:36:54.340Z",
       "tags": [],
       "links": [],
       "related": []
@@ -20908,6 +20954,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=zOfyKb7_c1M"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Unitree Robot vs a Bear Mascot — Then Those Creepy Fingers  #robot  #fightingrobot",
+      "summary": "Unitree’s robot takes on a bear mascot—then does the finger routine of a cartoon villain. Excellent opponent selection. Slightly alarming victory celebration. This short edit follows the funny part of Unitree’s Embodied ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/061L0VamfC8",
+      "publishedAt": "2026-11-27T23:30:23.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=061L0VamfC8"
         }
       ],
       "related": []

@@ -3217,6 +3217,17 @@
     },
     {
       "source": "youtube",
+      "title": "Quantum Gravity from the Null Cone — New Paper Explained",
+      "url": "https://www.youtube.com/watch?v=9wFEHvzcsKM",
+      "publishedAt": "2026-11-27T00:56:57.000Z",
+      "excerpt": "Can gravity be described quantum mechanically without the usual perturbative infinities? This visual explainer follows a new null-cone proposal by Stanford physicist Venkatesa Chandrasekaran. We walk through light cones ",
+      "coverImage": "https://i.ytimg.com/vi/9wFEHvzcsKM/hqdefault.jpg",
+      "videoDescription": "Can gravity be described quantum mechanically without the usual perturbative infinities? This visual explainer follows a new null-cone proposal by Stanford physicist Venkatesa Chandrasekaran.\n\nWe walk through light cones and causal diamonds, quantum boundary states, a finite graviton-pair calculation, and checks involving Einstein’s equations and black hole entropy. The particle grids and convergence spiral are visual metaphors, not literal pictures of spacetime or graviton motion.\n\nThe final section covers the author’s report of working with GPT-6 Astra over several months, using approximately 400 million tokens. The paper remains a preprint. Its principal four-dimensional construction concerns vacuum gravity, and independent scrutiny is still needed.\n\n0:00 Two theories\n0:16 The infinity problem\n0:36 The new proposal\n0:52 Light and causal diamonds\n1:11 Quantum geometry\n1:30 The finite test calculation\n1:54 Einstein equations and black hole entropy\n2:15 Why investigate this?\n2:33 The author’s AI collaboration\n2:49 What remains unproven\n\nPrimary source:\nAn algebraic quantization of gravity from the null cone — Venkatesa Chandrasekaran\nhttps://arxiv.org/abs/2611.34924\nFull text, version 1:\nhttps://arxiv.org/html/2611.34924v1\nAI collaboration: see Acknowledgements in the paper.\n\nEnglish adaptation of the supplied animated explainer. Music: Ethereal Void, from the creator’s soundtrack library. English narration is synthetic.\n\nMade in Framewright — https://markoblogo.github.io/framewright/\nBy ABVX — https://abvx.xyz/\n\n#QuantumGravity #Physics #GeneralRelativity #BlackHoles #ScienceExplained",
+      "addedAt": "2026-11-27T01:13:54.293Z",
+      "addedAtBasis": "observed"
+    },
+    {
+      "source": "youtube",
       "title": "I Tried Porting a WebGL Game to Unity With AI. It Got Complicated.",
       "url": "https://www.youtube.com/watch?v=9wirkrpkSoQ",
       "publishedAt": "2026-11-15T20:18:23.000Z",

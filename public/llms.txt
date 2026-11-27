@@ -349,6 +349,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/9Pd1Wd-AS9w
   Summary: Forget those tiny self-balancing Arduino robots. Researchers just taught a neural network to balance a FIVE-TON construction loader on two wheels. And that's only the beginning. Meet Heavy Metal Acrobatics, a robotics re
 
+- Quantum Gravity from the Null Cone — New Paper Explained
+  URL: https://abvx.xyz/writing/videos/9wFEHvzcsKM
+  Summary: Can gravity be described quantum mechanically without the usual perturbative infinities? This visual explainer follows a new null-cone proposal by Stanford physicist Venkatesa Chandrasekaran. We walk through light cones
+
 - I Tried Porting a WebGL Game to Unity With AI. It Got Complicated.
   URL: https://abvx.xyz/writing/videos/9wirkrpkSoQ
   Summary: My little AI-powered weekend game project is turning into something much bigger. What started as a WebGL experiment has now evolved into a Unity project with AI-generated 3D assets, multiple coding agents, and a growing

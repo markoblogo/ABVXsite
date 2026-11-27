@@ -10206,7 +10206,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-26T21:36:50.760Z",
+      "updatedAt": "2026-11-27T01:13:54.293Z",
       "tags": [],
       "links": [],
       "related": []
@@ -17781,6 +17781,29 @@
       "links": [],
       "publishedAt": "2026-11-26",
       "updatedAt": "2026-11-26",
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Quantum Gravity from the Null Cone — New Paper Explained",
+      "summary": "Can gravity be described quantum mechanically without the usual perturbative infinities? This visual explainer follows a new null-cone proposal by Stanford physicist Venkatesa Chandrasekaran. We walk through light cones ",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/9wFEHvzcsKM",
+      "publishedAt": "2026-11-27T00:56:57.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=9wFEHvzcsKM"
+        }
+      ],
       "related": []
     },
     {

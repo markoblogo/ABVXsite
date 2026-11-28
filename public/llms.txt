@@ -61,6 +61,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/_V7WTXgW8gQ
   Summary: Deemos Tech just upgraded Hyper3D Rodin with a new Low-Poly mode designed to produce cleaner, more usable 3D meshes. And this is the part of AI-generated 3D that I've been waiting for. Beautiful geometry is one thing. A
 
+- Bruno Simon’s Portfolio Let Me Drive Across the Sea
+  URL: https://abvx.xyz/writing/videos/_ziZIZ9nj0w
+  Summary: I opened creative developer Bruno Simon’s portfolio and ended up driving across the sea. This interactive browser world has roads, obstacles, playful objects and plenty of places to explore. In my recording, the keyboard
+
 - Claude Code Can Recreate Any Website Animation Frame by Frame | /reanimate
   URL: https://abvx.xyz/writing/videos/-8oBX51Y-cY
   Summary: Ever found an amazing animation on a website and wished you could recreate it in your own project? Not just something similar. The actual movement, timing, transitions, and visual effects. Meet /reanimate, a new open-sou

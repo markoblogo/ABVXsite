@@ -8760,6 +8760,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Bruno Simon’s Portfolio Let Me Drive Across the Sea",
+      "summary": "I opened creative developer Bruno Simon’s portfolio and ended up driving across the sea. This interactive browser world has roads, obstacles, playful objects and plenty of places to explore. In my recording, the keyboard",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/_ziZIZ9nj0w",
+      "publishedAt": "2026-11-28T02:05:26.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=_ziZIZ9nj0w"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Brushveil Gameplay: Explore Van Gogh’s World in a Relaxing Browser Game",
       "summary": "What would it feel like to step inside Vincent van Gogh’s painted world? Brushveil is a free, relaxing browser game that turns artwork into a place to explore. Our short gameplay review takes you through Starry Town, a g",
       "canonicalUrl": "https://abvx.xyz/writing/videos/2Eo7TqHaF50",
@@ -10321,7 +10344,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-28T01:40:28.557Z",
+      "updatedAt": "2026-11-28T02:17:31.636Z",
       "tags": [],
       "links": [],
       "related": []

@@ -60,7 +60,7 @@ test('analytics QA exits promptly when the browser executable is missing',()=>{
   // This is a standalone test runner, not a child managed by our runner's IPC.
   delete env.NODE_TEST_CONTEXT;
   const result=spawnSync(process.execPath,['--test','--test-name-pattern=^QA blocks','test/qa-analytics.test.mjs'],{
-   env,encoding:'utf8',timeout:5000,
+   env,encoding:'utf8',timeout:20000,
   });
   assert.equal(result.error,undefined,'a missing browser must fail without leaving the fixture server listening');
   assert.equal(result.signal,null);

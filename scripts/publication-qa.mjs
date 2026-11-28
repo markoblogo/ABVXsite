@@ -39,7 +39,7 @@ export function internalPagePaths(hrefs,base='https://abvx.xyz') {
 // Binary downloads need link availability proof, not a buffered body transfer.
 export async function assertInternalLink(request, url) {
  const method = internalPagePaths([url], url).length ? 'get' : 'head';
- const response = await request[method](url);
+ const response = await request[method](url,{maxRetries:2});
  try { assert.ok(response.status() >= 200 && response.status() < 400, url + ' broken internal link'); }
  finally { await response.dispose(); }
 }

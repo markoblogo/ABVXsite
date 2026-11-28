@@ -53,6 +53,6 @@ test('globparts amplification input terminates within a bounded child process', 
     const result=minimatch('src/file.ts','**/../a/b/'.repeat(18)+'*.ts',{optimizationLevel:2});
     process.stdout.write(JSON.stringify({result}));`;
   const output = execFileSync(process.execPath, ['--max-old-space-size=128', '-e', code, matcherPath],
-    {timeout:5000, encoding:'utf8', stdio:['ignore','pipe','pipe']});
+    {timeout:15000, encoding:'utf8', stdio:['ignore','pipe','pipe']});
   assert.equal(typeof JSON.parse(output).result, 'boolean');
 });

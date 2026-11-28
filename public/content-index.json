@@ -8346,6 +8346,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "App Store Compliance: AI Skill for Apple App Store & Google Play Pre-Release Audits",
+      "summary": "Building an application with AI is becoming easier. Getting it approved by Apple App Store and Google Play is another challenge entirely. App Store Compliance is an open-source AI agent skill designed to audit your appli",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/LePJdp6t9Rg",
+      "publishedAt": "2026-11-28T01:35:19.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=LePJdp6t9Rg"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "ArcBrush 1.7: 3D PBR Material Preview, Pixel Art Editor & PSD Support",
       "summary": "ArcBrush 1.7 is here, bringing real-time 3D material previews, PBR texture creation, a built-in pixel art editor, Photoshop PSD support, and new tools for digital artists and game developers. ArcBrush is a node-based ima",
       "canonicalUrl": "https://abvx.xyz/writing/videos/3WcaSS67C54",
@@ -10298,7 +10321,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-28T01:13:45.802Z",
+      "updatedAt": "2026-11-28T01:40:28.557Z",
       "tags": [],
       "links": [],
       "related": []

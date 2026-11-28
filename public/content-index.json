@@ -9996,6 +9996,29 @@
       "ecosystem": "Writing",
       "group": "YouTube",
       "status": "live",
+      "title": "Claude Opus 5.6: 4 Incredible AI 3D Animations | Creative Coding Showcase",
+      "summary": "Claude Opus 5.6 is taking over X (Twitter), with developers sharing remarkable 3D animations created during early access to Anthropic's new AI model. This video brings together four particularly impressive examples, each",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/RdGQIupIeS4",
+      "publishedAt": "2026-11-28T00:58:24.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=RdGQIupIeS4"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
       "title": "Claude's Weirdest Plugin? A Home Distillery",
       "summary": "One maker calls a home distillery an AI вЂњpluginвЂќвЂ”and the final reveal makes the joke even better. We adapted the Russian narration and on-screen captions into English. Source clip: https://www.yaplakal.com/forum3/t",
       "canonicalUrl": "https://abvx.xyz/writing/videos/928ZiGl0m8w",
@@ -10275,7 +10298,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-27T23:36:54.340Z",
+      "updatedAt": "2026-11-28T01:13:45.802Z",
       "tags": [],
       "links": [],
       "related": []
@@ -10437,6 +10460,29 @@
           "type": "youtube",
           "label": "Watch on YouTube",
           "url": "https://www.youtube.com/watch?v=uDYjI2-QvpQ"
+        }
+      ],
+      "related": []
+    },
+    {
+      "type": "video",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": "YouTube",
+      "status": "live",
+      "title": "Deft: A Skill Library for AI Agents — Including Two of Mine",
+      "summary": "A quick tour of Deft, a searchable directory of agent skills focused on interface craft and design engineering. I browse 3D, motion, video, software architecture, MCP setup and Ask Deft. Two of my own skills are listed u",
+      "canonicalUrl": "https://abvx.xyz/writing/videos/uXHUnbMXCkU",
+      "publishedAt": "2026-11-28T00:53:57.000Z",
+      "tags": [
+        "youtube",
+        "video"
+      ],
+      "links": [
+        {
+          "type": "youtube",
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=uXHUnbMXCkU"
         }
       ],
       "related": []

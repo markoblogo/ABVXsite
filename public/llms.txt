@@ -1497,6 +1497,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
   URL: https://abvx.xyz/writing/videos/R2d5LM8bHEk
   Summary: Remember the original Prince of Persia? The legendary 1989 computer game with its pixelated characters, deadly traps, impossible jumps, and unforgettable atmosphere? Well, someone decided to give it a serious cinematic u
 
+- Claude Opus 5.6: 4 Incredible AI 3D Animations | Creative Coding Showcase
+  URL: https://abvx.xyz/writing/videos/RdGQIupIeS4
+  Summary: Claude Opus 5.6 is taking over X (Twitter), with developers sharing remarkable 3D animations created during early access to Anthropic's new AI model. This video brings together four particularly impressive examples, each
+
 - An Endless Walk to Nowhere | 20 Minutes of Ambient Piano & Night Sounds
   URL: https://abvx.xyz/writing/videos/rfClK3jPHlw
   Summary: A destination that always stays just ahead. Follow a moonlit Möbius path for 20 minutes, with gentle ambient piano, river sounds, crickets and frogs. No voiceover or on-screen captions — just a continuous background jour
@@ -1712,6 +1716,10 @@ Primary layers: Focus = market infrastructure; Systems = operational systems arc
 - Codync: Control Claude Code, Codex & 40+ AI Agents From Your Phone
   URL: https://abvx.xyz/writing/videos/uxDl4yGr-Ik
   Summary: What if you could turn Claude Code, OpenAI Codex, Gemini CLI, Cursor, and more than 40 other AI coding agents into personal chatbots you can control from your phone? Meet Codync, a free, open-source alternative to Grok B
+
+- Deft: A Skill Library for AI Agents — Including Two of Mine
+  URL: https://abvx.xyz/writing/videos/uXHUnbMXCkU
+  Summary: A quick tour of Deft, a searchable directory of agent skills focused on interface craft and design engineering. I browse 3D, motion, video, software architecture, MCP setup and Ask Deft. Two of my own skills are listed u
 
 - AI Battlegrounds: The Unity Port Is Here. Try It Yourself!
   URL: https://abvx.xyz/writing/videos/uYTY8g7XLm4

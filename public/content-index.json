@@ -10344,7 +10344,7 @@
       "title": "Complete Writing Archive",
       "summary": "All published ABVX articles, Working Stories and video pages, including older material beyond the recent feed.",
       "canonicalUrl": "https://abvx.xyz/writing/archive",
-      "updatedAt": "2026-11-28T02:17:31.636Z",
+      "updatedAt": "2026-11-28T08:07:02.927Z",
       "tags": [],
       "links": [],
       "related": []
@@ -18093,6 +18093,42 @@
       "links": [],
       "publishedAt": "2026-11-27",
       "updatedAt": "2026-11-27",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #77 — Making Room for What Is Gone",
+      "summary": "Ten translated notebook fragments on making room for what is gone.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-77-making-room-for-what-is-gone",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-28",
+      "updatedAt": "2026-11-28",
+      "related": []
+    },
+    {
+      "type": "writing",
+      "section": "writing",
+      "ecosystem": "Writing",
+      "group": null,
+      "status": "live",
+      "title": "Psychology Notebook #78 — The Voice We Use on Ourselves",
+      "summary": "Ten translated notebook fragments on the voice we use on ourselves.",
+      "language": "en",
+      "canonicalUrl": "https://abvx.xyz/writing/psychology-notebook-78-the-voice-we-use-on-ourselves",
+      "tags": [
+        "psychology-notebook"
+      ],
+      "links": [],
+      "publishedAt": "2026-11-28",
+      "updatedAt": "2026-11-28",
       "related": []
     },
     {
